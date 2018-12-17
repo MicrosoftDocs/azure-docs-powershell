@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azapplicationsecuritygroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzApplicationSecurityGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzApplicationSecurityGroup.md
 ---
 
 # Get-AzApplicationSecurityGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an application security group.
 
 ## SYNTAX
 
@@ -18,26 +20,40 @@ Get-AzApplicationSecurityGroup [-ResourceGroupName <String>] [-Name <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApplicationSecurityGroup** cmdlet gets an application security group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Retrieve all application security groups.
+```
+PS C:\> Get-AzApplicationSecurityGroup
 ```
 
-{{ Add example description here }}
+The command above returns the all application security groups in the subscription.
+
+### Example 2: Retrieve application security groups in a resource group.
+```
+PS C:\> Get-AzApplicationSecurityGroup -ResourceGroupName MyResourceGroup
+```
+
+The command above returns all application security groups that belong to the resource group MyResourceGroup.
+
+### Example 3: Retrieve a specific application security group.
+```
+PS C:\> Get-AzApplicationSecurityGroup -ResourceGroupName MyResourceGroup -Name MyApplicationSecurityGroup
+```
+
+The command above returns the application security group MyApplicationSecurityGroup under the resource group MyResourceGroup.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the application security group.
+The resource name.
 
 ```yaml
 Type: System.String
@@ -62,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name of the application security group.
+The resource group name.
 
 ```yaml
 Type: System.String
@@ -77,8 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +106,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApplicationSecurityGroup](./New-AzApplicationSecurityGroup.md)
+
+[Remove-AzApplicationSecurityGroup](./Remove-AzApplicationSecurityGroup.md)
+
+[Get-AzNetworkSecurityRuleConfig](./Get-AzNetworkSecurityRuleConfig.md)
+
+[Get-AzNetworkInterfaceIpConfig](./Get-AzNetworkInterfaceIpConfig.md)

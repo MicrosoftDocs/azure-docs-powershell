@@ -1,106 +1,108 @@
 ---
 Module Name: Az.IotHub
-Module Guid: 888ad48f-0bd0-4141-80fd-ecaae40d3923
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 51a3a993-fe39-4f8f-a437-2cb751584af5
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.iothub
+Help Version: 3.1.2.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Az.IotHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Az.IotHub.md
 ---
 
 # Az.IotHub Module
 ## Description
-{{Manually Enter Description Here}}
+Commands for Managing Azure IotHubs
 
 ## Az.IotHub Cmdlets
 ### [Add-AzIotHubCertificate](Add-AzIotHubCertificate.md)
-{{Manually Enter Add-AzIotHubCertificate Description Here}}
+Create/update an Azure IoT Hub certificate.
 
 ### [Add-AzIotHubEventHubConsumerGroup](Add-AzIotHubEventHubConsumerGroup.md)
-{{Manually Enter Add-AzIotHubEventHubConsumerGroup Description Here}}
+Creates an eventhub consumer group.
 
 ### [Add-AzIotHubKey](Add-AzIotHubKey.md)
-{{Manually Enter Add-AzIotHubKey Description Here}}
+Creates an IotHub Key.
 
 ### [Add-AzIotHubRoute](Add-AzIotHubRoute.md)
-{{Manually Enter Add-AzIotHubRoute Description Here}}
+Create a route in IoT Hub
 
 ### [Add-AzIotHubRoutingEndpoint](Add-AzIotHubRoutingEndpoint.md)
-{{Manually Enter Add-AzIotHubRoutingEndpoint Description Here}}
+Add an endpoint to your IoT Hub
 
 ### [Get-AzIotHub](Get-AzIotHub.md)
-{{Manually Enter Get-AzIotHub Description Here}}
+Gets information about the IotHubs in a subscription.
 
 ### [Get-AzIotHubCertificate](Get-AzIotHubCertificate.md)
-{{Manually Enter Get-AzIotHubCertificate Description Here}}
+Lists all certificates or a particular certificate contained within an Azure IoT Hub. 
 
 ### [Get-AzIotHubCertificateVerificationCode](Get-AzIotHubCertificateVerificationCode.md)
-{{Manually Enter Get-AzIotHubCertificateVerificationCode Description Here}}
+Generates a verification code for an Azure IoT Hub certificate. 
 
 ### [Get-AzIotHubConnectionString](Get-AzIotHubConnectionString.md)
-{{Manually Enter Get-AzIotHubConnectionString Description Here}}
+Gets the IotHub connectionstrings.
 
 ### [Get-AzIotHubEventHubConsumerGroup](Get-AzIotHubEventHubConsumerGroup.md)
-{{Manually Enter Get-AzIotHubEventHubConsumerGroup Description Here}}
+Gets all the eventhub consumergroups.
 
 ### [Get-AzIotHubJob](Get-AzIotHubJob.md)
-{{Manually Enter Get-AzIotHubJob Description Here}}
+Gets the information about an IotHub job.
 
 ### [Get-AzIotHubKey](Get-AzIotHubKey.md)
-{{Manually Enter Get-AzIotHubKey Description Here}}
+Gets an IotHub Key.
 
 ### [Get-AzIotHubQuotaMetric](Get-AzIotHubQuotaMetric.md)
-{{Manually Enter Get-AzIotHubQuotaMetric Description Here}}
+Gets the Quota Metrics for an IotHub.
 
 ### [Get-AzIotHubRegistryStatistic](Get-AzIotHubRegistryStatistic.md)
-{{Manually Enter Get-AzIotHubRegistryStatistic Description Here}}
+Gets the RegistryStatistics for an IotHub.
 
 ### [Get-AzIotHubRoute](Get-AzIotHubRoute.md)
-{{Manually Enter Get-AzIotHubRoute Description Here}}
+Get information about the route in IoT Hub
 
 ### [Get-AzIotHubRoutingEndpoint](Get-AzIotHubRoutingEndpoint.md)
-{{Manually Enter Get-AzIotHubRoutingEndpoint Description Here}}
+Get information on all the endpoints for your IoT Hub
 
 ### [Get-AzIotHubValidSku](Get-AzIotHubValidSku.md)
-{{Manually Enter Get-AzIotHubValidSku Description Here}}
+Gets all valid skus that this IotHub can transition to.
 
 ### [New-AzIotHub](New-AzIotHub.md)
-{{Manually Enter New-AzIotHub Description Here}}
+Creates a new IotHub.
 
 ### [New-AzIotHubExportDevices](New-AzIotHubExportDevices.md)
-{{Manually Enter New-AzIotHubExportDevices Description Here}}
+Creates a new export devices job.
 
 ### [New-AzIotHubImportDevices](New-AzIotHubImportDevices.md)
-{{Manually Enter New-AzIotHubImportDevices Description Here}}
+Creates a new import devices job.
 
 ### [Remove-AzIotHub](Remove-AzIotHub.md)
-{{Manually Enter Remove-AzIotHub Description Here}}
+Deletes an IotHub.
 
 ### [Remove-AzIotHubCertificate](Remove-AzIotHubCertificate.md)
-{{Manually Enter Remove-AzIotHubCertificate Description Here}}
+Deletes an Azure IoT Hub certificate.
 
 ### [Remove-AzIotHubEventHubConsumerGroup](Remove-AzIotHubEventHubConsumerGroup.md)
-{{Manually Enter Remove-AzIotHubEventHubConsumerGroup Description Here}}
+Deletes an eventhub consumergroup.
 
 ### [Remove-AzIotHubKey](Remove-AzIotHubKey.md)
-{{Manually Enter Remove-AzIotHubKey Description Here}}
+Removes an IotHub Key.
 
 ### [Remove-AzIotHubRoute](Remove-AzIotHubRoute.md)
-{{Manually Enter Remove-AzIotHubRoute Description Here}}
+Delete a route in IoT Hub
 
 ### [Remove-AzIotHubRoutingEndpoint](Remove-AzIotHubRoutingEndpoint.md)
-{{Manually Enter Remove-AzIotHubRoutingEndpoint Description Here}}
+Delete an endpoint for your IoT Hub
 
 ### [Set-AzIotHub](Set-AzIotHub.md)
-{{Manually Enter Set-AzIotHub Description Here}}
+Updates the properties of an IotHub.
 
 ### [Set-AzIotHubRoute](Set-AzIotHubRoute.md)
-{{Manually Enter Set-AzIotHubRoute Description Here}}
+Update a route in IoT Hub
 
 ### [Set-AzIotHubVerifiedCertificate](Set-AzIotHubVerifiedCertificate.md)
-{{Manually Enter Set-AzIotHubVerifiedCertificate Description Here}}
+Verifies an Azure IoT Hub certificate. 
 
 ### [Test-AzIotHubRoute](Test-AzIotHubRoute.md)
-{{Manually Enter Test-AzIotHubRoute Description Here}}
+Test routes in IoT Hub
 
 ### [Update-AzIotHub](Update-AzIotHub.md)
-{{Manually Enter Update-AzIotHub Description Here}}
+Update an Azure IoT Hub.
 

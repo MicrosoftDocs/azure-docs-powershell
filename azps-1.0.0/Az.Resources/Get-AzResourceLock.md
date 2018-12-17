@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 3FBF91B8-8EF9-4E05-AD7E-AEFC6EBBFB8E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourcelock
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceLock.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceLock.md
 ---
 
 # Get-AzResourceLock
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a resource lock.
 
 ## SYNTAX
 
@@ -56,22 +59,22 @@ Get-AzResourceLock [-AtScope] -LockId <String> [-ApiVersion <String>] [-Pre]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzResourceLock** cmdlet gets Azure resource locks.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a lock
+```
+PS C:\>Get-AzResourceLock -LockName "ContosoSiteLock" -ResourceName "ContosoSite" -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11"
 ```
 
-{{ Add example description here }}
+This command gets the resource lock named ContosoSiteLock.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use.
+If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: System.String
@@ -86,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -AtScope
-When specified returns all locks at or above the specified scope, otherwise returns all locks at, above or below the scope.
+Indicates that this cmdlet returns all locks at or above the specified scope.
+If you do not specify this parameter, the cmdlet returns all locks at, above, or below the scope.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -101,12 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -116,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -LockId
-The Id of the lock.
+Specifies the ID of the lock that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -131,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -LockName
-The name of the lock.
+Specifies the name of the lock that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -146,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -161,7 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which the lock applies.
+This cmdlet gets locks for this resource group.
 
 ```yaml
 Type: System.String
@@ -176,9 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-The resource name.
-e.g.
-to specify a database MyServer/MyDatabase.
+Specifies the name of the resource for which this lock applies.
+This cmdlet gets locks for this resource.
 
 ```yaml
 Type: System.String
@@ -193,9 +197,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The resource type.
-e.g.
-Microsoft.Sql/Servers/Databases.
+Specifies the resource type of the resource for which this lock applies.
+This cmdlet gets locks for this resource.
 
 ```yaml
 Type: System.String
@@ -210,9 +213,8 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-The scope.
-e.g.
-to specify a database '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaserName}', to specify a resoruce group: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'
+Specifies the scope to which the lock applies.
+The cmdlet gets locks for this scope.
 
 ```yaml
 Type: System.String
@@ -227,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantLevel
-Indicates that this is a tenant level operation.
+Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -242,8 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -256,3 +257,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzResourceLock](./New-AzResourceLock.md)
+
+[Remove-AzResourceLock](./Remove-AzResourceLock.md)
+
+[Set-AzResourceLock](./Set-AzResourceLock.md)
+
+

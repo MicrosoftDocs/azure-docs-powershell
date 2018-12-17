@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 38D57CE4-6994-4BDA-A50E-28680EF4E568
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azexpressroutecircuitauthorization
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzExpressRouteCircuitAuthorization.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzExpressRouteCircuitAuthorization.md
 ---
 
 # Remove-AzExpressRouteCircuitAuthorization
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an existing ExpressRoute configuration authorization.
 
 ## SYNTAX
 
@@ -18,26 +21,41 @@ Remove-AzExpressRouteCircuitAuthorization [-Name <String>] -ExpressRouteCircuit 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzExpressRouteCircuitAuthorization** cmdlet removes an authorization assigned to
+an ExpressRoute circuit. ExpressRoute circuits connect your on-premises network to Azure by using a
+connectivity provider instead of the public Internet. The owner of an ExpressRoute circuit can
+create as many as 10 authorizations for each circuit; these authorizations generate an
+authorization key that can be used by a virtual network owner to connect his or her network to the
+circuit. There can only be one authorization per virtual network. At any time, however, the circuit
+owner can use **Remove-AzExpressRouteCircuitAuthorization** to remove the authorization
+assigned to a virtual network. When that happens the corresponding virtual network is no longer
+able to use the ExpressRoute circuit to connect to Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a circuit authorization from an ExpressRoute circuit
+```
+$Circuit = Get-AzExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
+Remove-AzExpressRouteCircuitAuthorization -Name "ContosoCircuitAuthorization" -Circuit $Circuit
+Set-AzExpressRouteCircuit -ExpressRouteCircuit $Circuit
 ```
 
-{{ Add example description here }}
+This example removes a circuit authorization from an ExpressRoute circuit. The first command uses
+the **Get-AzExpressRouteCircuit** cmdlet to create an object reference to an ExpressRoute
+circuit named ContosoCircuit and stores the result in the variable named $Circuit.
+The second command marks the circuit authorization ContosoCircuitAuthorization for removal.
+The third command uses the Set-AzExpressRouteCircuit cmdlet to confirm the removal of the
+ExpressRoute circuit stored in the $Circuit variable.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-The ExpressRouteCircuit
+Specifies the ExpressRouteCircuit object that this cmdlet removes.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -62,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Authorization
+Specifies the name of the circuit authorization that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -77,8 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +108,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzExpressRouteCircuitAuthorization](./Add-AzExpressRouteCircuitAuthorization.md)
+
+[Get-AzExpressRouteCircuit](./Get-AzExpressRouteCircuit.md)
+
+[Get-AzExpressRouteCircuitAuthorization](./Get-AzExpressRouteCircuitAuthorization.md)
+
+[New-AzExpressRouteCircuitAuthorization](./New-AzExpressRouteCircuitAuthorization.md)
+
+[Set-AzExpressRouteCircuit](./Set-AzExpressRouteCircuit.md)

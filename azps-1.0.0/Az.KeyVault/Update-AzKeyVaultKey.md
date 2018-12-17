@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/update-azkeyvaultkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Update-AzKeyVaultKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Update-AzKeyVaultKey.md
 ---
 
 # Update-AzKeyVaultKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the attributes of a key in a key vault.
 
 ## SYNTAX
 
@@ -27,16 +29,56 @@ Update-AzKeyVaultKey [-InputObject] <PSKeyVaultKeyIdentityItem> [[-Version] <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzKeyVaultKey** cmdlet updates the editable attributes of a key in a key vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Modify a key to enable it, and set the expiration date and tags
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $Expires = (Get-Date).AddYears(2).ToUniversalTime()
+PS C:\> $Tags = @{'Severity' = 'high'; 'Accounting' = 'true'}
+PS C:\> Update-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Expires $Expires -Enable $True -Tag $Tags -PassThru
+
+Vault Name     : Contoso
+Name           : ITSoftware
+Version        : 394f9379a47a4e2086585468de6c7ae5
+Id             : https://Contoso.vault.azure.net:443/keys/ITSoftware/394f9379a47a4e2086585468de6c7ae5
+Enabled        : True
+Expires        : 5/25/2020 7:58:07 PM
+Not Before     :
+Created        : 4/6/2018 11:31:36 PM
+Updated        : 5/25/2018 7:59:02 PM
+Purge Disabled : False
+Tags           : Name        Value
+                 Severity    high
+                 Accounting  true
 ```
 
-{{ Add example description here }}
+The first command creates a **DateTime** object by using the **Get-Date** cmdlet. That object
+specifies a time two years in the future. The command stores that date in the $Expires variable.
+For more information, type `Get-Help Get-Date`.
+The second command creates a variable to store tag values of high severity and Accounting.
+The final command modifies a key named ITSoftware. The command enables the key, sets its expiration
+time to the time stored in $Expires, and sets the tags that are stored in $Tags.
+
+### Example 2: Modify a key to delete all tags
+```powershell
+PS C:\> Update-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Version '394f9379a47a4e2086585468de6c7ae5' -Tag @{}
+
+Vault Name     : Contoso
+Name           : ITSoftware
+Version        : 394f9379a47a4e2086585468de6c7ae5
+Id             : https://Contoso.vault.azure.net:443/keys/ITSoftware/394f9379a47a4e2086585468de6c7ae5
+Enabled        : True
+Expires        : 5/25/2020 7:58:07 PM
+Not Before     :
+Created        : 4/6/2018 11:31:36 PM
+Updated        : 5/25/2018 8:00:08 PM
+Purge Disabled : False
+Tags           :
+```
+
+This commands deletes all tags for a specific version of a key named ITSoftware.
 
 ## PARAMETERS
 
@@ -44,9 +86,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -246,8 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

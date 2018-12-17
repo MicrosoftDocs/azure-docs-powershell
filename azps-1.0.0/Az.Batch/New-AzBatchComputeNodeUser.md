@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: FE7689DE-4EC6-4C6B-94A4-D22C61CA569D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchcomputenodeuser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchComputeNodeUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchComputeNodeUser.md
 ---
 
 # New-AzBatchComputeNodeUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a user account on a Batch compute node.
 
 ## SYNTAX
 
@@ -27,25 +30,34 @@ New-AzBatchComputeNodeUser [[-ComputeNode] <PSComputeNode>] -Name <String> -Pass
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzBatchComputeNodeUser** cmdlet creates a user account on an Azure Batch compute node.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a user account that has administrative credentials
+```
+PS C:\>New-AzBatchComputeNodeUser -PoolId "MyPool01" -ComputeNodeId "ComputeNode01" -Name "TestUser" -Password "Password" -ExpiryTime ([DateTime]::Now.AddDays(7)) -IsAdmin -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command creates a user account on the compute node that has the ID ComputeNode01.
+The node is in the pool that has the ID MyPool01.
+The user name is TestUser, the password is Password, the account expires in seven days, and the account is has administrative credentials.
+
+### Example 2: Create a user account on a compute node by using the pipeline
+```
+PS C:\>Get-AzBatchComputeNode "MyPool01" -ComputeNodeId "ComputeNode01" -BatchContext $Context | New-AzBatchComputeNodeUser -Name "TestUser" -Password "Password" -BatchContext $Context
+```
+
+This command gets the compute node named ComputeNode01 by using the **Get-AzBatchComputeNode** cmdlet.
+That node is in the pool that has the ID MyPool01.
+The command passes that compute node to the current cmdlet by using the pipeline operator.
+The command creates a user account that has the user name TestUserand the password Password.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -60,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNode
-{{Fill ComputeNode Description}}
+Specifies the compute node, as a **PSComputeNode** object, on which this cmdlet creates a user account.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
@@ -75,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNodeId
-The id of the compute node to create the user on.
+Specifies the ID of the compute node on which this cmdlet creates a user account.
 
 ```yaml
 Type: System.String
@@ -90,12 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -105,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryTime
-{{Fill ExpiryTime Description}}
+Specifies the expiry time for the new user account.
 
 ```yaml
 Type: System.DateTime
@@ -120,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAdmin
-{{Fill IsAdmin Description}}
+Indicates that the cmdlet creates a user account that has administrative credentials.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -135,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the local windows account created.
+Specifies the name of the new local Windows account.
 
 ```yaml
 Type: System.String
@@ -150,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The account password.
+Specifies the user account password.
 
 ```yaml
 Type: System.Security.SecureString
@@ -165,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool containing the compute node to create the user on.
+Specifies the ID of the pool that contains the compute node on which to create the user account.
 
 ```yaml
 Type: System.String
@@ -180,8 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -196,3 +207,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Get-AzBatchComputeNode](./Get-AzBatchComputeNode.md)
+
+[Remove-AzBatchComputeNodeUser](./Remove-AzBatchComputeNodeUser.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

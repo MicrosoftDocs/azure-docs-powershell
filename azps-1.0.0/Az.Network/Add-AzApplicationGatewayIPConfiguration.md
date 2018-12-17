@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 5358C08F-A1EB-457E-85B1-7F12396A873A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayipconfiguration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzApplicationGatewayIPConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzApplicationGatewayIPConfiguration.md
 ---
 
 # Add-AzApplicationGatewayIPConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an IP configuration to an application gateway.
 
 ## SYNTAX
 
@@ -25,21 +28,28 @@ Add-AzApplicationGatewayIPConfiguration -ApplicationGateway <PSApplicationGatewa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzApplicationGatewayIPConfiguration** cmdlet adds an IP configuration to an application gateway.
+IP configurations contain the subnet in which the application gateway is deployed.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add an virtual network configuration to an application gateway
+```
+PS C:\>$Vnet = Get-AzVirtualNetwork -Name "Vnet01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $Vnet 
+PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Add-AzApplicationGatewayIPConfiguration -ApplicationGateway $AppGw -Name "Appgwsubnet01" -Subnet $Subnet
 ```
 
-{{ Add example description here }}
+The first command creates a virtual network.
+The second command creates a subnet using the previously created virtual network.
+The third command gets the application gateway and stores it in the $AppGw variable.
+The fouth command adds the IP configuration to the application gateway stored in $AppGw.
 
 ## PARAMETERS
 
 ### -ApplicationGateway
-The applicationGateway
+Specifies the application gateway to which this cmdlet adds an IP configuration.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
@@ -54,12 +64,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the application gateway IP configuration
+Specifies the name of the IP configuration to add.
 
 ```yaml
 Type: System.String
@@ -84,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -Subnet
-Subnet where application gateway gets its address from
+Specifies a subnet.
+This is the subnet in which the application gateway is deployed.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSSubnet
@@ -99,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-ID of subnet where application gateway gets its address from
+Specifies a subnet ID.
+This is the subnet in which the application gateway is deployed.
 
 ```yaml
 Type: System.String
@@ -114,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -128,3 +139,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApplicationGatewayIPConfiguration](./Get-AzApplicationGatewayIPConfiguration.md)
+
+[New-AzApplicationGatewayIPConfiguration](./New-AzApplicationGatewayIPConfiguration.md)
+
+[Remove-AzApplicationGatewayIPConfiguration](./Remove-AzApplicationGatewayIPConfiguration.md)
+
+[Set-AzApplicationGatewayIPConfiguration](./Set-AzApplicationGatewayIPConfiguration.md)
+
+

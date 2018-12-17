@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 15634C76-6B34-4E2B-9354-86155827F200
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementcontext
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementContext.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementContext.md
 ---
 
 # New-AzApiManagementContext
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an instance of PsAzureApiManagementContext.
 
 ## SYNTAX
 
@@ -18,26 +21,27 @@ New-AzApiManagementContext -ResourceGroupName <String> -ServiceName <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzApiManagementContext** cmdlet creates an instance of **PsAzureApiManagementContext**.
+The context is used for all of the API Management service cmdlets.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a PsApiManagementContext instance
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "ContosoResources" -ServiceName "Contoso"
 ```
 
-{{ Add example description here }}
+This command creates an instance of **PsApiManagementContext**.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which an API Management service is deployed.
+Specifies the name of the resource group under which an API Management service is deployed.
 
 ```yaml
 Type: System.String
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Name of deployed API Management service.
+Specifies the name of the deployed API Management service.
 
 ```yaml
 Type: System.String
@@ -77,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: B88EC6DB-84AC-4F1D-AD79-0D243E0DC88A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementgroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementGroup.md
 ---
 
 # Remove-AzApiManagementGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an existing API management group.
 
 ## SYNTAX
 
@@ -18,22 +21,22 @@ Remove-AzApiManagementGroup -Context <PsApiManagementContext> -GroupId <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzApiManagementGroup** cmdlet removes an existing API management group.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an existing management group
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementGroup -Context $apimContext -GroupId "Group0001" -Force
 ```
 
-{{ Add example description here }}
+This command removes an existing management group named Group0001 and does not prompt the user for confirmation.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies the instance of a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,8 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-This parameter is required.
+Specifies the identifier of a management group.
 
 ```yaml
 Type: System.String
@@ -79,9 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Indicates that this cmdlet returns a value of $True if it succeeds, or a value of $False, otherwise.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -105,7 +105,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -121,14 +121,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -145,3 +144,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementGroup](./Get-AzApiManagementGroup.md)
+
+[New-AzApiManagementGroup](./New-AzApiManagementGroup.md)
+
+[Set-AzApiManagementGroup](./Set-AzApiManagementGroup.md)
+
+

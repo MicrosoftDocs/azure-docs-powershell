@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/set-azservicebusrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusRule.md
 ---
 
 # Set-AzServiceBusRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the specified rule description for the given subscription.
 
 ## SYNTAX
 
@@ -19,26 +21,28 @@ Set-AzServiceBusRule [-ResourceGroupName] <String> [-Namespace] <String> [-Topic
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzServiceBusRule** cmdlet updates the description for the specified rule of the given subscription.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $getRule = Get-AzServiceBusRule -ResourceGroup Default-ServiceBus-WestUS -Namespace SBExample1 -Topic SBTopic -Subscription SBSubscription -Name SBRule
+PS C:\> $getRule.SqlFilter.SqlExpression = "mysqlexpression='condition'"
+PS C:\> $setRule = Set-AzServiceBusRule -ResourceGroup Default-ServiceBus-WestUS -Namespace SBExample1 -Topic SBTopic -Subscription SBSubscription -Name SBRule -InputObject $getRule
 ```
 
-{{ Add example description here }}
+updates the sqlexpression **mysqlexpression='condition'** of the rule `SBEule` of the subscription `SBSubscription` in Topic `SBTopic`
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-ServiceBus Rules definition
+ServiceBus Rules definition.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ServiceBus.Models.PSRulesAttributes
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Rule Name
+Rule Name.
 
 ```yaml
 Type: System.String
@@ -78,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name
+Namespace Name.
 
 ```yaml
 Type: System.String
@@ -108,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subscription
-Subscription Name
+Subscription Name.
 
 ```yaml
 Type: System.String
@@ -123,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Topic
-Topic Name
+Topic Name.
 
 ```yaml
 Type: System.String
@@ -169,8 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

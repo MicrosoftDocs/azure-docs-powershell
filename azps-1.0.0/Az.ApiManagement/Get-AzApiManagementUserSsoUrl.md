@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 27FF1B7D-E103-4504-AD09-8D3A8BCA8B75
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementuserssourl
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementUserSsoUrl.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementUserSsoUrl.md
 ---
 
 # Get-AzApiManagementUserSsoUrl
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Generates an SSO URL for a user.
 
 ## SYNTAX
 
@@ -18,21 +21,22 @@ Get-AzApiManagementUserSsoUrl -Context <PsApiManagementContext> -UserId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementUserSsoUrl** cmdlet generates a single sign-on (SSO) URL for a user.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a user's SSO URL
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementUserSsoUrl -Context $apimContext -UserId "0123456789"
 ```
 
-{{ Add example description here }}
+This command gets a user's SSO URL.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
+Specifies a **PsApiManagementContext** object.
 This parameter is required.
 
 ```yaml
@@ -48,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
+Specifies a user ID.
 This parameter is required.
 
 ```yaml
@@ -79,8 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -95,3 +98,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementUser](./Get-AzApiManagementUser.md)
+
+

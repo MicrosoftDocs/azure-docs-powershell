@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 54E01B3B-FFA5-4E3C-BA5A-A281FF5C9F8B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/remove-azsqldatabasesecondary
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlDatabaseSecondary.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlDatabaseSecondary.md
 ---
 
 # Remove-AzSqlDatabaseSecondary
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Terminates data replication between a SQL Database and the specified secondary database.
 
 ## SYNTAX
 
@@ -19,21 +22,16 @@ Remove-AzSqlDatabaseSecondary [-DatabaseName] <String> -PartnerResourceGroupName
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzSqlDatabaseSecondary** cmdlet forces termination of a geo-replication link.
+This cmdlet replaces the Stop-AzSqlDatabaseCopy cmdlet.
+There is no replication synchronization before termination.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database to remove.
+Specifies the name of the primary Azure SQL Database that has the replication link that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -48,12 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerResourceGroupName
-The name of the resource group of the secondary.
+Specifies the name of the partner  resource group.
 
 ```yaml
 Type: System.String
@@ -78,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServerName
-The name of the Azure SQL Server of the secondary.
+Specifies the name of the partner SQL Server.
 
 ```yaml
 Type: System.String
@@ -93,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that is associated with the replication link to remove.
 
 ```yaml
 Type: System.String
@@ -108,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the database to be replicated is in.
+Specifies the name of the SQL Server that has the replication link to remove.
 
 ```yaml
 Type: System.String
@@ -132,7 +130,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -148,14 +146,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -168,3 +165,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzSqlDatabaseSecondary](./New-AzSqlDatabaseSecondary.md)
+
+[Set-AzSqlDatabaseSecondary](./Set-AzSqlDatabaseSecondary.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: 7A9D8F5A-6035-411B-8FDB-96ABFEED05A2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/get-aznotificationhubauthorizationrules
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzNotificationHubAuthorizationRules.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzNotificationHubAuthorizationRules.md
 ---
 
 # Get-AzNotificationHubAuthorizationRules
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about the authorization rules associated with a notification hub.
 
 ## SYNTAX
 
@@ -19,21 +22,38 @@ Get-AzNotificationHubAuthorizationRules [-ResourceGroup] <String> [-Namespace] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzNotificationHubAuthorizationRules** cmdlet gets information about the Shared Access Signature (SAS) authorization rules associated with a notification hub.
+The cmdlet returns information about all the rules associated with a hub or, by including the *AuthorizationRule* parameter, gets information about a specific rule.
+Authorization rules manage access to your notification hubs.
+An authorization rule will create links, as a URI, based on different permission levels.
+Clients are directed to one of these URIs based on the appropriate permission level.
+For instance, a client with the Listen permission will be directed to the URI for that permission.
+The **Get-AzNotificationHubAuthorizationRules** cmdlet only gets information about the authorization rules associated with a notification hub.
+To get information about the hub itself, use Get-AzNotificationHub.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get information for all authorization rules assigned to a notification hub
+```
+PS C:\>Get-AzNotificationHubAuthorizationRules -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -NotificationHub "ContosoInternalHub"
 ```
 
-{{ Add example description here }}
+This command gets information for all the authorization rules assigned to the notification hub named ContosoInternalHub in the namespace ContosoNamespace.
+You must specify the namespace where the hub is located as well as the resource group that the hub has been assigned to.
+
+### Example 2: Get information for an authorization rules assigned to a notification hub
+```
+PS C:\>Get-AzNotificationHubAuthorizationRules -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -NotificationHub "ContosoInternalHub" -AuthorizationRule "ListenRule"
+```
+
+This command gets information for all the authorization rules assigned to the notification hub named ContosoInternalHub in the namespace ContosoNamespace.
+The command uses the *AuthorizationRule* parameter to limit the returned data to a single authorization rule named ListenRule.
 
 ## PARAMETERS
 
 ### -AuthorizationRule
-NotificationHub AuthorizationRule Name.
+Specifies the name of an SAS authentication rule.
+These rules determine the type of access that users have to the notification hub.
 
 ```yaml
 Type: System.String
@@ -48,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace to which the notification hub is assigned.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -78,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHub
-NotificationHub Name.
+Specifies the notification hub that this cmdlet assigns authorization rules.
+Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
 
 ```yaml
 Type: System.String
@@ -93,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the notification hub is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simplify inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -108,8 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +144,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHubsNamespaceAuthorizationRules](./Get-AzNotificationHubsNamespaceAuthorizationRules.md)
+
+[New-AzNotificationHubAuthorizationRules](./New-AzNotificationHubAuthorizationRules.md)
+
+[Remove-AzNotificationHubAuthorizationRules](./Remove-AzNotificationHubAuthorizationRules.md)
+
+[Set-AzNotificationHubAuthorizationRules](./Set-AzNotificationHubAuthorizationRules.md)
+
+

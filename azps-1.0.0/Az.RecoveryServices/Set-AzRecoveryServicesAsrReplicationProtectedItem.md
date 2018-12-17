@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/set-azrecoveryservicesasrreplicationprotecteditem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesAsrReplicationProtectedItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesAsrReplicationProtectedItem.md
 ---
 
 # Set-AzRecoveryServicesAsrReplicationProtectedItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets recovery properties such as target network and virtual machine size for the specified replication protected item.
 
 ## SYNTAX
 
@@ -24,16 +26,16 @@ Set-AzRecoveryServicesAsrReplicationProtectedItem -InputObject <ASRReplicationPr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzRecoveryServicesAsrReplicationProtectedItem** cmdlet sets the recovery properties for a Replication Protected Item.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $currentJob = Set-AzRecoveryServicesAsrReplicationProtectedItem -ReplicationProtectedItem $RPI -PrimaryNic $NicId -RecoveryNetworkId $AzureNetworkID -RecoveryNicSubnetName $subnetName
 ```
 
-{{ Add example description here }}
+Starts the operation of updating the replication protect item settings using the specified parameters and returns the ASR job used to track the operation.
 
 ## PARAMETERS
 
@@ -55,10 +57,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -68,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+The input object to the cmdlet: The ASR replication protected item object corresponding to the replication protected item to update.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem
@@ -83,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -LicenseType
-{{Fill LicenseType Description}}
+Specifiy the license type selection to be used for Windows Server virtual machines. If you are entitled to use the Azure Hybrid Use Benefit (HUB) for migrations and would like to specify that the HUB setting be used while failing over this protected item set the license type to be WindowsServer.
 
 ```yaml
 Type: System.String
@@ -99,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the recovery virtual machine that will be created on failover.
 
 ```yaml
 Type: System.String
@@ -114,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -NicSelectionType
-{{Fill NicSelectionType Description}}
+Specifies the network interface card (NIC) properties set by user or set by default.
+You can specify NotSelected to go back to the default values.
 
 ```yaml
 Type: System.String
@@ -130,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryNic
-{{Fill PrimaryNic Description}}
+Specifies the NIC of the virtual machine for which this cmdlet sets the recovery network property.
 
 ```yaml
 Type: System.String
@@ -145,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAvailabilitySet
-{{Fill RecoveryAvailabilitySet Description}}
+Availability set for replication protected item after failover.
 
 ```yaml
 Type: System.String
@@ -160,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryBootDiagStorageAccountId
-{{Fill RecoveryBootDiagStorageAccountId Description}}
+Specifies the storage account for boot diagnostics for recovery azure VM.
 
 ```yaml
 Type: System.String
@@ -175,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryCloudServiceId
-{{Fill RecoveryCloudServiceId Description}}
+The resource ID of the recovery cloud service to failover this virtual machine to.
 
 ```yaml
 Type: System.String
@@ -190,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryNetworkId
-{{Fill RecoveryNetworkId Description}}
+Specifies the ID of the Azure virtual network to which the protected item should be failed over.
 
 ```yaml
 Type: System.String
@@ -205,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryNicStaticIPAddress
-{{Fill RecoveryNicStaticIPAddress Description}}
+Specifies the static IP address that should be assigned to primary NIC on recovery.
 
 ```yaml
 Type: System.String
@@ -220,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryNicSubnetName
-{{Fill RecoveryNicSubnetName Description}}
+Specifies the name of the subnet on the recovery Azure virtual network to which this NIC of the protected item should be connected to on failover.
 
 ```yaml
 Type: System.String
@@ -235,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryResourceGroupId
-{{Fill RecoveryResourceGroupId Description}}
+The ID of the Azure resource group in the recovery region in which the protected item will be recovered on failover.
 
 ```yaml
 Type: System.String
@@ -250,7 +254,8 @@ Accept wildcard characters: False
 ```
 
 ### -Size
-{{Fill Size Description}}
+Specifies the recovery virtual machine size.
+The value should be from the set of sizes supported by Azure virtual machines.
 
 ```yaml
 Type: System.String
@@ -265,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseManagedDisk
-{{Fill UseManagedDisk Description}}
+Specifies if the Azure virtual machine that is created on failover should use managed disks.
 
 ```yaml
 Type: System.String
@@ -296,8 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -312,8 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -326,3 +329,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesAsrReplicationProtectedItem](./Get-AzRecoveryServicesAsrReplicationProtectedItem.md)
+
+[New-AzRecoveryServicesAsrReplicationProtectedItem](./New-AzRecoveryServicesAsrReplicationProtectedItem.md)
+
+[Remove-AzRecoveryServicesAsrReplicationProtectedItem](./Remove-AzRecoveryServicesAsrReplicationProtectedItem.md)

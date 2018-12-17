@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: ECC5C079-C9A0-4159-A039-EE216897D686
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvirtualnetworkgatewayconnectionsharedkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVirtualNetworkGatewayConnectionSharedKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVirtualNetworkGatewayConnectionSharedKey.md
 ---
 
 # Get-AzVirtualNetworkGatewayConnectionSharedKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Displays the shared key used for the connection.
 
 ## SYNTAX
 
@@ -18,26 +21,25 @@ Get-AzVirtualNetworkGatewayConnectionSharedKey [-Name <String>] -ResourceGroupNa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Displays the shared key used for the connection.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
 ```
-
-{{ Add example description here }}
+Get-AzVirtualNetworkGatewayConnectionSharedKey -Name 1 -ResourceGroupName P2SVPNGateway
+xxxxxx
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,8 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -62,8 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -77,8 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: B2E6E66A-1A09-4DB0-8BB4-D2E5EC34C9EB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/remove-azsqlserveractivedirectoryadministrator
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlServerActiveDirectoryAdministrator.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlServerActiveDirectoryAdministrator.md
 ---
 
 # Remove-AzSqlServerActiveDirectoryAdministrator
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an Azure AD administrator for SQL Server.
 
 ## SYNTAX
 
@@ -18,26 +21,33 @@ Remove-AzSqlServerActiveDirectoryAdministrator [-Force] [-ServerName] <String> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzSqlServerActiveDirectoryAdministrator** cmdlet removes an Azure Active Directory (Azure AD) administrator for AzureSQL Server in the current subscription.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove an administrator
+```
+PS C:\>Remove-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+Confirm 
+Are you sure you want to remove the Azure Sql Server Active Directory Administrator on server 'Server01'? 
+[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y 
+
+ResourceGroupName ServerName DisplayName ObjectId 
+----------------- ---------- ----------- -------- 
+ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
-{{ Add example description here }}
+This command removes the Azure AD administrator for the server named Server01 associated with the resource group ResourceGroup01.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Skip confirmation message for performing the action
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -62,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the SQL Server is assigned.
 
 ```yaml
 Type: System.String
@@ -77,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Azure Active Directory administrator is in.
+Specifies the name of the SQL Server for which this cmdlet removes an administrator.
 
 ```yaml
 Type: System.String
@@ -101,7 +111,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -117,14 +127,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +146,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlServerActiveDirectoryAdministrator](./Get-AzSqlServerActiveDirectoryAdministrator.md)
+
+[Set-AzSqlServerActiveDirectoryAdministrator](./Set-AzSqlServerActiveDirectoryAdministrator.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+
+

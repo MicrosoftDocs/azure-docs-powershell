@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/remove-aziothubcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Remove-AzIotHubCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Remove-AzIotHubCertificate.md
 ---
 
 # Remove-AzIotHubCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes an Azure IoT Hub certificate.
 
 ## SYNTAX
 
@@ -32,16 +34,16 @@ Remove-AzIotHubCertificate [-ResourceId] <String> [-Etag] <String> [-PassThru]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-x509ca-overview
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Remove-AzIotHubCertificate -ResourceGroupName "myresourcegroup" -Name "myiothub" -CertificateName "mycertificate" -Etag "AAAAAAFPazE="
 ```
 
-{{ Add example description here }}
+Deletes MyCertificate
 
 ## PARAMETERS
 
@@ -61,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -197,8 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

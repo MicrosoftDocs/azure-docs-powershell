@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 6A6D6C7D-EED7-4AD4-ACE6-BFA64404455E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/set-azbatchtask
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchTask.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchTask.md
 ---
 
 # Set-AzBatchTask
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the properties of a task.
 
 ## SYNTAX
 
@@ -18,25 +21,29 @@ Set-AzBatchTask [-Task] <PSCloudTask> -BatchContext <BatchAccountContext>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzBatchTask** cmdlet updates the properties of a task in the Azure Batch service.
+Use the Get-AzBatchTask cmdlet to get a **PSCloudTask** object.
+Modify the properties of that object, and then use the current cmdlet to commit your changes to the Batch service.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update a task
+```
+PS C:\>$Task = Get-AzBatchTask -JobId "Job16" -Id "Task22" -BatchContext $Context
+PS C:\> $Constraints = New-Object Microsoft.Azure.Commands.Batch.Models.PSTaskConstraints -ArgumentList @([TimeSpan}::FromDays(5), [TimeSpan]::FromDays(2), 3)
+PS C:\> $Task.Constraints = $Constraints
+PS C:\> Set-AzBatchTask -Task $Task -BatchContext $Context
 ```
 
-{{ Add example description here }}
+The first command gets a task by using **Get-AzBatchTask**, and then stores it in the $Task variable.
+The next two commands modify the constraints of the task in $Task.
+The final command updates the Batch service to match the local object in $Task.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -51,12 +58,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -66,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Task
-The PSCloudTask object with changes to commit to the Batch Service.
+Specifies the **PSCloudTask** to which this cmdlet updates the Batch service.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSCloudTask
@@ -81,8 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -97,3 +103,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchTask](./Get-AzBatchTask.md)
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[New-AzBatchTask](./New-AzBatchTask.md)
+
+[Remove-AzBatchTask](./Remove-AzBatchTask.md)
+
+[Stop-AzBatchTask](./Stop-AzBatchTask.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

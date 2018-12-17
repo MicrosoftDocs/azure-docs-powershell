@@ -1,22 +1,36 @@
 ---
 Module Name: Az.PolicyInsights
-Module Guid: 8e5143cc-e222-4c80-9e62-c87989326174
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: B1876B47-3652-4265-9AD5-782EC3E98319
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.policyinsights
+Help Version: 1.1.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PolicyInsights/Commands.PolicyInsights/help/Az.PolicyInsights.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PolicyInsights/Commands.PolicyInsights/help/Az.PolicyInsights.md
 ---
 
 # Az.PolicyInsights Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help for the Azure Policy Insights cmdlets.
 
 ## Az.PolicyInsights Cmdlets
 ### [Get-AzPolicyEvent](Get-AzPolicyEvent.md)
-{{Manually Enter Get-AzPolicyEvent Description Here}}
+Gets policy evaluation events generated as resources are created or updated.
+
+### [Get-AzPolicyRemediation](Get-AzPolicyRemediation.md)
+Gets policy remediations.
 
 ### [Get-AzPolicyState](Get-AzPolicyState.md)
-{{Manually Enter Get-AzPolicyState Description Here}}
+Gets policy compliance states for resources.
 
 ### [Get-AzPolicyStateSummary](Get-AzPolicyStateSummary.md)
-{{Manually Enter Get-AzPolicyStateSummary Description Here}}
+Gets latest policy compliance states summary for resources.
+
+### [Remove-AzPolicyRemediation](Remove-AzPolicyRemediation.md)
+Deletes a policy remediation.
+
+### [Start-AzPolicyRemediation](Start-AzPolicyRemediation.md)
+Creates and starts a policy remediation for a policy assignment.
+
+### [Stop-AzPolicyRemediation](Stop-AzPolicyRemediation.md)
+Cancels an in-progress policy remediation.
 

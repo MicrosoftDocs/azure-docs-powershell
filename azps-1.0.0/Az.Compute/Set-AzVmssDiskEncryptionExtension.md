@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssdiskencryptionextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssDiskEncryptionExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssDiskEncryptionExtension.md
 ---
 
 # Set-AzVmssDiskEncryptionExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables disk encryption on a VM scale set.
 
 ## SYNTAX
 
@@ -22,26 +24,34 @@ Set-AzVmssDiskEncryptionExtension [-ResourceGroupName] <String> [-VMScaleSetName
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVmssDiskEncryptionExtension** cmdlet enables encryption on a VM scale set.
+This cmdlet enables encryption by installing the disk encryption extension on the VM scale set.
+If no *Name* parameter is specified, an extension with the default name AzureDiskEncryption for virtual machines that run the Windows operating system or AzureDiskEncryptionForLinux for Linux virtual machines are installed.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+$RGName = "MyResourceGroup"
+$VmssName = "MyTestVmss"
+$VaultName= "MyKeyVault"
+$KeyVault = Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName
+$DiskEncryptionKeyVaultUrl = $KeyVault.VaultUri
+$KeyVaultResourceId = $KeyVault.ResourceId
+PS C:\> Set-AzVmssDiskEncryptionExtension -ResourceGroupName $RGName -VMScaleSetName $VmssName -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
 ```
 
-{{ Add example description here }}
+This command enables encryption on all disks of all VMs in the VM scale set.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -127,8 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpdate
-Generate a tag for force update. 
-This should be given to perform repeated encryption operations on the same VM.
+Generate a tag for force update.  This should be given to perform repeated encryption operations on the same VM.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -297,8 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

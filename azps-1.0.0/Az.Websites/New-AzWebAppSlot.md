@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: D23BBF34-80C0-48B1-8E1C-6F345DEC61AD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/new-azwebappslot
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/New-AzWebAppSlot.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/New-AzWebAppSlot.md
 ---
 
 # New-AzWebAppSlot
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure Web App slot.
 
 ## SYNTAX
 
@@ -22,21 +25,22 @@ New-AzWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [[-Slot] <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzWebAppSlot** cmdlet creates an Azure Web App Slot in a given a resource group that uses the specified App Service plan and data center.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> New-AzWebAppSlot -ResourceGroupName Default-Web-WestUS -Name "ContosoSite" -AppServicePlan "ContosoServicePlan" -Slot "Slot001"
 ```
 
-{{ Add example description here }}
+This command creates a Slot named Slot001 under an existing Web App names ContosoSite in the existing resource group named Default-Web-WestUS in data center West US.
+The command uses an existing App Service plan named ContosoServicePlan.
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The name of the app service plan eg: Default1.
+App Service Plan Name
 
 ```yaml
 Type: System.String
@@ -51,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettingsOverrides
-Overrides all application settings in new web app
+App Settings Overrides Hashtable
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -66,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-Name of application service environment
+App Service Environment Name
 
 ```yaml
 Type: System.String
@@ -81,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-Resource group of Application Service environment
+App Service Environment Resource Group Name
 
 ```yaml
 Type: System.String
@@ -171,12 +175,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -201,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreCustomHostNames
-Ignore custom hostnames on source web app
+Ignore Custom HostNames Option
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -216,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSourceControl
-Ignore source control on source web app
+Ignore Source Control Option
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -231,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+Webapp Name
 
 ```yaml
 Type: System.String
@@ -246,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -261,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+Webapp Slot Name
 
 ```yaml
 Type: System.String
@@ -276,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceWebApp
-The source web app to clone
+Source WebApp Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.PSSite
@@ -291,8 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -307,3 +310,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzWebAppSlot](./Get-AzWebAppSlot.md)
+
+[Remove-AzWebAppSlot](./Remove-AzWebAppSlot.md)
+
+[Restart-AzWebAppSlot](./Restart-AzWebAppSlot.md)
+
+[Set-AzWebAppSlot](./Set-AzWebAppSlot.md)
+
+[Start-AzWebAppSlot](./Start-AzWebAppSlot.md)
+
+[Stop-AzWebAppSlot](./Stop-AzWebAppSlot.md)
+
+[Get-AzAppServicePlan](./Get-AzAppServicePlan.md)
+
+[Get-AzWebApp](./Get-AzWebApp.md)

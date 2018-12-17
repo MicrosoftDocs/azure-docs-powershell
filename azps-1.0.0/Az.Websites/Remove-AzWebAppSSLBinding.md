@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 3AB3D398-E5DB-4214-BA27-6E3B7D225550
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/remove-azwebappsslbinding
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzWebAppSSLBinding.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzWebAppSSLBinding.md
 ---
 
 # Remove-AzWebAppSSLBinding
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an SSL binding from an uploaded certificate.
 
 ## SYNTAX
 
@@ -26,26 +29,48 @@ Remove-AzWebAppSSLBinding [-Name] <String> [[-DeleteCertificate] <Boolean>] [-Fo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzWebAppSSLBinding** cmdlet removes a Secure Sockets Layer (SSL) binding from an Azure Web App.
+SSL bindings are used to associate a Web App with a certificate.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove an SSL binding for a web app
+```
+PS C:\>Remove-AzWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com"
 ```
 
-{{ Add example description here }}
+This command removes the SSL binding for the web app ContosoWebApp.
+Since the *DeleteCertificate* parameter is not included, the certificate will be deleted if it no longer has any SSL bindings.
+
+### Example 2: Remove an SSL binding without removing the certificate
+```
+PS C:\>Remove-AzWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com" -DeleteCertificate $False
+```
+
+Similar to Example 1, this command also removes the SSL binding for the Web App ContosoWebApp.
+In this case, however, the *DeleteCertificate* parameter is included, and the parameter value is set to $False.
+That means that the certificate will not be deleted regardless of whether it has any SSL bindings or not.
+
+### Example 3: Use an object reference to remove an SSL binding
+```
+PS C:\>$WebApp = Get-AzWebApp -Name "ContosoWebApp"
+PS C:\> Remove-AzWebAppSSLBinding -WebApp $WebApp -Name "www.contoso.com"
+```
+
+This example uses an object reference to the Web App website to remove the SSL binding for a Web App.
+The first command uses the Get-AzWebApp cmdlet to create an object reference to the Web App named ContosoWebApp.
+That object reference is stored in a variable named $WebApp.
+The second command uses the object reference and the **Remove-AzWebAppSSLBinding** cmdlet to remove the SSL binding.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -55,8 +80,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteCertificate
-Delete the certificate if it's the last certificate binding.
-The default selection is true
+Specifies the action to take place if the SSL binding being removed is the only binding used by the certificate.
+If *DeleteCertificate* is set to $False, the certificate will not be deleted when the binding is deleted.
+If *DeleteCertificate* is set to $True or is not included in the command, the certificate will be deleted along with the SSL binding.
+The certificate will only be deleted if the SSL binding being removed is the only binding used by the certificate.
+If the certificate has more than one binding, the certificate will not be removed regardless of the value of the *DeleteCertificate* parameter.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -71,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -86,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the host name.
+Specifies the name of the Web App.
 
 ```yaml
 Type: System.String
@@ -101,7 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that the certificate is assigned to.
+You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: System.String
@@ -116,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+Specifies the Web App deployment slot.
+To get a deployment slot, use the Get-AzWebAppSlot cmdlet.
 
 ```yaml
 Type: System.String
@@ -131,7 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object.
+Specifies a Web App.
+To get a Web App, use the Get-AzWebApp cmdlet.
+You cannot use the *WebApp* parameter in the same command as the *ResourceGroupName* parameter and/or the *WebAppName*.
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.PSSite
@@ -146,7 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -WebAppName
-The name of the web app.
+Specifies the name of the Web App.
+You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: System.String
@@ -170,13 +203,14 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
+The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -186,14 +220,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -206,3 +239,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzWebAppSSLBinding](./Get-AzWebAppSSLBinding.md)
+
+[New-AzWebAppSSLBinding](./New-AzWebAppSSLBinding.md)
+
+[Get-AzWebAppSlot](./Get-AzWebAppSlot.md)
+
+[Get-AzWebApp](./Get-AzWebApp.md)
+
+

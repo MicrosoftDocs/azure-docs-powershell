@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: C831F934-7513-4882-A155-816E56CD9807
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/disable-azbatchjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Disable-AzBatchJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Disable-AzBatchJob.md
 ---
 
 # Disable-AzBatchJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables a Batch job.
 
 ## SYNTAX
 
@@ -18,25 +21,27 @@ Disable-AzBatchJob [-Id] <String> [-DisableJobOption] <DisableJobOption> -BatchC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Disable-AzBatchJob** cmdlet disables an Azure Batch job.
+After you enable a job, new tasks can run.
+Disabled jobs do not run new tasks.
+You can enable a disabled job later.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Disable a Batch job
+```
+PS C:\>Disable-AzBatchJob -Id "Job-000001" -DisableJobOption "Terminate" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command disables the job that has the ID Job-000001.
+The command terminates active tasks for the job.
+Use the **Get-AzBatchAccountKeys** cmdlet to assign a context to the $Context variable.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -51,12 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -66,7 +71,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableJobOption
-Specifies what to do with active tasks associated with the job.
+Specifies what to do with active tasks associated with the job that this cmdlet disables.
+Valid values are: 
+- Requeue 
+- Terminate 
+- Wait
 
 ```yaml
 Type: Microsoft.Azure.Batch.Common.DisableJobOption
@@ -82,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The id of the job to disable.
+Specifies the ID of the job that this cmdlet disables.
 
 ```yaml
 Type: System.String
@@ -97,8 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +121,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Enable-AzBatchJob](./Enable-AzBatchJob.md)
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Get-AzBatchJob](./Get-AzBatchJob.md)
+
+[New-AzBatchJob](./New-AzBatchJob.md)
+
+[Remove-AzBatchJob](./Remove-AzBatchJob.md)
+
+[Stop-AzBatchJob](./Stop-AzBatchJob.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

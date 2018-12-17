@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 64AB1BAE-A756-43A8-A40F-10B746EA0946
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmcustomscriptextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMCustomScriptExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMCustomScriptExtension.md
 ---
 
 # Set-AzVMCustomScriptExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a custom script extension to a virtual machine.
 
 ## SYNTAX
 
@@ -30,21 +33,23 @@ Set-AzVMCustomScriptExtension [-FileUri <String[]>] [-Run <String>] [-Argument <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMCustomScriptExtension** cmdlet adds a custom script Virtual Machine Extension to a virtual machine.
+This extension lets you run your own scripts on the virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a custom script
+```
+PS C:\> Set-AzVMCustomScriptExtension -ResourceGroupName "ResourceGroup11" -Location "Central US" -VMName "VirtualMachine07" -Name "ContosoTest" -TypeHandlerVersion "1.1" -StorageAccountName "Contoso" -StorageAccountKey <StorageKey> -FileName "ContosoScript.exe" -ContainerName "Scripts"
 ```
 
-{{ Add example description here }}
+This command adds a custom script to the virtual machine named VirtualMachine07.
+The script file is contososcript.exe.
 
 ## PARAMETERS
 
 ### -Argument
-The Argument String for the Run File.
+Specifies arguments that the script extension passes to the script.
 
 ```yaml
 Type: System.String
@@ -59,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerName
-The Name of the Container.
+Specifies the name of the Azure storage container where this cmdlet stores the script.
 
 ```yaml
 Type: System.String
@@ -74,12 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -89,8 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoUpgradeMinorVersion
-Disable auto-upgrade of minor version
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -104,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-The Blob Files in the Container.
+Specifies the name of the script file. If the file is stored in Azure Blob storage, the file name
+value is case-senstive. File names of files stored in Azure File storage are not case-senstive.
 
 ```yaml
 Type: System.String[]
@@ -119,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUri
-The File URIs.
+Specifies the URI of the script file.
 
 ```yaml
 Type: System.String[]
@@ -134,7 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceRerun
-Force re-run even if extension configuration has not changed
+Indicates that this cmdlet forces a rerun of the same extension configuration on the virtual machine without uninstalling and reinstalling the extension.
+The value can be any string different from the current value.
+If forceUpdateTag is not changed, updates to public or protected settings are still applied by the handler.
 
 ```yaml
 Type: System.String
@@ -149,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the location of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -164,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of the custom script extension.
 
 ```yaml
 Type: System.String
@@ -179,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -194,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -Run
-The Run File to Execute in PowerShell on the VM.
+Specifies the command to use that runs your script.
 
 ```yaml
 Type: System.String
@@ -209,7 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecureExecution
-Set command to execute in private config.
+Indicates that this cmdlet makes sure that the value of the *Run* parameter is not logged on the server or returned to the user by using the GET extension API.
+The value of *Run* might contain secrets or passwords to be passed to the script file securely.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -224,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountKey
-The Storage Account Key.
+Specifies the key for the Azure storage container.
 
 ```yaml
 Type: System.String
@@ -239,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-The Storage Account Name.
+Specifies the name of the Azure storage account where this cmdlet stores the script.
 
 ```yaml
 Type: System.String
@@ -254,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEndpointSuffix
-The Storage Endpoint Suffix.
+Specifies the storage endpoint suffix.
 
 ```yaml
 Type: System.String
@@ -269,7 +276,8 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-The version
+Specifies the version of the extension to use for this virtual machine.
+To obtain the version, run the Get-AzVMExtensionImage cmdlet with a value of Microsoft.Compute for the *PublisherName* parameter and CustomScriptExtension for the *Type* parameter.
 
 ```yaml
 Type: System.String
@@ -284,7 +292,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine.
+This cmdlet adds the custom script extension for the virtual machine that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -308,7 +317,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -324,14 +333,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -348,3 +356,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMCustomScriptExtension](./Get-AzVMCustomScriptExtension.md)
+
+[Remove-AzVMCustomScriptExtension](./Remove-AzVMCustomScriptExtension.md)
+
+

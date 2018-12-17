@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 4F487FCA-930D-4D56-8D28-7693312E1A01
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azroutetable
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzRouteTable.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzRouteTable.md
 ---
 
 # Get-AzRouteTable
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets route tables.
 
 ## SYNTAX
 
@@ -25,26 +28,48 @@ Get-AzRouteTable -ResourceGroupName <String> -Name <String> -ExpandResource <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRouteTable** cmdlet gets Azure route tables.
+You can get a single route table, or get all the route tables in a resource group or in your subscription.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a route table
+```
+PS C:\>Get-AzRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01"
+Name              : routetable01
+ResourceGroupName : ResourceGroup11
+Location          : eastus
+Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Microsoft.Networ
+                    k/routeTables/routetable01
+Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
+ProvisioningState : Succeeded
+Tags              : 
+Routes            : [
+                      {
+                        "Name": "route07",
+                        "Etag": "W/\"db5f4e12-3f34-465b-92dd-0ab3bf6fc274\"",
+                        "Id": "/subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Micro
+                    soft.Network/routeTables/routetable01/routes/route07",
+                        "AddressPrefix": "10.1.0.0/16",
+                        "NextHopType": "VnetLocal",
+                        "NextHopIpAddress": null, 
+                        "ProvisioningState": "Succeeded"
+                      }
+                    ] 
+Subnets           : []
 ```
 
-{{ Add example description here }}
+This command gets the route table named RouteTable01 in the resource group named ResourceGroup11.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,8 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandResource
-{{Fill ExpandResource Description}}
-
 ```yaml
 Type: System.String
 Parameter Sets: Expand
@@ -69,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the route table.
+Specifies the name of the route table that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -96,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name of the route table.
+Specifies the name of the resource group that contains the route tables that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -123,8 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +159,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzRouteTable](./New-AzRouteTable.md)
+
+[Remove-AzRouteTable](./Remove-AzRouteTable.md)
+
+[Set-AzRouteTable](./Set-AzRouteTable.md)
+
+

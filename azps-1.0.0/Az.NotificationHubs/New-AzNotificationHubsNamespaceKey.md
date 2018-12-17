@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: 1EC19069-B64C-4F0F-99A3-07C16E46C0A0
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/new-aznotificationhubsnamespacekey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzNotificationHubsNamespaceKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzNotificationHubsNamespaceKey.md
 ---
 
 # New-AzNotificationHubsNamespaceKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Regenerate the Authorization Rule Key for a Namespace.
 
 ## SYNTAX
 
@@ -19,12 +22,12 @@ New-AzNotificationHubsNamespaceKey [-ResourceGroup] <String> [-Namespace] <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+New-AzNotificationHubNamespaceKey cmdlet regenerates the Primary Key/Secondary Key for the Namespace Authorization Rule.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> {{ Add example code here }}
 ```
 
@@ -33,8 +36,6 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AuthorizationRule
-Namespace AuthorizationRule Name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -48,12 +49,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,8 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -93,8 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyKey
-Namespace Authorization Rule Key Name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -109,8 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -155,8 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

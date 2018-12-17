@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 83EE33E5-18EF-4A7A-AEF2-E93D7A3CA541
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/register-azproviderfeature
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Register-AzProviderFeature.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Register-AzProviderFeature.md
 ---
 
 # Register-AzProviderFeature
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Registers an Azure provider feature in your account.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Register-AzProviderFeature -FeatureName <String> -ProviderNamespace <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Register-AzProviderFeature** cmdlet registers an Azure provider feature in your account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Register a feature
+```
+PS C:\>Register-AzProviderFeature -FeatureName AllowApplicationSecurityGroups -ProviderNamespace Microsoft.Network
 ```
 
-{{ Add example description here }}
+This adds the AllowApplicationSecurityGroups feature for Microsoft.Network to your account.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureName
-The feature name.
+Specifies the name of the feature that this cmdlet registers.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderNamespace
-The resource provider namespace.
+Specifies a namespace for which this cmdlet registers a provider feature.
 
 ```yaml
 Type: System.String
@@ -86,7 +89,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -102,14 +105,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +124,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzProviderFeature](./Get-AzProviderFeature.md)
+
+

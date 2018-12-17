@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Management.PowerBIEmbedded.dll-Help.xml
 Module Name: Az.PowerBIEmbedded
-online version:
+ms.assetid: 2D63CC6D-AB02-4299-A922-4057D6F595D7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/remove-azpowerbiworkspacecollection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Remove-AzPowerBIWorkspaceCollection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Remove-AzPowerBIWorkspaceCollection.md
 ---
 
 # Remove-AzPowerBIWorkspaceCollection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a Power BI workspace collection.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Remove-AzPowerBIWorkspaceCollection [-ResourceGroupName] <String> [-WorkspaceCol
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzPowerBIWorkspaceCollection** cmdlet removes a Power BI workspace collection from your Azure subscription and resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a workspace collection
+```
+PS C:\>Remove-AzPowerBIWorkspaceCollection -ResourceGroupName "ResourceGroup17" -WorkspaceCollectionName "WCN11"
 ```
 
-{{ Add example description here }}
+This command removes the workspace collection named WCN11 in the specified resource group.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Specifies the name of the resource group from which this cmdlet removes a workspace collection.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceCollectionName
-Workspace Collection Name.
+Specifies the name of the Power BI workspace collection that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -86,7 +89,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -102,14 +105,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +124,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPowerBIWorkspaceCollection](./Get-AzPowerBIWorkspaceCollection.md)
+
+[New-AzPowerBIWorkspaceCollection](./New-AzPowerBIWorkspaceCollection.md)
+
+

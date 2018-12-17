@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.dll-Help.xml
 Module Name: Az.StreamAnalytics
-online version:
+ms.assetid: B5914F65-CAF8-4647-BA78-49B65DD6D67A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics/start-azstreamanalyticsjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Start-AzStreamAnalyticsJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Start-AzStreamAnalyticsJob.md
 ---
 
 # Start-AzStreamAnalyticsJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts a Stream Analytics job.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Start-AzStreamAnalyticsJob [-Name] <String> [[-OutputStartMode] <String>] [[-Out
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-AzStreamAnalyticsJob** cmdlet asynchronously deploys and starts a Stream Analytics job in Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1: Start a Stream Analytics job
+```
+PS C:\>Start-AzStreamAnalyticsJob -ResourceGroupName "StreamAnalytics-Default-West-US" -Name "StreamingJob" -OutputStartMode "CustomTime" -OutputStartTime "2014-07-03T01:00Z"
 ```
 
-{{ Add example description here }}
+This command starts the job StreamingJob and specifies that the output event stream should start at timestamp 2014-07-03T01:00Z.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The azure stream analytics job name.
+Specifies the name of the Azure Stream Analytics job to start.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -OutputStartMode
-The desired output start mode for the azure stream analytics job.
+Specifies the start mode for the job.
+Valid values are: 
+- JobStartTime - This value indicates that the starting point of the output event stream should start when the job is started.
+- CustomTime - This value indicates that the starting point of the output event stream should start at a custom time that is specified in the *OutputStartTime* parameter. 
+ -- LastOutputEventTime - This value indicates that the starting point of the output event stream should start from the last event output time.
+If the property is absent, the default is JobStartTime.
 
 ```yaml
 Type: System.String
@@ -77,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutputStartTime
-The desired output start time for the azure stream analytics job.
+Specifies the output start time.
+This value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or $Null to indicate that the output event stream will start whenever the streaming job is started.
+This property must have a value if *OutputStartMode* is set to CustomTime.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -92,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
 
 ```yaml
 Type: System.String
@@ -107,8 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +132,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStreamAnalyticsJob](./Get-AzStreamAnalyticsJob.md)
+
+[New-AzStreamAnalyticsJob](./New-AzStreamAnalyticsJob.md)
+
+[Remove-AzStreamAnalyticsJob](./Remove-AzStreamAnalyticsJob.md)
+
+[Stop-AzStreamAnalyticsJob](./Stop-AzStreamAnalyticsJob.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/get-aziothubconnectionstring
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzIotHubConnectionString.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzIotHubConnectionString.md
 ---
 
 # Get-AzIotHubConnectionString
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the IotHub connectionstrings.
 
 ## SYNTAX
 
@@ -18,26 +20,34 @@ Get-AzIotHubConnectionString [-ResourceGroupName] <String> [-Name] <String> [[-K
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Gets the IotHub connectionstrings.
+You can either get connectionstrings for all the keys or filter them by a specific key name.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 Get All IotHub connectionstrings
+```
+PS C:\> Get-AzIotHubConnectionString -ResourceGroupName "myresourcegroup" -Name "myiothub"
 ```
 
-{{ Add example description here }}
+Gets the connectionstrings for all keys for the iothub named "myiothub"
+
+### Example 2 Get the IotHub connectionstrings for a specific key
+```
+PS C:\> Get-AzIotHubConnectionString -ResourceGroupName "myresourcegroup" -Name "myiothub" -KeyName "mykey"
+```
+
+Gets the connectionstrings for the key named "mykey" for the iothub named "myiothub"
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyName
-KeyName
+Name of the Key
 
 ```yaml
 Type: System.String
@@ -62,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Iot Hub
+Name of the IotHub
 
 ```yaml
 Type: System.String
@@ -77,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -92,8 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

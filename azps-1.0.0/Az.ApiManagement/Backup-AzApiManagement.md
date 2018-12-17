@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 5846BBB7-DA8E-41B5-A894-BA2B61C2212C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/backup-azapimanagement
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Backup-AzApiManagement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Backup-AzApiManagement.md
 ---
 
 # Backup-AzApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Backs up an API Management service.
 
 ## SYNTAX
 
@@ -19,26 +22,30 @@ Backup-AzApiManagement -ResourceGroupName <String> -Name <String> -StorageContex
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Backup-AzApiManagement** cmdlet backs up an instance of an Azure API Management service.
+This cmdlet stores the backup as an Azure Storage blob.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Back up an API Management service
+```
+PS C:\>New-AzStorageAccount -StorageAccountName "ContosoStorage" -Location $location -ResourceGroupName "ContosoGroup02" -Type Standard_LRS
+PS C:\>$storageKey = (Get-AzStorageAccountKey -ResourceGroupName "ContosoGroup02" -StorageAccountName "ContosoStorage")[0].Value
+PS C:\>$storageContext = New-AzStorageContext -StorageAccountName "ContosoStorage" -StorageAccountKey $storageKey
+PS C:\>Backup-AzApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -StorageContext $StorageContext -TargetContainerName "ContosoBackups" -TargetBlobName "ContosoBackup.apimbackup"
 ```
 
-{{ Add example description here }}
+This command backs up an API Management service to a Storage blob.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management deployment that this cmdlet backs up.
 
 ```yaml
 Type: System.String
@@ -63,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends backed up PsApiManagement to pipeline if operation succeeds.
+Indicates that this cmdlet returns the backed up **PsApiManagement** object, if the operation succeeds.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of the of resource group under which the API Management deployment exists.
 
 ```yaml
 Type: System.String
@@ -93,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-The storage connection context.
+Specifies a storage connection context.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -108,8 +115,10 @@ Accept wildcard characters: False
 ```
 
 ### -TargetBlobName
-Name of target Azure Storage blob.
-If the blob does not exist it will be created.
+Specifies the name of the blob for the backup.
+If the blob does not exist, this cmdlet creates it.
+This cmdlet generates a default value based on the following pattern: 
+{Name}-{yyyy-MM-dd-HH-mm}.apimbackup
 
 ```yaml
 Type: System.String
@@ -124,8 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetContainerName
-Name of target Azure Storage container.
-If container does not exist it will be created.
+Specifies the name of the container of the blob for the backup.
+If the container does not exist, this cmdlet creates it.
 
 ```yaml
 Type: System.String
@@ -140,8 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -156,3 +164,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagement](./Get-AzApiManagement.md)
+
+[New-AzApiManagement](./New-AzApiManagement.md)
+
+[Remove-AzApiManagement](./Remove-AzApiManagement.md)
+
+[Restore-AzApiManagement](./Restore-AzApiManagement.md)
+
+

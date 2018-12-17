@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.ARM.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 818B5302-91EE-425F-B1CD-86B626F1B7A3
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/get-azrecoveryservicesvault
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesVault.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesVault.md
 ---
 
 # Get-AzRecoveryServicesVault
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a list of Recovery Services vaults.
 
 ## SYNTAX
 
@@ -18,26 +21,40 @@ Get-AzRecoveryServicesVault [-ResourceGroupName <String>] [-Name <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesVault** cmdlet gets a list of Recovery Services vaults in the current subscription.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzRecoveryServicesVault
 ```
 
-{{ Add example description here }}
+Get the list of vault in selected subscription.
+
+### Example 2
+```
+PS C:\> Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup"
+```
+
+Get the list of vault in resource group in selected subscription.
+
+### Example 3
+```
+PS C:\> Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+```
+
+Get the vault in resource group with given name.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the vault to query for.
 
 ```yaml
 Type: System.String
@@ -62,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the Azure resource group in which to create or from which to retrieve the specified Recovery Services object.
 
 ```yaml
 Type: System.String
@@ -77,8 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +107,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesVaultSettingsFile](./Get-AzRecoveryServicesVaultSettingsFile.md)
+
+[New-AzRecoveryServicesVault](./New-AzRecoveryServicesVault.md)
+
+[Remove-AzRecoveryServicesVault](./Remove-AzRecoveryServicesVault.md)
+
+

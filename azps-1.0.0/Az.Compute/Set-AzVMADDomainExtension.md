@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 65BF37D3-4FCE-48A3-BC5D-01AA20FEB6CA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmaddomainextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMADDomainExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMADDomainExtension.md
 ---
 
 # Set-AzVMADDomainExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an AD domain extension to a virtual machine.
 
 ## SYNTAX
 
@@ -20,21 +23,17 @@ Set-AzVMADDomainExtension -DomainName <String> [-OUPath <String>] [-JoinOption <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMADDomainExtension** cmdlet adds an Azure Active Directory (AD) domain virtual machine extension to a virtual machine.
+This extension lets your virtual machine join a domain.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Credential
-Credential
+Specifies the user name and password for the virtual machine as a **PSCredential** object.
+To obtain a credential, use the Get-Credential cmdlet.
+For more information, type `Get-Help Get-Credential`.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -49,12 +48,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoUpgradeMinorVersion
-Disable auto-upgrade of minor version
+Indicates that this cmdlet disables auto-upgrade of the minor version of the extension.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -79,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-The Name of the Domain.
+Specifies the name of the domain.
 
 ```yaml
 Type: System.String
@@ -94,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceRerun
-Force re-run even if extension configuration has not changed
+Indicates that this cmdlet forces a rerun of the same extension configuration on the virtual machine without uninstalling and reinstalling the extension.
+The value can be any string different from the current value.
+If forceUpdateTag is not changed, updates to public or protected settings are still applied by the handler.
 
 ```yaml
 Type: System.String
@@ -109,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -JoinOption
-Join Options
+Specifies the join option. For join options see [fJoinOptions](https://docs.microsoft.com/en-us/windows/desktop/api/lmjoin/nf-lmjoin-netjoindomain)
 
 ```yaml
 Type: System.Nullable`1[System.UInt32]
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the location of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of the domain extension to add.
 
 ```yaml
 Type: System.String
@@ -154,7 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -OUPath
-The OU Path
+Specifies an organizational unit (OU) for the domain account.
+Enter the full distinguished name of the OU in quotation marks.
+The default value is the default OU for machine objects in the domain.
 
 ```yaml
 Type: System.String
@@ -169,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: System.String
@@ -184,7 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -Restart
-Restart
+Indicates that this cmdlet restarts the virtual machine.
+A restart is often required to make the change effective.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-The version
+Specifies the version of the domain extension.
 
 ```yaml
 Type: System.String
@@ -214,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -238,7 +242,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -254,14 +258,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -280,3 +283,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMADDomainExtension](./Get-AzVMADDomainExtension.md)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 1B29AB8C-95DD-4C4F-86E2-2F81E8020CEA
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azstoragetable
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageTable.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageTable.md
 ---
 
 # Remove-AzStorageTable
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a storage table.
 
 ## SYNTAX
 
@@ -18,21 +21,29 @@ Remove-AzStorageTable [-Name] <String> [-Force] [-PassThru] [-Context <IStorageC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzStorageTable** cmdlet removes one or more storage tables from a storage account in Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a table
+```
+PS C:\>Remove-AzStorageTable -Name "TableABC"
 ```
 
-{{ Add example description here }}
+This command removes a table.
+
+### Example 2: Remove several tables
+```
+PS C:\>Get-AzStorageTable table* | Remove-AzStorageTable
+```
+
+This example uses a wildcard character with the *Name* parameter to get all tables that match the pattern table and then passes the result on the pipeline to remove the tables.
 
 ## PARAMETERS
 
 ### -Context
-Azure Storage Context Object
+Specifies the Azure storage context.
+You can create it by using the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -50,7 +61,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -62,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to remove the table and all content in it
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -77,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Table name
+Specifies the name of the table to remove.
 
 ```yaml
 Type: System.String
@@ -92,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Return whether the specified table is successfully removed
+Indicates that this cmdlet returns a **Boolean** that reflects the success of the operation.
+By default, this cmdlet does not return a value.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,7 +128,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -132,14 +144,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +165,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageTable](./Get-AzStorageTable.md)

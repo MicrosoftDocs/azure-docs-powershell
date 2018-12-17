@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementidentityprovider
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementIdentityProvider.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementIdentityProvider.md
 ---
 
 # Set-AzApiManagementIdentityProvider
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the Configuration of an existing Identity Provider.
 
 ## SYNTAX
 
@@ -20,22 +22,22 @@ Set-AzApiManagementIdentityProvider -Context <PsApiManagementContext>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Updates the Configuration of an existing Identity Provider.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\> Set-AzApiManagementIdentityProvider -Context $apimContext -Type Facebook -ClientSecret "updatedSecret" -PassThru
 ```
 
-{{ Add example description here }}
+The cmdlet updates the Client Secret of the Facebook Identity Provider;
 
 ## PARAMETERS
 
 ### -AllowedTenants
-Allowed Azure Active Directory Tenants.
-This parameter is optional and only required when setting up Aad Identity Provider.
+List of allowed Azure Active Directory Tenants.
 
 ```yaml
 Type: System.String[]
@@ -51,7 +53,7 @@ Accept wildcard characters: False
 
 ### -ClientId
 Client Id of the Application in the external Identity Provider.
-This parameter is optional.
+It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
 
 ```yaml
 Type: System.String
@@ -67,7 +69,7 @@ Accept wildcard characters: False
 
 ### -ClientSecret
 Client secret of the Application in external Identity Provider, used to authenticate login request.
-This parameter is optional.
+For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
 
 ```yaml
 Type: System.String
@@ -98,12 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -113,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProvider type representing the modified identity provider.
+Indicates that this cmdlet returns the  **PsApiManagementIdentityProvider** that this cmdlet modifies.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -128,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Identifier of existing identity provider.
+Identifier of an existing Identity Provider.
 This parameter is required.
 
 ```yaml
@@ -160,8 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -176,8 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -198,3 +198,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementIdentityProvider](./New-AzApiManagementIdentityProvider.md)
+
+[Get-AzApiManagementIdentityProvider](./Get-AzApiManagementIdentityProvider.md)
+
+[Remove-AzApiManagementIdentityProvider](./Remove-AzApiManagementIdentityProvider.md)

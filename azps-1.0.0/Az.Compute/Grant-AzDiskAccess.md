@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/grant-azdiskaccess
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Grant-AzDiskAccess.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Grant-AzDiskAccess.md
 ---
 
 # Grant-AzDiskAccess
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Grants an access to a disk.
 
 ## SYNTAX
 
@@ -19,21 +21,21 @@ Grant-AzDiskAccess [-ResourceGroupName] <String> [-DiskName] <String> [-Access] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Grant-AzDiskAccess** cmdlet grants an access to a disk.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Grant-AzDiskAccess -ResourceGroupName 'ResourceGroup01' -DiskName 'Disk01' -Access 'Read' -DurationInSecond 60;
 ```
 
-{{ Add example description here }}
+Grant 'Read' access to the disk named 'Disk01' in the resource group named 'ResourceGroup01' for 60 seconds.
 
 ## PARAMETERS
 
 ### -Access
-{{Fill Access Description}}
+Specifies Access level.
 
 ```yaml
 Type: System.String
@@ -63,12 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskName
-{{Fill DiskName Description}}
+Specifies the name of a disk.
 
 ```yaml
 Type: System.String
@@ -93,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -DurationInSecond
-{{Fill DurationInSecond Description}}
+Specifies access duration in seconds.
 
 ```yaml
 Type: System.Int32
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -138,8 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,8 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

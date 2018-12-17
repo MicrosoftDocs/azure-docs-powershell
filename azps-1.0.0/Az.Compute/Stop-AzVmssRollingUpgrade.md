@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/stop-azvmssrollingupgrade
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzVmssRollingUpgrade.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzVmssRollingUpgrade.md
 ---
 
 # Stop-AzVmssRollingUpgrade
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cancels the current virtual machine scale set rolling upgrade.
 
 ## SYNTAX
 
@@ -25,16 +27,16 @@ Stop-AzVmssRollingUpgrade [-Force] [-AsJob] [-DefaultProfile <IAzureContextConta
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Cancels the current virtual machine scale set rolling upgrade.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Stop-AzVmssRollingUpgrade -ResourceGroupName "Group001" -VMScaleSetName "VMSS001"
 ```
 
-{{ Add example description here }}
+This command cancels on-going rolling upgrade of VM scale set "VMSS001" in resource group "Group001".
 
 ## PARAMETERS
 
@@ -54,12 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+The name of the resource group.
 
 ```yaml
 Type: System.String
@@ -99,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMScaleSetName
-{{Fill VMScaleSetName Description}}
+The name of the VM scale set.
 
 ```yaml
 Type: System.String
@@ -145,8 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

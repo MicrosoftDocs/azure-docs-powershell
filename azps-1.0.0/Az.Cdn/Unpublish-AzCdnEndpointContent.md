@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+ms.assetid: 21E9F441-A00B-4F79-8FF1-968D92982471
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/unpublish-azcdnendpointcontent
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Unpublish-AzCdnEndpointContent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Unpublish-AzCdnEndpointContent.md
 ---
 
 # Unpublish-AzCdnEndpointContent
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Purges a CDN endpoint.
 
 ## SYNTAX
 
@@ -26,21 +29,14 @@ Unpublish-AzCdnEndpointContent -CdnEndpoint <PSEndpoint> -PurgeContent <String[]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Unpublish-AzCdnEndpointContent** cmdlet purges the content from an Azure Content Delivery Network (CDN) endpoint.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CdnEndpoint
-The CDN endpoint object.
+Specifies the endpoint that this cmdlet purges.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
@@ -55,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-Azure CDN endpoint name.
+Specifies name of the endpoint that this cmdlet purges.
 
 ```yaml
 Type: System.String
@@ -85,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Return object (if specified).
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-Azure CDN profile name.
+Specifies the name of the profile to which the endpoint belongs.
 
 ```yaml
 Type: System.String
@@ -115,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -PurgeContent
-The resource group of the Azure CDN profile
+Specifies an array of relative paths for the content on the origin server that this cmdlet purges.
 
 ```yaml
 Type: System.String[]
@@ -130,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group of the Azure CDN profile
+Specifies the name of the resource group to which the endpoint belongs.
 
 ```yaml
 Type: System.String
@@ -154,7 +151,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -170,14 +167,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -192,3 +188,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Publish-AzCdnEndpointContent](./Publish-AzCdnEndpointContent.md)
+
+

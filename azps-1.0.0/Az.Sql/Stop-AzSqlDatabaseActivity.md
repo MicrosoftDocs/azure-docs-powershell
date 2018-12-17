@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: B5C909D7-6087-463A-83BF-99DD196B9862
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/stop-azsqldatabaseactivity
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Stop-AzSqlDatabaseActivity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Stop-AzSqlDatabaseActivity.md
 ---
 
 # Stop-AzSqlDatabaseActivity
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cancels the asynchronous updates operation on the database.
 
 ## SYNTAX
 
@@ -19,21 +22,34 @@ Stop-AzSqlDatabaseActivity [-ServerName] <String> [-ElasticPoolName <String>] -D
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Stop-AzSqlDatabaseActivity** cmdlet cancels the asynchronous updates operation on the database.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Cancel the asynchronous updates operation on the database
+```
+PS C:\>Stop-AzSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -OperationId af97005d-9243-4f8a-844e-402d1cc855f5
+
+OperationId     : af97005d-9243-4f8a-844e-402d1cc855f5
+ServerName      : Server01
+DatabaseName    : Database01
+State           : CANCELLED
+Operation       : UpdateLogicalDatabase
+ErrorCode       :
+ErrorMessage    :
+ErrorSeverity   :
+StartTime       : 10/15/2017 02:49:42 PM
+EndTime         : 10/15/2017 02:49:43 PM
+PercentComplete : 
+Properties      : Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseActivityModel+DatabaseState
 ```
 
-{{ Add example description here }}
+This command cancels the asynchronous updates operation on the database.
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database.
+Specifies the name of the database for which this cmdlet gets status.
 
 ```yaml
 Type: System.String
@@ -48,12 +64,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-The ID of the operation to retrieve.
+Specifies the ID of the operation that this cmdlet gets.
 
 ```yaml
 Type: System.Nullable`1[System.Guid]
@@ -93,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the database is assigned.
 
 ```yaml
 Type: System.String
@@ -108,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Elastic Pool is in.
+Specifies the name of the Microsoft SQL Server that hosts the database.
 
 ```yaml
 Type: System.String
@@ -132,7 +148,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -148,14 +164,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

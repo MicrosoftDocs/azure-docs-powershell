@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/stop-azautomationdscnodeconfigurationdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Stop-AzAutomationDscNodeConfigurationDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Stop-AzAutomationDscNodeConfigurationDeployment.md
 ---
 
 # Stop-AzAutomationDscNodeConfigurationDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Stops a DSC Node configuration deployment in Automation. It only stops the current deployment job but does not unassign already assigned node configurations.
 
 ## SYNTAX
 
@@ -27,21 +30,21 @@ Stop-AzAutomationDscNodeConfigurationDeployment [-PassThru] -InputObject <NodeCo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Stop-AzAutomationDscNodeConfigurationDeployment** cmdlet stops a deployment of a Desired State Configuration (DSC) node configuration in Azure Automation. It stops assignment of node configuration to groups of nodes, if any are remaining to be assigned, but does not unassign already assigned nodes. To unregister a scheduled job, please use the [Unregister-AzAutomationScheduledRunbook](./Unregister-AzAutomationScheduledRunbook.md) with the JobScheduleId to unassign an existing scheduled job.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Deploy an Azure DSC node configuration in Automation
+```
+PS C:\> Stop-AzAutomationDscNodeConfigurationDeployment -AutomationAccountName "Contoso01" -ResourceGroupName "ResourceGroup01" -JobId 00000000-0000-0000-0000-000000000000
 ```
 
-{{ Add example description here }}
+The above command stops the DSC node configuration deployment job with the jobId passed in.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles
 
 ```yaml
 Type: System.String
@@ -56,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+ps_force
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -86,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Input object for Piping.
+Input object for Piping
 
 ```yaml
 Type: Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeployment
@@ -101,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-The deployment job id.
+Specifies the Job id of an existing deployment job.
 
 ```yaml
 Type: System.Guid
@@ -116,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -131,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
 Type: System.String
@@ -155,7 +159,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -171,14 +175,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -195,3 +198,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-AzAutomationDscCompilationJob](./Start-AzAutomationDscCompilationJob.md)
+
+[Import-AzAutomationDscNodeConfiguration](./Import-AzAutomationDscNodeConfiguration.md)
+
+[Start-AzAutomationDscNodeConfigurationDeployment](./Start-AzAutomationDscNodeConfigurationDeployment.md)
+
+[Get-AzAutomationDscNodeConfigurationDeployment](./Get-AzAutomationDscNodeConfigurationDeployment.md)
+
+[Get-AzAutomationDscNodeConfigurationDeploymentSchedule](./Get-AzAutomationDscNodeConfigurationDeploymentSchedule.md)

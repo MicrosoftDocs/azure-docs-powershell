@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 01F56553-1685-43D4-89E6-DDCDF17D1E00
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworksecuritygroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzNetworkSecurityGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzNetworkSecurityGroup.md
 ---
 
 # Remove-AzNetworkSecurityGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a network security group.
 
 ## SYNTAX
 
@@ -18,16 +21,16 @@ Remove-AzNetworkSecurityGroup -Name <String> -ResourceGroupName <String> [-Force
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzNetworkSecurityGroup** cmdlet removes an Azure network security group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a network security group
+```
+PS C:\>Remove-AzNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
 ```
 
-{{ Add example description here }}
+This command removes the security group named NSG-FrontEnd in the resource group named TestRG.
 
 ## PARAMETERS
 
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -77,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+Specifies the name of the network security group that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -92,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -107,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group that this cmdlet removes a network security group from.
 
 ```yaml
 Type: System.String
@@ -131,7 +135,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -147,14 +151,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -167,3 +170,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNetworkSecurityGroup](./Get-AzNetworkSecurityGroup.md)
+
+[New-AzNetworkSecurityGroup](./New-AzNetworkSecurityGroup.md)
+
+[Set-AzNetworkSecurityGroup](./Set-AzNetworkSecurityGroup.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: F23D9274-63B9-4654-897B-6E84757774D2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementapi
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementApi.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementApi.md
 ---
 
 # Remove-AzApiManagementApi
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an API.
 
 ## SYNTAX
 
@@ -18,22 +21,22 @@ Remove-AzApiManagementApi -Context <PsApiManagementContext> -ApiId <String> [-Pa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzAzureRmApiManagementApi** cmdlet removes an existing API.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an API
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementApi -Context $apimContext -ApiId "0123456789"
 ```
 
-{{ Add example description here }}
+This command removes the API with the specified ID.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of the API.
-This parameter is required.
+Specifies the ID of the API remove.
 
 ```yaml
 Type: System.String
@@ -48,8 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -64,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -79,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -104,7 +105,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -120,14 +121,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -144,3 +144,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzApiManagementApi](./Export-AzApiManagementApi.md)
+
+[Get-AzApiManagementApi](./Get-AzApiManagementApi.md)
+
+[Import-AzApiManagementApi](./Import-AzApiManagementApi.md)
+
+[New-AzApiManagementApi](./New-AzApiManagementApi.md)
+
+[Set-AzApiManagementApi](./Set-AzApiManagementApi.md)
+
+

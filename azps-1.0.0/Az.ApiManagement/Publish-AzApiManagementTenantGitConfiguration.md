@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 4783305F-5619-446A-A6DF-BD1E56739A2F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/publish-azapimanagementtenantgitconfiguration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Publish-AzApiManagementTenantGitConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Publish-AzApiManagementTenantGitConfiguration.md
 ---
 
 # Publish-AzApiManagementTenantGitConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Publishes changes from a Git branch to the configuration database.
 
 ## SYNTAX
 
@@ -19,22 +22,32 @@ Publish-AzApiManagementTenantGitConfiguration -Context <PsApiManagementContext> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Publish-AzApiManagementTenantGitConfiguration** cmdlet publishes the changes from a Git branch to the configuration database.
+You can alternatively validate the changes in a Git branch without publishing.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Deploy Git changes
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Publish-AzApiManagementTenantGitConfiguration -Context $apimContext -Branch 'master' -PassThru
 ```
 
-{{ Add example description here }}
+This command publishes the changes from the specified branch to the configuration database.
+
+### Example 2: Validate Git changes
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Publish-AzApiManagementTenantGitConfiguration -Context $apimContext -Branch 'master' -ValidateOnly -PassThru
+```
+
+This command validates the changes in the Git branch against the configuration database.
+It does not publish changes.
 
 ## PARAMETERS
 
 ### -Branch
-Name of the Git branch from which the configuration is to be deployed to the configuration database.
-This parameter is required.
+Specifies the name of the Git branch from which this cmdlet deploys the configuration to the configuration database.
 
 ```yaml
 Type: System.String
@@ -49,8 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -65,12 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -80,9 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Enforce deleting subscriptions to products that are deleted in this update.
-This parameter is optional.
-Default value is false.
+Indicates that this cmdlet deletes subscriptions to products that are deleted in this update.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -97,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOperationResult type representing the operation result will be written to output.
+Indicates that this cmdlet returns a **PsApiManagementOperationResult** object.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -112,9 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateOnly
-If specified will only validate the changes in the specified git Branch and not deploy.
-This parameter is optional.
-Default value is false.
+Indicates that this cmdlet validates the changes in the specified Git branch.
+It does not publish to the configuration database.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -138,7 +147,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -154,14 +163,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,3 +186,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Save-AzApiManagementTenantGitConfiguration](./Save-AzApiManagementTenantGitConfiguration.md)
+
+

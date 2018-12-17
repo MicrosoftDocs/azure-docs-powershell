@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: FD2E3442-9CEA-4390-BE9C-772C7D6FD1E2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/remove-azbatchapplicationpackage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchApplicationPackage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchApplicationPackage.md
 ---
 
 # Remove-AzBatchApplicationPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes an application package record and the binary file.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ Remove-AzBatchApplicationPackage [-AccountName] <String> [-ResourceGroupName] <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzBatchApplicationPackage** cmdlet deletes an application package record and the binary file from an Azure Batch account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Delete an application package from a Batch account
+```
+PS C:\>Remove-AzBatchApplicationPackage -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup" -ApplicationId "litware" -ApplicationVersion "1.0"
 ```
 
-{{ Add example description here }}
+This command deletes version 1.0 of the Litware application from the ContosoBatchGroup account.
+The command deletes both the package record and the blob that contain the package binary file.
 
 ## PARAMETERS
 
 ### -AccountName
-Specifies the name of the Batch account.
+Specifies the name of the Batch account from which this cmdlet deletes an application package.
 
 ```yaml
 Type: System.String
@@ -48,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the id of the application.
+Specifies the ID of the application.
 
 ```yaml
 Type: System.String
@@ -78,12 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -108,8 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +125,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchApplication](./Get-AzBatchApplication.md)
+
+[Get-AzBatchApplicationPackage](./Get-AzBatchApplicationPackage.md)
+
+[New-AzBatchApplication](./New-AzBatchApplication.md)
+
+[New-AzBatchApplicationPackage](./New-AzBatchApplicationPackage.md)
+
+[Remove-AzBatchApplication](./Remove-AzBatchApplication.md)
+
+[Set-AzBatchApplication](./Set-AzBatchApplication.md)
+
+

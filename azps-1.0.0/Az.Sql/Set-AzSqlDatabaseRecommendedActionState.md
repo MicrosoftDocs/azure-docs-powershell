@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: BDBA3AA3-DCC6-4C83-84C8-EE6D93BFE1D3
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqldatabaserecommendedactionstate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseRecommendedActionState.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseRecommendedActionState.md
 ---
 
 # Set-AzSqlDatabaseRecommendedActionState
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the state of an Azure SQL Database recommended action.
 
 ## SYNTAX
 
@@ -19,21 +22,52 @@ Set-AzSqlDatabaseRecommendedActionState -RecommendedActionName <String> -State <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzSqlDatabaseRecommendedActionState** cmdlet updates the state of an Azure SQL Database Recommended Action.
+This allows a recommended action to be applied, reverted or discarded based on the new state.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Apply a recommended action state to pending
+```
+PS C:\>Set-AzSqlDatabaseRecommendedActionState -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex" -RecommendedActionName "IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893" -State Pending
+DatabaseName               : WIRunner
+
+ResourceGroupName          : WIRunnersProd
+ServerName                 : wi-runner-australia-east
+AdvisorName                : CreateIndex
+RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
+Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
+                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
+EstimatedImpact            : {ActionDuration, SpaceChange}
+ExecuteActionDuration      : PT1M
+ExecuteActionInitiatedBy   : User
+ExecuteActionInitiatedTime : 4/21/2016 3:24:47 PM
+ExecuteActionStartTime     : 4/21/2016 3:24:47 PM
+ImplementationDetails      : Microsoft.Azure.Management.Sql.Models.RecommendedActionImplementationInfo
+IsArchivedAction           : False
+IsExecutableAction         : True
+IsRevertableAction         : True
+LastRefresh                : 4/21/2016 3:24:47 PM
+LinkedObjects              : {}
+ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
+RecommendationReason       : 
+RevertActionDuration       : 
+RevertActionInitiatedBy    : 
+RevertActionInitiatedTime  : 
+RevertActionStartTime      : 
+Score                      : 2
+State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
+TimeSeries                 : {}
+ValidSince                 : 4/21/2016 3:24:47 PM
 ```
 
-{{ Add example description here }}
+This command updates the state of the recommended action named IR_\[test_schema\]_\[test_table_0.0361551\]_6C7AE8CC9C87E7FD5893 that belongs to the database named WIRunner to Pending.
 
 ## PARAMETERS
 
 ### -AdvisorName
-Azure SQL Database Advisor name.
+Specifies the name of the advisor for which this recommended action belongs to.
 
 ```yaml
 Type: System.String
@@ -48,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Azure SQL Database name.
+Specifies the name of the database for which this cmdlet sets the recommended action state.
 
 ```yaml
 Type: System.String
@@ -63,12 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedActionName
-Azure SQL Database RecommendedAction name.
+Specifies the name of the recommended action for which state is being updated.
 
 ```yaml
 Type: System.String
@@ -93,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group of the server that contains this database.
 
 ```yaml
 Type: System.String
@@ -108,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Azure SQL Server name.
+Specifies the name of the server the database is in.
 
 ```yaml
 Type: System.String
@@ -123,7 +157,14 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The new state of Azure SQL Database Recommended Action.
+Specifies the new value to which this cmdlet updates the recommended action state.
+The acceptable values for this parameter are:
+- Active
+- Pending
+- PendingRevert
+- RevertCancelled
+- Ignored
+- Resolved
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.RecommendedAction.Cmdlet.RecommendedActionState
@@ -148,7 +189,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -164,14 +205,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -184,5 +224,28 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Sql.RecommendedAction.Model.AzureSqlDatabaseRecommendedActionModel
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, sql, database, mssql, advisor, recommendedaction
 
 ## RELATED LINKS
+
+[Get-AzSqlServerAdvisor](./Get-AzSqlServerAdvisor.md)
+
+[Get-AzSqlElasticPoolAdvisor](./Get-AzSqlElasticPoolAdvisor.md)
+
+[Get-AzSqlServerRecommendedAction](./Get-AzSqlServerRecommendedAction.md)
+
+[Get-AzSqlElasticPoolRecommendedAction](./Get-AzSqlElasticPoolRecommendedAction.md)
+
+[Set-AzSqlElasticPoolRecommendedActionState](./Set-AzSqlElasticPoolRecommendedActionState.md)
+
+[Set-AzSqlElasticPoolAdvisorAutoExecuteStatus](./Set-AzSqlElasticPoolAdvisorAutoExecuteStatus.md)
+
+[Set-AzSqlElasticPoolRecommendedActionState](./Set-AzSqlElasticPoolRecommendedActionState.md)
+
+[Set-AzSqlServerRecommendedActionState](./Set-AzSqlServerRecommendedActionState.md)
+
+[Set-AzSqlElasticPoolAdvisorAutoExecuteStatus](./Set-AzSqlElasticPoolAdvisorAutoExecuteStatus.md)
+
+[Set-AzSqlServerAdvisorAutoExecuteStatus](./Set-AzSqlServerAdvisorAutoExecuteStatus.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

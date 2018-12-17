@@ -1,127 +1,129 @@
 ---
 Module Name: Az.ServiceBus
-Module Guid: ced192ca-b6cd-4848-90dc-b83a5970befc
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.servicebus
+Help Version: 4.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Az.ServiceBus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Az.ServiceBus.md
 ---
 
 # Az.ServiceBus Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Service Bus cmdlets.
 
 ## Az.ServiceBus Cmdlets
 ### [Complete-AzServiceBusMigration](Complete-AzServiceBusMigration.md)
-{{Manually Enter Complete-AzServiceBusMigration Description Here}}
+Cmdlets set the Migration from Standard to premium namespace as complete and connection strings of standard namespace now point to Premium namespace
 
 ### [Get-AzServiceBusAuthorizationRule](Get-AzServiceBusAuthorizationRule.md)
-{{Manually Enter Get-AzServiceBusAuthorizationRule Description Here}}
+Gets a description of the specified authorization rule for a given Namespace or Queue or Topic or Alias (GeoDR Configurations). 
 
 ### [Get-AzServiceBusGeoDRConfiguration](Get-AzServiceBusGeoDRConfiguration.md)
-{{Manually Enter Get-AzServiceBusGeoDRConfiguration Description Here}}
+Retrieves Alias(Disaster Recovery configuration) for primary or secondary namespace
 
 ### [Get-AzServiceBusKey](Get-AzServiceBusKey.md)
-{{Manually Enter Get-AzServiceBusKey Description Here}}
+Gets the primary and secondary connection strings for the given Namespace or Queue or Topic or Alias (GeoDR Configurations).
 
 ### [Get-AzServiceBusMigration](Get-AzServiceBusMigration.md)
-{{Manually Enter Get-AzServiceBusMigration Description Here}}
+Retrieves MigrationConfiguration for the namespace
 
 ### [Get-AzServiceBusNamespace](Get-AzServiceBusNamespace.md)
-{{Manually Enter Get-AzServiceBusNamespace Description Here}}
+Gets a description for the specified Service Bus namespace within the resource group.
 
 ### [Get-AzServiceBusOperation](Get-AzServiceBusOperation.md)
-{{Manually Enter Get-AzServiceBusOperation Description Here}}
+List supported ServiceBus Operations
 
 ### [Get-AzServiceBusQueue](Get-AzServiceBusQueue.md)
-{{Manually Enter Get-AzServiceBusQueue Description Here}}
+Returns a description for the specified Service Bus queue.
 
 ### [Get-AzServiceBusRule](Get-AzServiceBusRule.md)
-{{Manually Enter Get-AzServiceBusRule Description Here}}
+Creates a new rule for a given Subscription of Topic. 
 
 ### [Get-AzServiceBusSubscription](Get-AzServiceBusSubscription.md)
-{{Manually Enter Get-AzServiceBusSubscription Description Here}}
+Returns a subscription description for the specified topic.
 
 ### [Get-AzServiceBusTopic](Get-AzServiceBusTopic.md)
-{{Manually Enter Get-AzServiceBusTopic Description Here}}
+Returns a description for the specified Service Bus topic.
 
 ### [New-AzServiceBusAuthorizationRule](New-AzServiceBusAuthorizationRule.md)
-{{Manually Enter New-AzServiceBusAuthorizationRule Description Here}}
+Creates a new authorization rule for the specified Service Bus given Namespace or Queue or Topic.
 
 ### [New-AzServiceBusGeoDRConfiguration](New-AzServiceBusGeoDRConfiguration.md)
-{{Manually Enter New-AzServiceBusGeoDRConfiguration Description Here}}
+Creates an new Alias(Disaster Recovery configuration)
 
 ### [New-AzServiceBusKey](New-AzServiceBusKey.md)
-{{Manually Enter New-AzServiceBusKey Description Here}}
+Regenerates the primary or secondary connection strings for the Service Bus namespace or queue or topic.
 
 ### [New-AzServiceBusNamespace](New-AzServiceBusNamespace.md)
-{{Manually Enter New-AzServiceBusNamespace Description Here}}
+Creates a new Service Bus namespace.
 
 ### [New-AzServiceBusQueue](New-AzServiceBusQueue.md)
-{{Manually Enter New-AzServiceBusQueue Description Here}}
+Creates a Service Bus queue in the specified Service Bus namespace.
 
 ### [New-AzServiceBusRule](New-AzServiceBusRule.md)
-{{Manually Enter New-AzServiceBusRule Description Here}}
+Creates a new rule for a given Subscription of Topic. 
 
 ### [New-AzServiceBusSubscription](New-AzServiceBusSubscription.md)
-{{Manually Enter New-AzServiceBusSubscription Description Here}}
+Creates a subscription to the specified Service Bus topic.
 
 ### [New-AzServiceBusTopic](New-AzServiceBusTopic.md)
-{{Manually Enter New-AzServiceBusTopic Description Here}}
+Creates a new Service Bus topic in  the specified Service Bus namespace.
 
 ### [Remove-AzServiceBusAuthorizationRule](Remove-AzServiceBusAuthorizationRule.md)
-{{Manually Enter Remove-AzServiceBusAuthorizationRule Description Here}}
+Removes the authorization rule of a Service Bus namespace or queue or topic from the specified resource group.
 
 ### [Remove-AzServiceBusGeoDRConfiguration](Remove-AzServiceBusGeoDRConfiguration.md)
-{{Manually Enter Remove-AzServiceBusGeoDRConfiguration Description Here}}
+Deletes an Alias(Disaster Recovery configuration)
 
 ### [Remove-AzServiceBusMigration](Remove-AzServiceBusMigration.md)
-{{Manually Enter Remove-AzServiceBusMigration Description Here}}
+Cmdlet deletes the Migration configuration for Standard to Premium namespaces
 
 ### [Remove-AzServiceBusNamespace](Remove-AzServiceBusNamespace.md)
-{{Manually Enter Remove-AzServiceBusNamespace Description Here}}
+Removes the namespace from the specified resource group. 
 
 ### [Remove-AzServiceBusQueue](Remove-AzServiceBusQueue.md)
-{{Manually Enter Remove-AzServiceBusQueue Description Here}}
+Removes the queue from the specified Service Bus namespace.
 
 ### [Remove-AzServiceBusRule](Remove-AzServiceBusRule.md)
-{{Manually Enter Remove-AzServiceBusRule Description Here}}
+Removes the speficied rule of a given subscription .
 
 ### [Remove-AzServiceBusSubscription](Remove-AzServiceBusSubscription.md)
-{{Manually Enter Remove-AzServiceBusSubscription Description Here}}
+Removes the subscription to a topic from the specified Service Bus namespace.
 
 ### [Remove-AzServiceBusTopic](Remove-AzServiceBusTopic.md)
-{{Manually Enter Remove-AzServiceBusTopic Description Here}}
+Removes the topic from the specified Service Bus namespace.
 
 ### [Set-AzServiceBusAuthorizationRule](Set-AzServiceBusAuthorizationRule.md)
-{{Manually Enter Set-AzServiceBusAuthorizationRule Description Here}}
+Updates the specified authorization rule description for the given Service Bus namespace or queue or topic.
 
 ### [Set-AzServiceBusGeoDRConfigurationBreakPair](Set-AzServiceBusGeoDRConfigurationBreakPair.md)
-{{Manually Enter Set-AzServiceBusGeoDRConfigurationBreakPair Description Here}}
+This operation disables the Disaster Recovery and stops replicating changes from primary to secondary namespaces
 
 ### [Set-AzServiceBusGeoDRConfigurationFailOver](Set-AzServiceBusGeoDRConfigurationFailOver.md)
-{{Manually Enter Set-AzServiceBusGeoDRConfigurationFailOver Description Here}}
+Invokes GEO DR failover and reconfigure the alias to point to the secondary namespace
 
 ### [Set-AzServiceBusNamespace](Set-AzServiceBusNamespace.md)
-{{Manually Enter Set-AzServiceBusNamespace Description Here}}
+Updates the description of an existing Service Bus namespace.
 
 ### [Set-AzServiceBusQueue](Set-AzServiceBusQueue.md)
-{{Manually Enter Set-AzServiceBusQueue Description Here}}
+Updates the description of a Service Bus queue in the specified Service Bus namespace.
 
 ### [Set-AzServiceBusRule](Set-AzServiceBusRule.md)
-{{Manually Enter Set-AzServiceBusRule Description Here}}
+Updates the specified rule description for the given subscription.
 
 ### [Set-AzServiceBusSubscription](Set-AzServiceBusSubscription.md)
-{{Manually Enter Set-AzServiceBusSubscription Description Here}}
+Updates a subscription description for a Service Bus topic in the specified Service Bus namespace.
 
 ### [Set-AzServiceBusTopic](Set-AzServiceBusTopic.md)
-{{Manually Enter Set-AzServiceBusTopic Description Here}}
+Updates the description of a Service Bus topic in the specified Service Bus namespace.
 
 ### [Start-AzServiceBusMigration](Start-AzServiceBusMigration.md)
-{{Manually Enter Start-AzServiceBusMigration Description Here}}
+Creates a new Migration configuration and starts migrating entities from Standard to Premium namespaces
 
 ### [Stop-AzServiceBusMigration](Stop-AzServiceBusMigration.md)
-{{Manually Enter Stop-AzServiceBusMigration Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Test-AzServiceBusName](Test-AzServiceBusName.md)
-{{Manually Enter Test-AzServiceBusName Description Here}}
+Checks the Availability of the given NameSpace Name or Alias (DR Configuration Name) 
 

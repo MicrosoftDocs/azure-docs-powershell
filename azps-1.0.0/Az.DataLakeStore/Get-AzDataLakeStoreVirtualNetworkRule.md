@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/get-azdatalakestorevirtualnetworkrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzDataLakeStoreVirtualNetworkRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzDataLakeStoreVirtualNetworkRule.md
 ---
 
 # Get-AzDataLakeStoreVirtualNetworkRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the specified virtual network rules in the specified Data Lake Store.
+If no virtual network rule is specified, then lists all virtual network rules for the account.
 
 ## SYNTAX
 
@@ -18,16 +21,24 @@ Get-AzDataLakeStoreVirtualNetworkRule [-Account] <String> [-Name <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzDataLakeStoreVirtualNetworkRule cmdlet gets the specified virtual network rules in the specified Data Lake Store.
+If no virtual network rule is specified, then lists all virtual network rules for the account.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzDataLakeStoreVirtualNetworkRule -Account "dls" -Name "myVNET"
+
+ResourceGroupName                :
+AccountName                      :
+VirtualNetworkRuleName           : myVNET
+VirtualNetworkSubnetId           : /subscriptions/<subscriptionId>/resourceGroups/<resourceGroup>/providers/Microsoft.Network/virtualNetworks/myVNET/subnets/testId
+IgnoreMissingVnetServiceEndpoint :
+State                            :
 ```
 
-{{ Add example description here }}
+Returns the virtual network rule named "myVNET" from account "dls"
 
 ## PARAMETERS
 
@@ -50,9 +61,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,8 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azpolicysetdefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzPolicySetDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzPolicySetDefinition.md
 ---
 
 # Get-AzPolicySetDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets policy set definitions.
 
 ## SYNTAX
 
@@ -49,16 +51,37 @@ Get-AzPolicySetDefinition [-ManagementGroupName <String>] [-SubscriptionId <Guid
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzPolicySetDefinition** cmdlet gets a collection of policy set definitions or a specific policy set definition identified by name or ID.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all policy set definitions
+```
+PS C:\> Get-AzPolicySetDefinition
 ```
 
-{{ Add example description here }}
+This command gets all the policy set definitions.
+
+### Example 2: Get policy set definition from current subscription by name
+```
+PS C:\> Get-AzPolicySetDefinition -Name 'VMPolicySetDefinition'
+```
+
+This command gets the policy set definition named VMPolicySetDefinition from the current default subscription.
+
+### Example 3: Get policy set definition from subscription by name
+```
+PS C:\> Get-AzPolicySetDefinition -Name 'VMPolicySetDefinition' -subscriptionId '3bf44b72-c631-427a-b8c8-53e2595398ca'
+```
+
+This command gets the policy definition named VMPolicySetDefinition from the subscription with ID 3bf44b72-c631-427a-b8c8-53e2595398ca.
+
+### Example 4: Get all custom policy set definitions from management group
+```
+PS C:\> Get-AzPolicySetDefinition -ManagementGroupName 'Dept42' -Custom
+```
+
+This command gets all custom policy set definitions from the management group named Dept42.
 
 ## PARAMETERS
 
@@ -109,12 +132,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -124,9 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified ID of the policy set definition to get, including the subscription or management group.
+The fully qualified policy set definition Id, including the subscription.
 e.g.
-/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policySetDefinitions/{policySetDefinitionName}.
+/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 
 ```yaml
 Type: System.String
@@ -168,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the policy set definition to get.
+The policy set definition name.
 
 ```yaml
 Type: System.String
@@ -225,8 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

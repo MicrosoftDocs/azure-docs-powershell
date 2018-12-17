@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 335588D4-4D2C-4DBD-B6B2-B1227C4AF9A9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/get-azdatalakestoreitemowner
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzDataLakeStoreItemOwner.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzDataLakeStoreItemOwner.md
 ---
 
 # Get-AzDataLakeStoreItemOwner
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the owner of a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Get-AzDataLakeStoreItemOwner [-Account] <String> [-Path] <DataLakeStorePathInsta
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDataLakeStoreItemOwner** cmdlet gets the owner of a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the owner for a directory
+```
+PS C:\>Get-AzDataLakeStoreItemOwner -AccountName "ContosoADL" -Path / -Type User
 ```
 
-{{ Add example description here }}
+This command gets the user owner for the root directory of the ContosoADL account.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,8 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account that should have its owner or owning group retrieved.
-Can be a file or folder In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of an item, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -78,8 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of owner to get.
-Valid values are 'user' and 'group'.
+Specifies the type of owner to get.
+The acceptable values for this parameter are: User and Group.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+Owner
@@ -95,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +114,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzDataLakeStoreItemOwner](./Set-AzDataLakeStoreItemOwner.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: B2D9FF7B-EA3B-4853-814C-00FC4E328957
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/start-azautomationrunbook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Start-AzAutomationRunbook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Start-AzAutomationRunbook.md
 ---
 
 # Start-AzAutomationRunbook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts a runbook job.
 
 ## SYNTAX
 
@@ -27,22 +30,31 @@ Start-AzAutomationRunbook [-Name] <String> [-Parameters <IDictionary>] [-RunOn <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-AzAutomationRunbook** cmdlet starts an Azure Automation runbook job.
+Specify the ID or name of a runbook.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Start a runbook job
+```
+PS C:\>Start-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command starts a runbook job for the runbook named Runbk01 in the Azure Automation account named Contoso17.
+
+### Example 2: Start a runbook job and wait for results
+```
+Start-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ResourceGroupName "ResourceGroup01" -MaxWaitSeconds 1000 -Wait
+```
+
+This command starts a runbook job for the runbook named Runbk01 in the Azure Automation account named Contoso17.
+This command specifies the _Wait_ parameter.
+Therefore, it returns results after the job is completed.
+The cmdlet waits up to 1000 seconds for the results.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -56,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,8 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxWaitSeconds
-Maximum time in seconds to wait for job completion.
-Default max wait time is 10800 seconds.
+Specifies the number of seconds this cmdlet waits for a job to finish before it abandons the job.
+The default value is 10800, or three hours.
 
 ```yaml
 Type: System.Int32
@@ -87,8 +99,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The runbook name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -102,12 +112,10 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The runbook parameters.
-
 ```yaml
 Type: System.Collections.IDictionary
 Parameter Sets: (All)
-Aliases:
+Aliases: JobParameters
 
 Required: False
 Position: Named
@@ -117,8 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -132,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
-Optional name of the hybrid agent which should execute the runbook
+Specifies which Hybrid Worker Group on which to run the runbook.
 
 ```yaml
 Type: System.String
@@ -147,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Wait for job to complete, suspend, or fail.
+Indicates that this cmdlet waits for job to complete, suspend, or fail, and then returns control to Azure PowerShell.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,8 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,3 +183,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzAutomationRunbook](./Export-AzAutomationRunbook.md)
+
+[Get-AzAutomationRunbook](./Get-AzAutomationRunbook.md)
+
+[Import-AzAutomationRunbook](./Import-AzAutomationRunbook.md)
+
+[New-AzAutomationRunbook](./New-AzAutomationRunbook.md)
+
+[New-AzAutomationRunbook](./New-AzAutomationRunbook.md)
+
+[Publish-AzAutomationRunbook](./Publish-AzAutomationRunbook.md)
+
+[Remove-AzAutomationRunbook](./Remove-AzAutomationRunbook.md)
+
+[Set-AzAutomationRunbook](./Set-AzAutomationRunbook.md)

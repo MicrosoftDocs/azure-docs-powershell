@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 2B4A3E2A-1868-492F-9F77-932319D2CE6D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvpnclientpackage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVpnClientPackage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVpnClientPackage.md
 ---
 
 # Get-AzVpnClientPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about a VPN client package.
 
 ## SYNTAX
 
@@ -18,26 +21,30 @@ Get-AzVpnClientPackage -ResourceGroupName <String> -VirtualNetworkGatewayName <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVpnClientPackage** cmdlet gets information about the VPN client packages available from a virtual network gateway.
+Client packages contain configuration data that enable a client computer to make a VPN connection to an Azure virtual network; client computers must have the correct configuration package installed in order to make a VPN connection.
+Different configuration packages are available based on the client computer's version of Windows (for example, Windows 7 or Windows 10) and on the client computer's processor architecture (AMD64 or x86).
+You must specify the architecture type when running **Get-AzVpnClientPackage**.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get information about a processor architecture VPN client package
+```
+PS C:\>Get-AzVpnClientPackage -ProcessorArchitecture -VirtualNetworkGatewayName "ContosoVirtualNetworkGateway" -ResourceGroupName "ContosoResourceGroup" -ProcessorArchitecture "Amd64"
 ```
 
-{{ Add example description here }}
+This command gets information about the AMD64 VPN client packages stored on the virtual network gateway named ContosoVirtualNetworkGateway.
+To get information about the x86 client packages, set the value of the *ProcessorArchitecture* parameter to x86.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +54,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessorArchitecture
-ProcessorArchitecture
+Specifies the type of CPU architecture that the client package is designed for.
+Valid values are Amd64 and X86.
 
 ```yaml
 Type: System.String
@@ -63,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-ResourceGroup name
+Specifies the name of the resource group that the virtual network gateway is assigned to.
+Resource groups categorize items to help simplify inventory management and general Azure administration.
 
 ```yaml
 Type: System.String
@@ -78,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGatewayName
-VirtualNetworkGateway name
+Specifies the name of the virtual network gateway where the client package information is stored.
 
 ```yaml
 Type: System.String
@@ -93,8 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,3 +115,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Resize-AzVirtualNetworkGateway](./Resize-AzVirtualNetworkGateway.md)
+
+[Set-AzVirtualNetworkGatewayVpnClientConfig](./Set-AzVirtualNetworkGatewayVpnClientConfig.md)
+
+

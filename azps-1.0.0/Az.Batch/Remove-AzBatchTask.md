@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: D79AEF8C-F0DC-40F8-9EEE-A2BB6AE5C4BF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/remove-azbatchtask
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchTask.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchTask.md
 ---
 
 # Remove-AzBatchTask
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a Batch task.
 
 ## SYNTAX
 
@@ -25,25 +28,36 @@ Remove-AzBatchTask [-InputObject] <PSCloudTask> [-Force] -BatchContext <BatchAcc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzBatchTask** cmdlet deletes an Azure Batch task.
+This cmdlet prompts you for confirmation, unless you specify the *Force* parameter.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Delete a Batch task by ID
+```
+PS C:\>Remove-AzBatchTask -JobId "Job-000001" -Id "Task23" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command deletes a task that has the ID Task23 under the job that has the ID Job-000001.
+The command prompts you for confirmation.
+Use the **Get-AzBatchAccountKeys** cmdlet to assign a context to the $Context variable.
+
+### Example 2: Delete a Batch task by using the pipeline without confirmation
+```
+PS C:\>Get-AzBatchTask -JobId "Job-000001" -Id "Task26" -BatchContext $Context | Remove-AzBatchTask -Force -BatchContext $Context
+```
+
+This command gets the Batch task that has the ID Task26 in the job that has the ID Job-000001 by using the **Get-AzBatchTask** cmdlet.
+The command passes that task to the current cmdlet by using the pipeline operator.
+The command deletes that task.
+This command specifies the *Force* parameter.
+Therefore, the command does not prompt you for confirmation.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -58,12 +72,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -73,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -88,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The id of the task to delete.
+Specifies the ID of the task that this cmdlet deletes.
+You cannot specify wildcard characters.
 
 ```yaml
 Type: System.String
@@ -103,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-The PSCloudTask object representing the task to delete.
+Specifies the task that this cmdlet deletes.
+To obtain a **PSCloudTask** object, use  the Get-AzBatchTask cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSCloudTask
@@ -118,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-The id of the job containing the task to delete.
+Specifies the ID of the job that contains the task.
 
 ```yaml
 Type: System.String
@@ -142,7 +158,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -158,14 +174,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -182,3 +197,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Get-AzBatchTask](./Get-AzBatchTask.md)
+
+[New-AzBatchTask](./New-AzBatchTask.md)
+
+[Remove-AzBatchTask](./Remove-AzBatchTask.md)
+
+[Stop-AzBatchTask](./Stop-AzBatchTask.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

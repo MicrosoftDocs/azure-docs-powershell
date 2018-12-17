@@ -1,226 +1,228 @@
 ---
 Module Name: Az.Batch
-Module Guid: c6da7084-6a9c-4c33-b162-0f2c6bfad401
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: a8f00f40-1c1a-49b5-9db3-24076b75c3cf
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.batch
+Help Version: 4.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Az.Batch.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Az.Batch.md
 ---
 
 # Az.Batch Module
 ## Description
-{{Manually Enter Description Here}}
+The Azure Batch cmdlets in the Azure module enable you to manage Microsoft Azure Batch services in Azure PowerShell.
 
 ## Az.Batch Cmdlets
 ### [Disable-AzBatchAutoScale](Disable-AzBatchAutoScale.md)
-{{Manually Enter Disable-AzBatchAutoScale Description Here}}
+Disables automatic scaling of a pool.
 
 ### [Disable-AzBatchComputeNodeScheduling](Disable-AzBatchComputeNodeScheduling.md)
-{{Manually Enter Disable-AzBatchComputeNodeScheduling Description Here}}
+Disables task scheduling on the specified compute node.
 
 ### [Disable-AzBatchJob](Disable-AzBatchJob.md)
-{{Manually Enter Disable-AzBatchJob Description Here}}
+Disables a Batch job.
 
 ### [Disable-AzBatchJobSchedule](Disable-AzBatchJobSchedule.md)
-{{Manually Enter Disable-AzBatchJobSchedule Description Here}}
+Disables a Batch job schedule.
 
 ### [Enable-AzBatchAutoScale](Enable-AzBatchAutoScale.md)
-{{Manually Enter Enable-AzBatchAutoScale Description Here}}
+Enables automatic scaling of a pool.
 
 ### [Enable-AzBatchComputeNodeScheduling](Enable-AzBatchComputeNodeScheduling.md)
-{{Manually Enter Enable-AzBatchComputeNodeScheduling Description Here}}
+Enables task scheduling on the specified compute node.
 
 ### [Enable-AzBatchJob](Enable-AzBatchJob.md)
-{{Manually Enter Enable-AzBatchJob Description Here}}
+Enables a Batch job.
 
 ### [Enable-AzBatchJobSchedule](Enable-AzBatchJobSchedule.md)
-{{Manually Enter Enable-AzBatchJobSchedule Description Here}}
+Enables a Batch job schedule.
 
 ### [Enable-AzBatchTask](Enable-AzBatchTask.md)
-{{Manually Enter Enable-AzBatchTask Description Here}}
+Reactivates a task.
 
 ### [Get-AzBatchAccount](Get-AzBatchAccount.md)
-{{Manually Enter Get-AzBatchAccount Description Here}}
+Gets a Batch account in the current subscription.
 
 ### [Get-AzBatchAccountKeys](Get-AzBatchAccountKeys.md)
-{{Manually Enter Get-AzBatchAccountKeys Description Here}}
+Gets the keys of a Batch account.
 
 ### [Get-AzBatchApplication](Get-AzBatchApplication.md)
-{{Manually Enter Get-AzBatchApplication Description Here}}
+Gets information about the specified application.
 
 ### [Get-AzBatchApplicationPackage](Get-AzBatchApplicationPackage.md)
-{{Manually Enter Get-AzBatchApplicationPackage Description Here}}
+Gets information about an application package in a Batch account.
 
 ### [Get-AzBatchCertificate](Get-AzBatchCertificate.md)
-{{Manually Enter Get-AzBatchCertificate Description Here}}
+Gets the certificates in a Batch account.
 
 ### [Get-AzBatchComputeNode](Get-AzBatchComputeNode.md)
-{{Manually Enter Get-AzBatchComputeNode Description Here}}
+Gets Batch compute nodes from a pool.
 
 ### [Get-AzBatchJob](Get-AzBatchJob.md)
-{{Manually Enter Get-AzBatchJob Description Here}}
+Gets Batch jobs for a Batch account or job schedule.
 
 ### [Get-AzBatchJobPreparationAndReleaseTaskStatus](Get-AzBatchJobPreparationAndReleaseTaskStatus.md)
-{{Manually Enter Get-AzBatchJobPreparationAndReleaseTaskStatus Description Here}}
+Gets Batch job preparation and release task status.
 
 ### [Get-AzBatchJobSchedule](Get-AzBatchJobSchedule.md)
-{{Manually Enter Get-AzBatchJobSchedule Description Here}}
+Gets Batch job schedules.
 
 ### [Get-AzBatchJobStatistics](Get-AzBatchJobStatistics.md)
-{{Manually Enter Get-AzBatchJobStatistics Description Here}}
+Gets job summary statistics for a Batch account.
 
 ### [Get-AzBatchLocationQuotas](Get-AzBatchLocationQuotas.md)
-{{Manually Enter Get-AzBatchLocationQuotas Description Here}}
+Gets the Batch service quotas for your subscription at the given location.
 
 ### [Get-AzBatchNodeAgentSku](Get-AzBatchNodeAgentSku.md)
-{{Manually Enter Get-AzBatchNodeAgentSku Description Here}}
+Gets Batch node agent SKUs available in a Batch account.
 
 ### [Get-AzBatchNodeFile](Get-AzBatchNodeFile.md)
-{{Manually Enter Get-AzBatchNodeFile Description Here}}
+Gets the properties of Batch node files.
 
 ### [Get-AzBatchNodeFileContent](Get-AzBatchNodeFileContent.md)
-{{Manually Enter Get-AzBatchNodeFileContent Description Here}}
+Gets a Batch node file.
 
 ### [Get-AzBatchPool](Get-AzBatchPool.md)
-{{Manually Enter Get-AzBatchPool Description Here}}
+Gets Batch pools under the specified Batch account.
 
 ### [Get-AzBatchPoolNodeCounts](Get-AzBatchPoolNodeCounts.md)
-{{Manually Enter Get-AzBatchPoolNodeCounts Description Here}}
+Gets Batch node counts per node state grouped by pool id.
 
 ### [Get-AzBatchPoolStatistics](Get-AzBatchPoolStatistics.md)
-{{Manually Enter Get-AzBatchPoolStatistics Description Here}}
+Gets pool summary statistics for a Batch account.
 
 ### [Get-AzBatchPoolUsageMetrics](Get-AzBatchPoolUsageMetrics.md)
-{{Manually Enter Get-AzBatchPoolUsageMetrics Description Here}}
+Gets pool usage metrics for a Batch account.
 
 ### [Get-AzBatchRemoteDesktopProtocolFile](Get-AzBatchRemoteDesktopProtocolFile.md)
-{{Manually Enter Get-AzBatchRemoteDesktopProtocolFile Description Here}}
+Gets an RDP file from a compute node.
 
 ### [Get-AzBatchRemoteLoginSettings](Get-AzBatchRemoteLoginSettings.md)
-{{Manually Enter Get-AzBatchRemoteLoginSettings Description Here}}
+Gets remote logon settings for a compute node.
 
 ### [Get-AzBatchSubtask](Get-AzBatchSubtask.md)
-{{Manually Enter Get-AzBatchSubtask Description Here}}
+Gets the subtask information of the specified task.
 
 ### [Get-AzBatchTask](Get-AzBatchTask.md)
-{{Manually Enter Get-AzBatchTask Description Here}}
+Gets the Batch tasks for a job.
 
 ### [Get-AzBatchTaskCounts](Get-AzBatchTaskCounts.md)
-{{Manually Enter Get-AzBatchTaskCounts Description Here}}
+Gets the task counts for the specified job.
 
 ### [New-AzBatchAccount](New-AzBatchAccount.md)
-{{Manually Enter New-AzBatchAccount Description Here}}
+Creates a Batch account.
 
 ### [New-AzBatchAccountKey](New-AzBatchAccountKey.md)
-{{Manually Enter New-AzBatchAccountKey Description Here}}
+Regenerates a key of a Batch account.
 
 ### [New-AzBatchApplication](New-AzBatchApplication.md)
-{{Manually Enter New-AzBatchApplication Description Here}}
+Adds an application to the specified Batch account.
 
 ### [New-AzBatchApplicationPackage](New-AzBatchApplicationPackage.md)
-{{Manually Enter New-AzBatchApplicationPackage Description Here}}
+Creates an application package in a Batch account.
 
 ### [New-AzBatchCertificate](New-AzBatchCertificate.md)
-{{Manually Enter New-AzBatchCertificate Description Here}}
+Adds a certificate to the specified Batch account.
 
 ### [New-AzBatchComputeNodeUser](New-AzBatchComputeNodeUser.md)
-{{Manually Enter New-AzBatchComputeNodeUser Description Here}}
+Creates a user account on a Batch compute node.
 
 ### [New-AzBatchJob](New-AzBatchJob.md)
-{{Manually Enter New-AzBatchJob Description Here}}
+Creates a job in the Batch service.
 
 ### [New-AzBatchJobSchedule](New-AzBatchJobSchedule.md)
-{{Manually Enter New-AzBatchJobSchedule Description Here}}
+Creates a job schedule in the Batch service.
 
 ### [New-AzBatchPool](New-AzBatchPool.md)
-{{Manually Enter New-AzBatchPool Description Here}}
+Creates a pool in the Batch service.
 
 ### [New-AzBatchTask](New-AzBatchTask.md)
-{{Manually Enter New-AzBatchTask Description Here}}
+Creates a Batch task under a job.
 
 ### [Remove-AzBatchAccount](Remove-AzBatchAccount.md)
-{{Manually Enter Remove-AzBatchAccount Description Here}}
+Removes a Batch account.
 
 ### [Remove-AzBatchApplication](Remove-AzBatchApplication.md)
-{{Manually Enter Remove-AzBatchApplication Description Here}}
+Deletes an application from a Batch account.
 
 ### [Remove-AzBatchApplicationPackage](Remove-AzBatchApplicationPackage.md)
-{{Manually Enter Remove-AzBatchApplicationPackage Description Here}}
+Deletes an application package record and the binary file.
 
 ### [Remove-AzBatchCertificate](Remove-AzBatchCertificate.md)
-{{Manually Enter Remove-AzBatchCertificate Description Here}}
+Deletes a certificate from an account.
 
 ### [Remove-AzBatchComputeNode](Remove-AzBatchComputeNode.md)
-{{Manually Enter Remove-AzBatchComputeNode Description Here}}
+Removes compute nodes from a pool.
 
 ### [Remove-AzBatchComputeNodeUser](Remove-AzBatchComputeNodeUser.md)
-{{Manually Enter Remove-AzBatchComputeNodeUser Description Here}}
+Deletes a user account from a Batch compute node.
 
 ### [Remove-AzBatchJob](Remove-AzBatchJob.md)
-{{Manually Enter Remove-AzBatchJob Description Here}}
+Deletes a Batch job.
 
 ### [Remove-AzBatchJobSchedule](Remove-AzBatchJobSchedule.md)
-{{Manually Enter Remove-AzBatchJobSchedule Description Here}}
+Removes a Batch job schedule.
 
 ### [Remove-AzBatchNodeFile](Remove-AzBatchNodeFile.md)
-{{Manually Enter Remove-AzBatchNodeFile Description Here}}
+Deletes a node file for a task or compute node.
 
 ### [Remove-AzBatchPool](Remove-AzBatchPool.md)
-{{Manually Enter Remove-AzBatchPool Description Here}}
+Deletes the specified Batch pool.
 
 ### [Remove-AzBatchTask](Remove-AzBatchTask.md)
-{{Manually Enter Remove-AzBatchTask Description Here}}
+Deletes a Batch task.
 
 ### [Reset-AzBatchComputeNode](Reset-AzBatchComputeNode.md)
-{{Manually Enter Reset-AzBatchComputeNode Description Here}}
+Reinstalls the operating system on the specified compute node.
 
 ### [Restart-AzBatchComputeNode](Restart-AzBatchComputeNode.md)
-{{Manually Enter Restart-AzBatchComputeNode Description Here}}
+Reboots the specified compute node.
 
 ### [Set-AzBatchAccount](Set-AzBatchAccount.md)
-{{Manually Enter Set-AzBatchAccount Description Here}}
+Updates a Batch account.
 
 ### [Set-AzBatchApplication](Set-AzBatchApplication.md)
-{{Manually Enter Set-AzBatchApplication Description Here}}
+Updates settings for the specified application.
 
 ### [Set-AzBatchComputeNodeUser](Set-AzBatchComputeNodeUser.md)
-{{Manually Enter Set-AzBatchComputeNodeUser Description Here}}
+Modifies properties of an account on a Batch compute node.
 
 ### [Set-AzBatchJob](Set-AzBatchJob.md)
-{{Manually Enter Set-AzBatchJob Description Here}}
+Updates a Batch job.
 
 ### [Set-AzBatchJobSchedule](Set-AzBatchJobSchedule.md)
-{{Manually Enter Set-AzBatchJobSchedule Description Here}}
+Sets a job schedule.
 
 ### [Set-AzBatchPool](Set-AzBatchPool.md)
-{{Manually Enter Set-AzBatchPool Description Here}}
+Updates the properties of a pool.
 
 ### [Set-AzBatchPoolOSVersion](Set-AzBatchPoolOSVersion.md)
-{{Manually Enter Set-AzBatchPoolOSVersion Description Here}}
+Changes the operating system version of the specified pool.
 
 ### [Set-AzBatchTask](Set-AzBatchTask.md)
-{{Manually Enter Set-AzBatchTask Description Here}}
+Updates the properties of a task.
 
 ### [Start-AzBatchComputeNodeServiceLogUpload](Start-AzBatchComputeNodeServiceLogUpload.md)
-{{Manually Enter Start-AzBatchComputeNodeServiceLogUpload Description Here}}
+Upload compute node service log files to an Azure Storage container.
 
 ### [Start-AzBatchPoolResize](Start-AzBatchPoolResize.md)
-{{Manually Enter Start-AzBatchPoolResize Description Here}}
+Starts to resize a pool.
 
 ### [Stop-AzBatchCertificateDeletion](Stop-AzBatchCertificateDeletion.md)
-{{Manually Enter Stop-AzBatchCertificateDeletion Description Here}}
+Cancels a failed deletion of a certificate.
 
 ### [Stop-AzBatchJob](Stop-AzBatchJob.md)
-{{Manually Enter Stop-AzBatchJob Description Here}}
+Stops a Batch job.
 
 ### [Stop-AzBatchJobSchedule](Stop-AzBatchJobSchedule.md)
-{{Manually Enter Stop-AzBatchJobSchedule Description Here}}
+Stops a Batch job schedule.
 
 ### [Stop-AzBatchPoolResize](Stop-AzBatchPoolResize.md)
-{{Manually Enter Stop-AzBatchPoolResize Description Here}}
+Stops a pool resize operation.
 
 ### [Stop-AzBatchTask](Stop-AzBatchTask.md)
-{{Manually Enter Stop-AzBatchTask Description Here}}
+Stops a Batch task.
 
 ### [Test-AzBatchAutoScale](Test-AzBatchAutoScale.md)
-{{Manually Enter Test-AzBatchAutoScale Description Here}}
+Gets the result of an automatic scaling formula on a pool.
 

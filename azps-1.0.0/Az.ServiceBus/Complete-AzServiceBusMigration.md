@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/complete-azservicebusmigration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Complete-AzServiceBusMigration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Complete-AzServiceBusMigration.md
 ---
 
 # Complete-AzServiceBusMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cmdlets set the Migration from Standard to premium namespace as complete and connection strings of standard namespace now point to Premium namespace
 
 ## SYNTAX
 
@@ -31,16 +33,16 @@ Complete-AzServiceBusMigration [-ResourceId] <String> [-PassThru] [-DefaultProfi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Complete-AzServiceBusMigration** cmdlets set the Migration from Standard to premium namespace as complete and connection strings of standard namespace now point to Premium namespace
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Complete-AzServiceBusMigration -ResourceGroupName ResourceGroup -Name NamespaceStandardMirgation
 ```
 
-{{ Add example description here }}
+Sets the Migration of 'NamespaceStandardMirgation' namespace as complete.
 
 ## PARAMETERS
 
@@ -48,9 +50,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,8 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 1E192553-61D8-4449-936B-68CF866C710C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayhttplistener
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzApplicationGatewayHttpListener.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzApplicationGatewayHttpListener.md
 ---
 
 # Add-AzApplicationGatewayHttpListener
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an HTTP listener to an application gateway.
 
 ## SYNTAX
 
@@ -17,7 +20,8 @@ schema: 2.0.0
 Add-AzApplicationGatewayHttpListener -ApplicationGateway <PSApplicationGateway> -Name <String>
  [-FrontendIPConfigurationId <String>] [-FrontendPortId <String>] [-SslCertificateId <String>]
  [-HostName <String>] [-RequireServerNameIndication <String>] -Protocol <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -26,25 +30,36 @@ Add-AzApplicationGatewayHttpListener -ApplicationGateway <PSApplicationGateway> 
  [-FrontendIPConfiguration <PSApplicationGatewayFrontendIPConfiguration>]
  [-FrontendPort <PSApplicationGatewayFrontendPort>] [-SslCertificate <PSApplicationGatewaySslCertificate>]
  [-HostName <String>] [-RequireServerNameIndication <String>] -Protocol <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzApplicationGatewayHttpListener** cmdlet adds a HTTP listener to an application gateway.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a HTTP listener
+```
+PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Appgw = Add-AzApplicationGatewayHttpListener -ApplicationGateway $AppGw -Name "listener01" -Protocol "Http" -FrontendIpConfiguration $FIP01 -FrontendPort $FP01
 ```
 
-{{ Add example description here }}
+The first command gets the application gateway and stores it in the $AppGw variable.The second command adds the HTTP listener to the application gateway.
+
+### Example 2: Add a HTTPS listener with SSL
+```
+PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Add-AzApplicationGatewayHttpListener -ApplicationGateway $AppGw -Name "Listener01" -Protocol "Https" -FrontendIpConfiguration $FIP01 -FrontendPort $FP01 -SslCertificate $SSLCert01
+```
+
+The first command gets the application gateway and stores it in the $AppGw variable.
+The second command adds the listener, which uses the HTTPS protocol, to the application gateway.
 
 ## PARAMETERS
 
 ### -ApplicationGateway
-The applicationGateway
+Specifies the application gateway to which this cmdlet adds an HTTP listener.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
@@ -58,13 +73,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+### -CustomErrorConfiguration
+Customer error of an application gateway
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayCustomError[]
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -74,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIPConfiguration
-Application gateway FrontendIPConfiguration
+Specifies the application gateway front-end IP resource object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration
@@ -89,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIPConfigurationId
-ID of the application gateway FrontendIPConfiguration
+Specifies the application gateway front-end IP ID.
 
 ```yaml
 Type: System.String
@@ -104,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendPort
-Application gateway FrontendPort
+Specifies the application gateway front-end port object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort
@@ -119,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendPortId
-ID of the application gateway FrontendPort
+Specifies the application gateway front-end port ID.
 
 ```yaml
 Type: System.String
@@ -134,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostName
-Host name
+Specifies the host name that this cmdlet adds a HTTP listener to.
 
 ```yaml
 Type: System.String
@@ -149,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the HTTP listener
+Specifies the name of the front-end port that this command adds.
 
 ```yaml
 Type: System.String
@@ -164,7 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Protocol
+Specifies the protocol of the HTTP listener.
+Both HTTP and HTTPS are supported.
 
 ```yaml
 Type: System.String
@@ -180,8 +211,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequireServerNameIndication
-RequireServerNameIndication
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -196,7 +225,8 @@ Accept wildcard characters: False
 ```
 
 ### -SslCertificate
-Application gateway SslCertificate
+Specifies the SSL certificate of the HTTP listener.
+Must be specified if HTTPS is chosen as listener protocol.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate
@@ -211,7 +241,8 @@ Accept wildcard characters: False
 ```
 
 ### -SslCertificateId
-ID of the application gateway SslCertificate
+Specifies the SSL certificate ID of the HTTP listener.
+Must be specified if HTTPS is chosen as listener protocol.
 
 ```yaml
 Type: System.String
@@ -226,8 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -240,3 +270,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApplicationGatewayHttpListener](./Get-AzApplicationGatewayHttpListener.md)
+
+[New-AzApplicationGatewayHttpListener](./New-AzApplicationGatewayHttpListener.md)
+
+[Remove-AzApplicationGatewayHttpListener](./Remove-AzApplicationGatewayHttpListener.md)
+
+[Set-AzApplicationGatewayHttpListener](./Set-AzApplicationGatewayHttpListener.md)
+
+

@@ -1,14 +1,18 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/update-azsqlsyncschema
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Update-AzSqlSyncSchema.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Update-AzSqlSyncSchema.md
 ---
 
 # Update-AzSqlSyncSchema
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Update the sync schema for a sync member database or a sync hub database.
+It will get the the latest database schema from the real database and then use it refresh the schema cached by Sync metadata database.
+If "SyncMemberName" is specified, it will refresh the member database schema; if not, it will refresh the hub database schema.
 
 ## SYNTAX
 
@@ -19,21 +23,28 @@ Update-AzSqlSyncSchema [-SyncGroupName] <String> [-SyncMemberName <String>] [-Pa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzSqlSyncSchema** cmdlet updates the sync schema for a sync member database or a sync hub database.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update the sync schema for a hub database
+```
+PS C:\>Update-AzSqlSyncSchema -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "database01" -SyncGroupName "syncGroup01"
 ```
 
-{{ Add example description here }}
+This command updates the sync schema for the hub database in the sync group syncGroup01
+
+### Example 2: Update the sync schema for a member database
+```
+PS C:\>Update-AzSqlSyncSchema -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "database01" -SyncGroupName "syncGroup01" -SyncMemberName "syncMember01"
+```
+
+This command updates the sync schema for the member database in the sync member syncMember01
 
 ## PARAMETERS
 
 ### -DatabaseName
-SQL Database name.
+The name of the Azure SQL Database.
 
 ```yaml
 Type: System.String
@@ -48,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-SQL Database server name.
+The name of the Azure SQL Server.
 
 ```yaml
 Type: System.String
@@ -169,8 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

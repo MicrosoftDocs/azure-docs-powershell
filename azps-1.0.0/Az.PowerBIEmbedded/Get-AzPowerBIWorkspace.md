@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Management.PowerBIEmbedded.dll-Help.xml
 Module Name: Az.PowerBIEmbedded
-online version:
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/get-azpowerbiworkspace
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzPowerBIWorkspace.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzPowerBIWorkspace.md
 ---
 
 # Get-AzPowerBIWorkspace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the workspaces in a Power BI workspace collection.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Get-AzPowerBIWorkspace [-ResourceGroupName] <String> [-WorkspaceCollectionName] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzPowerBIWorkspace** cmdlet gets the workspaces in a Power BI workspace collection.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get workspaces of a workspace collection
+```
+PS C:\>Get-AzPowerBIWorkspace -ResourceGroupName "ResourceGroup17" -WorkspaceCollectionName "WCN11"
 ```
 
-{{ Add example description here }}
+This command gets the workspaces that belong to the workspace collection named WCN11 in the specified resource group.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Specifies the name of the resource group to which the workspace collection belongs.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceCollectionName
-Workspace Collection Name.
+Specifies the name of the workspace collection for which this cmdlet gets workspaces.
 
 ```yaml
 Type: System.String
@@ -77,8 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +93,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPowerBIWorkspaceCollection](./Get-AzPowerBIWorkspaceCollection.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 015C7DB7-2B08-4033-9B6E-1738D4DDACDA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkinterfaceipconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzNetworkInterfaceIpConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzNetworkInterfaceIpConfig.md
 ---
 
 # Remove-AzNetworkInterfaceIpConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a network interface IP configuration from a network interface.
 
 ## SYNTAX
 
@@ -18,26 +21,29 @@ Remove-AzNetworkInterfaceIpConfig -Name <String> -NetworkInterface <PSNetworkInt
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzNetworkInterfaceIpConfig** cmdlet removes a network interface IP configuration from an Azure network interface.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1: Delete an IP configuration from a network interface
+```
+$nic = Get-AzNetworkInterface -Name mynic -ResourceGroupName myrg
+
+Remove-AzNetworkInterfaceIpConfig -Name IPConfig-1 -NetworkInterface $nic
 ```
 
-{{ Add example description here }}
+The first command gets a network interface called mynic and stores it in the variable $nic. The second command
+    removes the IP configuration called IPConfig-1 associated with this network interface.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the IpConfiguration
+Specifies the name of the network interface IP configuration to remove.
 
 ```yaml
 Type: System.String
@@ -62,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkInterface
-The Network Interface
+Specifies a **NetworkInterface** object.
+This object contains the network interface IP configuration to remove.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
@@ -77,8 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,5 +95,16 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, network, networking
 
 ## RELATED LINKS
+
+[Add-AzNetworkInterfaceIpConfig](./Add-AzNetworkInterfaceIpConfig.md)
+
+[Get-AzNetworkInterfaceIpConfig](./Get-AzNetworkInterfaceIpConfig.md)
+
+[New-AzNetworkInterfaceIpConfig](./New-AzNetworkInterfaceIpConfig.md)
+
+[Set-AzNetworkInterfaceIpConfig](./Set-AzNetworkInterfaceIpConfig.md)
+
+

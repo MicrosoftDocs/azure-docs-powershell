@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatalongtermretentionbackup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseLongTermRetentionBackup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseLongTermRetentionBackup.md
 ---
 
 # Get-AzSqlDatabaseLongTermRetentionBackup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets one or more long term retention backups.
 
 ## SYNTAX
 
@@ -56,16 +58,73 @@ Get-AzSqlDatabaseLongTermRetentionBackup [-InputObject] <AzureSqlDatabaseModel> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlDatabaseLongTermRetentionBackup** cmdlet gets all long term retention backups for a location, server, or database or gets a specific long term retention backup.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all backups for a location
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzSqlDatabaseLongTermRetentionBackup -Location northeurope
+
+
+BackupExpirationTime : 3/22/2018 11:43:18 PM
+BackupName           : 55970792-164c-4a4a-88e5-7158d092d503;131656309980000000
+BackupTime           : 3/15/2018 11:43:18 PM
+DatabaseName         : database02
+DatabaseDeletionTime : 3/18/2018 4:36:00 PM
+Location         : northeurope
+ResourceId           : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server02/longTermRetentionDatabases/database02/longTermRetentionBackups/55970792-164c-4a4a-88e5-7158d092d503;131656309980000000
+ServerName           : server02
+ServerCreateTime     : 2/28/2018 12:12:19 AM
+
+BackupExpirationTime : 3/22/2018 5:50:55 AM
+BackupName           : 601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+BackupTime           : 3/15/2018 5:50:55 AM
+DatabaseName         : database01
+DatabaseDeletionTime :
+Location         : northeurope
+ResourceId           : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database01/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+ServerName           : server01
+ServerCreateTime     : 2/29/2018 12:12:19 AM
 ```
 
-{{ Add example description here }}
+This command gets all long term retention backups for all databases (which may be alive or deleted) in northeurope.
+
+### Example 2: Get a specific long term retention backup
+```powershell
+PS C:\> Get-AzSqlDatabaseLongTermRetentionBackup -Location northeurope -ServerName server01 -DatabaseName database01 -BackupName "601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000"
+
+
+BackupExpirationTime : 3/22/2018 5:50:55 AM
+BackupName           : 601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+BackupTime           : 3/15/2018 5:50:55 AM
+DatabaseName         : database01
+DatabaseDeletionTime :
+Location         : northeurope
+ResourceId           : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database01/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+ServerName           : server01
+ServerCreateTime     : 2/29/2018 12:12:19 AM
+```
+
+This command gets the backup with name 601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+
+### Example 3: Get all long term retention backups for a database
+```powershell
+PS C:\> Get-AzSqlDatabase -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01 | Get-AzSqlDatabaseLongTermRetentionBackup
+
+
+BackupExpirationTime : 3/22/2018 5:50:55 AM
+BackupName           : 601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+BackupTime           : 3/15/2018 5:50:55 AM
+DatabaseName         : database01
+DatabaseDeletionTime :
+Location         : northeurope
+ResourceId           : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database01/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+ServerName           : server01
+ServerCreateTime     : 2/29/2018 12:12:19 AM
+```
+
+This command gets all long term retention backups for database01
 
 ## PARAMETERS
 
@@ -85,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the Azure SQL Server the backups are under.
+The name of the Azure SQL Database the backup is from.
 
 ```yaml
 Type: System.String
@@ -132,9 +191,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -184,7 +243,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -229,7 +288,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -245,14 +304,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -267,3 +325,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzSqlDatabaseLongTermRetentionBackup](./Remove-AzSqlDatabaseLongTermRetentionBackup.md)
+
+[Get-AzSqlDatabaseBackupLongTermRetentionPolicy](./Get-AzSqlDatabaseBackupLongTermRetentionPolicy.md)
+
+[Set-AzSqlDatabaseBackupLongTermRetentionPolicy](./Set-AzSqlDatabaseBackupLongTermRetentionPolicy.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

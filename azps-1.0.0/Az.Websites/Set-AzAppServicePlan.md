@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 32D45795-FBCD-4157-BF45-41BD1F61782E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/set-azappserviceplan
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Set-AzAppServicePlan.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Set-AzAppServicePlan.md
 ---
 
 # Set-AzAppServicePlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets an Azure App Service plan.
 
 ## SYNTAX
 
@@ -26,21 +29,22 @@ Set-AzAppServicePlan [-AsJob] [-AppServicePlan] <PSAppServicePlan> [-DefaultProf
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzAppServicePlan** cmdlet sets an Azure App Service plan.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1: Modify an App Service plan
+```
+PS C:\>Set-AzAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -PerSiteScaling $true
 ```
 
-{{ Add example description here }}
+This command sets the PerSiteScaling option to true on the App Service plan named ContosoASP 
+    that belongs to the resource group named Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -AdminSiteName
-The name of the admin web app
+Admin Site Name
 
 ```yaml
 Type: System.String
@@ -55,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-The app service plan object
+App Service Plan Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan
@@ -85,12 +89,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -100,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+App Service Plan Name
 
 ```yaml
 Type: System.String
@@ -115,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-Number of Workers to be allocated.
+Number Of Workers
 
 ```yaml
 Type: System.Int32
@@ -130,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -PerSiteScaling
-Whether or not to enable Per Site Scaling
+Per Site Scaling Boolean
 
 ```yaml
 Type: System.Boolean
@@ -139,13 +143,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -160,8 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The App Service plan tier.
-Allowed values are \[Free|Shared|Basic|Standard|Premium|PremiumV2\]
+Tier
 
 ```yaml
 Type: System.String
@@ -176,8 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-Size of workers to be allocated.
-Allowed values are \[Small|Medium|Large|ExtraLarge\]
+Worker Size
 
 ```yaml
 Type: System.String
@@ -192,8 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -206,3 +207,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzWebApp](./Get-AzWebApp.md)
+
+[New-AzWebApp](./New-AzWebApp.md)
+
+[Remove-AzWebApp](./Remove-AzWebApp.md)
+
+[Restart-AzWebApp](./Restart-AzWebApp.md)
+
+[Start-AzWebApp](./Start-AzWebApp.md)
+
+[Stop-AzWebApp](./Stop-AzWebApp.md)
+
+

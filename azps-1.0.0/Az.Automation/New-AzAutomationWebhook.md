@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: E1FC931E-4EB8-4DCA-92BD-8013DDC13219
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationwebhook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationWebhook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationWebhook.md
 ---
 
 # New-AzAutomationWebhook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a webhook for an Automation runbook.
 
 ## SYNTAX
 
@@ -20,21 +23,38 @@ New-AzAutomationWebhook [-Name] <String> [-RunbookName] <String> [-IsEnabled] <B
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAutomationWebhook** cmdlet creates a webhook for an Azure Automation runbook.
+Be sure to save the webhook URL that this cmdlet returns, because it cannot be retrieved again.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a webhook
+```
+PS C:\>$Webhook = New-AzAutomationWebhook -Name "Webhook06" -IsEnabled $True -ExpiryTime "10/2/2016" -RunbookName "ContosoRunbook" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Force
 ```
 
-{{ Add example description here }}
+This command creates a webhook named Webhook06 for the runbook named ContosoRunbook in the Automation account named AutomationAccount01.
+The command stores the webhook in the $Webhook variable.
+The webhook is enabled.
+The webhook expires at the specified time.
+This command does not provide any values for webhook parameters.
+This command specifies the *Force* parameter.
+Therefore, it does not prompt you for confirmation.
+
+### Example 2: Create a webhook with parameters
+```
+PS C:\>$Params = @{"StringParam"="Hello World";"IntegerParam"=32}
+PS C:\> $Webhook = New-AzAutomationWebhook -Name "Webhook11" -Parameters $Params -IsEnabled $True -ExpiryTime "10/2/2016" -RunbookName "ContosoRunbook" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Force
+```
+
+The first command creates a dictionary of parameters, and stores them in the $Params variable.
+The second command creates a webhook named Webhook11 for the runbook named ContosoRunbook in the Automation account named AutomationAccount01.
+The command assigns the parameters in $Params to the webhook.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account in which this cmdlet creates a webhook.
 
 ```yaml
 Type: System.String
@@ -49,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryTime
-The Expiry Time for webhook.
+Specifies the expiry time for the webhook as a **DateTimeOffset** object.
+You can specify a string or a **DateTime** that can be converted to a valid **DateTimeOffset**.
 
 ```yaml
 Type: System.DateTimeOffset
@@ -79,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Skip warning message about one-time viewable webhook URL
+ps_force
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -94,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-The Enable/Disable property of the Webhook
+Specifies whether the webhook is enabled.
 
 ```yaml
 Type: System.Boolean
@@ -109,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The webhook name.
+Specifies a name for the webhook.
 
 ```yaml
 Type: System.String
@@ -124,7 +145,10 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Runbook parameters name/value.
+Specifies a dictionary of key/value pairs.
+The keys are the runbook parameter names.
+The values are the runbook parameter values.
+When the runbook starts in response to a webhook, these parameters are passed to the runbook.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -139,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet creates a webhook.
 
 ```yaml
 Type: System.String
@@ -154,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunbookName
-The Runbook Name associated with the webhook.
+Specifies the name of the runbook to associate to the webhook.
 
 ```yaml
 Type: System.String
@@ -169,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
-Optional name of the hybrid agent which should execute the runbook
+Optional name of the hybrid worker group which should execute the runbook
 
 ```yaml
 Type: System.String
@@ -193,7 +217,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -209,14 +233,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -233,3 +256,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationWebhook](./Get-AzAutomationWebhook.md)
+
+[Remove-AzAutomationWebhook](./Remove-AzAutomationWebhook.md)
+
+[Set-AzAutomationWebhook](./Set-AzAutomationWebhook.md)
+
+

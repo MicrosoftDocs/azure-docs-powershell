@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvirtualnetworkusagelist
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVirtualNetworkUsageList.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVirtualNetworkUsageList.md
 ---
 
 # Get-AzVirtualNetworkUsageList
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets virtual network current usage.
 
 ## SYNTAX
 
@@ -18,26 +20,40 @@ Get-AzVirtualNetworkUsageList -ResourceGroupName <String> -Name <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVirtualNetworkUsageList** cmdlet gets per subnet usage for the specified virtual network.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzVirtualNetworkUsageList -ResourceGroupName test -Name usagetest
+
+Get-AzVirtualNetworkUsageList -ResourceGroupName test -Name usagetest
+
+Name         : Subnet size and usage
+Id           : /subscriptions/sub1/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/usagetest/subnets/subnet
+CurrentValue : 1
+Limit        : 65531
+Unit         : Count
+
+Name         : Subnet size and usage
+Id           : /subscriptions/sub1/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/usagetest/subnets/subnet11
+CurrentValue : 0
+Limit        : 251
+Unit         : Count
 ```
 
-{{ Add example description here }}
+Gets per subnet current values of usage for usagetest virtual network.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Virtual network name.
+Specifies the name of the virtual network to show usages for.
 
 ```yaml
 Type: System.String
@@ -62,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that virtual network belongs to.
 
 ```yaml
 Type: System.String
@@ -77,8 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

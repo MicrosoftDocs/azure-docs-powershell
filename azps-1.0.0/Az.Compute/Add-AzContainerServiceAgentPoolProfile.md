@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: C3C65F3E-1192-4B57-87DB-5D371C8FF68E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azcontainerserviceagentpoolprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzContainerServiceAgentPoolProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzContainerServiceAgentPoolProfile.md
 ---
 
 # Add-AzContainerServiceAgentPoolProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a container service agent pool profile.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ Add-AzContainerServiceAgentPoolProfile [-ContainerService] <PSContainerService> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzContainerServiceAgentPoolProfile** cmdlet adds a container service agent pool profile to a local container service object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a profile
+```
+PS C:\> Add-AzContainerServiceAgentPoolProfile -Name "AgentPool01" -VmSize "Standard_A1" -DnsPrefix "APResourceGroup17"
 ```
 
-{{ Add example description here }}
+This command adds a container service agent pool profile to the local container service object.
 
 ## PARAMETERS
 
 ### -ContainerService
-{{Fill ContainerService Description}}
+Specifies the container service object to which this cmdlet adds an agent pool profile.
+To obtain a **ContainerService** object, use the [New-AzContainerServiceConfig](./New-AzContainerServiceConfig.md) cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService
@@ -48,7 +52,9 @@ Accept wildcard characters: False
 ```
 
 ### -Count
-{{Fill Count Description}}
+Specifies the number of agents that host containers.
+The acceptable values for this parameter are: integers from 1 to 100.
+The default value is 1.
 
 ```yaml
 Type: System.Int32
@@ -63,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -DnsPrefix
-{{Fill DnsPrefix Description}}
+Specifies the DNS prefix that this cmdlet uses to create the fully qualified domain name for this agent pool.
 
 ```yaml
 Type: System.String
@@ -93,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the agent pool profile.
+This value must be unique in the context of the subscription and resource group.
 
 ```yaml
 Type: System.String
@@ -108,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmSize
-{{Fill VmSize Description}}
+Specifies the size of the virtual machines for the agents.
 
 ```yaml
 Type: System.String
@@ -138,8 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,8 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -172,3 +177,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerServiceConfig](./New-AzContainerServiceConfig.md)
+
+[Remove-AzContainerServiceAgentPoolProfile](./Remove-AzContainerServiceAgentPoolProfile.md)

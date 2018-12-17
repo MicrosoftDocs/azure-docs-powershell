@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+ms.assetid: FA99C137-68E3-47D3-A0AC-FE33A481BE66
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/set-azrediscachediagnostics
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Set-AzRedisCacheDiagnostics.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Set-AzRedisCacheDiagnostics.md
 ---
 
 # Set-AzRedisCacheDiagnostics
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables diagnostics on an Azure Redis Cache.
 
 ## SYNTAX
 
@@ -18,26 +21,27 @@ Set-AzRedisCacheDiagnostics [-ResourceGroupName <String>] -Name <String> -Storag
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzRedisCacheDiagnostics** cmdlet enables diagnostics for an Azure Redis Cache.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable diagnostics
+```
+PS C:\>Set-AzRedisCacheDiagnostics -ResourceGroupName "ContosoResourceGroup" -Name "PeakCache" -StorageAccountId "/subscriptions/fffff139-aaaa-bbbb-cccc-21f21f35806e/resourcegroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount"
 ```
 
-{{ Add example description here }}
+This command enables diagnostics for an Azure Redis cache.
+This command will enable diagnostics or update the storage account for all Azure Redis Caches in the same region for the subscription.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of redis cache.
+Specifies the name of the cache.
 
 ```yaml
 Type: System.String
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which cache exists.
+Specifies the name of the resource group that contains the cache.
 
 ```yaml
 Type: System.String
@@ -77,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-ARM Resource Id for storage account.
+Specifies the resource ID of the storage account used to store the diagnostics data.
 
 ```yaml
 Type: System.String
@@ -107,8 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -123,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -135,5 +137,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Void
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
 
 ## RELATED LINKS
+
+[Remove-AzRedisCacheDiagnostics](./Remove-AzRedisCacheDiagnostics.md)
+
+

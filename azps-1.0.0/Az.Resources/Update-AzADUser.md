@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/update-azaduser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzADUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzADUser.md
 ---
 
 # Update-AzADUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates an existing active directory user.
 
 ## SYNTAX
 
@@ -28,9 +30,9 @@ Update-AzADUser -UserPrincipalName <String> [-DisplayName <String>] [-EnableAcco
 
 ### ObjectIdParameterSet
 ```
-Update-AzADUser -ObjectId <Guid> [-DisplayName <String>] [-EnableAccount <Boolean>] [-Password <SecureString>]
- [-ForceChangePasswordNextLogin] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Update-AzADUser -ObjectId <String> [-DisplayName <String>] [-EnableAccount <Boolean>]
+ [-Password <SecureString>] [-ForceChangePasswordNextLogin] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObjectParameterSet
@@ -41,16 +43,34 @@ Update-AzADUser -InputObject <PSADUser> [-DisplayName <String>] [-EnableAccount 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Updates an existing active directory user (work/school account also popularly known as org-id).
+For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#UpdateUser
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Update the display name of a user using object id
+
+```
+PS C:\> Update-AzADUser -ObjectId 155a5c10-93a9-4941-a0df-96d83ab5ab24 -DisplayName MyNewDisplayName
 ```
 
-{{ Add example description here }}
+Updates the display name of the user with object id '155a5c10-93a9-4941-a0df-96d83ab5ab24' to be 'MyNewDisplayName'.
+
+### Example 2 - Update the display name of a user using user principal name
+
+```
+PS C:\> Update-AzADUser -UserPrincipalName foo@domain.com -DisplayName MyNewDisplayName
+```
+
+Updates the display name of the user with user principal name 'foo@domain.com' to be 'MyNewDisplayName'.
+
+### Example 3 - Update the display name of a user using piping
+
+```
+PS C:\> Get-AzADUser -ObjectId 155a5c10-93a9-4941-a0df-96d83ab5ab24 | Update-AzADUser -DisplayName MyNewDisplayName
+```
+
+Gets the user with object id '155a5c10-93a9-4941-a0df-96d83ab5ab24' and pipes that to the Update-AzADUser cmdlet to update the display name of that user to 'MyNewDisplayName'.
 
 ## PARAMETERS
 
@@ -58,9 +78,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -140,10 +160,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-The object of the user to be updated.
+The object representing the user to be updated.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 Parameter Sets: InputObjectParameterSet
 Aliases:
 
@@ -155,10 +175,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The object Id of the user to be updated.
+The object id of the user to be updated.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ObjectIdParameterSet
 Aliases:
 
@@ -197,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -UPNOrObjectId
-The userPrincipalName or ObjectId of the user to be updated.
+The user principal name or object id of the user to be updated.
 
 ```yaml
 Type: System.String
@@ -258,16 +278,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### System.Guid
-
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 
 ### System.Nullable`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
@@ -275,7 +292,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 
 ## NOTES
 

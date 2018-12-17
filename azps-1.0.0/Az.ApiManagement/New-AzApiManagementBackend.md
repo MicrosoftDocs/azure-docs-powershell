@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementbackend
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementBackend.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementBackend.md
 ---
 
 # New-AzApiManagementBackend
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new backend entity.
 
 ## SYNTAX
 
@@ -22,16 +24,19 @@ New-AzApiManagementBackend -Context <PsApiManagementContext> [-BackendId <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a new backend entity in Api Management.
 
 ## EXAMPLES
 
-### Example 1
+### Create Backend 123 with a Basic Authorization Scheme
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>$credential = New-AzApiManagementBackendCredential -AuthorizationHeaderScheme basic -AuthorizationHeaderParameter opensesame -Query @{"sv" = @('xx', 'bb'); "sr" = @('cc')} -Header @{"x-my-1" = @('val1', 'val2')}
+
+PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Credential $credential -Description "my backend"
 ```
 
-{{ Add example description here }}
+Creates a new Backend
 
 ## PARAMETERS
 
@@ -69,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Credential to be used when talking to the Backend.
+Credential details which should be used when talking to the Backend.
 This parameter is optional.
 
 ```yaml
@@ -85,12 +90,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -118,6 +123,7 @@ Accept wildcard characters: False
 ### -Protocol
 Backend Communication protocol.
 This parameter is required.
+Valid values are 'http' and 'soap'.
 
 ```yaml
 Type: System.String
@@ -166,8 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceFabricCluster
-Service Fabric Cluster Backend details.
-This parameter is optional.
+Service Fabric Cluster Backend details. This parameter is optional.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
@@ -261,8 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -277,8 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -301,3 +304,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+
+[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
+
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+
+[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
+
+[Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)
+

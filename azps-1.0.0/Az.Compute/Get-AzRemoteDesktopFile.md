@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: E2A56E55-30A3-4A2F-80AE-9D166840909E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azremotedesktopfile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzRemoteDesktopFile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzRemoteDesktopFile.md
 ---
 
 # Get-AzRemoteDesktopFile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an .rdp file.
 
 ## SYNTAX
 
@@ -25,26 +28,27 @@ Get-AzRemoteDesktopFile [-ResourceGroupName] <String> [-Name] <String> [[-LocalP
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRemoteDesktopFile** cmdlet gets a Remote Desktop Protocol (.rdp) file.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a Remote Desktop file
+```
+PS C:\> Get-AzRemoteDesktopFile -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -LocalPath "D:\RemoteDesktopFile07.rdp"
 ```
 
-{{ Add example description here }}
+This command gets the Remote Desktop file for the virtual machine named VirtualMachine07.
+The command stores the result in the file named D:\RemoteDesktopFile07.rdp.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Launch
-Start a remote desktop session to the specified role instance.
+Indicates that this cmdlet launches Remote Desktop after it gets the .rdp file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
-Path and name of the output RDP file.
+Specifies the local full path where this cmdlet stores the .rdp file.
 
 ```yaml
 Type: System.String
@@ -96,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+Specifies the name of the availability set that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -111,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -126,8 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

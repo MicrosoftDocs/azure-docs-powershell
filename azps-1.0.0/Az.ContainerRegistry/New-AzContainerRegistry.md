@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/new-azcontainerregistry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/New-AzContainerRegistry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/New-AzContainerRegistry.md
 ---
 
 # New-AzContainerRegistry
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a container registry.
 
 ## SYNTAX
 
@@ -19,26 +21,61 @@ New-AzContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-Sku] <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzContainerRegistry cmdlet creates a container registry.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a container registry with a new storage account.
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -Sku "Basic"
+
+   Container registry location: eastus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
 ```
 
-{{ Add example description here }}
+This command creates a container registry with a new storage account in the resource group \`MyResourceGroup\`.
+
+### Example 2: Create a container registry with admin user enabled.
+```powershell
+PS C:\>New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -Sku "Basic" -EnableAdminUser
+
+  Container registry location: eastus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
+```
+
+This command creates a container registry with admin user enabled.
+
+### Example 3: Create a container registry with an existing storage account.
+```powershell
+PS C:\>New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -Sku "Basic" -StorageAccountName "mystorageaccount"
+
+  Container registry location: eastus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
+```
+
+This command creates a container registry with an existing storage account \`mystorageaccount\` in the same subscription.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -57,7 +94,7 @@ Aliases: EnableAdmin
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -110,6 +147,7 @@ Accept wildcard characters: False
 
 ### -Sku
 Container Registry SKU.
+Allowed values: Basic.
 
 ```yaml
 Type: System.String
@@ -126,7 +164,6 @@ Accept wildcard characters: False
 
 ### -StorageAccountName
 The name of an existing storage account.
-This only applies to Classic sku.
 
 ```yaml
 Type: System.String
@@ -141,7 +178,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Container Registry Tags.
+Container Registry Tags.Key-value pairs in the form of a hash table.
+For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -165,7 +204,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -181,14 +220,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -201,3 +239,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzContainerRegistry](Get-AzContainerRegistry.md)
+
+[Update-AzContainerRegistry](Update-AzContainerRegistry.md)
+
+[Remove-AzContainerRegistry](Remove-AzContainerRegistry.md)
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/set-azservicebusnamespace
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusNamespace.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusNamespace.md
 ---
 
 # Set-AzServiceBusNamespace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the description of an existing Service Bus namespace.
 
 ## SYNTAX
 
@@ -19,26 +21,37 @@ Set-AzServiceBusNamespace [-ResourceGroupName] <String> [-Location] <String> [-N
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzServiceBusNamespace** cmdlet updates the description of the specified Service Bus namespace within the resource group.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzServiceBusNamespace -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -Location WestUs -SkuName Premium -SkuCapacity 1 -Tag @{Tag2="Tag2Value"}
+
+Name               : SB-Example1
+Id                 : /subscriptions/{subscription id}/resourceGroups/Default-ServiceBus-WestUS/providers/Microsoft.ServiceBus/namespaces/SB-Example1
+ResourceGroup      : Default-ServiceBus-WestUS
+Location           : West US
+Tags               : {Tag2, Tag2Value}
+Sku                : Name : Premium , Tier : Premium, Capacity : 1
+ProvisioningState  : Succeeded
+CreatedAt          :
+UpdatedAt          :
+ServiceBusEndpoint :
 ```
 
-{{ Add example description here }}
+Updates the Service Bus namespace with a new description.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-ServiceBus Namespace Location
+The Service Bus namespace location.
 
 ```yaml
 Type: System.String
@@ -63,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-ServiceBus Namespace Name
+ServiceBus Namespace Name.
 
 ```yaml
 Type: System.String
@@ -78,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+The resource group name.
 
 ```yaml
 Type: System.String
@@ -108,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Namespace Sku Name
+The namespace SKU name.
 
 ```yaml
 Type: System.String
@@ -124,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Hashtables which represents resource Tags
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -139,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Updates the Service Bus namespace with the specified information.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -148,7 +162,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -164,14 +178,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

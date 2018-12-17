@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/new-azrecoveryservicesasrreplicationprotecteditem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrReplicationProtectedItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrReplicationProtectedItem.md
 ---
 
 # New-AzRecoveryServicesAsrReplicationProtectedItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables replication for an ASR protectable item by creating a replication protected item.
 
 ## SYNTAX
 
@@ -67,21 +69,52 @@ New-AzRecoveryServicesAsrReplicationProtectedItem [-AzureToAzure] -AzureVmId <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzRecoveryServicesAsrReplicationProtectedItem** cmdlet creates a new replication protected item.
+Use this cmdlet to enable replication for an ASR protectable item.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $currentJob = New-AzRecoveryServicesAsrReplicationProtectedItem -ProtectableItem $VM -Name $VM.Name -ProtectionContainerMapping $ProtectionContainerMapping
 ```
 
-{{ Add example description here }}
+Starts the replication protected item creation operation for the specified ASR protectable item and returns the ASR job used to track the operation.
+
+### Example 2
+```
+PS C:\>$job = New-AzRecoveryServicesAsrReplicationProtectedItem -ProtectableItem $pi -Name $rpiName -ProtectionContainerMapping $pcm `
+-RecoveryAzureStorageAccountId $RecoveryAzureStorageAccountId -RecoveryResourceGroupId  $RecoveryResourceGroupId `
+-ProcessServer $fabric.fabricSpecificDetails.ProcessServers[0] -Account $fabric.fabricSpecificDetails.RunAsAccounts[0]
+```
+
+Starts the replication protected item creation operation for the specified ASR protectable item and returns the ASR job used to track the operation(vmWare to Azure scenario).
+
+### Example 3
+```
+PS C:>$job = New-AzRecoveryServicesAsrReplicationProtectedItem -AzToAzure -AzToAzureDiskReplicationConfig disk1,disk2 -AzVmId $vmId `
+-Name "a2aprotectedItem" -RecoveryVmName "vmName" -ProtectionContainerMapping $pcmMapping -RecoveryResourceGroupId $recoveryResourceGroup
+```
+
+Starts the replication protected item creation operation for the specified ASR protectable item and returns the ASR job used to track the operation (Azure to Azure scenario).
+
+### Example 4
+```
+PS C:\> $disk1 = new-AzToAzureDiskReplicationConfiguration -vhdUri  $diskUri1 -RecoveryAzureStorageAccountId $recoveryAzureStorageAccountId `
+-LogStorageAccountId $logStorageAccountId  
+PS C:\> $disk2 = new-AzToAzureDiskReplicationConfiguration -vhdUri  $diskUri2 -RecoveryAzureStorageAccountId $recoveryAzureStorageAccountId `
+-LogStorageAccountId $logStorageAccountId  
+PS C:\> $enableDRjob = New-AzRecoveryServicesAsrReplicationProtectedItem -AzToAzure -AzVmId $vmId -Name $rpiName `
+-RecoveryCloudServiceId  $recoveryCloudServiceId -ProtectionContainerMapping $pcm -RecoveryResourceGroupId  $RecoveryResourceGroupId `
+-AzToAzureDiskReplicationConfiguration $disk1,$disk2
+```
+
+Starts the replication protected item creation operation for the specified VmId and returns the ASR job used to track the operation (Azure to Azure scenario).
 
 ## PARAMETERS
 
 ### -Account
-{{Fill Account Description}}
+The run as account to be used to push install the Mobility service if needed. Must be one from the list of run as accounts in the ASR fabric.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRunAsAccount
@@ -143,10 +176,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -156,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -HyperVToAzure
-{{Fill HyperVToAzure Description}}
+Switch parameter to specify the replicated item is a Hyper-V virtual machine that is being replicated to Azure.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -171,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDiskId
-{{Fill IncludeDiskId Description}}
+The list of disks to include for replication. By default all disks are included.
 
 ```yaml
 Type: System.String[]
@@ -186,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogStorageAccountId
-{{Fill LogStorageAccountId Description}}
+Specifies the log or cache storage account Id to be used to store replication logs.
 
 ```yaml
 Type: System.String
@@ -213,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies a name for the ASR replication protected item. The name must be unique within the vault.
 
 ```yaml
 Type: System.String
@@ -228,7 +262,8 @@ Accept wildcard characters: False
 ```
 
 ### -OS
-{{Fill OS Description}}
+Specifies the operating system family.
+The acceptable values for this parameter are: Windows or Linux.
 
 ```yaml
 Type: System.String
@@ -244,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -OSDiskName
-{{Fill OSDiskName Description}}
+Specifies the name of the operating system disk.
 
 ```yaml
 Type: System.String
@@ -259,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessServer
-{{Fill ProcessServer Description}}
+The Process Server to use to replicate this machine. Use the list of process servers in the ASR fabric corresponding to the Configuration server to specify one.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProcessServer
@@ -274,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectableItem
-{{Fill ProtectableItem Description}}
+Specifies the ASR protectable item object for which replication is being enabled.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectableItem
@@ -289,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionContainerMapping
-{{Fill ProtectionContainerMapping Description}}
+Specifies the ASR protection container mapping object corresponding to the replication policy to be used for replication.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainerMapping
@@ -304,7 +339,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAvailabilitySetId
-{{Fill RecoveryAvailabilitySetId Description}}
+The ID of the AvailabilitySet to recover the machine to in the event of a failover.
 
 ```yaml
 Type: System.String
@@ -319,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureNetworkId
-{{Fill RecoveryAzureNetworkId Description}}
+The ID of the Azure virtual network to recover the machine to in the event of a failover.
 
 ```yaml
 Type: System.String
@@ -334,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureStorageAccountId
-{{Fill RecoveryAzureStorageAccountId Description}}
+Specifies the ID of the Azure storage account to replicate to.
 
 ```yaml
 Type: System.String
@@ -361,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureSubnetName
-{{Fill RecoveryAzureSubnetName Description}}
+The subnet within the recovery Azure virtual network to which the failed over virtual machine should be attached in the event of a failover.
 
 ```yaml
 Type: System.String
@@ -376,7 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryBootDiagStorageAccountId
-{{Fill RecoveryBootDiagStorageAccountId Description}}
+Specifies the storage account for boot diagnostics for recovery azure VM.
 
 ```yaml
 Type: System.String
@@ -391,7 +426,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryCloudServiceId
-{{Fill RecoveryCloudServiceId Description}}
+Specifies the resource ID of the recovery cloud service to failover this virtual machine to.
 
 ```yaml
 Type: System.String
@@ -406,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryResourceGroupId
-{{Fill RecoveryResourceGroupId Description}}
+Specifies the ARM identifier of the resource group in which the virtual machine will be created in the event of a failover.
 
 ```yaml
 Type: System.String
@@ -421,7 +456,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryVmName
-{{Fill RecoveryVmName Description}}
+Name of the recovery Vm created after failover.
 
 ```yaml
 Type: System.String
@@ -436,7 +471,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationGroupName
-{{Fill ReplicationGroupName Description}}
+Specifies the replication group name to use to create multi-VM consistent recovery points. By default each replication protected item is created in a group of its own and multi-VM consistent recovery points are not generated. Use this option only if you need to create multi-VM consistent recovery points across a group of machines by protecting all machines to the same replication group. 
 
 ```yaml
 Type: System.String
@@ -451,7 +486,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmmToVmm
-{{Fill VmmToVmm Description}}
+Switch parameter to specify the replicated item is a Hyper-V virtual machine that is being replicated between VMM managed Hyper-V sites.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -466,7 +501,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMwareToAzure
-{{Fill VMwareToAzure Description}}
+Switch parameter to specify the replicated item is a VMware virtual machine or physical server that will be replicate to Azure.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -481,7 +516,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForCompletion
-{{Fill WaitForCompletion Description}}
+Specifies that the cmdlet should wait for completion of the operation before returning.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -496,7 +531,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts  for confirmation before starting the operation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -527,8 +562,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -541,3 +575,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesAsrReplicationProtectedItem](./Get-AzRecoveryServicesAsrReplicationProtectedItem.md)
+
+[Remove-AzRecoveryServicesAsrReplicationProtectedItem](./Remove-AzRecoveryServicesAsrReplicationProtectedItem.md)
+
+[Set-AzRecoveryServicesAsrReplicationProtectedItem](./Set-AzRecoveryServicesAsrReplicationProtectedItem.md)

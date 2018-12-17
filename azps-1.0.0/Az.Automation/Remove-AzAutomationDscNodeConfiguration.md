@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 6C6C7142-31CD-4245-BC55-CB7916EA12E0
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/remove-azautomationdscnodeconfiguration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Remove-AzAutomationDscNodeConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Remove-AzAutomationDscNodeConfiguration.md
 ---
 
 # Remove-AzAutomationDscNodeConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes metadata from DSC node configurations in Automation.
 
 ## SYNTAX
 
@@ -19,21 +22,15 @@ Remove-AzAutomationDscNodeConfiguration [-Name] <String> [-Force] [-IgnoreNodeMa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzAutomationDscNodeConfiguration** cmdlet removes metadata from APS Desired State Configuration (DSC) node configurations in Azure Automation.
+Automation stores DSC node configuration as a Managed Object Format (MOF) configuration document.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account that contains the DSC node configurations for which this cmdlet removes metadata.
 
 ```yaml
 Type: System.String
@@ -48,12 +45,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force confirmation of the removal of the node configuration
+ps_force
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNodeMappings
-Remove the node configuration even if the node configuration is mapped to one or more nodes
+Indicates that this cmdlet ignores node mappings.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -93,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The node configuration name.
+Specifies the name of the DSC node configuration for which this cmdlet removes metadata.
 
 ```yaml
 Type: System.String
@@ -108,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group.
+This cmdlet removes metadata for DSC node configurations in the resource group that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -132,7 +130,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -148,14 +146,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -168,3 +165,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationDscNodeConfiguration](./Get-AzAutomationDscNodeConfiguration.md)
+
+[Import-AzAutomationDscNodeConfiguration](./Import-AzAutomationDscNodeConfiguration.md)
+
+[Azure Automation Cmdlets](./Az.Automation.md)
+
+

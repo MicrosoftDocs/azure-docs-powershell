@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 61C34433-A16A-4ACF-A318-1C7D9E49579F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azloadbalancerinboundnatpoolconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzLoadBalancerInboundNatPoolConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzLoadBalancerInboundNatPoolConfig.md
 ---
 
 # New-AzLoadBalancerInboundNatPoolConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -29,23 +31,19 @@ New-AzLoadBalancerInboundNatPoolConfig -Name <String> -Protocol <String> -Fronte
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1: New
 ```
-
-{{ Add example description here }}
+PS C:\> $slb = Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $feIpConfig = Get-AzLoadBalancerFrontendIpConfig -Name "FrontendName" -Loadbalancer $slb
+PS C:\> New-AzLoadBalancerInboundNatPoolConfig -Name "myInboundNatPool" -FrontendIpConfigurationId $feIpConfig.Id -Protocol TCP -FrontendPortRangeStart 1001 -FrontendPortRangeEnd 2000 -BackendPort 1001
+```
 
 ## PARAMETERS
 
 ### -BackendPort
-The port used for internal connections on the endpoint.
-Acceptable values are between 1 and 65535.
-
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
@@ -59,12 +57,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -74,9 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFloatingIP
-Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.
-This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
-This setting can't be changed after you create the endpoint.
+Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -91,8 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTcpReset
-Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.
-This element is only used when the protocol is set to TCP.
+Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -107,8 +102,6 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfiguration
-A reference to frontend IP addresses.
-
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration
 Parameter Sets: SetByResource
@@ -122,8 +115,6 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfigurationId
-A reference to frontend IP addresses.
-
 ```yaml
 Type: System.String
 Parameter Sets: SetByResourceId
@@ -137,9 +128,6 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendPortRangeEnd
-The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer.
-Acceptable values range between 1 and 65535.
-
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
@@ -153,9 +141,6 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendPortRangeStart
-The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer.
-Acceptable values range between 1 and 65534.
-
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
@@ -169,10 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdleTimeoutInMinutes
-The timeout for the TCP idle connection.
-The value can be set between 4 and 30 minutes.
-The default value is 4 minutes.
-This element is only used when the protocol is set to TCP.
+The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
 
 ```yaml
 Type: System.Int32
@@ -187,8 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the inbound nat pool.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -202,8 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-The transport protocol for the endpoint.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -232,8 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -248,8 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

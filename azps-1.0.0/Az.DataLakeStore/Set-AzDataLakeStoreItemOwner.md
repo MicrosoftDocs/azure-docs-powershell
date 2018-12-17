@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 415C5854-FE03-4D4E-BE84-408EA5F95E34
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/set-azdatalakestoreitemowner
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreItemOwner.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreItemOwner.md
 ---
 
 # Set-AzDataLakeStoreItemOwner
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the owner of a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Set-AzDataLakeStoreItemOwner [-Account] <String> [-Path] <DataLakeStorePathInsta
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDataLakeStoreItemOwner** cmdlet modifies the owner of a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the owner for an item
+```
+PS C:\>Set-AzDataLakeStoreItemOwner -AccountName "ContosoADL" -Path / -Type User -Id (Get-AzADUser -Mail "PattiFuller@contoso.com").ObjectId
 ```
 
-{{ Add example description here }}
+This command sets the owner for the root directory to Patti Fuller.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The AAD object ID of the new owner entity
+Specifies the object ID of the AzureActive Directory user, group, or service principal to use as the owner.
 
 ```yaml
 Type: System.Guid
@@ -92,8 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account that should have its ACL set.
-Can be a file or folder In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of the item to modify, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -108,8 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of owner to set.
-Valid values are 'user' and 'group'.
+Specifies the type of owner to set.
+The acceptable values for this parameter are: User and Group.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+Owner
@@ -134,7 +136,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -150,14 +152,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -173,8 +174,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### System.Boolean
+### System.String
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItemOwner](./Get-AzDataLakeStoreItemOwner.md)
+
+

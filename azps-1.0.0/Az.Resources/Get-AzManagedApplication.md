@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azmanagedapplication
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzManagedApplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzManagedApplication.md
 ---
 
 # Get-AzManagedApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets managed applications
 
 ## SYNTAX
 
@@ -31,16 +33,23 @@ Get-AzManagedApplication -Id <String> [-ApiVersion <String>] [-Pre] [-DefaultPro
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzManagedApplication** cmdlet gets managed applications
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all managed applications under a resource group
+```
+PS C:\>Get-AzManagedApplication -ResourceGroupName "MyRG"
 ```
 
-{{ Add example description here }}
+This command gets managed applications under resource group "MyRG"
+
+### Example 2: Get all managed applications
+```
+PS C:\>Get-AzManagedApplication
+```
+
+This command get all managed applications under the current subscription
 
 ## PARAMETERS
 
@@ -61,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -138,8 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

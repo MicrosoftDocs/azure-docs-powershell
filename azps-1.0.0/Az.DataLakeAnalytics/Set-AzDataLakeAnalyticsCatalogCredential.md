@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: 75E4E0FB-35A8-47DA-B606-45E073D04625
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/set-azdatalakeanalyticscatalogcredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsCatalogCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsCatalogCredential.md
 ---
 
 # Set-AzDataLakeAnalyticsCatalogCredential
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an Azure Data Lake Analytics catalog credential password.
 
 ## SYNTAX
 
@@ -27,21 +30,26 @@ Set-AzDataLakeAnalyticsCatalogCredential [-Account] <String> [-DatabaseName] <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Set-AzDataLakeAnalyticsCatalogCredential cmdlet modifies a credential password associated with an Azure Data Lake Analytics catalog.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify a credential's password associated with an account
+```
+PS C:\> Set-AzDataLakeAnalyticsCatalogCredential -AccountName "ContosoAdlAccount" `
+                  -DatabaseName "databaseName" `
+                  -CredentialName "credName" `
+                  -Credential (Get-Credential) `
+                  -NewPassword (Get-Credential) `
+                  -Host "example.contoso.com" -Port 8080
 ```
 
-{{ Add example description here }}
+This command sets the credential password to the password specified in NewPassword.
 
 ## PARAMETERS
 
 ### -Account
-The account name that contains the catalog to create the credential in.
+Specifies the Data Lake Analytics account name.
 
 ```yaml
 Type: System.String
@@ -56,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The credential to create, which includes the user ID and password that can authenticate to the data source
+Specifies the name and current password of the credential to modify.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -71,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -CredentialName
-The name of the credential to create.
+Specifies the name of the credential to modify
 
 ```yaml
 Type: System.String
@@ -86,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseHost
-The host of the database to connect to in the format 'myhost.dns.com'.
+Specifies the host name of the external data source the credential can connect to in the format mydatabase.contoso.com.
 
 ```yaml
 Type: System.String
@@ -101,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the database to create the credential in.
+Specifies the name of the database in the Data Lake Analytics account holding the credential.
 
 ```yaml
 Type: System.String
@@ -116,12 +124,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -131,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewPassword
-The new password for the credential
+Specifies the new password for the credential
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -146,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-The Port associated with the host for the database to connect to.
+Specifies the port number used to connect to the specified DatabaseHost using this credential.
 
 ```yaml
 Type: System.Int32
@@ -161,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The URI of the database to connect to.
+Specifies the full Uniform Resource Identifier (URI) of the external data source this credential can connect to.
 
 ```yaml
 Type: System.Uri
@@ -191,9 +199,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -207,8 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

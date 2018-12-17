@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+ms.assetid: 863DD160-4443-4D50-804E-089255F3EA4E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/set-azcdnprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Set-AzCdnProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Set-AzCdnProfile.md
 ---
 
 # Set-AzCdnProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a CDN profile.
 
 ## SYNTAX
 
@@ -18,21 +21,14 @@ Set-AzCdnProfile -CdnProfile <PSProfile> [-DefaultProfile <IAzureContextContaine
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzCdnProfile** cmdlet updates an Azure Content Delivery Network (CDN) profile.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CdnProfile
-The Azure CDN profile object.
+Specifies the profile that this cmdlet updates.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile
@@ -47,12 +43,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +67,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -87,14 +83,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,3 +102,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzCdnProfile](./Get-AzCdnProfile.md)
+
+[New-AzCdnProfile](./New-AzCdnProfile.md)
+
+[Remove-AzCdnProfile](./Remove-AzCdnProfile.md)
+
+

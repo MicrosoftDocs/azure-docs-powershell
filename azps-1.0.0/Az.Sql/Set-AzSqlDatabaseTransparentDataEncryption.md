@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 01744DBD-1991-45EF-AA92-FD471F7E7551
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqldatabasetransparentdataencryption
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseTransparentDataEncryption.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseTransparentDataEncryption.md
 ---
 
 # Set-AzSqlDatabaseTransparentDataEncryption
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies TDE property for a database.
 
 ## SYNTAX
 
@@ -19,21 +22,26 @@ Set-AzSqlDatabaseTransparentDataEncryption [-State] <TransparentDataEncryptionSt
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzSqlDatabaseTransparentDataEncryption** cmdlet modifies the Transparent Data Encryption (TDE) property of an Azure SQL database.
+For more information, see Transparent Data Encryption with Azure SQL Databasehttps://msdn.microsoft.com/library/dn948096 (https://msdn.microsoft.com/library/dn948096) in the Microsoft Developer Network Library.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable TDE for a database
+```
+PS C:\>Set-AzSqlDatabaseTransparentDataEncryption -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -State Enabled
+ResourceGroupName             ServerName                    DatabaseName                                          State
+-----------------             ----------                    ------------                                          -----
+ResourceGroup01               Server01                      Database01                                            Enabled
 ```
 
-{{ Add example description here }}
+This command enables TDE for the database named Database01 on the server named Server01.
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database.
+Specifies the name of the database that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -48,12 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the database is assigned.
 
 ```yaml
 Type: System.String
@@ -78,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The Azure Sql Server name.
+Specifies the name of the server that hosts the database.
 
 ```yaml
 Type: System.String
@@ -93,7 +101,10 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The Azure Sql Database Transparent Data Encryption state.
+Specifies the value of the TDE property.
+The acceptable values for this parameter are:
+- Enabled 
+- Disabled
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.TransparentDataEncryption.Model.TransparentDataEncryptionStateType
@@ -118,7 +129,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -134,14 +145,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -156,3 +166,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlDatabaseTransparentDataEncryption](./Get-AzSqlDatabaseTransparentDataEncryption.md)
+
+[Get-AzSqlDatabaseTransparentDataEncryptionActivity](./Get-AzSqlDatabaseTransparentDataEncryptionActivity.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+
+

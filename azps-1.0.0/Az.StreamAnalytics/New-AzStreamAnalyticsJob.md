@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.dll-Help.xml
 Module Name: Az.StreamAnalytics
-online version:
+ms.assetid: F281B351-F7C7-47D1-9745-FFE4BAA840FD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics/new-azstreamanalyticsjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/New-AzStreamAnalyticsJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/New-AzStreamAnalyticsJob.md
 ---
 
 # New-AzStreamAnalyticsJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates or updates a Stream Analytics job.
 
 ## SYNTAX
 
@@ -18,26 +21,38 @@ New-AzStreamAnalyticsJob [[-Name] <String>] [-File] <String> [-Force] [-Resource
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStreamAnalyticsJob** cmdlet creates a new Stream Analytics job in Azure or updates the definition of an existing specified job.
+The name of the job can be specified in the .JSON file or on the command line.
+If both are specified, the name on command line must match the name in the file.
+If you specify a job name that already exists and do not specify the *Force* parameter, the cmdlet will ask whether or not to replace the existing job.
+If you specify the *Force* parameter and specify an existing job name, the job definition will be replaced without confirmation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1: Create a job
+```
+PS C:\>New-AzStreamAnalyticsJob -ResourceGroupName "StreamAnalytics-Default-West-US" -File "C:\JobDefinition.json"
 ```
 
-{{ Add example description here }}
+This command creates a job from the definition in JobDefinition.json.
+If an existing job with the specified name in the job definition file is already defined, the cmdlet will ask whether or not to replace it.
+
+### EXAMPLE 2: Replace a job definition
+```
+PS C:\>New-AzStreamAnalyticsJob -ResourceGroupName "StreamAnalytics-Default-West-US" -File "C:\JobDefinition.json" -Name "StreamingJob" -Force
+```
+
+This command replaces the job definition for StreamingJob without confirmation.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -File
-The stream analytics job JSON file path.
+Specifies the path to a JSON file that contains the JSON representation of the Azure Stream Analytics job to create.
 
 ```yaml
 Type: System.String
@@ -62,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Don't ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -77,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The stream analytics job name.
+Specifies the name of the Azure Stream Analytics job to create.
 
 ```yaml
 Type: System.String
@@ -92,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group to which the Azure Stream Analytics job should belong.
 
 ```yaml
 Type: System.String
@@ -116,7 +131,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -132,14 +147,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +166,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStreamAnalyticsJob](./Get-AzStreamAnalyticsJob.md)
+
+[Remove-AzStreamAnalyticsJob](./Remove-AzStreamAnalyticsJob.md)
+
+[Start-AzStreamAnalyticsJob](./Start-AzStreamAnalyticsJob.md)
+
+[Stop-AzStreamAnalyticsJob](./Stop-AzStreamAnalyticsJob.md)
+
+[Stop-AzStreamAnalyticsJob](./Stop-AzStreamAnalyticsJob.md)
+
+

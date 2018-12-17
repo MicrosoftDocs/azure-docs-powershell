@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/get-azrecoveryservicesasrstorageclassification
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrStorageClassification.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrStorageClassification.md
 ---
 
 # Get-AzRecoveryServicesAsrStorageClassification
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the available(discovered) ASR storage classifications in the Recovery Services vault.
 
 ## SYNTAX
 
@@ -31,26 +33,27 @@ Get-AzRecoveryServicesAsrStorageClassification -FriendlyName <String> -Fabric <A
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesAsrStorageClassification** cmdlet gets details of the discovered ASR storage classifications in the Recovery Services vault.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $StorageClassifications = Get-AzRecoveryServicesAsrStorageClassification -Fabric $Fabric
 ```
 
-{{ Add example description here }}
+List the discovered storage classifications corresponding to the specified ASR fabric. 
 
 ## PARAMETERS
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-{{Fill Fabric Description}}
+Specifies an ASR fabric object. The cmdlet gets the details of discovered storage classifications corresponding to the specified ASR fabric. 
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric
@@ -75,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-{{Fill FriendlyName Description}}
+Specifies the friendly name of the storage classification object to get.
 
 ```yaml
 Type: System.String
@@ -90,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the storage classification object to get.
 
 ```yaml
 Type: System.String
@@ -105,8 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

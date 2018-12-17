@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 522F5305-CDF6-41F2-803B-9EEA9E927668
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azcontainerservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzContainerService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzContainerService.md
 ---
 
 # New-AzContainerService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a container service.
 
 ## SYNTAX
 
@@ -18,21 +21,29 @@ New-AzContainerService [-ResourceGroupName] <String> [-Name] <String> [-Containe
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzContainerService** cmdlet creates a container service.
+Specify a container service object that you can create by using the New-AzContainerServiceConfig cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a container service
+```
+PS C:\> New-AzResourceGroup -Name "ResourceGroup17" -Location "Australia Southeast" -Force
+PS C:\> $Container = New-AzContainerServiceConfig -Location "Australia Southeast" -OrchestratorType "DCOS" -MasterDnsPrefix "MasterResourceGroup17" -AdminUsername "AcsLinuxAdmin" -SshPublicKey "<ssh-key>" | Add-AzContainerServiceAgentPoolProfile -Name "AgentPool01" -VmSize "Standard_A1" -DnsPrefix "APResourceGroup17"
+PS C:\> New-AzContainerService -ResourceGroupName "ResourceGroup17" -Name "CSResourceGroup17" -ContainerService $Container
 ```
 
-{{ Add example description here }}
+The first command creates a resource group named ResourceGroup17 at the specified location.
+For more information, see the New-AzResourceGroup cmdlet.
+The second command creates a container, and then stores it in the $Container variable.
+For more information, see the New-AzContainerServiceConfig cmdlet.
+The final command creates a container service for the container stored in $Container.
+The service is named csResourceGroup17.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background
+RRun cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -47,7 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerService
-{{Fill ContainerService Description}}
+Specifies a container service object that contains the properties for the new service.
+To obtain a **ContainerService** object, use the New-AzContainerServiceConfig cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService
@@ -62,12 +74,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the container service that this cmdlet creates.
 
 ```yaml
 Type: System.String
@@ -92,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the resource group in which this cmdlet deploys the container service.
 
 ```yaml
 Type: System.String
@@ -116,7 +128,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -132,14 +144,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +165,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzContainerService](./Get-AzContainerService.md)
+
+[New-AzContainerServiceConfig](./New-AzContainerServiceConfig.md)
+
+[Remove-AzContainerService](./Remove-AzContainerService.md)
+
+[Update-AzContainerService](./Update-AzContainerService.md)
+
+

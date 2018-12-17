@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 848A6972-AB29-46FB-8E03-FF2ADB113A0E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabasedatamaskingrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseDataMaskingRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseDataMaskingRule.md
 ---
 
 # Get-AzSqlDatabaseDataMaskingRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the data masking rules from a database.
 
 ## SYNTAX
 
@@ -19,21 +22,64 @@ Get-AzSqlDatabaseDataMaskingRule [-SchemaName <String>] [-TableName <String>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlDatabaseDataMaskingRule** cmdlet gets either a specific data masking rule or all of the data masking rules for an Azure SQL database.
+To use the cmdlet, use the *ResourceGroupName*, *ServerName*, and *DatabaseName* parameters to identify the database, and the *RuleId* parameter to specify which rule this cmdlet returns.
+If you do not provide *RuleId*, all the data masking rules for that Azure SQL database are returned.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all data masking rules from a database
+```
+PS C:\>Get-AzSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+DatabaseName      : database01
+ResourceGroupName : resourcegroup01
+ServerName        : server01
+SchemaName        : dbo
+TableName         : table1
+ColumnName        : column1
+MaskingFunction   : Default
+PrefixSize        :
+SuffixSize        :
+ReplacementString :
+NumberFrom        :
+NumberTo          :
+
+DatabaseName      : database01
+ResourceGroupName : resourcegroup01
+ServerName        : server01
+SchemaName        : dbo
+TableName         : table2
+ColumnName        : column2
+MaskingFunction   : Default
+PrefixSize        :
+SuffixSize        :
+ReplacementString :
+NumberFrom        :
+NumberTo          :
 ```
 
-{{ Add example description here }}
+### Example 2: Get the data masking rule defined on schema "dbo", table "table1" and column "column1".
+```
+PS C:\>Get-AzSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SchemaName "dbo" -TableName  "table1" -ColumnName "column1"
+DatabaseName      : database01
+ResourceGroupName : resourcegroup01
+ServerName        : server01
+SchemaName        : dbo
+TableName         : table1
+ColumnName        : column1
+MaskingFunction   : Default
+PrefixSize        :
+SuffixSize        :
+ReplacementString :
+NumberFrom        :
+NumberTo          :
+```
 
 ## PARAMETERS
 
 ### -ColumnName
-The column name.
+Specifies the name of the column targeted by the masking rule.
 
 ```yaml
 Type: System.String
@@ -48,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-SQL Database name.
+Specifies the name of the database.
 
 ```yaml
 Type: System.String
@@ -63,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the database is assigned.
 
 ```yaml
 Type: System.String
@@ -93,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -SchemaName
-The schema name.
+Specifies the name of a schema.
 
 ```yaml
 Type: System.String
@@ -108,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-SQL Database server name.
+Specifies the name of the server.
 
 ```yaml
 Type: System.String
@@ -123,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -TableName
-The table name.
+Specifies the name of an Azure SQL table.
 
 ```yaml
 Type: System.String
@@ -147,7 +193,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -163,14 +209,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -183,3 +228,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlDatabaseDataMaskingPolicy](./Get-AzSqlDatabaseDataMaskingPolicy.md)
+
+[New-AzSqlDatabaseDataMaskingRule](./New-AzSqlDatabaseDataMaskingRule.md)
+
+[Remove-AzSqlDatabaseDataMaskingRule](./Remove-AzSqlDatabaseDataMaskingRule.md)
+
+[Set-AzSqlDatabaseDataMaskingPolicy](./Set-AzSqlDatabaseDataMaskingPolicy.md)
+
+[Set-AzSqlDatabaseDataMaskingRule](./Set-AzSqlDatabaseDataMaskingRule.md)
+
+

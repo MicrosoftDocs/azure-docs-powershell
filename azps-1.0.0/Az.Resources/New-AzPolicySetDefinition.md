@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azpolicysetdefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzPolicySetDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzPolicySetDefinition.md
 ---
 
 # New-AzPolicySetDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a policy set definition.
 
 ## SYNTAX
 
@@ -34,16 +36,61 @@ New-AzPolicySetDefinition -Name <String> [-DisplayName <String>] [-Description <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzPolicySetDefinition** cmdlet creates a policy set definition.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a policy set definition by using a policy set file
+```
+[
+   {
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2a0e14a6-b0a6-4fab-991a-187a4f81c498",
+      "parameters": {
+         "tagName": {
+            "value": "Business Unit"
+         },
+         "tagValue": {
+            "value": "Finance"
+         }
+      }
+   },
+   {
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/464dbb85-3d5f-4a1d-bb09-95a9b5dd19cf"
+   }
+]
 ```
 
-{{ Add example description here }}
+```
+PS C:\> New-AzPolicySetDefinition -Name 'VMPolicyDefinition' -PolicyDefinition C:\VMPolicySet.json
+```
+
+This command creates a policy set definition named VMPolicyDefinition that contains the policy definitions specified in C:\VMPolicy.json. Example content of the VMPolicy.json is provided above.
+
+### Example 2: Create a parameterized policy set definition
+```
+[
+   {
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2a0e14a6-b0a6-4fab-991a-187a4f81c498",
+      "parameters": {
+         "tagName": {
+            "value": "Business Unit"
+         },
+         "tagValue": {
+            "value": "[parameters('buTagValue')]"
+         }
+      }
+   },
+   {
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/464dbb85-3d5f-4a1d-bb09-95a9b5dd19cf"
+   }
+]
+```
+
+```
+PS C:\> New-AzPolicySetDefinition -Name 'VMPolicyDefinition' -PolicyDefinition C:\VMPolicySet.json -Parameter '{ "buTagValue": { "type": "string" } }'
+```
+
+This command creates a parameterized policy set definition named VMPolicyDefinition that contains the policy definitions specified in C:\VMPolicy.json. Example content of the VMPolicy.json is provided above.
 
 ## PARAMETERS
 
@@ -64,12 +111,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -79,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description for the new policy set definition.
+The description for policy set definition.
 
 ```yaml
 Type: System.String
@@ -94,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The display name for the new policy set definition.
+The display name for policy set definition.
 
 ```yaml
 Type: System.String
@@ -124,8 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-The metadata for the new policy set definition.
-This can either be a path to a file name containing the metadata, or the metadata as a string.
+The metadata for policy set definition. This can either be a path to a file name containing the metadata, or the metadata as string
 
 ```yaml
 Type: System.String
@@ -140,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the new policy set definition.
+The policy set definition name.
 
 ```yaml
 Type: System.String
@@ -155,8 +201,8 @@ Accept wildcard characters: False
 ```
 
 ### -Parameter
-The parameters declaration for the new policy set definition.
-This can either be a path to a file name or uri containing the parameters declaration, or the parameters declaration as a string.
+The parameters declaration for policy set definition.
+This can either be a path to a file name containing the parameters declaration, or the parameters declaration as string.
 
 ```yaml
 Type: System.String
@@ -171,8 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyDefinition
-The policy definition for the new policy set definition.
-This can either be a path to a file name containing the policy definitions, or the policy set definition as a string.
+The policy set definition. This can either be a path to a file name containing the policy definitions, or the policy set definition as string.
 
 ```yaml
 Type: System.String
@@ -232,8 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -248,8 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

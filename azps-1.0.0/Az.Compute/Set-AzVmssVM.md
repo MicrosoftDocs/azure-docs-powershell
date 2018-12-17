@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 70AA9747-232E-40F2-845C-35A779F51CD2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssVM.md
 ---
 
 # Set-AzVmssVM
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the state of a VMSS instance.
 
 ## SYNTAX
 
@@ -38,16 +41,9 @@ Set-AzVmssVM [-ResourceGroupName] <String> [-VMScaleSetName] <String> [-Instance
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVmssVM** cmdlet modifies the state of a Virtual Machine Scale Set (VMSS) instance.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -67,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceId
-{{Fill InstanceId Description}}
+Specifies the ID of the VMSS instance for which this cmdlet modifies state.
 
 ```yaml
 Type: System.String
@@ -97,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -PerformMaintenance
-{{Fill PerformMaintenance Description}}
+Indicates that this cmdlet performs maintenance on a virtual machine in the VMSS.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -112,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Redeploy
-{{Fill Redeploy Description}}
+Indicates that this cmdlet redeploys a virtual machine in the VMSS.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -127,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reimage
-{{Fill Reimage Description}}
+Indicates that this cmdlet reimages the VMSS instance.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -142,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReimageAll
-{{Fill ReimageAll Description}}
+Indicates that the cmdlet reimages all the disks in the VMSS instance.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -157,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the resource group that contains the VMSS instance.
 
 ```yaml
 Type: System.String
@@ -172,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMScaleSetName
-{{Fill VMScaleSetName Description}}
+Specifies the name of the VMSS instance that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -202,8 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -218,8 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -232,3 +226,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVmssVM](./Get-AzVmssVM.md)

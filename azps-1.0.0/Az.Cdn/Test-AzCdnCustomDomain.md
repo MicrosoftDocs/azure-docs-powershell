@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+ms.assetid: 8C4E824F-FB4A-4DE7-8FD9-3FDA3848F25C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/test-azcdncustomdomain
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzCdnCustomDomain.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzCdnCustomDomain.md
 ---
 
 # Test-AzCdnCustomDomain
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Checks whether a custom domain can be added to an endpoint.
 
 ## SYNTAX
 
@@ -25,21 +28,14 @@ Test-AzCdnCustomDomain -CdnEndpoint <PSEndpoint> -CustomDomainHostName <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Test-AzCdnCustomDomain** cmdlet checks whether a custom domain can be added to an endpoint by validating the CName mapping.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CdnEndpoint
-The CDN endpoint object.
+Specifies the endpoint to which you want to add the custom domain.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
@@ -54,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDomainHostName
-The resource group of the Azure CDN profile
+Specifies the host name of the custom domain.
 
 ```yaml
 Type: System.String
@@ -69,12 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -84,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-Azure CDN endpoint name.
+Specifies the name of the endpoint to which you want to add the custom domain.
 
 ```yaml
 Type: System.String
@@ -99,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-Azure CDN profile name.
+Specifies the name of the profile.
 
 ```yaml
 Type: System.String
@@ -114,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group of the Azure CDN profile
+Specifies the name of the resource group.
 
 ```yaml
 Type: System.String
@@ -129,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -143,3 +138,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzCdnCustomDomain](./Get-AzCdnCustomDomain.md)
+
+[New-AzCdnCustomDomain](./New-AzCdnCustomDomain.md)
+
+[Remove-AzCdnCustomDomain](./Remove-AzCdnCustomDomain.md)
+
+

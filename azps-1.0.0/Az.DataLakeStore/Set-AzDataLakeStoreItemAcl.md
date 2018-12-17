@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: FFB335D4-AE3E-4788-B6FD-9AFC36F52B61
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/set-azdatalakestoreitemacl
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreItemAcl.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreItemAcl.md
 ---
 
 # Set-AzDataLakeStoreItemAcl
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the ACL of a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -19,21 +22,32 @@ Set-AzDataLakeStoreItemAcl [-Account] <String> [-Path] <DataLakeStorePathInstanc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDataLakeStoreItemAcl** cmdlet modifies the access control list (ACL) of a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the ACL for a file and a folder
+```
+PS C:\>$ACL = Get-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path /
+PS C:\> Set-AzDataLakeStoreItemAcl -AccountName "ContosoADL" -Path "/MyFiles/Test.txt" -Acl $ACL
 ```
 
-{{ Add example description here }}
+The first command gets the ACL for the root directory of the ContosoADL account, and then stores it in the $ACL variable.
+The second command sets the ACL for the file Test.txt to the one in $ACL.
+
+### Example 2: Set the ACL for folder recursively
+```
+PS C:\>$ACL = Get-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path /Folder1
+PS C:\> Set-AzDataLakeStoreItemAcl -AccountName "ContosoADL" -Path "/Folder2" -Acl $ACL -Recurse -Concurrency 128
+```
+
+The first command gets the ACL for the directory Folder1 of the ContosoADL account, and then stores it in the $ACL variable.
+The second command sets the ACL recursively to Folder2 and its sub directories and files to the one in $ACL.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -48,9 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Acl
-The ACL to set.
-This can be a modified ACL from Get-AzureDataLakeStoreItemAcl or it can be the string  representation of an ACL as defined in the apache webhdfs specification.
-Note that this is only supported for named ACEs.This cmdlet is not to be used for setting the owner or owning group.
+Specifies an ACL for a file or a folder.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce[]
@@ -65,8 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Concurrency
-Indicates the number of files/directories processed in parallel for recursive processing.
-Default will be computed as a best effort based on system specification.
+Number of files/directories processed in parallel. Optional: a reasonable default will be selected.
 
 ```yaml
 Type: System.Int32
@@ -81,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -96,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting ACL should be returned indicating the result of set operation.
+Indicates the resulting ACL should be returned.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -111,8 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account that should have its ACL set.
-Can be a file or folder In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of the file or folder, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -142,8 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowProgress
-If passed then progress status is showed.
-Only applicable when recursive Acl Set is done.
+If passed then progress status is showed. Only applicable when recursive Acl set is done.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -167,7 +176,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -183,14 +192,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

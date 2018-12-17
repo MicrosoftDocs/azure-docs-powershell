@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.AnalysisServices.Dataplane.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.Dataplane.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices/add-azanalysisservicesaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Add-AzAnalysisServicesAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Add-AzAnalysisServicesAccount.md
 ---
 
 # Add-AzAnalysisServicesAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an authenticated account to use for Azure Analysis Services server cmdlet requests.
 
 ## SYNTAX
 
@@ -31,16 +33,34 @@ Add-AzAnalysisServicesAccount [-RolloutEnvironment] <String> [-ServicePrincipal]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Add-AzAnalysisServicesAccount cmdlet is used to login to an instance of Azure Analysis Services server
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\>Add-AzAnalysisServicesAccount
+RolloutEnvironment: westcentralus.asazure.windows.net
+Credential: $UserCredential
 ```
 
-{{ Add example description here }}
+This example will add the account specified by the $UserCredential variable to the westcentralus.asazure.windows.net Analysis Services environment.
+
+### Example 2
+```
+PS C:\>$ApplicationCredential = Get-Credential
+PS C:\>Add-AzAnalysisServicesAccount -RolloutEnvironment 'westcentralus.asazure.windows.net' -ServicePrincipal -Credential $ApplicationCredential -TenantId "xxxx-xxxx-xxxx-xxxx"
+```
+
+The first command gets the application service principal credentials, and then stores them in the $ApplicationCredential variable.
+The second command add the application service principal account specified by the $ApplicationCredential variable and TenantId to the westcentralus.asazure.windows.net Analysis Services environment.
+
+### Example 3
+```
+PS C:\>Add-AzAnalysisServicesAccount -RolloutEnvironment 'westcentralus.asazure.windows.net' -ServicePrincipal -ApplicationId "yyyy-yyyy-yyyy-yyyy" -CertificateThumbprint 'zzzzzzzzzzzzzzzz' -TenantId "xxxx-xxxx-xxxx-xxxx"
+```
+
+This example will add the application service principal account specified by the ApplicationId, TenantId and CertificateThumbprint to the westcentralus.asazure.windows.net Analysis Services environment.
 
 ## PARAMETERS
 
@@ -75,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Login credentials to the Azure Analysis Services environment
+Login credentials
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -102,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -RolloutEnvironment
-Name of the Azure Analysis Services environment to which to logon to
+Name of the Azure Analysis Services environment to which to logon to. Given the full name of the server for example asazure://westcentralus.asazure.windows.net/testserver , the correct value for this variable will be westcentralus.asazure.windows.net
 
 ```yaml
 Type: System.String
@@ -129,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipal
-{{Fill ServicePrincipal Description}}
+Indicates that this account authenticates by providing service principal credentials.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -190,8 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -202,5 +221,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.AnalysisServices.Dataplane.AsAzureProfile
 
 ## NOTES
+Alias: Login-AzAsAccount
 
 ## RELATED LINKS

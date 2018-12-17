@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: BAC2FA68-1D82-411D-A853-FD4EE525B533
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssnetworkinterfaceconfiguration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssNetworkInterfaceConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssNetworkInterfaceConfiguration.md
 ---
 
 # Add-AzVmssNetworkInterfaceConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a network interface configuration to the VMSS.
 
 ## SYNTAX
 
@@ -21,26 +24,26 @@ Add-AzVmssNetworkInterfaceConfiguration [-VirtualMachineScaleSet] <PSVirtualMach
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzVmssNetworkInterfaceConfiguration** cmdlet adds a network interface configuration to the Virtual Machine Scale Set (VMSS).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a network interface configuration to the VMSS
+```
+PS C:\> Add-AzVmssNetworkInterfaceConfiguration -VirtualMachineScaleSet $VMSS -Name "Test" -Primary $True -IPConfiguration $IPCfg
 ```
 
-{{ Add example description here }}
+This command adds a network interface configuration to the VMSS.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -50,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DnsSettingsDnsServer
-{{Fill DnsSettingsDnsServer Description}}
+List of dns server IP addresses for dns settings.
 
 ```yaml
 Type: System.String[]
@@ -65,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAcceleratedNetworking
-{{Fill EnableAcceleratedNetworking Description}}
+Specifies whether the network interface is accelerated networking-enabled.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -80,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableIPForwarding
-{{Fill EnableIPForwarding Description}}
+Specifies whether IP forwarding enabled on this NIC.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -95,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+Specifies the Resource ID of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -110,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -IpConfiguration
-{{Fill IpConfiguration Description}}
+Specifies the IP configurations of the network interface.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetIPConfiguration[]
@@ -125,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the network interface configuration.
 
 ```yaml
 Type: System.String
@@ -140,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkSecurityGroupId
-{{Fill NetworkSecurityGroupId Description}}
+Id of the network security group.
 
 ```yaml
 Type: System.String
@@ -155,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Primary
-{{Fill Primary Description}}
+Indicates whether network interfaces created from the network interface configuration will be the primary network information center (NIC) of the virtual machine.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -170,7 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specifies the VMSS object.
+You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) cmdlet to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -200,8 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -216,8 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -238,3 +240,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzVmssConfig](./New-AzVmssConfig.md)

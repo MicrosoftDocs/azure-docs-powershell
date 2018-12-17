@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/get-azrecoveryservicesasrvcenter
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrvCenter.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrvCenter.md
 ---
 
 # Get-AzRecoveryServicesAsrvCenter
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets details of the vCenter servers registered for discovery on the Configuration server specified by the ASR fabric.
 
 ## SYNTAX
 
@@ -31,26 +33,44 @@ Get-AzRecoveryServicesAsrvCenter -Fabric <ASRFabric> -Name <String> [-DefaultPro
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesAsrvCenter** cmdlet gets details of the vCenter servers registered for discovery on the Configuration server specified by the ASR fabric.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzRecoveryServicesAsrvCenter -Fabric $Fabric -Name $Name
+
+FriendlyName          : inmtest81
+Server                : 10.150.209.27
+Port                  : 443
+Name                  : inmtest81
+ID                    : /Subscriptions/xxxxxxxxxxx/resourceGroups/canaryexproute/providers/Microsoft.RecoveryServices/vaults/xxxxxxxxx/replicationFabrics/xxxxxxxxxxxxxxxxx/replicationvCenters/inmtest81
+FabricArmResourceName : d011a5abf48190235963ee3a88ad188ee6bca8a4c6cd0c8d7ce5d439aa77ffd9
+ProcessServerId       : 526C9B6C-4039-D841-97A92FB0BD153B53
+AccountId             : 2
+DiscoveryStatus       : Pending
+LastHeartbeat         :
 ```
 
-{{ Add example description here }}
+Get azure site recovery vCenter by fabric name and name of vCenter.
+
+### Example 2
+```
+PS C:\> Get-AzRecoveryServicesAsrvCenter -Fabric $Fabric
+```
+
+Get azure site recovery vCenter list by fabric name.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-{{Fill Fabric Description}}
+ASR fabric object representing the Configuration Server.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric
@@ -75,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Name of the vCenter server.
 
 ```yaml
 Type: System.String
@@ -90,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{Fill ResourceId Description}}
+Specifies the resourceId of vCenter.
 
 ```yaml
 Type: System.String
@@ -105,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

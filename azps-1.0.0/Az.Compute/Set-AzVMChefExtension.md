@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: CC306D8C-A5EE-4655-B686-E5A77CCE5042
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmchefextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMChefExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMChefExtension.md
 ---
 
 # Set-AzVMChefExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a Chef extension to a virtual machine.
 
 ## SYNTAX
 
@@ -35,22 +38,38 @@ Set-AzVMChefExtension [-ResourceGroupName] <String> [-VMName] <String> [[-TypeHa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMChefExtension** cmdlet adds the Chef extension to the virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a Chef extension to a Windows virtual machine
+```
+PS C:\> Set-AzVMChefExtension -ResourceGroupName "ResourceGroup001" -VMName "WindowsVM001" -ValidationPem "C:\my-org-validator.pem" -ClientRb "C:\client.rb" -RunList "Apache" -Daemon "service" -SecretFile "C:\my_encrypted_data_bag_secret" -Windows
 ```
 
-{{ Add example description here }}
+This command adds a Chef extension to a Windows virtual machine named WindowsVM001.
+When the virtual machine starts, Chef bootstraps the virtual machine to run Apache.
+
+### Example 2: Add a Chef extension to a Linux virtual machine
+```
+PS C:\> Set-AzVMChefExtension -ResourceGroupName "ResourceGroup002" -VMName "LinuxVM001" -ValidationPem "C:\my-org-validator.pem" -ClientRb "C:\client.rb" -RunList "Apache" -Secret "my_secret" -Linux
+```
+
+This command adds a Chef extension to a Linux virtual machine named LinuxVM001.
+When the virtual machine starts, Chef bootstraps the virtual machine to run Apache.
+
+### Example 3: Add a Chef extension to a Windows virtual machine with bootstrap options
+```
+PS C:\> Set-AzVMChefExtension -ResourceGroupName "ResourceGroup003" -VMName "WindowsVM002" -ValidationPem C:\my-org-validator.pem -ClientRb C:\client.rb -BootstrapOptions '{"chef_node_name":"your_node_name","chef_server_url":"https://api.opscode.com/organizations/some-org", "validation_client_name":"some-org-validator"}' -RunList "Apache" -Windows
+```
+
+This command adds the Chef extension to a Windows virtual machine named WindowsVM002.
+When the virtual machine starts, Chef bootstraps the virtual machine to run Apache.
+After bootstrapping, the virtual machine refers to the BootstrapOptions specified in JSON format.
 
 ## PARAMETERS
 
 ### -AutoUpgradeMinorVersion
-Pass a boolean value indicating whether auto upgrade chef extension minor version.
-
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -64,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -BootstrapOptions
-The Chef Client bootstrap options in JSON format.
+Specifies configuration settings in the client_rb option.
 
 ```yaml
 Type: System.String
@@ -79,8 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -BootstrapVersion
-Chef client version to be installed with the extension.
-Works for only linux.
+Specifies the version of the bootstrap configuration.
 
 ```yaml
 Type: System.String
@@ -95,8 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChefDaemonInterval
-Specifies the frequency (in minutes) at which the chef-service runs.
-If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.
+Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.
 
 ```yaml
 Type: System.String
@@ -111,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChefServerUrl
-The Chef Server Url.
+Specifies the Chef server link, as a URL.
 
 ```yaml
 Type: System.String
@@ -126,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientRb
-The Chef Server Client Config (ClientRb)File Path.
+Specifies the full path of the Chef client.rb.
 
 ```yaml
 Type: System.String
@@ -141,8 +158,11 @@ Accept wildcard characters: False
 ```
 
 ### -Daemon
-Configures the chef-client service for unattended execution.
-The node platform should be Windows.Allowed options: 'none', 'service' and 'task'none - Currently prevents the chef-client service from being configured as a service.service - Configures the chef-client to run automatically in the background as a service.task - Configures the chef-client to run automatically in the background as a secheduled task.
+Configures the chef-client service for unattended execution. The node platform should be Windows.
+Allowed options: 'none','service' and 'task'.
+none - Currently prevents the chef-client service from being configured as a service.
+service - Configures the chef-client to run automatically in the background as a service.
+task - Configures the chef-client to run automatically in the background as a secheduled task.
 
 ```yaml
 Type: System.String
@@ -158,12 +178,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -173,9 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -JsonAttribute
-A JSON string to be added to the first run of chef-client.
-e.g.
--JsonAttribute '{"foo" : "bar"}'
+A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'
 
 ```yaml
 Type: System.String
@@ -190,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-Set extension for Linux.
+Indicates that this cmdlet creates a Windows virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -205,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the location of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -220,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of the Chef extension.
 
 ```yaml
 Type: System.String
@@ -235,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationName
-The Chef Organization name, used to form Validation Client Name.
+Specifies the organization name of the Chef extension.
 
 ```yaml
 Type: System.String
@@ -250,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that contains the virtual machine.
 
 ```yaml
 Type: System.String
@@ -265,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunList
-The Chef Server Node Runlist.
+Specifies the Chef node run list.
 
 ```yaml
 Type: System.String
@@ -310,7 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-The extension version.
+Specifies the version of the extension to use for this virtual machine.
 
 ```yaml
 Type: System.String
@@ -325,8 +343,6 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationClientName
-The Chef ValidationClientName, used to determine whether a chef-client may register with a Chef server.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -340,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationPem
-The Chef Server Validation Key File Path.
+Specifies the Chef validator .pem file path
 
 ```yaml
 Type: System.String
@@ -355,7 +371,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine.
+This cmdlet adds the Chef extension for the virtual machine that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -370,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Set extension for Windows.
+Indicates that this cmdlet creates a Windows virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -394,7 +411,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -410,14 +427,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -432,3 +448,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMChefExtension](./Get-AzVMChefExtension.md)
+
+[Remove-AzVMChefExtension](./Remove-AzVMChefExtension.md)

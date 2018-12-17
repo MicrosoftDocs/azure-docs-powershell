@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerInstance.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.dll-Help.xml
 Module Name: Az.ContainerInstance
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerinstance/remove-azcontainergroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Remove-AzContainerGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Remove-AzContainerGroup.md
 ---
 
 # Remove-AzContainerGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a container group.
 
 ## SYNTAX
 
@@ -31,26 +33,40 @@ Remove-AzContainerGroup -ResourceId <String> [-PassThru] [-DefaultProfile <IAzur
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzContainerGroup** cmdlet removes a container group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Removes a container group
+```
+PS C:\> Remove-AzContainerGroup -ResourceGroupName MyResourceGroup -Name MyContainer
 ```
 
-{{ Add example description here }}
+This command removes the specified container group.
+
+### Example 2: Removes a container group by piping
+```
+PS C:\> Get-AzContainerGroup -ResourceGroupName MyResourceGroup -Name MyContainer | Remove-AzContainerGroup
+```
+
+This command removes a container group by piping.
+
+### Example 3: Removes a container group by resource Id.
+```
+PS C:\> Find-AzResource -ResourceGroupEquals MyResourceGroup -ResourceNameEquals MyContainer | Remove-AzContainerGroup
+```
+
+This command removes a container group by resource Id.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -166,8 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

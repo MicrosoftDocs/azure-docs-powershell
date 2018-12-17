@@ -1,20 +1,24 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 1F094EBA-E4AE-4B3E-BA20-858818C6FD12
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightsdatasource
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsDataSource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsDataSource.md
 ---
 
 # Get-AzOperationalInsightsDataSource
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get datasources under Azure Log Analytics workspace.
 
 ## SYNTAX
 
-### ByWorkspaceName (Default)
+### ByWorkspaceNameByKind (Default)
 ```
-Get-AzOperationalInsightsDataSource [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzOperationalInsightsDataSource [[-ResourceGroupName] <String>] [[-WorkspaceName] <String>]
+ [-Kind] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByWorkspaceObjectByName
@@ -35,33 +39,22 @@ Get-AzOperationalInsightsDataSource [-ResourceGroupName] <String> [-WorkspaceNam
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### ByWorkspaceNameByKind
-```
-Get-AzOperationalInsightsDataSource [[-ResourceGroupName] <String>] [[-WorkspaceName] <String>]
- [-Kind] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzOperationalInsightsDataSource** cmdlet gets data sources.
+You can specify a data source to get.
+You can filter the results based on the kind of data source.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,20 +64,14 @@ Accept wildcard characters: False
 ```
 
 ### -Kind
-The data source name.
-
-```yaml
-Type: System.String
-Parameter Sets: ByWorkspaceObjectByKind
-Aliases:
-Accepted values: AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Specifies the kind of data sources to get.
+The acceptable values for this parameter are:
+- AzureActivityLog 
+- CustomLog 
+- LinuxPerformanceObject 
+- LinuxSyslog 
+- WindowsEvent 
+- WindowsPerformanceCounter
 
 ```yaml
 Type: System.String
@@ -95,12 +82,25 @@ Accepted values: AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObj
 Required: True
 Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: ByWorkspaceObjectByKind
+Aliases:
+Accepted values: AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -Name
-The data source name.
+Specifies the name of a data source to get.
 
 ```yaml
 Type: System.String
@@ -127,19 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-
-```yaml
-Type: System.String
-Parameter Sets: ByWorkspaceNameByName
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+Specifies the name of a resource group that contains data sources to get.
 
 ```yaml
 Type: System.String
@@ -149,12 +137,24 @@ Aliases:
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: ByWorkspaceNameByName
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Workspace
-The workspace that containts the datasource(s).
+Specifies a workspace in which this cmdlet operates.
 
 ```yaml
 Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
@@ -181,19 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceName
-The name of the workspace that contains the datasource(s).
-
-```yaml
-Type: System.String
-Parameter Sets: ByWorkspaceNameByName
-Aliases:
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
+Specifies the name of a workspace in which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -203,13 +191,24 @@ Aliases:
 Required: False
 Position: 2
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: ByWorkspaceNameByName
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -222,5 +221,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, operational, insights
 
 ## RELATED LINKS
+
+[Remove-AzOperationalInsightsDataSource](./Remove-AzOperationalInsightsDataSource.md)
+
+[Set-AzOperationalInsightsDataSource](./Set-AzOperationalInsightsDataSource.md)
+
+

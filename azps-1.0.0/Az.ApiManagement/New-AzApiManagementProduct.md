@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: E94B88AA-B8B0-49F0-AD36-6707E17B40AD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementproduct
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementProduct.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementProduct.md
 ---
 
 # New-AzApiManagementProduct
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an API Management product.
 
 ## SYNTAX
 
@@ -20,23 +23,35 @@ New-AzApiManagementProduct -Context <PsApiManagementContext> [-ProductId <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzApiManagementProduct** cmdlet creates an API Management product.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a product that does not require a subscription
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>New-AzApiManagementProduct -Context $apimContext -ProductId "0123456789" -Title "Starter" -Description "Starter Product" -LegalTerms "Free for all" -SubscriptionRequired $False -State "Published"
 ```
 
-{{ Add example description here }}
+This command creates an API Management product.
+No subscription is required.
+
+### Example 2: Create a product that requires a subscription and approval
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>New-AzApiManagementProduct -Context $apimContext -ProductId "9876543210" -Title "Unlimited" -Description "Subscribers have completely unlimited access to the API. Administrator approval is required." -LegalTerms "Free for all" -ApprovalRequired $True -State "Published" -NotificationPeriod "D10" -SubscriptionPeriod "Y1"
+```
+
+This command creates a product.
+A subscription and approval are required.
+This command sets the notification period to 10 days.
+The subscription duration is set to one year.
 
 ## PARAMETERS
 
 ### -ApprovalRequired
-Whether subscription to the product requires approval or not.
-This parameter is optional.
-Default value is $false.
+Indicates whether the subscription to the product requires approval or not.
+By default, this parameter is **$False**.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -51,8 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -67,12 +81,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,8 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Product description.
-This parameter is optional.
+Specifies the product description.
 
 ```yaml
 Type: System.String
@@ -98,8 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegalTerms
-Legal terms of use of the product.
-This parameter is optional.
+Specifies the legal terms of use of the product.
 
 ```yaml
 Type: System.String
@@ -114,9 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of new Product.
-This parameter is optional.
-If not specified will be generated.
+Specifies the identifier of new product.
+If you do not specify this parameter, a new product is generated.
 
 ```yaml
 Type: System.String
@@ -131,10 +142,11 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Product state.
-One of: NotPublished, Published.
-This parameter is optional.
-Default value is NotPublished.
+Specifies the product state.
+psdx_paramvalues
+- NotPublished
+- Published 
+The default value is NotPublished.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProductState]
@@ -150,9 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionRequired
-Whether the product requires subscription or not.
-This parameter is optional.
-Default value is $true.
+Indicates whether the product requires a subscription.
+The default value is **$True**.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -167,9 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionsLimit
-Maximum number of simultaneous subscriptions.
-This parameter is optional.
-Default value is 1.
+Specifies the maximum number of simultaneous subscriptions.
+The default value is 1.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -184,8 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-Product title.
-This parameter is required.
+Specifies the product title.
 
 ```yaml
 Type: System.String
@@ -200,8 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -213,7 +221,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProductState, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProductState, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ## OUTPUTS
 
@@ -222,3 +230,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementProduct](./Get-AzApiManagementProduct.md)
+
+[Remove-AzApiManagementProduct](./Remove-AzApiManagementProduct.md)
+
+[Set-AzApiManagementProduct](./Set-AzApiManagementProduct.md)
+
+

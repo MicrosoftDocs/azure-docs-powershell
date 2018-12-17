@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/remove-azkeyvaultsecret
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultSecret.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultSecret.md
 ---
 
 # Remove-AzKeyVaultSecret
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a secret in a key vault.
 
 ## SYNTAX
 
@@ -25,26 +27,72 @@ Remove-AzKeyVaultSecret [-InputObject] <PSKeyVaultSecretIdentityItem> [-Force] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Remove-AzKeyVaultSecret cmdlet deletes a secret in a key vault.
+If the secret was accidentally deleted the secret can be recovered using Undo-AzKeyVaultSecretRemoval by a user with special 'recover' permissions.
+This cmdlet has a value of high for the **ConfirmImpact** property.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a secret from a key vault
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzKeyVaultSecret -VaultName 'Contoso' -Name 'FinanceSecret' -PassThru
+
+Vault Name           : Contoso
+Name                 : FinanceSecret
+Version              : f622abc7b1394092812f1eb0f85dc91c
+Id                   : https://contoso.vault.azure.net:443/secrets/financesecret/f622abc7b1394092812f1eb0f85dc91c
+Deleted Date         : 5/25/2018 4:45:34 PM
+Scheduled Purge Date : 8/23/2018 4:45:34 PM
+Enabled              : True
+Expires              :
+Not Before           :
+Created              : 4/19/2018 5:56:02 PM
+Updated              : 4/26/2018 7:48:40 PM
+Content Type         :
+Tags                 :
 ```
 
-{{ Add example description here }}
+This command removes the secret named FinanceSecret from the key vault named Contoso.'
+
+### Example 2: Remove a secret from a key vault without user confirmation
+```powershell
+PS C:\> Remove-AzKeyVaultSecret -VaultName 'Contoso' -Name 'FinanceSecret' -PassThru -Force
+
+Vault Name           : Contoso
+Name                 : FinanceSecret
+Version              : f622abc7b1394092812f1eb0f85dc91c
+Id                   : https://contoso.vault.azure.net:443/secrets/financesecret/f622abc7b1394092812f1eb0f85dc91c
+Deleted Date         : 5/25/2018 4:45:34 PM
+Scheduled Purge Date : 8/23/2018 4:45:34 PM
+Enabled              : True
+Expires              :
+Not Before           :
+Created              : 4/19/2018 5:56:02 PM
+Updated              : 4/26/2018 7:48:40 PM
+Content Type         :
+Tags                 :
+```
+
+This command removes the secret named FinanceSecret from the key vault named Contoso.
+The command specifies the *Force* and *Confirm* parameters, and, therefore, the cmdlet does not prompt you for confirmation.
+
+### Example 3: Purge deleted secret from the key vault permanently
+```powershell
+PS C:\> Remove-AzKeyVaultSecret -VaultName 'Contoso' -Name 'FinanceSecret' -InRemovedState
+```
+
+This command premoves the secret named FinanceSecret from the key vault named Contoso permanently.
+Executing this cmdlet requires the 'purge' permission, which must have been previously and explicitly granted to the user for this key vault.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,8 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Secret name.
-Cmdlet constructs the FQDN of a secret from vault name, currently selected environment and secret name.
+Specifies the name of a secret.
+This cmdlet constructs the fully qualified domain name (FQDN) of a secret based on the name that this parameter specifies, the name of the key vault, and your current environment.
 
 ```yaml
 Type: System.String
@@ -115,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Cmdlet does not return an object by default.
-If this switch is specified, cmdlet returns the secret that was deleted.
+Indicates that this cmdlet returns a **Microsoft.Azure.Commands.KeyVault.Models.Secret** object.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -131,8 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of the key vault to which the secret belongs.
+This cmdlet constructs the FQDN of a key vault based on the name that this parameter specifies and your current environment.
 
 ```yaml
 Type: System.String
@@ -156,13 +204,14 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
+The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -172,14 +221,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -192,3 +240,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzKeyVaultSecret](./Get-AzKeyVaultSecret.md)
+
+[Set-AzKeyVaultSecret](./Set-AzKeyVaultSecret.md)
+
+[Undo-AzKeyVaultSecretRemoval](./Undo-AzKeyVaultSecretRemoval.md)
+

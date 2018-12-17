@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: D93666EC-C252-4E3B-B311-50B6EEA6D4BF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmaccessextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMAccessExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMAccessExtension.md
 ---
 
 # Set-AzVMAccessExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds the VMAccess extension to a virtual machine.
 
 ## SYNTAX
 
@@ -19,21 +22,25 @@ Set-AzVMAccessExtension [-Credential <PSCredential>] [-ResourceGroupName] <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMAccessExtension** cmdlet adds the Virtual Machine Access (VMAccess) Virtual Machine VMAccess Extension to a virtual machine. VMAccess Extension can be used to set a temporary password and this should be immediately changed it after logging into the machine. This is not supported on Windows Domain Controllers.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a VMAccess extension
+```
+PS C:\> Set-AzVMAccessExtension -ResourceGroupName "ResrouceGroup11" -Location "Central US" -VMName "VirtualMachine07" -Name "ContosoTest" -TypeHandlerVersion "2.0" -UserName "PFuller" -Password "Password"
 ```
 
-{{ Add example description here }}
+This command adds a VMAccess extension for the virtual machine named VirtualMachine07 in ResrouceGroup11.
+The command specifies the name and type handler version for VMAccess.
 
 ## PARAMETERS
 
 ### -Credential
-Credential
+Specifies the user name and password for the virtual machine as a **PSCredential** object.
+If you type a different name than the current local administrator account on your VM, the VMAccess extension will add a local administrator account with that name, and assign your specified password to that account. If the local administrator account on your VM exists, it will reset the password and if the account is disabled, the VMAccess extension enables it.
+To obtain a credential, use the Get-Credential cmdlet.
+For more information, type `Get-Help Get-Credential`.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -48,12 +55,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,8 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoUpgradeMinorVersion
-Disable auto-upgrade of minor version
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -78,7 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceRerun
-Force re-run even if extension configuration has not changed
+Indicates that this cmdlet forces a rerun of the same extension configuration on the virtual machine without uninstalling and reinstalling the extension.
+The value can be any string different from the current value.
+If forceUpdateTag is not changed, updates to public or protected settings are still applied by the handler.
 
 ```yaml
 Type: System.String
@@ -93,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the location of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -108,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of the extension that this cmdlet adds.
 
 ```yaml
 Type: System.String
@@ -123,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -138,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-The version
+Specifies the version of the extension to use for this virtual machine.
+To obtain the version, run the Get-AzVMExtensionImage cmdlet with a value of Microsoft.Compute for the *PublisherName* parameter and VMAccessAgent for the *Type* parameter. The typeHandlerVersion must be 2.0 or greater, as version 1 is deprecated.
 
 ```yaml
 Type: System.String
@@ -153,7 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine.
+This cmdlet adds VMAccess for the virtual machine that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -177,7 +186,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -193,14 +202,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -217,3 +225,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMAccessExtension](./Get-AzVMAccessExtension.md)
+
+[Remove-AzVMAccessExtension](./Remove-AzVMAccessExtension.md)
+
+[Set-AzVMExtension](./Set-AzVMExtension.md)
+
+[Get-AzVMExtensionImage](./Get-AzVMExtensionImage.md)
+
+

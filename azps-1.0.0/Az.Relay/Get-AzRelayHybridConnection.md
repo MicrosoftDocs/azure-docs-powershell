@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
 Module Name: Az.Relay
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.relay/get-azrelayhybridconnection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/Get-AzRelayHybridConnection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/Get-AzRelayHybridConnection.md
 ---
 
 # Get-AzRelayHybridConnection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a description for the specified HybridConnection within the Relay namespace.
 
 ## SYNTAX
 
@@ -18,16 +20,26 @@ Get-AzRelayHybridConnection [-ResourceGroupName] <String> [-Namespace] <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRelayHybridConnection** cmdlet gets a description for the specified HybridConnection within the Relay namespace.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\>Get-AzRelayHybridConnection -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name TestHybridConnection
+
+CreatedAt                   : 4/12/2017 3:17:02 AM
+UpdatedAt                   : 4/12/2017 3:17:02 AM
+ListenerCount               : 0
+RequiresClientAuthorization : True
+UserMetadata                : User Meta data
+Id                          : /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/Default-ServiceBus-WestUS/providers/Microsoft.Relay/namespaces/TestNameSpace-Relay1/H
+                              ybridConnections/TestHybridConnection
+Name                        : TestHybridConnection
+Type                        : Microsoft.Relay/HybridConnections
 ```
 
-{{ Add example description here }}
+Returns the description of the HybridConnection.
 
 ## PARAMETERS
 
@@ -35,9 +47,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -101,7 +112,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.Relay.Models.HybridConnectionAttibutes
+### Microsoft.Azure.Commands.Relay.Models.PSHybridConnectionAttibutes
 
 ## NOTES
 

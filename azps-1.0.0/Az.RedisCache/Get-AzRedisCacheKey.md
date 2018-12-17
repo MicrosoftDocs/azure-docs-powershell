@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+ms.assetid: C0BEC701-8CE2-4B19-9F04-D32A42D9249E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/get-azrediscachekey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCacheKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCacheKey.md
 ---
 
 # Get-AzRedisCacheKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the access keys for a Redis Cache.
 
 ## SYNTAX
 
@@ -18,26 +21,28 @@ Get-AzRedisCacheKey [-ResourceGroupName <String>] -Name <String> [-DefaultProfil
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRedisCacheKey** cmdlet gets the access keys for an Azure Redis Cache.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the access keys for a Redis Cache
+```
+PS C:\>Get-AzRedisCacheKey -ResourceGroupName "MyResourceGroup" -Name "MyCacheKey"
+PrimaryKey        : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+SecondaryKey      : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
 ```
 
-{{ Add example description here }}
+This command gets the access keys named MyCacheKey.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of redis cache.
+Specifies the name of a Redis Cache.
 
 ```yaml
 Type: System.String
@@ -62,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which cache exists.
+Specifies the name of the resource group that contains the Redis Cache.
 
 ```yaml
 Type: System.String
@@ -77,8 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +95,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzRedisCacheKey](./New-AzRedisCacheKey.md)
+
+

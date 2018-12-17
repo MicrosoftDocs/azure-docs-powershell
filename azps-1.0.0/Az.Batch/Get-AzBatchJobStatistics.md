@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: E655684D-9601-4A0B-BB09-EFB787EB2B1B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchjobstatistics
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchJobStatistics.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchJobStatistics.md
 ---
 
 # Get-AzBatchJobStatistics
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets job summary statistics for a Batch account.
 
 ## SYNTAX
 
@@ -18,25 +21,40 @@ Get-AzBatchJobStatistics -BatchContext <BatchAccountContext> [-DefaultProfile <I
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchJobStatistics** cmdlet gets lifetime summary statistics for all of the jobs in an Azure Batch account.
+Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get summary statistics for all jobs
+```
+PS C:\>Get-AzBatchJobStatistics -BatchContext $Context
+FailedTaskCount    : 330
+KernelCpuTime      : 00:24:31.8440000
+LastUpdateTime     : 5/16/2016 6:00:00 PM
+ReadIOGiB          : 38.1271341182292
+ReadIOps           : 26546054
+StartTime          : 11/3/2015 9:47:14 PM
+SucceededTaskCount : 766
+TaskRetryCount     : 0
+Url                : https://accountname.westus.batch.azure.com/lifetimejobstats
+UserCpuTime        : 20:55:50.3200000
+WaitTime           : 03:54:49.8530000
+WallClockTime      : 20:55:50.3200000
+WriteIOGiB         : 0.159623090177774
+WriteIOps          : 146946
 ```
 
-{{ Add example description here }}
+The first command creates an object reference to the account keys for the batch account named ContosoBatchAccount by using **Get-AzBatchAccountKeys**.
+The command stores this object reference in the $Context variable.
+The second command gets the summary statistics for all of the jobs.
+The command uses the $Context value from the first command.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -51,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -66,8 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -80,3 +97,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Get-AzBatchPoolStatistics](./Get-AzBatchPoolStatistics.md)
+
+[Get-AzBatchPoolUsageMetrics](./Get-AzBatchPoolUsageMetrics.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning/get-azmlcommitmentassociation
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzMlCommitmentAssociation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzMlCommitmentAssociation.md
 ---
 
 # Get-AzMlCommitmentAssociation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Retrieves the summary information for one or more commitment associations.
 
 ## SYNTAX
 
@@ -18,21 +20,25 @@ Get-AzMlCommitmentAssociation -ResourceGroupName <String> -CommitmentPlanName <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Retrieves commitment association information.
+Depending on the paramenters passed, the cmdlet returns a specific commitment association or a collection of commitment associations for the specified commitment plan.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a specific commitment association
+```
+Get-AzMlCommitmentAssociation -ResourceGroupName "MyResourceGroup" -CommitmentPlanName "MyCommitmentPlanName" -Name "MyCommitmentAssociationName"
 ```
 
-{{ Add example description here }}
+### Example 2: Get all commitment associations for the specified commitment plan
+```
+Get-AzMlCommitmentAssociation -ResourceGroupName "MyResourceGroup" -CommitmentPlanName "MyCommitmentPlanName"
+```
 
 ## PARAMETERS
 
 ### -CommitmentPlanName
-The name of the Azure ML commitment plan.
+The name of the Azure ML commitment plan which has one or more commitment associations.
 
 ```yaml
 Type: System.String
@@ -47,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,8 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -104,5 +109,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Management.MachineLearning.CommitmentPlans.Models.CommitmentPlan
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS

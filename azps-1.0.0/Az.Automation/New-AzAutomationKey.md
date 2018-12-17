@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 055526FA-5DB7-4F1D-81B3-5D9753283FE2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationKey.md
 ---
 
 # New-AzAutomationKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Regenerates registration keys for an Automation account.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ New-AzAutomationKey [-KeyType] <String> [-ResourceGroupName] <String> [-Automati
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAutomationKey** cmdlet regenerates registration keys for an Azure Automation account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Regenerate a key for an Automation account
+```
+PS C:\>New-AzAutomationKey -KeyType Primary -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
-{{ Add example description here }}
+This command regenerates the primary key for the Azure Automation account named AutomationAccount01 in the resource group named ResourceGroup01.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account for which this cmdlet regenerates keys.
 
 ```yaml
 Type: System.String
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeyType
-The key type of the agent registration key - primary or secondary
+Specifies the type of the agent registration key.
+Valid values are: 
+- Primary 
+- Secondary
 
 ```yaml
 Type: System.String
@@ -78,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group.
+This cmdlet regenerates keys for an Automation account in the resource group that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -93,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

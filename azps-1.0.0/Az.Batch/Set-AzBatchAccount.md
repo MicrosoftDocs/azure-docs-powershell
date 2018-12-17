@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 9BEE5888-304D-4438-BE97-D1FE254AEE98
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/set-azbatchaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchAccount.md
 ---
 
 # Set-AzBatchAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a Batch account.
 
 ## SYNTAX
 
@@ -18,21 +21,35 @@ Set-AzBatchAccount [-AccountName] <String> [-Tag] <Hashtable> [-ResourceGroupNam
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzBatchAccount** cmdlet updates an Azure Batch account.
+Currently, this cmdlet can update only tags.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update the tags on a Batch account
+```
+PS C:\>Set-AzBatchAccount -AccountName "cmdletexample" -Tag @{key0="value0";key1=$null;key2="value2"}
+AccountName                  : cmdletexample
+Location                     : westus
+ResourceGroupName            : CmdletExampleRG
+CoreQuota                    : 20
+PoolQuota                    : 20
+ActiveJobAndJobScheduleQuota : 20
+Tags                         :
+                               Name  Value
+                               ====  ======
+                               key0  value0
+                               key1
+                               key2  value2
+TaskTenantUrl                : https://cmdletexample.westus.batch.azure.com
 ```
 
-{{ Add example description here }}
+This command updates the tags on the account named pfuller.
 
 ## PARAMETERS
 
 ### -AccountName
-The name of the Batch service account to update.
+Specifies the name of the Batch account that this cmdlet updates.
 
 ```yaml
 Type: System.String
@@ -47,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoStorageAccountId
-{{Fill AutoStorageAccountId Description}}
+Specifies the resource ID of the storage account to be used for auto storage.
 
 ```yaml
 Type: System.String
@@ -62,12 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the resource group of the account that this cmdlet updates.
 
 ```yaml
 Type: System.String
@@ -92,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable which represents the tags to set on the account.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -107,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +140,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccount](./Get-AzBatchAccount.md)
+
+[New-AzBatchAccount](./New-AzBatchAccount.md)
+
+[Remove-AzBatchAccount](./Remove-AzBatchAccount.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/start-azrecoveryservicesasrunplannedfailoverjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Start-AzRecoveryServicesAsrUnplannedFailoverJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Start-AzRecoveryServicesAsrUnplannedFailoverJob.md
 ---
 
 # Start-AzRecoveryServicesAsrUnplannedFailoverJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts a unplanned failover operation.
 
 ## SYNTAX
 
@@ -37,21 +39,22 @@ Start-AzRecoveryServicesAsrUnplannedFailoverJob -ReplicationProtectedItem <ASRRe
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-AzRecoveryServicesAsrTestFailoverJob** cmdlet starts test failover of an Azure Site Recovery replication protected item or recovery plan.
+You can check whether the job succeeded by using the Get-AzRecoveryServicesAsrJob cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $currentJob = Start-AzRecoveryServicesAsrTestFailoverJob -RecoveryPlan $RP -Direction PrimaryToRecovery -VMNetwork $TestRecoveryNetwork
 ```
 
-{{ Add example description here }}
+Starts the test failover operation for the recovery plan with the specified parameters and returns the ASR job used to track the operation.
 
 ## PARAMETERS
 
 ### -DataEncryptionPrimaryCertFile
-{{Fill DataEncryptionPrimaryCertFile Description}}
+Specifies the data encryption primary certificate file path for failover of Protected Item.
 
 ```yaml
 Type: System.String
@@ -66,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataEncryptionSecondaryCertFile
-{{Fill DataEncryptionSecondaryCertFile Description}}
+Specifies the data encryption secondary certificate file path for failover of Protected Item.
 
 ```yaml
 Type: System.String
@@ -83,10 +86,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -96,7 +100,11 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-{{Fill Direction Description}}
+Specifies the failover direction.
+The acceptable values for this parameter are:
+
+- PrimaryToRecovery
+- RecoveryToPrimary
 
 ```yaml
 Type: System.String
@@ -112,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -PerformSourceSideAction
-{{Fill PerformSourceSideAction Description}}
+Perform operation in source side before starting unplanned failover.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -127,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPlan
-{{Fill RecoveryPlan Description}}
+Specifies an ASR recovery plan object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan
@@ -142,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPoint
-{{Fill RecoveryPoint Description}}
+Specifies a custom recovery point to failover the protected machine to.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPoint
@@ -157,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryTag
-{{Fill RecoveryTag Description}}
+Specifies the recovery tag to failover to.
 
 ```yaml
 Type: System.String
@@ -186,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProtectedItem
-{{Fill ReplicationProtectedItem Description}}
+Specifies an azure site recovery replication protected item.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem
@@ -216,8 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -232,8 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -248,3 +254,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesAsrJob](./Get-AzRecoveryServicesAsrJob.md)

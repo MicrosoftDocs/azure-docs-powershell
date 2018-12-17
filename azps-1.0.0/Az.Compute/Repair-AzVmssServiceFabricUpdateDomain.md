@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/repair-azvmssservicefabricupdatedomain
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Repair-AzVmssServiceFabricUpdateDomain.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Repair-AzVmssServiceFabricUpdateDomain.md
 ---
 
 # Repair-AzVmssServiceFabricUpdateDomain
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Manual platform update domain walk to update virtual machines in a service fabric virtual machine scale set.
 
 ## SYNTAX
 
@@ -33,16 +35,31 @@ Repair-AzVmssServiceFabricUpdateDomain [-PlatformUpdateDomain] <Int32>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Force manual platform update domain walk to update virtual machines in a service fabric virtual machine scale set.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Repair-AzVmssServiceFabricUpdateDomain -ResourceGroupName $rgname -VMScaleSetName $vmssName -PlatformUpdateDomain 0
 ```
 
-{{ Add example description here }}
+This command forces service fabric update walk on UD 0 for the virtual machine scale set specified by resource group name and scale set name.
+
+### Example 2
+```
+PS C:\> $vmss = Get-AzVmss -ResourceGroupName $rgname -VMScaleSetName $vmssName
+PS C:\> Repair-AzVmssServiceFabricUpdateDomain -VirtualMachineScaleSet $vmss -PlatformUpdateDomain 1
+```
+
+This command forces service fabric update walk on UD 1 for the virtual machine scale set specified by VM scale set object.
+
+### Example 3
+```
+PS C:\> Repair-AzVmssServiceFabricUpdateDomain -ResourceId $resoureId  -PlatformUpdateDomain 2;
+```
+
+This command forces service fabric update walk on UD 2 for the virtual machine scale set specified by resource id.
 
 ## PARAMETERS
 
@@ -65,9 +82,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformUpdateDomain
-{{Fill PlatformUpdateDomain Description}}
+The platform update domain for which a manual recovery walk is requested.
 
 ```yaml
 Type: System.Int32
@@ -92,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+The name of the resource group.
 
 ```yaml
 Type: System.String
@@ -107,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{Fill ResourceId Description}}
+The resource id for the virtual machine scale set.
 
 ```yaml
 Type: System.String
@@ -122,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Local virtual machine scale set object
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -137,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMScaleSetName
-{{Fill VMScaleSetName Description}}
+The name of the virtual machine scale set
 
 ```yaml
 Type: System.String
@@ -183,8 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

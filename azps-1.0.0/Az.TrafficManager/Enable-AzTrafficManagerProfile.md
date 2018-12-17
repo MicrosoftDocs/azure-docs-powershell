@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
-online version:
+ms.assetid: 2CE84C3A-EFC0-47FA-ACE5-687380D90A7D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/enable-aztrafficmanagerprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Enable-AzTrafficManagerProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Enable-AzTrafficManagerProfile.md
 ---
 
 # Enable-AzTrafficManagerProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables a Traffic Manager profile.
 
 ## SYNTAX
 
@@ -25,26 +28,37 @@ Enable-AzTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfile>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Enable-AzTrafficManagerProfile** cmdlet enables an Azure Traffic Manager profile.
+You can specify the profile object by using the pipeline or as a parameter value.
+Alternatively, you can specify the profile by using the *Name* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable a profile specified by name
+```
+PS C:\>Enable-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-{{ Add example description here }}
+This command enables the profile named ContosoProfile in ResourceGroup11.
+
+### Example 2: Enable a profile by using the pipeline
+```
+PS C:\>Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Enable-AzTrafficManagerProfile
+```
+
+This command gets the profile named ContosoProfile in ResourceGroup11.
+The command then passes that profile to the **Enable-AzTrafficManagerProfile** cmdlet by using the pipeline operator.
+That cmdlet enables that profile.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the profile.
+Specifies the name of the Traffic Manager profile that this cmdlet enables.
 
 ```yaml
 Type: System.String
@@ -69,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+Specifies the name of a resource group.
+This cmdlet enables a Traffic Manager profile in the group that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -84,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfile
-The profile.
+Specifies a **TrafficManagerProfile** object to enable.
+To obtain a **TrafficManagerProfile** object, use the Get-AzTrafficManagerProfile cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
@@ -99,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +128,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AzTrafficManagerProfile](./Disable-AzTrafficManagerProfile.md)
+
+[Get-AzTrafficManagerProfile](./Get-AzTrafficManagerProfile.md)
+
+[New-AzTrafficManagerProfile](./New-AzTrafficManagerProfile.md)
+
+[Remove-AzTrafficManagerProfile](./Remove-AzTrafficManagerProfile.md)
+
+[Set-AzTrafficManagerProfile](./Set-AzTrafficManagerProfile.md)
+
+

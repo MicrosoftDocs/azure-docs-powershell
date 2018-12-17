@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: C3DD193E-B8FE-468D-BEE7-00C3D99B469E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroupdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzResourceGroupDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzResourceGroupDeployment.md
 ---
 
 # Remove-AzResourceGroupDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a resource group deployment and any associated operations.
 
 ## SYNTAX
 
@@ -25,22 +28,15 @@ Remove-AzResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzResourceGroupDeployment** cmdlet removes an Azure resource group deployment and any associated operations.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource Provider.
+You can specify a different version than the default version.
 
 ```yaml
 Type: System.String
@@ -55,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,8 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified resource Id of the deployment.
-example: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Resources/deployments/{deploymentName}
+Specifies the ID of the resource group deployment to remove.
 
 ```yaml
 Type: System.String
@@ -86,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the deployment.
+Specifies the name of the resource group deployment to remove.
 
 ```yaml
 Type: System.String
@@ -101,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to remove.
 
 ```yaml
 Type: System.String
@@ -140,7 +135,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -156,14 +151,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -176,3 +170,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzResourceGroupDeployment](./Get-AzResourceGroupDeployment.md)
+
+[New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)
+
+[Stop-AzResourceGroupDeployment](./Stop-AzResourceGroupDeployment.md)
+
+[Test-AzResourceGroupDeployment](./Test-AzResourceGroupDeployment.md)
+
+

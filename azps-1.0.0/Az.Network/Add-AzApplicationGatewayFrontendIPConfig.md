@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 0ECE4232-EA5D-46A0-8260-69646E27FA9A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayfrontendipconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzApplicationGatewayFrontendIPConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzApplicationGatewayFrontendIPConfig.md
 ---
 
 # Add-AzApplicationGatewayFrontendIPConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a front-end IP configuration to an application gateway.
 
 ## SYNTAX
 
@@ -27,21 +30,56 @@ Add-AzApplicationGatewayFrontendIPConfig -ApplicationGateway <PSApplicationGatew
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzApplicationGatewayFrontendIPConfig** cmdlet adds a front-end IP configuration to an application gateway.
+An application gateway supports two types of front-end IP configurations: 
+- Public IP addresses
+- Private IP addresses using internal load-balancing (ILB)
+An application gateway can have at most one public IP and one private IP.
+Add the public IP address and private IP address as separate front-end IPs.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a public IP as the front-end IP address
+```
+PS C:\>$PublicIp = New-AzPublicIpAddress -ResourceGroupName "ResourceGroup01" -Name "PublicIp01" -location "West US" -AllocationMethod Dynamic
+PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Add-AzApplicationGatewayFrontendIPConfig -ApplicationGateway $AppGw -Name "FrontEndIp01" -PublicIPAddress $PublicIp
 ```
 
-{{ Add example description here }}
+The first command creates a public IP address object and stores it in the $PublicIp variable.
+The second command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01, and stores it in the $AppGw variable.
+The third command adds the front-end IP configuration named FrontEndIp01, for the gateway in $AppGw, using the address stored in $PublicIp.
+
+### Example 2: Add a static private IP as the front-end IP address
+```
+PS C:\>$VNet = Get-AzvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $VNet
+PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Add-AzApplicationGatewayFrontendIPConfig -ApplicationGateway $AppGw -Name "FrontendIP02" -Subnet $Subnet -PrivateIPAddress 10.0.1.1
+```
+
+The first command gets a virtual network named VNet01 that belongs to the resource group named ResourceGroup01, and stores it in the $VNet variable.
+The second command gets a subnet configuration named Subnet01 using $VNet from the first command and stores it in the $Subnet variable.
+The third command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01, and stores it in the $AppGw variable.
+The fourth command adds a front-end IP configuration named FrontendIP02 using $Subnet from the second command and the private IP address 10.0.1.1.
+
+### Example 3: Add a dynamic private IP as the front-end IP address
+```
+PS C:\>$VNet = Get-AzvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $VNet
+PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Add-AzApplicationGatewayFrontendIPConfig -ApplicationGateway $AppGw -Name "FrontendIP02" -Subnet $Subnet
+```
+
+The first command gets a virtual network named VNet01 that belongs to the resource group named ResourceGroup01, and stores it in the $VNet variable.
+The second command gets a subnet configuration named Subnet01 using $VNet from the first command and stores it in the $Subnet variable.
+The third command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01, and stores it in the $AppGw variable.
+The fourth command adds a front-end IP configuration named FrontendIP02 using $Subnet from the second command.
 
 ## PARAMETERS
 
 ### -ApplicationGateway
-The application gateway
+Specifies the application gateway to which this cmdlet adds a front-end IP configuration.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
@@ -56,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the FrontendIPConfiguration
+Specifies the name of the front-end IP configuration to add.
 
 ```yaml
 Type: System.String
@@ -86,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateIPAddress
-The private ip address of the frontendIPConfiguration if static allocation is specified.
+Specifies the private IP address to add as a front-end IP for the application gateway.
+If specified, this IP is statically allocated from the subnet.
 
 ```yaml
 Type: System.String
@@ -101,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIPAddress
-PublicIPAddress
+Specifies the public IP address which this cmdlet adds as a front-end IP address for the application gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress
@@ -116,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIPAddressId
-PublicIPAddressId
+Specifies the ID of the public IP address which this cmdlet adds as a front-end IP address for the application gateway.
 
 ```yaml
 Type: System.String
@@ -131,7 +170,10 @@ Accept wildcard characters: False
 ```
 
 ### -Subnet
-Subnet
+Specifies the subnet which this cmdlet adds as front-end IP configuration.
+If you specify this parameter, it implies that the application gateway supports a private IP based-configuration.
+If the *PrivateIPAddress* parameter is specified, it should belong to this subnet.
+If *PrivateIPAddress* is not specified, one of the IP addresses from this subnet is dynamically picked up as the front-end IP address of the application gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSSubnet
@@ -146,7 +188,10 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-SubnetId
+Specifies the subnet ID which this cmdlet adds as the front-end IP configuration.
+Passing subnet implies private IP.
+If the *PrivateIPAddresss* parameter is specified, it should belong to this subnet.
+Otherwise, one of the IP from this subnet is dynamically picked up as the front-end IP of the application gateway.
 
 ```yaml
 Type: System.String
@@ -161,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -175,3 +219,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApplicationGatewayFrontendIPConfig](./Get-AzApplicationGatewayFrontendIPConfig.md)
+
+[New-AzApplicationGatewayFrontendIPConfig](./New-AzApplicationGatewayFrontendIPConfig.md)
+
+[Remove-AzApplicationGatewayFrontendIPConfig](./Remove-AzApplicationGatewayFrontendIPConfig.md)
+
+[Set-AzApplicationGatewayFrontendIPConfig](./Set-AzApplicationGatewayFrontendIPConfig.md)
+
+

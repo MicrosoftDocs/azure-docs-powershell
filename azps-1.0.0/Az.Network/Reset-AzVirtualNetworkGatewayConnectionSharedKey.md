@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: AB370DAD-CED9-479D-BE08-B32EFF924A37
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/reset-azvirtualnetworkgatewayconnectionsharedkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Reset-AzVirtualNetworkGatewayConnectionSharedKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Reset-AzVirtualNetworkGatewayConnectionSharedKey.md
 ---
 
 # Reset-AzVirtualNetworkGatewayConnectionSharedKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Resets the shared key of the virtual network gateway connection.
 
 ## SYNTAX
 
@@ -18,26 +21,29 @@ Reset-AzVirtualNetworkGatewayConnectionSharedKey -Name <String> -ResourceGroupNa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Resets the shared key of the virtual network gateway connection.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1:
 ```
+Reset-AzVirtualNetworkGatewayConnectionSharedKey -ResourceGroupName myRG -Name myConnection -KeyLength 32
 
-{{ Add example description here }}
+Confirm
+Are you sure you want to overwrite resource 'myConnection'
+[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+h0FmZA3BzXHqRE00J0wie0Mti0cCZwJm
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,8 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -62,8 +66,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeyLength
-The virtual network connection reset shared key length
-
 ```yaml
 Type: System.UInt32
 Parameter Sets: (All)
@@ -77,8 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -92,8 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -116,7 +114,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -132,14 +130,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +151,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVirtualNetworkGatewayConnectionSharedKey](./Get-AzVirtualNetworkGatewayConnectionSharedKey.md)
+
+[Set-AzVirtualNetworkGatewayConnectionSharedKey](./Set-AzVirtualNetworkGatewayConnectionSharedKey.md)
+
+

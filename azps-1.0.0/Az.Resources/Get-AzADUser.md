@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: BF254F2F-F658-45CC-8AC8-53FF96CFCAAD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azaduser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzADUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzADUser.md
 ---
 
 # Get-AzADUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Filters active directory users.
 
 ## SYNTAX
 
@@ -32,8 +35,8 @@ Get-AzADUser -DisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-
 
 ### ObjectIdParameterSet
 ```
-Get-AzADUser -ObjectId <Guid> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount] [-Skip <UInt64>]
- [-First <UInt64>] [<CommonParameters>]
+Get-AzADUser -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+ [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
 ### UPNParameterSet
@@ -49,26 +52,51 @@ Get-AzADUser -Mail <String> [-DefaultProfile <IAzureContextContainer>] [-Include
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Filters active directory users.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - List all users
+
+```
+PS C:\> Get-AzADUser
 ```
 
-{{ Add example description here }}
+Lists all AD users in a tenant.
+
+### Example 2 - List all users using paging
+
+```
+PS C:\> Get-AzADUser -First 100
+```
+
+Lists the first 100 AD users in a tenant.
+
+### Example 3 - Get AD user by user principal name
+
+```
+PS C:\> Get-AzADUser -UserPrincipalName foo@domain.com
+```
+
+Gets the AD user with user principal name "foo@domain.com".
+
+### Example 4 - List by search string
+
+```
+PS C:\> Get-AzADUser -SearchString Joe
+```
+
+Lists all AD users whose display name starts with "Joe".
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -108,10 +136,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The user object id.
+Object id of the user.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ObjectIdParameterSet
 Aliases:
 
@@ -138,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The user UPN.
+UPN of the user.
 
 ```yaml
 Type: System.String
@@ -165,8 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Reports the number of objects in the data set (an integer) followed by the objects.
-If the cmdlet cannot determine the total count, it returns 'Unknown total count'.
+Reports the number of objects in the data set. Currently, this parameter does nothing.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -181,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Ignores the first 'n' objects and then gets the remaining objects.
+Ignores the first N objects and then gets the remaining objects.
 
 ```yaml
 Type: System.UInt64
@@ -196,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-Gets only the first 'n' objects.
+The maximum number of objects to return.
 
 ```yaml
 Type: System.UInt64
@@ -211,19 +238,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### System.Guid
-
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzADUser](./New-AzADUser.md)
+
+[Set-AzADUser](./Set-AzADUser.md)
+
+[Remove-AzADUser](./Remove-AzADUser.md)
+

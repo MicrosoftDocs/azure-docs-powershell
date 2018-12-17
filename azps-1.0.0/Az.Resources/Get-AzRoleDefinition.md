@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 7740AC3B-F643-4F8D-8DC5-ACBF59323BD8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azroledefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzRoleDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzRoleDefinition.md
 ---
 
 # Get-AzRoleDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists all Azure RBAC roles that are available for assignment.
 
 ## SYNTAX
 
@@ -31,16 +34,24 @@ Get-AzRoleDefinition [-Scope <String>] [-Custom] [-DefaultProfile <IAzureContext
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Get-AzRoleDefinition command with a particular role name to view its details.
+To inspect individual operations that a role grants access to, review the Actions and NotActions properties of the role.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzRoleDefinition -Name Reader
 ```
 
-{{ Add example description here }}
+Get the Reader role definition
+
+### Example 2
+```
+PS C:\> Get-AzRoleDefinition
+```
+
+Lists all RBAC role definitions
 
 ## PARAMETERS
 
@@ -60,12 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -75,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Role definition id.
+Role definition Id.
 
 ```yaml
 Type: System.Guid
@@ -107,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Scope of the existing role definition.
+Role definition scope.
 
 ```yaml
 Type: System.String
@@ -122,8 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -138,5 +148,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
+
+[New-AzRoleAssignment](./New-AzRoleAssignment.md)
+
+[Get-AzRoleAssignment](./Get-AzRoleAssignment.md)
+
+[New-AzRoleDefinition](./New-AzRoleDefinition.md)
+
+[Remove-AzRoleDefinition](./Remove-AzRoleDefinition.md)
+

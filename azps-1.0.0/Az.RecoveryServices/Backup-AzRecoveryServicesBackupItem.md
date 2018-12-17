@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 04D7317E-2089-4197-909D-89F0CEC4851A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/backup-azrecoveryservicesbackupitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Backup-AzRecoveryServicesBackupItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Backup-AzRecoveryServicesBackupItem.md
 ---
 
 # Backup-AzRecoveryServicesBackupItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts a backup for a Backup item.
 
 ## SYNTAX
 
@@ -18,26 +21,35 @@ Backup-AzRecoveryServicesBackupItem -Item <ItemBase> [-ExpiryDateTimeUTC <DateTi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Backup-AzRecoveryServicesBackupItem** cmdlet starts a backup for a protected Azure Backup item that is not tied to the backup schedule.
+You can do an initial backup immediately after you enable protection or start a backup after a scheduled backup fails.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Start a backup for a Backup item
+```
+PS C:\> $NamedContainer = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM -Status Registered -Name "pstestv2vm1" 
+PS C:\> $Item = Get-AzRecoveryServicesBackupItem -Container $NamedContainer -WorkloadType AzureVM 
+PS C:\> $Job = Backup-AzRecoveryServicesItem -Item $Item
+Operation        Status               StartTime            EndTime                   JOBID                           
+------------     ---------            ------               ---------                 -------                                         
+pstestv2vm1      Backup               InProgress           4/23/2016 5:00:30 PM      cf4b3ef5-2fac-4c8e-a215-d2eba4124f27
 ```
 
-{{ Add example description here }}
+The first command gets the Backup container of type AzureVM named pstestv2vm1, and then stores it in the $NamedContainer variable.
+The second command gets the Backup item corresponding to the container in $NamedContainer, and then stores it in the $Item variable.
+The last command triggers the backup job for the Backup item in $Item.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryDateTimeUTC
-Date and time specified in UTC after which the recovery points created by this backup will no longer be available for restore
+Specifies an expiry time as a **DateTime** object.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -62,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Item
-Filter value for status of job.
+Specifies a Backup item for which this cmdlet starts a backup operation.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
@@ -107,8 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -123,8 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -141,3 +151,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupContainer](./Get-AzRecoveryServicesBackupContainer.md)
+
+[Get-AzRecoveryServicesBackupItem](./Get-AzRecoveryServicesBackupItem.md)
+
+[Restore-AzRecoveryServicesBackupItem](./Restore-AzRecoveryServicesBackupItem.md)
+
+

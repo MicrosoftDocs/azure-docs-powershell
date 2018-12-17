@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 90C3DF13-0010-49B6-A8CD-C6AC34BC3EFA
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azstoragecontainer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageContainer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageContainer.md
 ---
 
 # Get-AzStorageContainer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists the storage containers.
 
 ## SYNTAX
 
@@ -27,21 +30,30 @@ Get-AzStorageContainer -Prefix <String> [-MaxCount <Int32>] [-ContinuationToken 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzStorageContainer** cmdlet lists the storage containers associated with the storage account in Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get Azure Storage blob by name
+```
+PS C:\>Get-AzStorageContainer -Name container*
 ```
 
-{{ Add example description here }}
+This example uses a wildcard character to return a list of all containers with a name that starts with container.
+
+### Example 2: Get Azure Storage container by container name prefix
+```
+PS C:\>Get-AzStorageContainer -Prefix "container"
+```
+
+This example uses the *Prefix* parameter to return a list of all containers with a name that starts with container.
 
 ## PARAMETERS
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -56,7 +68,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -72,7 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies the storage context.
+To create it, you can use the New-AzStorageContext cmdlet.
+The container permissions won't be retrieved when you use a storage context created from SAS Token, because query container permissions requires Storage account key permission.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -87,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinuationToken
-Continuation Token.
+Specifies a continuation token for the blob list.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.BlobContinuationToken
@@ -105,7 +122,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -117,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCount
-The max count of the containers that can return.
+Specifies the maximum number of objects that this cmdlet returns.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -132,7 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Container Name
+Specifies the container name.
+If container name is empty, the cmdlet lists all the containers.
+Otherwise, it lists all containers that match the specified name or the regular name pattern.
 
 ```yaml
 Type: System.String
@@ -147,7 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-Container Prefix
+Specifies a prefix used in the name of the container or containers you want to get.
+You can use this to find all containers that start with the same string, such as "my" or "test".
 
 ```yaml
 Type: System.String
@@ -162,7 +182,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the service side time-out interval, in seconds, for a request.
+If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -177,8 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -193,3 +213,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzStorageContainer](./New-AzStorageContainer.md)
+
+[Remove-AzStorageContainer](./Remove-AzStorageContainer.md)
+
+[Set-AzStorageContainerAcl](./Set-AzStorageContainerAcl.md)
+
+

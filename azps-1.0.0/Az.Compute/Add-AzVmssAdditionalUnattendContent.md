@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 9BE2E42C-594B-4B67-866C-BBA3B84AA5FD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssadditionalunattendcontent
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssAdditionalUnattendContent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssAdditionalUnattendContent.md
 ---
 
 # Add-AzVmssAdditionalUnattendContent
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds information to the unattended Windows Setup answer file.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ Add-AzVmssAdditionalUnattendContent [-VirtualMachineScaleSet] <PSVirtualMachineS
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzVmssAdditionalUnattendContent** cmdlet adds information to the unattended Windows Setup answer file.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add information to the unattended Windows Setup answer file
+```
+PS C:\> Add-AzVmssAdditionalUnattendContent -VirtualMachineScaleSet $VMSS -ComponentName  $AUCComponentName -Content  $AUCContent -PassName $AUCPassName -SettingName  $AUCSetting
 ```
 
-{{ Add example description here }}
+This command adds information to the unattended Windows Setup answer file.
 
 ## PARAMETERS
 
 ### -ComponentName
-{{Fill ComponentName Description}}
+Specifies the name of the component to configure with the added content.
+The only allowable value is Microsoft-Windows-Shell-Setup.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.ComponentNames]
@@ -49,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Content
-{{Fill Content Description}}
+Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component.
 
 ```yaml
 Type: System.String
@@ -64,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -79,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassName
-{{Fill PassName Description}}
+Specifies the name of the pass that the content applies to.
+The only allowable value is oobeSystem.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.PassNames]
@@ -95,7 +100,10 @@ Accept wildcard characters: False
 ```
 
 ### -SettingName
-{{Fill SettingName Description}}
+Specifies the name of the setting to which the content applies.
+The acceptable values for this parameter are::
+- FirstLogonCommands
+- AutoLogon
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.SettingNames]
@@ -111,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specify the virtual machine **Scale Set** object.
+You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) cmdlet to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -141,8 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -157,18 +165,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
 
-### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.PassNames, Microsoft.Azure.Management.Compute, Version=22.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.PassNames, Microsoft.Azure.Management.Compute, Version=23.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
-### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.ComponentNames, Microsoft.Azure.Management.Compute, Version=22.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.ComponentNames, Microsoft.Azure.Management.Compute, Version=23.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
-### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.SettingNames, Microsoft.Azure.Management.Compute, Version=22.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.SettingNames, Microsoft.Azure.Management.Compute, Version=23.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ### System.String
 
@@ -179,3 +186,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzVmssConfig](./New-AzVmssConfig.md)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 562DE7FA-F2A7-49E9-9273-3C4E2BF8D4B5
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementuser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementUser.md
 ---
 
 # Set-AzApiManagementUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets user details.
 
 ## SYNTAX
 
@@ -19,21 +22,23 @@ Set-AzApiManagementUser -Context <PsApiManagementContext> -UserId <String> [-Fir
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementUser** cmdlet sets user details.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change a user's password, email address and state
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>$securePassword = ConvertTo-SecureString "qwerty" -AsPlainText -Force
+PS C:\>Set-AzApiManagementUser -Context $apimContext -UserId "0123456789" -Email "patti.fuller@contoso.com" -Password $securePassword -State "Blocked"
 ```
 
-{{ Add example description here }}
+This command sets a new user password and email address and blocks the user.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
+Specifies a **PsApiManagementContext** object.
 This parameter is required.
 
 ```yaml
@@ -49,12 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Email
-User email.
+Specifies the email address of the user.
 This parameter is optional.
 
 ```yaml
@@ -80,9 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-User first name.
-This parameter is optional.
-Must be 1 to 100 characters long.
+Specifies the first name of the user.
+This parameter must be 1 to 100 characters long.
 
 ```yaml
 Type: System.String
@@ -97,9 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-User last name.
-This parameter is optional.
-Must be 1 to 100 characters long.
+Specifies the last name of the user.
+This parameter is must be 1 to 100 characters long.
 
 ```yaml
 Type: System.String
@@ -114,9 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -Note
-Note on the user.
+Specifies a note about the user.
 This parameter is optional.
-Default value is $null.
+The default value of this parameter is $null.
 
 ```yaml
 Type: System.String
@@ -131,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUser type representing the modified user.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -146,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-User password.
+Specifies the user password.
 This parameter is optional.
 
 ```yaml
@@ -162,9 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -State
-User state.
+Specifies the user state.
 This parameter is optional.
-Default value is Active.
+The default value is Active.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState
@@ -180,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
+Specifies the user ID.
 This parameter is required.
 
 ```yaml
@@ -196,8 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -218,3 +220,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementUser](./Get-AzApiManagementUser.md)
+
+[New-AzApiManagementUser](./New-AzApiManagementUser.md)
+
+[Remove-AzApiManagementUser](./Remove-AzApiManagementUser.md)
+
+

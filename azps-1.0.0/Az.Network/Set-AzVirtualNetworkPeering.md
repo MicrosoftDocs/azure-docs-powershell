@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 06DAD751-3A43-4EF6-94C5-AA7AC1A67FC8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworkpeering
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzVirtualNetworkPeering.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzVirtualNetworkPeering.md
 ---
 
 # Set-AzVirtualNetworkPeering
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Configures a virtual network peering.
 
 ## SYNTAX
 
@@ -18,16 +21,61 @@ Set-AzVirtualNetworkPeering -VirtualNetworkPeering <PSVirtualNetworkPeering> [-A
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVirtualNetworkPeering** cmdlet configures a virtual network peering.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Change forwarded traffic configuration of a virtual network peering
+```
+# Get the virtual network peering you want to update information for
+Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "ResourceGroup" -Name "myVnet1ToMyVnet2"
+
+# Change value of AllowForwardedTraffic property
+$myVnet1ToMyVnet2.AllowForwardedTraffic = $True
+
+# Update the peering with changes made
+Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1ToMyVnet2
 ```
 
-{{ Add example description here }}
+### Example 2: Change virtual network access of a virtual network peering
+```
+# Get the virtual network peering
+$myVnet1TomyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "myResourceGroup" -Name "myVnet1TomyVnet2"
+
+# Change AllowVirtualNetworkAccess property
+$myVnet1TomyVnet2.AllowVirtualNetworkAccess = $False
+
+# Update virtual network peering
+Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1TomyVnet2
+```
+
+### Example 3: Change gateway transit property configuration of a virtual network peering
+```
+# Get the virtual network peering
+$myVnet1TomyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "myResourceGroup" -Name "myVnet1TomyVnet2"
+
+# Change AllowGatewayTransit property
+$myVnet1TomyVnet2.AllowGatewayTransit = $True
+
+# Update the virtual network peering
+Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1TomyVnet2
+```
+
+### Example 4: Use remote gateways in virtual network peering
+```
+# Get the virtual network peering 
+$myVnet1TomyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "ResourceGroup001" -Name "myVnet1TomyVnet2"
+
+# Change the UseRemoteGateways property
+$myVnet1TomyVnet2.UseRemoteGateways = $True
+
+# Update the virtual network peering
+Set-AzVirtualNetworkPeering -VirtualNetworkPeering $LinkToVNet2
+```
+
+By changing this property to $True, your peer's VNet gateway can be used.
+However, the peer VNet must have a gateway configured and **AllowGatewayTransit** must have a value of $True.
+This property cannot be used if a gateway has already been configured.
 
 ## PARAMETERS
 
@@ -47,12 +95,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkPeering
-The virtual network peering
+Specifies the virtual network peering.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering
@@ -77,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +138,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzVirtualNetworkPeering](./Add-AzVirtualNetworkPeering.md)
+
+[Get-AzVirtualNetworkPeering](./Get-AzVirtualNetworkPeering.md)
+
+[Remove-AzVirtualNetworkPeering](./Remove-AzVirtualNetworkPeering.md)
+
+

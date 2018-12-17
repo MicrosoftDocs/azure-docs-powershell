@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
-online version:
+ms.assetid: 6AB6C366-4925-4370-A33E-EDAF4BE1E230
+online version: https://docs.microsoft.com/en-us/powershell/module/az.media/remove-azmediaservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Remove-AzMediaService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Remove-AzMediaService.md
 ---
 
 # Remove-AzMediaService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a media service.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Remove-AzMediaService [-ResourceGroupName] <String> [-AccountName] <String> [-Fo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzMediaService** cmdlet removes a media service.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a media service
+```
+PS C:\>Remove-AzMediaService -ResourceGroupName "ResourceGroup001" -AccountName "MediaService0011"
 ```
 
-{{ Add example description here }}
+This command removes the media service named MediaService0011 in the resource group named ResourceGroup001.
 
 ## PARAMETERS
 
 ### -AccountName
-The media service account name.
+Specifies the name of the media service that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to remove media service without confirm.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -77,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that contains the media service.
 
 ```yaml
 Type: System.String
@@ -101,7 +104,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -117,14 +120,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +139,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzMediaService](./Get-AzMediaService.md)
+
+[New-AzMediaService](./New-AzMediaService.md)
+
+[Set-AzMediaService](./Set-AzMediaService.md)
+
+

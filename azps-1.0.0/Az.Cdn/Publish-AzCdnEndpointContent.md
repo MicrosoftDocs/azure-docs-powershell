@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+ms.assetid: AFDBE48E-63B0-4A9E-9825-5246081AA129
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/publish-azcdnendpointcontent
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Publish-AzCdnEndpointContent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Publish-AzCdnEndpointContent.md
 ---
 
 # Publish-AzCdnEndpointContent
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Loads content to an endpoint.
 
 ## SYNTAX
 
@@ -25,21 +28,14 @@ Publish-AzCdnEndpointContent -CdnEndpoint <PSEndpoint> -LoadContent <String[]> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Publish-AzCdnEndpointContent** cmdlet loads content from an origin server for the Azure Content Delivery Network (CDN) endpoint.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CdnEndpoint
-The Azure CDN endpoint.
+Sepcifies the CDN endpoint.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
@@ -54,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-Azure CDN endpoint name.
+Specifies the name of the endpoint.
 
 ```yaml
 Type: System.String
@@ -84,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadContent
-The resource group of the Azure CDN profile.
+Specifies an array of relative paths for the content on the origin server that this cmdlet publishes.
 
 ```yaml
 Type: System.String[]
@@ -99,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Return object (if specified).
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -114,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-Azure CDN profile name.
+Specifies the name of the profile to which the origin server belongs.
 
 ```yaml
 Type: System.String
@@ -129,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group of the Azure CDN profile.
+Specifies the name of the resource group to which the origin server belongs.
 
 ```yaml
 Type: System.String
@@ -144,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,3 +156,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Unpublish-AzCdnEndpointContent](./Unpublish-AzCdnEndpointContent.md)
+
+

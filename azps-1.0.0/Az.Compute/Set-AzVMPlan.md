@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: A1EA7D34-A8B4-4FA0-BD8C-3E846715AFBA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmplan
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMPlan.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMPlan.md
 ---
 
 # Set-AzVMPlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the Marketplace plan information on a virtual machine.
 
 ## SYNTAX
 
@@ -18,26 +21,20 @@ Set-AzVMPlan [-VM] <PSVirtualMachine> [-Name] <String> [[-Product] <String>] [[-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMPlan** cmdlet sets the Azure Marketplace plan information for a virtual machine.
+Before being able to deploy a Marketplace image through the command-line, programmatic access must be enabled or the virtual machine must be deployed by using the Azure portal.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +44,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The plan ID
+Specifies the name of the image from the Marketplace.
+This is the same value that is returned by the Get-AzVMImageSku cmdlet.
+For more information about how to find image information, see Navigating and Selecting Azure Virtual Machine images with PowerShell and the Azure CLIhttps://azure.microsoft.com/documentation/articles/resource-groups-vm-searching/ (https://azure.microsoft.com/documentation/articles/resource-groups-vm-searching/) in the Microsoft Azure documentation.
 
 ```yaml
 Type: System.String
@@ -62,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -Product
-The offer ID
+Specifies the product of the image from the Marketplace.
+This is the same information as the **Offer** value of the **imageReference** element.
 
 ```yaml
 Type: System.String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromotionCode
-The promotion code
+Specifies a promotion code.
 
 ```yaml
 Type: System.String
@@ -92,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -Publisher
-The publisher ID
+Specifies the publisher of the image.
+You can find this information by using the Get-AzVMImagePublisher cmdlet.
 
 ```yaml
 Type: System.String
@@ -107,7 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-The virtual machine profile.
+Specifies the virtual machine object for which to set a Marketplace plan.
+You can use the Get-AzVM cmdlet to obtain a virtual machine object.
+You can use the New-AzVMConfig cmdlet to create a virtual machine object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
@@ -122,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -138,3 +140,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+[Get-AzVMImageSku](./Get-AzVMImageSku.md)
+
+[New-AzVMConfig](./New-AzVMConfig.md)

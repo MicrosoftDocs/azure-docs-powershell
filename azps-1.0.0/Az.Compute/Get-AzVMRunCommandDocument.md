@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmruncommanddocument
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMRunCommandDocument.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMRunCommandDocument.md
 ---
 
 # Get-AzVMRunCommandDocument
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get run command document.
 
 ## SYNTAX
 
@@ -18,21 +20,29 @@ Get-AzVMRunCommandDocument [-Location] <String> [[-CommandId] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Get run command document.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzVMRunCommandDocument -Location 'westus' -CommandId 'RunPowerShellScript'
 ```
 
-{{ Add example description here }}
+Gets a specific run command document for 'RunPowerShellScript' in 'westus'.
+Get-AzVMRunCommandDocument -Location $loc
+
+### Example 2
+```
+PS C:\> Get-AzVMRunCommandDocument -Location 'westus'
+```
+
+Lists all available run commands in 'westus'.
 
 ## PARAMETERS
 
 ### -CommandId
-{{Fill CommandId Description}}
+The command id.
 
 ```yaml
 Type: System.String
@@ -47,12 +57,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+The location upon which run commands is queried.
 
 ```yaml
 Type: System.String
@@ -77,8 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

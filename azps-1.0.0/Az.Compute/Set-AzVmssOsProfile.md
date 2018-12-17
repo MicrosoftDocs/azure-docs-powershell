@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 3E7B9EFA-8BC2-46EB-9AD7-43EAB7FF3891
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssosprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssOsProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssOsProfile.md
 ---
 
 # Set-AzVmssOsProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the VMSS operating system profile properties.
 
 ## SYNTAX
 
@@ -23,21 +26,23 @@ Set-AzVmssOsProfile [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-Comp
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVmssOsProfile** cmdlet sets the Virtual Machine Scale Set operating system profile properties.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the operating system profile properties for a VMSS
+```
+PS C:\> Set-AzVmssOSProfile -VirtualMachineScaleSet "ContosoVMSS" -ComputerNamePrefix "Test" -AdminUsername $AdminUsername -AdminPassword $AdminPassword
 ```
 
-{{ Add example description here }}
+This command sets operating system profile properties for the virtual machines that belong to the VMSS named ContosoVMSS.
+The command sets the computer name prefix for all the virtual machine instances in the VMSS to Test and supplies the administrator username and password.
 
 ## PARAMETERS
 
 ### -AdditionalUnattendContent
-{{Fill AdditionalUnattendContent Description}}
+Specifies an unattended content object.
+You can use the Add-AzVMAdditionalUnattendContent to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.AdditionalUnattendContent[]
@@ -52,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminPassword
-{{Fill AdminPassword Description}}
+Specifies the administrator password to use for all the virtual machine instances in the VMSS.
 
 ```yaml
 Type: System.String
@@ -67,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminUsername
-{{Fill AdminUsername Description}}
+Specifies the administrator account name to use for all the virtual machine instances in the VMSS.
 
 ```yaml
 Type: System.String
@@ -82,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerNamePrefix
-{{Fill ComputerNamePrefix Description}}
+Specifies the computer name prefix for all the virtual machine instances in the VMSS.
+Computer names must be 1 to 15 characters long.
 
 ```yaml
 Type: System.String
@@ -97,7 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomData
-{{Fill CustomData Description}}
+Specifies a base-64 encoded string of custom data.
+This is decoded to a binary array that is saved as a file on the virtual machine.
+The maximum length of the binary array is 65535 bytes.
 
 ```yaml
 Type: System.String
@@ -112,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -127,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -LinuxConfigurationDisablePasswordAuthentication
-{{Fill LinuxConfigurationDisablePasswordAuthentication Description}}
+Indicates that this cmdlet disables password authentication.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -142,7 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Listener
-{{Fill Listener Description}}
+Specifies the Windows Remote Management (WinRM) listeners.
+This enables remote Windows PowerShell.
+You can use the Add-AzVmssWinRMListener cmdlet to create the listener.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.WinRMListener[]
@@ -157,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicKey
-{{Fill PublicKey Description}}
+Specifies the Secure Shell (SSH) public key object.
+You can use the Add-AzVMSshPublicKey cmdlet to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.SshPublicKey[]
@@ -172,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -Secret
-{{Fill Secret Description}}
+Specifies the secrets object which contains the certificate references to place on the virtual machine.
+You can use the Add-AzVmssSecret cmdlet to create the secrets object.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.VaultSecretGroup[]
@@ -187,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZone
-{{Fill TimeZone Description}}
+Specifies the time zone for the virtual machine.
 
 ```yaml
 Type: System.String
@@ -202,7 +214,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specifies the VMSS object.
+You can use the New-AzVmssConfig cmdlet to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -217,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsConfigurationEnableAutomaticUpdate
-{{Fill WindowsConfigurationEnableAutomaticUpdate Description}}
+Indicates whether the virtual machines in the VMSS are enabled for automatic updates.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -232,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsConfigurationProvisionVMAgent
-{{Fill WindowsConfigurationProvisionVMAgent Description}}
+Indicates whether virtual machine agent should be provisioned on the virtual machines in the VMSS.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -262,8 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -278,8 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -304,3 +315,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzVMAdditionalUnattendContent](./Add-AzVMAdditionalUnattendContent.md)
+
+[Add-AzVmssWinRMListener](./Add-AzVmssWinRMListener.md)
+
+[Add-AzVMSshPublicKey](./Add-AzVMSshPublicKey.md)
+
+[Add-AzVmssSecret](./Add-AzVmssSecret.md)
+
+[New-AzVmssConfig](./New-AzVmssConfig.md)
+
+

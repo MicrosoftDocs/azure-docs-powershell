@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Billing.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
 Module Name: Az.Billing
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.billing/get-azenrollmentaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Billing/Commands.Billing/help/Get-AzEnrollmentAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Billing/Commands.Billing/help/Get-AzEnrollmentAccount.md
 ---
 
 # Get-AzEnrollmentAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get enrollment accounts.
 
 ## SYNTAX
 
@@ -23,26 +25,42 @@ Get-AzEnrollmentAccount [-ObjectId] <String> [-DefaultProfile <IAzureContextCont
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzEnrollmentAccount** cmdlet gets enrollment accounts.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzEnrollmentAccount
+
+ObjectId                             PrincipalName
+--------                             -------------
+dbd8453d-071f-4fb4-8e01-c99f5b067649 jason@contoso.onmicrosoft.com
+7ff524ac-a0de-4402-876f-934ccee3b601 carol@contoso.onmicrosoft.com
 ```
 
-{{ Add example description here }}
+Get all available enrollment accounts.
+
+### Example 2
+```
+PS C:\> Get-AzEnrollmentAccount -ObjectId dbd8453d-071f-4fb4-8e01-c99f5b067649
+
+ObjectId                             PrincipalName
+--------                             -------------
+dbd8453d-071f-4fb4-8e01-c99f5b067649 jason@contoso.onmicrosoft.com
+```
+
+Get the enrollment account with the specified object id.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -52,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-ObjectId of the enrollment account to get.
+ObjectId of a specific enrollment account to get.
 
 ```yaml
 Type: System.String
@@ -67,8 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

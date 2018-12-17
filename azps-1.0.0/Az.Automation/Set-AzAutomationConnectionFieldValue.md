@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: CA25260C-D0BF-4F9C-A846-9D9B6C48CE8A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationconnectionfieldvalue
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationConnectionFieldValue.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationConnectionFieldValue.md
 ---
 
 # Set-AzAutomationConnectionFieldValue
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the value of a field in an Automation connection.
 
 ## SYNTAX
 
@@ -19,21 +22,21 @@ Set-AzAutomationConnectionFieldValue [-Name] <String> -ConnectionFieldName <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzAutomationConnectionFieldValue** cmdlet modifies the value of a field in a connection in Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Change a field value in a connection
+```
+PS C:\>Set-AzAutomationConnectionFieldValue -Name "ContosoConnection" -ConnectionFieldName "SubscriptionID" -Value "b53ec456-3494-4847-8f2b-180901c51050" -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
-{{ Add example description here }}
+This command changes the subscription ID for the Azure connection named ContosoConnection in the Automation account named AutomationAccount01.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account for which this cmdlet modifies a field in a connection.
 
 ```yaml
 Type: System.String
@@ -48,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionFieldName
-The connection field name.
+Specifies a name for the field that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -63,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The connection name.
+Specifies a name for the connection for which this cmdlet modifies a field.
 
 ```yaml
 Type: System.String
@@ -93,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet modifies a field in a connection.
 
 ```yaml
 Type: System.String
@@ -108,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The connection field value.
+Specifies a value to modify in the connection field.
 
 ```yaml
 Type: System.Object
@@ -123,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,3 +141,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzAutomationConnection](./New-AzAutomationConnection.md)
+
+

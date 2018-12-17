@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 95103160-8101-4C43-8DAA-0BD75DFF3150
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationconnection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationConnection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationConnection.md
 ---
 
 # New-AzAutomationConnection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Automation connection.
 
 ## SYNTAX
 
@@ -19,21 +22,24 @@ New-AzAutomationConnection [-Name] <String> [-ConnectionTypeName] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAutomationConnection** cmdlet creates a connection in Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a connection
+```
+PS C:\>$FieldValues = @{"AutomationCertificateName"="ContosoCertificate";"SubscriptionID"="81b59010-dc55-45b7-89cd-5ca26db62472"}
+PS C:\> New-AzAutomationConnection -Name "Connection12" -ConnectionTypeName Azure -ConnectionFieldValues $FieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
-{{ Add example description here }}
+The first command assigns a hash table of field values to the $FieldValue variable.
+The second command creates an Azure connection named Connection12 in the Automation account named AutomationAccount01.
+The command uses the connection field values in $FieldValues.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account for which this cmdlet creates a connection.
 
 ```yaml
 Type: System.String
@@ -48,7 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionFieldValues
-The connection field values.
+Specifies a hash table that contains key/value pairs.
+The keys represent the connection fields for the specified connection type.
+The values represent the specific values of each connection field for the connection instance.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -63,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionTypeName
-The connection type name.
+Specifies the name of the connection type.
 
 ```yaml
 Type: System.String
@@ -78,12 +86,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The connection description.
+Specifies a description for the connection.
 
 ```yaml
 Type: System.String
@@ -108,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The connection name.
+Specifies a name for the connection.
 
 ```yaml
 Type: System.String
@@ -123,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet creates a connection.
 
 ```yaml
 Type: System.String
@@ -138,8 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +161,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationConnection](./Get-AzAutomationConnection.md)
+
+[Remove-AzAutomationConnection](./Remove-AzAutomationConnection.md)
+
+

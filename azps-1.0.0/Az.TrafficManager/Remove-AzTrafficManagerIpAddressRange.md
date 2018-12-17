@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
-online version:
+ms.assetid: 25E3F297-1D91-4102-B4D3-1E7195A5D345
+online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/remove-aztrafficmanagerIpAddressRange
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Remove-AzTrafficManagerIpAddressRange.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Remove-AzTrafficManagerIpAddressRange.md
 ---
 
 # Remove-AzTrafficManagerIpAddressRange
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an address range or subnet from a local Traffic Manager endpoint object.
 
 ## SYNTAX
 
@@ -18,26 +21,34 @@ Remove-AzTrafficManagerIpAddressRange -First <String> -TrafficManagerEndpoint <T
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzTrafficManagerIpAddressRange** cmdlet removes an IP address range from a local Azure Traffic Manager endpoint object.
+You can get an endpoint by using the New-AzTrafficManagerEndpoint or Get-AzTrafficManagerEndpoint cmdlets.
+
+This cmdlet operates on the local endpoint object.
+Commit your changes to the endpoint for Traffic Manager by using the Set-AzTrafficManagerEndpoint cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove IP address ranges from an endpoint
+```
+PS C:\> $TrafficManagerEndpoint = Get-AzTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type AzureEndpoints
+PS C:\> Remove-AzTrafficManagerIpAddressRange -TrafficManagerEndpoint $TrafficManagerEndpoint -First "1.2.3.4"
+PS C:\> Set-AzTrafficManagerEndpoint -TrafficManagerEndpoint $TrafficManagerEndpoint
 ```
 
-{{ Add example description here }}
+The first command gets the Azure endpoint named contoso from the profile named ContosoProfile in the resource group named ResourceGroup11, and then stores that object in the $TrafficManagerEndpoint variable.
+The second command removes an IP address range from the endpoint stored in $TrafficManagerEndpoint.
+The final command updates the endpoint in Traffic Manager to match the local value in $TrafficManagerEndpoint.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +58,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerEndpoint
-The endpoint.
+Specifies a local **TrafficManagerEndpoint** object.
+This cmdlet modifies this local object.
+To obtain a **TrafficManagerEndpoint** object, use the Get-AzTrafficManagerEndpoint or New-AzTrafficManagerEndpoint cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint
@@ -77,8 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -93,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-The first address in the range.
+Specifies the first IP address in the range to be removed.
 
 ```yaml
 Type: System.String
@@ -108,8 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +133,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzTrafficManagerIpAddressRange](./Add-AzTrafficManagerIpAddressRange.md)
+
+[Get-AzTrafficManagerProfile](./Get-AzTrafficManagerEndpoint.md)
+
+[New-AzTrafficManagerEndpoint](./New-AzTrafficManagerEndpoint.md)
+
+[Set-AzTrafficManagerEndpoint](./Set-AzTrafficManagerEndpoint.md)

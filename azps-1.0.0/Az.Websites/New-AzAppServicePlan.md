@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 8F36244D-A4D7-40BB-AC4C-E9AD445549F8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/new-azappserviceplan
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/New-AzAppServicePlan.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/New-AzAppServicePlan.md
 ---
 
 # New-AzAppServicePlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure App Service plan in a given Geo location.
 
 ## SYNTAX
 
@@ -28,21 +31,22 @@ New-AzAppServicePlan [-Location] <String> [[-Tier] <String>] [[-NumberofWorkers]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAppServicePlan** cmdlet creates an Azure App Service plan in a given Geo location with the specified Tier, worker size, and number of workers.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an App Service plan
+```
+PS C:\>New-AzAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -Location "West US" -Tier "Basic" -NumberofWorkers 2 -WorkerSize "Small"
 ```
 
-{{ Add example description here }}
+This command creates an App Service plan named ContosoASP in the resource group named Default-Web-WestUS in Geo location West US.
+The command specifies a Basic Tier and allocates two small workers.
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The app service plan object
+App Service Plan Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan
@@ -57,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-Name of application service environment
+App Service Environment Name
 
 ```yaml
 Type: System.String
@@ -72,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-Name of the application service environment resource group
+App Service Environment Resource Group Name
 
 ```yaml
 Type: System.String
@@ -102,12 +106,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -132,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location of the app service plan.
+Location 
 
 ```yaml
 Type: System.String
@@ -147,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+App Service Plan Name
 
 ```yaml
 Type: System.String
@@ -162,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-Number of Workers to be allocated.
+Number Of Workers
 
 ```yaml
 Type: System.Int32
@@ -171,7 +175,7 @@ Aliases:
 
 Required: False
 Position: 4
-Default value: None
+Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -192,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -207,8 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The App Service plan tier.
-Allowed values are \[Free|Shared|Basic|Standard|Premium|PremiumV2\]
+Tier
 
 ```yaml
 Type: System.String
@@ -217,14 +220,13 @@ Aliases:
 
 Required: False
 Position: 3
-Default value: None
+Default value: Free
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-Size of workers to be allocated.
-Allowed values are \[Small|Medium|Large|ExtraLarge\]
+Size of web worker
 
 ```yaml
 Type: System.String
@@ -234,14 +236,13 @@ Accepted values: Small, Medium, Large, ExtraLarge
 
 Required: False
 Position: 5
-Default value: None
+Default value: Small
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -254,3 +255,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAppServicePlan](./Get-AzAppServicePlan.md)
+
+[Remove-AzAppServicePlan](./Remove-AzAppServicePlan.md)
+
+[Set-AzAppServicePlan](./Set-AzAppServicePlan.md)
+
+

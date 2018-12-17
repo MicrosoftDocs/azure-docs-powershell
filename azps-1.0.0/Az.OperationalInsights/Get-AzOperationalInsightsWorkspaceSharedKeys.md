@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 112D5C69-3F4F-4BB6-9DA4-52757146B0EF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightsworkspacesharedkeys
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsWorkspaceSharedKeys.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsWorkspaceSharedKeys.md
 ---
 
 # Get-AzOperationalInsightsWorkspaceSharedKeys
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the shared keys for a workspace.
 
 ## SYNTAX
 
@@ -18,26 +21,35 @@ Get-AzOperationalInsightsWorkspaceSharedKeys [-ResourceGroupName] <String> [-Nam
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzOperationalInsightsWorkspaceSharedKeys** cmdlet lists the shared keys for a workspace.
+The keys are used to connect Operational Insights agents to the workspace.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get shared keys by workspace name
+```
+PS C:\>Get-AzOperationalInsightsWorkspaceSharedKeys -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 ```
 
-{{ Add example description here }}
+This command gets the shared keys for the workspace named MyWorkspace in the resource group named ContosoResourceGroup.
+
+### Example 2: Get shared keys by using the pipeline
+```
+PS C:\>Get-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" | Get-AzOperationalInsightsWorkspaceSharedKeys
+```
+
+This command gets the workspace named MyWorkspace using the Get-AzOperationalInsightsWorkspace cmdlet, and then passes the workspace to the **Get-AzOperationalInsightsWorkspaceSharedKeys** cmdlet.
+The command gets the shared keys for that workspace.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The workspace name.
+Specifies the workspace name.
 
 ```yaml
 Type: System.String
@@ -62,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of an Azure resource group.
 
 ```yaml
 Type: System.String
@@ -77,8 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +102,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
+
+[Get-AzOperationalInsightsWorkspace](./Get-AzOperationalInsightsWorkspace.md)
+
+

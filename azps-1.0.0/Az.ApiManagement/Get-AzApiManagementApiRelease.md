@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementapirelease
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementApiRelease.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementApiRelease.md
 ---
 
 # Get-AzApiManagementApiRelease
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get the API Release.
 
 ## SYNTAX
 
@@ -18,16 +20,43 @@ Get-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementApiRelease** cmdlet gets one or more releases of the Azure API Management API.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all releases of the API
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementApiRelease -Context $ApiMgmtContext -ApiId 5adf6fbf0faadf3ad8558065
+ReleaseId         : 5afccaf6b89fd067426d402e
+ApiId             : 5adf6fbf0faadf3ad8558065
+CreatedDateTime   : 5/17/2018 12:21:12 AM
+UpdatedDateTime   : 5/17/2018 12:21:12 AM
+Notes             : creating a new release
+Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/apis/5adf6fbf0faadf3ad8558065/releases/5afccaf6b89fd067426d402e
+ResourceGroupName : Api-Default-WestUS
+ServiceName       : contos
 ```
 
-{{ Add example description here }}
+This command gets all of the releases of the `echo-api` API for the specified context.
+
+### Example 2: Get the release information of the particular API release
+```powershell
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementApiRelease -Context $ApiMgmtContext -ApiId 5adf6fbf0faadf3ad8558065 -ReleaseId 5afccaf6b89fd067426d402e
+ReleaseId         : 5afccaf6b89fd067426d402e
+ApiId             : 5adf6fbf0faadf3ad8558065
+CreatedDateTime   : 5/17/2018 12:21:12 AM
+UpdatedDateTime   : 5/17/2018 12:21:12 AM
+Notes             : creating a new release
+Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Mi
+                    crosoft.ApiManagement/service/contos/apis/5adf6fbf0faadf3ad8558065/releases/5afccaf6b89fd067426d402
+                    e
+ResourceGroupName : Api-Default-WestUS
+ServiceName       : contos
+```
+
+This command gets the releases information of a particular API with the specified releaseId.
 
 ## PARAMETERS
 
@@ -67,9 +96,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -94,8 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -110,3 +138,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
+
+[Remove-AzApiManagementApiRelease](./Remove-AzApiManagementApiRelease.md)
+
+[Set-AzApiManagementApiRelease](./Set-AzApiManagementApiRelease.md)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 3B5FC8E3-5A02-4F3B-81F0-51DFE47A201B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementtenantaccess
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementTenantAccess.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementTenantAccess.md
 ---
 
 # Set-AzApiManagementTenantAccess
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables or disables tenant access.
 
 ## SYNTAX
 
@@ -18,22 +21,22 @@ Set-AzApiManagementTenantAccess -Context <PsApiManagementContext> -Enabled <Bool
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementTenantAccess** cmdlet enables or disables tenant access.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable tenant access
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementTenantAccess -Context $apimContext -Enabled $True
 ```
 
-{{ Add example description here }}
+This command enables tenant access in the specified context.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,9 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Enable Tenant access.
-Set to true for enabling and false for disabling.
-This parameter is required.
+Specifies whether this cmdlet enables or disables tenant access.
+Specify a value of $True to enable or $False to disable.
 
 ```yaml
 Type: System.Boolean
@@ -80,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessInformation type is returned.
+Indicates that this cmdlet returns the **PsApiManagementAccessInformation** that this cmdlet modifies.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -95,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -111,3 +112,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementTenantAccess](./Get-AzApiManagementTenantAccess.md)
+
+

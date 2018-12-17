@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: AD8BA5CB-D5D4-4C6E-A65F-E7AE69E3B22C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlserverfirewallrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlServerFirewallRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlServerFirewallRule.md
 ---
 
 # Get-AzSqlServerFirewallRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets firewall rules for a SQL Database server.
 
 ## SYNTAX
 
@@ -18,26 +21,38 @@ Get-AzSqlServerFirewallRule [[-FirewallRuleName] <String>] [-ServerName] <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlServerFirewallRule** cmdlet gets firewall rules for an Azure SQL Database server.
+If you specify the name of a firewall rule, this cmdlet gets information about that specific firewall rule.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all rules for a server
+```
+PS C:\>Get-AzSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+ResourceGroupName : ResourceGroup01
+ServerName        : server01
+StartIpAddress    : 0.0.0.0
+EndIpAddress      : 0.0.0.0
+FirewallRuleName  : AllowAllWindowsAzureIps
+
+ResourceGroupName : ResourceGroup01
+ServerName        : Server01
+StartIpAddress    : 1.2.3.4
+EndIpAddress      : 4.3.2.1
+FirewallRuleName  : Rule01
 ```
 
-{{ Add example description here }}
+This command gets all the firewall rules for the server named Server01.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallRuleName
-The Azure Sql Database Server Firewall Rule name.
+Specifies the name of the firewall rule.
 
 ```yaml
 Type: System.String
@@ -62,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the SQL Server is assigned.
 
 ```yaml
 Type: System.String
@@ -77,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The Azure Sql Server name.
+Specifies the name of the SQL Server.
 
 ```yaml
 Type: System.String
@@ -101,7 +116,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -117,14 +132,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +151,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzSqlServerFirewallRule](./New-AzSqlServerFirewallRule.md)
+
+[Remove-AzSqlServerFirewallRule](./Remove-AzSqlServerFirewallRule.md)
+
+[Set-AzSqlServerFirewallRule](./Set-AzSqlServerFirewallRule.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+
+

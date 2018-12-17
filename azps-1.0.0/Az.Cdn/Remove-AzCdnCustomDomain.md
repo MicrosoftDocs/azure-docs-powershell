@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+ms.assetid: 5727E2CA-0A0B-4050-9F4A-7E06758D9B53
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/remove-azcdncustomdomain
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Remove-AzCdnCustomDomain.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Remove-AzCdnCustomDomain.md
 ---
 
 # Remove-AzCdnCustomDomain
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a custom domain.
 
 ## SYNTAX
 
@@ -26,21 +29,14 @@ Remove-AzCdnCustomDomain -CdnCustomDomain <PSCustomDomain> [-PassThru]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzCdnCustomDomain** cmdlet removes the custom domain from an Azure Content Delivery Network (CDN) endpoint.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CdnCustomDomain
-The custom domain object.
+Specifies the custom domain that this cmdlet removes.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Cdn.Models.CustomDomain.PSCustomDomain
@@ -55,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDomainName
-Azure CDN custom domain display name.
+Specifies the resource name of the custom domain that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -70,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -85,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-Azure CDN endpoint name.
+Specifies the name of the endpoint from which this cmdlet removes a custom domain.
 
 ```yaml
 Type: System.String
@@ -100,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Return object if specified.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -115,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-Azure CDN profile name.
+Specifies the name of the profile from which this cmdlet removes a custom domain.
 
 ```yaml
 Type: System.String
@@ -130,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group of the Azure CDN profile
+Specifies the name of the resource group from which this cmdlet removes a custom domain.
 
 ```yaml
 Type: System.String
@@ -154,7 +151,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -170,14 +167,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -192,3 +188,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzCdnCustomDomain](./Get-AzCdnCustomDomain.md)
+
+[New-AzCdnCustomDomain](./New-AzCdnCustomDomain.md)
+
+[Test-AzCdnCustomDomain](./Test-AzCdnCustomDomain.md)
+
+

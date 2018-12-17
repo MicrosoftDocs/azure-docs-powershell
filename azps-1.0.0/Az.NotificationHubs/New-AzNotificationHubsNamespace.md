@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: 3BA94976-DE88-4F07-9C06-41FEEDE1B829
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/new-aznotificationhubsnamespace
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzNotificationHubsNamespace.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzNotificationHubsNamespace.md
 ---
 
 # New-AzNotificationHubsNamespace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a notification hub namespace.
 
 ## SYNTAX
 
@@ -19,26 +22,44 @@ New-AzNotificationHubsNamespace [-ResourceGroup] <String> [-Namespace] <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzNotificationHubsNamespace** cmdlet creates a notification hub namespace.
+Namespaces are logical containers that help you organize and manage your notification hubs.
+You must have at least one notification hub namespace.
+A single namespace can house multiple hubs.
+You can have multiple namespaces to organize your hubs, or to give specific individuals permission to manage a selected subset of your hubs.
+To create a namespace, make sure that you specify a unique name for the namespace; specify the datacenter where the namespace will be located; and, specify the resource group that the namespace will be assigned to.
+After the namespace has been created you can use the New-AzNotificationHubsNamespaceAuthorizationRules cmdlet to assign authorization rules to that namespace.
+Authorization rules are used to manage permissions to the namespace.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a notification hub
+```
+PS C:\>New-AzNotificationHubsNamespace -ResourceGroup "ContosoNotificationsGroup" -Location "West US" -Namespace "ContosoPartners"
 ```
 
-{{ Add example description here }}
+This command creates a notification hub named ContosoPartners.
+The namespace will be located in the West US datacenter and be assigned to the ContosoNotificationsGroup resource group.
+
+### Example 2: Create a notification hub with tags
+```
+PS C:\>New-AzNotificationHubsNamespace -ResourceGroup "ContosoNotificationsGroup" -Location "West US" -Namespace "ContosoPartners" -Tags @{Name="Audience";Value="PartnerOrganizations"}
+```
+
+This command creates a notification hub named ContosoPartners.
+The namespace will be located in the West US datacenter and be assigned to the ContosoNotificationsGroup resource group.
+In addition, this command creates a tag with the name Audience and the value PartnerOrganizations and is assigned to the namespace.
+This ensures that the namespace will be displayed any time you filter for items where the Audience tag is set to PartnerOrganizations.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Namespace Location.
+Specifies the display name of the datacenter that will host the Namespace.
+Although you can set this parameter to any valid location, for optimal performance you might want to use a datacenter located near the majority of your users.
 
 ```yaml
 Type: System.String
@@ -63,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the name of the new namespace.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -78,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the namespace will be assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and administration.
 
 ```yaml
 Type: System.String
@@ -108,7 +132,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Hashtables which represents resource Tags.
+Specifies name-value pairs that can be used to categorize and organize Azure items.
+Tags function similar to keywords, and operate across a deployment.
+For example, if you search for all items with the tag Department:IT the search will return all the Azure items that have that tag, regardless of such things as item type, location, or resource group.
+An individual tag consists of two parts: the *Name* and, optionally, the *Value*.
+For instance, in Department:IT, the tag name is Department and the tag value is IT.
+To add a tag, use hash table syntax similar to this, which creates the tag CalendarYear:2016:
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -138,8 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,8 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -170,3 +197,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHubsNamespace](./Get-AzNotificationHubsNamespace.md)
+
+[Remove-AzNotificationHubsNamespace](./Remove-AzNotificationHubsNamespace.md)
+
+[Set-AzNotificationHubsNamespace](./Set-AzNotificationHubsNamespace.md)
+
+

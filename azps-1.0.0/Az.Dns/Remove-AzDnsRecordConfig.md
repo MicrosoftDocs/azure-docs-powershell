@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
-online version:
+ms.assetid: D1A2326C-CD41-45A6-B37A-FC6176193B01
+online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/remove-azdnsrecordconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzDnsRecordConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzDnsRecordConfig.md
 ---
 
 # Remove-AzDnsRecordConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a DNS record from a local record set object.
 
 ## SYNTAX
 
@@ -67,22 +70,139 @@ Remove-AzDnsRecordConfig -RecordSet <DnsRecordSet> -CaaFlags <Byte> -CaaTag <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzDnsRecordConfig** cmdlet removes a Domain Name System (DNS) record from a record set.
+The **RecordSet** object is an offline object, and changes to it do not change the DNS responses until after you run the Set-AzDnsRecordSet cmdlet to persist the change to the Microsoft Azure DNS service.
+To remove a record, all the fields for that record type must match exactly.
+You cannot add or remove SOA records.
+SOA records are automatically created when a DNS zone is created and automatically deleted when the DNS zone is deleted.
+You can pass the **RecordSet** object to this cmdlet as a parameter or by using the pipeline operator.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove an A record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "www" -RecordType A -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 1.2.3.4
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "www" -RecordType A -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com" | Remove-AzDnsRecordConfig -Ipv4Address 1.2.3.4 | Set-AzDnsRecordSet
 ```
 
-{{ Add example description here }}
+This example removes an A record from an existing record set.
+If this is the only record in the record set, the result will be an empty record set.
+To remove a record set entirely, see Remove-AzDnsRecordSet.
+
+### Example 2: Remove an AAAA record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "www" -RecordType AAAA -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordConfig -RecordSet $RecordSet -Ipv6Address 2001:DB80:4009:1803::1005
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "www" -RecordType AAAA -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com" | Remove-AzDnsRecordConfig -Ipv6Address 2001:DB80:4009:1803::1005 | Set-AzDnsRecordSet
+```
+
+This example removes an AAAA record from an existing record set.
+If this is the only record in the record set, the result will be an empty record set.
+To remove a record set entirely, see Remove-AzDnsRecordSet.
+
+### Example 3: Remove a CNAME record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "www" -RecordType CNAME -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordConfig -RecordSet $RecordSet -Cname contoso.com
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "www" -RecordType CNAME -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com" | Remove-AzDnsRecordConfig -Cname contoso.com | Set-AzDnsRecordSet
+```
+
+This example removes a CNAME record from an existing record set.
+Because a CNAME record set can contain at most one record, the result is an empty record set.
+
+### Example 4: Remove an MX record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "@" -RecordType MX -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordConfig -Exchange mail.microsoft.com -Preference 5 -RecordSet $RecordSet
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "@" -RecordType MX -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com" | Remove-AzDnsRecordConfig -Exchange mail.microsoft.com -Preference 5 | Set-AzDnsRecordSet
+```
+
+This example removes an MX record from an existing record set.
+The record name "@" indicates a record set at the zone apex.
+If this is the only record in the record set, the result is an empty record set.
+To remove a record set entirely, see Remove-AzDnsRecordSet.
+
+### Example 5: Remove an NS record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "abc" -RecordType NS -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordConfig -Nsdname ns1.myzone.com -RecordSet $RecordSet
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "abc" -RecordType NS -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com" | Remove-AzDnsRecordConfig -Nsdname "ns1.myzone.com" | Set-AzDnsRecordSet
+```
+
+This example removes an NS record from an existing record set.
+If this is the only record in the record set, the result is an empty record set.
+To remove a record set entirely, see Remove-AzDnsRecordSet.
+
+### Example 6: Remove a PTR record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "4" -RecordType PTR -ResouceGroupName "MyResourceGroup" -ZoneName 3.2.1.in-addr.arpa
+PS C:\> Remove-AzDnsRecordConfig -Ptrdname www.contoso.com -RecordSet $RecordSet
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "4" -RecordType PTR -ResouceGroupName "MyResourceGroup" -ZoneName "3.2.1.in-addr.arpa" | Remove-AzDnsRecordConfig -Ptrdname www.contoso.com | Set-AzDnsRecordSet
+```
+
+This example removes a PTR record from an existing record set.
+If this is the only record in the record set, the result is an empty record set.
+To remove a record set entirely, see Remove-AzDnsRecordSet.
+
+### Example 7: Remove an SRV record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "_sip._tcp" -RecordType SRV -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordConfig -RecordSet $RecordSet -Priority 0 -Weight 5 -Port 8080 -Target target.example.com
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "_sip._tcp" -RecordType SRV -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com" | Remove-AzDnsRecordConfig -Priority 0 -Weight 5 -Port 8080 -Target target.example.com  | Set-AzDnsRecordSet
+```
+
+This example removes an SRV record from an existing record set.
+If this is the only record in the record set, the result is an empty record set.
+To remove a record set entirely, see Remove-AzDnsRecordSet.
+
+### Example 8: Remove a TXT record from a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "text" -RecordType TXT -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordConfig -RecordSet $RecordSet -Value "This is a TXT Record"
+PS C:\> Set-AzDnsRecordSet -RecordSet $RecordSet
+
+# The above sequence can also be piped:
+
+PS C:\> Get-AzDnsRecordSet -Name "text" -RecordType TXT -ResouceGroupName "MyResourceGroup" -ZoneName "myzone.com" | Remove-AzDnsRecordConfig -Value "This is a TXT Record"  | Set-AzDnsRecordSet
+```
+
+This example removes a TXT record from an existing record set.
+If this is the only record in the record set, the result is an empty record set.
+To remove a record set entirely, see Remove-AzDnsRecordSet.
 
 ## PARAMETERS
 
 ### -CaaFlags
-The flags for the CAA record to add.
-Must be a number between 0 and 255.
+The flags for the CAA record to add. Must be a number between 0 and 255.
 
 ```yaml
 Type: System.Byte
@@ -127,9 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cname
-The canonical name of the CNAME record to remove.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the domain name for a canonical name (CNAME) record.
 
 ```yaml
 Type: System.String
@@ -144,12 +262,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -159,9 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -Exchange
-The mail exchange host of the MX record to remove.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the mail exchange server name for a mail exchange (MX) record.
 
 ```yaml
 Type: System.String
@@ -176,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ipv4Address
-The IPv4 address of the A record to remove.
+Specifies an IPv4 address for an A record.
 
 ```yaml
 Type: System.String
@@ -191,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ipv6Address
-The IPv6 address of the AAAA record to remove.
+Specifies an IPv6 address for an AAAA record.
 
 ```yaml
 Type: System.String
@@ -206,9 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -Nsdname
-The name server host of the NS record to remove.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the name server for a name server (NS) record.
 
 ```yaml
 Type: System.String
@@ -223,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-The port number of the SRV record to remove.
+Specifies the port for a service (SRV) record.
 
 ```yaml
 Type: System.UInt16
@@ -238,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -Preference
-The preference value of the MX record to remove.
+Specifies the preference for an MX record.
 
 ```yaml
 Type: System.UInt16
@@ -253,7 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The priority value of the SRV record to remove.
+Specifies the priority for an SRV record.
 
 ```yaml
 Type: System.UInt16
@@ -268,9 +382,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ptrdname
-The target host of the PTR record to remove.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the target domain name of a pointer (PTR) record.
 
 ```yaml
 Type: System.String
@@ -285,7 +397,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordSet
-The record set from which to remove the record.
+Specifies the **RecordSet** object that contains the record to remove.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Dns.DnsRecordSet
@@ -300,9 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-The target host of the SRV record to remove.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the target for an SRV record.
 
 ```yaml
 Type: System.String
@@ -317,7 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The text value of the TXT record to remove.
+Specifies the value for a TXT record.
 
 ```yaml
 Type: System.String
@@ -332,7 +442,7 @@ Accept wildcard characters: False
 ```
 
 ### -Weight
-The weight value of the SRV record to remove.
+Specifies the weight for an SRV record.
 
 ```yaml
 Type: System.UInt16
@@ -347,8 +457,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -367,3 +476,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzDnsRecordConfig](./Add-AzDnsRecordConfig.md)
+
+[Get-AzDnsRecordSet](./Get-AzDnsRecordSet.md)
+
+[Set-AzDnsRecordSet](./Set-AzDnsRecordSet.md)

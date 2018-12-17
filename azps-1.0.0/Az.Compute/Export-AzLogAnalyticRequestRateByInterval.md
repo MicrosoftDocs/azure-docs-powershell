@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/export-azloganalyticrequestratebyinterval
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Export-AzLogAnalyticRequestRateByInterval.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Export-AzLogAnalyticRequestRateByInterval.md
 ---
 
 # Export-AzLogAnalyticRequestRateByInterval
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Export logs that show Api requests made by this subscription in the given time window to show throttling activities.
 
 ## SYNTAX
 
@@ -20,16 +22,19 @@ Export-AzLogAnalyticRequestRateByInterval [-FromTime] <DateTime> [-GroupByOperat
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Exports statistical data about the subscription's calls to the Microsoft.Compute API by Success, Failure, or Throttled status, in predefined time intervals. The logs can be further grouped by three parameters: GroupByOperationName, GroupByThrottlePolicy, or GroupByResourceName.
+Note that this cmdlet collects only Compute Resource Provider logs; moreover, data about the Disk and Snapshot resource types is not yet available.
+
+For an overview of the Compute Resource Provider's API throttling, see https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-request-limits. 
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Export-AzLogAnalyticRequestRateByInterval -Location 'West Central US' -FromTime '2018-02-20T17:54:14.8806951-08:00' -ToTime '2018-02-22T17:54:17.5832413-08:00' -BlobContainerSasUri 'https://wkuotest1.blob.core.windows.net/mylogs?someSasUri' -IntervalLength ThirtyMins -GroupByOperationName
 ```
 
-{{ Add example description here }}
+This command stores the aggregated numbers of Microsoft.Compute API calls separated by Success, Failure, or Throttled between 2018-02-20T17:54:14 and 2018-02-22T17:54:17 in the given SAS URI, aggregated by operation name.
 
 ## PARAMETERS
 
@@ -49,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlobContainerSasUri
-{{Fill BlobContainerSasUri Description}}
+SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
 
 ```yaml
 Type: System.String
@@ -67,9 +72,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -79,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromTime
-{{Fill FromTime Description}}
+From time of the query
 
 ```yaml
 Type: System.DateTime
@@ -94,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupByOperationName
-{{Fill GroupByOperationName Description}}
+Group query result by Operation Name.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -109,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupByResourceName
-{{Fill GroupByResourceName Description}}
+Group query result by Resource Name.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupByThrottlePolicy
-{{Fill GroupByThrottlePolicy Description}}
+Group query result by Throttle Policy applied.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -139,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalLength
-{{Fill IntervalLength Description}}
+Interval value in minutes used to create LogAnalytics call rate logs.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.IntervalInMins
@@ -155,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+The location upon which log analytic is queried.
 
 ```yaml
 Type: System.String
@@ -170,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToTime
-{{Fill ToTime Description}}
+To time of the query
 
 ```yaml
 Type: System.DateTime
@@ -216,8 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

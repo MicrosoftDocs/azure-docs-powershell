@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: B10B1F5D-5566-4129-9D42-05A6D3B72C9E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/export-azdatalakestoreitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Export-AzDataLakeStoreItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Export-AzDataLakeStoreItem.md
 ---
 
 # Export-AzDataLakeStoreItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Downloads a file from Data Lake Store.
 
 ## SYNTAX
 
@@ -28,21 +31,21 @@ Export-AzDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInstanc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Export-AzDataLakeStoreItem** cmdlet downloads a file from Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Download an item from the Data Lake Store
+```
+PS C:\>Export-AzDataLakeStoreItem -AccountName "ContosoADL" -Path /myFiles/TestSource.csv -Destination "C:\Test.csv" -Concurrency 4
 ```
 
-{{ Add example description here }}
+This command downloads the file TestSource.csv from the Data Lake Store to C:\Test.csv with a concurrency of 4.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -57,8 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Concurrency
-Indicates the number of files or chunks to download in parallel.
-Default will be computed as a best effort based on system specifications.
+Indicates the number of files or chunks to download in parallel. Default will be computed as a best effort based on system specifications.
 
 ```yaml
 Type: System.Int32
@@ -73,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -88,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-The local path to download the file or folder to
+Specifies the local file path to which to download the file.
 
 ```yaml
 Type: System.String
@@ -103,8 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticLogLevel
-Optionally indicates the diagnostic log level to use to record events during the file or folder import.
-Default is Error.
+Optionally indicates the diagnostic log level to use to record events during the file or folder import. Default is Error.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.LogLevel
@@ -114,7 +115,7 @@ Accepted values: Debug, Information, Error, None
 
 Required: False
 Position: Named
-Default value: None
+Default value: Error
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -135,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Indicates that, if the file or folder exists, it should be overwritten
+Indicates that this operation can overwrite the destination file if it already exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -150,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path to the file or folder to download
+Specifies the path of the item to download from the Data Lake Store, starting from the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -165,8 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-Indicates if the download should be recursive for folder downloads.
-The default is false.
+Indicates that a folder download is recursive.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -206,7 +206,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -222,14 +222,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -250,3 +249,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItem](./Get-AzDataLakeStoreItem.md)
+
+[Import-AzDataLakeStoreItem](./Import-AzDataLakeStoreItem.md)
+
+[Join-AzDataLakeStoreItem](./Join-AzDataLakeStoreItem.md)
+
+[Move-AzDataLakeStoreItem](./Move-AzDataLakeStoreItem.md)
+
+[New-AzDataLakeStoreItem](./New-AzDataLakeStoreItem.md)
+
+[Remove-AzDataLakeStoreItem](./Remove-AzDataLakeStoreItem.md)
+
+[Test-AzDataLakeStoreItem](./Test-AzDataLakeStoreItem.md)
+
+

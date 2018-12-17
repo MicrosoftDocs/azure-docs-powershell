@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: D4188DC6-A8AB-4B45-9781-94B74C338C63
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/import-azkeyvaultcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Import-AzKeyVaultCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Import-AzKeyVaultCertificate.md
 ---
 
 # Import-AzKeyVaultCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Imports a certificate to a key vault.
 
 ## SYNTAX
 
@@ -34,21 +37,52 @@ Import-AzKeyVaultCertificate [-VaultName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Import-AzKeyVaultCertificate** cmdlet imports a certificate into a key vault.
+You can create the certificate to import by using one of the following methods:
+- Use the New-AzKeyVaultCertificateSigningRequest cmdlet to create a certificate signing request and submit it to a certificate authority.
+- Use an existing certificate package file, such as a .pfx or .p12 file, which contains both the certificate and private key.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Import a key vault certificate
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $Password = ConvertTo-SecureString -String "123" -AsPlainText -Force
+PS C:\> Import-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "ImportCert01" -FilePath "C:\Users\contosoUser\Desktop\import.pfx" -Password $Password
+
+Name        : importCert01
+Certificate : [Subject]
+                CN=contoso.com
+
+              [Issuer]
+                CN=contoso.com
+
+              [Serial Number]
+                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+              [Not Before]
+                2/8/2016 3:11:45 PM
+
+              [Not After]
+                8/8/2016 4:21:45 PM
+
+              [Thumbprint]
+                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Thumbprint  : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Tags        :
+Enabled     : True
+Created     : 2/8/2016 11:50:43 PM
+Updated     : 2/8/2016 11:50:43 PM
 ```
 
-{{ Add example description here }}
+The first command uses the ConvertTo-SecureString cmdlet to create a secure password, and then
+stores it in the $Password variable.
+The second command imports the certificate named ImportCert01 into the CosotosoKV01 key vault.
 
 ## PARAMETERS
 
 ### -CertificateCollection
-Specifies the certificate collection to add to key vault.
+Specifies the certificate collection to add to a key vault.
 
 ```yaml
 Type: System.Security.Cryptography.X509Certificates.X509Certificate2Collection
@@ -63,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateString
-The certificate and private key to add to key vault as a string.
+Specifies a certificate string.
 
 ```yaml
 Type: System.String
@@ -78,12 +112,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-Specifies the path to the file that contains the certificate to add to key vault.
+Specifies the path of the certificate file that this cmdlet imports.
 
 ```yaml
 Type: System.String
@@ -108,8 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Certificate name.
-Cmdlet constructs the FQDN of a certificate from vault name, currently selected environment and certificate name.
+Specifies the certificate name. This cmdlet constructs the fully qualified domain name (FQDN) of a
+certificate from key vault name, currently selected environment, and certificate name.
 
 ```yaml
 Type: System.String
@@ -124,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies the password for the certificate and private key file to import.
+Specifies the password for a certificate file.
 
 ```yaml
 Type: System.Security.SecureString
@@ -139,7 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable representing certificate tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -154,8 +189,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the key vault name into which this cmdlet imports certificates.
+This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name and currently selected environment.
 
 ```yaml
 Type: System.String
@@ -201,8 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -219,3 +253,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)

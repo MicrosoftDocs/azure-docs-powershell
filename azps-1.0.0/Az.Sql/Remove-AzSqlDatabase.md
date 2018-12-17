@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: B396388D-F91C-4BC9-A211-ABFF5DFC1693
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/remove-azsqldatabase
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlDatabase.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlDatabase.md
 ---
 
 # Remove-AzSqlDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an Azure SQL database.
 
 ## SYNTAX
 
@@ -18,21 +21,22 @@ Remove-AzSqlDatabase [-DatabaseName] <String> [-Force] [-ServerName] <String> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzSqlDatabase** cmdlet removes an Azure SQL database.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a database from an Azure SQL server
+```
+PS C:\>Remove-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ```
 
-{{ Add example description here }}
+This command removes the database named Database01 from server Server01.
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database to remove.
+Specifies the name of the database that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -47,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Skip confirmation message for performing the action
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -77,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the Azure resource group to which the database is assigned.
 
 ```yaml
 Type: System.String
@@ -92,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Database Server the database is in.
+Specifies the name of the server that hosts the database.
 
 ```yaml
 Type: System.String
@@ -116,7 +120,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -132,14 +136,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +155,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlDatabase](./Get-AzSqlDatabase.md)
+
+[New-AzSqlDatabase](./New-AzSqlDatabase.md)
+
+[Resume-AzSqlDatabase](./Resume-AzSqlDatabase.md)
+
+[Set-AzSqlDatabase](./Set-AzSqlDatabase.md)
+
+[Suspend-AzSqlDatabase](./Suspend-AzSqlDatabase.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+
+

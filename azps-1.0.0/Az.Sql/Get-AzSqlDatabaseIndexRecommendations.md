@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 10656EA5-EA5F-4394-951F-BC64BE3BF6F9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabaseindexrecommendations
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseIndexRecommendations.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseIndexRecommendations.md
 ---
 
 # Get-AzSqlDatabaseIndexRecommendations
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the recommended index operations for a server or database.
 
 ## SYNTAX
 
@@ -19,21 +22,35 @@ Get-AzSqlDatabaseIndexRecommendations -ServerName <String> [-DatabaseName <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlDatabaseIndexRecommendations** cmdlet gets the recommended index operations for an Azure SQL Database server or database.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get index recommendations for all databases on server
+```
+PS C:\>Get-AzSqlDatabaseIndexRecommendations -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ```
 
-{{ Add example description here }}
+This command returns index recommendations for all databases on server server01.
+
+### Example 2: Get index recommendations for a specific database
+```
+PS C:\>Get-AzSqlDatabaseIndexRecommendations -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+```
+
+This command returns index recommendations for specific database.
+
+### Example 3: Get a single index recommendation by name
+```
+PS C:\>Get-AzSqlDatabaseIndexRecommendations -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -IndexRecommendationName "INDEX_NAME"
+```
+
+This command returns single index recommendation by name.
 
 ## PARAMETERS
 
 ### -DatabaseName
-Azure SQL Database name.
+Specifies the name of the database for which this cmdlet gets index recommendations.
 
 ```yaml
 Type: System.String
@@ -48,12 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexRecommendationName
-Azure SQL Index Recommendation name.
+Specifies the name of the index recommendation that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -78,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that the server is assigned for.
+This cmdlet gets index recommendations for a database hosted by this server.
 
 ```yaml
 Type: System.String
@@ -93,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Azure SQL Server name.
+Specifies the server that hosts the database for which this cmdlet gets index recommendations.
 
 ```yaml
 Type: System.String
@@ -108,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -TableName
-Azure SQL Table name.
+Specifies the name of an Azure SQL table.
 
 ```yaml
 Type: System.String
@@ -132,7 +150,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -148,14 +166,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -168,3 +185,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-AzSqlDatabaseExecuteIndexRecommendation](./Start-AzSqlDatabaseExecuteIndexRecommendation.md)
+
+[Stop-AzSqlDatabaseExecuteIndexRecommendation](./Stop-AzSqlDatabaseExecuteIndexRecommendation.md)

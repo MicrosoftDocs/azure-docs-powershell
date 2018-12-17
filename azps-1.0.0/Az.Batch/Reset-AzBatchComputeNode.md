@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: A202537B-D292-4822-A0B9-27A6A20621D4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/reset-azbatchcomputenode
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Reset-AzBatchComputeNode.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Reset-AzBatchComputeNode.md
 ---
 
 # Reset-AzBatchComputeNode
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Reinstalls the operating system on the specified compute node.
 
 ## SYNTAX
 
@@ -25,25 +28,30 @@ Reset-AzBatchComputeNode [[-ComputeNode] <PSComputeNode>] [-ReimageOption <Compu
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Reset-AzBatchComputeNode** cmdlet reinstalls the operating system on the specified compute node.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Reimage a node
+```
+PS C:\>Reset-AzBatchComputeNode -PoolId "MyPool" -Id "tvm-3257026573_2-20150813t200938z" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command reimages the compute node with ID "tvm-3257026573_2-20150813t200938z" in the pool named MyPool.
+Use the Get-AzBatchAccountKeys cmdlet to assign a context to the $Context variable.
+
+### Example 2: Reimage all nodes in a pool
+```
+PS C:\>Get-AzBatchComputeNode -PoolId "MyPool" -BatchContext $Context | Reset-AzBatchComputeNode -BatchContext $Context
+```
+
+This command reimages every compute node in the pool named MyPool.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -58,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNode
-{{Fill ComputeNode Description}}
+Specifies the **PSComputeNode** object that represents the compute node to reimage.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
@@ -73,12 +81,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -88,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The id of the compute node to reimage.
+Specifies the ID of the compute node to reimage.
 
 ```yaml
 Type: System.String
@@ -103,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool that contains the compute node.
+Specifies the ID of the pool that contains the compute node.
 
 ```yaml
 Type: System.String
@@ -118,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReimageOption
-{{Fill ReimageOption Description}}
+Specifies when to reimage the node and what to do with currently running tasks.
+The default is Requeue.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Batch.Common.ComputeNodeReimageOption]
@@ -134,8 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -150,3 +158,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchComputeNode](./Get-AzBatchComputeNode.md)
+
+[Restart-AzBatchComputeNode](./Restart-AzBatchComputeNode.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

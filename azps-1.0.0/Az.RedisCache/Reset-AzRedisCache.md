@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+ms.assetid: A73D4DDD-387A-4468-AC6E-F15BF473527E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/reset-azrediscache
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Reset-AzRedisCache.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Reset-AzRedisCache.md
 ---
 
 # Reset-AzRedisCache
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Restarts nodes of a cache.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Reset-AzRedisCache [-ResourceGroupName <String>] -Name <String> -RebootType <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Reset-AzRedisCache** cmdlet restarts nodes of an Azure Redis Cache instance.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Restart both nodes
+```
+PS C:\>Reset-AzRedisCache -ResourceGroupName "ResourceGroup13" -Name "RedisCache06" -RebootType "AllNodes" -Force
 ```
 
-{{ Add example description here }}
+This command restarts both nodes for the cache named RedisCache06.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of redis cache.
+Specifies the name of a cache.
 
 ```yaml
 Type: System.String
@@ -77,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Indicates that this cmdlet returns a Boolean that indicates whether the operation succeeds.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -92,7 +96,11 @@ Accept wildcard characters: False
 ```
 
 ### -RebootType
-Specifies which node to reboot.
+Specifies which node or nodes to restart.
+The acceptable values for this parameter are:
+- PrimaryNode 
+- SecondaryNode 
+- AllNodes
 
 ```yaml
 Type: System.String
@@ -108,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which cache exists.
+Specifies the name of the resource group that contains the cache.
 
 ```yaml
 Type: System.String
@@ -123,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShardId
-In case of cluster cache specifies which shard to reboot.
+Specifies the ID of the shard that this cmdlet restarts for a premium cache with clustering enabled.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -147,7 +155,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -163,14 +171,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -183,5 +190,18 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
 
 ## RELATED LINKS
+
+[Export-AzRedisCache](./Export-AzRedisCache.md)
+
+[Import-AzRedisCache](./Import-AzRedisCache.md)
+
+[New-AzRedisCache](./New-AzRedisCache.md)
+
+[Remove-AzRedisCache](./Remove-AzRedisCache.md)
+
+[Set-AzRedisCache](./Set-AzRedisCache.md)
+
+

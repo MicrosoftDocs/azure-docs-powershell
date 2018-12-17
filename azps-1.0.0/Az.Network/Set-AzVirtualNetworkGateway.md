@@ -1,26 +1,26 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 5C309071-A2ED-464C-9197-0A77859C8FBB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworkgateway
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzVirtualNetworkGateway.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzVirtualNetworkGateway.md
 ---
 
 # Set-AzVirtualNetworkGateway
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a virtual network gateway.
 
 ## SYNTAX
 
 ### Default (Default)
 ```
 Set-AzVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGateway> [-GatewaySku <String>]
- [-GatewayDefaultSite <PSLocalNetworkGateway>]
- [-VpnClientAddressPool <System.Collections.Generic.List`1[System.String]>]
- [-VpnClientProtocol <System.Collections.Generic.List`1[System.String]>]
- [-VpnClientRootCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]>]
- [-VpnClientRevokedCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]>]
- [-VpnClientIpsecPolicy <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy]>]
+ [-GatewayDefaultSite <PSLocalNetworkGateway>] [-VpnClientAddressPool <String[]>]
+ [-VpnClientProtocol <String[]>] [-VpnClientRootCertificates <PSVpnClientRootCertificate[]>]
+ [-VpnClientRevokedCertificates <PSVpnClientRevokedCertificate[]>] [-VpnClientIpsecPolicy <PSIpsecPolicy[]>]
  [-Asn <UInt32>] [-PeerWeight <Int32>] [-EnableActiveActiveFeature] [-DisableActiveActiveFeature] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -28,28 +28,40 @@ Set-AzVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGateway> [-G
 ### RadiusServerConfiguration
 ```
 Set-AzVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGateway> [-GatewaySku <String>]
- [-GatewayDefaultSite <PSLocalNetworkGateway>]
- [-VpnClientAddressPool <System.Collections.Generic.List`1[System.String]>]
- [-VpnClientProtocol <System.Collections.Generic.List`1[System.String]>]
- [-VpnClientRootCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]>]
- [-VpnClientRevokedCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]>]
- [-VpnClientIpsecPolicy <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy]>]
+ [-GatewayDefaultSite <PSLocalNetworkGateway>] [-VpnClientAddressPool <String[]>]
+ [-VpnClientProtocol <String[]>] [-VpnClientRootCertificates <PSVpnClientRootCertificate[]>]
+ [-VpnClientRevokedCertificates <PSVpnClientRevokedCertificate[]>] [-VpnClientIpsecPolicy <PSIpsecPolicy[]>]
  [-Asn <UInt32>] [-PeerWeight <Int32>] [-EnableActiveActiveFeature] [-DisableActiveActiveFeature]
  -RadiusServerAddress <String> -RadiusServerSecret <SecureString> [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVirtualNetworkGateway** cmdlet updates a virtual network gateway.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the goal state a virtual network gateway
+```
+PS C:\>$Gateway = Get-AzVirtualNetworkGateway -ResourceGroupName "ResourceGroup001" -Name "Gateway001"
+PS C:\> Set-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -Asn 1337
 ```
 
-{{ Add example description here }}
+The first command gets a virtual network gateway named Gateway01 that belongs to resource group ResourceGroup001 and stores it to the variable named $Gateway
+The second command sets the goal state for the virtual network gateway stored in variable $Gateway.
+The command also sets the ASN to 1337.
+
+### Example 2: Set the goal state a virtual network gateway
+```
+PS C:\>$Gateway = Get-AzVirtualNetworkGateway -ResourceGroupName "ResourceGroup001" -Name "Gateway001"
+PS C:\> $vpnclientipsecpolicy = New-AzVpnClientIpsecPolicy -IpsecEncryption AES256 -IpsecIntegrity SHA256 -SALifeTimeSeconds 86472 -SADataSizeKilobytes 429497 -IkeEncryption AES256 -IkeIntegrity SHA256 -DhGroup DHGroup2 -PfsGroup None
+PS C:\> $gateway = Set-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -VpnClientIpsecPolicy $vpnclientipsecpolicy
+```
+
+The first command gets a virtual network gateway named Gateway01 that belongs to resource group ResourceGroup001 and stores it to the variable named $Gateway
+The second command creates the Vpn ipsec policy object as per specified ipsec parameters.
+The third command sets the goal state for the virtual network gateway stored in variable $Gateway.
+The command also sets the custom vpn ipsec policy specified in the $vpnclientipsecpolicy object on Virtual network gateway.
 
 ## PARAMETERS
 
@@ -69,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Asn
-The virtual network gateway's ASN, used to set up BGP sessions inside IPsec tunnels
+Specifies the virtual network gateway Autonomous System Number (ASN) that is used to set up Border Gateway Protocol (BGP) sessions inside IPsec tunnels.
 
 ```yaml
 Type: System.UInt32
@@ -84,12 +96,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -99,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableActiveActiveFeature
-Flag to disable Active Active feature on virtual network gateway
+Disables the active-active feature.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -114,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableActiveActiveFeature
-Flag to enable Active Active feature on virtual network gateway
+Enables the active-active feature.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -129,8 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayDefaultSite
-The default site to use for force tunneling.
-If a default site is specified, all internet traffic from the gateway's vnet is routed to that site.
+Specifies the default site to use for force tunneling.
+If a default site is specified, all internet traffic from the gateway's Virtual Private Network (VPN) is routed to that site.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway
@@ -145,7 +157,20 @@ Accept wildcard characters: False
 ```
 
 ### -GatewaySku
-The virtual network gateway's SKU
+Specifies the stock keeping unit (SKU) of the virtual network gateway.
+The acceptable values for this parameter are:
+- Basic
+- Standard
+- HighPerformance
+- VpnGw1
+- VpnGw2
+- VpnGw3
+- VpnGw1AZ
+- VpnGw2AZ
+- VpnGw3AZ
+- ErGw1AZ
+- ErGw2AZ
+- ErGw3AZ
 
 ```yaml
 Type: System.String
@@ -161,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerWeight
-The weight added to routes learned over BGP from this virtual network gateway
+Specifies the weight added to routes learned over BGP from this virtual network gateway
 
 ```yaml
 Type: System.Int32
@@ -206,8 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway
-The virtual network gateway object to base modifications off of.
-This can be retrieved using Get-AzureRmVirtualNetworkGateway
+Specifies the virtual network gateway object to base modifications off of.
+You can use the Get-AzVirtualNetworkGateway cmdlet to get the virtual network gateway object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
@@ -222,11 +247,11 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientAddressPool
-The address space to allocate VPN client IP addresses from.
+Specifies the address space that this cmdlet uses to allocate VPN client IP addresses from.
 This should not overlap with virtual network or on-premise ranges.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -241,7 +266,7 @@ Accept wildcard characters: False
 A list of IPSec policies for P2S VPN client tunneling protocols.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy]
+Type: Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy[]
 Parameter Sets: (All)
 Aliases:
 
@@ -256,7 +281,7 @@ Accept wildcard characters: False
 A list of P2S VPN client tunneling protocols
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 Accepted values: SSTP, IkeV2, OpenVPN
@@ -269,11 +294,11 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientRevokedCertificates
-A list of revoked VPN client certificates.
-A VPN client presenting a certificate that matches one of these will be told to go away.
+Specifies a list of revoked VPN client certificates.
+A VPN client presenting a certificate that matches one of these is removed.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]
+Type: Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate[]
 Parameter Sets: (All)
 Aliases:
 
@@ -285,11 +310,11 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientRootCertificates
-A list of VPN client root certificates to use for VPN client authentication.
+Specifies a list of VPN client root certificates to use for VPN client authentication.
 Connecting VPN clients must present certificates generated from one of these root certificates.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]
+Type: Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate[]
 Parameter Sets: (All)
 Aliases:
 
@@ -316,8 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -332,8 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -343,13 +366,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway
 
-### System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+### System.String[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy[]
 
 ### System.UInt32
 
@@ -362,5 +385,18 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, network, networking
 
 ## RELATED LINKS
+
+[Get-AzVirtualNetworkGateway](./Get-AzVirtualNetworkGateway.md)
+
+[New-AzVirtualNetworkGateway](./New-AzVirtualNetworkGateway.md)
+
+[Remove-AzVirtualNetworkGateway](./Remove-AzVirtualNetworkGateway.md)
+
+[Reset-AzVirtualNetworkGateway](./Reset-AzVirtualNetworkGateway.md)
+
+[Resize-AzVirtualNetworkGateway](./Resize-AzVirtualNetworkGateway.md)
+
+

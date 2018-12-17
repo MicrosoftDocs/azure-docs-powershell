@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: F0BDB0EE-1F26-450D-9C68-34C79CE8F778
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementuserfromgroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementUserFromGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementUserFromGroup.md
 ---
 
 # Remove-AzApiManagementUserFromGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a user from a group.
 
 ## SYNTAX
 
@@ -18,21 +21,22 @@ Remove-AzApiManagementUserFromGroup -Context <PsApiManagementContext> -GroupId <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzApiManagementUserFromGroup** cmdlet removes a user from an existing group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a user from a group
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementUserFromGroup -Context $apimContext -GroupId "0001" -UserId "0123456789"
 ```
 
-{{ Add example description here }}
+This command removes a user from a group.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
+Specifies a **PsApiManagementContext** object.
 This parameter is required.
 
 ```yaml
@@ -48,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-This parameter is required.
+Specifies the ID of the group from which to remove a user.
 
 ```yaml
 Type: System.String
@@ -79,9 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Indicates that this cmdlet returns a value of $True, if it succeeds, or a value of $False, otherwise.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
-This parameter is required.
+Specifies the ID of the user to remove from the group.
 
 ```yaml
 Type: System.String
@@ -112,8 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -130,3 +129,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzApiManagementUserToGroup](./Add-AzApiManagementUserToGroup.md)
+
+[Get-AzApiManagementUser](./Get-AzApiManagementUser.md)
+
+

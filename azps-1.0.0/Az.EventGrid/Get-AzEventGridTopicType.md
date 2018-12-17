@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll-Help.xml
 Module Name: Az.EventGrid
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/get-azeventgridtopictype
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzEventGridTopicType.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzEventGridTopicType.md
 ---
 
 # Get-AzEventGridTopicType
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details about the topic types supported by Azure Event Grid.
 
 ## SYNTAX
 
@@ -18,26 +20,43 @@ Get-AzEventGridTopicType [[-Name] <String>] [-IncludeEventTypeData] [-DefaultPro
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Gets the details of topic types supported by Azure Event Grid.
+If a topic type name is specified, details about that topic type are returned.
+If a topic type name is not specified, details about all topic types are returned.
+If IncludeEventTypes is specified, information about event types supported by each topic type is included in the response.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzEventGridTopicType
 ```
 
-{{ Add example description here }}
+Gets a list of the topic types.
+
+### Example 2
+```
+PS C:\> Get-AzEventGridTopicType -Name "Microsoft.Storage.StorageAccounts"
+```
+
+Gets information about the StorageAccounts topic type.
+
+### Example 3
+```
+PS C:\> Get-AzEventGridTopicType -Name "Microsoft.Storage.StorageAccounts" -IncludeEventTypeData
+```
+
+Gets information about the StorageAccounts topic type, including the event types supported by StorageAccounts.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,8 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

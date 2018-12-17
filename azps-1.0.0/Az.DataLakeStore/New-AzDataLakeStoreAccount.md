@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 58AAA284-45A3-4360-B321-FBE0A3F5D7A9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/new-azdatalakestoreaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/New-AzDataLakeStoreAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/New-AzDataLakeStoreAccount.md
 ---
 
 # New-AzDataLakeStoreAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new Data Lake Store account.
 
 ## SYNTAX
 
@@ -28,21 +31,21 @@ New-AzDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [-Loca
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzDataLakeStoreAccount** cmdlet creates a new Data Lake Store account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an account
+```
+PS C:\>New-AzDataLakeStoreAccount -Name "ContosoADL" -ResourceGroupName "ContosoOrg" -Location "East US 2"
 ```
 
-{{ Add example description here }}
+This command creates a Data Lake Store account named ContosoADL for the East US 2 location.
 
 ## PARAMETERS
 
 ### -DefaultGroup
-Name of the default group to give permissions to for freshly created files and folders in the DataLakeStore.
+Specifies the object ID of the AzureActive Directory group to use as the default group owner for new files and folders.
 
 ```yaml
 Type: System.String
@@ -57,12 +60,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -87,10 +90,6 @@ Accept wildcard characters: False
 ```
 
 ### -Encryption
-Indicates what type of encryption to provision the account with.
-By default, encryption is ServiceManaged.
-If no encryption is desired, it must be explicitly set with the -DisableEncryption flag
-
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Store.Models.EncryptionConfigType]
 Parameter Sets: UserOrSystemAssignedEncryption
@@ -105,8 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeyName
-If the encryption type is User assigned, this is the key name in the key vault the user wishes to use
-
 ```yaml
 Type: System.String
 Parameter Sets: UserOrSystemAssignedEncryption
@@ -120,8 +117,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultId
-If the encryption type is User assigned, this is the key vault the user wishes to use
-
 ```yaml
 Type: System.String
 Parameter Sets: UserOrSystemAssignedEncryption
@@ -135,8 +130,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVersion
-If the encryption type is User assigned, this is the key version of the key the user wishes to use
-
 ```yaml
 Type: System.String
 Parameter Sets: UserOrSystemAssignedEncryption
@@ -150,7 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Azure region where the account should be created.
+Specifies the location to use for the account.
+The acceptable values for this parameter are:
+- East US 2
 
 ```yaml
 Type: System.String
@@ -165,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the account to create.
+Specifies the name of the account to create.
 
 ```yaml
 Type: System.String
@@ -180,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to create the account.
+Specifies the name of the resource group that contains the account.
 
 ```yaml
 Type: System.String
@@ -195,12 +190,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A string,string dictionary of tags associated with this account
+Specifies tags as key-value pairs.
+You can use tags to identify a Data Lake Store account from other Azure resources.
 
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
-Aliases: Tags
+Aliases:
 
 Required: False
 Position: 4
@@ -226,8 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -248,3 +243,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreAccount](./Get-AzDataLakeStoreAccount.md)
+
+[Remove-AzDataLakeStoreAccount](./Remove-AzDataLakeStoreAccount.md)
+
+[Set-AzDataLakeStoreAccount](./Set-AzDataLakeStoreAccount.md)
+
+[Test-AzDataLakeStoreAccount](./Test-AzDataLakeStoreAccount.md)
+
+

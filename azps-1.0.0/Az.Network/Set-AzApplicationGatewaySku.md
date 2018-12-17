@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 3D88F561-7FE4-4017-BAC4-8F085AD037A9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaysku
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzApplicationGatewaySku.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzApplicationGatewaySku.md
 ---
 
 # Set-AzApplicationGatewaySku
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the SKU of an application gateway.
 
 ## SYNTAX
 
@@ -18,21 +21,23 @@ Set-AzApplicationGatewaySku -ApplicationGateway <PSApplicationGateway> -Name <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApplicationGatewaySku** cmdlet modifies the stock keeping unit (SKU) of an application gateway.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update the application gateway SKU
+```
+PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Set-AzApplicationGatewaySku -ApplicationGateway $AppGw -Name "Standard_Small" -Tier "Standard" -Capacity 2
 ```
 
-{{ Add example description here }}
+The first command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01, and stores it in the $AppGw variable.
+The second command updates the SKU of the application gateway.
 
 ## PARAMETERS
 
 ### -ApplicationGateway
-The applicationGateway
+Specifies the application gateway object with which this cmdlet associates the SKU.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
@@ -47,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Capacity
-Application gateway instance count
+Specifies the instance count of the application gateway.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -62,12 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,7 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the SKU
+Specifies the name of the application gateway.
+The acceptable values for this parameter are:
+- Standard_Small
+- Standard_Medium
+- Standard_Large
+- WAF_Medium
+- WAF_Large
 
 ```yaml
 Type: System.String
@@ -93,7 +104,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-Application gateway tier
+Specifies the tier of the application gateway.
+The acceptable values for this parameter are:
+- Standard
+- WAF
 
 ```yaml
 Type: System.String
@@ -109,8 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +136,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApplicationGatewaySku](./Get-AzApplicationGatewaySku.md)
+
+[New-AzApplicationGatewaySku](./New-AzApplicationGatewaySku.md)
+
+

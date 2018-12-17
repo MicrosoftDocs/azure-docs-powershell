@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/new-azrecoveryservicesasrazuretoazurediskreplicationconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig.md
 ---
 
 # New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a disk mapping object for Azure virtual machine disks to be replicated.
 
 ## SYNTAX
 
@@ -28,16 +30,16 @@ New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig [-ManagedDisk] -LogSt
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a disk mapping object that maps an Azure virtual machine disk to the cache storage account and target storage account (recovery region) to be used to replicate the disk.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig -VhdUri  $vhdUri -RecoveryAzureStorageAccountId $recoveryStorageAccountId -LogStorageAccountId $logStorageAccountId
 ```
 
-{{ Add example description here }}
+Create a disk mapping object for Azure virtual machine disks to be replicated.Used during Azure to Azure EnableDr and reprotect operation.
 
 ## PARAMETERS
 
@@ -45,9 +47,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -57,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskId
-{{Fill DiskId Description}}
+Specifies the disk id of managed disk.
 
 ```yaml
 Type: System.String
@@ -87,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedDisk
-{{Fill ManagedDisk Description}}
+Specifies the input is for managed disk.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -117,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryReplicaDiskAccountType
-{{Fill RecoveryReplicaDiskAccountType Description}}
+Specifies the account type of replicated managed disk.
 
 ```yaml
 Type: System.String
@@ -133,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryResourceGroupId
-{{Fill RecoveryResourceGroupId Description}}
+Specifies the recovery resource group id for replicated managed disk.
 
 ```yaml
 Type: System.String
@@ -148,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryTargetDiskAccountType
-{{Fill RecoveryTargetDiskAccountType Description}}
+Specifies the recovery target disk for replicated managed disk.
 
 ```yaml
 Type: System.String
@@ -210,8 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: 2EA28B90-4BAE-45DF-BD2E-60C74F53FB7B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azlogicapprunaction
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzLogicAppRunAction.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzLogicAppRunAction.md
 ---
 
 # Get-AzLogicAppRunAction
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an action from a logic app run.
 
 ## SYNTAX
 
@@ -18,21 +21,55 @@ Get-AzLogicAppRunAction -ResourceGroupName <String> -Name <String> -RunName <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzLogicAppRunAction** cmdlet gets an action from a logic app run.
+This cmdlet returns a **WorkflowRunAction** objects.
+Specify the logic app, resource group, and run.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get an action from a Logic App run
+```
+PS C:\>Get-AzLogicAppActionRun -ResourceGroupName "ResourceGroup11" -Name "LogicApp05" -RunName "LogicAppRun56" -ActionName "LogicAppAction01"
+Code        : NotFound
+EndTime     : 1/13/2016 2:42:56 PM
+Error       : 
+InputsLink  : Microsoft.Azure.Management.Logic.Models.ContentLink
+Name        : LogicAppAction01
+OutputsLink : Microsoft.Azure.Management.Logic.Models.ContentLink
+StartTime   : 1/13/2016 2:42:55 PM
+Status      : Failed
+TrackingId  : 
+Type        :
 ```
 
-{{ Add example description here }}
+This command gets a specific Logic App action from the logic app named LogicApp05 for the run named LogicAppRun56.
+
+### Example 2: Get all the actions from a Logic App run
+```
+PS C:\>Get-AzLogicAppActionRun -ResourceGroupName "ResourceGroup11" -Name "LogicApp05" -RunName "LogicAppRun56"
+Code        : NotFound
+EndTime     : 1/13/2016 2:42:56 PM
+Error       : 
+InputsLink  : Microsoft.Azure.Management.Logic.Models.ContentLink
+Name        : LogicAppAction1
+OutputsLink : Microsoft.Azure.Management.Logic.Models.ContentLink
+StartTime   : 1/13/2016 2:42:55 PM
+Status      : Failed
+TrackingId  : 
+Type        :
+```
+
+This command gets all Logic App actions from a run named LogicAppRun56 of a logic app named LogicApp05.
 
 ## PARAMETERS
 
 ### -ActionName
-The name of the action in the workflow run.
+Specifies the name of an action in a logic app run.
+This cmdlet gets the action that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -47,12 +84,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the workflow.
+Specifies the name of a logic app for which this cmdlet gets an action.
 
 ```yaml
 Type: System.String
@@ -77,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The targeted resource group for the workflow.
+Specifies the name of a resource group in which this cmdlet gets an action.
 
 ```yaml
 Type: System.String
@@ -92,7 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunName
-The name of the workflow run.
+Specifies the name of a run of a logic app.
+This cmdlet gets an action for the run that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -107,8 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -121,3 +158,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzLogicAppRunHistory](./Get-AzLogicAppRunHistory.md)
+
+[Stop-AzLogicAppRun](./Stop-AzLogicAppRun.md)
+
+

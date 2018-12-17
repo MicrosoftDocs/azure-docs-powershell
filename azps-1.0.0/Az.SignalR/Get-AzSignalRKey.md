@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.SignalR.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.SignalR.dll-Help.xml
 Module Name: Az.SignalR
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.signalr/get-azsignalrkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/Get-AzSignalRKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/Get-AzSignalRKey.md
 ---
 
 # Get-AzSignalRKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get the access keys of a SignalR service.
 
 ## SYNTAX
 
@@ -30,16 +32,36 @@ Get-AzSignalRKey -InputObject <PSSignalRResource> [-DefaultProfile <IAzureContex
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Get the access keys of a SignalR service.
 
 ## EXAMPLES
 
-### Example 1
+### Get access keys of a specific SignalR service
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzSignalRKey -ResourceGroupName myResourceGroup -Name mysignalr1
+
+Name                      : mysignalr1
+PrimaryKey                : vmYRhoM62PMkNe/CSSPdMSxokn+WZEFmOQNt77PovDs=
+PrimaryConnectionString   : Endpoint=https://mysignalr1.service.signalr.net;AccessKey=vmYRhoM62PMkNe/CSSPdMSxokn+WZEFmO
+                            QNt77PovDs=;
+SecondaryKey              : 2+HkuxAA34xiZFFiDsVM0uDyzCsg6GKsdXSjN4C/YFQ=
+SecondaryConnectionString : Endpoint=https://mysignalr1.service.signalr.net;AccessKey=2+HkuxAA34xiZFFiDsVM0uDyzCsg6GKsd
+                            XSjN4C/YFQ=;
 ```
 
-{{ Add example description here }}
+### Get access keys from a SignalR service object in pipe
+
+```powershell
+PS C:\> Get-AzSignalR -ResourceGroupName myResourceGroup -Name mysignalr1 | Get-AzSignalRKey
+
+Name                      : mysignalr1
+PrimaryKey                : vmYRhoM62PMkNe/CSSPdMSxokn+WZEFmOQNt77PovDs=
+PrimaryConnectionString   : Endpoint=https://mysignalr1.service.signalr.net;AccessKey=vmYRhoM62PMkNe/CSSPdMSxokn+WZEFmO
+                            QNt77PovDs=;
+SecondaryKey              : 2+HkuxAA34xiZFFiDsVM0uDyzCsg6GKsdXSjN4C/YFQ=
+SecondaryConnectionString : Endpoint=https://mysignalr1.service.signalr.net;AccessKey=2+HkuxAA34xiZFFiDsVM0uDyzCsg6GKsd
+                            XSjN4C/YFQ=;
+```
 
 ## PARAMETERS
 
@@ -47,9 +69,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -74,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The SignalR service name.
+SignalR service name.
 
 ```yaml
 Type: System.String
@@ -89,8 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-The default one will be used if not specified.
+Resource group name.
 
 ```yaml
 Type: System.String
@@ -120,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

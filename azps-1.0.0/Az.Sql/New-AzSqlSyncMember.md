@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqlsyncmember
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlSyncMember.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlSyncMember.md
 ---
 
 # New-AzSqlSyncMember
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure SQL Database Sync Member.
 
 ## SYNTAX
 
@@ -37,21 +39,63 @@ New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -SqlServerDataba
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzSqlSyncMember** cmdlet creates an Azure SQL Database Sync Member.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a sync member for an Azure SQL database.
+```
+PS C:\> $credential = Get-Credential
+PS C:\> New-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" -SyncDirection "OneWayMemberToHub"
+-MemberDatabaseType "AzureSqlDatabase" -MemberServerName "memberServer01.full.dns.name" -MemberDatabaseName "memberDatabase01" -MemberDatabaseCredential $credential | Format-List
+ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+ResourceGroupName           : ResourceGroup01
+ServerName                  : Server01
+DatabaseName                : Database01
+SyncGroupName               : SyncGroup01
+SyncMemberName              : SyncMember01
+SyncDirection               : OneWayMemberToHub
+MemberDatabaseType:         : AzureSqlDatabase
+SyncAgentId                 : 
+SqlServerDatabaseId         : 
+MemberServerName            : memberServer01.full.dns.name
+MemberDatabaseName          : memberDatabase01
+MemberDatabaseUserName      : myAccount
+MemberDatabasePassword      : 
+SyncState                   : UnProvisioned
 ```
 
-{{ Add example description here }}
+This command creates a sync member for an Azure SQL database.
+
+### Example 2: Create a sync member for an on-premises SQL Server database
+```
+PS C:\> $credential = Get-Credential
+PS C:\> New-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" -SyncDirection "OneWayMemberToHub"
+-MemberDatabaseType "SqlServerDatabase" -SqlServerDatabaseId "dbId" -syncAgentResourceGroupName "syncAgentResourceGroupName" -syncAgentServerName "syncAgentServerName" 
+-syncAgentDatabaseName "syncAgentDatabaseName" -syncAgentName "agentName" | Format-List
+ResourceId                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+ResourceGroupName           : ResourceGroup01
+ServerName                  : Server01
+DatabaseName                : Database01
+SyncGroupName               : SyncGroup01
+SyncMemberName              : SyncMember01
+SyncDirection               : OneWayMemberToHub
+MemberDatabaseType:         : AzureSqlDatabase
+SyncAgentId                 : /subscriptions/{subscriptionId}/resourceGroups/{syncAgentResourceGroupName}/servers/{syncAgentServerName}/syncAgents/{syncAgentId}
+SqlServerDatabaseId         : dbId
+MemberServerName            : 
+MemberDatabaseName          : 
+MemberDatabaseUserName      : myAccount
+MemberDatabasePassword      : 
+SyncState                   : UnProvisioned
+```
+
+This command creates a sync member for an on-premises SQL database.
 
 ## PARAMETERS
 
 ### -DatabaseName
-SQL Database name.
+The name of the Azure SQL Database.
 
 ```yaml
 Type: System.String
@@ -66,12 +110,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -172,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-SQL Database server name.
+The name of the Azure SQL Server.
 
 ```yaml
 Type: System.String
@@ -324,8 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -338,3 +381,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlSyncMember](./Get-AzSqlSyncMember.md)
+
+[Set-AzSqlSyncMember](./Set-AzSqlSyncMember.md)
+
+[Remove-AzSqlSyncMember](./Remove-AzSqlSyncMember.md)
+

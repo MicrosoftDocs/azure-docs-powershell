@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvirtualnetworktap
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzVirtualNetworkTap.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzVirtualNetworkTap.md
 ---
 
 # New-AzVirtualNetworkTap
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a VirtualNetworkTap resource.
 
 ## SYNTAX
 
@@ -30,16 +32,27 @@ New-AzVirtualNetworkTap -ResourceGroupName <String> -Name <String> [-Destination
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzVirtualNetworkTap** cmdlet creates an Azure virtual network tap resource.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an Azure virtual network tap
+```
+PS C:\>New-AzVirtualNetworkTap -Name "VirtualNetworkTap1" -ResourceGroupName "ResourceGroup1" -Location "centralus" -DestinationPort 8888 -DestinationNetworkInterfaceIPConfiguration $destinationNic.IpConfigurations[0]
 ```
 
-{{ Add example description here }}
+This command creates a virtual network tap named "VirtualNetworkTap1" which has destination VM configuration details (DestinationIpConfiguration, DestinationPort).
+All the source tap configured VM's traffic will be routed to this Destination IP + Port.
+
+### Example 2: Create an Azure virtual network tap using LoadBalancer IP
+```
+# Create LoadBalancer
+PS C:\>$frontend = New-AzLoadBalancerFrontendIpConfig -Name $frontendName -PublicIpAddress $publicip
+PS C:\>New-AzVirtualNetworkTap -Name "VirtualNetworkTap1" -ResourceGroupName "ResourceGroup1" -Location "centralus" -DestinationLoadBalancerFrontEndIPConfiguration $frontend
+```
+
+This command creates a virtual network tap named "VirtualNetworkTap1" which has destination VM configuration details (FrontEndIpConfiguration).
+All the source tap configured VM's traffic will be routed to this LoadBalancer IpConfiguration. Default Destination Port is 4789.
 
 ## PARAMETERS
 
@@ -62,9 +75,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -134,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationPort
-{{Fill DestinationPort Description}}
+The Destination Port of the packet collector
 
 ```yaml
 Type: System.Int32
@@ -255,8 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

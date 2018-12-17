@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: A0A956E9-6C4F-4432-A39F-A180CD519C04
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationwebhook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationWebhook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationWebhook.md
 ---
 
 # Get-AzAutomationWebhook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets webhooks from Automation.
 
 ## SYNTAX
 
@@ -31,21 +34,22 @@ Get-AzAutomationWebhook -RunbookName <String> [-ResourceGroupName] <String> [-Au
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationWebhook** cmdlet gets webhooks.
+To get specific webhooks, specify a webhook name or specify the name of an Azure Automation runbook to get the webhooks connected to it.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all webhooks for a runbook
+```
+PS C:\>Get-AzAutomationWebhook -RunbookName "Runbook03" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
-{{ Add example description here }}
+This command gets all webhooks for a runbook named Runbook03 in the Automation account named AutomationAccount01 in the resource group named ResourceGroup01.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account in which this cmdlet gets a webhook.
 
 ```yaml
 Type: System.String
@@ -60,12 +64,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -75,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Webhook name.
+Specifies the name of the webhook that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -90,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet gets webhooks.
 
 ```yaml
 Type: System.String
@@ -105,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunbookName
-The Runbook name.
+Specifies the name of a runbook for which this cmdlet gets webhooks.
 
 ```yaml
 Type: System.String
@@ -120,8 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,3 +137,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzAutomationWebhook](./New-AzAutomationWebhook.md)
+
+[Remove-AzAutomationWebhook](./Remove-AzAutomationWebhook.md)
+
+[Set-AzAutomationWebhook](./Set-AzAutomationWebhook.md)
+
+

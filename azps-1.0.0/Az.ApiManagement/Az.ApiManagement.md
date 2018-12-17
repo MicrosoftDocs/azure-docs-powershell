@@ -1,325 +1,315 @@
 ---
 Module Name: Az.ApiManagement
-Module Guid: 4f58d643-631f-4d13-a205-15292af40748
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: f875725d-8ce4-423f-a6af-ea880bc63f13
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement
+Help Version: 4.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Az.ApiManagement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Az.ApiManagement.md
 ---
 
 # Az.ApiManagement Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure API Management Cmdlets.
 
 ## Az.ApiManagement Cmdlets
 ### [Add-AzApiManagementApiToProduct](Add-AzApiManagementApiToProduct.md)
-{{Manually Enter Add-AzApiManagementApiToProduct Description Here}}
+Adds an API to a product.
 
 ### [Add-AzApiManagementProductToGroup](Add-AzApiManagementProductToGroup.md)
-{{Manually Enter Add-AzApiManagementProductToGroup Description Here}}
+Adds a product to a group.
 
 ### [Add-AzApiManagementRegion](Add-AzApiManagementRegion.md)
-{{Manually Enter Add-AzApiManagementRegion Description Here}}
+Adds new deployment regions to a PsApiManagement instance.
 
 ### [Add-AzApiManagementUserToGroup](Add-AzApiManagementUserToGroup.md)
-{{Manually Enter Add-AzApiManagementUserToGroup Description Here}}
+Adds a user to a group.
 
 ### [Backup-AzApiManagement](Backup-AzApiManagement.md)
-{{Manually Enter Backup-AzApiManagement Description Here}}
+Backs up an API Management service.
 
 ### [Export-AzApiManagementApi](Export-AzApiManagementApi.md)
-{{Manually Enter Export-AzApiManagementApi Description Here}}
+Exports an API to a file.
 
 ### [Get-AzApiManagement](Get-AzApiManagement.md)
-{{Manually Enter Get-AzApiManagement Description Here}}
+Gets a list or a particular API Management Service description.
 
 ### [Get-AzApiManagementApi](Get-AzApiManagementApi.md)
-{{Manually Enter Get-AzApiManagementApi Description Here}}
+Gets an API.
 
 ### [Get-AzApiManagementApiRelease](Get-AzApiManagementApiRelease.md)
-{{Manually Enter Get-AzApiManagementApiRelease Description Here}}
+Get the API Release.
 
 ### [Get-AzApiManagementApiRevision](Get-AzApiManagementApiRevision.md)
-{{Manually Enter Get-AzApiManagementApiRevision Description Here}}
+Gets details of all the API Revisions of an API
 
 ### [Get-AzApiManagementApiVersionSet](Get-AzApiManagementApiVersionSet.md)
-{{Manually Enter Get-AzApiManagementApiVersionSet Description Here}}
+Get the details of the API Version Sets
 
 ### [Get-AzApiManagementAuthorizationServer](Get-AzApiManagementAuthorizationServer.md)
-{{Manually Enter Get-AzApiManagementAuthorizationServer Description Here}}
+Gets an API Management authorization server.
 
 ### [Get-AzApiManagementBackend](Get-AzApiManagementBackend.md)
-{{Manually Enter Get-AzApiManagementBackend Description Here}}
+Get the details of the Backend.
 
 ### [Get-AzApiManagementCertificate](Get-AzApiManagementCertificate.md)
-{{Manually Enter Get-AzApiManagementCertificate Description Here}}
+Gets API Management certificates configured for Mutual Authentication with Backend in the service.
 
 ### [Get-AzApiManagementGroup](Get-AzApiManagementGroup.md)
-{{Manually Enter Get-AzApiManagementGroup Description Here}}
+Gets all or specific API management groups.
 
 ### [Get-AzApiManagementIdentityProvider](Get-AzApiManagementIdentityProvider.md)
-{{Manually Enter Get-AzApiManagementIdentityProvider Description Here}}
+Get the identity provider configuration details.
 
 ### [Get-AzApiManagementLogger](Get-AzApiManagementLogger.md)
-{{Manually Enter Get-AzApiManagementLogger Description Here}}
+Gets API Management Logger objects.
 
 ### [Get-AzApiManagementOpenIdConnectProvider](Get-AzApiManagementOpenIdConnectProvider.md)
-{{Manually Enter Get-AzApiManagementOpenIdConnectProvider Description Here}}
+Gets OpenID Connect providers.
 
 ### [Get-AzApiManagementOperation](Get-AzApiManagementOperation.md)
-{{Manually Enter Get-AzApiManagementOperation Description Here}}
+Gets a list or a specified API Operation.
 
 ### [Get-AzApiManagementPolicy](Get-AzApiManagementPolicy.md)
-{{Manually Enter Get-AzApiManagementPolicy Description Here}}
+Gets the specified scope policy.
 
 ### [Get-AzApiManagementProduct](Get-AzApiManagementProduct.md)
-{{Manually Enter Get-AzApiManagementProduct Description Here}}
+Gets a list or a particular product.
 
 ### [Get-AzApiManagementProperty](Get-AzApiManagementProperty.md)
-{{Manually Enter Get-AzApiManagementProperty Description Here}}
+Gets a list or a particular Property (Named-Value).
 
 ### [Get-AzApiManagementSsoToken](Get-AzApiManagementSsoToken.md)
-{{Manually Enter Get-AzApiManagementSsoToken Description Here}}
+Gets a link with an SSO token to a deployed management portal of an API Management service.
 
 ### [Get-AzApiManagementSubscription](Get-AzApiManagementSubscription.md)
-{{Manually Enter Get-AzApiManagementSubscription Description Here}}
+Gets subscriptions.
 
 ### [Get-AzApiManagementTenantAccess](Get-AzApiManagementTenantAccess.md)
-{{Manually Enter Get-AzApiManagementTenantAccess Description Here}}
+Gets the access configuration for a tenant.
 
 ### [Get-AzApiManagementTenantGitAccess](Get-AzApiManagementTenantGitAccess.md)
-{{Manually Enter Get-AzApiManagementTenantGitAccess Description Here}}
+Gets the Git access configuration for a tenant.
 
 ### [Get-AzApiManagementTenantSyncState](Get-AzApiManagementTenantSyncState.md)
-{{Manually Enter Get-AzApiManagementTenantSyncState Description Here}}
+Gets the status of the most recent synchronization between the configuration database and the Git repository.
 
 ### [Get-AzApiManagementUser](Get-AzApiManagementUser.md)
-{{Manually Enter Get-AzApiManagementUser Description Here}}
+Gets a user or users.
 
 ### [Get-AzApiManagementUserSsoUrl](Get-AzApiManagementUserSsoUrl.md)
-{{Manually Enter Get-AzApiManagementUserSsoUrl Description Here}}
+Generates an SSO URL for a user.
 
 ### [Import-AzApiManagementApi](Import-AzApiManagementApi.md)
-{{Manually Enter Import-AzApiManagementApi Description Here}}
-
-### [Import-AzApiManagementHostnameCertificate](Import-AzApiManagementHostnameCertificate.md)
-{{Manually Enter Import-AzApiManagementHostnameCertificate Description Here}}
+Imports an API from a file or a URL.
 
 ### [New-AzApiManagement](New-AzApiManagement.md)
-{{Manually Enter New-AzApiManagement Description Here}}
+Creates an API Management deployment.
 
 ### [New-AzApiManagementApi](New-AzApiManagementApi.md)
-{{Manually Enter New-AzApiManagementApi Description Here}}
+Creates an API.
 
 ### [New-AzApiManagementApiRelease](New-AzApiManagementApiRelease.md)
-{{Manually Enter New-AzApiManagementApiRelease Description Here}}
+Creates an API Release of an API Revision
 
 ### [New-AzApiManagementApiRevision](New-AzApiManagementApiRevision.md)
-{{Manually Enter New-AzApiManagementApiRevision Description Here}}
+Creates a new Revision of an Existing API.
 
 ### [New-AzApiManagementApiVersionSet](New-AzApiManagementApiVersionSet.md)
-{{Manually Enter New-AzApiManagementApiVersionSet Description Here}}
+Creates an API Version Set.
 
 ### [New-AzApiManagementAuthorizationServer](New-AzApiManagementAuthorizationServer.md)
-{{Manually Enter New-AzApiManagementAuthorizationServer Description Here}}
+Creates an authorization server.
 
 ### [New-AzApiManagementBackend](New-AzApiManagementBackend.md)
-{{Manually Enter New-AzApiManagementBackend Description Here}}
+Creates a new backend entity.
 
 ### [New-AzApiManagementBackendCredential](New-AzApiManagementBackendCredential.md)
-{{Manually Enter New-AzApiManagementBackendCredential Description Here}}
+Creates a new Backend Credential contract.
 
 ### [New-AzApiManagementBackendProxy](New-AzApiManagementBackendProxy.md)
-{{Manually Enter New-AzApiManagementBackendProxy Description Here}}
+Creates a new Backend Proxy Object.
 
 ### [New-AzApiManagementBackendServiceFabric](New-AzApiManagementBackendServiceFabric.md)
-{{Manually Enter New-AzApiManagementBackendServiceFabric Description Here}}
+Creates an object of `PsApiManagementServiceFabric`
 
 ### [New-AzApiManagementCertificate](New-AzApiManagementCertificate.md)
-{{Manually Enter New-AzApiManagementCertificate Description Here}}
+Creates an API Management certificate to be used during Authentication with Backend.
 
 ### [New-AzApiManagementContext](New-AzApiManagementContext.md)
-{{Manually Enter New-AzApiManagementContext Description Here}}
+Creates an instance of PsAzureApiManagementContext.
 
 ### [New-AzApiManagementCustomHostnameConfiguration](New-AzApiManagementCustomHostnameConfiguration.md)
-{{Manually Enter New-AzApiManagementCustomHostnameConfiguration Description Here}}
+Creates an instance of `PsApiManagementCustomHostNameConfiguration`.
 
 ### [New-AzApiManagementGroup](New-AzApiManagementGroup.md)
-{{Manually Enter New-AzApiManagementGroup Description Here}}
-
-### [New-AzApiManagementHostnameConfiguration](New-AzApiManagementHostnameConfiguration.md)
-{{Manually Enter New-AzApiManagementHostnameConfiguration Description Here}}
+Creates an API management group.
 
 ### [New-AzApiManagementIdentityProvider](New-AzApiManagementIdentityProvider.md)
-{{Manually Enter New-AzApiManagementIdentityProvider Description Here}}
+Creates a new Identity Provider configuration.
 
 ### [New-AzApiManagementLogger](New-AzApiManagementLogger.md)
-{{Manually Enter New-AzApiManagementLogger Description Here}}
+Creates an API Management Logger.
 
 ### [New-AzApiManagementOpenIdConnectProvider](New-AzApiManagementOpenIdConnectProvider.md)
-{{Manually Enter New-AzApiManagementOpenIdConnectProvider Description Here}}
+Creates an OpenID Connect provider.
 
 ### [New-AzApiManagementOperation](New-AzApiManagementOperation.md)
-{{Manually Enter New-AzApiManagementOperation Description Here}}
+Creates an API management operation.
 
 ### [New-AzApiManagementProduct](New-AzApiManagementProduct.md)
-{{Manually Enter New-AzApiManagementProduct Description Here}}
+Creates an API Management product.
 
 ### [New-AzApiManagementProperty](New-AzApiManagementProperty.md)
-{{Manually Enter New-AzApiManagementProperty Description Here}}
+Creates a new Property.
 
 ### [New-AzApiManagementRegion](New-AzApiManagementRegion.md)
-{{Manually Enter New-AzApiManagementRegion Description Here}}
+Creates an instance of PsApiManagementRegion.
 
 ### [New-AzApiManagementSubscription](New-AzApiManagementSubscription.md)
-{{Manually Enter New-AzApiManagementSubscription Description Here}}
+Creates a subscription.
 
 ### [New-AzApiManagementSystemCertificate](New-AzApiManagementSystemCertificate.md)
-{{Manually Enter New-AzApiManagementSystemCertificate Description Here}}
+Creates an instance of `PsApiManagementSystemCertificate`. The certificate can be issued by private CA's and will be installed on the API Management service into `CertificateAuthority` or `Root` store.
 
 ### [New-AzApiManagementUser](New-AzApiManagementUser.md)
-{{Manually Enter New-AzApiManagementUser Description Here}}
+Registers a new user.
 
 ### [New-AzApiManagementVirtualNetwork](New-AzApiManagementVirtualNetwork.md)
-{{Manually Enter New-AzApiManagementVirtualNetwork Description Here}}
+Creates an instance of PsApiManagementVirtualNetwork.
 
 ### [Publish-AzApiManagementTenantGitConfiguration](Publish-AzApiManagementTenantGitConfiguration.md)
-{{Manually Enter Publish-AzApiManagementTenantGitConfiguration Description Here}}
+Publishes changes from a Git branch to the configuration database.
 
 ### [Remove-AzApiManagement](Remove-AzApiManagement.md)
-{{Manually Enter Remove-AzApiManagement Description Here}}
+Removes an API Management service.
 
 ### [Remove-AzApiManagementApi](Remove-AzApiManagementApi.md)
-{{Manually Enter Remove-AzApiManagementApi Description Here}}
+Removes an API.
 
 ### [Remove-AzApiManagementApiFromProduct](Remove-AzApiManagementApiFromProduct.md)
-{{Manually Enter Remove-AzApiManagementApiFromProduct Description Here}}
+Removes an API from a product.
 
 ### [Remove-AzApiManagementApiRelease](Remove-AzApiManagementApiRelease.md)
-{{Manually Enter Remove-AzApiManagementApiRelease Description Here}}
+Removes a particular API Release
 
 ### [Remove-AzApiManagementApiRevision](Remove-AzApiManagementApiRevision.md)
-{{Manually Enter Remove-AzApiManagementApiRevision Description Here}}
+Removed a particular API Revision
 
 ### [Remove-AzApiManagementApiVersionSet](Remove-AzApiManagementApiVersionSet.md)
-{{Manually Enter Remove-AzApiManagementApiVersionSet Description Here}}
+Removes a particular Api Version Set
 
 ### [Remove-AzApiManagementAuthorizationServer](Remove-AzApiManagementAuthorizationServer.md)
-{{Manually Enter Remove-AzApiManagementAuthorizationServer Description Here}}
+Removes an authorization server.
 
 ### [Remove-AzApiManagementBackend](Remove-AzApiManagementBackend.md)
-{{Manually Enter Remove-AzApiManagementBackend Description Here}}
+Removes a Backend.
 
 ### [Remove-AzApiManagementCertificate](Remove-AzApiManagementCertificate.md)
-{{Manually Enter Remove-AzApiManagementCertificate Description Here}}
+Removes an API Management certificate.
 
 ### [Remove-AzApiManagementGroup](Remove-AzApiManagementGroup.md)
-{{Manually Enter Remove-AzApiManagementGroup Description Here}}
+Removes an existing API management group.
 
 ### [Remove-AzApiManagementIdentityProvider](Remove-AzApiManagementIdentityProvider.md)
-{{Manually Enter Remove-AzApiManagementIdentityProvider Description Here}}
+Removes an existing Identity Provider Configuration.
 
 ### [Remove-AzApiManagementLogger](Remove-AzApiManagementLogger.md)
-{{Manually Enter Remove-AzApiManagementLogger Description Here}}
+Removes an API Management Logger.
 
 ### [Remove-AzApiManagementOpenIdConnectProvider](Remove-AzApiManagementOpenIdConnectProvider.md)
-{{Manually Enter Remove-AzApiManagementOpenIdConnectProvider Description Here}}
+Removes an OpenID Connect provider.
 
 ### [Remove-AzApiManagementOperation](Remove-AzApiManagementOperation.md)
-{{Manually Enter Remove-AzApiManagementOperation Description Here}}
+Removes an existing operation.
 
 ### [Remove-AzApiManagementPolicy](Remove-AzApiManagementPolicy.md)
-{{Manually Enter Remove-AzApiManagementPolicy Description Here}}
+Removes the API Management policy from a specified scope.
 
 ### [Remove-AzApiManagementProduct](Remove-AzApiManagementProduct.md)
-{{Manually Enter Remove-AzApiManagementProduct Description Here}}
+Removes an existing API Management product.
 
 ### [Remove-AzApiManagementProductFromGroup](Remove-AzApiManagementProductFromGroup.md)
-{{Manually Enter Remove-AzApiManagementProductFromGroup Description Here}}
+Removes a product from a group.
 
 ### [Remove-AzApiManagementProperty](Remove-AzApiManagementProperty.md)
-{{Manually Enter Remove-AzApiManagementProperty Description Here}}
+Removes an API Management Property.
 
 ### [Remove-AzApiManagementRegion](Remove-AzApiManagementRegion.md)
-{{Manually Enter Remove-AzApiManagementRegion Description Here}}
+Removes an existing deployment region from PsApiManagement instance.
 
 ### [Remove-AzApiManagementSubscription](Remove-AzApiManagementSubscription.md)
-{{Manually Enter Remove-AzApiManagementSubscription Description Here}}
+Deletes an existing subscription.
 
 ### [Remove-AzApiManagementUser](Remove-AzApiManagementUser.md)
-{{Manually Enter Remove-AzApiManagementUser Description Here}}
+Deletes an existing user.
 
 ### [Remove-AzApiManagementUserFromGroup](Remove-AzApiManagementUserFromGroup.md)
-{{Manually Enter Remove-AzApiManagementUserFromGroup Description Here}}
+Removes a user from a group.
 
 ### [Restore-AzApiManagement](Restore-AzApiManagement.md)
-{{Manually Enter Restore-AzApiManagement Description Here}}
+Restores an API Management Service from the specified Azure storage blob.
 
 ### [Save-AzApiManagementTenantGitConfiguration](Save-AzApiManagementTenantGitConfiguration.md)
-{{Manually Enter Save-AzApiManagementTenantGitConfiguration Description Here}}
+Saves changes by creating a commit for current configuration.
 
 ### [Set-AzApiManagement](Set-AzApiManagement.md)
-{{Manually Enter Set-AzApiManagement Description Here}}
+Updates an Azure Api Management service
 
 ### [Set-AzApiManagementApi](Set-AzApiManagementApi.md)
-{{Manually Enter Set-AzApiManagementApi Description Here}}
+Modifies an API.
 
 ### [Set-AzApiManagementApiRevision](Set-AzApiManagementApiRevision.md)
-{{Manually Enter Set-AzApiManagementApiRevision Description Here}}
+Modifies an API Revision
 
 ### [Set-AzApiManagementApiVersionSet](Set-AzApiManagementApiVersionSet.md)
-{{Manually Enter Set-AzApiManagementApiVersionSet Description Here}}
+Updates an API Version Set in the API Management Context.
 
 ### [Set-AzApiManagementAuthorizationServer](Set-AzApiManagementAuthorizationServer.md)
-{{Manually Enter Set-AzApiManagementAuthorizationServer Description Here}}
+Modifies an authorization server.
 
 ### [Set-AzApiManagementBackend](Set-AzApiManagementBackend.md)
-{{Manually Enter Set-AzApiManagementBackend Description Here}}
+Updates a Backend.
 
 ### [Set-AzApiManagementCertificate](Set-AzApiManagementCertificate.md)
-{{Manually Enter Set-AzApiManagementCertificate Description Here}}
+Modifies an API Management certificate which is configured for mutual authentication with backend.
 
 ### [Set-AzApiManagementGroup](Set-AzApiManagementGroup.md)
-{{Manually Enter Set-AzApiManagementGroup Description Here}}
-
-### [Set-AzApiManagementHostnames](Set-AzApiManagementHostnames.md)
-{{Manually Enter Set-AzApiManagementHostnames Description Here}}
+Configures an API management group.
 
 ### [Set-AzApiManagementIdentityProvider](Set-AzApiManagementIdentityProvider.md)
-{{Manually Enter Set-AzApiManagementIdentityProvider Description Here}}
+Updates the Configuration of an existing Identity Provider.
 
 ### [Set-AzApiManagementLogger](Set-AzApiManagementLogger.md)
-{{Manually Enter Set-AzApiManagementLogger Description Here}}
+Modifies an API Management Logger.
 
 ### [Set-AzApiManagementOpenIdConnectProvider](Set-AzApiManagementOpenIdConnectProvider.md)
-{{Manually Enter Set-AzApiManagementOpenIdConnectProvider Description Here}}
+Modifies an OpenID Connect provider.
 
 ### [Set-AzApiManagementOperation](Set-AzApiManagementOperation.md)
-{{Manually Enter Set-AzApiManagementOperation Description Here}}
+Sets API operation details.
 
 ### [Set-AzApiManagementPolicy](Set-AzApiManagementPolicy.md)
-{{Manually Enter Set-AzApiManagementPolicy Description Here}}
+Sets the specified scope policy for API Management.
 
 ### [Set-AzApiManagementProduct](Set-AzApiManagementProduct.md)
-{{Manually Enter Set-AzApiManagementProduct Description Here}}
+Sets the API Management product details.
 
 ### [Set-AzApiManagementProperty](Set-AzApiManagementProperty.md)
-{{Manually Enter Set-AzApiManagementProperty Description Here}}
+Modifies an API Management Property.
 
 ### [Set-AzApiManagementSubscription](Set-AzApiManagementSubscription.md)
-{{Manually Enter Set-AzApiManagementSubscription Description Here}}
+Sets existing subscription details.
 
 ### [Set-AzApiManagementTenantAccess](Set-AzApiManagementTenantAccess.md)
-{{Manually Enter Set-AzApiManagementTenantAccess Description Here}}
+Enables or disables tenant access.
 
 ### [Set-AzApiManagementUser](Set-AzApiManagementUser.md)
-{{Manually Enter Set-AzApiManagementUser Description Here}}
+Sets user details.
 
 ### [Update-AzApiManagementApiRelease](Update-AzApiManagementApiRelease.md)
-{{Manually Enter Update-AzApiManagementApiRelease Description Here}}
-
-### [Update-AzApiManagementDeployment](Update-AzApiManagementDeployment.md)
-{{Manually Enter Update-AzApiManagementDeployment Description Here}}
+Updates a particular Api Release.
 
 ### [Update-AzApiManagementRegion](Update-AzApiManagementRegion.md)
-{{Manually Enter Update-AzApiManagementRegion Description Here}}
+Updates existing deployment region in PsApiManagement instance.
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: CF3B6E3B-3FC1-4871-AFE0-366B17A9E4F8
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azstoragetablestoredaccesspolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageTableStoredAccessPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageTableStoredAccessPolicy.md
 ---
 
 # New-AzStorageTableStoredAccessPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a stored access policy for an Azure storage table.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ New-AzStorageTableStoredAccessPolicy [-Table] <String> [-Policy] <String> [-Perm
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStorageTableStoredAccessPolicy** cmdlet creates a stored access policy for an Azure storage table.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a stored access policy in a table
+```
+PS C:\>New-AzStorageTableStoredAccessPolicy -Table "MyTable" -Policy "Policy02"
 ```
 
-{{ Add example description here }}
+This command creates an access policy named Policy02 in the storage table named MyTable.
 
 ## PARAMETERS
 
 ### -Context
-Azure Storage Context Object
+Specifies an Azure storage context.
+To obtain a storage context, use the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -51,7 +55,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryTime
-Expiry Time
+Specifies the time at which the stored access policy becomes invalid.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -78,8 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-Permissions for a table.
-Permissions can be any not-empty subset of "audqr".
+Specifies permissions in the stored access policy to access the storage table.
+It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
 
 ```yaml
 Type: System.String
@@ -94,8 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-Policy Identifier.
-Need to be unique in the Table
+Specifies a name for the stored access policy.
 
 ```yaml
 Type: System.String
@@ -110,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Start Time
+Specifies the time at which the stored access policy becomes valid.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -125,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Table
-Table Name
+Specifies the Azure storage table name.
 
 ```yaml
 Type: System.String
@@ -140,8 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -156,3 +158,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageTableStoredAccessPolicy](./Get-AzStorageTableStoredAccessPolicy.md)
+
+[New-AzStorageContext](./New-AzStorageContext.md)
+
+[Remove-AzStorageTableStoredAccessPolicy](./Remove-AzStorageTableStoredAccessPolicy.md)
+
+[Set-AzStorageTableStoredAccessPolicy](./Set-AzStorageTableStoredAccessPolicy.md)
+
+

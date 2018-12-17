@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 7C86B385-D784-45FD-9B57-31C895115A2C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/add-azapimanagementapitoproduct
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Add-AzApiManagementApiToProduct.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Add-AzApiManagementApiToProduct.md
 ---
 
 # Add-AzApiManagementApiToProduct
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an API to a product.
 
 ## SYNTAX
 
@@ -18,22 +21,22 @@ Add-AzApiManagementApiToProduct -Context <PsApiManagementContext> -ProductId <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzApiManagementApiToProduct** cmdlet adds an Azure API Management API to a product.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add an API to a product
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Add-AzApiManagementApiToProduct -Context $ApiMgmtContext -ProductId "0123456789" -ApiId "0001"
 ```
 
-{{ Add example description here }}
+This command adds the specified API to the specified product.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of existing APIs to be added to the product.
-This parameter is required.
+Specifies the ID of an API to add to a product.
 
 ```yaml
 Type: System.String
@@ -48,8 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -64,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -79,9 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,8 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing Product to add API to.
-This parameter is required.
+Specifies the ID of the product to which to add the API.
 
 ```yaml
 Type: System.String
@@ -112,8 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -130,3 +128,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzApiManagementApiFromProduct](./Remove-AzApiManagementApiFromProduct.md)
+
+

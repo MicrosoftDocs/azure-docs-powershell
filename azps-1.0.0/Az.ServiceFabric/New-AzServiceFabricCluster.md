@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
 Module Name: Az.ServiceFabric
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefabric/new-azservicefabriccluster
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/New-AzServiceFabricCluster.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/New-AzServiceFabricCluster.md
 ---
 
 # New-AzServiceFabricCluster
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This command uses certificates that you provide or system generated self-signed certificates to set up a new service fabric cluster. It can use a default template or a custom template that you provide. You have the option of specifying a folder to export the self-signed certificates to or fetching them later from the key vault. 
 
 ## SYNTAX
 
@@ -24,8 +26,9 @@ New-AzServiceFabricCluster [-ResourceGroupName] <String> [-CertificateOutputFold
 ### ByExistingKeyVault
 ```
 New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
- [-VmPassword <SecureString>] -SecretIdentifier <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CertificateCommonName <String>] [-CertificateIssuerThumbprint <String>] [-VmPassword <SecureString>]
+ -SecretIdentifier <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByNewPfxAndVaultName
@@ -41,26 +44,95 @@ New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> 
 New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
  -CertificateFile <String> [-CertificatePassword <SecureString>] [-SecondaryCertificateFile <String>]
  [-SecondaryCertificatePassword <SecureString>] [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>]
- [-VmPassword <SecureString>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-CertificateCommonName <String>] [-CertificateIssuerThumbprint <String>] [-VmPassword <SecureString>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzServiceFabricCluster** command uses certificates that you provide or system generated self-signed certificates to set up a new service fabric cluster. The template used can be a default template or a custom template that you provide. You have the option of specifying a folder to export the self-signed certificates or fetching them later from the key vault.
+If you are specifying a custom template and parameter file, you don't need to provide the certificate information in the parameter file, the system will populate these parameters.
+The four options are detailed below. Scroll down for explanations of each of the parameters.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Specify only the cluster size, the cert subject name, and the OS to deploy a cluster.
+```
+$pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test01"
+$clusterloc="SouthCentralUS"
+$subname="{0}.{1}.cloudapp.azure.com" -f $RGname, $clusterloc
+$pfxfolder="c:\certs"
+
+Write-Output "Create cluster in '$clusterloc' with cert subject name '$subname' and cert output path '$pfxfolder'"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -Location $clusterloc -ClusterSize 5 -VmPassword $pass -CertificateSubjectName $subname -CertificateOutputFolder $pfxfolder -CertificatePassword $pass -OS WindowsServer2016Datacenter
 ```
 
-{{ Add example description here }}
+This command specifies only the cluster size, the cert subject name, and the OS to deploy a cluster.
+
+### Example 2: Specify an existing Certificate resource in a key vault and a custom template to deploy a cluster
+```
+$RGname="test20"
+$templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="C:\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+$secretId="https://test1.vault.azure.net:443/secrets/testcertificate4/56ec774dc61a462bbc645ffc9b4b225f"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -SecretIdentifier $secretId
+```
+
+This command specifies an existing Certificate resource in a key vault and a custom template to deploy a cluster.
+
+### Example 3: Create a new cluster using a custom template. Specify a different resource group name for the key vault and have the system upload a new certificate to it
+```
+$pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test20"
+$keyVaultRG="test20kvrg"
+$keyVault="test20kv"
+$clusterloc="SouthCentralUS"
+$subname="{0}.{1}.$clusterloc.cloudapp.azure.com" -f $RGName, $clusterloc
+$pfxfolder="~\Documents"
+$templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateOutputFolder $pfxfolder -CertificatePassword $pass -KeyVaultResouceGroupName $keyVaultRG  -KeyVaultName $keyVault -CertificateSubjectName $subname
+```
+
+This command creates a new cluster using a custom template. Specify a different resource group name for the key vault and have the system upload a new certificate to it
+
+### Example 4: Bring your own Certificate and custom template and create a new cluster
+```
+$pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test20"
+$keyVaultRG="test20kvrg"
+$keyVault="test20kv"
+$pfxsourcefile="c:\Mycertificates\my2017Prodcert.pfx"
+$templateParmfile="~\Documents\GitHub\azure-quickstart-templates-parms\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="~\GitHub\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateFile $pfxsourcefile -CertificatePassword $pass -KeyVaultResouceGroupName $keyVaultRG -KeyVaultName $keyVault
+```
+
+This command will let you bring your own Certificate and custom template and create a new cluster.
 
 ## PARAMETERS
 
+### -CertificateCommonName
+Certificate common name
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByExistingPfxAndVaultName
+Aliases: CertCommonName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CertificateFile
-The existing certificate file path for the primary cluster certificate
+The existing certificate file path for the primary cluster certificate.
 
 ```yaml
 Type: System.String
@@ -74,8 +146,23 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -CertificateIssuerThumbprint
+Certificate issuer thumbprint, separated by commas if more than one
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByExistingPfxAndVaultName
+Aliases: CertIssuerThumbprint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CertificateOutputFolder
-The folder of the new certificate file to be created
+The folder of the new certificate file to be created.
 
 ```yaml
 Type: System.String
@@ -90,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-The password of the certificate file
+The password of the certificate file.
 
 ```yaml
 Type: System.Security.SecureString
@@ -105,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateSubjectName
-The subject name of the certificate to be created
+The subject name of the certificate to be created.
 
 ```yaml
 Type: System.String
@@ -120,8 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterSize
-The number of nodes in the cluster.
-Default are 5 nodes
+The number of nodes in the cluster. Default are 5 nodes.
 
 ```yaml
 Type: System.Int32
@@ -136,12 +222,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -151,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultName
-Azure key vault name, if not given it will be defaulted to the resource group name
+Azure key vault name. If not given, it will be defaulted to the resource group name.
 
 ```yaml
 Type: System.String
@@ -166,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultResouceGroupName
-Azure key vault resource group name, if not given it will be defaulted to resource group name
+Azure key vault resource group name. If not given, it will be defaulted to resource group name.
 
 ```yaml
 Type: System.String
@@ -181,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The resource group location
+The resource group location.
 
 ```yaml
 Type: System.String
@@ -196,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specify the name of the cluster, if not given it will be same as resource group name
+Specify the name of the cluster. If not given, it will be same as resource group name.
 
 ```yaml
 Type: System.String
@@ -257,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryCertificateFile
-The existing certificate file path for the secondary cluster certificate
+The existing certificate file path for the secondary cluster certificate.
 
 ```yaml
 Type: System.String
@@ -272,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryCertificatePassword
-The password of the certificate file
+The password of the certificate file.
 
 ```yaml
 Type: System.Security.SecureString
@@ -287,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecretIdentifier
-The existing Azure key vault secret URL, for example 'https://mykv.vault.azure.net:443/secrets/mysecrets/55ec7c4dc61a462bbc645ffc9b4b225f'
+The existing Azure key vault secret URL, for example: 'https://mykv.vault.azure.net:443/secrets/mysecrets/55ec7c4dc61a462bbc645ffc9b4b225f'.
 
 ```yaml
 Type: System.String
@@ -344,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmSku
-The Vm Sku
+The Vm Sku.
 
 ```yaml
 Type: System.String
@@ -359,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmUserName
-The user name for logging to Vm
+The user name for logging to Vm.
 
 ```yaml
 Type: System.String
@@ -389,8 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -405,8 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

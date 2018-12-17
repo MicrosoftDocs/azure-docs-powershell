@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: EC8C915A-A0BC-41DE-9DBF-3617536E3D1A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azcontainerserviceconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzContainerServiceConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzContainerServiceConfig.md
 ---
 
 # New-AzContainerServiceConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a local configuration object for a container service.
 
 ## SYNTAX
 
@@ -24,21 +27,27 @@ New-AzContainerServiceConfig [[-Location] <String>] [[-Tag] <Hashtable>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzContainerServiceConfig** cmdlet creates a local configuration object for a container service.
+Provide this object to the New-AzContainerService cmdlet to create a container service.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a container service configuration
+```
+PS C:\> $Container = New-AzContainerServiceConfig -Location "Australia Southeast" -OrchestratorType "DCOS" -MasterDnsPrefix "MasterResourceGroup17" -AdminUsername "AcsLinuxAdmin" -SshPublicKey "<ssh-key>"
+PS C:\> $Container | Add-AzContainerServiceAgentPoolProfile -Name "AgentPool01" -VmSize "Standard_A1" -DnsPrefix "APResourceGroup17"
 ```
 
-{{ Add example description here }}
+This command creates a container, and then stores it in the $Container variable.
+The command specifies various settings for the container service configuration. The command passes
+the configuration object to the Add-AzContainerServiceAgentPoolProfile cmdlet by using the
+pipeline operator. That cmdlet adds an agent pool profile.
+Specify the object in $Container for the *ContainerService* parameter of **New-AzContainerService**.
 
 ## PARAMETERS
 
 ### -AdminUsername
-{{Fill AdminUsername Description}}
+Specifies the administrator account name to use for a Linux-based container service.
 
 ```yaml
 Type: System.String
@@ -53,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -AgentPoolProfile
-{{Fill AgentPoolProfile Description}}
+Specifies an array of agent pool profile objects for the container service.
+Add a profile by using the Add-AzContainerServiceAgentPoolProfile cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.ContainerServiceAgentPoolProfile[]
@@ -68,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomProfileOrchestrator
-{{Fill CustomProfileOrchestrator Description}}
+Specifies the custom profile orchestrator.
 
 ```yaml
 Type: System.String
@@ -83,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -98,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+Specifies the location in which to create the container service.
 
 ```yaml
 Type: System.String
@@ -113,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -MasterCount
-{{Fill MasterCount Description}}
+Specifies the number of master virtual machines to create.
 
 ```yaml
 Type: System.Int32
@@ -128,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -MasterDnsPrefix
-{{Fill MasterDnsPrefix Description}}
+Specifies the DNS prefix for the master virtual machine.
 
 ```yaml
 Type: System.String
@@ -143,7 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -OrchestratorType
-{{Fill OrchestratorType Description}}
+Specifies the type of orchestrator for the container service.
+The acceptable values for this parameter are: DCOS and Swarm.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.ContainerServiceOrchestratorTypes]
@@ -159,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalProfileClientId
-{{Fill ServicePrincipalProfileClientId Description}}
+Specifies the principal profile client ID.
 
 ```yaml
 Type: System.String
@@ -174,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalProfileSecret
-{{Fill ServicePrincipalProfileSecret Description}}
+Specifies the principal profile secret.
 
 ```yaml
 Type: System.String
@@ -189,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -SshPublicKey
-{{Fill SshPublicKey Description}}
+Specifies the SSH public key for a Linux-based container service.
 
 ```yaml
 Type: System.String[]
@@ -204,7 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -219,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmDiagnosticsEnabled
-{{Fill VmDiagnosticsEnabled Description}}
+Indicates whether this configuration enables diagnostics for the container service virtual machine.
 
 ```yaml
 Type: System.Boolean
@@ -234,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsProfileAdminPassword
-{{Fill WindowsProfileAdminPassword Description}}
+Specifies the administrator password for a container service that uses the Windows operating system.
 
 ```yaml
 Type: System.String
@@ -249,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsProfileAdminUsername
-{{Fill WindowsProfileAdminUsername Description}}
+Specifies the administrator username for a container service that uses the Windows operating system.
 
 ```yaml
 Type: System.String
@@ -279,8 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -295,8 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -304,7 +314,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Collections.Hashtable
 
-### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.ContainerServiceOrchestratorTypes, Microsoft.Azure.Management.Compute, Version=22.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.ContainerServiceOrchestratorTypes, Microsoft.Azure.Management.Compute, Version=23.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ### System.Int32
 
@@ -321,3 +331,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzContainerServiceAgentPoolProfile](./Add-AzContainerServiceAgentPoolProfile.md)
+
+[New-AzContainerService](./New-AzContainerService.md)

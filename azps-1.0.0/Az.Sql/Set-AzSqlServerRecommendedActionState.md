@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 26EC220C-5123-4CEF-8CC6-5FFD08F33481
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqlserverrecommendedactionstate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlServerRecommendedActionState.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlServerRecommendedActionState.md
 ---
 
 # Set-AzSqlServerRecommendedActionState
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the state of an Azure SQL Server recommended action.
 
 ## SYNTAX
 
@@ -19,21 +22,50 @@ Set-AzSqlServerRecommendedActionState -RecommendedActionName <String> -State <Re
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzSqlServerRecommendedActionState** cmdlet updates state of an Azure SQL Server recommended action.
+This cmdlet applies, reverts, or discards the recommended action based on the new state.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example1: Update the state of the specified recommended action to Pending
+```
+PS C:\>Set-AzSqlServerRecommendedActionState -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex" -RecommendedActionName "IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893" -State Pending
+ResourceGroupName          : WIRunnersProd
+ServerName                 : wi-runner-australia-east
+AdvisorName                : CreateIndex
+RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
+Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
+                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
+EstimatedImpact            : {ActionDuration, SpaceChange}
+ExecuteActionDuration      : PT1M
+ExecuteActionInitiatedBy   : User
+ExecuteActionInitiatedTime : 4/21/2016 3:24:47 PM
+ExecuteActionStartTime     : 4/21/2016 3:24:47 PM
+ImplementationDetails      : Microsoft.Azure.Management.Sql.Models.RecommendedActionImplementationInfo
+IsArchivedAction           : False
+IsExecutableAction         : True
+IsRevertableAction         : True
+LastRefresh                : 4/21/2016 3:24:47 PM
+LinkedObjects              : {}
+ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
+RecommendationReason       : 
+RevertActionDuration       : 
+RevertActionInitiatedBy    : 
+RevertActionInitiatedTime  : 
+RevertActionStartTime      : 
+Score                      : 2
+State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
+TimeSeries                 : {}
+ValidSince                 : 4/21/2016 3:24:47 PM
 ```
 
-{{ Add example description here }}
+Updates state of server recommended action named "IR_\[test_schema\]_\[test_table_0.0361551\]_6C7AE8CC9C87E7FD5893" to "Pending"
 
 ## PARAMETERS
 
 ### -AdvisorName
-Azure SQL Server Advisor name.
+Specifies the name of the advisor that contains the recommended action.
 
 ```yaml
 Type: System.String
@@ -48,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedActionName
-Azure SQL Server RecommendedAction name.
+Specifies the name of the recommended action for which this cmdlet updates the state.
 
 ```yaml
 Type: System.String
@@ -78,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group of the server.
 
 ```yaml
 Type: System.String
@@ -93,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Azure SQL Server name.
+Specifies the name of the server.
 
 ```yaml
 Type: System.String
@@ -108,7 +140,14 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The new state of Azure SQL Server Recommended Action.
+Specifies the new value to which this cmdlet updates the recommended action state.
+The acceptable values for this parameter are:
+- Active
+- Pending
+- PendingRevert
+- RevertCancelled
+- Ignored
+- Resolved
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.RecommendedAction.Cmdlet.RecommendedActionState
@@ -133,7 +172,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -149,14 +188,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -169,5 +207,16 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Sql.RecommendedAction.Model.AzureSqlServerRecommendedActionModel
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, sql, server, mssql, advisor, recommendedaction
 
 ## RELATED LINKS
+
+[Get-AzSqlServerAdvisor](./Get-AzSqlServerAdvisor.md)
+
+[Get-AzSqlServerRecommendedAction](./Get-AzSqlServerRecommendedAction.md)
+
+[Set-AzSqlDatabaseRecommendedActionState](./Set-AzSqlDatabaseRecommendedActionState.md)
+
+[Set-AzSqlElasticPoolRecommendedActionState](./Set-AzSqlElasticPoolRecommendedActionState.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

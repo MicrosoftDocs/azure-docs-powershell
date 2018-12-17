@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 2A3B7343-9AA0-4505-AEDE-31C0C5B98694
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azexpressroutecircuit
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzExpressRouteCircuit.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzExpressRouteCircuit.md
 ---
 
 # Set-AzExpressRouteCircuit
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an ExpressRoute circuit.
 
 ## SYNTAX
 
@@ -18,16 +21,16 @@ Set-AzExpressRouteCircuit -ExpressRouteCircuit <PSExpressRouteCircuit> [-AsJob]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzExpressRouteCircuit** cmdlet saves the modified ExpressRoute circuit to Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Change the ServiceKey of an ExpressRoute circuit
 ```
-
-{{ Add example description here }}
+$ckt = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg
+$ckt.ServiceKey = '64ce99dd-ee70-4e74-b6b8-91c6307433a0'
+Set-AzExpressRouteCircuit -ExpressRouteCircuit $ckt
+```
 
 ## PARAMETERS
 
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-The ExpressRouteCircuit
+Specifies the **ExpressRouteCircuit** object that this cmdlet modifies.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -77,8 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +93,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzExpressRouteCircuit](./Get-AzExpressRouteCircuit.md)
+
+[Move-AzExpressRouteCircuit](./Move-AzExpressRouteCircuit.md)
+
+[New-AzExpressRouteCircuit](./New-AzExpressRouteCircuit.md)
+
+[Remove-AzExpressRouteCircuit](./Remove-AzExpressRouteCircuit.md)

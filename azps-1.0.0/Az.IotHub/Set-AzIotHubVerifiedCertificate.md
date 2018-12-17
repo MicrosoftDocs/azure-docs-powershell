@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/set-aziothubverifiedcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Set-AzIotHubVerifiedCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Set-AzIotHubVerifiedCertificate.md
 ---
 
 # Set-AzIotHubVerifiedCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Verifies an Azure IoT Hub certificate. 
 
 ## SYNTAX
 
@@ -32,16 +34,28 @@ Set-AzIotHubVerifiedCertificate [-ResourceId] <String> [-Etag] <String> [-Path] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Verifies a certificate by uploading a verification certificate containing the verification code obtained by cmdlet Get-AzIotHubCertificateVerificationCode. This is the last step in the proof of possession process.
+For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-x509ca-overview
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzIotHubVerifiedCertificate -ResourceGroupName "myresourcegroup" -Name "myiothub" -CertificateName "mycertificate" -Path "c:\myverifiedcertificate.cer" -Etag "AAAAAAFPazE="
+
+Id					: /subscriptions/377cxxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Devices/IotHubs/myiothub/certificates/mycertificate
+ResourceGroupName	: myresourcegroup
+Name				: myiothub
+CertificateName		: mycertificate
+Subject				: CN=mycertificate
+Thumbprint			: 38303FC7371EC13DDE3E18D712C8414EE50969C7
+Status				: Verified
+Expiry				: 1/01/2027 16:01
+Created				: 1/01/2017 16:01
+Etag				: AAAAAAFpObE=
 ```
 
-{{ Add example description here }}
+Verifies ownership of the MyCertificate private key. 
 
 ## PARAMETERS
 
@@ -61,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -197,8 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

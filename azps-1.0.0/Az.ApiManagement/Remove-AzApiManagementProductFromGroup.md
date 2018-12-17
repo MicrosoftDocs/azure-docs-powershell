@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 2FD2C5C0-5A5A-4CF0-9260-21B9E3DE52B9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementproductfromgroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementProductFromGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementProductFromGroup.md
 ---
 
 # Remove-AzApiManagementProductFromGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a product from a group.
 
 ## SYNTAX
 
@@ -18,21 +21,23 @@ Remove-AzApiManagementProductFromGroup -Context <PsApiManagementContext> -GroupI
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzApiManagementProductFromGroup** cmdlet removes a product from an existing group.
+In other words, this cmdlet removes the group assignment from a product.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a product from a group
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementProductFromGroup -Context $apimContext -GroupId "0001" -ProductId "0123456789"
 ```
 
-{{ Add example description here }}
+This command removes a product from an existing group.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
+Specifies a **PsApiManagementContext** object.
 This parameter is required.
 
 ```yaml
@@ -48,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
+Specifies the group ID.
 This parameter is required.
 
 ```yaml
@@ -79,9 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Indicates that this cmdlet returns a value of $True, if it succeeds, or $False, otherwise.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing product.
+Specifies the product ID.
 This parameter is required.
 
 ```yaml
@@ -112,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -130,3 +132,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzApiManagementProductToGroup](./Add-AzApiManagementProductToGroup.md)
+
+

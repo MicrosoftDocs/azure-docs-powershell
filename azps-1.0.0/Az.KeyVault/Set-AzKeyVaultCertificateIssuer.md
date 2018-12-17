@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 4C2C77F7-ECE4-4106-8AF1-256A496A977B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/set-azkeyvaultcertificateissuer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzKeyVaultCertificateIssuer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzKeyVaultCertificateIssuer.md
 ---
 
 # Set-AzKeyVaultCertificateIssuer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets a certificate issuer in a key vault.
 
 ## SYNTAX
 
@@ -28,21 +31,31 @@ Set-AzKeyVaultCertificateIssuer [-VaultName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Set-AzKeyVaultCertificateIssuer cmdlet sets a certificate issuer in a key vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set a certificate issuer
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $AdminDetails = New-AzKeyVaultCertificateAdministratorDetails -FirstName user -LastName name -EmailAddress username@microsoft.com
+PS C:\> $OrgDetails = New-AzKeyVaultCertificateOrganizationDetails -AdministrationDetails $AdminDetails
+PS C:\> $Password = ConvertTo-SecureString -String P@ssw0rd -AsPlainText -Force
+PS C:\> Set-AzKeyVaultCertificateIssuer -VaultName "Contosokv01" -Name "TestIssuer01" -IssuerProvider "Test" -AccountId "555" -ApiKey $Password -OrganizationDetails $OrgDetails -PassThru
+
+AccountId           : 555
+ApiKey              :
+OrganizationDetails : Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateOrganizationDetails
+Name                : TestIssuer01
+IssuerProvider      : Test
+VaultName           : Contosokv01
 ```
 
-{{ Add example description here }}
+This command sets the properties for a certificate issuer.
 
 ## PARAMETERS
 
 ### -AccountId
-Specifies the account id to be used with the issuer.
+Specifies the account ID for the certificate issuer.
 
 ```yaml
 Type: System.String
@@ -57,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiKey
-Specifies the api key to be used with the issuer.
+Specifies the API key for the certificate issuer.
 
 ```yaml
 Type: System.Security.SecureString
@@ -72,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -102,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -IssuerProvider
-Specifies the type of the issuer.
+Specifies the type of certificate issuer.
 
 ```yaml
 Type: System.String
@@ -117,8 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Issuer name.
-Cmdlet constructs the FQDN of a certificate issuer from vault name, currently selected environment and issuer name.
+Specifies the name of the Issuer.
 
 ```yaml
 Type: System.String
@@ -133,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationDetails
-Specifies the organization details to be used with the issuer.
+Organization details to be used with the issuer.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateOrganizationDetails
@@ -148,8 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-This cmdlet does not return an object by default.
-If this switch is specified, it returns the contact object.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -164,8 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of the key vault.
 
 ```yaml
 Type: System.String
@@ -211,8 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -227,3 +237,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzKeyVaultCertificateIssuer](./Get-AzKeyVaultCertificateIssuer.md)
+
+[Remove-AzKeyVaultCertificateIssuer](./Remove-AzKeyVaultCertificateIssuer.md)
+

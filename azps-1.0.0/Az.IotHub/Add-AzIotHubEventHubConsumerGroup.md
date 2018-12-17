@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/add-aziothubeventhubconsumergroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Add-AzIotHubEventHubConsumerGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Add-AzIotHubEventHubConsumerGroup.md
 ---
 
 # Add-AzIotHubEventHubConsumerGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an eventhub consumer group.
 
 ## SYNTAX
 
@@ -19,26 +21,33 @@ Add-AzIotHubEventHubConsumerGroup [-ResourceGroupName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a consumer group in the Eventhub associated with the specified IotHub.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a consumer group to the telemetry eventhub
+```
+PS C:\> Add-AzIotHubEventHubConsumerGroup -ResourceGroupName "myresourcegroup" -Name "myiothub" -EventHubEndpointName "events" -EventHubConsumerGroupName "myconsumergroup"
 ```
 
-{{ Add example description here }}
+Adds a new consumergroup named "myconsumergroup" to the eventhub for telemetry events in the iothub named "myiothub"
+
+### Example 2: Add a consumer group to the operations monitoring eventhub
+```
+PS C:\> Add-AzIotHubEventHubConsumerGroup -ResourceGroupName "myresourcegroup" -Name "myiothub" -EventHubEndpointName "operationsMonitoringEvents" -EventHubConsumerGroupName "myconsumergroup"
+```
+
+Adds a new consumergroup named "myconsumergroup" to the eventhub for operations monitoring events in the iothub named "myiothub"
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubConsumerGroupName
-Name of the EventHub ConsumerGroup
+Name of the EventHub ConsumerGroup that you want to add.
 
 ```yaml
 Type: System.String
@@ -63,8 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubEndpointName
-Name of the Event Hub Endpoint.
-Possible values are 'events', 'operationsMonitoringEvents'
+Name of the EventHub Endpoint.
+Possible values events, operationsMonitoringEvents
 
 ```yaml
 Type: System.String
@@ -95,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group
+Name of the Resource Group.
 
 ```yaml
 Type: System.String
@@ -119,7 +128,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -135,14 +144,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

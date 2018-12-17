@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: F20A5FD3-6EC3-4EFE-988C-75F8583961A4
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/set-azstorageblobcontent
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzStorageBlobContent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzStorageBlobContent.md
 ---
 
 # Set-AzStorageBlobContent
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Uploads a local file to an Azure Storage blob.
 
 ## SYNTAX
 
@@ -41,21 +44,66 @@ Set-AzStorageBlobContent [-File] <String> -CloudBlob <CloudBlob> [-BlobType <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzStorageBlobContent** cmdlet uploads a local file to an Azure Storage blob.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Upload a named file
+```
+PS C:\>Set-AzStorageBlobContent -Container "ContosoUpload" -File ".\PlanningData" -Blob "Planning2015"
 ```
 
-{{ Add example description here }}
+This command uploads the file that is named PlanningData to a blob named Planning2015.
+
+### Example 2: Upload all files under the current folder
+```
+PS C:\>Get-ChildItem -File -Recurse | Set-AzStorageBlobContent -Container "ContosoUploads"
+```
+
+This command uses the core Windows PowerShell cmdlet Get-ChildItem to get all the files in the current folder and in subfolders, and then passes them to the current cmdlet by using the pipeline operator.
+The **Set-AzStorageBlobContent** cmdlet uploads the files to the container named ContosoUploads.
+
+### Example 3: Overwrite an existing blob
+```
+PS C:\>Get-AzStorageBlob -Container "ContosoUploads" -Blob "Planning2015" | Set-AzStorageBlobContent -File "ContosoPlanning"
+```
+
+This command gets the blob named Planning2015 in the ContosoUploads container by using the Get-AzStorageBlob cmdlet, and then passes that blob to the current cmdlet.
+The command uploads the file that is named ContosoPlanning as Planning2015.
+This command does not specify the *Force* parameter.
+The command prompts you for confirmation.
+If you confirm the command, the cmdlet overwrites the existing blob.
+
+### Example 4: Upload a file to a container by using the pipeline
+```
+PS C:\>Get-AzStorageContainer -Container "ContosoUpload*" | Set-AzStorageBlobContent -File "ContosoPlanning" -Blob "Planning2015"
+```
+
+This command gets the container that starts with the string ContosoUpload by using the **Get-AzStorageContainer** cmdlet, and then passes that blob to the current cmdlet.
+The command uploads the file that is named ContosoPlanning as Planning2015.
+
+### Example 5: Upload a file to page blob with metadata and PremiumPageBlobTier as P10
+```
+PS C:\>$Metadata = @{"key" = "value"; "name" = "test"}
+PS C:\> Set-AzStorageBlobContent -File "ContosoPlanning" -Container "ContosoUploads" -Metadata $Metadata -BlobType Page -PremiumPageBlobTier P10
+```
+
+The first command creates a hash table that contains metadata for a blob, and stores that hash table in the $Metadata variable.
+The second command uploads the file that is named ContosoPlanning to the container named ContosoUploads.
+The blob includes the metadata stored in $Metadata, and has PremiumPageBlobTier as P10.
+
+### Example 6: Upload a file to blob with specified blob properties
+```
+PS C:\> Set-AzStorageBlobContent -File "ContosoPlanning" -Container "ContosoUploads" -Properties @{"ContentType" = "image/jpeg"; "ContentMD5" = "i727sP7HigloQDsqadNLHw=="}
+```
+
+This command  uploads the file that is named ContosoPlanning to the container named ContosoUploads with specified blob properties.
 
 ## PARAMETERS
 
 ### -Blob
-Blob name
+Specifies the name of a blob.
+This cmdlet uploads a file to the Azure Storage blob that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -70,7 +118,11 @@ Accept wildcard characters: False
 ```
 
 ### -BlobType
-Blob Type('Block', 'Page', 'Append')
+Specifies the type for the blob that this cmdlet uploads.
+The acceptable values for this parameter are:
+- Block
+- Page
+The default value is Block.
 
 ```yaml
 Type: System.String
@@ -86,7 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -101,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlob
-Azure Blob Object
+Specifies a **CloudBlob** object.
+To obtain a **CloudBlob** object, use the Get-AzStorageBlob cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
@@ -116,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlobContainer
-Azure Blob Container Object
+Specifies a **CloudBlobContainer** object from the Azure Storage Client library.
+This cmdlet uploads content to a blob in the container that this parameter specifies.
+To obtain a **CloudBlobContainer** object, use the Get-AzStorageContainer cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer
@@ -131,7 +188,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -147,7 +207,8 @@ Accept wildcard characters: False
 ```
 
 ### -Container
-Container name
+Specifies the name of a container.
+This cmdlet uploads a file to a blob in the container that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -162,7 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies an Azure storage context.
+To obtain a storage context, use the New-AzStorageContext cmdlet.
+To use a storage context created from a SAS Token without read permission, need add -Force parameter to skip check blob existance.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -180,7 +243,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -192,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -File
-file Path
+Specifies a local file path for a file to upload as blob content.
 
 ```yaml
 Type: System.String
@@ -219,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to overwrite the existing blob or file
+Indicates that this cmdlet overwrites an existing blob without prompting you for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -234,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-Blob Metadata
+Specifies metadata for the uploaded blob.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -265,7 +328,8 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-Blob Properties
+Specifies properties for the uploaded blob. 
+The supported properties are: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, ContentMD5, ContentType.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -280,7 +344,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the service side time-out interval, in seconds, for a request.
+If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -304,7 +369,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -320,14 +385,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -346,3 +410,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageBlobContent](./Get-AzStorageBlobContent.md)
+
+[Get-AzStorageBlob](./Get-AzStorageBlob.md)
+
+[Remove-AzStorageBlob](./Remove-AzStorageBlob.md)

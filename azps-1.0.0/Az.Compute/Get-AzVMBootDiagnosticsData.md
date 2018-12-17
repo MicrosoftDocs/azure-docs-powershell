@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 15CAC050-F2E9-4872-88E7-516A6D194FAB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmbootdiagnosticsdata
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMBootDiagnosticsData.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMBootDiagnosticsData.md
 ---
 
 # Get-AzVMBootDiagnosticsData
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets boot diagnostics data for a virtual machine.
 
 ## SYNTAX
 
@@ -25,26 +28,28 @@ Get-AzVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Lin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMBootDiagnosticsData** cmdlet gets boot diagnostics data for a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get boot diagnostics data
+```
+PS C:\> Get-AzVMBootDiagnosticsData -ResourceGroupName "ResourceGroup11" -Name "ContosoVM07" -Windows -LocalPath "C:\Contoso\BootDiagnostics"
 ```
 
-{{ Add example description here }}
+This command gets boot diagnostics data for the virtual machine named ContosoVM07.
+This virtual machine runs the Windows operating system.
+The command stores the data in specified local path.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-{{Fill Linux Description}}
+Indicates that the virtual machine runs the Linux operating system.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
-Path and name of the output RDP file.
+Specifies the local path for the boot diagnostics data.
 
 ```yaml
 Type: System.String
@@ -96,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the virtual machine for which this cmdlet gets diagnostics data.
 
 ```yaml
 Type: System.String
@@ -111,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -126,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-{{Fill Windows Description}}
+Indicates that the virtual machine runs the Windows operating system.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,8 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -157,3 +161,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzVMBootDiagnostics](./Set-AzVMBootDiagnostics.md)
+
+

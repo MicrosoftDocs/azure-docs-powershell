@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 0C35E679-B991-49A8-890F-C8DAB68A8240
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/remove-azoperationalinsightsworkspace
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Remove-AzOperationalInsightsWorkspace.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Remove-AzOperationalInsightsWorkspace.md
 ---
 
 # Remove-AzOperationalInsightsWorkspace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a workspace.
 
 ## SYNTAX
 
@@ -18,26 +21,35 @@ Remove-AzOperationalInsightsWorkspace [-ResourceGroupName] <String> [-Name] <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzOperationalInsightsWorkspace** cmdlet deletes an existing workspace.
+If this workspace was linked to an existing account via the *CustomerId* parameter at creation time the original account is not deleted in the Operational Insights portal.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a workspace by name
+```
+PS C:\>Remove-AzOperationalInsightsWorkspace -ResourceGroupName "ContosResourceGroup" -Name "MyWorkspace"
 ```
 
-{{ Add example description here }}
+This command removes the workspace named MyWorkspace from the resource group named ContosoResourceGroup.
+
+### Example 2: Remove a workspace by using the pipeline and without confirmation
+```
+PS C:\>Get-AzOperationalInsightsWorkspace -ResourceGroupName "ContosResourceGroup" -Name "MyWorkspace" | Remove-AzOperationalInsightsWorkspace -Force
+```
+
+This command uses the Get-AzOperationalInsightsWorkspace cmdlet to get the workspace named MyWorkspace, and then passes it to the **Remove-AzOperationalInsightsWorkspace** cmdlet by using the pipeline operator to remove it.
+Since the *Force* parameter is specified, the command does not prompt you before removing the workspace.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Don't ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -62,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The workspace name.
+Specifies the name of the workspace.
 
 ```yaml
 Type: System.String
@@ -77,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of an Azure resource group.
 
 ```yaml
 Type: System.String
@@ -101,7 +113,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -117,14 +129,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +148,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
+
+[Get-AzOperationalInsightsWorkspace](./Get-AzOperationalInsightsWorkspace.md)
+
+

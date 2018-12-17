@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementbackend
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementBackend.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementBackend.md
 ---
 
 # Get-AzApiManagementBackend
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get the details of the Backend.
 
 ## SYNTAX
 
@@ -25,16 +27,25 @@ Get-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Get the details of the Backend.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all Backends
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementBackend -Context $apimContext
 ```
 
-{{ Add example description here }}
+Gets a list of all the Backends configured in the Api Management service.
+
+### Example 2: Get the Backend specified by the Identifier 123
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementBackend -Context $apimContext -backendId 123
+```
+
+Get the details of the specified Backend identified by the Identifier '123'
 
 ## PARAMETERS
 
@@ -72,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -87,8 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -103,3 +113,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
+
+[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
+
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+
+[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
+
+[Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)

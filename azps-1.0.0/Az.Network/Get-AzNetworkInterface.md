@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: E066BBFA-2E03-431D-85D1-99F230B6AC59
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkinterface
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkInterface.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkInterface.md
 ---
 
 # Get-AzNetworkInterface
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a network interface.
 
 ## SYNTAX
 
@@ -38,26 +41,33 @@ Get-AzNetworkInterface -Name <String> -ResourceGroupName <String> -VirtualMachin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzNetworkInterface** cmdlet gets an Azure network interface or a list of Azure network interfaces in a resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all network interfaces
+```
+PS C:\>Get-AzNetworkInterface
 ```
 
-{{ Add example description here }}
+This command gets all network interfaces for the current subscription.
+
+### Example 2: Get all network interfaces with a specific provisioning state
+```
+PS C:\>Get-AzNetworkInterface -ResourceGroupName "ResourceGroup1" | Where-Object {$_.ProvisioningState -eq 'Succeeded'}
+```
+
+This command gets all network interfaces in the resource group named ResourceGroup1 that has a provisioning state of succeeded.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -67,8 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandResource
-The resource reference to be expanded.
-
 ```yaml
 Type: System.String
 Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic
@@ -82,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+Specifies the name of the network interface that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -109,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group from which this cmdlet gets network interfaces.
 
 ```yaml
 Type: System.String
@@ -136,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineIndex
-Virtual Machine Index.
+Specifies the virtual machine index of the virtual machine scale set from which this cmdlet gets network interfaces.
 
 ```yaml
 Type: System.String
@@ -163,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSetName
-Virtual Machine Scale Set Name.
+Specifies the name of the virtual machine scale set from which this cmdlet gets network interfaces.
 
 ```yaml
 Type: System.String
@@ -190,8 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -204,3 +211,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzNetworkInterface](./New-AzNetworkInterface.md)
+
+[Remove-AzNetworkInterface](./Remove-AzNetworkInterface.md)
+
+[Set-AzNetworkInterface](./Set-AzNetworkInterface.md)
+
+

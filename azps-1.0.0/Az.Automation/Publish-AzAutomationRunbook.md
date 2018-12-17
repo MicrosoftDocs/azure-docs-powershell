@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: E7F31B71-983A-4DB3-BB30-BDC5C0247E74
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/publish-azautomationrunbook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Publish-AzAutomationRunbook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Publish-AzAutomationRunbook.md
 ---
 
 # Publish-AzAutomationRunbook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Publishes a runbook.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Publish-AzAutomationRunbook [-Name] <String> [-ResourceGroupName] <String> [-Aut
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Publish-AzAutomationRunbook** cmdlet publishes a runbook for use in the production environment of Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Publish a runbook
+```
+PS C:\>Publish-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command publishes the runbook named Runbk01 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account in which this cmdlet publishes a runbook.
 
 ```yaml
 Type: System.String
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The runbook name.
+Specifies the name of the runbook that this cmdlet publishes.
 
 ```yaml
 Type: System.String
@@ -77,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet publishes a runbook.
 
 ```yaml
 Type: System.String
@@ -92,8 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +108,21 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzAutomationRunbook](./Export-AzAutomationRunbook.md)
+
+[Get-AzAutomationRunbook](./Get-AzAutomationRunbook.md)
+
+[Import-AzAutomationRunbook](./Import-AzAutomationRunbook.md)
+
+[New-AzAutomationRunbook](./New-AzAutomationRunbook.md)
+
+[New-AzAutomationRunbook](./New-AzAutomationRunbook.md)
+
+[Remove-AzAutomationRunbook](./Remove-AzAutomationRunbook.md)
+
+[Set-AzAutomationRunbook](./Set-AzAutomationRunbook.md)
+
+[Start-AzAutomationRunbook](./Start-AzAutomationRunbook.md)
+
+

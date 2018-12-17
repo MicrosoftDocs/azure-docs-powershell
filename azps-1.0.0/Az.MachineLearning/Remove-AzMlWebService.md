@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning/remove-azmlwebservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzMlWebService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzMlWebService.md
 ---
 
 # Remove-AzMlWebService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a web service.
 
 ## SYNTAX
 
@@ -25,26 +27,24 @@ Remove-AzMlWebService -MlWebService <WebService> [-Force] [-DefaultProfile <IAzu
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Deletes a Azure Machine Learning web service referenced by resource group and name.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
 ```
-
-{{ Add example description here }}
+Remove-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -MlWebService
-The machine learning web service object.
+The web service to be removed.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web service.
+The name of the web service to be removed.
 
 ```yaml
 Type: System.String
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group for the Azure ML web service.
+The resource group of the web service.
 
 ```yaml
 Type: System.String
@@ -145,8 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -157,5 +156,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Void
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS

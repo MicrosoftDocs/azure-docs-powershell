@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssbootdiagnostic
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssBootDiagnostic.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssBootDiagnostic.md
 ---
 
 # Set-AzVmssBootDiagnostic
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the virtual machine scale set boot diagnostics profile.
 
 ## SYNTAX
 
@@ -18,26 +20,28 @@ Set-AzVmssBootDiagnostic [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Sets the virtual machine scale set boot diagnostics profile.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the boot diagnostics profile property for a VMSS
+```
+PS C:\> $vmss = New-AzVmssConfig -Location $loc -SkuCapacity 2 -SkuName 'Standard_A0'
+PS C:\> Set-AzVmssBootDiagnostic -VirtualMachineScaleSet $vmss -Enabled $true -StorageUri $storageUri;
+PS C:\> New-AzVmss -ResourceGroupName $rgname -Name "ContosoVMSS" -VirtualMachineScaleSet $vmss;
 ```
 
-{{ Add example description here }}
+This command sets boot diagnostics profile property for the VMSS named ContosoVMSS.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{Fill Enabled Description}}
+Whether boot diagnostics should be enabled on the virtual machine scale set.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageUri
-{{Fill StorageUri Description}}
+URI of the storage account to use for placing the console output and screenshot.
 
 ```yaml
 Type: System.String
@@ -77,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specifies the VMSS object.
+You can use the New-AzVmssConfig cmdlet to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -123,8 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

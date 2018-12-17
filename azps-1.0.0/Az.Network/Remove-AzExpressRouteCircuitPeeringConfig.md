@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 462F3EF7-4C15-41F8-853D-CDCC8E67673D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azexpressroutecircuitpeeringconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzExpressRouteCircuitPeeringConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzExpressRouteCircuitPeeringConfig.md
 ---
 
 # Remove-AzExpressRouteCircuitPeeringConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an ExpressRoute circuit peering configuration.
 
 ## SYNTAX
 
@@ -18,26 +21,27 @@ Remove-AzExpressRouteCircuitPeeringConfig [-Name <String>] -ExpressRouteCircuit 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzExpressRouteCircuitPeeringConfig** cmdlet removes an ExpressRoute circuit
+peering configuration.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a peering configuration from an ExpressRoute circuit
 ```
-
-{{ Add example description here }}
+$circuit = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg
+Remove-AzExpressRouteCircuitPeeringConfig -Name 'AzurePrivatePeering' -ExpressRouteCircuit $circuit
+Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-The ExpressRouteCircuit
+The ExpressRoute circuit containing the peering configuration to be removed.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Peering
+The name of the peering configuration to be removed.
 
 ```yaml
 Type: System.String
@@ -93,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,3 +110,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzExpressRouteCircuitPeeringConfig](Add-AzExpressRouteCircuitPeeringConfig.md)
+
+[Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)
+
+[New-AzExpressRouteCircuitPeeringConfig](New-AzExpressRouteCircuitPeeringConfig.md)
+
+[Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)

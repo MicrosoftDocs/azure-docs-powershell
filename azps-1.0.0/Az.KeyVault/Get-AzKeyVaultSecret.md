@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 8C9B33EE-10DE-4803-B76D-FE9FC2AC3372
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/get-azkeyvaultsecret
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultSecret.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultSecret.md
 ---
 
 # Get-AzKeyVaultSecret
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the secrets in a key vault.
 
 ## SYNTAX
 
@@ -67,26 +70,185 @@ Get-AzKeyVaultSecret [-ResourceId] <String> [-Name] <String> [-IncludeVersions]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzKeyVaultSecret** cmdlet gets secrets in a key vault.
+This cmdlet gets a specific secret or all the secrets in a key vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all current versions of all secrets in a key vault
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzKeyVaultSecret -VaultName 'Contoso'
+
+Vault Name   : contoso
+Name         : secret1
+Version      :
+Id           : https://contoso.vault.azure.net:443/secrets/secret1
+Enabled      : True
+Expires      : 4/6/2018 3:59:43 PM
+Not Before   :
+Created      : 4/5/2018 11:46:28 PM
+Updated      : 4/6/2018 11:30:17 PM
+Content Type :
+Tags         :
+
+Vault Name   : contoso
+Name         : secret2
+Version      :
+Id           : https://contoso.vault.azure.net:443/secrets/secret2
+Enabled      : True
+Expires      :
+Not Before   :
+Created      : 4/11/2018 11:45:06 PM
+Updated      : 4/11/2018 11:45:06 PM
+Content Type :
+Tags         :
 ```
 
-{{ Add example description here }}
+This command gets the current versions of all secrets in the key vault named Contoso.
+
+### Example 2: Get all versions of a specific secret
+```powershell
+PS C:\> Get-AzKeyVaultSecret -VaultName 'Contoso' -Name 'secret1' -IncludeVersions
+
+Vault Name   : contoso
+Name         : secret1
+Version      : 7128133570f84a71b48d7d0550deb74c
+Id           : https://contoso.vault.azure.net:443/secrets/secret1/7128133570f84a71b48d7d0550deb74c
+Enabled      : True
+Expires      : 4/6/2018 3:59:43 PM
+Not Before   :
+Created      : 4/5/2018 11:46:28 PM
+Updated      : 4/6/2018 11:30:17 PM
+Content Type :
+Tags         :
+
+Vault Name   : contoso
+Name         : secret1
+Version      : 5d1a74ba2c454439886fb8509b6cab3c
+Id           : https://contoso.vault.azure.net:443/secrets/secret1/5d1a74ba2c454439886fb8509b6cab3c
+Enabled      : True
+Expires      :
+Not Before   :
+Created      : 4/5/2018 11:44:50 PM
+Updated      : 4/5/2018 11:44:50 PM
+Content Type :
+Tags         :
+```
+
+This command gets all versions of the secret named secret1 in the key vault named Contoso.
+
+### Example 3: Get the current version of a specific secret
+```powershell
+PS C:\> Get-AzKeyVaultSecret -VaultName 'Contoso' -Name 'secret1'
+
+Vault Name   : contoso
+Name         : secret1
+Version      : 7128133570f84a71b48d7d0550deb74c
+Id           : https://contoso.vault.azure.net:443/secrets/secret1/7128133570f84a71b48d7d0550deb74c
+Enabled      : True
+Expires      : 4/6/2018 3:59:43 PM
+Not Before   :
+Created      : 4/5/2018 11:46:28 PM
+Updated      : 4/6/2018 11:30:17 PM
+Content Type :
+Tags         :
+```
+
+This command gets the current version of the secret named secret1 in the key vault named Contoso.
+
+### Example 4: Get a specific version of a specific secret
+```powershell
+PS C:\> Get-AzKeyVaultSecret -VaultName 'Contoso' -Name 'secret1' -Version '5d1a74ba2c454439886fb8509b6cab3c'
+
+Vault Name   : contoso
+Name         : secret1
+Version      : 5d1a74ba2c454439886fb8509b6cab3c
+Id           : https://contoso.vault.azure.net:443/secrets/secret1/5d1a74ba2c454439886fb8509b6cab3c
+Enabled      : True
+Expires      :
+Not Before   :
+Created      : 4/5/2018 11:44:50 PM
+Updated      : 4/5/2018 11:44:50 PM
+Content Type :
+Tags         :
+```
+
+This command gets a specific version of the secret named secret1 in the key vault named Contoso.
+
+### Example 5: Get the plain text value of the current version of a specific secret
+```powershell
+PS C:\> $secret = Get-AzKeyVaultSecret -VaultName 'Contoso' -Name 'ITSecret'
+PS C:\> Write-Host "Secret Value is:" $secret.SecretValueText
+
+Secret Value is: P@ssw0rd
+```
+
+These commands get the current version of a secret named ITSecret, and then displays the plain text value of that secret.
+
+### Example 6: Get all the secrets that have been deleted but not purged for this key vault.
+```powershell
+PS C:\> Get-AzKeyVaultSecret -VaultName 'Contoso' -InRemovedState
+
+Vault Name           : contoso
+Name                 : secret1
+Id                   : https://contoso.vault.azure.net:443/secrets/secret1
+Deleted Date         : 4/4/2018 8:51:58 PM
+Scheduled Purge Date : 7/3/2018 8:51:58 PM
+Enabled              : True
+Expires              :
+Not Before           :
+Created              : 4/4/2018 8:51:03 PM
+Updated              : 4/4/2018 8:51:03 PM
+Content Type         :
+Tags                 :
+
+Vault Name           : contoso
+Name                 : secret2
+Id                   : https://contoso.vault.azure.net:443/secrets/secret2
+Deleted Date         : 5/7/2018 7:56:34 PM
+Scheduled Purge Date : 8/5/2018 7:56:34 PM
+Enabled              : True
+Expires              :
+Not Before           :
+Created              : 4/6/2018 8:39:15 PM
+Updated              : 4/6/2018 10:11:24 PM
+Content Type         : 
+Tags                 :
+```
+
+This command gets all the secrets that have been previously deleted, but not purged, in the key vault named Contoso.
+
+### Example 7: Gets the secret ITSecret that has been deleted but not purged for this key vault.
+```powershell
+PS C:\> Get-AzKeyVaultSecret -VaultName 'Contoso' -KeyName 'secret1' -InRemovedState
+
+Vault Name           : contoso
+Name                 : secret1
+Version              : 689d23346e9c42a2a64f4e3d75094dcc
+Id                   : https://contoso.vault.azure.net:443/secrets/secret1/689d23346e9c42a2a64f4e3d75094dcc
+Deleted Date         : 4/4/2018 8:51:58 PM
+Scheduled Purge Date : 7/3/2018 8:51:58 PM
+Enabled              : True
+Expires              :
+Not Before           :
+Created              : 4/4/2018 8:51:03 PM
+Updated              : 4/4/2018 8:51:03 PM
+Content Type         :
+Tags                 :
+```
+
+This command gets the secret 'secret1' that has been previously deleted, but not purged, in the key vault named Contoso.
+This command will return metadata such as the deletion date, and the scheduled purging date of this deleted secret.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -96,7 +258,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-Specifies whether to include the versions of the secret in the output.
+Indicates that this cmdlet gets all versions of a secret.
+The current version of a secret is the first one on the list.
+If you specify this parameter you must also specify the *Name* and *VaultName* parameters.
+If you do not specify the *IncludeVersions* parameter, this cmdlet gets the current version of the secret with the specified *Name*.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -126,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-Specifies whether to show the previously deleted secrets in the output.
+Specifies whether to show the previously deleted secrets in the output
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,8 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Secret name.
-Cmdlet constructs the FQDN of a secret from vault name, currently selected environment and secret name.
+Specifies the name of the secret to get.
 
 ```yaml
 Type: System.String
@@ -184,8 +348,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of the key vault to which the secret belongs.
+This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name that this parameter specifies and your current environment.
 
 ```yaml
 Type: System.String
@@ -200,8 +364,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Secret version.
-Cmdlet constructs the FQDN of a secret from vault name, currently selected environment, secret name and secret version.
+Specifies the secret version.
+This cmdlet constructs the FQDN of a secret based on the key vault name, your currently selected environment, the secret name, and the secret version.
 
 ```yaml
 Type: System.String
@@ -216,8 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -238,3 +401,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzKeyVaultSecret](./Remove-AzKeyVaultSecret.md)
+
+[Undo-AzKeyVaultSecretRemoval](./Undo-AzKeyVaultSecretRemoval.md)
+
+[Set-AzKeyVaultSecret](./Set-AzKeyVaultSecret.md)
+

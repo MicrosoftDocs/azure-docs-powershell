@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: C6BB6E4D-6009-4796-866B-17115FDFA06D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/remove-azdatalakeanalyticscatalogcredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Remove-AzDataLakeAnalyticsCatalogCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Remove-AzDataLakeAnalyticsCatalogCredential.md
 ---
 
 # Remove-AzDataLakeAnalyticsCatalogCredential
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes an Azure Data Lake Analytics credential.
 
 ## SYNTAX
 
@@ -19,21 +22,23 @@ Remove-AzDataLakeAnalyticsCatalogCredential [-Account] <String> [-DatabaseName] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Remove-AzDataLakeAnalyticsCatalogCredential cmdlet deletes an Azure Data Lake Analytics catalog credential.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a credential
+```
+PS C:\> Remove-AzDataLakeAnalyticsCatalogCredential -AccountName "ContosoAdla" `
+                      -DatabaseName "DatabaseName" `
+                      -Name "CredName"
 ```
 
-{{ Add example description here }}
+This command removes the specified Data Lake Analytics catalog credential.
 
 ## PARAMETERS
 
 ### -Account
-The account name that contains the catalog to remove the credential from.
+Specifies the Data Lake Analytics account name.
 
 ```yaml
 Type: System.String
@@ -48,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the database to remove the credential from.
+Specifies the name of the database that holds the credential.
 
 ```yaml
 Type: System.String
@@ -63,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -93,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of credential to be removed.
+Specifies the name of the credential.
 
 ```yaml
 Type: System.String
@@ -108,7 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Indicates that this cmdlet does not wait for the operation to complete.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -139,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-Indicates that this delete operation should go through and also delete and drop all resources dependent on this credential
+Indicates that this delete operation should go through and also delete and drop all resources dependent on this credential.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -169,9 +176,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -185,8 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

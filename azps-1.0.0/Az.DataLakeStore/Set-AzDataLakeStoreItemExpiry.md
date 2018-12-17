@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/set-azdatalakestoreitemexpiry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreItemExpiry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreItemExpiry.md
 ---
 
 # Set-AzDataLakeStoreItemExpiry
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets or removes the expire time for a file in an Azure Data Lake Store account.
 
 ## SYNTAX
 
@@ -27,21 +29,39 @@ Set-AzDataLakeStoreItemExpiry [-Account] <String> [-Path] <DataLakeStorePathInst
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDataLakeStoreItemExpiry** cmdlet sets or removes the expire time for a file in an Azure Data Lake Store account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the expiration time for a file
+```
+PS C:\> Set-AzDataLakeStoreItemExpiry -AccountName "ContosoADL" -Path /myfile.txt -Expiration [DateTimeOffset]::Now.AddHours(2)
 ```
 
-{{ Add example description here }}
+Sets expiration on the file myfile.txt in account ContosoADL to be two hours from now.
+This will cause the file to expire (be marked for delete) in two hours.
+
+### Example 2: Remove the expiration on a file
+```
+PS C:\> Set-AzDataLakeStoreItemExpiry -AccountName "ContosoADL" -Path /myfile.txt
+```
+
+Removes any expiration that was previously set on file 'myfile.txt' in account 'ContosoADL'.
+This means the file will not automatically expire (be marked for delete) and will need to be manually deleted or set to expire again.
+
+### Example 3: Set expiration time for a file relative to now
+```
+PS C:\> Set-AdlStoreItemExpiry -Account "ContosoADL" -path /myfile.txt -RelativeFileExpiryOption RelativeToNow -RelativeTime 240000
+PS C:\> Set-AdlStoreItemExpiry -Account "ContosoADL" -path /myfile.txt -RelativeFileExpiryOption RelativeToCreationDate -RelativeTime 240000
+```
+
+The first command sets the expiration time of the file /myfile.txt 240 seconds relative to current time at server.
+The second command sets the expiration time of the file /myfile.txt 240 seconds relative to creation time at server.
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to perform the action in
+Specifies the Data Lake Store account name.
 
 ```yaml
 Type: System.String
@@ -56,12 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Expiration
-The expiration time for the specified file.
+The absolute expiration time for the specified file.
 If no value or set to MaxValue, the file will never expire.
 
 ```yaml
@@ -87,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The name of the firewall rule.
+Specifies the Data Lake Store path of the file item for which to set or remove expiry.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -102,8 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -RelativeFileExpiryOption
-Relative expiry options.
-RelativeToNow or RelativeToCreationDate are current options
+Relative expiry options. RelativeToNow or RelativeToCreationDate are current options
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+PathRelativeExpiryOptions
@@ -119,8 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -RelativeTime
-The relative time in milliseconds with respect to now or creation time.
-By default it will be zero.
+The relative time in milliseconds with respect to now or creation time
 
 ```yaml
 Type: System.Int64
@@ -166,8 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -186,5 +203,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItem
 
 ## NOTES
+Alias: Set-AdlStoreItemExpiry
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItem](./Get-AzDataLakeStoreItem.md)
+

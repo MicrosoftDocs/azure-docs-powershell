@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: 4EA01047-021C-4FA5-82F0-5102BA114BC2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzDataLakeAnalyticsAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzDataLakeAnalyticsAccount.md
 ---
 
 # Get-AzDataLakeAnalyticsAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about a Data Lake Analytics account.
 
 ## SYNTAX
 
@@ -30,26 +33,26 @@ Get-AzDataLakeAnalyticsAccount [[-ResourceGroupName] <String>] [-Name] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDataLakeAnalyticsAccount** cmdlet gets information about an Azure Data Lake Analytics account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get information about a Data Lake Analytics account
+```
+PS C:\>Get-AzDataLakeAnalyticsAccount -Name "ContosoAdlAccount"
 ```
 
-{{ Add example description here }}
+This command gets information about the account named ContosoAdlAccount.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -59,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific account.
+Specifies the name of the Data Lake Analytics account.
 
 ```yaml
 Type: System.String
@@ -74,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which want to retrieve the account.
+Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: System.String
@@ -101,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -112,6 +114,18 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSDataLakeAnalyticsAccount
 
+### Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSDataLakeAnalyticsAccountBasic
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzDataLakeAnalyticsAccount](./New-AzDataLakeAnalyticsAccount.md)
+
+[Remove-AzDataLakeAnalyticsAccount](./Remove-AzDataLakeAnalyticsAccount.md)
+
+[Set-AzDataLakeAnalyticsAccount](./Set-AzDataLakeAnalyticsAccount.md)
+
+[Test-AzDataLakeAnalyticsAccount](./Test-AzDataLakeAnalyticsAccount.md)
+
+

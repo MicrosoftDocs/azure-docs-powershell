@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: AFDE5ECD-29AB-4C91-98BF-1B8C9C3BB079
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchaccountkeys
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchAccountKeys.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchAccountKeys.md
 ---
 
 # Get-AzBatchAccountKeys
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the keys of a Batch account.
 
 ## SYNTAX
 
@@ -18,21 +21,32 @@ Get-AzBatchAccountKeys [-AccountName] <String> [-ResourceGroupName <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchAccountKeys** cmdlet gets the keys of an Azure Batch account in the current subscription.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get batch account keys and save it in $Context variable for use later
+```
+PS C:\>$Context = Get-AzBatchAccountKeys -AccountName myaccount
 ```
 
-{{ Add example description here }}
+This command gets the account details and stores it in a `$Context` object for use later.
+
+### Example 2: Get batch account keys and display them
+```
+PS C:\>$Context = Get-AzBatchAccountKeys -AccountName myaccount
+PS C:\>$Context.PrimaryAccountKey
+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMN==
+PS C:\>$Context.SecondaryAccountKey
+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMN==
+```
+
+This command gets the account keys and prints them to the console.
 
 ## PARAMETERS
 
 ### -AccountName
-The name of the Batch service account to query keys for.
+Specifies the name of the account for which this cmdlet gets keys.
 
 ```yaml
 Type: System.String
@@ -47,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the resource group that contains the account for which this cmdlet gets keys.
 
 ```yaml
 Type: System.String
@@ -77,8 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +104,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzBatchAccountKey](./New-AzBatchAccountKey.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: CAA3E6A9-7E1A-4D57-A269-0B2D3D9C3BEC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmsqlserverextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMSqlServerExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMSqlServerExtension.md
 ---
 
 # Get-AzVMSqlServerExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the settings for a SQL Server extension on a virtual machine.
 
 ## SYNTAX
 
@@ -18,26 +21,63 @@ Get-AzVMSqlServerExtension [-ResourceGroupName] <String> [-VMName] <String> [[-N
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMSqlServerExtension** cmdlet gets the settings of the SQL Server infrastructure as a service (IaaS) Agent on a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the settings of a SQL Server extension on a virtual machine
+```
+PS C:\> Get-AzVMSqlServerExtension -ResourceGroupName "ResourceGroup11" -VMName "ContosoVM07"
+ExtensionName        : SqlIaaSAgent
+Publisher            : Microsoft.SqlServer.Management
+Version              : 1.0
+State                : Enable
+RoleName             : VMName
+AutoPatchingSettings : Microsoft.WindowsAzure.Commands.ServiceManagement.IaaS.Extensions.AutoPatchingSettings
+AutoBackupSettings   : Microsoft.WindowsAzure.Commands.ServiceManagement.IaaS.Extensions.AutoBackupSettings
 ```
 
-{{ Add example description here }}
+This command gets the settings of the SQL Server extension on a virtual machine named ContosoVM07.
+
+### Example 2: Get the settings by using the pipeline
+```
+PS C:\> Get-AzVM -ServiceName "Service08" -Name "ContosoVM22" | Get-AzVMSqlServerExtension
+ExtensionName        : SqlIaaSAgent
+Publisher            : Microsoft.SqlServer.Management
+Version              : 1.0
+State                : Enable
+RoleName             : VMName
+AutoPatchingSettings : Microsoft.WindowsAzure.Commands.ServiceManagement.IaaS.Extensions.AutoPatchingSettings
+AutoBackupSettings   : Microsoft.WindowsAzure.Commands.ServiceManagement.IaaS.Extensions.AutoBackupSettings
+```
+
+This command gets the virtual machine named ContosoVM22 on the service Service08 by using the Get-AzVM cmdlet.
+The command passes the results to the current cmdlet by using the pipeline operator.
+The current command gets the settings of the SQL Server IaaS Agent on that virtual machine.
+
+### Example 3: Get the settings of specific SQL Server version
+```
+PS C:\> Get-AzVMSqlServerExtension -ResourceGroupName "ResourceGroup11" -VMName "ContosoVM07" -Version "1.0"
+ExtensionName        : SqlIaaSAgent
+Publisher            : Microsoft.SqlServer.Management
+Version              : 1.0
+State                : Enable
+RoleName             : VMName
+AutoPatchingSettings : Microsoft.WindowsAzure.Commands.ServiceManagement.IaaS.Extensions.AutoPatchingSettings
+AutoBackupSettings   : Microsoft.WindowsAzure.Commands.ServiceManagement.IaaS.Extensions.AutoBackupSettings
+```
+
+This command gets the settings of version 1.0 of the SQL Server extension on a virtual machine named ContosoVM07.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,9 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the ARM resource that represents the extension.
-The Set-AzureRmVMSqlServerExtension cmdlet sets this name to  'Microsoft.SqlServer.Management.SqlIaaSAgent', which is the same value used by Get-AzureRmVMSqlServerExtension.
-Specify this parameter only if you changed the default name in the Set cmdlet or used a different resource name in an ARM template.
+Specifies the name of the SQL Server the extension.
 
 ```yaml
 Type: System.String
@@ -64,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -79,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -94,8 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -108,3 +145,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+[Remove-AzVMSqlServerExtension](./Remove-AzVMSqlServerExtension.md)
+
+[Set-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
+
+

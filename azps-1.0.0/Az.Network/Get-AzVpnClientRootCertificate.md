@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 16754F70-9619-4F68-86E9-5C8B27812707
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvpnclientrootcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVpnClientRootCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVpnClientRootCertificate.md
 ---
 
 # Get-AzVpnClientRootCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about VPN root certificates.
 
 ## SYNTAX
 
@@ -18,26 +21,37 @@ Get-AzVpnClientRootCertificate [-VpnClientRootCertificateName <String>] -Virtual
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVpnClientRootCertificate** cmdlet returns information about the root certificates assigned to a virtual network gateway.
+Root certificates are X.509 certificates that identify your Root Certification Authority: all other certificates used on the gateway trust the root certificate.
+By default, **Get-AzVpnClientRootCertificate** returns information about all the root certificates assigned to a gateway.
+(Gateways can have more than one root certificate.) However, by including the **VpnClientRootCertificateName** parameter you can limit the returned data to a specific certificate.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get information about all root certificates
+```
+PS C:\>Get-AzVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup"
 ```
 
-{{ Add example description here }}
+This command gets information about all the root certificates assigned to a virtual network gateway named ContosoVirtualNetwork.
+
+### Example 2: Get information about specific root certificates
+```
+PS C:\>Get-AzVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup" -VpnClientRootCertificateName "ContosoRootClientCertificate"
+```
+
+This command is a variation of the command shown in Example 1.
+In this case, however, the *VpnClientRootCertificateName* parameter is included in order to limit the returned data to a specific root certificate: ContosoRootClientCertificate.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that the virtual network gateway is assigned to.
+Resource groups categorize items to help simplify inventory management and general Azure administration.
 
 ```yaml
 Type: System.String
@@ -62,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGatewayName
-The virtual network gateway name.
+Specifies the name of the virtual network gateway where the root certificate is assigned.
 
 ```yaml
 Type: System.String
@@ -77,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientRootCertificateName
-The vpnclient root certificate name.
+Specifies the name of the client root certificate that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -92,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +120,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzVpnClientRootCertificate](./Add-AzVpnClientRootCertificate.md)
+
+[New-AzVpnClientRootCertificate](./New-AzVpnClientRootCertificate.md)
+
+[Remove-AzVpnClientRootCertificate](./Remove-AzVpnClientRootCertificate.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azdosprotectionplan
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzDdosProtectionPlan.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzDdosProtectionPlan.md
 ---
 
 # New-AzDdosProtectionPlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a DDoS protection plan.
 
 ## SYNTAX
 
@@ -18,16 +20,71 @@ New-AzDdosProtectionPlan -ResourceGroupName <String> -Name <String> -Location <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzDdosProtectionPlan cmdlet creates a DDoS protection plan.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create and associate a DDoS protection plan with a new virtual network
+```
+D:\> $ddosProtectionPlan = New-AzDdosProtectionPlan -ResourceGroupName ResourceGroupName -Name DdosProtectionPlanName -Location "West US"
+D:\> $subnet = New-AzVirtualNetworkSubnetConfig -Name SubnetName -AddressPrefix 10.0.1.0/24
+D:\> $vnet = New-AzvirtualNetwork -Name VnetName -ResourceGroupName ResourceGroupName -Location "West US" -AddressPrefix 10.0.0.0/16 -DnsServer 8.8.8.8 -Subnet $subnet -EnableDdoSProtection -DdosProtectionPlanId $ddosProtectionPlan.Id
 ```
 
-{{ Add example description here }}
+First, we create a new DDoS Protection plan with the **New-AzDdosProtectionPlan** command.
+Then, we create a new virtual network with **New-AzvirtualNetwork** and we specify the ID of the newly created plan in the parameter **DdosProtectionPlanId**. In this case, since we are associating the virtual network with a plan, we can also specify the parameter **EnableDdoSProtection**.
+
+### Example 2: Create and associate a DDoS protection plan with an existing virtual network
+```
+D:\> $ddosProtectionPlan = New-AzDdosProtectionPlan -ResourceGroupName ResourceGroupName -Name DdosProtectionPlanName -Location "West US"
+D:\> $vnet = Get-AzVirtualNetwork -Name VnetName -ResourceGroupName ResourceGroupName
+D:\> $vnet.DdosProtectionPlan = New-Object Microsoft.Azure.Commands.Network.Models.PSResourceId
+D:\> $vnet.DdosProtectionPlan.Id = $ddosProtectionPlan.Id
+D:\> $vnet.EnableDdosProtection = $true
+D:\> $vnet | Set-AzVirtualNetwork
+
+
+Name                   : VnetName
+ResourceGroupName      : ResourceGroupName
+Location               : westus
+Id                     : /subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/virtualNetworks/VnetName
+Etag                   : W/"fbf41754-3c13-43fd-bb5b-fcc37d5e1cbb"
+ResourceGuid           : fcb7bc1e-ee0d-4005-b3f1-feda76e3756c
+ProvisioningState      : Succeeded
+Tags                   :
+AddressSpace           : {
+                           "AddressPrefixes": [
+                             "10.0.0.0/16"
+                           ]
+                         }
+DhcpOptions            : {
+                           "DnsServers": [
+                             "8.8.8.8"
+                           ]
+                         }
+Subnets                : [
+                           {
+                             "Name": "SubnetName",
+                             "Etag": "W/\"fbf41754-3c13-43fd-bb5b-fcc37d5e1cbb\"",
+                             "Id": "/subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/virtualNetworks/VnetName/subnets/SubnetName",
+                             "AddressPrefix": "10.0.1.0/24",
+                             "IpConfigurations": [],
+                             "ResourceNavigationLinks": [],
+                             "ServiceEndpoints": [],
+                             "ProvisioningState": "Succeeded"
+                           }
+                         ]
+VirtualNetworkPeerings : []
+EnableDdosProtection   : true
+DdosProtectionPlan     : {
+                           "Id": "/subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/ddosProtectionPlans/DdosProtectionPlanName"
+                         }
+EnableVmProtection     : false
+```
+
+First, we create a new DDoS Protection plan with the **New-AzDdosProtectionPlan** command.
+Second, we get the most updated version of the virtual network we want to associate with the plan. We update the property **DdosProtectionPlan** with a **PSResourceId** object containing a reference to the ID of the newly created plan. In this case, if we associate the virtual network with a DDoS protection plan, we can also set the flag **EnableDdosProtection** to true.
+Finally, we persist the new state by piping the local variable into **Set-AzVirtualNetwork**.
 
 ## PARAMETERS
 
@@ -50,9 +107,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -153,8 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -169,3 +225,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDdosProtectionPlan](./Get-AzDdosProtectionPlan.md)
+
+[Remove-AzDdosProtectionPlan](./Remove-AzDdosProtectionPlan.md)
+
+[New-AzVirtualNetwork](./New-AzVirtualNetwork.md)
+
+[Set-AzVirtualNetwork](./Set-AzVirtualNetwork.md)
+
+[Get-AzVirtualNetwork](./Get-AzVirtualNetwork.md)

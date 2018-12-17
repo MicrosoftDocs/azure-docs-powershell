@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+ms.assetid: 6477ADC3-0831-493D-8904-F1D787145DD3
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/start-azcdnendpoint
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Start-AzCdnEndpoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Start-AzCdnEndpoint.md
 ---
 
 # Start-AzCdnEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts a CDN endpoint.
 
 ## SYNTAX
 
@@ -25,21 +28,14 @@ Start-AzCdnEndpoint -CdnEndpoint <PSEndpoint> [-PassThru] [-DefaultProfile <IAzu
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-AzCdnEndpoint** cmdlet starts an Azure Content Delivery Network (CDN) endpoint.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CdnEndpoint
-The Azure CDN endpoint.
+Specifies the endpoint that this cmdlet starts.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
@@ -54,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-Azure CDN endpoint name.
+Specifies the name of the endpoint that this cmdlet starts.
 
 ```yaml
 Type: System.String
@@ -84,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Return object (if specified).
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-Azure CDN profile name.
+Specifies the name of the profile to which the endpoint belongs.
 
 ```yaml
 Type: System.String
@@ -114,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group of the Azure CDN profile.
+Specifies the name of the resource group to which the endpoint belongs.
 
 ```yaml
 Type: System.String
@@ -138,7 +135,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -154,14 +151,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -176,3 +172,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzCdnEndpoint](./Get-AzCdnEndpoint.md)
+
+[New-AzCdnEndpoint](./New-AzCdnEndpoint.md)
+
+[Remove-AzCdnEndpoint](./Remove-AzCdnEndpoint.md)
+
+[Set-AzCdnEndpoint](./Set-AzCdnEndpoint.md)
+
+[Stop-AzCdnEndpoint](./Stop-AzCdnEndpoint.md)
+
+

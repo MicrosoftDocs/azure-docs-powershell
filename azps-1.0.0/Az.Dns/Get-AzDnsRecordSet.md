@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
-online version:
+ms.assetid: 40179CF3-7896-4C45-BC18-4CB653B245B6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/get-azdnsrecordset
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Get-AzDnsRecordSet.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Get-AzDnsRecordSet.md
 ---
 
 # Get-AzDnsRecordSet
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a DNS record set.
 
 ## SYNTAX
 
@@ -25,26 +28,53 @@ Get-AzDnsRecordSet [-Name <String>] -Zone <DnsZone> [-RecordType <RecordType>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDnsRecordSet** cmdlet gets the Domain Name System (DNS) record set with the specified name and type, in the specified zone.
+If you do not specify the *Name* or *RecordType* parameters, this cmdlet returns all record sets of the specified type in the zone.
+If you specify the *RecordType* parameter but not the *Name* parameter, this cmdlet returns all record sets of the specified record type.
+You can use the pipeline operator to pass a **DnsZone** object to this cmdlet, or you can pass a **DnsZone** object as the *Zone* parameter, or alternatively you can specify the zone and resource group by name.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get record sets with a specified name and type
+```
+PS C:\>$RecordSet = Get-AzDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com" -Name "www" -RecordType A
 ```
 
-{{ Add example description here }}
+This command gets the record set of record type A named www in the specified resource group and zone, and then stores it in the $RecordSet variable.
+Because the *Name* and *RecordType* parameters are specified, only one **RecordSet** object is returned.
+
+### Example 2: Get record sets of a specified type
+```
+PS C:\>$RecordSets = Get-AzDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com" -RecordType A
+```
+
+This command gets an array of all record sets of record type A in the zone named myzone.com in the resource group named MyResourceGroup, and then stores them in the $RecordSets variable.
+
+### Example 3: Get all record sets in a zone
+```
+PS C:\>$RecordSets = Get-AzDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+```
+
+This command gets an array of all record sets in the zone named myzone.com in the resource group named MyResourceGroup, and then stores them in the $RecordSets variable.
+
+### Example 4: Get all record sets in a zone, using a DnsZone object
+```
+PS C:\> $Zone = Get-AzDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGroup"
+PS C:\> $RecordSets = Get-AzDnsRecordSet -Zone $Zone
+```
+
+This example is equivalent to Example 3 above.
+This time, the zone is specified using a zone object.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the records inthis record set (relative to the name of the zone and without a terminating dot).
+Specifies the name of the **RecordSet** to get.
+If you do not specify the *Name* parameter, all record sets of the specified type are returned.
 
 ```yaml
 Type: System.String
@@ -81,7 +112,19 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The type of DNS records in this record set.
+Specifies the type of DNS record that this cmdlet gets.
+Valid values are: 
+- A
+- AAAA
+- CNAME
+- MX
+- NS
+- PTR
+- SOA
+- SRV
+- TXT
+If you do not specify the *RecordType* parameter, you must also omit the *Name* parameter. 
+This cmdlet then returns all record sets in the zone (of all names and types).
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Dns.Models.RecordType]
@@ -97,7 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the zone belongs.
+Specifies the resource group that contains the DNS zone.
+The zone name must also be specified, using the *ZoneName* parameter.
+Alternatively, you can specify the zone and resource group by passing in a **DnsZone** object using the *Zone* parameter.
 
 ```yaml
 Type: System.String
@@ -112,7 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-The DnsZone object representing the zone in which to create the record set.
+Specifies the DNS zone that contains the record set that this cmdlet gets.
+Alternatively, you can specify the zone using the *ZoneName* and *ResourceGroupName* parameters.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Dns.DnsZone
@@ -127,7 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -ZoneName
-The zone in which to create the record set (without a terminating dot).
+Specifies the name of the DNS zone that contains the record set to get.
+The resource group containing the zone must also be specified, using the *ResourceGroupName* parameter.
+Alternatively, you can specify the zone and resource group by passing in a DNS Zone object using the *Zone* parameter.
 
 ```yaml
 Type: System.String
@@ -142,8 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,3 +207,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzDnsRecordSet](./New-AzDnsRecordSet.md)
+
+[Remove-AzDnsRecordSet](./Remove-AzDnsRecordSet.md)
+
+[Set-AzDnsRecordSet](./Set-AzDnsRecordSet.md)
+
+

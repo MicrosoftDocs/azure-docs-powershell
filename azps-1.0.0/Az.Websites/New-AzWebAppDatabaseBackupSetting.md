@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 22ACB910-0C41-4649-8D22-537E38CB4570
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/new-azwebappdatabasebackupsetting
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/New-AzWebAppDatabaseBackupSetting.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/New-AzWebAppDatabaseBackupSetting.md
 ---
 
 # New-AzWebAppDatabaseBackupSetting
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -18,22 +20,21 @@ New-AzWebAppDatabaseBackupSetting [-Name] <String> [-DatabaseType] <String> [-Co
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzWebAppDatabaseBackupSetting** cmdlet creates a new Azure Web App Backup setting.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:
+```
+PS C:\> New-AzWebAppDatabaseBackupSetting -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -ConnectionString "MyConnectionString" -DatabaseType "SqlAzure"
 ```
 
-{{ Add example description here }}
+Creates a database backup setting (connection string) of type SqlAzure for the specified app ContosoWebApp that is within resource group Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -ConnectionString
-The database's connection string.
-If the restore should happen to a new database, the database name inside is the new one.
+Connection String
 
 ```yaml
 Type: System.String
@@ -48,8 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStringName
-Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.
+Connection String Name
 
 ```yaml
 Type: System.String
@@ -64,8 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-The type of database, e.g.
-SqlAzure or MySql.
+Database Type ( e.g. "SqlAzure" or "MySql" )
 
 ```yaml
 Type: System.String
@@ -80,12 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -95,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the database.
+WebApp Name
 
 ```yaml
 Type: System.String
@@ -110,8 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

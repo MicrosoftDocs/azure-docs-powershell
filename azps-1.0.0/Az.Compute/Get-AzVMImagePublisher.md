@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 7311F66C-3370-4436-8030-6D98D42C3112
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmimagepublisher
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMImagePublisher.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMImagePublisher.md
 ---
 
 # Get-AzVMImagePublisher
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the VMImage publishers.
 
 ## SYNTAX
 
@@ -17,26 +20,26 @@ Get-AzVMImagePublisher -Location <String> [-DefaultProfile <IAzureContextContain
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMImagePublisher** cmdlet gets the VMImage publishers.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get VMImage publishers for a region
+```
+PS C:\> Get-AzVMImagePublisher -Location "Central US"
 ```
 
-{{ Add example description here }}
+This command gets the publishers of VMImage instances for the Central US region within your Azure profile.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -46,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+Specifies the location of the VMImage.
 
 ```yaml
 Type: System.String
@@ -61,8 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -75,3 +77,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMImage](./Get-AzVMImage.md)
+
+[Get-AzVMImageOffer](./Get-AzVMImageOffer.md)
+
+[Get-AzVMImageSku](./Get-AzVMImageSku.md)
+
+[Save-AzVMImage](./Save-AzVMImage.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 363FA51E-D075-4800-A4BE-BFF63FD25C90
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/get-azkeyvaultcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultCertificate.md
 ---
 
 # Get-AzKeyVaultCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a certificate from a key vault.
 
 ## SYNTAX
 
@@ -67,26 +70,125 @@ Get-AzKeyVaultCertificate [-ResourceId] <String> [-Name] <String> [-IncludeVersi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzKeyVaultCertificate** cmdlet gets the specified certificate or the versions of a certificate from a key vault in Azure Key Vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a certificate
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
+Name        : testCert01
+Certificate : [Subject] 
+                CN=contoso.com
+
+              [Issuer] 
+                CN=contoso.com
+
+              [Serial Number] 
+                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+              [Not Before] 
+                2/8/2016 3:11:45 PM
+
+              [Not After] 
+                8/8/2016 4:21:45 PM
+
+              [Thumbprint] 
+                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Thumbprint  : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Tags        : 
+Enabled     : True
+Created     : 2/8/2016 11:21:45 PM
+Updated     : 2/8/2016 11:21:45 PM
 ```
 
-{{ Add example description here }}
+This command gets the certificate named TestCert01 from the key vault named ContosoKV01.
+
+### Example 2: Get all the certificates that have been deleted but not purged for this key vault.
+```powershell
+PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -InRemovedState
+
+DeletedDate        : 5/24/2018 6:08:32 PM
+Enabled            : True
+Expires            : 11/24/2018 6:08:13 PM
+NotBefore          : 5/24/2018 5:58:13 PM
+Created            : 5/24/2018 6:08:13 PM
+Updated            : 5/24/2018 6:08:13 PM
+Tags               :
+VaultName          : contoso
+Name               : test1
+Version            :
+Id                 : https://contoso.vault.azure.net:443/certificates/test1
+
+ScheduledPurgeDate : 8/22/2018 6:10:47 PM
+DeletedDate        : 5/24/2018 6:10:47 PM
+Enabled            : True
+Expires            : 11/24/2018 6:09:44 PM
+NotBefore          : 5/24/2018 5:59:44 PM
+Created            : 5/24/2018 6:09:44 PM
+Updated            : 5/24/2018 6:09:44 PM
+Tags               :
+VaultName          : contoso
+Name               : test2
+Version            :
+Id                 : https://contoso.vault.azure.net:443/certificates/test2
+```
+
+This command gets all the certificates that have been previously deleted, but not purged, in the key vault named Contoso.
+
+### Example 3: Gets the certificate MyCert that has been deleted but not purged for this key vault.
+```powershell
+PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -Name 'test1' -InRemovedState
+
+Certificate        : [Subject]
+                       CN=contoso.com
+
+                     [Issuer]
+                       CN=contoso.com
+
+                     [Serial Number]
+                       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+                     [Not Before]
+                       5/24/2018 10:58:13 AM
+
+                     [Not After]
+                       11/24/2018 10:08:13 AM
+
+                     [Thumbprint]
+                       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+KeyId              : https://contoso.vault.azure.net:443/keys/test1/7fe415d5518240c1a6fce89986b8d334
+SecretId           : https://contoso.vault.azure.net:443/secrets/test1/7fe415d5518240c1a6fce89986b8d334
+Thumbprint         : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+RecoveryLevel      : Recoverable+Purgeable
+ScheduledPurgeDate : 8/22/2018 6:08:32 PM
+DeletedDate        : 5/24/2018 6:08:32 PM
+Enabled            : True
+Expires            : 11/24/2018 6:08:13 PM
+NotBefore          : 5/24/2018 5:58:13 PM
+Created            : 5/24/2018 6:08:13 PM
+Updated            : 5/24/2018 6:08:13 PM
+Tags               :
+VaultName          : contoso
+Name               : test1
+Version            : 7fe415d5518240c1a6fce89986b8d334
+Id                 : https://contoso.vault.azure.net:443/certificates/test1/7fe415d5518240c1a6fce89986b8d334
+```
+
+This command gets the certificate named 'MyCert' that has been previously deleted, but not purged, in the key vault named Contoso.
+This command will return metadata such as the deletion date, and the scheduled purging date of this deleted certificate.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -96,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePending
-Specifies whether to include the pending certificates in the output.
+Specifies whether to include pending certificates in the output
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -111,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-Specifies whether to include the versions of the certificate in the output.
+Indicates that this operation gets all versions of the certificate.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-Specifies whether to show the previously deleted certificates in the output.
+Specifies whether to include previously deleted certificates in the output
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -156,8 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Certificate name.
-Cmdlet constructs the FQDN of a certificate from vault name, currently selected environment and certificate name.
+Specifies the name of the certificate to get.
 
 ```yaml
 Type: System.String
@@ -199,8 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of a key vault.
 
 ```yaml
 Type: System.String
@@ -215,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of the certificate in key vault.
+Specifies the version of a certificate.
 
 ```yaml
 Type: System.String
@@ -230,8 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -252,3 +351,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzKeyVaultCertificate](./Add-AzKeyVaultCertificate.md)
+
+[Import-AzKeyVaultCertificate](./Import-AzKeyVaultCertificate.md)
+
+[Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
+
+[Undo-AzKeyVaultSecretCertificate](./Undo-AzKeyVaultSecretCertificate.md)

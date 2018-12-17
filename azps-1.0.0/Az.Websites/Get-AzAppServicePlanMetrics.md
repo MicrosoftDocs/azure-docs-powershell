@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 0AC0C4F9-4138-49EA-88CB-DC220DE7E9F4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/get-azappserviceplanmetrics
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzAppServicePlanMetrics.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzAppServicePlanMetrics.md
 ---
 
 # Get-AzAppServicePlanMetrics
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -27,21 +29,22 @@ Get-AzAppServicePlanMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [[-End
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAppServicePlanMetrics** gets App Service Plan metrics.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:
+```
+PS C:\>Get-AzAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics "CPU Percentage"
 ```
 
-{{ Add example description here }}
+This command gets CPU percentage of the App Service Plan 
+    per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The app service plan object
+App Service Plan Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan
@@ -56,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-Metrics end time
+End Time in UTC
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -86,8 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-Metric granularity.
-Allowed values: \[PT1M|PT1H|P1D\]
+Granularity
 
 ```yaml
 Type: System.String
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceDetails
-Whether or not to include instance details
+Instance Details
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metrics
-Names of web app metrics
+Metrics
 
 ```yaml
 Type: System.String[]
@@ -133,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+App Service Plan Name
 
 ```yaml
 Type: System.String
@@ -148,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -163,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Metrics start time
+Start Time in UTC
 
 ```yaml
 Type: System.DateTime
@@ -178,8 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

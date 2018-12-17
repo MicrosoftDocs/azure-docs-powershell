@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/get-aziothubcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzIotHubCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzIotHubCertificate.md
 ---
 
 # Get-AzIotHubCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists all certificates or a particular certificate contained within an Azure IoT Hub. 
 
 ## SYNTAX
 
@@ -31,16 +33,39 @@ Get-AzIotHubCertificate [-ResourceId] <String> [-CertificateName <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-x509ca-overview
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzIotHubCertificate -ResourceGroupName "myresourcegroup" -Name "myiothub"
+
+ResourceGroupName	Name		CertificateName Status     Expiry
+-----------------	----        ---------------	------     ------
+myresourcegroup		myiothub3	mycert1         Unverified 12/04/2027 13:12
+myresourcegroup     myiothub	mycert2         Unverified 12/04/2027 13:12
 ```
 
-{{ Add example description here }}
+List all certificates in MyIotHub
+
+### Example 2
+```
+PS C:\> Get-AzIotHubCertificate -ResourceGroupName "myresourcegroup" -Name "myiothub" -CertificateName "mycertificate"
+
+Id					: /subscriptions/377cxxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Devices/IotHubs/myiothub/certificates/mycertificate
+ResourceGroupName	: myresourcegroup
+Name				: myiothub
+CertificateName		: mycertificate
+Subject				: CN=mycertificate
+Thumbprint			: 38303FC7371EC13DDE3E18D712C8414EE50969C7
+Status				: Unverified
+Expiry				: 1/01/2027 16:01
+Created				: 1/01/2017 16:01
+Etag				: AAAAAAFpObE=
+```
+
+Show details about MyCertificate
 
 ## PARAMETERS
 
@@ -60,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -135,8 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 515933DF-5DB1-452A-808B-0198A3A2EA8B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/remove-azautomationaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Remove-AzAutomationAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Remove-AzAutomationAccount.md
 ---
 
 # Remove-AzAutomationAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an Automation account.
 
 ## SYNTAX
 
@@ -18,26 +21,27 @@ Remove-AzAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Forc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzAutomationAccount** cmdlet removes an Azure Automation account from a resource group.
+For more information about Automation accounts, see the New-AzAutomationAccount cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove an automation account
+```
+PS C:\>Remove-AzAutomationAccount -Name "ContosoAutomationAccount" -Force -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command removes an automation account named ContosoAutomationAccount without prompting for user validation.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+ps_force
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The automation account name.
+Specifies the name of the Automation account that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -77,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group from which this cmdlet removes an Automation account.
 
 ```yaml
 Type: System.String
@@ -101,7 +105,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -117,14 +121,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +140,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationAccount](./Get-AzAutomationAccount.md)
+
+[New-AzAutomationAccount](./New-AzAutomationAccount.md)
+
+[Set-AzAutomationAccount](./Set-AzAutomationAccount.md)
+
+

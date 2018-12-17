@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/remove-azservicebustopic
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Remove-AzServiceBusTopic.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Remove-AzServiceBusTopic.md
 ---
 
 # Remove-AzServiceBusTopic
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the topic from the specified Service Bus namespace.
 
 ## SYNTAX
 
@@ -31,16 +33,38 @@ Remove-AzServiceBusTopic [-ResourceId] <String> [-PassThru] [-AsJob] [-DefaultPr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzServiceBusTopic** cmdlet removes the topic from the specified Service Bus namespace.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Remove-AzServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1
 ```
 
-{{ Add example description here }}
+Removes the topic `SB-Topic_exampl1` from the namespace `SB-Example1`.
+
+### Example 2.1 - InputObject - Using Variable:
+```
+PS C:\> $inputobject = Get-AzServiceBusTopic <parmas>
+PS C:\> Remove-AzServiceBusTopic -InputObject $inputobject
+```
+
+### Example 2.2 - InputObject - Using Piping:
+```
+PS C:\> Get-AzServiceBusTopic <parmas> | Remove-AzServiceBusTopic
+```
+
+### Example 3.1 - ResourceId Using Variable:
+```
+PS C:\> $resourceid = Get-AzServiceBusTopic <params>
+PS C:\> Remove-AzServiceBusTopic -ResourceId $resourceid.Id
+```
+
+### Example 3.2 - ResourceId Using String value
+```
+PS C:\> Remove-AzServiceBusTopic -ResourceId "/subscriptions/xxxx-xxxxx-xxxxxx-xxxxx/resourceGroups/ResourceGroupName/providers/Microsoft.ServiceBus/namespaces/NamespaceName/topics/TopicName"
+```
 
 ## PARAMETERS
 
@@ -63,9 +87,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -120,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -196,8 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

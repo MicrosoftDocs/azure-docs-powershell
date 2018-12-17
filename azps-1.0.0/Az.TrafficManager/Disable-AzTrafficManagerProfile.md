@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
-online version:
+ms.assetid: B6E043FF-F4DD-44B7-BEAA-6B17C8F21D58
+online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/disable-aztrafficmanagerprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Disable-AzTrafficManagerProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Disable-AzTrafficManagerProfile.md
 ---
 
 # Disable-AzTrafficManagerProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables a Traffic Manager profile.
 
 ## SYNTAX
 
@@ -25,26 +28,40 @@ Disable-AzTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfile> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Disable-AzTrafficManagerProfile** cmdlet disables an Azure Traffic Manager profile.
+You can specify the profile object by using the pipeline or as a parameter value.
+Alternatively, you can specify the profile by using the *Name* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Disable a profile specified by name
+```
+PS C:\>Disable-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-{{ Add example description here }}
+This command disables the profile named ContosoProfile in ResourceGroup11.
+The command prompts you for confirmation.
+
+### Example 2: Disable a profile by using the pipeline
+```
+PS C:\>Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzTrafficManagerProfile -Force
+```
+
+This command gets the profile named ContosoProfile in ResourceGroup11.
+The command then passes that profile to the **Disable-AzTrafficManagerProfile** cmdlet by using the pipeline operator.
+That cmdlet disables that profile.
+The command specifies the *Force* parameter.
+Therefore, it does not prompt you for confirmation.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the profile.
+Specifies the name of the Traffic Manager profile that this cmdlet disables.
 
 ```yaml
 Type: System.String
@@ -84,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+Specifies the name of a resource group.
+This cmdlet disables a Traffic Manager profile in the group that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -99,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfile
-The profile.
+Specifies a **TrafficManagerProfile** object to disable.
+To obtain a **TrafficManagerProfile** object, use the Get-AzTrafficManagerProfile cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
@@ -123,7 +142,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -139,14 +158,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -159,3 +177,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Enable-AzTrafficManagerProfile](./Enable-AzTrafficManagerProfile.md)
+
+[Get-AzTrafficManagerProfile](./Get-AzTrafficManagerProfile.md)
+
+[New-AzTrafficManagerProfile](./New-AzTrafficManagerProfile.md)
+
+[Remove-AzTrafficManagerProfile](./Remove-AzTrafficManagerProfile.md)
+
+[Set-AzTrafficManagerProfile](./Set-AzTrafficManagerProfile.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/update-azcontainerregistrycredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Update-AzContainerRegistryCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Update-AzContainerRegistryCredential.md
 ---
 
 # Update-AzContainerRegistryCredential
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Regenerates a login credential for a container registry.
 
 ## SYNTAX
 
@@ -32,26 +34,31 @@ Update-AzContainerRegistryCredential -PasswordName <PasswordName> -ResourceId <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Update-AzContainerRegistryCredential cmdlet regenerates a login credential for a container registry.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Regenerate a login credential for a container registry
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Update-AzContainerRegistryCredential -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -PasswordName "Password"
+
+Username   Password                         Password2
+--------   --------                         ---------
+MyRegistry ++q/=K9+RH/+hwg2+3A=N+/w=J/12Ph9 //JRPkgxx+r+z/ztU=R//E==vum=pRKL
 ```
 
-{{ Add example description here }}
+This command regenerates a login credential for the specified container registry.
+Admin user has to be enabled for the container registry \`MyRegistry\` to regenerate login credentials.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,6 +84,7 @@ Accept wildcard characters: False
 
 ### -PasswordName
 The name of password to regenerate.
+Allowed values: password, password2.
 
 ```yaml
 Type: Microsoft.Azure.Management.ContainerRegistry.Models.PasswordName
@@ -146,7 +154,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -162,14 +170,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -184,3 +191,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistry](New-AzContainerRegistry.md)
+
+[Update-AzContainerRegistry](Update-AzContainerRegistry.md)
+
+[Get-AzContainerRegistryCredential](Get-AzContainerRegistryCredential.md)
+

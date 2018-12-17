@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/set-azeventhubnamespace
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzEventHubNamespace.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzEventHubNamespace.md
 ---
 
 # Set-AzEventHubNamespace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the specified Event Hubs namespace.
 
 ## SYNTAX
 
@@ -28,16 +30,23 @@ Set-AzEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Locatio
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Set-AzEventHubNamespace cmdlet updates the properties of the specified Event Hubs namespace.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location "WestUS" -State Created
 ```
 
-{{ Add example description here }}
+Updates the state of namespace \`MyNamespaceName\` to Created .
+
+### Example 2
+```
+PS C:\> Set-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location "WestUS" -State Created -EnableAutoInflate -MaximumThroughputUnits 10
+```
+
+Updates the state of namespace \`MyNamespaceName\` with AutoInflate = enabled and MaximumThroughputUnits = 10
 
 ## PARAMETERS
 
@@ -45,9 +54,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -225,8 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -234,7 +242,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System.Nullable`1[[Microsoft.Azure.Commands.EventHub.Models.NamespaceState, Microsoft.Azure.Commands.EventHub, Version=0.6.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Commands.EventHub.Models.NamespaceState, Microsoft.Azure.PowerShell.Cmdlets.EventHub, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ### System.Collections.Hashtable
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 3BCEADF3-15DC-4033-A94A-4C8B4F5E7340
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/get-azwebappslotmetrics
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzWebAppSlotMetrics.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzWebAppSlotMetrics.md
 ---
 
 # Get-AzWebAppSlotMetrics
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets metrics for an Azure Web App slot.
 
 ## SYNTAX
 
@@ -27,26 +30,27 @@ Get-AzWebAppSlotMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [[-EndTime
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzWebAppSlotMetrics** gets Web App metrics for the specified slot.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["Requests"]
 ```
 
-{{ Add example description here }}
+This command gets Request of the specified Web App 
+    per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -56,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-Metrics end time
+End Time in UTC
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -71,8 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-Metric granularity.
-Allowed values: \[PT1M|PT1H|P1D\]
+Granularity
 
 ```yaml
 Type: System.String
@@ -87,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceDetails
-Whether or not to include instance details
+Instance Details
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -102,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metrics
-Names of web app metrics
+Metrics
 
 ```yaml
 Type: System.String[]
@@ -117,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+WebApp Name
 
 ```yaml
 Type: System.String
@@ -132,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -147,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+WebApp Slot Name
 
 ```yaml
 Type: System.String
@@ -162,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Metrics start time
+Start Time in UTC
 
 ```yaml
 Type: System.DateTime
@@ -177,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+WebApp Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.PSSite
@@ -192,8 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -208,3 +210,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAppServicePlanMetrics](./Get-AzAppServicePlanMetrics.md)
+
+[Get-AzWebApp](./Get-AzWebApp.md)
+
+[Get-AzWebAppSlot](./Get-AzWebAppSlot.md)

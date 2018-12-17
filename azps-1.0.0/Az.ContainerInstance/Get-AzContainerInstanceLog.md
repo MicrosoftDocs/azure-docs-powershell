@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerInstance.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.dll-Help.xml
 Module Name: Az.ContainerInstance
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerinstance/get-azcontainerinstancelog
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Get-AzContainerInstanceLog.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Get-AzContainerInstanceLog.md
 ---
 
 # Get-AzContainerInstanceLog
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get the logs of a container instance in a container group.
 
 ## SYNTAX
 
@@ -31,16 +33,55 @@ Get-AzContainerInstanceLog -ResourceId <String> [-Name <String>] [-Tail <Int32>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzContainerInstanceLog** cmdlet gets the logs of a container in a container group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the tail log of a container instance
+```
+PS C:\> Get-AzContainerInstanceLog -ResourceGroupName demo -ContainerGroupName mycontainer -Name container1
+
+Log line 1.
+Log line 2.
+Log line 3.
+Log line 4.
 ```
 
-{{ Add example description here }}
+Get the log from `container1` in container group `mycontainer`. By default, it will return up to 4MB log content.
+
+### Example 2: Get the tail log of a container instance that has the same name as the container group
+```
+PS C:\> Get-AzContainerInstanceLog -ResourceGroupName demo -ContainerGroupName mycontainer
+
+Log line 1.
+Log line 2.
+Log line 3.
+Log line 4.
+```
+
+Get the log from `mycontainer` in container group `mycontainer`. By default, it will return up to 4MB log content.
+
+### Example 3: Get the tail 2 lines of log of a container instance
+```
+PS C:\> Get-AzContainerInstanceLog -ResourceGroupName demo -ContainerGroupName mycontainer -Name container1 -Tail 2
+
+Log line 3.
+Log line 4.
+```
+
+Get the tail 2 lines of log from `container1` in container group `mycontainer`.
+
+### Example 4: Get the tail log of a container instance in a piped in container group
+```
+PS C:\> Get-AzContainerGroup -ResourceGroupName demo -Name mycontainer | Get-AzContainerInstanceLog
+
+Log line 1.
+Log line 2.
+Log line 3.
+Log line 4.
+```
+
+Get the log from `mycontainer` in piped in container group `mycontainer`. By default, it will return up to 4MB log content.
 
 ## PARAMETERS
 
@@ -60,12 +101,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -152,8 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

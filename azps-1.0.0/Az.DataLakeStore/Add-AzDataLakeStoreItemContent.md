@@ -1,39 +1,41 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: B008028D-27FC-4469-BE71-54F7218C068B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/add-azdatalakestoreitemcontent
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Add-AzDataLakeStoreItemContent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Add-AzDataLakeStoreItemContent.md
 ---
 
 # Add-AzDataLakeStoreItemContent
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds content to an item in a Data Lake Store.
 
 ## SYNTAX
 
 ```
 Add-AzDataLakeStoreItemContent [-Account] <String> [-Path] <DataLakeStorePathInstance> [-Value] <Object>
- [[-Encoding] <FileSystemCmdletProviderEncoding>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [[-Encoding] <Encoding>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzDataLakeStoreItemContent** cmdlet adds content to an item in an Azure Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add content to a file
+```
+PS C:\>Add-AzDataLakeStoreItemContent -AccountName "ContosoADLS" -Path /abc/myFile.txt -Value "My content here"
 ```
 
-{{ Add example description here }}
+This command adds content to the file myFile.txt.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -48,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,14 +65,24 @@ Accept wildcard characters: False
 ```
 
 ### -Encoding
-Optionally indicates the encoding for the content being uploaded as part of 'Value'.
-Default is UTF8
+Specifies the encoding for the item to create.
+The acceptable values for this parameter are:
+- Unknown
+- String
+- Unicode
+- Byte
+- BigEndianUnicode
+- UTF8
+- UTF7
+- Ascii
+- Default
+- Oem
+- BigEndianUTF32
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataLakeStore.Models.FileSystemCmdletProviderEncoding
+Type: System.Text.Encoding
 Parameter Sets: (All)
 Aliases:
-Accepted values: Unknown, String, Unicode, Byte, BigEndianUnicode, UTF8, UTF7, UTF32, Ascii, Default, Oem, BigEndianUTF32
 
 Required: False
 Position: 3
@@ -80,8 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account that should be appended to.
-Can only be a file in the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of the item to modify, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -96,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The content, as bytes, that should be appended to the file specified.
+Specifies the content to add to the item.
 
 ```yaml
 Type: System.Object
@@ -111,8 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,7 +132,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Object
 
-### Microsoft.Azure.Commands.DataLakeStore.Models.FileSystemCmdletProviderEncoding
+### System.Text.Encoding
 
 ## OUTPUTS
 
@@ -131,3 +141,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItemContent](./Get-AzDataLakeStoreItemContent.md)
+
+

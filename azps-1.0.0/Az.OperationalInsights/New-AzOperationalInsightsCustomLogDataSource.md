@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 6A08AF7C-1E18-40A1-B21E-12F94823D304
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/new-azoperationalinsightscustomlogdatasource
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/New-AzOperationalInsightsCustomLogDataSource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/New-AzOperationalInsightsCustomLogDataSource.md
 ---
 
 # New-AzOperationalInsightsCustomLogDataSource
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Defines a custom log collection policy.
 
 ## SYNTAX
 
@@ -27,21 +30,14 @@ New-AzOperationalInsightsCustomLogDataSource [-Workspace] <PSWorkspace> [-Name] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzOperationalInsightsCustomLogDataSource** cmdlet defines a custom log collection policy.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CustomLogRawJson
-The azure subscription Id.
+Specifies the custom collection policy as a raw JavaScript Object Notation (JSON) string.
 
 ```yaml
 Type: System.String
@@ -56,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Don't ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -86,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The data source name.
+Specifies a name for the data source.
 
 ```yaml
 Type: System.String
@@ -101,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group that contains computers.
 
 ```yaml
 Type: System.String
@@ -116,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Workspace
-The workspace that will contain the data source.
+Specifies a workspace in which this cmdlet operates.
 
 ```yaml
 Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
@@ -131,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceName
-The name of the workspace that will contain the data source.
+Specifies the name of a workspace in which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -155,7 +151,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -171,14 +167,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -193,3 +188,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AzOperationalInsightsLinuxCustomLogCollection](./Disable-AzOperationalInsightsLinuxCustomLogCollection.md)
+
+[Enable-AzOperationalInsightsLinuxCustomLogCollection](./Enable-AzOperationalInsightsLinuxCustomLogCollection.md)
+
+

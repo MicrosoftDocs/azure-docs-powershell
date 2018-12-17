@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: BD32B909-296B-4E46-A24F-6E2BD4B9764B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationJob.md
 ---
 
 # Get-AzAutomationJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Automation runbook jobs.
 
 ## SYNTAX
 
@@ -33,21 +36,35 @@ Get-AzAutomationJob -RunbookName <String> [-Status <String>] [-StartTime <DateTi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationJob** cmdlet gets runbook jobs in Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a specific runbook job
+```
+PS C:\>Get-AzAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b647
 ```
 
-{{ Add example description here }}
+This command gets the job that has the specified GUID.
+
+### Example 2: Get all jobs for a runbook
+```
+PS C:\>Get-AzAutomationJob -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -RunbookName "Runbook02"
+```
+
+This command gets all jobs associated with a runbook named Runbook02.
+
+### Example 3: Get all running jobs
+```
+PS C:\>Get-AzAutomationJob -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -Status "Running"
+```
+
+This command gets all running jobs in the Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account for which this cmdlet gets jobs.
 
 ```yaml
 Type: System.String
@@ -62,12 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-Filter jobs so that job end time \<= EndTime.
+Specifies the end time for a job as a **DateTimeOffset** object.
+You can specify a string that can be converted to a valid **DateTimeOffset**.
+This cmdlet gets jobs that have an end time at or before the value that this parameter specifies.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -92,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The job id.
+Specifies the ID of a job that this cmdlet gets.
 
 ```yaml
 Type: System.Guid
@@ -107,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group in which this cmdlet gets jobs.
 
 ```yaml
 Type: System.String
@@ -122,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunbookName
-The runbook name of the job.
+Specifies the name of a runbook for which this cmdlet gets jobs.
 
 ```yaml
 Type: System.String
@@ -137,7 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Filter jobs so that job start time \>= StartTime.
+Specifies the start time of a job as a **DateTimeOffset** object.
+This cmdlet gets jobs that have a start time at or after the value that this parameter specifies.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -152,7 +172,20 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The runbook name of the job.
+Specifies the status of a job.
+This cmdlet gets jobs that have a status matching this parameter.
+Valid values are: 
+- Activating
+- Completed
+- Failed
+- Queued
+- Resuming
+- Running
+- Starting
+- Stopped
+- Stopping
+- Suspended
+- Suspending
 
 ```yaml
 Type: System.String
@@ -168,8 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -184,3 +216,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationJobOutput](./Get-AzAutomationJobOutput.md)
+
+[Resume-AzAutomationJob](./Resume-AzAutomationJob.md)
+
+[Stop-AzAutomationJob](./Stop-AzAutomationJob.md)
+
+[Suspend-AzAutomationJob](./Suspend-AzAutomationJob.md)
+
+

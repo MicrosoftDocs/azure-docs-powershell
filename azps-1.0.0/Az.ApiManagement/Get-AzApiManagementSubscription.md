@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 227EF8A2-E04A-4F6B-B66E-E77F1276A7E4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementsubscription
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementSubscription.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementSubscription.md
 ---
 
 # Get-AzApiManagementSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets subscriptions.
 
 ## SYNTAX
 
@@ -37,22 +40,46 @@ Get-AzApiManagementSubscription -Context <PsApiManagementContext> [-ProductId <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementSubscription** cmdlet gets a specified subscription, or all subscriptions, if no subscription is specified.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all subscriptions
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementSubscription -Context $apimContext
 ```
 
-{{ Add example description here }}
+This command gets all subscriptions.
+
+### Example 2: Get a subscription with a specified ID
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789"
+```
+
+This command gets a subscription by ID.
+
+### Example 3: Get all subscriptions for a user
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementSubscription -Context $apimContext -UserId "777"
+```
+
+This command gets a user's subscriptions.
+
+### Example 4: Get all subscriptions for a product
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementSubscription -Context $apimContext -ProductId "999"
+```
+
+This command gets all subscriptions for the product.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -67,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,9 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Product identifier.
-If specified will try to find all subscriptions by the product identifier.
-This parameter is optional.
+Specifies a product identifier.
+If specified, this cmdlet finds all subscriptions by the product identifier.
 
 ```yaml
 Type: System.String
@@ -99,9 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Subscription identifier.
-If specified will try to find subscription by the identifier.
-This parameter is optional.
+Specifies a subscription identifier.
+If specified, this cmdlet finds subscription by the identifier.
 
 ```yaml
 Type: System.String
@@ -116,9 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-User identifier.
-If specified will try to find all subscriptions by the user identifier.
-This parameter is optional.
+Specifies a user identifier.
+If specified, this cmdlet finds all subscriptions by the user identifier.
 
 ```yaml
 Type: System.String
@@ -133,8 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -149,3 +172,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementSubscription](./New-AzApiManagementSubscription.md)
+
+[Remove-AzApiManagementSubscription](./Remove-AzApiManagementSubscription.md)
+
+[Set-AzApiManagementSubscription](./Set-AzApiManagementSubscription.md)
+
+

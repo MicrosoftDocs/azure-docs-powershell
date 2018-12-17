@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: C39ACCAC-2BFF-48D0-95EA-D5B402D74D46
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlserver
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlServer.md
 ---
 
 # Get-AzSqlServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns information about SQL Database servers.
 
 ## SYNTAX
 
@@ -18,26 +21,98 @@ Get-AzSqlServer [[-ResourceGroupName] <String>] [[-ServerName] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlServer** cmdlet returns information about one or more Azure SQL Database servers.
+Specify the name of a server to see information for only that server.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all instances of SQL Server assigned to a resource group
+```
+PS C:\>Get-AzSqlServer -ResourceGroupName "ResourceGroup01"
+ResourceGroupName        : resourcegroup01
+ServerName               : server01
+Location                 : Central US
+SqlAdministratorLogin    : adminLogin
+SqlAdministratorPassword :
+ServerVersion            : 12.0
+Tags                     :
+Identity                 :
+FullyQualifiedDomainName : server01.database.windows.net
+
+ResourceGroupName        : resourcegroup01
+ServerName               : server02
+Location                 : West US
+SqlAdministratorLogin    : adminLogin
+SqlAdministratorPassword :
+ServerVersion            : 12.0
+Tags                     :
+Identity                 :
+FullyQualifiedDomainName : server02.database.windows.net
 ```
 
-{{ Add example description here }}
+This command gets information about all the Azure SQL Database servers assigned to the resource group ResourceGroup01.
+
+### Example 2: Get information about an Azure SQL Database server
+```
+PS C:\>Get-AzSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+ResourceGroupName        : resourcegroup01
+ServerName               : server01
+Location                 : Central US
+SqlAdministratorLogin    : adminLogin
+SqlAdministratorPassword :
+ServerVersion            : 12.0
+Tags                     :
+Identity                 :
+FullyQualifiedDomainName : server01.database.windows.net
+```
+
+This command gets information about the Azure SQL Database server named Server01.
+
+### Example 3: Get all instances of SQL Server in the subscription
+```
+PS C:\>Get-AzResourceGroup | Get-AzSqlServer
+ResourceGroupName        : resourcegroup01
+ServerName               : server01
+Location                 : Central US
+SqlAdministratorLogin    : adminLogin
+SqlAdministratorPassword :
+ServerVersion            : 12.0
+Tags                     :
+Identity                 :
+FullyQualifiedDomainName : server01.database.windows.net
+
+ResourceGroupName        : resourcegroup01
+ServerName               : server02
+Location                 : West US
+SqlAdministratorLogin    : adminLogin
+SqlAdministratorPassword :
+ServerVersion            : 12.0
+Tags                     :
+Identity                 :
+FullyQualifiedDomainName : server02.database.windows.net
+
+ResourceGroupName        : resourcegroup02
+ServerName               : server03
+Location                 : East US
+SqlAdministratorLogin    : adminLogin
+SqlAdministratorPassword :
+ServerVersion            : 12.0
+Tags                     :
+Identity                 :
+FullyQualifiedDomainName : server03.database.windows.net
+```
+
+This command gets information about all the Azure SQL Database servers in the current subscription.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which servers are assigned.
 
 ```yaml
 Type: System.String
@@ -62,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-SQL Database server name.
+Specifies the name of the server that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -86,7 +161,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -102,14 +177,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +196,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzSqlServer](./New-AzSqlServer.md)
+
+[Remove-AzSqlServer](./Remove-AzSqlServer.md)
+
+[Set-AzSqlServer](./Set-AzSqlServer.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+
+

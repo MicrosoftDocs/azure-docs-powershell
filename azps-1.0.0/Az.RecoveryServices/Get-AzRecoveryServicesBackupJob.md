@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 12F8A120-7282-4844-90E0-1C3393336E8A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/get-azrecoveryservicesbackupjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupJob.md
 ---
 
 # Get-AzRecoveryServicesBackupJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Backup jobs.
 
 ## SYNTAX
 
@@ -19,27 +22,64 @@ Get-AzRecoveryServicesBackupJob [[-Status] <JobStatus>] [[-Operation] <JobOperat
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesBackupJob** cmdlet gets Azure Backup jobs for a specific vault.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all in-progress jobs
+```
+PS C:\>$Joblist = Get-AzRecoveryservicesBackupJob -Status Inprogress
+PS C:\> $Joblist[0]
+WorkloadName     Operation            Status               StartTime                 EndTime                                             
+------------     ---------            ------               ---------                 -------                                             
+V2VM             Backup               InProgress           4/23/2016 5:00:30 PM      1/1/2001 12:00:00
 ```
 
-{{ Add example description here }}
+The first command gets status of an in-progress job as an array, and then stores it in the $Joblist variable.
+The second command displays the first item in the $Joblist array.
+
+### Example 2: Get all failed jobs in the last 7 days
+```
+PS C:\>Get-AzRecoveryServicesBackupJob -From (Get-Date).AddDays(-7).ToUniversalTime() -Status Failed
+```
+
+This command gets failed jobs from the last week in the vault.
+The *From* parameter specifies a time seven days in the past specified in UTC.
+The command does not specify a value for the *To* parameter.
+Therefore, it uses the default value of the current time.
+
+### Example 3: Get an in-progress job and wait for completion
+```
+PS C:\> 
+$Jobs = Get-AzRecoveryServicesBackupJob -Status InProgress
+$Job = $Jobs[0]
+    while ( $Job.Status -ne Completed )
+    {
+       Write-Host "Waiting for completion..."
+       Start-Sleep -Seconds 10
+       $job = Get-AzBackAzureRmRecoveryServicesBackupJob  -Job $Job
+    }
+    Write-Host "Done!"
+    Waiting for completion... 
+    Waiting for completion... 
+    Waiting for completion... 
+    Done!
+```
+
+This script polls the first job that is currently in progress until the job has completed.
 
 ## PARAMETERS
 
 ### -BackupManagementType
-Filter value for Backup Management Type of job.
+Specifies the Backup management type.
+Currently, only AzureVM, AzureStorage is supported.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType]
 Parameter Sets: (All)
 Aliases:
-Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
+Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL, AzureStorage
 
 Required: False
 Position: Named
@@ -49,12 +89,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +104,10 @@ Accept wildcard characters: False
 ```
 
 ### -From
-Beginning value of time range for which jobs have to be fetched.
+Specifies the start, as a **DateTime** object, of a time range for the jobs that this cmdlet gets.
+To obtain a **DateTime** object, use the Get-Date cmdlet.
+For more information about **DateTime** objects, type `Get-Help Get-Date`.
+Use UTC format for dates.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -79,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Job
-Job whose latest object has to be fetched.
+Specifies the name of the Backup job to get.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
@@ -94,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-Filter value for Id of job.
+Specifies the ID of a job that this cmdlet gets.
+The ID is the InstanceId property of an **AzureRmRecoveryServicesBackupJob** object.
+To obtain an **AzureRmRecoveryServicesBackupJob** object, use Get-AzRecoveryServicesBackupJob.
 
 ```yaml
 Type: System.String
@@ -109,7 +154,15 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-Filter value for type of job.
+Specifies an operation of the jobs that this cmdlet gets.
+The acceptable values for this parameter are:
+- Backup
+- ConfigureBackup
+- DeleteBackupData
+- Register
+- Restore
+- UnProtect
+- Unregister
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobOperation]
@@ -125,7 +178,14 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Filter value for status of job.
+Specifies a status of the jobs that this cmdlet gets.
+The acceptable values for this parameter are:
+- InProgress
+- Failed
+- Cancelled
+- Cancelling
+- Completed
+- CompletedWithWarnings
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobStatus]
@@ -141,7 +201,10 @@ Accept wildcard characters: False
 ```
 
 ### -To
-Ending value of time range for which jobs have to be fetched.
+Specifies the end, as a **DateTime** object, of a time range for the jobs that this cmdlet gets.
+The default value is the current system time.
+If you specify this parameter, you must also specify the *From* parameter.
+Use UTC format for dates.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -171,8 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -185,3 +247,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupJobDetails](./Get-AzRecoveryServicesBackupJobDetails.md)
+
+[Stop-AzRecoveryServicesBackupJob](./Stop-AzRecoveryServicesBackupJob.md)
+
+[Wait-AzRecoveryServicesBackupJob](./Wait-AzRecoveryServicesBackupJob.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: D5254218-8B3B-4DE2-9480-D65EE5483018
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmimage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMImage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMImage.md
 ---
 
 # Get-AzVMImage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets all the versions of a VMImage.
 
 ## SYNTAX
 
@@ -25,26 +28,26 @@ Get-AzVMImage -Location <String> -PublisherName <String> -Offer <String> -Skus <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMImage** cmdlet gets all the versions of a VMImage.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get VMImage objects
+```
+PS C:\> Get-AzVMImage -Location "Central US" -PublisherName "MicrosoftWindowsServer" -Offer "windowsserver" -Skus "2012-R2-Datacenter"
 ```
 
-{{ Add example description here }}
+This command gets all the versions of VMImage that match the specified values.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterExpression
-{{Fill FilterExpression Description}}
+Specifies a filter expression.
 
 ```yaml
 Type: System.String
@@ -69,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+Specifies the location of a VMImage.
 
 ```yaml
 Type: System.String
@@ -84,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Offer
-{{Fill Offer Description}}
+Specifies the type of VMImage offer.
+To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
 
 ```yaml
 Type: System.String
@@ -99,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherName
-{{Fill PublisherName Description}}
+Specifies the publisher of a VMImage.
+To obtain an image publisher, use the Get-AzVMImagePublisher cmdlet.
 
 ```yaml
 Type: System.String
@@ -114,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -Skus
-{{Fill Skus Description}}
+Specifies a VMImage SKU.
+To obtain an SKU, use the Get-AzVMImageSku cmdlet.
 
 ```yaml
 Type: System.String
@@ -129,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-{{Fill Version Description}}
+Specifies the version of the VMImage.
 
 ```yaml
 Type: System.String
@@ -144,8 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,3 +165,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMImageOffer](./Get-AzVMImageOffer.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+[Get-AzVMImageSku](./Get-AzVMImageSku.md)
+
+[Save-AzVMImage](./Save-AzVMImage.md)
+
+

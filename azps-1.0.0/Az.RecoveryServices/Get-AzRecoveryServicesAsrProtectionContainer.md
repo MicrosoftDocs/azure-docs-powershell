@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/get-azrecoveryservicesasrprotectioncontainer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrProtectionContainer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrProtectionContainer.md
 ---
 
 # Get-AzRecoveryServicesAsrProtectionContainer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets ASR protection containers in the Recovery Services vault.
 
 ## SYNTAX
 
@@ -31,26 +33,61 @@ Get-AzRecoveryServicesAsrProtectionContainer -FriendlyName <String> -Fabric <ASR
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesAsrProtectionContainer** cmdlet gets Azure Site Recovery protection containers in the Recovery Services vault.
+A protection container is a logical container for protectable(discovered) and protected objects such as virtual machines.
+Replication policies define replication settings for protected items and can be associated with a protection container and applied to a protectable item.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $ProtectionContainers = Get-AzRecoveryServicesAsrProtectionContainer -Fabric $fabric
 ```
 
-{{ Add example description here }}
+List of protection container in fabric $fabric.
+
+### Example 2
+```
+PS C:\> Get-AzRecoveryServicesAsrProtectionContainer -Name xxxxx  -Fabric $fabric
+FriendlyName                : xxxxxxxx
+Name                        : xxxxx
+ID                          : /Subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/xxxxxxxxxxxxxxx/providers/Microsoft.RecoveryServices/vaults/xxxxxxxxxx/replicationFabrics/xxxxxxxxxxxxxxxxxxxxxxxxx/replicationProtectionContainers/xxxxxxxxxxxxxxxxxxxxxxxxx
+Type                        : Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers
+FabricFriendlyName          : xxxxxxxxxxxxxxxxxxxxxxxxx
+FabricType                  : VMware
+Role                        : Primary
+AvailablePolicies           : {V2aTestPolicy, v2ahydra, v2aswag-failback, v2aswag}
+ProtectionContainerMappings : {pcmmapping, v2aPowerold, 636569dc-79bc-4f50-b83d-89f58717f0b2, df7aa204-b0ef-4d62-943e-324551030e5b}
+```
+
+Protection container in fabric $fabric with name.
+
+### Example 3
+```
+PS C:\> Get-AzRecoveryServicesAsrProtectionContainer -FriendlyName xxxxxxxx  -Fabric $fabric
+FriendlyName                : xxxxxxxx
+Name                        : xxxxx
+ID                          : /Subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/xxxxxxxxxxxxxxx/providers/Microsoft.RecoveryServices/vaults/xxxxxxxxxx/replicationFabrics/xxxxxxxxxxxxxxxxxxxxxxxxx/replicationProtectionContainers/xxxxxxxxxxxxxxxxxxxxxxxxx
+Type                        : Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers
+FabricFriendlyName          : xxxxxxxxxxxxxxxxxxxxxxxxx
+FabricType                  : VMware
+Role                        : Primary
+AvailablePolicies           : {V2aTestPolicy, v2ahydra, v2aswag-failback, v2aswag}
+ProtectionContainerMappings : {pcmmapping, v2aPowerold, 636569dc-79bc-4f50-b83d-89f58717f0b2, df7aa204-b0ef-4d62-943e-324551030e5b}
+```
+
+Protection container in fabric $fabric with friendly Name.
 
 ## PARAMETERS
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-{{Fill Fabric Description}}
+Look for the protection container in the specified ASR fabric.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric
@@ -75,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-{{Fill FriendlyName Description}}
+Specifies the friendly name of the ASR protection container to look for.
 
 ```yaml
 Type: System.String
@@ -90,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the ASR protection container to look for.
 
 ```yaml
 Type: System.String
@@ -105,8 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

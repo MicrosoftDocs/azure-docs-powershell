@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.AnalysisServices.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices/set-azanalysisservicesserver
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Set-AzAnalysisServicesServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Set-AzAnalysisServicesServer.md
 ---
 
 # Set-AzAnalysisServicesServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies  an instance of Analysis Services server
 
 ## SYNTAX
 
@@ -38,21 +40,23 @@ Set-AzAnalysisServicesServer [-Name] <String> [[-ResourceGroupName] <String>] [[
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Set-AzAnalysisServicesServer cmdlet modifies an instance of Analysis Services server
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup" -Tag "key1:value1,key2:value2" -Administrator "testuser1@contoso.com"
 ```
 
-{{ Add example description here }}
+Modifies the server named testserver in resourcegroup testgroup to set the tags as key1:value1 and key2:value2 and administrator to testuser1@contoso.com
 
 ## PARAMETERS
 
 ### -Administrator
-A comma separated server names to set as administrators on the server
+A string representing a comma separated list of users or groups to be set as administrators on the server.
+The users or groups need to be specified UPN format e.g.
+user@contoso.com or groups@contoso.com
 
 ```yaml
 Type: System.String
@@ -67,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackupBlobContainerUri
-The Uri of blob container for backing up the server
+The blob container Uri for backup the Analysis Services server
 
 ```yaml
 Type: System.String
@@ -82,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultConnectionMode
-The default connection mode to query server
+Default connection mode of an Analysis service server
 
 ```yaml
 Type: System.String
@@ -98,12 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -113,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBackup
-The switch to turn off backup of the server.
+The switch to disable backup blob container.
+To re-enable the backup blob container, please provide the backup blob container Uri as -BackupBlobContainerUri.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -128,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisassociateGateway
-Disassociate current gateway
+Disassociate Gateway resource from an Analysis server
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -143,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallConfig
-Firewall configuration
+Firewall config of an Analysis server
 
 ```yaml
 Type: Microsoft.Azure.Commands.AnalysisServices.Models.PsAzureAnalysisServicesFirewallConfig
@@ -158,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayResourceId
-Gateway resource ID
+Gateway resource Id for assocaite to an Analysis server
 
 ```yaml
 Type: System.String
@@ -173,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the server.
+Name of the Analysis Services server
 
 ```yaml
 Type: System.String
@@ -188,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Will return the deleted server details if the operation completes successfully
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -203,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadonlyReplicaCount
-The replica count of readonly pool
+Read only replica count of an Analysis service server
 
 ```yaml
 Type: System.Int32
@@ -218,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to update the server.
+Name of the Azure resource group to which the server belongs
 
 ```yaml
 Type: System.String
@@ -233,7 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Name of the Sku used to create the server
+The name of the Sku for the server.
+The supported values are 'S0', 'S1', 'S2', 'S4' for the Standard tier; 'B1', 'B2' for the Basic tier and 'D1' for Development tier.
 
 ```yaml
 Type: System.String
@@ -248,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A string,string dictionary of tags associated with this server
+Key-value pairs in the form of a hash table set as tags on the server.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -263,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts user to confirm whether to perform the operation
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -278,8 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Describes the actions the current operation will perform without actually performing them
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -294,8 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -314,5 +318,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.AnalysisServices.Models.AzureAnalysisServicesServer
 
 ## NOTES
+Alias: Set-AzAs
 
 ## RELATED LINKS
+
+[Get-AzAnalysisServicesServer](./Get-AzAnalysisServicesServer.md)
+
+[Remove-AzAnalysisServicesServer](./Remove-AzAnalysisServicesServer.md)

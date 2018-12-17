@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/remove-aziothubeventhubconsumergroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Remove-AzIotHubEventHubConsumerGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Remove-AzIotHubEventHubConsumerGroup.md
 ---
 
 # Remove-AzIotHubEventHubConsumerGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes an eventhub consumergroup.
 
 ## SYNTAX
 
@@ -19,26 +21,26 @@ Remove-AzIotHubEventHubConsumerGroup [-ResourceGroupName] <String> [-Name] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Deletes an eventhub consumergroup.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 Remove eventhub consumergroup from the telemetry eventhub
+```
+PS C:\> Remove-AzIotHubEventHubConsumerGroup -ResourceGroupName "myresourcegroup" -Name "myiothub" -EventHubEndpointName events -EventHubConsumerGroupName myconsumergroup
 ```
 
-{{ Add example description here }}
+Removes the consumergroup named myconsumergroup from the IotHub named "myiothub"
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubConsumerGroupName
-Name of the EventHub ConsumerGroupName
+EventHub ConsumerGroup Name.
 
 ```yaml
 Type: System.String
@@ -63,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubEndpointName
-EventHubEndpointName.
+EventHub Endpoint Name.
 Possible values events, operationsMonitoringEvents
 
 ```yaml
@@ -80,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Iot Hub
+Name of the IotHub
 
 ```yaml
 Type: System.String
@@ -95,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -119,7 +121,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -135,14 +137,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 739EB137-E4A8-4E85-96BD-4CF26D2C5763
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationcredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationCredential.md
 ---
 
 # New-AzAutomationCredential
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Automation credential.
 
 ## SYNTAX
 
@@ -19,21 +22,28 @@ New-AzAutomationCredential [-Name] <String> [-Description <String>] [-Value] <PS
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAutomationCredential** cmdlet creates a credential as a **PSCredential** object in Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a credential
+```
+PS C:\>$User = "Contoso\PFuller"
+PS C:\> $Password = ConvertTo-SecureString "Password" -AsPlainText -Force
+PS C:\> $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $Password
+PS C:\> New-AzAutomationCredential -AutomationAccountName "Contoso17" -Name "ContosoCredential" -Value $Credential -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+The first command assigns a user name to the $User variable.
+The second command converts a plain text password into a secure string by using the ConvertTo-SecureString cmdlet.
+The command stores that object in the $Password variable.
+The third command creates a credential based on $User and $Password, and then stores it in the $Credential variable.
+The final command creates an Automation credential named ContosoCredential that uses $Credential.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account in which this cmdlet stores the credential.
 
 ```yaml
 Type: System.String
@@ -48,12 +58,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The credential description.
+Specifies a description for the credential.
 
 ```yaml
 Type: System.String
@@ -78,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The credential name.
+Specifies a name for the credential.
 
 ```yaml
 Type: System.String
@@ -93,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies a description for the resource group for which this cmdlet creates a credential.
 
 ```yaml
 Type: System.String
@@ -108,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The credential value.
+Specifies the credentials as a **PSCredential** object.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -123,8 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,3 +148,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationCredential](./Get-AzAutomationCredential.md)
+
+[Remove-AzAutomationCredential](./Remove-AzAutomationCredential.md)
+
+[Set-AzAutomationCredential](./Set-AzAutomationCredential.md)
+
+

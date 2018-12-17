@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 89ED4231-7616-47D0-BDAA-D849C245DC79
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/get-azappserviceplan
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzAppServicePlan.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzAppServicePlan.md
 ---
 
 # Get-AzAppServicePlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an Azure App Service plan in the specified resource group.
 
 ## SYNTAX
 
@@ -24,26 +27,33 @@ Get-AzAppServicePlan [-Location] <String> [-DefaultProfile <IAzureContextContain
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAppServicePlan** cmdlet gets an Azure App Service plan in the specified resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get an App Service plan from a resource group
+```
+PS C:\>Get-AzAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP"
 ```
 
-{{ Add example description here }}
+This command gets the App Service plan named ContosoASP that belongs to the resource group named Default-Web-WestUS.
+
+### Example 2: Get all App Service plans in a location
+```
+PS C:\>Get-AzAppServicePlan -Location "West US"
+```
+
+This command gets all App Service plans located in the "West US" region.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -53,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location of the app service plan.
+Location 
 
 ```yaml
 Type: System.String
@@ -68,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+App Service Plan Name
 
 ```yaml
 Type: System.String
@@ -83,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -98,8 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -112,3 +121,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzAppServicePlan](./New-AzAppServicePlan.md)
+
+[Remove-AzAppServicePlan](./Remove-AzAppServicePlan.md)
+
+[Set-AzAppServicePlan](./Set-AzAppServicePlan.md)
+
+

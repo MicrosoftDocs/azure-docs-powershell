@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 53988D79-1F8B-4138-9F92-2912D418C121
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azstoragedirectory
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageDirectory.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageDirectory.md
 ---
 
 # Remove-AzStorageDirectory
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a directory.
 
 ## SYNTAX
 
@@ -37,21 +40,23 @@ Remove-AzStorageDirectory [-Directory] <CloudFileDirectory> [[-Path] <String>] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzStorageDirectory** cmdlet deletes a directory.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Delete a folder
+```
+PS C:\>Remove-AzStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
 ```
 
-{{ Add example description here }}
+This command deletes the folder named ContosoWorkingFolder from the file share named ContosoShare06.
 
 ## PARAMETERS
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -66,7 +71,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -82,7 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies an Azure storage context.
+To obtain a storage context, use the [New-AzStorageContext](./New-AzStorageContext.md) cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -100,7 +109,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -112,7 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### -Directory
-CloudFileDirectory object indicated the base folder where the directory would be removed.
+Specifies a folder as a **CloudFileDirectory** object.
+This cmdlet removes the folder that this parameter specifies.
+To obtain a directory, use the New-AzStorageDirectory cmdlet.
+You can also use the **Get-AzStorageFile** cmdlet to obtain a directory.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileDirectory
@@ -127,8 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the removed directory.
-By default, this cmdlet does not generate any output.
+Indicates that, if this cmdlet succeeds, it returns a value of $True.
+If you specify this parameter, and if the cmdlet is unsuccessful because of an inappropriate value for the _Path_ parameter, the cmdlet returns an error.
+If you do not specify this parameter, this cmdlet does not return a value.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -143,7 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Path to the directory to be removed.
+Specifies the path of a folder.
+If the folder that this parameter specifies is empty, this cmdlet deletes that folder.
+If the folder is not empty, this cmdlet makes no change, and returns an error.
 
 ```yaml
 Type: System.String
@@ -170,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -185,7 +200,11 @@ Accept wildcard characters: False
 ```
 
 ### -Share
-CloudFileShare object indicated the share where the directory would be removed.
+Specifies a **CloudFileShare** object.
+This cmdlet removes a folder under the file share that this parameter specifies.
+To obtain a **CloudFileShare** object, use the Get-AzStorageShare cmdlet.
+This object contains the storage context.
+If you specify this parameter, do not specify the *Context* parameter.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
@@ -200,7 +219,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShareName
-Name of the file share where the directory would be removed.
+Specifies the name of the file share.
+This cmdlet removes a folder under the file share that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -224,7 +244,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -240,14 +260,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -266,3 +285,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageShare](./Get-AzStorageShare.md)
+
+[New-AzStorageContext](./New-AzStorageContext.md)
+
+[New-AzStorageDirectory](./New-AzStorageDirectory.md)

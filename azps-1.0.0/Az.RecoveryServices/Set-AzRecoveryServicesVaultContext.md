@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.ARM.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 368DD95E-EA25-4FC4-8171-CB7348FE480C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/set-azrecoveryservicesvaultcontext
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesVaultContext.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesVaultContext.md
 ---
 
 # Set-AzRecoveryServicesVaultContext
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets vault context.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Set-AzRecoveryServicesVaultContext -Vault <ARSVault> [-DefaultProfile <IAzureCon
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzRecoveryServicesVaultContext** cmdlet sets the vault context for Azure Site Recovery services.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzRecoveryServicesVaultContext -Vault $vault
 ```
 
-{{ Add example description here }}
+Sets vault context.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,8 @@ Accept wildcard characters: False
 ```
 
 ### -Vault
-{{Fill Vault Description}}
+Specifies the name of the vault.
+The vault must be an **AzureRmRecoveryServicesVault** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
@@ -62,8 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

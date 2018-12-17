@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: DEC01722-EB1A-45CE-BD30-9DB861718573
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azpolicydefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzPolicyDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzPolicyDefinition.md
 ---
 
 # Remove-AzPolicyDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a policy definition.
 
 ## SYNTAX
 
@@ -37,22 +40,32 @@ Remove-AzPolicyDefinition -Id <String> [-Force] [-ApiVersion <String>] [-Pre]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzPolicyDefinition** cmdlet removes a policy definition.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove the policy definition by name
+```
+PS C:\> Remove-AzPolicyDefinition -Name 'VMPolicyDefinition'
 ```
 
-{{ Add example description here }}
+This command removes the specified policy definition.
+
+### Example 2: Remove policy definition by resource ID
+```
+PS C:\> $PolicyDefinition = Get-AzPolicyDefinition -Name 'VMPolicyDefinition' 
+PS C:\> Remove-AzPolicyDefinition -Id $PolicyDefinition.ResourceId -Force
+```
+
+The first command gets a policy definition named VMPolicyDefinition by using the Get-AzPolicyDefinition cmdlet.
+The command stores it in the $PolicyDefinition variable.
+The second command removes the policy definition identified by the **ResourceId** property of $PolicyDefinition.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use.
+If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: System.String
@@ -67,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -97,9 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified policy definition ID to delete, including the subscription or management group.
-e.g.
-/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}.
+Specifies the fully qualified resource ID for the policy definition that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -129,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the policy definition to delete.
+Specifies the name of the policy definition that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -156,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -195,7 +206,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -211,14 +222,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -233,3 +243,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPolicyDefinition](./Get-AzPolicyDefinition.md)
+
+[New-AzPolicyDefinition](./New-AzPolicyDefinition.md)
+
+[Set-AzPolicyDefinition](./Set-AzPolicyDefinition.md)
+
+

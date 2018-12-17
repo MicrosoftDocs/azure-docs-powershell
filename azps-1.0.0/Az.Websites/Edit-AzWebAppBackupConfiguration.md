@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: BFC38930-DBB4-4EBB-8E29-73B901FAF486
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/edit-azwebappbackupconfiguration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Edit-AzWebAppBackupConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Edit-AzWebAppBackupConfiguration.md
 ---
 
 # Edit-AzWebAppBackupConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -29,21 +31,14 @@ Edit-AzWebAppBackupConfiguration [-FrequencyInterval] <Int32> [-FrequencyUnit] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Edit-AzWebAppBackupConfiguration** cmdlet edits the current configuration backup for an Azure Web App.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Databases
-The databases to backup.
+Databases of type DatabaseBackupSetting[]
 
 ```yaml
 Type: Microsoft.Azure.Management.WebSites.Models.DatabaseBackupSetting[]
@@ -58,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -73,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyInterval
-Numeric value for how often the backups should be made.
+Frequency Interval
 
 ```yaml
 Type: System.Int32
@@ -88,8 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyUnit
-Unit of time for how often the backups should be made.
-Options are "Hour" and "Day".
+Frequency Unit
 
 ```yaml
 Type: System.String
@@ -104,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeepAtLeastOneBackup
-True if one backup should always be kept in the storage account, regardless of how old it is.
+Keep At Least One Backup Option
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -119,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+WebApp Name
 
 ```yaml
 Type: System.String
@@ -134,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -149,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPeriodInDays
-How many days the automatic backups should be saved before being automatically deleted.
+Retention Period In Days
 
 ```yaml
 Type: System.Int32
@@ -164,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+WebApp Slot Name
 
 ```yaml
 Type: System.String
@@ -179,8 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-The time when the automatic backups should begin.
-Backups will begin immediately if this is null.
+StartTime in UTC
 
 ```yaml
 Type: System.DateTime
@@ -195,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-The SAS URL for the Azure Storage container used to store the backup.
+Storage Account Url
 
 ```yaml
 Type: System.String
@@ -210,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+WebApp Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.PSSite
@@ -225,8 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -249,3 +241,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzWebAppBackupConfiguration](./Get-AzWebAppBackupConfiguration.md)
+
+

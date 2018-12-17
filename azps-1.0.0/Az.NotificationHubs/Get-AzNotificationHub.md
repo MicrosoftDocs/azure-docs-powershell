@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: 796396B4-1F9D-4D53-AD2E-4CE83B563E93
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/get-aznotificationhub
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzNotificationHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzNotificationHub.md
 ---
 
 # Get-AzNotificationHub
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about your notification hubs.
 
 ## SYNTAX
 
@@ -18,26 +21,32 @@ Get-AzNotificationHub [-ResourceGroup] <String> [-Namespace] <String> [[-Notific
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzNotificationHub** cmdlet gets information about the notification hubs in a specified namespace and assigned to a specified resource group.
+For example, you can get information for all the notification hubs in the namespace ContosoNamespace and assigned to the ContosoNotificationsGroup resource group.
+Alternatively, you can use the *NotificationHub* parameter to limit the returned data to information about a specific notification hub.
+Notification hubs are used to send push notifications to multiple clients regardless of the platform, such as iOS, Android, Windows Phone 8, and Windows Store, used by those clients.
+These hubs are roughly equivalent to individual apps and each of your apps will typically have its own notification hub.
+This cmdlet only gets information about the hub itself.
+Other cmdlets, such as Get-AzNotificationHubAuthorizationRules, Get-AzNotificationHubListKeys, and Get-AzNotificationHubPNSCredentials, are needed to get information about a hub's authorization rules, connection strings, and platform notification service credentials.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get information for all notification hubs in a specific namespace
+```
+PS C:\>Get-AzNotificationHub -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup"
 ```
 
-{{ Add example description here }}
+This command gets information for all the notification hubs in the namespace named ContosoNamespace that have been assigned to the resource group ContosoNotificationsGroup.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace to which the notification hub is assigned.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -62,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHub
-NotificationHub Name.
+Specifies the name of the notification hub that this cmdlet gets.
+Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
 
 ```yaml
 Type: System.String
@@ -77,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the notification hub is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -92,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +117,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHubAuthorizationRules](./Get-AzNotificationHubAuthorizationRules.md)
+
+[Get-AzNotificationHubListKeys](./Get-AzNotificationHubListKeys.md)
+
+[Get-AzNotificationHubPNSCredentials](./Get-AzNotificationHubPNSCredentials.md)
+
+[New-AzNotificationHub](./New-AzNotificationHub.md)
+
+[Remove-AzNotificationHub](./Remove-AzNotificationHub.md)
+
+[Set-AzNotificationHub](./Set-AzNotificationHub.md)
+
+

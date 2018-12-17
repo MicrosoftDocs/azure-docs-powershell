@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 6E2F0D5E-E683-46F3-B48B-55C4864F3308
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzResourceGroupDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzResourceGroupDeployment.md
 ---
 
 # New-AzResourceGroupDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an Azure deployment to a resource group.
 
 ## SYNTAX
 
@@ -77,22 +80,39 @@ New-AzResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mod
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzResourceGroupDeployment** cmdlet adds a deployment to an existing resource group.
+This includes the resources that the deployment requires.
+An Azure resource is a user-managed Azure entity, such as a database server, database, website, virtual machine, or Storage account.
+An Azure resource group is a collection of Azure resources that are deployed as a unit, such as the website, database server, and databases that are required for a financial website.
+A resource group deployment uses a template to add resources to a resource group and publishes them so that they are available in Azure.
+To add resources to a resource group without using a template, use the New-AzResource cmdlet.
+To add a resource group deployment, specify the name of an existing resource group and a resource group template.
+A resource group template is a JSON string that represents a resource group for a complex cloud-based service, such as a web portal.
+The template includes parameter placeholders for required resources and configurable property values, such as names and sizes.
+You can find many templates in the Azure template gallery or you can create your own templates.
+You can use the **Get-AzResourceGroupGalleryTemplate** cmdlet to find a template in the gallery.
+To use a custom template to create a resource group, specify the *TemplateFile* parameter or *TemplateUri* parameter.
+Each template has parameters for configurable properties.
+To specify values for the template parameters, specify the *TemplateParameterFile* parameter or the *TemplateParameterObject* parameter.
+Alternatively, you can use the template parameters that are dynamically added to the command when you specify a template.
+To use dynamic parameters, type them at the command prompt, or type a minus sign (-) to indicate a parameter and use the Tab key to cycle through available parameters.
+Template parameter values that you enter at the command prompt take precedence over values in a template parameter object or file.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Use a custom template and parameter file to create a deployment
+```
+PS C:\>New-AzResourceGroupDeployment -ResourceGroupName "ContosoEngineering" -TemplateFile "D:\Azure\Templates\EngineeringSite.json" -TemplateParameterFile "D:\Azure\Templates\EngSiteParms.json"
 ```
 
-{{ Add example description here }}
+This command creates a new deployment by using a custom template and a template file on disk.
+The command uses the *TemplateFile* parameter to specify the template and the *TemplateParameterFile* parameter to specify a file that contains parameters and parameter values.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource Provider.
+You can specify a different version than the default version.
 
 ```yaml
 Type: System.String
@@ -122,12 +142,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -137,7 +157,12 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentDebugLogLevel
-The deployment debug log level.
+Specifies a debug log level.
+The acceptable values for this parameter are:
+- RequestContent
+- ResponseContent
+- All
+- None
 
 ```yaml
 Type: System.String
@@ -153,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -168,7 +193,12 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-The deployment mode.
+Specifies the deployment mode. The acceptable values for this parameter are:
+- Complete
+- Incremental
+In complete mode, Resource Manager deletes resources that exist in the resource group but are not
+specified in the template. In incremental mode, Resource Manager leaves unchanged resources that
+exist in the resource group but are not specified in the template.
 
 ```yaml
 Type: Microsoft.Azure.Management.ResourceManager.Models.DeploymentMode
@@ -178,15 +208,13 @@ Accepted values: Incremental, Complete
 
 Required: False
 Position: Named
-Default value: None
+Default value: Incremental
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the deployment it's going to create.
-Only valid when a template is used.
-When a template is used, if the user doesn't specify a deployment name, use the current time, like "20131223140835".
+Specifies the name of the resource group deployment to create.
 
 ```yaml
 Type: System.String
@@ -201,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -216,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group to deploy.
 
 ```yaml
 Type: System.String
@@ -261,7 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateFile
-Local path to the template file.
+Specifies the full path of a JSON template file.
+This can be a custom template or a gallery template that is saved as a JSON file, such as one created by using the **Save-AzResourceGroupGalleryTemplate** cmdlet.
 
 ```yaml
 Type: System.String
@@ -276,7 +305,10 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateParameterFile
-A file that has the template parameters.
+Specifies the full path of a JSON file that contains the names and values of the template parameters.
+If a template has parameters, you must specify the parameter values with the *TemplateParameterFile* parameter or the *TemplateParameterObject* parameter.
+Template parameters are dynamically added to the command when you specify a template.
+To use the dynamic parameters, type a minus sign (-) to indicate a parameter name and then use the Tab key to cycle through the available parameters.
 
 ```yaml
 Type: System.String
@@ -291,7 +323,10 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateParameterObject
-A hash table which represents the parameters.
+Specifies a hash table of template parameter names and values.
+For help with hash tables in Windows PowerShell, type `Get-Help about_Hash_Tables`.
+If a template has parameters, you must specify parameter values.
+Template parameters are dynamically added to the command when you specify a template.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -306,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateParameterUri
-Uri to the template parameter file.
+Specifies the URI of a template parameters file.
 
 ```yaml
 Type: System.String
@@ -321,7 +356,8 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateUri
-Uri to the template file.
+Specifies the URI of a JSON template file.
+This file can be a custom template or a gallery template that is saved as a JSON file, such as by using **Save-AzResourceGroupGalleryTemplate**.
 
 ```yaml
 Type: System.String
@@ -345,7 +381,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -361,14 +397,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -385,3 +420,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzResourceGroupDeployment](./Get-AzResourceGroupDeployment.md)
+
+[New-AzResource](./New-AzResource.md)
+
+[New-AzResourceGroup](./New-AzResourceGroup.md)
+
+[Remove-AzResourceGroupDeployment](./Remove-AzResourceGroupDeployment.md)
+
+[Stop-AzResourceGroupDeployment](./Stop-AzResourceGroupDeployment.md)
+
+[Test-AzResourceGroupDeployment](./Test-AzResourceGroupDeployment.md)
+
+

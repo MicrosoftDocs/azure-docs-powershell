@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 818D5D85-B6D5-458C-A26E-E4DE8E111A10
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchAccount.md
 ---
 
 # Get-AzBatchAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a Batch account in the current subscription.
 
 ## SYNTAX
 
@@ -18,21 +21,55 @@ Get-AzBatchAccount [[-AccountName] <String>] [[-ResourceGroupName] <String>] [[-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchAccount** cmdlet gets an Azure Batch account in the current subscription. You
+can use the *AccountName* parameter to get a single account, or you can use the *ResourceGroupName*
+parameter to get accounts under that resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a batch account by name
+```
+PS C:\>Get-AzBatchAccount -AccountName "pfuller"
+AccountName                  : pfuller
+Location                     : westus
+ResourceGroupName            : CmdletExampleRG
+CoreQuota                    : 20
+PoolQuota                    : 20
+ActiveJobAndJobScheduleQuota : 20
+Tags                         :
+TaskTenantUrl                : https://pfuller.westus.batch.azure.com
 ```
 
-{{ Add example description here }}
+This command gets the batch account named pfuller.
+
+### Example 2: Get the batch accounts associated with a resource group
+```
+PS C:\>Get-AzBatchAccount -ResourceGroupName "CmdletExampleRG"
+AccountName                  : cmdletexample
+Location                     : westus
+ResourceGroupName            : CmdletExampleRG
+CoreQuota                    : 20
+PoolQuota                    : 20
+ActiveJobAndJobScheduleQuota : 20
+Tags                         :
+TaskTenantUrl                : https://cmdletexample.westus.batch.azure.com
+AccountName                  : cmdletexample2
+Location                     : westus
+ResourceGroupName            : CmdletExampleRG
+CoreQuota                    : 20
+PoolQuota                    : 20
+ActiveJobAndJobScheduleQuota : 20
+Tags                         :
+TaskTenantUrl                : https://cmdletexample.westus.batch.azure.com
+```
+
+This command gets the batch accounts associated with the CmdletExampleRG resource group.
 
 ## PARAMETERS
 
 ### -AccountName
-{{Fill AccountName Description}}
+Specifies the name of an account.
+If you specify an account name, this cmdlet only returns that account.
 
 ```yaml
 Type: System.String
@@ -47,12 +84,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of a resource group.
+If you specify a resource group, this cmdlet gets the accounts under the specified resource group.
 
 ```yaml
 Type: System.String
@@ -77,7 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
+This cmdlet gets accounts that contain the tags that this parameter specifies.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -92,8 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -108,3 +147,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzBatchAccount](./New-AzBatchAccount.md)
+
+[Remove-AzBatchAccount](./Remove-AzBatchAccount.md)
+
+[Set-AzBatchAccount](./Set-AzBatchAccount.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)

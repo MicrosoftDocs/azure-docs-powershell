@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azintegrationaccountreceivedicn
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzIntegrationAccountReceivedIcn.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzIntegrationAccountReceivedIcn.md
 ---
 
 # Get-AzIntegrationAccountReceivedIcn
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This cmdlet retrieves a specific received interchange control number per agreement and control number value.
 
 ## SYNTAX
 
@@ -19,16 +21,30 @@ Get-AzIntegrationAccountReceivedIcn -ResourceGroupName <String> -Name <String> -
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet is meant to be used in disaster recovery scenarios to validate the presence of a received interchange control number and optionally to remove that entity with Remove-AzIntegrationAccountReceivedIcn.
+Please do provide the "-AgreementType" parameter to specify whether X12 or Edifact control numbers to return
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzIntegrationAccountReceivedIcn -AgreementType "X12" -ResourceGroupName "groupName" -Name "accountName" -AgreementName "X12AgreementName" -ControlNumberValue "000000641"
+ControlNumber            : 000000641
+ControlNumberChangedTime : 2/15/2017 12:36:00 AM
+IsMessageProcessingFailed: False
 ```
 
-{{ Add example description here }}
+This command gets the X12 integration account received interchange control number by agreement name and control number value.
+
+### Example 2
+```
+PS C:\> Get-AzIntegrationAccountReceivedIcn -AgreementType "Edifact" -ResourceGroupName "groupName" -Name "accountName" -AgreementName "EdifactAgreementName" -ControlNumberValue "000000641"
+ControlNumber            : 000000641
+ControlNumberChangedTime : 2/15/2017 12:36:00 AM
+IsMessageProcessingFailed: False
+```
+
+This command gets the Edifact integration account received interchange control number by agreement name and control number value.
 
 ## PARAMETERS
 
@@ -79,12 +95,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -124,8 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -138,3 +153,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzIntegrationAccountReceivedIcn](./Set-AzIntegrationAccountReceivedIcn.md)
+
+[Remove-AzIntegrationAccountReceivedIcn](./Remove-AzIntegrationAccountReceivedIcn.md)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: D3E8A6A6-C6C5-46B0-914B-75088A6F6011
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/remove-azdatalakestoreitemacl
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzDataLakeStoreItemAcl.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzDataLakeStoreItemAcl.md
 ---
 
 # Remove-AzDataLakeStoreItemAcl
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Clears the ACL of a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Remove-AzDataLakeStoreItemAcl [-Account] <String> [-Path] <DataLakeStorePathInst
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzDataLakeStoreItemAcl** cmdlet clears the access control list (ACL) of a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove the ACL from a folder
+```
+PS C:\>Remove-AzDataLakeStoreItemAcl -AccountName "ContosoADL" -Path "/"
 ```
 
-{{ Add example description here }}
+This command removes the ACL for the root directory for the ContosoADL account.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the Data Lake Store account name.
 
 ```yaml
 Type: System.String
@@ -47,8 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-Optionally indicates that the ACL to remove is the default ACL on the item.
-If not specified, will remove the standard ACL for the item
+Indicates that the cmdlet removes the default ACL for a file or a folder.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -63,12 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Indicates that the ACL should be removed on the file with the specified ACL without prompting.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -108,8 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account that should have its ACL removed.
-Can be a file or folder In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of the item, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -133,7 +134,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -149,14 +150,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -171,5 +171,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+* Alias: Remove-AdlStoreAcl
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItemAclEntry](./Get-AzDataLakeStoreItemAclEntry.md)
+
+[Set-AzDataLakeStoreItemAcl](./Set-AzDataLakeStoreItemAcl.md)
+
+[Set-AzDataLakeStoreItemAclEntry](./Set-AzDataLakeStoreItemAclEntry.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 7016BAA9-C25D-404E-9F75-2BE49FBF91A8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmsqlserverautopatchingconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVMSqlServerAutoPatchingConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVMSqlServerAutoPatchingConfig.md
 ---
 
 # New-AzVMSqlServerAutoPatchingConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a configuration object for automatic patching on a virtual machine.
 
 ## SYNTAX
 
@@ -18,21 +21,39 @@ New-AzVMSqlServerAutoPatchingConfig [-Enable] [-DayOfWeek <String>] [-Maintenanc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzVMSqlServerAutoPatchingConfig** cmdlet creates a configuration object for automatic patching on a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a configuration object to configure automatic patching
+```
+PS C:\> $AutoPatchingConfig = New-AzVMSqlServerAutoPatchingConfig -Enable -DayOfWeek "Thursday" -MaintenanceWindowStartingHour 11 -MaintenanceWindowDuration 120 -PatchCategory "Important"
+Enable                        : True
+DayOfWeek                     : Thursday
+MaintenanceWindowStartingHour : 11
+MaintenanceWindowDuration     : 120
+PatchCategory                 : Important
 ```
 
-{{ Add example description here }}
+This command creates configuration object for patching.
+The command specifies the day of the week and defines the maintenance window.
+This configuration enables patching that uses these values.
+The command stores the result in the $AutoBackupConfig variable.
+You can specify this configuration item for other cmdlets, such as the Set-AzVMSqlServerExtension cmdlet.
 
 ## PARAMETERS
 
 ### -DayOfWeek
-{{Fill DayOfWeek Description}}
+Specifies the day of the week when updates should be installed.
+The acceptable values for this parameter are:
+- Sunday
+- Monday
+- Tuesday
+- Wednesday
+- Thursday
+- Friday
+- Saturday
+- Everyday
 
 ```yaml
 Type: System.String
@@ -48,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-{{Fill Enable Description}}
+Indicates that automated patching for the virtual machine is enabled.
+If you enable automated patching the cmdlet puts Windows Update into interactive mode.
+If you disable automated patching, Windows Update settings do not change.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -63,7 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindowDuration
-{{Fill MaintenanceWindowDuration Description}}
+Specifies the duration, in minutes, of the maintenance window.
+Automated patching avoids performing an action that can affect a virtual machine availability outside that window.
+Specify a multiple of 30 minutes.
 
 ```yaml
 Type: System.Int32
@@ -78,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindowStartingHour
-{{Fill MaintenanceWindowStartingHour Description}}
+Specifies the hour of the day when maintenance window starts.
+This time defines when updates start to install.
 
 ```yaml
 Type: System.Int32
@@ -93,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -PatchCategory
-{{Fill PatchCategory Description}}
+Specifies whether important updates should be included.
 
 ```yaml
 Type: System.String
@@ -109,8 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +148,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzVMSqlServerAutoBackupConfig](./New-AzVMSqlServerAutoBackupConfig.md)
+
+[Set-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
+
+

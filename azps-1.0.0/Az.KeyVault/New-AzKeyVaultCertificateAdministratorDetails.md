@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 775AB0E8-EC3C-4F96-8AF8-51C1DFEEF082
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/new-azkeyvaultcertificateadministratordetails
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzKeyVaultCertificateAdministratorDetails.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzKeyVaultCertificateAdministratorDetails.md
 ---
 
 # New-AzKeyVaultCertificateAdministratorDetails
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an in-memory certificate administrator details object.
 
 ## SYNTAX
 
@@ -19,26 +22,31 @@ New-AzKeyVaultCertificateAdministratorDetails [-FirstName <String>] [-LastName <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzKeyVaultCertificateAdministratorDetails** cmdlet creates an in-memory certificate administrator details object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a certificate administrator details object
+```
+PS C:\> $AdminDetails = New-AzKeyVaultCertificateAdministratorDetails -FirstName "Patti" -LastName "Fuller" -EmailAddress "patti.fuller@contoso.com" -PhoneNumber "5553334444"
+PS C:\> $AdminDetails
+
+FirstName LastName EmailAddress             PhoneNumber
+--------- -------- ------------             -----------
+Patti     Fuller   patti.fuller@contoso.com 5553334444
 ```
 
-{{ Add example description here }}
+This command creates an in-memory certificate administrator details object, and then stores it in the $AdminDetails variable.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-Specifies the email address of the administrator.
+Specifies the email address for the certificate administrator.
 
 ```yaml
 Type: System.String
@@ -63,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-Specifies the first name of the administrator.
+Specifies the first name of the certificate administrator.
 
 ```yaml
 Type: System.String
@@ -78,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-Specifies the last name of the administrator.
+Specifies the last name of the certificate administrator.
 
 ```yaml
 Type: System.String
@@ -93,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-Specifies the phone number of the administrator.
+Specifies the phone number of the certificate administrator.
 
 ```yaml
 Type: System.String
@@ -139,8 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -153,3 +160,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzKeyVaultCertificateOrganizationDetails](./New-AzKeyVaultCertificateOrganizationDetails.md)
+

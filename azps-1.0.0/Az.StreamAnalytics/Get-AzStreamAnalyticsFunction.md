@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.dll-Help.xml
 Module Name: Az.StreamAnalytics
-online version:
+ms.assetid: 7F08A880-1FC5-4542-8AB8-927BB999A552
+online version: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics/get-azstreamanalyticsfunction
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzStreamAnalyticsFunction.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzStreamAnalyticsFunction.md
 ---
 
 # Get-AzStreamAnalyticsFunction
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets functions in a Stream Analytics job.
 
 ## SYNTAX
 
@@ -18,26 +21,33 @@ Get-AzStreamAnalyticsFunction [-JobName] <String> [[-Name] <String>] [-ResourceG
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzStreamAnalyticsFunction** cmdlet gets a list of the functions that are defined in an Azure Stream Analytics job or information about a specific function.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all Stream Analytics functions
+```
+PS C:\>Get-AzStreamAnalyticsFunction -ResourceGroupName "StreamAnalytics-Default-West-US" -JobName "StreamJob22"
 ```
 
-{{ Add example description here }}
+This command gets the functions defined on the job named StreamJob22.
+
+### Example 2: Get a specific Stream Analytics function
+```
+PS C:\>Get-AzStreamAnalyticsFunction -ResourceGroupName "StreamAnalytics-Default-West-US" -JobName "StreamJob22" -Name "ScoreTweet"
+```
+
+This command gets information about the function named ScoreTweet defined on the job named StreamJob22.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobName
-The azure stream analytics job name.
+Specifies the name of the Stream Analytics job to which functions belong.
+This cmdlet gets functions for the job that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -62,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The azure stream analytics function name.
+Specifies the name of the Stream Analytics function that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -77,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group to which Stream Analytics functions belongs.
+This cmdlet gets functions for the group that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -92,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +117,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzStreamAnalyticsFunction](./New-AzStreamAnalyticsFunction.md)
+
+[Remove-AzStreamAnalyticsFunction](./Remove-AzStreamAnalyticsFunction.md)
+
+[Test-AzStreamAnalyticsFunction](./Test-AzStreamAnalyticsFunction.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/get-azrecoveryservicesasrprotectableitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
 ---
 
 # Get-AzRecoveryServicesAsrProtectableItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get the protectable items in an ASR protection container.
 
 ## SYNTAX
 
@@ -31,26 +33,73 @@ Get-AzRecoveryServicesAsrProtectableItem -FriendlyName <String> -ProtectionConta
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesAsrProtectableItem** cmdlet gets the protectable items in an Azure Site Recovery Protection Container.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $ProtectableItems = Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer $Container
 ```
 
-{{ Add example description here }}
+Gets all the protectable items in specified ASR protection container.
+
+### Example 2
+```
+PS C:\> Get-ASRProtectableItem -ProtectionContainer $pc -FriendlyName $piFriendlyName
+
+Disks                         : {}
+FabricObjectId                :
+FabricSpecificVMDetails       : Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVMWareSpecificVMDetails
+FriendlyName                  : V2A-W2K12-400
+ID                            : /Subscriptions/xxxxxxxxxxxx/resourceGroups/canaryexproute/providers/Microsoft.RecoveryServices/vaults/IbizaV2ATest/replicationFabrics/d011a5abf48190235963ee3a88ad188ee6bca8a4c6cd0c8d7ce5d439aa77ffd9/replicationProt
+                                ectionContainers/cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078/replicationProtectableItems/22d47502-7df0-11e7-9373-0050568f2e8f
+Name                          : 22d47502-7df0-11e7-9373-0050568f2e8f
+OS                            : WINDOWS
+OSDiskId                      :
+OSDiskName                    :
+ProtectionContainerId         : cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078
+ProtectionReadinessErrors     :
+ProtectionStatus              : Unprotected
+ReplicationProtectedItemId    :
+SupportedReplicationProviders : {InMage, InMageAzureV2}
+```
+
+Get the protectable items in specified ASR protection container and with given friendly name.
+
+### Example 3
+```
+PS C:\> Get-ASRProtectableItem -ProtectionContainer $pc -Name $piName
+
+Disks                         : {}
+FabricObjectId                :
+FabricSpecificVMDetails       : Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVMWareSpecificVMDetails
+FriendlyName                  : V2A-W2K12-400
+ID                            : /Subscriptions/xxxxxxxxxxxx/resourceGroups/canaryexproute/providers/Microsoft.RecoveryServices/vaults/IbizaV2ATest/replicationFabrics/d011a5abf48190235963ee3a88ad188ee6bca8a4c6cd0c8d7ce5d439aa77ffd9/replicationProt
+                                ectionContainers/cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078/replicationProtectableItems/22d47502-7df0-11e7-9373-0050568f2e8f
+Name                          : 22d47502-7df0-11e7-9373-0050568f2e8f
+OS                            : WINDOWS
+OSDiskId                      :
+OSDiskName                    :
+ProtectionContainerId         : cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078
+ProtectionReadinessErrors     :
+ProtectionStatus              : Unprotected
+ReplicationProtectedItemId    :
+SupportedReplicationProviders : {InMage, InMageAzureV2}
+```
+
+Gets all the protectable items in specified ASR protection container.
 
 ## PARAMETERS
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-{{Fill FriendlyName Description}}
+Specifies the friendly name of the ASR protectable item.
 
 ```yaml
 Type: System.String
@@ -75,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the ASR protectable item.
 
 ```yaml
 Type: System.String
@@ -90,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionContainer
-{{Fill ProtectionContainer Description}}
+Specifies the Azure Site Recovery Protection Container object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
@@ -105,8 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -119,3 +167,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesAsrProtectionEntity](./Get-AzRecoveryServicesAsrProtectionEntity.md)
+
+[Set-AzRecoveryServicesAsrProtectionEntity](./Set-AzRecoveryServicesAsrProtectionEntity.md)

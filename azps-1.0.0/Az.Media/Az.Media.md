@@ -1,40 +1,43 @@
 ---
 Module Name: Az.Media
-Module Guid: c7f9ca6c-ada2-4df8-9cae-8b91f9e899c2
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: c66edca6-2e57-4550-905e-f5cc104de25e
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.media
+Help Version: 0.9.2.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Az.Media.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Az.Media.md
 ---
 
 # Az.Media Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Media Service web service feature in Azure App Service cmdlets.
 
 ## Az.Media Cmdlets
 ### [Get-AzMediaService](Get-AzMediaService.md)
-{{Manually Enter Get-AzMediaService Description Here}}
+Gets information about a media service.
 
 ### [Get-AzMediaServiceKeys](Get-AzMediaServiceKeys.md)
-{{Manually Enter Get-AzMediaServiceKeys Description Here}}
+Gets key information for accessing the REST endpoint associated with the media service.
 
 ### [Get-AzMediaServiceNameAvailability](Get-AzMediaServiceNameAvailability.md)
-{{Manually Enter Get-AzMediaServiceNameAvailability Description Here}}
+Checks whether a media service name is available.
+Media service names are globally unique.
 
 ### [New-AzMediaService](New-AzMediaService.md)
-{{Manually Enter New-AzMediaService Description Here}}
+Creates a media service if the media service already exists, all its properties are updated with the input provided.
 
 ### [New-AzMediaServiceStorageConfig](New-AzMediaServiceStorageConfig.md)
-{{Manually Enter New-AzMediaServiceStorageConfig Description Here}}
+Create a storage account configuration for the media service cmdlets.
 
 ### [Remove-AzMediaService](Remove-AzMediaService.md)
-{{Manually Enter Remove-AzMediaService Description Here}}
+Removes a media service.
 
 ### [Set-AzMediaService](Set-AzMediaService.md)
-{{Manually Enter Set-AzMediaService Description Here}}
+Modifies specified properties of an existing media service.
 
 ### [Set-AzMediaServiceKey](Set-AzMediaServiceKey.md)
-{{Manually Enter Set-AzMediaServiceKey Description Here}}
+Regenerates a key used for accessing the REST endpoint associated with the media service.
 
 ### [Sync-AzMediaServiceStorageKeys](Sync-AzMediaServiceStorageKeys.md)
-{{Manually Enter Sync-AzMediaServiceStorageKeys Description Here}}
+Synchronizes storage account keys for a storage account associated with the media service.
 

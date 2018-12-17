@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
-online version:
+ms.assetid: B831ABE6-348C-4DD6-9295-18D23A1FDF63
+online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/get-azdnszone
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Get-AzDnsZone.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Get-AzDnsZone.md
 ---
 
 # Get-AzDnsZone
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a DNS zone.
 
 ## SYNTAX
 
@@ -24,26 +27,43 @@ Get-AzDnsZone [-Name <String>] -ResourceGroupName <String> [-DefaultProfile <IAz
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDnsZone** cmdlet gets a Domain Name System (DNS) zone from the specified resource group.
+If you specify the *Name* parameter, a single **DnsZone** object is returned.
+If you do not specify the *Name* parameter, an array containing all of the zones in the specified resource group is returned.
+You can use the **DnsZone** object to update the zone, for example you can add **RecordSet** objects to it.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a zone
+```
+PS C:\> $Zone = Get-AzDnsZone -ResourceGroupName "MyResourceGroup" -Name "myzone.com"
 ```
 
-{{ Add example description here }}
+This example gets the DNS zone named myzone.com from the specified resource group, and then stores it in the $Zone variable.
+
+### Example 2: Get all of the zones in a resource group
+```
+PS C:\> $Zones = Get-AzDnsZone -ResourceGroupName "MyResourceGroup"
+```
+
+This example gets all of the DNS zones in the specified resource group, and then stores it in the $Zones variable.
+
+### Example 3: Get all of the zones in a subscription
+```
+PS C:\> $Zones = Get-AzDnsZone
+```
+
+This example gets all of the DNS zones in the current Azure subscription, and then stores them in the $Zones variable.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -53,7 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The full name of the zone (without a terminating dot).
+Specifies the name of the DNS zone to get.
+If you do not specify a value for the *Name* parameter, this cmdlet gets all DNS zones in the specified resource group.
+If you also omit the *ResourceGroupName* parameter, this cmdlet gets all DNS zones in the current Azure subscription.
 
 ```yaml
 Type: System.String
@@ -68,7 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group in which the zone exists.
+Specifies the name of the resource group that contains the DNS zone to get.
+If you do not specify the *ResourceGroupName*, then you must also omit the *Name* parameter.
+In this case, this cmdlet gets all DNS zones in the current Azure subscription.
 
 ```yaml
 Type: System.String
@@ -83,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -97,3 +120,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzDnsZone](./New-AzDnsZone.md)
+
+[Remove-AzDnsZone](./Remove-AzDnsZone.md)
+
+[Set-AzDnsZone](./Set-AzDnsZone.md)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: 91FFBEE9-A488-49ED-8C6C-2DE891CE0749
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/new-azintegrationaccountschema
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzIntegrationAccountSchema.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzIntegrationAccountSchema.md
 ---
 
 # New-AzIntegrationAccountSchema
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an integration account schema.
 
 ## SYNTAX
 
@@ -19,21 +22,38 @@ New-AzIntegrationAccountSchema -ResourceGroupName <String> -Name <String> -Schem
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzIntegrationAccountSchema** cmdlet creates an integration account schema.
+This cmdlet returns an object that represents the integration account schema.
+Specify the integration account name, resource group name, schema name, and schema definition.
+Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create the integration account schema
+```
+PS C:\>New-AzIntegrationAccountSchema -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -SchemaName "IntegrationAccountSchema1" -SchemaFilePath "c:\temp\schema1"
+Id          : /subscriptions/<SusbcriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/schemas/IntegrationAccountSchema1
+Name        : IntegrationAccountSchema1
+Type        : Microsoft.Logic/integrationAccounts/schemas
+CreatedTime : 3/26/2016 7:21:10 PM
+ChangedTime : 3/26/2016 7:21:10 PM
+SchemaType  : Xml
+ContentLink : https://<baseurl>/integrationaccounts68a13b6b49f14995ba7c5f3aedcbd7ad/3839E_XML_INTEGRATIONACCOUNTSCHEMA2-5A6650B914454A2CAB16
+              B4A8D3F9840D?sv=2014-02-14&sr=b&sig=<value>
+ContentSize : 7901
 ```
 
-{{ Add example description here }}
+This command creates the integration account schema named IntegrationAccountSchema1 in the specified resource group.
 
 ## PARAMETERS
 
 ### -ContentType
-The integration account schema content type.
+Specifies a content type for the integration account schema.
+This cmdlet supports application/xml as a map content type.
 
 ```yaml
 Type: System.String
@@ -48,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-The integration account schema metadata.
+Specifies a metadata object for the schema.
 
 ```yaml
 Type: System.Object
@@ -78,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The integration account name.
+Specifies the name of an integration account.
 
 ```yaml
 Type: System.String
@@ -93,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The integration account resource group name.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -108,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -SchemaDefinition
-The integration account schema definition.
+Specifies a definition object for integration account schema.
+Specify either this parameter or the *SchemaFilePath* parameter.
 
 ```yaml
 Type: System.String
@@ -123,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -SchemaFilePath
-The integration account schema file path.
+Specifies the file path of a definition for the integration account schema.
+Specify either this parameter or the *SchemaDefinition* parameter.
 
 ```yaml
 Type: System.String
@@ -138,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -SchemaName
-The integration account schema name.
+Specifies a name for the integration account schema.
 
 ```yaml
 Type: System.String
@@ -153,7 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -SchemaType
-The integration account schema type.
+Specifies the type for the integration account schema.
+This parameter supports Xml as the type.
 
 ```yaml
 Type: System.String
@@ -178,7 +201,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -194,14 +217,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -214,3 +236,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzIntegrationAccountSchema](./Get-AzIntegrationAccountSchema.md)
+
+[Remove-AzIntegrationAccountSchema](./Remove-AzIntegrationAccountSchema.md)
+
+[Set-AzIntegrationAccountSchema](./Set-AzIntegrationAccountSchema.md)
+
+

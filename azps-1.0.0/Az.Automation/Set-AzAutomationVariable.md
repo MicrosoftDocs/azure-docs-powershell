@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: F344D8D1-5593-4C09-A1CA-37579D2A3A61
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationvariable
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationVariable.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationVariable.md
 ---
 
 # Set-AzAutomationVariable
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an Automation variable.
 
 ## SYNTAX
 
@@ -25,21 +28,24 @@ Set-AzAutomationVariable [-Name] <String> -Description <String> [-ResourceGroupN
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzAutomationVariable** cmdlet modifies the value or description of a variable in Azure Automation.
+To encrypt the variable, specify the *Encrypted* parameter.
+You cannot modify the encrypted state of a variable after creation.
+Specifying *Encrypted* for an existing, non-encrypted, variable fails.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the value of a variable
+```
+PS C:\>Set-AzAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -ResourceGroupName "ResourceGroup01" -Value "New Value" -Encrypted $False
 ```
 
-{{ Add example description here }}
+This command sets a new value for the variable named StringVariable22 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account in which the variable is stored.
 
 ```yaml
 Type: System.String
@@ -54,12 +60,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description of the variable.
+Specifies a description for the variable.
 
 ```yaml
 Type: System.String
@@ -84,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypted
-The encrypted property of the variable.
+Specifies whether cmdlet encrypts the value of the variable for storage.
 
 ```yaml
 Type: System.Boolean
@@ -99,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The variable name.
+Specifies the name of the variable that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -114,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the resource group for which this cmdlet modifies a variable.
 
 ```yaml
 Type: System.String
@@ -129,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The value of the variable.
+Specifies a value for the variable.
 
 ```yaml
 Type: System.Object
@@ -144,8 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -162,3 +167,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationVariable](./Get-AzAutomationVariable.md)
+
+[New-AzAutomationVariable](./New-AzAutomationVariable.md)
+
+[Remove-AzAutomationVariable](./Remove-AzAutomationVariable.md)
+
+

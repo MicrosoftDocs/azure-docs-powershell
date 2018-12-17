@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: A82392AA-B12B-443E-8704-7CF5A9F8ED58
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/backup-azkeyvaultkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Backup-AzKeyVaultKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Backup-AzKeyVaultKey.md
 ---
 
 # Backup-AzKeyVaultKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Backs up a key in a key vault.
 
 ## SYNTAX
 
@@ -25,26 +28,55 @@ Backup-AzKeyVaultKey [-InputObject] <PSKeyVaultKeyIdentityItem> [[-OutputFile] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Backup-AzKeyVaultKey** cmdlet backs up a specified key in a key vault by downloading it and storing it in a file.
+If there are multiple versions of the key, all versions are included in the backup.
+Because the downloaded content is encrypted, it cannot be used outside of Azure Key Vault.
+You can restore a backed-up key to any key vault in the subscription that it was backed up from.
+Typical reasons to use this cmdlet are: 
+- You want to escrow a copy of your key, so that you have an offline copy in case you accidentally delete your key in your key vault.
+ 
+- You created a key using Key Vault and now want to clone the key into a different Azure region, so that you can use it from all instances of your distributed application.
+Use the **Backup-AzKeyVaultKey** cmdlet to retrieve the key in encrypted format and then use the Restore-AzKeyVaultKey cmdlet and specify a key vault in the second region.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Back up a key with an automatically generated file name
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\Users\username\> Backup-AzKeyVaultKey -VaultName 'MyKeyVault' -Name 'MyKey'
+
+C:\Users\username\mykeyvault-mykey-1527029447.01191
 ```
 
-{{ Add example description here }}
+This command retrieves the key named MyKey from the key vault named MyKeyVault and saves a backup of that key to a file that is automatically named for you, and displays the file name.
+
+### Example 2: Back up a key to a specified file name
+```powershell
+PS C:\> Backup-AzKeyVaultKey -VaultName 'MyKeyVault' -Name 'MyKey' -OutputFile 'C:\Backup.blob'
+
+C:\Backup.blob
+```
+
+This command retrieves the key named MyKey from the key vaultnamed MyKeyVault and saves a backup of that key to a file named Backup.blob.
+
+### Example 3: Back up a previously retrieved key to a specified file name, overwriting the destination file without prompting.
+```powershell
+PS C:\> $key = Get-AzKeyVaultKey -VaultName 'MyKeyVault' -Name 'MyKey'
+PS C:\> Backup-AzKeyVaultKey -Key $key -OutputFile 'C:\Backup.blob' -Force
+
+C:\Backup.blob
+```
+
+This command creates a backup of the key named $key.Name in the vault named $key.VaultName to a file named Backup.blob, silently overwriting the file if it exists already.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -84,8 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Key name.
-Cmdlet constructs the FQDN of a key from vault name, currently selected environment and key name.
+Specifies the name of the key to back up.
 
 ```yaml
 Type: System.String
@@ -100,9 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFile
-Output file.
-The output file to store the backed up key blob in.
-If not present, a default filename is chosen.
+Specifies the output file in which the backup blob is stored.
+If you do not specify this parameter, this cmdlet generates a file name for you.
+If you specify the name of an existing output file, the operation will not complete and returns an error message that the backup file already exists.
 
 ```yaml
 Type: System.String
@@ -117,8 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of the key vault that contains the key to back up.
 
 ```yaml
 Type: System.String
@@ -164,8 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,3 +207,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzKeyVaultKey](./Add-AzKeyVaultKey.md)
+
+[Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
+
+[Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
+
+[Restore-AzKeyVaultKey](./Restore-AzKeyVaultKey.md)
+

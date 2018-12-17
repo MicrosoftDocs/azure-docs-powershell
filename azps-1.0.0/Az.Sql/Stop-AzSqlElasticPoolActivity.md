@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/stop-azsqlelasticpoolactivity
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Stop-AzSqlElasticPoolActivity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Stop-AzSqlElasticPoolActivity.md
 ---
 
 # Stop-AzSqlElasticPoolActivity
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cancels the asynchronous update operation on an elastic pool.
 
 ## SYNTAX
 
@@ -19,16 +21,28 @@ Stop-AzSqlElasticPoolActivity [-PassThru] [-ServerName] <String> [-ElasticPoolNa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Stop-AzSqlElasticPoolActivity** cmdlet cancels the asynchronous update operation on an elastic pool.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Cancel the asynchronous update operation on an elastic pool
+```
+PS C:\> Stop-AzSqlElasticPoolActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -OperationId af97005d-9243-4f8a-844e-402d1cc855f5
+
+OperationId     : af97005d-9243-4f8a-844e-402d1cc855f5
+ServerName      : Server01
+DatabaseName    : ElasticPool01
+State           : CANCELLED
+Operation       : UpdateLogicalElasticPool
+ErrorCode       :
+ErrorMessage    :
+ErrorSeverity   :
+StartTime       : 10/15/2017 02:49:42 PM
+EndTime         : 10/15/2017 02:49:43 PM
+PercentComplete :
 ```
 
-{{ Add example description here }}
+This command cancels the asynchronous updates operation on the elastic pool.
 
 ## PARAMETERS
 
@@ -36,9 +50,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -154,8 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

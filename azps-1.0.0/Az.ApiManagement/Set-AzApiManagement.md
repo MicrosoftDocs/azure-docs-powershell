@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagement
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagement.md
 ---
 
 # Set-AzApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates an Azure Api Management service
 
 ## SYNTAX
 
@@ -18,16 +20,53 @@ Set-AzApiManagement -InputObject <PsApiManagement> [-AssignIdentity] [-AsJob] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+The **Set-AzApiManagement** cmdlet updates an Azure API Management service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 Get an API Management service and scale it to Premium and Add a region
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $apim = Get-AzApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
+PS C:\> $apim.Sku = "Premium"
+PS C:\> $apim.Capacity = 5
+PS C:\> $apim.AddRegion("Central US", "Premium", 3)
+PS C:\>Set-AzApiManagement -InputObject $apim
 ```
 
-{{ Add example description here }}
+This example gets an Api Management instance, scales it to five premium units and then adds an additional three units to the premium region.
+
+### Example 2: Update deployment (external VNET)
+```powershell
+PS C:\> $virtualNetwork = New-AzApiManagementVirtualNetwork -Location "East US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-WestUS/providers/Microsoft.Network/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
+PS C:\> $apim = Get-AzApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
+PS C:\> $apim.VpnType = "External"
+PS C:\> $apim.VirtualNetwork = $virtualNetwork
+PS C:\> Set-AzApiManagement -InputObject $apim
+```
+
+This command updates an existing API Management deployment and joins to an external *VpnType*.
+
+### Example 3: Create and initialize an instance of PsApiManagementCustomHostNameConfiguration using an Secret from KeyVault Resource
+```powershell
+PS C:\>$portal = New-AzApiManagementCustomHostnameConfiguration -Hostname "portal.contoso.com" -HostnameType Portal -KeyVaultId "https://apim-test-keyvault.vault.azure.net/secrets/api-portal-custom-ssl.pfx"
+PS C:\>$proxy1 = New-AzApiManagementCustomHostnameConfiguration -Hostname "gatewayl.contoso.com" -HostnameType Proxy -KeyVaultId "https://apim-test-keyvault.vault.azure.net/secrets/contoso-proxy-custom-ssl.pfx"
+PS C:\>$proxy2 = New-AzApiManagementCustomHostnameConfiguration -Hostname "gatewayl.foobar.com" -HostnameType Proxy -KeyVaultId "https://apim-test-keyvault.vault.azure.net/secrets/foobar-proxy-custom-ssl.pfx"
+PS C:\>$proxyCustomConfig = @($proxy1,$proxy2)
+PS C:\>$apim = Get-AzApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
+PS C:\>$apim.PortalCustomHostnameConfiguration = $portal
+PS C:\>$apim.ProxyCustomHostnameConfiguration = $proxyCustomConfig 
+PS C:\>Set-AzApiManagement -InputObject $apim -AssignIdentity
+```
+
+### Example 4: Update Publisher Email, NotificationSender Email and Organization Name
+```powershell
+PS C:\> $apim = Get-AzApiManagement -ResourceGroupName "api-Default-West-US" -Name "Contoso"
+PS C:\> $apim.PublisherEmail = "foobar@contoso.com"
+PS C:\> $apim.NotificationSenderEmail = "notification@contoso.com"
+PS C:\> $apim.OrganizationName = "Contoso"
+PS C:\> Set-AzApiManagement -InputObject $apim -PassThru
+```
 
 ## PARAMETERS
 
@@ -65,9 +104,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -122,8 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -138,8 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +189,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagement](./Get-AzApiManagement.md)
+
+[New-AzApiManagement](./New-AzApiManagement.md)
+
+[Remove-AzApiManagement](./Remove-AzApiManagement.md)

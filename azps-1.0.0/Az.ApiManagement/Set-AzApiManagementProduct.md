@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 223FBBA6-4405-4B7A-BA63-5F2434A2A50D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementproduct
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementProduct.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementProduct.md
 ---
 
 # Set-AzApiManagementProduct
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the API Management product details.
 
 ## SYNTAX
 
@@ -20,23 +23,23 @@ Set-AzApiManagementProduct -Context <PsApiManagementContext> -ProductId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementProduct** cmdlet sets the API Management product details.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the product details
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementProduct -Context $apimContext -ProductId "0123456789" -Title "Starter" -Description "Starter Product" -LegalTerms "Free for all" -SubscriptionRequired $True -State "NotPublished"
 ```
 
-{{ Add example description here }}
+This command updates the API Management product details, requires a subscription, and then unpublishes.
 
 ## PARAMETERS
 
 ### -ApprovalRequired
-Whether subscription to the product requires approval or not.
-This parameter is optional.
-Default value is $false.
+Indicates whether the subscription to the product requires approval.
+The default value is **$False**.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -51,8 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of the **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -67,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,8 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Product description.
-This parameter is optional.
+Specifies the product description.
 
 ```yaml
 Type: System.String
@@ -98,8 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegalTerms
-Legal terms of use of the product.
-This parameter is optional.
+Specifies the legal terms of use of the product.
 
 ```yaml
 Type: System.String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProduct type representing the modified product.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -129,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing Product.
-This parameter is required.
+Specifies the identifier of the existing product.
 
 ```yaml
 Type: System.String
@@ -145,10 +144,10 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Product state.
-One of: NotPublished, Published.
-This parameter is optional.
-Default value is NotPublished.
+Specifies the product state.
+psdx_paramvalues
+- NotPublished
+- Published
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProductState]
@@ -164,9 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionRequired
-Whether the product requires subscription or not.
-This parameter is optional.
-Default value is $true.
+Indicates whether the product requires a subscription.
+The default value for this parameter is **$True**.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -181,9 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionsLimit
-Maximum number of simultaneous subscriptions.
-This parameter is optional.
-Default value is 1.
+Specifies the maximum number of simultaneous subscriptions.
+The default value for this parameter is 1.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -198,8 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-Product title.
-This parameter is required.
+Specifies the product title this cmdlet sets.
 
 ```yaml
 Type: System.String
@@ -214,8 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -227,7 +222,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProductState, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProductState, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ### System.Management.Automation.SwitchParameter
 
@@ -238,3 +233,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementProduct](./Get-AzApiManagementProduct.md)
+
+[New-AzApiManagementProduct](./New-AzApiManagementProduct.md)
+
+[Remove-AzApiManagementProduct](./Remove-AzApiManagementProduct.md)
+
+

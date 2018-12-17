@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: A0293D80-5935-4D2C-AF11-2837FEC95760
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJob.md
 ---
 
 # Get-AzDataLakeAnalyticsJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a Data Lake Analytics job.
 
 ## SYNTAX
 
@@ -27,21 +30,29 @@ Get-AzDataLakeAnalyticsJob [-Account] <String> [-JobId] <Guid> [[-Include] <Exte
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDataLakeAnalyticsJob** cmdlet gets an Azure Data Lake Analytics job.
+If you do not specify a job, this cmdlet gets all jobs.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a specified job
+```
+PS C:\>Get-AzDataLakeAnalyticsJob -Account "contosoadla" -JobId $JobID01
 ```
 
-{{ Add example description here }}
+This command gets the job with the specified ID.
+
+### Example 2: Get jobs submitted in the past week
+```
+PS C:\>Get-AzDataLakeAnalyticsJob -Account "contosoadla" -SubmittedAfter (Get-Date).AddDays(-7)
+```
+
+This command gets jobs submitted in the past week.
 
 ## PARAMETERS
 
 ### -Account
-Name of the Data Lake Analytics account name under which want to retrieve the job information.
+Specifies the name of a Data Lake Analytics account.
 
 ```yaml
 Type: System.String
@@ -56,12 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -Include
-Optionally indicates additional job data to include in the job details.
+Specifies options that indicate the type of additional information to retrieve about the job.
+The acceptable values for this parameter are:
+- None
+- DebugInfo
+- Statistics
+- All
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+ExtendedJobData
@@ -87,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-ID of the specific job to return job information for.
+Specifies the ID of the job to get.
 
 ```yaml
 Type: System.Guid
@@ -102,7 +118,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-An optional filter which returns jobs with only the specified friendly name.
+Specifies a name to use to filter the job list results.
+The acceptable values for this parameter are:
+- None
+- DebugInfo
+- Statistics
+- All
 
 ```yaml
 Type: System.String
@@ -147,7 +168,12 @@ Accept wildcard characters: False
 ```
 
 ### -Result
-An optional filter which returns jobs with only the specified state.
+Specifies a result filter for the job results.
+The acceptable values for this parameter are:
+- None
+- Cancelled
+- Failed
+- Succeeded
 
 ```yaml
 Type: Microsoft.Azure.Management.DataLake.Analytics.Models.JobResult[]
@@ -163,7 +189,17 @@ Accept wildcard characters: False
 ```
 
 ### -State
-An optional filter which returns jobs with only the specified state.
+Specifies a state filter for the job results.
+The acceptable values for this parameter are:
+- Accepted
+- New
+- Compiling
+- Scheduling
+- Queued
+- Starting
+- Paused
+- Running
+- Ended
 
 ```yaml
 Type: Microsoft.Azure.Management.DataLake.Analytics.Models.JobState[]
@@ -179,7 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubmittedAfter
-An optional filter which returns jobs only submitted after the specified time.
+Specifies a date filter.
+Use this parameter to filter the job list result to jobs submitted after the specified date.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -194,7 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubmittedBefore
-An optional filter which returns jobs only submitted before the specified time.
+Specifies a date filter.
+Use this parameter to filter the job list result to jobs submitted before the specified date.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -209,7 +247,8 @@ Accept wildcard characters: False
 ```
 
 ### -Submitter
-An optional filter which returns jobs only by the specified submitter.
+Specifies the email address of a user.
+Use this parameter to filter the job list results to jobs submitted by a specified user.
 
 ```yaml
 Type: System.String
@@ -224,8 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -Top
-An optional value which indicates the number of jobs to return.
-Default value is 500
+An optional value which indicates the number of jobs to return. Default value is 500
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -240,8 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -268,3 +305,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Stop-AzDataLakeAnalyticsJob](./Stop-AzDataLakeAnalyticsJob.md)
+
+[Submit-AzDataLakeAnalyticsJob](./Submit-AzDataLakeAnalyticsJob.md)
+
+[Wait-AzDataLakeAnalyticsJob](./Wait-AzDataLakeAnalyticsJob.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/new-azcontainerregistry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/New-AzContainerRegistryWebhook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/New-AzContainerRegistryWebhook.md
 ---
 
 # New-AzContainerRegistryWebhook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a container registry webhook.
 
 ## SYNTAX
 
@@ -35,16 +37,21 @@ New-AzContainerRegistryWebhook [-Name] <String> [-Uri] <Uri> [-Action] <String[]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzContainerRegistryWebhook cmdlet creates a container registry webhook.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a container registry webhook.
+```
+PS C:\> New-AzContainerRegistryWebhook -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name "webhook001" -Uri http://www.bing.com -Action Delete,Push -Header @{SpecialHeader='headerVal'} -Tag @{Key="val"} -Location "east us" -Status Enabled -Scope "foo:*"
+
+Name            Location   Status     Scope           Actions         Provisioni ServiceUri
+                                                                      ngState
+----            --------   ------     -----           -------         ---------- ----------
+webhook001      westus     enabled    foo:*           {push, delete}  Succeeded
 ```
 
-{{ Add example description here }}
+Create a container registry webhook.
 
 ## PARAMETERS
 
@@ -65,12 +72,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -201,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Webhook status
+Webhook status, default value is enabled
 
 ```yaml
 Type: System.String
@@ -278,8 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -292,3 +298,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzContainerRegistryWebhook](Get-AzContainerRegistryWebhook.md)
+
+[Update-AzContainerRegistryWebhook](Update-AzContainerRegistryWebhook.md)
+
+[Remove-AzContainerRegistryWebhook](Remove-AzContainerRegistryWebhook.md)
+
+[Test-AzContainerRegistryWebhook](Test-AzContainerRegistryWebhook.md)

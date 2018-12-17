@@ -1,52 +1,54 @@
 ---
 Module Name: Az.PowerBIEmbedded
-Module Guid: b45b352f-17bd-465e-b162-10724c318e14
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 868389ce-dd36-4f57-a674-0970db085d9a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded
+Help Version: 4.1.4.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Az.PowerBIEmbedded.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Az.PowerBIEmbedded.md
 ---
 
 # Az.PowerBIEmbedded Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Power BI Embedded Cmdlets.
 
 ## Az.PowerBIEmbedded Cmdlets
 ### [Get-AzPowerBIEmbeddedCapacity](Get-AzPowerBIEmbeddedCapacity.md)
-{{Manually Enter Get-AzPowerBIEmbeddedCapacity Description Here}}
+Gets the details of a PowerBI Embedded Capacity.
 
 ### [Get-AzPowerBIWorkspace](Get-AzPowerBIWorkspace.md)
-{{Manually Enter Get-AzPowerBIWorkspace Description Here}}
+Gets the workspaces in a Power BI workspace collection.
 
 ### [Get-AzPowerBIWorkspaceCollection](Get-AzPowerBIWorkspaceCollection.md)
-{{Manually Enter Get-AzPowerBIWorkspaceCollection Description Here}}
+Gets Power BI workspace collections.
 
 ### [Get-AzPowerBIWorkspaceCollectionAccessKeys](Get-AzPowerBIWorkspaceCollectionAccessKeys.md)
-{{Manually Enter Get-AzPowerBIWorkspaceCollectionAccessKeys Description Here}}
+Gets the current access keys associated with a Power BI workspace collection.
 
 ### [New-AzPowerBIEmbeddedCapacity](New-AzPowerBIEmbeddedCapacity.md)
-{{Manually Enter New-AzPowerBIEmbeddedCapacity Description Here}}
+Creates a new PowerBI Embedded Capacity.
 
 ### [New-AzPowerBIWorkspaceCollection](New-AzPowerBIWorkspaceCollection.md)
-{{Manually Enter New-AzPowerBIWorkspaceCollection Description Here}}
+Creates a Power BI workspace collection.
 
 ### [Remove-AzPowerBIEmbeddedCapacity](Remove-AzPowerBIEmbeddedCapacity.md)
-{{Manually Enter Remove-AzPowerBIEmbeddedCapacity Description Here}}
+Deletes an instance of PowerBI Embedded Capacity.
 
 ### [Remove-AzPowerBIWorkspaceCollection](Remove-AzPowerBIWorkspaceCollection.md)
-{{Manually Enter Remove-AzPowerBIWorkspaceCollection Description Here}}
+Removes a Power BI workspace collection.
 
 ### [Reset-AzPowerBIWorkspaceCollectionAccessKeys](Reset-AzPowerBIWorkspaceCollectionAccessKeys.md)
-{{Manually Enter Reset-AzPowerBIWorkspaceCollectionAccessKeys Description Here}}
+Resets the specified access key.
 
 ### [Resume-AzPowerBIEmbeddedCapacity](Resume-AzPowerBIEmbeddedCapacity.md)
-{{Manually Enter Resume-AzPowerBIEmbeddedCapacity Description Here}}
+Resumes an instance of PowerBI Embedded Capacity.
 
 ### [Suspend-AzPowerBIEmbeddedCapacity](Suspend-AzPowerBIEmbeddedCapacity.md)
-{{Manually Enter Suspend-AzPowerBIEmbeddedCapacity Description Here}}
+Suspends an instance of PowerBI Embedded Capacity.
 
 ### [Test-AzPowerBIEmbeddedCapacity](Test-AzPowerBIEmbeddedCapacity.md)
-{{Manually Enter Test-AzPowerBIEmbeddedCapacity Description Here}}
+Tests the existence of an instance of PowerBI Embedded Capacity.
 
 ### [Update-AzPowerBIEmbeddedCapacity](Update-AzPowerBIEmbeddedCapacity.md)
-{{Manually Enter Update-AzPowerBIEmbeddedCapacity Description Here}}
+Modifies  an instance of PowerBI Embedded Capacity.
 

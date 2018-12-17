@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 0C8AC52C-4E70-493C-A299-79CE32EC5EF1
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabase
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabase.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabase.md
 ---
 
 # Get-AzSqlDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets one or more databases.
 
 ## SYNTAX
 
@@ -18,21 +21,84 @@ Get-AzSqlDatabase [[-DatabaseName] <String>] [-ServerName] <String> [-ResourceGr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlDatabase** cmdlet gets one or more Azure SQL databases from an Azure SQL Database Server.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all databases on a server
+```
+PS C:\>Get-AzSqlDatabase -ResourceGroupName "resourcegroup01" -ServerName "server01"
+ResourceGroupName             : resourcegroup01
+ServerName                    : server01
+DatabaseName                  : master
+Location                      : Central US
+DatabaseId                    : a2a7f2db-7526-4d86-a7b2-36276ee10dc6
+Edition                       : None
+CollationName                 : SQL_Latin1_General_CP1_CI_AS
+CatalogCollation              : 
+MaxSizeBytes                  : 5368709120
+Status                        : Online
+CreationDate                  : 7/3/2015 7:32:44 AM
+CurrentServiceObjectiveId     : c99ac918-dbea-463f-a475-16ec020fdc12
+CurrentServiceObjectiveName   : System1
+RequestedServiceObjectiveId   : c99ac918-dbea-463f-a475-16ec020fdc12
+RequestedServiceObjectiveName : 
+ElasticPoolName               : 
+EarliestRestoreDate           : 
+Tags                          : 
+
+ResourceGroupName             : resourcegroup01
+ServerName                    : server01
+DatabaseName                  : database01
+Location                      : Central US
+DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+Edition                       : Standard
+CollationName                 : SQL_Latin1_General_CP1_CI_AS
+CatalogCollation              : 
+MaxSizeBytes                  : 268435456000
+Status                        : Online
+CreationDate                  : 7/3/2015 7:33:37 AM
+CurrentServiceObjectiveId     : f1173c43-91bd-4aaa-973c-54e79e15235b
+CurrentServiceObjectiveName   : S0
+RequestedServiceObjectiveId   : f1173c43-91bd-4aaa-973c-54e79e15235b
+RequestedServiceObjectiveName : 
+ElasticPoolName               : 
+EarliestRestoreDate           : 
+Tags                          :
 ```
 
-{{ Add example description here }}
+This command gets all databases on the server named server01.
+
+### Example 2: Get a database by name on a server
+```
+PS C:\>Get-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database02"
+ResourceGroupName             : resourcegroup01
+ServerName                    : server01
+DatabaseName                  : database01
+Location                      : Central US
+DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+Edition                       : Standard
+CollationName                 : SQL_Latin1_General_CP1_CI_AS
+CatalogCollation              : 
+MaxSizeBytes                  : 268435456000
+Status                        : Online
+CreationDate                  : 7/3/2015 7:33:37 AM
+CurrentServiceObjectiveId     : f1173c43-91bd-4aaa-973c-54e79e15235b
+CurrentServiceObjectiveName   : S0
+RequestedServiceObjectiveId   : f1173c43-91bd-4aaa-973c-54e79e15235b
+RequestedServiceObjectiveName : 
+ElasticPoolName               : 
+EarliestRestoreDate           : 
+Tags                          :
+```
+
+This command gets a database named Database02 from a server named Server01.
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database to retrieve.
+Specifies the name of the database to retrieve.
 
 ```yaml
 Type: System.String
@@ -47,12 +113,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the database server is assigned.
 
 ```yaml
 Type: System.String
@@ -77,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Database Server the database is in.
+Specifies the name of the server to which the database is assigned.
 
 ```yaml
 Type: System.String
@@ -101,7 +167,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -117,14 +183,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -137,3 +202,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzSqlDatabase](./New-AzSqlDatabase.md)
+
+[Remove-AzSqlDatabase](./Remove-AzSqlDatabase.md)
+
+[Resume-AzSqlDatabase](./Resume-AzSqlDatabase.md)
+
+[Set-AzSqlDatabase](./Set-AzSqlDatabase.md)
+
+[Suspend-AzSqlDatabase](./Suspend-AzSqlDatabase.md)
+
+

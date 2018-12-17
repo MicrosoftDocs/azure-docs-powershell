@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/start-azrecoveryservicesasrplannedfailoverjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Start-AzRecoveryServicesAsrPlannedFailoverJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Start-AzRecoveryServicesAsrPlannedFailoverJob.md
 ---
 
 # Start-AzRecoveryServicesAsrPlannedFailoverJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts a planned failover operation.
 
 ## SYNTAX
 
@@ -30,21 +32,25 @@ Start-AzRecoveryServicesAsrPlannedFailoverJob -RecoveryPlan <ASRRecoveryPlan> -D
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-AzRecoveryServicesAsrPlannedFailoverJob** cmdlet starts a planned failover for an Azure Site Recovery replication protected item or recovery plan.
+You can check whether the job succeeds by using the Get-AzRecoveryServicesAsrJob cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $currentJob = Start-AzRecoveryServicesAsrPlannedFailoverJob -RecoveryPlan $RP -Direction PrimaryToRecovery
 ```
 
-{{ Add example description here }}
+Starts the planned failover for the specified ASR recovery plan and returns the ASR job used to track the operation.
 
 ## PARAMETERS
 
 ### -CreateVmIfNotFound
-{{Fill CreateVmIfNotFound Description}}
+Create the virtual machine if not found while failing back to the primary region (used in alternate location recovery.) The acceptable values for this parameter are:
+
+- Yes
+- No
 
 ```yaml
 Type: System.String
@@ -60,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataEncryptionPrimaryCertFile
-{{Fill DataEncryptionPrimaryCertFile Description}}
+Specifies the primary certificate file.
 
 ```yaml
 Type: System.String
@@ -75,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataEncryptionSecondaryCertFile
-{{Fill DataEncryptionSecondaryCertFile Description}}
+Specifies the secondary certificate file.
 
 ```yaml
 Type: System.String
@@ -92,10 +98,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -105,7 +112,11 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-{{Fill Direction Description}}
+Specifies the direction of the failover.
+The acceptable values for this parameter are:
+
+- PrimaryToRecovery
+- RecoveryToPrimary
 
 ```yaml
 Type: System.String
@@ -121,7 +132,21 @@ Accept wildcard characters: False
 ```
 
 ### -Optimize
-{{Fill Optimize Description}}
+Specifies what to optimize for.
+This parameter applies when failover is done from an Azure site to an on-premise site which requires substantial data synchronization.
+Valid values are:
+
+- ForDowntime
+- ForSynchronization
+
+When **ForDowntime** is specified, this indicates that data is synchronized before failover to minimize downtime.
+Synchronization is performed without shutting down the virtual machine.
+After synchronization is complete, the job is suspended.
+Resume the job to do an additional synchronization operation that shuts down the virtual machine.
+
+When **ForSynchronization** is specified, this indicates that data is synchronized during failover only so data synchronization is minimized.
+With this setting enabled, the virtual machine is shut down immediately.
+Synchronization starts after shutdown to complete the failover operation.
 
 ```yaml
 Type: System.String
@@ -137,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPlan
-{{Fill RecoveryPlan Description}}
+Specifies the ASR Recovery plan object corresponding to the recovery plan to be failed over.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan
@@ -152,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProtectedItem
-{{Fill ReplicationProtectedItem Description}}
+Specifies the ASR replication protected item object corresponding to the replication protected item to be failed over.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem
@@ -167,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicesProvider
-{{Fill ServicesProvider Description}}
+Identifies the host to on which to create the virtual machine while failing over to an alternate location by specifying the ASR services provider object corresponding to the ASR services provider running on the host.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryServicesProvider
@@ -197,8 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -213,8 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

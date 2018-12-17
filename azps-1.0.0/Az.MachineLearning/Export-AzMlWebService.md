@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning/export-azmlwebservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Export-AzMlWebService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Export-AzMlWebService.md
 ---
 
 # Export-AzMlWebService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Exports the web service definition object as a JSON formatted string.
 
 ## SYNTAX
 
@@ -25,26 +27,30 @@ Export-AzMlWebService -WebService <WebService> [-ToJsonString] [-Force]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Exports the definition object for the specified web servive as a JSON formatted string.
+You can return the string immediately or save it to a file.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Export as string
+```
+Export-AzMlWebService -WebService $svc -ToJsonString
 ```
 
-{{ Add example description here }}
+### Example 2: Export to file
+```
+Export-AzMlWebService -WebService $svc -OutputFile "C:\mlservice.json"
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFile
-Path to a file on disk where to export the web service definition in JSON format.
+The file path for exported definition.
 
 ```yaml
 Type: System.String
@@ -84,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToJsonString
-The actual web service definition as a JSON string.
+Specifies that the definition will be exported as a JSON string.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebService
-The web service definition object to export.
+The web service definition object to be exported.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
@@ -145,8 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -157,5 +162,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.String
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS

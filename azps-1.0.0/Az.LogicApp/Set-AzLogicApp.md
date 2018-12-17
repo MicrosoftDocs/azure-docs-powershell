@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: AEDA89D3-EF80-4E56-9B97-677EC8F3959D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/set-azlogicapp
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzLogicApp.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzLogicApp.md
 ---
 
 # Set-AzLogicApp
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies a logic app in a resource group.
 
 ## SYNTAX
 
@@ -29,21 +32,50 @@ Set-AzLogicApp -ResourceGroupName <String> -Name <String> [-AppServicePlan <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzLogicApp** cmdlet modifies a logic app by using the Logic Apps feature.
+A logic app is a collection of actions or triggers defined in Logic App definition.
+This cmdlet returns a **Workflow** object.
+You can modify a logic app by specifying a name, location, Logic App definition, resource group, and plan.
+A Logic App definition and parameters are formatted in JavaScript Object Notation (JSON).
+You can use a logic app as a template for definition and parameters.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
+Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify a logic app
+```
+PS C:\>Set-AzLogicApp -ResourceGroupName "ResourceGroup11" -Name "LogicApp17" -State "Enabled" -AppServicePlan "ServicePlan01" -DefinitionFilePath "d:\workflows\Definition17.json" -ParameterFilePath "d:\workflows\Parameters17.json"
+Id                           : /subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourceGroups/LogicAppCmdletTest/providers/Microsoft.Logic/workflows/LogicApp1
+Name                         : LogicApp17
+Type                         : Microsoft.Logic/workflows
+Location                     : westus
+ChangedTime                  : 1/13/2016 2:41:39 PM
+CreatedTime                  : 1/13/2016 2:41:39 PM
+AccessEndpoint               : https://westus.logic.azure.com:443/subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourcegroups/ResourceGroup11/providers/Microsoft.Logic/workflows/LogicApp17
+State                        : Enabled
+DefinitionLinkUri            : 
+DefinitionLinkContentVersion : 
+Definition                   : {$schema, contentVersion, parameters, triggers...} 
+ParametersLinkUri            : 
+ParametersLinkContentVersion : 
+Parameters                   : {[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter]} 
+SkuName                      : Standard
+PlanName                     : ServicePlan01
+PlanType                     : Microsoft.Web/ServerFarms
+PlanId                       : /subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourceGroups/ResourceGroup11/providers/Microsoft.Web/serverfarms/ServicePlan17
+Version                      : 08587489107859952120
 ```
 
-{{ Add example description here }}
+This command modifies a logic app.
 
 ## PARAMETERS
 
 ### -AppServicePlan
-App service plan name.
+Specifies the name of a plan.
 
 ```yaml
 Type: System.String
@@ -58,12 +90,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -73,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Definition
-The definition of the workflow.
+Specifies the definition of a logic app as an object or a string in JavaScript Object Notation (JSON) format.
 
 ```yaml
 Type: System.Object
@@ -88,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionFilePath
-The physical file path of the workflow definition.
+Specifies the definition of a logic app as the path of a definition file in JSON format.
 
 ```yaml
 Type: System.String
@@ -103,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -118,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntegrationAccountId
-The integration account id of the workflow.
+Specifies an integration account ID for the logic app.
 
 ```yaml
 Type: System.String
@@ -133,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the workflow.
+Specifies the name of a logic app.
 
 ```yaml
 Type: System.String
@@ -148,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterFilePath
-The parameter file path.
+Specifies the path of a JSON formatted parameter file.
 
 ```yaml
 Type: System.String
@@ -163,7 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The parameters parameter for the logic app.
+Specifies a parameters collection object for the Logic App.
+Specify a hash table, Dictionary\<string\>, or Dictionary\<string, WorkflowParameter\>.
 
 ```yaml
 Type: System.Object
@@ -178,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The targeted resource group for the workflow.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -193,7 +226,8 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The state of the workflow.
+Specifies the state of the logic app.
+The acceptable values for this parameter are: Enabled and Disabled.
 
 ```yaml
 Type: System.String
@@ -209,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseConsumptionModel
-Use consumption based model.
+Indicates that the logic app billing use the consumption based model.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -233,7 +267,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -249,14 +283,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -269,3 +302,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzLogicApp](./Get-AzLogicApp.md)
+
+[New-AzLogicApp](./New-AzLogicApp.md)
+
+[Remove-AzLogicApp](./Remove-AzLogicApp.md)
+
+[Start-AzLogicApp](./Start-AzLogicApp.md)
+
+

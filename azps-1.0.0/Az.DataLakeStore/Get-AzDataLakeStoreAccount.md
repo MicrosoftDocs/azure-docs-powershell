@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 234D579E-B62D-4D70-8D2E-22AC0D9AC513
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/get-azdatalakestoreaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzDataLakeStoreAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzDataLakeStoreAccount.md
 ---
 
 # Get-AzDataLakeStoreAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets details of a Data Lake Store account.
 
 ## SYNTAX
 
@@ -30,26 +33,26 @@ Get-AzDataLakeStoreAccount [[-ResourceGroupName] <String>] [-Name] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDataLakeStoreAccount** cmdlet gets details of a Data Lake Store account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a Data Lake Store account
+```
+PS C:\>Get-AzDataLakeStoreAccount -Name "ContosoADL"
 ```
 
-{{ Add example description here }}
+This command gets the account named ContosoADL.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -59,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific account.
+Specifies the name of the account to get.
 
 ```yaml
 Type: System.String
@@ -74,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which want to retrieve the account.
+Specifies the name of the resource group that contains the Data Lake Store account to get.
 
 ```yaml
 Type: System.String
@@ -101,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -115,3 +117,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzDataLakeStoreAccount](./New-AzDataLakeStoreAccount.md)
+
+[Remove-AzDataLakeStoreAccount](./Remove-AzDataLakeStoreAccount.md)
+
+[Set-AzDataLakeStoreAccount](./Set-AzDataLakeStoreAccount.md)
+
+[Test-AzDataLakeStoreAccount](./Test-AzDataLakeStoreAccount.md)
+
+

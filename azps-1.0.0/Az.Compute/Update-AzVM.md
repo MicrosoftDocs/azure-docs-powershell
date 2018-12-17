@@ -1,60 +1,67 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 38917534-49C6-47EA-B815-240F794EE655
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/update-azvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Update-AzVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Update-AzVM.md
 ---
 
 # Update-AzVM
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the state of an Azure virtual machine.
 
 ## SYNTAX
 
 ### ResourceGroupNameParameterSetName (Default)
 ```
 Update-AzVM [-ResourceGroupName] <String> -VM <PSVirtualMachine> [-Tag <Hashtable>]
- [-OsDiskWriteAccelerator <Boolean>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-OsDiskWriteAccelerator <Boolean>] [-UltraSSDEnabled <Boolean>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AssignIdentityParameterSet
 ```
 Update-AzVM [-ResourceGroupName] <String> -VM <PSVirtualMachine> [-Tag <Hashtable>] [-AssignIdentity]
- [-OsDiskWriteAccelerator <Boolean>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-OsDiskWriteAccelerator <Boolean>] [-UltraSSDEnabled <Boolean>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ExplicitIdentityParameterSet
 ```
 Update-AzVM [-ResourceGroupName] <String> -VM <PSVirtualMachine> [-Tag <Hashtable>]
- -IdentityType <ResourceIdentityType> [-IdentityId <String[]>] [-OsDiskWriteAccelerator <Boolean>] [-AsJob]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -IdentityType <ResourceIdentityType> [-IdentityId <String[]>] [-OsDiskWriteAccelerator <Boolean>]
+ [-UltraSSDEnabled <Boolean>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### IdParameterSetName
 ```
 Update-AzVM [-Id] <String> -VM <PSVirtualMachine> [-Tag <Hashtable>] [-OsDiskWriteAccelerator <Boolean>]
- [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UltraSSDEnabled <Boolean>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzVM** cmdlet updates the state of an Azure virtual machine to the state of a virtual machine object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update a virtual machine
+```
+PS C:\> Update-AzVM -ResourceGroupName "ResourceGroup11" -VM $VirtualMachine
 ```
 
-{{ Add example description here }}
+This command updates the virtual machine, $VirtualMachine, in ResourceGroup11.
+The command updates it by using the virtual machine object stored in the $VirtualMachine variable.
+To obtain a virtual machine object, use the **Get-AzVM** cmdlet.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background
+Run cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-{{Fill AssignIdentity Description}}
+Specify the system assigned identity for the virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,12 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -99,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group name.
+Specifies the Resource ID of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -114,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityId
-{{Fill IdentityId Description}}
+Specifies the list of user identities associated with the virtual machine scale set.
+The user identity references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/identities/{identityName}'
 
 ```yaml
 Type: System.String[]
@@ -129,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityType
-{{Fill IdentityType Description}}
+The type of identity used for the virtual machine. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.ResourceIdentityType]
@@ -145,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskWriteAccelerator
-{{Fill OsDiskWriteAccelerator Description}}
+Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
 
 ```yaml
 Type: System.Boolean
@@ -160,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -175,7 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+Specifies the resources and resource groups can be tagged with a set of name-value pairs.
+Adding tags to resources enables you to group resources together across resource groups and to create your own views.
+Each resource or resource group can have a maximum of 15 tags.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -189,8 +199,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UltraSSDEnabled
+The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM.
+Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine only if this property is enabled.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -VM
-{{Fill VM Description}}
+Specifies a local virtual machine object.
+To obtain a virtual machine object, use the Get-AzVM cmdlet.
+This virtual machine object contains the updated state for the virtual machine.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
@@ -214,7 +242,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -230,20 +258,21 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
 ### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
+
+### System.Boolean
 
 ## OUTPUTS
 
@@ -252,3 +281,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+[New-AzVM](./New-AzVM.md)
+
+[Remove-AzVM](./Remove-AzVM.md)
+
+[Restart-AzVM](./Restart-AzVM.md)
+
+[Start-AzVM](./Start-AzVM.md)
+
+[Stop-AzVM](./Stop-AzVM.md)
+
+[New-AzVMConfig](./New-AzVMConfig.md)
+
+

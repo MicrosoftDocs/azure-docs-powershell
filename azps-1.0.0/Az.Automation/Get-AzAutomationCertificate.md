@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: D690C903-A481-45F2-9D42-1CE2F4184A98
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationCertificate.md
 ---
 
 # Get-AzAutomationCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Automation certificates.
 
 ## SYNTAX
 
@@ -25,21 +28,30 @@ Get-AzAutomationCertificate [-Name] <String> [-ResourceGroupName] <String> [-Aut
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationCertificate** cmdlet gets one or more Azure Automation certificates.
+By default, this cmdlet gets all certificates.
+Specify the name of a certificate to get a specific certificate.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all certificates
+```
+PS C:\>Get-AzAutomationCertificate -ResourceGroupName "ResourceGroup07" -AutomationAccountName "Contoso17"
 ```
 
-{{ Add example description here }}
+This command gets metadata for all certificates in the Automation account named Contoso17.
+
+### Example 2: Get a certificate
+```
+PS C:\>Get-AzAutomationCertificate -ResourceGroupName "ResourceGroup07" -AutomationAccountName "Contoso17" -Name "ContosoCertificate"
+```
+
+This command gets metadata for the certificate named ContosoCertificate.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account for which this cmdlet retrieves a certificate.
 
 ```yaml
 Type: System.String
@@ -54,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The certificate name.
+Specifies the name of a certificate to retrieve.
 
 ```yaml
 Type: System.String
@@ -84,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet gets an Automation certificate.
 
 ```yaml
 Type: System.String
@@ -99,8 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +124,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzAutomationCertificate](./New-AzAutomationCertificate.md)
+
+[Remove-AzAutomationCertificate](./Remove-AzAutomationCertificate.md)
+
+[Set-AzAutomationCertificate](./Set-AzAutomationCertificate.md)
+
+

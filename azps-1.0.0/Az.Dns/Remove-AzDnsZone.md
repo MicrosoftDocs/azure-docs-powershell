@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
-online version:
+ms.assetid: A8E230A0-5057-40BC-81CD-6D397A503A84
+online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/remove-azdnszone
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzDnsZone.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzDnsZone.md
 ---
 
 # Remove-AzDnsZone
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a DNS zone from a resource group.
 
 ## SYNTAX
 
@@ -25,26 +28,32 @@ Remove-AzDnsZone -Zone <DnsZone> [-Overwrite] [-PassThru] [-DefaultProfile <IAzu
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzDnsZone** cmdlet permanently deletes a Domain Name System (DNS) zone from a specified resource group.
+All record sets contained in the zone are also deleted.
+You can pass a **DnsZone** object using the *Name* parameter or by using the pipeline operator, or alternatively you can specify the *ZoneName* and *ResourceGroupName* parameters.
+You can use the Confirm parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation.
+When specifying the zone using a **DnsZone** object (passed via the pipeline or *Zone* parameter), the zone is not deleted if it has been changed in Azure DNS since the local **DnsZone** object was retrieved (only operations directly on the DNS zone resource count as changes, operations on record sets within the zone do not).
+This provides protection for concurrent zone changes.
+This can be suppressed using the *Overwrite* parameter, which deletes the zone regardless of concurrent changes.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a zone
+```
+PS C:\>Remove-AzDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGroup"
 ```
 
-{{ Add example description here }}
+This command removes the zone named myzone.com from the resource group named MyResourceGroup.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The full name of the zone (without a terminating dot).
+Specifies the name of the DNS zone that this cmdlet removes.
+You must also specify the *ResourceGroupName* parameter.
+Alternatively, you can specify the DNS zone using the *Zone* parameter.
 
 ```yaml
 Type: System.String
@@ -69,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-Do not use the ETag field of the Zone parameter for optimistic concurrency checks.
+When specifying the zone using a **DnsZone** object (passed via the pipeline or *Zone* parameter), the zone is not deleted if it has been changed in Azure DNS since the local **DnsZone** object was retrieved (only operations directly on the DNS zone resource count as changes, operations on record sets within the zone do not).
+This provides protection for concurrent zone changes.
+This can be suppressed using the *Overwrite* parameter, which deletes the zone regardless of concurrent changes.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,7 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group in which the zone exists.
+Specifies the name of the resource group that contains the zone to remove.
+You must also specify the *ZoneName* parameter.
+Alternatively, you can specify the DNS zone using a **DnsZone** object, passed via either the pipeline or the *Zone* parameter.
 
 ```yaml
 Type: System.String
@@ -114,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-The zone object to set.
+Specifies the DNS zone to delete.
+The **DnsZone** object passed can also be passed via the pipeline.
+Alternatively, you can specify the DNS zone to delete by using the *ZoneName* and *ResourceGroupName* parameters.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Dns.DnsZone
@@ -138,7 +155,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -154,14 +171,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -174,5 +190,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+Due to the potentially high impact of deleting a DNS zone, by default, this cmdlet prompts for confirmation if the $ConfirmPreference Windows PowerShell variable has any value other than None.
+If you specify *Confirm* or *Confirm:$True*, this cmdlet prompts you for confirmation before it runs.
+If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation. 
 
 ## RELATED LINKS
+
+[Get-AzDnsZone](./Get-AzDnsZone.md)
+
+[New-AzDnsZone](./New-AzDnsZone.md)
+
+[Set-AzDnsZone](./Set-AzDnsZone.md)

@@ -1,25 +1,27 @@
 ---
 Module Name: Az.ContainerInstance
-Module Guid: 4c06e8d3-d64f-4497-8574-16e0c9dfebb2
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 99d2fc1f-ff3c-4bf3-ac22-8f81f0e5c279
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.containerinstance
+Help Version: 0.2.5.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Az.ContainerInstance.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Az.ContainerInstance.md
 ---
 
 # Az.ContainerInstance Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Container Instance Cmdlets.
 
 ## Az.ContainerInstance Cmdlets
 ### [Get-AzContainerGroup](Get-AzContainerGroup.md)
-{{Manually Enter Get-AzContainerGroup Description Here}}
+Gets container groups.
 
 ### [Get-AzContainerInstanceLog](Get-AzContainerInstanceLog.md)
-{{Manually Enter Get-AzContainerInstanceLog Description Here}}
+Get the logs of a container instance in a container group.
 
 ### [New-AzContainerGroup](New-AzContainerGroup.md)
-{{Manually Enter New-AzContainerGroup Description Here}}
+Creates a container group.
 
 ### [Remove-AzContainerGroup](Remove-AzContainerGroup.md)
-{{Manually Enter Remove-AzContainerGroup Description Here}}
+Removes a container group.
 

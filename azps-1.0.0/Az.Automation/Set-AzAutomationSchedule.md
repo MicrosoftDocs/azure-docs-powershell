@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 6429C564-1995-4D9B-BF9B-963B4F5FB3BD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationschedule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationSchedule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationSchedule.md
 ---
 
 # Set-AzAutomationSchedule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an Automation schedule.
 
 ## SYNTAX
 
@@ -19,21 +22,21 @@ Set-AzAutomationSchedule [-Name] <String> [-IsEnabled <Boolean>] [-Description <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzAutomationSchedule** cmdlet modifies a schedule in Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify a schedule
+```
+PS C:\>Set-AzAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -Description "Automation Schedule" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command modifies the description of the schedule named Schedule01.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account for which this cmdlet modifies a schedule.
 
 ```yaml
 Type: System.String
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The schedule description.
+Specifies a description for the schedule.
 
 ```yaml
 Type: System.String
@@ -78,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-Specifies whether the schedule is enabled.
-If a schedule is disabled, any runbooks using it will not run on the schedule until it is enabled.
+Specifies whether this cmdlet enables the schedule.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -94,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The schedule name.
+Specifies the name for the schedule that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet modifies a schedule.
 
 ```yaml
 Type: System.String
@@ -124,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -140,3 +141,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationSchedule](./Get-AzAutomationSchedule.md)
+
+[New-AzAutomationSchedule](./New-AzAutomationSchedule.md)
+
+[Remove-AzAutomationSchedule](./Remove-AzAutomationSchedule.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 585371E3-D4CE-452E-B0B0-92B3ABD127E7
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azstorageblobsastoken
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageBlobSASToken.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageBlobSASToken.md
 ---
 
 # New-AzStorageBlobSASToken
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Generates a SAS token for an Azure storage blob.
 
 ## SYNTAX
 
@@ -43,21 +46,30 @@ New-AzStorageBlobSASToken [-Container] <String> [-Blob] <String> -Policy <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStorageBlobSASToken** cmdlet generates a Shared Access Signature (SAS) token for an Azure storage blob.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Generate a blob SAS token with full blob permission
+```
+PS C:\>New-AzStorageBlobSASToken -Container "ContainerName" -Blob "BlobName" -Permission rwd
 ```
 
-{{ Add example description here }}
+This example generates a blob SAS token with full blob permission.
+
+### Example 2: Generate a blob SAS token with life time
+```
+PS C:\> $StartTime = Get-Date
+PS C:\> $EndTime = $startTime.AddHours(2.0)
+PS C:\> New-AzStorageBlobSASToken -Container "ContainerName" -Blob "BlobName" -Permission rwd -StartTime $StartTime -ExpiryTime $EndTime
+```
+
+This example generates a blob SAS token with life time.
 
 ## PARAMETERS
 
 ### -Blob
-Blob Name
+Specifies the storage blob name.
 
 ```yaml
 Type: System.String
@@ -72,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlob
-CloudBlob Object
+Specifies the **CloudBlob** object.
+To obtain a **CloudBlob** object, use the [Get-AzStorageBlob](./Get-AzStorageBlob.md) cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
@@ -87,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Container
-Container Name
+Specifies the storage container name.
 
 ```yaml
 Type: System.String
@@ -102,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies the storage context.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -120,7 +133,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -132,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryTime
-Expiry Time
+Specifies when the shared access signature expires.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -147,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullUri
-Display full uri with sas token
+Indicates that this cmdlet return the full blob URI and the shared access signature token.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,7 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressOrRange
-IP, or IP range ACL (access control list) that the request would be accepted by Azure Storage.
+Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+The range is inclusive.
 
 ```yaml
 Type: System.String
@@ -177,8 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-Permissions for a blob.
-Permissions can be any not-empty subset of "rwd".
+Specifies the permissions for a storage blob. 
+It is important to note that this is a string, like `rwd` (for Read, Write and Delete). 
 
 ```yaml
 Type: System.String
@@ -193,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-Policy Identifier
+Specifies an Azure Stored Access Policy.
 
 ```yaml
 Type: System.String
@@ -208,7 +222,11 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Protocol can be used in the request with this SAS token.
+Specifies the protocol permitted for a request.
+The acceptable values for this parameter are:
+* HttpsOnly
+* HttpsOrHttp
+The default value is HttpsOrHttp.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.WindowsAzure.Storage.SharedAccessProtocol]
@@ -224,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Start Time
+Specifies the time at which the shared access signature becomes valid.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -239,8 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -255,3 +272,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageBlob](./Get-AzStorageBlob.md)
+
+[New-AzStorageContainerSASToken](./New-AzStorageContainerSASToken.md)

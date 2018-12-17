@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: DEBD58A3-AFAF-485C-8708-53228625138F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azloadbalancerruleconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzLoadBalancerRuleConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzLoadBalancerRuleConfig.md
 ---
 
 # Remove-AzLoadBalancerRuleConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a rule configuration for a load balancer.
 
 ## SYNTAX
 
@@ -18,26 +21,28 @@ Remove-AzLoadBalancerRuleConfig -LoadBalancer <PSLoadBalancer> [-Name <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzLoadBalancerRuleConfig** cmdlet removes a rule configuration for an Azure load balancer.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a rule configuration from a load balancer
+```
+PS C:\>$loadbalancer = Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:> Remove-AzLoadBalancerRuleConfig -Name "MyLBruleName" -LoadBalancer $loadbalancer
 ```
 
-{{ Add example description here }}
+The first command gets the load balancer named MyLoadBalancer, and then stores it in the $loadbalancer variable.
+The second command removes the rule configuration named MyLBruleName from the load balancer in $loadbalancer.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
-The reference of the load balancer resource.
+Specifies the **LoadBalancer** object that contains the rule configuration that this cmdlet removes.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancer
@@ -62,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name of load balancing rule
+Specifies the name of the load balancer rule configuration that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -92,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -108,8 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +125,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzLoadBalancerRuleConfig](./Add-AzLoadBalancerRuleConfig.md)
+
+[Get-AzLoadBalancer](./Get-AzLoadBalancer.md)
+
+[Get-AzLoadBalancerRuleConfig](./Get-AzLoadBalancerRuleConfig.md)
+
+[New-AzLoadBalancerRuleConfig](./New-AzLoadBalancerRuleConfig.md)
+
+[Set-AzLoadBalancerRuleConfig](./Set-AzLoadBalancerRuleConfig.md)
+
+

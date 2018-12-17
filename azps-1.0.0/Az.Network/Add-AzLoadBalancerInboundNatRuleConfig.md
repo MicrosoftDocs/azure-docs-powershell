@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: EE8F5D57-1ECE-4F23-9A5B-F226DD2C5ECB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azloadbalancerinboundnatruleconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzLoadBalancerInboundNatRuleConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzLoadBalancerInboundNatRuleConfig.md
 ---
 
 # Add-AzLoadBalancerInboundNatRuleConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an inbound NAT rule configuration to a load balancer.
 
 ## SYNTAX
 
@@ -29,22 +32,23 @@ Add-AzLoadBalancerInboundNatRuleConfig -LoadBalancer <PSLoadBalancer> -Name <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzLoadBalancerInboundNatRuleConfig** cmdlet adds an inbound network address translation (NAT) rule configuration to an Azure load balancer.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add an inbound NAT rule configuration to a load balancer
+```
+PS C:\>$slb = Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $slb | Add-AzLoadBalancerInboundNatRuleConfig -Name "NewNatRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350  -EnableFloatingIP
 ```
 
-{{ Add example description here }}
+The first command gets the load balancer named MyloadBalancer, and then stores it in the variable $slb.
+The second command uses the pipeline operator to pass the load balancer in $slb to **Add-AzLoadBalancerInboundNatRuleConfig**, which adds an inbound NAT rule configuration to the load balancer.
 
 ## PARAMETERS
 
 ### -BackendPort
-The port used for the internal endpoint.
-Acceptable values range from 1 to 65535.
+Specifies the backend port for traffic matched by a rule configuration.
 
 ```yaml
 Type: System.Int32
@@ -59,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -74,9 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFloatingIP
-Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.
-This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
-This setting can't be changed after you create the endpoint.
+Indicates that this cmdlet enables a floating IP address for a rule configuration.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -91,8 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTcpReset
-Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.
-This element is only used when the protocol is set to TCP.
+Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfiguration
-A reference to frontend IP addresses.
+Specifies a list of front-end IP addresses to associate with an inbound NAT rule configuration.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration
@@ -122,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfigurationId
-A reference to frontend IP addresses.
+Specifies an ID for a front-end IP address configuration.
 
 ```yaml
 Type: System.String
@@ -137,9 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendPort
-The port for the external endpoint.
-Port numbers for each rule must be unique within the Load Balancer.
-Acceptable values range from 1 to 65534.
+Specifies the front-end port that is matched by a rule configuration.
 
 ```yaml
 Type: System.Int32
@@ -154,10 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdleTimeoutInMinutes
-The timeout for the TCP idle connection.
-The value can be set between 4 and 30 minutes.
-The default value is 4 minutes.
-This element is only used when the protocol is set to TCP.
+Specifies the length of time, in minutes, that the state of conversations is maintained in a load balancer.
 
 ```yaml
 Type: System.Int32
@@ -172,7 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
-The reference of the load balancer resource.
+Specifies a **LoadBalancer** object.
+This cmdlet adds an inbound NAT rule configuration to the load balancer that this parameter specifies.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancer
@@ -187,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the inbound nat rule.
+Specifies the name of the inbound NAT rule configuration to add.
 
 ```yaml
 Type: System.String
@@ -202,7 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-The transport protocol for the endpoint.
+Specifies the protocol that is matched by an inbound NAT rule.
+The acceptable values for this parameter are: Tcp or Udp.
 
 ```yaml
 Type: System.String
@@ -232,8 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -248,8 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -268,3 +264,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzLoadBalancer](./Get-AzLoadBalancer.md)
+
+[Get-AzLoadBalancerInboundNatRuleConfig](./Get-AzLoadBalancerInboundNatRuleConfig.md)
+
+[New-AzLoadBalancerInboundNatRuleConfig](./New-AzLoadBalancerInboundNatRuleConfig.md)
+
+[Remove-AzLoadBalancerInboundNatRuleConfig](./Remove-AzLoadBalancerInboundNatRuleConfig.md)
+
+[Set-AzLoadBalancer](./Set-AzLoadBalancer.md)
+
+[Set-AzLoadBalancerInboundNatRuleConfig](./Set-AzLoadBalancerInboundNatRuleConfig.md)
+
+

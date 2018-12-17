@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azsnapshot
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzSnapshot.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzSnapshot.md
 ---
 
 # Get-AzSnapshot
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the properties of a snapshot
 
 ## SYNTAX
 
@@ -18,26 +20,40 @@ Get-AzSnapshot [[-ResourceGroupName] <String>] [[-SnapshotName] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSnapshot** cmdlet gets the properties of a snapshot.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzSnapshot
 ```
 
-{{ Add example description here }}
+This command gets the properties of all snapshots of the subscription.
+
+### Example 2
+```
+PS C:\> Get-AzSnapshot -ResourceGroupName "ResourceGroupName1"
+```
+
+This command gets the properties of all snapshots in the resource group named "ResourceGroupName1"
+
+### Example 3
+```
+PS C:\> Get-AzSnapshot -ResourceGroupName "ResourceGroupName1" -SnapshotName "SnapshotName1"
+```
+
+This command gets the properties of the snapshot named "SnapshotName1" in the resource group named "ResourceGroupName1"
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -62,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -SnapshotName
-{{Fill SnapshotName Description}}
+Specifies the name of a snapshot.
 
 ```yaml
 Type: System.String
@@ -77,8 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

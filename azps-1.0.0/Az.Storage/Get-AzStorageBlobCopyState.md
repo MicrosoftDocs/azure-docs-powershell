@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: CBD157D2-37C5-491F-A806-6B39F1D0415A
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azstorageblobcopystate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageBlobCopyState.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageBlobCopyState.md
 ---
 
 # Get-AzStorageBlobCopyState
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the copy status of an Azure Storage blob.
 
 ## SYNTAX
 
@@ -34,21 +37,38 @@ Get-AzStorageBlobCopyState -CloudBlobContainer <CloudBlobContainer> [-Blob] <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzStorageBlobCopyState** cmdlet gets the copy status of an Azure Storage blob.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the copy status of a blob
+```
+C:\PS>Get-AzStorageBlobCopyState -Blob "ContosoPlanning2015" -Container "ContosoUploads"
 ```
 
-{{ Add example description here }}
+This command gets the copy status of the blob named ContosoPlanning2015 in the container ContosoUploads.
+
+### Example 2: Get the copy status for of a blob by using the pipeline
+```
+C:\PS>Get-AzStorageBlob -Blob "ContosoPlanning2015" -Container "ContosoUploads" | Get-AzStorageBlobCopyState
+```
+
+This command gets the blob named ContosoPlanning2015 in the container named ContosoUploads by using the **Get-AzStorageBlob** cmdlet, and then passes the result to the current cmdlet by using the pipeline operator.
+The **Get-AzStorageBlobCopyState** cmdlet gets the copy status for that blob.
+
+### Example 3: Get the copy status for a blob in a container by using the pipeline
+```
+C:\PS>Get-AzStorageContainer -Name "ContosoUploads" | Get-AzStorageBlobCopyState -Blob "ContosoPlanning2015"
+```
+
+This command gets the container named by using the **Get-AzStorageBlob** cmdlet, and then passes the result to the current cmdlet.
+The **Get-AzStorageContainer** cmdlet gets the copy status for the blob named ContosoPlanning2015 in that container.
 
 ## PARAMETERS
 
 ### -Blob
-Blob name
+Specifies the name of a blob.
+This cmdlet gets the state of the blob copy operation for the Azure Storage blob that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -63,7 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -78,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlob
-CloudBlob Object
+Specifies a **CloudBlob** object from Azure Storage Client library.
+To obtain a **CloudBlob** object, use the Get-AzStorageBlob cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
@@ -93,7 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlobContainer
-CloudBlobContainer Object
+Specifies a **CloudBlobContainer** object from the Azure Storage Client library.
+This cmdlet gets the copy status of a blob in the container that this parameter specifies.
+To obtain a **CloudBlobContainer** object, use the Get-AzStorageContainer cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer
@@ -108,7 +133,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -124,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -Container
-Container name
+Specifies the name of a container.
+This cmdlet gets the copy status for a blob in the container that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -139,7 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies an Azure storage context.
+To obtain a storage context, use the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -157,7 +187,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -169,7 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the service side time-out interval, in seconds, for a request.
+If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -184,7 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Wait for copy task complete
+Indicates that this cmdlet waits for the copy to finish.
+If you do not specify this parameter, this cmdlet returns a result immediately.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,8 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -217,3 +248,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-AzStorageBlobCopy](./Start-AzStorageBlobCopy.md)
+
+[Stop-AzStorageBlobCopy](./Stop-AzStorageBlobCopy.md)
+
+

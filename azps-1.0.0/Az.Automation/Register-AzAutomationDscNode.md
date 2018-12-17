@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 73E6DF02-7171-481B-966F-DECEC122A602
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/register-azautomationdscnode
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Register-AzAutomationDscNode.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Register-AzAutomationDscNode.md
 ---
 
 # Register-AzAutomationDscNode
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Registers an Azure virtual machine as a DSC node for an Automation account.
 
 ## SYNTAX
 
@@ -21,21 +24,24 @@ Register-AzAutomationDscNode -AzureVMName <String> [-NodeConfigurationName <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Register-AzAutomationDscNode** cmdlet registers an Azure virtual machine as an APS Desired State Configuration (DSC) node in an Azure Automation account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Register an Azure virtual machine as an Azure DSC node
+```
+PS C:\>Register-AzAutomationDscNode -AutomationAccountName "Contoso17" -AzVMName "VirtualMachine01" -ResourceGroupName "ResourceGroup01"-NodeConfigurationName "ContosoConfiguration.webserver"
 ```
 
-{{ Add example description here }}
+This command registers the Azure virtual machine named VirtualMachine01 as a DSC node in the Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -ActionAfterReboot
-Action to perform after a reboot.
+Specifies the action that the virtual machine takes after it restarts.
+Valid values are: 
+- ContinueConfiguration 
+- StopConfiguration
 
 ```yaml
 Type: System.String
@@ -51,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowModuleOverwrite
-Controls whether new configurations downloaded from the Azure Automation DSC pull server are allowed to overwrite the old modules already on the target node.
+Specifies whether new configurations that this DSC node downloads from the Azure Automation DSC pull server replace the existing modules already on the target node.
 
 ```yaml
 Type: System.Boolean
@@ -66,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account in which this cmdlet registers a virtual machine.
 
 ```yaml
 Type: System.String
@@ -126,7 +132,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationMode
-DSC configuration mode.
+Specifies the DSC configuration mode.
+Valid values are: 
+- ApplyAndMonitor 
+- ApplyAndAutocorrect 
+- ApplyOnly
 
 ```yaml
 Type: System.String
@@ -142,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationModeFrequencyMins
-Represents the frequency (in minutes) at which the background application of DSC attempts to implement the current configuration on the target node.
+Specifies the frequency, in minutes, at which the background application of DSC attempts to implement the current configuration on the target node.
 
 ```yaml
 Type: System.Int32
@@ -157,12 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -172,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeConfigurationName
-The name of the node configuration that the VM should be configured to pull from Azure Automation DSC.
+Specifies the name of the node configuration that this cmdlet configures the virtual machine to pull from Azure Automation DSC.
 
 ```yaml
 Type: System.String
@@ -187,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootNodeIfNeeded
-True to Reboot the node if needed.
+Specifies whether to restart the virtual machine, if needed.
 
 ```yaml
 Type: System.Boolean
@@ -202,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshFrequencyMins
-Represents the frequency (in minutes) at which the Local Configuration Manager contacts the Azure Automation DSC pull server to download the latest node configuration.
+Specifies the frequency, in minutes, at which the local Configuration Manager contacts the Azure Automation DSC pull server to download the latest node configuration.
 
 ```yaml
 Type: System.Int32
@@ -217,7 +227,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group.
+The Automation account with which this cmdlet registers a virtual machine belongs to the resource group that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -232,8 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -250,3 +260,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationDscNode](./Get-AzAutomationDscNode.md)
+
+[Set-AzAutomationDscNode](./Set-AzAutomationDscNode.md)
+
+[Unregister-AzAutomationDscNode](./Unregister-AzAutomationDscNode.md)
+
+

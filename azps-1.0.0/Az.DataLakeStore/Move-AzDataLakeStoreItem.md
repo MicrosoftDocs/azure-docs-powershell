@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 00CCA9B8-7C57-4FC0-9BD1-5FC16010E820
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/move-azdatalakestoreitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Move-AzDataLakeStoreItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Move-AzDataLakeStoreItem.md
 ---
 
 # Move-AzDataLakeStoreItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Moves or renames a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -19,21 +22,21 @@ Move-AzDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInstance>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Move-AzDataLakeStoreItem** cmdlet moves or renames a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Move and rename an item
+```
+PS C:\>Move-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "/Original/Path/File.txt" -Destination "/New/Path/RenamedFile.txt"
 ```
 
-{{ Add example description here }}
+This command renames the item File.txt to RenamedFile.txt and moves it to a different folder.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,8 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-The path in the specified Data Lake account where the file or folder should be moved to.
-In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path to which to move the item, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Indicates that, if the file or folder exists, it should be overwritten
+Indicates that this operation can overwrite the destination file if it already exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -94,8 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account where the file or folder should be moved from.
-In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of the item to move or rename, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -119,7 +120,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -135,14 +136,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -159,3 +159,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItem](./Get-AzDataLakeStoreItem.md)
+
+[Export-AzDataLakeStoreItem](./Export-AzDataLakeStoreItem.md)
+
+[Import-AzDataLakeStoreItem](./Import-AzDataLakeStoreItem.md)
+
+[New-AzDataLakeStoreItem](./New-AzDataLakeStoreItem.md)
+
+[Remove-AzDataLakeStoreItem](./Remove-AzDataLakeStoreItem.md)
+
+[Test-AzDataLakeStoreItem](./Test-AzDataLakeStoreItem.md)
+
+

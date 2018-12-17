@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: FC6BC096-DBC4-48DA-A366-B87EB18A0496
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmss
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVmss.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVmss.md
 ---
 
 # Get-AzVmss
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the properties of a VMSS.
 
 ## SYNTAX
 
@@ -31,26 +34,30 @@ Get-AzVmss [[-ResourceGroupName] <String>] [[-VMScaleSetName] <String>] [-OSUpgr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVmss** cmdlet gets the model and instance view of a Virtual Machine Scale Set (VMSS).
+The model view is the user specified properties of the virtual machine scale set.
+The instance view is the instance level status of the virtual machine scale set.
+Specify the *InstanceView* parameter to get only the instance view of a virtual machine scale set.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the properties of a VMSS
+```
+PS C:\> Get-AzVmss -ResourceGroupName "Group001" -VMScaleSetName "VMSS001"
 ```
 
-{{ Add example description here }}
+This command gets the properties of the VMSS named VMSS001 that belongs to the resource group named Group001.
+Since the command does not specify the *InstanceView* switch parameter, the cmdlet gets the model view of the virtual machine scale set.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceView
-{{Fill InstanceView Description}}
+Indicates that this cmdlet gets only the instance view of the virtual machine scale set.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -75,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -OSUpgradeHistory
-{{Fill OSUpgradeHistory Description}}
+Indicates that this cmdlet lists the os upgrade history of the virtual machine scale set.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -90,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the Resource Group of the VMSS.
 
 ```yaml
 Type: System.String
@@ -105,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMScaleSetName
-{{Fill VMScaleSetName Description}}
+Species the name of the VMSS.
 
 ```yaml
 Type: System.String
@@ -120,8 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,3 +140,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzVmss](./New-AzVmss.md)
+
+[Remove-AzVmss](./Remove-AzVmss.md)
+
+[Restart-AzVmss](./Restart-AzVmss.md)
+
+[Set-AzVmss](./Set-AzVmss.md)
+
+[Start-AzVmss](./Start-AzVmss.md)
+
+[Stop-AzVmss](./Stop-AzVmss.md)
+
+[Update-AzVmss](./Update-AzVmss.md)
+
+

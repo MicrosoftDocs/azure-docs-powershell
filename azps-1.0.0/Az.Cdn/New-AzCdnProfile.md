@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+ms.assetid: 2785A8E5-6905-4EDE-BFE1-FF7B1E386A39
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/new-azcdnprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/New-AzCdnProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/New-AzCdnProfile.md
 ---
 
 # New-AzCdnProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a CDN profile.
 
 ## SYNTAX
 
@@ -18,26 +21,19 @@ New-AzCdnProfile -ProfileName <String> -Location <String> -Sku <PSSkuName> -Reso
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzCdnProfile** cmdlet creates an Azure Content Delivery Network (CDN) profile.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +43,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location in which to create the CDN profile.
+Specifies the resource location of the profile.
 
 ```yaml
 Type: System.String
@@ -62,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-Azure CDN profile name.
+Specifies the name of the profile.
 
 ```yaml
 Type: System.String
@@ -77,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group of the Azure CDN profile will be created in.
+Specifies the name of the resource group to which the profile belongs.
 
 ```yaml
 Type: System.String
@@ -92,8 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-The pricing sku name of the Azure CDN profile.
-Valid values are StandardVerizon, StandardAkamai, Standard_Microsoft and PremiumVerizon.
+Specifies the SKU of the profile.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Cdn.Models.Profile.PSSkuName
@@ -133,7 +128,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -149,14 +144,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -169,3 +163,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzCdnProfile](./Get-AzCdnProfile.md)
+
+[Remove-AzCdnProfile](./Remove-AzCdnProfile.md)
+
+[Set-AzCdnProfile](./Set-AzCdnProfile.md)
+
+

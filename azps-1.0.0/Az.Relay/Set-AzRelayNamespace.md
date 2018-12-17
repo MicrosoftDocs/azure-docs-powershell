@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
 Module Name: Az.Relay
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.relay/set-azrelaynamespace
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/Set-AzRelayNamespace.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/Set-AzRelayNamespace.md
 ---
 
 # Set-AzRelayNamespace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the description of an existing Relay namespace.
 
 ## SYNTAX
 
@@ -19,16 +21,27 @@ Set-AzRelayNamespace [-ResourceGroupName] <String> [-Name] <String> [-Tag <Hasht
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzRelayNamespace** cmdlet updates the description of the specified Relay namespace within the resource group.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzRelayNamespace -ResourceGroupName Default-ServiceBus-WestUS -Name TestNameSpace-Relay1 -Tag @{Tag2="Tag2Value"}
+
+ProvisioningState  :
+CreatedAt          : 4/12/2017 12:38:47 AM
+UpdatedAt          : 4/12/2017 12:39:10 AM
+ServiceBusEndpoint : https://TestNameSpace-Relay1.servicebus.windows.net:443/
+MetricId           :
+Location           :
+Tags               : {[tag2, Tag2Value]}
+Id                 :
+Name               :
+Type               :
 ```
 
-{{ Add example description here }}
+Updates the Relay namespace with a new description.
 
 ## PARAMETERS
 
@@ -36,9 +49,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -139,8 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,7 +164,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.Relay.Models.RelayNamespaceAttributes
+### Microsoft.Azure.Commands.Relay.Models.PSRelayNamespaceAttributes
 
 ## NOTES
 

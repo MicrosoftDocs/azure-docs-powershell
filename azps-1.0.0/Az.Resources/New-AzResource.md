@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: D6FF6BDD-4515-438D-B39D-C0BFC3342F4E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresource
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzResource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzResource.md
 ---
 
 # New-AzResource
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a resource.
 
 ## SYNTAX
 
@@ -39,22 +42,37 @@ New-AzResource [-Location <String>] [-Kind <String>] [-Properties <PSObject>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzResource** cmdlet creates an Azure resource, such as a website, Azure SQL Database server, or Azure SQL Database, in a resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a resource
+```
+PS> New-AzResource -Location "West US" -Properties @{test="test"} -ResourceName TestSite06 -ResourceType microsoft.web/sites -ResourceGroupName ResourceGroup11 -Force
 ```
 
-{{ Add example description here }}
+This command creates a resource that is a website in ResourceGroup11.
+
+### Example 2: Create a resource using splatting
+```
+PS> $prop = @{
+    Location          = "West US" 
+    Properties        = @{test = "test"} 
+    ResourceName      = "TestSite06" 
+    ResourceType      = "microsoft.web/sites" 
+    ResourceGroupName = "ResourceGroup11" 
+    Force             = $true
+}
+
+PS> New-AzResource @prop
+```
+
+This command creates a resource that is a website in ResourceGroup11.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use. If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: System.String
@@ -84,12 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -99,9 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-The extension resource name.
-e.g.
-to specify a database MyServer/MyDatabase.
+Specifies the name of an extension resource for the resource. For instance, to specify a database, use the following format:
+server name`/`database name
 
 ```yaml
 Type: System.String
@@ -116,9 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-The extension resource type.
-e.g.
-Microsoft.Sql/Servers/Databases.
+Specifies the resource type for an extension resource.
+For instance, if the extension resource is a database, specify the following type:
+`Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -133,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -148,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsFullObject
-When set indicates that the full object is passed in to the -PropertyObject parameter.
+Indicates that the object that the *Properties* parameter specifies is the full object.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -163,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -Kind
-The resource kind.
+Specifies the resource kind for the resource.
 
 ```yaml
 Type: System.String
@@ -178,7 +195,11 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The resource location.
+Specifies the location of the resource.
+Specify data center location, such as Central US or Southeast Asia.
+You can place a resource in any location that supports resources of that type. Resource groups can
+contain resources from different locations. To determine which locations support each resource
+type, use the Get-AzLocation cmdlet.
 
 ```yaml
 Type: System.String
@@ -193,7 +214,8 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-An OData style filter which will be appended to the request in addition to any other filters.
+Specifies an Open Data Protocol (OData) style filter. This cmdlet appends this value to the request
+in addition to any other filters.
 
 ```yaml
 Type: System.String
@@ -208,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plan
-A hash table which represents resource plan properties.
+A hash table that represents resource plan properties.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -223,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -238,7 +260,8 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-A hash table which represents resource properties.
+Specifies resource properties for the resource. Use this parameter to specify the values of
+properties that are specific to a resource type.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -253,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group where this cmdlet creates the resource.
 
 ```yaml
 Type: System.String
@@ -268,9 +291,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-The fully qualified resource Id, including the subscription.
-e.g.
-/subscriptions/{subscriptionId}/providers/Microsoft.Sql/servers/myServer/databases/myDatabase
+Specifies the fully qualified resource ID, including the subscription, as in the following example:
+`/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -285,9 +307,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-The resource name.
-e.g.
-to specify a database MyServer/MyDatabase.
+Specifies the name of the resource. For instance, to specify a database, use the following format:
+`ContosoServer/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -302,9 +323,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The resource type.
-e.g.
-Microsoft.Sql/Servers/Databases.
+Specifies the type of the resource.
+For instance, for a database, the resource type is as follows:
+`Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -319,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-A hash table which represents sku properties.
+A hash table that represents sku properties.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -334,7 +355,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hash table which represents resource tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -349,7 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantLevel
-Indicates that this is a tenant level operation.
+Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -373,7 +395,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -389,14 +411,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -411,3 +432,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Find-AzResource](./Find-AzResource.md)
+
+[Get-AzResource](./Get-AzResource.md)
+
+[Move-AzResource](./Move-AzResource.md)
+
+[Remove-AzResource](./Remove-AzResource.md)
+
+[Set-AzResource](./Set-AzResource.md)

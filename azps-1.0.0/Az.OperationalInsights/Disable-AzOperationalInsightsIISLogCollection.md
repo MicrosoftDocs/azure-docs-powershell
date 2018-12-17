@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 95B54065-B6CC-4D10-A747-28CE3F412ABF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/disable-azoperationalinsightsiislogcollection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Disable-AzOperationalInsightsIISLogCollection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Disable-AzOperationalInsightsIISLogCollection.md
 ---
 
 # Disable-AzOperationalInsightsIISLogCollection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Stops collection of IIS logs from computers.
 
 ## SYNTAX
 
@@ -25,26 +28,19 @@ Disable-AzOperationalInsightsIISLogCollection [-Workspace] <PSWorkspace>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Disable-AzOperationalInsightsIISLogCollection** cmdlet stops collection of Internet Information Services (IIS) logs from connected computers in a workspace.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group that contains computers.
 
 ```yaml
 Type: System.String
@@ -69,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Workspace
-The workspace that will contain the data source.
+Specifies a workspace in which this cmdlet operates.
 
 ```yaml
 Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
@@ -84,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceName
-The name of the workspace that will contain the data source.
+Specifies the name of a workspace in which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -108,7 +104,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -124,14 +120,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -144,5 +139,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, operational, insights
 
 ## RELATED LINKS
+
+[Enable-AzOperationalInsightsIISLogCollection](./Enable-AzOperationalInsightsIISLogCollection.md)
+
+

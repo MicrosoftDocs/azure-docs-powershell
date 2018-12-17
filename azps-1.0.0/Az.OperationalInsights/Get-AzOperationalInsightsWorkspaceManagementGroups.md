@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: F29E0B9C-2479-44FB-B196-EAF97B69E6A6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightsworkspacemanagementgroups
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsWorkspaceManagementGroups.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsWorkspaceManagementGroups.md
 ---
 
 # Get-AzOperationalInsightsWorkspaceManagementGroups
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets details of management groups connected to a workspace.
 
 ## SYNTAX
 
@@ -18,26 +21,33 @@ Get-AzOperationalInsightsWorkspaceManagementGroups [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzOperationalInsightsWorkspaceManagementGroups** cmdlet lists the management groups that are connected to a workspace.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get management groups by workspace name
+```
+PS C:\>Get-AzOperationalInsightsWorkspaceManagementGroups -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 ```
 
-{{ Add example description here }}
+This command gets the management groups for the workspace named MyWorkspace in the resource group named ContosoResourceGroup.
+
+### Example 2: Get management groups by using the pipeline
+```
+PS C:\>Get-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" | Get-AzOperationalInsightsWorkspaceManagementGroups
+```
+
+This command uses the Get-AzOperationalInsightsWorkspace cmdlet to get the workspace named MyWorkspace, and then passes the workspace to the current cmdlet, which gets the management groups for that workspace.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The workspace name.
+Specifies the workspace name.
 
 ```yaml
 Type: System.String
@@ -62,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of an Azure resource group.
 
 ```yaml
 Type: System.String
@@ -77,8 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +100,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
+
+[Get-AzOperationalInsightsWorkspace](./Get-AzOperationalInsightsWorkspace.md)
+
+

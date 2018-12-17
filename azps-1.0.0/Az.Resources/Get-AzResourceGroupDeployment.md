@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 20CB842B-F7A9-4052-85D9-0DF9586D5FEA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourcegroupdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceGroupDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceGroupDeployment.md
 ---
 
 # Get-AzResourceGroupDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the deployments in a resource group.
 
 ## SYNTAX
 
@@ -25,22 +28,49 @@ Get-AzResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzResourceGroupDeployment** cmdlet gets the deployments in an Azure resource group.
+Specify the *Name* or *Id* parameter to filter the results.
+By default, **Get-AzResourceGroupDeployment** gets all deployments for a specified resource group.
+An Azure resource is a user-managed Azure entity, such as a database server, database, or web site.
+An Azure resource group is a collection of Azure resources that are deployed as a unit.
+A deployment is the operation that makes the resources in the resource group available for use.
+For more information about Azure resources and Azure resource groups, see the New-AzResourceGroup cmdlet.
+You can use this cmdlet for tracking.
+For debugging, use this cmdlet with the Get-AzLog cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all deployments for a resource group
+```
+PS C:\>Get-AzResourceGroupDeployment -ResourceGroupName "ContosoLabsRG"
 ```
 
-{{ Add example description here }}
+This command gets all deployments for the ContosoLabsRG resource group.
+The output shows a deployment for a WordPress blog that used a gallery template.
+
+### Example 2: Get a deployment by name
+```
+PS C:\>Get-AzResourceGroupDeployment -ResourceGroupName "ContosoLabsRG" -Name "DeployWebsite01"
+```
+
+This command gets the DeployWebsite01 deployment of the ContosoLabsRG resource group.
+You can assign a name to a deployment when you create it by using the **New-AzResourceGroup** or **New-AzResourceGroupDeployment** cmdlets.
+If you do not assign a name, the cmdlets provide a default name based on the template that is used to create the deployment.
+
+### Example 3: Get the deployments of all resource groups
+```
+PS C:\>Get-AzResourceGroup | Get-AzResourceGroupDeployment | Format-Table ResourceGroupName, DeploymentName, ProvisioningState
+```
+
+This command gets all resource groups in your subscription by using the Get-AzResourceGroup cmdlet.
+The command passes the resource groups to the current cmdlet by using the pipeline operator.
+The current cmdlet gets all deployments of all resource groups in the subscription, and passes the results to the Format-Table cmdlet to display their **ResourceGroupName**, **DeploymentName**, and **ProvisioningState** property values.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource Provider.
+You can specify a different version than the default version.
 
 ```yaml
 Type: System.String
@@ -55,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified resource Id of the deployment.
-example: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Resources/deployments/{deploymentName}
+Specifies the ID of the resource group deployment to get.
 
 ```yaml
 Type: System.String
@@ -86,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the resource group deployment.
+Specifies the name of the deployment to get.
+Wildcard characters are not permitted.
 
 ```yaml
 Type: System.String
@@ -101,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,7 +146,10 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of a resource group.
+The cmdlet gets the deployments for the resource group that this parameter specifies.
+Wildcard characters are not permitted.
+This parameter is required and you can specify only one resource group in each command.
 
 ```yaml
 Type: System.String
@@ -131,8 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -145,3 +177,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzResourceGroup](./Get-AzResourceGroup.md)
+
+[New-AzResourceGroup](./New-AzResourceGroup.md)
+
+[New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)
+
+[Remove-AzResourceGroupDeployment](./Remove-AzResourceGroupDeployment.md)
+
+[Stop-AzResourceGroupDeployment](./Stop-AzResourceGroupDeployment.md)
+
+[Test-AzResourceGroupDeployment](./Test-AzResourceGroupDeployment.md)
+
+

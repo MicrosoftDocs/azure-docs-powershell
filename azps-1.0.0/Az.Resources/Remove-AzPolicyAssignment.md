@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 36399302-3EA5-45A3-A042-536CC7EC2E6D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azpolicyassignment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzPolicyAssignment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzPolicyAssignment.md
 ---
 
 # Remove-AzPolicyAssignment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a policy assignment.
 
 ## SYNTAX
 
@@ -25,22 +28,38 @@ Remove-AzPolicyAssignment -Id <String> [-ApiVersion <String>] [-Pre] [-DefaultPr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzPolicyAssignment** cmdlet removes the specified policy assignment.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove policy assignment by name and scope
+```
+PS C:\> $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+PS C:\> Remove-AzPolicyAssignment -Name 'PolicyAssignment07' -Scope $ResourceGroup.ResourceId -Force
 ```
 
-{{ Add example description here }}
+The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet.
+The command stores that object in the $ResourceGroup variable.
+The second command removes the policy assignment named PolicyAssignment07 that was assigned at a resource group level.
+The **ResourceId** property of $ResourceGroup identifies the resource group.
+
+### Example 2: Remove policy assignment by ID
+```
+PS C:\> $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11' 
+PS C:\> $PolicyAssignment = Get-AzPolicyAssignment -Name 'PolicyAssignment07' -Scope $ResourceGroup.ResourceId
+PS C:\> Remove-AzPolicyAssignment -Id $PolicyAssignment.ResourceId -Force
+```
+
+The first command gets a resource group named ResourceGroup11, and then stores that object in the $ResourceGroup variable.
+The second command gets the policy assignment at a resource group level, and then stores it in the $PolicyAssignment variable.
+The **ResourceId** property of $ResourceGroup identifies the resource group.
+The final command removes the policy assignment that the **ResourceId** property of $PolicyAssignment identifies.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use.
+If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: System.String
@@ -55,12 +74,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,8 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified policy assignment ID to delete, including the scope, e.g.
-/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}.
+Specifies the fully qualified resource ID for the policy assignment that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -86,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the policy assignment to delete.
+Specifies the name of the policy assignment that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -101,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,8 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-The scope of the policy assignment to delete, e.g.
-/providers/managementGroups/{managementGroupName}.
+Specifies the scope at which the policy is applied.
 
 ```yaml
 Type: System.String
@@ -141,7 +158,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -157,14 +174,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -177,3 +193,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPolicyAssignment](./Get-AzPolicyAssignment.md)
+
+[New-AzPolicyAssignment](./New-AzPolicyAssignment.md)
+
+[Set-AzPolicyAssignment](./Set-AzPolicyAssignment.md)
+
+

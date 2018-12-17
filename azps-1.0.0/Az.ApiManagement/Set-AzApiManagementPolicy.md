@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 6CD1C2B8-0416-4FF3-81B0-0C9E59AE6CF9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementpolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementPolicy.md
 ---
 
 # Set-AzApiManagementPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the specified scope policy for API Management.
 
 ## SYNTAX
 
@@ -41,23 +44,47 @@ Set-AzApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] -
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementPolicy** cmdlet sets the specified scope policy for API Management.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set the tenant level policy
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementPolicy -Context $apimContext -PolicyFilePath "C:\contoso\policies\tenantpolicy.xml"
 ```
 
-{{ Add example description here }}
+This command sets the tenant level policy from a file named tenantpolicy.xml.
+
+### Example 2: Set a product-scope policy
+```powershell
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementPolicy -Context $apimContext -ProductId "0123456789" -Policy $PolicyString
+```
+
+This command sets the product-scope policy for API Management.
+
+### Example 3: Set API-scope policy
+```powershell
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementPolicy -Context $apimContext -ApiId "9876543210" -Policy $PolicyString
+```
+
+This command sets API-scope policy for API Management.
+
+### Example 4: Set operation-scope policy
+```powershell
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementPolicy -Context $apimContext -ApiId "9876543210" -OperationId "777" -Policy $PolicyString
+```
+
+This command sets operation-scope policy for API Management.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of existing API.
-If specified will set API-scope policy.
-This parameters is required.
+Specifies the identifier of the existing API.
+If you specify this parameter, the cmdlet sets the API-scope policy.
 
 ```yaml
 Type: System.String
@@ -72,9 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Identifier of API Revision.
-This parameter is optional.
-If not specified, the policy will be updated in the currently active api revision.
+Identifier of API Revision. This parameter is optional. If not specified, the policy will be updated in the currently active api revision.
 
 ```yaml
 Type: System.String
@@ -89,8 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies the instance of **PsApiManagementContext**.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -105,12 +129,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -120,8 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-Format of the policy.
-This parameter is optional.When using application/vnd.ms-azure-apim.policy+xml, expressions contained within the policy must be XML-escaped.When using application/vnd.ms-azure-apim.policy.raw+xml no escaping is necessary.Default value is 'application/vnd.ms-azure-apim.policy+xml'.
+Specifies the format of the policy. When using `application/vnd.ms-az-apim.policy+xml`, 
+expressions contained within the policy must be XML-escaped. When using `application/vnd.ms-az-apim.policy.raw+xml` it 
+is **not** necessary for the policy to be XML-escaped.
+The default value is `application/vnd.ms-az-apim.policy+xml`.
+This parameter is optional.
 
 ```yaml
 Type: System.String
@@ -137,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier of existing operation.
+Specifies the identifier of the existing operation.
 If specified with ApiId will set operation-scope policy.
 This parameters is required.
 
@@ -154,9 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -171,8 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-Policy document as a string.
-This parameter is required if -PolicyFilePath or -PolicyUrl is not specified.
+Specifies the policy document as a string.
+This parameter is required if the -*PolicyFilePath* is not specified.
 
 ```yaml
 Type: System.String
@@ -187,8 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyFilePath
-Policy document file path.
-This parameter is required if -Policy or -PolicyUrl is not specified.
+Specifies the policy document file path.
+This parameter is required if the *Policy* parameter is not specified.
 
 ```yaml
 Type: System.String
@@ -203,8 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyUrl
-The Url where the Policy document is hosted.
-This parameter is required if -Policy or -PolicyFilePath is not specified.
+The Url where the Policy document is hosted. This parameter is required if -Policy or -PolicyFilePath is not specified.
 
 ```yaml
 Type: System.String
@@ -219,9 +243,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing product.
-If specified will set product-scope policy.
-This parameters is required.
+Specifies the identifier of the existing product.
+If this parameter is specified, the cmdlet sets the product-scope policy.
 
 ```yaml
 Type: System.String
@@ -236,8 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -254,3 +276,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementPolicy](./Get-AzApiManagementPolicy.md)
+
+[Remove-AzApiManagementPolicy](./Remove-AzApiManagementPolicy.md)
+
+

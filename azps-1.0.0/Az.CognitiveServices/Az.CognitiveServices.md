@@ -1,37 +1,42 @@
 ---
 Module Name: Az.CognitiveServices
-Module Guid: 492308f7-25bf-4606-888f-357c7c2850aa
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 66c566b4-950c-4a2b-9f3b-199d92f0df1a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.cognitiveservices
+Help Version: 0.9.4.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Az.CognitiveServices.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Az.CognitiveServices.md
 ---
 
 # Az.CognitiveServices Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Cognitive Services cmdlets.
 
 ## Az.CognitiveServices Cmdlets
 ### [Get-AzCognitiveServicesAccount](Get-AzCognitiveServicesAccount.md)
-{{Manually Enter Get-AzCognitiveServicesAccount Description Here}}
+Gets an account.
 
 ### [Get-AzCognitiveServicesAccountKey](Get-AzCognitiveServicesAccountKey.md)
-{{Manually Enter Get-AzCognitiveServicesAccountKey Description Here}}
+Gets the API keys for an account.
 
 ### [Get-AzCognitiveServicesAccountSkus](Get-AzCognitiveServicesAccountSkus.md)
-{{Manually Enter Get-AzCognitiveServicesAccountSkus Description Here}}
+Gets the available SKUs for an account.
+
+### [Get-AzCognitiveServicesAccountType](Get-AzCognitiveServicesAccountType.md)
+Gets the available Cognitive Services Account Types.
 
 ### [Get-AzCognitiveServicesAccountUsage](Get-AzCognitiveServicesAccountUsage.md)
-{{Manually Enter Get-AzCognitiveServicesAccountUsage Description Here}}
+Get current usages for a Cognitive Services account.
 
 ### [New-AzCognitiveServicesAccount](New-AzCognitiveServicesAccount.md)
-{{Manually Enter New-AzCognitiveServicesAccount Description Here}}
+Creates a Cognitive Services account.
 
 ### [New-AzCognitiveServicesAccountKey](New-AzCognitiveServicesAccountKey.md)
-{{Manually Enter New-AzCognitiveServicesAccountKey Description Here}}
+Regenerates an account key.
 
 ### [Remove-AzCognitiveServicesAccount](Remove-AzCognitiveServicesAccount.md)
-{{Manually Enter Remove-AzCognitiveServicesAccount Description Here}}
+Deletes a Cognitive Services account.
 
 ### [Set-AzCognitiveServicesAccount](Set-AzCognitiveServicesAccount.md)
-{{Manually Enter Set-AzCognitiveServicesAccount Description Here}}
+Modifies an account.
 

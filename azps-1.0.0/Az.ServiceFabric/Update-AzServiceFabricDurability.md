@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
 Module Name: Az.ServiceFabric
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefabric/update-azservicefabricdurability
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Update-AzServiceFabricDurability.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Update-AzServiceFabricDurability.md
 ---
 
 # Update-AzServiceFabricDurability
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Update the durability tier or VmSku of a node type in the cluster.
 
 ## SYNTAX
 
@@ -19,26 +21,26 @@ Update-AzServiceFabricDurability [-ResourceGroupName] <String> [-Name] <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use **Update-AzServiceFabricDurability** to update durability or SKU of the cluster.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS c:> Update-AzServiceFabricDurability -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -DurabilityLevel Silver -NodeType nt1
 ```
 
-{{ Add example description here }}
+This command changes durability tier of the NodeType 'nt1' to silver.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -DurabilityLevel
-Specify durability Level
+Specify durability level.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel
@@ -64,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specify the name of the cluster
+Specify the name of the cluster.
 
 ```yaml
 Type: System.String
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
-Specify Service Fabric node type name
+Specify Service Fabric node type name.
 
 ```yaml
 Type: System.String
@@ -94,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specify the name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: System.String
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Specify the SKU of the node type
+Specify the SKU of the node type.
 
 ```yaml
 Type: System.String
@@ -139,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -155,8 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

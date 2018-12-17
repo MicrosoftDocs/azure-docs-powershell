@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/remove-azeventhub
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Remove-AzEventHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Remove-AzEventHub.md
 ---
 
 # Remove-AzEventHub
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the specified Event Hub.
 
 ## SYNTAX
 
@@ -31,16 +33,38 @@ Remove-AzEventHub [-ResourceId] <String> [-PassThru] [-AsJob] [-DefaultProfile <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Remove-AzEventHub cmdlet removes and deletes the specified Event Hub from the given namespace.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Remove-AzEventHub -ResourceGroupName MyResourceGroupName -Namespace MyNamespaceName -Name MyEventHubName
 ```
 
-{{ Add example description here }}
+Removes the Event Hub \`MyEventHubName\`.
+
+### Example 2.1 - InputObject - Using Variable:
+```
+PS C:\> $inputobject = Get-AzEventHub <params>
+PS C:\> Remove-AzEventHub -InputObject $inputobject
+```
+
+### Example 2.2 - InputObject Using Piping:
+```
+PS C:\> Get-AzEventHub <params> | Remove-AzEventHub
+```
+
+### Example 3.1 - ResourceId - Using Variable:
+```
+PS C:\> $resourceid = Get-AzEventHub <params>
+PS C:\> Remove-AzEventHub -ResourceId $resourceid.Id
+```
+
+### Example 3.1 - ResourceId - Using string:
+```
+PS C:\> Remove-AzEventHub -ResourceId "/subscriptions/xxxx-xxxxx-xxxxxx-xxxxxx/resourceGroups/ResourceGroupName/providers/Microsoft.EventHub/namespaces/NamespaceName/eventhubs/EventHubName"
+```
 
 ## PARAMETERS
 
@@ -63,9 +87,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -120,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -196,8 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

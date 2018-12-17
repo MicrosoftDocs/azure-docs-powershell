@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/new-azcontainerregistry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/New-AzContainerRegistryReplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/New-AzContainerRegistryReplication.md
 ---
 
 # New-AzContainerRegistryReplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a container registry replication.
 
 ## SYNTAX
 
@@ -32,26 +34,31 @@ New-AzContainerRegistryReplication -Location <String> [-Name <String>] [-Tag <Ha
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzContainerRegistryReplication cmdlet creates a new container registry replication.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a new container registry replication.
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>New-AzContainerRegistryReplication -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name replication001 -Location 'west us' -Tag @{tagName='MyTag'}
+
+Name                 Location   Provisioni Status               StatusTimestamp                Tags
+                                ngState
+----                 --------   ---------- ------               ---------------                ----
+replication001       westus     Succeeded  Ready                11/17/2017 10:19:45 PM         {[tagName, MyTag]}
 ```
 
-{{ Add example description here }}
+Create a new container registry replication.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -199,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -213,3 +219,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzContainerRegistryReplication](New-AzContainerRegistryReplication.md)
+
+[Remove-AzContainerRegistryReplication](Remove-AzContainerRegistryReplication.md)

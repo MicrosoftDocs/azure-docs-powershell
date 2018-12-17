@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 5CC89899-00B6-424A-8896-FD32DE9DDA28
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmssvaultcertificateconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVmssVaultCertificateConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVmssVaultCertificateConfig.md
 ---
 
 # New-AzVmssVaultCertificateConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a Key Vault certificate configuration.
 
 ## SYNTAX
 
@@ -18,21 +21,23 @@ New-AzVmssVaultCertificateConfig [[-CertificateUrl] <String>] [[-CertificateStor
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzVmssVaultCertificateConfig** cmdlet specifies the secret that needs to be placed on the Virtual Machine Scale Set (VMSS) virtual machines.
+The output of this cmdlet is intended to be used with the Add-AzVmssSecret cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a Key Vault certificate configuration
+```
+PS C:\> New-AzVmssVaultCertificateConfig -CertificateUrl "http://keyVaultName.vault.contoso.net/secrets/secretName/secretVersion" -CertificateStore "MyCerts"
 ```
 
-{{ Add example description here }}
+This command creates a Key Vault certificate configuration that uses the certificate store named MyCerts located at the specified certificate URL.
 
 ## PARAMETERS
 
 ### -CertificateStore
-{{Fill CertificateStore Description}}
+Specifies the certificate store on the virtual machines in the scale set where the certificate is added.
+This is only valid for Windows Virtual Machine Scale Sets.
 
 ```yaml
 Type: System.String
@@ -47,7 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateUrl
-{{Fill CertificateUrl Description}}
+Specifies the URI of a certificate stored in the Key Vault.
+It is the base64 encoding of the following JSON Object which is encoded in UTF-8:
+{
+  "data":"\<Base64-encoded-certificate\>",
+  "dataType":"pfx",
+  "password":"\<pfx-file-password\>"
+}
 
 ```yaml
 Type: System.String
@@ -62,12 +73,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,8 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -108,8 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +131,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzVmssSecret](./Add-AzVmssSecret.md)

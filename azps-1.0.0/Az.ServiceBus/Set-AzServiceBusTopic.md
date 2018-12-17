@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/set-azservicebustopic
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusTopic.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusTopic.md
 ---
 
 # Set-AzServiceBusTopic
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the description of a Service Bus topic in the specified Service Bus namespace.
 
 ## SYNTAX
 
@@ -19,26 +21,50 @@ Set-AzServiceBusTopic [-ResourceGroupName] <String> [-Namespace] <String> [-Name
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzServiceBusTopic** cmdlet updates a description object for a Service Bus topic in the specified Service Bus namespace.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $topicObj = Get-AzServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-ExampleStandard -TopicName SB-Topic_exampl1
+
+PS C:\> $topicObj.EnableExpress = $True
+
+PS C:\> Set-AzServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-ExampleStandard -TopicName SB-Topic_exampl1 -TopicObj $topicObj
+
+Name                                : SB-Topic_example1
+Id                                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ServiceBus/namespaces/SB-ExampleStandard/topics/SB-Topic_example1
+Type                                : Microsoft.ServiceBus/Namespaces/Topics
+AccessedAt                          : 1/1/0001 12:00:00 AM
+AutoDeleteOnIdle                    : P10675199DT2H48M5.4775807S
+CreatedAt                           : 10/12/2018 12:01:28 AM
+CountDetails                        : Microsoft.Azure.Management.ServiceBus.Models.MessageCountDetails
+DefaultMessageTimeToLive            : P10675199DT2H48M5.4775807S
+DuplicateDetectionHistoryTimeWindow : PT10M
+EnableBatchedOperations             : True
+EnableExpress                       : False
+EnablePartitioning                  : True
+MaxSizeInMegabytes                  : 81920
+RequiresDuplicateDetection          : False
+SizeInBytes                         : 0
+Status                              : Active
+SubscriptionCount                   : 0
+SupportOrdering                     : False
+UpdatedAt                           : 10/12/2018 12:01:29 AM
 ```
 
-{{ Add example description here }}
+Updates the specified topic with a new description in the specified namespace. This example updates the **EnableExpress** property to **true**. 
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-ServiceBus Topic definition
+ServiceBus Topic definition.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ServiceBus.Models.PSTopicAttributes
@@ -63,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Topic Name
+Topic Name.
 
 ```yaml
 Type: System.String
@@ -78,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name
+Namespace Name.
 
 ```yaml
 Type: System.String
@@ -117,7 +143,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -133,14 +159,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

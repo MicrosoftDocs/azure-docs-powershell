@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/test-azcontainerregistrynameavailability
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Test-AzContainerRegistryWebhook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Test-AzContainerRegistryWebhook.md
 ---
 
 # Test-AzContainerRegistryWebhook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Triggers a webhook ping event.
 
 ## SYNTAX
 
@@ -31,26 +33,30 @@ Test-AzContainerRegistryWebhook -Webhook <PSContainerRegistryWebhook>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Test-AzContainerRegistryWebhook cmdlet triggers a webhook ping event.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Triggers a webhook ping event.
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Test-AzContainerRegistryWebhook -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name "webhook001"
+
+Id
+--
+c5950af0-c8d0-4924-9873-1ba7da5cbf83
 ```
 
-{{ Add example description here }}
+Triggers a webhook ping event.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -135,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -151,3 +156,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistryWebhook](New-AzContainerRegistryWebhook.md)
+
+[Get-AzContainerRegistryWebhook](Get-AzContainerRegistryWebhook.md)
+
+[Update-AzContainerRegistryWebhook](Update-AzContainerRegistryWebhook.md)
+
+[Remove-AzContainerRegistryWebhook](Remove-AzContainerRegistryWebhook.md)

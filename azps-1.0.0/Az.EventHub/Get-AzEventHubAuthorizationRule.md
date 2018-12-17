@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/get-azeventhubauthorizationrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzEventHubAuthorizationRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzEventHubAuthorizationRule.md
 ---
 
 # Get-AzEventHubAuthorizationRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of an authorization rule, or gets a list of authorization rules.
 
 ## SYNTAX
 
@@ -31,16 +33,54 @@ Get-AzEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzEventHubAuthorizationRule cmdlet gets either the details of an authorization rule, or a list of all authorization rules for a specified Event Hub.
+If the name of an authorization rule is provided, the details of that single authorization rule are returned.
+If the name of an authorization rule is not provided, a list of all authorization rules for the specified Event Hub is returned.
+If (Disaster Recovery) Alias name provided, the details of authorization rule of the Namespace for Alias configured is returned.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1.0 - AuthorizationRule for namespace
+```
+PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Name MyAuthRuleName
 ```
 
-{{ Add example description here }}
+Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+
+### Example 1.1 - AuthorizationRules for namespace
+```
+PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
+```
+
+Gets a list of all authorization rules in the namespace \`MyNamespaceName\`.
+
+### Example 2.0 - AuthorizationRule for EventHub
+```
+PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -Name MyAuthRuleName
+```
+
+Gets the authorization rule \`MyAuthRuleName\` in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
+
+### Example 2.1 - AuthorizationRules for EventHub
+```
+PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
+```
+
+Gets list authorization rules in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
+
+### Example 3.0 - AuthorizationRule for Alias (GeoRecovery Configuration)
+```
+PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName -Name MyAuthRuleName
+```
+
+Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+
+### Example 3.1 -AuthorizationRules for Alias (GeoRecovery Configuration)
+```
+PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName
+```
+
+Gets a list of all authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
 
 ## PARAMETERS
 
@@ -63,9 +103,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -135,8 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

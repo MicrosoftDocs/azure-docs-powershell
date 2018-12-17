@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/disable-azsqlserveradvancedthreatprotection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Disable-AzSqlServerAdvancedThreatProtection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Disable-AzSqlServerAdvancedThreatProtection.md
 ---
 
 # Disable-AzSqlServerAdvancedThreatProtection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables Advanced Threat Protection on a server.
 
 ## SYNTAX
 
@@ -19,16 +21,32 @@ Disable-AzSqlServerAdvancedThreatProtection [-InputObject <AzureSqlServerModel>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Disable-AzSqlServerAdvancedThreatProtection** cmdlet disables Advanced Threat Protection on a server.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Disable server Advanced Threat Protection
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>  Disable-AzSqlServerAdvancedThreatProtection `
+            -ResourceGroupName "ResourceGroup01" `
+            -ServerName "Server01" 
+
+ResourceGroupName	         : ResourceGroup01
+ServerName		             : Server01
+IsEnabled		             : False
 ```
 
-{{ Add example description here }}
+### Example 2 - Disable server Advanced Threat Protection from server resource
+```powershell
+PS C:\>  Get-AzSqlServer `
+           -ResourceGroupName "ResourceGroup01" `
+           -ServerName "Server01" `
+           | Disable-AzSqlServerAdvancedThreatProtection
+
+ResourceGroupName	         : ResourceGroup01
+ServerName		             : Server01
+IsEnabled		             : False
+```
 
 ## PARAMETERS
 
@@ -36,9 +54,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -108,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

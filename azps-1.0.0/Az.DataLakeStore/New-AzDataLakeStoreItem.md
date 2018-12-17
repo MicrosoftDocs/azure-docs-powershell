@@ -1,39 +1,44 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: A8222AB8-0003-4AC6-8114-294ABE8054CE
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/new-azdatalakestoreitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/New-AzDataLakeStoreItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/New-AzDataLakeStoreItem.md
 ---
 
 # New-AzDataLakeStoreItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new file or folder in Data Lake Store.
 
 ## SYNTAX
 
 ```
 New-AzDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInstance> [[-Value] <Object>]
- [[-Encoding] <FileSystemCmdletProviderEncoding>] [-Folder] [-Force] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Encoding] <Encoding>] [-Folder] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzDataLakeStoreItem** cmdlet creates a new file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a new file and a new folder
+```
+PS C:\>New-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFile.txt"
+PS C:\> New-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFolder" -Folder
 ```
 
-{{ Add example description here }}
+The first command creates the file NewFile.txt for the specified account.
+The second command creates the folder NewFolder at the root folder.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -48,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,11 +68,22 @@ Accept wildcard characters: False
 ```
 
 ### -Encoding
-Optionally indicates the encoding for the content being uploaded as part of 'Value'.
-Default is UTF8
+Specifies the encoding for the item to create.
+The acceptable values for this parameter are:
+- Unknown
+- String
+- Unicode
+- Byte
+- BigEndianUnicode
+- UTF8
+- UTF7
+- Ascii
+- Default
+- Oem
+- BigEndianUTF32
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataLakeStore.Models.FileSystemCmdletProviderEncoding
+Type: System.Text.Encoding
 Parameter Sets: (All)
 Aliases:
 
@@ -79,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Folder
-Optionally indicates that this new item is a folder and not a file.
+Indicates that this operation creates a folder.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -94,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If passed then new item is created without any prompt
+Indicates that this operation can overwrite the destination item if it already exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -109,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account where the action should take place.
-In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of the item to create, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -125,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-Optional content for the file to contain upon creation
+Specifies the content to add to the item you create.
 
 ```yaml
 Type: System.Object
@@ -149,7 +164,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -165,14 +180,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -182,7 +196,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Object
 
-### Microsoft.Azure.Commands.DataLakeStore.Models.FileSystemCmdletProviderEncoding
+### System.Text.Encoding
 
 ### System.Management.Automation.SwitchParameter
 
@@ -193,3 +207,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItem](./Get-AzDataLakeStoreItem.md)
+
+[Export-AzDataLakeStoreItem](./Export-AzDataLakeStoreItem.md)
+
+[Import-AzDataLakeStoreItem](./Import-AzDataLakeStoreItem.md)
+
+[New-AzDataLakeStoreItem](./New-AzDataLakeStoreItem.md)
+
+[Remove-AzDataLakeStoreItem](./Remove-AzDataLakeStoreItem.md)
+
+[Test-AzDataLakeStoreItem](./Test-AzDataLakeStoreItem.md)
+
+

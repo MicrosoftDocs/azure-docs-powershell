@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 7EC166C7-151D-4DA0-9B10-165E735D4F12
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssExtension.md
 ---
 
 # Add-AzVmssExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an extension to the VMSS.
 
 ## SYNTAX
 
@@ -21,21 +24,33 @@ Add-AzVmssExtension [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-Name
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzVmssExtension** cmdlet adds an extension to the Virtual Machine Scale Set (VMSS).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add an extension to the VMSS
+```
+PS C:\> Add-AzVmssExtension -VirtualMachineScaleSet $VMSS -Name $ExtName -Publisher $Publisher -Type $ExtType -TypeHandlerVersion $ExtVer -AutoUpgradeMinorVersion $True
 ```
 
-{{ Add example description here }}
+This command adds an extension to the VMSS.
+
+### Example 2: Add an extension to the VMSS with settings and protected settings
+```
+PS C:\> $Settings = @{"fileUris" = "[]"; "commandToExecute" = ""};
+PS C:\> $ProtectedSettings = @{"storageAccountName" = $stoname; "storageAccountKey" = $stokey};
+
+PS C:\> Add-AzVmssExtension -VirtualMachineScaleSet $vmss -Name $vmssExtensionName -Publisher $vmssPublisher  `
+  -Type $vmssExtensionType -TypeHandlerVersion $ExtVer -AutoUpgradeMinorVersion $True  `
+  -Setting $Settings -ProtectedSetting $ProtectedSettings
+```
+
+This command adds an extension to the VMSS with a sample bash script on a blob storage, specify the url of blob storage and executable command in settings and security access in protected settings. 
 
 ## PARAMETERS
 
 ### -AutoUpgradeMinorVersion
-{{Fill AutoUpgradeMinorVersion Description}}
+Indicates whether the extension version should be automatically updated to a newer minor version.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -50,12 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -65,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpdateTag
-{{Fill ForceUpdateTag Description}}
+If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
 
 ```yaml
 Type: System.String
@@ -80,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the extension that this cmdlet adds.
 
 ```yaml
 Type: System.String
@@ -95,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectedSetting
-{{Fill ProtectedSetting Description}}
+Specifies private configuration for the extension, as a string.
+This cmdlet encrypts the private configuration.
 
 ```yaml
 Type: System.Object
@@ -110,7 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Publisher
-{{Fill Publisher Description}}
+Specifies the name of the extension publisher.
+The publisher provides a name when the publisher registers an extension.
+This can use the [Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md) cmdlet to get the publisher.
 
 ```yaml
 Type: System.String
@@ -125,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -Setting
-{{Fill Setting Description}}
+Specifies the public configuration, as a string, for the extension.
+This cmdlet does not encrypt public configuration.
 
 ```yaml
 Type: System.Object
@@ -140,7 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-{{Fill Type Description}}
+Specifies the extension type.
+You can use the [Get-AzVMExtensionImageType](./Get-AzVMExtensionImageType.md) cmdlet to get the extension type.
 
 ```yaml
 Type: System.String
@@ -155,7 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-{{Fill TypeHandlerVersion Description}}
+Specifies the version of the extension to use for this virtual machine.
+You can use the [Get-AzVMExtensionImage](./Get-AzVMExtensionImage.md) cmdlet to get the version of the extension.
 
 ```yaml
 Type: System.String
@@ -170,7 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specify the VMSS object.
+You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -200,8 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -216,8 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -236,3 +256,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzVmssExtension](./Remove-AzVmssExtension.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+[Get-AzVMExtensionImageType](./Get-AzVMExtensionImageType.md)
+
+[Get-AzVMExtensionImage](./Get-AzVMExtensionImage.md)
+
+[New-AzVmssConfig](./New-AzVmssConfig.md)

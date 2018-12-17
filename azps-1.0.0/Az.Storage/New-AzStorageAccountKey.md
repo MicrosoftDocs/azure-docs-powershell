@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Management.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: FDD2CE98-6C7E-4B95-BA5B-B03B6AC6EAEF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstorageaccountkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageAccountKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageAccountKey.md
 ---
 
 # New-AzStorageAccountKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Regenerates a storage key for an Azure Storage account.
 
 ## SYNTAX
 
@@ -18,16 +21,16 @@ New-AzStorageAccountKey [-ResourceGroupName] <String> [-Name] <String> [-KeyName
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStorageAccountKey** cmdlet regenerates a storage key for an Azure Storage account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Regenerate a storage key
+```
+PS C:\>New-AzStorageKey -ResourceGroupName "MyResourceGroup" -Name "mystorageaccount" -KeyName "key1"
 ```
 
-{{ Add example description here }}
+This command regenerates a storage key for the specified Storage account.
 
 ## PARAMETERS
 
@@ -35,9 +38,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeyName
-Storage Account Key.
+Specifies which key to regenerate.
+The acceptable values for this parameter are:
+- key1
+- key2
 
 ```yaml
 Type: System.String
@@ -63,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Storage Account Name.
+Specifies the name of the Storage account for which to regenerate a storage key.
 
 ```yaml
 Type: System.String
@@ -78,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Specifies the name of the resource group that contains the Storage account.
 
 ```yaml
 Type: System.String
@@ -93,8 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,3 +112,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageAccountKey](./Get-AzStorageAccountKey.md)

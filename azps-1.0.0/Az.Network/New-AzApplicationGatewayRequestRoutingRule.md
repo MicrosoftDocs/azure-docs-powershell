@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 622FE9AC-1CC4-489C-BB17-9D6B9D1C151D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewayrequestroutingrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzApplicationGatewayRequestRoutingRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzApplicationGatewayRequestRoutingRule.md
 ---
 
 # New-AzApplicationGatewayRequestRoutingRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a request routing rule for an application gateway.
 
 ## SYNTAX
 
@@ -16,7 +19,8 @@ schema: 2.0.0
 ```
 New-AzApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String> [-BackendHttpSettingsId <String>]
  [-HttpListenerId <String>] [-BackendAddressPoolId <String>] [-UrlPathMapId <String>]
- [-RedirectConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-RewriteRuleSetId <String>] [-RedirectConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -25,26 +29,27 @@ New-AzApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String>
  [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
  [-HttpListener <PSApplicationGatewayHttpListener>]
  [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
+ [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet>]
  [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+**The Add-AzApplicationGatewayRequestRoutingRule** cmdlet creates a request routing rule for an Azure application gateway.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a request routing rule for an application gateway
+```
+PS C:\>$Rule = New-AzApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
 ```
 
-{{ Add example description here }}
+This command creates a basic request routing rule named Rule01 and stores the result in the variable named $Rule.
 
 ## PARAMETERS
 
 ### -BackendAddressPool
-Application gateway BackendAddressPool
+Specifies the back-end address pool, as an object, for the request routing rule to create.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
@@ -59,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendAddressPoolId
-ID of the application gateway BackendAddressPool
+Specifies the back-end address pool ID of the request routing rule to create.
 
 ```yaml
 Type: System.String
@@ -74,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHttpSettings
-Application gateway BackendHttpSettings
+Specifies the back-end HTTP settings, as an object, for the request routing rule to create.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
@@ -89,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHttpSettingsId
-ID of the application gateway BackendHttpSettings
+Specifies the back-end HTTP settings ID of the request routing rule to create.
 
 ```yaml
 Type: System.String
@@ -104,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -119,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpListener
-Application gateway HttpListener
+Specifies the back-end HTTP listener for the request routing rule to create.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener
@@ -134,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpListenerId
-ID of the application gateway HttpListener
+Specifies the backend HTTP listener ID for the request routing rule to create.
 
 ```yaml
 Type: System.String
@@ -149,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Request Routing Rule
+Specifies the name of the request routing rule that this cmdlet creates.
 
 ```yaml
 Type: System.String
@@ -193,8 +198,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RewriteRuleSet
+Application gateway RewriteRuleSet
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet
+Parameter Sets: SetByResource
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RewriteRuleSetId
+ID of the application gateway RewriteRuleSet
+
+```yaml
+Type: System.String
+Parameter Sets: SetByResourceId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RuleType
-The type of rule
+Specifies type of the request routing rule.
 
 ```yaml
 Type: System.String
@@ -210,8 +245,6 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMap
-Application gateway UrlPathMap
-
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap
 Parameter Sets: SetByResource
@@ -225,8 +258,6 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMapId
-ID of the application gateway UrlPathMap
-
 ```yaml
 Type: System.String
 Parameter Sets: SetByResourceId
@@ -240,8 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -254,3 +284,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzApplicationGatewayRequestRoutingRule](./Add-AzApplicationGatewayRequestRoutingRule.md)
+
+[Get-AzApplicationGatewayRequestRoutingRule](./Get-AzApplicationGatewayRequestRoutingRule.md)
+
+[Remove-AzApplicationGatewayRequestRoutingRule](./Remove-AzApplicationGatewayRequestRoutingRule.md)
+
+[Set-AzApplicationGatewayRequestRoutingRule](./Set-AzApplicationGatewayRequestRoutingRule.md)
+
+

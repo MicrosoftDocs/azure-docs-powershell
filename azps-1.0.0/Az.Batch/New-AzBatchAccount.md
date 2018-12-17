@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 82C7B128-8818-4390-B1A5-CB40AC9D53CA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchAccount.md
 ---
 
 # New-AzBatchAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a Batch account.
 
 ## SYNTAX
 
@@ -19,21 +22,30 @@ New-AzBatchAccount [-AccountName] <String> [-Location] <String> [-ResourceGroupN
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzBatchAccount** cmdlet creates an Azure Batch account for the specified resource group and location.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a Batch account
+```
+PS C:\>New-AzBatchAccount -AccountName "pfuller" -ResourceGroupName "ResourceGroup03" -Location "WestUS"
+AccountName                  : pfuller
+Location                     : westus
+ResourceGroupName            : ResourceGroup03
+CoreQuota                    : 20
+PoolQuota                    : 20
+ActiveJobAndJobScheduleQuota : 20
+Tags                         :
+TaskTenantUrl                : https://cmdletexample.westus.batch.azure.com
 ```
 
-{{ Add example description here }}
+This command creates a Batch account named pfuller using the ResourceGroup03 resource group in the West US location.
 
 ## PARAMETERS
 
 ### -AccountName
-The name of the Batch service account to create.
+Specifies the name of the Batch account that this cmdlet creates.
+Batch account names must be between 3 and 24 characters long and contain only numbers and lowercase letters.
 
 ```yaml
 Type: System.String
@@ -48,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoStorageAccountId
-{{Fill AutoStorageAccountId Description}}
+Specifies the resource ID of the storage account to be used for auto storage.
 
 ```yaml
 Type: System.String
@@ -63,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultId
-{{Fill KeyVaultId Description}}
+The resource ID of the Azure key vault associated with the Batch account.
 
 ```yaml
 Type: System.String
@@ -93,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultUrl
-{{Fill KeyVaultUrl Description}}
+The URL of the Azure key vault associated with the Batch account.
 
 ```yaml
 Type: System.String
@@ -108,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The region where the account will be created.
+Specifies the region where this cmdlet creates the account.
+For more information, see [Azure Regions](https://azure.microsoft.com/en-us/regions).
 
 ```yaml
 Type: System.String
@@ -123,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolAllocationMode
-{{Fill PoolAllocationMode Description}}
+The allocation mode for creating pools in the Batch account.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Batch.Models.PoolAllocationMode]
@@ -139,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group where the account will be created.
+Specifies the name of the resource group in which this cmdlet creates the account.
 
 ```yaml
 Type: System.String
@@ -154,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -169,8 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -187,3 +200,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccount](./Get-AzBatchAccount.md)
+
+[Remove-AzBatchAccount](./Remove-AzBatchAccount.md)
+
+[Set-AzBatchAccount](./Set-AzBatchAccount.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)

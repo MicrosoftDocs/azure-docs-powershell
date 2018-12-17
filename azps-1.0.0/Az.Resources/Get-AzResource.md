@@ -1,14 +1,18 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: C2C608E5-3351-4D01-8533-9668B2E9F1D1
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresource
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResource.md
 ---
 
 # Get-AzResource
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+
+Gets resources.
 
 ## SYNTAX
 
@@ -33,22 +37,120 @@ Get-AzResource [-Name <String>] [-ResourceType <String>] [-ODataQuery <String>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+The **Get-AzResource** cmdlet gets Azure resources.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all resources in the current subscription
+
+```
+PS C:\> Get-AzResource | ft
+
+Name    ResourceGroupName  ResourceType                            Location
+----    -----------------  ------------                            --------
+testVM  testRG             Microsoft.Compute/virtualMachines       westus
+disk    testRG             Microsoft.Compute/disks                 westus
+nic     testRG             Microsoft.Network/networkInterfaces     westus
+nsg     testRG             Microsoft.Network/networkSecurityGroups westus
+ip      testRG             Microsoft.Network/publicIPAddresses     westus
+vnet    testRG             Microsoft.Network/virtualNetworks       westus
+testKV  otherRG            Microsoft.KeyVault/vaults               eastus
+storage otherResourceGroup Microsoft.Storage/storageAccounts       eastus
+testVM2 otherResourceGroup Microsoft.Compute/virtualMachines       eastus
 ```
 
-{{ Add example description here }}
+This command gets all of the resources in the current subscription.
+
+### Example 2: Get all resources in a resource group
+
+```
+PS C:\> Get-AzResource -ResourceGroupName testRG | ft
+
+Name   ResourceGroupName ResourceType                            Location
+----   ----------------- ------------                            --------
+testVM testRG            Microsoft.Compute/virtualMachines       westus
+disk   testRG            Microsoft.Compute/disks                 westus
+nic    testRG            Microsoft.Network/networkInterfaces     westus
+nsg    testRG            Microsoft.Network/networkSecurityGroups westus
+ip     testRG            Microsoft.Network/publicIPAddresses     westus
+vnet   testRG            Microsoft.Network/virtualNetworks       westus
+```
+
+This command gets all of the resources in the resource group "testRG".
+
+### Example 3: Get all resources whose resource group matches the provided wildcard
+
+```
+PS C:\> Get-AzResource -ResourceGroupName other* | ft
+
+Name    ResourceGroupName  ResourceType                      Location
+----    -----------------  ------------                      --------
+testKV  otherRG            Microsoft.KeyVault/vaults         eastus
+storage otherResourceGroup Microsoft.Storage/storageAccounts eastus
+testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
+```
+
+This command gets all of the resources whose resource group they belong in beings with "other".
+
+### Example 4: Get all resources with a given name
+
+```
+PS C:\> Get-AzResource -Name testVM | fl
+
+Name              : testVM
+ResourceGroupName : testRG
+ResourceType      : Microsoft.Compute/virtualMachines
+Location          : westus
+ResourceId        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM
+```
+
+This command gets all of the resources whose resource name is "testVM".
+
+### Example 5: Get all resources whose name matches the provided wildcard
+
+```
+PS C:\> Get-AzResource -Name test* | ft
+
+Name    ResourceGroupName  ResourceType                      Location
+----    -----------------  ------------                      --------
+testVM  testRG             Microsoft.Compute/virtualMachines westus
+testKV  otherRG            Microsoft.KeyVault/vaults         eastus
+testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
+```
+
+This command gets all of the resources whose resource name begins with "test".
+
+### Example 6: Get all resources of a given resource type
+
+```
+PS C:\> Get-AzResource -ResourceType Microsoft.Compute/virtualMachines | ft
+
+Name    ResourceGroupName  ResourceType                      Location
+----    -----------------  ------------                      --------
+testVM  testRG             Microsoft.Compute/virtualMachines westus
+testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
+```
+
+This command gets all of the resources in the current subscriptions that are virtual machines.
+
+### Example 7: Get a resource by resource id
+
+```
+PS C:\> Get-AzResource -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM
+
+Name              : testVM
+ResourceGroupName : testRG
+ResourceType      : Microsoft.Compute/virtualMachines
+Location          : westus
+ResourceId        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM
+```
+
+This command gets the resource with the provided resource id, which is a virtual machine called "testVM" in the resource group "testRG".
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
 Type: System.String
@@ -63,12 +165,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+The name of the resource(s) to be retrieved. This parameter supports wildcards at the beginning and/or end of the string.
 
 ```yaml
 Type: System.String
@@ -108,7 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-{{Fill ODataQuery Description}}
 
 ```yaml
 Type: System.String
@@ -123,7 +224,6 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -138,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+The resource group the resource(s) that is retireved belongs in. This parameter supports wildcards at the beginning and/or end of the string.
 
 ```yaml
 Type: System.String
@@ -153,7 +253,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{Fill ResourceId Description}}
+Specifies the fully qualified resource ID, as in the following example
+`/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Compute/virtualMachines`
 
 ```yaml
 Type: System.String
@@ -168,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-{{Fill ResourceType Description}}
+The resource type of the resource(s) to be retrieved. For example, Microsoft.Compute/virtualMachines
 
 ```yaml
 Type: System.String
@@ -183,7 +284,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+
+Gets resources that have the specified Azure tag. Enter a hash table with a Name key or Name and Value keys. Wildcard characters are not supported.A "tag" is a name-value pair that you can apply to resources and resource groups. Use tags to categorize your resources, such as by department or cost center, or to track notes or comments about the resources. To add a tag to a resource, use the Tag parameter of the New-AzResource or Set-AzResource cmdlets. To create a predefined tag, use the New-AzTag cmdlet. For help with hash tables in Windows PowerShell, run 'Get-Help about_Hashtables'.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -198,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -TagName
-{{Fill TagName Description}}
+The key in the tag of the resource(s) to be retrieved.
 
 ```yaml
 Type: System.String
@@ -213,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -TagValue
-{{Fill TagValue Description}}
+The value in the tag of the resource(s) to be retrieved.
 
 ```yaml
 Type: System.String
@@ -228,8 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -242,3 +343,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Find-AzResource](./Find-AzResource.md)
+
+[Move-AzResource](./Move-AzResource.md)
+
+[New-AzResource](./New-AzResource.md)
+
+[Remove-AzResource](./Remove-AzResource.md)
+
+[Set-AzResource](./Set-AzResource.md)

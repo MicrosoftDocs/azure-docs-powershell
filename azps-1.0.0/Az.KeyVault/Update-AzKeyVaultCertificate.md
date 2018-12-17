@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/update-azkeyvaultcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Update-AzKeyVaultCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Update-AzKeyVaultCertificate.md
 ---
 
 # Update-AzKeyVaultCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies editable attributes of a certificate.
 
 ## SYNTAX
 
@@ -27,16 +29,46 @@ Update-AzKeyVaultCertificate [-InputObject] <PSKeyVaultCertificateIdentityItem> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzKeyVaultCertificate** cmdlet modifies the editable attributes of a certificate.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Modify the tags associated with a certificate
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $Tags = @{ "Team" = "Azure" ; "Role" = "Engg" }
+PS C:\> Update-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01" -Tag $Tags -PassThru
+
+Name        : TestCert01
+Certificate : [Subject]
+                CN=AZURE
+
+              [Issuer]
+                CN=AZURE
+
+              [Serial Number]
+                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+              [Not Before]
+                7/27/2016 6:50:01 PM
+
+              [Not After]
+                7/27/2018 7:00:01 PM
+
+              [Thumbprint]
+                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Id          : https://ContosoKV01.vault.azure.net:443/certificates/TestCert01
+KeyId       : https://ContosoKV01.vault.azure.net:443/keys/TestCert01
+SecretId    : https://ContosoKV01.vault.azure.net:443/secrets/TestCert01
+Thumbprint  : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Tags        : {[Role, Engg], [Team, Azure]}
+Enabled     : True
+Created     : 7/28/2016 2:00:01 AM
+Updated     : 8/1/2016 5:37:48 PM
 ```
 
-{{ Add example description here }}
+The first command assigns an array of key/value pairs to the $Tags variable.
+The second command sets the tags value of the certificate named TestCert01 to be $Tags.
 
 ## PARAMETERS
 
@@ -44,9 +76,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -153,8 +185,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Secret version.
-Cmdlet constructs the FQDN of a secret from vault name, currently selected environment, secret name and secret version.
+Certificate version.
+Cmdlet constructs the FQDN of a certificate from vault name, currently selected environment, certificate name and certificate version.
 
 ```yaml
 Type: System.String
@@ -200,8 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

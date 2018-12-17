@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: FA868206-D8B0-4868-A1D1-D3F96BF3ADCC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/set-azwebappslot
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Set-AzWebAppSlot.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Set-AzWebAppSlot.md
 ---
 
 # Set-AzWebAppSlot
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an Azure Web App slot.
 
 ## SYNTAX
 
@@ -23,8 +26,8 @@ Set-AzWebAppSlot [[-AppServicePlan] <String>] [[-DefaultDocuments] <String[]>]
  [-AutoSwapSlotName <String>] [-NumberOfWorkers <Int32>] [-ContainerImageName <String>]
  [-ContainerRegistryUrl <String>] [-ContainerRegistryUser <String>] [-ContainerRegistryPassword <SecureString>]
  [-EnableContainerContinuousDeployment <Boolean>] [-AsJob] [-AssignIdentity <Boolean>] [-HttpsOnly <Boolean>]
- [-ResourceGroupName] <String> [-Name] <String> [-Slot] <String> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [-AzureStoragePath <WebAppAzureStoragePath[]>] [-ResourceGroupName] <String> [-Name] <String> [-Slot] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### S2
@@ -40,21 +43,21 @@ Set-AzWebAppSlot [[-AppServicePlan] <String>] [[-DefaultDocuments] <String[]>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzWebApp** cmdlet sets an Azure Web App Slot.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001" -HttpLoggingEnabled $true
 ```
 
-{{ Add example description here }}
+This command sets HttpLoggingEnabled to true for Slot Slot001 pertaining to Web App ContosoWebApp associated with the resource group Default-Web-WestUS
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The name of the app service plan eg: Default1.
+App Service Plan Name
 
 ```yaml
 Type: System.String
@@ -69,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettings
-Web app settings
+App Settings HashTable
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -99,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-Enable MSI on an existing azure webapp
+Enable/disable MSI on an existing slot [PREVIEW]
 
 ```yaml
 Type: System.Boolean
@@ -128,8 +131,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AzureStoragePath
+Azure Storage to mount inside a Web App for Container. Use New-AzureRmWebAppAzureStoragePath to create it
+
+```yaml
+Type: Microsoft.Azure.Commands.WebApps.Models.WebAppAzureStoragePath[]
+Parameter Sets: S1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConnectionStrings
-Web app connection strings
+Connection Strings HashTable
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -204,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultDocuments
-Default documents for web app
+Default Documents String Array
 
 ```yaml
 Type: System.String[]
@@ -219,12 +237,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -234,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedErrorLoggingEnabled
-Whether or not detailed error logging is enabled
+Detailed Error Logging Enabled Boolean
 
 ```yaml
 Type: System.Boolean
@@ -264,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -HandlerMappings
-Web app handler mappings
+Handler Mappings IList
 
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Management.WebSites.Models.HandlerMapping]
@@ -279,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpLoggingEnabled
-Whether or not http logging is enabled
+HttpLoggingEnabled Boolean
 
 ```yaml
 Type: System.Boolean
@@ -294,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpsOnly
-Enable/disable redirecting all traffic to HTTPS on an existing azure webapp
+Enable/disable redirecting all traffic to HTTPS on an existing slot
 
 ```yaml
 Type: System.Boolean
@@ -309,8 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedPipelineMode
-Web app managed pipeline mode.
-Allowed Values \[Classic|Integrated\]
+Managed Pipeline Mode Name
 
 ```yaml
 Type: System.String
@@ -326,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+WebApp Name
 
 ```yaml
 Type: System.String
@@ -341,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetFrameworkVersion
-.NET Framework version
+Net Framework Version
 
 ```yaml
 Type: System.String
@@ -371,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhpVersion
-PHP version
+Php Version
 
 ```yaml
 Type: System.String
@@ -386,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestTracingEnabled
-Whether or not request tracing is enabled
+Request Tracing Enabled Boolean
 
 ```yaml
 Type: System.Boolean
@@ -401,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -416,7 +433,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+WebApp Slot Name
 
 ```yaml
 Type: System.String
@@ -431,8 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -Use32BitWorkerProcess
-Whether or not to use 32-bit worker process.
-By default worker process is 64-bit
+Use 32-bit Worker Process Boolean
 
 ```yaml
 Type: System.Boolean
@@ -447,7 +463,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+WebApp Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.PSSite
@@ -462,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebSocketsEnabled
-Whether or not detailed error logging is enabled
+Web Sockets Enabled Boolean
 
 ```yaml
 Type: System.Boolean
@@ -477,8 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -495,3 +510,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzWebAppSlot](./Get-AzWebAppSlot.md)
+
+[New-AzWebAppSlot](./New-AzWebAppSlot.md)
+
+[Remove-AzWebAppSlot](./Remove-AzWebAppSlot.md)
+
+[Restart-AzWebAppSlot](./Restart-AzWebAppSlot.md)
+
+[Start-AzWebAppSlot](./Start-AzWebAppSlot.md)
+
+[Stop-AzWebAppSlot](./Stop-AzWebAppSlot.md)
+
+[Get-AzAppServicePlan](./Get-AzAppServicePlan.md)

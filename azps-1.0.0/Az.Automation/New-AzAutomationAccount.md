@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 2D5B16F0-0662-4D9F-A13F-808CE5EEBBA3
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationAccount.md
 ---
 
 # New-AzAutomationAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Automation account.
 
 ## SYNTAX
 
@@ -18,26 +21,29 @@ New-AzAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Locatio
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAutomationAccount** cmdlet creates an Azure Automation account in a resource group.
+An Automation account is a container for Automation resources that is isolated from the resources
+of other Automation accounts. Automation resources include runbooks, Desired State Configuration
+(DSC) configurations, jobs, and assets.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an automation account
+```
+PS C:\> New-AzAutomationAccount -Name "ContosoAutomationAccount" -Location "East US" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command creates a new automation account named ContosoAutomationAccount in the East US region.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +53,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The geo region of the automation account
+Specifies the location in which this cmdlet creates the Automation account.
+To obtain valid locations, use the Get-AzLocation cmdlet.
 
 ```yaml
 Type: System.String
@@ -62,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The automation account name.
+Specifies a name for the Automation account.
 
 ```yaml
 Type: System.String
@@ -77,7 +84,10 @@ Accept wildcard characters: False
 ```
 
 ### -Plan
-The plan of the automation account
+Specifies the plan for the Automation account.
+Valid values are:
+- Basic
+- Free
 
 ```yaml
 Type: System.String
@@ -93,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group to which this cmdlet adds an Automation account.
 
 ```yaml
 Type: System.String
@@ -108,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The automation account tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -123,8 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,3 +149,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationAccount](./Get-AzAutomationAccount.md)
+
+[Remove-AzAutomationAccount](./Remove-AzAutomationAccount.md)
+
+[Set-AzAutomationAccount](./Set-AzAutomationAccount.md)

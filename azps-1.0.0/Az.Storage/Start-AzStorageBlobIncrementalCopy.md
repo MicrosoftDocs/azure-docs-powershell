@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/start-azstorageblobincrementalcopy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Start-AzStorageBlobIncrementalCopy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Start-AzStorageBlobIncrementalCopy.md
 ---
 
 # Start-AzStorageBlobIncrementalCopy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Start an Incremental copy operation from a Page blob snapshot to the specified destination Page blob.
 
 ## SYNTAX
 
@@ -55,21 +57,44 @@ Start-AzStorageBlobIncrementalCopy -AbsoluteUri <String> -DestContainer <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Start an Incremental copy operation from a Page blob snapshot to the specified destination Page blob.
+See more details of the feature in https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/incremental-copy-blob.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Start Incremental Copy Operation by blob name and snapshot time
+```
+PS C:\>Start-AzStorageBlobIncrementalCopy -SrcContainer container1 -SrcBlob blob1 -SrcBlobSnapshotTime "04/07/2017 09:55:36.1190229 AM +00:00" -DestContainer container2 -DestBlob blob2
 ```
 
-{{ Add example description here }}
+This command start Incremental Copy Operation by blob name and snapshot time
+
+### Example 2: Start Incremental copy operation using source uri
+```
+PS C:\>Start-AzStorageBlobIncrementalCopy -AbsoluteUri "http://www.somesite.com/somefile?snapshot=2017-04-07T10:05:40.2126635Z" -DestContainer container -DestBlob blob -DestContext $context
+```
+
+This command start Incremental Copy Operation using source uri
+
+### Example 3:  Start Incremental copy operation using container pipeline from GetAzureStorageContainer
+```
+PS C:\>Get-AzStorageContainer -Container container1 | Start-AzStorageBlobIncrementalCopy -SrcBlob blob  -SrcBlobSnapshotTime "04/07/2017 09:55:36.1190229 AM +00:00" -DestContainer container2
+```
+
+This command start Incremental Copy Operation using container pipeline from GetAzureStorageContainer
+
+### Example 4:  start Incremental copy operation from CloudPageBlob object to destination blob with blob name
+```
+PS C:\>$srcBlobSnapshot = Get-AzStorageBlob -Container container1 -prefix blob1| ?{$_.ICloudBlob.IsSnapshot})[0]
+PS C:\>Start-AzStorageBlobIncrementalCopy -CloudBlob $srcBlobSnapshot.ICloudBlob -DestContainer container2 -DestBlob blob2
+```
+
+This command start Incremental Copy Operation from CloudPageBlob object to destination blob with blob name
 
 ## PARAMETERS
 
 ### -AbsoluteUri
-Source blob uri
+Absolute Uri to the source. Be noted that the credential should be provided in the Uri, if the source requires any.
 
 ```yaml
 Type: System.String
@@ -99,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlob
-CloudBlob Object
+CloudBlob object from Azure Storage Client library. You can create it or use Get-AzStorageBlob cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
@@ -114,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlobContainer
-CloudBlobContainer Object
+CloudBlobContainer object from Azure Storage Client library. You can create it or use Get-AzStorageContainer cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer
@@ -145,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Source Azure Storage Context Object
+Source Azure Storage Context. You can create it by New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -175,7 +200,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -244,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestContext
-Destination Storage context object
+Destination Azure Storage Context. You can create it by New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -274,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -SrcBlob
-Blob name
+Source page blob name.
 
 ```yaml
 Type: System.String
@@ -289,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -SrcBlobSnapshotTime
-Source Blob Snapshot Time
+Source page blob snapshot time.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -350,8 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
-online version:
+ms.assetid: 32263236-C207-4FE0-AB8A-018118FC7729
+online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/enable-aztrafficmanagerendpoint
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Enable-AzTrafficManagerEndpoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Enable-AzTrafficManagerEndpoint.md
 ---
 
 # Enable-AzTrafficManagerEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables an endpoint in a Traffic Manager profile.
 
 ## SYNTAX
 
@@ -25,26 +28,39 @@ Enable-AzTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndpoint>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Enable-AzTrafficManagerEndpoint** cmdlet enables an endpoint in an Azure Traffic Manager profile.
+
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet, or you can specify a **TrafficManagerEndpoint** object by using the *TrafficManagerEndpoint* parameter.
+
+Alternatively, you can specify the endpoint name and type by using the *Name* and *Type* parameters, together with the *ProfileName* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable an endpoint from a profile
+```
+PS C:\>Enable-AzTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName ResourceGroup11 -Type ExternalEndpoints
 ```
 
-{{ Add example description here }}
+This command enables the external endpoint named contoso in the profile named ContosoProfile in resource group ResouceGroup11.
+
+### Example 2: Enable an endpoint by using the pipeline
+```
+PS C:\>Get-AzTrafficManagerEndpoint -Name "contoso" -Type ExternalEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Enable-AzTrafficManagerEndpoint
+```
+
+This command gets the external endpoint named Contoso from the profile named ContosoProfile in ResourceGroup11.
+The command then passes that endpoint to the **Enable-AzTrafficManagerEndpoint** cmdlet by using the pipeline operator.
+That cmdlet enables that endpoint.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the endpoint.
+Specifies the name of the Traffic Manager endpoint that this cmdlet enables.
 
 ```yaml
 Type: System.String
@@ -69,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the endpoint.
+Specifies the name of a Traffic Manager profile in which this cmdlet enables an endpoint.
+To obtain a profile, use the Get-AzTrafficManagerProfile cmdlet.
 
 ```yaml
 Type: System.String
@@ -84,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+Specifies the name of a resource group.
+This cmdlet enables a Traffic Manager endpoint in the group that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -99,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerEndpoint
-The endpoint.
+Specifies the Traffic Manager endpoint that this cmdlet enables.
+To obtain a **TrafficManagerEndpoint** object, use the Get-AzTrafficManagerEndpoint cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint
@@ -114,7 +133,12 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of the endpoint.
+Specifies the type of endpoint that this cmdlet disables in the Traffic Manager profile.
+Valid values are: 
+
+- AzureEndpoints
+- ExternalEndpoints
+- NestedEndpoints
 
 ```yaml
 Type: System.String
@@ -130,8 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -144,3 +167,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AzTrafficManagerEndpoint](./Disable-AzTrafficManagerEndpoint.md)
+
+[Get-AzTrafficManagerEndpoint](./Get-AzTrafficManagerEndpoint.md)
+
+[Get-AzTrafficManagerProfile](./Get-AzTrafficManagerProfile.md)
+
+[New-AzTrafficManagerEndpoint](./New-AzTrafficManagerEndpoint.md)
+
+[New-AzTrafficManagerProfile](./New-AzTrafficManagerProfile.md)
+
+[Remove-AzTrafficManagerEndpoint](./Remove-AzTrafficManagerEndpoint.md)
+
+[Set-AzTrafficManagerProfile](./Set-AzTrafficManagerProfile.md)
+
+

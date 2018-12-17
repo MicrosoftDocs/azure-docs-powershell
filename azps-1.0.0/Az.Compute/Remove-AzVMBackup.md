@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 2AB1B227-68C4-49AE-84C0-E1421E609DE7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmbackup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzVMBackup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzVMBackup.md
 ---
 
 # Remove-AzVMBackup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the backup from a virtual machine.
 
 ## SYNTAX
 
@@ -18,26 +21,23 @@ Remove-AzVMBackup [-ResourceGroupName] <String> [-VMName] <String> [-Tag] <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:
 ```
-
-{{ Add example description here }}
+PS C:\>
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,8 +47,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -62,8 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-The tag for this backup.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -77,8 +73,6 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -92,8 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

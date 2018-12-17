@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 90630395-8747-4446-A879-323274811956
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/import-azdatalakestoreitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Import-AzDataLakeStoreItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Import-AzDataLakeStoreItem.md
 ---
 
 # Import-AzDataLakeStoreItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Uploads a local file or directory to a Data Lake Store.
 
 ## SYNTAX
 
@@ -28,21 +31,21 @@ Import-AzDataLakeStoreItem [-Account] <String> [-Path] <String> [-Destination] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Import-AzDataLakeStoreItem** cmdlet uploads a local file or directory to a Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Upload a file
+```
+PS C:\>Import-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "C:\SrcFile.csv" -Destination "/MyFiles/File.csv" -Concurrency 4
 ```
 
-{{ Add example description here }}
+This command uploads the file SrcFile.csv and adds it to the MyFiles folder in the Data Lake Store as File.csv with a concurrency of 4.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -57,8 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Concurrency
-Indicates the number of files or chunks to upload in parallel.
-Default will be computed as a best effort based on system specifications.
+Indicates the number of files or chunks to upload in parallel. Default will be computed as a best effort based on system specifications.
 
 ```yaml
 Type: System.Int32
@@ -73,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -88,8 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-The path in the specified Data Lake account where the file or folder should be copied to.
-In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path to which to upload a file or folder, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -104,8 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticLogLevel
-Optionally indicates the diagnostic log level to use to record events during the file or folder import.
-Default is Error.
+Optionally indicates the diagnostic log level to use to record events during the file or folder import. Default is Error.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.LogLevel
@@ -115,7 +115,7 @@ Accepted values: Debug, Information, Error, None
 
 Required: False
 Position: Named
-Default value: None
+Default value: Error
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Indicates that, if the file or folder exists, it should be overwritten
+Indicates that this operation can overwrite the destination file if it already exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceBinary
-Indicates that the file(s) being copied should be copied with no concern for new line preservation across appends
+Indicates that the file(s) being copied should be copied with no concern for new line preservation across appends.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The local path to the file or folder to copy
+Specifies the local path of the file or folder to upload.
 
 ```yaml
 Type: System.String
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-Optionally indicates that this the folder being copied should be copied to DataLakeStore recursively
+Indicates that this operation should upload all items in all subfolders.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -196,8 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Resume
-Indicates that the file(s) being copied are a continuation of a previous upload.
-This will cause the system to attempt to resume from the last file that was not fully uploaded.
+Indicates that the file(s) being copied are a continuation of a previous upload. This will cause the system to attempt to resume from the last file that was not fully uploaded.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -221,7 +220,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -237,14 +236,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -265,3 +263,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreItem](./Get-AzDataLakeStoreItem.md)
+
+[Export-AzDataLakeStoreItem](./Export-AzDataLakeStoreItem.md)
+
+[Join-AzDataLakeStoreItem](./Join-AzDataLakeStoreItem.md)
+
+[Move-AzDataLakeStoreItem](./Move-AzDataLakeStoreItem.md)
+
+[New-AzDataLakeStoreItem](./New-AzDataLakeStoreItem.md)
+
+[Remove-AzDataLakeStoreItem](./Remove-AzDataLakeStoreItem.md)
+
+[Test-AzDataLakeStoreItem](./Test-AzDataLakeStoreItem.md)
+
+

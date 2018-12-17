@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 2D3021B3-12C5-4797-8BF2-800E3CEAC56C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/add-azkeyvaultcertificatecontact
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzKeyVaultCertificateContact.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzKeyVaultCertificateContact.md
 ---
 
 # Add-AzKeyVaultCertificateContact
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a contact for certificate notifications.
 
 ## SYNTAX
 
@@ -31,26 +34,32 @@ Add-AzKeyVaultCertificateContact [-ResourceId] <String> [-EmailAddress] <String[
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzKeyVaultCertificateContact** cmdlet adds a contact for a key vault for certificate notifications in Azure Key Vault.
+The contact receives updates about events such as certificate close to expiry, certificate renewed, and so on.
+These events are determined by the certificate policy.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Add a key vault certificate contact
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Add-AzKeyVaultCertificateContact -VaultName "ContosoKV01" -EmailAddress "patti.fuller@contoso.com" -PassThru
+
+Email                    VaultName
+-----                    ---------
+patti.fuller@contoso.com ContosoKV01
 ```
 
-{{ Add example description here }}
+This command adds Patti Fuller as a certificate contact for the ContosoKV01 key vault and returns the list of contacts for the "ContosoKV01" vault.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -90,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If this parameter is specified, all contacts for this KeyVault are returned
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -120,8 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of the key vault.
 
 ```yaml
 Type: System.String
@@ -167,8 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -183,3 +191,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzKeyVaultCertificateContact](./Get-AzKeyVaultCertificateContact.md)
+
+[Remove-AzKeyVaultCertificateContact](./Remove-AzKeyVaultCertificateContact.md)
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+ms.assetid: ACB53C23-99E0-4A0A-A44E-0D3FDB12450B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/new-azrediscachescheduleentry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzRedisCacheScheduleEntry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzRedisCacheScheduleEntry.md
 ---
 
 # New-AzRedisCacheScheduleEntry
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a schedule entry.
 
 ## SYNTAX
 
@@ -18,21 +21,32 @@ New-AzRedisCacheScheduleEntry -DayOfWeek <String> -StartHourUtc <Int32> [-Mainte
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzRedisCacheScheduleEntry** cmdlet creates a **PSScheduleEntry** object.
+Azure Redis Cache patch schedule cmdlets, such as the New-AzRedisCachePatchSchedule cmdlet, require schedule entry objects.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a schedule entry for weekends
+```
+PS C:\>New-AzRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00"
 ```
 
-{{ Add example description here }}
+This command creates a **PSScheduleEntry** object that represents a weekend schedule that has the specified start time and window.
 
 ## PARAMETERS
 
 ### -DayOfWeek
-Day of week for which want to create schedule entry
+Specifies the day of the week for the schedule entry.
+The acceptable values for this parameter are:
+- Everyday 
+- Weekend 
+- Monday 
+- Tuesday 
+- Wednesday 
+- Thursday 
+- Friday 
+- Saturday 
+- Sunday
 
 ```yaml
 Type: System.String
@@ -48,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindow
-Window of time while patching is allowed
+Specifies the amount of time window allowed for updates.
 
 ```yaml
 Type: System.Nullable`1[System.TimeSpan]
@@ -78,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartHourUtc
-Hour of day when schedule starts in UTC
+Specifies an hour of the day when the schedule starts.
 
 ```yaml
 Type: System.Int32
@@ -93,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -109,5 +122,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
 
 ## RELATED LINKS
+
+[Get-AzRedisCachePatchSchedule](./Get-AzRedisCachePatchSchedule.md)
+
+[New-AzRedisCachePatchSchedule](./New-AzRedisCachePatchSchedule.md)
+
+[Remove-AzRedisCachePatchSchedule](./Remove-AzRedisCachePatchSchedule.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/new-azrecoveryservicesasrvcenter
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrvCenter.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrvCenter.md
 ---
 
 # New-AzRecoveryServicesAsrvCenter
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a vCenter server to discover protectable items from.
 
 ## SYNTAX
 
@@ -18,21 +20,23 @@ New-AzRecoveryServicesAsrvCenter -Fabric <ASRFabric> -Name <String> -Account <AS
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzRecoveryServicesAsrvCenter** cmdlet adds a vCenter server to discover protectable items from. This cmdlet registers the vCenter server for discovery with the Configuration server.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> New-AzRecoveryServicesAsrvCenterServer -Account $ConfigServer.FabricSpecificDetails.RunAsAccounts[1] -Fabric $ConfigServer -Name InmTest59 -Port 443 -Server 10.150.209.6
+
+Asr Job for vCenter creation.
 ```
 
-{{ Add example description here }}
+Adds a vCenter server to discover protectable items from.
 
 ## PARAMETERS
 
 ### -Account
-{{Fill Account Description}}
+User login creadential Account.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRunAsAccount
@@ -47,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-{{Fill Fabric Description}}
+ASR fabric corresponding to the Configuration server.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric
@@ -77,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -IpOrHostName
-{{Fill IpOrHostName Description}}
+IPv4 address or FQDN of the vCenter server.
 
 ```yaml
 Type: System.String
@@ -92,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+A friendly name for the vCenter server.
 
 ```yaml
 Type: System.String
@@ -107,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-{{Fill Port Description}}
+The TCP port on the vCenter server to use for discovery.
 
 ```yaml
 Type: System.Int32
@@ -153,8 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

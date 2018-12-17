@@ -1,73 +1,75 @@
 ---
 Module Name: Az.Relay
-Module Guid: 668e7be1-9801-496f-a7ed-25b1077d2f23
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.relay
+Help Version: 4.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/Az.Relay.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/Az.Relay.md
 ---
 
 # Az.Relay Module
 ## Description
-{{Manually Enter Description Here}}
+List of the cmdlets for Azure Relay
 
 ## Az.Relay Cmdlets
 ### [Get-AzRelayAuthorizationRule](Get-AzRelayAuthorizationRule.md)
-{{Manually Enter Get-AzRelayAuthorizationRule Description Here}}
+Gets the description of a specified authorization rule for a given Relay entities (Namespace/WcfRelay/HybridConnection).
 
 ### [Get-AzRelayHybridConnection](Get-AzRelayHybridConnection.md)
-{{Manually Enter Get-AzRelayHybridConnection Description Here}}
+Gets a description for the specified HybridConnection within the Relay namespace.
 
 ### [Get-AzRelayKey](Get-AzRelayKey.md)
-{{Manually Enter Get-AzRelayKey Description Here}}
+Gets the primary and secondary connection strings for the given Relay entities (Namespace/WcfRelay/HybridConnection).
 
 ### [Get-AzRelayNamespace](Get-AzRelayNamespace.md)
-{{Manually Enter Get-AzRelayNamespace Description Here}}
+Gets a description for the specified Relay namespace within the resource group.
 
 ### [Get-AzRelayOperation](Get-AzRelayOperation.md)
-{{Manually Enter Get-AzRelayOperation Description Here}}
+List supported Relay Operations
 
 ### [Get-AzWcfRelay](Get-AzWcfRelay.md)
-{{Manually Enter Get-AzWcfRelay Description Here}}
+Returns a description for the specified WcfRelay.
 
 ### [New-AzRelayAuthorizationRule](New-AzRelayAuthorizationRule.md)
-{{Manually Enter New-AzRelayAuthorizationRule Description Here}}
+Creates a new authorization rule for the specified Relay entities (Namespace/WcfRelay/HybridConnection).
 
 ### [New-AzRelayHybridConnection](New-AzRelayHybridConnection.md)
-{{Manually Enter New-AzRelayHybridConnection Description Here}}
+Creates a HybridConnection in the specified Relay namespace.
 
 ### [New-AzRelayKey](New-AzRelayKey.md)
-{{Manually Enter New-AzRelayKey Description Here}}
+Regenerates the primary or secondary connection strings for the given Relay entities (Namespace/WcfRelay/HybridConnection)
 
 ### [New-AzRelayNamespace](New-AzRelayNamespace.md)
-{{Manually Enter New-AzRelayNamespace Description Here}}
+Creates a new Relay namespace.
 
 ### [New-AzWcfRelay](New-AzWcfRelay.md)
-{{Manually Enter New-AzWcfRelay Description Here}}
+Creates a WcfRelay in the specified Relay namespace.
 
 ### [Remove-AzRelayAuthorizationRule](Remove-AzRelayAuthorizationRule.md)
-{{Manually Enter Remove-AzRelayAuthorizationRule Description Here}}
+Removes the authorization rule of a HybridConnection from the given Relay entities (Namespace/WcfRelay/HybridConnection).
 
 ### [Remove-AzRelayHybridConnection](Remove-AzRelayHybridConnection.md)
-{{Manually Enter Remove-AzRelayHybridConnection Description Here}}
+Removes the HybridConnection from the specified HybridConnection namespace.
 
 ### [Remove-AzRelayNamespace](Remove-AzRelayNamespace.md)
-{{Manually Enter Remove-AzRelayNamespace Description Here}}
+Removes the namespace from the specified resource group. 
 
 ### [Remove-AzWcfRelay](Remove-AzWcfRelay.md)
-{{Manually Enter Remove-AzWcfRelay Description Here}}
+Removes the WcfRelay from the specified Relay namespace.
 
 ### [Set-AzRelayAuthorizationRule](Set-AzRelayAuthorizationRule.md)
-{{Manually Enter Set-AzRelayAuthorizationRule Description Here}}
+Updates the specified authorization rule description for the given Relay entities (Namespace/WcfRelay/HybridConnection).
 
 ### [Set-AzRelayHybridConnection](Set-AzRelayHybridConnection.md)
-{{Manually Enter Set-AzRelayHybridConnection Description Here}}
+Updates the description of a HybridConnection in the specified Relay namespace.
 
 ### [Set-AzRelayNamespace](Set-AzRelayNamespace.md)
-{{Manually Enter Set-AzRelayNamespace Description Here}}
+Updates the description of an existing Relay namespace.
 
 ### [Set-AzWcfRelay](Set-AzWcfRelay.md)
-{{Manually Enter Set-AzWcfRelay Description Here}}
+Updates the description of a WcfRelay in the specified Relay namespace.
 
 ### [Test-AzRelayName](Test-AzRelayName.md)
-{{Manually Enter Test-AzRelayName Description Here}}
+Checks the Availability of the given NameSpace Name
 

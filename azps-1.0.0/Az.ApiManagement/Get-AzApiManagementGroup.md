@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: EEB52CCA-F5D6-4ACB-A6C9-D07C510A5878
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementgroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementGroup.md
 ---
 
 # Get-AzApiManagementGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets all or specific API management groups.
 
 ## SYNTAX
 
@@ -37,22 +40,46 @@ Get-AzApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [-Pr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementGroup** cmdlet gets all or specific API management groups.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all groups
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementGroup -Context $apimContext
 ```
 
-{{ Add example description here }}
+This command gets all groups.
+
+### Example 2: Get a group by ID
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementGroup -Context $apimContext -GroupId "0123456789"
+```
+
+This command gets  the group ID named 0123456789.
+
+### Example 3: Get a group by name
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementGroup -Context $apimContext -Name "Group0002"
+```
+
+This command gets the group named Group0002.
+
+### Example 4: Get all user groups
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementGroup -Context $apimContext -UserId "0123456789"
+```
+
+This command gets all user groups with the user ID named 0123456789.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of PsApiManagementContext.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -67,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,9 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of a group.
-If specified will try to find group by the identifier.
-This parameter is optional.
+Specifies the group ID.
+If specified, the cmdlet attempts to find the group by the identifier.
 
 ```yaml
 Type: System.String
@@ -99,9 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Group name.
-If specified will try to find group by the name.
-This parameter is optional.
+Specifies the name of the management group.
 
 ```yaml
 Type: System.String
@@ -133,9 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
-If specified will return all groups the user belongs to.
-This parameter is optional.
+Specifies the identifier of existing product.
+If specified the cmdlet will return all groups the product assigned to.
 
 ```yaml
 Type: System.String
@@ -150,8 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -166,3 +188,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementGroup](./New-AzApiManagementGroup.md)
+
+[Remove-AzApiManagementGroup](./Remove-AzApiManagementGroup.md)
+
+[Set-AzApiManagementGroup](./Set-AzApiManagementGroup.md)
+
+

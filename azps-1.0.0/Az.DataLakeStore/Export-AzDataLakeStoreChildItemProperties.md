@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/get-azatalakestorechilditemproperties
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Export-AzDataLakeStoreChildItemProperties.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Export-AzDataLakeStoreChildItemProperties.md
 ---
 
 # Export-AzDataLakeStoreChildItemProperties
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Exports the properties (Disk usage and Acl) for the entire tree from the specified path to a ouput path
 
 ## SYNTAX
 
@@ -37,16 +39,27 @@ Export-AzDataLakeStoreChildItemProperties [-Account] <String> [-Path] <DataLakeS
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Export-AzDataLakeStoreChildItemProperties** is used to report the ADLS space usage or/and ACL usage for the given directory and it's sub directories and files.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the disk usage and ACL usage for all subdirectories and files
+```
+PS C:\> Export-AzDataLakeStoreChildItemProperties -Account ContosoADL -Path /a -OutputPath "C:\Users\contoso\Desktop\DumpFile.txt" -GetAcl -GetDiskUsage -IncludeFile
 ```
 
-{{ Add example description here }}
+Get the disk usage and ACL usage for all subdirectories and files under /a. IncludeFile ensures the usage is reported for files also
+
+### Example 2: Get the ACL usage for all subdirectories and files with the consistent ACL hidden
+```
+PS C:\> $fullAcl="user:contoso-userid:--x|user::rwx|other::---|group::rwx"
+PS C:\> $newFullAcl = $fullAcl.Split("{|}");
+PS C:\> Set-AzDataLakeStoreItemAcl -Account ContosoADL -Path /a -Acl $newFullAcl -Recurse -Debug
+
+PS C:\> Export-AzDataLakeStoreChildItemProperties -Account ContosoADL -Path /a -OutputPath "C:\Users\contoso\Desktop\DumpFile.txt" -GetAcl -HideConsistentAcl -IncludeFile
+```
+
+Get the ACL usage for all subdirectories and files under /a. IncludeFile ensures the usage is reported for files also. HideconsistentAcl in this case will show the Acl of /a, not it's children since all of the children has same acl as /a. This flag skips the acl ouput of subtree if all it's acls are same as the root.
 
 ## PARAMETERS
 
@@ -66,8 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Concurrency
-Number of files/directories processed in parallel.
-Optional: a reasonable default will be selected
+Indicates the number of files/directories processed in parallel.
+Default will be computed as a best effort based on system specification.
 
 ```yaml
 Type: System.Int32
@@ -85,9 +98,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -97,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetAcl
-Retrieves the acl starting from the Path specified
+Retrieves the acl starting from the root path
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -112,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetDiskUsage
-Retrieves the disk usage starting from the Path specified
+Retrieves the disk usage starting from the root path
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -127,8 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -HideConsistentAcl
-Do not show directory subtree if the ACLs are the same throughout the entire subtree.
-This makes it easier to see only the paths up to which the ACLs differ.For example if all files and folders under /a/b are the same, do not show the subtreeunder /a/b, and just output /a/b with 'True' in the Consistent ACL columnCannot be set if IncludeFiles is not set, because consistent Acl cannot be determined without retrieving acls for the files.
+Do not show directory subtree if the ACLs are the same throughout the entire subtree. This makes it easier to see only the paths up to which the ACLs differ.For example if all files and folders under /a/b are the same, do not show the subtreeunder /a/b, and just output /a/b with 'True' in the Consistent ACL columnCannot be set if IncludeFiles is not set, because consistent Acl cannot be determined without retrieving acls for the files.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -158,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumDepth
-Maximum depth from the Path specified, to which disk usage or acl is displayed
+Maximum depth from the root directory till which disk usage or acl is displayed
 
 ```yaml
 Type: System.Int32
@@ -173,10 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputPath
-Path to output file.
-Can be a Local path or Adl Path.
-By default it is local.
-If SaveToAdl is pecified then it is an ADL path in the same account
+Path to output file. Can be a Local path or Adl Path. By default it is local. If SaveToAdl is pecified then it is an ADL path in the same account
 
 ```yaml
 Type: System.String
@@ -206,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account whose properties need to be retrieved.
+The path in the specified Data Lake account that should be retrieve.
 Can be a file or folder In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
 
 ```yaml
@@ -222,9 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -SaveToAdl
-Save output to ADL Store, in the same account.
-The OutputPath parameter should be the full ADL path to output to.Default is to save to a local file.
-In that case, OutputPath specifies the pathto local file.
+If passed then saves the dump file to ADL.
+The DumpFile wil be a ADL path in that case
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -270,8 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

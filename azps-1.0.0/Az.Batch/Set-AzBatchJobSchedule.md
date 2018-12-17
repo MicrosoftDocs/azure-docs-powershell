@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 14026F0E-4959-4150-A31F-A94BC56ED808
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/set-azbatchjobschedule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchJobSchedule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchJobSchedule.md
 ---
 
 # Set-AzBatchJobSchedule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets a job schedule.
 
 ## SYNTAX
 
@@ -18,25 +21,26 @@ Set-AzBatchJobSchedule [-JobSchedule] <PSCloudJobSchedule> -BatchContext <BatchA
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzBatchJobSchedule** cmdlet sets a job schedule in the Azure Batch service.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update a job schedule
+```
+PS C:\> $JobSchedule = Get-AzBatchJobSchedule -Id "MyJobSchedule" -BatchContext $Context
+PS C:\> $JobSchedule.Schedule.RecurrenceInterval = New-TimeSpan -Days 2
+PS C:\> Set-AzBatchJobSchedule -JobSchedule $Job -BatchContext $Context
 ```
 
-{{ Add example description here }}
+The first command gets a job by using **Get-AzBatchJobSchedule**, and then stores it in the $JobSchedule variable.
+The second command modifies the recurrence interval on the `$JobSchedule.Schedule` object.
+The final command updates the Batch service to match the local object in $JobSchedule.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -51,12 +55,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -66,7 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobSchedule
-The PSCloudJobSchedule object with changes to commit to the Batch Service.
+Specifies a **PSCloudJobSchedule** object that represents a job schedule.
+To obtain a **PSCloudJobSchedule** object, use the Get-AzBatchJobSchedule cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSCloudJobSchedule
@@ -81,8 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -97,3 +101,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AzBatchJobSchedule](./Disable-AzBatchJobSchedule.md)
+
+[Enable-AzBatchJobSchedule](./Enable-AzBatchJobSchedule.md)
+
+[Get-AzBatchJobSchedule](./Get-AzBatchJobSchedule.md)
+
+[New-AzBatchJobSchedule](./New-AzBatchJobSchedule.md)
+
+[Remove-AzBatchJobSchedule](./Remove-AzBatchJobSchedule.md)
+
+[Stop-AzBatchJobSchedule](./Stop-AzBatchJobSchedule.md)
+
+

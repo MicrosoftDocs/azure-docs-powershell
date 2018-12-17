@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Management.CognitiveServices.dll-Help.xml
 Module Name: Az.CognitiveServices
-online version:
+ms.assetid: A2B4ACC1-6F53-47DE-A2D4-831E8AC89A5C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cognitiveservices/new-azcognitiveservicesaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/New-AzCognitiveServicesAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/New-AzCognitiveServicesAccount.md
 ---
 
 # New-AzCognitiveServicesAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a Cognitive Services account.
 
 ## SYNTAX
 
@@ -19,26 +22,40 @@ New-AzCognitiveServicesAccount [-ResourceGroupName] <String> [-Name] <String> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzCognitiveServicesAccount** cmdlet creates a Cognitive Services account with the
+specified type and SKU.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:
 ```
+PS C:\> New-AzCognitiveServicesAccount -ResourceGroupName cognitive-services-resource-group -name myluis -Type LUIS -SkuName S0 -Locatio
+n 'WestUS'
 
-{{ Add example description here }}
+
+ResourceGroupName : cognitive-services-resource-group
+AccountName       : myluis
+Id                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/cognitive-services-resource-group/providers/Microsoft.Cog
+                    nitiveServices/accounts/myluis
+Endpoint          : https://westus.api.cognitive.microsoft.com/luis/v2.0
+Location          : WestUS
+Sku               : Microsoft.Azure.Management.CognitiveServices.Models.Sku
+AccountType       : LUIS
+ResourceType      : Microsoft.CognitiveServices/accounts
+Etag              : "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+ProvisioningState : Succeeded
+Tags              :
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Don't ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -63,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Cognitive Services Account Location.
+Specifies the location in which to create the account.
 
 ```yaml
 Type: System.String
@@ -78,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Cognitive Services Account Name.
+Specifies the name for the account.
 
 ```yaml
 Type: System.String
@@ -93,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Specifies the name of the resource group to which to assign the account.
+The resource group must already exist.
 
 ```yaml
 Type: System.String
@@ -108,7 +126,15 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Cognitive Services Account Sku Name.
+Specifies the SKU for the account.
+The acceptable values for this parameter are:
+- F0 (free tier)
+- S0
+- S1
+- S2
+- S3
+- S4
+For more information, see [Cognitive Service APIs](https://www.microsoft.com/cognitive-services/en-us/apis).
 
 ```yaml
 Type: System.String
@@ -123,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Cognitive Services Account Tags.
+Specifies a tag as a name/value pair.
 
 ```yaml
 Type: System.Collections.Hashtable[]
@@ -138,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Cognitive Services Account Type.
+Specifies the type of account to create. Use `Get-AzCognitiveServicesAccountType` cmdlet to get current acceptable values.
 
 ```yaml
 Type: System.String
@@ -162,7 +188,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -178,14 +204,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -198,3 +223,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzCognitiveServicesAccount](./Get-AzCognitiveServicesAccount.md)
+
+[Remove-AzCognitiveServicesAccount](./Remove-AzCognitiveServicesAccount.md)
+
+[Set-AzCognitiveServicesAccount](./Set-AzCognitiveServicesAccount.md)

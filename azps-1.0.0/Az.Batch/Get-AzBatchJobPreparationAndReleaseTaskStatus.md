@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchjobpreparationandreleasetaskstatus
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchJobPreparationAndReleaseTaskStatus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchJobPreparationAndReleaseTaskStatus.md
 ---
 
 # Get-AzBatchJobPreparationAndReleaseTaskStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Batch job preparation and release task status.
 
 ## SYNTAX
 
@@ -27,25 +29,43 @@ Get-AzBatchJobPreparationAndReleaseTaskStatus [-InputObject] <PSCloudJob> [-Filt
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchJobPreparationAndReleaseTaskStatus** cmdlet gets the Azure Batch job preparation and release task status for a Batch job.
+You must supply the *Id* parameter or a **PSCloudJob** instance to this cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the job preparation and release status of a job
+```
+PS C:\> Get-AzBatchJobPreparationAndReleaseTaskStatus -BatchContext $Context -Id Test
+
+ComputeNodeId                          : tvm-2316545714_1-20170613t201733z
+ComputeNodeUrl                         : https://account.westus.batch.azure.com/pools/test/nodes/tvm-2316545714_1-20170613t201733z
+JobPreparationTaskExecutionInformation : Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTaskExecutionInformation
+JobReleaseTaskExecutionInformation     :
+PoolId                                 : test
 ```
 
-{{ Add example description here }}
+This command gets the job preparation and release task status for job "Test".
+Use the Get-AzBatchAccountKeys cmdlet to assign a context to the $Context variable.
+
+### Example 2: Get the job preparation and release status of a job with Filter and Select specified
+```
+PS C:\> Get-AzBatchJobPreparationAndReleaseTaskStatus -BatchContext $context -Id Test -Filter "nodeId eq 'tvm-2316545714_1-20170613t201733z'" -Select "jobPreparationTaskExecutionInfo"
+
+ComputeNodeId                          :
+ComputeNodeUrl                         :
+JobPreparationTaskExecutionInformation : Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTaskExecutionInformation
+JobReleaseTaskExecutionInformation     :
+PoolId                                 :
+```
+
+This command gets the job preparation and release task status for job "Test" on node "tvm-2316545714_1-20170613t201733z" and uses the Select clause to specify to only return the JobPreparationTaskExecutionInformation information
 
 ## PARAMETERS
 
 ### -BatchContext
 The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -60,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -123,8 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a PSCloudJob object that represents the job to get the preparation and release task status from.
-To obtain a PSCloudJob object, use the Get-AzureBatchJob cmdlet.
+Specifies a **PSCloudJob** object that represents the job to get the preparation and release task status from.
+To obtain a **PSCloudJob** object, use the Get-AzBatchJob cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSCloudJob
@@ -140,6 +160,8 @@ Accept wildcard characters: False
 
 ### -MaxCount
 Specifies the maximum number of jobs preparation and release task status' to return.
+If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+The default value is 1000.
 
 ```yaml
 Type: System.Int32
@@ -170,8 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -186,3 +207,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchJob](./Get-AzBatchJob.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)

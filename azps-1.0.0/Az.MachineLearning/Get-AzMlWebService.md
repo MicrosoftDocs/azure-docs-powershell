@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning/get-azmlwebservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzMlWebService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzMlWebService.md
 ---
 
 # Get-AzMlWebService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Retrieves the summary information for one or more web services.
 
 ## SYNTAX
 
@@ -18,26 +20,35 @@ Get-AzMlWebService [-ResourceGroupName <String>] [-Name <String>] [-Region <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Retrieves web service defintion information.
+Depending on the paramenters passed, the cmdlet returns the defintion for a specific web service, a collection of defintions for the web services for a specified resource group within the current subscription, or a collection of defintions for the web services within the current subscription.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get details of specific web service
+```
+Get-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
 ```
 
-{{ Add example description here }}
+### Example 2: Get all web service resources in current subscription
+```
+Get-AzMlWebService
+```
+
+### Example 3: Get all web services in the current subscription and given resource group
+```
+Get-AzMlWebService -ResourceGroupName "myresourcegroup"
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web service.
+The name of the web service for which the details are retrieved.
 
 ```yaml
 Type: System.String
@@ -62,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Region
-The name of region
+The name of regio
 
 ```yaml
 Type: System.String
@@ -77,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group for the Azure ML web service.
+The resource group from which the details for the web service are retrieved.
 
 ```yaml
 Type: System.String
@@ -92,8 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -104,5 +114,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS

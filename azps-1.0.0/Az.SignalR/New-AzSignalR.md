@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.SignalR.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.SignalR.dll-Help.xml
 Module Name: Az.SignalR
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.signalr/new-azsignalr
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/New-AzSignalR.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/New-AzSignalR.md
 ---
 
 # New-AzSignalR
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create a SignalR service.
 
 ## SYNTAX
 
@@ -19,16 +21,22 @@ New-AzSignalR [-ResourceGroupName <String>] [-Name] <String> [-Location <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Create a SignalR service.
+The following values will be used for the parameters if not specified:
+* `ResourceGroupName`: the default resource group set by `Set-AzDefault -ResourceGroupName`.
+* `Location`: the location of the resource group
+* `Sku`: `Standard_S1`
 
 ## EXAMPLES
 
-### Example 1
+### Create a SignalR serivce
 ```powershell
-PS C:\> {{ Add example code here }}
-```
+PS C:\> New-AzSignalR -ResourceGroupName myResourceGroup1 -Name mysignalr1 -Location eastus -Sku Standard_S1
 
-{{ Add example description here }}
+HostName                                           Location       ServerPort PublicPort ProvisioningState Version
+--------                                           --------       ---------- ---------- ----------------- -------
+mysignalr1.service.signalr.net                     eastus         5002       5001       Succeeded         1.0-preview
+```
 
 ## PARAMETERS
 
@@ -51,9 +59,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,8 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The SignalR service location.
-The resource group location will be used if not specified.
+The SignalR service location. The resource group location will be used if not specified.
 
 ```yaml
 Type: System.String
@@ -94,8 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-The default one will be used if not specified.
+The resource group name. The default one will be used if not specified.
 
 ```yaml
 Type: System.String
@@ -119,7 +125,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Standard_S1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -140,8 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnitCount
-The SignalR service unit count, from 1 to 10.
-Default to 1.
+The SignalR service unit count, from 1 to 10. Default to 1.
 
 ```yaml
 Type: System.Int32
@@ -150,7 +155,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -187,8 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

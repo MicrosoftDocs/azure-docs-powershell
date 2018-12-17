@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: BDEEF1EA-A785-4E17-9887-C2000BDFCF57
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/set-azstoragecontaineracl
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzStorageContainerAcl.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzStorageContainerAcl.md
 ---
 
 # Set-AzStorageContainerAcl
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the public access permission to a storage container.
 
 ## SYNTAX
 
@@ -19,21 +22,30 @@ Set-AzStorageContainerAcl [-Name] <String> [-Permission] <BlobContainerPublicAcc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzStorageContainerAcl** cmdlet sets the public access permission to the specified storage container in Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set azure storage container ACL by name
+```
+PS C:\>Set-AzStorageContainerAcl -Container "Container01" -Permission Off -PassThru
 ```
 
-{{ Add example description here }}
+This command creates a container that has no public access.
+
+### Example 2: Set azure storage container ACL by using the pipeline
+```
+PS C:\>Get-AzStorageContainer container* | Set-AzStorageContainerAcl -Permission Blob -PassThru
+```
+
+This command gets all storage containers whose name starts with container and then passes the result on the pipeline to set the permission for them all to Blob access.
 
 ## PARAMETERS
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -48,7 +60,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -64,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies the Azure storage context.
+You can create it by using the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -82,7 +98,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -94,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Container Name
+Specifies a container name.
 
 ```yaml
 Type: System.String
@@ -109,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Display Container Information
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,7 +141,19 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-Permission string Off/Blob/Container
+Specifies the level of public access to this container.
+By default, the container and any blobs in it can be accessed only by the owner of the storage account.
+To grant anonymous users read permissions to a container and its blobs, you can set the container permissions to enable public access.
+Anonymous users can read blobs in a publicly available container without authenticating the request.
+The acceptable values for this parameter are:
+--Container.
+Provides full read access to a container and its blobs.
+Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account. 
+--Blob.
+Provides read access to blob data in a container through anonymous request, but does not provide access to container data.
+Clients cannot enumerate blobs in the container by using anonymous request. 
+--Off.
+Restricts access to only the storage account owner.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.BlobContainerPublicAccessType
@@ -140,7 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the service side time-out interval, in seconds, for a request.
+If the specified interval elapses before the service processes the request, the storage service returns an error.
+Server side time out for each request.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -155,8 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -171,3 +201,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageContainer](./Get-AzStorageContainer.md)
+
+[New-AzStorageContainer](./New-AzStorageContainer.md)
+
+[Remove-AzStorageContainer](./Remove-AzStorageContainer.md)
+
+

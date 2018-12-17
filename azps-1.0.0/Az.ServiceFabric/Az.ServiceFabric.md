@@ -1,61 +1,63 @@
 ---
 Module Name: Az.ServiceFabric
-Module Guid: f98e4fc9-6247-4e59-99a1-7b8ba13b3d1e
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 60f3ba88-443f-46ff-88a3-318cfd11c1da
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.servicefabric
+Help Version: 0.3.4.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Az.ServiceFabric.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Az.ServiceFabric.md
 ---
 
 # Az.ServiceFabric Module
 ## Description
-{{Manually Enter Description Here}}
+Azure Service Fabric Module that you can use to automate the end-2-end operations like creating a secure cluster, rolling over cluster certificates, adding or removed nodes from the cluster, etc. The complete list of all operations are listed below.
 
 ## Az.ServiceFabric Cmdlets
 ### [Add-AzServiceFabricApplicationCertificate](Add-AzServiceFabricApplicationCertificate.md)
-{{Manually Enter Add-AzServiceFabricApplicationCertificate Description Here}}
+Add a new certificate to the Virtual Machine Scale Set(s) that make up the cluster. The certificate is intended to be used as an application certificate.
 
 ### [Add-AzServiceFabricClientCertificate](Add-AzServiceFabricClientCertificate.md)
-{{Manually Enter Add-AzServiceFabricClientCertificate Description Here}}
+Add common name or thumbprint to the cluster for client authentication purposes.
 
 ### [Add-AzServiceFabricClusterCertificate](Add-AzServiceFabricClusterCertificate.md)
-{{Manually Enter Add-AzServiceFabricClusterCertificate Description Here}}
+Add a secondary cluster certificate to the cluster.
 
 ### [Add-AzServiceFabricNode](Add-AzServiceFabricNode.md)
-{{Manually Enter Add-AzServiceFabricNode Description Here}}
+Add nodes to the specific node type in the cluster.
 
 ### [Add-AzServiceFabricNodeType](Add-AzServiceFabricNodeType.md)
-{{Manually Enter Add-AzServiceFabricNodeType Description Here}}
+Add a new node type to the existing cluster.
 
 ### [Get-AzServiceFabricCluster](Get-AzServiceFabricCluster.md)
-{{Manually Enter Get-AzServiceFabricCluster Description Here}}
+Get the cluster resource details.
 
 ### [New-AzServiceFabricCluster](New-AzServiceFabricCluster.md)
-{{Manually Enter New-AzServiceFabricCluster Description Here}}
+This command uses certificates that you provide or system generated self-signed certificates to set up a new service fabric cluster. It can use a default template or a custom template that you provide. You have the option of specifying a folder to export the self-signed certificates to or fetching them later from the key vault. 
 
 ### [Remove-AzServiceFabricClientCertificate](Remove-AzServiceFabricClientCertificate.md)
-{{Manually Enter Remove-AzServiceFabricClientCertificate Description Here}}
+Remove a client certificate(s) or certificate subject(s) name(s) from being used for client authentication to the cluster.
 
 ### [Remove-AzServiceFabricClusterCertificate](Remove-AzServiceFabricClusterCertificate.md)
-{{Manually Enter Remove-AzServiceFabricClusterCertificate Description Here}}
+Remove a cluster certificate from being used for cluster security.
 
 ### [Remove-AzServiceFabricNode](Remove-AzServiceFabricNode.md)
-{{Manually Enter Remove-AzServiceFabricNode Description Here}}
+Remove nodes from the specific node type from a cluster.
 
 ### [Remove-AzServiceFabricNodeType](Remove-AzServiceFabricNodeType.md)
-{{Manually Enter Remove-AzServiceFabricNodeType Description Here}}
+Remove a complete node type from a cluster.
 
 ### [Remove-AzServiceFabricSetting](Remove-AzServiceFabricSetting.md)
-{{Manually Enter Remove-AzServiceFabricSetting Description Here}}
+Remove one or multiple Service Fabric setting from the cluster.
 
 ### [Set-AzServiceFabricSetting](Set-AzServiceFabricSetting.md)
-{{Manually Enter Set-AzServiceFabricSetting Description Here}}
+Add or update one or multiple Service Fabric settings to the cluster.
 
 ### [Set-AzServiceFabricUpgradeType](Set-AzServiceFabricUpgradeType.md)
-{{Manually Enter Set-AzServiceFabricUpgradeType Description Here}}
+Change the Service Fabric upgrade type of the cluster.
 
 ### [Update-AzServiceFabricDurability](Update-AzServiceFabricDurability.md)
-{{Manually Enter Update-AzServiceFabricDurability Description Here}}
+Update the durability tier or VmSku of a node type in the cluster.
 
 ### [Update-AzServiceFabricReliability](Update-AzServiceFabricReliability.md)
-{{Manually Enter Update-AzServiceFabricReliability Description Here}}
+Update the reliability tier of the primary node type in a cluster.
 

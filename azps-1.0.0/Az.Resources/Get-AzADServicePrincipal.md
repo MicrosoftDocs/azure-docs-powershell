@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 4DC26C26-6162-4A15-BFCB-4D2B6B52DD81
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azadserviceprincipal
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzADServicePrincipal.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzADServicePrincipal.md
 ---
 
 # Get-AzADServicePrincipal
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Filters active directory service principals.
 
 ## SYNTAX
 
@@ -32,7 +35,7 @@ Get-AzADServicePrincipal -DisplayName <String> [-DefaultProfile <IAzureContextCo
 
 ### ObjectIdParameterSet
 ```
-Get-AzADServicePrincipal -ObjectId <Guid> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+Get-AzADServicePrincipal -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
@@ -55,16 +58,49 @@ Get-AzADServicePrincipal -ServicePrincipalName <String> [-DefaultProfile <IAzure
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Filters active directory service principals.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - List AD service principals
+
+```
+PS C:\> Get-AzADServicePrincipal
 ```
 
-{{ Add example description here }}
+Lists all AD service principals in a tenant.
+
+### Example 2 - List AD service principals using paging
+
+```
+PS C:\> Get-AzADServicePrincipal -First 100
+```
+
+Lists the first 100 AD service principals in a tenant.
+
+### Example 3 - List service principals by SPN
+
+```
+PS C:\> Get-AzADServicePrincipal -ServicePrincipalName 36f81fc3-b00f-48cd-8218-3879f51ff39f
+```
+
+Lists service principals with the SPN '36f81fc3-b00f-48cd-8218-3879f51ff39f'.
+
+### Example 4 - List service principals by search string
+
+```
+PS C:\> Get-AzADServicePrincipal -SearchString "Web"
+```
+
+Lists all AD service principals whose display name start with "Web".
+
+### Example 5 - List service principals by piping
+
+```
+PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69 | Get-AzADServicePrincipal
+```
+
+Gets the AD application with object id '39e64ec6-569b-4030-8e1c-c3c519a05d69' and pipes it to the Get-AzADServicePrincipal cmdlet to list all service principals for that application.
 
 ## PARAMETERS
 
@@ -84,10 +120,10 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationObject
-The object representing the application to create an service principal for.
+The application object whose service principal is being retrieved.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 Parameter Sets: ApplicationObjectParameterSet
 Aliases:
 
@@ -99,12 +135,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -144,10 +180,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The service principal object id.
+Object id of the service principal.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ObjectIdParameterSet
 Aliases:
 
@@ -159,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The user SPN.
+SPN of the service.
 
 ```yaml
 Type: System.String
@@ -174,8 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Reports the number of objects in the data set (an integer) followed by the objects.
-If the cmdlet cannot determine the total count, it returns 'Unknown total count'.
+Reports the number of objects in the data set. Currently, this parameter does nothing.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -190,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Ignores the first 'n' objects and then gets the remaining objects.
+Ignores the first N objects and then gets the remaining objects.
 
 ```yaml
 Type: System.UInt64
@@ -205,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-Gets only the first 'n' objects.
+The maximum number of objects to return.
 
 ```yaml
 Type: System.UInt64
@@ -220,8 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -229,12 +263,23 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Guid
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzADServicePrincipal](./New-AzADServicePrincipal.md)
+
+[Set-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
+
+[Remove-AzADServicePrincipal](./Remove-AzADServicePrincipal.md)
+
+[Get-AzADApplication](./Get-AzADApplication.md)
+
+[Get-AzADSpCredential](./Get-AzADSpCredential.md)
+

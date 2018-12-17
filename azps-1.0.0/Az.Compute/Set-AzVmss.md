@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 6442E5BB-D59D-483B-8AC5-2586C6C1E925
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmss
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmss.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmss.md
 ---
 
 # Set-AzVmss
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets specific actions on a specified VMSS.
 
 ## SYNTAX
 
@@ -38,21 +41,22 @@ Set-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String> [[-InstanceI
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVmss** cmdlet sets specific actions on the Virtual Machine Scale Set (VMSS).
+The only action this cmdlet supports is Reimage.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Reimage a VMSS
+```
+PS C:\> Set-AzVmss -Reimage -ResourceGroupName "ContosoGroup" -VMScaleSetName "ContosoVMSS"
 ```
 
-{{ Add example description here }}
+This command reimages the VMSS named ContosoVMSS that belongs to the resource group named ContosoGroup.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background
+Run cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -67,12 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceId
-{{Fill InstanceId Description}}
+The instance ID of the virtual machine.
 
 ```yaml
 Type: System.String[]
@@ -97,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -PerformMaintenance
-{{Fill PerformMaintenance Description}}
+Indicates that this cmdlet performs maintenance one or more virtual machines in the VMSS.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -112,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Redeploy
-{{Fill Redeploy Description}}
+Indicates that the cmdlet redeploys one or more virtual machines in the VMSS.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -127,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reimage
-{{Fill Reimage Description}}
+Indicates that the cmdlet reimages the VMSS.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -142,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReimageAll
-{{Fill ReimageAll Description}}
+Indicates that the cmdlet reimages all the disks in the VMSS.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -157,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the resource group of the VMSS.
 
 ```yaml
 Type: System.String
@@ -172,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMScaleSetName
-{{Fill VMScaleSetName Description}}
+Species the name of the VMSS for which this cmdlet sets actions on.
 
 ```yaml
 Type: System.String
@@ -202,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -218,8 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -234,3 +236,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVmss](./Get-AzVmss.md)
+
+[New-AzVmss](./New-AzVmss.md)
+
+[Remove-AzVmss](./Remove-AzVmss.md)
+
+[Restart-AzVmss](./Restart-AzVmss.md)
+
+[Start-AzVmss](./Start-AzVmss.md)
+
+[Stop-AzVmss](./Stop-AzVmss.md)
+
+[Update-AzVmss](./Update-AzVmss.md)
+
+

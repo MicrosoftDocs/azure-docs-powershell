@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmdatadisk
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVMDataDisk.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVMDataDisk.md
 ---
 
 # New-AzVMDataDisk
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a local data disk object for a virtual machine or a Vmss VM.
 
 ## SYNTAX
 
@@ -27,16 +29,22 @@ New-AzVMDataDisk [-Lun] <Int32> [-CreateOption] <String> [-Name <String>] [-Cach
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzVMDataDisk** cmdlet creates a local data disk object for a virtual machine or a Vmss VM.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a managed data disk to a Vmss VM.
+```
+PS C:\> $disk = Get-AzDisk -ResourceGroupName $rgname -DiskName $diskname0
+PS C:\> $datadisk = New-AzVMDataDisk -Caching 'ReadOnly' -Lun 2 -CreateOption Attach -StorageAccountType Standard_LRS -ManagedDiskId $disk.Id
+PS C:\> $VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0
+PS C:\> Update-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0 -DataDisk $datadisk
 ```
 
-{{ Add example description here }}
+The first command gets an existing managed disk.
+The next command creates a data disk object with the managed disk.
+The next command gets an existing Vmss VM given by the resource group name, the vmss name and the instance ID.
+The final command updates the Vmss VM by adding a new data disk.
 
 ## PARAMETERS
 
@@ -75,9 +83,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -192,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -WriteAccelerator
-{{Fill WriteAccelerator Description}}
+Specifies whether WriteAccelerator should be enabled or disabled on a managed data disk.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -207,8 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

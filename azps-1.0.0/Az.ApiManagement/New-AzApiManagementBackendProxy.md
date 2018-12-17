@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementbackendproxy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementBackendProxy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementBackendProxy.md
 ---
 
 # New-AzApiManagementBackendProxy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new Backend Proxy Object.
 
 ## SYNTAX
 
@@ -18,26 +20,32 @@ New-AzApiManagementBackendProxy -Url <String> [-ProxyCredential <PSCredential>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a new Backend Proxy Object which can be piped when creating a new Backend entity.
 
 ## EXAMPLES
 
-### Example 1
+### Create a Backend Proxy In-Memory Object
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$secpassword = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
+PS C:\>$proxyCreds = New-Object System.Management.Automation.PSCredential ("foo", $secpassword)
+PS C:\>$credential = New-AzApiManagementBackendProxy -Url "http://12.168.1.1:8080" -ProxyCredential $proxyCreds
+
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+
+PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Proxy $credential -Description "backend with proxy server"
 ```
 
-{{ Add example description here }}
+Creates a Backend Proxy Object and sets up Backend
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,8 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Credentials used to connect to Backend Proxy.
-This parameter is optional.
+Credentials used to connect to Backend Proxy. This parameter is optional.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -63,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-Url of the Backend Proxy.
+Url of the Proxy server to be used when forwarding calls to Backend.
 This parameter is required.
 
 ```yaml
@@ -79,8 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -93,3 +99,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
+
+[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
+
+[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
+
+[Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)

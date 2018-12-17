@@ -1,28 +1,30 @@
 ---
 Module Name: Az.SignalR
-Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
+Module Guid: 7aa1b2c0-72cb-448a-9c12-c45bdf3e088d
 Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Help Version: 0.1.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/Az.SignalR.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/Az.SignalR.md
 ---
 
 # Az.SignalR Module
 ## Description
-{{Manually Enter Description Here}}
+Cmdlets to interact with the Azure SignalR service.
 
 ## Az.SignalR Cmdlets
 ### [Get-AzSignalR](Get-AzSignalR.md)
-{{Manually Enter Get-AzSignalR Description Here}}
+Get a specific SignalR service or all the SignalR services in a resource group or a subscription.
 
 ### [Get-AzSignalRKey](Get-AzSignalRKey.md)
-{{Manually Enter Get-AzSignalRKey Description Here}}
+Get the access keys of a SignalR service.
 
 ### [New-AzSignalR](New-AzSignalR.md)
-{{Manually Enter New-AzSignalR Description Here}}
+Create a SignalR service.
 
 ### [New-AzSignalRKey](New-AzSignalRKey.md)
-{{Manually Enter New-AzSignalRKey Description Here}}
+Regenerate an access key for a SignalR service.
 
 ### [Remove-AzSignalR](Remove-AzSignalR.md)
-{{Manually Enter Remove-AzSignalR Description Here}}
+Remove a SignalR service.
 

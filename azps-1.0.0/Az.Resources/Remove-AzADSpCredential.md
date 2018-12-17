@@ -1,20 +1,23 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 04B1E3A6-6D52-46A3-8241-2CCDB5E71642
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azadspcredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzADSpCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzADSpCredential.md
 ---
 
 # Remove-AzADSpCredential
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a credential from a service principal.
 
 ## SYNTAX
 
 ### ObjectIdWithKeyIdParameterSet (Default)
 ```
-Remove-AzADSpCredential -ObjectId <Guid> [-KeyId <Guid>] [-PassThru] [-Force]
+Remove-AzADSpCredential -ObjectId <String> [-KeyId <Guid>] [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -37,26 +40,45 @@ Remove-AzADSpCredential -ServicePrincipalObject <PSADServicePrincipal> [-KeyId <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Remove-AzADSpCredential cmdlet can be used to remove a credential key from a service principal in the case of a compromise or as part of credential key rollover expiration.
+The service principal is identified by supplying either the object ID or service principal name (SPN).
+The credential to be removed is identified by its key ID if an individual credential is to be removed or with an 'All' switch to delete all credentials associated with the service principal.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Remove a specific credential from a service principal
+
+```
+PS C:\> Remove-AzADSpCredential -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
 ```
 
-{{ Add example description here }}
+Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the service principal with object id '7663d3fb-6f86-4352-9e6d-cf9d50d5ee82'.
+
+### Example 2 - Remove all credentials from a service principal
+
+```
+PS C:\> Remove-AzADSpCredential -ServicePrincipalName http://test123
+```
+
+Removes all credentials from the service principal with the SPN "http://test123".
+
+### Example 3 - Remove all credentials from a service principal using piping
+
+```
+PS C:\> Get-AzADServicePrincipal -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 | Remove-AzADSpCredential
+```
+
+Gets the service principal with object id '7663d3fb-6f86-4352-9e6d-cf9d50d5ee82' and pipes that to the Remove-AzADSpCredential cmdlet to remove all credentials from that service principal.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -81,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Switch to delete credential without a confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -KeyId
-The keyCredential Id.
+Specifies the credential key to be removed.
+The key Ids for a service principal can be obtained using the Get-AzADSpCredential cmdlet.
 
 ```yaml
 Type: System.Guid
@@ -111,10 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The servicePrincipal object id.
+The object id of the service principal to remove the credentials from.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ObjectIdWithKeyIdParameterSet
 Aliases:
 
@@ -126,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The servicePrincipal name.
+The name (SPN) of the service principal to remove the credentials from.
 
 ```yaml
 Type: System.String
@@ -156,10 +179,10 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalObject
-The service principal object.
+The service principal object to remove the credentials from.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 Parameter Sets: ServicePrincipalObjectParameterSet
 Aliases:
 
@@ -202,16 +225,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.Guid
-
 ### System.String
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
+
+### System.Guid
 
 ## OUTPUTS
 
@@ -220,3 +242,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzADSpCredential](./Get-AzADSpCredential.md)
+
+[New-AzADSpCredential](./New-AzADSpCredential.md)
+
+[Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
+

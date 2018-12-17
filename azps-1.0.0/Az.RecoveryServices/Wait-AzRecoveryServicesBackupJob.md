@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: F671A7CC-2A27-460E-B064-2FBF1B9C6A0B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/wait-azrecoveryservicesbackupjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Wait-AzRecoveryServicesBackupJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Wait-AzRecoveryServicesBackupJob.md
 ---
 
 # Wait-AzRecoveryServicesBackupJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Waits for a Backup job to finish.
 
 ## SYNTAX
 
@@ -18,26 +21,43 @@ Wait-AzRecoveryServicesBackupJob [-Job] <Object> [[-Timeout] <Int64>] [-VaultId 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Wait-AzRecoveryServicesBackupJob** cmdlet waits for an Azure Backup job to finish.
+Backup jobs can take a long time.
+If you run a backup job as part of a script, you may want to force the script to wait for job to finish before it continues to other tasks.
+A script that includes this cmdlet can be simpler than one that polls the Backup service for the job status.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Wait for a job to finish
+```
+PS C:\>
+$Jobs = Get-AzRecoveryServicesBackupJob -Status InProgress
+    $Job = $Jobs[0]
+    while ( $Job.Status -ne Completed )
+    {
+       Write-Host "Waiting for completion..."
+       Start-Sleep -Seconds 10
+       $Job = Get-AzBackAzureRmRecoveryServicesBackupJob -Job $Job
+    }
+   Write-Host "Done!"
+    Waiting for completion... 
+    Waiting for completion... 
+    Waiting for completion... 
+    Done!
 ```
 
-{{ Add example description here }}
+This script polls the first job that is currently in progress until the job has completed.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -Job
-Job or List of jobs until end of which the cmdlet should wait.
+Specifies the job to wait for.
+To obtain a **BackupJob** object, use the Get-AzRecoveryServicesBackupJob cmdlet.
 
 ```yaml
 Type: System.Object
@@ -62,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-Maximum time to wait before aborting wait in seconds.
+Specifies the maximum time, in seconds, that this cmdlet waits for the job to finish.
+It is recommended to specify a time-out value.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
@@ -92,8 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -108,3 +129,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupJob](./Get-AzRecoveryServicesBackupJob.md)
+
+

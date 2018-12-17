@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/get-azcontainerregistrycredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistryCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistryCredential.md
 ---
 
 # Get-AzContainerRegistryCredential
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the login credentials for a container registry.
 
 ## SYNTAX
 
@@ -31,26 +33,31 @@ Get-AzContainerRegistryCredential -ResourceId <String> [-DefaultProfile <IAzureC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzContainerRegistryCredential cmdlet gets the login credentials for a container registry.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the login credentials for a container registry
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Get-AzContainerRegistryCredential -ResourceGroupName "MyResourceGroup" -Name "MyRegistry"
+
+Username   Password                         Password2
+--------   --------                         ---------
+MyRegistry +Y+==B==KdT=YV=ZgH=p/zQ/e1sNQq/d //JRPkgxx+r+z/ztU=R//E==vum=pRKL
 ```
 
-{{ Add example description here }}
+This command gets the login credentials for the specified container registry.
+Admin user has to be enabled for the container registry \`MyRegistry\` to get login credentials.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -120,8 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,3 +140,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistry](New-AzContainerRegistry.md)
+
+[Update-AzContainerRegistry](Update-AzContainerRegistry.md)
+
+[Update-AzContainerRegistryCredential](Update-AzContainerRegistryCredential.md)
+

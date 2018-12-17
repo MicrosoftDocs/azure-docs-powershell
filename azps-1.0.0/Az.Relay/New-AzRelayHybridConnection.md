@@ -1,21 +1,23 @@
 ---
-external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
 Module Name: Az.Relay
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.relay/new-azrelayhybridconnection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/New-AzRelayHybridConnection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/New-AzRelayHybridConnection.md
 ---
 
 # New-AzRelayHybridConnection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a HybridConnection in the specified Relay namespace.
 
 ## SYNTAX
 
 ### HybridConnectionInputObjectSet
 ```
 New-AzRelayHybridConnection [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- [-InputObject <HybridConnectionAttibutes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-InputObject <PSHybridConnectionAttibutes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -27,16 +29,48 @@ New-AzRelayHybridConnection [-ResourceGroupName] <String> [-Namespace] <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzRelayHybridConnection cmdlet creates a HybridConnection in the specified Relay namespace.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - InputObject
+```
+PS C:\> $getHybirdConnection = Get-AzRelayHybridConnection -ResourceGroupName Default-ServiceBus-WestUS -NamespaceName TestNameSpace-HybirdConnection -Name TestHybirdConnection1
+PS C:\> $getHybirdConnection.UserMetadata = "TestHybirdConnection2"
+PS C:\> $getHybirdConnection.RequiresClientAuthorization = $False
+PS C:\> New-AzRelayHybridConnection -ResourceGroupName Default-Storage-WestUS -Namespace TestNameSpace-HybirdConnection -Name TestHybirdConnection2 -InputObject $getHybirdConnection
+
+CreatedAt                   : 4/26/2017 10:04:15 PM
+UpdatedAt                   : 4/26/2017 10:04:15 PM
+ListenerCount               :
+RequiresClientAuthorization : True
+UserMetadata                : User Meta data
+Id                          : /subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/Default-ServiceBus-WestUS
+                              /providers/Microsoft.Relay/namespaces/TestNameSpace-HybirdConnection/HybridConnections/TestHybirdConnectio
+                              n2
+Name                        : TestHybirdConnection2
+Type                        : Microsoft.Relay/HybridConnections
 ```
 
-{{ Add example description here }}
+Creates a new HybirdConnection \`TestHybirdConnection2\` in the specified Relay namespace \`TestNameSpace-HybirdConnection\`.
+
+### Example 2 - Properties
+```
+PS C:\> New-AzWcfRelay -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-HybirdConnection -Name TestHybirdConnection1 -RequiresClientAuthorization $True -UserMetadata "User Meta data"
+
+CreatedAt                   : 4/26/2017 10:04:15 PM
+UpdatedAt                   : 4/26/2017 10:04:15 PM
+ListenerCount               :
+RequiresClientAuthorization : True
+UserMetadata                : User Meta data
+Id                          : /subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/Default-ServiceBus-WestUS
+                              /providers/Microsoft.Relay/namespaces/TestNameSpace-HybirdConnection/HybridConnections/TestHybirdConnectio
+                              n1
+Name                        : TestHybirdConnection1
+Type                        : Microsoft.Relay/HybridConnections
+```
+
+Creates a new HybirdConnection \`TestHybirdConnection1\` in the specified Relay namespace \`TestNameSpace-HybirdConnection\`.
 
 ## PARAMETERS
 
@@ -44,9 +78,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -59,7 +93,7 @@ Accept wildcard characters: False
 HybridConnections object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Relay.Models.HybridConnectionAttibutes
+Type: Microsoft.Azure.Commands.Relay.Models.PSHybridConnectionAttibutes
 Parameter Sets: HybridConnectionInputObjectSet
 Aliases:
 
@@ -178,20 +212,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### Microsoft.Azure.Commands.Relay.Models.HybridConnectionAttibutes
+### Microsoft.Azure.Commands.Relay.Models.PSHybridConnectionAttibutes
 
 ### System.Nullable`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.Relay.Models.HybridConnectionAttibutes
+### Microsoft.Azure.Commands.Relay.Models.PSHybridConnectionAttibutes
 
 ## NOTES
 

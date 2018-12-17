@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azmanagementgroup/
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzManagementGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzManagementGroup.md
 ---
 
 # New-AzManagementGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a Management Group
 
 ## SYNTAX
 
@@ -25,16 +27,78 @@ New-AzManagementGroup [-GroupName] <String> [-DisplayName <String>] [-DefaultPro
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzManagementGroup** cmdlet creates a management group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a Management Group
+```
+PS C:\> New-AzManagementGroup -GroupName "TestGroup"
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+DisplayName       : TestGroup
+UpdatedTime       : 2/1/2018 11:06:27 AM
+UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentId          : /providers/Microsoft.Management/managementGroups/14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentName        : 14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentDisplayName : 14307de0-5e6f-46cf-b2ba-64a062964d30
 ```
 
-{{ Add example description here }}
+Creation of a new group with `DisplayName` and `ParentId` set to `null`. The `DisplayName` will be same as the `GroupName` and the parent of the group will be the tenant.  
+
+### Example 2: Create a Management Group with a display name
+```
+PS C:\> New-AzManagementGroup -GroupName "TestGroup" -DisplayName "TestGroupDisplayName"
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+DisplayName       : TestGroup
+UpdatedTime       : 2/1/2018 11:06:27 AM
+UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentId          : /providers/Microsoft.Management/managementGroups/14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentName        : 14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentDisplayName : 14307de0-5e6f-46cf-b2ba-64a062964d30
+```
+
+In this case, the parent of the group will be the tenant and the `DisplayName` will be set to the value given.
+
+### Example 3: Create a Management Group with a parent and a display name
+```
+PS C:\> New-AzManagementGroup -GroupName "TestGroup" -DisplayName "TestGroupDisplayName" -ParentId "/providers/Microsoft.Management/managementGroups/TestGroupParent"
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+DisplayName       : TestGroupDisplayName
+UpdatedTime       : 2/1/2018 11:16:12 AM
+UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+ParentName        : TestGroupParent
+ParentDisplayName : TestGroupParent
+```
+
+### Example 4: Create a Management Group with a parent (using a parent object)
+```
+PS C:\> $parentObject = Get-AzManagementGroup -GroupName "TestGroupParent"
+PS C:\> New-AzManagementGroup -GroupName "TestGroup" -ParentObject $parentObject
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+DisplayName       : TestGroupDisplayName
+UpdatedTime       : 2/1/2018 11:16:12 AM
+UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+ParentName        : TestGroupParent
+ParentDisplayName : TestGroupParent
+```
 
 ## PARAMETERS
 
@@ -42,9 +106,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -145,8 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -159,3 +222,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzManagementGroup](./Remove-AzManagementGroup.md)
+
+[Update-AzManagementGroup](./Update-AzManagementGroup.md)
+
+[Get-AzManagementGroup](./Get-AzManagementGroup.md)

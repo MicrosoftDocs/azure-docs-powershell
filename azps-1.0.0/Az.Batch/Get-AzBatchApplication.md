@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: CF8B8E94-3C6C-4D68-B55B-956393890946
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchapplication
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchApplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchApplication.md
 ---
 
 # Get-AzBatchApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about the specified application.
 
 ## SYNTAX
 
@@ -18,21 +21,26 @@ Get-AzBatchApplication [-AccountName] <String> [-ResourceGroupName] <String> [[-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchApplication** cmdlet gets information about an application in an Azure Batch account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Display the applications in a Batch account
+```
+PS C:\>Get-AzBatchApplication -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup"
+ApplicationId AllowUpdates DisplayName
+
+------------- ------------ ----------------------------
+
+litware       False        Litware Advanced Reticulator
 ```
 
-{{ Add example description here }}
+This command displays all applications in the ContosoBatch account.
 
 ## PARAMETERS
 
 ### -AccountName
-Specifies the name of the Batch account.
+Specifies the name of the Batch account that contains the application.
 
 ```yaml
 Type: System.String
@@ -47,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-{{Fill ApplicationId Description}}
+Specifies the ID of the application.
 
 ```yaml
 Type: System.String
@@ -62,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +113,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchApplicationPackage](./Get-AzBatchApplicationPackage.md)
+
+[New-AzBatchApplication](./New-AzBatchApplication.md)
+
+[New-AzBatchApplicationPackage](./New-AzBatchApplicationPackage.md)
+
+[Remove-AzBatchApplication](./Remove-AzBatchApplication.md)
+
+[Remove-AzBatchApplicationPackage](./Remove-AzBatchApplicationPackage.md)
+
+[Set-AzBatchApplication](./Set-AzBatchApplication.md)
+
+

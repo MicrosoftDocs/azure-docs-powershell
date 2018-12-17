@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: cc944e06-4fa0-4ce5-88e9-ea6454b41d55
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azexpressroutecircuitconnectionconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzExpressRouteCircuitConnectionConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzExpressRouteCircuitConnectionConfig.md
 ---
 
 # Remove-AzExpressRouteCircuitConnectionConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an ExpressRoute circuit connection configuration.
 
 ## SYNTAX
 
@@ -18,26 +21,32 @@ Remove-AzExpressRouteCircuitConnectionConfig [-Name] <String> [-ExpressRouteCirc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzExpressRouteCircuitConnectionConfig** cmdlet removes an ExpressRoute circuit
+connection configuration associated with a given Express Route Circuit.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a circuit connection configuration from an ExpressRoute circuit
+```
+$circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
+Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init
+Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
 ```
 
-{{ Add example description here }}
+### Example 2: Remove a circuit connection configuration using Piping from an ExpressRoute Circuit
+```
+Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName|Set-AzExpressRouteCircuit
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-Express Route Circuit Peering intiating connection
+The ExpressRoute circuit containing the peering configuration to be removed.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -62,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Circuit Connection
+The name of the circuit connection configuration to be removed.
 
 ```yaml
 Type: System.String
@@ -92,8 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -108,8 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +129,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)
+
+[Get-AzExpressRouteCircuitConnectionConfig](Get-AzExpressRouteCircuitConnectionConfig.md)
+
+[Add-AzExpressRouteCircuitConnectionConfig](Add-AzExpressRouteCircuitConnectionConfig.md)
+
+[Set-AzExpressRouteCircuitConnectionConfig](Set-AzExpressRouteCircuitConnectionConfig.md)
+
+[New-AzExpressRouteCircuitConnectionConfig](New-AzExpressRouteCircuitConnectionConfig.md)
+
+[Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)
+
+[Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)

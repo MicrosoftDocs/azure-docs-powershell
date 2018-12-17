@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: D64FB139-04E2-47BC-86FB-EEEA23839F2F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabaseupgradehint
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseUpgradeHint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseUpgradeHint.md
 ---
 
 # Get-AzSqlDatabaseUpgradeHint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets pricing tier hints for a database.
 
 ## SYNTAX
 
@@ -19,21 +22,38 @@ Get-AzSqlDatabaseUpgradeHint [-ServerName] <String> [-DatabaseName <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlDatabaseUpgradeHint** cmdlet gets pricing tier hints for upgrading an Azure SQL Database.
+Databases that are still in Web and Business pricing tiers get the hint to upgrade to the new Basic, Standard, or Premium pricing tiers.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get recommendations for all databases on a server
+```
+PS C:\>Get-AzSqlDatabaseUpgradeHint -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ```
 
-{{ Add example description here }}
+This command returns upgrade hints for all databases on the server named Server01.
+
+### Example 2: Get recommendations for specific database
+```
+PS C:\>Get-AzSqlDatabaseUpgradeHint -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+```
+
+This command returns upgrade hints for a specific database.
+
+### Example 3: Get recommendation for all databases that are not in an elastic database pool
+```
+PS C:\>Get-AzSqlDatabaseUpgradeHint -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ExcludeElasticPoolCandidates $True
+```
+
+This command returns upgrade hints for all databases that are not in an elastic database pool.
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database.
+Specifies the name of the SQL database for which this cmdlet gets an upgrade hint.
+If you do not specify a database, this cmdlet gets hints for all databases on the logical server.
 
 ```yaml
 Type: System.String
@@ -48,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeElasticPoolCandidates
-Exclude databases that are included in elastic pool recommendations
+Indicates whether databases in elastic database pools are excluded from the returned recommendations.
 
 ```yaml
 Type: System.Boolean
@@ -78,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the database is assigned.
 
 ```yaml
 Type: System.String
@@ -93,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server.
+Specifies the name of the server that hosts the database for which this cmdlet gets an upgrade hint.
 
 ```yaml
 Type: System.String
@@ -117,7 +137,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -133,14 +153,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -155,3 +174,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlDatabaseExpanded](./Get-AzSqlDatabaseExpanded.md)
+
+[Get-AzSqlElasticPoolRecommendation](./Get-AzSqlElasticPoolRecommendation.md)
+
+

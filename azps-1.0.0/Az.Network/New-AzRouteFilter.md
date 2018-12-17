@@ -1,34 +1,36 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azroutefilter
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzRouteFilter.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzRouteFilter.md
 ---
 
 # New-AzRouteFilter
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a route filter.
 
 ## SYNTAX
 
 ```
-New-AzRouteFilter -Name <String> -ResourceGroupName <String> -Location <String>
- [-Rule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSRouteFilterRule]>]
+New-AzRouteFilter -Name <String> -ResourceGroupName <String> -Location <String> [-Rule <PSRouteFilterRule[]>]
  [-Tag <Hashtable>] [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzRouteFilter cmdlet creates an Azure route filter.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> {{ Add example code here }}
 ```
 
+ 
 {{ Add example description here }}
 
 ## PARAMETERS
@@ -49,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource
+Indicates that this cmdlet creates a route table even if a route filter that has the same name already exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-location.
+Specifies the Azure region in which this cmdlet creates a route filter.
 
 ```yaml
 Type: System.String
@@ -94,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+Specifies a name for the route filter.
 
 ```yaml
 Type: System.String
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group in which this cmdlet creates a route filter.
 
 ```yaml
 Type: System.String
@@ -124,10 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### -Rule
-The list of Routes
+Specifies an array of Route Filter Rule objects to associate with the route filter.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSRouteFilterRule]
+Type: Microsoft.Azure.Commands.Network.Models.PSRouteFilterRule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -139,7 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable which represents resource tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -169,8 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -185,14 +187,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSRouteFilterRule, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSRouteFilterRule[]
 
 ### System.Collections.Hashtable
 
@@ -201,5 +202,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Network.Models.PSRouteFilter
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, network, networking
 
 ## RELATED LINKS
+
+[Get-AzRouteFilter](./Get-AzRouteFilter.md)
+
+[New-AzRouteFilterRuleConfig](./New-AzRouteFilterRuleConfig.md)
+
+[Remove-AzRouteFilter](./Remove-AzRouteFilter.md)
+
+[Set-AzRouteFilter](./Set-AzRouteFilter.md)

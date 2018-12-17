@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzDeployment.md
 ---
 
 # New-AzDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creat a deployment
 
 ## SYNTAX
 
@@ -69,16 +71,36 @@ New-AzDeployment [-Name <String>] -Location <String> [-DeploymentDebugLogLevel <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzDeployment** cmdlet adds a deployment at the current subscription scope.
+This includes the resources that the deployment requires.
+
+An Azure resource is a user-managed Azure entity. A resource can live in a resource group, like database server, database, website, virtual machine, or Storage account. 
+Or, it can be a subscription level resource, like role definition, policy definition, etc.
+
+To add resources to a resource group, use the **New-AzDeployment** which creates a deployment at a resource group.
+The **New-AzDeployment** cmdlet creates a deployment at the current subscription scope, which deploys subscription level resources. 
+
+To add a deployment at subscription, specify the location and a template.
+The location tells Azure Resource Manager where to store the deployment data. The template is a JSON string that contains individual resources to be deployed.
+The template includes parameter placeholders for required resources and configurable property values, such as names and sizes.
+
+To use a custom template for the deployment, specify the *TemplateFile* parameter or *TemplateUri* parameter.
+Each template has parameters for configurable properties.
+To specify values for the template parameters, specify the *TemplateParameterFile* parameter or the *TemplateParameterObject* parameter.
+Alternatively, you can use the template parameters that are dynamically added to the command when you specify a template.
+To use dynamic parameters, type them at the command prompt, or type a minus sign (-) to indicate a parameter and use the Tab key to cycle through available parameters.
+Template parameter values that you enter at the command prompt take precedence over values in a template parameter object or file.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Use a custom template and parameter file to create a deployment
+```
+PS C:\>New-AzDeployment -Location "West US" -TemplateFile "D:\Azure\Templates\EngineeringSite.json" -TemplateParameterFile "D:\Azure\Templates\EngSiteParms.json" -TemplateVersion "2.1"
 ```
 
-{{ Add example description here }}
+This command creates a new deployment at the current subscription scope by using a custom template and a template file on disk.
+The command uses the *TemplateFile* parameter to specify the template and the *TemplateParameterFile* parameter to specify a file that contains parameters and parameter values.
+It uses the *TemplateVersion* parameter to specify the version of the template.
 
 ## PARAMETERS
 
@@ -117,9 +139,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -297,8 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

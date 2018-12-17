@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 9F9B2691-BB3F-4644-BD95-6D74777D1E99
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azaduser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzADUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzADUser.md
 ---
 
 # Remove-AzADUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes an active directory user.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ Remove-AzADUser -UserPrincipalName <String> [-PassThru] [-Force] [-DefaultProfil
 
 ### ObjectIdParameterSet
 ```
-Remove-AzADUser -ObjectId <Guid> [-PassThru] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+Remove-AzADUser -ObjectId <String> [-PassThru] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,26 +46,43 @@ Remove-AzADUser -InputObject <PSADUser> [-PassThru] [-Force] [-DefaultProfile <I
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Deletes an active directory user (work/school account also popularly known as org-id).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Remove a user by user principal name
+
+```
+PS C:\> Remove-AzADUser -UserPrincipalName foo@domain.com
 ```
 
-{{ Add example description here }}
+Removes the user with user principal name "foo@domain.com" from the tenant.
+
+### Example 2 - Remove a user by object id
+
+```
+PS C:\> Remove-AzADUser -ObjectId 7a9582cf-88c4-4319-842b-7a5d60967a69
+```
+
+Removes the user with object id '7a9582cf-88c4-4319-842b-7a5d60967a69' from the tenant.
+
+### Example 3 - Remove a user by piping
+
+```
+PS C:\> Get-AzADUser -ObjectId 7a9582cf-88c4-4319-842b-7a5d60967a69 | Remove-AzADUser
+```
+
+Gets the user with object id '7a9582cf-88c4-4319-842b-7a5d60967a69' and pipes that to the Remove-AzADUser cmdlet to remove the user from the tenant.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -87,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+If specified, doesn't ask for confirmation for deleting the user.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -105,7 +125,7 @@ Accept wildcard characters: False
 The user object to be deleted.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 Parameter Sets: InputObjectParameterSet
 Aliases:
 
@@ -117,10 +137,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The object Id of the user to be deleted.
+The object id of the user to be deleted.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ObjectIdParameterSet
 Aliases:
 
@@ -132,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -147,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -UPNOrObjectId
-The userPrincipalName or ObjectId of the user to be deleted.
+The user principal name or the objectId of the user to be deleted.
 
 ```yaml
 Type: System.String
@@ -208,16 +228,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### System.Guid
-
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 
 ## OUTPUTS
 
@@ -226,3 +243,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzADUser](./New-AzADUser.md)
+
+[Get-AzADUser](./Get-AzADUser.md)
+
+[Set-AzADUser](./Set-AzADUser.md)
+

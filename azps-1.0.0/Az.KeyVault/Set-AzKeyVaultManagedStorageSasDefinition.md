@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/set-azkeyvaultmanagedstoragesasdefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzKeyVaultManagedStorageSasDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzKeyVaultManagedStorageSasDefinition.md
 ---
 
 # Set-AzKeyVaultManagedStorageSasDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets a Shared Access Signature (SAS) definition with Key Vault for a given Key Vault managed Azure Storage Account.
 
 ## SYNTAX
 
@@ -28,22 +30,40 @@ Set-AzKeyVaultManagedStorageSasDefinition [-InputObject] <PSKeyVaultManagedStora
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Sets a Shared Access Signature (SAS) definition with a given Key Vault managed Azure Storage
+Account. This also sets a secret which can be used to get the SAS token per this SAS definition.
+SAS token is generated using these parameters and the active key of the Key Vault managed Azure
+Storage Account.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 : Set an account-type SAS definition, and obtain a current SAS token based on it
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $sa = Get-AzStorageAccount -Name mysa -ResourceGroupName myrg
+PS C:\> $kv = Get-AzKeyVault -VaultName mykv
+PS C:\> Add-AzKeyVaultManagedStorageAccount -VaultName $kv.VaultName -AccountName $sa.StorageAccountName -AccountResourceId $sa.Id -ActiveKeyName key1 -RegenerationPeriod 180
+PS C:\> $sctx = New-AzStorageContext -StorageAccountName $sa.StorageAccountName -Protocol Https -StorageAccountKey Key1
+PS C:\> $start = [System.DateTime]::Now.AddDays(-1)
+PS C:\> $end = [System.DateTime]::Now.AddMonths(1)
+PS C:\> $at = New-AzStorageAccountSasToken -Service blob,file,Table,Queue -ResourceType Service,Container,Object -Permission "racwdlup" -Protocol HttpsOnly -StartTime $start -ExpiryTime $end -Context $sctx
+PS C:\> $sas = Set-AzKeyVaultManagedStorageSasDefinition -AccountName $sa.StorageAccountName -VaultName $kv.VaultName -Name accountsas -TemplateUri $at -SasType 'account' -ValidityPeriod ([System.Timespan]::FromDays(30))
+PS C:\> Get-AzKeyVaultSecret -VaultName $kv.VaultName -Name $sas.Sid.Substring($sas.Sid.LastIndexOf('/')+1)
 ```
 
-{{ Add example description here }}
+Sets an account SAS definition 'accountsas' on a KeyVault-managed storage account 'mysa' in vault 'mykv'. Specifically, the sequence above performs the following:
+  - gets a (pre-existing) storage account
+  - gets a (pre-existing) key vault
+  - adds a KeyVault-managed storage account to the vault, setting Key1 as the active key, and with a regeneration period of 180 days
+  - sets a storage context for the specified storage account, with Key1
+  - creates an account SAS token for services Blob, File, Table and Queue, for resource types Service, Container and Object, with all permissions, over https and with the specified start and end dates
+  - sets a KeyVault-managed storage SAS definition in the vault, with the template uri as the SAS token created above, of SAS type 'account' and valid for 30 days
+  - retrieves the actual access token from the KeyVault secret corresponding to the SAS definition
 
 ## PARAMETERS
 
 ### -AccountName
-Key Vault managed storage account name.
-Cmdlet constructs the FQDN of a managed storage account name from vault name, currently selected environment and manged storage account name.
+Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed storage account
+name from vault name, currently selected environment and manged storage account name.
 
 ```yaml
 Type: System.String
@@ -58,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -103,8 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Storage sas definition name.
-Cmdlet constructs the FQDN of a storage sas definition from vault name, currently selected environment, storage account name and sas definition name.
+Storage sas definition name. Cmdlet constructs the FQDN of a storage sas definition from vault
+name, currently selected environment, storage account name and sas definition name.
 
 ```yaml
 Type: System.String
@@ -134,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable representing tags of sas definition.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -226,8 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -240,3 +260,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Azureâ€‹RM.â€‹Keyâ€‹Vault](/powershell/module/az.keyvault/)

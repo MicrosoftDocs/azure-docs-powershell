@@ -1,46 +1,48 @@
 ---
 Module Name: Az.EventGrid
-Module Guid: d2167b29-9406-4ec7-b089-500460b3ebbd
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 53BF7132-5BB4-46EB-AC05-61A49A6CD5EB
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid
+Help Version: 1.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Az.EventGrid.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Az.EventGrid.md
 ---
 
 # Az.EventGrid Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help for the Azure Event Grid PowerShell resource manager cmdlets.
 
 ## Az.EventGrid Cmdlets
 ### [Get-AzEventGridSubscription](Get-AzEventGridSubscription.md)
-{{Manually Enter Get-AzEventGridSubscription Description Here}}
+Gets the details of an event subscription, or gets a list of all event subscriptions in the current Azure subscription.
 
 ### [Get-AzEventGridTopic](Get-AzEventGridTopic.md)
-{{Manually Enter Get-AzEventGridTopic Description Here}}
+Gets the details of an Event Grid topic, or gets a list of all Event Grid topics in the current Azure subscription.
 
 ### [Get-AzEventGridTopicKey](Get-AzEventGridTopicKey.md)
-{{Manually Enter Get-AzEventGridTopicKey Description Here}}
+Gets the shared access keys used to publish events to an Event Grid topic.
 
 ### [Get-AzEventGridTopicType](Get-AzEventGridTopicType.md)
-{{Manually Enter Get-AzEventGridTopicType Description Here}}
+Gets the details about the topic types supported by Azure Event Grid.
 
 ### [New-AzEventGridSubscription](New-AzEventGridSubscription.md)
-{{Manually Enter New-AzEventGridSubscription Description Here}}
+Creates a new Azure Event Grid Event Subscription to a topic, Azure resource, Azure subscription or Resource Group.
 
 ### [New-AzEventGridTopic](New-AzEventGridTopic.md)
-{{Manually Enter New-AzEventGridTopic Description Here}}
+Creates a new Azure Event Grid Topic.
 
 ### [New-AzEventGridTopicKey](New-AzEventGridTopicKey.md)
-{{Manually Enter New-AzEventGridTopicKey Description Here}}
+Regenerates the shared access key for an Azure Event Grid Topic.
 
 ### [Remove-AzEventGridSubscription](Remove-AzEventGridSubscription.md)
-{{Manually Enter Remove-AzEventGridSubscription Description Here}}
+Removes an Azure Event Grid event subscription.
 
 ### [Remove-AzEventGridTopic](Remove-AzEventGridTopic.md)
-{{Manually Enter Remove-AzEventGridTopic Description Here}}
+Removes an Azure Event Grid Topic.
 
 ### [Set-AzEventGridTopic](Set-AzEventGridTopic.md)
-{{Manually Enter Set-AzEventGridTopic Description Here}}
+Sets the properties of an Event Grid topic.
 
 ### [Update-AzEventGridSubscription](Update-AzEventGridSubscription.md)
-{{Manually Enter Update-AzEventGridSubscription Description Here}}
+Update the properties of an Event Grid event subscription.
 

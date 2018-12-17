@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/add-aziothubroute
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Add-AzIotHubRoute.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Add-AzIotHubRoute.md
 ---
 
 # Add-AzIotHubRoute
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create a route in IoT Hub
 
 ## SYNTAX
 
@@ -34,16 +36,22 @@ Add-AzIotHubRoute [-ResourceId] <String> [-RouteName] <String> -Source <PSRoutin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Create a route to send specific data source and condition to a desired endpoint.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Add-AzIotHubRoute -ResourceGroupName "myresourcegroup" -Name "myiothub" -RouteName R1 -Source DeviceMessages -EndpointName E1
+
+RouteName     : R1
+DataSource    : DeviceMessages
+EndpointNames : E1
+Condition     : 
+IsEnabled     : False
 ```
 
-{{ Add example description here }}
+Create a new route "R1".
 
 ## PARAMETERS
 
@@ -66,9 +74,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -108,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-IotHub object
+IotHub Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub
@@ -230,8 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

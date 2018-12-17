@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 17D53F56-6E3B-491E-8776-5EBE109FBE3C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementlogger
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementLogger.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementLogger.md
 ---
 
 # New-AzApiManagementLogger
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an API Management Logger.
 
 ## SYNTAX
 
@@ -26,22 +29,24 @@ New-AzApiManagementLogger -Context <PsApiManagementContext> [-LoggerId <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzApiManagementLogger** cmdlet creates an Azure API Management **Logger**.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a logger
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>New-AzApiManagementLogger -Context $apimContext -LoggerId "Logger123" -Name "ContosoSdkEventHub" -ConnectionString "Endpoint=sb://ContosoSdkEventHubs.servicebus.windows.net/;SharedAccessKeyName=SendKey;SharedAccessKey=<key>" -Description "SDK event hub logger"
 ```
 
-{{ Add example description here }}
+This command creates a logger named ContosoSdkEventHub by using the specified connection string.
 
 ## PARAMETERS
 
 ### -ConnectionString
-EventHub Connection String with Send Policy Rights.
-This parameter is required.
+Specifies an Azure Event Hubs connection string that starts with the following: 
+`Endpoint=endpoint and key from Azure classic portal`
+The Key with Send Rights in the connection string must be configured.
 
 ```yaml
 Type: System.String
@@ -56,8 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -72,12 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -87,8 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Logger description.
-This parameter is optional.
+Specifies a description.
 
 ```yaml
 Type: System.String
@@ -103,8 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstrumentationKey
-Instrumentation Key of the application Insights.
-This parameter is required.
+Instrumentation Key of the application Insights. This parameter is optional.
 
 ```yaml
 Type: System.String
@@ -119,8 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsBuffered
-Whether the logs should be buffered before sending to EventHub.
-This parameter is optional.
+Specifies whether the records in the logger are buffered before publishing.
+The default value is $True.
+When records are buffered, they are sent to Event Hubs every 15 seconds, or whenever the buffer receives 256 KB of messages.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -135,9 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoggerId
-Identifier of new logger.
-This parameter is optional.
-If not specified will be generated.
+Specifies an ID for the logger.
+If you do not specify an ID, this cmdlet generates one.
 
 ```yaml
 Type: System.String
@@ -152,8 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-EventHub Entity name.
-This parameter is required.
+Specifies the entity name of an event hub from Azure classic portal.
 
 ```yaml
 Type: System.String
@@ -168,8 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -186,3 +186,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementLogger](./Get-AzApiManagementLogger.md)
+
+[Remove-AzApiManagementLogger](./Remove-AzApiManagementLogger.md)
+
+[Set-AzApiManagementLogger](./Set-AzApiManagementLogger.md)
+
+

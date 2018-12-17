@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: D2CCAEB4-E43E-4075-9436-77F2C4FE9463
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmimageoffer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMImageOffer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMImageOffer.md
 ---
 
 # Get-AzVMImageOffer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets VMImage offer types.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Get-AzVMImageOffer -Location <String> -PublisherName <String> [-DefaultProfile <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMImageOffer** cmdlet gets the VMImage offer types.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get offer types for a publisher
+```
+PS C:\> Get-AzVMImageOffer -Location "Central US" -PublisherName "Fabrikam"
 ```
 
-{{ Add example description here }}
+This command gets the offer types for the specified publisher in the Central US region.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+Specifies the location of the VMImage.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherName
-{{Fill PublisherName Description}}
+Specifies the name of a publisher of a VMImage.
+To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
 
 ```yaml
 Type: System.String
@@ -77,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +94,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMImage](./Get-AzVMImage.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+[Get-AzVMImageSku](./Get-AzVMImageSku.md)
+
+[Save-AzVMImage](./Save-AzVMImage.md)
+
+

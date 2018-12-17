@@ -1,41 +1,54 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: F1522074-7EEA-4DCF-AC16-26FE8E654720
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azloadbalancer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzLoadBalancer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzLoadBalancer.md
 ---
 
 # New-AzLoadBalancer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a load balancer.
 
 ## SYNTAX
 
 ```
 New-AzLoadBalancer -ResourceGroupName <String> -Name <String> -Location <String> [-Tag <Hashtable>]
- [-Sku <String>]
- [-FrontendIpConfiguration <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration]>]
- [-BackendAddressPool <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool]>]
- [-LoadBalancingRule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSLoadBalancingRule]>]
- [-Probe <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSProbe]>]
- [-InboundNatRule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSInboundNatRule]>]
- [-InboundNatPool <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSInboundNatPool]>]
- [-OutboundRule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSOutboundRule]>]
- [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Sku <String>] [-FrontendIpConfiguration <PSFrontendIPConfiguration[]>]
+ [-BackendAddressPool <PSBackendAddressPool[]>] [-LoadBalancingRule <PSLoadBalancingRule[]>]
+ [-Probe <PSProbe[]>] [-InboundNatRule <PSInboundNatRule[]>] [-InboundNatPool <PSInboundNatPool[]>]
+ [-OutboundRule <PSOutboundRule[]>] [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzLoadBalancer** cmdlet creates an Azure load balancer.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a load balancer
+```
+PS C:\>$publicip = New-AzPublicIpAddress -ResourceGroupName "MyResourceGroup" -Name "MyPublicIp" -Location "West US" -AllocationMethod "Dynamic"
+PS C:\> $frontend = New-AzLoadBalancerFrontendIpConfig -Name "MyFrontEnd" -PublicIpAddress $publicip
+PS C:\> $backendAddressPool = New-AzLoadBalancerBackendAddressPoolConfig -Name "MyBackendAddPoolConfig02"
+PS C:\> $probe = New-AzLoadBalancerProbeConfig -Name "MyProbe" -Protocol "http" -Port 80 -IntervalInSeconds 15 -ProbeCount 2 -RequestPath "healthcheck.aspx"
+PS C:\> $inboundNatRule1 = New-AzLoadBalancerInboundNatRuleConfig -Name "MyinboundNatRule1" -FrontendIPConfiguration $frontend -Protocol "Tcp" -FrontendPort 3389 -BackendPort 3389 -IdleTimeoutInMinutes 15 -EnableFloatingIP
+PS C:\> $inboundNatRule2 = New-AzLoadBalancerInboundNatRuleConfig -Name "MyinboundNatRule2" -FrontendIPConfiguration $frontend -Protocol "Tcp" -FrontendPort 3391 -BackendPort 3392
+PS C:\> $lbrule = New-AzLoadBalancerRuleConfig -Name "MyLBruleName" -FrontendIPConfiguration $frontend -BackendAddressPool $backendAddressPool -Probe $probe -Protocol "Tcp" -FrontendPort 80 -BackendPort 80 -IdleTimeoutInMinutes 15 -EnableFloatingIP -LoadDistribution SourceIP
+PS C:\> $lb = New-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup" -Location "West US" -FrontendIpConfiguration $frontend -BackendAddressPool $backendAddressPool -Probe $probe -InboundNatRule $inboundNatRule1,$inboundNatRule2 -LoadBalancingRule $lbrule
+PS C:\> Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 ```
 
-{{ Add example description here }}
+Deploying a load balancer requires that you first create several objects, and the first seven
+commands show how to create those objects.
+The eighth command creates a load balancer named MyLoadBalancer in the resource group named
+MyResourceGroup.
+The ninth and last command gets the new load balancer to ensure it was successfully created.
+Note that this example only shows how to create a load balancer. You must also configure it using
+the Add-AzNetworkInterfaceIpConfig cmdlet to assign the NICs to different virtual machines.
 
 ## PARAMETERS
 
@@ -55,10 +68,10 @@ Accept wildcard characters: False
 ```
 
 ### -BackendAddressPool
-Collection of backend address pools used by a load balancer
+Specifies a backend address pool to associate with a load balancer.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool]
+Type: Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool[]
 Parameter Sets: (All)
 Aliases:
 
@@ -70,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -85,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overwrite a resource
+Indicates that this cmdlet creates a load balancer even if a load balancer with the same name already exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,10 +113,10 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfiguration
-Object representing the frontend IPs to be used for the load balancer
+Specifies a list of front-end IP addresses to associate with a load balancer.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration]
+Type: Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration[]
 Parameter Sets: (All)
 Aliases:
 
@@ -115,15 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -InboundNatPool
-Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer.
-Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range.
-Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules.
-Inbound NAT pools are referenced from virtual machine scale sets.
-NICs that are associated with individual virtual machines cannot reference an inbound NAT pool.
-They have to reference individual inbound NAT rules.
-
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSInboundNatPool]
+Type: Microsoft.Azure.Commands.Network.Models.PSInboundNatPool[]
 Parameter Sets: (All)
 Aliases:
 
@@ -135,14 +141,10 @@ Accept wildcard characters: False
 ```
 
 ### -InboundNatRule
-Collection of inbound NAT Rules used by a load balancer.
-Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool.
-Inbound NAT pools are referenced from virtual machine scale sets.
-NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool.
-They have to reference individual inbound NAT rules.
+Specifies a list of inbound network address translation (NAT) rules to associate with a load balancer.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSInboundNatRule]
+Type: Microsoft.Azure.Commands.Network.Models.PSInboundNatRule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -154,10 +156,10 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancingRule
-Object collection representing the load balancing rules Gets the provisioning
+Specifies a list of load balancing rules to associate with a load balancer.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSLoadBalancingRule]
+Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancingRule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -169,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the region in which to create a load balancer.
 
 ```yaml
 Type: System.String
@@ -184,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the load balancer.
+Specifies the name of the load balancer that this creates.
 
 ```yaml
 Type: System.String
@@ -202,7 +204,7 @@ Accept wildcard characters: False
 The outbound rules.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSOutboundRule]
+Type: Microsoft.Azure.Commands.Network.Models.PSOutboundRule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -214,10 +216,10 @@ Accept wildcard characters: False
 ```
 
 ### -Probe
-Collection of probe objects used in the load balancer
+Specifies a list of probes to associate with a load balancer.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSProbe]
+Type: Microsoft.Azure.Commands.Network.Models.PSProbe[]
 Parameter Sets: (All)
 Aliases:
 
@@ -229,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name of the load balancer.
+Specifies the name of the resource group in which to create a load balancer.
 
 ```yaml
 Type: System.String
@@ -244,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Name of a load balancer SKU.
+The load balancer Sku name.
 
 ```yaml
 Type: System.String
@@ -259,7 +261,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable which represents resource tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -283,7 +286,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -299,14 +302,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -314,19 +316,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Collections.Hashtable
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSLoadBalancingRule, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSLoadBalancingRule[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSProbe, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSProbe[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSInboundNatRule, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSInboundNatRule[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSInboundNatPool, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSInboundNatPool[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSOutboundRule, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSOutboundRule[]
 
 ## OUTPUTS
 
@@ -335,3 +337,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzNetworkInterfaceIpConfig](./Add-AzNetworkInterfaceIpConfig.md)
+
+[Get-AzLoadBalancer](./Get-AzLoadBalancer.md)
+
+[Remove-AzLoadBalancer](./Remove-AzLoadBalancer.md)
+
+[Set-AzLoadBalancer](./Set-AzLoadBalancer.md)

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-aznetworkprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzNetworkProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzNetworkProfile.md
 ---
 
 # New-AzNetworkProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new network profile.
 
 ## SYNTAX
 
@@ -19,16 +21,16 @@ New-AzNetworkProfile -ResourceGroupName <String> -Name <String> [-Location <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzNetworkProfile** cmdlet creates a new network profile top level resource.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+$networkProfile = New-AzNetworkProfile -Name np1 -ResourceGroupName rg1 -Location westus
 ```
 
-{{ Add example description here }}
+This creates a new network profile top level resource
 
 ## PARAMETERS
 
@@ -48,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerNicConfig
-{{Fill ContainerNicConfig Description}}
+The container network interface configurations to add to this network profile.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSContainerNetworkInterfaceConfiguration[]
@@ -66,9 +68,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -184,8 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

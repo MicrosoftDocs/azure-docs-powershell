@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: D2DB7821-A7D2-4017-8522-78793DDE040E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqldatabase
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlDatabase.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlDatabase.md
 ---
 
 # New-AzSqlDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a database or an elastic database.
 
 ## SYNTAX
 
@@ -31,16 +34,86 @@ New-AzSqlDatabase -DatabaseName <String> [-CollationName <String>] [-CatalogColl
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzSqlDatabase** cmdlet creates an Azure SQL database.
+You can also create an elastic database by setting the *ElasticPoolName* parameter to an existing elastic pool.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a database on a specified server
+```
+PS C:\>New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+ResourceGroupName             : ResourceGroup01
+ServerName                    : Server01
+DatabaseName                  : Database01
+Location                      : Central US
+DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+Edition                       : Standard
+CollationName                 : SQL_Latin1_General_CP1_CI_AS
+CatalogCollation              :
+MaxSizeBytes                  : 268435456000
+Status                        : Online
+CreationDate                  : 7/3/2015 7:33:37 AM
+CurrentServiceObjectiveId     : f1173c43-91bd-4aaa-973c-54e79e15235b
+CurrentServiceObjectiveName   : S0
+RequestedServiceObjectiveId   : f1173c43-91bd-4aaa-973c-54e79e15235b
+RequestedServiceObjectiveName :
+ElasticPoolName               :
+EarliestRestoreDate           :
+LicenseType                   :
+Tags                          :
 ```
 
-{{ Add example description here }}
+This command creates a database named Database01 on server Server01.
+
+### Example 2: Create an elastic database on a specified server
+```
+PS C:\>New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -ElasticPoolName "ElasticPool01"
+ResourceGroupName             : ResourceGroup01
+ServerName                    : Server01
+DatabaseName                  : Database02
+Location                      : Central US
+DatabaseId                    : 7bd9d561-42a7-484e-bf05-62ddef8015ab
+Edition                       : Standard
+CollationName                 : SQL_Latin1_General_CP1_CI_AS
+CatalogCollation              :
+MaxSizeBytes                  : 268435456000
+Status                        : Online
+CreationDate                  : 8/26/2015 10:04:29 PM
+CurrentServiceObjectiveId     : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+CurrentServiceObjectiveName   : ElasticPool
+RequestedServiceObjectiveId   : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+RequestedServiceObjectiveName :
+ElasticPoolName               : ElasticPool01
+EarliestRestoreDate           :
+LicenseType                   :
+Tags                          :
+```
+
+This command creates a database named Database02 in the elastic pool named ElasticPool01 on server Server01.
+
+### Example 3: Create an Vcore database on a specified server
+```
+PS C:\>New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database03" -Edition "GeneralPurpose" -Vcore 2 -ComputeGeneration "Gen4"
+ResourceGroupName             : ResourceGroup01
+ServerName                    : Server01
+DatabaseName                  : Database03
+Location                      : Central US
+DatabaseId                    : 34d9d561-42a7-484e-bf05-62ddef8000ab
+Edition                       : GeneralPurpose
+CollationName                 : SQL_Latin1_General_CP1_CI_AS
+CatalogCollation              :
+MaxSizeBytes                  : 268435456000
+Status                        : Online
+CreationDate                  : 8/26/2015 10:04:29 PM
+CurrentServiceObjectiveName   : GP_Gen4_2
+RequestedServiceObjectiveName :
+ElasticPoolName               :
+EarliestRestoreDate           :
+LicenseType                   : LicenseIncluded
+Tags                          :
+```
+
+This command creates a Vcore database named Database03 on server Server01.
 
 ## PARAMETERS
 
@@ -60,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -CatalogCollation
-The name of the Azure SQL Database catalog collation to use.
+Specifies the name of the SQL database catalog collation.
 
 ```yaml
 Type: System.String
@@ -75,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollationName
-The name of the Azure SQL Database collation to use.
+Specifies the name of the SQL database collation.
 
 ```yaml
 Type: System.String
@@ -105,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the Azure SQL Database to create.
+Specifies the name of the database.
 
 ```yaml
 Type: System.String
@@ -120,12 +193,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -135,7 +208,16 @@ Accept wildcard characters: False
 ```
 
 ### -Edition
-The edition to assign to the Azure SQL Database.
+Specifies the edition to assign to the database. The acceptable values for this parameter are:
+- None
+- Basic
+- Standard
+- Premium
+- DataWarehouse
+- Free
+- Stretch
+- GeneralPurpose
+- BusinessCritical
 
 ```yaml
 Type: System.String
@@ -162,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -ElasticPoolName
-The name of the Elastic Pool to put the database in.
+Specifies the name of the elastic pool in which to put the database.
 
 ```yaml
 Type: System.String
@@ -192,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSizeBytes
-The maximum size of the Azure SQL Database in bytes.
+Specifies the maximum size of the database in bytes.
 
 ```yaml
 Type: System.Int64
@@ -223,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestedServiceObjectiveName
-The name of the service objective to assign to the Azure SQL Database.
+Specifies the name of the service objective to assign to the database.
 
 ```yaml
 Type: System.String
@@ -238,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the server is assigned.
 
 ```yaml
 Type: System.String
@@ -269,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Database Server the database is in.
+Specifies the name of the server that hosts the database.
 
 ```yaml
 Type: System.String
@@ -284,7 +366,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate with the Azure Sql Database Server
+Specifies a dictionary of Key-value pairs in the form of a hash table that this cmdlet associates
+with the new database. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -338,7 +422,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -354,14 +438,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -374,3 +457,20 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlDatabase](./Get-AzSqlDatabase.md)
+
+[New-AzSqlElasticPool](./New-AzSqlElasticPool.md)
+
+[New-AzSqlServer](./New-AzSqlServer.md)
+
+[Remove-AzSqlDatabase](./Remove-AzSqlDatabase.md)
+
+[Resume-AzSqlDatabase](./Resume-AzSqlDatabase.md)
+
+[Set-AzSqlDatabase](./Set-AzSqlDatabase.md)
+
+[Suspend-AzSqlDatabase](./Suspend-AzSqlDatabase.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+

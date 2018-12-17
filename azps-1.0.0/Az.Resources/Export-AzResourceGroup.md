@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 63BBDF98-75FC-4A44-9FD0-95AD21ED93A6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/export-azresourcegroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Export-AzResourceGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Export-AzResourceGroup.md
 ---
 
 # Export-AzResourceGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Captures a resource group as a template and saves it to a file.
 
 ## SYNTAX
 
@@ -19,22 +22,26 @@ Export-AzResourceGroup -ResourceGroupName <String> [-Path <String>] [-IncludePar
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Export-AzResourceGroup** cmdlet captures the specified resource group as a template and saves it to a JSON file.This can be useful in scenarios where you have already created some resources in your resource group, and then want to leverage the benefits of using template backed deployments.
+This cmdlet gives you an easy start by generating the template for your existing resources in the resource group.
+There might be some cases where this cmdlet fails to generate some parts of the template.
+Warning messages will inform you of the resources that failed.
+The template will still be generated for the parts that were successful.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Export a resource group
+```
+PS C:\>Export-AzResourceGroup -ResourceGroupName "TestGroup"
 ```
 
-{{ Add example description here }}
+This command captures the resource group named TestGroup as a template, and saves it to a JSON file in the current directory.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use.
+If not specified, the latest API version is used.
 
 ```yaml
 Type: System.String
@@ -49,12 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -79,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeComments
-Export template with comments.
+Indicates that this operation exports the template with comments.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -94,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeParameterDefaultValue
-Export template parameter with default value.
+Indicates that this operation exports the template parameter with the default value.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -109,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The output path of the template file.
+Specifies the output path of the template file.
 
 ```yaml
 Type: System.String
@@ -124,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet use pre-release API versions when automatically determining which API version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -139,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group to export.
 
 ```yaml
 Type: System.String
@@ -163,7 +170,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -179,14 +186,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -199,3 +205,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Find-AzResourceGroup](./Find-AzResourceGroup.md)
+
+

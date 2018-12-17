@@ -1,76 +1,78 @@
 ---
 Module Name: Az.RedisCache
-Module Guid: 66466448-cfe3-4897-9956-b37a536c1603
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 820628d7-6938-488a-8760-43373a5ffce6
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.rediscache
+Help Version: 4.1.2.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Az.RedisCache.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Az.RedisCache.md
 ---
 
 # Az.RedisCache Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Redis Cache cmdlets.
 
 ## Az.RedisCache Cmdlets
 ### [Export-AzRedisCache](Export-AzRedisCache.md)
-{{Manually Enter Export-AzRedisCache Description Here}}
+Exports data from Azure Redis Cache to a container.
 
 ### [Get-AzRedisCache](Get-AzRedisCache.md)
-{{Manually Enter Get-AzRedisCache Description Here}}
+Gets a Redis Cache.
 
 ### [Get-AzRedisCacheFirewallRule](Get-AzRedisCacheFirewallRule.md)
-{{Manually Enter Get-AzRedisCacheFirewallRule Description Here}}
+Get firewall rules set on Redis Cache.
 
 ### [Get-AzRedisCacheKey](Get-AzRedisCacheKey.md)
-{{Manually Enter Get-AzRedisCacheKey Description Here}}
+Gets the access keys for a Redis Cache.
 
 ### [Get-AzRedisCacheLink](Get-AzRedisCacheLink.md)
-{{Manually Enter Get-AzRedisCacheLink Description Here}}
+Get geo replication link for Redis Cache.
 
 ### [Get-AzRedisCachePatchSchedule](Get-AzRedisCachePatchSchedule.md)
-{{Manually Enter Get-AzRedisCachePatchSchedule Description Here}}
+Gets a patch schedule.
 
 ### [Import-AzRedisCache](Import-AzRedisCache.md)
-{{Manually Enter Import-AzRedisCache Description Here}}
+Imports data from blobs to Azure Redis Cache.
 
 ### [New-AzRedisCache](New-AzRedisCache.md)
-{{Manually Enter New-AzRedisCache Description Here}}
+Creates a Redis Cache.
 
 ### [New-AzRedisCacheFirewallRule](New-AzRedisCacheFirewallRule.md)
-{{Manually Enter New-AzRedisCacheFirewallRule Description Here}}
+Create a firewall rule on a Redis Cache.
 
 ### [New-AzRedisCacheKey](New-AzRedisCacheKey.md)
-{{Manually Enter New-AzRedisCacheKey Description Here}}
+Regenerates the access key of a Redis Cache.
 
 ### [New-AzRedisCacheLink](New-AzRedisCacheLink.md)
-{{Manually Enter New-AzRedisCacheLink Description Here}}
+Create a geo replication link between two Redis Caches.
 
 ### [New-AzRedisCachePatchSchedule](New-AzRedisCachePatchSchedule.md)
-{{Manually Enter New-AzRedisCachePatchSchedule Description Here}}
+Adds a patch schedule.
 
 ### [New-AzRedisCacheScheduleEntry](New-AzRedisCacheScheduleEntry.md)
-{{Manually Enter New-AzRedisCacheScheduleEntry Description Here}}
+Creates a schedule entry.
 
 ### [Remove-AzRedisCache](Remove-AzRedisCache.md)
-{{Manually Enter Remove-AzRedisCache Description Here}}
+Removes a Redis Cache.
 
 ### [Remove-AzRedisCacheDiagnostics](Remove-AzRedisCacheDiagnostics.md)
-{{Manually Enter Remove-AzRedisCacheDiagnostics Description Here}}
+Disables diagnostics on an Azure Redis Cache.
 
 ### [Remove-AzRedisCacheFirewallRule](Remove-AzRedisCacheFirewallRule.md)
-{{Manually Enter Remove-AzRedisCacheFirewallRule Description Here}}
+Remove a firewall rule from a Redis Cache.
 
 ### [Remove-AzRedisCacheLink](Remove-AzRedisCacheLink.md)
-{{Manually Enter Remove-AzRedisCacheLink Description Here}}
+Remove a geo replication link between two Redis Caches.
 
 ### [Remove-AzRedisCachePatchSchedule](Remove-AzRedisCachePatchSchedule.md)
-{{Manually Enter Remove-AzRedisCachePatchSchedule Description Here}}
+Removes the patch schedule.
 
 ### [Reset-AzRedisCache](Reset-AzRedisCache.md)
-{{Manually Enter Reset-AzRedisCache Description Here}}
+Restarts nodes of a cache.
 
 ### [Set-AzRedisCache](Set-AzRedisCache.md)
-{{Manually Enter Set-AzRedisCache Description Here}}
+Modifies a Redis Cache.
 
 ### [Set-AzRedisCacheDiagnostics](Set-AzRedisCacheDiagnostics.md)
-{{Manually Enter Set-AzRedisCacheDiagnostics Description Here}}
+Enables diagnostics on an Azure Redis Cache.
 

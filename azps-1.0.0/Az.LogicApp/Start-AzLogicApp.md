@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: 50C359FC-D98C-4C2C-87EE-BE9A25C3EDC6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/start-azlogicapp
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Start-AzLogicApp.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Start-AzLogicApp.md
 ---
 
 # Start-AzLogicApp
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Runs a logic app in a resource group.
 
 ## SYNTAX
 
@@ -18,26 +21,31 @@ Start-AzLogicApp -ResourceGroupName <String> -Name <String> [-Parameters <Object
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-AzLogicApp** cmdlet runs a logic app by using the Logic Apps feature.
+Specify a name, resource group, and trigger.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Run a logic app
+```
+PS C:\>Start-AzLogicApp -ResourceGroupName "ResourceGroup11" -Name "LogicApp03" -TriggerName "Trigger22"
 ```
 
-{{ Add example description here }}
+This command runs the logic app in the resource group named ResourceGroup11.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the workflow.
+Specifies the name of the logic app that this cmdlet starts.
 
 ```yaml
 Type: System.String
@@ -62,7 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The parameters for the workflow run.
+Specifies a parameters collection object of the logic app.
+Specify a hash table, Dictionary\<string\>, or Dictionary\<string, WorkflowParameter\>.
 
 ```yaml
 Type: System.Object
@@ -77,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The targeted resource group for the workflow.
+Specifies the name of the resource group that contains the logic app that this cmdlet starts.
 
 ```yaml
 Type: System.String
@@ -92,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -TriggerName
-The name of the trigger.
+Specifies the name of the trigger of the logic app that this cmdlet starts.
 
 ```yaml
 Type: System.String
@@ -116,7 +125,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -132,14 +141,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +160,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzLogicApp](./Get-AzLogicApp.md)
+
+[Get-AzLogicAppRunHistory](./Get-AzLogicAppRunHistory.md)
+
+[New-AzLogicApp](./New-AzLogicApp.md)
+
+[Remove-AzLogicApp](./Remove-AzLogicApp.md)
+
+[Set-AzLogicApp](./Set-AzLogicApp.md)
+
+[Stop-AzLogicAppRun](./Stop-AzLogicAppRun.md)
+
+

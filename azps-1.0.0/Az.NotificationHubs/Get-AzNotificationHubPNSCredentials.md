@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: 2CCDF339-9D6E-4B0C-9201-BE641C8827F6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/get-aznotificationhubpnscredentials
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzNotificationHubPNSCredentials.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzNotificationHubPNSCredentials.md
 ---
 
 # Get-AzNotificationHubPNSCredentials
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the PNS credentials for a notification hub.
 
 ## SYNTAX
 
@@ -18,26 +21,28 @@ Get-AzNotificationHubPNSCredentials [-ResourceGroup] <String> [-Namespace] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzNotificationHubPNSCredentials** cmdlet gets the platform notification service (PNS) credentials for a notification hub.
+Each notification hub has a single set of PNS credentials.
+These credentials are applied to individual push notification services such as, but not limited to; the iOS push notification service, the Android push notification service, and Windows Phone 8.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get PNS credentials for a specific notification hub
+```
+PS C:\>Get-AzNotificationHubPNSCredentials -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -NotificationHub "ContosoInternalHub"
 ```
 
-{{ Add example description here }}
+This command gets the PNS credentials for the notification hub named ContosoInternalHub that belongs to the resource group named ContosoNotificationsGroup.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +52,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace to which the notification hub is assigned.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -62,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHub
-NotificationHub Name.
+Specifies the notification hub that the PNS credentials are assigned to.
+Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
 
 ```yaml
 Type: System.String
@@ -77,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the notification hub is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -92,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +113,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHub](./Get-AzNotificationHub.md)
+
+

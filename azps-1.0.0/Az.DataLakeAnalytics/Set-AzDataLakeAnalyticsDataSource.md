@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: 2F28118E-6A34-4261-85BD-8CFDDC8A2707
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/set-azdatalakeanalyticsdatasource
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsDataSource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsDataSource.md
 ---
 
 # Set-AzDataLakeAnalyticsDataSource
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the details of a data source of a Data Lake Analytics account.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Set-AzDataLakeAnalyticsDataSource [-Account] <String> [-Blob] <String> [-AccessK
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDataLakeAnalyticsDataSource** cmdlet modifies the details of a data source of an Azure Data Lake Analytics account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Change the access key for a data source
+```
+PS C:\>Set-AzDataLakeAnalyticsDataSource -Account "ContosoAdlAccount" -Blob "contosowasb" -AccessKey "...newaccesskey..."
 ```
 
-{{ Add example description here }}
+This command changes the access key stored for an Azure Blob Storage data source.
 
 ## PARAMETERS
 
 ### -AccessKey
-The corresponding access key for the Blob to add to the account.
+Specifies the new access key of the Azure Blob Storage data source.
 
 ```yaml
 Type: System.String
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Account
-Name of the account to update the data source in.
+Specifies the Data Lake Analytics account name.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Blob
-The name of the Blob to update in the account.
+Specifies the name of the Azure Blob Storage data source.
 
 ```yaml
 Type: System.String
@@ -77,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which the Data Lake Analytics account exists to add a data source to.
+Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: System.String
@@ -107,8 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -121,3 +123,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzDataLakeAnalyticsDataSource](./Add-AzDataLakeAnalyticsDataSource.md)
+
+[Remove-AzDataLakeAnalyticsDataSource](./Remove-AzDataLakeAnalyticsDataSource.md)
+
+

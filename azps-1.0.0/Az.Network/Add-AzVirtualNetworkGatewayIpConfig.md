@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: BCB64535-FF37-46EF-85AF-7286BB67787B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azvirtualnetworkgatewayipconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzVirtualNetworkGatewayIpConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzVirtualNetworkGatewayIpConfig.md
 ---
 
 # Add-AzVirtualNetworkGatewayIpConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an IP configuration to a virtual network gateway.
 
 ## SYNTAX
 
@@ -27,26 +30,72 @@ Add-AzVirtualNetworkGatewayIpConfig -VirtualNetworkGateway <PSVirtualNetworkGate
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzVirtualNetworkGatewayIpConfig** cmdlet adds an IP configuration to a virtual network gateway.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
 ```
+Add-AzVirtualNetworkGatewayIpConfig -VirtualNetworkGateway $gw -Name GWIPConfig2 -Subnet $subnet -PublicIpAddress $gwpip2
 
-{{ Add example description here }}
+
+Name                   : VNet7GW
+ResourceGroupName      : VPNGatewayV3
+Location               : eastus
+Id                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VPNGatewayV3/providers/Microsoft.Network/virtualNetworkGateways/VNet7GW
+Etag                   : W/"d27a784f-3c3f-4150-863d-764649b6e8e7"
+ResourceGuid           : 3c2478a7-d5d4-4e80-8532-7ea2ad577598
+ProvisioningState      : Succeeded
+Tags                   :
+IpConfigurations       : [
+                           {
+                             "PrivateIpAllocationMethod": "Dynamic",
+                             "Subnet": {
+                               "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VPNGatewayV3/providers/Microsoft.Network/virtualNetworks/Vnet7/subnets/GatewaySubnet"
+                             },
+                             "PublicIpAddress": {
+                               "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VPNGatewayV3/providers/Microsoft.Network/publicIPAddresses/VNet7GW_IP"
+                             },
+                             "Name": "default",
+                             "Etag": "W/\"d27a784f-3c3f-4150-863d-764649b6e8e7\"",
+                             "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VPNGatewayV3/providers/Microsoft.Network/virtualNetworkGateways/VNet7GW/ipConfigurations/default"
+                           },
+                           {
+                             "PrivateIpAllocationMethod": "Dynamic",
+                             "PublicIpAddress": {
+                               "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VPNGatewayV3/providers/Microsoft.Network/publicIPAddresses/delIPConfig"
+                             },
+                             "Name": "GWIPConfig2",
+                             "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupNotSet/providers/Microsoft.Network/virtualNetworkGateways/VirtualNetworkGatewayNameNotSet/virtualNetworkGatewayIpConfiguration/GWIPConfig2"
+                           }
+                         ]
+GatewayType            : Vpn
+VpnType                : RouteBased
+EnableBgp              : True
+ActiveActive           : False
+GatewayDefaultSite     : null
+Sku                    : {
+                           "Capacity": 2,
+                           "Name": "VpnGw1",
+                           "Tier": "VpnGw1"
+                         }
+VpnClientConfiguration : null
+BgpSettings            : {
+                           "Asn": 65534,
+                           "BgpPeeringAddress": "10.7.255.254",
+                           "PeerWeight": 0
+                         }
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -56,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the VirtualNetworkGatewayIpConfiguration
+Specifies the name of the gateway IP configuration to add.
 
 ```yaml
 Type: System.String
@@ -71,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateIpAddress
-The private ip address of the frontendIpConfiguration if static allocation is specified.
+Specifies the private IP address.
 
 ```yaml
 Type: System.String
@@ -86,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIpAddress
-PublicIpAddress
+Specifies the public IP address.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress
@@ -101,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIpAddressId
-PublicIpAddressId
+Specifies the ID of the public IP address.
 
 ```yaml
 Type: System.String
@@ -116,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subnet
-Subnet
+Specifies a **PSSubnet** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSSubnet
@@ -131,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-SubnetId
+Specifies the ID of the subnet.
 
 ```yaml
 Type: System.String
@@ -146,8 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway
-The virtual network gateway object to base modifications off of.
-This can be retrieved using Get-AzureRmVirtualNetworkGateway
+Specifies a **PSVirtualNetworkGateway** object.
+This cmdlet modifies the **PSVirtualNetworkGateway** object that you specify.
+You can use the Get-AzVirtualNetworkGateway cmdlet to retrieve a **PSVirtualNetworkGateway** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
@@ -171,7 +221,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -187,14 +237,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -207,3 +256,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVirtualNetworkGateway](./Get-AzVirtualNetworkGateway.md)
+
+[New-AzVirtualNetworkGatewayIpConfig](./New-AzVirtualNetworkGatewayIpConfig.md)
+
+[Remove-AzVirtualNetworkGatewayIpConfig](./Remove-AzVirtualNetworkGatewayIpConfig.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 13901193-8C68-4969-ADCD-2E82EA714354
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azvirtualnetworkpeering
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzVirtualNetworkPeering.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzVirtualNetworkPeering.md
 ---
 
 # Add-AzVirtualNetworkPeering
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a peering between two virtual networks.
 
 ## SYNTAX
 
@@ -19,21 +22,61 @@ Add-AzVirtualNetworkPeering -Name <String> -VirtualNetwork <PSVirtualNetwork> -R
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzVirtualNetworkPeering** cmdlet creates a peering between two virtual networks.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a peering between two virtual networks in the same region
+```
+# Variables for common values used throughout the script.
+$rgName='myResourceGroup'
+$location='eastus'
+
+# Create a resource group.
+New-AzResourceGroup -Name $rgName  -Location $location
+
+# Create virtual network 1.
+$vnet1 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet1' -AddressPrefix '10.0.0.0/16' -Location $location
+
+# Create virtual network 2.
+$vnet2 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet2' -AddressPrefix '10.1.0.0/16' -Location $location
+
+# Peer VNet1 to VNet2.
+Add-AzVirtualNetworkPeering -Name myVnet1ToMyVnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
+
+# Peer VNet2 to VNet1.
+Add-AzVirtualNetworkPeering -Name 'myVnet2ToMyVnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
 ```
 
-{{ Add example description here }}
+Note that a peering link must be created from vnet1 to vnet2 and vice versa in order for peering to work.
+
+### Example 2: Create a peering between two virtual networks in different regions
+```
+# Variables for common values used throughout the script.
+$rgName='myResourceGroup'
+
+# Create a resource group.
+New-AzResourceGroup -Name $rgName  -Location westcentralus
+
+# Create virtual network 1.
+$vnet1 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet1' -AddressPrefix '10.0.0.0/16' -Location westcentralus
+
+# Create virtual network 2.
+$vnet2 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet2' -AddressPrefix '10.1.0.0/16' -Location candacentral
+
+# Peer VNet1 to VNet2.
+Add-AzVirtualNetworkPeering -Name myVnet1ToMyVnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
+
+# Peer VNet2 to VNet1.
+Add-AzVirtualNetworkPeering -Name 'myVnet2ToMyVnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
+```
+
+Here 'myVnet1' in US West Central is peered with 'myVnet2' in Canada Central.
 
 ## PARAMETERS
 
 ### -AllowForwardedTraffic
-Flag to allow the forwarded traffic from the VMs in the remote virtual network
+Indicates that this cmdlet allows the forwarded traffic from the virtual machines in the remote virtual network.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockVirtualNetworkAccess
-Flag to block the VMs in the linked virtual network space to access all the VMs in local Virtual network space
+Indicates that this cmdlet blocks the virtual machines in the linked virtual network space to access all the virtual machines in local virtual network space.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -93,12 +136,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -108,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the virtual network peering
+Specifies the name of the virtual network peering.
 
 ```yaml
 Type: System.String
@@ -123,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteVirtualNetworkId
-Reference to the remote virtual network
+Specifies the ID of the remote virtual network.
 
 ```yaml
 Type: System.String
@@ -138,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseRemoteGateways
-Flag to allow remote gateways be used on this virtual network
+Indicates that this cmdlet allows remote gateways on this virtual network.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -153,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-The virtualNetwork
+Specifies the parent virtual network.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork
@@ -168,8 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -184,3 +226,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVirtualNetwork](./Get-AzVirtualNetwork.md)
+
+[Get-AzVirtualNetworkPeering](./Get-AzVirtualNetworkPeering.md)
+
+[Remove-AzVirtualNetworkPeering](./Remove-AzVirtualNetworkPeering.md)
+
+[Set-AzVirtualNetworkPeering](./Set-AzVirtualNetworkPeering.md)
+
+

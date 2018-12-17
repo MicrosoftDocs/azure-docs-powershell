@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: 860AB403-3F99-45FA-8E6A-8C9872C121E8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/remove-aznotificationhubsnamespaceauthorizationrules
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Remove-AzNotificationHubsNamespaceAuthorizationRules.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Remove-AzNotificationHubsNamespaceAuthorizationRules.md
 ---
 
 # Remove-AzNotificationHubsNamespaceAuthorizationRules
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an authorization rule from a notification hub namespace.
 
 ## SYNTAX
 
@@ -19,21 +22,31 @@ Remove-AzNotificationHubsNamespaceAuthorizationRules [-ResourceGroup] <String> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzNotificationHubsNamespaceAuthorizationRules** cmdlet removes a Shared Access Signature (SAS) authorization rule from a notification hub namespace.
+Authorization rules manage access to a namespace.
+This is done by through the creation of links, as URIs, based on different permission levels.
+Permission levels can be of the following: 
+- Listen
+- Send
+- Manage
+Clients are directed to one of these URIs based on the appropriate permission level.
+For instance, a client given the Listen permission is directed to the URI for that permission.
+Removing an authorization rule also removes the corresponding user permission.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove an authorization rule from a namespace
+```
+PS C:\>Remove-AzNotificationHubNamespaceAuthorizationRules -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -AuthorizationRule "ListenRule"
 ```
 
-{{ Add example description here }}
+This command removes the authorization rule named ListenRule from the namespace named ContosoNamespace.
+When you run this command you must specify the resource group that the namespace is assigned to.
 
 ## PARAMETERS
 
 ### -AuthorizationRule
-Namespace AuthorizationRule Name.
+Specifies the name of the SAS authentication rule to be removed.
 
 ```yaml
 Type: System.String
@@ -48,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace to which the authorization rules are assigned.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -93,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the namespace is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -123,8 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -139,8 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -153,3 +166,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHubsNamespaceAuthorizationRules](./Get-AzNotificationHubsNamespaceAuthorizationRules.md)
+
+[New-AzNotificationHubsNamespaceAuthorizationRules](./New-AzNotificationHubsNamespaceAuthorizationRules.md)
+
+[Set-AzNotificationHubsNamespaceAuthorizationRules](./Set-AzNotificationHubsNamespaceAuthorizationRules.md)
+
+

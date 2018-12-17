@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 3DFFD0F2-6CD8-4FBE-B15C-8505CBF8F44E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/remove-azbatchcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchCertificate.md
 ---
 
 # Remove-AzBatchCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a certificate from an account.
 
 ## SYNTAX
 
@@ -19,25 +22,33 @@ Remove-AzBatchCertificate [-ThumbprintAlgorithm] <String> [-Thumbprint] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzBatchCertificate** cmdlet removes a certificate from the specified Azure Batch account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a certificate
+```
+PS C:\>Remove-AzBatchCertificate -ThumbprintAlgorithm "sha1" -Thumbprint "c1e494a415149c5f211c4778b52f2e834a07247c" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command removes the certificate that has the specified thumbprint.
+
+### Example 2:Remove all active certificates
+```
+PS C:\>Get-AzBatchCertificate -Filter "state eq 'active'" -BatchContext $Context | Remove-AzBatchCertificate -Force -BatchContext $Context
+```
+
+This command gets all certificates that are active by using the Get-AzBatchCertificate cmdlet.
+The command passes the active certificates to the current cmdlet by using the pipeline operator.
+That cmdlet removes each certificate.
+The command specifies the *Force* parameter.
+Therefore, the command does not prompt you for confirmation.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -52,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -67,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-The thumbprint of the certificate to delete.
+Specifies the thumbprint of the certificate that this cmdlet deletes.
 
 ```yaml
 Type: System.String
@@ -82,8 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -ThumbprintAlgorithm
-The algorithm used to derive the Thumbprint parameter.
-This must be sha1.
+Specifies the algorithm used to derive the *Thumbprint* parameter.
+Currently, the only valid value is sha1.
 
 ```yaml
 Type: System.String
@@ -107,7 +118,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -123,14 +134,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -145,3 +155,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchCertificate](./Get-AzBatchCertificate.md)
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[New-AzBatchCertificate](./New-AzBatchCertificate.md)
+
+[Stop-AzBatchCertificateDeletion](./Stop-AzBatchCertificateDeletion.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

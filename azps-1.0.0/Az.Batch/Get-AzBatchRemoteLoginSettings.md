@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 07811B64-6A77-452C-B148-DE8C13E73DEF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchremoteloginsettings
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchRemoteLoginSettings.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchRemoteLoginSettings.md
 ---
 
 # Get-AzBatchRemoteLoginSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets remote logon settings for a compute node.
 
 ## SYNTAX
 
@@ -25,25 +28,44 @@ Get-AzBatchRemoteLoginSettings [[-ComputeNode] <PSComputeNode>] -BatchContext <B
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchRemoteLoginSettings** cmdlet gets remote logon settings for a compute node in a virtual machines infrastructure-based pool.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get remote logon settings for all nodes in a pool
+```
+PS C:\>$Context = Get-AzBatchAccountKeys -AccountName "ContosoBatchAccount"
+PS C:\> Get-AzBatchComputeNode -PoolId "ContosoPool" -BatchContext $Context | Get-AzBatchRemoteLoginSettings -BatchContext $Context
+IPAddress       Port
+---------       ----
+10.214.75.221   50002
+10.214.75.221   50001
+10.214.75.221   50000
 ```
 
-{{ Add example description here }}
+The first command gets a batch account context that contains access keys for your subscription by using **Get-AzBatchAccountKeys**.
+The command stores the context in the $Context variable to use in the next command.
+The second command gets each compute node in the pool that has the ID ContosoPool by using **Get-AzBatchComputeNode**.
+The command passes each computer node to the current cmdlet by using the pipeline operator.
+The command gets the remote logon settings for each compute node.
+
+### Example 2: Get remote logon settings for a node
+```
+PS C:\>$Context = Get-AzBatchAccountKeys -AccountName "ContosoBatchAccount"
+PS C:\> Get-AzBatchRemoteLoginSettings -PoolId "ContosoPool" -ComputeNodeId "tvm-1900272697_1-20150330t205553z" -BatchContext $Context
+IPAddress       Port
+---------       ----
+10.214.75.221   50000
+```
+
+The first command gets a batch account context that contains access keys for your subscription, and then stores it in the $Context variable.
+The second command gets the remote logon settings for the compute node that has the specified ID in the pool that has the ID ContosoPool.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+To obtain a **BatchAccountContext** that contains access keys for your subscription, use the Get-AzBatchAccountKeys cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -58,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNode
-{{Fill ComputeNode Description}}
+Specifies a compute node, as a **PSComputeNode** object, for which this cmdlet gets remote logon settings.
+To obtain a compute node object, use the Get-AzBatchComputeNode cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
@@ -73,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNodeId
-The id of the compute node for which to get remote login settings.
+Specifies the ID of the compute node for which to get the remote logon settings.
+for which this cmdlet gets remote logon settings.
 
 ```yaml
 Type: System.String
@@ -88,12 +112,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -103,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool containing the compute node for which to get remote login settings.
+Specifies the ID of the pool that contains the virtual machine.
 
 ```yaml
 Type: System.String
@@ -118,8 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,3 +157,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Get-AzBatchComputeNode](./Get-AzBatchComputeNode.md)
+
+[Get-AzBatchRemoteDesktopProtocolFile](./Get-AzBatchRemoteDesktopProtocolFile.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

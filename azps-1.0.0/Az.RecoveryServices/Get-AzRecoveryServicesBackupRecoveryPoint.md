@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 838026E4-F001-434C-86F0-B2A838E93A9C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/get-azrecoveryservicesbackuprecoverypoint
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupRecoveryPoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupRecoveryPoint.md
 ---
 
 # Get-AzRecoveryServicesBackupRecoveryPoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the recovery points for a backed up item.
 
 ## SYNTAX
 
@@ -32,26 +35,36 @@ Get-AzRecoveryServicesBackupRecoveryPoint [-Item] <ItemBase> [-RecoveryPointId] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesBackupRecoveryPoint** cmdlet gets the recovery points for a backed up Azure Backup item.
+After an item has been backed up, an **AzureRmRecoveryServicesBackupRecoveryPoint** object has one or more recovery points.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get recovery points from the last week for an item
+```
+PS C:\> $StartDate = (Get-Date).AddDays(-7) 
+PS C:\> $EndDate = Get-Date 
+PS C:\> $Container = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM -Status Registered -Name "V2VM"
+PS C:\> $BackupItem = Get-AzRecoveryServicesBackupItem -ContainerType AzureVM -WorkloadType AzureVM 
+PS C:\> $RP = Get-AzRecoveryServicesBackupRecoveryPoint -Item $BackupItem -StartDate $Startdate.ToUniversalTime() -EndDate $Enddate.ToUniversalTime()
 ```
 
-{{ Add example description here }}
+The first command gets the date from seven days ago, and then stores it in the $StartDate variable.
+The second command gets today's date, and then stores it in the $EndDate variable.
+The third command gets AzureVM backup containers, and stores them in the $Containers variable.
+The fourth command gets the backup item named V2VM, and then stores it in the $BackupItem variable.
+The last command gets an array of recovery points for the item in $BackupItem, and then stores them in the $RP variable.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -61,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-End time of Time range for which recovery point need to be fetched
+Specifies the end of the date range.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -76,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -Item
-Protected Item object for which recovery point need to be fetched
+Specifies the item for which this cmdlet gets recovery points.
+To obtain an **AzureRmRecoveryServicesBackupItem** object, use the Get-AzRecoveryServicesBackupItem cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
@@ -91,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyFileDownloadLocation
-Location where the key file should be downloaded in the case of encrypted VMs.
+Specifies the location to download the input file to restore the KeyVault key for an encrypted virtual machine.
 
 ```yaml
 Type: System.String
@@ -106,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPointId
-Recovery point Id for which detail is needed
+Specifies the recovery point ID.
 
 ```yaml
 Type: System.String
@@ -121,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-Start time of Time range for which recovery point need to be fetched
+Specifies the start of the date range.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -151,8 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -167,3 +180,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupContainer](./Get-AzRecoveryServicesBackupContainer.md)
+
+[Get-AzRecoveryServicesBackupItem](./Get-AzRecoveryServicesBackupItem.md)
+
+

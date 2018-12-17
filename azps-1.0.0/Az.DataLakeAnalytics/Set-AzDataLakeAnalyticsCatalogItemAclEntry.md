@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/set-azdatalakeanalyticscatalogitemaclentry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsCatalogItemAclEntry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsCatalogItemAclEntry.md
 ---
 
 # Set-AzDataLakeAnalyticsCatalogItemAclEntry
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an entry in the ACL of a catalog or catalog item in Data Lake Analytics.
 
 ## SYNTAX
 
@@ -80,16 +82,85 @@ Set-AzDataLakeAnalyticsCatalogItemAclEntry [-Account] <String> [-GroupOwner] -It
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDataLakeAnalyticsCatalogItemAclEntry** cmdlet adds or modifies an entry (ACE) in the access control list (ACL) of a catalog or catalog item in Data Lake Analytics.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Modify user permissions for a catalog
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzDataLakeAnalyticsCatalogItemAclEntry -Account "contosoadla" -User -ObjectId (Get-AzADUser -Mail "PattiFuller@contoso.com").Id -Permissions Read
+
+Type  Id                                   Permissions
+----  --                                   -----------
+User  90a6f74b-fd73-490e-900a-c4f0f9694d02        Read
+Group 902b155a-5601-4ca8-8178-ad3289211f88   ReadWrite
+Other 00000000-0000-0000-0000-000000000000        None
+User  bd0b55bb-3a57-442a-b2f6-78c95c10ef86        Read
 ```
 
-{{ Add example description here }}
+This command modifies the catalog ACE for Patti Fuller to have read permissions.
+
+### Example 2: Modify user Permissions for a database
+```powershell
+PS C:\> Set-AzDataLakeAnalyticsCatalogItemAclEntry -Account "contosoadla" -User -ObjectId (Get-AzADUser -Mail "PattiFuller@contoso.com").Id -ItemType Database -Path "databaseName" -Permissions Read
+
+Type  Id                                   Permissions
+----  --                                   -----------
+User  90a6f74b-fd73-490e-900a-c4f0f9694d02        Read
+Group 902b155a-5601-4ca8-8178-ad3289211f88   ReadWrite
+Other 00000000-0000-0000-0000-000000000000        None
+User  bd0b55bb-3a57-442a-b2f6-78c95c10ef86        Read
+```
+
+This command modifies the database ACE for Patti Fuller to have read permissions.
+
+### Example 3: Modify other permissions for a catalog
+```powershell
+PS C:\> Set-AzDataLakeAnalyticsCatalogItemAclEntry -Account "contosoadla" -Other -Permissions Read
+
+Type  Id                                   Permissions
+----  --                                   -----------
+User  90a6f74b-fd73-490e-900a-c4f0f9694d02        Read
+Group 902b155a-5601-4ca8-8178-ad3289211f88   ReadWrite
+Other 00000000-0000-0000-0000-000000000000        Read
+User  bd0b55bb-3a57-442a-b2f6-78c95c10ef86        Read
+```
+
+This command modifies the catalog ACE for other to have read permissions.
+
+### Example 4: Modify other Permissions for a database
+```powershell
+PS C:\> Set-AzDataLakeAnalyticsCatalogItemAclEntry -Account "contosoadla" -Other -ItemType Database -Path "databaseName" -Permissions Read
+
+Type  Id                                   Permissions
+----  --                                   -----------
+User  90a6f74b-fd73-490e-900a-c4f0f9694d02        Read
+Group 902b155a-5601-4ca8-8178-ad3289211f88   ReadWrite
+Other 00000000-0000-0000-0000-000000000000        Read
+User  bd0b55bb-3a57-442a-b2f6-78c95c10ef86        Read
+```
+
+### Example 5: Modify user owner permissions for a catalog
+```powershell
+PS C:\> Set-AzDataLakeAnalyticsCatalogItemAclEntry -Account "contosoadla" -UserOwner -Permissions Read
+
+Type      Id                                   Permissions
+----      --                                   -----------
+UserOwner 0316ac75-6703-4ace-984f-a4dd79aeeafc        Read
+```
+
+This command sets the owner permission for the account to Read.
+
+### Example 6: Modify user owner Permissions for a database
+```powershell
+PS C:\> Set-AzDataLakeAnalyticsCatalogItemAclEntry -Account "contosoadla" -UserOwner -ItemType Database -Path "databaseName" -Permissions Read
+
+Type       Id                                   Permissions
+----       --                                   -----------
+GroupOwner 0316ac75-6703-4ace-984f-a4dd79aeeafc        Read
+```
+
+This command sets the owner permission for the database to Read.
 
 ## PARAMETERS
 
@@ -112,9 +183,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -154,7 +225,9 @@ Accept wildcard characters: False
 ```
 
 ### -ItemType
-The type of the catalog item(s).
+Specifies the type of the catalog or catalog item(s). The acceptable values for this parameter are:
+- Catalog
+- Database
 
 ```yaml
 Type: System.String
@@ -199,7 +272,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The catalog item path to search within, in the format:'DatabaseName.\<optionalSecondPart\>.\<optionalThirdPart\>.\<optionalFourthPart\>'.
+Specifies the Data Lake Analytics path of an catalog or catalog item.
+The parts of the path should be separated by a period (.).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance
@@ -214,8 +288,11 @@ Accept wildcard characters: False
 ```
 
 ### -Permissions
-The permissions to set for the ACE.
-Possible values include: 'None', 'Read', 'ReadWrite'.
+Specifies the permissions for the ACE.
+The acceptable values for this parameter are:
+- None
+- Read
+- ReadWrite
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+PermissionType
@@ -292,8 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -312,3 +388,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeAnalyticsCatalogItemAclEntry](Get-AzDataLakeAnalyticsCatalogItemAclEntry.md)
+
+[Remove-AzDataLakeAnalyticsCatalogItemAclEntry](Remove-AzDataLakeAnalyticsCatalogItemAclEntry.md)
+
+[U-SQL now offers database level access control](https://github.com/Azure/AzureDataLake/blob/master/docs/Release_Notes/2016/2016_08_01/USQL_Release_Notes_2016_08_01.md#u-sql-now-offers-database-level-access-control)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: BF6AA8D4-D624-4BE1-A393-1A43909450C4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azavailabilityset
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzAvailabilitySet.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzAvailabilitySet.md
 ---
 
 # New-AzAvailabilitySet
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure availability set.
 
 ## SYNTAX
 
@@ -19,21 +22,21 @@ New-AzAvailabilitySet [-ResourceGroupName] <String> [-Name] <String> [-Location]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAvailabilitySet** cmdlet creates an Azure availability set.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an availability set
+```
+PS C:\> New-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03" -Location "West US"
 ```
 
-{{ Add example description here }}
+This command creates an availability set named AvailablitySet03 in the resource group named ResourceGroup11.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background
+Run cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the location for the availability set.
 
 ```yaml
 Type: System.String
@@ -78,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+Specifies a name for the availability set.
 
 ```yaml
 Type: System.String
@@ -93,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformFaultDomainCount
-The Platform Fault Domain Count
+Specifies the platform fault domain count.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -108,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformUpdateDomainCount
-The Platform Update Domain Count
+Specifies the platform update domain count.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -123,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -138,7 +141,10 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-The Name of Sku
+The Name of Sku.
+The acceptable values for this parameter are:
+- Aligned: For managed disks
+- Classic: For unmanaged disks
 
 ```yaml
 Type: System.String
@@ -168,8 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -184,3 +189,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAvailabilitySet](./Get-AzAvailabilitySet.md)
+
+[Remove-AzAvailabilitySet](./Remove-AzAvailabilitySet.md)
+
+

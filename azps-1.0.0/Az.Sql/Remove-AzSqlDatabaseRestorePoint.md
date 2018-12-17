@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 67A9BB67-EF14-4CAA-99D9-002D0D23178B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/remove-azsqldatabaserestorepoint
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlDatabaseRestorePoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzSqlDatabaseRestorePoint.md
 ---
 
 # Remove-AzSqlDatabaseRestorePoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes given restore point from a SQL Database.
 
 ## SYNTAX
 
@@ -19,21 +22,23 @@ Remove-AzSqlDatabaseRestorePoint -RestorePointCreationDate <DateTime> [-PassThru
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzSqlDatabaseRestorePoint** cmdlet removes given restore point from Azure SQL Database.
+This cmdlet is currently supported by the SQL Server Datawarehouse service on Azure SQL Database.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Removes a restore point
+```
+PS C:\>$RestorePointCreationDate = Get-Date "3/11/2017 1:50:00 AM"
+PS C:\>Remove-AzSqlDatabaseRestorePoint -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -RestorePointCreationDate $RestorePointCreationDate
 ```
 
-{{ Add example description here }}
+This command removes a restore point for Azure SQL Database given creation date.
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database to retrieve restore points from.
+Specifies the name of the SQL Database.
 
 ```yaml
 Type: System.String
@@ -48,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the SQL Database is assigned.
 
 ```yaml
 Type: System.String
@@ -93,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestorePointCreationDate
-The restore point create time.
+Specifies the restore point creation date.
 
 ```yaml
 Type: System.DateTime
@@ -108,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the database is in.
+Specifies the name of the AzureSQL Server that hosts the database.
 
 ```yaml
 Type: System.String
@@ -132,7 +137,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -148,14 +153,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

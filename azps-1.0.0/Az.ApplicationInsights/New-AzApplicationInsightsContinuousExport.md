@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.dll-Help.xml
 Module Name: Az.ApplicationInsights
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.applicationinsights/new-azapplicationinsightscontinuousexport
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/New-AzApplicationInsightsContinuousExport.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/New-AzApplicationInsightsContinuousExport.md
 ---
 
 # New-AzApplicationInsightsContinuousExport
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create a new application insights continuous export configuration for an application insights resource
 
 ## SYNTAX
 
@@ -34,16 +36,31 @@ New-AzApplicationInsightsContinuousExport [-ResourceId] <String> -DocumentType <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Create a new application insights continuous export configuration for an application insights resource
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 Create a new continuous export configuration for an application insights resource
+```
+PS C:\> $sastoken = New-AzStorageContainerSASToken -Name testcontainer -Context $context -ExpiryTime (Get-Date).AddYears(50) -Permission w
+PS C:\> $sasuri = "https://teststorageaccount.blob.core.windows.net/testcontainer" + $sastoken
+PS C:\> New-AzApplicationInsightsContinuousExport -ResourceGroupName "testgroup" -Name "test"
+ -DocumentType "Request","Trace", "Custom Event" -StorageAccountId "/subscriptions/50359d91-7b9d-4823-85af-eb298a61ba96/resourceGroups/testgroup/providers/Microsoft.Storage/storageAccounts/teststorageaccount" -StorageLocation sourcecentralus
+ -StorageSASUri $sasuri
+
+ExportId                         : jlTFEiBg1rkDXOCIeJQ2mB2TxZg=
+StorageName                      : teststorageaccount
+ContainerName                    : testcontainer
+DocumentTypes                    : Request, Custom Event, Trace
+DestinationStorageSubscriptionId : 50359d91-7b9d-4823-85af-eb298a61ba96
+DestinationStorageLocationId     : sourcecentralus
+DestinationStorageAccountId      : /subscriptions/50359d91-7b9d-4823-85af-eb298a61ba96/resourceGroups/testgroup/providers/Microsoft.Storage/storageAccounts/teststorageaccount
+IsEnabled                        : True
+ExportStatus                     : Preparing
+LastSuccessTime                  :
 ```
 
-{{ Add example description here }}
+Create a new application insights continuous export configuration to export "Request" and "Trace" document types to storage contain "testcontainer" in storage account "teststorageaccount" in resource group "testgroup". The SAS token have to be valid and have write permission to the container, otherwise continous export feature won't work.If SAS token expired, the continuous export feature will stop working.
 
 ## PARAMETERS
 
@@ -63,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -199,8 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -215,8 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

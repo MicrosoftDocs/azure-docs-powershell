@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: ED17430D-4DAF-4B9E-937D-0F8A843DAB96
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/test-azdatalakeanalyticscatalogitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Test-AzDataLakeAnalyticsCatalogItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Test-AzDataLakeAnalyticsCatalogItem.md
 ---
 
 # Test-AzDataLakeAnalyticsCatalogItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Checks for the existence of a catalog item.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Test-AzDataLakeAnalyticsCatalogItem [-Account] <String> [-ItemType] <CatalogItem
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Test-AzDataLakeAnalyticsCatalogItem** cmdlet checks for the existence of an Azure Data Lake Analytics catalog item.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Test whether a catalog item exists
+```
+PS C:\>Test-AzDataLakeAnalyticsCatalogItem -Account "ContosoAdlAccount" -ItemType Schema -Path "databaseName.schemaName"
 ```
 
-{{ Add example description here }}
+This command tests whether a specified Schema item exists.
 
 ## PARAMETERS
 
 ### -Account
-The account name to retrieve the catalog item(s) from.
+Specifies the Data Lake Analytics account name.
 
 ```yaml
 Type: System.String
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,21 @@ Accept wildcard characters: False
 ```
 
 ### -ItemType
-The type of the catalog item(s) to retrieve.
+Specifies the catalog item type of the item to check.
+The acceptable values for this parameter are:
+- Database
+- Schema
+- Assembly
+- Table
+- TablePartition
+- TableValuedFunction
+- TableStatistics
+- ExternalDataSource
+- View
+- Procedure
+- Secret
+- Credential
+- Types
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType
@@ -78,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The catalog item path to search within, in the format:'DatabaseName.\<optionalSecondPart\>.\<optionalThirdPart\>.\<optionalTableStatsName\>'.This is required for all catalog item types except database list
+Specifies the path to the item to fetch, or the path to the parent item of the items to list.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance
@@ -93,8 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -111,3 +127,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeAnalyticsCatalogItem](./Get-AzDataLakeAnalyticsCatalogItem.md)
+
+

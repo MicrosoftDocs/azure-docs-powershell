@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 14620FBD-4B10-4366-94F7-891BC01B893F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlelasticpooldatabase
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlElasticPoolDatabase.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlElasticPoolDatabase.md
 ---
 
 # Get-AzSqlElasticPoolDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets elastic databases in an elastic pool and their property values.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ Get-AzSqlElasticPoolDatabase [-ElasticPoolName] <String> [-DatabaseName <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlElasticPoolDatabase** cmdlet gets elastic databases in an elastic pool and their property values.
+You can specify the name of an elastic database in Azure SQL Database to see the property values for only that database.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all databases in an elastic pool
+```
+PS C:\>Get-AzSqlElasticPoolDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
 ```
 
-{{ Add example description here }}
+This command gets all databases in an elastic pool named ElasticPool01.
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database to retrieve.
+Specifies the name of the SQL Database that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -48,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ElasticPoolName
-The name of the Azure SQL Elastic Pool to retrieve.
+Specifies the name of an elastic pool.
 
 ```yaml
 Type: System.String
@@ -78,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of a resource group to which the elastic pool is assigned.
 
 ```yaml
 Type: System.String
@@ -93,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Elastic Pool is in.
+Specifies the name of a server that contains an elastic pool.
 
 ```yaml
 Type: System.String
@@ -117,7 +121,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -133,14 +137,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -153,3 +156,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlElasticPool](./Get-AzSqlElasticPool.md)
+
+[Get-AzSqlElasticPoolActivity](./Get-AzSqlElasticPoolActivity.md)
+
+[New-AzSqlElasticPool](./New-AzSqlElasticPool.md)
+
+[Remove-AzSqlElasticPool](./Remove-AzSqlElasticPool.md)
+
+[Set-AzSqlElasticPool](./Set-AzSqlElasticPool.md)
+

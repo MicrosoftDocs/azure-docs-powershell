@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: A8FDC5A3-F309-49B3-B417-8E0A1535BAF4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/stop-azrecoveryservicesbackupjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Stop-AzRecoveryServicesBackupJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Stop-AzRecoveryServicesBackupJob.md
 ---
 
 # Stop-AzRecoveryServicesBackupJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cancels a running job.
 
 ## SYNTAX
 
@@ -25,26 +28,31 @@ Stop-AzRecoveryServicesBackupJob [-JobId] <String> [-VaultId <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Stop-AzRecoveryServicesBackupJob** cmdlet cancels an existing Azure Backup job.
+Use this cmdlet to stop a job that takes too long and blocks other activities.
+You can cancel only Backup and Restore job types.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Stop a backup job
+```
+PS C:\>$Job = Get-AzRecoveryServicesBackupJob -Operation Backup
+PS C:\> Stop-AzRecoveryServicesBackupJob -JobID $Job.InstanceId
 ```
 
-{{ Add example description here }}
+The first command gets a backup job, and then stores the job in the $Job variable.
+The last command stops the job by specifying the Instance ID of the backup job in $Job.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -Job
-Job to be stopped.
+Specifies a job that this cmdlet cancels.
+To obtain a **BackupJob** object, use the Get-AzRecoveryServicesBackupJob cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
@@ -69,7 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-Id of Job to be stopped.
+Specifies the ID of the job to cancel.
+The ID is the InstanceId property of a **BackupJob** object.
+To obtain an **BackupJob** object, use Get-AzRecoveryServicesBackupJob.
 
 ```yaml
 Type: System.String
@@ -114,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -130,8 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -144,3 +153,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupJob](./Get-AzRecoveryServicesBackupJob.md)
+
+[Wait-AzRecoveryServicesBackupJob](./Wait-AzRecoveryServicesBackupJob.md)
+
+

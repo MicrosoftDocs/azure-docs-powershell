@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll-Help.xml
 Module Name: Az.EventGrid
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/remove-azeventgridsubscription
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Remove-AzEventGridSubscription.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Remove-AzEventGridSubscription.md
 ---
 
 # Remove-AzEventGridSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an Azure Event Grid event subscription.
 
 ## SYNTAX
 
@@ -38,26 +40,54 @@ Remove-AzEventGridSubscription [-EventSubscriptionName] <String> [-ResourceGroup
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes an Azure Event Grid event subscription for an Azure Event Grid topic, a resource, an Azure subscription or resource group.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Remove-AzEventGridSubscription -ResourceGroup MyResourceGroup -TopicName Topic1 -EventSubscriptionName EventSubscription1
 ```
 
-{{ Add example description here }}
+Removes the event subscription \`EventSubscription1\` to an Azure Event Grid topic \`Topic1\` in resource group \`MyResourceGroupName\`.
+
+### Example 2
+```
+PS C:\> Remove-AzEventGridSubscription -ResourceGroupName MyResourceGroupName -EventSubscriptionName EventSubscription1
+```
+
+Removes the event subscription \`EventSubscription1\` to a resource group \`MyResourceGroupName\`.
+
+### Example 3
+```
+PS C:\> Remove-AzEventGridSubscription -EventSubscriptionName EventSubscription1
+```
+
+Removes the event subscription \`EventSubscription1\` to the default Azure subscription.
+
+### Example 4
+```
+PS C:\> Get-AzResource -ResourceId "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.EventHub/namespaces/$namespaceName" | Remove-AzEventGridSubscription -EventSubscriptionName EventSubscription1
+```
+
+Removes the event subscription \`EventSubscription1\` to an Event Hub namespace.
+
+### Example 5
+```
+PS C:\> Get-AzEventGridTopic -ResourceGroup MyResourceGroup -TopicName Topic1 | Remove-AzEventGridSubscription -EventSubscriptionName EventSubscription1
+```
+
+Removes the event subscription \`EventSubscription1\` to an Event Grid Topic.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -67,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventSubscriptionName
-The name of the event subscription
+Name of the event subscription that needs to be removed.
 
 ```yaml
 Type: System.String
@@ -94,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-EventGrid Topic object.
+EventGrid EventSubscription object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
@@ -109,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Returns the status of the Remove operation. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+Resource Group Name.
 
 ```yaml
 Type: System.String
@@ -166,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-The name of the topic
+Event Grid Topic Name.
 
 ```yaml
 Type: System.String
@@ -212,8 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

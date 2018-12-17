@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 2AE5E9B8-7344-407B-9317-47709F10FCD8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azloadbalancerruleconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzLoadBalancerRuleConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzLoadBalancerRuleConfig.md
 ---
 
 # Add-AzLoadBalancerRuleConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a rule configuration to a load balancer.
 
 ## SYNTAX
 
@@ -31,22 +34,23 @@ Add-AzLoadBalancerRuleConfig -LoadBalancer <PSLoadBalancer> -Name <String> [-Pro
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzLoadBalancerRuleConfig** cmdlet adds a rule configuration to an Azure load balancer.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a rule configuration to a load balancer
+```
+PS C:\>$slb = Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $slb | Add-AzLoadBalancerRuleConfig -Name "NewRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350 -EnableFloatingIP
 ```
 
-{{ Add example description here }}
+The first command gets the load balancer named MyLoadBalancer, and then stores it in the variable $slb.
+The second command uses the pipeline operator to pass the load balancer in $slb to **Add-AzLoadBalancerRuleConfig**, which adds the rule configuration named NewRule.
 
 ## PARAMETERS
 
 ### -BackendAddressPool
-A reference to a pool of DIPs.
-Inbound traffic is randomly load balanced across IPs in the backend IPs.
+Specifies the backend address pool to associate with a load balancer rule configuration.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool
@@ -61,8 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendAddressPoolId
-A reference to a pool of DIPs.
-Inbound traffic is randomly load balanced across IPs in the backend IPs.
+Specifies the ID of a **BackendAddressPool** object to associate with a load balancer rule configuration.
 
 ```yaml
 Type: System.String
@@ -77,9 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendPort
-The port used for internal connections on the endpoint.
-Acceptable values are between 0 and 65535.
-Note that value 0 enables 'Any Port'
+Specifies the backend port for traffic that is matched by a load balancer rule configuration.
 
 ```yaml
 Type: System.Int32
@@ -94,12 +95,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -124,9 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFloatingIP
-Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.
-This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
-This setting can't be changed after you create the endpoint.
+Indicates that this cmdlet enables a floating IP address for a rule configuration.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,8 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTcpReset
-Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.
-This element is only used when the protocol is set to TCP.
+Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -157,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfiguration
-A reference to frontend IP addresses.
+Specifies a list of front-end IP addresses to associate with a load balancer rule configuration.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration
@@ -172,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfigurationId
-A reference to frontend IP addresses.
+Specifies the ID for a front-end IP address configuration.
 
 ```yaml
 Type: System.String
@@ -187,10 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendPort
-The port for the external endpoint.
-Port numbers for each rule must be unique within the Load Balancer.
-Acceptable values are between 0 and 65534.
-Note that value 0 enables 'Any Port'
+Specifies the front-end port that is matched by a load balancer rule configuration.
 
 ```yaml
 Type: System.Int32
@@ -205,10 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdleTimeoutInMinutes
-The timeout for the TCP idle connection.
-The value can be set between 4 and 30 minutes.
-The default value is 4 minutes.
-This element is only used when the protocol is set to TCP.
+Specifies the length of time, in minutes, that the state of conversations is maintained in the load balancer.
 
 ```yaml
 Type: System.Int32
@@ -223,7 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
-The reference of the load balancer resource.
+Specifies a **LoadBalancer** object.
+This cmdlet adds a rule configuration to the load balancer that this parameter specifies.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancer
@@ -238,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadDistribution
-The load distribution policy for this rule.
+Specifies a load distribution.
 
 ```yaml
 Type: System.String
@@ -253,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the load balancing rule.
+Specifies the name of the load balancer rule configuration.
 
 ```yaml
 Type: System.String
@@ -268,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -Probe
-The reference of the load balancer probe used by the load balancing rule.
+Specifies a probe to associate with a load balancer rule configuration.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSProbe
@@ -283,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProbeId
-The reference of the load balancer probe used by the load balancing rule.
+Specifies the ID of the probe to associate with a load balancer rule configuration.
 
 ```yaml
 Type: System.String
@@ -298,7 +291,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-The transport protocol for the endpoint.
+Specfies the protocol that is matched by a load balancer rule.
+The acceptable values for this parameter are: Tcp or Udp.
 
 ```yaml
 Type: System.String
@@ -328,8 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -344,8 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -368,3 +360,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzLoadBalancer](./Get-AzLoadBalancer.md)
+
+[Get-AzLoadBalancerRuleConfig](./Get-AzLoadBalancerRuleConfig.md)
+
+[New-AzLoadBalancerRuleConfig](./New-AzLoadBalancerRuleConfig.md)
+
+[Remove-AzLoadBalancerRuleConfig](./Remove-AzLoadBalancerRuleConfig.md)
+
+[Set-AzLoadBalancerRuleConfig](./Set-AzLoadBalancerRuleConfig.md)
+
+

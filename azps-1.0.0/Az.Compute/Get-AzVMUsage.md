@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 3702701E-428D-47E2-A227-0F38B055F881
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmusage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMUsage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMUsage.md
 ---
 
 # Get-AzVMUsage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the virtual machine core count usage for a location.
 
 ## SYNTAX
 
@@ -17,26 +20,26 @@ Get-AzVMUsage [-Location] <String> [-DefaultProfile <IAzureContextContainer>] [<
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMUsage** cmdlet gets the virtual machine core count usage for a location.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get core count usage for a location
+```
+PS C:\> Get-AzVMUsage -Location "Central US"
 ```
 
-{{ Add example description here }}
+This command gets the virtual machine core count usage for the location Central US.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -46,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location name.
+Specifies the location for which this cmdlet gets virtual machine core count usage.
 
 ```yaml
 Type: System.String
@@ -61,8 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -75,3 +77,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+

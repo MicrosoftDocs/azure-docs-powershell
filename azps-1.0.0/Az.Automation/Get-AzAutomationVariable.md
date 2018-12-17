@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 8FB78A4A-8392-44EE-A907-10FDF756071B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationvariable
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationVariable.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationVariable.md
 ---
 
 # Get-AzAutomationVariable
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an Automation variable.
 
 ## SYNTAX
 
@@ -25,21 +28,26 @@ Get-AzAutomationVariable [-Name] <String> [-ResourceGroupName] <String> [-Automa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationVariable** cmdlet gets one or more Azure Automation variables.
+To get a specific variable, specify its name.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a variable
+```
+PS C:\>$Variable = Get-AzAutomationVariable -AutomationAccountName "Contoso17" -Name "Variable06" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Value = $Variable.value
 ```
 
-{{ Add example description here }}
+The first command gets an Automation variable named Variable06 in the account named Contoso17.
+The command stores that object in the $Variable variable.
+The second command uses standard dot notation to refer to the **value** property of $Variable.
+The command stores the value in the $value variable.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account that contains the variables that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -54,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The variable name.
+Specifies the name of a variable that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -84,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the resource group for which this cmdlet gets variables.
 
 ```yaml
 Type: System.String
@@ -99,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +120,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzAutomationVariable](./New-AzAutomationVariable.md)
+
+[Remove-AzAutomationVariable](./Remove-AzAutomationVariable.md)
+
+[Set-AzAutomationVariable](./Set-AzAutomationVariable.md)
+
+

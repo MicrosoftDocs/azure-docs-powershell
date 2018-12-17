@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: D5EB9AFA-B56C-45E2-838B-4555ED1EF8F8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementoperation
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementOperation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementOperation.md
 ---
 
 # Get-AzApiManagementOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a list or a specified API Operation.
 
 ## SYNTAX
 
@@ -25,22 +28,30 @@ Get-AzApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementOperation** gets a list or a specified API Operation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all API management operations
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementOperation -Context $apimContext -ApiId $APIId
 ```
 
-{{ Add example description here }}
+This command gets all API management operations.
+
+### Example 2: Get an API Management operation by operation ID
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementOperation -Context $apimContext -ApiId $APIId -OperationId "Operation003"
+```
+
+This command gets an API management operation by operation ID named Operation0003.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of API Operation belongs to.
-This parameter is required.
+Specifies the identifier of the API Operation.
 
 ```yaml
 Type: System.String
@@ -55,9 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Identifier of API Revision.
-This parameter is optional.
-If not specified, the operation will be retrieved from the currently active api revision.
+Identifier of API Revision. This parameter is optional. If not specified, the operation will be retrieved from the currently active api revision.
 
 ```yaml
 Type: System.String
@@ -72,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies the instance of the **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -88,12 +96,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -103,8 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier operation to look for.
-This parameter is optional.
+Specifies the operation identifier.
 
 ```yaml
 Type: System.String
@@ -119,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -135,3 +141,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementOperation](./New-AzApiManagementOperation.md)
+
+[Remove-AzApiManagementOperation](./Remove-AzApiManagementOperation.md)
+
+[Set-AzApiManagementOperation](./Set-AzApiManagementOperation.md)
+
+

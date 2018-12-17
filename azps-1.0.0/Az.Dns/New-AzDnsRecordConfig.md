@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
-online version:
+ms.assetid: AD97BCAF-69BA-4C16-8B57-AB243D796B71
+online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/new-azdnsrecordconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/New-AzDnsRecordConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/New-AzDnsRecordConfig.md
 ---
 
 # New-AzDnsRecordConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new DNS record local object.
 
 ## SYNTAX
 
@@ -61,22 +64,123 @@ New-AzDnsRecordConfig -CaaFlags <Byte> -CaaTag <String> -CaaValue <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzDnsRecordConfig** cmdlet creates a local **DnsRecord** object.
+An array of these objects is passed to the New-AzDnsRecordSet cmdlet using the *DnsRecords* parameter to specify the records to create in the record set.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a RecordSet of type A
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -IPv4Address 1.2.3.4
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
+
+# When creating a RecordSet containing a single record, the above sequence can also be condensed into a single line:
+
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords (New-AzDnsRecordConfig -IPv4Address 1.2.3.4)
+
+# To create a record set containing multiple records, use New-AzDnsRecordConfig to add each record to the $Records array,
+# then call New-AzDnsRecordSet, as follows:
+
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -IPv4Address 1.2.3.4
+PS C:\> $Records += New-AzDnsRecordConfig -IPv4Address 5.6.7.8
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
 ```
 
-{{ Add example description here }}
+This example creates a **RecordSet** named www in the zone myzone.com.
+The record set is of type A and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record.
+
+### Example 2: Create a RecordSet of type AAAA
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -Ipv6Address 2001:db8::1
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "www" -RecordType AAAA -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
+```
+
+This example creates a **RecordSet** named www in the zone myzone.com.
+The record set is of type AAAA and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record.
+To create a **RecordSet** using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+
+### Example 3: Create a RecordSet of type CNAME
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -Cname www.contoso.com
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "www" -RecordType CNAME -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
+```
+
+This example creates a **RecordSet** named www in the zone myzone.com.
+The record set is of type CNAME and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record.
+To create a **RecordSet** using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+
+### Example 4: Create a RecordSet of type MX
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -Exchange "mail.microsoft.com" -Preference 5
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "www" -RecordType AAAA -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
+```
+
+This command creates a **RecordSet** named www in the zone myzone.com.
+The record set is of type MX and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record.
+To create a **RecordSet** using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+
+### Example 5: Create a RecordSet of type NS
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -Nsdname ns1-01.azure-dns.com
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "ns1" -RecordType NS -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
+```
+
+This command creates a **RecordSet** named ns1 in the zone myzone.com.
+The record set is of type NS and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record.
+To create a **RecordSet** using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+
+### Example 6: Create a RecordSet of type PTR
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -Ptrdname www.contoso.com
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "4" -RecordType PTR -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "3.2.1.in-addr.arpa" -DnsRecords $Records
+```
+
+This command creates a **RecordSet** named 4 in the zone 3.2.1.in-addr.arpa.
+The record set is of type PTR and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record.
+To create a **RecordSet** using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+
+### Example 7: Create a RecordSet of type SRV
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -Priority 0 -Weight 5 -Port 8080 -Target sipservice.contoso.com
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "_sip._tcp" -RecordType SRV -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
+```
+
+This command creates a **RecordSet** named _sip._tcp in the zone myzone.com.
+The record set is of type SRV and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record, pointing to the IP address 2001.2.3.4.
+The service (sip) and the protocol (tcp) are specified as part of the record set name, not as part of the record data.
+To create a **RecordSet** using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+
+### Example 8: Create a RecordSet of type TXT
+```
+PS C:\> $Records = @()
+PS C:\> $Records += New-AzDnsRecordConfig -Value "This is a TXT Record"
+PS C:\> $RecordSet = New-AzDnsRecordSet -Name "text" -RecordType TXT -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords $Records
+```
+
+This command creates a **RecordSet** named text in the zone myzone.com.
+The record set is of type TXT and has a TTL of 1 hour (3600 seconds).
+It contains a single DNS record.
+To create a **RecordSet** using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
 
 ## PARAMETERS
 
 ### -CaaFlags
-The flags for the CAA record to add.
-Must be a number between 0 and 255.
+The flags for the CAA record to add. Must be a number between 0 and 255.
 
 ```yaml
 Type: System.Byte
@@ -121,9 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cname
-The canonical name for the CNAME record to add.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the domain name for a canonical name (CNAME) record.
 
 ```yaml
 Type: System.String
@@ -138,12 +240,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -153,9 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Exchange
-The mail exchange host for the MX record to add.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the mail exchange server name for a mail exchange (MX) record.
 
 ```yaml
 Type: System.String
@@ -170,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ipv4Address
-The IPv4 address for the A record to add.
+Specifies an IPv4 address for an A record.
 
 ```yaml
 Type: System.String
@@ -185,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ipv6Address
-The IPv6 address for the AAAA record to add.
+Specifies an IPv6 address for an AAAA record.
 
 ```yaml
 Type: System.String
@@ -200,9 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -Nsdname
-The name server host for the NS record to add.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the name server name for a name server (NS) record.
 
 ```yaml
 Type: System.String
@@ -217,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-The port number for the SRV record to add.
+Specifies the port for a service (SRV) record.
 
 ```yaml
 Type: System.UInt16
@@ -232,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -Preference
-The preference value for the MX record to add.
+Specifies the preference for an MX record.
 
 ```yaml
 Type: System.UInt16
@@ -247,7 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The priority value SRV record to add.
+Specifies the priority for an SRV record.
 
 ```yaml
 Type: System.UInt16
@@ -262,9 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ptrdname
-The target host for the PTR record to add.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the target domain name of a pointer resource (PTR) record.
 
 ```yaml
 Type: System.String
@@ -279,9 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-The target host for the SRV record to add.
-Must not be relative to the name of the zone.
-Must not have a terminating dot
+Specifies the target for an SRV record.
 
 ```yaml
 Type: System.String
@@ -296,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The text value for the TXT record to add.
+Specifies the value for a TXT record.
 
 ```yaml
 Type: System.String
@@ -311,7 +405,7 @@ Accept wildcard characters: False
 ```
 
 ### -Weight
-The weight value for the SRV record to add.
+Specifies the weight for an SRV record.
 
 ```yaml
 Type: System.UInt16
@@ -326,8 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -344,3 +437,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzDnsRecordConfig](./Add-AzDnsRecordConfig.md)
+
+[New-AzDnsRecordSet](./New-AzDnsRecordSet.md)
+
+[Remove-AzDnsRecordConfig](./Remove-AzDnsRecordConfig.md)

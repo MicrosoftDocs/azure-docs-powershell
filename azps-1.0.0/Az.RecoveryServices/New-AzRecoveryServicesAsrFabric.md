@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/new-azrecoveryservicesasrfabric
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrFabric.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrFabric.md
 ---
 
 # New-AzRecoveryServicesAsrFabric
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure Site Recovery Fabric.
 
 ## SYNTAX
 
@@ -25,16 +27,24 @@ New-AzRecoveryServicesAsrFabric [-Azure] -Name <String> -Location <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzRecoveryServicesAsrFabric** cmdlet creates an Azure Site Recovery Fabric of the specified type.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\>  $currentJob = New-AzRecoveryServicesAsrFabric -Name $FabricName
 ```
 
-{{ Add example description here }}
+Starts the fabric creation with passed name and returns the ASR job used to track the fabric creation operation.
+
+### Example 2
+```
+PS C:\>  $currentJob = New-AzRecoveryServicesAsrFabric -Az -Name $fabricName -Location "eastus"
+PS C:\>  Get-ASRJob -name $currentJob.id
+```
+
+Starts the azure fabric creation with passed name and returns the ASR job used to track the fabric creation operation.
 
 ## PARAMETERS
 
@@ -56,10 +66,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+Specifies the Azure region corresponding to the Fabric object being created. The Azure Site Recovery fabric object represents a region. For virtual machines being replicated between two Azure regions  a primary fabric represents the primary Azure region and the recovery fabric .
 
 ```yaml
 Type: System.String
@@ -84,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the fabric to be created
+Specifies the name of the Azure Site Recovery Fabric.
 
 ```yaml
 Type: System.String
@@ -99,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-{{Fill Type Description}}
+Specifies the Azure Site Recovery Fabric Type.
 
 ```yaml
 Type: System.String
@@ -130,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -146,8 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,3 +169,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesAsrFabric](./Get-AzRecoveryServicesAsrFabric.md)
+
+[Remove-AzRecoveryServicesAsrFabric](./Remove-AzRecoveryServicesAsrFabric.md)

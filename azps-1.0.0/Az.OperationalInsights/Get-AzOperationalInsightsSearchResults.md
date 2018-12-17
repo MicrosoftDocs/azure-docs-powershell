@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 438F549D-1AF6-49FE-83AC-B45BAB701AB6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightssearchresults
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsSearchResults.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsSearchResults.md
 ---
 
 # Get-AzOperationalInsightsSearchResults
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns search results based on the specified parameters.
 
 ## SYNTAX
 
@@ -19,26 +22,70 @@ Get-AzOperationalInsightsSearchResults [-ResourceGroupName] <String> [-Workspace
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzOperationalInsightsSearchResults** cmdlet returns the search results based on the specified parameters.
+You can access the status of the search in the Metadata property of the returned object.
+If the status is Pending, then the search has not completed, and the results will be from the archive.
+You can retrieve the results of the search from the Value property of the returned object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get search results using a query
+```
+PS C:\>Get-AzOperationalInsightsSearchResults -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "ContosoWorkspace" -Query "Type=Event" -Top 100
 ```
 
-{{ Add example description here }}
+This command gets all search results by using a query.
+
+### Example 2: Get search results using an ID
+```
+PS C:\>Get-AzOperationalInsightsSearchResults -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "ContosoWorkspace" -Id "ContosoSearchId"
+```
+
+This command gets search results by using an ID.
+
+### Example 3: Wait for a search to complete before displaying results
+```
+PS C:\>$error.clear()
+$response = @{}
+$StartTime = Get-Date
+
+$resGroup = "ContosoResourceGroup"
+$wrkspace = "ContosoWorkspace"
+
+# Sample Query
+$query = "Type=Event"
+
+# Get Initial response
+$response = Get-AzOperationalInsightsSearchResults -WorkspaceName $wrkspace -ResourceGroupName $resGroup -Query $query -Top 15000
+$elapsedTime = $(get-date) - $script:StartTime
+Write-Host "Elapsed: " $elapsedTime "Status: " $response.Metadata.Status
+
+# Split and extract request Id
+$reqIdParts = $response.Id.Split("/")
+$reqId = $reqIdParts[$reqIdParts.Count -1]
+
+# Poll if pending
+while($response.Metadata.Status -eq "Pending" -and $error.Count -eq 0) {
+    $response = Get-AzOperationalInsightsSearchResults -WorkspaceName $wrkspace -ResourceGroupName $resGroup -Id $reqId
+    $elapsedTime = $(get-date) - $script:StartTime
+    Write-Host "Elapsed: " $elapsedTime "Status: " $response.Metadata.Status
+}
+
+Write-Host "Returned " $response.Value.Count " documents"
+Write-Host $error
+```
+
+This script starts a search and waits until it completes before displaying the results.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,8 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -PostHighlight
-The post highlight search parameter.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -93,8 +138,6 @@ Accept wildcard characters: False
 ```
 
 ### -PreHighlight
-The pre highlight search parameter.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -162,13 +205,13 @@ Aliases:
 
 Required: False
 Position: 2
-Default value: None
+Default value: 10
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -WorkspaceName
-The workspace name.
+Specifies a workspace name.
 
 ```yaml
 Type: System.String
@@ -183,8 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -201,3 +243,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzOperationalInsightsSavedSearchResults](./Get-AzOperationalInsightsSavedSearchResults.md)
+
+

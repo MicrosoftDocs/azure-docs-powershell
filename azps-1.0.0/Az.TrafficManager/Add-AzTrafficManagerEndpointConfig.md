@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
-online version:
+ms.assetid: 25E3F297-1D91-4102-B4D3-1E7195A5D33D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/add-aztrafficmanagerendpointconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Add-AzTrafficManagerEndpointConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Add-AzTrafficManagerEndpointConfig.md
 ---
 
 # Add-AzTrafficManagerEndpointConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an endpoint to a local Traffic Manager profile object.
 
 ## SYNTAX
 
@@ -23,16 +26,30 @@ Add-AzTrafficManagerEndpointConfig -EndpointName <String> -TrafficManagerProfile
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzTrafficManagerEndpointConfig** cmdlet adds an endpoint to a local Azure Traffic Manager profile object.
+You can get a profile by using the New-AzTrafficManagerProfile or Get-AzTrafficManagerProfile cmdlets.
+
+This cmdlet operates on the local profile object.
+Commit your changes to the profile for Traffic Manager by using the Set-AzTrafficManagerProfile cmdlet.
+To create an endpoint and commit the change in a single operation, use the New-AzTrafficManagerEndpoint cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add an endpoint to a profile
+```
+PS C:\>$TrafficManagerProfile = Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Add-AzTrafficManagerEndpointConfig -EndpointName "contoso" -EndpointStatus Enabled -Target "www.contoso.com" -TrafficManagerProfile $TrafficManagerProfile -Type ExternalEndpoints -EndpointLocation "North Europe" -Priority 1 -Weight 10
+PS C:\> Set-AzTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
 ```
 
-{{ Add example description here }}
+The first command gets an Azure Traffic Manager profile by using the **Get-AzTrafficManagerProfile** cmdlet.
+The command stores the local profile in the $TrafficManagerProfile variable.
+
+The second command adds an endpoint named contoso to the profile stored in $TrafficManagerProfile.
+The command includes configuration data for the endpoint.
+This command changes only the local object.
+
+The final command updates the Traffic Manager profile in Azure to match the local value in $TrafficManagerProfile.
 
 ## PARAMETERS
 
@@ -52,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -67,7 +84,12 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointLocation
-The location of the endpoint.
+Specifies the location of the endpoint to use in the Performance traffic-routing method.
+This parameter is only applicable to endpoints of the ExternalEndpoints or the NestedEndpoints type.
+You must specify this parameter when the Performance traffic-routing method is used.
+
+Specify an Azure region name.
+For a full list of Azure regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
 
 ```yaml
 Type: System.String
@@ -82,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointName
-The name of the endpoint.
+Specifies the name of the Traffic Manager endpoint that this cmdlet adds.
 
 ```yaml
 Type: System.String
@@ -97,7 +119,13 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointStatus
-The status of the endpoint.
+Specifies the status of the endpoint.
+Valid values are: 
+
+- Enabled 
+- Disabled 
+
+If the status is Enabled, the endpoint is probed for endpoint health and is included in the traffic-routing method.
 
 ```yaml
 Type: System.String
@@ -113,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -GeoMapping
-The list of regions mapped to this endpoint when using the 'Geographic' traffic routing method.
-Please consult Traffic Manager documentation for a full list of accepted values.
+The list of regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager documentation for a [full list of accepted values](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-geographic-regions).
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -145,7 +172,13 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The priority of the endpoint.
+Specifies the priority that Traffic Manager assigns to the endpoint.
+This parameter is used only if the Traffic Manager profile is configured with the for Priority traffic-routing method.
+Valid values are integers from 1 through 1000.
+Lower values represent higher priority.
+
+If you specify a priority, you must specify priorities on all endpoints in the profile, and no two endpoints can share the same priority value.
+If you do not specify priorities, Traffic Manager assigns default priority values to the endpoints, starting with one (1), in the order the profile lists the endpoints.
 
 ```yaml
 Type: System.Nullable`1[System.UInt32]
@@ -175,7 +208,10 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-The target of the endpoint.
+Specifies the fully qualified DNS name of the endpoint.
+Traffic Manager returns this value in DNS responses when it directs traffic to this endpoint.
+Specify this parameter only for the ExternalEndpoints endpoint type.
+For other endpoint types, specify the *TargetResourceId* parameter instead.
 
 ```yaml
 Type: System.String
@@ -190,7 +226,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-The resource id of the endpoint.
+Specifies resource ID of the target.
+Specify this parameter only for the AzureEndpoints and NestedEndpoints endpoint types.
+For the ExternalEndpoints endpoint type, specify the *Target* parameter instead.
 
 ```yaml
 Type: System.String
@@ -205,7 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfile
-The profile.
+Specifies a local **TrafficManagerProfile** object.
+This cmdlet modifies this local object.
+To obtain a **TrafficManagerProfile** object, use the Get-AzTrafficManagerProfile cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
@@ -220,7 +260,12 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of the endpoint.
+Specifies the type of endpoint that this cmdlet adds to the Azure Traffic Manager profile.
+Valid values are: 
+
+- AzureEndpoints
+- ExternalEndpoints
+- NestedEndpoints
 
 ```yaml
 Type: System.String
@@ -236,7 +281,10 @@ Accept wildcard characters: False
 ```
 
 ### -Weight
-The weight of the endpoint.
+Specifies the weight that Traffic Manager assigns to the endpoint.
+Valid values are integers from 1 through 1000.
+The default value is one (1).
+This parameter is used only if the Traffic Manager profile is configured with the Weighted traffic-routing method.
 
 ```yaml
 Type: System.Nullable`1[System.UInt32]
@@ -251,8 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -265,3 +312,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzTrafficManagerProfile](./Get-AzTrafficManagerProfile.md)
+
+[New-AzTrafficManagerEndpoint](./New-AzTrafficManagerEndpoint.md)
+
+[Remove-AzTrafficManagerEndpointConfig](./Remove-AzTrafficManagerEndpointConfig.md)
+
+[Set-AzTrafficManagerProfile](./Set-AzTrafficManagerProfile.md)
+
+

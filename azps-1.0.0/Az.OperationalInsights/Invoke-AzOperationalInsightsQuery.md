@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/invoke-azoperationalinsightsquery
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Invoke-AzOperationalInsightsQuery.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Invoke-AzOperationalInsightsQuery.md
 ---
 
 # Invoke-AzOperationalInsightsQuery
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns search results based on the specified parameters.
 
 ## SYNTAX
 
@@ -26,16 +28,52 @@ Invoke-AzOperationalInsightsQuery -Workspace <PSWorkspace> -Query <String> [-Tim
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Invoke-AzOperationalInsightsQuery** cmdlet returns the search results based on the specified parameters.
+You can access the status of the search in the Metadata property of the returned object.
+If the status is Pending, then the search has not completed, and the results will be from the archive.
+You can retrieve the results of the search from the Value property of the returned object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get search results using a query
+```
+PS C:\> $queryResults = Invoke-AzOperationalInsightsQuery -WorkspaceId "63613592-b6f7-4c3d-a390-22ba13102111" -Query "union * | take 10"
+PS C:\> $queryResults.Results
+...
 ```
 
-{{ Add example description here }}
+Once invoked, $queryResults.Results will contain all of the resulting rows from your query.
+
+### Example 2: Convert $results.Result IEnumberable to an array
+```
+PS C:\> $queryResults = Invoke-AzOperationalInsightsQuery -WorkspaceId "63613592-b6f7-4c3d-a390-22ba13102111" -Query "union * | take 10"
+PS C:\> $resultsArray = [System.Linq.Enumerable]::ToArray($results.Results)
+...
+```
+
+Some queries can result in very large data sets being returned. Because of this, the default behavior of the cmdlet is to return an IEnumerable to reduce memory costs. If you'd prefer to have an array of results, you can use the LINQ Enumerable.ToArray() extension method to convert the IEnumerable to an array.
+
+### Example 3: Get search results using a query over a specific timeframe
+```
+PS C:\> $queryResults = Invoke-AzOperationalInsightsQuery -WorkspaceId "63613592-b6f7-4c3d-a390-22ba13102111" -Query "union * | take 10" -Timespan (New-TimeSpan -Hours 24)
+PS C:\> $queryResults.Results
+...
+```
+
+The results from this query will be limited to the past 24 hours.
+
+### Example 4: Include render & statistics in query result
+```
+PS C:\> $queryResults = Invoke-AzOperationalInsightsQuery -WorkspaceId "63613592-b6f7-4c3d-a390-22ba13102111" -Query "union * | take 10" -IncludeRender -IncludeStatistics
+PS C:\> $queryResults.Results
+...
+PS C:\> $queryResults.Render
+...
+PS C:\> $queryResults.Statistics
+...
+```
+
+See [https://dev.loganalytics.io/documentation/Using-the-API/RequestOptions](https://dev.loganalytics.io/documentation/Using-the-API/RequestOptions) for details on the render and statistics info.
 
 ## PARAMETERS
 
@@ -55,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -176,8 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

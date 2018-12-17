@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzDeployment.md
 ---
 
 # Remove-AzDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a deployment and any associated operations
 
 ## SYNTAX
 
@@ -31,16 +33,23 @@ Remove-AzDeployment -InputObject <PSDeployment> [-AsJob] [-PassThru] [-ApiVersio
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzDeployment** cmdlet removes an Azure deployment at subscription scope and any associated operations.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a deployment with a given name
+```
+PS C:\>Remove-AzDeployment -Name "RolesDeployment"
 ```
 
-{{ Add example description here }}
+This command removes the deployment "RolesDeployment" at the current subscription scope.
+
+### Example 2: Get a deployment and remove it
+```
+PS C:\>Get-AzDeployment -Name "RolesDeployment" | Remove-AzDeployment
+```
+
+This command gets the deployment "RolesDeployment" at the current subscription scope and removes it.
 
 ## PARAMETERS
 
@@ -79,9 +88,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -198,8 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

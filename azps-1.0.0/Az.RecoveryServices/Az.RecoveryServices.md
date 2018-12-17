@@ -1,289 +1,291 @@
 ---
 Module Name: Az.RecoveryServices
-Module Guid: 5af71f43-17ca-45bd-b534-34524b801ade
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 4aa53b7e-fcfe-4e22-979c-9a4e6380de58
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices
+Help Version: 4.1.2.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Az.RecoveryServices.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Az.RecoveryServices.md
 ---
 
 # Az.RecoveryServices Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Recovery Services cmdlets.
 
 ## Az.RecoveryServices Cmdlets
 ### [Backup-AzRecoveryServicesBackupItem](Backup-AzRecoveryServicesBackupItem.md)
-{{Manually Enter Backup-AzRecoveryServicesBackupItem Description Here}}
+Starts a backup for a Backup item.
 
 ### [Disable-AzRecoveryServicesBackupProtection](Disable-AzRecoveryServicesBackupProtection.md)
-{{Manually Enter Disable-AzRecoveryServicesBackupProtection Description Here}}
+Disables protection for a Backup-protected item.
 
 ### [Disable-AzRecoveryServicesBackupRPMountScript](Disable-AzRecoveryServicesBackupRPMountScript.md)
-{{Manually Enter Disable-AzRecoveryServicesBackupRPMountScript Description Here}}
+Dismounts all the files of the recovery point.
 
 ### [Edit-AzRecoveryServicesAsrRecoveryPlan](Edit-AzRecoveryServicesAsrRecoveryPlan.md)
-{{Manually Enter Edit-AzRecoveryServicesAsrRecoveryPlan Description Here}}
+Edits a Site Recovery plan.
 
 ### [Enable-AzRecoveryServicesBackupProtection](Enable-AzRecoveryServicesBackupProtection.md)
-{{Manually Enter Enable-AzRecoveryServicesBackupProtection Description Here}}
+Enables backup for an item with a specified Backup protection policy.
 
 ### [Get-AzRecoveryServicesAsrAlertSetting](Get-AzRecoveryServicesAsrAlertSetting.md)
-{{Manually Enter Get-AzRecoveryServicesAsrAlertSetting Description Here}}
+Gets the configured Azure Site Recovery notification settings for the vault.
 
 ### [Get-AzRecoveryServicesAsrEvent](Get-AzRecoveryServicesAsrEvent.md)
-{{Manually Enter Get-AzRecoveryServicesAsrEvent Description Here}}
+Gets details of Azure Site Recovery events in the vault.
 
 ### [Get-AzRecoveryServicesAsrFabric](Get-AzRecoveryServicesAsrFabric.md)
-{{Manually Enter Get-AzRecoveryServicesAsrFabric Description Here}}
+Get the details of an Azure Site Recovery Fabric.
 
 ### [Get-AzRecoveryServicesAsrJob](Get-AzRecoveryServicesAsrJob.md)
-{{Manually Enter Get-AzRecoveryServicesAsrJob Description Here}}
+Gets the details of the specified ASR job or the list of recent ASR jobs in the Recovery Services vault.
 
 ### [Get-AzRecoveryServicesAsrNetwork](Get-AzRecoveryServicesAsrNetwork.md)
-{{Manually Enter Get-AzRecoveryServicesAsrNetwork Description Here}}
+Gets information about the networks managed by Site Recovery for the current vault.
 
 ### [Get-AzRecoveryServicesAsrNetworkMapping](Get-AzRecoveryServicesAsrNetworkMapping.md)
-{{Manually Enter Get-AzRecoveryServicesAsrNetworkMapping Description Here}}
+Gets information about Site Recovery network mappings for the current vault.
 
 ### [Get-AzRecoveryServicesAsrPolicy](Get-AzRecoveryServicesAsrPolicy.md)
-{{Manually Enter Get-AzRecoveryServicesAsrPolicy Description Here}}
+Gets ASR replication policies.
 
 ### [Get-AzRecoveryServicesAsrProtectableItem](Get-AzRecoveryServicesAsrProtectableItem.md)
-{{Manually Enter Get-AzRecoveryServicesAsrProtectableItem Description Here}}
+Get the protectable items in an ASR protection container.
 
 ### [Get-AzRecoveryServicesAsrProtectionContainer](Get-AzRecoveryServicesAsrProtectionContainer.md)
-{{Manually Enter Get-AzRecoveryServicesAsrProtectionContainer Description Here}}
+Gets ASR protection containers in the Recovery Services vault.
 
 ### [Get-AzRecoveryServicesAsrProtectionContainerMapping](Get-AzRecoveryServicesAsrProtectionContainerMapping.md)
-{{Manually Enter Get-AzRecoveryServicesAsrProtectionContainerMapping Description Here}}
+Gets Azure Site Recovery Protection Container mappings.
 
 ### [Get-AzRecoveryServicesAsrRecoveryPlan](Get-AzRecoveryServicesAsrRecoveryPlan.md)
-{{Manually Enter Get-AzRecoveryServicesAsrRecoveryPlan Description Here}}
+Gets a recovery plan or all the recovery plans in the Recovery Services vault
 
 ### [Get-AzRecoveryServicesAsrRecoveryPoint](Get-AzRecoveryServicesAsrRecoveryPoint.md)
-{{Manually Enter Get-AzRecoveryServicesAsrRecoveryPoint Description Here}}
+Gets the available recovery points for a replication protected item.
 
 ### [Get-AzRecoveryServicesAsrReplicationProtectedItem](Get-AzRecoveryServicesAsrReplicationProtectedItem.md)
-{{Manually Enter Get-AzRecoveryServicesAsrReplicationProtectedItem Description Here}}
+Gets the properties of an Azure Site Recovery Replication Protected Items.
 
 ### [Get-AzRecoveryServicesAsrServicesProvider](Get-AzRecoveryServicesAsrServicesProvider.md)
-{{Manually Enter Get-AzRecoveryServicesAsrServicesProvider Description Here}}
+Gets the details of the ASR recovery services providers registered to the Recovery Services vault.
 
 ### [Get-AzRecoveryServicesAsrStorageClassification](Get-AzRecoveryServicesAsrStorageClassification.md)
-{{Manually Enter Get-AzRecoveryServicesAsrStorageClassification Description Here}}
+Gets the available(discovered) ASR storage classifications in the Recovery Services vault.
 
 ### [Get-AzRecoveryServicesAsrStorageClassificationMapping](Get-AzRecoveryServicesAsrStorageClassificationMapping.md)
-{{Manually Enter Get-AzRecoveryServicesAsrStorageClassificationMapping Description Here}}
+Gets ASR storage classification mappings.
 
 ### [Get-AzRecoveryServicesAsrVaultContext](Get-AzRecoveryServicesAsrVaultContext.md)
-{{Manually Enter Get-AzRecoveryServicesAsrVaultContext Description Here}}
+Gets ASR vault settings information for the Recovery Services vault.
 
 ### [Get-AzRecoveryServicesAsrvCenter](Get-AzRecoveryServicesAsrvCenter.md)
-{{Manually Enter Get-AzRecoveryServicesAsrvCenter Description Here}}
+Gets details of the vCenter servers registered for discovery on the Configuration server specified by the ASR fabric.
 
 ### [Get-AzRecoveryServicesBackupContainer](Get-AzRecoveryServicesBackupContainer.md)
-{{Manually Enter Get-AzRecoveryServicesBackupContainer Description Here}}
+Gets Backup containers.
 
 ### [Get-AzRecoveryServicesBackupItem](Get-AzRecoveryServicesBackupItem.md)
-{{Manually Enter Get-AzRecoveryServicesBackupItem Description Here}}
+Gets the items from a container in Backup.
 
 ### [Get-AzRecoveryServicesBackupJob](Get-AzRecoveryServicesBackupJob.md)
-{{Manually Enter Get-AzRecoveryServicesBackupJob Description Here}}
+Gets Backup jobs.
 
 ### [Get-AzRecoveryServicesBackupJobDetails](Get-AzRecoveryServicesBackupJobDetails.md)
-{{Manually Enter Get-AzRecoveryServicesBackupJobDetails Description Here}}
+Gets details for a Backup job.
 
 ### [Get-AzRecoveryServicesBackupManagementServer](Get-AzRecoveryServicesBackupManagementServer.md)
-{{Manually Enter Get-AzRecoveryServicesBackupManagementServer Description Here}}
+Gets SCDPM and Azure Backup management servers.
 
 ### [Get-AzRecoveryServicesBackupProperty](Get-AzRecoveryServicesBackupProperty.md)
-{{Manually Enter Get-AzRecoveryServicesBackupProperty Description Here}}
+Gets Backup properties.
 
 ### [Get-AzRecoveryServicesBackupProtectionPolicy](Get-AzRecoveryServicesBackupProtectionPolicy.md)
-{{Manually Enter Get-AzRecoveryServicesBackupProtectionPolicy Description Here}}
+Gets Backup protection policies for a vault.
 
 ### [Get-AzRecoveryServicesBackupRecoveryPoint](Get-AzRecoveryServicesBackupRecoveryPoint.md)
-{{Manually Enter Get-AzRecoveryServicesBackupRecoveryPoint Description Here}}
+Gets the recovery points for a backed up item.
 
 ### [Get-AzRecoveryServicesBackupRetentionPolicyObject](Get-AzRecoveryServicesBackupRetentionPolicyObject.md)
-{{Manually Enter Get-AzRecoveryServicesBackupRetentionPolicyObject Description Here}}
+Gets a base retention policy object.
 
 ### [Get-AzRecoveryServicesBackupRPMountScript](Get-AzRecoveryServicesBackupRPMountScript.md)
-{{Manually Enter Get-AzRecoveryServicesBackupRPMountScript Description Here}}
+Downloads a script to mount all the files of the recovery point.
 
 ### [Get-AzRecoveryServicesBackupSchedulePolicyObject](Get-AzRecoveryServicesBackupSchedulePolicyObject.md)
-{{Manually Enter Get-AzRecoveryServicesBackupSchedulePolicyObject Description Here}}
+Gets a base schedule policy object.
 
 ### [Get-AzRecoveryServicesBackupStatus](Get-AzRecoveryServicesBackupStatus.md)
-{{Manually Enter Get-AzRecoveryServicesBackupStatus Description Here}}
+Checks whether your ARM resource is backed up or not.
 
 ### [Get-AzRecoveryServicesVault](Get-AzRecoveryServicesVault.md)
-{{Manually Enter Get-AzRecoveryServicesVault Description Here}}
+Gets a list of Recovery Services vaults.
 
 ### [Get-AzRecoveryServicesVaultSettingsFile](Get-AzRecoveryServicesVaultSettingsFile.md)
-{{Manually Enter Get-AzRecoveryServicesVaultSettingsFile Description Here}}
+Gets the Azure Site Recovery vault settings file.
 
 ### [Import-AzRecoveryServicesAsrVaultSettingsFile](Import-AzRecoveryServicesAsrVaultSettingsFile.md)
-{{Manually Enter Import-AzRecoveryServicesAsrVaultSettingsFile Description Here}}
+Imports the specified ASR vault settings file to set the vault context(PowerShell session context) for subsequent ASR operations in the PowerShell session. 
 
 ### [New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig](New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig.md)
-{{Manually Enter New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig Description Here}}
+Creates a disk mapping object for Azure virtual machine disks to be replicated.
 
 ### [New-AzRecoveryServicesAsrFabric](New-AzRecoveryServicesAsrFabric.md)
-{{Manually Enter New-AzRecoveryServicesAsrFabric Description Here}}
+Creates an Azure Site Recovery Fabric.
 
 ### [New-AzRecoveryServicesAsrNetworkMapping](New-AzRecoveryServicesAsrNetworkMapping.md)
-{{Manually Enter New-AzRecoveryServicesAsrNetworkMapping Description Here}}
+Creates an ASR network mapping between two networks.
 
 ### [New-AzRecoveryServicesAsrPolicy](New-AzRecoveryServicesAsrPolicy.md)
-{{Manually Enter New-AzRecoveryServicesAsrPolicy Description Here}}
+Creates an Azure Site Recovery replication policy.
 
 ### [New-AzRecoveryServicesAsrProtectableItem](New-AzRecoveryServicesAsrProtectableItem.md)
-{{Manually Enter New-AzRecoveryServicesAsrProtectableItem Description Here}}
+Add(Discover) a physical server to the list of protectable items.
 
 ### [New-AzRecoveryServicesAsrProtectionContainer](New-AzRecoveryServicesAsrProtectionContainer.md)
-{{Manually Enter New-AzRecoveryServicesAsrProtectionContainer Description Here}}
+Creates an Azure Site Recovery Protection Container within the specified fabric.
 
 ### [New-AzRecoveryServicesAsrProtectionContainerMapping](New-AzRecoveryServicesAsrProtectionContainerMapping.md)
-{{Manually Enter New-AzRecoveryServicesAsrProtectionContainerMapping Description Here}}
+Creates an Azure Site Recovery Protection Container mapping by associating the specified replication policy to the specified ASR protection container.
 
 ### [New-AzRecoveryServicesAsrRecoveryPlan](New-AzRecoveryServicesAsrRecoveryPlan.md)
-{{Manually Enter New-AzRecoveryServicesAsrRecoveryPlan Description Here}}
+Creates an ASR recovery plan.
 
 ### [New-AzRecoveryServicesAsrReplicationProtectedItem](New-AzRecoveryServicesAsrReplicationProtectedItem.md)
-{{Manually Enter New-AzRecoveryServicesAsrReplicationProtectedItem Description Here}}
+Enables replication for an ASR protectable item by creating a replication protected item.
 
 ### [New-AzRecoveryServicesAsrStorageClassificationMapping](New-AzRecoveryServicesAsrStorageClassificationMapping.md)
-{{Manually Enter New-AzRecoveryServicesAsrStorageClassificationMapping Description Here}}
+Creates an ASR storage classification mapping in the Recovery Services vault.
 
 ### [New-AzRecoveryServicesAsrvCenter](New-AzRecoveryServicesAsrvCenter.md)
-{{Manually Enter New-AzRecoveryServicesAsrvCenter Description Here}}
+Adds a vCenter server to discover protectable items from.
 
 ### [New-AzRecoveryServicesBackupProtectionPolicy](New-AzRecoveryServicesBackupProtectionPolicy.md)
-{{Manually Enter New-AzRecoveryServicesBackupProtectionPolicy Description Here}}
+Creates a Backup protection policy.
 
 ### [New-AzRecoveryServicesVault](New-AzRecoveryServicesVault.md)
-{{Manually Enter New-AzRecoveryServicesVault Description Here}}
+Creates a new Recovery Services vault.
 
 ### [Remove-AzRecoveryServicesAsrFabric](Remove-AzRecoveryServicesAsrFabric.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrFabric Description Here}}
+Deletes the specified Azure Site Recovery Fabric from the Recovery Services vault.
 
 ### [Remove-AzRecoveryServicesAsrNetworkMapping](Remove-AzRecoveryServicesAsrNetworkMapping.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrNetworkMapping Description Here}}
+Deletes the specified ASR network mapping from the Recovery Services vault.
 
 ### [Remove-AzRecoveryServicesAsrPolicy](Remove-AzRecoveryServicesAsrPolicy.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrPolicy Description Here}}
+Deletes the specified ASR replication policy from the Recovery Services vault.
 
 ### [Remove-AzRecoveryServicesAsrProtectionContainer](Remove-AzRecoveryServicesAsrProtectionContainer.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrProtectionContainer Description Here}}
+Deletes the specified Protection Container from its Fabric.
 
 ### [Remove-AzRecoveryServicesAsrProtectionContainerMapping](Remove-AzRecoveryServicesAsrProtectionContainerMapping.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrProtectionContainerMapping Description Here}}
+Deletes the specified Azure Site Recovery protection container mapping.
 
 ### [Remove-AzRecoveryServicesAsrRecoveryPlan](Remove-AzRecoveryServicesAsrRecoveryPlan.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrRecoveryPlan Description Here}}
+Deletes the specified ASR recovery plan from Recovery Services vault.
 
 ### [Remove-AzRecoveryServicesAsrReplicationProtectedItem](Remove-AzRecoveryServicesAsrReplicationProtectedItem.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrReplicationProtectedItem Description Here}}
+Stops/Disables replication for an Azure Site Recovery replication protected item.
 
 ### [Remove-AzRecoveryServicesAsrServicesProvider](Remove-AzRecoveryServicesAsrServicesProvider.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrServicesProvider Description Here}}
+Deletes/unregister the specified Azure Site Recovery recovery services provider from the recovery services vault.
 
 ### [Remove-AzRecoveryServicesAsrStorageClassificationMapping](Remove-AzRecoveryServicesAsrStorageClassificationMapping.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrStorageClassificationMapping Description Here}}
+Deletes the specified ASR storage classification mapping.
 
 ### [Remove-AzRecoveryServicesAsrvCenter](Remove-AzRecoveryServicesAsrvCenter.md)
-{{Manually Enter Remove-AzRecoveryServicesAsrvCenter Description Here}}
+Removes the vCenter server from the ASR fabric and stops discovery of virtual machines from the vCenter server.
 
 ### [Remove-AzRecoveryServicesBackupProtectionPolicy](Remove-AzRecoveryServicesBackupProtectionPolicy.md)
-{{Manually Enter Remove-AzRecoveryServicesBackupProtectionPolicy Description Here}}
+Deletes a Backup protection policy from a vault.
 
 ### [Remove-AzRecoveryServicesVault](Remove-AzRecoveryServicesVault.md)
-{{Manually Enter Remove-AzRecoveryServicesVault Description Here}}
+Deletes a Recovery Services vault.
 
 ### [Restart-AzRecoveryServicesAsrJob](Restart-AzRecoveryServicesAsrJob.md)
-{{Manually Enter Restart-AzRecoveryServicesAsrJob Description Here}}
+Restarts an Azure Site Recovery job.
 
 ### [Restore-AzRecoveryServicesBackupItem](Restore-AzRecoveryServicesBackupItem.md)
-{{Manually Enter Restore-AzRecoveryServicesBackupItem Description Here}}
+Restores the data and configuration for a Backup item to a recovery point.
 
 ### [Resume-AzRecoveryServicesAsrJob](Resume-AzRecoveryServicesAsrJob.md)
-{{Manually Enter Resume-AzRecoveryServicesAsrJob Description Here}}
+Resumes a suspended Azure Site Recovery job.
 
 ### [Set-AzRecoveryServicesAsrAlertSetting](Set-AzRecoveryServicesAsrAlertSetting.md)
-{{Manually Enter Set-AzRecoveryServicesAsrAlertSetting Description Here}}
+Configure Azure Site Recovery notification settings (email notification) for the vault.
 
 ### [Set-AzRecoveryServicesAsrReplicationProtectedItem](Set-AzRecoveryServicesAsrReplicationProtectedItem.md)
-{{Manually Enter Set-AzRecoveryServicesAsrReplicationProtectedItem Description Here}}
+Sets recovery properties such as target network and virtual machine size for the specified replication protected item.
 
 ### [Set-AzRecoveryServicesAsrVaultContext](Set-AzRecoveryServicesAsrVaultContext.md)
-{{Manually Enter Set-AzRecoveryServicesAsrVaultContext Description Here}}
+Sets the Recovery Services vault context to be used for subsequent Azure Site Recovery operations in the current PowerShell session.
 
 ### [Set-AzRecoveryServicesBackupProperties](Set-AzRecoveryServicesBackupProperties.md)
-{{Manually Enter Set-AzRecoveryServicesBackupProperties Description Here}}
+Sets the properties for backup management.
 
 ### [Set-AzRecoveryServicesBackupProtectionPolicy](Set-AzRecoveryServicesBackupProtectionPolicy.md)
-{{Manually Enter Set-AzRecoveryServicesBackupProtectionPolicy Description Here}}
+Modifies a Backup protection policy.
 
 ### [Set-AzRecoveryServicesVaultContext](Set-AzRecoveryServicesVaultContext.md)
-{{Manually Enter Set-AzRecoveryServicesVaultContext Description Here}}
+Sets vault context.
 
 ### [Start-AzRecoveryServicesAsrApplyRecoveryPoint](Start-AzRecoveryServicesAsrApplyRecoveryPoint.md)
-{{Manually Enter Start-AzRecoveryServicesAsrApplyRecoveryPoint Description Here}}
+Changes a recovery point for a failed over protected item before commiting the failover operation.
 
 ### [Start-AzRecoveryServicesAsrCommitFailoverJob](Start-AzRecoveryServicesAsrCommitFailoverJob.md)
-{{Manually Enter Start-AzRecoveryServicesAsrCommitFailoverJob Description Here}}
+Starts the commit failover action for a Site Recovery object.
 
 ### [Start-AzRecoveryServicesAsrPlannedFailoverJob](Start-AzRecoveryServicesAsrPlannedFailoverJob.md)
-{{Manually Enter Start-AzRecoveryServicesAsrPlannedFailoverJob Description Here}}
+Starts a planned failover operation.
 
 ### [Start-AzRecoveryServicesAsrResynchronizeReplicationJob](Start-AzRecoveryServicesAsrResynchronizeReplicationJob.md)
-{{Manually Enter Start-AzRecoveryServicesAsrResynchronizeReplicationJob Description Here}}
+Starts replication resynchronization.
 
 ### [Start-AzRecoveryServicesAsrSwitchProcessServerJob](Start-AzRecoveryServicesAsrSwitchProcessServerJob.md)
-{{Manually Enter Start-AzRecoveryServicesAsrSwitchProcessServerJob Description Here}}
+Switch replication from one Process server to another for load balancing.
 
 ### [Start-AzRecoveryServicesAsrTestFailoverCleanupJob](Start-AzRecoveryServicesAsrTestFailoverCleanupJob.md)
-{{Manually Enter Start-AzRecoveryServicesAsrTestFailoverCleanupJob Description Here}}
+Starts the test failover cleanup operation.
 
 ### [Start-AzRecoveryServicesAsrTestFailoverJob](Start-AzRecoveryServicesAsrTestFailoverJob.md)
-{{Manually Enter Start-AzRecoveryServicesAsrTestFailoverJob Description Here}}
+Starts a test failover operation.
 
 ### [Start-AzRecoveryServicesAsrUnplannedFailoverJob](Start-AzRecoveryServicesAsrUnplannedFailoverJob.md)
-{{Manually Enter Start-AzRecoveryServicesAsrUnplannedFailoverJob Description Here}}
+Starts a unplanned failover operation.
 
 ### [Stop-AzRecoveryServicesAsrJob](Stop-AzRecoveryServicesAsrJob.md)
-{{Manually Enter Stop-AzRecoveryServicesAsrJob Description Here}}
+Stops an Azure Site Recovery job.
 
 ### [Stop-AzRecoveryServicesBackupJob](Stop-AzRecoveryServicesBackupJob.md)
-{{Manually Enter Stop-AzRecoveryServicesBackupJob Description Here}}
+Cancels a running job.
 
 ### [Unregister-AzRecoveryServicesBackupContainer](Unregister-AzRecoveryServicesBackupContainer.md)
-{{Manually Enter Unregister-AzRecoveryServicesBackupContainer Description Here}}
+Unregisters a Windows Server or other container from the vault.
 
 ### [Unregister-AzRecoveryServicesBackupManagementServer](Unregister-AzRecoveryServicesBackupManagementServer.md)
-{{Manually Enter Unregister-AzRecoveryServicesBackupManagementServer Description Here}}
+Unregisters a SCDPM server or Backup server from the vault.
 
 ### [Update-AzRecoveryServicesAsrMobilityService](Update-AzRecoveryServicesAsrMobilityService.md)
-{{Manually Enter Update-AzRecoveryServicesAsrMobilityService Description Here}}
+Push mobility service agent updates to protected machines.
 
 ### [Update-AzRecoveryServicesAsrNetworkMapping](Update-AzRecoveryServicesAsrNetworkMapping.md)
-{{Manually Enter Update-AzRecoveryServicesAsrNetworkMapping Description Here}}
+Updates the specified azure site recovery network mapping.
 
 ### [Update-AzRecoveryServicesAsrPolicy](Update-AzRecoveryServicesAsrPolicy.md)
-{{Manually Enter Update-AzRecoveryServicesAsrPolicy Description Here}}
+Updates an Azure Site Recovery replication policy.
 
 ### [Update-AzRecoveryServicesAsrProtectionDirection](Update-AzRecoveryServicesAsrProtectionDirection.md)
-{{Manually Enter Update-AzRecoveryServicesAsrProtectionDirection Description Here}}
+Updates the replication direction for the specified replication protected item or recovery plan. Used to re-protect/reverse replicate a failed over replicated item or recovery plan.
 
 ### [Update-AzRecoveryServicesAsrRecoveryPlan](Update-AzRecoveryServicesAsrRecoveryPlan.md)
-{{Manually Enter Update-AzRecoveryServicesAsrRecoveryPlan Description Here}}
+Updates the contents of an Azure Site recovery plan.
 
 ### [Update-AzRecoveryServicesAsrServicesProvider](Update-AzRecoveryServicesAsrServicesProvider.md)
-{{Manually Enter Update-AzRecoveryServicesAsrServicesProvider Description Here}}
+Refreshes (Refresh server) the information received from the Azure Site Recovery Services Provider.
 
 ### [Update-AzRecoveryServicesAsrvCenter](Update-AzRecoveryServicesAsrvCenter.md)
-{{Manually Enter Update-AzRecoveryServicesAsrvCenter Description Here}}
+Update discovery details for a registered vCenter.
 
 ### [Wait-AzRecoveryServicesBackupJob](Wait-AzRecoveryServicesBackupJob.md)
-{{Manually Enter Wait-AzRecoveryServicesBackupJob Description Here}}
+Waits for a Backup job to finish.
 

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/update-azrecoveryservicesasrpolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Update-AzRecoveryServicesAsrPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Update-AzRecoveryServicesAsrPolicy.md
 ---
 
 # Update-AzRecoveryServicesAsrPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates an Azure Site Recovery replication policy.
 
 ## SYNTAX
 
@@ -18,7 +20,7 @@ Update-AzRecoveryServicesAsrPolicy -InputObject <ASRPolicy> [-ReplicationMethod 
  [-ReplicationFrequencyInSeconds <String>] [-NumberOfRecoveryPointsToRetain <Int32>]
  [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-Compression <String>] [-ReplicationPort <UInt16>]
  [-Authentication <String>] [-ReplicationStartTime <TimeSpan>] [-ReplicaDeletion <String>]
- [-RecoveryAzureStorageAccountId <String>] [-Encryption <String>] [-DefaultProfile <IAzureContextContainer>]
+ [-RecoveryAzureStorageAccountId <String>] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,7 +53,7 @@ Update-AzRecoveryServicesAsrPolicy [-AzureToVMware] -InputObject <ASRPolicy>
 Update-AzRecoveryServicesAsrPolicy [-HyperVToAzure] -InputObject <ASRPolicy>
  [-ReplicationFrequencyInSeconds <String>] [-NumberOfRecoveryPointsToRetain <Int32>]
  [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-ReplicationStartTime <TimeSpan>]
- [-RecoveryAzureStorageAccountId <String>] [-Encryption <String>] [-DefaultProfile <IAzureContextContainer>]
+ [-RecoveryAzureStorageAccountId <String>] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -65,21 +67,35 @@ Update-AzRecoveryServicesAsrPolicy [-VmmToVmm] -InputObject <ASRPolicy> [-Replic
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzRecoveryServicesAsrPolicy** cmdlet updates the specified Azure Site Recovery replication policy.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $currentJob = Update-AzRecoveryServicesAsrPolicy -Policy $Policy -ReplicationFrequencyInSeconds 900
 ```
 
-{{ Add example description here }}
+Starts the update replication policy operation using the specified parameters and returns the ASR job used to track the operation.
+
+### Example 2
+```
+PS C:\> Update-AzRecoveryServicesAsrPolicy -AzToAzure -InputObject $Policy -ReplicationFrequencyInSeconds 900
+```
+
+Starts the update azure to azure replication policy operation using the specified parameters and returns the ASR job used to track the operation.
+
+### Example 3
+```
+PS C:\> $currentJob = Update-AzRecoveryServicesAsrPolicy -AzToAzure -InputObject $Policy -RecoveryPointRetentionInHours 20
+```
+
+Starts the update azure to azure replication policy using the specified parameters and returns the ASR job used to track the operation.
 
 ## PARAMETERS
 
 ### -ApplicationConsistentSnapshotFrequencyInHours
-{{Fill ApplicationConsistentSnapshotFrequencyInHours Description}}
+Specifies the frequency(in hours) at which to create application consistent recovery points.
 
 ```yaml
 Type: System.Int32
@@ -94,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-{{Fill Authentication Description}}
+Specifies the type of authentication used.
 
 ```yaml
 Type: System.String
@@ -140,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Compression
-{{Fill Compression Description}}
+Specifies if compression should be enabled.
 
 ```yaml
 Type: System.String
@@ -158,26 +174,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Encryption
-{{Fill Encryption Description}}
-
-```yaml
-Type: System.String
-Parameter Sets: Default, HyperVToAzure
-Aliases:
-Accepted values: Enable, Disable
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -187,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -HyperVToAzure
-{{Fill HyperVToAzure Description}}
+Switch parameter indicating that the specfied policy is used to replicate Hyper-V virtual machines to Azure.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -202,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+Input object for the cmdlet: Specifies the ASR replication policy object corresponding to the replication policy to be updated.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRPolicy
@@ -217,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -MultiVmSyncStatus
-{{Fill MultiVmSyncStatus Description}}
+Specifies multiVm sync status for the policy.
 
 ```yaml
 Type: System.String
@@ -233,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfRecoveryPointsToRetain
-{{Fill NumberOfRecoveryPointsToRetain Description}}
+Specifies the number recovery points to retain.
 
 ```yaml
 Type: System.Int32
@@ -248,7 +249,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureStorageAccountId
-{{Fill RecoveryAzureStorageAccountId Description}}
+Specifies the Azure storage account ID of the replication target. Used as the target storage account for replication if an alternate is not provided while enabling replication using the New-AzRecoveryServicesASRReplicationProtectedItem cmdlet.
+
 
 ```yaml
 Type: System.String
@@ -263,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPointRetentionInHours
-{{Fill RecoveryPointRetentionInHours Description}}
+Time in hours to retain recovery points after creation.
 
 ```yaml
 Type: System.Int32
@@ -278,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicaDeletion
-{{Fill ReplicaDeletion Description}}
+Specifies if the replica virtual machine should be deleted on disabling replication from a VMM managed site to another.
 
 ```yaml
 Type: System.String
@@ -294,7 +296,12 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationFrequencyInSeconds
-{{Fill ReplicationFrequencyInSeconds Description}}
+Specifies the replication frequency interval in seconds.
+Valid values are:
+
+- 30
+- 300
+- 900
 
 ```yaml
 Type: System.String
@@ -310,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationMethod
-{{Fill ReplicationMethod Description}}
+Specifies the replication method.
 
 ```yaml
 Type: System.String
@@ -326,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationPort
-{{Fill ReplicationPort Description}}
+Specifies the port used for replication.
 
 ```yaml
 Type: System.UInt16
@@ -341,7 +348,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationStartTime
-{{Fill ReplicationStartTime Description}}
+Specifies the replication start time.
+It must be no later than 24-hours from the start of the job.
 
 ```yaml
 Type: System.Nullable`1[System.TimeSpan]
@@ -356,7 +364,7 @@ Accept wildcard characters: False
 ```
 
 ### -RPOWarningThresholdInMinutes
-{{Fill RPOWarningThresholdInMinutes Description}}
+The RPO threshold value in minutes to warn on.
 
 ```yaml
 Type: System.Int32
@@ -371,7 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmmToVmm
-{{Fill VmmToVmm Description}}
+Switch parameter indicating that the specfied policy is used to replicate VMM managed Hyper-V virtual machines between two Hyper-V sites.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -386,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMwareToAzure
-{{Fill VMwareToAzure Description}}
+Switch parameter indicating that the specfied policy is used to replicate VMware virtual machines to Azure.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -416,8 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -432,8 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

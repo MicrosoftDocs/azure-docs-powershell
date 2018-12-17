@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 3D4822DD-736B-42DF-8D9A-1CB23FEF052E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqldatabaseexport
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlDatabaseExport.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlDatabaseExport.md
 ---
 
 # New-AzSqlDatabaseExport
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Exports an Azure SQL Database as a .bacpac file to a storage account.
 
 ## SYNTAX
 
@@ -20,21 +23,36 @@ New-AzSqlDatabaseExport [-DatabaseName] <String> [-ServerName] <String> -Storage
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzSqlDatabaseExport** cmdlet exports an Azure SQL Database as a .bacpac file to a storage account.
+The get export database status request may be sent to retrieve status information for this request.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an export request for a database
+```
+PS C:\>New-AzSqlDatabaseExport -ResourceGroupName "RG01" -ServerName "Server01" -DatabaseName "Database01" -StorageKeyType "StorageAccessKey" -StorageKey "StorageKey01" -StorageUri "http://account01.blob.core.contoso.net/bacpacs/database01.bacpac" -AdministratorLogin "User" -AdministratorLoginPassword "secure password"
+ResourceGroupName          : RG01
+ServerName                 : Server01
+DatabaseName               : Database01
+StorageKeyType             : StorageAccessKey
+StorageKey                 : 
+StorageUri                 : http://account01.blob.core.contoso.net/bacpacs/database01.bacpac
+AdministratorLogin         : User
+AdministratorLoginPassword : 
+AuthenticationType         : None
+OperationStatusLink        : https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-00
+                             0-0000-0000-000000000000?api-version=2014-04-01
+Status                     : InProgress
+ErrorMessage               :
 ```
 
-{{ Add example description here }}
+This command creates an export request for the specified database.
 
 ## PARAMETERS
 
 ### -AdministratorLogin
-The Azure SQL Server administrator login username
+Specifies the name of the SQL administrator.
 
 ```yaml
 Type: System.String
@@ -49,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdministratorLoginPassword
-The Azure SQL Server administrator password
+Specifies the password of the SQL administrator.
 
 ```yaml
 Type: System.Security.SecureString
@@ -64,9 +82,16 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationType
-The authentication type of the SQL administrator.
-Only available in the latest SQL Database version (V12).
-Default is Sql
+Specifies the type of authentication used to access the server.
+The default value is SQL if no authentication type is set.
+The acceptable values for this parameter are:
+- Sql.
+SQL authentication.
+Set the *AdministratorLogin* and *AdministratorLoginPassword* to the SQL administrator username and password. 
+- ADPassword.
+Azure Active Directory authentication.
+Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure AD administrator username and password.
+This parameter is only available on SQL Database V12 servers.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.ImportExport.Model.AuthenticationType
@@ -82,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-SQL Database name.
+Specifies the name of the SQL Database.
 
 ```yaml
 Type: System.String
@@ -97,12 +122,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -112,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group for the SQL Database server.
 
 ```yaml
 Type: System.String
@@ -127,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-SQL Database server name.
+Specifies the name of the SQL Database server.
 
 ```yaml
 Type: System.String
@@ -142,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageKey
-The storage key
+Specifies the access key for the storage account.
 
 ```yaml
 Type: System.String
@@ -157,7 +182,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageKeyType
-The type of the storage key
+Specifies the type of access key for the storage account.
+The acceptable values for this parameter are:
+- StorageAccessKey.
+This value uses a storage account key. 
+- SharedAccessKey.
+This value uses a Shared Access Signature (SAS) key.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.ImportExport.Model.StorageKeyType
@@ -173,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageUri
-The blob URI of the .bacpac file
+Specifies the blob link, as a URL, to the .bacpac file.
 
 ```yaml
 Type: System.Uri
@@ -197,7 +227,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -213,14 +243,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -231,5 +260,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Sql.ImportExport.Model.AzureSqlDatabaseImportExportBaseModel
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, sql, database, mssql
 
 ## RELATED LINKS
+
+[Get-AzSqlDatabaseImportExportStatus](./Get-AzSqlDatabaseImportExportStatus.md)
+
+[New-AzSqlDatabaseImport](./New-AzSqlDatabaseImport.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

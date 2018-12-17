@@ -1,57 +1,76 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: A3D60CF1-2E66-4EE5-9C68-932DD8DF80BD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azfirewall
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewall.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewall.md
 ---
 
 # New-AzFirewall
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new Firewall in a resource group.
 
 ## SYNTAX
 
 ### Default (Default)
 ```
 New-AzFirewall -Name <String> -ResourceGroupName <String> -Location <String>
- [-ApplicationRuleCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection]>]
- [-NatRuleCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection]>]
- [-NetworkRuleCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection]>]
- [-Tag <Hashtable>] [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ApplicationRuleCollection <PSAzureFirewallApplicationRuleCollection[]>]
+ [-NatRuleCollection <PSAzureFirewallNatRuleCollection[]>]
+ [-NetworkRuleCollection <PSAzureFirewallNetworkRuleCollection[]>] [-Tag <Hashtable>] [-Force] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### IpConfigurationParameterValues
 ```
 New-AzFirewall -Name <String> -ResourceGroupName <String> -Location <String> -VirtualNetworkName <String>
- -PublicIpName <String>
- [-ApplicationRuleCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection]>]
- [-NatRuleCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection]>]
- [-NetworkRuleCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection]>]
- [-Tag <Hashtable>] [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -PublicIpName <String> [-ApplicationRuleCollection <PSAzureFirewallApplicationRuleCollection[]>]
+ [-NatRuleCollection <PSAzureFirewallNatRuleCollection[]>]
+ [-NetworkRuleCollection <PSAzureFirewallNetworkRuleCollection[]>] [-Tag <Hashtable>] [-Force] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzFirewall** cmdlet creates an Azure Firewall.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:  Create a Firewall attached to a virtual network
+```
+New-AzFirewall -Name "azFw" -ResourceGroupName "rg" -Location centralus -VirtualNetworkName "vnet" -PublicIpName "pip-name"
 ```
 
-{{ Add example description here }}
+This example creates a Firewall attached to virtual network "vnet" in the same resource group as the firewall.
+Since no rules were specified, the firewall will block all traffic (default behavior).
+
+### 2:  Create a Firewall which allows all HTTPS traffic
+```
+$rule = New-AzFirewallApplicationRule -Name R1 -Protocol "https:443" -TargetFqdn "*" 
+$ruleCollection = New-AzFirewallApplicationRuleCollection -Name RC1 -Priority 100 -Rule $rule -ActionType "Allow"
+New-AzFirewall -Name "azFw" -ResourceGroupName "rg" -Location centralus -VirtualNetworkName "vnet" -PublicIpName "pip-name" -ApplicationRuleCollection $ruleCollection
+```
+
+This example creates a Firewall which allows all HTTPS traffic on port 443.
+
+### 3:  DNAT - redirect traffic destined to 10.1.2.3:80 to 10.2.3.4:8080
+```
+$rule = New-AzFirewallNatRule -Name "natRule" -Protocol "TCP" -SourceAddress "*" -DestinationAddress "10.1.2.3" -DestinationPort "80" -TranslatedAddress "10.2.3.4" -TranslatedPort "8080"
+$ruleCollection = New-AzFirewallNatRuleCollection -Name "NatRuleCollection" -Priority 1000 -Rule $rule
+New-AzFirewall -Name "azFw" -ResourceGroupName "rg" -Location centralus -NatRuleCollection $ruleCollection
+```
+
+This example created a Firewall which translated the destination IP and port of all packets destined to 10.1.2.3:80 to 10.2.3.4:8080
 
 ## PARAMETERS
 
 ### -ApplicationRuleCollection
-The list of AzureFirewallApplicationRuleCollections
+Specifies the collections of application rules for the new Firewall.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection]
+Type: Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection[]
 Parameter Sets: (All)
 Aliases:
 
@@ -78,12 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -108,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-location.
+Specifies the region for the Firewall.
 
 ```yaml
 Type: System.String
@@ -123,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+Specifies the name of the Azure Firewall that this cmdlet creates.
 
 ```yaml
 Type: System.String
@@ -141,7 +160,7 @@ Accept wildcard characters: False
 The list of AzureFirewallNatRuleCollections
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection]
+Type: Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection[]
 Parameter Sets: (All)
 Aliases:
 
@@ -156,7 +175,7 @@ Accept wildcard characters: False
 The list of AzureFirewallNetworkRuleCollections
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection]
+Type: Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection[]
 Parameter Sets: (All)
 Aliases:
 
@@ -168,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIpName
-Public Ip Name
+Public Ip Name. The Public IP must use Standard SKU and must belong to the same resource group as the Firewall.
 
 ```yaml
 Type: System.String
@@ -183,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group to contain the Firewall.
 
 ```yaml
 Type: System.String
@@ -198,7 +217,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable which represents resource tags.
+Key-value pairs in the form of a hash table. For example:
+
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -213,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkName
-Virtual Network Name
+Specifies the name of the virtual network for which the Firewall will be deployed. Virtual network and Firewall must belong to the same resource group.
 
 ```yaml
 Type: System.String
@@ -237,7 +258,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -253,24 +274,23 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection[]
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection, Microsoft.Azure.Commands.Network, Version=6.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection[]
 
 ### System.Collections.Hashtable
 
@@ -281,3 +301,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzFirewall](./Get-AzFirewall.md)
+
+[Remove-AzFirewall](./Remove-AzFirewall.md)
+
+[Set-AzFirewall](./Set-AzFirewall.md)
+
+[New-AzFirewallApplicationRuleCollection](./New-AzFirewallApplicationRuleCollection.md)
+
+[New-AzFirewallNatRuleCollection](./New-AzFirewallNatRuleCollection.md)
+
+[New-AzFirewallNetworkRuleCollection](./New-AzFirewallNetworkRuleCollection.md)

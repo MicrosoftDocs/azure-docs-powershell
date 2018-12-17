@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 48C143BE-3BF6-43E3-99B0-1A1D12A0A3F3
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/import-azapimanagementapi
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Import-AzApiManagementApi.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Import-AzApiManagementApi.md
 ---
 
 # Import-AzApiManagementApi
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Imports an API from a file or a URL.
 
 ## SYNTAX
 
@@ -29,23 +32,39 @@ Import-AzApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Import-AzApiManagementApi** cmdlet imports an Azure API Management API from a file or a URL in Web Application Description Language (WADL), Web Services Description Language (WSDL), or Swagger format.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 Import an API from a WADL file
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Import-AzApiManagementApi -Context $ApiMgmtContext -SpecificationFormat "Wadl" -SpecificationPath "C:\contoso\specifications\echoapi.wadl" -Path "apis"
 ```
 
-{{ Add example description here }}
+This command imports an API from the specified WADL file.
+
+### Example 2 Import an API from a Swagger file
+```powershell
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Import-AzApiManagementApi -Context $ApiMgmtContext -SpecificationFormat "Swagger" -SpecificationPath "C:\contoso\specifications\echoapi.swagger" -Path "apis"
+```
+
+This command imports an API from the specified Swagger file.
+
+### Example 3: Import an API from a WADL link
+```powershell
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Import-AzApiManagementApi -Context $ApiMgmtContext -SpecificationFormat "Wadl" -SpecificationUrl "http://contoso.com/specifications/wadl/echoapi" -Path "apis"
+```
+
+This command imports an API from the specified WADL link.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier for importing API.
-This parameter is optional.
-If not specified the identifier will be generated.
+Specifies an ID for the API to import.
+If you do not specify this parameter, an ID is generated for you.
 
 ```yaml
 Type: System.String
@@ -60,9 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Identifier of API Revision.
-This parameter is optional.
-If not specified, the import will be done onto the currently active revision or a new api.
+Identifier of API Revision. This parameter is optional. If not specified, the import will be done onto the currently active revision or a new api.
 
 ```yaml
 Type: System.String
@@ -77,8 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiType
-This parameter is optional with a default value of Http.
-The Soap option is only applicable when importing WSDL and will create a SOAP Passthrough API.
+This parameter is optional with a default value of Http. The Soap option is only applicable when importing WSDL and will create a SOAP Passthrough API.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiType]
@@ -94,8 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -110,12 +125,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -125,12 +140,10 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Web API Path.
-Last part of the API's public URL.
-This URL will be used by API consumers for sending requests to the web service.
+Specifies a web API path as the last part of the API's public URL.
+This URL is used by API consumers for sending requests to the web service.
 Must be 1 to 400 characters long.
-This parameter is optional.
-Default value is $null.
+The default value is $Null.
 
 ```yaml
 Type: System.String
@@ -145,8 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificationFormat
-Specification format (Wadl, Swagger, Wsdl).
-This parameter is required.
+Specifies the specification format.
+psdx_paramvalues Wadl, Wsdl, and Swagger.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiFormat
@@ -162,8 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificationPath
-Specification file path.
-This parameter is required.
+Specifies the specification file path.
 
 ```yaml
 Type: System.String
@@ -178,8 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificationUrl
-Specification URL.
-This parameter is required.
+Specifies the specification URL.
 
 ```yaml
 Type: System.String
@@ -194,10 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -WsdlEndpointName
-Local name of WSDL Endpoint (port) to be imported.
-Must be 1 to 400 characters long.
-This parameter is optional and only required for importing Wsdl.
-Default value is $null.
+Local name of WSDL Endpoint (port) to be imported. Must be 1 to 400 characters long. This parameter is optional and only required for importing Wsdl. Default value is $null.
 
 ```yaml
 Type: System.String
@@ -212,10 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -WsdlServiceName
-Local name of WSDL Service to be imported.
-Must be 1 to 400 characters long.
-This parameter is optional and only required for importing Wsdl .
-Default value is $null.
+Local name of WSDL Service to be imported. Must be 1 to 400 characters long. This parameter is optional and only required for importing Wsdl . Default value is $null.
 
 ```yaml
 Type: System.String
@@ -230,8 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -241,7 +245,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiFormat
 
-### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiType, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiType, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ## OUTPUTS
 
@@ -250,3 +254,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzApiManagementApi](./Export-AzApiManagementApi.md)
+
+[Get-AzApiManagementApi](./Get-AzApiManagementApi.md)
+
+[New-AzApiManagementApi](./New-AzApiManagementApi.md)
+
+[Remove-AzApiManagementApi](./Remove-AzApiManagementApi.md)
+
+[Set-AzApiManagementApi](./Set-AzApiManagementApi.md)
+
+

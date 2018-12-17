@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DevTestLabs.dll-Help.xml
 Module Name: Az.DevTestLabs
-online version: https://azure.microsoft.com/en-us/solutions/dev-test/
+ms.assetid: 9FD4DB8C-B242-4F9A-92E5-0B3EDED00521
+online version: https://docs.microsoft.com/en-us/powershell/module/az.devtestlabs/get-azdtlautostartpolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Get-AzDtlAutoStartPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Get-AzDtlAutoStartPolicy.md
 ---
 
 # Get-AzDtlAutoStartPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the auto start policy of a lab in DevTest Labs.
 
 ## SYNTAX
 
@@ -18,26 +21,20 @@ Get-AzDtlAutoStartPolicy [-LabName] <String> [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDtlAutoStartPolicy** cmdlet gets the auto start policy of a lab which schedules lab virtual machines for automatic start.
+The cmdlet returns the enabled or disabled status of the policy and the days of the week and time of day that you have set to allow lab virtual machines to be scheduled for automatic start.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +44,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabName
-Specifies a name an existing DevTest lab.
+Specifies the name of the lab for which this cmdlet gets the auto start policy.
 
 ```yaml
 Type: System.String
@@ -62,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of an existing resource group that contains the lab.
+Specifies the name of the resource group that the lab belongs to.
 
 ```yaml
 Type: System.String
@@ -77,8 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -92,5 +88,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[https://azure.microsoft.com/en-us/solutions/dev-test/](https://azure.microsoft.com/en-us/solutions/dev-test/)
+[Set-AzDtlAutoStartPolicy](./Set-AzDtlAutoStartPolicy.md)
+
 

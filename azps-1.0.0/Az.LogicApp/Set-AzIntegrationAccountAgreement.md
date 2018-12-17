@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: 5FDD6C6A-9F6A-44C3-B332-B528F648DFDB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/set-azintegrationaccountagreement
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzIntegrationAccountAgreement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzIntegrationAccountAgreement.md
 ---
 
 # Set-AzIntegrationAccountAgreement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an integration account agreement.
 
 ## SYNTAX
 
@@ -22,21 +25,43 @@ Set-AzIntegrationAccountAgreement -ResourceGroupName <String> -Name <String> -Ag
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzIntegrationAccountAgreement** cmdlet modifies an integration account agreement.
+This cmdlet returns an object that represents the integration account agreement.
+Specify the integration account name, resource group name, and agreement name.
+Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update an integration account agreement
+```
+PS C:\>Set-AzIntegrationAccountAgreement -Name "IntegrationAccount31"-ResourceGroupName "ResourceGroup11" -AgreementName "IntegrationAccountAgreement06" -AgreementType "X12" -GuestPartner "GuestPartner" -HostPartner "HostPartner" -GuestIdentityQualifier "BB" -HostIdentityQualifier "AA" -AgreementContentFilePath "C:\temp\AgreementContent.json"
+Id                     : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/agreements/IntegrationAccountAgreement06
+Name                   : IntegrationAccountAgreement06
+Type                   : Microsoft.Logic/integrationAccounts/agreements
+CreatedTime            : 3/26/2016 6:43:52 PM
+ChangedTime            : 3/26/2016 6:43:52 PM
+AgreementType          : X12
+HostPartner            : HostPartner
+GuestPartner           : GuestPartner
+HostIdentityQualifier  : AA
+HostIdentityValue      : AA
+GuestIdentityQualifier : BB
+GuestIdentityValue     : BB
+Content                : {"AS2":null,"X12":{"ReceiveAgreement":{"SenderBusinessIdentity":{"Qualifier":"AA","Value":"AA"},"ReceiverBusinessIdentity":{"Qualifier":"ZZ","Valu
+                         e":"ZZ"},"ProtocolSettings":{"ValidationSettings":{"ValidateCharacterSet":true,"CheckDuplicateInterchangeControlNumber":false,"InterchangeControlN
+                         . . .
 ```
 
-{{ Add example description here }}
+This command updates an integration account agreement in the specified Azure resource group.
 
 ## PARAMETERS
 
 ### -AgreementContent
-The integration account agreement content.
+Specifies agreement content, in JavaScript Object Notation (JSON) format, for the agreement.
 
 ```yaml
 Type: System.String
@@ -51,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgreementContentFilePath
-The integration account agreement content.
+Specifies the file path of agreement content for the agreement.
 
 ```yaml
 Type: System.String
@@ -66,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgreementName
-The integration account agreement name.
+Specifies the name of the integration account agreement.
 
 ```yaml
 Type: System.String
@@ -81,7 +106,11 @@ Accept wildcard characters: False
 ```
 
 ### -AgreementType
-The integration account agreement type.
+Specifies the integration account agreement type.
+The acceptable values for this parameter are:
+- X12 
+- AS2
+- Edifact
 
 ```yaml
 Type: System.String
@@ -97,12 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -112,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -127,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -GuestIdentityQualifier
-The integration account agreement guest identity qualifier.
+Specifies a name business identity qualifier for the guest partner.
 
 ```yaml
 Type: System.String
@@ -157,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -GuestPartner
-The integration account agreement guest partner.
+Specifies the name of the guest partner.
 
 ```yaml
 Type: System.String
@@ -172,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostIdentityQualifier
-The integration account agreement host identity qualifier.
+Specifies a name business identity qualifier for the host partner.
 
 ```yaml
 Type: System.String
@@ -202,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostPartner
-The integration account agreement host partner.
+Specifies the name of the host partner.
 
 ```yaml
 Type: System.String
@@ -217,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-The integration account agreement metadata.
+Specifies a metadata object for the agreement.
 
 ```yaml
 Type: System.Object
@@ -232,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The integration account name.
+Specifies the name of an integration account.
 
 ```yaml
 Type: System.String
@@ -247,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The integration account resource group name.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -271,7 +300,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -287,14 +316,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -307,3 +335,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzIntegrationAccountAgreement](./Get-AzIntegrationAccountAgreement.md)
+
+[New-AzIntegrationAccountAgreement](./New-AzIntegrationAccountAgreement.md)
+
+[Remove-AzIntegrationAccountAgreement](./Remove-AzIntegrationAccountAgreement.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 7D0D8B46-4BF0-47D5-9261-3306AEB9E7DD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchsubtask
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchSubtask.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchSubtask.md
 ---
 
 # Get-AzBatchSubtask
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the subtask information of the specified task.
 
 ## SYNTAX
 
@@ -25,25 +28,27 @@ Get-AzBatchSubtask [[-Task] <PSCloudTask>] [-MaxCount <Int32>] -BatchContext <Ba
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchSubtask** cmdlet retrieves the subtask information about the specified task.
+Subtasks provide parallel processing for individual tasks, and enable precise monitoring of task execution and progress.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Return all subtasks for a specified task
+```
+PS C:\>$Context = Get-AzBatchAccountKeys -AccountName "contosobatchaccount"
+PS C:\> Get-AzBatchSubtask -JobId "Job-01" -TaskID "myTask" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+These commands return all the subtasks for the task with the ID myTask.
+To do this, the first command in the example creates an object reference to the account keys for the batch account contosobatchaccount.
+This object reference is stored in a variable named $context.
+The second command then uses that object reference and the **Get-AzBatchSubtask** cmdlet to return all the subtasks for myTask, a task that runs as part of job Job-01.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -58,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -73,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-The id of the job which contains the task.
+Specifies the ID of the job that contains the task whose subtasks this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -88,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCount
-{{Fill MaxCount Description}}
+Specifies the maximum number of subtasks to return.
+If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+The default value is 1000.
 
 ```yaml
 Type: System.Int32
@@ -103,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -Task
-{{Fill Task Description}}
+Specifies an object reference to the task that contain the subtasks that this cmdlet returns.
+This object reference is created by using the Get-AzBatchTask cmdlet and storing the returned object in a variable.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSCloudTask
@@ -118,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskId
-The id of the task.
+Specifies the ID of the task whose subtasks this cmdlet returns.
 
 ```yaml
 Type: System.String
@@ -133,8 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -151,3 +158,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchTask](./Get-AzBatchTask.md)
+
+

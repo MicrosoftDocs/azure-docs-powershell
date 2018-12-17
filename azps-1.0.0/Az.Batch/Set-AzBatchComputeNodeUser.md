@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: A0D620DA-B5A3-4F8F-BD43-A58630C95432
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/set-azbatchcomputenodeuser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchComputeNodeUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchComputeNodeUser.md
 ---
 
 # Set-AzBatchComputeNodeUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies properties of an account on a Batch compute node.
 
 ## SYNTAX
 
@@ -19,25 +22,23 @@ Set-AzBatchComputeNodeUser [-PoolId] <String> [-ComputeNodeId] <String> [-Name] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzBatchComputeNodeUser** cmdlet modifies properties of a user account on an Azure Batch compute node.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update a user account
+```
+PS C:\>Set-AzBatchComputeNodeUser -PoolId "ContosoPool" -ComputeNodeId "tvm-3257026573_1-20150904t230807z" -Name "PFuller" -BatchContext $Context -Password "Password" -ExpiryTime ([DateTime]::Now.AddDays(14))
 ```
 
-{{ Add example description here }}
+This command modifies user account named PFuller on the compute node that has the specified ID in the pool named ContosoPool.
+The command changes the account password and expiry time.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNodeId
-The id of the compute node containing the user account to update.
+Specifies the ID of the compute node on which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -67,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryTime
-{{Fill ExpiryTime Description}}
+Specifies the expiry time for the user account.
 
 ```yaml
 Type: System.DateTime
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the user account to update.
+Specifies the name of the user account that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The account password.
+Specifies the password for the user account.
 
 ```yaml
 Type: System.Security.SecureString
@@ -127,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool containing the compute node.
+Specifies the ID of the pool that contains the compute node on which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -142,8 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -156,3 +156,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[New-AzBatchComputeNodeUser](./New-AzBatchComputeNodeUser.md)
+
+[Remove-AzBatchComputeNodeUser](./Remove-AzBatchComputeNodeUser.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

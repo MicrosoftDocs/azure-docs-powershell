@@ -1,34 +1,36 @@
 ---
 Module Name: Az.Aks
 Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.aks
+Help Version: 0.0.1.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Aks/Commands.Aks/help/Az.Aks.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Aks/Commands.Aks/help/Az.Aks.md
 ---
 
 # Az.Aks Module
 ## Description
-{{Manually Enter Description Here}}
+Commands to interact with Azure managed Kubernetes clusters.
 
 ## Az.Aks Cmdlets
 ### [Get-AzAks](Get-AzAks.md)
-{{Manually Enter Get-AzAks Description Here}}
+List Kubernetes managed clusters.
 
 ### [Import-AzAksCredential](Import-AzAksCredential.md)
-{{Manually Enter Import-AzAksCredential Description Here}}
+Import and merge Kubectl config for a managed Kubernetes Cluster.
 
 ### [New-AzAks](New-AzAks.md)
-{{Manually Enter New-AzAks Description Here}}
+Create a new managed Kubernetes cluster.
 
 ### [Remove-AzAks](Remove-AzAks.md)
-{{Manually Enter Remove-AzAks Description Here}}
+Delete a managed Kubernetes cluster.
 
 ### [Set-AzAks](Set-AzAks.md)
-{{Manually Enter Set-AzAks Description Here}}
+Update or create a managed Kubernetes cluster.
 
 ### [Start-AzAksDashboard](Start-AzAksDashboard.md)
-{{Manually Enter Start-AzAksDashboard Description Here}}
+Create a Kubectl SSH tunnel to the managed cluster's dashboard.
 
 ### [Stop-AzAksDashboard](Stop-AzAksDashboard.md)
-{{Manually Enter Stop-AzAksDashboard Description Here}}
+Stop the Kubectl SSH tunnel created in Start-AzKubernetesDashboard.
 

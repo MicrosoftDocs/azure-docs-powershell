@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 44622461-E567-4A0A-8F18-2D7B1BF86DA2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/enable-azrecoveryservicesbackupprotection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Enable-AzRecoveryServicesBackupProtection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Enable-AzRecoveryServicesBackupProtection.md
 ---
 
 # Enable-AzRecoveryServicesBackupProtection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables backup for an item with a specified Backup protection policy.
 
 ## SYNTAX
 
@@ -24,6 +27,13 @@ Enable-AzRecoveryServicesBackupProtection [-Policy] <PolicyBase> [-Name] <String
  [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### AzureFileShareEnableProtection
+```
+Enable-AzRecoveryServicesBackupProtection [-Policy] <PolicyBase> [-Name] <String>
+ [-StorageAccountName] <String> [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
 ### ModifyProtection
 ```
 Enable-AzRecoveryServicesBackupProtection [-Policy] <PolicyBase> [-Item] <ItemBase> [-VaultId <String>]
@@ -31,26 +41,32 @@ Enable-AzRecoveryServicesBackupProtection [-Policy] <PolicyBase> [-Item] <ItemBa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Enable-AzRecoveryServicesBackupProtection** cmdlet sets Azure Backup protection policy on an item.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable Backup protection for an item
+```
+PS C:\> $Pol = Get-AzRecoveryServicesBackupProtectionPolicy -Name "DefaultPolicy"
+PS C:\> Enable-AzRecoveryServicesBackupProtection -Policy $Pol -Name "V2VM" -ResourceGroupName "RGName1"
+WorkloadName    Operation        Status          StartTime                  EndTime
+------------    ---------        ------          ---------                  -------
+co03-vm         ConfigureBackup  Completed       11-Apr-16 12:19:49 PM      11-Apr-16 12:19:54 PM
 ```
 
-{{ Add example description here }}
+The first cmdlet gets a default policy object, and then stores it in the $Pol variable.
+The second cmdlet sets the Backup protection policy for the ARM virtual machine named V2VM using the policy in $Pol.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -Item
-Filter value for status of job.
+Specifies the Backup item for which this cmdlet enables protection.
+To obtain an **AzureRmRecoveryServicesBackupItem**, use the Get-AzRecoveryServicesBackupItem cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
@@ -75,11 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Azure VM Name.
+Specifies the name of the Backup item.
 
 ```yaml
 Type: System.String
-Parameter Sets: AzureVMComputeEnableProtection, AzureVMClassicComputeEnableProtection
+Parameter Sets: AzureVMComputeEnableProtection, AzureVMClassicComputeEnableProtection, AzureFileShareEnableProtection
 Aliases:
 
 Required: True
@@ -90,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-Protection policy object.
+Specifies protection policy that this cmdlet associates with an item.
+To obtain an **AzureRmRecoveryServicesBackupProtectionPolicy** object, use the Get-AzRecoveryServicesBackupProtectionPolicy cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase
@@ -105,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name for Azure Compute VM .
+Specifies the name of the resource group.
+Specify this parameter only for ARM virtual machines.
 
 ```yaml
 Type: System.String
@@ -120,11 +139,27 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Cloud Service Name for Azure Classic Compute VM.
+Specifies the service name.
+Specify this parameter only for ASM virtual machines.
 
 ```yaml
 Type: System.String
 Parameter Sets: AzureVMClassicComputeEnableProtection
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageAccountName
+Azure file share storage account name
+
+```yaml
+Type: System.String
+Parameter Sets: AzureFileShareEnableProtection
 Aliases:
 
 Required: True
@@ -165,8 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -181,8 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -197,3 +230,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AzRecoveryServicesBackupProtection](./Disable-AzRecoveryServicesBackupProtection.md)
+
+[Get-AzRecoveryServicesBackupProtectionPolicy](./Get-AzRecoveryServicesBackupProtectionPolicy.md)
+
+

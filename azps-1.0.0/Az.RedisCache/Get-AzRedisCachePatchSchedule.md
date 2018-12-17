@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+ms.assetid: DA180A4A-88B6-4359-94E0-CF72F66D1FE4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/get-azrediscachepatchschedule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCachePatchSchedule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCachePatchSchedule.md
 ---
 
 # Get-AzRedisCachePatchSchedule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a patch schedule.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Get-AzRedisCachePatchSchedule [-ResourceGroupName <String>] -Name <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRedisCachePatchSchedule** cmdlet gets a patch schedule for a cache in Azure Redis Cache.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the patch schedule
+```
+PS C:\>Get-AzRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06"
 ```
 
-{{ Add example description here }}
+This command gets the patch schedule from the cache named RedisCache06.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of redis cache.
+Specifies the name of a cache.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group in which cache exists.
+Specifies the name of the resource group which contains the cache.
 
 ```yaml
 Type: System.String
@@ -77,8 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,5 +91,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
 
 ## RELATED LINKS
+
+[New-AzRedisCachePatchSchedule](./New-AzRedisCachePatchSchedule.md)
+
+[New-AzRedisCacheScheduleEntry](./New-AzRedisCacheScheduleEntry.md)
+
+[Remove-AzRedisCachePatchSchedule](./Remove-AzRedisCachePatchSchedule.md)
+
+

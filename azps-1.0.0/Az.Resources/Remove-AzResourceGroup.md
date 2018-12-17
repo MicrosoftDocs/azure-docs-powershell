@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 880D321E-30F2-4CAE-B14A-5F6DD8E1DB99
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzResourceGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzResourceGroup.md
 ---
 
 # Remove-AzResourceGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a resource group.
 
 ## SYNTAX
 
@@ -25,22 +28,39 @@ Remove-AzResourceGroup -Id <String> [-Force] [-AsJob] [-ApiVersion <String>] [-P
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzResourceGroup** cmdlet removes an Azure resource group and its resources from the current subscription.
+To delete a resource, but leave the resource group, use the Remove-AzResource cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a resource group
+```
+PS C:\>Remove-AzResourceGroup -Name "ContosoRG01"
 ```
 
-{{ Add example description here }}
+This command removes the ContosoRG01 resource group from the subscription.
+The cmdlet prompts you for confirmation and returns no output.
+
+### Example 2: Remove a resource group without confirmation
+```
+PS C:\>Get-AzResourceGroup -Name "ContosoRG01" | Remove-AzResourceGroup -Verbose -Force
+```
+
+This command uses the Get-AzResourceGroup cmdlet to get the resource group ContosoRG01, and then passes it to **Remove-AzResourceGroup** by using the pipeline operator.
+The *Verbose* common parameter gets status information about the operation, and the *Force* parameter suppresses the confirmation prompt.
+
+### Example 3: Remove all resource groups
+```
+PS C:\>Get-AzResourceGroup | Remove-AzResourceGroup
+```
+
+This command uses the **Get-AzResourceGroup** cmdlet to get all resource groups, and then passes them to **Remove-AzResourceGroup** by using the pipeline operator.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource Provider.
+You can specify a different version than the default version.
 
 ```yaml
 Type: System.String
@@ -70,12 +90,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -85,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group Id.
+Specifies the ID of resource group to remove.
+Wildcard characters are not permitted.
 
 ```yaml
 Type: System.String
@@ -115,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the resource group.
+Specifies the names of resource groups to remove.
+Wildcard characters are not permitted.
 
 ```yaml
 Type: System.String
@@ -130,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,7 +176,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -170,14 +192,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -190,3 +211,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzResourceGroup](./Get-AzResourceGroup.md)
+
+[New-AzResourceGroup](./New-AzResourceGroup.md)
+
+[Set-AzResourceGroup](./Set-AzResourceGroup.md)
+
+

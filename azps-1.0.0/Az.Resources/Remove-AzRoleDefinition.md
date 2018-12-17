@@ -1,14 +1,19 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 2D882B33-2B62-4785-AF8F-5F4644E9504D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azroledefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzRoleDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzRoleDefinition.md
 ---
 
 # Remove-AzRoleDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a custom role in Azure RBAC.
+The role to be deleted is specified using the Id property of the role.
+Delete will fail if there are existing role assignments made to the custom role.
 
 ## SYNTAX
 
@@ -31,26 +36,33 @@ Remove-AzRoleDefinition -InputObject <PSRoleDefinition> [-Force] [-PassThru]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Remove-AzRoleDefinition cmdlet deletes a custom role in Azure Role-Based Access Control.
+        Provide the Id parameter of an existing custom role to delete that custom role.
+By default, Remove-AzRoleDefinition prompts you for confirmation.
+To suppress the prompt, use the Force parameter.
+If there are existing role assignments made to the custom role to be deleted, the delete will fail.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+Get-AzRoleDefinition -Name "Virtual Machine Operator" | Remove-AzRoleDefinition
 ```
 
-{{ Add example description here }}
+### Example 2
+```
+Remove-AzRoleDefinition -Id "52a6cc13-ff92-47a8-a39b-2a8205c3087e"
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+If set, does not prompt for a confirmation before deleting the custom role
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -75,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Role definition id
+Id of the Role definition to be deleted
 
 ```yaml
 Type: System.Guid
@@ -105,9 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Role definition name.
-For e.g.
-Reader, Contributor, Virtual Machine Contributor.
+Name of the Role definition to be deleted.
 
 ```yaml
 Type: System.String
@@ -122,8 +132,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -137,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Scope of the existing role definition.
+Role definition scope.
 
 ```yaml
 Type: System.String
@@ -167,9 +175,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -183,8 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -199,5 +203,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
+
+[New-AzRoleDefinition](./New-AzRoleDefinition.md)
+
+[Get-AzRoleDefinition](./Get-AzRoleDefinition.md)
+
+[Set-AzRoleDefinition](./Set-AzRoleDefinition.md)
+

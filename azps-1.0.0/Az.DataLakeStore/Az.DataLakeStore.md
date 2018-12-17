@@ -1,136 +1,141 @@
 ---
 Module Name: Az.DataLakeStore
-Module Guid: 3fabfb08-d284-44b8-a982-eaada389075e
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 90dfd814-abce-4e1f-99b6-fe16760c079a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore
+Help Version: 1.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Az.DataLakeStore.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Az.DataLakeStore.md
 ---
 
 # Az.DataLakeStore Module
 ## Description
-{{Manually Enter Description Here}}
+The topics in this section document the Azure PowerShell cmdlets for Azure Data Lake Store in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.DataLakeStore namespace.
 
 ## Az.DataLakeStore Cmdlets
 ### [Add-AzDataLakeStoreFirewallRule](Add-AzDataLakeStoreFirewallRule.md)
-{{Manually Enter Add-AzDataLakeStoreFirewallRule Description Here}}
+Adds a firewall rule to the specified Data Lake Store account.
 
 ### [Add-AzDataLakeStoreItemContent](Add-AzDataLakeStoreItemContent.md)
-{{Manually Enter Add-AzDataLakeStoreItemContent Description Here}}
+Adds content to an item in a Data Lake Store.
 
 ### [Add-AzDataLakeStoreTrustedIdProvider](Add-AzDataLakeStoreTrustedIdProvider.md)
-{{Manually Enter Add-AzDataLakeStoreTrustedIdProvider Description Here}}
+Adds a trusted identity provider to the specified Data Lake Store account.
 
 ### [Add-AzDataLakeStoreVirtualNetworkRule](Add-AzDataLakeStoreVirtualNetworkRule.md)
-{{Manually Enter Add-AzDataLakeStoreVirtualNetworkRule Description Here}}
+Adds a virtual network rule to the specified Data Lake Store account.
 
 ### [Enable-AzDataLakeStoreKeyVault](Enable-AzDataLakeStoreKeyVault.md)
-{{Manually Enter Enable-AzDataLakeStoreKeyVault Description Here}}
+Attempts to enable a user managed Key Vault for encryption of the specified Data Lake Store account.
 
 ### [Export-AzDataLakeStoreChildItemProperties](Export-AzDataLakeStoreChildItemProperties.md)
-{{Manually Enter Export-AzDataLakeStoreChildItemProperties Description Here}}
+Exports the properties (Disk usage and Acl) for the entire tree from the specified path to a ouput path
 
 ### [Export-AzDataLakeStoreItem](Export-AzDataLakeStoreItem.md)
-{{Manually Enter Export-AzDataLakeStoreItem Description Here}}
+Downloads a file from Data Lake Store.
 
 ### [Get-AzDataLakeStoreAccount](Get-AzDataLakeStoreAccount.md)
-{{Manually Enter Get-AzDataLakeStoreAccount Description Here}}
+Gets details of a Data Lake Store account.
 
 ### [Get-AzDataLakeStoreChildItem](Get-AzDataLakeStoreChildItem.md)
-{{Manually Enter Get-AzDataLakeStoreChildItem Description Here}}
+Gets the list of items in a folder in Data Lake Store.
 
 ### [Get-AzDataLakeStoreChildItemSummary](Get-AzDataLakeStoreChildItemSummary.md)
-{{Manually Enter Get-AzDataLakeStoreChildItemSummary Description Here}}
+Gets the summary of total size, files and directories contained in the path specified
 
 ### [Get-AzDataLakeStoreFirewallRule](Get-AzDataLakeStoreFirewallRule.md)
-{{Manually Enter Get-AzDataLakeStoreFirewallRule Description Here}}
+Gets the specified firewall rules in the specified Data Lake Store.
+If no firewall rule is specified, then lists all firewall rules for the account.
 
 ### [Get-AzDataLakeStoreItem](Get-AzDataLakeStoreItem.md)
-{{Manually Enter Get-AzDataLakeStoreItem Description Here}}
+Gets the details of a file or folder in Data Lake Store.
 
 ### [Get-AzDataLakeStoreItemAclEntry](Get-AzDataLakeStoreItemAclEntry.md)
-{{Manually Enter Get-AzDataLakeStoreItemAclEntry Description Here}}
+Gets an entry in the ACL of a file or folder in Data Lake Store.
 
 ### [Get-AzDataLakeStoreItemContent](Get-AzDataLakeStoreItemContent.md)
-{{Manually Enter Get-AzDataLakeStoreItemContent Description Here}}
+Gets the contents of a file in Data Lake Store.
 
 ### [Get-AzDataLakeStoreItemOwner](Get-AzDataLakeStoreItemOwner.md)
-{{Manually Enter Get-AzDataLakeStoreItemOwner Description Here}}
+Gets the owner of a file or folder in Data Lake Store.
 
 ### [Get-AzDataLakeStoreItemPermission](Get-AzDataLakeStoreItemPermission.md)
-{{Manually Enter Get-AzDataLakeStoreItemPermission Description Here}}
+Gets the permission octal of a file or folder in Data Lake Store.
 
 ### [Get-AzDataLakeStoreTrustedIdProvider](Get-AzDataLakeStoreTrustedIdProvider.md)
-{{Manually Enter Get-AzDataLakeStoreTrustedIdProvider Description Here}}
+Gets the specified trusted identity provider in the specified Data Lake Store.
+If no provider is specified, then lists all providers for the account.
 
 ### [Get-AzDataLakeStoreVirtualNetworkRule](Get-AzDataLakeStoreVirtualNetworkRule.md)
-{{Manually Enter Get-AzDataLakeStoreVirtualNetworkRule Description Here}}
+Gets the specified virtual network rules in the specified Data Lake Store.
+If no virtual network rule is specified, then lists all virtual network rules for the account.
 
 ### [Import-AzDataLakeStoreItem](Import-AzDataLakeStoreItem.md)
-{{Manually Enter Import-AzDataLakeStoreItem Description Here}}
+Uploads a local file or directory to a Data Lake Store.
 
 ### [Join-AzDataLakeStoreItem](Join-AzDataLakeStoreItem.md)
-{{Manually Enter Join-AzDataLakeStoreItem Description Here}}
+Joins one or more files to create one file in Data Lake Store.
 
 ### [Move-AzDataLakeStoreItem](Move-AzDataLakeStoreItem.md)
-{{Manually Enter Move-AzDataLakeStoreItem Description Here}}
+Moves or renames a file or folder in Data Lake Store.
 
 ### [New-AzDataLakeStoreAccount](New-AzDataLakeStoreAccount.md)
-{{Manually Enter New-AzDataLakeStoreAccount Description Here}}
+Creates a new Data Lake Store account.
 
 ### [New-AzDataLakeStoreItem](New-AzDataLakeStoreItem.md)
-{{Manually Enter New-AzDataLakeStoreItem Description Here}}
+Creates a new file or folder in Data Lake Store.
 
 ### [Remove-AzDataLakeStoreAccount](Remove-AzDataLakeStoreAccount.md)
-{{Manually Enter Remove-AzDataLakeStoreAccount Description Here}}
+Deletes a Data Lake Store account permanently.
 
 ### [Remove-AzDataLakeStoreFirewallRule](Remove-AzDataLakeStoreFirewallRule.md)
-{{Manually Enter Remove-AzDataLakeStoreFirewallRule Description Here}}
+Removes the specified firewall rule in the specified Data Lake Store.
 
 ### [Remove-AzDataLakeStoreItem](Remove-AzDataLakeStoreItem.md)
-{{Manually Enter Remove-AzDataLakeStoreItem Description Here}}
+Deletes a file or folder in Data Lake Store.
 
 ### [Remove-AzDataLakeStoreItemAcl](Remove-AzDataLakeStoreItemAcl.md)
-{{Manually Enter Remove-AzDataLakeStoreItemAcl Description Here}}
+Clears the ACL of a file or folder in Data Lake Store.
 
 ### [Remove-AzDataLakeStoreItemAclEntry](Remove-AzDataLakeStoreItemAclEntry.md)
-{{Manually Enter Remove-AzDataLakeStoreItemAclEntry Description Here}}
+Removes an entry from the ACL of a file or folder in Data Lake Store.
 
 ### [Remove-AzDataLakeStoreTrustedIdProvider](Remove-AzDataLakeStoreTrustedIdProvider.md)
-{{Manually Enter Remove-AzDataLakeStoreTrustedIdProvider Description Here}}
+Removes the specified trusted identity provider in the specified Data Lake Store.
 
 ### [Remove-AzDataLakeStoreVirtualNetworkRule](Remove-AzDataLakeStoreVirtualNetworkRule.md)
-{{Manually Enter Remove-AzDataLakeStoreVirtualNetworkRule Description Here}}
+Removes the specified virtual network rule in the specified Data Lake Store.
 
 ### [Set-AzDataLakeStoreAccount](Set-AzDataLakeStoreAccount.md)
-{{Manually Enter Set-AzDataLakeStoreAccount Description Here}}
+Modifies a Data Lake Store account.
 
 ### [Set-AzDataLakeStoreFirewallRule](Set-AzDataLakeStoreFirewallRule.md)
-{{Manually Enter Set-AzDataLakeStoreFirewallRule Description Here}}
+Modifies the specified firewall rule in the specified Data Lake Store.
 
 ### [Set-AzDataLakeStoreItemAcl](Set-AzDataLakeStoreItemAcl.md)
-{{Manually Enter Set-AzDataLakeStoreItemAcl Description Here}}
+Modifies the ACL of a file or folder in Data Lake Store.
 
 ### [Set-AzDataLakeStoreItemAclEntry](Set-AzDataLakeStoreItemAclEntry.md)
-{{Manually Enter Set-AzDataLakeStoreItemAclEntry Description Here}}
+Modifies an entry in the ACL of a file or folder in Data Lake Store.
 
 ### [Set-AzDataLakeStoreItemExpiry](Set-AzDataLakeStoreItemExpiry.md)
-{{Manually Enter Set-AzDataLakeStoreItemExpiry Description Here}}
+Sets or removes the expire time for a file in an Azure Data Lake Store account.
 
 ### [Set-AzDataLakeStoreItemOwner](Set-AzDataLakeStoreItemOwner.md)
-{{Manually Enter Set-AzDataLakeStoreItemOwner Description Here}}
+Modifies the owner of a file or folder in Data Lake Store.
 
 ### [Set-AzDataLakeStoreItemPermission](Set-AzDataLakeStoreItemPermission.md)
-{{Manually Enter Set-AzDataLakeStoreItemPermission Description Here}}
+Modifies the permission octal of a file or folder in Data Lake Store.
 
 ### [Set-AzDataLakeStoreTrustedIdProvider](Set-AzDataLakeStoreTrustedIdProvider.md)
-{{Manually Enter Set-AzDataLakeStoreTrustedIdProvider Description Here}}
+Modifies the specified trusted identity provider in the specified Data Lake Store.
 
 ### [Set-AzDataLakeStoreVirtualNetworkRule](Set-AzDataLakeStoreVirtualNetworkRule.md)
-{{Manually Enter Set-AzDataLakeStoreVirtualNetworkRule Description Here}}
+Modifies the specified virtual network rule in the specified Data Lake Store.
 
 ### [Test-AzDataLakeStoreAccount](Test-AzDataLakeStoreAccount.md)
-{{Manually Enter Test-AzDataLakeStoreAccount Description Here}}
+Tests the existence of a Data Lake Store account.
 
 ### [Test-AzDataLakeStoreItem](Test-AzDataLakeStoreItem.md)
-{{Manually Enter Test-AzDataLakeStoreItem Description Here}}
+Tests the existence of a file or folder in Data Lake Store.
 

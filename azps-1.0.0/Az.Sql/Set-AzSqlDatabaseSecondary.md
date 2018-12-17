@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: F9703508-DD4D-4D25-A7CA-7E3432B5DCA9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqldatabasesecondary
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseSecondary.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseSecondary.md
 ---
 
 # Set-AzSqlDatabaseSecondary
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Switches a secondary database to be primary in order to initiate failover.
 
 ## SYNTAX
 
@@ -27,21 +30,18 @@ Set-AzSqlDatabaseSecondary [-DatabaseName] <String> -PartnerResourceGroupName <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzSqlDatabaseSecondary** cmdlet switches a secondary database to be primary in order to initiate failover.
+This cmdlet is designed as a general configuration command, but is currently limited to initiating failover.
+Specify the *AllowDataLoss* parameter to initiate a force failover during an outage.
+You do not have to specify this parameter when you perform a planned operation, such as recovery drill.
+In the latter case, the secondary database is synchronized with the primary before it is switched.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AllowDataLoss
-Whether this failover operation will allow data loss.
+Indicates that this failover operation permits data loss.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the Azure SQL Database to failover.
+Specifies the name of the Azure SQL Database Secondary.
 
 ```yaml
 Type: System.String
@@ -86,12 +86,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Failover
-Whether this operation is a failover.
+Indicates that this operation is a failover.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerResourceGroupName
-The name of the Azure Resource Group of the partner Azure SQL Database.
+Specifies the name of the resource group to which the partner Azure SQL Database is assigned.
 
 ```yaml
 Type: System.String
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the Azure SQL Database Secondary is assigned.
 
 ```yaml
 Type: System.String
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the database to be replicated is in.
+Specifies the name of the SQL Server that hosts the Azure SQL Database Secondary.
 
 ```yaml
 Type: System.String
@@ -170,7 +170,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -186,14 +186,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -206,3 +205,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzSqlDatabaseSecondary](./New-AzSqlDatabaseSecondary.md)
+
+[Remove-AzSqlDatabaseSecondary](./Remove-AzSqlDatabaseSecondary.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

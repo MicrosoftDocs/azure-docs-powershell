@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: E9500392-6BE1-46EC-9AF5-9234281025E6
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azstoragequeue
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageQueue.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageQueue.md
 ---
 
 # New-AzStorageQueue
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a storage queue.
 
 ## SYNTAX
 
@@ -18,21 +21,30 @@ New-AzStorageQueue [-Name] <String> [-Context <IStorageContext>] [-DefaultProfil
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStorageQueue** cmdlet creates a storage queue in Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an Azure storage queue
+```
+PS C:\>New-AzStorageQueue -Name "queueabc"
 ```
 
-{{ Add example description here }}
+This example creates a storage queue named queueabc.
+
+### Example 2: Create multiple azure storage queues
+```
+PS C:\>"queue1 queue2 queue3".split() | New-AzStorageQueue
+```
+
+This example creates multiple storage queues.
+It uses the Split method of the .NET String class and then passes the names on the pipeline.
 
 ## PARAMETERS
 
 ### -Context
-Azure Storage Context Object
+Specifies the Azure storage context.
+You can create it by using the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -50,7 +62,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -62,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Queue name
+Specifies a name for the queue.
 
 ```yaml
 Type: System.String
@@ -77,8 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -93,3 +104,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageQueue](./Get-AzStorageQueue.md)
+
+[Remove-AzStorageQueue](./Remove-AzStorageQueue.md)
+
+

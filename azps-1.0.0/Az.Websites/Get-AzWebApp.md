@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: A87ED954-9C09-4329-A005-ABFF36C45E6E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/get-azwebapp
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzWebApp.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzWebApp.md
 ---
 
 # Get-AzWebApp
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Azure Web Apps in the specified resource group.
 
 ## SYNTAX
 
@@ -30,22 +33,21 @@ Get-AzWebApp [-Location] <String> [-DefaultProfile <IAzureContextContainer>] [<C
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzWebApp** cmdlet gets information about an Azure Web App.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a Web App from a resource group
+```
+PS C:\>Get-AzWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-{{ Add example description here }}
+This command gets the Web App named ContosoSite that belongs to the resource group Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The app service plan.
-Gets all web apps in specified service plan
+App Service Plan object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan
@@ -60,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -75,8 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The name of the web app location.
-Gets all web apps at location
+Location
 
 ```yaml
 Type: System.String
@@ -91,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+WebApp Name
 
 ```yaml
 Type: System.String
@@ -106,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -121,8 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -135,3 +135,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzWebApp](./New-AzWebApp.md)
+
+[Remove-AzWebApp](./Remove-AzWebApp.md)
+
+[Restart-AzWebApp](./Restart-AzWebApp.md)
+
+[Start-AzWebApp](./Start-AzWebApp.md)
+
+[Stop-AzWebApp](./Stop-AzWebApp.md)
+
+

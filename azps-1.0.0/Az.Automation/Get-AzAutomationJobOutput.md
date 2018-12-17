@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: B39C4D6B-392A-4C8D-A6FB-886DA1A2BA58
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationjoboutput
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationJobOutput.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationJobOutput.md
 ---
 
 # Get-AzAutomationJobOutput
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the output of an Automation job.
 
 ## SYNTAX
 
@@ -19,21 +22,21 @@ Get-AzAutomationJobOutput [-Id] <Guid> [-Stream <StreamType>] [-StartTime <DateT
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationJobOutput** cmdlet gets the output of an Azure Automation job.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the output of an Automation job
+```
+PS C:\>Get-AzAutomationJobOutput -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01" -Stream "Any"
 ```
 
-{{ Add example description here }}
+This command gets all of the output of the job that has the specified ID.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account for which this cmdlet gets job output.
 
 ```yaml
 Type: System.String
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The job name or Id
+Specifies the ID of a job for which this cmdlet gets output.
 
 ```yaml
 Type: System.Guid
@@ -78,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet gets job output.
 
 ```yaml
 Type: System.String
@@ -93,7 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Retrieves output created after this time
+Specifies a start time as a **DateTimeOffset** object.
+You can specify a string that can be converted to a valid **DateTimeOffset**.
+The cmdlet retrieves output created after this time.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -108,14 +113,21 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
-The stream type.
-Defaults to Any.
+Specifies the type of output.
+Valid values are: 
+- Any
+- Debug
+- Error
+- Output
+- Progress
+- Verbose
+- Warning
 
 ```yaml
 Type: Microsoft.Azure.Commands.Automation.Common.StreamType
 Parameter Sets: (All)
 Aliases:
-Accepted values: Any, Progress, Output, Warning, Error, Debug, Verbose
+Accepted values: Any, Progress, Output, Warning, Error, Verbose
 
 Required: False
 Position: Named
@@ -125,8 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -145,3 +156,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationJob](./Get-AzAutomationJob.md)
+
+[Resume-AzAutomationJob](./Resume-AzAutomationJob.md)
+
+[Stop-AzAutomationJob](./Stop-AzAutomationJob.md)
+
+[Suspend-AzAutomationJob](./Suspend-AzAutomationJob.md)
+
+

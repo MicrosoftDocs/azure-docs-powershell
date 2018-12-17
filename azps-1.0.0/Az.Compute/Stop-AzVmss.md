@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: AF0DDDD0-B664-4AD8-A569-1363FB2EDB40
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/stop-azvmss
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzVmss.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzVmss.md
 ---
 
 # Stop-AzVmss
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Stops the VMSS or a set of virtual machines within the VMSS.
 
 ## SYNTAX
 
@@ -26,21 +29,29 @@ Stop-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String> [[-Instance
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Stop-AzVmss** cmdlet stops all the virtual machines within the Virtual Machine Scale Set (VMSS) or a set of virtual machines.
+You can use the *InstanceId* parameter to select a set of virtual machines.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Stop all the virtual machines within the VMSS
+```
+PS C:\> Stop-AzVmss -ResourceGroupName "ContosoGroup" -VMScaleSetName "ContosoVMSS"
 ```
 
-{{ Add example description here }}
+This command stops all virtual machines that belong to the VMSS named ContosoVMSS.
+
+### Example 2: Stop a specific set of virtual machines within the VMSS
+```
+PS C:\> Stop-AzVmss -ResourceGroupName "ContosoGroup" -VMScaleSetName "ContosoVMSS" -InstanceId "3","5"
+```
+
+This command stops a specific set of virtual machines specified by the instance ID string array that belong to the VMSS named ContosoVMSS.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background
+Run cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -55,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -85,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceId
-{{Fill InstanceId Description}}
+Specifies, as a string array, the ID or IDs of the virtual machine instances that this cmdlet stops.
+For instance: `-InstanceId "0", "3"`.
 
 ```yaml
 Type: System.String[]
@@ -100,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the resource group of the VMSS.
 
 ```yaml
 Type: System.String
@@ -115,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -StayProvisioned
-{{Fill StayProvisioned Description}}
+If specified, the virtual machine will enter stopped state. If not specified, the virtual machine will enter stopped-deallocated state. The user is still charged for VMs in stopped state but not for VMs in stopped-deallocated state.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -130,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMScaleSetName
-{{Fill VMScaleSetName Description}}
+Specifies the name of the VMSS for which this cmdlet stops the virtual machines.
 
 ```yaml
 Type: System.String
@@ -160,8 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -176,8 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -192,3 +202,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVmss](./Get-AzVmss.md)
+
+[New-AzVmss](./New-AzVmss.md)
+
+[Remove-AzVmss](./Remove-AzVmss.md)
+
+[Restart-AzVmss](./Restart-AzVmss.md)
+
+[Set-AzVmss](./Set-AzVmss.md)
+
+[Start-AzVmss](./Start-AzVmss.md)
+
+[Update-AzVmss](./Update-AzVmss.md)
+
+

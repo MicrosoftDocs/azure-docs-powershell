@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 2970E81E-A788-4829-B1FF-B522A91DE4B1
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azproviderfeature
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzProviderFeature.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzProviderFeature.md
 ---
 
 # Get-AzProviderFeature
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about Azure provider features.
 
 ## SYNTAX
 
@@ -25,26 +28,33 @@ Get-AzProviderFeature -ProviderNamespace <String> -FeatureName <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzProviderFeature** cmdlet gets the feature name, provider name, and registration status for Azure provider features.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all available features
+```
+PS C:\>Get-AzProviderFeature -ListAvailable
 ```
 
-{{ Add example description here }}
+This command gets all available features.
+
+### Example 2: Get information about a specific feature
+```
+PS C:\>Get-AzProviderFeature -FeatureName "AllowPreReleaseRegions" -ProviderNamespace "Microsoft.Compute"
+```
+
+This command gets information for the feature named AllowPreReleaseRegions for the specified provider.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureName
-The feature name.
+Specifies the name of the feature to get.
 
 ```yaml
 Type: System.String
@@ -69,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListAvailable
-When set, lists all available features including those not registered with the current subscription.
+Indicates that this cmdlet gets all features.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderNamespace
-The resource provider namespace.
+Specifies the namespace for which this cmdlet gets provider features.
 
 ```yaml
 Type: System.String
@@ -111,8 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -125,3 +134,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Register-AzProviderFeature](./Register-AzProviderFeature.md)
+
+

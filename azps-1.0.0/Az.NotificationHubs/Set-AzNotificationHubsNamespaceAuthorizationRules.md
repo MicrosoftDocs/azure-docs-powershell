@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: F0981A7A-1B17-4141-A267-927E5B78BE5F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/set-aznotificationhubsnamespaceauthorizationrules
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzNotificationHubsNamespaceAuthorizationRules.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzNotificationHubsNamespaceAuthorizationRules.md
 ---
 
 # Set-AzNotificationHubsNamespaceAuthorizationRules
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets authorization rules for a notification hub namespace.
 
 ## SYNTAX
 
@@ -27,26 +30,45 @@ Set-AzNotificationHubsNamespaceAuthorizationRules [-ResourceGroup] <String> [-Na
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzNotificationHubsNamespaceAuthorizationRules** cmdlet modifies a Shared Access Signature (SAS) authorization rule assigned to a notification hub namespace.
+Authorization rules manage user rights to the namespace and to the notification hubs contained in that namespace.
+This cmdlet provides two ways to modify an authorization rule assigned to a namespace.
+For one, you can create an instance of the **SharedAccessAuthorizationRuleAttributes** object and then configure that object with the property values you want the rule to possess.
+You can use the .NET Framework to accomplish this.
+You can then copy those property values to the rule through the *SASRule* parameter.
+Alternatively, you can create a JSON (JavaScript Object Notation) file containing the relevant configuration values and then apply those values through the *InputFile* parameter.
+A JSON file is a text file that uses syntax similar to this:
+{  
+    "Name": "ContosoAuthorizationRule",  
+    "PrimaryKey": "WE4qH0398AyXjlekt56gg1gMR3NHoMs29KkUnnpUk01Y=",  
+    "Rights": \[  
+        "Listen",  
+        "Send"  
+    \]  
+}
+When used in conjunction with the **Set-AzNotificationHubsNamespaceAuthorizationRules** cmdlet, the preceding JSON sample modifies an authorization rule named ContosoAuthorizationRule to give users Listen and Send rights to the namespace.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify an authorization rule assigned to a namespace
+```
+PS C:\>Set-AzNotificationHubsNamespaceAuthorizationRules -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationGroup" -InputFile "C:\Configuration\AuthorizationRules.json"
 ```
 
-{{ Add example description here }}
+This command modifies an authorization rule assigned to the namespace named ContosoNamespace.
+You must specify the resource group that the namespace is assigned to.
+Information about the authorization rule is not included in the command itself.
+Instead, that information is obtained from the input file C:\Configuration\AuthorizationRules.json.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputFile
-File name containing a single AuthorizationRule definition.
+Specifies the path to a JSON file containing configuration information for the new rule.
 
 ```yaml
 Type: System.String
@@ -86,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace that contains the authorization rules that this cmdlet modifies.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -101,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the namespace is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -116,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -SASRule
-Namespace AuthorizationRule Object.
+Specifies the **SharedAccessAuthorizationRuleAttributes** object that contains configuration information for the authorization rules that this cmdlet modifies.
 
 ```yaml
 Type: Microsoft.Azure.Commands.NotificationHubs.Models.SharedAccessAuthorizationRuleAttributes
@@ -146,8 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,8 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -176,3 +198,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHubsNamespaceAuthorizationRules](./Get-AzNotificationHubsNamespaceAuthorizationRules.md)
+
+[New-AzNotificationHubsNamespaceAuthorizationRules](./New-AzNotificationHubsNamespaceAuthorizationRules.md)
+
+[Remove-AzNotificationHubsNamespaceAuthorizationRules](./Remove-AzNotificationHubsNamespaceAuthorizationRules.md)
+
+

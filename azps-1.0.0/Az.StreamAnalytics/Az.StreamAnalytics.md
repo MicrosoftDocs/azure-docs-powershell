@@ -1,76 +1,78 @@
 ---
 Module Name: Az.StreamAnalytics
-Module Guid: 1fb42c21-81b6-4b14-af67-ad21f7867cd7
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 59713673-194f-418a-b1f2-ac60db82edf9
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics
+Help Version: 4.0.4.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Az.StreamAnalytics.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Az.StreamAnalytics.md
 ---
 
 # Az.StreamAnalytics Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Stream Analytics Cmdlets.
 
 ## Az.StreamAnalytics Cmdlets
 ### [Get-AzStreamAnalyticsDefaultFunctionDefinition](Get-AzStreamAnalyticsDefaultFunctionDefinition.md)
-{{Manually Enter Get-AzStreamAnalyticsDefaultFunctionDefinition Description Here}}
+Gets the default definition of a function in Stream Analytics.
 
 ### [Get-AzStreamAnalyticsFunction](Get-AzStreamAnalyticsFunction.md)
-{{Manually Enter Get-AzStreamAnalyticsFunction Description Here}}
+Gets functions in a Stream Analytics job.
 
 ### [Get-AzStreamAnalyticsInput](Get-AzStreamAnalyticsInput.md)
-{{Manually Enter Get-AzStreamAnalyticsInput Description Here}}
+Gets Stream Analytics job inputs.
 
 ### [Get-AzStreamAnalyticsJob](Get-AzStreamAnalyticsJob.md)
-{{Manually Enter Get-AzStreamAnalyticsJob Description Here}}
+Gets Stream Analytics jobs information.
 
 ### [Get-AzStreamAnalyticsOutput](Get-AzStreamAnalyticsOutput.md)
-{{Manually Enter Get-AzStreamAnalyticsOutput Description Here}}
+Gets the outputs defined in a specified Stream Analytics job or output.
 
 ### [Get-AzStreamAnalyticsQuota](Get-AzStreamAnalyticsQuota.md)
-{{Manually Enter Get-AzStreamAnalyticsQuota Description Here}}
+Gets information about the Streaming Unit quota for a region.
 
 ### [Get-AzStreamAnalyticsTransformation](Get-AzStreamAnalyticsTransformation.md)
-{{Manually Enter Get-AzStreamAnalyticsTransformation Description Here}}
+Gets information about a Stream Analytics job transformation.
 
 ### [New-AzStreamAnalyticsFunction](New-AzStreamAnalyticsFunction.md)
-{{Manually Enter New-AzStreamAnalyticsFunction Description Here}}
+Creates or replaces a function in a Stream Analytics job.
 
 ### [New-AzStreamAnalyticsInput](New-AzStreamAnalyticsInput.md)
-{{Manually Enter New-AzStreamAnalyticsInput Description Here}}
+Creates or updates a job input.
 
 ### [New-AzStreamAnalyticsJob](New-AzStreamAnalyticsJob.md)
-{{Manually Enter New-AzStreamAnalyticsJob Description Here}}
+Creates or updates a Stream Analytics job.
 
 ### [New-AzStreamAnalyticsOutput](New-AzStreamAnalyticsOutput.md)
-{{Manually Enter New-AzStreamAnalyticsOutput Description Here}}
+Creates or updates outputs for a Stream Analytics job.
 
 ### [New-AzStreamAnalyticsTransformation](New-AzStreamAnalyticsTransformation.md)
-{{Manually Enter New-AzStreamAnalyticsTransformation Description Here}}
+Creates or updates a transformation within a job.
 
 ### [Remove-AzStreamAnalyticsFunction](Remove-AzStreamAnalyticsFunction.md)
-{{Manually Enter Remove-AzStreamAnalyticsFunction Description Here}}
+Deletes a function from a Stream Analytics job.
 
 ### [Remove-AzStreamAnalyticsInput](Remove-AzStreamAnalyticsInput.md)
-{{Manually Enter Remove-AzStreamAnalyticsInput Description Here}}
+Deletes an input from a Stream Analytics job.
 
 ### [Remove-AzStreamAnalyticsJob](Remove-AzStreamAnalyticsJob.md)
-{{Manually Enter Remove-AzStreamAnalyticsJob Description Here}}
+Removes a Stream Analytics job.
 
 ### [Remove-AzStreamAnalyticsOutput](Remove-AzStreamAnalyticsOutput.md)
-{{Manually Enter Remove-AzStreamAnalyticsOutput Description Here}}
+Deletes an output from a Stream Analytics job.
 
 ### [Start-AzStreamAnalyticsJob](Start-AzStreamAnalyticsJob.md)
-{{Manually Enter Start-AzStreamAnalyticsJob Description Here}}
+Starts a Stream Analytics job.
 
 ### [Stop-AzStreamAnalyticsJob](Stop-AzStreamAnalyticsJob.md)
-{{Manually Enter Stop-AzStreamAnalyticsJob Description Here}}
+Stops a Stream Analytics job.
 
 ### [Test-AzStreamAnalyticsFunction](Test-AzStreamAnalyticsFunction.md)
-{{Manually Enter Test-AzStreamAnalyticsFunction Description Here}}
+Tests whether Stream Analytics can connect to a function.
 
 ### [Test-AzStreamAnalyticsInput](Test-AzStreamAnalyticsInput.md)
-{{Manually Enter Test-AzStreamAnalyticsInput Description Here}}
+Tests the connection status of an input.
 
 ### [Test-AzStreamAnalyticsOutput](Test-AzStreamAnalyticsOutput.md)
-{{Manually Enter Test-AzStreamAnalyticsOutput Description Here}}
+Tests the connection status of an output.
 

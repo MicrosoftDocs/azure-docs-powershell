@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/get-azrediscachelink
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCacheLink.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCacheLink.md
 ---
 
 # Get-AzRedisCacheLink
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get geo replication link for Redis Cache.
 
 ## SYNTAX
 
@@ -36,26 +38,63 @@ Get-AzRedisCacheLink -SecondaryServerName <String> [-DefaultProfile <IAzureConte
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+There are four different ways to get geo-replication link detail. Either provide parameter Name or PrimaryServerName and/or SecondaryServerName. Name is given then all link where cache exists will be returned. If only PrimaryServerName is given then all links where cache is primary will be returned. If only SecondaryServerName is given then all links where cache is secondary will be returned. If PrimaryServerName and SecondaryServerName both are given then specific link with correct role will be returned. 
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get using parameter set AllLinksForCache
+```
+PS C:\>Get-AzRedisCacheLink -Name "mycache1"
+
+        PrimaryServerName   : mycache1
+        SecondaryServerName : mycache2
+        ProvisioningState   : Succeeded
 ```
 
-{{ Add example description here }}
+This command gets all geo-replication links for Redis Cache named mycache1.
+
+### Example 2: Get using parameter set AllLinksForPrimaryCache
+```
+PS C:\>Get-AzRedisCacheLink -PrimaryServerName "mycache1"
+
+        PrimaryServerName   : mycache1
+        SecondaryServerName : mycache2
+        ProvisioningState   : Succeeded
+```
+
+This command gets geo-replication links where Redis Cache named mycache1 is primary.
+
+### Example 3: Get using parameter set AllLinksForSecondaryCache
+```
+PS C:\>Get-AzRedisCacheLink -SecondaryServerName "mycache2"
+
+        PrimaryServerName   : mycache1
+        SecondaryServerName : mycache2
+        ProvisioningState   : Succeeded
+```
+
+This command gets geo-replication links where Redis Cache named mycache2 is secondary.
+
+### Example 4: Get using parameter set SingleLink
+```
+PS C:\>Get-AzRedisCacheLink -PrimaryServerName "mycache1" -SecondaryServerName "mycache2"
+
+        PrimaryServerName   : mycache1
+        SecondaryServerName : mycache2
+        ProvisioningState   : Succeeded
+```
+
+This command gets a single geo-replication links where Redis Cache named mycache1 is primary and Redis Cache named mycache2 is secondary.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -110,8 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -124,3 +162,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzRedisCacheLink](./New-AzRedisCacheLink.md)
+
+[Remove-AzRedisCacheLink](./Remove-AzRedisCacheLink.md)
+
+[Get-AzRedisCache](./Get-AzRedisCache.md)
+
+[New-AzRedisCache](./New-AzRedisCache.md)
+
+[Remove-AzRedisCache](./Remove-AzRedisCache.md)
+
+[Set-AzRedisCache](./Set-AzRedisCache.md)

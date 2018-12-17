@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkusage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkUsage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkUsage.md
 ---
 
 # Get-AzNetworkUsage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists network usages for a subscription
 
 ## SYNTAX
 
@@ -17,26 +19,70 @@ Get-AzNetworkUsage -Location <String> [-DefaultProfile <IAzureContextContainer>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzNetworkUsage cmdlet gets limits and current usage for Network resources.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzNetworkUsage -Location westcentralus
+
+ResourceType : Virtual Networks
+CurrentValue : 6
+Limit        : 50
+
+ResourceType : Static Public IP Addresses
+CurrentValue : 1
+Limit        : 20
+
+ResourceType : Network Security Groups
+CurrentValue : 2
+Limit        : 100
+
+ResourceType : Public IP Addresses
+CurrentValue : 6
+Limit        : 60
+
+ResourceType : Network Interfaces
+CurrentValue : 1
+Limit        : 300
+
+ResourceType : Load Balancers
+CurrentValue : 1
+Limit        : 100
+
+ResourceType : Application Gateways
+CurrentValue : 1
+Limit        : 50
+
+ResourceType : Route Tables
+CurrentValue : 0
+Limit        : 100
+
+ResourceType : Route Filters
+CurrentValue : 0
+Limit        : 1000
+
+ResourceType : Network Watchers
+CurrentValue : 1
+Limit        : 1
+
+ResourceType : Packet Captures
+CurrentValue : 0
+Limit        : 10
 ```
 
-{{ Add example description here }}
+Gets resources usage data in westcentralus region
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -46,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+The location where resource usage is queried.
 
 ```yaml
 Type: System.String
@@ -61,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

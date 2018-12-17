@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: 9B3B6AD4-C37C-4877-9864-9FB2E3B0BDAB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/set-azintegrationaccountpartner
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzIntegrationAccountPartner.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzIntegrationAccountPartner.md
 ---
 
 # Set-AzIntegrationAccountPartner
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an integration account partner.
 
 ## SYNTAX
 
@@ -19,21 +22,36 @@ Set-AzIntegrationAccountPartner -ResourceGroupName <String> -Name <String> -Part
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzIntegrationAccountPartner** cmdlet modifies an integration account partner.
+This cmdlet returns an object that represents the integration account partner.
+Specify the integration account name, resource group name, and partner name.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify an integration account partner
+```
+PS C:\>Set-AzIntegrationAccountPartner -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -PartnerName "IntegrationAccountPartner22" -PartnerType "B2B" -BusinessIdentities $BusinessIdentities
+Id                 : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/partners/IntegrationAccountPartner1
+Name               : IntegrationAccountPartner1
+Type               : Microsoft.Logic/integrationAccounts/partners
+PartnerType        : B2B
+CreatedTime        : 3/26/2016 7:29:30 PM
+ChangedTime        : 3/26/2016 7:29:30 PM
+BusinessIdentities : [{"Qualifier":"ZZ","Value":"AA"},{"Qualifier":"XX","Value":"GG"}]
+Metadata
 ```
 
-{{ Add example description here }}
+This command modify the integration account partner named IntegrationAccountPartner22 in the specified resource group.
 
 ## PARAMETERS
 
 ### -BusinessIdentities
-The integration account partner business identities.
+Specifies business identities for the integration account partner.
+Specify a hash table.
 
 ```yaml
 Type: System.Object
@@ -48,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-The integration account partner metadata.
+Specifies a metadata object for the partner.
 
 ```yaml
 Type: System.Object
@@ -93,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The integration account name.
+Specifies the name of an integration account.
 
 ```yaml
 Type: System.String
@@ -108,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerName
-The integration account partner name.
+Specifies the name of the integration account partner.
 
 ```yaml
 Type: System.String
@@ -123,7 +141,8 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerType
-The integration account partner type.
+Specifies the type of the integration account.
+This parameter supports the type B2B.
 
 ```yaml
 Type: System.String
@@ -139,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The integration account resource group name.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -163,7 +182,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -179,14 +198,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -199,3 +217,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzIntegrationAccountPartner](./Get-AzIntegrationAccountPartner.md)
+
+[New-AzIntegrationAccountPartner](./New-AzIntegrationAccountPartner.md)
+
+[Remove-AzIntegrationAccountPartner](./Remove-AzIntegrationAccountPartner.md)
+
+

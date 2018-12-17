@@ -1,20 +1,23 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 0C8C07CA-6720-452F-A952-48C76EBF3BBD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azadserviceprincipal
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzADServicePrincipal.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzADServicePrincipal.md
 ---
 
 # Remove-AzADServicePrincipal
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes the azure active directory service principal.
 
 ## SYNTAX
 
 ### ObjectIdParameterSet (Default)
 ```
-Remove-AzADServicePrincipal -ObjectId <Guid> [-PassThru] [-Force] [-DefaultProfile <IAzureContextContainer>]
+Remove-AzADServicePrincipal -ObjectId <String> [-PassThru] [-Force] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -49,16 +52,49 @@ Remove-AzADServicePrincipal -ApplicationObject <PSADApplication> [-PassThru] [-F
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Deletes the azure active directory service principal.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Remove a service principal by object id
+
+```
+PS C:\> Remove-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```
 
-{{ Add example description here }}
+Removes the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.
+
+### Example 2 - Remove a service principal by application id
+
+```
+PS C:\> Remove-AzADServicePrincipal -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76
+```
+
+Removes the service principal with application id '9263469e-d328-4321-8646-3e3e75d20e76'.
+
+### Example 3 - Remove a service principal by SPN
+
+```
+PS C:\> Remove-AzADServicePrincipal -ServicePrincipalName MyServicePrincipal
+```
+
+Remove the service principal with service principal name "MyServicePrincipal"
+
+### Example 4 - Remove a service principal by piping
+
+```
+PS C:\> Get-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 | Remove-AzADServicePrincipal
+```
+
+Gets the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove that service principal.
+
+### Example 5 - Remove a service principal by piping an application
+
+```
+PS C:\> Get-AzApplication -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76 | Remove-AzADServicePrincipal
+```
+
+Gets the application with application id '9263469e-d328-4321-8646-3e3e75d20e76' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove the service principal associated with that application.
 
 ## PARAMETERS
 
@@ -81,7 +117,7 @@ Accept wildcard characters: False
 The application object whose service principal is being removed.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 Parameter Sets: ApplicationObjectParameterSet
 Aliases:
 
@@ -93,12 +129,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -123,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Switch to delete service principal without a confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,7 +177,7 @@ Accept wildcard characters: False
 The service principal object.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 Parameter Sets: InputObjectParameterSet
 Aliases:
 
@@ -153,10 +189,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The service principal object id.
+The object id of the service principal to delete.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ObjectIdParameterSet
 Aliases: PrincipalId, Id
 
@@ -168,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+If specified, returns the deleted service principal.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -229,23 +265,33 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.Guid
-
 ### System.String
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+### System.Guid
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
+
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
+
+[New-AzADServicePrincipal](./New-AzADServicePrincipal.md)
+
+[Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
+
+[Set-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
+
+[Remove-AzADApplication](./Remove-AzADApplication.md)
+
+[Remove-AzADAppCredential](./Remove-AzADAppCredential.md)

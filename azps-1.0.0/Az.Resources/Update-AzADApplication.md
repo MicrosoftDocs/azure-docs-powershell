@@ -1,20 +1,22 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/update-azadapplication
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzADApplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzADApplication.md
 ---
 
 # Update-AzADApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates an existing azure active directory application.
 
 ## SYNTAX
 
 ### ApplicationObjectIdWithUpdateParamsParameterSet (Default)
 ```
-Update-AzADApplication -ObjectId <Guid> [-DisplayName <String>] [-HomePage <String>]
+Update-AzADApplication -ObjectId <String> [-DisplayName <String>] [-HomePage <String>]
  [-IdentifierUri <String[]>] [-ReplyUrl <String[]>] [-AvailableToOtherTenants <Boolean>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -34,21 +36,39 @@ Update-AzADApplication -InputObject <PSADApplication> [-DisplayName <String>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Updates an existing azure active directory application.
+To update the credentials associated with this application, please use the New-AzADAppCredential cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Update the display name of an application
+
+```
+PS C:\> Update-AzADApplication -ObjectId fb7b3405-ca44-4b5b-8584-12392f5d96d7 -DisplayName MyNewDisplayName
 ```
 
-{{ Add example description here }}
+Updates the display name of the application with object id 'fb7b3405-ca44-4b5b-8584-12392f5d96d7' to be 'MyNewDisplayName'.
+
+### Example 2 - Update all properties of an application
+
+```
+PS C:\> Update-AzADApplication -ObjectId fb7b3405-ca44-4b5b-8584-12392f5d96d7 -DisplayName MyNewDisplayName -HomePage https://www.microsoft.com -IdentifierUris "https://UpdateAppUri"
+```
+
+Updates the properties of an application with object id 'fb7b3405-ca44-4b5b-8584-12392f5d96d7'.
+
+### Example 3 - Update the display name of an application using piping
+
+```
+PS C:\> Get-AzADApplication -ObjectId fb7b3405-ca44-4b5b-8584-12392f5d96d7 | Update-AzADApplication -DisplayName MyNewDisplayName
+```
+
+Gets the application with object id 'fb7b3405-ca44-4b5b-8584-12392f5d96d7' and pipes that to the Update-AzADApplication cmdlet to update the display name of the application to "MyNewDisplayName".
 
 ## PARAMETERS
 
 ### -ApplicationId
-The application id.
+The application id of the application to update.
 
 ```yaml
 Type: System.Guid
@@ -93,9 +113,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -105,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The display name for the application.
+The display name for the application to update.
 
 ```yaml
 Type: System.String
@@ -186,10 +206,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-The application object.
+The object representing the application to update.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 Parameter Sets: InputObjectWithUpdateParamsParameterSet
 Aliases:
 
@@ -201,10 +221,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The application object id.
+The object id of the application to update.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ApplicationObjectIdWithUpdateParamsParameterSet
 Aliases:
 
@@ -274,16 +294,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### System.String
+
 ### System.Guid
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
-
-### System.String
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
 ### System.String[]
 
@@ -291,7 +310,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
 ## NOTES
 

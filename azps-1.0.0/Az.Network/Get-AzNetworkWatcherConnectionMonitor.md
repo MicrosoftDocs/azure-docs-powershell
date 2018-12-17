@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatcher
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkWatcherConnectionMonitor.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkWatcherConnectionMonitor.md
 ---
 
 # Get-AzNetworkWatcherConnectionMonitor
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns connection monitor with specified name or the list of connection monitors
 
 ## SYNTAX
 
@@ -37,16 +39,43 @@ Get-AzNetworkWatcherConnectionMonitor -ResourceId <String> [-DefaultProfile <IAz
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzNetworkWatcherConnectionMonitor cmdlet returns the connection monitor with the specified name / resourceId or the list of connection monitors corresponding to the specified network watcher / location.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get connection monitor by name in the specified location
+```
+PS C:\> Get-AzNetworkWatcherConnectionMonitor -Location centraluseuap -Name cm
+
+
+Name                        : cm
+Id                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGro
+                              ups/NetworkWatcherRG/providers/Microsoft.Network/networkWatcher
+                              s/NetworkWatcher_centraluseuap/connectionMonitors/cm
+Etag                        : W/"40961b58-e379-4204-a47b-0c477739b095"
+ProvisioningState           : Succeeded
+Source                      : {
+                                "ResourceId": "/subscriptions/96e68903-0a56-4819-9987-8d08ad6
+                              a1f99/resourceGroups/VarunRgCentralUSEUAP/providers/Microsoft.C
+                              ompute/virtualMachines/irinavm",
+                                "Port": 0
+                              }
+Destination                 : {
+                                "Address": "google.com",
+                                "Port": 80
+                              }
+MonitoringIntervalInSeconds : 60
+AutoStart                   : True
+StartTime                   : 1/12/2018 7:19:28 PM
+MonitoringStatus            : Stopped
+Location                    : centraluseuap
+Type                        : Microsoft.Network/networkWatchers/connectionMonitors
+Tags                        : {
+                                "key1": "value1"
+                              }
 ```
 
-{{ Add example description here }}
+In this example we get connection monitor by name in the specified location.
 
 ## PARAMETERS
 
@@ -54,9 +83,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -141,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Resource ID.
+Resource ID of the connection monitor.
 
 ```yaml
 Type: System.String
@@ -156,8 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -170,5 +198,60 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Network.Models.PSConnectionMonitorResult
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher, connection monitor
 
 ## RELATED LINKS
+
+[New-AzNetworkWatcher]()
+
+[Get-AzNetworkWatcher]()
+
+[Remove-AzNetworkWatcher]()
+
+[Get-AzNetworkWatcherNextHop]()
+
+[Get-AzNetworkWatcherSecurityGroupView]()
+
+[Get-AzNetworkWatcherTopology]()
+
+[Get-AzNetworkWatcherTroubleshootingResult]()
+
+[New-AzNetworkWatcherPacketCapture]()
+
+[New-AzPacketCaptureFilterConfig]()
+
+[Get-AzNetworkWatcherPacketCapture]()
+
+[Remove-AzNetworkWatcherPacketCapture]()
+
+[Stop-AzNetworkWatcherPacketCapture]()
+
+[Get-AzNetworkWatcherConnectionMonitor]()
+
+[Get-AzNetworkWatcherConnectionMonitorReport]()
+
+[Remove-AzNetworkWatcherConnectionMonitor]()
+
+[Set-AzNetworkWatcherConnectionMonitor]()
+
+[Stop-AzNetworkWatcherConnectionMonitor]()
+
+[New-AzNetworkWatcherConnectionMonitor]()
+
+[New-AzNetworkWatcherProtocolConfiguration]()
+
+[Test-AzNetworkWatcherIPFlow]()
+
+[Test-AzNetworkWatcherConnectivity]()
+
+[Start-AzNetworkWatcherResourceTroubleshooting]()
+
+[Start-AzNetworkWatcherConnectionMonitor]()
+
+[Set-AzNetworkWatcherConfigFlowLog]()
+
+[Get-AzNetworkWatcherReachabilityReport]()
+
+[Get-AzNetworkWatcherReachabilityProvidersList]()
+
+[Get-AzNetworkWatcherFlowLogStatus]()

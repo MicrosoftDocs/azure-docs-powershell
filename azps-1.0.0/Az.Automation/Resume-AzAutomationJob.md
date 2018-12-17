@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 9400E9EB-E927-44D5-8722-9706BDD92FD5
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/resume-azautomationjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Resume-AzAutomationJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Resume-AzAutomationJob.md
 ---
 
 # Resume-AzAutomationJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Resumes a suspended Automation job.
 
 ## SYNTAX
 
@@ -18,21 +21,23 @@ Resume-AzAutomationJob [-Id] <Guid> [-ResourceGroupName] <String> [-AutomationAc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Resume-AzAutomationJob** cmdlet resumes a suspended Azure Automation job.
+Specify the suspended job.
+To suspend a job, use the Suspend-AzAutomationJob cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Resume a suspended job
+```
+PS C:\>Resume-AzAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command resumes the job that has the specified ID.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account in which this cmdlet resume a job.
 
 ```yaml
 Type: System.String
@@ -47,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The job id.
+Specifies the ID of a job that this cmdlet resumes.
 
 ```yaml
 Type: System.Guid
@@ -77,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet resumes a job.
 
 ```yaml
 Type: System.String
@@ -92,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -108,3 +112,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationJob](./Get-AzAutomationJob.md)
+
+[Get-AzAutomationJobOutput](./Get-AzAutomationJobOutput.md)
+
+[Stop-AzAutomationJob](./Stop-AzAutomationJob.md)
+
+[Suspend-AzAutomationJob](./Suspend-AzAutomationJob.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 45F35BDD-969E-4521-9E8D-3499A15434A6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmextensionimagetype
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMExtensionImageType.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMExtensionImageType.md
 ---
 
 # Get-AzVMExtensionImageType
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the type of an Azure extension.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Get-AzVMExtensionImageType -Location <String> -PublisherName <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMExtensionImageType** cmdlet gets the type of an Azure extension.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get an extension image type
+```
+PS C:\> Get-AzVMExtensionImageType -Location "Central US" -PublisherName "Fabrikam"
 ```
 
-{{ Add example description here }}
+This command gets the extension image type for the specified publisher and location.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+Specifies the location of an extension.
+This cmdlet gets the type for an extension at the location that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -62,7 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherName
-{{Fill PublisherName Description}}
+Specifies the name of a publisher of an extension.
+To obtain an extension publisher, use the Get-AzVMImagePublisher cmdlet.
+This cmdlet gets the type for an extension from the publisher that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -77,8 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +96,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMExtensionImage](./Get-AzVMExtensionImage.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+

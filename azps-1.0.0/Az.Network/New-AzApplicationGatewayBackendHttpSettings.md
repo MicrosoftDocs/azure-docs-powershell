@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewaybackendhttpsettings
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzApplicationGatewayBackendHttpSettings.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzApplicationGatewayBackendHttpSettings.md
 ---
 
 # New-AzApplicationGatewayBackendHttpSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates back-end HTTP settings for an application gateway.
 
 ## SYNTAX
 
@@ -17,23 +19,25 @@ New-AzApplicationGatewayBackendHttpSettings -Name <String> -Port <Int32> -Protoc
  -CookieBasedAffinity <String> [-RequestTimeout <Int32>]
  [-ConnectionDraining <PSApplicationGatewayConnectionDraining>] [-ProbeId <String>]
  [-Probe <PSApplicationGatewayProbe>]
- [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
- [-TrustedRootCertificate <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate]>]
- [-PickHostNameFromBackendAddress] [-HostName <String>] [-AffinityCookieName <String>] [-Path <String>]
+ [-AuthenticationCertificates <PSApplicationGatewayAuthenticationCertificate[]>]
+ [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>] [-PickHostNameFromBackendAddress]
+ [-HostName <String>] [-AffinityCookieName <String>] [-Path <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzApplicationGatewayBackendHttpSettings cmdlet creates back-end HTTP settings for an application gateway.
+Back-end HTTP settings are applied to all back-end servers in a pool.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create back-end HTTP settings
+```
+PS C:\>$Setting = New-AzApplicationGatewayBackendHttpSettings -Name "Setting01" -Port 80 -Protocol Http -CookieBasedAffinity Disabled
 ```
 
-{{ Add example description here }}
+This command creates back-end HTTP settings named Setting01 on port 80, using the HTTP protocol, with cookie-based affinity disabled.
+The settings are stored in the $Setting variable.
 
 ## PARAMETERS
 
@@ -53,10 +57,10 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationCertificates
-Application gateway Authentication Certificates
+Specifies authentication certificates for the application gateway.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate[]
 Parameter Sets: (All)
 Aliases:
 
@@ -83,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -CookieBasedAffinity
-Cookie Based Affinity
+Specifies whether cookie-based affinity should be enabled or disabled for the back-end server pool.
 
 ```yaml
 Type: System.String
@@ -99,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -129,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the backend http settings
+Specifies the name of the back-end HTTP settings that this cmdlet creates.
 
 ```yaml
 Type: System.String
@@ -175,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-Port
+Specifies the port of the back-end server pool.
 
 ```yaml
 Type: System.Int32
@@ -190,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Probe
-Application gateway Probe
+Specifies a probe to associate with the back-end server pool.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe
@@ -205,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProbeId
-ID of the application gateway Probe
+Specifies the ID of the probe to associate with the back-end server pool.
 
 ```yaml
 Type: System.String
@@ -220,7 +224,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Protocol
+Specifies the protocol to use for communication between the application gateway and the back-end servers.
+The acceptable values for this parameter are: Http and Https.
 
 ```yaml
 Type: System.String
@@ -236,8 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestTimeout
-Request Timeout.
-Default value 30 seconds.
+Specifies a request time-out value.
 
 ```yaml
 Type: System.Int32
@@ -255,7 +259,7 @@ Accept wildcard characters: False
 Application gateway Trusted Root Certificates
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate]
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate[]
 Parameter Sets: (All)
 Aliases:
 
@@ -267,8 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -281,3 +284,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzApplicationGatewayBackendHttpSettings]()
+
+[Get-AzApplicationGatewayBackendHttpSettings]()
+
+[Remove-AzApplicationGatewayBackendHttpSettings]()
+
+[Set-AzApplicationGatewayBackendHttpSettings]()
+

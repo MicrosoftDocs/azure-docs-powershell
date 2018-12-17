@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.ARM.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: C635D723-0F03-4EF8-9435-24DBE0859899
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/set-azrecoveryservicesbackupproperties
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesBackupProperties.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesBackupProperties.md
 ---
 
 # Set-AzRecoveryServicesBackupProperties
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the properties for backup management.
 
 ## SYNTAX
 
@@ -19,21 +22,23 @@ Set-AzRecoveryServicesBackupProperties -Vault <ARSVault>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzRecoveryServicesBackupProperties** cmdlet sets backup storage properties for a Recovery Services vault.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set GeoRedundant storage for a vault
+```
+PS C:\> $Vault01 = Get-AzRecoveryServicesVault -Name "TestVault"
+PS C:\> Set-AzRecoveryServicesBackupProperties -Vault $Vault01 -BackupStorageRedundancy GeoRedundant
 ```
 
-{{ Add example description here }}
+The first command gets the vault named TestVault, and then stores it in the $Vault01 variable.
+The second command sets the backup storage redundancy for $Vault01 to GeoRedundant.
 
 ## PARAMETERS
 
 ### -BackupStorageRedundancy
-{{Fill BackupStorageRedundancy Description}}
+Specifies the backup storage redundancy type.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.AzureRmRecoveryServicesBackupStorageRedundancyType]
@@ -49,12 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -Vault
-{{Fill Vault Description}}
+Specifies the name of the vault.
+The vault must be an **AzureRmRecoveryServicesVault** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
@@ -94,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -110,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -124,3 +128,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupProperties](./Get-AzRecoveryServicesBackupProperties.md)
+
+[Get-AzRecoveryServicesVault](./Get-AzRecoveryServicesVault.md)
+
+

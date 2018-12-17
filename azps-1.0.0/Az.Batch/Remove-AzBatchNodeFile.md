@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: DBA02017-8372-4A91-A4F1-985777DEDAB9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/remove-azbatchnodefile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchNodeFile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchNodeFile.md
 ---
 
 # Remove-AzBatchNodeFile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a node file for a task or compute node.
 
 ## SYNTAX
 
@@ -33,25 +36,42 @@ Remove-AzBatchNodeFile [[-InputObject] <PSNodeFile>] [-Force] [-Recursive] -Batc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzBatchNodeFile** cmdlet deletes an Azure Batch node file for a task or compute node.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Delete a file assocated with a task
+```
+PS C:\>Remove-AzBatchNodeFile -JobId "Job-000001" -TaskId "Task26" -Path "wd\testFile.txt" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command deletes the node file that is named wd\testFile.txt.
+That file is associated with the task that has the ID Task26 under the job Job-000001.
+
+### Example 2: Delete a file from a compute node
+```
+PS C:\>Remove-AzBatchNodeFile -PoolId "Pool07" -ComputeNodeId "tvm-2316545714_1-20150725t213220z" -Path "startup\testFile.txt" -BatchContext $Context
+```
+
+This command deletes the node file that is named startup\testFile.txt from the specified compute node in the pool that has the ID Pool07.
+
+### Example 3: Remove a file by using the pipeline
+```
+PS C:\>Get-AzBatchNodeFile -JobId "Job-000001" -TaskId "Task26" -Path "wd\testFile2.txt" -BatchContext $Context | Remove-AzBatchNodeFile -Force -BatchContext $Context
+```
+
+This command gets the node file by using **Get-AzBatchNodeFile**.
+That file is associated with the task that has the ID Task26 under the job Job-000001.
+The command passes that file to the current cmdlet by using the pipeline.
+The current cmdlet removes the node file.
+The command specifies the *Force* parameter.
+Therefore, the command does not prompt you for confirmation.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -66,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNodeId
-The id of the compute node.
+Specifies the ID of the compute node that contains the Batch node file that this cmdlet deletes.
 
 ```yaml
 Type: System.String
@@ -81,12 +101,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -96,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -111,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+Specifies **PSNodeFile** object that represent the node file that this cmdlet deletes.
+To obtain a **PSNodeFile**, use the Get-AzBatchNodeFile cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSNodeFile
@@ -126,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-The id of the job containing the task.
+Specifies the ID of the job that contains the task.
 
 ```yaml
 Type: System.String
@@ -156,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool containing the compute node.
+Specifies the ID of the pool that contains the compute nodes for which this cmdlet removes a file.
 
 ```yaml
 Type: System.String
@@ -171,7 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -Recursive
-{{Fill Recursive Description}}
+Indicates that this cmdlet deletes the folder and all subfolders and files under the specified path.
+This cmdlet is relevant only if the path is a folder.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -186,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskId
-The id of the task.
+Specifies the ID of the task.
 
 ```yaml
 Type: System.String
@@ -210,7 +232,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -226,14 +248,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -250,3 +271,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Get-AzBatchNodeFile](./Get-AzBatchNodeFile.md)
+
+[Get-AzBatchNodeFileContent](./Get-AzBatchNodeFileContent.md)
+
+

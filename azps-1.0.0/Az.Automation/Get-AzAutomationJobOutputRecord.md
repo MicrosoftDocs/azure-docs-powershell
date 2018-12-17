@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 38BB4F4E-B72B-460E-8DF2-2A7A9CACDB41
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationjoboutputrecord
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationJobOutputRecord.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationJobOutputRecord.md
 ---
 
 # Get-AzAutomationJobOutputRecord
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the full output of an Automation job output record.
 
 ## SYNTAX
 
@@ -18,21 +21,25 @@ Get-AzAutomationJobOutputRecord [-JobId] <Guid> [-Id] <String> [-ResourceGroupNa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationJobOutputRecord** cmdlet gets the full output of an Automation job output record.
+Although the **Get-AzAutomationJobOutput** cmdlet lists one or more job output records, it returns only a summary, as a string, of the value of any output record.
+It does not return the full value of an output record's outputted value in its original type.
+In addition, the summary has a maximum length, which the full value that this cmdlet outputs may exceed.
+Unlike **Get-AzAutomationJobOutput**, this cmdlet returns the full value in its originally outputted type, for any output record's outputted value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the full output of an Automation job
+```
+PS C:\>Get-AzAutomationJobOutput -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01" -Stream "Any" | Get-AzAutomationJobOutputRecord
 ```
 
-{{ Add example description here }}
+This command gets the full output of the job that has the specified job ID.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account for which this cmdlet gets a job output record.
 
 ```yaml
 Type: System.String
@@ -47,12 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The stream record id
+Specifies the ID of a job output record for this cmdlet to retrieve.
 
 ```yaml
 Type: System.String
@@ -77,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-The job Id
+Specifies the ID of a job for which this cmdlet gets an output record.
 
 ```yaml
 Type: System.Guid
@@ -92,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet gets a job output record.
 
 ```yaml
 Type: System.String
@@ -107,8 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +129,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationJobOutput](./Get-AzAutomationJobOutput.md)
+
+

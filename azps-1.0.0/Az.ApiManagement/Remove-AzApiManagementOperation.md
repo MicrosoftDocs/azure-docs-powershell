@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: A4A8D996-72A2-4154-98DA-5F84CAA010B9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementoperation
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementOperation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementOperation.md
 ---
 
 # Remove-AzApiManagementOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an existing operation.
 
 ## SYNTAX
 
@@ -19,22 +22,22 @@ Remove-AzApiManagementOperation -Context <PsApiManagementContext> -ApiId <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzApiManagementOperation** cmdlet removes an existing operation.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an existing API Operation
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementOperation -Context $apimContext -ApiId "0123456789" -OperationId "9876543210" -Force
 ```
 
-{{ Add example description here }}
+This command removes an existing API Operation.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of API.
-This parameter is required.
+Specifies the identifier of the API.
 
 ```yaml
 Type: System.String
@@ -49,9 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Identifier of API Revision.
-This parameter is optional.
-If not specified, the operation will be removed from the currently active api revision.
+Identifier of API Revision. This parameter is optional. If not specified, the operation will be removed from the currently active api revision.
 
 ```yaml
 Type: System.String
@@ -66,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of **PsApiManagementContext**.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -82,12 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -97,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier of API operation.
-This parameter is required.
+Specifies the identifier of the API operation.
 
 ```yaml
 Type: System.String
@@ -113,8 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
+Indicates that this cmdlet returns a value of $True if it succeeds, or a value of $False, otherwise.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -138,7 +136,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -154,14 +152,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,3 +175,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementOperation](./Get-AzApiManagementOperation.md)
+
+[New-AzApiManagementOperation](./New-AzApiManagementOperation.md)
+
+[Set-AzApiManagementOperation](./Set-AzApiManagementOperation.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 3B15C734-DF57-433A-8854-ACE2B35FF6CB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmaemextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMAEMExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMAEMExtension.md
 ---
 
 # Set-AzVMAEMExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables support for monitoring for SAP systems.
 
 ## SYNTAX
 
@@ -19,26 +22,28 @@ Set-AzVMAEMExtension [-ResourceGroupName] <String> [-VMName] <String> [-EnableWA
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMAEMExtension** cmdlet updates the configuration of a virtual machine to enable or update the support for monitoring for SAP systems that are installed on the virtual machine.
+The cmdlet installs the Azure Enhanced Monitoring (AEM) extension that collects the performance data and makes it discoverable for the SAP system.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Use AEM extension
+```
+PS C:\> Set-AzVMAEMExtension -ResourceGroupName "ResourceGroup11" -VMName "contoso-server" -WADStorageAccountName "stdstorage"
 ```
 
-{{ Add example description here }}
+This command configures the virtual machine named contoso-server to use the AEM extension.
+The command specifies the storage account named stdstorage.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -57,14 +62,15 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -OSType
-Operating System Type of the virtual machines.
-Possible values: Windows | Linux
+Specifies the type of the operating system of the operating system disk.
+If the operating system disk does not have a type, you must specify this parameter.
+The acceptable values for this parameter are: Windows and Linux.
 
 ```yaml
 Type: System.String
@@ -79,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -94,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipStorage
-Disables the settings for table content
+Indicates that this cmdlet skips configuration of storage.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -109,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine.
+This cmdlet adds the AEM extension for the virtual machine that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -124,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -WADStorageAccountName
-Name of the storage account that should be used to store analytics data.
+Specifies the name of the storage account that this cmdlet uses to configure the LinuxDiagnostics or IaaSDiagnostics extension.
+If the virtual machine does not use a standard storage account, you must specify a value for this parameter.
 
 ```yaml
 Type: System.String
@@ -139,8 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -153,3 +160,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMAEMExtension](./Get-AzVMAEMExtension.md)
+
+[Remove-AzVMAEMExtension](./Remove-AzVMAEMExtension.md)
+
+[Test-AzVMAEMExtension](./Test-AzVMAEMExtension.md)
+
+

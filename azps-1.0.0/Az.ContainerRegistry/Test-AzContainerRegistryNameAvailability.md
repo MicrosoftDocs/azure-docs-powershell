@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/test-azcontainerregistrynameavailability
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Test-AzContainerRegistryNameAvailability.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Test-AzContainerRegistryNameAvailability.md
 ---
 
 # Test-AzContainerRegistryNameAvailability
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Checks the availability of a container registry name.
 
 ## SYNTAX
 
@@ -18,26 +20,30 @@ Test-AzContainerRegistryNameAvailability [-Name] <String> [-DefaultProfile <IAzu
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Test-AzContainerRegistryNameAvailability cmdlet checks whether a container registry name is valid and available to use.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Checks the availability of a container registry name
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Test-AzContainerRegistryNameAvailability -Name 'SomeRegistryName'
+
+NameAvailable Reason Message
+------------- ------ -------
+         True
 ```
 
-{{ Add example description here }}
+This command checks the availability of the container registry name \`SomeRegistryName\`.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,8 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -76,3 +81,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistry]()
+

@@ -1,34 +1,74 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: A29E9921-C1B9-42C2-B816-5D4873AC6688
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azfirewallapplicationrulecollection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewallApplicationRuleCollection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewallApplicationRuleCollection.md
 ---
 
 # New-AzFirewallApplicationRuleCollection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a collection of Firewall application rules.
 
 ## SYNTAX
 
 ```
 New-AzFirewallApplicationRuleCollection -Name <String> -Priority <UInt32>
- -Rule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRule]>
- -ActionType <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Rule <PSAzureFirewallApplicationRule[]> -ActionType <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzFirewallApplicationRuleCollection** cmdlet creates a collection of Firewall Application Rules.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:  Create a collection with one rule
+```
+$rule1 = New-AzFirewallApplicationRule -Name "httpsRule" -Protocol "https:443" -TargetFqdn "*" -SourceAddress "10.0.0.0"
+New-AzFirewallApplicationRuleCollection -Name "MyAppRuleCollection" -Priority 1000 -Rule $rule1 -ActionType "Allow"
 ```
 
-{{ Add example description here }}
+This example creates a collection with one rule. All traffic that matches the conditions identified in $rule1 will be allowed.
+The first rule is for all HTTPS traffic on port 443 from 10.0.0.0. 
+If there is another application rule collection with higher priority (smaller number) which also matches traffic identified in $rule1,
+the action of the rule collection with higher priority will take in effect instead. 
+
+### 2:  Add a rule to a rule collection
+```
+$rule1 = New-AzFirewallApplicationRule -Name R1 -Protocol "http:80","https:443" -TargetFqdn "*google.com", "*microsoft.com" -SourceAddress "10.0.0.0"
+$ruleCollection = New-AzFirewallApplicationRuleCollection -Name "MyAppRuleCollection" -Priority 100 -Rule $rule1 -ActionType "Allow"
+
+$rule2 = New-AzFirewallApplicationRule -Name R2 -Protocol "http:80","https:443" -TargetFqdn "*google.com", "*microsoft.com" 
+$ruleCollection.AddRule($rule2)
+```
+
+This example creates a new application rule collection with one rule and then adds a second rule to the rule collection using method
+AddRule on the rule collection object. Each rule name in a given rule collection must have a unique name and is case insensitive.
+
+### 3:  Get a rule from a rule collection
+```
+$rule1 = New-AzFirewallApplicationRule -Name R1 -Protocol "http:80","https:443" -TargetFqdn "*google.com", "*microsoft.com" -SourceAddress "10.0.0.0"
+$ruleCollection = New-AzFirewallApplicationRuleCollection -Name "MyAppRuleCollection" -Priority 100 -Rule $rule1 -ActionType "Allow"
+$getRule=$ruleCollection.GetRuleByName("r1")
+```
+
+This example creates a new application rule collection with one rule and then gets the rule by name, calling method GetRuleByName on the 
+rule collection object. The rule name for method GetRuleByName is case-insensitive.
+
+### 4:  Remove a rule from a rule collection
+```
+$rule1 = New-AzFirewallApplicationRule -Name R1 -Protocol "http:80","https:443" -TargetFqdn "*google.com", "*microsoft.com" -SourceAddress "10.0.0.0"
+$rule2 = New-AzFirewallApplicationRule -Name R2 -Protocol "http:80","https:443" -TargetFqdn "*google.com", "*microsoft.com" 
+$ruleCollection = New-AzFirewallApplicationRuleCollection -Name "MyAppRuleCollection" -Priority 100 -Rule $rule1, $rule1 -ActionType "Allow"
+$ruleCollection.RemoveRuleByName("r1")
+```
+
+This example creates a new application rule collection with two rules and then removes the first rule from the rule collection by calling method
+RemoveRuleByName on the rule collection object. The rule name for method RemoveRuleByName is case-insensitive.
 
 ## PARAMETERS
 
@@ -49,12 +89,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Application Rule Collection
+Specifies the name of this application rule. The name must be unique inside a rule collection.
 
 ```yaml
 Type: System.String
@@ -79,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The priority of the rule collection
+Specifies the priority of this rule. Priority is a number between 100 and 65000. The smaller the number, the bigger the priority.
 
 ```yaml
 Type: System.UInt32
@@ -94,10 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -Rule
-The list of application rules
+Specifies the list of rules to be grouped under this collection.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRule]
+Type: Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -118,7 +158,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -134,14 +174,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +193,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzFirewallApplicationRule](./New-AzFirewallApplicationRule.md)
+
+[New-AzFirewall](./New-AzFirewall.md)
+
+[Get-AzFirewall](./Get-AzFirewall.md)

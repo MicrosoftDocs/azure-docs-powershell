@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: BD311CEF-378B-463E-8998-CC3E9A5B3A7B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/set-aznotificationhubauthorizationrules
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzNotificationHubAuthorizationRules.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzNotificationHubAuthorizationRules.md
 ---
 
 # Set-AzNotificationHubAuthorizationRules
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets authorization rules for a notification hub.
 
 ## SYNTAX
 
@@ -27,26 +30,50 @@ Set-AzNotificationHubAuthorizationRules [-ResourceGroup] <String> [-Namespace] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzNotificationHubAuthorizationRules** cmdlet modifies a Shared Access Signature (SAS) authorization rule assigned to a notification hub.
+Authorization rules manage access to your notification hubs by the creation of links, as URIs, based on different permission levels.
+Permission levels can be one of the following: 
+- Listen
+- Send
+- Manage
+Clients are directed to one of these URIs based on the appropriate permission level.
+For example, a client given the Listen permission will be directed to the URI for that permission.
+This cmdlet provides two ways to modify an authorization rule assigned to a notification hub.
+For one, you can create an instance of the **SharedAccessAuthorizationRuleAttributes** object and then configure that object with the property values you want the rule to possess.
+You can configure the object through the .NET Framework.
+You can then copy those property values to your rule by using *SASRule* parameter.
+Alternatively, you can create a JSON (JavaScript Object Notation) file containing the relevant configuration values and then apply those values through the *InputFile* parameter.
+A JSON file is a text file that uses syntax similar to this:
+{      "Name": "ContosoAuthorizationRule",  
+    "PrimaryKey": "WE4qH0398AyXjlekt56gg1gMR3NHoMs29KkUnnpUk01Y=",  
+    "Rights": \[  
+        "Listen",  
+        "Send"  
+    \]  
+}
+When used in conjunction with the New-AzNotificationHubAuthorizationRules cmdlet, the preceding JSON sample modifies an authorization rule named ContosoAuthorizationRule in order to give users Listen and Send rights to the hub.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify an authorization rule assigned to a notification hub
+```
+PS C:\>Set-AzNotificationHubAuthorizationRules -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationGroup" -NotificationHub "ContosoExternalHub" -InputFile "C:\Configuration\AuthorizationRules.json"
 ```
 
-{{ Add example description here }}
+This command modifies an authorization rule assigned to the notification hub named ContosoExternalHub.
+You must specify the namespace where the hub is located as well as the resource group that the hub is assigned.
+Information about the rule that is modified is not included in the command itself.
+Instead, that information is found in the input file C:\Configuration\AuthorizationRules.json.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputFile
-File name containing a single AuthorizationRule definition.
+Specifies the path to a JSON file containing configuration information for the new rule.
 
 ```yaml
 Type: System.String
@@ -86,7 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace to which the notification hub is assigned.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -101,7 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHub
-NotificationHub Name.
+Specifies the notification hub that this cmdlet assigns authorization rules to.
+Notification hubs are used to send push notifications to multiple clients regardless of the used by those clients.
 
 ```yaml
 Type: System.String
@@ -116,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the notification hub is assigned. 
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -131,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -SASRule
-NotificationHub AuthorizationRule Object.
+Specifies the **SharedAccessAuthorizationRuleAttributes** object that contains configuration information for the authorization rules that are modified.
 
 ```yaml
 Type: Microsoft.Azure.Commands.NotificationHubs.Models.SharedAccessAuthorizationRuleAttributes
@@ -161,8 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -177,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -191,3 +219,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHubAuthorizationRules](./Get-AzNotificationHubAuthorizationRules.md)
+
+[New-AzNotificationHubAuthorizationRules](./New-AzNotificationHubAuthorizationRules.md)
+
+[Remove-AzNotificationHubAuthorizationRules](./Remove-AzNotificationHubAuthorizationRules.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationdscnodeconfigurationdeploymentschedule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationDscNodeConfigurationDeploymentSchedule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationDscNodeConfigurationDeploymentSchedule.md
 ---
 
 # Get-AzAutomationDscNodeConfigurationDeploymentSchedule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a DSC Node configuration deployment job schedule in Automation.
 
 ## SYNTAX
 
@@ -25,21 +28,62 @@ Get-AzAutomationDscNodeConfigurationDeploymentSchedule -JobScheduleId <Guid> [-R
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationDscNodeConfigurationDeployment** cmdlet deployes an APS Desired State Configuration (DSC) node configuration in Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all the deployment schedules
+```
+PS C:\> Get-AzAutomationDscNodeConfigurationDeploymentSchedule `
+            -AutomationAccountName "Contoso01"  `
+            -ResourceGroupName "ResourceGroup01"
+
+ResourceGroupName     : ResourceGroup01
+AutomationAccountName : Contoso01
+JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSchedule
+RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
+
+ResourceGroupName     : ResourceGroup01
+AutomationAccountName : Contoso01
+JobScheduleId         : e347dfc4-62fe-4ed6-adfb-55518c57b558
+JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSchedule
+RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
 ```
 
-{{ Add example description here }}
+### Example 2: Get a deployment schedule
+```
+PS C:\> $js= Get-AzAutomationDscNodeConfigurationDeploymentSchedule `
+                 -AutomationAccountName "Contoso01" `
+                 -ResourceGroupName "ResourceGroup01" `
+                 -JobScheduleId 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+
+PS C:\> $js
+
+ResourceGroupName     : ResourceGroup01
+AutomationAccountName : Contoso01
+JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSche
+RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
+
+PS C:\> $js.JobSchedule
+
+ResourceGroupName     : ResourceGroup01
+RunOn                 :
+AutomationAccountName : Contoso01
+JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
+ScheduleName          : TestScheduleName
+Parameters            : {AutomationAccountName, NodeConfigurationName, ResourceGroupName, ListOfNodeNames}
+HybridWorker          :
+```
+
+The above command deploys the DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
 
 ```yaml
 Type: System.String
@@ -54,12 +98,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobScheduleId
-The deployment job schedule id.
+Specifies the Job Schedule id of an existing scheduled deployment job.
 
 ```yaml
 Type: System.Guid
@@ -84,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
 Type: System.String
@@ -99,8 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -115,3 +158,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-AzAutomationDscCompilationJob](./Start-AzAutomationDscCompilationJob.md)
+
+[Import-AzAutomationDscNodeConfiguration](./Import-AzAutomationDscNodeConfiguration.md)
+
+[Start-AzAutomationDscNodeConfigurationDeployment](./Start-AzAutomationDscNodeConfigurationDeployment.md)
+
+[Stop-AzAutomationDscNodeConfigurationDeployment](./Stop-AzAutomationDscNodeConfigurationDeployment.md)
+
+[Get-AzAutomationDscNodeConfigurationDeployment](./Get-AzAutomationDscNodeConfigurationDeployment.md)

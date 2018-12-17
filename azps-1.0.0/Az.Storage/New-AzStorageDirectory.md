@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 65962F9A-CC79-4B8B-9208-A993708FD36F
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azstoragedirectory
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageDirectory.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageDirectory.md
 ---
 
 # New-AzStorageDirectory
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a directory.
 
 ## SYNTAX
 
@@ -34,21 +37,32 @@ New-AzStorageDirectory [-Directory] <CloudFileDirectory> [-Path] <String> [-Serv
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStorageDirectory** cmdlet creates a directory.
+This cmdlet returns a **CloudFileDirectory** object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a folder in a file share
+```
+PS C:\>New-AzStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
 ```
 
-{{ Add example description here }}
+This command creates a folder named ContosoWorkingFolder in the file share named ContosoShare06.
+
+### Example 2: Create a folder in a file share specified in a file share object
+```
+PS C:\>Get-AzStorageShare -Name "ContosoShare06" | New-AzStorageDirectory -Path "ContosoWorkingFolder"
+```
+
+This command uses the **Get-AzStorageShare** cmdlet to get the file share named ContosoShare06, and then passes it to the current cmdlet by using the pipeline operator.
+The current cmdlet creates the folder named ContosoWorkingFolder in ContosoShare06.
 
 ## PARAMETERS
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -63,7 +77,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -79,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies an Azure storage context.
+To obtain a storage context, use the [New-AzStorageContext](./New-AzStorageContext.md) cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -97,7 +115,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -109,7 +127,10 @@ Accept wildcard characters: False
 ```
 
 ### -Directory
-CloudFileDirectory object indicated the base folder where the new directory would be created.
+Specifies a folder as a **CloudFileDirectory** object.
+This cmdlet creates the folder in the location that this parameter specifies.
+To obtain a directory, use the New-AzStorageDirectory cmdlet.
+You can also use the Get-AzStorageFile cmdlet to obtain a directory.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileDirectory
@@ -124,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Path of the directory to be created.
+Specifies the path of a folder.
+This cmdlet creates a folder for the path that this cmdlet specifies.
 
 ```yaml
 Type: System.String
@@ -139,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -154,7 +176,11 @@ Accept wildcard characters: False
 ```
 
 ### -Share
-CloudFileShare object indicated the share where the directory would be created.
+Specifies a **CloudFileShare** object.
+This cmdlet creates a folder in the file share that this parameter specifies.
+To obtain a **CloudFileShare** object, use the Get-AzStorageShare cmdlet.
+This object contains the storage context.
+If you specify this parameter, do not specify the *Context* parameter.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
@@ -169,7 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShareName
-Name of the file share where the directory would be created.
+Specifies the name of the file share.
+This cmdlet creates a folder in the file share that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -184,8 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -204,3 +230,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageFile](./Get-AzStorageFile.md)
+
+[Get-AzStorageShare](./Get-AzStorageShare.md)
+
+[New-AzStorageContext](./New-AzStorageContext.md)
+
+[New-AzStorageDirectory](./New-AzStorageDirectory.md)
+
+[Remove-AzStorageDirectory](./Remove-AzStorageDirectory.md)

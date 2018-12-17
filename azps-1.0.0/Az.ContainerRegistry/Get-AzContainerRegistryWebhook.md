@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/get-azcontainerregistrycredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistryWebhook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistryWebhook.md
 ---
 
 # Get-AzContainerRegistryWebhook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a container registry webhook.
 
 ## SYNTAX
 
@@ -43,26 +45,57 @@ Get-AzContainerRegistryWebhook [-IncludeConfiguration] -ResourceId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzContainerRegistryWebhook cmdlet gets a specified webhook of container registry or all the webhooks of a container registry.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a specified webhook of a container registry
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Get-AzContainerRegistryWebhook -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name "webhook001"
+
+Name            Location   Status     Scope           Actions         Provisioni ServiceUri
+                                                                      ngState
+----            --------   ------     -----           -------         ---------- ----------
+webhook001      westus     enabled                    {push, delete}  Succeeded
 ```
 
-{{ Add example description here }}
+Get a specified webhook of a container registry
+
+### Example 2: Get all the webhooks of a container registry
+```powershell
+PS C:\>Get-AzContainerRegistryWebhook -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry"
+
+Name            Location   Status     Scope           Actions         Provisioni ServiceUri
+                                                                      ngState
+----            --------   ------     -----           -------         ---------- ----------
+webhook04       westus     enabled                    {push, delete}  Succeeded
+webhook05       westus     disabled                   {push, delete}  Succeeded
+wh003           westus     enabled                    delete          Succeeded
+```
+
+Get all the webhooks of a container registry
+
+### Example 3: Get a specified webhook of a container registry with configuration details
+```powershell
+PS C:\>Get-AzContainerRegistryWebhook -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name "webhook001" -IncludeConfiguration
+
+Name            Location   Status     Scope           Actions         Provisioni ServiceUri
+                                                                      ngState
+----            --------   ------     -----           -------         ---------- ----------
+webhook001      westus     enabled                    {push, delete}  Succeeded  http://www.test.com/
+```
+
+Get a specified webhook of a container registry with configuration details
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -162,8 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,3 +210,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistryWebhook](New-AzContainerRegistryWebhook.md)
+
+[Update-AzContainerRegistryWebhook](Update-AzContainerRegistryWebhook.md)
+
+[Remove-AzContainerRegistryWebhook](Remove-AzContainerRegistryWebhook.md)
+
+[Test-AzContainerRegistryWebhook](Test-AzContainerRegistryWebhook.md)

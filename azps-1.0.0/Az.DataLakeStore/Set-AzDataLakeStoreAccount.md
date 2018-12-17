@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 0EB5C25C-D0A1-4444-AEA2-C963D5069CFC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/set-azdatalakestoreaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzDataLakeStoreAccount.md
 ---
 
 # Set-AzDataLakeStoreAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies a Data Lake Store account.
 
 ## SYNTAX
 
@@ -20,16 +23,16 @@ Set-AzDataLakeStoreAccount [-Name] <String> [[-DefaultGroup] <String>] [[-Tag] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDataLakeStoreAccount** cmdlet modifies a Data Lake Store account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a tag to an account
+```
+PS C:\>Set-AzDataLakeStoreAccount -Name "ContosoADL" -Tags @{"stage"="production"}
 ```
 
-{{ Add example description here }}
+This command adds the specified tag to the Data Lake Store account named ContosoADL.
 
 ## PARAMETERS
 
@@ -50,7 +53,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultGroup
-Name of default group to use for all newly created files and folders in the Data Lake Store.
+Specifies the ID of an AzureActive Directory group.
+This group is the default group for files and folders that you create.
 
 ```yaml
 Type: System.String
@@ -65,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -80,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallState
-Optionally enable/disable existing firewall rules.
+Optionally enable or disable existing firewall rules.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Store.Models.FirewallState]
@@ -111,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the account.
+Specifies the name of a Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -126,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to update the account.
+Specifies the name of the resource group that contains the Data Lake Store account to modify.
 
 ```yaml
 Type: System.String
@@ -141,12 +145,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A string,string dictionary of tags associated with this account that should replace the current set of tags
+Specifies tags as key-value pairs.
+You can use tags to identify a Data Lake Store account from other Azure resources.
 
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
-Aliases: Tags
+Aliases:
 
 Required: False
 Position: 2
@@ -172,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedIdProviderState
-Optionally enable/disable the existing trusted ID providers.
+Optionally enable or disable the existing trusted ID providers.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Store.Models.TrustedIdProviderState]
@@ -187,8 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -211,3 +215,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreAccount](./Get-AzDataLakeStoreAccount.md)
+
+[New-AzDataLakeStoreAccount](./New-AzDataLakeStoreAccount.md)
+
+[Remove-AzDataLakeStoreAccount](./Remove-AzDataLakeStoreAccount.md)
+
+[Test-AzDataLakeStoreAccount](./Test-AzDataLakeStoreAccount.md)
+
+

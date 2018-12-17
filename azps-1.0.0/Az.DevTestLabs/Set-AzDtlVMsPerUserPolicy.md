@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DevTestLabs.dll-Help.xml
 Module Name: Az.DevTestLabs
-online version: https://azure.microsoft.com/en-us/solutions/dev-test/
+ms.assetid: D00E04D9-C91F-4F89-8867-0A026C274F27
+online version: https://docs.microsoft.com/en-us/powershell/module/az.devtestlabs/set-azdtlvmsperuserpolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Set-AzDtlVMsPerUserPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Set-AzDtlVMsPerUserPolicy.md
 ---
 
 # Set-AzDtlVMsPerUserPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the virtual machines per user policy of a lab in DevTest Labs.
 
 ## SYNTAX
 
@@ -25,26 +28,20 @@ Set-AzDtlVMsPerUserPolicy [[-MaxVMs] <Int32>] [-Disable] [-LabName] <String> [-R
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDtlVMsPerUserPolicy** cmdlet sets the virtual machines per user policy of a lab, which sets the maximum number of virtual machines allowed per user.
+The cmdlet uses the specified resource group and name of the lab to set the policy.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-Whether to disable the policy.
+Indicates that this cmdlet disables the policy for the lab.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Whether to enable the policy.
+Indicates that this cmdlet enables the policy for the lab.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabName
-Specifies a name an existing DevTest lab.
+Specifies the name of the lab for which this cmdlet sets the virtual machines per user policy.
 
 ```yaml
 Type: System.String
@@ -99,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxVMs
-Maximum number of virtual machines a user is allowed to own in the lab.
+Specifies the maximum number of virtual machines that can be created in the lab.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -114,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of an existing resource group that contains the lab.
+Specifies the name of the resource group that the lab belongs to.
 
 ```yaml
 Type: System.String
@@ -138,7 +135,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -154,14 +151,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -175,5 +171,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[https://azure.microsoft.com/en-us/solutions/dev-test/](https://azure.microsoft.com/en-us/solutions/dev-test/)
+[Get-AzDtlVMsPerUserPolicy](./Get-AzDtlVMsPerUserPolicy.md)
+
 

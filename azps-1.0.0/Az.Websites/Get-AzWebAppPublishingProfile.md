@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: 38433470-CAFD-4B8F-980C-63D4B264B39F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/get-azwebapppublishingprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzWebAppPublishingProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Get-AzWebAppPublishingProfile.md
 ---
 
 # Get-AzWebAppPublishingProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an Azure Web App publishing profile.
 
 ## SYNTAX
 
@@ -25,26 +28,27 @@ Get-AzWebAppPublishingProfile [[-OutputFile] <String>] [[-Format] <String>] [-In
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzWebAppPublishingProfile** cmdlet gets an Azure Web App publishing profile.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:
+```
+PS C:\> Get-AzWebAppPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Format "Ftp" -OutputFile "C:\Users\contoso\outputfile"
 ```
 
-{{ Add example description here }}
+This command gets the publishing profile in Ftp format for Web App ContosoWebApp associated with the resource group Default-Web-WestUS
+    and stores it in the specified output file.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,9 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-The format of the profile.
-Allowed values are \[WebDeploy|FileZilla3|Ftp\].
-Default value is WebDeploy
+Format
 
 ```yaml
 Type: System.String
@@ -87,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+WebApp Name
 
 ```yaml
 Type: System.String
@@ -102,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFile
-The file the publishing profile will we saved as
+Output File
 
 ```yaml
 Type: System.String
@@ -117,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -132,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+WebApp Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.PSSite
@@ -147,8 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -163,3 +164,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAppServicePlan](./Get-AzAppServicePlan.md)
+
+[Get-AzWebApp](./Get-AzWebApp.md)
+
+

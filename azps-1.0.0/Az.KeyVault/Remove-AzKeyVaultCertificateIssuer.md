@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: FC14F6BF-BD8F-45E0-9CAA-A937E5E56288
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/remove-azkeyvaultcertificateissuer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultCertificateIssuer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultCertificateIssuer.md
 ---
 
 # Remove-AzKeyVaultCertificateIssuer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a certificate issuer from a key vault.
 
 ## SYNTAX
 
@@ -25,26 +28,33 @@ Remove-AzKeyVaultCertificateIssuer [-InputObject] <PSKeyVaultCertificateIssuerId
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzKeyVaultCertificateIssuer** cmdlet deletes a certificate issuer from a key vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a certificate issuer
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzKeyVaultCertificateIssuer -VaultName "ContosoKV01" -Name "TestIssuer01" -Force
+
+AccountId           :
+ApiKey              :
+OrganizationDetails :
+Name                : TestIssuer01
+IssuerProvider      : test
+VaultName           : ContosoKV01
 ```
 
-{{ Add example description here }}
+This command removes the certificate issuer named TestIssuer01 from the ContosoKV01 key vault.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,8 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Certificate name.
-Cmdlet constructs the FQDN of a certificate from vault name, currently selected environment and certificate name.
+Specifies the name of the issuer to remove.
 
 ```yaml
 Type: System.String
@@ -100,8 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Cmdlet does not return an object by default.
-If this switch is specified, the cmdlet returns the issuer object that was deleted.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of a key vault.
 
 ```yaml
 Type: System.String
@@ -141,13 +149,14 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
+The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -157,14 +166,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -177,3 +185,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzKeyVaultCertificateIssuer](./Get-AzKeyVaultCertificateIssuer.md)
+
+[Set-AzKeyVaultCertificateIssuer](./Set-AzKeyVaultCertificateIssuer.md)
+
+

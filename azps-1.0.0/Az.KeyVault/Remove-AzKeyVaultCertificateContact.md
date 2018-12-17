@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 35FAA57F-B2BD-4E43-8238-12F7A8269E4D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/remove-azkeyvaultcertificatecontact
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultCertificateContact.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultCertificateContact.md
 ---
 
 # Remove-AzKeyVaultCertificateContact
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a contact that is registered for certificate notifications from a key vault.
 
 ## SYNTAX
 
@@ -31,26 +34,33 @@ Remove-AzKeyVaultCertificateContact [-ResourceId] <String> [-EmailAddress] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzKeyVaultCertificateContact** cmdlet deletes a contact that is registered for certificate notifications from a key vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a certificate contact
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzKeyVaultCertificateContact -VaultName "Contoso01" -EmailAddress "patti.fuller@contoso.com" -PassThru
+
+Email               VaultName
+-----               ---------
+user1@microsoft.com mvault2
+user2@microsoft.com mvault2
+user3@microsoft.com mvault2
+user4@microsoft.com mvault2
 ```
 
-{{ Add example description here }}
+This command removes Patti Fuller as a certificate contact for the Contoso01 key vault.  If PassThru is specified, the cmdlet returns the list of remaining certificate contacts.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-Specifies the email address of the contact.
+Specifies the email address of the contact to remove.
 
 ```yaml
 Type: System.String[]
@@ -90,8 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-This cmdlet does not return an object by default.
-If this switch is specified, it returns the contact object.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -121,8 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of a key vault.
 
 ```yaml
 Type: System.String
@@ -168,8 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -184,3 +192,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzKeyVaultCertificateContact](./Add-AzKeyVaultCertificateContact.md)
+
+[Get-AzKeyVaultCertificateContact](./Get-AzKeyVaultCertificateContact.md)
+

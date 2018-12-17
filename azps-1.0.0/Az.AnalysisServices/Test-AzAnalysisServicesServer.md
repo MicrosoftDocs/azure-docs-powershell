@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.AnalysisServices.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices/test-azanalysisservicesserver
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Test-AzAnalysisServicesServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Test-AzAnalysisServicesServer.md
 ---
 
 # Test-AzAnalysisServicesServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Tests the existence of an instance of Analysis Services server
 
 ## SYNTAX
 
@@ -18,26 +20,26 @@ Test-AzAnalysisServicesServer [-Name] <String> [[-ResourceGroupName] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Test-AzAnalysisServicesServer cmdlet tests the existence of an instance of Analysis Services server
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Test-AzAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup"
 ```
 
-{{ Add example description here }}
+This command will test if there is a server named testserver in the resourcegroup testgroup
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific server.
+Name of the Analysis Services server
 
 ```yaml
 Type: System.String
@@ -62,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which want to test the server.
+Name of the Azure resource group to which the server belongs
 
 ```yaml
 Type: System.String
@@ -77,8 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,5 +90,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+Alias: Test-AzAs
 
 ## RELATED LINKS
+
+[Get-AzAnalysisServicesServer](./Get-AzAnalysisServicesServer.md)
+
+[Remove-AzAnalysisServicesServer](./Remove-AzAnalysisServicesServer.md)

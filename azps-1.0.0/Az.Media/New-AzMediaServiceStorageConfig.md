@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
-online version:
+ms.assetid: 4D64CA4D-1066-4D3E-9317-60D37D9DE2BB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.media/new-azmediaservicestorageconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/New-AzMediaServiceStorageConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/New-AzMediaServiceStorageConfig.md
 ---
 
 # New-AzMediaServiceStorageConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create a storage account configuration for the media service cmdlets.
 
 ## SYNTAX
 
@@ -18,26 +21,31 @@ New-AzMediaServiceStorageConfig [-DefaultProfile <IAzureContextContainer>] [-Sto
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzMediaServiceStorageConfig** cmdlet creates a storage account configuration for the media service cmdlets.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a storage account configuration for the media service cmdlets
+```
+PS C:\>
+$StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name "Storage1" -Location "East US" -Type "Standard_GRS"
+
+PS C:\> New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount.Id -IsPrimary
 ```
 
-{{ Add example description here }}
+The first command creates a storage account object by using **the New-AzStorageAccount** cmdlet.
+The command names this storage account Storage1 and the type is named Standard_GRS and stores the result in the variable named $StorageAccount.
+The second command creates a storage configuration object as the primary storage account associated with the media service using the storage account ID information stored in the $StorageAccount variable.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsPrimary
-Specifies as the primary storage account for the media service.
+Indicates that the cmdlet creates the storage account as the primary storage for the media service.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -62,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-The Id for the existed storage account.
+Specifies the ID of the storage account.
 
 ```yaml
 Type: System.String
@@ -86,7 +94,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -102,14 +110,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +129,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Sync-AzMediaServiceStorageKeys](./Sync-AzMediaServiceStorageKeys.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
-online version:
+ms.assetid: F395E192-80FA-421D-A389-8C5C0C2267E4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.media/sync-azmediaservicestoragekeys
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Sync-AzMediaServiceStorageKeys.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Sync-AzMediaServiceStorageKeys.md
 ---
 
 # Sync-AzMediaServiceStorageKeys
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Synchronizes storage account keys for a storage account associated with the media service.
 
 ## SYNTAX
 
@@ -19,21 +22,23 @@ Sync-AzMediaServiceStorageKeys [-ResourceGroupName] <String> [-AccountName] <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Sync-AzMediaServiceStorageKeys** cmdlet synchronizes storage account keys for a storage account associated with the media service.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Synchronize storage account keys for a storage account associated with the media service
+```
+PS C:\>$StorageAccount = Get-AzStorageAccount -ResourceGroupName "ResourceGroup001" -Name "Storage135"
+PS C:\> Sync-AzMediaServiceStorageKeys -ResourceGroupName "ResourceGroup001" -AccoutName "MediasService001" -StorageAccoutId $StorageAccount.Id
 ```
 
-{{ Add example description here }}
+The first command uses the Get-AzStorageAccount cmdlet to get the storage account named Storage135 that belongs to ResourceGroup001 and stores the result in the variable named $StorageAccount.
+The second command synchronizes the storage account keys for the media service named MediaService001 using the **Id** property contained in the $StorageAccount variable.
 
 ## PARAMETERS
 
 ### -AccountName
-The media service account name.
+Specifies the name of the media service that this cmdlet synchronizes.
 
 ```yaml
 Type: System.String
@@ -48,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that contains the media service.
 
 ```yaml
 Type: System.String
@@ -78,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-The storage account associated with the media service account.
+Specifies the storage account ID associated with the media service account.
 
 ```yaml
 Type: System.String
@@ -102,7 +107,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -118,14 +123,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

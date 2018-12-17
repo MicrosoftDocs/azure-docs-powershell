@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.AnalysisServices.Dataplane.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.Dataplane.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices/sync-azanalysisservicesinstance
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Sync-AzAnalysisServicesInstance.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Sync-AzAnalysisServicesInstance.md
 ---
 
 # Sync-AzAnalysisServicesInstance
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+
+Synchronizes a specified database on the specified instance of Analysis Services server to all the query scaleout instances in the currently logged in Environment as specified in Add-AzAnalysisServicesAccount command
 
 ## SYNTAX
 
@@ -18,21 +21,24 @@ Sync-AzAnalysisServicesInstance [-Instance] <String> [-Database] <String> [-Pass
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+The Sync-AzAnalysisServicesInstance cmdlet synchronizes a specified database on the specified instance of Analysis Services server to all the query scaleout instances in the currently logged in Environment as specified in Add-AzAnalysisServicesAccount command
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+
+```
+PS C:\>Sync-AzAnalysisServicesInstance -Instance asazure://westus.asazure.windows.net/contoso -Database SalesOrders
 ```
 
-{{ Add example description here }}
+This command will synchronize the database named SalesOrders in the server named 'contoso' in the environment westus.asazure.windows.net provided the user has logged-in to this enviroment using Add-AzAnalysisServicesAccount command.
 
 ## PARAMETERS
 
 ### -Database
-Identity of the database need to be synchronized
+
+Identity of the database to be synchronized
 
 ```yaml
 Type: System.String
@@ -47,9 +53,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Name of the Azure Analysis Services server to synchronize.
-E.x.
-asazure://westus.asazure.windows.net/contososerver:rw
+
+Name of the Analysis Services server instance to restart
 
 ```yaml
 Type: System.String
@@ -64,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -94,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -110,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,5 +126,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.AnalysisServices.Dataplane.Models.ScaleOutServerDatabaseSyncDetails
 
 ## NOTES
+
+Alias: Sync-AzAsInstance
 
 ## RELATED LINKS

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 67EE6EFB-3297-4D21-A6EC-B03F5FE82F84
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementoperation
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementOperation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementOperation.md
 ---
 
 # Set-AzApiManagementOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets API operation details.
 
 ## SYNTAX
 
@@ -21,22 +24,22 @@ Set-AzApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementOperation** cmdlet sets API operation details.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set the operation details
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>New-AzApiManagementOperation -Context $apimContext -ApiId $APIID -OperationId $OperationId -Name "Get Resource" -Method GET -UrlTemplate "/newresource" -Description "Use this operation to get newresource"
 ```
 
-{{ Add example description here }}
+This command sets the operation details for API management.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of API.
-This parameter is required.
+Specifies the identifier of the API.
 
 ```yaml
 Type: System.String
@@ -51,9 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Identifier of API Revision.
-This parameter is optional.
-If not specified, the operation will be updated in the currently active api revision.
+Identifier of API Revision. This parameter is optional. If not specified, the operation will be updated in the currently active api revision.
 
 ```yaml
 Type: System.String
@@ -68,8 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of **PsApiManagementContext**.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -84,12 +84,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -99,8 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of new operation.
-This parameter is optional.
+Specifies the description of the new operation.
 
 ```yaml
 Type: System.String
@@ -115,8 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Method
-HTTP method of new operation.
-This parameter is required.
+Specifies the HTTP method of the new operation.
 
 ```yaml
 Type: System.String
@@ -131,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Display name of new operation.
-This parameter is required.
+Specifies the display name of the new operation.
 
 ```yaml
 Type: System.String
@@ -147,8 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier of existing operation.
-This parameter is required.
+Specifies the identifier of the existing operation.
 
 ```yaml
 Type: System.String
@@ -163,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOperation type representing the modified operation.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,8 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Request
-Operation request details.
-This parameter is optional.
+Specifies the operation request details.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementRequest
@@ -194,8 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -Responses
-Array of possible operation responses.
-This parameter is optional.
+Specifies an array of possible operation responses.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementResponse[]
@@ -210,10 +204,9 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateParameters
-Array or parameters defined in UrlTemplate.
-This parameter is optional.
-If not specified default value will be generated based on the UrlTemplate.
-Use the parameter to give more details on parameters like description, type, possible values.
+Specifies an array or parameters defined in parameter *UrlTemplate*.
+If you do not specify a value, a default value will be generated based on the UrlTemplate.
+Use the parameter to give more details on parameters such as description, type, and other possible values.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementParameter[]
@@ -228,9 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -UrlTemplate
-URL template.
-Example: customers/{cid}/orders/{oid}/?date={date}.
-This parameter is required.
+Specifies the URL template.
+For instance: customers/{cid}/orders/{oid}/?date={date}.
 
 ```yaml
 Type: System.String
@@ -245,8 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -269,3 +260,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementOperation](./Get-AzApiManagementOperation.md)
+
+[New-AzApiManagementOperation](./New-AzApiManagementOperation.md)
+
+[Remove-AzApiManagementOperation](./Remove-AzApiManagementOperation.md)
+
+

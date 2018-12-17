@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/new-azservicebustopic
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzServiceBusTopic.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzServiceBusTopic.md
 ---
 
 # New-AzServiceBusTopic
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new Service Bus topic in  the specified Service Bus namespace.
 
 ## SYNTAX
 
@@ -22,22 +24,41 @@ New-AzServiceBusTopic [-ResourceGroupName] <String> [-Namespace] <String> [-Name
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzServiceBusTopic** cmdlet creates a new Service Bus topic in the specified Service Bus namespace.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> New-AzServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -EnablePartitioning $True
+
+Name                                : SB-Topic_example1
+Id                                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ServiceBus/namespaces/SB-Example1/topics/SB-Topic_example1
+Type                                : Microsoft.ServiceBus/Namespaces/Topics
+AccessedAt                          : 1/1/0001 12:00:00 AM
+AutoDeleteOnIdle                    : P10675199DT2H48M5.4775807S
+CreatedAt                           : 10/11/2018 11:51:24 PM
+CountDetails                        : Microsoft.Azure.Management.ServiceBus.Models.MessageCountDetails
+DefaultMessageTimeToLive            : P10675199DT2H48M5.4775807S
+DuplicateDetectionHistoryTimeWindow : PT10M
+EnableBatchedOperations             : True
+EnableExpress                       : False
+EnablePartitioning                  : False
+MaxSizeInMegabytes                  : 81920
+RequiresDuplicateDetection          : False
+SizeInBytes                         : 0
+Status                              : Active
+SubscriptionCount                   : 0
+SupportOrdering                     : True
+UpdatedAt                           : 10/11/2018 11:51:24 PM
 ```
 
-{{ Add example description here }}
+Creates a new Service Bus topic `SB-Topic_exampl1` in the specified Service Bus namespace `SB-Example1`.
 
 ## PARAMETERS
 
 ### -AutoDeleteOnIdle
-Auto Delete On Idle - the TimeSpan idle interval after which the queue is automatically deleted.
-The minimum duration is 5 minutes.
+Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
 
 ```yaml
 Type: System.String
@@ -52,10 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultMessageTimeToLive
-Timespan to live value.
-This is the duration after which the message expires, starting from when the message is sent to Service Bus.
-This is the default value used when TimeToLive is not set on a message itself.
-For Standard = Timespan.Max and Basic = 14 dyas
+Specifies the duration after which the message expires, starting from when the message is sent to Service Bus.
 
 ```yaml
 Type: System.String
@@ -70,12 +88,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -85,8 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -DuplicateDetectionHistoryTimeWindow
-Duplicate Detection History Time Window - TimeSpan, that defines the duration of the duplicate detection history.
-The default value is 10 minutes.
+Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
 
 ```yaml
 Type: System.String
@@ -101,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBatchedOperations
-Enable Batched Operations - value that indicates whether server-side batched operations are enabled
+Indicates whether server-side batched operations are enabled.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -117,8 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExpress
-EnableExpress - a value that indicates whether Express Entities are enabled.
-An express queue holds a message in memory temporarily before writing it to persistent storage.
+Indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -134,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePartitioning
-EnablePartitioning
+Specifies whether to enable the topic to be partitioned across multiple message brokers. 
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -150,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSizeInMegabytes
-MaxSizeInMegabytes - the maximum size of the queue in megabytes, which is the size of memory allocated for the queue.
+The maximum size of the topic in megabytes, which is the size of memory allocated for the topic.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
@@ -165,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Topic Name
+Topic Name.
 
 ```yaml
 Type: System.String
@@ -180,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name
+Namespace Name.
 
 ```yaml
 Type: System.String
@@ -195,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequiresDuplicateDetection
-RequiresDuplicateDetection - a value that indicates whether the queue supports the concept of session
+Indicates whether the topic requires duplication detection.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -226,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -SizeInBytes
-SizeInBytes - the size of the queue in bytes
+Specifies the size of the topic in bytes.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
@@ -241,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportOrdering
-SupportOrdering - the value indicating it supports ordering
+Indicates whether the topic supports ordering.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -288,8 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

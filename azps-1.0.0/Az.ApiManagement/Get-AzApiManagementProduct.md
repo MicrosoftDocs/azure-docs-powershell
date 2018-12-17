@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: B64E9C13-97A6-4E8B-92DB-EFAF8A48C5B8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementproduct
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementProduct.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementProduct.md
 ---
 
 # Get-AzApiManagementProduct
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a list or a particular product.
 
 ## SYNTAX
 
@@ -31,22 +34,30 @@ Get-AzApiManagementProduct -Context <PsApiManagementContext> [-Title <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementProduct** cmdlet gets a list or a particular product.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all products
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementProduct -Context $apimContext
 ```
 
-{{ Add example description here }}
+This command get all API Management products.
+
+### Example 2: Get a product by ID
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementProduct -Context $apimContext -ProductId "0123456789"
+```
+
+This command get an API Management product by ID.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -61,12 +72,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -76,8 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of Product to search for.
-This parameter is optional.
+Specifies the identifier of the product to search for.
 
 ```yaml
 Type: System.String
@@ -92,9 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-Title of the Product to look for.
-If specified will try to get the Product by title.
-This parameter is optional.
+Specifies the title of the product to look for.
+If specified, the cmdlet attempts to get the product by title.
 
 ```yaml
 Type: System.String
@@ -109,8 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -125,3 +133,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementProduct](./New-AzApiManagementProduct.md)
+
+[Remove-AzApiManagementProduct](./Remove-AzApiManagementProduct.md)
+
+[Set-AzApiManagementProduct](./Set-AzApiManagementProduct.md)
+
+

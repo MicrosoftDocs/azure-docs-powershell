@@ -1,520 +1,564 @@
 ---
 Module Name: Az.Compute
-Module Guid: d4cb9989-9ed1-49c2-bacd-0f8daf758671
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 0a83c907-1ffb-4d87-a492-c65ac7d7ed37
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.compute
+Help Version: 3.5.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Az.Compute.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Az.Compute.md
 ---
 
 # Az.Compute Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays the help topics for the Azure Compute Cmdlets.
 
 ## Az.Compute Cmdlets
 ### [Add-AzContainerServiceAgentPoolProfile](Add-AzContainerServiceAgentPoolProfile.md)
-{{Manually Enter Add-AzContainerServiceAgentPoolProfile Description Here}}
+Adds a container service agent pool profile.
 
 ### [Add-AzImageDataDisk](Add-AzImageDataDisk.md)
-{{Manually Enter Add-AzImageDataDisk Description Here}}
+Adds a data disk to an image obejct.
 
 ### [Add-AzVhd](Add-AzVhd.md)
-{{Manually Enter Add-AzVhd Description Here}}
+Uploads a virtual hard disk from an on-premises virtual machine to a blob in a cloud storage account in Azure.
 
 ### [Add-AzVMAdditionalUnattendContent](Add-AzVMAdditionalUnattendContent.md)
-{{Manually Enter Add-AzVMAdditionalUnattendContent Description Here}}
+Adds information to the unattended Windows Setup answer file.
 
 ### [Add-AzVMDataDisk](Add-AzVMDataDisk.md)
-{{Manually Enter Add-AzVMDataDisk Description Here}}
+Adds a data disk to a virtual machine.
 
 ### [Add-AzVMNetworkInterface](Add-AzVMNetworkInterface.md)
-{{Manually Enter Add-AzVMNetworkInterface Description Here}}
+Adds a network interface to a virtual machine.
 
 ### [Add-AzVMSecret](Add-AzVMSecret.md)
-{{Manually Enter Add-AzVMSecret Description Here}}
+Adds a secret to a virtual machine.
 
 ### [Add-AzVmssAdditionalUnattendContent](Add-AzVmssAdditionalUnattendContent.md)
-{{Manually Enter Add-AzVmssAdditionalUnattendContent Description Here}}
+Adds information to the unattended Windows Setup answer file.
 
 ### [Add-AzVmssDataDisk](Add-AzVmssDataDisk.md)
-{{Manually Enter Add-AzVmssDataDisk Description Here}}
+Adds a data disk to the VMSS.
 
 ### [Add-AzVmssDiagnosticsExtension](Add-AzVmssDiagnosticsExtension.md)
-{{Manually Enter Add-AzVmssDiagnosticsExtension Description Here}}
+Adds a diagnostics extension to the VMSS.
 
 ### [Add-AzVmssExtension](Add-AzVmssExtension.md)
-{{Manually Enter Add-AzVmssExtension Description Here}}
+Adds an extension to the VMSS.
 
 ### [Add-AzVMSshPublicKey](Add-AzVMSshPublicKey.md)
-{{Manually Enter Add-AzVMSshPublicKey Description Here}}
+Adds the public keys for SSH for a virtual machine.
 
 ### [Add-AzVmssNetworkInterfaceConfiguration](Add-AzVmssNetworkInterfaceConfiguration.md)
-{{Manually Enter Add-AzVmssNetworkInterfaceConfiguration Description Here}}
+Adds a network interface configuration to the VMSS.
 
 ### [Add-AzVmssSecret](Add-AzVmssSecret.md)
-{{Manually Enter Add-AzVmssSecret Description Here}}
+Adds a secret to a VMSS.
 
 ### [Add-AzVmssSshPublicKey](Add-AzVmssSshPublicKey.md)
-{{Manually Enter Add-AzVmssSshPublicKey Description Here}}
+Adds SSH public keys to the VMSS.
+
+### [Add-AzVmssVMDataDisk](Add-AzVmssVMDataDisk.md)
+Adds a data disk to a Vmss VM.
 
 ### [Add-AzVmssWinRMListener](Add-AzVmssWinRMListener.md)
-{{Manually Enter Add-AzVmssWinRMListener Description Here}}
+Adds a WinRM listener to the VMSS.
 
 ### [ConvertTo-AzVMManagedDisk](ConvertTo-AzVMManagedDisk.md)
-{{Manually Enter ConvertTo-AzVMManagedDisk Description Here}}
+Converts a virtual machine with blob-based disks to a virtual machine with managed disks.
 
 ### [Disable-AzVMDiskEncryption](Disable-AzVMDiskEncryption.md)
-{{Manually Enter Disable-AzVMDiskEncryption Description Here}}
+Disables encryption on an IaaS virtual machine.
 
 ### [Disable-AzVmssDiskEncryption](Disable-AzVmssDiskEncryption.md)
-{{Manually Enter Disable-AzVmssDiskEncryption Description Here}}
+Disables disk encryption on a VM scale set.
 
 ### [Export-AzLogAnalyticRequestRateByInterval](Export-AzLogAnalyticRequestRateByInterval.md)
-{{Manually Enter Export-AzLogAnalyticRequestRateByInterval Description Here}}
+Export logs that show Api requests made by this subscription in the given time window to show throttling activities.
 
 ### [Export-AzLogAnalyticThrottledRequests](Export-AzLogAnalyticThrottledRequests.md)
-{{Manually Enter Export-AzLogAnalyticThrottledRequests Description Here}}
+Export logs that show total throttled Api requests for this subscription in the given time window.
 
 ### [Get-AzAvailabilitySet](Get-AzAvailabilitySet.md)
-{{Manually Enter Get-AzAvailabilitySet Description Here}}
+Gets Azure availability sets in a resource group.
 
 ### [Get-AzComputeResourceSku](Get-AzComputeResourceSku.md)
-{{Manually Enter Get-AzComputeResourceSku Description Here}}
+List all compute resource Skus
 
 ### [Get-AzContainerService](Get-AzContainerService.md)
-{{Manually Enter Get-AzContainerService Description Here}}
+Gets a container service.
 
 ### [Get-AzDisk](Get-AzDisk.md)
-{{Manually Enter Get-AzDisk Description Here}}
+Gets the properties of a Managed disk.
+
+### [Get-AzGallery](Get-AzGallery.md)
+Get or list galleries.
+
+### [Get-AzGalleryImageDefinition](Get-AzGalleryImageDefinition.md)
+Get or list gallery image definitions.
+
+### [Get-AzGalleryImageVersion](Get-AzGalleryImageVersion.md)
+Get or list gallery image versions.
 
 ### [Get-AzImage](Get-AzImage.md)
-{{Manually Enter Get-AzImage Description Here}}
+Gets the properties of an image.
 
 ### [Get-AzRemoteDesktopFile](Get-AzRemoteDesktopFile.md)
-{{Manually Enter Get-AzRemoteDesktopFile Description Here}}
+Gets an .rdp file.
 
 ### [Get-AzSnapshot](Get-AzSnapshot.md)
-{{Manually Enter Get-AzSnapshot Description Here}}
+Gets the properties of a snapshot
 
 ### [Get-AzVM](Get-AzVM.md)
-{{Manually Enter Get-AzVM Description Here}}
+Gets the properties of a virtual machine.
 
 ### [Get-AzVMAccessExtension](Get-AzVMAccessExtension.md)
-{{Manually Enter Get-AzVMAccessExtension Description Here}}
+Gets information about the VMAccess extension.
 
 ### [Get-AzVMADDomainExtension](Get-AzVMADDomainExtension.md)
-{{Manually Enter Get-AzVMADDomainExtension Description Here}}
+Gets information about an AD domain extension.
 
 ### [Get-AzVMAEMExtension](Get-AzVMAEMExtension.md)
-{{Manually Enter Get-AzVMAEMExtension Description Here}}
+Gets information about the AEM extension.
 
 ### [Get-AzVMBootDiagnosticsData](Get-AzVMBootDiagnosticsData.md)
-{{Manually Enter Get-AzVMBootDiagnosticsData Description Here}}
+Gets boot diagnostics data for a virtual machine.
 
 ### [Get-AzVMChefExtension](Get-AzVMChefExtension.md)
-{{Manually Enter Get-AzVMChefExtension Description Here}}
+Gets information about a Chef extension.
 
 ### [Get-AzVMCustomScriptExtension](Get-AzVMCustomScriptExtension.md)
-{{Manually Enter Get-AzVMCustomScriptExtension Description Here}}
+Gets information about a custom script extension.
 
 ### [Get-AzVMDiagnosticsExtension](Get-AzVMDiagnosticsExtension.md)
-{{Manually Enter Get-AzVMDiagnosticsExtension Description Here}}
+Gets the settings of the Diagnostics extension on a virtual machine.
 
 ### [Get-AzVMDiskEncryptionStatus](Get-AzVMDiskEncryptionStatus.md)
-{{Manually Enter Get-AzVMDiskEncryptionStatus Description Here}}
+Gets the encryption status of the virtual machine.
 
 ### [Get-AzVMDscExtension](Get-AzVMDscExtension.md)
-{{Manually Enter Get-AzVMDscExtension Description Here}}
+Gets the settings of the DSC extension on a particular virtual machine.
 
 ### [Get-AzVMDscExtensionStatus](Get-AzVMDscExtensionStatus.md)
-{{Manually Enter Get-AzVMDscExtensionStatus Description Here}}
+Gets the status of the DSC extension handler for a virtual machine.
 
 ### [Get-AzVMExtension](Get-AzVMExtension.md)
-{{Manually Enter Get-AzVMExtension Description Here}}
+Gets properties of Virtual Machine Extensions installed on a virtual machine.
 
 ### [Get-AzVMExtensionImage](Get-AzVMExtensionImage.md)
-{{Manually Enter Get-AzVMExtensionImage Description Here}}
+Gets all versions for an Azure extension.
 
 ### [Get-AzVMExtensionImageType](Get-AzVMExtensionImageType.md)
-{{Manually Enter Get-AzVMExtensionImageType Description Here}}
+Gets the type of an Azure extension.
 
 ### [Get-AzVMImage](Get-AzVMImage.md)
-{{Manually Enter Get-AzVMImage Description Here}}
+Gets all the versions of a VMImage.
 
 ### [Get-AzVMImageOffer](Get-AzVMImageOffer.md)
-{{Manually Enter Get-AzVMImageOffer Description Here}}
+Gets VMImage offer types.
 
 ### [Get-AzVMImagePublisher](Get-AzVMImagePublisher.md)
-{{Manually Enter Get-AzVMImagePublisher Description Here}}
+Gets the VMImage publishers.
 
 ### [Get-AzVMImageSku](Get-AzVMImageSku.md)
-{{Manually Enter Get-AzVMImageSku Description Here}}
+Gets VMImage SKUs.
 
 ### [Get-AzVMRunCommandDocument](Get-AzVMRunCommandDocument.md)
-{{Manually Enter Get-AzVMRunCommandDocument Description Here}}
+Get run command document.
 
 ### [Get-AzVMSize](Get-AzVMSize.md)
-{{Manually Enter Get-AzVMSize Description Here}}
+Gets available virtual machine sizes.
 
 ### [Get-AzVMSqlServerExtension](Get-AzVMSqlServerExtension.md)
-{{Manually Enter Get-AzVMSqlServerExtension Description Here}}
+Gets the settings for a SQL Server extension on a virtual machine.
 
 ### [Get-AzVmss](Get-AzVmss.md)
-{{Manually Enter Get-AzVmss Description Here}}
+Gets the properties of a VMSS.
 
 ### [Get-AzVmssDiskEncryption](Get-AzVmssDiskEncryption.md)
-{{Manually Enter Get-AzVmssDiskEncryption Description Here}}
+Shows the disk encryption status of a VM scale set.
 
 ### [Get-AzVmssRollingUpgrade](Get-AzVmssRollingUpgrade.md)
-{{Manually Enter Get-AzVmssRollingUpgrade Description Here}}
+Shows the status of the latest virtual machine scale set rolling upgrade.
 
 ### [Get-AzVmssSku](Get-AzVmssSku.md)
-{{Manually Enter Get-AzVmssSku Description Here}}
+Gets the available SKUs for the VMSS.
 
 ### [Get-AzVmssVM](Get-AzVmssVM.md)
-{{Manually Enter Get-AzVmssVM Description Here}}
+Gets the properties of a VMSS virtual machine.
 
 ### [Get-AzVmssVMDiskEncryption](Get-AzVmssVMDiskEncryption.md)
-{{Manually Enter Get-AzVmssVMDiskEncryption Description Here}}
+Shows the disk encryption status of VMs in a VM scale set.
 
 ### [Get-AzVMUsage](Get-AzVMUsage.md)
-{{Manually Enter Get-AzVMUsage Description Here}}
+Gets the virtual machine core count usage for a location.
 
 ### [Grant-AzDiskAccess](Grant-AzDiskAccess.md)
-{{Manually Enter Grant-AzDiskAccess Description Here}}
+Grants an access to a disk.
 
 ### [Grant-AzSnapshotAccess](Grant-AzSnapshotAccess.md)
-{{Manually Enter Grant-AzSnapshotAccess Description Here}}
+Grants an access to a snapshot.
 
 ### [Invoke-AzVMRunCommand](Invoke-AzVMRunCommand.md)
-{{Manually Enter Invoke-AzVMRunCommand Description Here}}
+Run command on the VM.
 
 ### [Invoke-AzVmssVMRunCommand](Invoke-AzVmssVMRunCommand.md)
-{{Manually Enter Invoke-AzVmssVMRunCommand Description Here}}
+Run command on the Virtual Machine Scale Set VM.
 
 ### [New-AzAvailabilitySet](New-AzAvailabilitySet.md)
-{{Manually Enter New-AzAvailabilitySet Description Here}}
+Creates an Azure availability set.
 
 ### [New-AzContainerService](New-AzContainerService.md)
-{{Manually Enter New-AzContainerService Description Here}}
+Creates a container service.
 
 ### [New-AzContainerServiceConfig](New-AzContainerServiceConfig.md)
-{{Manually Enter New-AzContainerServiceConfig Description Here}}
+Creates a local configuration object for a container service.
 
 ### [New-AzDisk](New-AzDisk.md)
-{{Manually Enter New-AzDisk Description Here}}
+Creates a managed disk.
 
 ### [New-AzDiskConfig](New-AzDiskConfig.md)
-{{Manually Enter New-AzDiskConfig Description Here}}
+Creates a configurable disk object.
 
 ### [New-AzDiskUpdateConfig](New-AzDiskUpdateConfig.md)
-{{Manually Enter New-AzDiskUpdateConfig Description Here}}
+Creates a configurable disk update object.
+
+### [New-AzGallery](New-AzGallery.md)
+Create a gallery.
+
+### [New-AzGalleryImageDefinition](New-AzGalleryImageDefinition.md)
+Create a gallery image definition.
+
+### [New-AzGalleryImageVersion](New-AzGalleryImageVersion.md)
+Create a gallery image version.
 
 ### [New-AzImage](New-AzImage.md)
-{{Manually Enter New-AzImage Description Here}}
+Creats an image.
 
 ### [New-AzImageConfig](New-AzImageConfig.md)
-{{Manually Enter New-AzImageConfig Description Here}}
+Creates a configurable image object.
 
 ### [New-AzSnapshot](New-AzSnapshot.md)
-{{Manually Enter New-AzSnapshot Description Here}}
+Creates a snapshot.
 
 ### [New-AzSnapshotConfig](New-AzSnapshotConfig.md)
-{{Manually Enter New-AzSnapshotConfig Description Here}}
+Creates a configurable snapshot object.
 
 ### [New-AzSnapshotUpdateConfig](New-AzSnapshotUpdateConfig.md)
-{{Manually Enter New-AzSnapshotUpdateConfig Description Here}}
+Creates a configurable snapshot update object.
 
 ### [New-AzVM](New-AzVM.md)
-{{Manually Enter New-AzVM Description Here}}
+Creates a virtual machine.
 
 ### [New-AzVMConfig](New-AzVMConfig.md)
-{{Manually Enter New-AzVMConfig Description Here}}
+Creates a configurable virtual machine object.
 
 ### [New-AzVMDataDisk](New-AzVMDataDisk.md)
-{{Manually Enter New-AzVMDataDisk Description Here}}
+Creates a local data disk object for a virtual machine or a Vmss VM.
 
 ### [New-AzVMSqlServerAutoBackupConfig](New-AzVMSqlServerAutoBackupConfig.md)
-{{Manually Enter New-AzVMSqlServerAutoBackupConfig Description Here}}
+Creates a configuration object for SQL Server automatic backup.
 
 ### [New-AzVMSqlServerAutoPatchingConfig](New-AzVMSqlServerAutoPatchingConfig.md)
-{{Manually Enter New-AzVMSqlServerAutoPatchingConfig Description Here}}
+Creates a configuration object for automatic patching on a virtual machine.
 
 ### [New-AzVMSqlServerKeyVaultCredentialConfig](New-AzVMSqlServerKeyVaultCredentialConfig.md)
-{{Manually Enter New-AzVMSqlServerKeyVaultCredentialConfig Description Here}}
+Creates a configuration object for SQL server key vault credential on a virtual machine.
 
 ### [New-AzVmss](New-AzVmss.md)
-{{Manually Enter New-AzVmss Description Here}}
+Creates a VMSS.
 
 ### [New-AzVmssConfig](New-AzVmssConfig.md)
-{{Manually Enter New-AzVmssConfig Description Here}}
+Creates a VMSS configuration object.
 
 ### [New-AzVmssIpConfig](New-AzVmssIpConfig.md)
-{{Manually Enter New-AzVmssIpConfig Description Here}}
+Creates an IP configuration for a network interface of a VMSS.
 
 ### [New-AzVmssIpTagConfig](New-AzVmssIpTagConfig.md)
-{{Manually Enter New-AzVmssIpTagConfig Description Here}}
+Creates an IP Tag object for a network interface of a VMSS.
 
 ### [New-AzVmssVaultCertificateConfig](New-AzVmssVaultCertificateConfig.md)
-{{Manually Enter New-AzVmssVaultCertificateConfig Description Here}}
+Creates a Key Vault certificate configuration.
 
 ### [Publish-AzVMDscConfiguration](Publish-AzVMDscConfiguration.md)
-{{Manually Enter Publish-AzVMDscConfiguration Description Here}}
+Uploads a DSC script to Azure blob storage.
 
 ### [Remove-AzAvailabilitySet](Remove-AzAvailabilitySet.md)
-{{Manually Enter Remove-AzAvailabilitySet Description Here}}
+Removes an availability set from Azure.
 
 ### [Remove-AzContainerService](Remove-AzContainerService.md)
-{{Manually Enter Remove-AzContainerService Description Here}}
+Removes a container service.
 
 ### [Remove-AzContainerServiceAgentPoolProfile](Remove-AzContainerServiceAgentPoolProfile.md)
-{{Manually Enter Remove-AzContainerServiceAgentPoolProfile Description Here}}
+Removes an agent pool profile from a container service.
 
 ### [Remove-AzDisk](Remove-AzDisk.md)
-{{Manually Enter Remove-AzDisk Description Here}}
+Removes a disk.
+
+### [Remove-AzGallery](Remove-AzGallery.md)
+Delete a gallery.
+
+### [Remove-AzGalleryImageDefinition](Remove-AzGalleryImageDefinition.md)
+Delete a gallery image definition.
+
+### [Remove-AzGalleryImageVersion](Remove-AzGalleryImageVersion.md)
+Delete a gallery image version.
 
 ### [Remove-AzImage](Remove-AzImage.md)
-{{Manually Enter Remove-AzImage Description Here}}
+Removes an image.
 
 ### [Remove-AzImageDataDisk](Remove-AzImageDataDisk.md)
-{{Manually Enter Remove-AzImageDataDisk Description Here}}
+Removes a data disk from an image object.
 
 ### [Remove-AzSnapshot](Remove-AzSnapshot.md)
-{{Manually Enter Remove-AzSnapshot Description Here}}
+Removes a snapshot.
 
 ### [Remove-AzVM](Remove-AzVM.md)
-{{Manually Enter Remove-AzVM Description Here}}
+Removes a virtual machine from Azure.
 
 ### [Remove-AzVMAccessExtension](Remove-AzVMAccessExtension.md)
-{{Manually Enter Remove-AzVMAccessExtension Description Here}}
+Removes the VMAccess extension from a virtual machine.
 
 ### [Remove-AzVMAEMExtension](Remove-AzVMAEMExtension.md)
-{{Manually Enter Remove-AzVMAEMExtension Description Here}}
+Removes the AEM extension from a virtual machine.
 
 ### [Remove-AzVMBackup](Remove-AzVMBackup.md)
-{{Manually Enter Remove-AzVMBackup Description Here}}
+Removes the backup from a virtual machine.
 
 ### [Remove-AzVMChefExtension](Remove-AzVMChefExtension.md)
-{{Manually Enter Remove-AzVMChefExtension Description Here}}
+Removes the Chef extension from a virtual machine.
 
 ### [Remove-AzVMCustomScriptExtension](Remove-AzVMCustomScriptExtension.md)
-{{Manually Enter Remove-AzVMCustomScriptExtension Description Here}}
+Removes a custom script extension from a virtual machine.
 
 ### [Remove-AzVMDataDisk](Remove-AzVMDataDisk.md)
-{{Manually Enter Remove-AzVMDataDisk Description Here}}
+Removes a data disk from a virtual machine.
 
 ### [Remove-AzVMDiagnosticsExtension](Remove-AzVMDiagnosticsExtension.md)
-{{Manually Enter Remove-AzVMDiagnosticsExtension Description Here}}
+Removes the Diagnostics extension from a virtual machine.
 
 ### [Remove-AzVMDiskEncryptionExtension](Remove-AzVMDiskEncryptionExtension.md)
-{{Manually Enter Remove-AzVMDiskEncryptionExtension Description Here}}
+Removes the disk encryption extension from a virtual machine.
 
 ### [Remove-AzVMDscExtension](Remove-AzVMDscExtension.md)
-{{Manually Enter Remove-AzVMDscExtension Description Here}}
+Removes a DSC extension handler from a virtual machine in a resource group.
 
 ### [Remove-AzVMExtension](Remove-AzVMExtension.md)
-{{Manually Enter Remove-AzVMExtension Description Here}}
+Removes an extension from a virtual machine.
 
 ### [Remove-AzVMNetworkInterface](Remove-AzVMNetworkInterface.md)
-{{Manually Enter Remove-AzVMNetworkInterface Description Here}}
+Removes a network interface from a virtual machine.
 
 ### [Remove-AzVMSecret](Remove-AzVMSecret.md)
-{{Manually Enter Remove-AzVMSecret Description Here}}
+Removes (a) secret(s) from a virtual machine object
 
 ### [Remove-AzVMSqlServerExtension](Remove-AzVMSqlServerExtension.md)
-{{Manually Enter Remove-AzVMSqlServerExtension Description Here}}
+Removes a SQL Server extension from a virtual machine.
 
 ### [Remove-AzVmss](Remove-AzVmss.md)
-{{Manually Enter Remove-AzVmss Description Here}}
+Removes the VMSS or a virtual machine that is within the VMSS.
 
 ### [Remove-AzVmssDataDisk](Remove-AzVmssDataDisk.md)
-{{Manually Enter Remove-AzVmssDataDisk Description Here}}
+Removes a data disk from the VMSS.
 
 ### [Remove-AzVmssDiagnosticsExtension](Remove-AzVmssDiagnosticsExtension.md)
-{{Manually Enter Remove-AzVmssDiagnosticsExtension Description Here}}
+Removes a diagnostics extension from the VMSS.
 
 ### [Remove-AzVmssExtension](Remove-AzVmssExtension.md)
-{{Manually Enter Remove-AzVmssExtension Description Here}}
+Removes an extension from the VMSS.
 
 ### [Remove-AzVmssNetworkInterfaceConfiguration](Remove-AzVmssNetworkInterfaceConfiguration.md)
-{{Manually Enter Remove-AzVmssNetworkInterfaceConfiguration Description Here}}
+Removes a network interface configuration from a VMSS.
+
+### [Remove-AzVmssVMDataDisk](Remove-AzVmssVMDataDisk.md)
+Removes a data disk from a virtual machine scale set VM
 
 ### [Repair-AzVmssServiceFabricUpdateDomain](Repair-AzVmssServiceFabricUpdateDomain.md)
-{{Manually Enter Repair-AzVmssServiceFabricUpdateDomain Description Here}}
+Manual platform update domain walk to update virtual machines in a service fabric virtual machine scale set.
 
 ### [Restart-AzVM](Restart-AzVM.md)
-{{Manually Enter Restart-AzVM Description Here}}
+Restarts an Azure virtual machine.
 
 ### [Restart-AzVmss](Restart-AzVmss.md)
-{{Manually Enter Restart-AzVmss Description Here}}
+Restarts the VMSS or a virtual machine within the VMSS.
 
 ### [Revoke-AzDiskAccess](Revoke-AzDiskAccess.md)
-{{Manually Enter Revoke-AzDiskAccess Description Here}}
+Revokes an access to a disk.
 
 ### [Revoke-AzSnapshotAccess](Revoke-AzSnapshotAccess.md)
-{{Manually Enter Revoke-AzSnapshotAccess Description Here}}
+Revokes an access to a snapshot.
 
 ### [Save-AzVhd](Save-AzVhd.md)
-{{Manually Enter Save-AzVhd Description Here}}
+Saves downloaded .vhd images locally.
 
 ### [Save-AzVMImage](Save-AzVMImage.md)
-{{Manually Enter Save-AzVMImage Description Here}}
+Saves a virtual machine as a VMImage.
 
 ### [Set-AzDiskDiskEncryptionKey](Set-AzDiskDiskEncryptionKey.md)
-{{Manually Enter Set-AzDiskDiskEncryptionKey Description Here}}
+Sets the disk encryption key properties on a disk object.
 
 ### [Set-AzDiskImageReference](Set-AzDiskImageReference.md)
-{{Manually Enter Set-AzDiskImageReference Description Here}}
+Sets the image reference properties on a disk object.
 
 ### [Set-AzDiskKeyEncryptionKey](Set-AzDiskKeyEncryptionKey.md)
-{{Manually Enter Set-AzDiskKeyEncryptionKey Description Here}}
+Sets the key encryption key properties on a disk object.
 
 ### [Set-AzDiskUpdateDiskEncryptionKey](Set-AzDiskUpdateDiskEncryptionKey.md)
-{{Manually Enter Set-AzDiskUpdateDiskEncryptionKey Description Here}}
+Sets the disk encryption key properties on on a disk update object.
 
 ### [Set-AzDiskUpdateKeyEncryptionKey](Set-AzDiskUpdateKeyEncryptionKey.md)
-{{Manually Enter Set-AzDiskUpdateKeyEncryptionKey Description Here}}
+Sets the key encryption key properties on a disk update object.
 
 ### [Set-AzImageOsDisk](Set-AzImageOsDisk.md)
-{{Manually Enter Set-AzImageOsDisk Description Here}}
+Sets the operating system disk properties on an image object.
 
 ### [Set-AzSnapshotDiskEncryptionKey](Set-AzSnapshotDiskEncryptionKey.md)
-{{Manually Enter Set-AzSnapshotDiskEncryptionKey Description Here}}
+Sets the disk encryption key properties on a snapshot object.
 
 ### [Set-AzSnapshotImageReference](Set-AzSnapshotImageReference.md)
-{{Manually Enter Set-AzSnapshotImageReference Description Here}}
+Sets the image reference properties on a snapshot object.
 
 ### [Set-AzSnapshotKeyEncryptionKey](Set-AzSnapshotKeyEncryptionKey.md)
-{{Manually Enter Set-AzSnapshotKeyEncryptionKey Description Here}}
+Sets the key encryption key properties on a snapshot object.
 
 ### [Set-AzSnapshotUpdateDiskEncryptionKey](Set-AzSnapshotUpdateDiskEncryptionKey.md)
-{{Manually Enter Set-AzSnapshotUpdateDiskEncryptionKey Description Here}}
+Sets the disk encryption key properties on a snapshot update object.
 
 ### [Set-AzSnapshotUpdateKeyEncryptionKey](Set-AzSnapshotUpdateKeyEncryptionKey.md)
-{{Manually Enter Set-AzSnapshotUpdateKeyEncryptionKey Description Here}}
+Sets the key encryption key properties on a snapshot update object.
 
 ### [Set-AzVM](Set-AzVM.md)
-{{Manually Enter Set-AzVM Description Here}}
+Marks a virtual machine as generalized.
 
 ### [Set-AzVMAccessExtension](Set-AzVMAccessExtension.md)
-{{Manually Enter Set-AzVMAccessExtension Description Here}}
+Adds the VMAccess extension to a virtual machine.
 
 ### [Set-AzVMADDomainExtension](Set-AzVMADDomainExtension.md)
-{{Manually Enter Set-AzVMADDomainExtension Description Here}}
+Adds an AD domain extension to a virtual machine.
 
 ### [Set-AzVMAEMExtension](Set-AzVMAEMExtension.md)
-{{Manually Enter Set-AzVMAEMExtension Description Here}}
+Enables support for monitoring for SAP systems.
 
 ### [Set-AzVMBackupExtension](Set-AzVMBackupExtension.md)
-{{Manually Enter Set-AzVMBackupExtension Description Here}}
+Sets the backup extension properties on a virtual machine.
 
 ### [Set-AzVMBginfoExtension](Set-AzVMBginfoExtension.md)
-{{Manually Enter Set-AzVMBginfoExtension Description Here}}
+Adds the BGInfo extension to a virtual machine.
 
 ### [Set-AzVMBootDiagnostics](Set-AzVMBootDiagnostics.md)
-{{Manually Enter Set-AzVMBootDiagnostics Description Here}}
+Modifies boot diagnostics properties of a virtual machine.
 
 ### [Set-AzVMChefExtension](Set-AzVMChefExtension.md)
-{{Manually Enter Set-AzVMChefExtension Description Here}}
+Adds a Chef extension to a virtual machine.
 
 ### [Set-AzVMCustomScriptExtension](Set-AzVMCustomScriptExtension.md)
-{{Manually Enter Set-AzVMCustomScriptExtension Description Here}}
+Adds a custom script extension to a virtual machine.
 
 ### [Set-AzVMDataDisk](Set-AzVMDataDisk.md)
-{{Manually Enter Set-AzVMDataDisk Description Here}}
+Modifies properties of a virtual machine data disk.
 
 ### [Set-AzVMDiagnosticsExtension](Set-AzVMDiagnosticsExtension.md)
-{{Manually Enter Set-AzVMDiagnosticsExtension Description Here}}
+Configures the Azure diagnostics extension on a virtual machine.
 
 ### [Set-AzVMDiskEncryptionExtension](Set-AzVMDiskEncryptionExtension.md)
-{{Manually Enter Set-AzVMDiskEncryptionExtension Description Here}}
+Enables encryption on a running IaaS virtual machine in Azure.
 
 ### [Set-AzVMDscExtension](Set-AzVMDscExtension.md)
-{{Manually Enter Set-AzVMDscExtension Description Here}}
+Configures the DSC extension on a virtual machine.
 
 ### [Set-AzVMExtension](Set-AzVMExtension.md)
-{{Manually Enter Set-AzVMExtension Description Here}}
+Updates extension properties or adds an extension to a virtual machine.
 
 ### [Set-AzVMOperatingSystem](Set-AzVMOperatingSystem.md)
-{{Manually Enter Set-AzVMOperatingSystem Description Here}}
+Sets operating system properties for a virtual machine.
 
 ### [Set-AzVMOSDisk](Set-AzVMOSDisk.md)
-{{Manually Enter Set-AzVMOSDisk Description Here}}
+Sets the operating system disk properties on a virtual machine.
 
 ### [Set-AzVMPlan](Set-AzVMPlan.md)
-{{Manually Enter Set-AzVMPlan Description Here}}
+Sets the Marketplace plan information on a virtual machine.
 
 ### [Set-AzVMSourceImage](Set-AzVMSourceImage.md)
-{{Manually Enter Set-AzVMSourceImage Description Here}}
+Specifies the image for a virtual machine.
 
 ### [Set-AzVMSqlServerExtension](Set-AzVMSqlServerExtension.md)
-{{Manually Enter Set-AzVMSqlServerExtension Description Here}}
+Sets the Azure SQL Server extension on a virtual machine.
 
 ### [Set-AzVmss](Set-AzVmss.md)
-{{Manually Enter Set-AzVmss Description Here}}
+Sets specific actions on a specified VMSS.
 
 ### [Set-AzVmssBootDiagnostic](Set-AzVmssBootDiagnostic.md)
-{{Manually Enter Set-AzVmssBootDiagnostic Description Here}}
+Sets the virtual machine scale set boot diagnostics profile.
 
 ### [Set-AzVmssDiskEncryptionExtension](Set-AzVmssDiskEncryptionExtension.md)
-{{Manually Enter Set-AzVmssDiskEncryptionExtension Description Here}}
+Enables disk encryption on a VM scale set.
 
 ### [Set-AzVmssOsProfile](Set-AzVmssOsProfile.md)
-{{Manually Enter Set-AzVmssOsProfile Description Here}}
+Sets the VMSS operating system profile properties.
 
 ### [Set-AzVmssRollingUpgradePolicy](Set-AzVmssRollingUpgradePolicy.md)
-{{Manually Enter Set-AzVmssRollingUpgradePolicy Description Here}}
+Sets the VMSS rolling upgrade policy properties.
 
 ### [Set-AzVmssStorageProfile](Set-AzVmssStorageProfile.md)
-{{Manually Enter Set-AzVmssStorageProfile Description Here}}
+Sets the storage profile properties for the VMSS.
 
 ### [Set-AzVmssVM](Set-AzVmssVM.md)
-{{Manually Enter Set-AzVmssVM Description Here}}
+Modifies the state of a VMSS instance.
 
 ### [Start-AzVM](Start-AzVM.md)
-{{Manually Enter Start-AzVM Description Here}}
+Starts an Azure virtual machine.
 
 ### [Start-AzVmss](Start-AzVmss.md)
-{{Manually Enter Start-AzVmss Description Here}}
+Starts the VMSS or a set of virtual machines within the VMSS.
 
 ### [Start-AzVmssRollingOSUpgrade](Start-AzVmssRollingOSUpgrade.md)
-{{Manually Enter Start-AzVmssRollingOSUpgrade Description Here}}
+Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.
 
 ### [Stop-AzVM](Stop-AzVM.md)
-{{Manually Enter Stop-AzVM Description Here}}
+Stops an Azure virtual machine.
 
 ### [Stop-AzVmss](Stop-AzVmss.md)
-{{Manually Enter Stop-AzVmss Description Here}}
+Stops the VMSS or a set of virtual machines within the VMSS.
 
 ### [Stop-AzVmssRollingUpgrade](Stop-AzVmssRollingUpgrade.md)
-{{Manually Enter Stop-AzVmssRollingUpgrade Description Here}}
+Cancels the current virtual machine scale set rolling upgrade.
 
 ### [Test-AzVMAEMExtension](Test-AzVMAEMExtension.md)
-{{Manually Enter Test-AzVMAEMExtension Description Here}}
+Checks the configuration of the AEM extension.
 
 ### [Update-AzAvailabilitySet](Update-AzAvailabilitySet.md)
-{{Manually Enter Update-AzAvailabilitySet Description Here}}
+Updates an availability set.
 
 ### [Update-AzContainerService](Update-AzContainerService.md)
-{{Manually Enter Update-AzContainerService Description Here}}
+Updates the state of a container service.
 
 ### [Update-AzDisk](Update-AzDisk.md)
-{{Manually Enter Update-AzDisk Description Here}}
+Updates a disk.
+
+### [Update-AzGallery](Update-AzGallery.md)
+Update a gallery.
+
+### [Update-AzGalleryImageDefinition](Update-AzGalleryImageDefinition.md)
+Update a gallery image definition.
+
+### [Update-AzGalleryImageVersion](Update-AzGalleryImageVersion.md)
+Update a gallery image version.
 
 ### [Update-AzImage](Update-AzImage.md)
-{{Manually Enter Update-AzImage Description Here}}
+Updates an image.
 
 ### [Update-AzSnapshot](Update-AzSnapshot.md)
-{{Manually Enter Update-AzSnapshot Description Here}}
+Updates a snapshot.
 
 ### [Update-AzVM](Update-AzVM.md)
-{{Manually Enter Update-AzVM Description Here}}
+Updates the state of an Azure virtual machine.
 
 ### [Update-AzVmss](Update-AzVmss.md)
-{{Manually Enter Update-AzVmss Description Here}}
+Updates the state of a VMSS.
 
 ### [Update-AzVmssInstance](Update-AzVmssInstance.md)
-{{Manually Enter Update-AzVmssInstance Description Here}}
+Starts a manual upgrade of the VMSS instance.
 
 ### [Update-AzVmssVM](Update-AzVmssVM.md)
-{{Manually Enter Update-AzVmssVM Description Here}}
+Updates the state of a Vmss VM.
 

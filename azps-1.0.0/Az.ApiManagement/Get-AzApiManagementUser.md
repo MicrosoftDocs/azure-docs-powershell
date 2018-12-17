@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 638B2BF6-23F8-4038-B20B-1CFABFDBF5D3
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementuser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementUser.md
 ---
 
 # Get-AzApiManagementUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a user or users.
 
 ## SYNTAX
 
@@ -32,22 +35,54 @@ Get-AzApiManagementUser -Context <PsApiManagementContext> [-FirstName <String>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementUser** cmdlet gets a specified user, or all users, if no user is specified.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all users
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementUser -Context $apimContext
 ```
 
-{{ Add example description here }}
+This command gets all users.
+
+### Example 2: Get a user by ID
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementUser -Context $apimContext -UserId "0123456789"
+```
+
+This command gets a user by ID.
+
+### Example: Get users by last name
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementUser -Context $apimContext -LastName "Fuller"
+```
+
+This command gets users that have a specified last name, Fuller.
+
+### Example 4: Get a user by email address
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementUser -Context $apimContext -Email "user@contoso.com"
+```
+
+This command gets the user that has the specified email address.
+
+### Example 5: Get all users within a group
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementUser -Context $apimContext -GroupId "0001"
+```
+
+This command gets all users within the specified group.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of **PsApiManagementContext**.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -62,12 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -77,8 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -Email
-User email.
-If specified will try to find user by email.
+Specifies the email address of the user.
+If this parameter is specified, this cmdlet finds a user by email.
 This parameter is optional.
 
 ```yaml
@@ -94,8 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-User first name.
-If specified will try to find users by the first name.
+Specifies the first name of the user.
+If this parameter is specified, this cmdlet finds a user by first name.
 This parameter is optional.
 
 ```yaml
@@ -111,8 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-If specified will try to find all users within the group.
+Specifies the group identifier.
+If specified, this cmdlet finds all users within the specified group.
 This parameter is optional.
 
 ```yaml
@@ -128,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-User last name.
-If specified will try to find users by the last name.
+Specifies the last name of a user.
+If specified, this cmdlet finds users by last name.
 This parameter is optional.
 
 ```yaml
@@ -145,8 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -State
-User state.
-If specified will try to find all users in the state.
+Specifies the user state.
+If specified, this cmdlet finds users in this state.
 This parameter is optional.
 
 ```yaml
@@ -163,8 +198,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of a user.
-If specified will try to find user by the identifier.
+Specifies a user ID.
+If specified, this cmdlet finds the user by this identifier.
 This parameter is optional.
 
 ```yaml
@@ -180,8 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -189,7 +223,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.String
 
-### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ## OUTPUTS
 
@@ -198,3 +232,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzApiManagementUser](./New-AzApiManagementUser.md)
+
+[Remove-AzApiManagementUser](./Remove-AzApiManagementUser.md)
+
+[Set-AzApiManagementUser](./Set-AzApiManagementUser.md)
+
+

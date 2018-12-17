@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
 Module Name: Az.Cdn
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/get-azcdnprofilesupportedoptimizationtype
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzCdnProfileSupportedOptimizationType.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzCdnProfileSupportedOptimizationType.md
 ---
 
 # Get-AzCdnProfileSupportedOptimizationType
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the supported optimization types for a CDN profile.
 
 ## SYNTAX
 
@@ -25,16 +27,18 @@ Get-AzCdnProfileSupportedOptimizationType -CdnProfile <PSProfile> [-DefaultProfi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzCdnProfileSupportedOptimizationType** cmdlet gets the supported optimization types for the current profile. A user can create an endpoint with an optimization type from the listed values.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzCdnProfileSupportedOptimizationType -ProfileName $profileName -ResourceGroupName $resourceGroupName
+OptimizationType: GeneralWebDelivery
+OptimizationType: DynamicSiteAcceleration
 ```
 
-{{ Add example description here }}
+Get the supported optimization types for a CDN profile.
 
 ## PARAMETERS
 
@@ -57,9 +61,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -99,8 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

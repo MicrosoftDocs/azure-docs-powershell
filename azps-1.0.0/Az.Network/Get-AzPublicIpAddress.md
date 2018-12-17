@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 0CD03BF8-8DB6-44BC-91F0-D863949DBD17
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azpublicipaddress
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzPublicIpAddress.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzPublicIpAddress.md
 ---
 
 # Get-AzPublicIpAddress
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a public IP address.
 
 ## SYNTAX
 
@@ -39,26 +42,26 @@ Get-AzPublicIpAddress -Name <String> -ResourceGroupName <String> -VirtualMachine
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzPublicIPAddress** cmdlet gets one or more public IP addresses in a resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1: Get a public IP resource
+```
+$publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
 ```
 
-{{ Add example description here }}
+This command gets a public IP address resource with name $publicIPName in the resource group $rgName.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -68,8 +71,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandResource
-The resource reference to be expanded.
-
 ```yaml
 Type: System.String
 Parameter Sets: ExpandStandAloneIp, ExpandScaleSetIp
@@ -110,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+Specifies the name of the public IP address that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -164,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that contains the public IP address that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -245,8 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -259,3 +259,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzPublicIpAddress](./New-AzPublicIpAddress.md)
+
+[Remove-AzPublicIpAddress](./Remove-AzPublicIpAddress.md)
+
+[Set-AzPublicIpAddress](./Set-AzPublicIpAddress.md)
+
+

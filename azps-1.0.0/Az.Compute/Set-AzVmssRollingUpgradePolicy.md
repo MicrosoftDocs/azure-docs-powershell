@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssrollingupgradepolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssRollingUpgradePolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssRollingUpgradePolicy.md
 ---
 
 # Set-AzVmssRollingUpgradePolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the VMSS rolling upgrade policy properties.
 
 ## SYNTAX
 
@@ -20,26 +22,26 @@ Set-AzVmssRollingUpgradePolicy [-VirtualMachineScaleSet] <PSVirtualMachineScaleS
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Sets the VMSS rolling upgrade policy properties.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzVmssRollingUpgradePolicy -VirtualMachineScaleSet $vmss -VirtualMachineScaleSet $vmss -MaxBatchInstancePercent 40 -MaxUnhealthyInstancePercent 35 -MaxUnhealthyUpgradedInstancePercent 30 -PauseTimeBetweenBatches "PT30S"
 ```
 
-{{ Add example description here }}
+This command sets 40 percent for MaxBatchInstance, 35 percent for MaxUnhealthyInstance, 30 percent for MaxUnhealthyUpgradedInstance and 30 second pause time between batches for VMSS local object $vmss.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -49,7 +51,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxBatchInstancePercent
-{{Fill MaxBatchInstancePercent Description}}
+The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch.
+As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.
+If the value is not specified, it is set to 20.
 
 ```yaml
 Type: System.Int32
@@ -64,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxUnhealthyInstancePercent
-{{Fill MaxUnhealthyInstancePercent Description}}
+The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts.
+This constraint will be checked prior to starting any batch.
+If the value is not specified, it is set to 20.
 
 ```yaml
 Type: System.Int32
@@ -79,7 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### -MaxUnhealthyUpgradedInstancePercent
-{{Fill MaxUnhealthyUpgradedInstancePercent Description}}
+The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state.
+This check will happen after each batch is upgraded.
+If this percentage is ever exceeded, the rolling update aborts.
+If the value is not specified, it is set to 20.
 
 ```yaml
 Type: System.Int32
@@ -94,7 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -PauseTimeBetweenBatches
-{{Fill PauseTimeBetweenBatches Description}}
+The wait time between completing the update for all virtual machines in one batch and starting the next batch.
+The time duration should be specified in ISO 8601 format.
+The default value is 0 seconds (PT0S).
 
 ```yaml
 Type: System.String
@@ -109,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specifies the VMSS object.
+You can use the New-AzVmssConfig cmdlet to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -155,8 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/edit-azrecoveryservicesasrrecoveryplan
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Edit-AzRecoveryServicesAsrRecoveryPlan.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Edit-AzRecoveryServicesAsrRecoveryPlan.md
 ---
 
 # Edit-AzRecoveryServicesAsrRecoveryPlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Edits a Site Recovery plan.
 
 ## SYNTAX
 
@@ -39,21 +41,21 @@ Edit-AzRecoveryServicesAsrRecoveryPlan -InputObject <ASRRecoveryPlan> -Group <AS
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Edit-AzRecoveryServicesAsrRecoveryPlan** cmdlet edits an Azure Site Recovery plan.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $RP = Edit-AzRecoveryServicesAsrRecoveryPlan -RecoveryPlan $RP -AppendGroup
 ```
 
-{{ Add example description here }}
+Appends a group to existing Azure Site Recovery recovery plan and returns the in-memory updated recovery plan. 
 
 ## PARAMETERS
 
 ### -AddProtectedItem
-{{Fill AddProtectedItem Description}}
+List of ASR replication protected items to be added to the recovery plan group in the recovery plan object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem[]
@@ -68,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppendGroup
-{{Fill AppendGroup Description}}
+Switch parameter to append a recovery plan group to the recovery plan object.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -85,10 +87,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -98,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
-{{Fill Group Description}}
+Specifies a recovery plan group.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlanGroup
@@ -113,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+The ASR recovery plan object to be edited (In memory operation. To update the recovery plan run Update-AzASRRecoveryPlan with the edited recovery plan object.)
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan
@@ -128,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveGroup
-{{Fill RemoveGroup Description}}
+Removes the specified group from the recovery plan object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlanGroup
@@ -143,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProtectedItem
-{{Fill RemoveProtectedItem Description}}
+List of ASR replication protected items to be removed from the recovery plan group in the recovery plan object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem[]
@@ -173,8 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -189,8 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -203,3 +204,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesAsrRecoveryPlan](./Get-AzRecoveryServicesAsrRecoveryPlan.md)
+
+[New-AzRecoveryServicesAsrRecoveryPlan](./New-AzRecoveryServicesAsrRecoveryPlan.md)

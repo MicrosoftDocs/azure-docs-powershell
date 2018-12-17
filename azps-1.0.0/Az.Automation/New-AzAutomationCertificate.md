@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: A504099E-BA96-45C9-A7A6-195E7087A0D4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationCertificate.md
 ---
 
 # New-AzAutomationCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Automation certificate.
 
 ## SYNTAX
 
@@ -19,21 +22,27 @@ New-AzAutomationCertificate [-Name] <String> [-Description <String>] [-Password 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAutomationCertificate** cmdlet creates a certificate in Azure Automation.
+Provide the path to a certificate file to upload.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a new certificate
+```
+PS C:\>$Password = ConvertTo-SecureString -String "Password" -AsPlainText -Force
+PS C:\> New-AzAutomationCertificate -AutomationAccountName "Contoso17" -Name "ContosoCertificate" -Path "./cert.pfx" -Password $Password -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+The first command converts a plain text password to be a secure string by using the ConvertTo-SecureString cmdlet.
+The command stores that object in the $Password variable.
+The second command creates a certificate named ContosoCertificate.
+The command uses the password stored in $Password.
+The command specifies the account name and the path of the file that it uploads.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account for which this cmdlet stores the certificate.
 
 ```yaml
 Type: System.String
@@ -48,12 +57,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The certificate description.
+Specifies a description for the certificate.
 
 ```yaml
 Type: System.String
@@ -78,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Exportable
-The exportable property of the certificate.
+Specifies whether the certificate can be exported.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The certificate name.
+Specifies the name for the certificate.
 
 ```yaml
 Type: System.String
@@ -108,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The certificate password.
+Specifies the password for the certificate file.
 
 ```yaml
 Type: System.Security.SecureString
@@ -123,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The certificate file path.
+Specifies the path to a script file that this cmdlet uploads.
+The file can be a .cer or a .pfx file.
 
 ```yaml
 Type: System.String
@@ -138,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet creates a certificate.
 
 ```yaml
 Type: System.String
@@ -153,8 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -171,3 +180,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationCertificate](./Get-AzAutomationCertificate.md)
+
+[Remove-AzAutomationCertificate](./Remove-AzAutomationCertificate.md)
+
+[Set-AzAutomationCertificate](./Set-AzAutomationCertificate.md)
+
+

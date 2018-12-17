@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 5F856280-C561-47B5-AA96-27E34C86D604
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/get-azkeyvaultcertificateissuer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultCertificateIssuer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultCertificateIssuer.md
 ---
 
 # Get-AzKeyVaultCertificateIssuer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a certificate issuer for a key vault.
 
 ## SYNTAX
 
@@ -31,26 +34,33 @@ Get-AzKeyVaultCertificateIssuer [-ResourceId] <String> [[-Name] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzKeyVaultCertificateIssuer** cmdlet gets a specified certificate issuer or all certificate issuers for a key vault in Azure Key Vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a certificate issuer
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzKeyVaultCertificateIssuer -VaultName "Contosokv01" -Name "TestIssuer01"
+
+AccountId           : 555
+ApiKey              :
+OrganizationDetails : Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateOrganizationDetails
+Name                : TestIssuer01
+IssuerProvider      : Test
+VaultName           : Contosokv01
 ```
 
-{{ Add example description here }}
+This command gets the certificate issuer named TestIssuer01.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -75,8 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Issuer name.
-Cmdlet constructs the FQDN of a certificate issuer from vault name, currently selected environment and issuer name.
+Specifies the name of the certificate issuer to get.
 
 ```yaml
 Type: System.String
@@ -106,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of a key vault.
 
 ```yaml
 Type: System.String
@@ -122,8 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -140,3 +147,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzKeyVaultCertificateIssuer](./Remove-AzKeyVaultCertificateIssuer.md)
+
+[Set-AzKeyVaultCertificateIssuer](./Set-AzKeyVaultCertificateIssuer.md)
+
+

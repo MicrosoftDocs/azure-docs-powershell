@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 920C028B-0471-43EB-9123-C444289FD845
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationrunbook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationRunbook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationRunbook.md
 ---
 
 # Set-AzAutomationRunbook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies a runbook.
 
 ## SYNTAX
 
@@ -19,21 +22,21 @@ Set-AzAutomationRunbook [-Name] <String> [-Description <String>] [-Tag <IDiction
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzAutomationRunbook** cmdlet modifies the configuration of an Azure Automation runbook in APS.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable verbose logging for a runbook
+```
+PS C:\>Set-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbook02" -LogVerbose $True -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command enables verbose logging for the jobs of the specified runbook in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account in which this cmdlet modifies a runbook.
 
 ```yaml
 Type: System.String
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The runbook description.
+Specifies a description for the runbook.
 
 ```yaml
 Type: System.String
@@ -78,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogProgress
-Indicate whether progress logging should be turned on or off.
+Specifies whether the runbook logs progress.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -93,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogVerbose
-Indicate whether verbose logging should be turned on or off.
+Specifies whether logging includes detailed information.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -108,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The runbook name.
+Specifies the name of the runbook that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -123,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet modifies a runbook.
 
 ```yaml
 Type: System.String
@@ -153,8 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -171,3 +173,21 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzAutomationRunbook](./Export-AzAutomationRunbook.md)
+
+[Get-AzAutomationRunbook](./Get-AzAutomationRunbook.md)
+
+[Import-AzAutomationRunbook](./Import-AzAutomationRunbook.md)
+
+[New-AzAutomationRunbook](./New-AzAutomationRunbook.md)
+
+[New-AzAutomationRunbook](./New-AzAutomationRunbook.md)
+
+[Publish-AzAutomationRunbook](./Publish-AzAutomationRunbook.md)
+
+[Remove-AzAutomationRunbook](./Remove-AzAutomationRunbook.md)
+
+[Start-AzAutomationRunbook](./Start-AzAutomationRunbook.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/get-azcontainerregistrycredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistryReplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistryReplication.md
 ---
 
 # Get-AzContainerRegistryReplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a replication of a container registry.
 
 ## SYNTAX
 
@@ -43,26 +45,44 @@ Get-AzContainerRegistryReplication -ResourceId <String> [-DefaultProfile <IAzure
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzContainerRegistryReplication cmdlet gets a specified replication of a container registry or all the replications of a container registry.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Gets a specified replication of a container registry
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Get-AzContainerRegistryReplication -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name "myreplication"
+
+Name                 Location   Provisioni Status               StatusTimestamp                Tags
+                                ngState
+----                 --------   ---------- ------               ---------------                ----
+myreplication       westus     Succeeded  Ready                 11/17/2017 10:19:45 PM         {[tagName, MyTag]}
 ```
 
-{{ Add example description here }}
+Gets a specified replication of a container registry
+
+### Example 2: Gets all the replications of a container registry
+```powershell
+PS C:\>Get-AzContainerRegistryReplication -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry"
+
+Name                 Location   Provisioni Status               StatusTimestamp                Tags
+                                ngState
+----                 --------   ---------- ------               ---------------                ----
+eastus               eastus     Succeeded  Ready                11/6/2017 6:14:47 PM           {}
+myreplication        westus     Succeeded  Ready                11/17/2017 10:19:45 PM         {[tagName, MyTag]}
+```
+
+Gets all the replications of a container registry
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -147,8 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -163,3 +182,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistryReplication](New-AzContainerRegistryReplication.md)
+
+[Remove-AzContainerRegistryReplication](Remove-AzContainerRegistryReplication.md)

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/invoke-azvmssvmruncommand
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Invoke-AzVmssVMRunCommand.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Invoke-AzVmssVMRunCommand.md
 ---
 
 # Invoke-AzVmssVMRunCommand
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Run command on the Virtual Machine Scale Set VM.
 
 ## SYNTAX
 
@@ -34,16 +36,24 @@ Invoke-AzVmssVMRunCommand -CommandId <String> [-ScriptPath <String>] [-Parameter
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Invoke a run command on the Virtual Machine Scale Set VM.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Invoke-AzVmssVMRunCommand -ResourceGroupName 'rgname' -VMScaleSetName 'vmssname' -InstanceId '0' -CommandId 'RunPowerShellScript' -ScriptPath 'sample.ps1' -Parameter @{"arg1" = "var1";"arg2" = "var2"}
 ```
 
-{{ Add example description here }}
+Invoke a run command of RunPowerShellScript with overriding the script 'sample.ps1' and the parameters on the ID '0' VM in the virtual machine scale set of 'vmssname' in resource group 'rgname'.
+
+### Example 2
+```
+PS C:\> $VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0
+PS C:\> Invoke-AzVmssVMRunCommand -VirtualMachineScaleSetVM $VmssVM -CommandId 'RunPowerShellScript' -ScriptPath 'sample.ps1' -Parameter @{"arg1" = "var1";"arg2" = "var2"}
+```
+
+Invoke a run command of RunPowerShellScript with overriding the script 'sample.ps1' and the parameters on the ID '0' VM in the virtual machine scale set of 'vmssname' in resource group 'rgname'.
 
 ## PARAMETERS
 
@@ -63,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -CommandId
-{{Fill CommandId Description}}
+The run command id.
 
 ```yaml
 Type: System.String
@@ -81,9 +91,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceId
-{{Fill InstanceId Description}}
+The instance ID of the virtual machine scale set VM.
 
 ```yaml
 Type: System.String
@@ -108,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parameter
-{{Fill Parameter Description}}
+The run command parameters.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -123,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+The name of the resource group.
 
 ```yaml
 Type: System.String
@@ -138,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{Fill ResourceId Description}}
+The resource id for the virtual machine scale set VM
 
 ```yaml
 Type: System.String
@@ -153,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptPath
-{{Fill ScriptPath Description}}
+Path of the script to be executed.  When this value is given, the given script will override the default script of the command.
 
 ```yaml
 Type: System.String
@@ -168,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSetVM
-{{Fill VirtualMachineScaleSetVM Description}}
+The PS Virtual Machine Scale Set VM Object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSetVM
@@ -183,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMScaleSetName
-{{Fill VMScaleSetName Description}}
+The name of the virtual machine scale set VM.
 
 ```yaml
 Type: System.String
@@ -229,8 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.dll-Help.xml
 Module Name: Az.ApplicationInsights
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.applicationinsights/remove-azapplicationinsightscontinuousexport
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Remove-AzApplicationInsightsContinuousExport.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Remove-AzApplicationInsightsContinuousExport.md
 ---
 
 # Remove-AzApplicationInsightsContinuousExport
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Remove a cotinuous export configuration in an application insights resource
 
 ## SYNTAX
 
@@ -33,16 +35,17 @@ Remove-AzApplicationInsightsContinuousExport [-ResourceId] <String> [-ExportId] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Remove a cotinuous export configuration in an application insights resource
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 Remove a cotinuous export configuration in an application insights resource
+```
+PS C:\> Remove-AzApplicationInsightsContinuousExport -ResourceGroupName "testgroup" -Name "test" -ExportId "uGOoki0jQsyEs3IdQ83Q4QsNr4=" -PassThru
+True
 ```
 
-{{ Add example description here }}
+Remove application insights continuous export configuration with export id "uGOoki0jQsyEs3IdQ83Q4QsNr4=" for resource named "test" in resource group "testgroup"
 
 ## PARAMETERS
 
@@ -62,12 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -107,9 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+If specified will write true in case operation succeeds. This parameter is optional. Default value is false.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -185,8 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 9E423A10-06AF-42F8-AC90-82DB01012AFA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/remove-azbatchcomputenodeuser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchComputeNodeUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzBatchComputeNodeUser.md
 ---
 
 # Remove-AzBatchComputeNodeUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a user account from a Batch compute node.
 
 ## SYNTAX
 
@@ -19,25 +22,25 @@ Remove-AzBatchComputeNodeUser [-PoolId] <String> [-ComputeNodeId] <String> [-Nam
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzBatchComputeNodeUser** cmdlet deletes a user account from an Azure Batch compute node.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Delete a user from a compute node without confirmation
+```
+PS C:\>Remove-AzBatchComputeNodeUser -PoolId "Pool01" -ComputeNodeId "ComputeNode01" -Name "User14" -Force -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command deletes the user named User14 from compute node named ComputeNode01.
+The compute node is in the pool named Pool01.
+This command specifies the *Force* parameter.
+Therefore, the command does not prompt you for confirmation.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -52,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNodeId
-The id of the compute node that contains the user.
+Specifies the ID of the compute node on which this cmdlet deletes the user account.
 
 ```yaml
 Type: System.String
@@ -67,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the compute node user to delete.
+Specifies the name of the user account to delete.
+You cannot specify wildcard characters.
 
 ```yaml
 Type: System.String
@@ -97,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool that contains the compute node.
+Specifies the ID of the pool that contains the compute node on which to delete the user account.
 
 ```yaml
 Type: System.String
@@ -121,7 +125,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -137,14 +141,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -159,3 +162,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzBatchComputeNodeUser](./New-AzBatchComputeNodeUser.md)
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

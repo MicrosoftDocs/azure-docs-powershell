@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/New-AzVM.md
 ---
 
 # New-AzVM
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a virtual machine.
 
 ## SYNTAX
 
@@ -19,8 +22,8 @@ New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] [[-Zone] <String
  [-SubnetAddressPrefix <String>] [-PublicIpAddressName <String>] [-DomainNameLabel <String>]
  [-AllocationMethod <String>] [-SecurityGroupName <String>] [-OpenPorts <Int32[]>] [-Image <String>]
  [-Size <String>] [-AvailabilitySetName <String>] [-SystemAssignedIdentity] [-UserAssignedIdentity <String>]
- [-AsJob] [-DataDiskSizeInGb <Int32[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AsJob] [-DataDiskSizeInGb <Int32[]>] [-EnableUltraSSD] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### DefaultParameterSet
@@ -37,26 +40,136 @@ New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] -Name <String> [
  [-PublicIpAddressName <String>] [-DomainNameLabel <String>] [-AllocationMethod <String>]
  [-SecurityGroupName <String>] [-OpenPorts <Int32[]>] -DiskFile <String> [-Linux] [-Size <String>]
  [-AvailabilitySetName <String>] [-SystemAssignedIdentity] [-UserAssignedIdentity <String>] [-AsJob]
- [-DataDiskSizeInGb <Int32[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DataDiskSizeInGb <Int32[]>] [-EnableUltraSSD] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzVM** cmdlet creates a virtual machine in Azure.
+This cmdlet takes a virtual machine object as input.
+Use the New-AzVMConfig cmdlet to create a virtual machine object.
+Other cmdlets can be used to configure the virtual machine, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, Add-AzVMNetworkInterface, and Set-AzVMOSDisk.
+The `SimpleParameterSet` provides a convenient method to create a VM by making common VM creation arguments optional.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a virtual machine
+```
+PS C:\> New-AzVM -Name MyVm -Credential (Get-Credential)
+
+VERBOSE: Use 'mstsc /v:myvm-222222.eastus.cloudapp.azure.com' to connect to the VM.
+
+ResourceGroupName        : MyVm
+Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyVm/provi
+ders/Microsoft.Compute/virtualMachines/MyVm
+VmId                     : 11111111-1111-1111-1111-111111111111
+Name                     : MyVm
+Type                     : Microsoft.Compute/virtualMachines
+Location                 : eastus
+Tags                     : {}
+HardwareProfile          : {VmSize}
+NetworkProfile           : {NetworkInterfaces}
+OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+ProvisioningState        : Succeeded
+StorageProfile           : {ImageReference, OsDisk, DataDisks}
+FullyQualifiedDomainName : myvm-222222.eastus.cloudapp.azure.com
 ```
 
-{{ Add example description here }}
+This example script shows how to create a virtual machine.
+The script will ask a user name and password for the VM.
+This script uses several other cmdlets.
+
+### Example 2: Create a virtual machine from a custom user image
+```
+PS C:\> ## VM Account
+# Credentials for Local Admin account you created in the sysprepped (generalized) vhd image
+$VMLocalAdminUser = "LocalAdminUser"
+$VMLocalAdminSecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
+## Azure Account
+$LocationName = "westus"
+$ResourceGroupName = "MyResourceGroup"
+# This a Premium_LRS storage account.
+# It is required in order to run a client VM with efficiency and high performance.
+$StorageAccount = "Mydisk"
+
+## VM
+$OSDiskName = "MyClient"
+$ComputerName = "MyClientVM"
+$OSDiskUri = "https://Mydisk.blob.core.windows.net/disks/MyOSDisk.vhd"
+$SourceImageUri = "https://Mydisk.blob.core.windows.net/vhds/MyOSImage.vhd"
+$VMName = "MyVM"
+# Modern hardware environment with fast disk, high IOPs performance.
+# Required to run a client VM with efficiency and performance
+$VMSize = "Standard_DS3"
+$OSDiskCaching = "ReadWrite"
+$OSCreateOption = "FromImage"
+
+## Networking
+$DNSNameLabel = "mydnsname" # mydnsname.westus.cloudapp.azure.com
+$NetworkName = "MyNet"
+$NICName = "MyNIC"
+$PublicIPAddressName = "MyPIP"
+$SubnetName = "MySubnet"
+$SubnetAddressPrefix = "10.0.0.0/24"
+$VnetAddressPrefix = "10.0.0.0/16"
+
+$SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
+$Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
+$PIP = New-AzPublicIpAddress -Name $PublicIPAddressName -DomainNameLabel $DNSNameLabel -ResourceGroupName $ResourceGroupName -Location $LocationName -AllocationMethod Dynamic
+$NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id -PublicIpAddressId $PIP.Id
+
+$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+
+$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
+$VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
+$VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
+$VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -SourceImageUri $SourceImageUri -Caching $OSDiskCaching -CreateOption $OSCreateOption -Windows
+
+New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+```
+
+This example takes an existing sys-prepped, generalized custom operating system image and attaches a data disk to it, provisions a new network, deploys the VHD, and runs it.
+This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
+This script assumes that you are already logged into your Azure account.
+You can confirm your login status by using the **Get-AzSubscription** cmdlet.
+
+### Example 3: Create a VM from a marketplace image without a Public IP
+```
+$VMLocalAdminUser = "LocalAdminUser"
+$VMLocalAdminSecurePassword = ConvertTo-SecureString <password> -AsPlainText -Force
+$LocationName = "westus"
+$ResourceGroupName = "MyResourceGroup"
+$ComputerName = "MyVM"
+$VMName = "MyVM"
+$VMSize = "Standard_DS3"
+
+$NetworkName = "MyNet"
+$NICName = "MyNIC"
+$SubnetName = "MySubnet"
+$SubnetAddressPrefix = "10.0.0.0/24"
+$VnetAddressPrefix = "10.0.0.0/16"
+
+$SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
+$Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
+$NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id
+
+$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+
+$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
+$VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
+$VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
+$VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'WindowsServer' -Skus '2012-R2-Datacenter' -Version latest
+
+New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+```
+
+This example provisions a new network and deploys a Windows VM from the Marketplace without creating a public IP address or Network Security Group.
+This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
 
 ## PARAMETERS
 
 ### -AddressPrefix
-{{Fill AddressPrefix Description}}
+The address prefix for the virtual network which will be created for the VM.
 
 ```yaml
 Type: System.String
@@ -65,13 +178,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 192.168.0.0/16
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -AllocationMethod
-{{Fill AllocationMethod Description}}
+The IP allocation method for the public IP which will be created for the VM.
 
 ```yaml
 Type: System.String
@@ -81,13 +194,13 @@ Accepted values: Static, Dynamic
 
 Required: False
 Position: Named
-Default value: None
+Default value: Static
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -AsJob
-Run cmdlet in the background
+Run cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -102,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailabilitySetName
-{{Fill AvailabilitySetName Description}}
+Specifies a name for the availability set.
 
 ```yaml
 Type: System.String
@@ -117,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{Fill Credential Description}}
+The administrator credentials for the VM.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -132,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataDiskSizeInGb
-{{Fill DataDiskSizeInGb Description}}
+Specifies the sizes of data disks in GB.
 
 ```yaml
 Type: System.Int32[]
@@ -147,12 +260,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -162,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBginfoExtension
-Disable BG Info Extension
+Indicates that this cmdlet does not install the **BG Info** extension on the virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -177,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskFile
-{{Fill DiskFile Description}}
+The local path to the virtual hard disk file to be uploaded to the cloud and for creating the VM, and it must have '.vhd' as its suffix.
 
 ```yaml
 Type: System.String
@@ -192,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainNameLabel
-{{Fill DomainNameLabel Description}}
+The subdomain label for the fully-qualified domain name (FQDN) of the VM.  This will take the form `{domainNameLabel}.{location}.cloudapp.azure.com`.
 
 ```yaml
 Type: System.String
@@ -206,13 +319,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Image
-{{Fill Image Description}}
+### -EnableUltraSSD
+Use UltraSSD disks for the vm.
 
 ```yaml
-Type: System.String
-Parameter Sets: SimpleParameterSet
-Aliases: ImageName
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SimpleParameterSet, DiskFileParameterSet
+Aliases:
 
 Required: False
 Position: Named
@@ -221,8 +334,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Image
+The friendly image name upon which the VM will be built.  These include: Win2016Datacenter, Win2012R2Datacenter, Win2012Datacenter, Win2008R2SP1, UbuntuLTS, CentOS, CoreOS, Debian, openSUSE-Leap, RHEL, SLES.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases: ImageName
+
+Required: False
+Position: Named
+Default value: Win2016Datacenter
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LicenseType
-{{Fill LicenseType Description}}
+Specifies a license type, which indicates that the image or disk for the virtual machine was licensed on-premises.
+This value is used only for images that contain the Windows Server operating system.
+The acceptable values for this parameter are:
+- Windows_Client
+- Windows_Server
+This value cannot be updated.
+If you specify this parameter for an update, the value must match the initial value for the virtual machine.
 
 ```yaml
 Type: System.String
@@ -237,7 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-{{Fill Linux Description}}
+Indicates whether the disk file is for Linux VM, if specified; or Windows, if not specified by default.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -252,7 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+Specifies a location for the virtual machine.
 
 ```yaml
 Type: System.String
@@ -279,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+The name of the VM resource.
 
 ```yaml
 Type: System.String
@@ -294,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -OpenPorts
-{{Fill OpenPorts Description}}
+A list of ports to open on the network security group (NSG) for the created VM.  The default value depends on the type of image chosen (i.e., Windows: 3389, 5985 and Linux: 22).
 
 ```yaml
 Type: System.Int32[]
@@ -309,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIpAddressName
-{{Fill PublicIpAddressName Description}}
+The name of a new (or existing) public IP address for the created VM to use.  If not specified, a name will be generated.
 
 ```yaml
 Type: System.String
@@ -324,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -351,7 +485,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroupName
-{{Fill SecurityGroupName Description}}
+The name of a new (or existing) network security group (NSG) for the created VM to use.  If not specified, a name will be generated.
 
 ```yaml
 Type: System.String
@@ -366,7 +500,7 @@ Accept wildcard characters: False
 ```
 
 ### -Size
-{{Fill Size Description}}
+The Virtual Machine Size.  The Default Value is: Standard_DS1_v2.
 
 ```yaml
 Type: System.String
@@ -375,13 +509,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Standard_DS1_v2
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -SubnetAddressPrefix
-{{Fill SubnetAddressPrefix Description}}
+The address prefix for the subnet which will be created for the VM.
 
 ```yaml
 Type: System.String
@@ -390,13 +524,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 192.168.1.0/24
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -SubnetName
-{{Fill SubnetName Description}}
+The name of a new (or existing) subnet for the created VM to use.  If not specified, a name will be generated.
 
 ```yaml
 Type: System.String
@@ -411,7 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -SystemAssignedIdentity
-Use this to add system assigned identity (MSI) to the vm
+If the parameter is present then the VM is assingned a managed system identity that is auto generated.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -426,7 +560,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+Specifies that resources and resource groups can be tagged with a set of name-value pairs.
+Adding tags to resources enables you to group resources together across resource groups and to create your own views.
+Each resource or resource group can have a maximum of 15 tags.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -441,7 +577,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAssignedIdentity
-Use this to add the assign user specified identity (MSI) to the VM
+The name of a managed service identity that should be assigned to the VM.
 
 ```yaml
 Type: System.String
@@ -456,7 +592,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkName
-{{Fill VirtualNetworkName Description}}
+The name of a new (or existing) virtual network for the created VM to use.  If not specified, a name will be generated.
 
 ```yaml
 Type: System.String
@@ -471,7 +607,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{Fill VM Description}}
+Specifies a local virtual machine to create.
+To obtain a virtual machine object, use the New-AzVMConfig cmdlet.
+Other cmdlets can be used to configure the virtual machine, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, and Add-AzVMNetworkInterface.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
@@ -486,7 +624,7 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-{{Fill Zone Description}}
+Specifies the zone list of the virtual machine.
 
 ```yaml
 Type: System.String[]
@@ -522,7 +660,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -538,14 +676,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -566,3 +703,29 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+[Remove-AzVM](./Remove-AzVM.md)
+
+[Restart-AzVM](./Restart-AzVM.md)
+
+[Start-AzVM](./Start-AzVM.md)
+
+[Stop-AzVM](./Stop-AzVM.md)
+
+[Update-AzVM](./Update-AzVM.md)
+
+[Add-AzVMDataDisk](./Add-AzVMDataDisk.md)
+
+[Add-AzVMNetworkInterface](./Add-AzVMNetworkInterface.md)
+
+[New-AzVMConfig](./New-AzVMConfig.md)
+
+[Set-AzVMOperatingSystem](./Set-AzVMOperatingSystem.md)
+
+[Set-AzVMSourceImage](./Set-AzVMSourceImage.md)
+
+[Set-AzVMOSDisk](./Set-AzVMOSDisk.md)
+
+

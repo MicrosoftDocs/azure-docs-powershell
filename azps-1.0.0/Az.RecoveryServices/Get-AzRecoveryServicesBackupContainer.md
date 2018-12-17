@@ -1,46 +1,65 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 1097FF29-1C23-4960-930C-5C1227419359
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/get-azrecoveryservicesbackupcontainer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupContainer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupContainer.md
 ---
 
 # Get-AzRecoveryServicesBackupContainer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Backup containers.
 
 ## SYNTAX
 
 ```
 Get-AzRecoveryServicesBackupContainer [-ContainerType] <ContainerType> [[-BackupManagementType] <String>]
- [[-Name] <String>] [[-FriendlyName] <String>] [[-ResourceGroupName] <String>]
- [[-Status] <ContainerRegistrationStatus>] [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [[-FriendlyName] <String>] [[-ResourceGroupName] <String>] [[-Status] <ContainerRegistrationStatus>]
+ [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesBackupContainer** cmdlet gets a backup container.
+A Backup container encapsulates data sources that are modelled as backup items.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a specific container
+```
+PS C:\>Get-AzRecoveryServicesContainer -ContainerType "AzureVM" -Status "Registered" -Name "V2VM";
 ```
 
-{{ Add example description here }}
+This command gets the container named V2VM of type AzureVM.
+
+### Example 2: Get all containers of a specific type
+```
+PS C:\>Get-AzRecoveryServicesBackupContainer -ContainerType Windows -BackupManagementType MARS
+```
+
+This command gets all Windows containers that are protected by Azure Backup agent.
+The *BackupManagementType* parameter is only required for Windows containers.
 
 ## PARAMETERS
 
 ### -BackupManagementType
-The backup management type of the Azure Backup container
+Specifies the backup management type.
+The acceptable values for this parameter are:
+- AzureVM
+- MARS
+- AzureSQL
+- AzureStorage
+
+This parameter is used to differentiate Windows machines that are backed up using MARS agent or other backup engines.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: AzureVM, MARS, AzureSQL
+Accepted values: AzureVM, MARS, AzureSQL, AzureStorage
 
 Required: False
 Position: 2
@@ -50,13 +69,18 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerType
-The type of the Azure Backup container (for example:  Windows Server or Azure IaaS VM).
+Specifies the backup container type.
+The acceptable values for this parameter are:
+- AzureVM 
+- Windows
+- AzureSQL
+- AzureStorage
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerType
 Parameter Sets: (All)
 Aliases:
-Accepted values: AzureVM, Windows, AzureSQL
+Accepted values: AzureVM, Windows, AzureSQL, AzureStorage
 
 Required: True
 Position: 1
@@ -66,12 +90,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -81,22 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-The name of the resource being managed by the Azure Backup service (for example: resource name of the VM).
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The name of the resource being managed by the Azure Backup service (for example: resource name of the VM).
+Specifies the friendly name of the container to get.
 
 ```yaml
 Type: System.String
@@ -111,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The ResourceGroup of the resource being managed by the Azure Backup service (for example: ResourceGroup name of the VM).
+Specifies the name of the resource group.
+This parameter is for Azure virtual machines only.
 
 ```yaml
 Type: System.String
@@ -126,7 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The registration status of the Azure Backup container.
+Specifies the container registration status.
+The acceptable values for this parameter are:
+- Registered
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerRegistrationStatus
@@ -157,8 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -171,3 +182,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupItem](./Get-AzRecoveryServicesBackupItem.md)
+
+[Get-AzRecoveryServicesBackupManagementServer](./Get-AzRecoveryServicesBackupManagementServer.md)
+
+[Unregister-AzRecoveryServicesBackupContainer](./Unregister-AzRecoveryServicesBackupContainer.md)
+

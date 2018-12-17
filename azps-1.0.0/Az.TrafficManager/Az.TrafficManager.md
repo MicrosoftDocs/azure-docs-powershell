@@ -1,79 +1,81 @@
 ---
 Module Name: Az.TrafficManager
-Module Guid: fe9266bb-89fe-4eb4-a63a-cbefad974666
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280237
+Help Version: 4.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Az.TrafficManager.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Az.TrafficManager.md
 ---
 
 # Az.TrafficManager Module
 ## Description
-{{Manually Enter Description Here}}
+This topic lists the help topics for the Azure Traffic Manager cmdlets. The cmdlets use Azure Resource Manager.
 
 ## Az.TrafficManager Cmdlets
 ### [Add-AzTrafficManagerCustomHeaderToEndpoint](Add-AzTrafficManagerCustomHeaderToEndpoint.md)
-{{Manually Enter Add-AzTrafficManagerCustomHeaderToEndpoint Description Here}}
+Adds custom header information to a local Traffic Manager endpoint object.
 
 ### [Add-AzTrafficManagerCustomHeaderToProfile](Add-AzTrafficManagerCustomHeaderToProfile.md)
-{{Manually Enter Add-AzTrafficManagerCustomHeaderToProfile Description Here}}
+Adds custom header information to a local Traffic Manager profile object.
 
 ### [Add-AzTrafficManagerEndpointConfig](Add-AzTrafficManagerEndpointConfig.md)
-{{Manually Enter Add-AzTrafficManagerEndpointConfig Description Here}}
+Adds an endpoint to a local Traffic Manager profile object.
 
 ### [Add-AzTrafficManagerExpectedStatusCodeRange](Add-AzTrafficManagerExpectedStatusCodeRange.md)
-{{Manually Enter Add-AzTrafficManagerExpectedStatusCodeRange Description Here}}
+Adds an expected status code range to a local Traffic Manager profile object.
 
 ### [Add-AzTrafficManagerIpAddressRange](Add-AzTrafficManagerIpAddressRange.md)
-{{Manually Enter Add-AzTrafficManagerIpAddressRange Description Here}}
+Adds an address range or subnet to a local Traffic Manager endpoint object.
 
 ### [Disable-AzTrafficManagerEndpoint](Disable-AzTrafficManagerEndpoint.md)
-{{Manually Enter Disable-AzTrafficManagerEndpoint Description Here}}
+Disables an endpoint in a Traffic Manager profile.
 
 ### [Disable-AzTrafficManagerProfile](Disable-AzTrafficManagerProfile.md)
-{{Manually Enter Disable-AzTrafficManagerProfile Description Here}}
+Disables a Traffic Manager profile.
 
 ### [Enable-AzTrafficManagerEndpoint](Enable-AzTrafficManagerEndpoint.md)
-{{Manually Enter Enable-AzTrafficManagerEndpoint Description Here}}
+Enables an endpoint in a Traffic Manager profile.
 
 ### [Enable-AzTrafficManagerProfile](Enable-AzTrafficManagerProfile.md)
-{{Manually Enter Enable-AzTrafficManagerProfile Description Here}}
+Enables a Traffic Manager profile.
 
 ### [Get-AzTrafficManagerEndpoint](Get-AzTrafficManagerEndpoint.md)
-{{Manually Enter Get-AzTrafficManagerEndpoint Description Here}}
+Gets an endpoint for a Traffic Manager profile.
 
 ### [Get-AzTrafficManagerProfile](Get-AzTrafficManagerProfile.md)
-{{Manually Enter Get-AzTrafficManagerProfile Description Here}}
+Gets a Traffic Manager profile.
 
 ### [New-AzTrafficManagerEndpoint](New-AzTrafficManagerEndpoint.md)
-{{Manually Enter New-AzTrafficManagerEndpoint Description Here}}
+Creates an endpoint in a Traffic Manager profile.
 
 ### [New-AzTrafficManagerProfile](New-AzTrafficManagerProfile.md)
-{{Manually Enter New-AzTrafficManagerProfile Description Here}}
+Creates a Traffic Manager profile.
 
 ### [Remove-AzTrafficManagerCustomHeaderFromEndpoint](Remove-AzTrafficManagerCustomHeaderFromEndpoint.md)
-{{Manually Enter Remove-AzTrafficManagerCustomHeaderFromEndpoint Description Here}}
+Removes custom header information from a local Traffic Manager endpoint object.
 
 ### [Remove-AzTrafficManagerCustomHeaderFromProfile](Remove-AzTrafficManagerCustomHeaderFromProfile.md)
-{{Manually Enter Remove-AzTrafficManagerCustomHeaderFromProfile Description Here}}
+Removes custom header information from a local Traffic Manager profile object.
 
 ### [Remove-AzTrafficManagerEndpoint](Remove-AzTrafficManagerEndpoint.md)
-{{Manually Enter Remove-AzTrafficManagerEndpoint Description Here}}
+Removes an endpoint from Traffic Manager.
 
 ### [Remove-AzTrafficManagerEndpointConfig](Remove-AzTrafficManagerEndpointConfig.md)
-{{Manually Enter Remove-AzTrafficManagerEndpointConfig Description Here}}
+Removes an endpoint from a local Traffic Manager profile object.
 
 ### [Remove-AzTrafficManagerExpectedStatusCodeRange](Remove-AzTrafficManagerExpectedStatusCodeRange.md)
-{{Manually Enter Remove-AzTrafficManagerExpectedStatusCodeRange Description Here}}
+Removes an expected status code range from a local Traffic Manager profile object.
 
 ### [Remove-AzTrafficManagerIpAddressRange](Remove-AzTrafficManagerIpAddressRange.md)
-{{Manually Enter Remove-AzTrafficManagerIpAddressRange Description Here}}
+Removes an address range or subnet from a local Traffic Manager endpoint object.
 
 ### [Remove-AzTrafficManagerProfile](Remove-AzTrafficManagerProfile.md)
-{{Manually Enter Remove-AzTrafficManagerProfile Description Here}}
+Deletes a Traffic Manager profile.
 
 ### [Set-AzTrafficManagerEndpoint](Set-AzTrafficManagerEndpoint.md)
-{{Manually Enter Set-AzTrafficManagerEndpoint Description Here}}
+Updates a Traffic Manager endpoint.
 
 ### [Set-AzTrafficManagerProfile](Set-AzTrafficManagerProfile.md)
-{{Manually Enter Set-AzTrafficManagerProfile Description Here}}
+Updates a Traffic Manager profile.
 

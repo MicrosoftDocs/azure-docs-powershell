@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/get-aziothubroutingendpoint
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzIotHubRoutingEndpoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzIotHubRoutingEndpoint.md
 ---
 
 # Get-AzIotHubRoutingEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get information on all the endpoints for your IoT Hub
 
 ## SYNTAX
 
@@ -31,16 +33,58 @@ Get-AzIotHubRoutingEndpoint [-ResourceId] <String> [-EndpointType <PSEndpointTyp
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Get information on the endpoint.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzIotHubRoutingEndpoint -ResourceGroupName "myresourcegroup" -Name "myiothub"
+
+Name EndpointType			AzureResource
+---- ------------			-------------
+E1   EventHub				resourcegroup1/event1
+E2   EventHub				resourcegroup1/event2
+S1   AzureStorageContainer	mystorage1/container
 ```
 
-{{ Add example description here }}
+Get all the endpoints from "myiothub" IoT Hub.
+
+### Example 2
+```
+PS C:\> Get-AzIotHubRoutingEndpoint -ResourceGroupName "myresourcegroup" -Name "myiothub" -EndpointType EventHub
+
+ResourceGroupName SubscriptionId                       EndpointName
+----------------- --------------                       ------------
+resourcegroup1    91d12343-a3de-345d-b2ea-135792468abc E1
+resourcegroup1    91d12343-a3de-345d-b2ea-135792468abc E2
+```
+
+Get all the endpoints of type EventHub from "myiothub" IoT Hub. 
+
+### Example 3
+```
+PS C:\> Get-AzIotHubRoutingEndpoint -ResourceGroupName "myresourcegroup" -Name "myiothub" -EndpointType EventHub
+
+ResourceGroupName : resourcegroup1
+SubscriptionId    : 91d12343-a3de-345d-b2ea-135792468abc
+EndpointName      : E1
+ConnectionString  : Endpoint=sb://myeventhub1.servicebus.windows.net:5671/;SharedAccessKeyName=iothubroutes_myeventhub1;SharedAccessKey=****;EntityPath=event1
+```
+
+Get all the endpoints of type EventHub from "myiothub" IoT Hub.
+
+### Example 4
+```
+PS C:\> Get-AzIotHubRoutingEndpoint -ResourceGroupName "myresourcegroup" -Name "myiothub" -EndpointName E1
+
+ResourceGroupName : resourcegroup1
+SubscriptionId    : 91d12343-a3de-345d-b2ea-135792468abc
+EndpointName      : E1
+ConnectionString  : Endpoint=sb://myeventhub1.servicebus.windows.net:5671/;SharedAccessKeyName=iothubroutes_myeventhub1;SharedAccessKey=****;EntityPath=event1
+```
+
+Get an endpoint information from "myiothub" IoT Hub.
 
 ## PARAMETERS
 
@@ -48,9 +92,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -151,8 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -164,7 +207,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingEventHubEndpoint
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingEventHubProperties, Microsoft.Azure.Commands.IotHub, Version=3.1.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingEventHubProperties, Microsoft.Azure.PowerShell.Cmdlets.IotHub, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ### Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingServiceBusQueueEndpoint
 

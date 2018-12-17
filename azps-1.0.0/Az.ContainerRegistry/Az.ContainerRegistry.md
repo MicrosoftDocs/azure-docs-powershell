@@ -1,61 +1,63 @@
 ---
 Module Name: Az.ContainerRegistry
-Module Guid: 11a1f96b-f261-4be1-8e1e-1613eedddacc
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: b3ca459c-feb9-41cc-a954-46222505acb3
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry
+Help Version: 1.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Az.ContainerRegistry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Az.ContainerRegistry.md
 ---
 
 # Az.ContainerRegistry Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Container Registry Management Cmdlets.
 
 ## Az.ContainerRegistry Cmdlets
 ### [Get-AzContainerRegistry](Get-AzContainerRegistry.md)
-{{Manually Enter Get-AzContainerRegistry Description Here}}
+Gets a container registry.
 
 ### [Get-AzContainerRegistryCredential](Get-AzContainerRegistryCredential.md)
-{{Manually Enter Get-AzContainerRegistryCredential Description Here}}
+Gets the login credentials for a container registry.
 
 ### [Get-AzContainerRegistryReplication](Get-AzContainerRegistryReplication.md)
-{{Manually Enter Get-AzContainerRegistryReplication Description Here}}
+Gets a replication of a container registry.
 
 ### [Get-AzContainerRegistryWebhook](Get-AzContainerRegistryWebhook.md)
-{{Manually Enter Get-AzContainerRegistryWebhook Description Here}}
+Gets a container registry webhook.
 
 ### [Get-AzContainerRegistryWebhookEvent](Get-AzContainerRegistryWebhookEvent.md)
-{{Manually Enter Get-AzContainerRegistryWebhookEvent Description Here}}
+Gets events of a container registry webhook.
 
 ### [New-AzContainerRegistry](New-AzContainerRegistry.md)
-{{Manually Enter New-AzContainerRegistry Description Here}}
+Creates a container registry.
 
 ### [New-AzContainerRegistryReplication](New-AzContainerRegistryReplication.md)
-{{Manually Enter New-AzContainerRegistryReplication Description Here}}
+Creates a container registry replication.
 
 ### [New-AzContainerRegistryWebhook](New-AzContainerRegistryWebhook.md)
-{{Manually Enter New-AzContainerRegistryWebhook Description Here}}
+Creates a container registry webhook.
 
 ### [Remove-AzContainerRegistry](Remove-AzContainerRegistry.md)
-{{Manually Enter Remove-AzContainerRegistry Description Here}}
+Removes a container registry.
 
 ### [Remove-AzContainerRegistryReplication](Remove-AzContainerRegistryReplication.md)
-{{Manually Enter Remove-AzContainerRegistryReplication Description Here}}
+Removes a container registry replication.
 
 ### [Remove-AzContainerRegistryWebhook](Remove-AzContainerRegistryWebhook.md)
-{{Manually Enter Remove-AzContainerRegistryWebhook Description Here}}
+Removes a container registry webhook.
 
 ### [Test-AzContainerRegistryNameAvailability](Test-AzContainerRegistryNameAvailability.md)
-{{Manually Enter Test-AzContainerRegistryNameAvailability Description Here}}
+Checks the availability of a container registry name.
 
 ### [Test-AzContainerRegistryWebhook](Test-AzContainerRegistryWebhook.md)
-{{Manually Enter Test-AzContainerRegistryWebhook Description Here}}
+Triggers a webhook ping event.
 
 ### [Update-AzContainerRegistry](Update-AzContainerRegistry.md)
-{{Manually Enter Update-AzContainerRegistry Description Here}}
+Updates a container registry.
 
 ### [Update-AzContainerRegistryCredential](Update-AzContainerRegistryCredential.md)
-{{Manually Enter Update-AzContainerRegistryCredential Description Here}}
+Regenerates a login credential for a container registry.
 
 ### [Update-AzContainerRegistryWebhook](Update-AzContainerRegistryWebhook.md)
-{{Manually Enter Update-AzContainerRegistryWebhook Description Here}}
+Updates a container registry webhook.
 

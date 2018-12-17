@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 28BC1B99-946C-4A8D-9581-4D5CC0BCEF8B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/set-azkeyvaultcertificatepolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzKeyVaultCertificatePolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzKeyVaultCertificatePolicy.md
 ---
 
 # Set-AzKeyVaultCertificatePolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates or updates the policy for a certificate in a key vault.
 
 ## SYNTAX
 
@@ -45,16 +48,37 @@ Set-AzKeyVaultCertificatePolicy [-VaultName] <String> [-Name] <String> -RenewAtN
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzKeyVaultCertificatePolicy** cmdlet creates or updates the policy for a certificate in a key vault.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set a certificate policy
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzKeyVaultCertificatePolicy -VaultName "ContosoKV01" -Name "TestCert01" -SecretContentType "application/x-pkcs12" -SubjectName "CN=contoso.com" -IssuerName "Self" -ValidityInMonths 6 -ReuseKeyOnRenewal $True -PassThru
+
+SecretContentType               : application/x-pkcs12
+Kty                             :
+KeySize                         : 2048
+Exportable                      :
+ReuseKeyOnRenewal               : True
+SubjectName                     : CN=contoso.com
+DnsNames                        :
+KeyUsage                        :
+Ekus                            :
+ValidityInMonths                : 6
+IssuerName                      : Self
+CertificateType                 :
+RenewAtNumberOfDaysBeforeExpiry :
+RenewAtPercentageLifetime       :
+EmailAtNumberOfDaysBeforeExpiry :
+EmailAtPercentageLifetime       :
+CertificateTransparency         :
+Enabled                         : True
+Created                         :
+Updated                         :
 ```
 
-{{ Add example description here }}
+This command sets the policy for the TestCert01 certificate in the ContosoKV01 key vault.
 
 ## PARAMETERS
 
@@ -89,12 +113,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -104,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disabled
-Specifies whether the certificate policy is enabled or not.
+Indicates that the certificate policy is disabled.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -134,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ekus
-Specifies the enhanced key usages in the certificate.
+Specifies the enhanced key usages (EKUs) in the certificate.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -149,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAtNumberOfDaysBeforeExpiry
-Specifies how many days before expiry the automatic notification process begins.
+Specifies the number of days before expiration when automatic renewal should start.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -209,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyNotExportable
-Specifies whether the key is not exportable.
+Indicates that the key is not exportable.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -224,7 +248,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeyType
-Specifies the key type of the key backing the certificate.
+Specifies the key type of the key that backs the certificate.
+The acceptable values for this parameter are:
+- RSA
+- RSA-HSM
 
 ```yaml
 Type: System.String
@@ -256,8 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Certificate name.
-Cmdlet constructs the FQDN of a certificate from vault name, currently selected environment and certificate name.
+Specifies the name of the certificate.
 
 ```yaml
 Type: System.String
@@ -272,8 +298,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-This cmdlet does not return an object by default.
-If this switch is specified, it returns the policy object.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -288,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -RenewAtNumberOfDaysBeforeExpiry
-Specifies the number of days before expiration when automatic renewal should start.
+Specifies the number of days before expiry after which the automatic process for certificate renewal begins.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -303,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -RenewAtPercentageLifetime
-Specifies the percentage of the lifetime after which the automatic process for the certificate renewal begins.
+Specifies the percentage of the lifetime after which the automatic process for certificate renewal begins.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -318,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReuseKeyOnRenewal
-Specifies whether the certificate should use the old key during renewal.
+Indicates that the certificate reuse the key during renewal.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -333,7 +359,10 @@ Accept wildcard characters: False
 ```
 
 ### -SecretContentType
-Specifies the content type of the resulting Key Vault secret.
+Specifies the content type of the new key vault secret.
+The acceptable values for this parameter are:
+- application/x-pkcs12
+- application/x-pem-file
 
 ```yaml
 Type: System.String
@@ -364,7 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidityInMonths
-Specifies the number of months the certificate will be valid.
+Specifies the number of months the certificate is valid.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -379,8 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of a key vault.
 
 ```yaml
 Type: System.String
@@ -426,8 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -440,3 +467,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzKeyVaultCertificatePolicy](./Get-AzKeyVaultCertificatePolicy.md)
+
+[New-AzKeyVaultCertificatePolicy](./New-AzKeyVaultCertificatePolicy.md)
+

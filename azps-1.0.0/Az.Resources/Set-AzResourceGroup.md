@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 4E5C059B-36F3-41C8-9FDB-69F5318CF39B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/set-azresourcegroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Set-AzResourceGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Set-AzResourceGroup.md
 ---
 
 # Set-AzResourceGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies a resource group.
 
 ## SYNTAX
 
@@ -25,22 +28,55 @@ Set-AzResourceGroup [-Tag] <Hashtable> -Id <String> [-ApiVersion <String>] [-Pre
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzResourceGroup** cmdlet modifies the properties of a resource group.
+You can use this cmdlet to add, change, or delete the Azure tags applied to a resource group.
+Specify the *Name* parameter to identify the resource group and the *Tag* parameter to modify the tags.
+You cannot use this cmdlet to change the name of a resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Apply a tag to a resource group
+```
+PS C:\>Set-AzResourceGroup -Name "ContosoRG" -Tag @{Department="IT"}
 ```
 
-{{ Add example description here }}
+This command applies a Department tag with a value of IT to a resource group that has no existing tags.
+
+### Example 2: Add tags to a resource group
+```
+PS C:\>$Tags = (Get-AzResourceGroup -Name "ContosoRG").Tags
+PS C:\> $Tags
+PS C:\> $Tags += @{"Status"="Approved"; "FY2016"=$null}
+PS C:\> Set-AzResourceGroup -Name "ContosoRG" -Tag $Tags
+PS C:> (Get-AzResourceGroup -Name "ContosoRG").Tags
+```
+
+This example adds a Status tag with a value of Approved and an FY2016 tag to a resource group that
+has existing tags. Because the tags you specify replace the existing tags, you must include the
+existing tags in the new tag collection or you will lose them.
+The first command gets the ContosoRG resource group and uses the dot method to get the value of its
+Tags property. The command stores the tags in the $Tags variable.
+The second command gets the tags in the $Tags variable.
+The third command uses the += assignment operator to add the Status and FY2016 tags to the array of
+tags in the $Tags variable.
+The fourth command uses the *Tag* parameter of **Set-AzResourceGroup** to apply the tags in
+the $Tags variable to the ContosoRG resource group.
+The fifth command gets all of the tags applied to the ContosoRG resource group. The output shows
+that the resource group has the Department tag and the two new tags, Status and FY2015.
+
+### Example 3: Delete all tags for a resource group
+```
+PS C:\>Set-AzResourceGroup -Name "ContosoRG" -Tag @{}
+```
+
+This command specifies the *Tag* parameter with an empty hash table value to delete all tags from
+the ContosoRG resource group.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource Provider.
+You can specify a different version than the default version.
 
 ```yaml
 Type: System.String
@@ -55,12 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group Id.
+Specifies the ID of the resource group to modify.
 
 ```yaml
 Type: System.String
@@ -85,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource group name.
+Specifies the name of the resource group to modify.
 
 ```yaml
 Type: System.String
@@ -100,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -115,7 +151,17 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable which represents resource tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
+A tag is a name-value pair that you can create and apply to resources and resource groups. After
+you assign tags to resources and groups, you can use the *Tag* parameter of Get-AzResource and
+Get-AzResourceGroup to search for resources and groups by tag name or name and value. You can
+use tags to categorize your resources, such as by department or cost center, or to track notes or
+comments about the resources.
+To add or change a tag, you must replace the collection of tags for the resource group. To delete a
+tag, enter a hash table with all tags currently applied to the resource group, from
+**Get-AzResourceGroup**, except for the tag you want to delete. To delete all tags from a
+resource group, specify an empty hash table: `@{}`.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -130,8 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -146,3 +191,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzResource](./Get-AzResource.md)
+
+[Get-AzResourceGroup](./Get-AzResourceGroup.md)
+
+[New-AzResourceGroup](./New-AzResourceGroup.md)
+
+[Remove-AzResourceGroup](./Remove-AzResourceGroup.md)

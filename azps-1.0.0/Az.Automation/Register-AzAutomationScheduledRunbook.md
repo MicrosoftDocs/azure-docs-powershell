@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: F79AFF9A-CEDA-4E57-B5DB-9D0A7CDA6D27
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/register-azautomationscheduledrunbook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Register-AzAutomationScheduledRunbook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Register-AzAutomationScheduledRunbook.md
 ---
 
 # Register-AzAutomationScheduledRunbook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Associates a runbook to a schedule.
 
 ## SYNTAX
 
@@ -26,21 +29,22 @@ Register-AzAutomationScheduledRunbook -RunbookName <String> -ScheduleName <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Register-AzAutomationScheduledRunbook** cmdlet associates an Azure Automation runbook to a schedule.
+The runbook starts based on the schedule you specify using the *ScheduleName* parameter.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Associate a runbook with a schedule
+```
+PS C:\>Register-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ScheduleName "Sched01" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command associates the runbook named Runbk01 with the schedule named Sched01 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies an Automation account for the runbook on which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -55,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +74,10 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The runbook parameters.
+Specifies a hash table of key/value pairs.
+The keys are runbook parameter names.
+The values are runbook parameter values.
+When the runbook starts in response to the associated schedule, these parameters are passed to the runbook.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -85,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for the scheduled runbook.
 
 ```yaml
 Type: System.String
@@ -100,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunbookName
-The runbook name.
+Specifies the name of the runbook that this cmdlet associates to a schedule.
 
 ```yaml
 Type: System.String
@@ -115,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
-Optional name of the hybrid agent which should execute the runbook
+The name of the hybrid runbook worker group.
 
 ```yaml
 Type: System.String
@@ -130,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleName
-The name of the schedule on which the runbook will be started.
+Specifies the name of the schedule to which this cmdlet associates a runbook.
 
 ```yaml
 Type: System.String
@@ -145,8 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -159,3 +165,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationScheduledRunbook](./Get-AzAutomationScheduledRunbook.md)
+
+[Unregister-AzAutomationScheduledRunbook](./Unregister-AzAutomationScheduledRunbook.md)
+
+

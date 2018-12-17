@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning/new-azmlwebservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/New-AzMlWebService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/New-AzMlWebService.md
 ---
 
 # New-AzMlWebService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new web service.
 
 ## SYNTAX
 
@@ -26,26 +28,34 @@ New-AzMlWebService -ResourceGroupName <String> -Location <String> -Name <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates an Azure Machine Learning web service in an existing resource group.
+If a web service with the same name exists in the resource group, the call acts as an update operation and the existing web service is overwritten.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a new service from a Json file based definition
+```
+New-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Location "South Central US" -DefinitionFile "C:\mlservice.json"
 ```
 
-{{ Add example description here }}
+Creates a new Azure Machine Learning web service named "mywebservicename" in the "myresourcegroup" group and South Central US region, based on the definition present in the referenced json file.
+
+### Example 2: Create a new service from an object instance
+```
+New-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Location "South Central US" -NewWebServiceDefinition $serviceDefinitionObject
+```
+
+You can obtain a web service object instance to customize before publishing as a resource by using the Import-AzMlWebService cmdlet.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -55,7 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionFile
-The definition of the new web service.
+Specifes the path to the file containing the JSON format definition of the web service.
+You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning.
 
 ```yaml
 Type: System.String
@@ -85,7 +96,12 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location of the AzureML.
+The region of the web service.
+Enter an Azure data center region, such as "West US" or "Southeast Asia".
+You can place a web service in any region that supports resources of that type.
+The web service does not have to be in the same region your Azure subscription or the same region as its resource group.
+Resource groups can contain web services from different regions.
+To determine which regions support each resource type, use the Get-AzResourceProvider with the ProviderNamespace parameter cmdlet.
 
 ```yaml
 Type: System.String
@@ -100,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web service
+The name for the web service.
+The name must be unique in the resource group.
 
 ```yaml
 Type: System.String
@@ -115,7 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewWebServiceDefinition
-The definition of the new web service.
+The definition for the new web service, containing all the properties that make up the service.
+This parameter is required and represents an instance of the Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService class.
+You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2017-01-01/swagger/webservices.json.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
@@ -130,7 +149,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group for the Azure ML web service.
+The resource group in which to place the web service.
+Enter an Azure data center region, such as "West US" or "Southeast Asia".
+You can place a web service in any region that supports resources of that type.
+The web service does not have to be in the same region your Azure subscription or the same region as its resource group.
+Resource groups can contain web services from different regions.
+To determine which regions support each resource type, use the Get-AzResourceProvider with the ProviderNamespace parameter cmdlet.
 
 ```yaml
 Type: System.String
@@ -176,8 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -188,5 +211,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.AnalysisServices.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices/new-azanalysisservicesfirewallrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/New-AzAnalysisServicesFirewallRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/New-AzAnalysisServicesFirewallRule.md
 ---
 
 # New-AzAnalysisServicesFirewallRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new Analysis Services firewall rule
 
 ## SYNTAX
 
@@ -18,16 +20,16 @@ New-AzAnalysisServicesFirewallRule [-FirewallRuleName] <String> [-RangeStart] <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzAnalysisServicesFirewallRule creates a new firewall rule object.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> New-AzAnalysisServicesFirewallRule -FirewallRuleName rule1 -RangeStart 0.0.0.0 -RangeEnd 255.255.255.255
 ```
 
-{{ Add example description here }}
+Creates a firewall rule named rule1 with start range 0.0.0.0 and end range 255.255.255.255
 
 ## PARAMETERS
 
@@ -35,9 +37,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -RangeEnd
-IP range end, for example, 255.255.255.255
+The range end of a firewall rule
 
 ```yaml
 Type: System.String
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -RangeStart
-IP range start, for example, 0.0.0.0
+The range start of a firewall rule
 
 ```yaml
 Type: System.String
@@ -92,8 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +107,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzAnalysisServicesFirewallConfig](./New-AzAnalysisServicesFirewallConfig.md)

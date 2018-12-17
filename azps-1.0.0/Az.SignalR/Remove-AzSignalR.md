@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.SignalR.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.SignalR.dll-Help.xml
 Module Name: Az.SignalR
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.signalr/new-azsignalr
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/Remove-AzSignalR.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/SignalR/Commands.SignalR/help/Remove-AzSignalR.md
 ---
 
 # Remove-AzSignalR
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Remove a SignalR service.
 
 ## SYNTAX
 
@@ -31,21 +33,26 @@ Remove-AzSignalR -InputObject <PSSignalRResource> [-AsJob] [-PassThru]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Remove a SignalR service.
 
 ## EXAMPLES
 
-### Example 1
+### Remove a SignalR service
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzSignalR -ResourceGroupName myResourceGroup -Name mysignalr1 -PassThru
+
+True
 ```
 
-{{ Add example description here }}
+### Remove all SignalR service from pipe
+```powershell
+PS C:\> Get-AzSignalR -ResourceGroupName myResourceGroup | Remove-AzSignalR
+```
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in background.
+Run cmdlet in the background
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -63,9 +70,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -90,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The SignalR service name.
+SignalR service name.
 
 ```yaml
 Type: System.String
@@ -105,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Returns true if the removal was completed successfully.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -120,8 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-The default one will be used if not specified.
+Resource group name.
 
 ```yaml
 Type: System.String
@@ -182,8 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

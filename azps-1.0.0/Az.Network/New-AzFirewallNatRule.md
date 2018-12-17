@@ -1,47 +1,47 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: C0E1D4DF-232F-49C6-BE4C-05C8E8038329
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azfirewallnatrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewallNatRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewallNatRule.md
 ---
 
 # New-AzFirewallNatRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a Firewall NAT Rule.
 
 ## SYNTAX
 
 ```
-New-AzFirewallNatRule -Name <String> [-Description <String>]
- -SourceAddress <System.Collections.Generic.List`1[System.String]>
- -DestinationAddress <System.Collections.Generic.List`1[System.String]>
- -DestinationPort <System.Collections.Generic.List`1[System.String]>
- -Protocol <System.Collections.Generic.List`1[System.String]> -TranslatedAddress <String>
+New-AzFirewallNatRule -Name <String> [-Description <String>] -SourceAddress <String[]>
+ -DestinationAddress <String[]> -DestinationPort <String[]> -Protocol <String[]> -TranslatedAddress <String>
  -TranslatedPort <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzFirewallNatRule** cmdlet creates a NAT rule for Azure Firewall.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:  Create a rule to DNAT all TCP traffic from 10.0.0.0/24 with destination 10.1.2.3:80 to destination 10.4.5.6:8080
+```
+New-AzFirewallNatRule -Name "dnat-rule" -Protocol "TCP" -SourceAddress "10.0.0.0/24" -DestinationAddress "10.1.2.3" -DestinationPort "80" -TranslatedAddress "10.4.5.6" -TranslatedPort "8080"
 ```
 
-{{ Add example description here }}
+This example creates a rule which will DNAT all traffic originating in 10.0.0.0/24 with destination 10.1.2.3:80 to 10.4.5.6:8080
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description of the rule
+Specifies an optional description of this rule.
 
 ```yaml
 Type: System.String
@@ -66,10 +66,10 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationAddress
-The destination addresses of the rule
+The destination addresses of the rule.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 The destination ports of the rule
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the NAT Rule
+Specifies the name of this NAT rule. The name must be unique inside a rule collection.
 
 ```yaml
 Type: System.String
@@ -111,10 +111,12 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-The protocols of the rule
+Specifies the type of traffic to be filtered by this rule.
+The supported protocols are TCP and UDP.
+A special value "Any" is allowed, meaning it will match both TCP and UDP, but no other protocols.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 Accepted values: Any, TCP, UDP
@@ -130,7 +132,7 @@ Accept wildcard characters: False
 The source addresses of the rule
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -142,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -TranslatedAddress
-The translated address for this NAT rule
+Specifies the desired result of the address translation
 
 ```yaml
 Type: System.String
@@ -157,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -TranslatedPort
-The translated port for this NAT rule
+Specifies the desired result of the port translation
 
 ```yaml
 Type: System.String
@@ -181,7 +183,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -197,14 +199,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -217,3 +218,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzFirewallNatRuleCollection](./New-AzFirewallNatRuleCollection.md)
+
+[New-AzFirewall](./New-AzFirewall.md)
+
+[Get-AzFirewall](./Get-AzFirewall.md)

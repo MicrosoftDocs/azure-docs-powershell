@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: 8B10E476-F283-4BDC-BFAD-A33F8EC38341
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/set-azdatalakeanalyticsaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Set-AzDataLakeAnalyticsAccount.md
 ---
 
 # Set-AzDataLakeAnalyticsAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies a Data Lake Analytics account.
 
 ## SYNTAX
 
@@ -20,16 +23,16 @@ Set-AzDataLakeAnalyticsAccount [-Name] <String> [[-Tag] <Hashtable>] [[-Resource
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDataLakeAnalyticsAccount** cmdlet modifies an Azure Data Lake Analytics account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify the data source of an account
+```
+PS C:\>Set-AzDataLakeAnalyticsAccount -Name "ContosoAdlAcct" -DefaultDataLakeStore "ContosoAdlStore01" -Tags @{"stage"="production"}
 ```
 
-{{ Add example description here }}
+This command changes the default data source and the Tags property of the account.
 
 ## PARAMETERS
 
@@ -50,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -81,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxAnalyticsUnits
-The maximum supported analytics units for this account.
+The optional maximum supported analytics units to update the account with.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -96,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxJobCount
-The maximum supported jobs running under the account at the same time.
+The optional maximum supported jobs running under the account at the same time to set.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -111,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the account.
+Specifies the Data Lake Analytics account name.
 
 ```yaml
 Type: System.String
@@ -126,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueryStoreRetention
-The number of days that job metadata is retained.
+The optional number of days that job metadata is retained to set in the account.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -141,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to update the account.
+Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: System.String
@@ -187,8 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -211,3 +213,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeAnalyticsAccount](./Get-AzDataLakeAnalyticsAccount.md)
+
+[New-AzDataLakeAnalyticsAccount](./New-AzDataLakeAnalyticsAccount.md)
+
+[Remove-AzDataLakeAnalyticsAccount](./Remove-AzDataLakeAnalyticsAccount.md)
+
+[Test-AzDataLakeAnalyticsAccount](./Test-AzDataLakeAnalyticsAccount.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 3B4F32F3-51ED-4851-B38F-172658186C96
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azstoragetable
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageTable.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageTable.md
 ---
 
 # New-AzStorageTable
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a storage table.
 
 ## SYNTAX
 
@@ -18,21 +21,30 @@ New-AzStorageTable [-Name] <String> [-Context <IStorageContext>] [-DefaultProfil
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStorageTable** cmdlet creates a storage table associated with the storage account in Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an azure storage table
+```
+PS C:\>New-AzStorageTable -Name "tableabc"
 ```
 
-{{ Add example description here }}
+This command creates a storage table with a name of tableabc.
+
+### Example 2: Create multiple azure storage tables
+```
+PS C:\>"table1 table2 table3".split() | New-AzStorageTable
+```
+
+This command creates multiple tables.
+It uses the **Split** method of the .NET **String** class and then passes the names on the pipeline.
 
 ## PARAMETERS
 
 ### -Context
-Azure Storage Context Object
+Specifies the storage context.
+To create it, you can use the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -50,7 +62,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -62,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Table name
+Specifies a name for the new table.
 
 ```yaml
 Type: System.String
@@ -77,8 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -93,3 +104,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageTable](./Get-AzStorageTable.md)
+
+[Remove-AzStorageTable](./Remove-AzStorageTable.md)
+
+

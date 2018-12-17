@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkwatcher
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzNetworkWatcherConnectionMonitor.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Remove-AzNetworkWatcherConnectionMonitor.md
 ---
 
 # Remove-AzNetworkWatcherConnectionMonitor
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Remove connection monitor.
 
 ## SYNTAX
 
@@ -44,16 +46,16 @@ Remove-AzNetworkWatcherConnectionMonitor -InputObject <PSConnectionMonitorResult
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The remove-AzNetworkWatcherConnectionMonitor cmdlet removes the specified connection monitor.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove the specified connection monitor
+```
+PS C:\> Remove-AzNetworkWatcherConnectionMonitor -Location centraluseuap -Name cm
 ```
 
-{{ Add example description here }}
+In this example we delete the connection monitor specified by location and name.
 
 ## PARAMETERS
 
@@ -67,7 +69,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -76,9 +78,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -172,7 +174,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -217,7 +219,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -233,14 +235,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -255,5 +256,60 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher, connection monitor
 
 ## RELATED LINKS
+
+[New-AzNetworkWatcher]()
+
+[Get-AzNetworkWatcher]()
+
+[Remove-AzNetworkWatcher]()
+
+[Get-AzNetworkWatcherNextHop]()
+
+[Get-AzNetworkWatcherSecurityGroupView]()
+
+[Get-AzNetworkWatcherTopology]()
+
+[Get-AzNetworkWatcherTroubleshootingResult]()
+
+[New-AzNetworkWatcherPacketCapture]()
+
+[New-AzPacketCaptureFilterConfig]()
+
+[Get-AzNetworkWatcherPacketCapture]()
+
+[Remove-AzNetworkWatcherPacketCapture]()
+
+[Stop-AzNetworkWatcherPacketCapture]()
+
+[Get-AzNetworkWatcherConnectionMonitor]()
+
+[Get-AzNetworkWatcherConnectionMonitorReport]()
+
+[Remove-AzNetworkWatcherConnectionMonitor]()
+
+[Set-AzNetworkWatcherConnectionMonitor]()
+
+[Stop-AzNetworkWatcherConnectionMonitor]()
+
+[New-AzNetworkWatcherConnectionMonitor]()
+
+[New-AzNetworkWatcherProtocolConfiguration]()
+
+[Test-AzNetworkWatcherIPFlow]()
+
+[Test-AzNetworkWatcherConnectivity]()
+
+[Start-AzNetworkWatcherResourceTroubleshooting]()
+
+[Start-AzNetworkWatcherConnectionMonitor]()
+
+[Set-AzNetworkWatcherConfigFlowLog]()
+
+[Get-AzNetworkWatcherReachabilityReport]()
+
+[Get-AzNetworkWatcherReachabilityProvidersList]()
+
+[Get-AzNetworkWatcherFlowLogStatus]()

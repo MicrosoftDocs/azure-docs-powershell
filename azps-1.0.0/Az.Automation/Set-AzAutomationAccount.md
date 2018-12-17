@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: B1897EFC-0184-4A8B-B8E4-203CC8E3B179
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationAccount.md
 ---
 
 # Set-AzAutomationAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an Automation account.
 
 ## SYNTAX
 
@@ -18,26 +21,36 @@ Set-AzAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Plan <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzAutomationAccount** cmdlet modifies an Azure Automation account.
+For more information about Automation accounts, see the New-AzAutomationAccount cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the tags for an Automation account
+```
+PS C:\>$Tags = @{"tag01"="value01";"tag02"="value02"}
+PS C:\> Set-AzAutomationAccount -Name "AutomationAccount01" -ResourceGroupName "ResourceGroup01" -Tags $Tags
 ```
 
-{{ Add example description here }}
+The first command assigns two key/value pairs to the $Tags variable.
+The second command sets tags in $Tags for the Automation account named AutomationAccount01.
+
+### Example 2: Change the plan for an Automation account
+```
+PS C:\>Set-AzAutomationAccount -Name "AutomationAccount01" -ResourceGroupName "ResourceGroup01" -Plan Basic
+```
+
+This command changes the plan to Basic for the Automation account named AutomationAccount01.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The automation account name.
+Specifies the name of the Automation account that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -62,7 +75,10 @@ Accept wildcard characters: False
 ```
 
 ### -Plan
-The plan of the automation account
+Specifies the plan for the Automation account.
+Valid values are:
+- Basic
+- Free
 
 ```yaml
 Type: System.String
@@ -78,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group that contains the Automation account that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -93,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The automation account tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -108,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -124,3 +140,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationAccount](./Get-AzAutomationAccount.md)
+
+[New-AzAutomationAccount](./New-AzAutomationAccount.md)
+
+[Remove-AzAutomationAccount](./Remove-AzAutomationAccount.md)

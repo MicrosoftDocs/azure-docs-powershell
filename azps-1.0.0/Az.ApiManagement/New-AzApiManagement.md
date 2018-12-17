@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 164C5205-01BA-47BB-B780-D0B9AE614A4B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagement
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagement.md
 ---
 
 # New-AzApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an API Management deployment.
 
 ## SYNTAX
 
@@ -24,16 +27,42 @@ New-AzApiManagement -ResourceGroupName <String> -Name <String> -Location <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzApiManagement** cmdlet creates an API Management deployment in Azure API Management.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a Developer tier API Management service
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>New-AzApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
 ```
 
-{{ Add example description here }}
+This command creates a Developer tier API Management service.
+The command specifies the organization and the administrator address.
+The command does not specify the *SKU* parameter.
+Therefore, the cmdlet uses the default value of Developer.
+
+### Example 2: Create a Standard tier service that has three units
+```powershell
+PS C:\>New-AzApiManagement -ResourceGroupName "ContosoGroup02 -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Standard -Capacity 3
+```
+
+This command creates a Standard tier API Management service that has three units.
+
+### Example 3: Create an API Management service for an external virtual network
+```powershell
+PS C:\> $virtualNetwork = New-AzApiManagementVirtualNetwork -Location "West US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-b1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
+PS C:\> New-AzApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization Contoso -AdminEmail admin@contoso.com -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
+```
+
+This command creates a Premium-tier API Management service in an Azure virtual network subnet having an external-facing gateway endpoint with a master region in the West US.
+
+### Example 4: Create an API Management service for an internal virtual network
+```powershell
+PS C:\> $virtualNetwork = New-AzApiManagementVirtualNetwork -Location "West US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-b1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
+PS C:\> New-AzApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization "Contoso" -AdminEmail "admin@contoso.com" -VirtualNetwork $virtualNetwork -VpnType "Internal" -Sku "Premium"
+```
+
+This command creates a Premium-tier API Management service in an Azure virtual network subnet having an internal-facing gateway endpoint with a master region in the West US.
 
 ## PARAMETERS
 
@@ -53,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminEmail
-The originating e-mail address for all e-mail notifications sent from the API Management system.
+Specifies the originating email address for all notifications that the API Management system sends.
 
 ```yaml
 Type: System.String
@@ -83,8 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -Capacity
-Sku capacity of the Azure API Management service.
-Default value is 1.
+Specifies the SKU capacity of the Azure API Management service.
+The default is one (1).
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -99,9 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomHostnameConfiguration
-Custom hostname configurations.
-Default value is $null.
-Passing $null will set the default hostname.
+Custom hostname configurations. Default value is $null. Passing $null will set the default hostname.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementCustomHostNameConfiguration[]
@@ -116,12 +143,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -131,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location where want to create API Management.
+Specifies the location to create the Api Management service.
+To obtain valid locations, use the cmdlet
+Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | where {$_.ResourceTypes[0].ResourceTypeName -eq "service"} | Select-Object Locations
 
 ```yaml
 Type: System.String
@@ -146,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of API Management.
+Specifies a name for the API Management deployment.
 
 ```yaml
 Type: System.String
@@ -161,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The name of the organization for use in the developer portal in e-mail notifications.
+Specifies the name of an organization.
+API Management uses this address in the developer portal in email notifications.
 
 ```yaml
 Type: System.String
@@ -176,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to create API Management.
+Specifies the name of the of resource group under which this cmdlet creates an API Management deployment.
 
 ```yaml
 Type: System.String
@@ -191,9 +221,12 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-The tier of the Azure API Management service.
-Valid values are Developer, Basic, Standard and Premium .
-Default value is Developer
+Specifies the tier of the API Management service.
+Valid values are: 
+- Developer 
+- Standard 
+- Premium 
+The default is Developer.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku]
@@ -209,8 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -SystemCertificateConfiguration
-Certificates issued by Internal CA to be installed on the service.
-Default value is $null.
+Certificates issued by Internal CA to be installed on the service. Default value is $null.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSystemCertificate[]
@@ -241,7 +273,6 @@ Accept wildcard characters: False
 
 ### -VirtualNetwork
 Virtual Network Configuration of master Azure API Management deployment region.
-Default value is $null
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
@@ -256,9 +287,10 @@ Accept wildcard characters: False
 ```
 
 ### -VpnType
-Virtual Network Type of the ApiManagement Deployment.
-Valid Values are  - None (Default Value.
-ApiManagement is not part of any Virtual Network) - External (ApiManagement Deployment is setup inside a Virtual Network having an Internet Facing Endpoint)  - Internal (ApiManagement Deployment is setup inside a Virtual Network having an Intranet Facing Endpoint)
+Virtual Network Type of the ApiManagement Deployment. Valid Values are 
+- "None" (Default Value. ApiManagement is not part of any Virtual Network")
+- "External" (ApiManagement Deployment is setup inside a Virtual Network having an Internet Facing Endpoint)
+- "Internal" (ApiManagement Deployment is setup inside a Virtual Network having an Intranet Facing Endpoint)
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVpnType
@@ -274,14 +306,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku, Microsoft.Azure.Commands.ApiManagement, Version=6.1.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ### System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
@@ -302,3 +333,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Backup-AzApiManagement](./Backup-AzApiManagement.md)
+
+[Get-AzApiManagement](./Get-AzApiManagement.md)
+
+[Set-AzApiManagement](./Set-AzApiManagement.md)
+
+[Remove-AzApiManagement](./Remove-AzApiManagement.md)
+
+[Restore-AzApiManagement](./Restore-AzApiManagement.md)
+
+

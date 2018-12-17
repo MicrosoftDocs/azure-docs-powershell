@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationdscnodeconfigurationdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationDscNodeConfigurationDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationDscNodeConfigurationDeployment.md
 ---
 
 # Get-AzAutomationDscNodeConfigurationDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets DSC Node configuration deployments in Automation.
 
 ## SYNTAX
 
@@ -26,21 +29,42 @@ Get-AzAutomationDscNodeConfigurationDeployment -JobId <Guid> [-ResourceGroupName
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationDscNodeConfigurationDeployment** cmdlet deployes an APS Desired State Configuration (DSC) node configuration in Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a node configuration deployment
+```
+PS C:\> $deployment = Get-AzAutomationDscNodeConfigurationDeployment `
+                         -JobId 35b14eb4-52b7-4a1d-ad62-8e9f84adc657 `
+                         -AutomationAccountName "Contoso01"  `
+                         -ResourceGroupName "ResourceGroup01" `
+            
+ResourceGroupName     : ResourceGroup01
+AutomationAccountName : Contoso01
+JobId                 : 35b14eb4-52b7-4a1d-ad62-8e9f84adc657
+Job                   : Microsoft.Azure.Commands.Automation.Model.Job
+JobStatus             : Running
+NodeStatus            : {System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.Dictionary`2[System.String,System.String]}
+NodeConfigurationName : Config01.Node1
+JobSchedule           :
+JobScheduleId         : 00000000-0000-0000-0000-000000000000
+
+PS C:\> $deployment | Select -expand nodeStatus
+
+Key        Value
+---        -----
+WebServer  Pending
+WebServer2 Pending
+WebServer3 Compliant
 ```
 
-{{ Add example description here }}
+The above command deploys the DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
 
 ```yaml
 Type: System.String
@@ -55,12 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-Filter deployment jobs so that job end time \<= EndTime.
+End time filter.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -85,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-The deployment job id.
+Specifies the Job id of an existing deployment job.
 
 ```yaml
 Type: System.Guid
@@ -100,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
 Type: System.String
@@ -115,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Filter deployment jobs so that job start time \>= StartTime.
+Start time filter.
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
@@ -130,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Filter deployment jobs based on their status.
+Status of the Job filter.
 
 ```yaml
 Type: System.String
@@ -146,8 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -162,3 +185,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-AzAutomationDscCompilationJob](./Start-AzAutomationDscCompilationJob.md)
+
+[Import-AzAutomationDscNodeConfiguration](./Import-AzAutomationDscNodeConfiguration.md)
+
+[Start-AzAutomationDscNodeConfigurationDeployment](./Start-AzAutomationDscNodeConfigurationDeployment.md)
+
+[Stop-AzAutomationDscNodeConfigurationDeployment](./Stop-AzAutomationDscNodeConfigurationDeployment.md)
+
+[Get-AzAutomationDscNodeConfigurationDeploymentSchedule](./Get-AzAutomationDscNodeConfigurationDeploymentSchedule.md)

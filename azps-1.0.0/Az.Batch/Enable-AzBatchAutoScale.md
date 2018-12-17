@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 3107D061-7F25-45D0-8029-C99120A156DA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/enable-azbatchautoscale
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Enable-AzBatchAutoScale.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Enable-AzBatchAutoScale.md
 ---
 
 # Enable-AzBatchAutoScale
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables automatic scaling of a pool.
 
 ## SYNTAX
 
@@ -19,21 +22,24 @@ Enable-AzBatchAutoScale [-Id] <String> [[-AutoScaleFormula] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Enable-AzBatchAutoScale** cmdlet enables automatic scaling of the specified pool.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable automatic scaling for a pool
+```
+PS C:\>$Formula = 'totalNodes=($CPUPercent.GetSamplePercent(TimeInterval_Minute*0,TimeInterval_Minute*10)<0.7?5:(min($CPUPercent.GetSample(TimeInterval_Minute*0, TimeInterval_Minute*10))>0.8?($CurrentDedicated*1.1):$CurrentDedicated));$TargetDedicated=min(100,totalNodes);';
+PS C:\> Enable-AzBatchAutoScale -Id "MyPool" -AutoScaleFormula $Formula -BatchContext $Context
 ```
 
-{{ Add example description here }}
+The first command defines a formula, and then saves it to the $Formula variable.
+The second command enables automatic scaling on the pool named MyPool using the formula in $Formula.
 
 ## PARAMETERS
 
 ### -AutoScaleEvaluationInterval
-{{Fill AutoScaleEvaluationInterval Description}}
+Specifies the amount of time (in minutes) that elapses before the pool size is automatically adjusted according to the AutoScale formula.
+The default value is 15 minutes, and the minimum value is 5 minutes.
 
 ```yaml
 Type: System.Nullable`1[System.TimeSpan]
@@ -48,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoScaleFormula
-{{Fill AutoScaleFormula Description}}
+Specifies the formula for the desired number of compute nodes in the pool.
 
 ```yaml
 Type: System.String
@@ -63,11 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -82,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The id of the pool to enable automatic scaling on.
+Specifies the object ID of the pool for which to enable automatic scaling.
 
 ```yaml
 Type: System.String
@@ -112,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -128,3 +130,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AzBatchAutoScale](./Disable-AzBatchAutoScale.md)
+
+[Test-AzBatchAutoScale](./Test-AzBatchAutoScale.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

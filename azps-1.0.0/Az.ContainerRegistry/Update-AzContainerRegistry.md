@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/update-azcontainerregistry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Update-AzContainerRegistry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Update-AzContainerRegistry.md
 ---
 
 # Update-AzContainerRegistry
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a container registry.
 
 ## SYNTAX
 
@@ -53,26 +55,47 @@ Update-AzContainerRegistry [-Tag <Hashtable>] [-StorageAccountName <String>] [-S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Update-AzContainerRegistry cmdlet updates a container registry.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Enable admin user for a specified container registry
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Update-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -EnableAdminUser
+
+  Container registry location: eastus
+
+Registry Name        Sku        LoginServer                    CreationDate         Provisioni AdminUserE StorageAccountName
+                                                                                    ngState    nabled
+-------------        ---        -----------                    ------------         ---------- ---------- ------------------
+MyRegistry           Basic      myregistry.azurecr.io          11/20/2017 10:05:... Succeeded  True
 ```
 
-{{ Add example description here }}
+This command enables admin user for the specified container registry.
+
+### Example 2: Set the storage account used by a specified container registry
+```powershell
+PS C:\>Update-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -StorageAccountName "mystorageaccount"
+
+  Container registry location: eastus
+
+Registry Name        Sku        LoginServer                    CreationDate         Provisioni AdminUserE StorageAccountName
+                                                                                    ngState    nabled
+-------------        ---        -----------                    ------------         ---------- ---------- ------------------
+MyRegistry           Basic      myregistry.azurecr.io          11/20/2017 10:05:... Succeeded  True       mystorageaccount
+```
+
+This command sets the specified container registry to use an existing storage account \`mystorageaccount\` in the same subscription.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAdminUser
-Disable admin user for the container registry.
+Enable admin user for the container registry.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -91,7 +114,7 @@ Aliases: DisableAdmin
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -106,7 +129,7 @@ Aliases: EnableAdmin
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -212,7 +235,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Container Registry Tags.
+Key-value pairs in the form of a hash table.
+For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -236,7 +261,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -252,14 +277,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -272,3 +296,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistry](New-AzContainerRegistry.md)
+
+[Get-AzContainerRegistry](Get-AzContainerRegistry.md)
+
+[Remove-AzContainerRegistry](Remove-AzContainerRegistry.md)
+

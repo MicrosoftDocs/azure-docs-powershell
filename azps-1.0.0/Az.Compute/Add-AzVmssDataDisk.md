@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssdatadisk
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssDataDisk.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Add-AzVmssDataDisk.md
 ---
 
 # Add-AzVmssDataDisk
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a data disk to the VMSS.
 
 ## SYNTAX
 
@@ -20,21 +22,22 @@ Add-AzVmssDataDisk [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-Name]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzVmssDataDisk** cmdlet adds a data disk to the Virtual Machine Scale Set (VMSS) instance.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a data disk
+```
+PS C:\> $vmss = New-AzVmssConfig -Location $Loc -SkuCapacity 2 -SkuName "Standard_A0" -UpgradePolicyMode "Automatic"
+PS C:\> $vmss = Add-AzVmssDataDisk -VirtualMachineScaleSet $vmss -Name 'DataDisk1' -Lun 0 -Caching 'ReadOnly' -CreateOption Empty -DiskSizeGB 10 -StorageAccountType StandardLRS
 ```
 
-{{ Add example description here }}
+This command adds an empty data disk to the VMSS object.
 
 ## PARAMETERS
 
 ### -Caching
-{{Fill Caching Description}}
+Specifies the caching type of the disk.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.CachingTypes]
@@ -50,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -CreateOption
-{{Fill CreateOption Description}}
+Specifies the create option of the disk.
 
 ```yaml
 Type: System.String
@@ -65,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -80,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSizeGB
-{{Fill DiskSizeGB Description}}
+Specifies the size of the disk in GB.
 
 ```yaml
 Type: System.Int32
@@ -95,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Lun
-{{Fill Lun Description}}
+Specifies the logical unit number of the disk.
 
 ```yaml
 Type: System.Int32
@@ -110,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the disk.
 
 ```yaml
 Type: System.String
@@ -125,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountType
-{{Fill StorageAccountType Description}}
+Specifies the storage account type of the disk.
 
 ```yaml
 Type: System.String
@@ -140,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specify the VMSS object.
+You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) cmdlet to create the object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -155,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -WriteAccelerator
-{{Fill WriteAccelerator Description}}
+Specifies whether WriteAccelerator should be enabled or disabled on the data disk.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -201,8 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -212,7 +215,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Int32
 
-### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.CachingTypes, Microsoft.Azure.Management.Compute, Version=22.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.CachingTypes, Microsoft.Azure.Management.Compute, Version=23.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ## OUTPUTS
 

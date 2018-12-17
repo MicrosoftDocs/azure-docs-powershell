@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: D53DAEB6-DC4F-473C-A193-A1E2A65326D4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchapplicationpackage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchApplicationPackage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchApplicationPackage.md
 ---
 
 # New-AzBatchApplicationPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an application package in a Batch account.
 
 ## SYNTAX
 
@@ -27,21 +30,21 @@ New-AzBatchApplicationPackage [-AccountName] <String> [-ResourceGroupName] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzBatchApplicationPackage** cmdlet creates an application package in an Azure Batch account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Install an application package into a Batch account
+```
+PS C:\>New-AzBatchApplicationPackage -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup" -ApplicationId "Litware" -ApplicationVersion "1.0" -FilePath "litware.1.0.zip" -Format "zip"
 ```
 
-{{ Add example description here }}
+This command creates and activates version 1.0 of the Litware application, and uploads the contents of litware.1.0.zip as the application package content.
 
 ## PARAMETERS
 
 ### -AccountName
-Specifies the name of the Batch account.
+Specifies the name of the Batch account to which this cmdlet adds an application package.
 
 ```yaml
 Type: System.String
@@ -56,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActivateOnly
-{{Fill ActivateOnly Description}}
+Indicates that this cmdlet activates an application package that has already been uploaded.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the id of the application.
+Specifies the ID of the application.
 
 ```yaml
 Type: System.String
@@ -101,12 +104,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -116,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-Specifies the file path of the application that will be uploaded to Azure Storage.
+Specifies the file to be uploaded as the application package binary file.
 
 ```yaml
 Type: System.String
@@ -161,8 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -177,3 +179,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchApplication](./Get-AzBatchApplication.md)
+
+[Get-AzBatchApplicationPackage](./Get-AzBatchApplicationPackage.md)
+
+[New-AzBatchApplication](./New-AzBatchApplication.md)
+
+[Remove-AzBatchApplication](./Remove-AzBatchApplication.md)
+
+[Remove-AzBatchApplicationPackage](./Remove-AzBatchApplicationPackage.md)
+
+[Set-AzBatchApplication](./Set-AzBatchApplication.md)
+
+

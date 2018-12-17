@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 7b4a8c9f-874c-4a27-b87e-c8ad7e73188d
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azexpressroutecircuitconnectionconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
 ---
 
 # Add-AzExpressRouteCircuitConnectionConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a circuit connection configuration to Private Peering of an Express Route Circuit. 
 
 ## SYNTAX
 
@@ -27,21 +30,33 @@ Add-AzExpressRouteCircuitConnectionConfig [-Name] <String> [-ExpressRouteCircuit
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzExpressRouteCircuitConnectionConfig** cmdlet adds a circuit connection configuration to
+private peering for an ExpressRoute circuit. This allows peering two Express Route Circuits 
+across regions or subscriptions.Note that, after running **Add-AzExpressRouteCircuitPeeringConfig**, 
+you must call the Set-AzExpressRouteCircuit cmdlet to activate the configuration.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add a circuit connection resource to an existing ExpressRoute circuit
+```
+$circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
+$circuit_peer = Get-AzExpressRouteCircuit -Name $peeringCircuitName -ResourceGroupName $rg
+$addressSpace = '60.0.0.0/29'
+Add-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init -PeerExpressRouteCircuitPeering $circuit_peer.Peerings[0].Id -AddressPrefix $addressSpace -AuthorizationKey $circuit_peer.Authorizations[0].AuthorizationKey
+Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
 ```
 
-{{ Add example description here }}
+### Example 2: Add a circuit connection configuration using Piping to an existing ExpressRoute Circuit
+```
+$circuit_peer = Get-AzExpressRouteCircuit -Name $peeringCircuitName -ResourceGroupName $rg
+$addressSpace = '60.0.0.0/29'
+Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Add-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -PeerExpressRouteCircuitPeering $circuit_peer.Peerings[0].Id -AddressPrefix $addressSpace -AuthorizationKey $circuit_peer.Authorizations[0].AuthorizationKey |Set-AzExpressRouteCircuit
+```
 
 ## PARAMETERS
 
 ### -AddressPrefix
-Private IP Addresses to create VxLAN Tunnels
+A minimum /29 customer address space to create VxLan tunnels between Express Route Circuits
 
 ```yaml
 Type: System.String
@@ -56,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationKey
-Authorization Key to peer to circuit in another subscription
+Authorization Key to peer Express Route Circuit in another subscription. Authorization on peer circuit can be created using existing commands.
 
 ```yaml
 Type: System.String
@@ -71,12 +86,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -86,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-Express Route Circuit Peering intiating connection
+The ExpressRoute circuit being modified. This is Azure object returned by the
+**Get-AzExpressRouteCircuit** cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -101,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Circuit Connection
+The name of the circuit connection resource to be added.
 
 ```yaml
 Type: System.String
@@ -116,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerExpressRouteCircuitPeering
-Private Peering of Circuit being peered
+Resource Id for Private Peering of remote circuit which will be peered with the current circuit.
 
 ```yaml
 Type: System.String
@@ -146,8 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,8 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,3 +192,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)
+
+[Get-AzExpressRouteCircuitConnectionConfig](Get-AzExpressRouteCircuitConnectionConfig.md)
+
+[Remove-AzExpressRouteCircuitConnectionConfig](Remove-AzExpressRouteCircuitConnectionConfig.md)
+
+[Set-AzExpressRouteCircuitConnectionConfig](Set-AzExpressRouteCircuitConnectionConfig.md)
+
+[New-AzExpressRouteCircuitConnectionConfig](New-AzExpressRouteCircuitConnectionConfig.md)
+
+[Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)
+
+[Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)

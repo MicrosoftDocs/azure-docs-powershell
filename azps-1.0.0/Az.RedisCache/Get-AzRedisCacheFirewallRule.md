@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/get-azrediscachefirewallrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCacheFirewallRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzRedisCacheFirewallRule.md
 ---
 
 # Get-AzRedisCacheFirewallRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get firewall rules set on Redis Cache.
 
 ## SYNTAX
 
@@ -18,26 +20,57 @@ Get-AzRedisCacheFirewallRule [-ResourceGroupName <String>] -Name <String> [-Rule
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+If **RuleName** parameter if provided, **Get-AzRedisCacheFirewallRule** cmdlet gets detail about the specified firewall rule on Azure Redis Cache. If only **Name** is specified this operation gets all firewall rules available on that Redis Cache.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a single firewall rule
+```
+PS C:\>Get-AzRedisCacheFirewallRule -Name "mycache" -RuleName "ruleone"
+
+        ResourceGroupName : myGroup
+        Name              : mycache
+        FirewallRuleId    : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/myGroup/providers/Microsoft.Cache/Redis/mycache/firewallRules/ruleone
+        RuleName          : ruleone
+        Type              : Microsoft.Cache/Redis/firewallRules
+        StartIP           : 10.0.0.1
+        EndIP             : 10.0.0.32
 ```
 
-{{ Add example description here }}
+This command gets firewall rule named ruleone from Redis Cache named mycache.
+
+### Example 2: Get all firewall rules
+```
+PS C:\>Get-AzRedisCacheFirewallRule -Name "mycache"
+
+        ResourceGroupName : myGroup
+        Name              : mycache
+        FirewallRuleId    : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/myGroup/providers/Microsoft.Cache/Redis/mycache/firewallRules/ruleone
+        RuleName          : ruleone
+        Type              : Microsoft.Cache/Redis/firewallRules
+        StartIP           : 10.0.0.1
+        EndIP             : 10.0.0.32
+
+        ResourceGroupName : myGroup
+        Name              : mycache
+        FirewallRuleId    : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/myGroup/providers/Microsoft.Cache/Redis/mycache/firewallRules/ruletwo
+        RuleName          : ruletwo
+        Type              : Microsoft.Cache/Redis/firewallRules
+        StartIP           : 10.0.0.33
+        EndIP             : 10.0.0.64
+```
+
+This command gets all firewall rules from Redis Cache named mycache.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +138,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzRedisCacheFirewallRule](./New-AzRedisCacheFirewallRule.md)
+
+[Remove-AzRedisCacheFirewallRule](./Remove-AzRedisCacheFirewallRule.md)
+
+[Get-AzRedisCache](./Get-AzRedisCache.md)
+
+[New-AzRedisCache](./New-AzRedisCache.md)
+
+[Remove-AzRedisCache](./Remove-AzRedisCache.md)
+
+[Set-AzRedisCache](./Set-AzRedisCache.md)

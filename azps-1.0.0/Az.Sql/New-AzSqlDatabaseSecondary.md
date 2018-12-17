@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: BEE99039-35F7-4E9D-9308-090EAE68292D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqldatabasesecondary
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlDatabaseSecondary.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlDatabaseSecondary.md
 ---
 
 # New-AzSqlDatabaseSecondary
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a secondary database for an existing database and starts data replication.
 
 ## SYNTAX
 
@@ -31,21 +34,25 @@ New-AzSqlDatabaseSecondary [-DatabaseName] <String> [-Tags <Hashtable>] -Partner
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzSqlDatabaseSecondary** cmdlet replaces the Start-AzSqlDatabaseCopy cmdlet when
+used for setting up geo-replication for a database. It returns the geo-replication link object from
+the primary to the secondary database.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1: Establish Active Geo-Replication
 ```
-
-{{ Add example description here }}
+$database = Get-AzSqlDatabase -DatabaseName $databasename -ResourceGroupName $primaryresourcegroupname -ServerName $primaryservername
+$database | New-AzSqlDatabaseSecondary -PartnerResourceGroupName $secondaryresourcegroupname -PartnerServerName $secondaryservername -AllowConnections "All"
+```
 
 ## PARAMETERS
 
 ### -AllowConnections
-The read intent of the secondary (Non-Readable secondary is not supported anymore).
+Specifies the read intent of the secondary Azure SQL Database.
+The acceptable values for this parameter are:
+- No
+- All
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.Replication.Model.AllowConnections
@@ -76,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the Azure SQL Database to act as primary.
+Specifies the name of the database to act as primary.
 
 ```yaml
 Type: System.String
@@ -91,12 +98,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -121,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerResourceGroupName
-The name of the resource group to create secondary in.
+Specifies the name of the Azure Resource Group to which this cmdlet assigns the secondary database.
 
 ```yaml
 Type: System.String
@@ -136,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServerName
-The name of the Azure SQL Server to create secondary in.
+Specifies the name of the Azure SQL database server to act as secondary.
 
 ```yaml
 Type: System.String
@@ -151,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the Azure Resource Group to which this cmdlet assigns the primary database.
 
 ```yaml
 Type: System.String
@@ -181,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryElasticPoolName
-The name of the Elastic Pool to put the secondary in.
+Specifies the name of the elastic pool in which to put the secondary database.
 
 ```yaml
 Type: System.String
@@ -196,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryServiceObjectiveName
-The name of the service objective to assign to the secondary.
+Specifies the name of the service objective to assign to the secondary database.
 
 ```yaml
 Type: System.String
@@ -226,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the database to be replicated is in.
+Specifies the name of the SQL Server of the primary  SQL Database.
 
 ```yaml
 Type: System.String
@@ -241,7 +248,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate with the Azure SQL Database Replication Link
+Specifies the Key-value pairs in the form of a hash table to associate with the SQL Database replication link. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -265,7 +273,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -281,14 +289,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -301,3 +308,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzSqlDatabaseSecondary](./Remove-AzSqlDatabaseSecondary.md)
+
+[Set-AzSqlDatabaseSecondary](./Set-AzSqlDatabaseSecondary.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

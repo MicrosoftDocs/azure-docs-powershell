@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: F58FD77E-2946-44B1-B410-6E983FC20E21
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azadapplication
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzADApplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/New-AzADApplication.md
 ---
 
 # New-AzADApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new azure active directory application.
 
 ## SYNTAX
 
@@ -48,21 +51,32 @@ New-AzADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a new azure active directory application.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Create new AAD application.
+
+```
+PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http://NewApplication"
 ```
 
-{{ Add example description here }}
+Creates a new azure active directory application without any credentials.
+
+### Example 2 - Create new AAD application with password.
+
+```
+PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
+PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http:
+//NewApplication" -Password $SecureStringPassword
+```
+
+Creates a new azure active directory application and associates password credentials with it.
 
 ## PARAMETERS
 
 ### -AvailableToOtherTenants
-True if the application is shared with other tenants; otherwise, false.
+The value specifying whether the application is a single tenant or a multi-tenant.
 
 ```yaml
 Type: System.Boolean
@@ -77,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -CertValue
-The base64 encoded cert value for the key credentials associated with the application that will be valid for one year by default.
+The value of the "asymmetric" credential type.
+It represents the base 64 encoded certificate.
 
 ```yaml
 Type: System.String
@@ -92,12 +107,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -107,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The display name for the application.
+Display name of the new application.
 
 ```yaml
 Type: System.String
@@ -122,8 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-The end date till which password or key is valid.
-Default value is one year after current time.
+The effective end date of the credential usage.
+The default end date value is one year from today. 
+For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
 Type: System.DateTime
@@ -138,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomePage
-The URL to the applicationâ€™s homepage.
+The URL to the application homepage.
 
 ```yaml
 Type: System.String
@@ -168,10 +184,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeyCredentials
-The collection of key credentials associated with the application.
+The list of certificate credentials associated with the application.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential[]
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]
 Parameter Sets: ApplicationWithKeyCredentialParameterSet
 Aliases:
 
@@ -183,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The value for the password credential associated with the application that will be valid for one year by default.
+The password to be associated with the application.
 
 ```yaml
 Type: System.Security.SecureString
@@ -198,10 +214,10 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordCredentials
-The collection of password credentials associated with the application.
+The list of password credentials associated with the application.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential[]
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential[]
 Parameter Sets: ApplicationWithPasswordCredentialParameterSet
 Aliases:
 
@@ -213,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplyUrls
-Specifies the URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
+The application reply urls.
 
 ```yaml
 Type: System.String[]
@@ -228,8 +244,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-The start date after which password or key would be valid.
-Default value is current time.
+The effective start date of the credential usage.
+The default start date value is today. 
+For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml
 Type: System.DateTime
@@ -275,8 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -286,9 +302,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Boolean
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential[]
+### Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential[]
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential[]
+### Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]
 
 ### System.Security.SecureString
 
@@ -296,8 +312,22 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
+
+[Remove-AzADApplication](./Remove-AzADApplication.md)
+
+[Get-AzADApplication](./Get-AzADApplication.md)
+
+[New-AzADServicePrincipal](./New-AzADServicePrincipal.md)
+
+[Get-AzADAppCredential](./Get-AzADAppCredential.md)
+
+[New-AzADAppCredential](./New-AzADAppCredential.md)
+
+[Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
+

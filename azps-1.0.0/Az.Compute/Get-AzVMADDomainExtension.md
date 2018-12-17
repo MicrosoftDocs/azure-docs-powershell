@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 49D17667-35C3-4A79-A0C8-C197DAA5CD90
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmaddomainextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMADDomainExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMADDomainExtension.md
 ---
 
 # Get-AzVMADDomainExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about an AD domain extension.
 
 ## SYNTAX
 
@@ -18,26 +21,19 @@ Get-AzVMADDomainExtension [-ResourceGroupName] <String> [-VMName] <String> [-Nam
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMADDomainExtension** cmdlet gets information about the specified Azure Active Directory (AD) domain extension.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +43,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of the domain extension.
 
 ```yaml
 Type: System.String
@@ -62,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -77,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-To show the status.
+Indicates that this cmdlet gets the instance view of the domain extension.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -92,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -107,8 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +118,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzVMADDomainExtension](./Set-AzVMADDomainExtension.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzDeployment.md
 ---
 
 # Get-AzDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get deployment
 
 ## SYNTAX
 
@@ -25,16 +27,27 @@ Get-AzDeployment [-Id <String>] [-ApiVersion <String>] [-Pre] [-DefaultProfile <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDeployment** cmdlet gets the deployments at the current subscription scope.
+Specify the *Name* or *Id* parameter to filter the results.
+By default, **Get-AzDeployment** gets all deployments at the current subscription scope.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all deployments at subscription scope
+```
+PS C:\>Get-AzDeployment
 ```
 
-{{ Add example description here }}
+This command gets all deployments at the current subscription scope.
+
+### Example 2: Get a deployment by name
+```
+PS C:\>Get-AzDeployment -Name "DeployRoles01"
+```
+
+This command gets the DeployRoles01 deployment at the current subscription scope.
+You can assign a name to a deployment when you create it by using the **New-AzDeployment** cmdlets.
+If you do not assign a name, the cmdlets provide a default name based on the template that is used to create the deployment.
 
 ## PARAMETERS
 
@@ -58,9 +71,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -116,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

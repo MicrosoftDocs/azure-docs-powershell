@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DevTestLabs.dll-Help.xml
 Module Name: Az.DevTestLabs
-online version: https://azure.microsoft.com/en-us/solutions/dev-test/
+ms.assetid: 3FADEC2E-4A2B-46EB-8A94-CF48D717C7FC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.devtestlabs/set-azdtlautostartpolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Set-AzDtlAutoStartPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Set-AzDtlAutoStartPolicy.md
 ---
 
 # Set-AzDtlAutoStartPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the auto start policy of a lab in DevTest Labs.
 
 ## SYNTAX
 
@@ -27,21 +30,15 @@ Set-AzDtlAutoStartPolicy [[-Time] <DateTime>] [[-Days] <DayOfWeek[]>] [-Disable]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzDtlAutoStartPolicy** cmdlet sets the auto start policy of a lab, which allows lab virtual machines to be scheduled for automatic start.
+The cmdlet uses the specified resource group and name of the lab to set the policy.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Days
-Days of the week when virtual machines can be auto-started.
+Specifies, as an array, the days of the week for when the virtual machines of the lab must be started.
 
 ```yaml
 Type: System.DayOfWeek[]
@@ -57,12 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -72,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-Whether to disable the policy.
+Indicates that this cmdlet disables the policy for the virtual machines in the lab.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -87,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Whether to enable the policy.
+Indicates that this cmdlet enables the policy for the virtual machines in the lab.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -102,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabName
-Specifies a name an existing DevTest lab.
+Specifies the name of the lab for which this cmdlet sets the automatic start policy.
 
 ```yaml
 Type: System.String
@@ -117,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of an existing resource group that contains the lab.
+Specifies the name of the resource group that the lab belongs to.
 
 ```yaml
 Type: System.String
@@ -132,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Time
-Time of day when virtual machines can be auto-started.
+Specifies the time when the virtual machines of the lab must be started.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -156,7 +153,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -172,14 +169,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -193,5 +189,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[https://azure.microsoft.com/en-us/solutions/dev-test/](https://azure.microsoft.com/en-us/solutions/dev-test/)
+[Get-AzDtlAutoStartPolicy](./Get-AzDtlAutoStartPolicy.md)
+
 

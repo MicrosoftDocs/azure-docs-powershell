@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: B6229D26-D38C-44CD-B9CA-7F39365C8B9D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchJob.md
 ---
 
 # New-AzBatchJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a job in the Batch service.
 
 ## SYNTAX
 
@@ -22,25 +25,29 @@ New-AzBatchJob [-Id] <String> [-CommonEnvironmentSettings <IDictionary>] [-Displ
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzBatchJob** cmdlet creates a job in the Azure Batch service in the account specified by the *BatchAccountContext* parameter.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a job
+```
+PS C:\>$PoolInformation = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSPoolInformation" 
+PS C:\> $PoolInformation.PoolId = "Pool22" 
+PS C:\> New-AzBatchJob -Id "ContosoJob35" -PoolInformation $PoolInformation -BatchContext $Context
 ```
 
-{{ Add example description here }}
+The first command creates a **PSPoolInformation** object by using the New-Object cmdlet.
+The command stores that object in the $PoolInformation variable.
+The second command assigns the ID Pool22 to the **PoolId** property of the object in $PoolInformation.
+The final command creates a job that has the ID ContosoJob35.
+Tasks added to the job run on the pool that has the ID Pool22.
+Use the Get-AzBatchAccountKeys cmdlet to assign a context to the $Context variable.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -55,7 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -CommonEnvironmentSettings
-{{Fill CommonEnvironmentSettings Description}}
+Specifies the common environment variables, as key/value pairs, that this cmdlet sets for all tasks in the job.
+The key is the environment variable name.
+The value is the environment variable value.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -70,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Constraints
-{{Fill Constraints Description}}
+Specifies the execution constraints for the job.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSJobConstraints
@@ -85,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -100,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-{{Fill DisplayName Description}}
+Specifies the display name for the job.
 
 ```yaml
 Type: System.String
@@ -115,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The id of the job to create.
+Specifies an ID for the job.
 
 ```yaml
 Type: System.String
@@ -130,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobManagerTask
-{{Fill JobManagerTask Description}}
+Specifies the Job Manager task.
+The Batch service runs the Job Manager task when the job is started.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSJobManagerTask
@@ -145,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobPreparationTask
-{{Fill JobPreparationTask Description}}
+Specifies the Job Preparation task.
+The Batch service runs the Job Preparation task on a compute node before it starts any tasks of that job on that compute node.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTask
@@ -160,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -JobReleaseTask
-{{Fill JobReleaseTask Description}}
+Specifies the Job Release task.
+The Batch service runs the Job Release task when the job ends.
+The Batch service runs the Job Release task on each compute node where it ran any task of the job.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSJobReleaseTask
@@ -175,7 +188,9 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-{{Fill Metadata Description}}
+Specifies metadata, as key/value pairs, to add to the job.
+The key is the metadata name.
+The value is the metadata value.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -190,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnAllTasksComplete
-{{Fill OnAllTasksComplete Description}}
+Specifies an action the Batch service takes if all tasks in the job are in the completed state.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Batch.Common.OnAllTasksComplete]
@@ -206,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnTaskFailure
-{{Fill OnTaskFailure Description}}
+Specifies an action the Batch service takes if any task in the job fails.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Batch.Common.OnTaskFailure]
@@ -222,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolInformation
-The pool information for the job.
+Specifies the details of the pool on which the Batch service runs the tasks of the job.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSPoolInformation
@@ -237,7 +252,11 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{Fill Priority Description}}
+Specifies the priority of the job.
+Valid values are: integers from -1000 to 1000.
+A value of -1000 is the lowest priority.
+A value of 1000 is the highest priority.
+The default value is 0.
 
 ```yaml
 Type: System.Int32
@@ -252,8 +271,6 @@ Accept wildcard characters: False
 ```
 
 ### -UsesTaskDependencies
-{{Fill UsesTaskDependencies Description}}
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -267,8 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -283,3 +299,21 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AzBatchJob](./Disable-AzBatchJob.md)
+
+[Enable-AzBatchJob](./Enable-AzBatchJob.md)
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Get-AzBatchJob](./Get-AzBatchJob.md)
+
+[Get-AzBatchJobSchedule](./Get-AzBatchJobSchedule.md)
+
+[Remove-AzBatchJob](./Remove-AzBatchJob.md)
+
+[Stop-AzBatchJob](./Stop-AzBatchJob.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

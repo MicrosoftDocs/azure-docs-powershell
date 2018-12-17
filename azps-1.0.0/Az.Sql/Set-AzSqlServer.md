@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: FAAF458C-1662-4130-9A16-0514B714D11D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqlserver
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlServer.md
 ---
 
 # Set-AzSqlServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies properties of a SQL Database server.
 
 ## SYNTAX
 
@@ -19,16 +22,27 @@ Set-AzSqlServer [-ServerName] <String> [-SqlAdministratorPassword <SecureString>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzSqlServer** cmdlet modifies properties of an Azure SQL Database server.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Reset the administrator password
+```
+PS C:\>$ServerPassword = "newpassword"
+PS C:\> $SecureString = ConvertTo-SecureString $ServerPassword -AsPlainText -Force
+PS C:\> Set-AzSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -SqlAdministratorPassword $secureString
+ResourceGroupName        : ResourceGroup01
+ServerName               : Server01
+Location                 : Australia East
+SqlAdministratorLogin    : adminLogin
+SqlAdministratorPassword :
+ServerVersion            : 12.0
+Tags                     :
+Identity                 :
+FullyQualifiedDomainName : server01.database.windows.net
 ```
 
-{{ Add example description here }}
+This command resets the administrator password on the AzureSQL Server named server01.
 
 ## PARAMETERS
 
@@ -48,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Skip confirmation message for performing the action
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the server is assigned.
 
 ```yaml
 Type: System.String
@@ -93,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-SQL Database server name.
+Specifies the name of the server that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -108,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerVersion
-Which server version to change to.
+Specifies the version to which this cmdlet changes the server. The acceptable values for this
+parameter are: 2.0 and 12.0.
 
 ```yaml
 Type: System.String
@@ -123,7 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -SqlAdministratorPassword
-The new SQL administrator password for the server.
+Specifies a new password, as a **SecureString**, for the database server administrator. To obtain a
+**SecureString**, use the Get-Credential cmdlet. For more information, type `Get-Help
+ConvertTo-SecureString`.
 
 ```yaml
 Type: System.Security.SecureString
@@ -138,7 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate with the server.
+Specifies a dictionary of tags that this cmdlet associates with the server. Key-value pairs in the
+form of a hash table set as tags on the server. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -162,7 +181,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -178,14 +197,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -198,3 +216,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 40E56EC1-3327-4DFF-8262-E2EEBB5E4447
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azfirewall
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzFirewall.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzFirewall.md
 ---
 
 # Set-AzFirewall
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Saves a modified Firewall.
 
 ## SYNTAX
 
@@ -18,16 +21,38 @@ Set-AzFirewall -AzureFirewall <PSAzureFirewall> [-AsJob] [-DefaultProfile <IAzur
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzFirewall** cmdlet updates an Azure Firewall.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:  Update priority of a Firewall application rule collection
+```
+$azFw = Get-AzFirewall -Name "AzureFirewall" -ResourceGroupName "rg"
+$ruleCollection = $azFw.GetApplicationRuleCollectionByName("ruleCollectionName")
+$ruleCollection.Priority = 101
+Set-AzFirewall -Firewall $azFw
 ```
 
-{{ Add example description here }}
+This example updates the priority of an existing rule collection of an Azure Firewall.
+Assuming Azure Firewall "AzureFirewall" in resource group "rg" contains an application rule collection named 
+"ruleCollectionName", the commands above will change the priority of that rule collection and update the 
+Azure Firewall afterwards. Without the Set-AzFirewall command, all operations performed on the local $azFw 
+object are not reflected on the server.
+
+### 2:  Create a Azure Firewall and set an application rule collection later
+```
+$azFw = New-AzFirewall -Name "AzureFirewall" -ResourceGroupName "rg" -VirtualNetworkName "vnet-name" -PublicIpName "pip-name"
+
+$rule = New-AzFirewallApplicationRule -Name R1 -Protocol "http:80","https:443" -TargetFqdn "*google.com", "*microsoft.com" -SourceAddress "10.0.0.0"
+$RuleCollection = New-AzFirewallApplicationRuleCollection -Name RC1 -Priority 100 -Rule $rule -ActionType "Allow"
+$azFw.ApplicationRuleCollections = $RuleCollection
+
+$azFw | Set-AzFirewall
+```
+
+In this example, a Firewall is created first without any application rule collections. Afterwards a Application Rule 
+and Application Rule Collection are created, then the Firewall object is modified in memory, without affecting 
+the real configuration in cloud. For changes to be reflected in cloud, Set-AzFirewall must be called.
 
 ## PARAMETERS
 
@@ -62,12 +87,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,8 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -108,8 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,3 +145,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzFirewall](./Get-AzFirewall.md)
+
+[New-AzFirewall](./New-AzFirewall.md)
+
+[Remove-AzFirewall](./Remove-AzFirewall.md)

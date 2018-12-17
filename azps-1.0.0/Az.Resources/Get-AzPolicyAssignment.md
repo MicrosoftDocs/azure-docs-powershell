@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 2DBAF415-A039-479E-B3CA-E00FD5E476C9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azpolicyassignment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzPolicyAssignment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzPolicyAssignment.md
 ---
 
 # Get-AzPolicyAssignment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets policy assignments.
 
 ## SYNTAX
 
@@ -37,22 +40,41 @@ Get-AzPolicyAssignment -Id <String> [-PolicyDefinitionId <String>] [-ApiVersion 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzPolicyAssignment** cmdlet gets all policy assignments or particular assignments.
+Identify a policy assignment to get by name and scope or by ID.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all policy assignments
+```
+PS C:\> Get-AzPolicyAssignment
 ```
 
-{{ Add example description here }}
+This command gets all the policy assignments.
+
+### Example 2: Get a specific policy assignment
+```
+PS C:\> $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+PS C:\> Get-AzPolicyAssignment -Name 'PolicyAssignment07' -Scope $ResourceGroup.ResourceId
+```
+
+The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdletand stores it in the $ResourceGroup variable.
+The second command gets the policy assignment named PolicyAssignment07 for the scope that the **ResourceId** property of $ResourceGroup identifies.
+
+### Example 3: Get all policy assignments assigned to a management group
+```
+PS C:\> $mgId = 'myManagementGroup'
+PS C:\> Get-AzPolicyAssignment -Scope '/providers/Microsoft.Management/managementgroups/$mgId'
+```
+
+The first command specifies the ID of the management group to query.
+The second command gets all of the policy assignments that are assigned to the management group with ID 'myManagementGroup'.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use.
+If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: System.String
@@ -67,12 +89,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified policy assignment ID to get, including the scope, e.g.
-/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}.
+Specifies the fully qualified resource ID for the policy assignment that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -113,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the policy assignment to get.
+Specifies the name of the policy assignment that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -128,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyDefinitionId
-Limits the list of returned policy assignments to those assigning the policy definition identified by this fully qualified Id.
+Specifies the ID of the policy definition of the policy assignments that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -143,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -158,8 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-The scope of the policy assignment to get, e.g.
-/providers/managementGroups/{managementGroupName}.
+Specifies the scope at which the policy is applied for the assignment that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -174,8 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -190,3 +209,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzPolicyAssignment](./New-AzPolicyAssignment.md)
+
+[Remove-AzPolicyAssignment](./Remove-AzPolicyAssignment.md)
+
+[Set-AzPolicyAssignment](./Set-AzPolicyAssignment.md)
+
+

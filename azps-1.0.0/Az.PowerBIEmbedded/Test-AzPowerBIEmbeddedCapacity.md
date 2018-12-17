@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.PowerBI.dll-Help.xml
 Module Name: Az.PowerBIEmbedded
-online version:
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/test-azpowerbiembeddedcapacity
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Test-AzPowerBIEmbeddedCapacity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Test-AzPowerBIEmbeddedCapacity.md
 ---
 
 # Test-AzPowerBIEmbeddedCapacity
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Tests the existence of an instance of PowerBI Embedded Capacity.
 
 ## SYNTAX
 
@@ -17,16 +20,17 @@ Test-AzPowerBIEmbeddedCapacity [-Name] <String> [-DefaultProfile <IAzureContextC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Test-AzPowerBIEmbeddedCapacity cmdlet tests the existence of an instance of PowerBI Embedded Capacity
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Test-AzPowerBIEmbeddedCapacity -Name "testcapacity"
+True
 ```
 
-{{ Add example description here }}
+This command will test if there is a capacity named testcapacity
 
 ## PARAMETERS
 
@@ -34,9 +38,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -46,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific capacity.
+Name of the PowerBI Embedded Capacity
 
 ```yaml
 Type: System.String
@@ -61,8 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -75,3 +78,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPowerBIEmbeddedCapacity](./Get-AzPowerBIEmbeddedCapacity.md)
+
+[Remove-AzPowerBIEmbeddedCapacity](./Remove-AzPowerBIEmbeddedCapacity.md)

@@ -1,20 +1,22 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/update-azadserviceprincipal
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzADServicePrincipal.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzADServicePrincipal.md
 ---
 
 # Update-AzADServicePrincipal
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates an existing azure active directory service principal.
 
 ## SYNTAX
 
 ### SpObjectIdWithDisplayNameParameterSet (Default)
 ```
-Update-AzADServicePrincipal -ObjectId <Guid> [-DisplayName <String>] [-Homepage <String>]
+Update-AzADServicePrincipal -ObjectId <String> [-DisplayName <String>] [-Homepage <String>]
  [-IdentifierUri <String[]>] [-KeyCredential <KeyCredential[]>] [-PasswordCredential <PasswordCredential[]>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -41,21 +43,32 @@ Update-AzADServicePrincipal -InputObject <PSADServicePrincipal> [-DisplayName <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Updates an existing azure active directory service principal. 
+To update the credentials associated with this service principal, please use New-AzADSpCredential cmdlet. 
+To update the properties associated with the underlying application, please use Update-AzADApplication cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Update the display name of a service principal
+
+```
+PS C:\> Update-AzADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 -DisplayName MyNewDisplayName
 ```
 
-{{ Add example description here }}
+Updates the display name of the service principal with object id '784136ca-3ae2-4fdd-a388-89d793e7c780' to be 'MyNewDisplayName'.
+
+### Example 2 - Update the display name of a service principal using piping
+
+```
+PS C:\> Get-AzADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 | Update-AzADServicePrincipal -DisplayName MyNewDisplayName
+```
+
+Gets the service principal with object id '784136ca-3ae2-4fdd-a388-89d793e7c780' and pipes that to the Update-AzADServicePrincipal cmdlet to update the display name of the service principal to "MyNewDisplayName".
 
 ## PARAMETERS
 
 ### -ApplicationId
-The service principal application id.
+The application id of the service principal to update.
 
 ```yaml
 Type: System.Guid
@@ -73,9 +86,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -142,10 +155,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-The service principal object.
+The object representing the service principal to update.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+Type: Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 Parameter Sets: InputObjectWithDisplayNameParameterSet
 Aliases:
 
@@ -160,7 +173,7 @@ Accept wildcard characters: False
 The key credential(s) for the service principal.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.Models.KeyCredential[]
+Type: Microsoft.Azure.Graph.RBAC.Models.KeyCredential[]
 Parameter Sets: (All)
 Aliases:
 
@@ -172,10 +185,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The servicePrincipal object id.
+The object id of the service principal to update.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: SpObjectIdWithDisplayNameParameterSet
 Aliases: ServicePrincipalObjectId
 
@@ -190,7 +203,7 @@ Accept wildcard characters: False
 The password credential(s) for the service principal.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.Models.PasswordCredential[]
+Type: Microsoft.Azure.Graph.RBAC.Models.PasswordCredential[]
 Parameter Sets: (All)
 Aliases:
 
@@ -202,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The servicePrincipal name.
+The SPN of the service principal to update.
 
 ```yaml
 Type: System.String
@@ -248,20 +261,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.Guid
-
 ### System.String
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+### System.Guid
+
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
 ## NOTES
 

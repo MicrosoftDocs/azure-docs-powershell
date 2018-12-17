@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/stop-azdeployment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Stop-AzDeployment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Stop-AzDeployment.md
 ---
 
 # Stop-AzDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cancal a running deployment
 
 ## SYNTAX
 
@@ -31,16 +33,28 @@ Stop-AzDeployment -InputObject <PSDeployment> [-PassThru] [-ApiVersion <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Stop-AzDeployment** cmdlet cancels a deployment at subscription scope that has started but not completed.
+To stop a deployment, the deployment must have an incomplete provisioning state, such as Provisioning, and not a completed state, such as Provisioned or Failed.
+
+To create a deployment at subscription scope, use the New-AzDeployment cmdlet.
+
+This cmdlet stops only one running deployment. Use the *Name* parameter to stop a specific deployment.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\>Stop-AzDeployment -Name "deployment01"
 ```
 
-{{ Add example description here }}
+This command cancels a running deployment "deployment01" at the current subscription scope.
+
+### Example 2
+```
+PS C:\>Get-AzDeployment -Name "deployment01" | Stop-AzDeployment
+```
+
+This command gets the deployment "deployment01" at the current subscription scope and cancels it. 
 
 ## PARAMETERS
 
@@ -64,9 +78,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -183,8 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

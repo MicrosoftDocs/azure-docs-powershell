@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 486748AC-3932-4E0C-BBCC-2BC194E69DCC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchaccountkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchAccountKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzBatchAccountKey.md
 ---
 
 # New-AzBatchAccountKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Regenerates a key of a Batch account.
 
 ## SYNTAX
 
@@ -18,21 +21,36 @@ New-AzBatchAccountKey [-AccountName] <String> [-ResourceGroupName <String>] -Key
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzBatchAccountKey** cmdlet regenerates the primary or secondary key of an Azure Batch account.
+The cmdlet returns a **BatchAccountContext** object that has its current **PrimaryAccountKey** and **SecondaryAccountKey** properties.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Regenerate the primary account key on a Batch account
+```
+PS C:\>New-AzBatchAccountKey -AccountName "pfuller" -KeyType "Primary"
+AccountName                  : pfuller
+
+Location                     : westus
+
+ResourceGroupName            : CmdletExampleRG
+
+CoreQuota                    : 20
+
+PoolQuota                    : 20
+
+ActiveJobAndJobScheduleQuota : 20
+
+Tags                         : 
+TaskTenantUrl                : https://cmdletexample.westus.batch.azure.com
 ```
 
-{{ Add example description here }}
+This command regenerates the primary account key on the Batch account named pfuller.
 
 ## PARAMETERS
 
 ### -AccountName
-The name of the Batch service account to regenerate the specified key for.
+Specifies the name of the Batch account for which this cmdlet regenerates a key.
 
 ```yaml
 Type: System.String
@@ -47,12 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeyType
-The type of key (primary or secondary) to regenerate.
+Specifies the type of key that this cmdlet regenerates.
+Valid values are: 
+- Primary
+- Secondary
 
 ```yaml
 Type: System.String
@@ -78,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the resource group of the account for which this cmdlet regenerates a key.
 
 ```yaml
 Type: System.String
@@ -93,8 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,3 +127,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

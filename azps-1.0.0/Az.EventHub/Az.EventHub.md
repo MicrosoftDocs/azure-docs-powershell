@@ -1,85 +1,87 @@
 ---
 Module Name: Az.EventHub
-Module Guid: d1fc588c-f6f1-4c18-968b-94c7c1ee695d
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.eventhub
+Help Version: 4.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Az.EventHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventHub/Commands.EventHub/help/Az.EventHub.md
 ---
 
 # Az.EventHub Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help for the Azure Event Hub PowerShell resource manager cmdlets.
 
 ## Az.EventHub Cmdlets
 ### [Get-AzEventHub](Get-AzEventHub.md)
-{{Manually Enter Get-AzEventHub Description Here}}
+Gets the details of a single Event Hub, or gets a list of Event Hubs.
 
 ### [Get-AzEventHubAuthorizationRule](Get-AzEventHubAuthorizationRule.md)
-{{Manually Enter Get-AzEventHubAuthorizationRule Description Here}}
+Gets the details of an authorization rule, or gets a list of authorization rules.
 
 ### [Get-AzEventHubConsumerGroup](Get-AzEventHubConsumerGroup.md)
-{{Manually Enter Get-AzEventHubConsumerGroup Description Here}}
+Gets the details of a specified Event Hubs consumer group, or gets a list of consumer groups in an Event Hub.
 
 ### [Get-AzEventHubGeoDRConfiguration](Get-AzEventHubGeoDRConfiguration.md)
-{{Manually Enter Get-AzEventHubGeoDRConfiguration Description Here}}
+Retrieves Alias(Disaster Recovery configuration) for primary or secondary namespace
 
 ### [Get-AzEventHubKey](Get-AzEventHubKey.md)
-{{Manually Enter Get-AzEventHubKey Description Here}}
+Gets the primary key details of the specified Event Hubs authorization rule.
 
 ### [Get-AzEventHubNamespace](Get-AzEventHubNamespace.md)
-{{Manually Enter Get-AzEventHubNamespace Description Here}}
+Gets the details of an Event Hubs namespace, or gets a list of all Event Hubs namespaces in the current Azure subscription.
 
 ### [New-AzEventHub](New-AzEventHub.md)
-{{Manually Enter New-AzEventHub Description Here}}
+Creates a new Event Hub.
 
 ### [New-AzEventHubAuthorizationRule](New-AzEventHubAuthorizationRule.md)
-{{Manually Enter New-AzEventHubAuthorizationRule Description Here}}
+Creates a new Event Hubs authorization rule for namespace or eventhub.
 
 ### [New-AzEventHubConsumerGroup](New-AzEventHubConsumerGroup.md)
-{{Manually Enter New-AzEventHubConsumerGroup Description Here}}
+Creates a new consumer group for the specified Event Hub.
 
 ### [New-AzEventHubGeoDRConfiguration](New-AzEventHubGeoDRConfiguration.md)
-{{Manually Enter New-AzEventHubGeoDRConfiguration Description Here}}
+Creates an new Alias(Disaster Recovery configuration)
 
 ### [New-AzEventHubKey](New-AzEventHubKey.md)
-{{Manually Enter New-AzEventHubKey Description Here}}
+Creates a new primary or secondary key for the specified Event Hubs authorization rule.
 
 ### [New-AzEventHubNamespace](New-AzEventHubNamespace.md)
-{{Manually Enter New-AzEventHubNamespace Description Here}}
+Creates an Event Hubs namespace.
 
 ### [Remove-AzEventHub](Remove-AzEventHub.md)
-{{Manually Enter Remove-AzEventHub Description Here}}
+Removes the specified Event Hub.
 
 ### [Remove-AzEventHubAuthorizationRule](Remove-AzEventHubAuthorizationRule.md)
-{{Manually Enter Remove-AzEventHubAuthorizationRule Description Here}}
+Removes the specified Event Hub authorization rule.
 
 ### [Remove-AzEventHubConsumerGroup](Remove-AzEventHubConsumerGroup.md)
-{{Manually Enter Remove-AzEventHubConsumerGroup Description Here}}
+Deletes the specified Event Hubs consumer group.
 
 ### [Remove-AzEventHubGeoDRConfiguration](Remove-AzEventHubGeoDRConfiguration.md)
-{{Manually Enter Remove-AzEventHubGeoDRConfiguration Description Here}}
+Deletes an Alias(Disaster Recovery configuration)
 
 ### [Remove-AzEventHubNamespace](Remove-AzEventHubNamespace.md)
-{{Manually Enter Remove-AzEventHubNamespace Description Here}}
+Removes the specified Event Hubs namespace.
 
 ### [Set-AzEventHub](Set-AzEventHub.md)
-{{Manually Enter Set-AzEventHub Description Here}}
+Updates the specified Event Hub.
 
 ### [Set-AzEventHubAuthorizationRule](Set-AzEventHubAuthorizationRule.md)
-{{Manually Enter Set-AzEventHubAuthorizationRule Description Here}}
+Updates the specified authorization rule on an Event Hub.
 
 ### [Set-AzEventHubConsumerGroup](Set-AzEventHubConsumerGroup.md)
-{{Manually Enter Set-AzEventHubConsumerGroup Description Here}}
+Updates the specified Event Hubs consumer group.
 
 ### [Set-AzEventHubGeoDRConfigurationBreakPair](Set-AzEventHubGeoDRConfigurationBreakPair.md)
-{{Manually Enter Set-AzEventHubGeoDRConfigurationBreakPair Description Here}}
+This operation disables the Disaster Recovery and stops replicating changes from primary to secondary namespaces
 
 ### [Set-AzEventHubGeoDRConfigurationFailOver](Set-AzEventHubGeoDRConfigurationFailOver.md)
-{{Manually Enter Set-AzEventHubGeoDRConfigurationFailOver Description Here}}
+Invokes GEO DR failover and reconfigure the alias to point to the secondary namespace
 
 ### [Set-AzEventHubNamespace](Set-AzEventHubNamespace.md)
-{{Manually Enter Set-AzEventHubNamespace Description Here}}
+Updates the specified Event Hubs namespace.
 
 ### [Test-AzEventHubName](Test-AzEventHubName.md)
-{{Manually Enter Test-AzEventHubName Description Here}}
+Checks the Availability of the given NameSpace Name or Alias (DR Configuration Name)
 

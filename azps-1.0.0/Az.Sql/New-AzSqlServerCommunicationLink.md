@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 52664E45-7EAB-41C9-BF78-304F10BFC51A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqlservercommunicationlink
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlServerCommunicationLink.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/New-AzSqlServerCommunicationLink.md
 ---
 
 # New-AzSqlServerCommunicationLink
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a communication link for elastic database transactions between two SQL Database servers.
 
 ## SYNTAX
 
@@ -19,16 +22,19 @@ New-AzSqlServerCommunicationLink -LinkName <String> -PartnerServer <String> [-As
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzSqlServerCommunicationLink** cmdlet creates a communication link for elastic database transactions between two logical servers in Azure SQL Database.
+Elastic database transactions can span databases in either of the paired servers.
+You can create more than one link on a server.
+Therefore, elastic database transactions can span across a larger number of servers.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a communication link
+```
+PS C:\>New-AzSqlServerCommunicationLink -ResourceGroupName "ResourceGroup01" -ServerName "ContosoServer17" -LinkName "Link01" -PartnerServer "ContosoServer02"
 ```
 
-{{ Add example description here }}
+This command creates a link named Link01 between ContosoServer17 and ContosoServer02.
 
 ## PARAMETERS
 
@@ -48,12 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -LinkName
-The name of the Azure SQL server communication link to create.
+Specifies the name of the server communication link that this cmdlet creates.
 
 ```yaml
 Type: System.String
@@ -78,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServer
-The name of the partner server.
+Specifies the name of the other server that takes part in this communication link.
 
 ```yaml
 Type: System.String
@@ -93,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group to which the server specified by the *ServerName* parameter belongs.
 
 ```yaml
 Type: System.String
@@ -108,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server.
+Specifies the name of the server on which this cmdlet sets up the communication link.
 
 ```yaml
 Type: System.String
@@ -132,7 +138,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -148,14 +154,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -166,5 +171,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Sql.ServerCommunicationLink.Model.AzureSqlServerCommunicationLinkModel
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, sql, database, mssql
 
 ## RELATED LINKS
+
+[Get-AzSqlServerCommunicationLink](./Get-AzSqlServerCommunicationLink.md)
+
+[Remove-AzSqlServerCommunicationLink](./Remove-AzSqlServerCommunicationLink.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

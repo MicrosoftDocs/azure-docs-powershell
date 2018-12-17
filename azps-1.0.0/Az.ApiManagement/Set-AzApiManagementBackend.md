@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementbackend
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementBackend.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementBackend.md
 ---
 
 # Set-AzApiManagementBackend
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a Backend.
 
 ## SYNTAX
 
@@ -22,16 +24,15 @@ Set-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Updates an existing backend in the Api Management.
 
 ## EXAMPLES
 
-### Example 1
+### Updates the Description of the Backend 123
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementBackend -Context $apimContext -BackendId 123 -Description "updated description" -PassThru
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Credential to be used when talking to the Backend.
+Credential details which should be used when talking to the Backend.
 This parameter is optional.
 
 ```yaml
@@ -84,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend type  representing the modified backend will be written to output.
+Indicates that this cmdlet returns the  **PsApiManagementBackend** that this cmdlet modifies.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -130,8 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Backend Communication protocol.
-This parameter is optional.
+Backend Communication protocol (http or soap).
+This parameter is optional
 
 ```yaml
 Type: System.String
@@ -163,8 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Original uri of entity in external system backend points to.
+Management Uri of the Resource in External System.
 This parameter is optional.
+This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
 
 ```yaml
 Type: System.String
@@ -179,8 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceFabricCluster
-Service Fabric Cluster Backend details.
-This parameter is optional.
+Service Fabric Cluster Backend details. This parameter is optional.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
@@ -274,8 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -290,8 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -316,3 +315,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
+
+[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
+
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+
+[Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)

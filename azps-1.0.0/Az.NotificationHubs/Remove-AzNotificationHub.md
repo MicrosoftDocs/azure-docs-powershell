@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: 62631E1C-FB43-4E87-82C2-159A9D1D4221
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/remove-aznotificationhub
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Remove-AzNotificationHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Remove-AzNotificationHub.md
 ---
 
 # Remove-AzNotificationHub
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an existing notification hub.
 
 ## SYNTAX
 
@@ -18,26 +21,32 @@ Remove-AzNotificationHub [-ResourceGroup] <String> [-Namespace] <String> [-Notif
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzNotificationHub** cmdlet removes an existing notification hub.
+Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
+Platforms include, but are not limited to: iOS, Android, Windows Phone 8, and Windows Store.
+Notification hubs are roughly equivalent to individual apps: each of your apps will typically have its own notification hub.
+You can remove an existing notification hub by using the **Remove-AzNotificationHub** cmdlet.
+After a hub has been removed you can no longer use that hub to send push notifications to users.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a notification hub
+```
+PS C:\>Remove-AzNotificationHub -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -NotificationHub "ContosoInternalHub"
 ```
 
-{{ Add example description here }}
+This command removes the notification hub named ContosoInternalHub.
+In order to remove the hub, you must specify the namespace where the hub is located as well as the resource group the hub is assigned to.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace to which the notification hub is assigned.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -77,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHub
-NotificationHub Name.
+Specifies the notification hub to be removed.
+Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
 
 ```yaml
 Type: System.String
@@ -92,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the notification hub is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -122,8 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -138,8 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +162,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHub](./Get-AzNotificationHub.md)
+
+[New-AzNotificationHub](./New-AzNotificationHub.md)
+
+[Set-AzNotificationHub](./Set-AzNotificationHub.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.dll-Help.xml
 Module Name: Az.StreamAnalytics
-online version:
+ms.assetid: 1D10C1EA-632A-4953-85B1-596A45C30B24
+online version: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics/get-azstreamanalyticsjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzStreamAnalyticsJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzStreamAnalyticsJob.md
 ---
 
 # Get-AzStreamAnalyticsJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Stream Analytics jobs information.
 
 ## SYNTAX
 
@@ -24,26 +27,40 @@ Get-AzStreamAnalyticsJob [-NoExpand] [-DefaultProfile <IAzureContextContainer>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzStreamAnalyticsJob** cmdlet lists all Stream Analytics jobs defined in the Azure subscription or specified resource group or gets job information about a specific job within a resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1: Get information about all jobs in a subscription
+```
+PS C:\>Get-AzStreamAnalyticsJob
 ```
 
-{{ Add example description here }}
+This command returns information about all the Stream Analytics jobs in the Azure subscription.
+
+### EXAMPLE 2: Get information about all jobs in a resource group
+```
+PS C:\>Get-AzStreamAnalyticsJob -ResourceGroupName "StreamAnalytics-Default-West-US"
+```
+
+This command returns information about all the Stream Analytics jobs in the resource group StreamAnalytics-Default-West-US.
+
+### EXAMPLE 3: Get information about a specific job in a resource group
+```
+PS C:\>Get-AzStreamAnalyticsJob -ResourceGroupName "StreamAnalytics-Default-West-US" -Name "StreamingJob"
+```
+
+This command returns information about the Stream Analytics job StreamingJob in the resource group StreamAnalytics-Default-West-US.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -53,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The azure stream analytics job name.
+Specifies the name of the Azure Stream Analytics job to retrieve.
 
 ```yaml
 Type: System.String
@@ -68,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoExpand
-The switch to specify whether the job entity should be expanded.
+Indicates the cmdlet will retrieve the Azure Stream Analytics job, but not return information on its inputs, outputs, and transformation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -83,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
 
 ```yaml
 Type: System.String
@@ -98,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -114,3 +130,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzStreamAnalyticsJob](./New-AzStreamAnalyticsJob.md)
+
+[Remove-AzStreamAnalyticsJob](./Remove-AzStreamAnalyticsJob.md)
+
+[Start-AzStreamAnalyticsJob](./Start-AzStreamAnalyticsJob.md)
+
+[Stop-AzStreamAnalyticsJob](./Stop-AzStreamAnalyticsJob.md)
+
+

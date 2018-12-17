@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
-online version:
+ms.assetid: 5CEA7323-4CF7-42B2-BA94-BB3C8F73D2E9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.media/new-azmediaservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/New-AzMediaService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/New-AzMediaService.md
 ---
 
 # New-AzMediaService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a media service if the media service already exists, all its properties are updated with the input provided.
 
 ## SYNTAX
 
@@ -27,21 +30,82 @@ New-AzMediaService [-ResourceGroupName] <String> [-AccountName] <String> [-Locat
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzMediaService** cmdlet creates a media service.
+If the media service already exists, this cmdlet update its properties.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example1: Create a media service with the primary storage account only
+```
+PS C:\># Variables
+## Global
+$ResourceGroupName = "ResourceGroup001"
+$Location = "East US"
+
+## Storage
+$StorageName = "Storage1"
+$StorageType = "Standard_GRS"
+
+## Media Service
+$Tags = @{"tag1" = "value1"; "tag2" = "value2"}
+$MediaServiceName = "MediaService1"
+
+# Resource Group
+PS C:\> New-AzResourceGroup -Name $ResourceGroupName -Location $Location
+
+# Storage
+$StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName -Location $Location -Type $StorageType
+
+# Media Service
+PS C:\> New-AzMediaService -ResourceGroupName $ResourceGroupName -AccountName $MediaServiceName -Location $Location -StorageAccountId $StorageAccount.Id -Tag $Tags
 ```
 
-{{ Add example description here }}
+This example shows how to  create a media service with specifying primary storage account only.
+This script uses several other cmdlets.
+
+### Example 2: Create a media service with multiple storage
+```
+PS C:\># Variables
+
+## Global
+$ResourceGroupName = "ResourceGroup001"
+$Location = "East US"
+
+## Storage
+$StorageName1 = "storage1"
+$StorageName2 = "storage2"
+$StorageType = "Standard_GRS"
+
+## Media Service
+$Tags = @{"tag1" = "value1"; "tag2" = "value2"}
+$MediaServiceName = "MediaService1"
+
+# Resource Group
+PS C:\> New-AzResourceGroup -Name $ResourceGroupName -Location $Location
+
+# Storage
+$StorageAccount1 = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName1 -Location $Location -Type $StorageType
+
+
+$StorageAccount2 = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName2 -Location $Location -Type $StorageType
+
+# Media Service
+
+## Setup the storage configuration object.
+PS C:\> $PrimaryStorageAccount = New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount1.Id -IsPrimary
+PS C:\> $SecondaryStorageAccount = New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount2.Id
+PS C:\> $StorageAccounts = @($PrimaryStorageAccount, $SecondaryStorageAccount)
+
+## Create a media service.New-AzMediaService -ResourceGroupName $ResourceGroupName -AccountName $MediaServiceName -Location $Location -StorageAccounts $StorageAccounts -Tag $Tags
+```
+
+This example shows how to create a media service with multiple storage accounts.
+This script uses several other cmdlets.
 
 ## PARAMETERS
 
 ### -AccountName
-The media service account name.
+Specifies the name of the media service that this cmdlet creates.
 
 ```yaml
 Type: System.String
@@ -56,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the region that this cmdlet creates the media service in.
 
 ```yaml
 Type: System.String
@@ -86,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that the media service is assigned to.
 
 ```yaml
 Type: System.String
@@ -101,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-The primary storage account assosiated with the media account.
+Specifies the storage account associated with the media service account.
 
 ```yaml
 Type: System.String
@@ -116,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccounts
-The storage accounts assosiated with the media account.
+Specifies an array of storage accounts to associate with the media service.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Media.Models.PSStorageAccount[]
@@ -136,7 +200,7 @@ The tags associated with the media service account.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
-Aliases: Tags
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +219,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -171,14 +235,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -193,3 +256,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzMediaService](./Get-AzMediaService.md)
+
+[Remove-AzMediaService](./Remove-AzMediaService.md)
+
+[Set-AzMediaService](./Set-AzMediaService.md)
+
+

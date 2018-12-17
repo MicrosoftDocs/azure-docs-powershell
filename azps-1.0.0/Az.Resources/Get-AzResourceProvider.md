@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 6AB09621-488B-4A16-92D9-9C47EB87DA95
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourceprovider
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceProvider.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceProvider.md
 ---
 
 # Get-AzResourceProvider
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a resource provider.
 
 ## SYNTAX
 
@@ -25,22 +28,15 @@ Get-AzResourceProvider -ProviderNamespace <String[]> [-Location <String>] [-ApiV
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzResourceProvider** cmdlet gets an Azure resource provider.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource Provider.
+You can specify a different version than the default version.
 
 ```yaml
 Type: System.String
@@ -55,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListAvailable
-When specified, lists all the resource providers available, including those not registered with the current subscription.
+Indicates that this operation gets all available resource providers.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -85,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location to look for provider namespace.
+Specifies the location of the resource provider.
 
 ```yaml
 Type: System.String
@@ -100,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -115,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderNamespace
-The resource provider namespace.
+Specifies the namespace of the resource provider.
 
 ```yaml
 Type: System.String[]
@@ -130,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -144,3 +139,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Register-AzResourceProvider](./Register-AzResourceProvider.md)
+
+[Unregister-AzResourceProvider](./Unregister-AzResourceProvider.md)
+
+

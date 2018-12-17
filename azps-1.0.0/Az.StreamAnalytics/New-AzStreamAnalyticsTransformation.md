@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.dll-Help.xml
 Module Name: Az.StreamAnalytics
-online version:
+ms.assetid: 8FF53426-D4AE-455E-A182-D7FBC7262FE1
+online version: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics/new-azstreamanalyticstransformation
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/New-AzStreamAnalyticsTransformation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/New-AzStreamAnalyticsTransformation.md
 ---
 
 # New-AzStreamAnalyticsTransformation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates or updates a transformation within a job.
 
 ## SYNTAX
 
@@ -19,26 +22,38 @@ New-AzStreamAnalyticsTransformation [-JobName] <String> [[-Name] <String>] [-Fil
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStreamAnalyticsTransformation** cmdlet creates a transformation within a Stream Analytics job or updates the existing transformation.
+The name of the transformation can be specified in the .JSON file or on the command line.
+If both are specified, the name on command line must match the name in the file.
+If you specify a transformation that already exists and do not specify the Force parameter, the cmdlet will ask whether or not to replace the existing transformation.
+If you specify the *Force* parameter and specify an existing transformation name, the transformation will be replaced without confirmation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1: Create or replace a transformation in a job
+```
+PS C:\>New-AzStreamAnalyticsTransformation -ResourceGroupName "StreamAnalytics-Default-West-US" -File "C:\Transformation.json" -JobName "StreamingJob" -Name "StreamingJobTransform"
 ```
 
-{{ Add example description here }}
+This command creates a transformation called StreamingJobTransform in the job called StreamingJob.
+If an existing transformation is already defined with that name, the cmdlet will ask whether or not to replace it.
+
+### EXAMPLE 2: Replace a transformation in a job
+```
+PS C:\>New-AzStreamAnalyticsTransformation -ResourceGroupName "StreamAnalytics-Default-West-US" -File "C:\Transformation.json" -JobName "StreamingJob" -Name "StreamingJobTransform" -Force
+```
+
+This command replaces the definition of StreamingJobTransform in the job StreamingJob without confirmation.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -File
-The stream analytics transformation JSON file path.
+Specifies the path to a JSON file that contains the JSON representation of the Azure Stream Analytics transformation to create.
 
 ```yaml
 Type: System.String
@@ -63,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Don't ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobName
-The stream analytics job name.
+Specifies the name of the Azure Stream Analytics job under which to create the Azure Stream Analytics transformation.
 
 ```yaml
 Type: System.String
@@ -93,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The stream analytics transformation name.
+Specifies the name of the Azure Stream Analytics transformation to create.
 
 ```yaml
 Type: System.String
@@ -108,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group under which to create the Azure Stream Analytics transformation.
 
 ```yaml
 Type: System.String
@@ -132,7 +147,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -148,14 +163,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -168,3 +182,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStreamAnalyticsTransformation](./Get-AzStreamAnalyticsTransformation.md)
+
+

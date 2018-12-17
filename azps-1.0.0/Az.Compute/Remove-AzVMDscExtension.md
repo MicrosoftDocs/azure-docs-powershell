@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: C7FCF2CA-2C8D-4280-BF68-10DEA96642A5
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmdscextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzVMDscExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzVMDscExtension.md
 ---
 
 # Remove-AzVMDscExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a DSC extension handler from a virtual machine in a resource group.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Remove-AzVMDscExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Name
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzVMDscExtension** cmdlet removes a Desired State Configuration (DSC) extension handler from a virtual machine in a resource group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a DSC extension
+```
+PS C:\> Remove-AzVMDscExtension -ResourceGroupName "ResourceGroup001" -VMName "VM07" -Name "DSC"
 ```
 
-{{ Add example description here }}
+This command removes the extension named DSC on virtual machine named VM07.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,9 +50,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the ARM resource that represents the extension.
-The Set-AzureRmVMDscExtension cmdlet sets this name to  'Microsoft.Powershell.DSC', which is the same value used by Get-AzureRmVMDscExtension.
-Specify this parameter only if you changed the default name in the Set cmdlet or used a different resource name in an ARM template.
+Specifies the name of the DSC extension that this cmdlet removes.
+The Set-AzVMDscExtension cmdlet sets this name to Microsoft.Powershell.DSC, which is the default value used by **Remove-AzVMDscExtension**.
 
 ```yaml
 Type: System.String
@@ -64,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The name of the virtual machine.
+Specifies the name of a virtual machine from which this cmdlet removes the DSC extension.
 
 ```yaml
 Type: System.String
@@ -103,7 +105,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -119,14 +121,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,3 +140,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMDscExtension](./Get-AzVMDscExtension.md)
+
+[Set-AzVMDscExtension](./Set-AzVMDscExtension.md)
+
+

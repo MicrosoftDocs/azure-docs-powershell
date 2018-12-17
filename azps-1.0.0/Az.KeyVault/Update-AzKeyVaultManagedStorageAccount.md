@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/update-azkeyvaultmanagedstorageaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Update-AzKeyVaultManagedStorageAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Update-AzKeyVaultManagedStorageAccount.md
 ---
 
 # Update-AzKeyVaultManagedStorageAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Update editable attributes of a Key Vault managed Azure Storage Account.
 
 ## SYNTAX
 
@@ -28,22 +30,36 @@ Update-AzKeyVaultManagedStorageAccount [-InputObject] <PSKeyVaultManagedStorageA
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Update the editable attributes of a Key Vault managed Azure Storage Account.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the active key to 'key2' on a Key Vault managed Azure Storage Account.
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Update-AzKeyVaultManagedStorageAccount -VaultName 'myvault' -AccountName 'mystorageaccount' -ActiveKeyName 'key2'
+
+Id                  : https://myvault.vault.azure.net:443/storage/mystorageaccount
+Vault Name          : myvault
+AccountName         : mystorageaccount
+Account Resource Id : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers/Microsoft.St
+                      orage/storageAccounts/mystorageaccount
+Active Key Name     : key2
+Auto Regenerate Key : True
+Regeneration Period : 90.00:00:00
+Enabled             : True
+Created             : 5/21/2018 11:55:58 PM
+Updated             : 5/21/2018 11:55:58 PM
+Tags                :
 ```
 
-{{ Add example description here }}
+Updates the Key Vault managed Azure Storage Account active key to 'key2'. 'key2' will be used to
+generate SAS tokens after this update.
 
 ## PARAMETERS
 
 ### -AccountName
-Key Vault managed storage account name.
-Cmdlet constructs the FQDN of a managed storage account name from vault name, currently selected environment and manged storage account name.
+Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed storage account
+name from vault name, currently selected environment and manged storage account name.
 
 ```yaml
 Type: System.String
@@ -90,12 +106,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -105,9 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-If present, enables a use of a managed storage account key for sas token generation if value is true.
-Disables use of a managed storage account key for sas token generation if value is false.
-If not specified, the existing value of the storage account's enabled/disabled state remains unchanged.
+If present, enables a use of a managed storage account key for sas token generation if value is
+true. Disables use of a managed storage account key for sas token generation if value is false. If
+not specified, the existing value of the storage account's enabled/disabled state remains
+unchanged.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -137,8 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Cmdlet does not return object by default.
-If this switch is specified, return managed storage account object.
+Cmdlet does not return object by default. If this switch is specified, return managed storage
+account object.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -153,9 +170,10 @@ Accept wildcard characters: False
 ```
 
 ### -RegenerationPeriod
-Regeneration period.
-If auto regenerate key is enabled, this value specifies the timespan after which managed storage account's inactive keygets auto regenerated and becomes the active key.
-If not specified, the existing value of regeneration period of keys of managed storage account remains unchanged
+Regeneration period. If auto regenerate key is enabled, this value specifies the timespan after
+which managed storage account's inactive keygets auto regenerated and becomes the active key. If
+not specified, the existing value of regeneration period of keys of managed storage account remains
+unchanged
 
 ```yaml
 Type: System.Nullable`1[System.TimeSpan]
@@ -170,9 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hashtable representing tags of managed storage account.
-If not specified, the existing tags of the managed storage account remain unchanged.
-Remove tags by specifying an empty Hashtable.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -234,8 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -248,3 +264,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Az.KeyVault](/powershell/module/az.keyvault)

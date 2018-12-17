@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/remove-azservicebusnamespace
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Remove-AzServiceBusNamespace.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Remove-AzServiceBusNamespace.md
 ---
 
 # Remove-AzServiceBusNamespace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the namespace from the specified resource group. 
 
 ## SYNTAX
 
@@ -31,16 +33,39 @@ Remove-AzServiceBusNamespace [-ResourceId] <String> [-PassThru] [-AsJob]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzServiceBusNamespace** cmdlet removes the namespace from the specified resource group.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Remove-AzServiceBusNamespace -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1
 ```
 
-{{ Add example description here }}
+Removes the Service Bus namespace `SB-Example1` from the specified resource group `Default-ServiceBus-WestUS`.
+
+### Example 2.1 - InputObject - Using variable:
+```
+PS C:\> $inputobject = Get-AzServiceBusNamespace <params>
+PS C:\> Remove-AzServiceBusNamespace -InputObject $inputobject
+```
+
+Removes the Service Bus namespace provided through the $inputobject.
+
+### Example 2.2 - InputObject - Using Piping:
+```
+PS C:\> Get-AzServiceBusNamespace <params> | Remove-AzServiceBusNamespace
+```
+
+Removes the Service Bus namespace using Piping.
+
+### Example 3 - ResourceId
+```
+PS c:\> $ResourceId = (Get-AzResource -ResourceType Microsoft.ServiceBus/namespaces).ResourceId
+PS C:\> Remove-AzServiceBusNamespace -ResourceId $resourceid
+```
+
+Removes the Service Bus namespace provided through ARM id in $resourceid for -ResourceId parameter or through piping.
 
 ## PARAMETERS
 
@@ -63,9 +88,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -105,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -181,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

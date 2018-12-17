@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: FF3AD436-CA33-4A52-8580-D2345D80A231
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azstorageshare
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageShare.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageShare.md
 ---
 
 # Remove-AzStorageShare
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a file share.
 
 ## SYNTAX
 
@@ -29,21 +32,30 @@ Remove-AzStorageShare [-Share] <CloudFileShare> [-IncludeAllSnapshot] [-Force] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzStorageShare** cmdlet deletes a file share.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a file share
+```
+PS C:\>Remove-AzStorageShare -Name "ContosoShare06"
 ```
 
-{{ Add example description here }}
+This command removes the file share named ContosoShare06.
+
+### Example 2: Remove a file share and all its snapshots
+```
+PS C:\>Remove-AzStorageShare -Name "ContosoShare06" -IncludeAllSnapshot
+```
+
+This command removes the file share named ContosoShare06 and all its snapshots.
 
 ## PARAMETERS
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -58,7 +70,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -74,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies an Azure storage context.
+To obtain a storage context, use the [New-AzStorageContext](./New-AzStorageContext.md) cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -92,7 +108,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -104,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to remove the share with all its snapshots, and all content in them.
+Force to remove the share with all of its snapshots, and all content.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -134,7 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the file share to be removed.
+Specifies the name of the file share.
+This cmdlet deletes the file share that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -149,8 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the removed file share.
-By default, this cmdlet does not generate any output.
+Indicates that this cmdlet returns a **Boolean** that reflects the success of the operation.
+By default, this cmdlet does not return a value.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -165,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -180,7 +197,11 @@ Accept wildcard characters: False
 ```
 
 ### -Share
-File share object to be removed.
+Specifies a **CloudFileShare** object.
+This cmdlet removes the object that this parameter specifies.
+To obtain a **CloudFileShare** object, use the Get-AzStorageShare cmdlet.
+This object contains the storage context.
+If you specify this parameter, do not specify the *Context* parameter.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
@@ -204,7 +225,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -220,14 +241,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -244,3 +264,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageShare](./Get-AzStorageShare.md)
+
+[New-AzStorageContext](./New-AzStorageContext.md)
+
+[New-AzStorageShare](./New-AzStorageShare.md)

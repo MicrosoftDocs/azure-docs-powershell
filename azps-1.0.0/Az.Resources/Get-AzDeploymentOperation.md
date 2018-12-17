@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azdeploymentoperation
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzDeploymentOperation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzDeploymentOperation.md
 ---
 
 # Get-AzDeploymentOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get deployment operation
 
 ## SYNTAX
 
@@ -25,16 +27,29 @@ Get-AzDeploymentOperation -DeploymentObject <PSDeployment> [-ApiVersion <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzDeploymentOperation** cmdlet lists all the operations that were part of a deployment to help you identify and give more information about the exact operations that failed for a particular deployment.
+It can also show the response and the request content for each deployment operation.
+This is the same information provided in the deployment details on the portal.
+
+To get the request and the response content, enable the setting when submitting a deployment through **New-AzDeployment**.
+It can potentially log and expose secrets like passwords used in the resource property or **listKeys** operations that are then returned when you retrieve the deployment operations.
+For more on this setting and how to enable it, see New-AzDeployment and Debugging ARM template deployments
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Get deployment operations given a deployment name
+```
+PS C:\>Get-AzDeploymentOperation -DeploymentName test
 ```
 
-{{ Add example description here }}
+Gets deployment operation with name "test" at the current subscription scope.
+
+### Get a deployment and get its deployment operations
+```
+PS C:\>Get-AzDeployment -Name "test" | Get-AzDeploymentOperation
+```
+
+This command gets the deployment "test" at the current subscription scope and get its deployment operations.
 
 ## PARAMETERS
 
@@ -58,9 +73,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -130,8 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

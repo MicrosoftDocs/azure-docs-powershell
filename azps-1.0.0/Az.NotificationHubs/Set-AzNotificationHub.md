@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
-online version:
+ms.assetid: F7BBEF57-0DC2-4EFF-9AA2-119B3BD19AE6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/set-aznotificationhub
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzNotificationHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzNotificationHub.md
 ---
 
 # Set-AzNotificationHub
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets property values for a notification hub.
 
 ## SYNTAX
 
@@ -26,26 +29,39 @@ Set-AzNotificationHub [-ResourceGroup] <String> [-Namespace] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzNotificationHub** cmdlet modifies the property values of a notification hub.
+You can modify a notification hub property value in two ways.
+For one, you can create an instance of the **NotificationHubAttributes** object and then configure that object with the property values you want the new hub to possess.
+This can be done through the .NET Framework.
+You can then copy those property values to your hub by through the *NotificationHubObj* parameter.
+Alternatively, you can create a JSON (JavaScript Object Notation) file that contains the relevant configuration values, then apply those values by through the *InputFile* parameter.
+A JSON file is a text file that uses syntax similar to the following:
+{  
+    "Name": "ContosoNotificationHub",  
+    "Location": "West US",  
+}
+When used in conjunction with the **Set-AzNotificationHub** cmdlet, the preceding JSON sample sets the Location value of a notification hub named ContosoNotificationHub to West US.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify the property values for a notification hub
+```
+PS C:\>Set-AzNotificationHub -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -InputFile "C:\Configuration\Hubs.json"
 ```
 
-{{ Add example description here }}
+This command modifies the property values for a notification hub found in the ContosoNamespace namespace and assigned it to the resource group ContosoNotificationsGroup.
+The property values, as well as the name of the hub to be modified, are not specified in the command.
+Instead, that information is contained in the input file C:\Configuration\Hubs.json.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputFile
-File name containing a single NotificationHub definition.
+Specifies the path to a JSON file that contains configuration information for the notification hub.
 
 ```yaml
 Type: System.String
@@ -85,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name.
+Specifies the namespace to which the notification hub is assigned.
+Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
 Type: System.String
@@ -100,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHubObj
-NotificationHub definition.
+Specifies the **NotificationHubAttributes** object that contains configuration information for the hub that this cmdlet modifies.
 
 ```yaml
 Type: Microsoft.Azure.Commands.NotificationHubs.Models.NotificationHubAttributes
@@ -115,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group
+Specifies the resource group to which the notification hub is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: System.String
@@ -145,8 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -161,8 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -175,3 +191,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzNotificationHub](./Get-AzNotificationHub.md)
+
+[New-AzNotificationHub](./New-AzNotificationHub.md)
+
+[Remove-AzNotificationHub](./Remove-AzNotificationHub.md)
+
+

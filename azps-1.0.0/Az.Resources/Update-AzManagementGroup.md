@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/update-azmanagementgroup/
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzManagementGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Update-AzManagementGroup.md
 ---
 
 # Update-AzManagementGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a Management Group
 
 ## SYNTAX
 
@@ -38,16 +40,74 @@ Update-AzManagementGroup -GroupName <String> [-DisplayName <String>] [-DefaultPr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzManagementGroup** cmdlet updates the **ParentId** or **DisplayName** for a Management Group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update a Management Group's Display Name
+```
+PS C:\> Update-AzManagementGroup -Group "TestGroup" -DisplayName "New Display Name"
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+DisplayName       : New Display Name
+UpdatedTime       : 2/1/2018 12:03:37 PM
+UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
+ParentId          : /providers/Microsoft.Management/managementGroups/6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+ParentName        : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+ParentDisplayName : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
 ```
 
-{{ Add example description here }}
+### Example 2: Update a Management Group's Parent
+```
+PS C:\> Update-AzManagementGroup -Group "TestGroup" -ParentId "/providers/Microsoft.Management/managementGroups/TestGroupParent"
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+DisplayName       : TestGroup
+UpdatedTime       : 2/1/2018 12:03:37 PM
+UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
+ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+ParentName        : TestGroupParent
+ParentDisplayName : TestGroupParent
+```
+
+### Example 3: Update a Management Group by piping PSManagementGroup Object
+```
+PS C:\> Get-AzManagementGroup -GroupName "TestGroup" | Update-AzManagementGroup -DisplayName "TestDisplayName" -ParentId "/providers/Microsoft.Management/managementGroups/TestGroupParent"
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+DisplayName       : TestDisplayName
+UpdatedTime       : 2/1/2018 12:03:37 PM
+UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
+ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+ParentName        : TestGroupParent
+ParentDisplayName : TestGroupParent
+```
+
+### Example 4: Update a Management Group's parent using the ParentObject
+```
+PS C:\> $parentObject = Get-AzManagementGroup -GroupName "TestGroupParent"
+PS C:\> Update-AzManagementGroup -GroupName "TestGroup" -ParentObject $parentObject
+
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+Type              : /providers/Microsoft.Management/managementGroups
+Name              : TestGroup
+TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+DisplayName       : TestGroupDisplayName
+UpdatedTime       : 2/1/2018 11:16:12 AM
+UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+ParentName        : TestGroupParent
+ParentDisplayName : TestGroupParent
+```
 
 ## PARAMETERS
 
@@ -55,9 +115,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupName
-Input Object from the Get call
+Management Group Id
 
 ```yaml
 Type: System.String
@@ -173,8 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

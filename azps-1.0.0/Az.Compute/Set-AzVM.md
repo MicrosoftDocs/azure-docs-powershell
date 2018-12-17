@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 939320CB-2595-4150-AFDD-500CEA78559C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVM.md
 ---
 
 # Set-AzVM
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Marks a virtual machine as generalized.
 
 ## SYNTAX
 
@@ -37,21 +40,22 @@ Set-AzVM [-Id] <String> [-Name] <String> [-Redeploy] [-AsJob] [-DefaultProfile <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVM** cmdlet marks a virtual machine as generalized.
+Before you run this cmdlet, log on to the virtual machine and use Sysprep to prepare the hard disk.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Mark a virtual machine as generalized
+```
+PS C:\> Set-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -Generalized
 ```
 
-{{ Add example description here }}
+This command marks the virtual machine named VirtualMachine07 as generalized.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background
+Run cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -66,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -81,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Generalized
-To generalize virtual machine.
+Indicates that this cmdlet marks a virtual machine as generalized.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group name.
+Specifies the Resource ID of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -111,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The virtual machine name.
+Specifies the name of the virtual machine on which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -126,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -Redeploy
-To redeploy virtual machine.
+Indicates that this cmdlet manually redeploys the virtual machine to a different Azure host to fix any problems.
+If you redeploy a virtual machine, it restarts, which results in the loss of ephemeral drive data.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -156,8 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -170,3 +174,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+

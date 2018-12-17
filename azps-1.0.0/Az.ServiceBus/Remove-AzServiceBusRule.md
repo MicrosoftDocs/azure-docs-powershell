@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/remove-azservicebusrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Remove-AzServiceBusRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Remove-AzServiceBusRule.md
 ---
 
 # Remove-AzServiceBusRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the speficied rule of a given subscription .
 
 ## SYNTAX
 
@@ -26,16 +28,42 @@ Remove-AzServiceBusRule [-InputObject] <PSTopicAttributes> [-ResourceId] <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzServiceBusRule** cmdlet removes the rule of a subscription of given topic.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Remove-AzServiceBusRule -ResourceGroup Default-ServiceBus-WestUS -Namespace SBExample1 -Topic SBTopic -Subscription SBSubscription -Name SBRule
 ```
 
-{{ Add example description here }}
+Removes the rule `SBRule` of subscription `SBSubscription` of specified topic `SBTopic`.
+
+### Example 2.1 - InputObject - Using Variable:
+```
+PS C:\> $inputobject = Get-AzServiceBusRule <params>
+PS C:\> Remove-AzServiceBusRule -InputObject $inputobject
+```
+
+Removes the rule provided through $inputobject for -InputObject parameter
+
+### Example 2.2 - InputObject - Using Piping:
+```
+PS C:\> Get-AzServiceBusRule <params> | Remove-AzServiceBusRule
+```
+
+### Example 3.1 - ResourceId - Using Variable
+```
+PS C:\> $resourceid = Get-AzServiceBusRule <params>
+PS C:\> Remove-AzServiceBusRule -ResourceId $resourceid.Id
+```
+
+### Example 3.1 - ResourceId - Using string value
+```
+PS C:\> Remove-AzServiceBusRule -ResourceId "/subscriptions/xxx-xxxxx-xxxxxx-xxxxxx/resourceGroups/ResourceGroupName/providers/Microsoft.ServiceBus/namespaces/NamespaceName/topics/TopicName/subscriptions/SubscriptionName/rules/RuleName"
+```
+
+Removes the rule provided through ARM Id in $resourceid/string for -ResourceId parameter 
 
 ## PARAMETERS
 
@@ -58,9 +86,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -130,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -236,8 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

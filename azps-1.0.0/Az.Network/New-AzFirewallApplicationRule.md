@@ -1,55 +1,61 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: C0E1D4DF-232F-49C6-BE4C-05C8E8038329
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azfirewallapplicationrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewallApplicationRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzFirewallApplicationRule.md
 ---
 
 # New-AzFirewallApplicationRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a Firewall Application Rule.
 
 ## SYNTAX
 
 ### TargetFqdn (Default)
 ```
-New-AzFirewallApplicationRule -Name <String> [-Description <String>]
- [-SourceAddress <System.Collections.Generic.List`1[System.String]>]
- -TargetFqdn <System.Collections.Generic.List`1[System.String]>
- -Protocol <System.Collections.Generic.List`1[System.String]> [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzFirewallApplicationRule -Name <String> [-Description <String>] [-SourceAddress <String[]>]
+ -TargetFqdn <String[]> -Protocol <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### FqdnTag
 ```
-New-AzFirewallApplicationRule -Name <String> [-Description <String>]
- [-SourceAddress <System.Collections.Generic.List`1[System.String]>]
- -FqdnTag <System.Collections.Generic.List`1[System.String]> [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzFirewallApplicationRule -Name <String> [-Description <String>] [-SourceAddress <String[]>]
+ -FqdnTag <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzFirewallApplicationRule** cmdlet creates an application rule for Azure Firewall.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:  Create a rule to allow all HTTPS traffic from 10.0.0.0
+```
+New-AzFirewallApplicationRule -Name "https-rule" -Protocol "https:443" -TargetFqdn "*" -SourceAddress "10.0.0.0"
 ```
 
-{{ Add example description here }}
+This example creates a rule which will allow all HTTPS traffic on port 443 from 10.0.0.0.
+
+### 2:  Create a rule to allow WindowsUpdate for 10.0.0.0/24 subnet
+```
+New-AzFirewallApplicationRule -Name "windows-update-rule" -FqdnTag WindowsUpdate -SourceAddress "10.0.0.0/24"
+```
+
+This example creates a rule which will allow traffic for Windows Updates for 10.0.0.0/24 domain.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -59,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description of the rule
+Specifies an optional description of this rule.
 
 ```yaml
 Type: System.String
@@ -74,10 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -FqdnTag
-The FQDN Tags of the rule
+Specifies a list of FQDN Tags for this rule. The available tags can be retrieved using [Get-AzFirewallFqdnTag](./Get-AzFirewallFqdnTag.md) cmdlet.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: FqdnTag
 Aliases:
 
@@ -89,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Application Rule
+Specifies the name of this application rule. The name must be unique inside a rule collection.
 
 ```yaml
 Type: System.String
@@ -104,10 +110,12 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-The protocols of the rule
+Specifies the type of traffic to be filtered by this rule. The format is <protocol type>:<port>. 
+For example, "http:80" or "https:443".
+Protocol is mandatory when TargetFqdn is used, but it cannot be used with FqdnTag. The supported protocols are HTTP and HTTPS.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: TargetFqdn
 Aliases:
 
@@ -122,7 +130,7 @@ Accept wildcard characters: False
 The source addresses of the rule
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -134,10 +142,11 @@ Accept wildcard characters: False
 ```
 
 ### -TargetFqdn
-The target FQDNs of the rule
+Specifies a list of domain names filtered by this rule.
+The asterik character, '*', is accepted only as the first character of an FQDN in the list. When used, the asterik matches any number of characters. (e.g. '*msn.com' will match msn.com and all its subdomains)
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: TargetFqdn
 Aliases:
 
@@ -158,7 +167,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -174,14 +183,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -194,3 +202,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzFirewallApplicationRuleCollection](./New-AzFirewallApplicationRuleCollection.md)
+
+[New-AzFirewall](./New-AzFirewall.md)
+
+[Get-AzFirewall](./Get-AzFirewall.md)
+
+[Get-AzFirewallFqdnTag](./Get-AzFirewallFqdnTag.md)

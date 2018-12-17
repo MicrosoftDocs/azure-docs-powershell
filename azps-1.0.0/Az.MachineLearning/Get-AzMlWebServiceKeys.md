@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning/get-azmlwebservicekeys
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzMlWebServiceKeys.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzMlWebServiceKeys.md
 ---
 
 # Get-AzMlWebServiceKeys
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Retrieves the web service's keys.
 
 ## SYNTAX
 
@@ -25,26 +27,31 @@ Get-AzMlWebServiceKeys -MlWebService <WebService> [-DefaultProfile <IAzureContex
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Gets the access keys for the Azure Machine Learning web service's runtime APIs.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - Get the keys for a web service specified by resource group and name
+```
+Get-AzMlWebServiceKeys -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
 ```
 
-{{ Add example description here }}
+### Example 2 - Get keys for web service instance
+```
+Get-AzMlWebServiceKeys -MlWebService $mlService
+```
+
+$mlService is an object of type Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -MlWebService
-The web service instance to get the keys for.
+The name of the web service for which the access keys are retrieved.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
@@ -69,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web service.
+The name of the web service for which the access keys are retrieved.
 
 ```yaml
 Type: System.String
@@ -84,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group for the Azure ML web services.
+The resource group for the web service.
 
 ```yaml
 Type: System.String
@@ -99,8 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -111,5 +117,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebServiceKeys
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS

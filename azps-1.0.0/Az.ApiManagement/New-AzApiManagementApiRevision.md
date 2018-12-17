@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementapirevision
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementApiRevision.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementApiRevision.md
 ---
 
 # New-AzApiManagementApiRevision
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new Revision of an Existing API.
 
 ## SYNTAX
 
@@ -18,16 +20,38 @@ New-AzApiManagementApiRevision -Context <PsApiManagementContext> -ApiId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+The **New-AzApiManagementApiRevision** cmdlet creates an API Revision for an existing an API in API Management context.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an API Revision for an API
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>New-AzApiManagementApiRevision -Context $ApiMgmtContext  -ApiId 5adf6fbf0faadf3ad8558065 -ApiRevision 6
+
+
+ApiId                         : 5adf6fbf0faadf3ad8558065;rev=6
+Name                          : httpbin.org
+Description                   : API Management facade for a very handy and free online HTTP tool.
+ServiceUrl                    : https://httpbin.org/
+Path                          : httpbin
+ApiType                       : http
+Protocols                     : {Http, Https}
+AuthorizationServerId         : contoso-oauth
+AuthorizationScope            : contoso-oauth
+SubscriptionKeyHeaderName     : Ocp-Apim-Subscription-Key
+SubscriptionKeyQueryParamName : subscription-key
+ApiRevision                   : 6
+ApiVersion                    : v1
+IsCurrent                     : False
+IsOnline                      : False
+Id                            : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/apis/5adf6fbf0faadf3ad8558065;rev=6
+ResourceGroupName             : Api-Default-WestUS
+ServiceName                   : contoso
 ```
 
-{{ Add example description here }}
+This command creates an API Revision `2` of the `echo-api` API.
 
 ## PARAMETERS
 
@@ -81,9 +105,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -108,8 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,8 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -140,3 +162,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementApi](./Get-AzApiManagementApi.md)
+
+[Remove-AzApiManagementApi](./Remove-AzApiManagementApi.md)
+
+[Set-AzApiManagementApi](./Set-AzApiManagementApi.md)

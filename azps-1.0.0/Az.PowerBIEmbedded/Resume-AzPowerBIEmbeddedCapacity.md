@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.PowerBI.dll-Help.xml
 Module Name: Az.PowerBIEmbedded
-online version:
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/resume-azpowerbiembeddedcapacity
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Resume-AzPowerBIEmbeddedCapacity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Resume-AzPowerBIEmbeddedCapacity.md
 ---
 
 # Resume-AzPowerBIEmbeddedCapacity
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Resumes an instance of PowerBI Embedded Capacity.
 
 ## SYNTAX
 
@@ -31,16 +34,26 @@ Resume-AzPowerBIEmbeddedCapacity [-InputObject] <PSPowerBIEmbeddedCapacity> [-Pa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Resume-AzPowerBIEmbeddedCapacity cmdlet resumes an instance of PowerBI Embedded Capacity
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Resume-AzPowerBIEmbeddedCapacity -Name "testcapacity" -ResourceGroupName "testRG" -PassThru
+Type                   : Microsoft.PowerBIDedicated/capacities
+Id                     : /subscriptions/78e47976-.../resourceGroups/testRG/providers/Microsoft.PowerBIDedicated/capacities/testcapacity
+ResourceGroup          : testRG
+Name                   : testcapacity
+Location               : West Central US
+State                  : Succeeded
+Administrator          : {admin@microsoft.com}
+Sku                    : A1
+Tier                   : PBIE_Azure
+Tag                    : {}
 ```
 
-{{ Add example description here }}
+This command will resume a paused capacity named testcapacity in the resourcegroup testRG
 
 ## PARAMETERS
 
@@ -48,9 +61,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-PowerBI Embedded Capacity object.
+Input object for Piping
 
 ```yaml
 Type: Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity
@@ -75,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific capacity.
+Name of the PowerBI Embedded Capacity
 
 ```yaml
 Type: System.String
@@ -105,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which to retrieve the capacity.
+Name of the Azure resource group to which the capacity belongs
 
 ```yaml
 Type: System.String
@@ -120,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-PowerBI Embedded Capacity ResourceID.
+Azure resource ID
 
 ```yaml
 Type: System.String
@@ -135,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts user to confirm whether to perform the operation
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -150,8 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Describes the actions the current operation will perform without actually performing them
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,8 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -182,3 +193,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPowerBIEmbeddedCapacity](./Get-AzPowerBIEmbeddedCapacity.md)
+
+[Suspend-AzPowerBIEmbeddedCapacity](./Suspend-AzPowerBIEmbeddedCapacity.md)

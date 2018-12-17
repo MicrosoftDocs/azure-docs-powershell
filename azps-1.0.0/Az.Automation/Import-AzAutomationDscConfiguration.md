@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: BA508F0B-847F-4531-9D5D-A5A044A2D207
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/import-azautomationdscconfiguration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Import-AzAutomationDscConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Import-AzAutomationDscConfiguration.md
 ---
 
 # Import-AzAutomationDscConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Imports a DSC configuration into Automation.
 
 ## SYNTAX
 
@@ -19,21 +22,24 @@ Import-AzAutomationDscConfiguration -SourcePath <String> [-Tags <IDictionary>] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Import-AzAutomationDscConfiguration** cmdlet imports an APS Desired State Configuration (DSC) configuration into Azure Automation.
+Specify the path of an APS script that contains a single DSC configuration.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Import a DSC configuration into Automation
+```
+PS C:\>Import-AzAutomationDscConfiguration -AutomationAccountName "Contoso17"-ResourceGroupName "ResourceGroup01" -SourcePath "C:\DSC\client.ps1" -Force
 ```
 
-{{ Add example description here }}
+This command imports the DSC configuration in the file named client.ps1 into the Automation account
+named Contoso17. The command specifies the *Force* parameter. If there is an existing DSC
+configuration, this command replaces it.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account into which this cmdlet imports a DSC configuration.
 
 ```yaml
 Type: System.String
@@ -48,12 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description of the configuration being imported.
+Specifies a description of the configuration that this cmdlet imports.
 
 ```yaml
 Type: System.String
@@ -78,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to overwrite an existing configuration.
+Indicates that this cmdlet replaces an existing DSC configuration in Automation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -93,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogVerbose
-Indicate whether verbose logging should be turned on or off.
+Specifies whether this cmdlet turns verbose logging on or off for compilation jobs of this DSC
+configuration. Specify a value of $True to turn verbose logging on or $False to turn it off.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -108,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Published
-Import the configuration in published state.
+Indicates that this cmdlet imports the DSC configuration in the published state.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -123,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet imports a DSC configuration.
 
 ```yaml
 Type: System.String
@@ -138,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePath
-Path to the configuration script .ps1 to import.
+Specifies the path of the wps_2 script that contains the DSC configuration that this cmdlet imports.
 
 ```yaml
 Type: System.String
@@ -153,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The dsc configuration tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -177,7 +185,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -193,14 +201,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -217,3 +224,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzAutomationDscConfiguration](./Export-AzAutomationDscConfiguration.md)
+
+[Get-AzAutomationDscConfiguration](./Get-AzAutomationDscConfiguration.md)

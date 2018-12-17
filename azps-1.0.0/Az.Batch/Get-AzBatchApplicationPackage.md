@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 17653793-3CE1-465F-87F7-20B4B8F56193
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchapplicationpackage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchApplicationPackage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzBatchApplicationPackage.md
 ---
 
 # Get-AzBatchApplicationPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about an application package in a Batch account.
 
 ## SYNTAX
 
@@ -18,21 +21,28 @@ Get-AzBatchApplicationPackage [-AccountName] <String> [-ResourceGroupName] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzBatchApplicationPackage** cmdlet gets information about an application package in an Azure Batch account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get details of an application package in a Batch account
+```
+PS C:\>Get-AzBatchApplicationPackage -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup" -ApplicationId "Litware" -ApplicationVersion "1.0"
+Format             : zip
+State              : Active
+Version            : 1.0
+LastActivationTime : 13/05/2016 4:03:24 AM
+StorageUrl         : https://contosobatch.blob.core.windows.net/app-test
+StorageUrlExpiry   : 13/05/2016 8:04:44 AM
+Id                 : litware
 ```
 
-{{ Add example description here }}
+This command gets the details of version 1.0 of the Litware package.
 
 ## PARAMETERS
 
 ### -AccountName
-Specifies the name of the Batch account.
+Specifies the name of the Batch account from which this cmdlet gets information.
 
 ```yaml
 Type: System.String
@@ -47,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the id of the application.
+Specifies the ID of the application.
 
 ```yaml
 Type: System.String
@@ -77,12 +87,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -107,8 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -121,3 +130,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchApplication](./Get-AzBatchApplication.md)
+
+[New-AzBatchApplication](./New-AzBatchApplication.md)
+
+[New-AzBatchApplicationPackage](./New-AzBatchApplicationPackage.md)
+
+[Remove-AzBatchApplication](./Remove-AzBatchApplication.md)
+
+[Remove-AzBatchApplicationPackage](./Remove-AzBatchApplicationPackage.md)
+
+[Set-AzBatchApplication](./Set-AzBatchApplication.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/set-azrecoveryservicesasralertsetting
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesAsrAlertSetting.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzRecoveryServicesAsrAlertSetting.md
 ---
 
 # Set-AzRecoveryServicesAsrAlertSetting
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Configure Azure Site Recovery notification settings (email notification) for the vault.
 
 ## SYNTAX
 
@@ -37,21 +39,36 @@ Set-AzRecoveryServicesAsrAlertSetting [-DisableNotification] [-DefaultProfile <I
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzRecoveryServicesAsrNotificationSetting** cmdlet configures Azure Site Recovery notification settings (email notification) for the vault.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Set-AzRecoveryServicesAsrAlertSetting -DisableNotification
+
+CustomEmailAddress EmailSubscriptionOwner Locale
+------------------ ---------------------- ------
+{}                 Off                    en-US
 ```
 
-{{ Add example description here }}
+Disable notification.
+
+### Example 2
+```
+PS C:\> Set-AzRecoveryServicesAsrAlertSetting -CustomEmailAddress "abcxxxx@xxxx.com" -EmailSubscriptionOwner
+
+CustomEmailAddress     EmailSubscriptionOwner Locale
+------------------     ---------------------- ------
+{abcxxxx@xxxx.com} On                     en-US
+```
+
+Set notification for custom email address(s) and for subscription owner.
 
 ## PARAMETERS
 
 ### -CustomEmailAddress
-{{Fill CustomEmailAddress Description}}
+Alert / Notification sent to emails.
 
 ```yaml
 Type: System.String[]
@@ -66,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -81,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmailToSubscriptionOwner
-{{Fill DisableEmailToSubscriptionOwner Description}}
+Switch parameter specifies enable notification to subscription owner.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableNotification
-{{Fill DisableNotification Description}}
+Flag to disable all notification.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -111,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEmailSubscriptionOwner
-{{Fill EnableEmailSubscriptionOwner Description}}
+Switch paramter specifies enable notification to subscription owner.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -126,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleID
-{{Fill LocaleID Description}}
+Email language of alert /notifcation to user(supported culture codes from microsoft). 
 
 ```yaml
 Type: System.String
@@ -156,8 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -172,8 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

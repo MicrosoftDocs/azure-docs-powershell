@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/invoke-azvmruncommand
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Invoke-AzVMRunCommand.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Invoke-AzVMRunCommand.md
 ---
 
 # Invoke-AzVMRunCommand
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Run command on the VM.
 
 ## SYNTAX
 
@@ -34,21 +36,21 @@ Invoke-AzVMRunCommand -CommandId <String> [-ScriptPath <String>] [-Parameter <Ha
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Invoke a run command on the VM.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Invoke-AzVMRunCommand -ResourceGroupName 'rgname' -Name 'vmname' -CommandId 'RunPowerShellScript' -ScriptPath 'sample.ps1' -Parameter @{"arg1" = "var1";"arg2" = "var2"}
 ```
 
-{{ Add example description here }}
+Invoke a run command of RunPowerShellScript with overriding the script 'sample.ps1' and the parameters on the VM of 'vmname' in resource group 'rgname'.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background
+Run cmdlet in the background and return a Job to track progress.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -63,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -CommandId
-{{Fill CommandId Description}}
+The run command id.
 
 ```yaml
 Type: System.String
@@ -78,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parameter
-{{Fill Parameter Description}}
+The run command parameters.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+The name of the resource group.
 
 ```yaml
 Type: System.String
@@ -123,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{Fill ResourceId Description}}
+The resource id for the VM
 
 ```yaml
 Type: System.String
@@ -138,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptPath
-{{Fill ScriptPath Description}}
+Path of the script to be executed.  When this value is given, the given script will override the default script of the command.
 
 ```yaml
 Type: System.String
@@ -153,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{Fill VM Description}}
+The PS virtual Machine Object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
@@ -168,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-{{Fill VMName Description}}
+The name of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -214,8 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

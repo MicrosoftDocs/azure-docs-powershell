@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 50E09DF7-F5B5-4668-9520-73D562E91800
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqldatabaseadvisorautoexecutestatus
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseAdvisorAutoExecuteStatus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlDatabaseAdvisorAutoExecuteStatus.md
 ---
 
 # Set-AzSqlDatabaseAdvisorAutoExecuteStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies auto execute status of an Azure SQL Database Advisor.
 
 ## SYNTAX
 
@@ -19,21 +22,32 @@ Set-AzSqlDatabaseAdvisorAutoExecuteStatus -AdvisorName <String> -AutoExecuteStat
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzSqlDatabaseAdvisorAutoExecuteStatus** cmdlet modifies the auto execute property for an Azure SQL Database Advisor.
+Currently, this cmdlet supports the values Enabled, Disabled, and Default.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable auto execute for an advisor
+```
+PS C:\>Set-AzSqlDatabaseAdvisorAutoExecuteStatus -ResourceGroupName "ContosoRunnersProd" -ServerName "runner-australia-east" -DatabaseName "ContosoRunner" -AdvisorName "CreateIndex" -AutoExecuteStatus Enabled
+DatabaseName                   : ContosoRunner
+ResourceGroupName              : ContosoRunnersProd
+ServerName                     : runner-australia-east
+AdvisorName                    : CreateIndex
+AdvisorStatus                  : GA
+AutoExecuteStatus              : Enabled
+AutoExecuteStatusInheritedFrom : Database
+LastChecked                    : 8/1/2016 2:36:47 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {}
 ```
 
-{{ Add example description here }}
+This command changes the auto execute status of an advisor named CreateIndex to Enabled.
 
 ## PARAMETERS
 
 ### -AdvisorName
-Azure SQL Database Advisor name.
+Specifies the name of the advisor for which this cmdlet modifies the status.
 
 ```yaml
 Type: System.String
@@ -48,7 +62,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoExecuteStatus
-The new auto-execute status of Azure SQL Database Advisor.
+Specifies the value for the status.
+The acceptable values for this parameter are:
+- Enabled 
+- Disabled 
+- Default
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.Advisor.Cmdlet.AdvisorAutoExecuteStatus
@@ -64,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Azure SQL Database name.
+Specifies the name of the database for which this cmdlet modifies status.
 
 ```yaml
 Type: System.String
@@ -79,12 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -94,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group of the server that contains this database.
 
 ```yaml
 Type: System.String
@@ -109,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Azure SQL Server name.
+Specifies the name of the server for the database.
 
 ```yaml
 Type: System.String
@@ -139,8 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -155,8 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -171,3 +187,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlDatabaseAdvisor](./Get-AzSqlDatabaseAdvisor.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+

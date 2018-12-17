@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: 70DB088D-4AF5-406B-8D66-118A0F766041
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/restore-azkeyvaultsecret
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzKeyVaultSecret.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzKeyVaultSecret.md
 ---
 
 # Restore-AzKeyVaultSecret
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a secret in a key vault from a backed-up secret.
 
 ## SYNTAX
 
@@ -31,26 +34,44 @@ Restore-AzKeyVaultSecret [-ResourceId] <String> [-InputFile] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Restore-AzKeyVaultSecret** cmdlet creates a secret in the specified key vault.
+This secret is a replica of the backed-up secret in the input file and has the same name as the original secret.
+If the key vault already has a secret by the same name, this cmdlet fails instead of overwriting the original secret.
+If the backup contains multiple versions of a secret, all versions are restored.
+The key vault that you restore the secret into can be different from the key vault that you backed up the secret from.
+However, the key vault must use the same subscription and be in an Azure region in the same geography (for example, North America).
+See the Microsoft Azure Trust Center (https://azure.microsoft.com/support/trust-center/) for the mapping of Azure regions to geographies.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Restore a backed-up secret
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Restore-AzKeyVaultSecret -VaultName 'contoso' -InputFile "C:\Backup.blob"
+
+Vault Name   : contoso
+Name         : secret1
+Version      : 7128133570f84a71b48d7d0550deb74c
+Id           : https://contoso.vault.azure.net:443/secrets/secret1/7128133570f84a71b48d7d0550deb74c
+Enabled      : True
+Expires      : 4/6/2018 3:59:43 PM
+Not Before   :
+Created      : 4/5/2018 11:46:28 PM
+Updated      : 4/6/2018 11:30:17 PM
+Content Type :
+Tags         :
 ```
 
-{{ Add example description here }}
+This command restores a secret, including all of its versions, from the backup file named Backup.blob into the key vault named contoso.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputFile
-Input file.
-The input file containing the backed-up blob
+Specifies the input file that contains the backup of the secret to restore.
 
 ```yaml
 Type: System.String
@@ -106,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of the key vault into which to restore the secret.
 
 ```yaml
 Type: System.String
@@ -131,7 +150,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -147,14 +166,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -169,3 +187,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzKeyVaultSecret](./Set-AzKeyVaultSecret.md)
+
+[Backup-AzKeyVaultSecret](./Backup-AzKeyVaultSecret.md)
+
+[Get-AzKeyVaultSecret](./Get-AzKeyVaultSecret.md)
+
+[Remove-AzKeyVaultSecret](./Remove-AzKeyVaultSecret.md)
+

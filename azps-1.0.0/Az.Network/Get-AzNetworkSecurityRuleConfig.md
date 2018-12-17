@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 5A0D9326-3A8A-4156-8372-EBA93C1BB4E4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworksecurityruleconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkSecurityRuleConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzNetworkSecurityRuleConfig.md
 ---
 
 # Get-AzNetworkSecurityRuleConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get a network security rule configuration for a network security group.
 
 ## SYNTAX
 
@@ -18,26 +21,35 @@ Get-AzNetworkSecurityRuleConfig [-Name <String>] -NetworkSecurityGroup <PSNetwor
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzNetworkSecurityRuleConfig** cmdlet gets a network security rule configuration for an Azure network security group.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1: Retrieving a network security rule config
+```
+Get-AzNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 
+    | Get-AzNetworkSecurityRuleConfig -Name AllowInternetOutBound -DefaultRules
 ```
 
-{{ Add example description here }}
+This command retrieves the default rule named "AllowInternetOutBound" from Azure network security group named "nsg1" in resource group "rg1"
+
+### 2: Retrieving a network security rule config using only the name
+```
+Get-AzNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 
+    | Get-AzNetworkSecurityRuleConfig -Name "rdp-rule"
+```
+
+This command retrieves user defined rule named "rdp-rule" from Azure network security group named "nsg1" in resource group "rg1"
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultRules
-{{Fill DefaultRules Description}}
+Indicates whether this cmdlet gets a user-created rule configuration or a default rule configuration.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -62,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the rule
+Specifies the name of the network security rule configuration to get.
 
 ```yaml
 Type: System.String
@@ -77,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkSecurityGroup
-The NetworkSecurityGroup
+Specifies a **NetworkSecurityGroup** object that contains the network security rule configuration to get.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup
@@ -92,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -106,3 +117,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzNetworkSecurityRuleConfig](./Add-AzNetworkSecurityRuleConfig.md)
+
+[New-AzNetworkSecurityRuleConfig](./New-AzNetworkSecurityRuleConfig.md)
+
+[Remove-AzNetworkSecurityRuleConfig](./Remove-AzNetworkSecurityRuleConfig.md)
+
+[Set-AzNetworkSecurityRuleConfig](./Set-AzNetworkSecurityRuleConfig.md)
+
+

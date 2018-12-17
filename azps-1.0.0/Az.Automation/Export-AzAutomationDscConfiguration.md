@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 595D3304-3331-4F44-BA57-AE090FB8A132
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/export-azautomationdscconfiguration
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Export-AzAutomationDscConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Export-AzAutomationDscConfiguration.md
 ---
 
 # Export-AzAutomationDscConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Exports a DSC configuration from Automation to a local file.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ Export-AzAutomationDscConfiguration -Name <String> [-Slot <String>] [-OutputFold
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Export-AzAutomationDscConfiguration** cmdlet exports an APS Desired State Configuration (DSC) configuration from Azure Automation to a local file.
+The exported file has a .ps1 file name extension.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Export the published version of a DSC configuration
+```
+PS C:\>Export-AzAutomationDscConfiguration -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Name "Configuration01" -Slot Published -OutputFolder "C:\Users\PattiFuller\Desktop"
 ```
 
-{{ Add example description here }}
+This command exports the published version of a DSC configuration in Automation to the specified folder, which is the desktop.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account that contains the DSC that this cmdlet exports.
 
 ```yaml
 Type: System.String
@@ -48,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces an overwrite of an existing local file with the same name.
+Indicates that this cmdlet replaces an existing local file with a new file that has the same name.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The dsc configuration name.
+Specifies the name of the DSC configuration that this cmdlet exports.
 
 ```yaml
 Type: System.String
@@ -93,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-The folder where configuration script should be placed.
+Specifies the output folder where this cmdlet exports the DSC configuration.
 
 ```yaml
 Type: System.String
@@ -108,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet exports a DSC configuration.
 
 ```yaml
 Type: System.String
@@ -123,8 +127,11 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Returns the draft or the published configuration version only.
-If not set, return published.
+Specifies which version of the DSC configuration that this cmdlet exports.
+Valid values are: 
+- Draft
+- Published 
+The default value is Published.
 
 ```yaml
 Type: System.String
@@ -149,7 +156,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -165,14 +172,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -185,3 +191,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationDscConfiguration](./Get-AzAutomationDscConfiguration.md)
+
+[Import-AzAutomationDscConfiguration](./Import-AzAutomationDscConfiguration.md)
+
+

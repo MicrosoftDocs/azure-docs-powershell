@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: AE7B103B-23ED-4A66-A0DC-14FB0DF38FA8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/remove-azkeyvaultaccesspolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
 ---
 
 # Remove-AzKeyVaultAccessPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes all permissions for a user or application from a key vault.
 
 ## SYNTAX
 
@@ -108,21 +111,77 @@ Remove-AzKeyVaultAccessPolicy [-ResourceId] <String> [-EnabledForDeployment] [-E
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzKeyVaultAccessPolicy** cmdlet removes all permissions for a user or application or for all users and applications from a key vault.
+Even if you remove all permissions, the owner of the Azure subscription that contains the key vault can add permissions to the key vault.
+Note that although specifying the resource group is optional for this cmdlet, you should do so for better performance.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove permissions for a user
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PassThru
+
+Vault Name                       : Contoso03Vault
+Resource Group Name              : myrg
+Location                         : westus
+Resource ID                      : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers
+                                   /Microsoft.KeyVault/vaults/contoso03vault
+Vault URI                        : https://contoso03vault.vault.azure.net/
+Tenant ID                        : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+SKU                              : Standard
+Enabled For Deployment?          : False
+Enabled For Template Deployment? : False
+Enabled For Disk Encryption?     : False
+Soft Delete Enabled?             :
+Access Policies                  :
+                                   Tenant ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                   Object ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                   Application ID                             :
+                                   Display Name                               : User Name (username@microsoft.com)
+                                   Permissions to Keys                        :
+                                   Permissions to Secrets                     :
+                                   Permissions to Certificates                : get, create
+                                   Permissions to (Key Vault Managed) Storage :
+
+
+Network Rule Set                 :
+                                   Default Action                             : Allow
+                                   Bypass                                     : AzureServices
+                                   IP Rules                                   :
+                                   Virtual Network Rules                      :
+
+Tags                             :
 ```
 
-{{ Add example description here }}
+This command removes all the permissions that a user PattiFuller@contoso.com has on the key vault named Contoso03Vault.  If -PassThru is specified, the KeyVault object is returned.
+
+### Example 2: Remove permissions for an application
+```powershell
+PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com'
+```
+
+This command removes all the permissions that an application has on the key vault named Contoso03Vault.
+This example identifies the application by using the service principal name registered in Azure Active Directory, http://payroll.contoso.com.
+
+### Example 3: Remove permissions for an application by using its object ID
+```powershell
+PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID 34595082-9346-41b6-8d6b-295a2808b8db
+```
+
+This command removes all the permissions that an application has on the key vault named Contoso03Vault.
+This example identifies the application by the object ID of the service principal.
+
+### Example 4: Remove permissions for the Microsoft.Compute resource provider
+```powershell
+PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
+```
+
+This command removes permission for the Microsoft.Compute resource provider to get secrets from the Contoso03Vault.
 
 ## PARAMETERS
 
 ### -ApplicationId
-Specifies the ID of application whose permissions should be removed.
+Specifies the ID of application whose permissions should be removed
 
 ```yaml
 Type: System.Nullable`1[System.Guid]
@@ -137,12 +196,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -152,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-Specifies the email address of the user in Azure Active Directory whose permissions should be deleted.
+Specifies the user email address of the user whose access you want to remove.
 
 ```yaml
 Type: System.String
@@ -242,8 +301,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-This Cmdlet does not return an object by default.
-If this switch is specified, it returns the updated key vault object.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -258,7 +317,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group associated with the key vault whose permissions you want to remove.
+Specifies the name of the resource group associated with the key vault whose access policy is being modified.
+If not specified, this cmdlet searches for the key vault in the current subscription.
 
 ```yaml
 Type: System.String
@@ -366,8 +426,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -382,3 +441,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzKeyVaultAccessPolicy](./Set-AzKeyVaultAccessPolicy.md)
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 91B2DE2F-442D-4428-8A6F-9C2CEC181CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmsourceimage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMSourceImage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMSourceImage.md
 ---
 
 # Set-AzVMSourceImage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Specifies the image for a virtual machine.
 
 ## SYNTAX
 
@@ -25,26 +28,33 @@ Set-AzVMSourceImage [-VM] <PSVirtualMachine> [-Id] <String> [-DefaultProfile <IA
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMSourceImage** cmdlet specifies the platform image to use for a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set values for an image
+```
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
+PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id 
+PS C:\> Set-AzVMSourceImage -VM $VirtualMachine -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2012-R2-Datacenter" -Version "latest"
 ```
 
-{{ Add example description here }}
+The first command gets the availability set named AvailablitySet03 in the resource group named ResourceGroup11, and then stores that object in the $AvailabilitySet variable.
+The second command creates a virtual machine object, and then stores it in the $VirtualMachine variable.
+The command assigns a name and size to the virtual machine.
+The virtual machine belongs to the availability set stored in $AvailabilitySet.
+The final command sets values for publisher name, offer, SKU, and version.
+The **Get-AzVMImagePublisher**, **Get-AzVMImageOffer**, **Get-AzVMImageSku**, and **Get-AzVMImage** cmdlets can discover these settings.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+Specifies the ID.
 
 ```yaml
 Type: System.String
@@ -69,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Offer
-{{Fill Offer Description}}
+Specifies the type of VMImage offer.
+To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
 
 ```yaml
 Type: System.String
@@ -84,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherName
-{{Fill PublisherName Description}}
+Specifies the name of a publisher of a VMImage.
+To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
 
 ```yaml
 Type: System.String
@@ -99,7 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -Skus
-{{Fill Skus Description}}
+Specifies a VMImage SKU.
+To obtain SKUs, use the Get-AzVMImageSku cmdlet.
 
 ```yaml
 Type: System.String
@@ -114,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-{{Fill Version Description}}
+Specifies a version of a VMImage.
+To use the latest version, specify a value of latest instead of a particular version.
 
 ```yaml
 Type: System.String
@@ -129,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{Fill VM Description}}
+Specifies the local virtual machine object to configure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
@@ -144,8 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,3 +173,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAvailabilitySet](./Get-AzAvailabilitySet.md)
+
+[Get-AzVMImage](./Get-AzVMImage.md)
+
+[Get-AzVMImageOffer](./Get-AzVMImageOffer.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+[Get-AzVMImageSku](./Get-AzVMImageSku.md)
+
+[New-AzVMConfig](./New-AzVMConfig.md)
+
+

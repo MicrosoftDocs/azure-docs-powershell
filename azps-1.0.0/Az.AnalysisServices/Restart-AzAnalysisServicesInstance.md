@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.AnalysisServices.Dataplane.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.Dataplane.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices/restart-azanalysisservicesinstance
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Restart-AzAnalysisServicesInstance.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Restart-AzAnalysisServicesInstance.md
 ---
 
 # Restart-AzAnalysisServicesInstance
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Restarts an instance of Analysis Services server in the currently logged in Environment as specified in Add-AzAnalysisServicesAccount command
 
 ## SYNTAX
 
@@ -17,21 +19,22 @@ Restart-AzAnalysisServicesInstance -Instance <String> [-PassThru] [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Restart-AzAnalysisServicesInstance cmdlet restarts an instance of Azure Analysis Services server
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\>Restart-AzAnalysisServicesInstance
+Instance: testserver
 ```
 
-{{ Add example description here }}
+This command will restart the server 'testserver' in the environment specified in the Add-AzAnalysisServicesAccount command
 
 ## PARAMETERS
 
 ### -Instance
-Name of the Azure Analysis Services server to restart
+Name of the Analysis Services server instance to restart
 
 ```yaml
 Type: System.String
@@ -46,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifying this will return true if the command was successful.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -92,8 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -104,5 +106,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+Alias: Restart-AzAsInstance
 
 ## RELATED LINKS

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: DEB3D7B5-D974-472B-B8B4-9A19CA6AECCC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/get-azrecoveryservicesbackupitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupItem.md
 ---
 
 # Get-AzRecoveryServicesBackupItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the items from a container in Backup.
 
 ## SYNTAX
 
@@ -36,27 +39,39 @@ Get-AzRecoveryServicesBackupItem [-Policy] <PolicyBase> [[-Name] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesBackupItem** cmdlet gets the items in a container or a value in Azure Backup and the protection status of the items.
+A container that is registered to an Azure Recovery Services vault can have one or more items that can be protected.
+For Azure virtual machines, there can be only one backup item in the virtual machine container.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get an item from a Backup container
+```
+PS C:\>$Container = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM -Status Registered -Name "V2VM"
+PS C:\> $BackupItem = Get-AzRecoveryServicesBackupItem -Container $Container -WorkloadType AzureVM
 ```
 
-{{ Add example description here }}
+The first command gets the container of type AzureVM, and then stores it in the $Container variable.
+The second command gets the Backup item named V2VM in $Container, and then stores it in the $BackupItem variable.
 
 ## PARAMETERS
 
 ### -BackupManagementType
-Backup Management type of the resource (for example: MAB, DPM).
+Specifies the Backup management type.
+The acceptable values for this parameter are:
+- AzureVM 
+- MARS 
+- SCDPM 
+- AzureBackupServer 
+- AzureSQL
+- AzureStorage
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType
 Parameter Sets: GetItemsForVault
 Aliases:
-Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
+Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL, AzureStorage
 
 Required: True
 Position: 1
@@ -66,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -Container
-Container where the item resides
+Specifies a container object from which this cmdlet gets backup items.
+To obtain an **AzureRmRecoveryServicesBackupContainer**, use the Get-AzRecoveryServicesBackupContainer cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase
@@ -81,12 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -96,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Azure VM Name.
+Specifies the name of the container.
 
 ```yaml
 Type: System.String
@@ -111,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The id of the backup policy which is used to protect the backup items
+Protection policy object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase
@@ -126,7 +142,16 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionState
-Status of the data source
+Specifies the state of protection.
+The acceptable values for this parameter are:
+- IRPending.
+Initial synchronization has not started and there is no recovery point yet. 
+- Protected.
+Protection is ongoing. 
+- ProtectionError.
+There is a protection error.
+- ProtectionStopped.
+Protection is disabled.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionState
@@ -142,7 +167,10 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionStatus
-Protection status of Item
+Specifies the overall protection status of an item in the container.
+The acceptable values for this parameter are:
+- Healthy
+- Unhealthy
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionStatus
@@ -173,13 +201,17 @@ Accept wildcard characters: False
 ```
 
 ### -WorkloadType
-Workload type of the resource (for example: AzureVM, WindowsServer).
+Specifies the workload type. 
+The acceptable values for this parameter are:
+- AzureVM 
+- AzureSQLDatabase
+- AzureFiles
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType
 Parameter Sets: GetItemsForContainer, GetItemsForVault
 Aliases:
-Accepted values: AzureVM, AzureSQLDatabase
+Accepted values: AzureVM, AzureSQLDatabase, AzureFiles
 
 Required: True
 Position: 5
@@ -189,8 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -205,3 +236,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Backup-AzRecoveryServicesBackupItem](./Backup-AzRecoveryServicesBackupItem.md)
+
+[Disable-AzRecoveryServicesBackupProtection](./Disable-AzRecoveryServicesBackupProtection.md)
+
+[Get-AzRecoveryServicesBackupRecoveryPoint](./Get-AzRecoveryServicesBackupRecoveryPoint.md)
+
+[Restore-AzRecoveryServicesBackupItem](./Restore-AzRecoveryServicesBackupItem.md)
+
+

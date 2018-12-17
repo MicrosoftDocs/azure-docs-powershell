@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning/update-azmlwebservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Update-AzMlWebService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Update-AzMlWebService.md
 ---
 
 # Update-AzMlWebService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates properties of an existing web service resource.
 
 ## SYNTAX
 
@@ -29,21 +31,32 @@ Update-AzMlWebService -ResourceGroupName <String> -Name <String> -ServiceUpdates
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Update-AzMlWebService cmdlet allows you to update the non-static properties of a web service.
+The cmdlet works as a patch operation.
+Pass only the properties that you want modified.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Selective update arguments
+```
+Update-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Description "new update to description" -Keys @{Primary='changed primary key'} -Diagnostics @{Level='All'}
 ```
 
-{{ Add example description here }}
+Here, we change the description, primary access key and enable the diagnostics collection for all traces during runtime for the web service.
+
+### Example 2: Update based on a web service instance
+```
+$updates = @{ Properties = @{ Title="New Title"; RealtimeConfiguration = @{ MaxConcurrentCalls=25 }}}
+
+Update-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -ServiceUpdates $updates
+```
+
+The example first creates a web service definition, that only contains the fields to be updated, and then calls the Update-AzMlWebService to apply them using the ServiceUpdates parameter.
 
 ## PARAMETERS
 
 ### -Assets
-Updated assets for the web service.
+The set of assets (e.g. modules, datasets) that make up the web service.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -58,12 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -73,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-New description for the web service.
+The new value for the web service's description.
+This is visible in the service's Swagger API schema.
 
 ```yaml
 Type: System.String
@@ -88,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostics
-New diagnostics settings for the web service.
+The settings that control the diagnostics traces collection for the web service.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.DiagnosticsConfiguration
@@ -118,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Input
-Updated input schema for the web service.
+The definition for the web service's input(s), provided as a Swagger schema construct.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification
@@ -133,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsReadOnly
-Mark the service as readonly.
+Specifies that this web serviceis readonly.
+Once set, the web service can longer be updated, including changing the value of this property, and can only be deleted.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -148,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Keys
-New access keys for the web service.
+Updates one or both of the access keys used to authenticate calls to the service's runtime APIs.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebServiceKeys
@@ -163,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web service.
+The name of the web service resource to be updated.
 
 ```yaml
 Type: System.String
@@ -178,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -Output
-Updated output schema for the web service.
+The definition for the web service's output(s), provided as a Swagger schema construct.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification
@@ -193,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-Updated graph package for the web service.
+The definition of the graph package that defines this web service.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.GraphPackage
@@ -208,7 +223,8 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-Updated global parameter values definition for the web service.
+The set of global parameters values defined for the web service, given as a global parameter name -\> default value collection.
+If no default value is specified, the parameter is considered to be required.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -223,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -RealtimeConfiguration
-New realtime endpoint runtime settings for the web service.
+Updates for the configuration of the service's realtime endpoint.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.RealtimeConfiguration
@@ -238,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group for the Azure ML web service.
+The resource group that contains the web service to be updated.
 
 ```yaml
 Type: System.String
@@ -253,7 +269,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUpdates
-An updated definition object to update the referenced web service with.
+A set of updates to apply to the web service provided as a web service definition instance.
+Only non-static fields are modified.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
@@ -268,8 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountKey
-New access key for the storage account associated with the web service.
-This allows for key rotation if needed.
+Rotates the access key for the storage account associated with the web service.
 
 ```yaml
 Type: System.String
@@ -284,7 +300,8 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-New title for the web service.
+The new value for the web service's title.
+This is visible in the service's Swagger API schema.
 
 ```yaml
 Type: System.String
@@ -330,8 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -342,5 +358,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS

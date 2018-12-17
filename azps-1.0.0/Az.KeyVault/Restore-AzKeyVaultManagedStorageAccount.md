@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/restore-azkeyvaultmanagedstorageaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzKeyVaultManagedStorageAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzKeyVaultManagedStorageAccount.md
 ---
 
 # Restore-AzKeyVaultManagedStorageAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Restores a managed storage account in a key vault from a backup file.
 
 ## SYNTAX
 
@@ -31,16 +33,34 @@ Restore-AzKeyVaultManagedStorageAccount [-ResourceId] <String> [-InputFile] <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Restore-AzKeyVaultManagedStorageAccount** cmdlet creates a managed storage account in the specified key vault from a backup file.
+This managed storage account is a replica of the backed-up managed storage account in the input file and has the same name as the original.
+If the key vault already contains a managed storage account by the same name, this cmdlet fails instead of overwriting the original.
+The key vault that you restore the managed storage account into can be different from the key vault that you backed up the managed storage account from.
+However, the key vault must use the same subscription and be in an Azure region in the same geography (for example, North America).
+See the Microsoft Azure Trust Center (https://azure.microsoft.com/support/trust-center/) for the mapping of Azure regions to geographies.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Restore a backed-up managed storage account
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Restore-AzKeyVaultManagedStorageAccount -VaultName 'MyKeyVault' -InputFile "C:\Backup.blob"
+
+Id                  : https://mykeyvault.vault.azure.net:443/storage/mystorageaccount
+Vault Name          : MyKeyVault
+AccountName         : mystorageaccount
+Account Resource Id : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers/Microsoft.St
+                      orage/storageAccounts/mystorageaccount
+Active Key Name     : key1
+Auto Regenerate Key : True
+Regeneration Period : 90.00:00:00
+Enabled             : True
+Created             : 5/21/2018 11:55:58 PM
+Updated             : 5/21/2018 11:55:58 PM
+Tags                :
 ```
 
-{{ Add example description here }}
+This command restores a managed storage account, including all of its versions, from the backup file named Backup.blob into the key vault named MyKeyVault.
 
 ## PARAMETERS
 
@@ -48,9 +68,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -153,8 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: 0A7CD695-6D14-4BC9-B960-0CAFE502B88B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/new-azdatalakeanalyticsaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzDataLakeAnalyticsAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzDataLakeAnalyticsAccount.md
 ---
 
 # New-AzDataLakeAnalyticsAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a Data Lake Analytics account.
 
 ## SYNTAX
 
@@ -20,22 +23,21 @@ New-AzDataLakeAnalyticsAccount [-ResourceGroupName] <String> [-Name] <String> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzDataLakeAnalyticsAccount** cmdlet creates an Azure Data Lake Analytics account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a Data Lake Analytics account
+```
+PS C:\>New-AzDataLakeAnalyticsAccount -Name "ContosoAdlAccount" -ResourceGroupName "ContosoOrg" -Location "East US 2" -DefaultDataLakeStore "ContosoAdlStore"
 ```
 
-{{ Add example description here }}
+This command creates a Data Lake Analytics account named ContosoAdlAccount that uses the ContosoAdlStore Data Store, in the resource group named ContosoOrg.
 
 ## PARAMETERS
 
 ### -DefaultDataLakeStore
-The default storage account name to use.
-This must be a Data Lake storage account.
+Specifies the name of the Data Lake Store account to set as the default data source.
 
 ```yaml
 Type: System.String
@@ -50,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -65,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Azure region where the account should be created.
+Specifies the location at which to create the Data Lake Analytics account.
+Only East US 2 is supported at this time.
 
 ```yaml
 Type: System.String
@@ -80,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxAnalyticsUnits
-The maximum supported analytics units for this account.
+The optional maximum supported analytics units for this account.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -95,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxJobCount
-The maximum supported jobs running under the account at the same time.
+The optional maximum supported jobs running under the account at the same time. If none is specified, defaults to 3
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -110,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the account to create.
+Specifies the Data Lake Analytics account name.
 
 ```yaml
 Type: System.String
@@ -125,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueryStoreRetention
-The number of days that job metadata is retained.
+The optional number of days that job metadata is retained. If none specified, the default is 30 days.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -140,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to create the account.
+Specifies the resource group name of the Data Lake Analytics account.
+To create a resource group, use the New-AzResourceGroup cmdlet.
 
 ```yaml
 Type: System.String
@@ -186,8 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -206,3 +209,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeAnalyticsAccount](./Get-AzDataLakeAnalyticsAccount.md)
+
+[Remove-AzDataLakeAnalyticsAccount](./Remove-AzDataLakeAnalyticsAccount.md)
+
+[Set-AzDataLakeAnalyticsAccount](./Set-AzDataLakeAnalyticsAccount.md)
+
+[Test-AzDataLakeAnalyticsAccount](./Test-AzDataLakeAnalyticsAccount.md)
+
+

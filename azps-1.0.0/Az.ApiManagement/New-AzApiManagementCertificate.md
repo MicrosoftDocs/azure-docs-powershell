@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 5CBEDFF8-C441-44CC-B011-5F5AAFA2E5C6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementCertificate.md
 ---
 
 # New-AzApiManagementCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an API Management certificate to be used during Authentication with Backend.
 
 ## SYNTAX
 
@@ -25,23 +28,23 @@ New-AzApiManagementCertificate -Context <PsApiManagementContext> [-CertificateId
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzApiManagementCertificate** cmdlet creates an Azure API Management certificate.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create and upload a certificate
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>New-AzApiManagementCertificate -Context $ApiMgmtContext -PfxFilePath "C:\contoso\certificates\apimanagement.pfx" -PfxPassword "1111"
 ```
 
-{{ Add example description here }}
+This command uploads a certificate to Api Management. This certificate can be used for mutual authentication with backend using policies.
 
 ## PARAMETERS
 
 ### -CertificateId
-Identifier of new certificate.
-This parameter is optional.
-If not specified will be generated.
+Specifies the ID of the certificate to create.
+If you do not specify this parameter, an ID is generated for you.
 
 ```yaml
 Type: System.String
@@ -56,8 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -72,12 +74,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -87,8 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -PfxBytes
-Bytes of the certificate file in .pfx format to be created/uploaded.
-This parameter is required if -PfxFilePath not specified.
+Specifies an array of bytes of the certificate file in .pfx format.
+This parameter is required if you do not specify the *PfxFilePath* parameter.
 
 ```yaml
 Type: System.Byte[]
@@ -103,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -PfxFilePath
-Path to the certificate file in .pfx format to be created/uploaded.
-This parameter is required if -PfxBytes not specified.
+Specifies the path to the certificate file in .pfx format to create and upload.
+This parameter is required if you do not specify the *PfxBytes* parameter.
 
 ```yaml
 Type: System.String
@@ -119,8 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -PfxPassword
-Password for the certificate.
-This parameter is required.
+Specifies the password for the certificate.
 
 ```yaml
 Type: System.String
@@ -135,8 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -153,3 +153,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementCertificate](./Get-AzApiManagementCertificate.md)
+
+[Remove-AzApiManagementCertificate](./Remove-AzApiManagementCertificate.md)
+
+[Set-AzApiManagementCertificate](./Set-AzApiManagementCertificate.md)
+
+

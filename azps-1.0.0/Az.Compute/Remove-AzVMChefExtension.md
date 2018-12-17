@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 473C71A8-1DF7-487A-B239-B80E2BB63B82
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmchefextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzVMChefExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzVMChefExtension.md
 ---
 
 # Remove-AzVMChefExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the Chef extension from a virtual machine.
 
 ## SYNTAX
 
@@ -25,26 +28,33 @@ Remove-AzVMChefExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Nam
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzVMChefExtension** cmdlet removes the Chef extension from a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a Chef extension from a Windows virtual machine
+```
+PS C:\> Remove-AzVMChefExtension -ResourceGroupName "ResourceGroup001" -VMName "WindowsVM001" -Windows
 ```
 
-{{ Add example description here }}
+This command removes a Chef extension from a Windows based virtual machine named WindowsVM001 that belongs to the resource group named ResourceGroup001.
+
+### Example 2: Remove a Chef extension from a Linux virtual machine
+```
+PS C:\> Remove-AzVMChefExtension -ResourceGroupName "ResourceGroup002" -VMName "LinuxVM001" -Linux
+```
+
+This command removes a Chef extension from a Linux based virtual machine named LinuxVM001 that belongs to the resource group named ResourceGroup002.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-Set extension for Linux.
+Indicates that this cmdlet targets a Linux virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Extension Name.
+Specifies the name of the Chef extension that this cmdlet removes.
 
 ```yaml
 Type: System.String
@@ -84,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that contains the virtual machine.
 
 ```yaml
 Type: System.String
@@ -99,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine for which this cmdlet removes the Chef extension.
 
 ```yaml
 Type: System.String
@@ -114,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Set extension for Windows.
+Indicates that this cmdlet targets a Windows virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -138,7 +148,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -154,14 +164,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -174,3 +183,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMChefExtension](./Get-AzVMChefExtension.md)
+
+[Set-AzVMChefExtension](./Set-AzVMChefExtension.md)

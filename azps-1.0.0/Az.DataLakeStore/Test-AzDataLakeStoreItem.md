@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 0937A390-6AC2-4611-AA6C-99936AC0ABFD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/test-azdatalakestoreitem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Test-AzDataLakeStoreItem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Test-AzDataLakeStoreItem.md
 ---
 
 # Test-AzDataLakeStoreItem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Tests the existence of a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ Test-AzDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInstance>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Test-AzDataLakeStoreItem** cmdlet tests the existence of a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Test a file
+```
+PS C:\>Test-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "/MyFiles/Test.csv"
 ```
 
-{{ Add example description here }}
+This command tests whether the file Test.csv exists in the ContosoADL account.
 
 ## PARAMETERS
 
 ### -Account
-The DataLakeStore account to execute the filesystem operation in
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,8 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path in the specified Data Lake account to test for the existence of the file.
-In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.
+Specifies the Data Lake Store path of the item to test, starting with the root directory (/).
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
@@ -78,8 +80,11 @@ Accept wildcard characters: False
 ```
 
 ### -PathType
-Indicates the type of path expected when testing.
-Valid values are Any, File or Folder.
+Specifies the type of item to test.
+The acceptable values for this parameter are:
+- Any 
+- File 
+- Folder
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+PathType
@@ -95,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +117,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzDataLakeStoreItem](./Export-AzDataLakeStoreItem.md)
+
+[Get-AzDataLakeStoreItem](./Get-AzDataLakeStoreItem.md)
+
+[Import-AzDataLakeStoreItem](./Import-AzDataLakeStoreItem.md)
+
+[Join-AzDataLakeStoreItem](./Join-AzDataLakeStoreItem.md)
+
+[Move-AzDataLakeStoreItem](./Move-AzDataLakeStoreItem.md)
+
+[Remove-AzDataLakeStoreItem](./Remove-AzDataLakeStoreItem.md)
+
+

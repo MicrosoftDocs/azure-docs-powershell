@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 54585346-04E2-4FB4-B5FD-833A85C46ACB
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/start-azstorageblobcopy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Start-AzStorageBlobCopy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Start-AzStorageBlobCopy.md
 ---
 
 # Start-AzStorageBlobCopy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts to copy a blob.
 
 ## SYNTAX
 
@@ -100,21 +103,63 @@ Start-AzStorageBlobCopy -AbsoluteUri <String> -DestContainer <String> -DestBlob 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-AzStorageBlobCopy** cmdlet starts to copy a blob.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Copy a named blob
+```
+C:\PS>Start-AzStorageBlobCopy -SrcBlob "ContosoPlanning2015" -DestContainer "ContosoArchives" -SrcContainer "ContosoUploads"
 ```
 
-{{ Add example description here }}
+This command starts the copy operation of the blob named ContosoPlanning2015 from the container named ContosoUploads to the container named ContosoArchives.
+
+### Example 2: Get a container to specify blobs to copy
+```
+C:\PS>Get-AzStorageContainer -Name "ContosoUploads" | Start-AzStorageBlobCopy -SrcBlob "ContosoPlanning2015" -DestContainer "ContosoArchives"
+```
+
+This command gets the container named ContosoUploads, by using the **Get-AzStorageContainer** cmdlet, and then passes the container to the current cmdlet by using the pipeline operator.
+That cmdlet starts the copy operation of the blob named ContosoPlanning2015.
+The previous cmdlet provides the source container.
+The *DestContainer* parameter specifies ContosoArchives as the destination container.
+
+### Example 3: Get all blobs in a container and copy them
+```
+C:\PS>Get-AzStorageBlob -Container "ContosoUploads" | Start-AzStorageBlobCopy -DestContainer "ContosoArchives"
+```
+
+This command gets the blobs in the container named ContosoUploads, by using the **Get-AzStorageBlob** cmdlet, and then passes the results to the current cmdlet by using the pipeline operator.
+That cmdlet starts the copy operation of the blobs to the container named ContosoArchives.
+
+### Example 4: Copy a blob specified as an object
+```
+C:\PS>$SrcBlob = Get-AzStorageBlob -Container "ContosoUploads" -Blob "ContosoPlanning2015"
+C:\PS> $DestBlob = Get-AzStorageBlob -Container "ContosoArchives" -Blob "ContosoPlanning2015Archived"
+C:\PS> Start-AzStorageBlobCopy -ICloudBlob $SrcBlob.ICloudBlob -DestICloudBlob $DestBlob.ICloudBlob
+```
+
+The first command gets the blob named ContosoPlanning2015 in the container named ContosoUploads.
+The command stores that object in the $SrcBlob variable.
+The second command gets the blob named ContosoPlanning2015Archived in the container named ContosoArchives.
+The command stores that object in the $DestBlob variable.
+The last command starts the copy operation from the source container to the destination container.
+The command uses standard dot notation to specify the **ICloudBlob** objects for the $SrcBlob and $DestBlob blobs.
+
+### Example 5: Copy a blob from a URI
+```
+C:\PS>$Context = New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >"
+C:\PS> Start-AzStorageBlobCopy -AbsoluteUri "http://www.contosointernal.com/planning" -DestContainer "ContosoArchive" -DestBlob "ContosoPlanning2015" -DestContext $Context
+```
+
+This command creates a context for the account named ContosoGeneral that uses the specified key, and then stores that key in the $Context variable.
+The second command copies the file from the specified URI to the blob named ContosoPlanning in the container named ContosoArchive.
+The command starts the copy operation in the context stored in $Context.
 
 ## PARAMETERS
 
 ### -AbsoluteUri
-Source blob uri
+Specifies the absolute URI of a file to copy to an Azure Storage blob.
 
 ```yaml
 Type: System.String
@@ -129,7 +174,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -144,7 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlob
-CloudBlob Object
+Specifies a **CloudBlob** object from Azure Storage Client library.
+To obtain a **CloudBlob** object, use the Get-AzStorageBlob cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
@@ -159,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlobContainer
-CloudBlobContainer Object
+Specifies a **CloudBlobContainer** object from the Azure Storage Client library.
+This cmdlet copies a blob from the container that this parameter specifies.
+To obtain a **CloudBlobContainer** object, use the Get-AzStorageContainer cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer
@@ -174,7 +224,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -190,7 +243,8 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Source Azure Storage Context Object
+Specifies an Azure storage context.
+To obtain a storage context, use the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -220,7 +274,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -232,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestBlob
-Destination blob name
+Specifies the name of the destination blob.
 
 ```yaml
 Type: System.String
@@ -259,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestCloudBlob
-Destination CloudBlob object
+Specifies a destination **CloudBlob** object
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
@@ -274,7 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestContainer
-Destination container name
+Specifies the name of the destination container.
 
 ```yaml
 Type: System.String
@@ -289,7 +343,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestContext
-Destination Storage context object
+Specifies an Azure storage context.
+To obtain a storage context, use the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -304,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to overwrite the existing blob or file
+Indicates that this cmdlet overwrites the destination blob without prompting you for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -335,7 +390,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the service side time-out interval, in seconds, for a request.
+If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -350,7 +406,7 @@ Accept wildcard characters: False
 ```
 
 ### -SrcBlob
-Blob name
+Specifies the name of the source blob.
 
 ```yaml
 Type: System.String
@@ -365,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### -SrcContainer
-Source Container name
+Specifies the name of the source container.
 
 ```yaml
 Type: System.String
@@ -380,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -SrcDir
-Source file directory
+Specifies a **CloudFileDirectory** object from Azure Storage Client library.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileDirectory
@@ -395,7 +451,8 @@ Accept wildcard characters: False
 ```
 
 ### -SrcFile
-Source file
+Specifes a **CloudFile** object from Azure Storage Client library.
+You can create it or use Get-AzStorageFile cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFile
@@ -410,7 +467,7 @@ Accept wildcard characters: False
 ```
 
 ### -SrcFilePath
-Source file path
+Specifies the source file relative path of source directory or source share.
 
 ```yaml
 Type: System.String
@@ -425,7 +482,8 @@ Accept wildcard characters: False
 ```
 
 ### -SrcShare
-Source share
+Specifies a **CloudFileShare** object from Azure Storage Client library.
+You can create it or use Get-AzStorageShare cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
@@ -440,7 +498,7 @@ Accept wildcard characters: False
 ```
 
 ### -SrcShareName
-Source share name
+Specifies the source share name.
 
 ```yaml
 Type: System.String
@@ -464,7 +522,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -480,14 +538,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -508,3 +565,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageBlobCopyState](./Get-AzStorageBlobCopyState.md)
+
+[Stop-AzStorageBlobCopy](./Stop-AzStorageBlobCopy.md)

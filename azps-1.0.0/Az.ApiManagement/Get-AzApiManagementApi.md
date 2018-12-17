@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: B80389B9-E143-4E24-A222-E95F691DA2E9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementapi
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementApi.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementApi.md
 ---
 
 # Get-AzApiManagementApi
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an API.
 
 ## SYNTAX
 
@@ -37,23 +40,38 @@ Get-AzApiManagementApi -Context <PsApiManagementContext> -ProductId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementApi** cmdlet gets one or more Azure API Management APIs.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all management APIs
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementApi -Context $ApiMgmtContext
 ```
 
-{{ Add example description here }}
+This command gets all of the APIs for the specified context.
+
+### Example 2: Get a management API by ID
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementApi -Context $ApiMgmtContext -ApiId $ApiId
+```
+
+This command gets the API with the specified ID.
+
+### Example 3: Get a management API by name
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementApi -Context $ApiMgmtContext -Name "EchoApi"
+```
+
+This command gets the API with the specified name.
 
 ## PARAMETERS
 
 ### -ApiId
-API identifier to look for.
-If specified will try to get the API by the Id.
-This parameter is optional.
+Specifies the ID of the API to get.
 
 ```yaml
 Type: System.String
@@ -68,8 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Revision Identifier of the particular Api revision.
-This parameter is optional.
+Revision Identifier of the particular Api revision. This parameter is optional.
 
 ```yaml
 Type: System.String
@@ -84,8 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -100,12 +116,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -115,9 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the API.
-If specified will try to get the API by name.
-This parameter is optional.
+Specifies the name of the API to get.
 
 ```yaml
 Type: System.String
@@ -132,8 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-If specified will try to get all Product APIs.
-This parameter is optional.
+Specifies the ID of the product for which to get the API.
 
 ```yaml
 Type: System.String
@@ -148,8 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -164,3 +176,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzApiManagementApi](./Export-AzApiManagementApi.md)
+
+[Import-AzApiManagementApi](./Import-AzApiManagementApi.md)
+
+[New-AzApiManagementApi](./New-AzApiManagementApi.md)
+
+[Remove-AzApiManagementApi](./Remove-AzApiManagementApi.md)
+
+[Set-AzApiManagementApi](./Set-AzApiManagementApi.md)
+
+

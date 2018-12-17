@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: 929F4593-2A71-49B9-87F8-F24FA9F6E314
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/test-azlogicapp
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Test-AzLogicApp.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Test-AzLogicApp.md
 ---
 
 # Test-AzLogicApp
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Validates a logic app definition.
 
 ## SYNTAX
 
@@ -27,26 +30,40 @@ Test-AzLogicApp -ResourceGroupName <String> -Name <String> -Location <String> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Test-AzLogicApp** cmdlet validates a logic app definition in a resource group.
+Specify the logic app name, resource group name, location, state, integration account ID, or parameters.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Validate a logic app by using file paths
+```
+PS C:\>Test-AzLogicApp -ResourceGroupName "ResourceGroup11" -Name "LogicApp01" -Location "westus" -State "Enabled" -DefinitionFilePath "d:\workflows\Definition.json" -ParameterFilePath "d:\workflows\Parameters.json"
 ```
 
-{{ Add example description here }}
+This command validates a logic app named LogicApp01 in the specified resource group.
+The command specifies definition and parameter file paths.
+
+### Example 2: Validate a logic app by using objects
+```
+PS C:\>Test-AzLogicApp -ResourceGroupName "ResourceGroup11" -Name "LogicApp01" -Location "westus" -State "Enabled" -Definition [IO.File]::ReadAllText("d:\Workflows\Definition.json") -Parameters @{name1="value1", name2="value2"}
+```
+
+This command validates a logic app named LogicApp01 in the specified resource group.
+The command specifies definition and parameter objects.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -56,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Definition
-The definition of the workflow.
+Specifies the definition of a logic app as an object or a string in JavaScript Object Notation (JSON) format.
 
 ```yaml
 Type: System.Object
@@ -71,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionFilePath
-The physical file path of the workflow definition.
+Specifies the definition of your logic app as the path of a definition file in JSON format.
 
 ```yaml
 Type: System.String
@@ -86,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntegrationAccountId
-The integration account id of the workflow.
+Specifies an integration account ID for the logic app.
 
 ```yaml
 Type: System.String
@@ -101,7 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location of the workflow.
+Specifies the location of the logic app.
+Enter an Azure data center location, such as West US or Southeast Asia.
+You can place a logic app in any location.
 
 ```yaml
 Type: System.String
@@ -116,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the workflow.
+Specifies the name of the logic app.
 
 ```yaml
 Type: System.String
@@ -131,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterFilePath
-The parameter file path.
+Specifies the path of a JSON formatted parameter file.
 
 ```yaml
 Type: System.String
@@ -146,7 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The parameters parameter for the logic app.
+Specifies a parameters collection object of the logic app.
+Specify a hash table, Dictionary\<string\>, or Dictionary\<string, WorkflowParameter\>.
 
 ```yaml
 Type: System.Object
@@ -161,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The targeted resource group for the workflow.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -176,7 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The state of the workflow.
+Specifies a state of the logic app.
+The acceptable values for this parameter are: Enabled and Disabled.
 
 ```yaml
 Type: System.String
@@ -192,8 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -206,3 +226,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzLogicApp](./Get-AzLogicApp.md)
+
+[New-AzLogicApp](./New-AzLogicApp.md)
+
+[Remove-AzLogicApp](./Remove-AzLogicApp.md)
+
+[Set-AzLogicApp](./Set-AzLogicApp.md)
+
+[Start-AzLogicApp](./Start-AzLogicApp.md)
+
+

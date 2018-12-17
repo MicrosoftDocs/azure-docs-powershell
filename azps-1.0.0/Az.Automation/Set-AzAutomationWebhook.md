@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: 9EA7F710-36FB-435C-BF28-1015E5D3155F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationwebhook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationWebhook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Set-AzAutomationWebhook.md
 ---
 
 # Set-AzAutomationWebhook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies a webhook for an Automation runbook.
 
 ## SYNTAX
 
@@ -19,21 +22,21 @@ Set-AzAutomationWebhook [-Name] <String> [-IsEnabled] <Boolean> [[-Parameters] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzAutomationWebhook** cmdlet modifies a webhook for an Azure Automation runbook.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Disable a webhook
+```
+PS C:\>Set-AzAutomationWebhook -Name "Webhook01" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -IsEnabled $False
 ```
 
-{{ Add example description here }}
+This command disables a webhook named Webhook01 in the Automation account named AutomationAccount01.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of an Automation account in which this cmdlet modifies a webhook.
 
 ```yaml
 Type: System.String
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-The Enable/Disable property of the Webhook
+Specifies whether the webhook is enabled.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -78,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Webhook name.
+Specifies a name of the webhook that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -93,7 +96,10 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Runbook parameters name/value.
+Specifies a dictionary of key/value pairs.
+The keys are the runbook parameter names.
+The values are the runbook parameter values.
+When the runbook starts in response to a webhook, these parameters are passed to the runbook.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -108,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet modifies a webhook.
 
 ```yaml
 Type: System.String
@@ -123,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -141,3 +146,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzAutomationWebhook](./Get-AzAutomationWebhook.md)
+
+[New-AzAutomationWebhook](./New-AzAutomationWebhook.md)
+
+[Remove-AzAutomationWebhook](./Remove-AzAutomationWebhook.md)
+
+

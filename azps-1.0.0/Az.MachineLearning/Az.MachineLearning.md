@@ -1,58 +1,81 @@
 ---
 Module Name: Az.MachineLearning
-Module Guid: 287cb4af-0379-4154-86bf-63c34f734bd3
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: bb030259-49f9-46ef-806f-2a3f5a2e018e
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning
+Help Version: 1.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Az.MachineLearning.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Az.MachineLearning.md
 ---
 
 # Az.MachineLearning Module
 ## Description
-{{Manually Enter Description Here}}
+Machine Learning Web Services cmdlets for Azure Resource Manager
 
 ## Az.MachineLearning Cmdlets
 ### [Add-AzMlWebServiceRegionalProperty](Add-AzMlWebServiceRegionalProperty.md)
-{{Manually Enter Add-AzMlWebServiceRegionalProperty Description Here}}
+Creates regional web service properties.
 
 ### [Export-AzMlWebService](Export-AzMlWebService.md)
-{{Manually Enter Export-AzMlWebService Description Here}}
+Exports the web service definition object as a JSON formatted string.
 
 ### [Get-AzMlCommitmentAssociation](Get-AzMlCommitmentAssociation.md)
-{{Manually Enter Get-AzMlCommitmentAssociation Description Here}}
+Retrieves the summary information for one or more commitment associations.
 
 ### [Get-AzMlCommitmentPlan](Get-AzMlCommitmentPlan.md)
-{{Manually Enter Get-AzMlCommitmentPlan Description Here}}
+Retrieves the summary information for one or more commitment plans.
 
 ### [Get-AzMlCommitmentPlanUsageHistory](Get-AzMlCommitmentPlanUsageHistory.md)
-{{Manually Enter Get-AzMlCommitmentPlanUsageHistory Description Here}}
+Retrieves usage history information for a specified commitment plan.
+
+### [Get-AzMlOpCluster](Get-AzMlOpCluster.md)
+Gets an operationalization cluster object.
+
+### [Get-AzMlOpClusterKey](Get-AzMlOpClusterKey.md)
+Gets the access keys associated with an operationalization cluster.
 
 ### [Get-AzMlWebService](Get-AzMlWebService.md)
-{{Manually Enter Get-AzMlWebService Description Here}}
+Retrieves the summary information for one or more web services.
 
 ### [Get-AzMlWebServiceKeys](Get-AzMlWebServiceKeys.md)
-{{Manually Enter Get-AzMlWebServiceKeys Description Here}}
+Retrieves the web service's keys.
 
 ### [Import-AzMlWebService](Import-AzMlWebService.md)
-{{Manually Enter Import-AzMlWebService Description Here}}
+Imports a JSON object into a web service definition.
 
 ### [Move-AzMlCommitmentAssociation](Move-AzMlCommitmentAssociation.md)
-{{Manually Enter Move-AzMlCommitmentAssociation Description Here}}
+Moves a commitment association from one commitment plan to another.
 
 ### [New-AzMlCommitmentPlan](New-AzMlCommitmentPlan.md)
-{{Manually Enter New-AzMlCommitmentPlan Description Here}}
+Creates a new commitment plan.
+
+### [New-AzMlOpCluster](New-AzMlOpCluster.md)
+Creates a new operationalization cluster.
 
 ### [New-AzMlWebService](New-AzMlWebService.md)
-{{Manually Enter New-AzMlWebService Description Here}}
+Creates a new web service.
 
 ### [Remove-AzMlCommitmentPlan](Remove-AzMlCommitmentPlan.md)
-{{Manually Enter Remove-AzMlCommitmentPlan Description Here}}
+Deletes a commitment plan.
+
+### [Remove-AzMlOpCluster](Remove-AzMlOpCluster.md)
+Removes an operationalization cluster.
 
 ### [Remove-AzMlWebService](Remove-AzMlWebService.md)
-{{Manually Enter Remove-AzMlWebService Description Here}}
+Deletes a web service.
+
+### [Set-AzMlOpCluster](Set-AzMlOpCluster.md)
+Sets the properties of an operationalization cluster.
+
+### [Test-AzMlOpClusterSystemServicesUpdateAvailability](Test-AzMlOpClusterSystemServicesUpdateAvailability.md)
+Checks if there are updates available for the system services associated with an operationalization cluster.
 
 ### [Update-AzMlCommitmentPlan](Update-AzMlCommitmentPlan.md)
-{{Manually Enter Update-AzMlCommitmentPlan Description Here}}
+Updates properties of an existing commitment plan resource.
+
+### [Update-AzMlOpClusterSystemService](Update-AzMlOpClusterSystemService.md)
+Starts an update on the operationalization cluster's system services.
 
 ### [Update-AzMlWebService](Update-AzMlWebService.md)
-{{Manually Enter Update-AzMlWebService Description Here}}
+Updates properties of an existing web service resource.
 

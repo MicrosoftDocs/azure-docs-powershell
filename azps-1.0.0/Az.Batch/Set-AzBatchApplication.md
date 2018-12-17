@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: DCA1FD7A-54AF-48B1-A245-BFA9C43ACA9B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/set-azbatchapplication
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchApplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzBatchApplication.md
 ---
 
 # Set-AzBatchApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates settings for the specified application.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ Set-AzBatchApplication [-AccountName] <String> [-ResourceGroupName] <String> [-A
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzBatchApplication** cmdlet modifies settings for the specified Azure Batch application.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update an application in a Batch account
+```
+PS C:\>Set-AzBatchApplication -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup" -ApplicationId "Litware" -AllowUpdates $False
 ```
 
-{{ Add example description here }}
+This command changes whether the Llitware application in the ContosoBatch account allows updates.
+The command does not change the default version or display name of the application.
 
 ## PARAMETERS
 
 ### -AccountName
-Specifies the name of the Batch account.
+Specifies the name of the Batch account for which this cmdlet modifies an application.
 
 ```yaml
 Type: System.String
@@ -48,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUpdates
-{{Fill AllowUpdates Description}}
+Specifies whether packages within the application can be overwritten using the same version string.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the id of the application.
+Specifies the ID of the application.
 
 ```yaml
 Type: System.String
@@ -78,12 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -93,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultVersion
-{{Fill DefaultVersion Description}}
+Specifies which package to use if a client requests the application but does not specify a version.
 
 ```yaml
 Type: System.String
@@ -108,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-{{Fill DisplayName Description}}
+Specifies the display name for the application.
 
 ```yaml
 Type: System.String
@@ -138,8 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +157,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchApplication](./Get-AzBatchApplication.md)
+
+[Get-AzBatchApplicationPackage](./Get-AzBatchApplicationPackage.md)
+
+[New-AzBatchApplication](./New-AzBatchApplication.md)
+
+[New-AzBatchApplicationPackage](./New-AzBatchApplicationPackage.md)
+
+[Remove-AzBatchApplication](./Remove-AzBatchApplication.md)
+
+[Remove-AzBatchApplicationPackage](./Remove-AzBatchApplicationPackage.md)
+
+

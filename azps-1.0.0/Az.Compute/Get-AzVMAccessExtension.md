@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 32CF9DA7-5607-4CF9-A2D0-D76A0C005FDA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmaccessextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMAccessExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMAccessExtension.md
 ---
 
 # Get-AzVMAccessExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about the VMAccess extension.
 
 ## SYNTAX
 
@@ -18,26 +21,33 @@ Get-AzVMAccessExtension [-ResourceGroupName] <String> [-VMName] <String> [-Name]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMAccessExtension** cmdlet gets information about the Virtual Machine Access (VMAccess) Virtual Machine Extension.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the VMAccess extension
+```
+PS C:\> $VMAccessExtension = Get-AzVMAccessExtension -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine07" -Name "ContosoTest"
 ```
 
-{{ Add example description here }}
+This command gets the VMAccess extension named ContosoTest for the virtual machine named VirtualMachine07.
+
+### Example 2: Get the instance view of the VMAccess extension
+```
+PS C:\> $VMAccessExtension = Get-AzVMAccessExtension -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine07" -Name "ContosoTest" -Status
+```
+
+This command gets the instance view of the VMAccess extension named ContosoTest for the virtual machine named VirtualMachine07.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of the extension that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -62,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -77,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-To show the status.
+Indicates that this cmdlet gets only the instance view of the extension.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -92,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine.
+This cmdlet gets information about VMAccess for the virtual machine that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -107,8 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +133,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzVMAccessExtension](./Remove-AzVMAccessExtension.md)
+
+[Set-AzVMAccessExtension](./Set-AzVMAccessExtension.md)
+
+[Get-AzVMExtension](./Get-AzVMExtension.md)
+
+

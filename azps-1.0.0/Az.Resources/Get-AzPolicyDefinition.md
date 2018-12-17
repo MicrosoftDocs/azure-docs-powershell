@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 6396AEC3-DFE6-45DA-BCF4-69C55C5D051B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azpolicydefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzPolicyDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzPolicyDefinition.md
 ---
 
 # Get-AzPolicyDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets policy definitions.
 
 ## SYNTAX
 
@@ -49,22 +52,43 @@ Get-AzPolicyDefinition [-ManagementGroupName <String>] [-SubscriptionId <Guid>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzPolicyDefinition** cmdlet gets a collection of policy definitions or a specific policy definition identified by name or ID.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all policy definitions
+```
+PS C:\> Get-AzPolicyDefinition
 ```
 
-{{ Add example description here }}
+This command gets all the policy definitions.
+
+### Example 2: Get policy definition from current subscription by name
+```
+PS C:\> Get-AzPolicyDefinition -Name 'VMPolicyDefinition'
+```
+
+This command gets the policy definition named VMPolicyDefinition from the current default subscription.
+
+### Example 3: Get policy definition from management group by name
+```
+PS C:\> Get-AzPolicyDefinition -Name 'VMPolicyDefinition' -ManagementGroupName 'Dept42'
+```
+
+This command gets the policy definition named VMPolicyDefinition from the management group named Dept42.
+
+### Example 4: Get all built-in policy definitions from subscription
+```
+PS C:\> Get-AzPolicyDefinition -SubscriptionId '3bf44b72-c631-427a-b8c8-53e2595398ca' -Builtin
+```
+
+This command gets all built-in policy definitions from the subscription with ID 3bf44b72-c631-427a-b8c8-53e2595398ca.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use.
+If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: System.String
@@ -109,12 +133,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -124,9 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified policy definition ID to get, including the subscription or management group.
-e.g.
-/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}.
+Specifies the fully qualified resource ID for the policy definition that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -168,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the policy definition to get.
+Specifies the name of the policy definition that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -183,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -225,8 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -241,3 +262,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzPolicyDefinition](./New-AzPolicyDefinition.md)
+
+[Remove-AzPolicyDefinition](./Remove-AzPolicyDefinition.md)
+
+[Set-AzPolicyDefinition](./Set-AzPolicyDefinition.md)
+
+

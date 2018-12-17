@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/update-azrecoveryservicesasrvcenter
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Update-AzRecoveryServicesAsrvCenter.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Update-AzRecoveryServicesAsrvCenter.md
 ---
 
 # Update-AzRecoveryServicesAsrvCenter
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Update discovery details for a registered vCenter.
 
 ## SYNTAX
 
@@ -25,21 +27,22 @@ Update-AzRecoveryServicesAsrvCenter -ResourceId <String> [-DefaultProfile <IAzur
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzRecoveryServicesAsrvCenter** cmdlet is updates discovery details for a registered vCenter.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Update-AzRecoveryServicesAsrvCenter -Account $fabric.fabricSpecificDetails.RunAsAccounts[1] -InputObject $vCenter
+Returns ASRJOB for update vCenter.
 ```
 
-{{ Add example description here }}
+Update discovery details for a registered vCenter.
 
 ## PARAMETERS
 
 ### -Account
-{{Fill Account Description}}
+vCenter login credentials account.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRunAsAccount
@@ -54,12 +57,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+The vCenter server object to update discovery details for.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRvCenter
@@ -84,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-{{Fill Port Description}}
+The TCP port on the vCenter server to use for discovery.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -99,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-{{Fill ResourceId Description}}
+Specifies the resourceId of vCenter.
 
 ```yaml
 Type: System.String
@@ -145,8 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

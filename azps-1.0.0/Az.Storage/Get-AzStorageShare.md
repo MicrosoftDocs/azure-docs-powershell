@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: FD3A0013-4365-4E65-891C-5C50A9D5658C
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azstorageshare
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageShare.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageShare.md
 ---
 
 # Get-AzStorageShare
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a list of file shares.
 
 ## SYNTAX
 
@@ -27,21 +30,46 @@ Get-AzStorageShare [-Name] <String> [[-SnapshotTime] <DateTimeOffset>] [-Context
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzStorageShare** cmdlet gets a list of file shares for a storage account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a file share
+```
+PS C:\>Get-AzStorageShare -Name "ContosoShare06"
 ```
 
-{{ Add example description here }}
+This command gets the file share named ContosoShare06.
+
+### Example 2: Get all file shares that begin with a string
+```
+PS C:\>Get-AzStorageShare -Prefix "Contoso"
+```
+
+This command gets all file shares that have names that begin with Contoso.
+
+### Example 3: Get all file shares in a specified context
+```
+PS C:\>$Context = New-AzStorageContext -Local
+PS C:\> Get-AzStorageShare -Context $Context
+```
+
+The first command uses the **New-AzStorageContext** cmdlet to create a context by using the *Local* parameter, and then stores that context object in the $Context variable.
+The second command gets the file shares for the context object stored in $Context.
+
+### Example 4: Get a file share snapshot with specific share name and SnapshotTime
+```
+PS C:\>Get-AzStorageShare -Name "ContosoShare06" -SnapshotTime "6/16/2017 9:48:41 AM +00:00"
+```
+
+This command gets a file share snapshot with specific share name and SnapshotTime.
 
 ## PARAMETERS
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -56,7 +84,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
 The default value is 10.
 
 ```yaml
@@ -72,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+Specifies an Azure Storage context.
+To obtain a context, use the [New-AzStorageContext](./New-AzStorageContext.md) cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -90,7 +122,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -102,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the file share to be received.
+Specifies the name of the file share.
+This cmdlet gets the file share that this parameter specifies, or nothing if you specify the name of a file share that does not exist.
 
 ```yaml
 Type: System.String
@@ -117,7 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-A prefix of the file shares to be listed.
+Specifies the prefix for file shares.
+This cmdlet gets file shares that match the prefix that this parameter specifies, or no file shares if no file shares match the specified prefix.
 
 ```yaml
 Type: System.String
@@ -132,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -162,8 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -176,3 +209,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzStorageShare](./New-AzStorageShare.md)
+
+[Remove-AzStorageShare](./Remove-AzStorageShare.md)

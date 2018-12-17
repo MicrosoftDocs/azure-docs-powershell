@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: BFE741CC-C166-4534-93F4-D21AAFAD9FF6
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/remove-azrecoveryservicesbackupprotectionpolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Remove-AzRecoveryServicesBackupProtectionPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Remove-AzRecoveryServicesBackupProtectionPolicy.md
 ---
 
 # Remove-AzRecoveryServicesBackupProtectionPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a Backup protection policy from a vault.
 
 ## SYNTAX
 
@@ -25,26 +28,32 @@ Remove-AzRecoveryServicesBackupProtectionPolicy [-Policy] <PolicyBase> [-PassThr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzRecoveryServicesBackupProtectionPolicy** cmdlet deletes backup policies for a vault.
+Before you can delete a Backup protection policy, the policy must not have any associated Backup items.
+Before you delete the policy, make sure that each associated item is associated with some other policy.
+To associate another policy with a Backup item, use the Enable-AzRecoveryServicesBackupProtection cmdlet.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a policy
+```
+PS C:\>$Pol= Get-AzRecoveryServicesBackupProtectionPolicy -Name "NewPolicy"
+PS C:\> Remove-AzRecoveryServicesBackupProtectionPolicy -Policy $Pol
 ```
 
-{{ Add example description here }}
+The first command gets the Backup protection policy named NewPolicy, and then stores it in the $Pol variable.
+The second command removes the policy object in $Pol.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Don't ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Policy that is being managed.
+Specifies the name of the Backup protection policy to remove.
 
 ```yaml
 Type: System.String
@@ -99,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-Protection policy object.
+Specifies the Backup protection policy to remove.
+To obtain an **BackupPolicy** object, use the Get-AzRecoveryServicesBackupProtectionPolicy cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase
@@ -138,7 +148,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -154,14 +164,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -176,3 +185,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupProtectionPolicy](./Get-AzRecoveryServicesBackupProtectionPolicy.md)
+
+[New-AzRecoveryServicesBackupProtectionPolicy](./New-AzRecoveryServicesBackupProtectionPolicy.md)
+
+[Set-AzRecoveryServicesBackupProtectionPolicy](./Set-AzRecoveryServicesBackupProtectionPolicy.md)
+
+

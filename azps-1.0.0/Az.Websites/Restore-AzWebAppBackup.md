@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version:
+ms.assetid: DC400E32-CAB9-4354-99B2-ABA4AA776030
+online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/restore-azwebappbackup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Restore-AzWebAppBackup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Websites/Commands.Websites/help/Restore-AzWebAppBackup.md
 ---
 
 # Restore-AzWebAppBackup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -28,22 +30,21 @@ Restore-AzWebAppBackup [-AppServicePlan <String>] [-Databases <DatabaseBackupSet
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Restore-AzWebAppBackup** cmdlet restores an Azure Web App Backup.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1:
+```
+PS C:\> Restore-AzWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net" -BlobName "myBlob"
 ```
 
-{{ Add example description here }}
+Restores a backup of the specified app ContosoWebApp that is within resource group Default-Web-WestUS in blob "myBlob" located at https://storageaccount.file.core.windows.net
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The name of the App Service Plan for the restored app.
-If left empty, the app's current App Service Plan is used.
+The name of the App Service Plan for the restored app. If left empty, the app's current App Service Plan is used.
 
 ```yaml
 Type: System.String
@@ -58,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlobName
-The name of the backup blob to restore.
+Blob Name
 
 ```yaml
 Type: System.String
@@ -73,8 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Databases
-The databases to restore.
-Must match the list of databases in the backup.
+Databases of type DatabaseBackupSetting[]
 
 ```yaml
 Type: Microsoft.Azure.Management.WebSites.Models.DatabaseBackupSetting[]
@@ -89,12 +89,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -104,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreConflictingHostNames
-If specified, custom domains are removed automatically during restore.
-Otherwise, custom domains are added to the site object when it is being restored, but the restore might fail due to conflicts.
+Ignore Conflicting HostNames Option
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -120,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+WebApp Name
 
 ```yaml
 Type: System.String
@@ -135,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-If specified, an existing web app will be overwritten by the contents of the backup.
+Overwrite Option
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -150,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -165,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+WebApp Slot Name
 
 ```yaml
 Type: System.String
@@ -180,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-The SAS URL for the Azure Storage container used to store the backup.
+Storage Account Url
 
 ```yaml
 Type: System.String
@@ -195,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+WebApp Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.PSSite
@@ -210,8 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: D6B7F253-03CD-40BE-87D6-E4AE300A29D5
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementproduct
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementProduct.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementProduct.md
 ---
 
 # Remove-AzApiManagementProduct
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an existing API Management product.
 
 ## SYNTAX
 
@@ -18,22 +21,22 @@ Remove-AzApiManagementProduct -Context <PsApiManagementContext> -ProductId <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzApiManagementProduct** cmdlet removes an existing API Management product.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an existing product and all subscriptions
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementProduct -Context $apimContext -ProductId "0123456789" -DeleteSubscriptions -Force
 ```
 
-{{ Add example description here }}
+This command removes an existing product and all subscriptions.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of the **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -48,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,9 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteSubscriptions
-Whether to delete subscriptions to the product or not.
-If not set and subscriptions exists exception will be thrown.
-This parameter is optional.
+Indicates whether to delete subscriptions to the product.
+If you do not set this parameter and subscriptions exists, an exception is thrown.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -80,8 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
+Indicates that this cmdlet returns a value of $True, if it succeeds, or a value of $False, if it fails.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing Product.
-This parameter is required.
+Specifies the identifier of the existing product.
 
 ```yaml
 Type: System.String
@@ -121,7 +121,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -137,14 +137,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -161,3 +160,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementProduct](./Get-AzApiManagementProduct.md)
+
+[New-AzApiManagementProduct](./New-AzApiManagementProduct.md)
+
+[Set-AzApiManagementProduct](./Set-AzApiManagementProduct.md)
+
+

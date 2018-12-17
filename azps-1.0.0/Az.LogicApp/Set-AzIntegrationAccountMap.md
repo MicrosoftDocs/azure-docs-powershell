@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
-online version:
+ms.assetid: 7EF87BE5-FB10-4E5D-A12F-7F50EE6DAD57
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/set-azintegrationaccountmap
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzIntegrationAccountMap.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Set-AzIntegrationAccountMap.md
 ---
 
 # Set-AzIntegrationAccountMap
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an integration account map.
 
 ## SYNTAX
 
@@ -20,21 +23,39 @@ Set-AzIntegrationAccountMap -ResourceGroupName <String> -Name <String> -MapName 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzIntegrationAccountMap** cmdlet modifies an integration account map.
+This cmdlet returns an object that represents the integration account map.
+Specify the integration account name, resource group name, and map name.
+This module supports dynamic parameters.
+To use a dynamic parameter, type it in the command.
+To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+If you omit a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify an integration account map
+```
+PS C:\>Set-AzIntegrationAccountMap -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -MapName "IntegrationAccountMap47" -MapDefinition $MapContent
+Id          : /subscriptions/<SusbcriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegartionAccount31/maps/IntegrationAccountMap47
+Name        : IntegrationAccountMap47
+Type        : Microsoft.Logic/integrationAccounts/maps
+CreatedTime : 3/26/2016 7:12:22 PM
+ChangedTime : 3/26/2016 7:12:22 PM
+MapType     : Xslt
+ContentLink : https://<baseurl>/integrationaccounts68a13b6b49f14995ba7c5f3aedcbd7ad/99D1E_XSLT_INTEGRATIONACCOUNTMAP47-9C97D973088B4256A1893B
+              BCB1F85246?sv=2014-02-14&sr=b&sig=<value>
+ContentSize : 3056
+Metadata    :
 ```
 
-{{ Add example description here }}
+This command modifies the integration account map in the specified resource group.
+The command specifies a map definition stored in the $MapContent variable by a previous command.
 
 ## PARAMETERS
 
 ### -ContentType
-The integration account map content type.
+Specifies a content type for the integration account map.
+This cmdlet supports application/xml as a map content type.
 
 ```yaml
 Type: System.String
@@ -49,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -64,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -79,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -MapDefinition
-The integration account map definition.
+Specifies a definition object for integration account map.
 
 ```yaml
 Type: System.String
@@ -94,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -MapFilePath
-The integration account map file path.
+Specifies the file path of a definition for the integration account map.
 
 ```yaml
 Type: System.String
@@ -109,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -MapName
-The integration account map name.
+Specifies the name of an integration account map.
 
 ```yaml
 Type: System.String
@@ -124,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -MapType
-The integration account map type.
+Specifies the type for the integration account map.
+This cmdlet supports Xslt as a map type.
 
 ```yaml
 Type: System.String
@@ -140,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-The integration account map metadata.
+Specifies a metadata object for the map.
 
 ```yaml
 Type: System.Object
@@ -155,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The integration account name.
+Specifies the name of the integration account.
 
 ```yaml
 Type: System.String
@@ -170,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The integration account resource group name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: System.String
@@ -194,7 +216,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -210,14 +232,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -230,3 +251,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzIntegrationAccountMap](./Get-AzIntegrationAccountMap.md)
+
+[New-AzIntegrationAccountMap](./New-AzIntegrationAccountMap.md)
+
+[Remove-AzIntegrationAccountMap](./Remove-AzIntegrationAccountMap.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: B4EC9132-8DB9-498D-8B3F-2AB51D8EA03A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/new-azoperationalinsightsazureactivitylogdatasource
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/New-AzOperationalInsightsAzureActivityLogDataSource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/New-AzOperationalInsightsAzureActivityLogDataSource.md
 ---
 
 # New-AzOperationalInsightsAzureActivityLogDataSource
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Collect Azure Activity log from given subscription.
 
 ## SYNTAX
 
@@ -27,12 +30,12 @@ New-AzOperationalInsightsAzureActivityLogDataSource [-Workspace] <PSWorkspace> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzOperationalInsightsAzureActivityLogDataSource enable Log Analytics to collect Azure activity log from given subscription.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> {{ Add example code here }}
 ```
 
@@ -56,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,8 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Don't ask for confirmation.
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -86,8 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The data source name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -101,8 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
-
 ```yaml
 Type: System.String
 Parameter Sets: ByWorkspaceName
@@ -116,8 +113,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The azure subscription Id.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -131,8 +126,6 @@ Accept wildcard characters: False
 ```
 
 ### -Workspace
-The workspace that will contain the data source.
-
 ```yaml
 Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
 Parameter Sets: ByWorkspaceObject
@@ -146,8 +139,6 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceName
-The name of the workspace that will contain the data source.
-
 ```yaml
 Type: System.String
 Parameter Sets: ByWorkspaceName
@@ -176,9 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -192,8 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

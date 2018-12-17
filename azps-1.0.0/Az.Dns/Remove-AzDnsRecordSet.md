@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
-online version:
+ms.assetid: 505562A4-30BC-44E7-94EF-579763B8D794
+online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/remove-azdnsrecordset
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzDnsRecordSet.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzDnsRecordSet.md
 ---
 
 # Remove-AzDnsRecordSet
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a record set.
 
 ## SYNTAX
 
@@ -31,26 +34,50 @@ Remove-AzDnsRecordSet -RecordSet <DnsRecordSet> [-Overwrite] [-PassThru]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzDnsRecordSet** cmdlet deletes the specified record set from the specified zone.
+You cannot delete SOA or name server (NS) records that are automatically created at the zone apex.
+You can pass a **RecordSet** object to this cmdlet by using the pipeline operator or as a parameter.
+To identify a record set by name and type without using a **RecordSet** object, you must pass the zone as a **DnsZone** object to this cmdlet by using the pipeline operator or as a parameter, or alternatively you can specify the *ZoneName* and *ResourceGroupName* parameters.
+You can use the Confirm parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation.
+When specifying the record set using a **RecordSet** object, the record set is not deleted if it has been changed in Azure DNS since the local **RecordSet** object was retrieved.
+This provides protection for concurrent changes.
+You can suppress this by using the *Overwrite* parameter, which deletes the record set regardless of concurrent changes.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a record set
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "www" -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+PS C:\> Remove-AzDnsRecordSet -RecordSet $RecordSet
 ```
 
-{{ Add example description here }}
+The first command gets the specified record set, and then stores it in the $RecordSet variable.The second command removes the record set in $RecordSet.
+
+### Example 2: Remove a record set and suppress all confirmation
+```
+PS C:\> $RecordSet = Get-AzDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup"
+PS C:\> Remove-AzDnsRecordSet -RecordSet $RecordSet -Confirm:$False -Overwrite
+
+# Alternatively, the record set can be removed as follows.  In this case,
+# because the record set is specified by name rather than by object, the
+# Overwrite parameter is not applicable.
+
+PS C:\> Remove-AzDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" -Confirm:$False
+```
+
+The first command gets the specified record set.
+The second command deletes the record set, even if it has changed in the meantime.
+Confirmation prompts are suppressed.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,7 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the records in the record set (relative to the name of the zone and without a terminating dot).
+Specifies the name of the **RecordSet** to remove.
+When specifying the record set by name, the DNS zone must be specified using either the *Zone* parameter or the *ZoneName* and *ResourceGroupName* parameters.
+Alternatively, the record set can be specified using a **RecordSet** object, passed using the *RecordSet* parameter.
 
 ```yaml
 Type: System.String
@@ -75,7 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-Do not use the ETag field of the RecordSet parameter for optimistic concurrency checks.
+When specifying the record set using a **RecordSet** object, the record set is not deleted if it has been changed in Azure DNS since the local **RecordSet** object was retrieved.
+This provides protection for concurrent changes.
+This can be suppressed using the *Overwrite* parameter, which deletes the record set regardless of concurrent changes.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -90,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -105,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecordSet
-The record set in which to add the record.
+Specifies the **RecordSet** object to remove.
+Alternatively, the record set can be specified using the *Name* and *Zone* parameters, or using the *Name*, *ZoneName*, and *ResourceGroupName* parameters.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Dns.DnsRecordSet
@@ -120,7 +152,18 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The type of DNS records in the record set.
+Specifies the type of DNS record.
+Valid values are:
+- A
+- AAAA
+- CNAME
+- MX
+- NS
+- PTR
+- SRV
+- TXT
+SOA records are deleted automatically when the zone is deleted.
+You cannot manually delete SOA records.
 
 ```yaml
 Type: Microsoft.Azure.Management.Dns.Models.RecordType
@@ -136,7 +179,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the zone belongs.
+Specifies the resource group that contains the DNS zone that contains the **RecordSet** to delete.
+This parameter is applicable only when the record set and DNS zone are specified using the *Name* and *ZoneName* parameters.
+Alternatively, you can specify the record set using either the *RecordSet* parameter, or the *Name* and *Zone* parameters.
 
 ```yaml
 Type: System.String
@@ -151,7 +196,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-The DnsZone object representing the zone in which to create the record set.
+Specifies the DNS zone that contains the **RecordSet** to delete.
+This parameter is applicable only when specifying the record set using the *Name* parameter.
+Alternatively, you can specify the record set using either the *RecordSet* parameter, or the *Name*, *ZoneName*, and *ResourceGroupName* parameters.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Dns.DnsZone
@@ -166,7 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -ZoneName
-The zone in which the record set exists (without a terminating dot).
+Specifies the name of the zone that contains the **RecordSet** to delete.
+You must also specify the *Name* and *ResourceGroupName* parameters.
+Alternatively, the record set can be specified using either the *RecordSet* parameter, or the *Name* and *Zone* parameters.
 
 ```yaml
 Type: System.String
@@ -190,7 +239,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -206,14 +255,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -230,5 +278,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Boolean
 
 ## NOTES
+You can use the *Confirm* parameter to control whether this cmdlet prompts you for confirmation.
+By default, the cmdlet prompts you for confirmation if the $ConfirmPreference Windows PowerShell variable has a value of Medium or lower.
+If you specify *Confirm* or *Confirm:$True*, this cmdlet prompts you for confirmation before it runs.
+If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation.
 
 ## RELATED LINKS
+
+[Get-AzDnsRecordSet](./Get-AzDnsRecordSet.md)
+
+[New-AzDnsRecordSet](./New-AzDnsRecordSet.md)
+
+[Set-AzDnsRecordSet](./Set-AzDnsRecordSet.md)

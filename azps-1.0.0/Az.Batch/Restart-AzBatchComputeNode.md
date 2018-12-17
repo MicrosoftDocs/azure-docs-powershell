@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 029361F0-C4E9-4948-9EBA-BFBD1B029909
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/restart-azbatchcomputenode
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Restart-AzBatchComputeNode.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Restart-AzBatchComputeNode.md
 ---
 
 # Restart-AzBatchComputeNode
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Reboots the specified compute node.
 
 ## SYNTAX
 
@@ -25,25 +28,29 @@ Restart-AzBatchComputeNode [[-ComputeNode] <PSComputeNode>] [[-RebootOption] <Co
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Restart-AzBatchComputeNode** cmdlet reboots the specified compute node.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Restart a compute node
+```
+PS C:\>Restart-AzBatchComputeNode -PoolId "MyPool" -Id "tvm-3257026573_2-20150813t200938z" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+This command reboots the compute node with the ID "tvm-3257026573_2-20150813t200938z" in the pool MyPool.
+
+### Example 2: Restart every compute node in a pool
+```
+PS C:\>Get-AzBatchComputeNode -PoolId "MyPool" -BatchContext $Context | Restart-AzBatchComputeNode -BatchContext $Context
+```
+
+This command reboots every compute node in the pool MyPool.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -58,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNode
-{{Fill ComputeNode Description}}
+Specifies the **PSComputeNode** object that represents the compute node to reboot.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
@@ -73,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -88,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The id of the compute node to reboot.
+Specifies the ID of the compute node to reboot.
 
 ```yaml
 Type: System.String
@@ -103,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool that contains the compute node.
+Specifies the ID of the pool that contains the compute node.
 
 ```yaml
 Type: System.String
@@ -118,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootOption
-{{Fill RebootOption Description}}
+Specifies when to reboot the node and what to do with currently running tasks.
+The default is Requeue.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Batch.Common.ComputeNodeRebootOption]
@@ -134,8 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -150,3 +157,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchComputeNode](./Get-AzBatchComputeNode.md)
+
+[Reset-AzBatchComputeNode](./Reset-AzBatchComputeNode.md)
+
+[Azure Batch Cmdlets](./Az.Batch.md)
+
+

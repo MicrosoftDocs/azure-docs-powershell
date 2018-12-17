@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 93D8A341-540A-43F1-8C62-28323EAA58E0
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetwork
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzVirtualNetwork.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzVirtualNetwork.md
 ---
 
 # Set-AzVirtualNetwork
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the goal state for a virtual network.
 
 ## SYNTAX
 
@@ -18,16 +21,25 @@ Set-AzVirtualNetwork -VirtualNetwork <PSVirtualNetwork> [-AsJob] [-DefaultProfil
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVirtualNetwork** cmdlet sets the goal state for an Azure virtual network.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### 1: Creates a virtual network and removes one of its subnets
+```
+New-AzResourceGroup -Name TestResourceGroup -Location centralus
+    $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24" ## Create resource group
+$backendSubnet = New-AzVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix "10.0.2.0/24" ## Create backend subnet
+
+$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName 
+    TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet,$backendSubnet ## Create virtual network
+
+Remove-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork $virtualNetwork ## Remove subnet from in memory representation of virtual network
+
+$virtualNetwork | Set-AzVirtualNetwork ## Remove subnet from virtual network
 ```
 
-{{ Add example description here }}
+This example creates a virtual network called TestResourceGroup with two subnets: frontendSubnet and backendSubnet. Then it removes backendSubnet subnet from the in-memory representation of the virtual network. The Set-AzVirtualNetwork cmdlet is then used to write the modified virtual network state on the service side. When the Set-AzVirtualNetwork cmdlet is executed, the backendSubnet is removed.
 
 ## PARAMETERS
 
@@ -47,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-The virtualNetwork
+Specifies a **VirtualNetwork** object that represents the goal state.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork
@@ -77,8 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +102,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVirtualNetwork](./Get-AzVirtualNetwork.md)
+
+[Get-AzVirtualNetwork](./Get-AzVirtualNetwork.md)
+
+[New-AzVirtualNetwork](./New-AzVirtualNetwork.md)
+
+[Remove-AzVirtualNetwork](./Remove-AzVirtualNetwork.md)
+
+

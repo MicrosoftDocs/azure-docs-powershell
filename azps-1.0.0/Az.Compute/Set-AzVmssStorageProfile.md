@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 230DAE05-C197-451F-A24C-F4A2DAE4AD04
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssstorageprofile
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssStorageProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVmssStorageProfile.md
 ---
 
 # Set-AzVmssStorageProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the storage profile properties for the VMSS.
 
 ## SYNTAX
 
@@ -17,27 +20,29 @@ Set-AzVmssStorageProfile [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>
  [[-ImageReferencePublisher] <String>] [[-ImageReferenceOffer] <String>] [[-ImageReferenceSku] <String>]
  [[-ImageReferenceVersion] <String>] [[-OsDiskName] <String>] [[-OsDiskCaching] <CachingTypes>]
  [[-OsDiskCreateOption] <String>] [[-OsDiskOsType] <OperatingSystemTypes>] [[-Image] <String>]
- [[-VhdContainer] <String[]>] [-ImageReferenceId <String>] [-OsDiskWriteAccelerator] [-ManagedDisk <String>]
- [-DataDisk <VirtualMachineScaleSetDataDisk[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [[-VhdContainer] <String[]>] [-ImageReferenceId <String>] [-OsDiskWriteAccelerator]
+ [-DiffDiskSetting <String>] [-ManagedDisk <String>] [-DataDisk <VirtualMachineScaleSetDataDisk[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVmssStorageProfile** cmdlet sets the storage profile properties for the Virtual Machine Scale Set (VMSS).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the storage profile properties for the VMSS
+```
+PS C:\> Set-AzVmssStorageProfile -VirtualMachineScaleSet "ContosoVMSS" -Name "Test" -OsDiskCreateOption "FromImage" -OsDiskCaching "None" `
+            -ImageReferenceOffer $ImgRef.Offer -ImageReferenceSku $ImgRef.Skus -ImageReferenceVersion $ImgRef.Version `
+            -ImageReferencePublisher $ImgRef.PublisherName -VhdContainer $VhdContainer
 ```
 
-{{ Add example description here }}
+This command sets the storage profile properties for the VMSS named ContosoVMSS.
 
 ## PARAMETERS
 
 ### -DataDisk
-{{Fill DataDisk Description}}
+Specifies the data disk object.
 
 ```yaml
 Type: Microsoft.Azure.Management.Compute.Models.VirtualMachineScaleSetDataDisk[]
@@ -52,12 +57,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -66,8 +71,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DiffDiskSetting
+Specifies the differencing disk settings for operating system disk.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Image
-{{Fill Image Description}}
+Specifies the blob URI for the user image.
+VMSS creates an operating system disk in the same container of the user image.
 
 ```yaml
 Type: System.String
@@ -82,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImageReferenceId
-{{Fill ImageReferenceId Description}}
+Specifies the image reference ID.
 
 ```yaml
 Type: System.String
@@ -97,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImageReferenceOffer
-{{Fill ImageReferenceOffer Description}}
+Specifies the type of virtual machine image (VMImage) offer.
+To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
 
 ```yaml
 Type: System.String
@@ -112,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImageReferencePublisher
-{{Fill ImageReferencePublisher Description}}
+Specifies the name of a publisher of a VMImage.
+To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
 
 ```yaml
 Type: System.String
@@ -127,7 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImageReferenceSku
-{{Fill ImageReferenceSku Description}}
+Specifies the VMImage SKU.
+To obtain SKUs, use the Get-AzVMImageSku cmdlet.
 
 ```yaml
 Type: System.String
@@ -142,7 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImageReferenceVersion
-{{Fill ImageReferenceVersion Description}}
+Specifies the version of the VMImage.
+To use the latest version, specify a value of latest instead of a particular version.
 
 ```yaml
 Type: System.String
@@ -157,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedDisk
-{{Fill ManagedDisk Description}}
+Specifies the managed disk.
 
 ```yaml
 Type: System.String
@@ -172,7 +197,13 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskCaching
-{{Fill OsDiskCaching Description}}
+Specifies the caching mode of the operating system disk. 
+The acceptable values for this parameter are:
+- ReadOnly
+- ReadWrite
+The default value is ReadWrite.
+If you change the caching value, the cmdlet will restart the virtual machine.
+This setting affects the consistency and performance of the disk.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.CachingTypes]
@@ -188,7 +219,11 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskCreateOption
-{{Fill OsDiskCreateOption Description}}
+Specifies how this cmdlet creates the VMSS virtual machines.
+The acceptable values for this parameter are:
+- Attach : This value is used when you are using a specialized disk to create the VMSS virtual machine. 
+- FromImage : This value is used when you are using an image to create the VMSS virtual machine.
+If you are using a platform image, you will also use the *imageReference* parameter.
 
 ```yaml
 Type: System.String
@@ -203,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskName
-{{Fill OsDiskName Description}}
+Specifies the name of the operating system disk.
 
 ```yaml
 Type: System.String
@@ -218,7 +253,8 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskOsType
-{{Fill OsDiskOsType Description}}
+Specifies the type of operating system on the disk.
+This is only needed for user image scenarios and not for a platform image.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes]
@@ -234,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskWriteAccelerator
-{{Fill OsDiskWriteAccelerator Description}}
+Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -249,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -VhdContainer
-{{Fill VhdContainer Description}}
+Specifies the container URLs that are used to store operating system disks for the VMSS.
 
 ```yaml
 Type: System.String[]
@@ -264,7 +300,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachineScaleSet
-{{Fill VirtualMachineScaleSet Description}}
+Specifies the VMSS object.
+To obtain the object, use the New-AzVmssConfig object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
@@ -294,8 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -310,8 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -319,9 +354,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.String
 
-### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.CachingTypes, Microsoft.Azure.Management.Compute, Version=22.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.CachingTypes, Microsoft.Azure.Management.Compute, Version=23.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
-### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes, Microsoft.Azure.Management.Compute, Version=22.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes, Microsoft.Azure.Management.Compute, Version=23.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ### System.String[]
 
@@ -334,3 +369,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMImageOffer](./Get-AzVMImageOffer.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+[Get-AzVMImageSku](./Get-AzVMImageSku.md)
+
+[New-AzVmssConfig](./New-AzVmssConfig.md)
+
+

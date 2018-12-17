@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 356764CF-A860-432A-907A-9058CEB2BF8E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azrouteconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzRouteConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzRouteConfig.md
 ---
 
 # New-AzRouteConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a route for a route table.
 
 ## SYNTAX
 
@@ -19,21 +22,31 @@ New-AzRouteConfig [-Name <String>] [-AddressPrefix <String>] [-NextHopType <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzRouteConfig** cmdlet creates a route for an Azure route table.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a route
+```
+PS C:\>$Route = New-AzRouteConfig -Name "Route07" -AddressPrefix 10.1.0.0/16 -NextHopType "VnetLocal"
+PS C:\> $Route
+Name              : Route07
+Id                : 
+Etag              : 
+ProvisioningState : 
+AddressPrefix     : 10.1.0.0/16
+NextHopType       : VnetLocal
+NextHopIpAddress  :
 ```
 
-{{ Add example description here }}
+The first command creates a route named Route07, and then stores it in the $Route variable.
+This route forwards packets to the local virtual network.
+The second command displays the properties of the route.
 
 ## PARAMETERS
 
 ### -AddressPrefix
-The destination CIDR to which the route applies.
+Specifies the destination, in Classless Interdomain Routing (CIDR) format, to which the route applies.
 
 ```yaml
 Type: System.String
@@ -48,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the route.
+Specifies a name for the route.
 
 ```yaml
 Type: System.String
@@ -78,8 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -NextHopIpAddress
-The IP address packets should be forwarded to.
-Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+Specifies the IP address of a virtual appliance that you add to your Azurevirtual network.
+This route forwards packets to that address.
+Specify this parameter only if you specify a value of VirtualAppliance for the *NextHopType* parameter.
 
 ```yaml
 Type: System.String
@@ -94,7 +108,19 @@ Accept wildcard characters: False
 ```
 
 ### -NextHopType
-The type of Azure hop the packet should be sent to.
+Specifies how this route forwards packets.
+The acceptable values for this parameter are:
+- Internet.
+The default Internet gateway provided by Azure. 
+- None.
+If you specify this value, the route does not forward packets. 
+- VirtualAppliance.
+A virtual appliance that you add to your Azure virtual network. 
+- VirtualNetworkGateway.
+An Azure server-to-server virtual private network gateway. 
+- VnetLocal.
+The local virtual network.
+If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network, select a value of VnetLocal for each subnet to forward to the other subnet.
 
 ```yaml
 Type: System.String
@@ -124,8 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -140,8 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +178,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzRouteConfig](./Add-AzRouteConfig.md)
+
+[Get-AzRouteConfig](./Get-AzRouteConfig.md)
+
+[Remove-AzRouteConfig](./Remove-AzRouteConfig.md)
+
+[Set-AzRouteConfig](./Set-AzRouteConfig.md)
+
+

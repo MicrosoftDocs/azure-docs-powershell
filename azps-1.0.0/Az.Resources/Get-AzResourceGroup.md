@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 5B17A241-BF36-48A6-BC29-4C32C08F5F94
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourcegroup
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzResourceGroup.md
 ---
 
 # Get-AzResourceGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets resource groups.
 
 ## SYNTAX
 
@@ -25,22 +28,51 @@ Get-AzResourceGroup [[-Location] <String>] [-Id <String>] [-ApiVersion <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzResourceGroup** cmdlet gets Azure resource groups in the current subscription.
+You can get all resource groups, or specify a resource group by name or by other properties.
+By default, this cmdlet gets all resource groups in the current subscription.
+For more information about Azure resources and Azure resource groups, see the New-AzResourceGroup cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a resource group by name
+```
+PS C:\>Get-AzResourceGroup -Name "EngineerBlog"
 ```
 
-{{ Add example description here }}
+This command gets the Azure resource group in your subscription named EngineerBlog.
+
+### Example 2: Get all tags of a resource group
+```
+PS C:\>(Get-AzResourceGroup -Name "ContosoRG").Tags
+```
+
+This command gets the resource group named ContosoRG, and displays the tags associated with that group.
+
+### Example 3: Show the Resource groups by location
+```
+PS C:\> Get-AzResourceGroup |
+  Sort Location,ResourceGroupName |
+  Format-Table -GroupBy Location ResourceGroupName,ProvisioningState,Tags
+```
+
+### Example 4: Show the names of all the Resource groups in a particular location
+```
+PS C:\> Get-AzResourceGroup -Location westus2 |
+   Sort ResourceGroupName | 
+   Format-Wide ResourceGroupName -Column 4
+```
+
+### Example 5: Show the Resource groups whose names begin with WebServer
+```
+PS C:\> Get-AzResourceGroup | Where ResourceGroupName -like WebServer*
+```
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource Provider.
+You can specify a different version than the default version.
 
 ```yaml
 Type: System.String
@@ -55,12 +87,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -70,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group Id.
+Specifies the ID of the resource group to get.
+Wildcard characters are not permitted.
 
 ```yaml
 Type: System.String
@@ -85,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The resource group location.
+Specifies the location of the resource group to get.
 
 ```yaml
 Type: System.String
@@ -100,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the resource group to get. This parameter supports wildcards at the beginning and/or the end of the string.
 
 ```yaml
 Type: System.String
@@ -115,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -145,8 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -161,3 +193,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzResourceGroup](./New-AzResourceGroup.md)
+
+[Remove-AzResourceGroup](./Remove-AzResourceGroup.md)
+
+[Set-AzResourceGroup](./Set-AzResourceGroup.md)
+
+

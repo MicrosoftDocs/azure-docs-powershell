@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/undo-azkeyvaultkeyremoval
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Undo-AzKeyVaultKeyRemoval.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Undo-AzKeyVaultKeyRemoval.md
 ---
 
 # Undo-AzKeyVaultKeyRemoval
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Recovers a deleted key in a key vault into an active state.
 
 ## SYNTAX
 
@@ -25,26 +27,40 @@ Undo-AzKeyVaultKeyRemoval [-InputObject] <PSDeletedKeyVaultKeyIdentityItem>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Undo-AzKeyVaultKeyRemoval** cmdlet will recover a previously deleted key.
+The recovered key will be active and can be used for all normal key operations.
+Caller needs to have 'recover' permission in order to perform this operation.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Undo-AzKeyVaultKeyRemoval -VaultName 'MyKeyVault' -Name 'MyKey'
+
+Vault Name     : MyKeyVault
+Name           : MyKey
+Version        : 1af807cc331a49d0b52b7c75e1b2366e
+Id             : https://mykeybault.vault.azure.net:443/keys/mykey/1af807cc331a49d0b52b7c75e1b2366e
+Enabled        : True
+Expires        :
+Not Before     :
+Created        : 5/24/2018 8:32:27 PM
+Updated        : 5/24/2018 8:32:27 PM
+Purge Disabled : False
+Tags           :
 ```
 
-{{ Add example description here }}
+This command will recover the key 'MyKey' that was previously deleted, into an active and usable state.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -132,8 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -146,3 +161,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
+
+[Add-AzKeyVaultKey](./Add-AzKeyVaultKey.md)
+
+[Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
+

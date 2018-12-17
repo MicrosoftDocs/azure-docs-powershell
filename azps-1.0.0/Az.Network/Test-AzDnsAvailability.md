@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 556A9F12-DF72-468F-9C3F-A747CC70BD2F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/test-azdnsavailability
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Test-AzDnsAvailability.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Test-AzDnsAvailability.md
 ---
 
 # Test-AzDnsAvailability
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Checks whether a domain name in the cloudapp.azure.com zone is available for use.
 
 ## SYNTAX
 
@@ -18,26 +21,24 @@ Test-AzDnsAvailability -DomainNameLabel <String> -Location <String> [-DefaultPro
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Checks whether a domain name in the cloudapp.azure.com zone is available for use.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Check if contoso.cloudapp.azure.com is available for use.
 ```
-
-{{ Add example description here }}
+Test-AzDnsAvailability -DomainNameLabel contoso -Location westus
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,8 +48,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainNameLabel
-The Domain Qualified Name.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -62,8 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location.
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -77,8 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 43D01A97-75B9-46CE-B007-26FE6A97C31C
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/update-azcontainerservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Update-AzContainerService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Update-AzContainerService.md
 ---
 
 # Update-AzContainerService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the state of a container service.
 
 ## SYNTAX
 
@@ -19,16 +22,22 @@ Update-AzContainerService [-ResourceGroupName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzContainerService** cmdlet updates the state of a container service to match a local instance of the service.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update a container service
+```
+PS C:\> Get-AzContainerService -ResourceGroupName "ResourceGroup17" -Name "CSResourceGroup17" | Remove-AzContainerServiceAgentPoolProfile -Name "AgentPool01" | Add-AzContainerServiceAgentPoolProfile -Name "AgentPool01" -VmSize "Standard_A1" -DnsPrefix "APResourceGroup17" -Count 2 | Update-AzContainerService -ResourceGroupName "ResourceGroup17" -Name "CSResourceGroup17"
 ```
 
-{{ Add example description here }}
+This command gets the container service named CSResourceGroup17 by using the Get-AzContainerService cmdlet.
+The command passes that object to the Remove-AzContainerServiceAgentPoolProfile cmdlet by using the pipeline operator.
+**Remove-AzContainerServiceAgentPoolProfile** removes the profile named AgentPool01.
+The command passes the result to the Add-AzContainerServiceAgentPoolProfile cmdlet.
+**Add-AzContainerServiceAgentPoolProfile** adds a profile that has the name AgentPool01, and has the specified properties.
+The command passes the result to the current cmdlet.
+The current cmdlet updates the container service to reflect the changes that were made in this command.
 
 ## PARAMETERS
 
@@ -48,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerService
-{{Fill ContainerService Description}}
+Specifies a local **ContainerService** object that contains changes.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService
@@ -63,12 +72,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -78,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the container service that this cmdlet updates.
 
 ```yaml
 Type: System.String
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the resource group of the container service that this cmdlet updates.
 
 ```yaml
 Type: System.String
@@ -117,7 +126,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -133,14 +142,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -155,3 +163,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzContainerServiceAgentPoolProfile](./Add-AzContainerServiceAgentPoolProfile.md)
+
+[Get-AzContainerService](./Get-AzContainerService.md)
+
+[New-AzContainerService](./New-AzContainerService.md)
+
+[Remove-AzContainerService](./Remove-AzContainerService.md)
+
+[Remove-AzContainerServiceAgentPoolProfile](./Remove-AzContainerServiceAgentPoolProfile.md)
+
+

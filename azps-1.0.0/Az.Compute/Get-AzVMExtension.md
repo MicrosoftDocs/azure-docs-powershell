@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 842652D4-0F1C-4D0D-AB55-0D43D3C5D82A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMExtension.md
 ---
 
 # Get-AzVMExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets properties of Virtual Machine Extensions installed on a virtual machine.
 
 ## SYNTAX
 
@@ -18,26 +21,35 @@ Get-AzVMExtension [-ResourceGroupName] <String> [-VMName] <String> [-Name] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMExtension** cmdlet gets properties of Virtual Machine Extensions installed on a virtual machine.
+Specify the name of an extension for which to get properties.
+To get only the instance view of an extension, specify the Status parameter.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get properties of an extension
+```
+PS C:\> Get-AzVMExtension -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine22" -Name "CustomScriptExtension"
 ```
 
-{{ Add example description here }}
+This command gets properties for the extension named CustomScriptExtension on the virtual machine named VirtualMachine22 in the resource group ResourceGroup11.
+
+### Example 2: Get instance view of an extension
+```
+PS C:\> Get-AzVMExtension -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine22" -Name "CustomScriptExtension" -Status
+```
+
+This command gets the instance view for the extension named CustomScriptExtension on the virtual machine named VirtualMachine22 in the resource group ResourceGroup11.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +59,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of an extension.
+This cmdlet gets properties for the extension that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -62,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group.
 
 ```yaml
 Type: System.String
@@ -77,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-To show the status.
+Indicates that this cmdlet gets only the instance view of an extension.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -92,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine.
+This cmdlet gets properties of an extension from the virtual machine that this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -107,8 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,3 +136,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzVMExtension](./Remove-AzVMExtension.md)
+
+[Set-AzVMExtension](./Set-AzVMExtension.md)
+
+

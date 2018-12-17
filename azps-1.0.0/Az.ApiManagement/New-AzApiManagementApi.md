@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 664CF009-FC52-4F1B-933B-3DEBD05AC8C5
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementapi
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementApi.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzApiManagementApi.md
 ---
 
 # New-AzApiManagementApi
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an API.
 
 ## SYNTAX
 
@@ -21,23 +24,23 @@ New-AzApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>] -Name
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzApiManagementApi** cmdlet creates an Azure API Management API.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an API
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>New-AzApiManagementApi -Context $ApiMgmtContext -Name "Echo api" -ServiceUrl "https://contoso.com/apis/echo" -Protocols @("http", "https") -Path "testapi"
 ```
 
-{{ Add example description here }}
+This command creates an API named EchoApi with the specified URL.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier for new API.
-This parameter is optional.
-If not specified the identifier will be generated.
+Specifies the ID of the API to create.
+If you do not specify this parameter, this cmdlet generates an ID for you.
 
 ```yaml
 Type: System.String
@@ -52,9 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationScope
-OAuth operations scope.
-This parameter is optional.
-Default value is $null.
+Specifies the OAuth operations scope.
+The default value is $Null.
 
 ```yaml
 Type: System.String
@@ -69,10 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationServerId
-OAuth authorization server identifier.
-This parameter is optional.
-Default value is $null.
-Must be specified if AuthorizationScope specified.
+Specifies the OAuth authorization server ID.
+The default value is $Null.
+You must specify this parameter if *AuthorizationScope* is specified.
 
 ```yaml
 Type: System.String
@@ -87,8 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -103,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -118,8 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Web API description.
-This parameter is optional.
+Specifies a description for the web API.
 
 ```yaml
 Type: System.String
@@ -134,9 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Web API name.
-Public name of the API as it would appear on the developer and admin portals.
-This parameter is required.
+Specifies the name of the web API.
+This is the public name of the API as it appears on the developer and admin portals.
 
 ```yaml
 Type: System.String
@@ -151,11 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Web API Path.
-Last part of the API's public URL.
-This URL will be used by API consumers for sending requests to the web service.
-Must be 0 to 400 characters long.
-This parameter is required.
+Specifies the web API path, which is the last part of the API's public URL and corresponds to the Web API URL suffix field in the admin portal.
+This URL is used by API consumers to send requests to the web service, and must be one to 400 characters long.
+The default value is $Null.
 
 ```yaml
 Type: System.String
@@ -170,8 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductIds
-Array of products IDs to add the new API to.
-This parameter is optional.
+Specifies an array of product IDs to which to add the new API.
 
 ```yaml
 Type: System.String[]
@@ -186,10 +181,10 @@ Accept wildcard characters: False
 ```
 
 ### -Protocols
-Web API protocols (http, https).
-Protocols over which API is made available.
-This parameter is required.
-Default value is $null.
+Specifies an array of web API protocols.
+Valid values are http, https.
+These are the web protocols over which the API is made available.
+The default value is $Null.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema[]
@@ -205,10 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUrl
-A URL of the web service exposing the API.
-This URL will be used by Azure API Management only, and will not be made public.
-Must be 1 to 2000 characters long.
-This parameter is required.
+Specifies the URL of the web service that exposes the API.
+This URL is used only by Azure API Management, and is not made public.
+The URL must be one to 2000 characters long.
 
 ```yaml
 Type: System.String
@@ -223,9 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionKeyHeaderName
-Subscription key header name.
-This parameter is optional.
-Default value is $null.
+Specifies the subscription key header name.
+The default value is $Null.
 
 ```yaml
 Type: System.String
@@ -240,9 +233,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionKeyQueryParamName
-Subscription key query string parameter name.
-This parameter is optional.
-Default value is $null.
+Specifies the subscription key query string parameter name.
+The default value is $Null.
 
 ```yaml
 Type: System.String
@@ -257,8 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -277,3 +268,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzApiManagementApi](./Export-AzApiManagementApi.md)
+
+[Get-AzApiManagementApi](./Get-AzApiManagementApi.md)
+
+[Import-AzApiManagementApi](./Import-AzApiManagementApi.md)
+
+[Remove-AzApiManagementApi](./Remove-AzApiManagementApi.md)
+
+[Set-AzApiManagementApi](./Set-AzApiManagementApi.md)
+
+

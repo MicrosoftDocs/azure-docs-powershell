@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version:
+ms.assetid: 2DF5FB4D-A5CB-439C-AC6F-DF2130AF33EC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/disable-azbatchcomputenodescheduling
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Disable-AzBatchComputeNodeScheduling.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/AzureBatch/Commands.Batch/help/Disable-AzBatchComputeNodeScheduling.md
 ---
 
 # Disable-AzBatchComputeNodeScheduling
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables task scheduling on the specified compute node.
 
 ## SYNTAX
 
@@ -27,25 +30,49 @@ Disable-AzBatchComputeNodeScheduling [[-ComputeNode] <PSComputeNode>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Disable-AzBatchComputeNodeScheduling** cmdlet disables task scheduling on the specified compute node.
+A compute node is an Azure virtual machine dedicated to a specific application workload.
+When you disable task scheduling on a compute node you will also have the option of determining what to do about jobs currently in the node's task queue.
+**Disable-AzBatchComputeNodeScheduling** lets you do the following: 
+- Terminate the tasks and put them back in the job queue.
+This enables those tasks to be rescheduled on another compute node. 
+- Terminate the tasks and remove them from the job queue.
+Tasks stopped in this manner will not be rescheduled. 
+- Wait for all the tasks currently being executed to complete and then disable task scheduling on the compute node. 
+- Wait for all the running tasks to complete and all the data retention periods to expire, and then disable task scheduling on the compute node.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Disable task scheduling on a compute node
+```
+PS C:\>$Context = Get-AzBatchAccountKeys -AccountName "contosobatchaccount"
+PS C:\> Disable-AzBatchComputeNodeScheduling -PoolId "myPool" -Id "tvm-1783593343_34-20151117t222514z" -BatchContext $Context
 ```
 
-{{ Add example description here }}
+These commands disable task schedule on the compute node tvm-1783593343_34-20151117t222514z.
+To do this, the first command in the example creates an object reference to the account keys for the batch account contosobatchaccount.
+This object reference is stored in a variable named $context.
+The second command then uses this object reference and the **Disable-AzBatchComputeNodeScheduling** cmdlet to connect to the pool myPool and disable task scheduling on node tvm-1783593343_34-20151117t222514z.
+Because the *DisableComputeNodeSchedulingOptions* parameter was not included any tasks currently running on the compute node will be requeued.
+
+### Example 2: Disable task scheduling on all compute nodes in a pool
+```
+PS C:\>$Context = Get-AzBatchAccountKeys -AccountName "contosobatchaccount"
+PS C:\> Get-AzBatchComputeNode -PoolId "Pool06"  -BatchContext $Context | Disable-AzBatchComputeNodeScheduling -BatchContext $Context
+```
+
+These commands disable task scheduling on all the computer nodes in the batch pool Pool06.
+To perform this task, the first command in the example creates an object reference to the account keys for the batch account contosobatchaccount.
+This object reference is stored in a variable named $context.
+The second command in the example then uses this object reference and **Get-AzBatchComputeNode** to return a collection of all the compute nodes found in Pool06.
+That collection is then piped to then **Disable-AzBatchComputeNodeScheduling** cmdlet to disable task scheduling on each compute node in the collection.
+Because the *DisableComputeNodeSchedulingOptions* parameter was not included any tasks currently running on the compute nodes will be requeued.
 
 ## PARAMETERS
 
 ### -BatchContext
-The BatchAccountContext instance to use when interacting with the Batch service.
-If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
-To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
-When using shared key authentication, the primary access key is used by default.
-To change the key to use, set the BatchAccountContext.KeyInUse property.
+Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
@@ -60,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputeNode
-{{Fill ComputeNode Description}}
+Specifies an object reference to the compute node where task scheduling is disabled.
+This object reference is created by using the Get-AzBatchComputeNode cmdlet and storing the returned compute node object in a variable.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
@@ -75,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -90,7 +118,21 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSchedulingOption
-{{Fill DisableSchedulingOption Description}}
+Specifies how this cmdlet deals with any tasks currently running on the computer node where scheduling is being disabled.
+The acceptable values for this parameter are:
+- Requeue.
+Tasks are stopped immediately and returned to the job queue.
+This enables the tasks to be rescheduled on another compute node.
+This is the default value. 
+- Terminate.
+Tasks are stopped immediately and removed from the job queue.
+These tasks will not be rescheduled. 
+- TaskCompletion.
+Currently running tasks will be able to complete before task scheduling is disabled on the compute node.
+No new tasks will be scheduled on this node. 
+- RetainedData.
+Currently running tasks will be able to complete and data retention periods will be able to expire before task scheduling is disabled on the compute node.
+No new tasks will be scheduled on this node.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Batch.Common.DisableComputeNodeSchedulingOption]
@@ -106,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The id of the compute node.
+Specifies the ID of the compute node where task scheduling is disabled.
 
 ```yaml
 Type: System.String
@@ -121,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -PoolId
-The id of the pool that contains the compute node.
+Specifies the ID of the batch pool that contains the compute node where task scheduling is disabled.
+If you use the *PoolId* parameter, do not use the *ComputeNode* parameter in that same command.
 
 ```yaml
 Type: System.String
@@ -136,8 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +194,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
+[Enable-AzBatchComputeNodeScheduling](./Enable-AzBatchComputeNodeScheduling.md)
+
+

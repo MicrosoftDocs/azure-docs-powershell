@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/get-azkeyvaultmanagedstoragesasdefinition
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultManagedStorageSasDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzKeyVaultManagedStorageSasDefinition.md
 ---
 
 # Get-AzKeyVaultManagedStorageSasDefinition
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Key Vault managed Storage SAS Definitions.
 
 ## SYNTAX
 
@@ -25,22 +27,49 @@ Get-AzKeyVaultManagedStorageSasDefinition [-InputObject] <PSKeyVaultManagedStora
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Gets a Key Vault managed Storage SAS Definition if the name of the definition is specified. If the definition name is not specified, then all the SAS definitions associated with the specified Key Vault managed Storage Account in the vault are listed.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: List all Key Vault managed Storage SAS Definitions
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzKeyVaultManagedStorageSasDefinition -VaultName 'myvault' -AccountName 'mystorageaccount'
+
+Id          : https://myvault.vault.azure.net:443/storage/mystorageaccount/sas/accountsas
+Vault Name  : myvault
+AccountName : mystorageaccount
+Name        : accountsas
+Enabled     : True
+Created     : 5/24/2018 9:11:08 PM
+Updated     : 5/24/2018 9:11:08 PM
+Tags        :
 ```
 
-{{ Add example description here }}
+Lists all the SAS definitions associated with Key Vault managed Storage Account 'mystorageaccount' managed by vault 'myvault'
+
+### Example 2: Get a Key Vault managed Storage Account
+```powershell
+PS C:\> Get-AzKeyVaultManagedStorageSasDefinition -VaultName 'myvault' -AccountName 'mystorageaccount' -Name 'accountsas'
+
+Id          : https://myvault.vault.azure.net:443/storage/mystorageaccount/sas/accountsas
+Secret Id   : https://myvault.vault.azure.net/secrets/mystorageaccount-accountsas
+Vault Name  : myvault
+AccountName : mystorageaccount
+Name        : accountsas
+Parameter   :
+Enabled     : True
+Created     : 5/24/2018 9:11:08 PM
+Updated     : 5/24/2018 9:11:08 PM
+Tags        :
+```
+
+Gets the details of SAS Definition 'accountsas' associated with Key Vault managed Storage Account 'mystorageaccount' managed by vault 'myvault'.
 
 ## PARAMETERS
 
 ### -AccountName
-Key Vault managed storage account name.
-Cmdlet constructs the FQDN of a managed storage account name from vault name, currently selected environment and manged storage account name.
+Vault name.
+Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
 
 ```yaml
 Type: System.String
@@ -55,12 +84,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -132,8 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +180,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[https://msdn.microsoft.com/en-us/library/dn868052.aspx](https://msdn.microsoft.com/en-us/library/dn868052.aspx)
+

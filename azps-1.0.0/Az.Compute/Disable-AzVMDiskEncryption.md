@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 979E956B-4C74-426E-A617-E50C4EBC8A20
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/disable-azvmdiskencryption
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Disable-AzVMDiskEncryption.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Disable-AzVMDiskEncryption.md
 ---
 
 # Disable-AzVMDiskEncryption
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables encryption on an IaaS virtual machine.
 
 ## SYNTAX
 
@@ -20,26 +23,40 @@ Disable-AzVMDiskEncryption [-ResourceGroupName] <String> [-VMName] <String> [[-V
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Disable-AzVMDiskEncryption** cmdlet disables encryption on an infrastructure as a service (IaaS) virtual machine.
+This cmdlet is only supported on Windows virtual machines and not Linux virtual machines.
+This cmdlet installs an extension on the virtual machine to disable encryption.
+If the *Name* parameter is not specified, an extension with the default name "AzureDiskEncryption for Windows VMs" is created.
+Caution: This cmdlet reboots the virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Disable encryption for all volumes on a Windows virtual machine
+```
+PS C:\> Disable-AzVMDiskEncryption -ResourceGroupName "Group001" -VMName "VM002"
 ```
 
-{{ Add example description here }}
+This command disables encryption for volumes of type all for the virtual machine named VM002 that belongs to the resource group named Group001.
+Since the *VolumeType* parameter is not specified, the cmdlet sets the value to All.
+
+### Example 2: Disable encryption for data volumes on a Windows virtual machine
+```
+PS C:\> $ResourceGroup = "Group002";
+PS C:\> $VMName = "VM004";
+PS C:\> Disable-AzVMDiskEncryption -ResourceGroupName "Group002" -VMName "VM004" -VolumeType "Data"
+```
+
+This command disables encryption for volumes of type data for the virtual machine named VM004 that belongs to the resource group named Group002.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -49,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoUpgradeMinorVersion
-Disable auto-upgrade of minor version
+Indicates that this cmdlet disables auto-upgrade of the minor version of the extension.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -64,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionPublisherName
-The extension publisher name.
-Specify this parameter only to override the default value of "Microsoft.Azure.Security".
+The extension publisher name. Specify this parameter only to override the default value of "Microsoft.Azure.Security".
 
 ```yaml
 Type: System.String
@@ -80,8 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionType
-The extension type.
-Specify this parameter to override its default value of "AzureDiskEncryption" for Windows VMs and "AzureDiskEncryptionForLinux" for Linux VMs.
+The extension type. Specify this parameter to override its default value of "AzureDiskEncryption" for Windows VMs and "AzureDiskEncryptionForLinux" for Linux VMs.
 
 ```yaml
 Type: System.String
@@ -96,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-To force the operation of decrypting the virtual machine.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -111,8 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
-If this parameter is not specified, default values used are AzureDiskEncryption for windows VMs and AzureDiskEncryptionForLinux for Linux VMs
+Specifes the name of the Azure Resource Manager (ARM) resource that represents the extension.
+If this parameter is not specified, this cmdlet defaults to "AzureDiskEncryption for Windows VMs".
 
 ```yaml
 Type: System.String
@@ -127,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name to which the VM belongs to
+Specifies the resource group name of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -142,7 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-The type handler version of AzureDiskEncryption VM extension that is used to disable encryption on the VM.
+Specifies the version of the encryption extension.
+If you do not specify a value for this parameter, the latest version of the extension is used.
 
 ```yaml
 Type: System.String
@@ -157,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Name of the virtual machine
+Specifies the name of the virtual machine that this cmdlet disables encryption on.
 
 ```yaml
 Type: System.String
@@ -172,7 +188,13 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeType
-Type of the volume (OS, Data or All) to perform decryption operation
+Specifies the type of virtual machine volumes to perform the encryption operation.
+For Windows virtual machines, valid values are: 
+- All
+- OS
+- Data.
+If you do not specify a value for this parameter, the default value is All.
+Disable encryption is not currently supported for Linux.
 
 ```yaml
 Type: System.String
@@ -197,7 +219,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -213,14 +235,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -235,3 +256,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVMDiskEncryptionStatus](./Get-AzVMDiskEncryptionStatus.md)
+
+[Remove-AzVMDiskEncryptionExtension](./Remove-AzVMDiskEncryptionExtension.md)
+
+[Set-AzVMDiskEncryptionExtension](./Set-AzVMDiskEncryptionExtension.md)
+
+

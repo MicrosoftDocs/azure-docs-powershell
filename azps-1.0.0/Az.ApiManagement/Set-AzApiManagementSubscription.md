@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 52115C49-0229-4F2C-B7B0-02FC52C1D32D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementsubscription
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementSubscription.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementSubscription.md
 ---
 
 # Set-AzApiManagementSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets existing subscription details.
 
 ## SYNTAX
 
@@ -20,22 +23,22 @@ Set-AzApiManagementSubscription -Context <PsApiManagementContext> -SubscriptionI
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementSubscription** cmdlet sets existing subscription details.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set the state and primary and secondary keys for a subscription
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementSubscription -Context $apimContext -SubscriptionId -0123456789 -PrimaryKey "80450f7d0b6d481382113073f67822c1" -SecondaryKey "97d6112c3a8f48d5bf0266b7a09a761c" -State "Active"
 ```
 
-{{ Add example description here }}
+This command sets the primary and secondary keys for a subscription and activates it.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -50,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -65,9 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiresOn
-Subscription expiration date.
-This parameter is optional.
-Default value is $null.
+Specifies a subscription expiration date.
+The default value of this parameter is $Null.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -82,8 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Subscription name.
-This parameter is optional.
+Specifies a subscription name.
 
 ```yaml
 Type: System.String
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscripition type representing the modified subscription.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -113,10 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryKey
-Subscription primary key.
-This parameter is optional.
-If not specified will be generated automatically.
-Must be 1 to 300 characters long.
+Specifies the subscription primary key.
+This parameter is generated automatically if not specified.
+This parameter must be 1 to 300 characters long.
 
 ```yaml
 Type: System.String
@@ -131,10 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryKey
-Subscription secondary key.
-This parameter is optional.
-If not specified will be generated automatically.
-Must be 1 to 300 characters long.
+Specifies the subscription secondary key.
+This parameter is generated automatically if not specified.
+This parameter must be 1 to 300 characters long.
 
 ```yaml
 Type: System.String
@@ -149,9 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Subscription state.
-This parameter is optional.
-Default value is $null.
+Specifies the subscription state.
+The default value of this parameter is $Null.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState]
@@ -167,9 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -StateComment
-Subscription state comment.
-This parameter is optional.
-Default value is $null.
+Specifies the subscription state comment.
+The default value of this parameter is $Null.
 
 ```yaml
 Type: System.String
@@ -184,8 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Identifier of existing subscription.
-This parameter is required.
+Specifies the subscription ID.
 
 ```yaml
 Type: System.String
@@ -200,8 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -209,7 +204,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.String
 
-### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
 ### System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
@@ -222,3 +217,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementSubscription](./Get-AzApiManagementSubscription.md)
+
+[New-AzApiManagementSubscription](./New-AzApiManagementSubscription.md)
+
+[Remove-AzApiManagementSubscription](./Remove-AzApiManagementSubscription.md)
+
+

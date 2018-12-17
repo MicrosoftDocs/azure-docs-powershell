@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementapirevision
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementApiRevision.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementApiRevision.md
 ---
 
 # Remove-AzApiManagementApiRevision
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removed a particular API Revision
 
 ## SYNTAX
 
@@ -25,16 +27,17 @@ Remove-AzApiManagementApiRevision -InputObject <PsApiManagementApi> [-PassThru]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The cmdlet **Remove-AzApiManagementApiRevision** removes a particular API revision.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an API Revision
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzAzureRmApiManagementApiRevision -Context $apimContext -ApiId "echo-api" -ApiRevision "2"
 ```
 
-{{ Add example description here }}
+This command removes the `2` revision of the API `echo-api` from API Management service.
 
 ## PARAMETERS
 
@@ -55,8 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Identifier of the API Revision.
-This parameter is required.
+Identifier of the API Revision. This parameter is required.
 
 ```yaml
 Type: System.String
@@ -90,9 +92,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -102,8 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Instance of PsApiManagementApiRelease.
-This parameter is required.
+Instance of PsApiManagementApiRelease. This parameter is required.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi
@@ -165,8 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -183,3 +183,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementApiRevision](./Get-AzApiManagementApiRevision.md)
+
+[New-AzApiManagementApiRevision](./New-AzApiManagementApiRevision.md)
+
+[Set-AzApiManagementApiRevision](./Set-AzApiManagementApiRevision.md)

@@ -1,48 +1,68 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: C3B2C33F-8BD4-4E31-9450-EF6A3A6A5325
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/set-azpolicyassignment
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Set-AzPolicyAssignment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Set-AzPolicyAssignment.md
 ---
 
 # Set-AzPolicyAssignment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies a policy assignment.
 
 ## SYNTAX
 
 ### NameParameterSet (Default)
 ```
 Set-AzPolicyAssignment -Name <String> -Scope <String> [-NotScope <String[]>] [-DisplayName <String>]
- [-Description <String>] [-Metadata <String>] [-Sku <Hashtable>] [-AssignIdentity] [-Location <String>]
- [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-Description <String>] [-Metadata <String>] [-AssignIdentity] [-Location <String>] [-ApiVersion <String>]
+ [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### IdParameterSet
 ```
 Set-AzPolicyAssignment [-NotScope <String[]>] -Id <String> [-DisplayName <String>] [-Description <String>]
- [-Metadata <String>] [-Sku <Hashtable>] [-AssignIdentity] [-Location <String>] [-ApiVersion <String>] [-Pre]
+ [-Metadata <String>] [-AssignIdentity] [-Location <String>] [-ApiVersion <String>] [-Pre]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzPolicyAssignment** cmdlet modifies a policy assignment.
+Specify an assignment by ID or by name and scope.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update the display name
+```
+PS C:\> $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+PS C:\> $PolicyAssignment = Get-AzPolicyAssignment -Name 'PolicyAssignment' -Scope $ResourceGroup.ResourceId
+PS C:\> Set-AzPolicyAssignment -Id $PolicyAssignment.ResourceId -DisplayName 'Do not allow VM creation'
 ```
 
-{{ Add example description here }}
+The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet.
+The command stores that object in the $ResourceGroup variable.
+The second command gets the policy assignment named PolicyAssignment by using the Get-AzPolicyAssignment cmdlet.
+The command stores that object in the $PolicyAssignment variable.
+The final command updates the display name on the policy assignment on the resource group identified by the **ResourceId** property of $ResourceGroup.
+
+### Example 2: Add a managed identity to the policy assignment
+```
+PS C:\> $PolicyAssignment = Get-AzPolicyAssignment -Name 'PolicyAssignment'
+PS C:\> Set-AzPolicyAssignment -Id $PolicyAssignment.ResourceId -AssignIdentity -Location 'westus'
+```
+
+The first command gets the policy assignment named PolicyAssignment from the current subscription by using the Get-AzPolicyAssignment cmdlet.
+The command stores that object in the $PolicyAssignment variable.
+The final command assigns a managed identity to the policy assignment.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the version of the resource provider API to use.
+If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: System.String
@@ -57,8 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-Generate and assign an Azure Active Directory Identity for this policy assignment.
-The identity will be used when executing deployments for 'deployIfNotExists' policies.
+Generate and assign an Azure Active Directory Identity for this policy assignment. The identity will be used when executing deployments for 'deployIfNotExists' policies. Location is required when assigning an identity.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -73,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -88,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description of the updated policy assignment
+The description for policy assignment
 
 ```yaml
 Type: System.String
@@ -103,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The display name of the updated policy assignment
+Specifies a new display name for the policy assignment.
 
 ```yaml
 Type: System.String
@@ -118,8 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified ID of the policy assignment to update, including the scope, e.g.
-/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}.
+Specifies the fully qualified resource ID for the policy assignment that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -134,8 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location of the policy assignment.
-This is only required when the policy assignment has a resource identity.
+The location of the policy assignment's resource identity. This is required when the -AssignIdentity switch is used.
 
 ```yaml
 Type: System.String
@@ -150,8 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-The updated metadata for the policy assignment.
-This can either be a path to a file name containing the metadata, or the metadata as a string.
+The updated metadata for the policy assignment. This can either be a path to a file name containing the metadata, or the metadata as a string.
 
 ```yaml
 Type: System.String
@@ -166,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the policy assignment to update.
+Specifies the name of the policy assignment that this cmdlet modifies.
 
 ```yaml
 Type: System.String
@@ -181,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotScope
-The not scopes of the updated policy assignment.
+The policy assignment not scopes.
 
 ```yaml
 Type: System.String[]
@@ -196,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -211,8 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-The scope of the policy assignment to update, e.g.
-/providers/managementGroups/{managementGroupName}.
+Specifies the scope at which the policy is applied.
 
 ```yaml
 Type: System.String
@@ -226,33 +241,14 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Sku
-A hash table which specifies sku properties.
-This parameter is deprecated and ignored.
-
-```yaml
-Type: System.Collections.Hashtable
-Parameter Sets: (All)
-Aliases: SkuObject
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
 ### System.String[]
-
-### System.Collections.Hashtable
 
 ## OUTPUTS
 
@@ -261,3 +257,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPolicyAssignment](./Get-AzPolicyAssignment.md)
+
+[New-AzPolicyAssignment](./New-AzPolicyAssignment.md)
+
+[Remove-AzPolicyAssignment](./Remove-AzPolicyAssignment.md)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaybackendhttpsettings
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzApplicationGatewayBackendHttpSettings.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzApplicationGatewayBackendHttpSettings.md
 ---
 
 # Set-AzApplicationGatewayBackendHttpSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates back-end HTTP settings for an application gateway.
 
 ## SYNTAX
 
@@ -17,23 +19,26 @@ Set-AzApplicationGatewayBackendHttpSettings -ApplicationGateway <PSApplicationGa
  -Port <Int32> -Protocol <String> -CookieBasedAffinity <String> [-RequestTimeout <Int32>]
  [-ConnectionDraining <PSApplicationGatewayConnectionDraining>] [-ProbeId <String>]
  [-Probe <PSApplicationGatewayProbe>]
- [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
- [-TrustedRootCertificate <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate]>]
- [-PickHostNameFromBackendAddress] [-HostName <String>] [-AffinityCookieName <String>] [-Path <String>]
+ [-AuthenticationCertificates <PSApplicationGatewayAuthenticationCertificate[]>]
+ [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>] [-PickHostNameFromBackendAddress]
+ [-HostName <String>] [-AffinityCookieName <String>] [-Path <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Set-AzApplicationGatewayBackendHttpSettings cmdlet updates the back-end Hypertext Transfer Protocol (HTTP) settings for an Azure application gateway.
+Back-end HTTP settings are applied to all back-end servers in a pool.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Update the back-end HTTP settings for an application gateway
+```
+PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Set-AzApplicationGatewayBackendHttpSettings -ApplicationGateway $AppGw -Name "Setting02" -Port 88 -Protocol "Http" -CookieBasedAffinity "Disabled"
 ```
 
-{{ Add example description here }}
+The first command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable.
+The second command updates the HTTP settings of the application gateway in the $AppGw variable to use port 88, the HTTP protocol and enables cookie-based affinity.
 
 ## PARAMETERS
 
@@ -53,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationGateway
-The applicationGateway
+Specifies an application gateway object with which this cmdlet associates back-end HTTP settings.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
@@ -68,10 +73,10 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationCertificates
-Application gateway Authentication Certificates
+Specifies authentication certificates for the application gateway.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate[]
 Parameter Sets: (All)
 Aliases:
 
@@ -98,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -CookieBasedAffinity
-Cookie Based Affinity
+Specifies whether cookie-based affinity should be enabled or disabled for the backend server pool.
+The acceptable values for this parameter are: Disabled or Enabled.
 
 ```yaml
 Type: System.String
@@ -114,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -144,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the backend http settings
+Specifies the name of the back-end HTTP settings object.
 
 ```yaml
 Type: System.String
@@ -190,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-Port
+Specifies the port to use for each server in the back-end server pool.
 
 ```yaml
 Type: System.Int32
@@ -205,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -Probe
-Application gateway Probe
+Specifies a probe to associate with the back-end HTTP settings.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe
@@ -220,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProbeId
-ID of the application gateway Probe
+Specifies the ID of the probe to associate with the back-end HTTP settings.
 
 ```yaml
 Type: System.String
@@ -235,7 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Protocol
+Specifies the protocol to use for communication between the application gateway and back-end servers.
+The acceptable values for this parameter are: Http and Https.
+This parameter is case-sensitive.
 
 ```yaml
 Type: System.String
@@ -251,8 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestTimeout
-Request Timeout.
-Default value 30 seconds.
+Specifies a request time-out value.
 
 ```yaml
 Type: System.Int32
@@ -270,7 +277,7 @@ Accept wildcard characters: False
 Application gateway Trusted Root Certificates
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate]
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate[]
 Parameter Sets: (All)
 Aliases:
 
@@ -282,8 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -296,3 +302,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzApplicationGatewayBackendHttpSettings]()
+
+[Get-AzApplicationGatewayBackendHttpSettings]()
+
+[New-AzApplicationGatewayBackendHttpSettings]()
+
+[Remove-AzApplicationGatewayBackendHttpSettings]()
+

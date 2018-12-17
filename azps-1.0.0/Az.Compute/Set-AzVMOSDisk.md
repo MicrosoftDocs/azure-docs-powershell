@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 8F7AF1B8-D769-452C-92CF-4486C3EB894D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmosdisk
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMOSDisk.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMOSDisk.md
 ---
 
 # Set-AzVMOSDisk
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the operating system disk properties on a virtual machine.
 
 ## SYNTAX
 
@@ -16,15 +19,15 @@ schema: 2.0.0
 ```
 Set-AzVMOSDisk [-VM] <PSVirtualMachine> [[-Name] <String>] [[-VhdUri] <String>] [[-Caching] <CachingTypes>]
  [[-SourceImageUri] <String>] [[-CreateOption] <String>] [-DiskSizeInGB <Int32>] [-ManagedDiskId <String>]
- [-StorageAccountType <String>] [-WriteAccelerator] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [-StorageAccountType <String>] [-WriteAccelerator] [-DiffDiskSetting <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### WindowsParamSet
 ```
 Set-AzVMOSDisk [-VM] <PSVirtualMachine> [[-Name] <String>] [[-VhdUri] <String>] [[-Caching] <CachingTypes>]
  [[-SourceImageUri] <String>] [[-CreateOption] <String>] [-Windows] [-DiskSizeInGB <Int32>]
- [-ManagedDiskId <String>] [-StorageAccountType <String>] [-WriteAccelerator]
+ [-ManagedDiskId <String>] [-StorageAccountType <String>] [-WriteAccelerator] [-DiffDiskSetting <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -34,14 +37,14 @@ Set-AzVMOSDisk [-VM] <PSVirtualMachine> [[-Name] <String>] [[-VhdUri] <String>] 
  [[-SourceImageUri] <String>] [[-CreateOption] <String>] [-Windows] [-DiskEncryptionKeyUrl] <String>
  [-DiskEncryptionKeyVaultId] <String> [[-KeyEncryptionKeyUrl] <String>] [[-KeyEncryptionKeyVaultId] <String>]
  [-DiskSizeInGB <Int32>] [-ManagedDiskId <String>] [-StorageAccountType <String>] [-WriteAccelerator]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-DiffDiskSetting <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### LinuxParamSet
 ```
 Set-AzVMOSDisk [-VM] <PSVirtualMachine> [[-Name] <String>] [[-VhdUri] <String>] [[-Caching] <CachingTypes>]
  [[-SourceImageUri] <String>] [[-CreateOption] <String>] [-Linux] [-DiskSizeInGB <Int32>]
- [-ManagedDiskId <String>] [-StorageAccountType <String>] [-WriteAccelerator]
+ [-ManagedDiskId <String>] [-StorageAccountType <String>] [-WriteAccelerator] [-DiffDiskSetting <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -51,25 +54,79 @@ Set-AzVMOSDisk [-VM] <PSVirtualMachine> [[-Name] <String>] [[-VhdUri] <String>] 
  [[-SourceImageUri] <String>] [[-CreateOption] <String>] [-Linux] [-DiskEncryptionKeyUrl] <String>
  [-DiskEncryptionKeyVaultId] <String> [[-KeyEncryptionKeyUrl] <String>] [[-KeyEncryptionKeyVaultId] <String>]
  [-DiskSizeInGB <Int32>] [-ManagedDiskId <String>] [-StorageAccountType <String>] [-WriteAccelerator]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-DiffDiskSetting <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMOSDisk** cmdlet sets the operating system disk properties on a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set properties on a virtual machine from platform image
+```
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
+PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id 
+PS C:\> Set-AzVMOSDisk -VM $VirtualMachine -Name "OsDisk12" -VhdUri "os.vhd" -Caching ReadWrite
+PS C:\> $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential) 
+PS C:\> $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName "Canonical" -Offer "UbuntuServer" -Skus "15.10" -Version "latest" -Caching ReadWrite
+PS C:\> $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption FromImage
+PS C:> New-AzVM -VM $VirtualMachine -ResouceGroupName "ResourceGroup11"
 ```
 
-{{ Add example description here }}
+The first command gets the availability set named AvailablitySet13 in the resource group named ResourceGroup11, and then stores that object in the $AvailabilitySet variable.
+The second command creates a virtual machine object, and then stores it in the $VirtualMachine variable.
+The command assigns a name and size to the virtual machine.
+The virtual machine belongs to the availability set stored in $AvailabilitySet.
+The final command sets the properties on the virtual machine in $VirtualMachine.
+
+### Example 2: Sets properties on a virtual machine from generalized user image
+```
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
+PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1"
+PS C:\> $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential)
+PS C:\> $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -SourceImageUri "https://mystorageaccount.blob.core.windows.net/vhds/myOSImage.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption fromImage -Linux
+PS C:> New-AzVM -VM $VirtualMachine -ResouceGroupName "ResourceGroup11"
+```
+
+The first command gets the availability set named AvailablitySet13 in the resource group named ResourceGroup11 and stores that object in the $AvailabilitySet variable.
+The second command creates a virtual machine object and stores it in the $VirtualMachine variable.
+The command assigns a name and size to the virtual machine.
+The virtual machine belongs to the availability set stored in $AvailabilitySet.
+The final command sets the properties on the virtual machine in $VirtualMachine.
+
+### Example 3: Sets properties on a virtual machine from specialized user image
+```
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
+PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1"
+PS C:\> $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption Attach -Linux
+PS C:> New-AzVM -VM $VirtualMachine -ResouceGroupName "ResourceGroup11"
+```
+
+The first command gets the availability set named AvailablitySet13 in the resource group named ResourceGroup11 and stores that object in the $AvailabilitySet variable.
+The second command creates a virtual machine object and stores it in the $VirtualMachine variable.
+The command assigns a name and size to the virtual machine.
+The virtual machine belongs to the availability set stored in $AvailabilitySet.
+The final command sets the properties on the virtual machine in $VirtualMachine.
+
+### Example 4: Set the disk encryption settings on a virtual machine operating system disk
+```
+PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1"
+PS C:> $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "OsDisk12" -VhdUri "os.vhd" -Caching ReadWrite -Windows -CreateOption "Attach" -DiskEncryptionKeyUrl "https://mytestvault.vault.azure.net/secrets/Test1/514ceb769c984379a7e0230bddaaaaaa" -DiskEncryptionKeyVaultId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.KeyVault/vaults/mytestvault"
+PS C:> New-AzVM -VM $VirtualMachine -ResouceGroupName " ResourceGroup11"
+```
+
+This example sets the disk encryption settings on a virtual machine operating system disk.
 
 ## PARAMETERS
 
 ### -Caching
-The virtual machine OS disk's caching.
+Specifies the caching mode of the operating system disk.
+Valid values are: 
+- ReadOnly
+- ReadWrite
+The default value is ReadWrite.
+Changing the caching value causes the virtual machine to restart.
+This setting affects the performance of the disk.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.CachingTypes]
@@ -85,7 +142,19 @@ Accept wildcard characters: False
 ```
 
 ### -CreateOption
-The virtual machine data disk's create option.
+Specifies whether this cmdlet creates a disk in the virtual machine from a platform or user image, or attaches an existing disk.
+Valid values are: 
+- Attach.
+Specify this option to create a virtual machine from a specialized disk.
+When you specify this option, do not specify the *SourceImageUri* parameter.
+Instead, use the Set-AzVMSourceImage cmdlet.
+You must also use the use the *Windows* or *Linux* parameters to tell the azure platform the type of the operating system on the VHD.
+The *VhdUri* parameter is enough to tell the azure platform the location of the disk to attach. 
+- FromImage.
+Specify this option to create a virtual machine from a platform image or a generalized user image.
+In the case of a generalized user image, you also need to specify the *SourceImageUri* parameter and either the *Windows* or *Linux* parameters to tell the Azure platform the location and type of the operating system disk VHD instead of using the **Set-AzVMSourceImage** cmdlet.
+In the case of a platform image, the *VhdUri* parameter is sufficient. 
+- Empty.
 
 ```yaml
 Type: System.String
@@ -100,12 +169,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -114,8 +183,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DiffDiskSetting
+Specifies the differencing disk settings for operating system disk.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DiskEncryptionKeyUrl
-the URL referencing a secret in a disk encryption key vault
+Specifies the location of the disk encryption key.
 
 ```yaml
 Type: System.String
@@ -130,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskEncryptionKeyVaultId
-the Id of a disk encryption key vault
+Specifies the resource ID of the Key Vault containing the disk encryption key.
 
 ```yaml
 Type: System.String
@@ -145,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSizeInGB
-The virtual machine OS disk's size in GB.
+Specifies the size, in GB, of the operating system disk.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -160,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyEncryptionKeyUrl
-the URL referencing a key in a key encryption key vault
+Specifies the location of the key encryption key.
 
 ```yaml
 Type: System.String
@@ -175,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyEncryptionKeyVaultId
-the Id of a key encryption key Vault
+Specifies the resource ID of the Key Vault containing the key encryption key.
 
 ```yaml
 Type: System.String
@@ -190,7 +274,8 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-The virtual machine disk's OS is Linux.
+Indicates that the operating system on the user image is Linux.
+Specify this parameter for user image based virtual machine deployment.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -205,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedDiskId
-The virtual machine managed disk's Id.
+Specifies the ID of a managed disk.
 
 ```yaml
 Type: System.String
@@ -220,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The virtual machine OS disk's name.
+Specifies the name of the operating system disk.
 
 ```yaml
 Type: System.String
@@ -235,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceImageUri
-The virtual machine OS disk's source image Uri.
+Specifies the URI of the VHD for user image scenarios.
 
 ```yaml
 Type: System.String
@@ -250,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountType
-The virtual machine managed disk's account type.
+Specifies the storage account type of managed disk.
 
 ```yaml
 Type: System.String
@@ -265,7 +350,10 @@ Accept wildcard characters: False
 ```
 
 ### -VhdUri
-The virtual machine OS disk's Vhd Uri.
+Specifies the Uniform Resource Identifier (URI) of a virtual hard disk (VHD).
+For an image based virtual machine, this parameter specifies the VHD file to create when a platform image or user image is specified.
+This is the location from which the image binary large object (BLOB) is copied to start the virtual machine.
+For a disk based virtual machine boot scenario, this parameter specifies the VHD file that the virtual machine uses directly for starting up.
 
 ```yaml
 Type: System.String
@@ -280,7 +368,8 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-The virtual machine profile.
+Specifies the local virtual machine object on which to set operating system disk properties.
+To obtain a virtual machine object, use the Get-AzVM cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
@@ -295,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-The virtual machine disk's OS is Windows.
+Indicates that the operating system on the user image is Windows.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -310,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -WriteAccelerator
-{{Fill WriteAccelerator Description}}
+Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -325,12 +414,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
+
+### System.String
 
 ## OUTPUTS
 
@@ -339,3 +429,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+[Get-AzAvailabilitySet](./Get-AzAvailabilitySet.md)
+
+[New-AzVMConfig](./New-AzVMConfig.md)
+
+

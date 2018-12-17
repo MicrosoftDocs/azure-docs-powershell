@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
-online version:
+ms.assetid: 25E3F297-1D91-4102-B4D3-1E7195A5D340
+online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/add-azrtmtrafficmanagerexpectedstatuscoderange
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Add-AzTrafficManagerExpectedStatusCodeRange.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Add-AzTrafficManagerExpectedStatusCodeRange.md
 ---
 
 # Add-AzTrafficManagerExpectedStatusCodeRange
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an expected status code range to a local Traffic Manager profile object.
 
 ## SYNTAX
 
@@ -19,26 +22,35 @@ Add-AzTrafficManagerExpectedStatusCodeRange -Min <Int32> -Max <Int32>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzTrafficManagerExpectedStatusCodeRange** cmdlet adds a range of expected status codes to a local Azure Traffic Manager profile object.
+You can get a profile by using the New-AzTrafficManagerProfile or Get-AzTrafficManagerProfile cmdlets.
+
+This cmdlet operates on the local profile object.
+Commit your changes to the profile for Traffic Manager by using the Set-AzTrafficManagerProfile cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add an expected status code range to a profile
+```
+PS C:\> $TrafficManagerProfile = Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Add-AzTrafficManagerExpectedStatusCodeRange -TrafficManagerProfile $TrafficManagerProfile -Min 200 -Max 499
+PS C:\> Set-AzTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
 ```
 
-{{ Add example description here }}
+The first command gets an Azure Traffic Manager profile by using the **Get-AzTrafficManagerProfile** cmdlet.
+The command stores the local profile in the $TrafficManagerProfile variable.
+The second command adds an expected status code range to the profile stored in $TrafficManagerProfile.
+The final command updates the profile in Traffic Manager to match the local value in $TrafficManagerProfile.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Max
-The maximum value of the expected status code range.
+Specifies the highest value in the status code range to be added.
 
 ```yaml
 Type: System.Int32
@@ -63,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Min
-The minimum value of the expected status code range.
+Specifies the lowest value in the status code range to be added.
 
 ```yaml
 Type: System.Int32
@@ -78,7 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfile
-The profile to which the range will be added.
+Specifies a local **TrafficManagerProfile** object.
+This cmdlet modifies this local object.
+To obtain a **TrafficManagerProfile** object, use the Get-AzTrafficManagerProfile cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
@@ -108,8 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,8 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -138,3 +150,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzTrafficManagerExpectedStatusCodeRange](./Remove-AzTrafficManagerExpectedStatusCodeRange.md)
+
+[Get-AzTrafficManagerProfile](./Get-AzTrafficManagerProfile.md)
+
+[Set-AzTrafficManagerProfile](./Set-AzTrafficManagerProfile.md)

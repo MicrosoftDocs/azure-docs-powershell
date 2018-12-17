@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.PowerBI.dll-Help.xml
 Module Name: Az.PowerBIEmbedded
-online version:
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/new-azpowerbiembeddedcapacity
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/New-AzPowerBIEmbeddedCapacity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/New-AzPowerBIEmbeddedCapacity.md
 ---
 
 # New-AzPowerBIEmbeddedCapacity
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new PowerBI Embedded Capacity.
 
 ## SYNTAX
 
@@ -19,21 +22,31 @@ New-AzPowerBIEmbeddedCapacity [-ResourceGroupName] <String> [-Name] <String> [-L
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzPowerBIEmbeddedCapacity cmdlet creates a new PowerBI Embedded Capacity
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> New-AzPowerBIEmbeddedCapacity -ResourceGroupName "testRG" -Name "testcapacity" -Location "West Central US" -Sku "A1" -Administrator admin@microsoft.com
+Type                   : Microsoft.PowerBIDedicated/capacities
+Id                     : /subscriptions/78e47976-.../resourceGroups/testRG/providers/Microsoft.PowerBIDedicated/capacities/testcapacity
+ResourceGroup          : testRG
+Name                   : testcapacity
+Location               : West Central US
+State                  : Succeeded
+Administrator          : {admin@microsoft.com}
+Sku                    : A1
+Tier                   : PBIE_Azure
+Tag                    : {}
 ```
 
-{{ Add example description here }}
+Creates a capacity named testcapacity in the Azure region West Central US and in resource group testRG. The sku level for the capacity will be A1.
 
 ## PARAMETERS
 
 ### -Administrator
-A comma separated capacity names to set as administrators on the capacity
+A comma separated capacity names to set as administrator on the capacity
 
 ```yaml
 Type: System.String[]
@@ -51,9 +64,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Azure region where the capacity should be created.
+The Azure region where the PowerBI Embedded Capacity is hosted
 
 ```yaml
 Type: System.String
@@ -78,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the capacity to create.
+Name of the PowerBI Embedded Capacity
 
 ```yaml
 Type: System.String
@@ -93,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to create the capacity.
+Name of the Azure resource group to which the capacity belongs
 
 ```yaml
 Type: System.String
@@ -108,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Name of the Sku used to create the capacity
+The name of the Sku for the capacity.
 
 ```yaml
 Type: System.String
@@ -124,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A string,string dictionary of tags associated with this capacity
+Key-value pairs in the form of a hash table set as tags on the capacity.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -139,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts user to confirm whether to perform the operation
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,8 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Describes the actions the current operation will perform without actually performing them
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -170,8 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -188,3 +199,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzPowerBIEmbeddedCapacity](./Get-AzPowerBIEmbeddedCapacity.md)
+
+[Remove-AzPowerBIEmbeddedCapacity](./Remove-AzPowerBIEmbeddedCapacity.md)

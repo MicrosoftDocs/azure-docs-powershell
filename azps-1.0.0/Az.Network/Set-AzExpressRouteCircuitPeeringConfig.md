@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 6C0281EC-4D23-4BD0-A268-4C278ABC7B1A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azexpressroutecircuitpeeringconfig
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzExpressRouteCircuitPeeringConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Set-AzExpressRouteCircuitPeeringConfig.md
 ---
 
 # Set-AzExpressRouteCircuitPeeringConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Saves a modified ExpressRoute peering configuration.
 
 ## SYNTAX
 
@@ -17,10 +20,9 @@ schema: 2.0.0
 Set-AzExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit <PSExpressRouteCircuit>
  -PeeringType <String> -PeerASN <UInt32> -PrimaryPeerAddressPrefix <String>
  -SecondaryPeerAddressPrefix <String> -VlanId <Int32> [-SharedKey <String>]
- [-MicrosoftConfigAdvertisedPublicPrefixes <System.Collections.Generic.List`1[System.String]>]
- [-MicrosoftConfigCustomerAsn <Int32>] [-MicrosoftConfigRoutingRegistryName <String>]
- [-PeerAddressType <String>] [-LegacyMode <Boolean>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [-MicrosoftConfigAdvertisedPublicPrefixes <String[]>] [-MicrosoftConfigCustomerAsn <Int32>]
+ [-MicrosoftConfigRoutingRegistryName <String>] [-PeerAddressType <String>] [-LegacyMode <Boolean>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### MicrosoftPeeringConfigRoutFilterId
@@ -28,10 +30,9 @@ Set-AzExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit <PSEx
 Set-AzExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit <PSExpressRouteCircuit>
  -PeeringType <String> -PeerASN <UInt32> -PrimaryPeerAddressPrefix <String>
  -SecondaryPeerAddressPrefix <String> -VlanId <Int32> [-SharedKey <String>]
- [-MicrosoftConfigAdvertisedPublicPrefixes <System.Collections.Generic.List`1[System.String]>]
- [-MicrosoftConfigCustomerAsn <Int32>] [-MicrosoftConfigRoutingRegistryName <String>] -RouteFilterId <String>
- [-PeerAddressType <String>] [-LegacyMode <Boolean>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [-MicrosoftConfigAdvertisedPublicPrefixes <String[]>] [-MicrosoftConfigCustomerAsn <Int32>]
+ [-MicrosoftConfigRoutingRegistryName <String>] -RouteFilterId <String> [-PeerAddressType <String>]
+ [-LegacyMode <Boolean>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### MicrosoftPeeringConfigRoutFilter
@@ -39,33 +40,42 @@ Set-AzExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit <PSEx
 Set-AzExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit <PSExpressRouteCircuit>
  -PeeringType <String> -PeerASN <UInt32> -PrimaryPeerAddressPrefix <String>
  -SecondaryPeerAddressPrefix <String> -VlanId <Int32> [-SharedKey <String>]
- [-MicrosoftConfigAdvertisedPublicPrefixes <System.Collections.Generic.List`1[System.String]>]
- [-MicrosoftConfigCustomerAsn <Int32>] [-MicrosoftConfigRoutingRegistryName <String>]
- -RouteFilter <PSRouteFilter> [-PeerAddressType <String>] [-LegacyMode <Boolean>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-MicrosoftConfigAdvertisedPublicPrefixes <String[]>] [-MicrosoftConfigCustomerAsn <Int32>]
+ [-MicrosoftConfigRoutingRegistryName <String>] -RouteFilter <PSRouteFilter> [-PeerAddressType <String>]
+ [-LegacyMode <Boolean>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzExpressRouteCircuitPeeringConfig** cmdlets saves a modified ExpressRoute peering
+configuration back to Azure.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Change an existing peering configuration
 ```
-
-{{ Add example description here }}
+$circuit = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg
+$parameters = @{
+    Name = 'AzurePrivatePeering'
+    Circuit = $circuit
+    PeeringType = 'AzurePrivatePeering'
+    PeerASN = 100
+    PrimaryPeerAddressPrefix = '10.6.1.0/30'
+    SecondaryPeerAddressPrefix = '10.6.2.0/30'
+    VlanId  = 201
+}
+Set-AzExpressRouteCircuitPeeringConfig @parameters
+Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -75,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-The ExpressRouteCircuit
+The ExpressRoute circuit object containing the peering configuration to be modified.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -105,10 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -MicrosoftConfigAdvertisedPublicPrefixes
-The MircosoftConfigAdvertisedPublicPrefixes
+For a PeeringType of MicrosoftPeering, you must provide a list of all prefixes you plan to
+advertise over the BGP session. Only public IP address prefixes are accepted. You can send a comma
+separated list if you plan to send a set of prefixes. These prefixes must be registered to you in
+a Routing Registry Name (RIR / IRR).
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -120,7 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -MicrosoftConfigCustomerAsn
-The customerAsn
+If you are advertising prefixes that are not registered to the peering AS number, you can specify
+the AS number to which they are registered.
 
 ```yaml
 Type: System.Int32
@@ -135,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -MicrosoftConfigRoutingRegistryName
-The MircosoftConfigRoutingRegistryName
+The Routing Registry Name (RIR / IRR) to which the AS number and prefixes are registered.
 
 ```yaml
 Type: System.String
@@ -150,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Peering
+The name of the peering configuration to be modified.
 
 ```yaml
 Type: System.String
@@ -181,7 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -PeerASN
-The PeerAsn
+The AS number of your ExpressRoute circuit. This must be a Public ASN when the PeeringType is
+AzurePublicPeering.
 
 ```yaml
 Type: System.UInt32
@@ -196,7 +211,8 @@ Accept wildcard characters: False
 ```
 
 ### -PeeringType
-The PeeringType
+The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and
+`MicrosoftPeering`
 
 ```yaml
 Type: System.String
@@ -212,7 +228,9 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryPeerAddressPrefix
-The PrimaryPeerAddressPrefix
+This is the IP Address range for the primary routing path of this peering relationship. This must
+be a /30 CIDR subnet. The first odd-numbered address in this subnet should be assigned to your
+router interface. Azure will configure the next even-numbered address to the Azure router interface.
 
 ```yaml
 Type: System.String
@@ -227,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteFilter
-RouteFilter
+This is an existing RouteFilter object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSRouteFilter
@@ -242,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteFilterId
-RouteFilterId
+This is the resource Id of an existing RouteFilter object.
 
 ```yaml
 Type: System.String
@@ -257,7 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryPeerAddressPrefix
-The SecondaryPeerAddressPrefix
+This is the IP Address range for the secondary routing path of this peering relationship. This must
+be a /30 CIDR subnet. The first odd-numbered address in this subnet should be assigned to your
+router interface. Azure will configure the next even-numbered address to the Azure router interface.
 
 ```yaml
 Type: System.String
@@ -272,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharedKey
-The SharedKey
+This is an optional MD5 hash used as a pre-shared key for the peering configuration.
 
 ```yaml
 Type: System.String
@@ -287,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -VlanId
-The vlanId
+This is the Id number of the VLAN assigned for this peering.
 
 ```yaml
 Type: System.Int32
@@ -302,8 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -322,3 +341,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzExpressRouteCircuitPeeringConfig](Add-AzExpressRouteCircuitPeeringConfig.md)
+
+[Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)
+
+[New-AzExpressRouteCircuitPeeringConfig](New-AzExpressRouteCircuitPeeringConfig.md)
+
+[Remove-AzExpressRouteCircuitPeeringConfig](Remove-AzExpressRouteCircuitPeeringConfig.md)

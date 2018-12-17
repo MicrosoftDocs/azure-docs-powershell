@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Management.CognitiveServices.dll-Help.xml
 Module Name: Az.CognitiveServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cognitiveservices/get-azcognitiveservicesaccountusage
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Get-AzCognitiveServicesAccountUsage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Get-AzCognitiveServicesAccountUsage.md
 ---
 
 # Get-AzCognitiveServicesAccountUsage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get current usages for a Cognitive Services account.
 
 ## SYNTAX
 
@@ -31,16 +33,54 @@ Get-AzCognitiveServicesAccountUsage [-ResourceId] <String> [-DefaultProfile <IAz
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzCognitiveServicesAccountUsage** cmdlet gets current usages for a Cognitive Services account.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzCognitiveServicesAccountUsage -ResourceGroupName TestUsages -Name TestCVUsages_Prediction
+
+CurrentValue  : 0
+Name          : CustomVision.Prediction.Transactions
+Limit         : 10000
+Status        : Included
+Unit          : Count
+QuotaPeriod   : 30.00:00:00
+NextResetTime : 0001-01-01T00:00:00Z
 ```
 
-{{ Add example description here }}
+### Example 2
+```powershell
+PS C:\GitHub> $acc = Get-AzCognitiveServicesAccount -ResourceGroupName TestUsages -Name TestCVUsages_Prediction
+
+PS C:\GitHub> Get-AzCognitiveServicesAccountUsage -InputObject $acc
+
+
+CurrentValue  : 0
+Name          : CustomVision.Prediction.Transactions
+Limit         : 10000
+Status        : Included
+Unit          : Count
+QuotaPeriod   : 30.00:00:00
+NextResetTime : 0001-01-01T00:00:00Z
+```
+
+### Example 3
+```powershell
+PS C:\GitHub> $acc = Get-AzCognitiveServicesAccount -ResourceGroupName TestUsages -Name TestCVUsages_Prediction
+
+PS C:\GitHub> Get-AzCognitiveServicesAccountUsage -ResourceId $acc.Id
+
+
+CurrentValue  : 0
+Name          : CustomVision.Prediction.Transactions
+Limit         : 10000
+Status        : Included
+Unit          : Count
+QuotaPeriod   : 30.00:00:00
+NextResetTime : 0001-01-01T00:00:00Z
+```
 
 ## PARAMETERS
 
@@ -48,9 +88,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -120,8 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

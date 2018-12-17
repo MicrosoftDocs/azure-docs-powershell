@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: 39AADD19-2EDD-4C1F-BC9E-22186DD9A085
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMOperatingSystem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMOperatingSystem.md
 ---
 
 # Set-AzVMOperatingSystem
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets operating system properties for a virtual machine.
 
 ## SYNTAX
 
@@ -50,21 +53,43 @@ Set-AzVMOperatingSystem [-VM] <PSVirtualMachine> [-Linux] [-ComputerName] <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMOperatingSystem** cmdlet sets operating system properties for a virtual machine.
+You can specify logon credentials, computer name, and operating system type.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Set operating system properties for a new virtual machines
+```
+PS C:\> $SecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
+PS C:\> $Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword); 
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03" 
+PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
+PS C:\> $ComputerName = "ContosoVM122"
+PS C:\> $WinRMCertUrl = "http://keyVaultName.vault.azure.net/secrets/secretName/secretVersion"
+PS C:\> $TimeZone = "Pacific Standard Time"
+PS C:\> $CustomData = "echo 'Hello World'"
+PS C:\> $VirtualMachine = Set-AzVMOperatingSystem -VM $$VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -CustomData $CustomData -WinRMHttp -WinRMHttps -WinRMCertificateUrl $WinRMCertUrl -ProvisionVMAgent -EnableAutoUpdate -TimeZone $TimeZone
 ```
 
-{{ Add example description here }}
+The first command converts a password to a secure string, and then stores it in the $SecurePassword variable.
+For more information, type `Get-Help ConvertTo-SecureString`.
+The second command creates a credential for the user FullerP and the password stored in $SecurePassword, and then stores the credential in the $Credential variable.
+For more information, type `Get-Help New-Object`.
+The third command gets the availability set named AvailablitySet03 in the resource group named ResourceGroup11, and then stores that object in the $AvailabilitySet variable.
+The fourth command creates a virtual machine object, and then stores it in the $VirtualMachine variable.
+The command assigns a name and size to the virtual machine.
+The virtual machine belongs to the availability set stored in $AvailabilitySet.
+The next four commands assign values to variables to use in the following command.
+Because you could specify these strings directly in the **Set-AzVMOperatingSystem** command, this approach is used only for readability.
+However, you might use an approach such as this in scripts.
+The final command sets operating system properties for the virtual machine stored in $VirtualMachine.
+The command uses the credentials stored in $Credential.
+The command uses variables assigned in previous commands for some parameters.
 
 ## PARAMETERS
 
 ### -ComputerName
-The virtual machine's omputer name.
+Specifies the name of the computer.
 
 ```yaml
 Type: System.String
@@ -79,7 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The virtual machine's credential.
+Specifies the user name and password for the virtual machine as a **PSCredential** object.
+To obtain a credential, use the Get-Credential cmdlet.
+For more information, type `Get-Help Get-Credential`.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -94,7 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomData
-Custom data
+Specifies a base-64 encoded string of custom data.
+This is decoded to a binary array that is saved as a file on the virtual machine.
+The maximum length of the binary array is 65535 bytes.
 
 ```yaml
 Type: System.String
@@ -109,12 +138,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -124,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePasswordAuthentication
-Enable WinRM Https protocol
+Indicates that this cmdlet disables password authentication.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoUpdate
-Enable Automatic Update
+Indicates that this cmdlet enables auto update.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -169,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-Linux
+Indicates that the type of operating system is Linux.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -184,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisionVMAgent
-The Provision VM Agent.
+Indicates that the settings require that the virtual machine agent be installed on the virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZone
-Time Zone
+Specifies the time zone for the virtual machine.
 
 ```yaml
 Type: System.String
@@ -214,7 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-The virtual machine profile.
+Specifies the local virtual machine object on which to set operating system properties.
+To obtain a virtual machine object, use the Get-AzVM cmdlet.
+Create a virtual machine object by using the New-AzVMConfig cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
@@ -229,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Windows
+Indicates that the type of operating system is Windows.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -244,7 +275,8 @@ Accept wildcard characters: False
 ```
 
 ### -WinRMCertificateUrl
-Url for WinRM certificate
+Specifies the URI of a WinRM certificate.
+This needs to be stored in a Key Vault.
 
 ```yaml
 Type: System.Uri
@@ -259,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -WinRMHttp
-Enable WinRM Http protocol
+Indicates that this operating system uses HTTP WinRM.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -274,7 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -WinRMHttps
-Enable WinRM Https protocol
+Indicates that this operating system uses HTTPS WinRM.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -289,8 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -311,3 +342,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzVM](./Get-AzVM.md)
+
+[New-AzVMConfig](./New-AzVMConfig.md)
+
+

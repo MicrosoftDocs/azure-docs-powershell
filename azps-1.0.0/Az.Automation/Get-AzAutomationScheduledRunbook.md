@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: EE854F8A-4B6B-4831-992A-6EC318BEE234
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationscheduledrunbook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationScheduledRunbook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationScheduledRunbook.md
 ---
 
 # Get-AzAutomationScheduledRunbook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Automation runbooks and associated schedules.
 
 ## SYNTAX
 
@@ -43,21 +46,37 @@ Get-AzAutomationScheduledRunbook -ScheduleName <String> [-ResourceGroupName] <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationScheduledRunbook** cmdlet gets one or more Azure Automation runbooks and associated schedules.
+By default, this cmdlet gets all scheduled runbooks.
+Specify the name of a runbook or a schedule or both to see specific runbook schedules.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all scheduled runbooks
+```
+PS C:\>Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command gets all scheduled runbooks in the Azure Automation account named Contoso17.
+
+### Example 2: Get all schedules associated with a runbook
+```
+PS C:\>Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -RunbookName "Runbk01"
+```
+
+This command gets all scheduled runbooks for the runbook Runbk01 in the Azure Automation account named Contoso17.
+
+### Example 3: Get all runbooks associated with a schedule
+```
+PS C:\>Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -ScheduleName "Schedule01"
+```
+
+This command gets all scheduled runbooks for the schedule Schedule01 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies an Automation account for the runbook on which this cmdlet operates.
 
 ```yaml
 Type: System.String
@@ -72,12 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -87,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobScheduleId
-The job schedule id.
+Specifies the ID of a scheduled job that this cmdlet gets.
 
 ```yaml
 Type: System.Nullable`1[System.Guid]
@@ -102,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for scheduled runbooks that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -117,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunbookName
-The runbook name of the job schedule.
+Specifies the name of a runbook for which this cmdlet gets scheduled runbooks.
 
 ```yaml
 Type: System.String
@@ -132,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleName
-The schedule name of the job schedule.
+Specifies the name of a schedule for which this cmdlet gets scheduled runbooks.
 
 ```yaml
 Type: System.String
@@ -147,8 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -163,3 +181,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Register-AzAutomationScheduledRunbook](./Register-AzAutomationScheduledRunbook.md)
+
+[Unregister-AzAutomationScheduledRunbook](./Unregister-AzAutomationScheduledRunbook.md)
+
+

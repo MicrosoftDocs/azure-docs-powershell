@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 48C33FAF-83C1-4725-AD2A-CF48D0718182
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewaysku
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzApplicationGatewaySku.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/New-AzApplicationGatewaySku.md
 ---
 
 # New-AzApplicationGatewaySku
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a SKU for an application gateway.
 
 ## SYNTAX
 
@@ -18,21 +21,21 @@ New-AzApplicationGatewaySku -Name <String> -Tier <String> [-Capacity <Int32>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzApplicationGatewaySku** cmdlet creates a stock keeping unit (SKU) for an Azure application gateway.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a SKU for an Azure application gateway
+```
+PS C:\>$SKU = New-AzApplicationGatewaySku -Name "Standard_Small" -Tier "Standard" -Capacity 2
 ```
 
-{{ Add example description here }}
+This command creates a SKU named Standard_Small for an Azure application gateway and stores the result in the variable named $SKU.
 
 ## PARAMETERS
 
 ### -Capacity
-Application gateway instance count
+Specifies the number of instances of an application gateway.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -47,12 +50,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +65,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the SKU
+Specifies the name of the SKU.
+The acceptable values for this parameter are:
+- Standard_Small
+- Standard_Medium
+- Standard_Large
+- WAF_Medium
+- WAF_Large
 
 ```yaml
 Type: System.String
@@ -78,7 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-Application gateway tier
+Specifies the tier of the SKU.
+The acceptable values for this parameter are:
+- Standard
+- WAF
 
 ```yaml
 Type: System.String
@@ -94,8 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -108,3 +119,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApplicationGatewaySku](./Get-AzApplicationGatewaySku.md)
+
+[Set-AzApplicationGatewaySku](./Set-AzApplicationGatewaySku.md)
+
+

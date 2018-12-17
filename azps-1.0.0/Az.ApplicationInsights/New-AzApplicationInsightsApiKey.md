@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.dll-Help.xml
 Module Name: Az.ApplicationInsights
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.applicationinsights/new-azapplicationinsightsapikey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/New-AzApplicationInsightsApiKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/New-AzApplicationInsightsApiKey.md
 ---
 
 # New-AzApplicationInsightsApiKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create an application insights api key for an application insights resource
 
 ## SYNTAX
 
@@ -32,16 +34,24 @@ New-AzApplicationInsightsApiKey [-ResourceId] <String> [-Permissions] <String[]>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Create an application insights api keys for an application insights resource
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 Create a new Api Key for an application insights resource
+```
+PS C:\>$apiKeyDescription="testapiKey"
+PS C:\>$permissions = @("ReadTelemetry", "WriteAnnotations")
+PS C:\>New-AzApplicationInsightsApiKey -ResourceGroupName "testGroup" -Name "test" -Description $apiKeyDescription -Permissions $permissions
+
+ApiKey      : st0rfelw7m3oimfspozrtwgccxihiftbdwqjdfkg
+CreatedDate : Fri, 27 Oct 2017 16:59:19 GMT
+Id          : 1ed593f9-1561-4981-922d-6917971eecd3
+Permissions : {ReadTelemetry, WriteAnnotations}
+Description : testapiKey
 ```
 
-{{ Add example description here }}
+Create application insights api key description as "testapiKey" with permissions "ReadTelemetry", "WriteAnnotations" for resource "test" in resource group "testGroup".
 
 ## PARAMETERS
 
@@ -61,12 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -167,8 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -183,8 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

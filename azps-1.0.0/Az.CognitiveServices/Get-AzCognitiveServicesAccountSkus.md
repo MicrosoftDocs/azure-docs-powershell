@@ -1,50 +1,54 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Management.CognitiveServices.dll-Help.xml
 Module Name: Az.CognitiveServices
-online version:
+ms.assetid: 386F09F0-2EEC-4B55-825C-F2E88D3B60AA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.cognitiveservices/get-azcognitiveservicesaccountskus
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Get-AzCognitiveServicesAccountSkus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Get-AzCognitiveServicesAccountSkus.md
 ---
 
 # Get-AzCognitiveServicesAccountSkus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the available SKUs for an account.
 
 ## SYNTAX
 
-### GetSkusWithAccount (Default)
-```
-Get-AzCognitiveServicesAccountSkus [-ResourceGroupName] <String> [-Name] <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
-### GetSkusWithFilter
 ```
 Get-AzCognitiveServicesAccountSkus [-Type <String>] [-Location <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzCognitiveServicesAccountSkus** cmdlet gets the available SKUs for a Cognitive Services account.
+The SKU is the tier plan for an account.
+It defines the price, call limit, and rate for the account.
+The F0 SKU is a free tier.
+Paid tiers include S0, S1, S2, and so on.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
-```
+PS C:\> (Get-AzCognitiveServicesAccountSkus -Type 'TextAnalytics' -Location "westus").Value | Select-Object -E
+xpandProperty Sku;
 
-{{ Add example description here }}
+Name     Tier
+----     ----
+F0       Free
+S0   Standard
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -58,41 +62,11 @@ Cognitive Services Account Location.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetSkusWithFilter
+Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Cognitive Services Account Name.
-
-```yaml
-Type: System.String
-Parameter Sets: GetSkusWithAccount
-Aliases: CognitiveServicesAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Resource Group Name.
-
-```yaml
-Type: System.String
-Parameter Sets: GetSkusWithAccount
-Aliases:
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -103,7 +77,7 @@ Cognitive Services Account Type.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetSkusWithFilter
+Parameter Sets: (All)
 Aliases: CognitiveServicesAccountType, AccountType, Kind
 
 Required: False
@@ -114,8 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,10 +96,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.Management.CognitiveServices.Models.PSCognitiveServicesSkus
-
 ### Microsoft.Azure.Management.CognitiveServices.Models.ResourceSku
 
 ## NOTES
+
+## RELATED LINKS
 
 ## RELATED LINKS

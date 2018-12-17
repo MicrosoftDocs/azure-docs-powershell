@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version:
+ms.assetid: C4E7ACDF-22FB-4D49-93B3-69E787B7E0CD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/restore-azkeyvaultkey
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzKeyVaultKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzKeyVaultKey.md
 ---
 
 # Restore-AzKeyVaultKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a key in a key vault from a backed-up key.
 
 ## SYNTAX
 
@@ -31,26 +34,44 @@ Restore-AzKeyVaultKey [-ResourceId] <String> [-InputFile] <String> [-DefaultProf
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Restore-AzKeyVaultKey** cmdlet creates a key in the specified key vault.
+This key is a replica of the backed-up key in the input file and has the same name as the original key.
+If the key vault already has a key by the same name, this cmdlet fails instead of overwriting the original key.
+If the backup contains multiple versions of a key, all versions are restored.
+The key vault that you restore the key into can be different from the key vault that you backed up the key from.
+However, the key vault must use the same subscription and be in an Azure region in the same geography (for example, North America).
+See the Microsoft Azure Trust Center (https://azure.microsoft.com/support/trust-center/) for the mapping of Azure regions to geographies.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Restore a backed-up key
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Restore-AzKeyVaultKey -VaultName 'MyKeyVault' -InputFile "C:\Backup.blob"
+
+Vault Name     : MyKeyVault
+Name           : key1
+Version        : 394f9379a47a4e2086585468de6c7ae5
+Id             : https://mykeyvault.vault.azure.net:443/keys/key1/394f9379a47a4e2086585468de6c7ae5
+Enabled        : True
+Expires        :
+Not Before     :
+Created        : 4/6/2018 11:31:36 PM
+Updated        : 4/6/2018 11:35:04 PM
+Purge Disabled : False
+Tags           :
 ```
 
-{{ Add example description here }}
+This command restores a key, including all of its versions, from the backup file named Backup.blob into the key vault named MyKeyVault.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -60,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputFile
-Input file.
-The input file containing the backed-up blob
+Specifies the input file that contains the backup of the key to restore.
 
 ```yaml
 Type: System.String
@@ -106,8 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Vault name.
-Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+Specifies the name of the key vault into which to restore the key.
 
 ```yaml
 Type: System.String
@@ -153,8 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -169,3 +187,12 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzKeyVaultKey](./Add-AzKeyVaultKey.md)
+
+[Backup-AzKeyVaultKey](./Backup-AzKeyVaultKey.md)
+
+[Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
+
+[Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
+

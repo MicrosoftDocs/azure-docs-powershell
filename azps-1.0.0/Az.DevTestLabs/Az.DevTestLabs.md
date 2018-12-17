@@ -1,43 +1,45 @@
 ---
 Module Name: Az.DevTestLabs
-Module Guid: 272a9e53-defc-4e25-af4d-122bd41ad458
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: be2ca175-bfb9-4601-b01c-4de13eb2105c
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.devtestlabs
+Help Version: 4.0.4.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Az.DevTestLabs.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Az.DevTestLabs.md
 ---
 
 # Az.DevTestLabs Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the DevTest Labs feature in Azure App Service cmdlets.
 
 ## Az.DevTestLabs Cmdlets
 ### [Get-AzDtlAllowedVMSizesPolicy](Get-AzDtlAllowedVMSizesPolicy.md)
-{{Manually Enter Get-AzDtlAllowedVMSizesPolicy Description Here}}
+Gets the allowed virtual machine sizes policy of a lab in DevTest Labs.
 
 ### [Get-AzDtlAutoShutdownPolicy](Get-AzDtlAutoShutdownPolicy.md)
-{{Manually Enter Get-AzDtlAutoShutdownPolicy Description Here}}
+Gets the auto shutdown policy of a lab in DevTest Labs.
 
 ### [Get-AzDtlAutoStartPolicy](Get-AzDtlAutoStartPolicy.md)
-{{Manually Enter Get-AzDtlAutoStartPolicy Description Here}}
+Gets the auto start policy of a lab in DevTest Labs.
 
 ### [Get-AzDtlVMsPerLabPolicy](Get-AzDtlVMsPerLabPolicy.md)
-{{Manually Enter Get-AzDtlVMsPerLabPolicy Description Here}}
+Gets the virtual machines per lab policy of a lab in DevTest Labs.
 
 ### [Get-AzDtlVMsPerUserPolicy](Get-AzDtlVMsPerUserPolicy.md)
-{{Manually Enter Get-AzDtlVMsPerUserPolicy Description Here}}
+Gets the virtual machines per user policy of a lab in DevTest Labs.
 
 ### [Set-AzDtlAllowedVMSizesPolicy](Set-AzDtlAllowedVMSizesPolicy.md)
-{{Manually Enter Set-AzDtlAllowedVMSizesPolicy Description Here}}
+Sets the allowed virtual machine sizes policy of a lab in DevTest Labs.
 
 ### [Set-AzDtlAutoShutdownPolicy](Set-AzDtlAutoShutdownPolicy.md)
-{{Manually Enter Set-AzDtlAutoShutdownPolicy Description Here}}
+Sets the auto shutdown policy of a lab DevTest Labs.
 
 ### [Set-AzDtlAutoStartPolicy](Set-AzDtlAutoStartPolicy.md)
-{{Manually Enter Set-AzDtlAutoStartPolicy Description Here}}
+Sets the auto start policy of a lab in DevTest Labs.
 
 ### [Set-AzDtlVMsPerLabPolicy](Set-AzDtlVMsPerLabPolicy.md)
-{{Manually Enter Set-AzDtlVMsPerLabPolicy Description Here}}
+Sets the virtual machines per lab policy of a lab in DevTest Labs.
 
 ### [Set-AzDtlVMsPerUserPolicy](Set-AzDtlVMsPerUserPolicy.md)
-{{Manually Enter Set-AzDtlVMsPerUserPolicy Description Here}}
+Sets the virtual machines per user policy of a lab in DevTest Labs.
 

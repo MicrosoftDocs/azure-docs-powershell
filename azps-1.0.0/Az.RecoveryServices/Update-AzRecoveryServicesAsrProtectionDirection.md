@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/update-azrecoveryservicesasrprotectiondirection
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Update-AzRecoveryServicesAsrProtectionDirection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Update-AzRecoveryServicesAsrProtectionDirection.md
 ---
 
 # Update-AzRecoveryServicesAsrProtectionDirection
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the replication direction for the specified replication protected item or recovery plan. Used to re-protect/reverse replicate a failed over replicated item or recovery plan.
 
 ## SYNTAX
 
@@ -85,21 +87,37 @@ Update-AzRecoveryServicesAsrProtectionDirection -Direction <String> [-DefaultPro
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzRecoveryServicesAsrProtectionDirection** cmdlet updates the replication direction for the specified Azure Site Recovery object after the completion of a commit failover operation.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $currentJob = Update-AzRecoveryServicesAsrProtectionDirection -RecoveryPlan $RP -Direction PrimaryToRecovery
 ```
 
-{{ Add example description here }}
+Start the update direction operation for the specified recovery plan and returns the ASR job object used to track the operation.
+
+### Example 2
+```
+PS C:\> $currentJob = Update-AzRecoveryServicesAsrProtectionDirection -AzToAzure -ProtectionContainerMapping $B2ApcmMapping -LogStorageAccountId $cacheStorageId `
+ -ReplicationProtectedItem $rpi
+```
+
+Start the update direction operation for the specified replication protected item in target azure region defined by protection container mapping and using cache storage (in same region as VM).
+
+### Example 3
+```
+PS C:\> $currentJob = Update-AzRecoveryServicesAsrProtectionDirection -AzToAzure -ProtectionContainerMapping $B2ApcmMapping `
+ -AzToAzureDiskReplicationConfiguration $disk1,$disk2 -ReplicationProtectedItem  $rpi
+```
+
+Start the update direction operation for the specified replication protected item in target azure region defined by protection container mapping and provided disk replication configuration.
 
 ## PARAMETERS
 
 ### -Account
-{{Fill Account Description}}
+The run as account to be used to push install the Mobility service if needed. Must be one from the list of run as accounts in the ASR fabric.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRunAsAccount
@@ -171,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataStore
-{{Fill DataStore Description}}
+The VMware datastore to be used for the vmdisk's.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRDataStore
@@ -188,10 +206,11 @@ Accept wildcard characters: False
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -201,7 +220,11 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-{{Fill Direction Description}}
+Specifies the direction to be used for the update operation post a failover.
+The acceptable values for this parameter are:
+
+- PrimaryToRecovery
+- RecoveryToPrimary
 
 ```yaml
 Type: System.String
@@ -217,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -HyperVToAzure
-{{Fill HyperVToAzure Description}}
+Reprotect a Hyper-V virtual machine after failback.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -232,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogStorageAccountId
-{{Fill LogStorageAccountId Description}}
+Specifies the storage account ID to store the replication log of VMs.
 
 ```yaml
 Type: System.String
@@ -259,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -MasterTarget
-{{Fill MasterTarget Description}}
+Master Target Server Details.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRMasterTargetServer
@@ -274,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessServer
-{{Fill ProcessServer Description}}
+Process Server to be used for replication.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProcessServer
@@ -289,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionContainerMapping
-{{Fill ProtectionContainerMapping Description}}
+Protection containerMapping to be used for replication.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainerMapping
@@ -304,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAvailabilitySetId
-{{Fill RecoveryAvailabilitySetId Description}}
+The availability set that the virtual machine should be created in upon failover
 
 ```yaml
 Type: System.String
@@ -319,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureStorageAccountId
-{{Fill RecoveryAzureStorageAccountId Description}}
+Specifies the ID of the Azure storage account to replicate to.
 
 ```yaml
 Type: System.String
@@ -334,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryBootDiagStorageAccountId
-{{Fill RecoveryBootDiagStorageAccountId Description}}
+Specifies the storage account for boot diagnostics for recovery azure VM.
 
 ```yaml
 Type: System.String
@@ -349,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryCloudServiceId
-{{Fill RecoveryCloudServiceId Description}}
+The resource ID of the recovery cloud service to failover this virtual machine to.
 
 ```yaml
 Type: System.String
@@ -364,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPlan
-{{Fill RecoveryPlan Description}}
+Specifies an ASR recovery plan object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan
@@ -379,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryResourceGroupId
-{{Fill RecoveryResourceGroupId Description}}
+Recovery resourceGroup id for protected Vm.
 
 ```yaml
 Type: System.String
@@ -394,7 +417,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProtectedItem
-{{Fill ReplicationProtectedItem Description}}
+Specifies an ASR replication protected item.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem
@@ -409,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionVolume
-{{Fill RetentionVolume Description}}
+Retention Volume on the master target server to be used.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRetentionVolume
@@ -424,7 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmmToVmm
-{{Fill VmmToVmm Description}}
+Update replication direction for a failed over Hyper-V virtual machine that is protected between two VMM managed Hyper-V sites.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -439,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMwareToAzure
-{{Fill VMwareToAzure Description}}
+Update replication direction from VMware to Azure.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -469,8 +492,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -485,8 +507,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

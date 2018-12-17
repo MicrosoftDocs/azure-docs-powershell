@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
-online version:
+ms.assetid: BB6AF5A9-49BD-4A76-9F3F-44B62D2AB842
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/new-azdatalakeanalyticscatalogcredential
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzDataLakeAnalyticsCatalogCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzDataLakeAnalyticsCatalogCredential.md
 ---
 
 # New-AzDataLakeAnalyticsCatalogCredential
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new Azure Data Lake Analytics catalog credential.
 
 ## SYNTAX
 
@@ -27,21 +30,36 @@ New-AzDataLakeAnalyticsCatalogCredential [-Account] <String> [-DatabaseName] <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzDataLakeAnalyticsCatalogCredential cmdlet creates a new credential to use in an Azure Data Lake Analytics catalog for connecting to external data sources.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a credential for a catalog specifying host and port
+```
+PS C:\> New-AzDataLakeAnalyticsCatalogCredential -AccountName "ContosoAdlAccount" `
+                  -DatabaseName "databaseName" `
+                  -CredentialName "exampleDbCred" `
+                  -Credential (Get-Credential) `
+                  -DatabaseHost "example.contoso.com" -Port 8080
 ```
 
-{{ Add example description here }}
+This command creates the specified credential for the specified account, database, host and port using https protocol.
+
+### Example 2: Create a credential for a catalog specifying full URI
+```
+PS C:\> New-AzDataLakeAnalyticsCatalogCredential -AccountName "ContosoAdlAccount" `
+                  -DatabaseName "databaseName" `
+                  -CredentialName "exampleDbCred" `
+                  -Credential (Get-Credential) `
+                  -Uri "http://httpExample.contoso.com:8080"
+```
+
+This command creates the specified credential for the specified account, database and external data source URI.
 
 ## PARAMETERS
 
 ### -Account
-The account name that contains the catalog to create the credential in.
+Specifies the Data Lake Analytics account name.
 
 ```yaml
 Type: System.String
@@ -56,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-The credential to create, which includes the user ID and password that can authenticate to the data source
+Specifies the user name and corresponding password of the credential.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -71,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -CredentialName
-The name of the credential to create.
+Specifies the name and password of the credential.
 
 ```yaml
 Type: System.String
@@ -86,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseHost
-The host of the database to connect to in the format 'myhost.dns.com'.
+Specifies the host name of the external data source the credential can connect to in the format mydatabase.contoso.com.
 
 ```yaml
 Type: System.String
@@ -101,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the database to create the credential in.
+Specifies the name of the database in the Data Lake Analytics account that the credential will be stored in.
 
 ```yaml
 Type: System.String
@@ -116,12 +134,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -131,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-The Port associated with the host for the database to connect to.
+Specifies the port number used to connect to the specified DatabaseHost using this credential.
 
 ```yaml
 Type: System.Int32
@@ -146,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The URI of the database to connect to.
+Specifies the full Uniform Resource Identifier (URI) of the external data source this credential can connect to.
 
 ```yaml
 Type: System.Uri
@@ -176,9 +194,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
@@ -192,8 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

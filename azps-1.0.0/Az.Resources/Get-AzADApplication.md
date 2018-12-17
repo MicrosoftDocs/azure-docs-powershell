@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 66AC5120-80B1-46F2-AA51-132BF361602E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azadapplication
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzADApplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzADApplication.md
 ---
 
 # Get-AzADApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Lists existing azure active directory applications.
 
 ## SYNTAX
 
@@ -20,7 +23,7 @@ Get-AzADApplication [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCou
 
 ### ApplicationObjectIdParameterSet
 ```
-Get-AzADApplication -ObjectId <Guid> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+Get-AzADApplication -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
@@ -49,21 +52,48 @@ Get-AzADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContextConta
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Lists existing azure active directory applications.
+Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.
+If no parameter is provided, it fetches all applications under the tenant.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - List all applications
+
+```
+PS C:\> Get-AzADApplication
 ```
 
-{{ Add example description here }}
+Lists all the applications under a tenant.
+
+### Example 2 - List applications using paging
+
+```
+PS C:\> Get-AzADApplication -First 100
+```
+
+Lists the first 100 applications under a tenant.
+
+### Example 3 - Get application by identifier URI
+
+```
+PS C:\> Get-AzADApplication -IdentifierUri http://mySecretApp1
+```
+
+Gets the application with identifier uri as "http://mySecretApp1".
+
+### Example 4 - Get application by object id
+
+```
+PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69
+```
+
+Gets the application with the object id '39e64ec6-569b-4030-8e1c-c3c519a05d69'.
 
 ## PARAMETERS
 
 ### -ApplicationId
-The application id.
+The application id of the application to fetch.
 
 ```yaml
 Type: System.Guid
@@ -78,12 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -108,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameStartWith
-Used to find applications that begin with the provided string.
+Fetch all applications starting with the display name.
 
 ```yaml
 Type: System.String
@@ -123,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUri
-The identifierUri of the application.
+Unique identifier Uri of the application to fetch.
 
 ```yaml
 Type: System.String
@@ -138,10 +168,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The application object id.
+The object id of the application to fetch.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: ApplicationObjectIdParameterSet
 Aliases:
 
@@ -153,8 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Reports the number of objects in the data set (an integer) followed by the objects.
-If the cmdlet cannot determine the total count, it returns 'Unknown total count'.
+Reports the number of objects in the data set. Currently, this parameter does nothing.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -169,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Ignores the first 'n' objects and then gets the remaining objects.
+Ignores the first N objects and then gets the remaining objects.
 
 ```yaml
 Type: System.UInt64
@@ -184,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-Gets only the first 'n' objects.
+The maximum number of objects to return.
 
 ```yaml
 Type: System.UInt64
@@ -199,19 +228,31 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.Guid
-
 ### System.String
+
+### System.Guid
 
 ## OUTPUTS
 
-### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
+
+[New-AzADAppCredential](./New-AzADAppCredential.md)
+
+[Get-AzADAppCredential](./Get-AzADAppCredential.md)
+
+[Remove-AzADApplication](./Remove-AzADApplication.md)
+
+[Set-AzADApplication](./Set-AzADApplication.md)
+
+[New-AzADApplication](./New-AzADApplication.md)
+

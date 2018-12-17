@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 22975A89-CAFF-4F18-8DCE-B695413FBAC7
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azstoragequeue
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageQueue.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzStorageQueue.md
 ---
 
 # Remove-AzStorageQueue
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a storage queue.
 
 ## SYNTAX
 
@@ -18,21 +21,29 @@ Remove-AzStorageQueue [-Name] <String> [-Force] [-PassThru] [-Context <IStorageC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzStorageQueue** cmdlet removes a storage queue.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Remove a storage queue by name
+```
+PS C:\>Remove-AzStorageQueue "ContosoQueue01"
 ```
 
-{{ Add example description here }}
+This command removes a queue named ContosoQueue01.
+
+### Example 2: Remove multiple storage queues
+```
+PS C:\>Get-AzStorageQueue "Contoso*" | Remove-AzStorageQueue
+```
+
+This command removes all queues with names that start with Contoso.
 
 ## PARAMETERS
 
 ### -Context
-Azure Storage Context Object
+Specifies the Azure storage context.
+To obtain the storage context, the New-AzStorageContext cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -50,7 +61,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -62,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to remove the queue and all content in it
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -77,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Queue name
+Specifies the name of the queue to remove.
 
 ```yaml
 Type: System.String
@@ -92,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Return whether the specified queue is successfully removed
+Indicates that this cmdlet returns a **Boolean** that reflects the success of the operation.
+By default, this cmdlet does not return a value.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,7 +128,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -132,14 +144,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,3 +165,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageQueue](./Get-AzStorageQueue.md)
+
+[New-AzStorageQueue](./New-AzStorageQueue.md)

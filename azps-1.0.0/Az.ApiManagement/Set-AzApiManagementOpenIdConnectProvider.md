@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: F3F21304-CED1-4742-B8BD-2841C4107DCC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementopenidconnectprovider
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementOpenIdConnectProvider.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementOpenIdConnectProvider.md
 ---
 
 # Set-AzApiManagementOpenIdConnectProvider
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an OpenID Connect provider.
 
 ## SYNTAX
 
@@ -19,22 +22,23 @@ Set-AzApiManagementOpenIdConnectProvider -Context <PsApiManagementContext> -Open
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementOpenIdConnectProvider** cmdlet modifies an OpenID Connect provider in Azure API Management.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change the client secret for a provider
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementOpenIdConnectProvider -Context $apimContext -OpenIdConnectProviderId "OICProvicer01" -ClientSecret "q2w3e43r45" -PassThru
 ```
 
-{{ Add example description here }}
+This command modifies the provider that has the ID OICProvicer01.
+The command specifies a client secret for the provider.
 
 ## PARAMETERS
 
 ### -ClientId
-ClientID of the developer console.
-This parameter is optional.
+Specifies the client ID of the developer console.
 
 ```yaml
 Type: System.String
@@ -49,8 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientSecret
-ClientSecret of the developer Console.
-This parameter is optional.
+Specifies the client secret of the developer console.
 
 ```yaml
 Type: System.String
@@ -65,8 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -81,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -96,8 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-OpenId Connect Provider user friendly description.
-This parameter is optional.
+Specifies a description.
 
 ```yaml
 Type: System.String
@@ -112,8 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndpointUri
-Metadata Endpoint URI of the OpenID Connect Provider.
-This parameter is optional.
+Specifies a metadata endpoint URI of the provider.
 
 ```yaml
 Type: System.String
@@ -128,8 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-OpenId Connect Provider User friendly name.
-This parameter is optional.
+Specifies a friendly name for the provider.
 
 ```yaml
 Type: System.String
@@ -144,8 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -OpenIdConnectProviderId
-Identifier of OpenId Connect Provider Id to update.
-This parameter is mandatory.
+Specifies an ID for the provider that this cmdlet modifies.
+If you do not specify an ID, this cmdlet generates one.
 
 ```yaml
 Type: System.String
@@ -160,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOpenIdConnectProvider type representing the modified OpenId Connect Provider will be written to output.
+Indicates that this cmdlet returns the **PsApiManagementOpenIdConnectProvider** that this cmdlet modifies.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -175,8 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -193,3 +191,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementOpenIdConnectProvider](./Get-AzApiManagementOpenIdConnectProvider.md)
+
+[New-AzApiManagementOpenIdConnectProvider](./New-AzApiManagementOpenIdConnectProvider.md)
+
+[Remove-AzApiManagementOpenIdConnectProvider](./Remove-AzApiManagementOpenIdConnectProvider.md)
+
+

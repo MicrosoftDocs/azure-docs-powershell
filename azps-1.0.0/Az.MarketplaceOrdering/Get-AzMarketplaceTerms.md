@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.MarketplaceOrdering.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.MarketplaceOrdering.dll-Help.xml
 Module Name: Az.MarketplaceOrdering
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.marketplaceordering/get-azmarketplaceterms
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/Get-AzMarketplaceTerms.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/Get-AzMarketplaceTerms.md
 ---
 
 # Get-AzMarketplaceTerms
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Get the agreement terms for a given publisher id(Publisher), offer id(Product) and plan id(Name). The terms object which is returned by this command should be passed to Set-AzMarketplaceTerms to accept the legal terms.
 
 ## SYNTAX
 
@@ -18,26 +20,32 @@ Get-AzMarketplaceTerms -Publisher <String> -Product <String> -Name <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzMarketplaceTerms** cmdlet returns terms for given publisher id(Publisher), offer id(Product) and plan id(Name) tuple.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
 ```
-
-{{ Add example description here }}
+PS C:\> Get-AzMarketplaceTerms -Publisher "microsoft-ads" -Product "windows-data-science-vm" -Name "windows2016"
+Publisher         : microsoft-ads
+Product           : windows-data-science-vm
+Plan              : windows2016
+LicenseTextLink   : <LicenseTextLink>
+PrivacyPolicyLink : <PrivacyPolicyLink>
+Signature         : <Signature>
+Accepted          : True
+RetrieveDatetime  : <RetrieveDatetime>
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -92,8 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

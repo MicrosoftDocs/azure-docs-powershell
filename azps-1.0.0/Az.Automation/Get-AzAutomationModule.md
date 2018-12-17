@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: A73B388A-E859-40D3-BA63-0E231CF1E81D
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationmodule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationModule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/Get-AzAutomationModule.md
 ---
 
 # Get-AzAutomationModule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets metadata for modules from Automation.
 
 ## SYNTAX
 
@@ -25,21 +28,28 @@ Get-AzAutomationModule [-Name] <String> [-ResourceGroupName] <String> [-Automati
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzAutomationModule** cmdlet gets metadata for modules from Azure Automation.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get all modules
+```
+PS C:\>Get-AzAutomationModule -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command gets all modules in the Automation account named Contoso17.
+
+### Example 2: Get a module
+```
+PS C:\>Get-AzAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ResourceGroupName "ResourceGroup01"
+```
+
+This command gets a module named ContosoModule in the Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account for which this cmdlet gets module metadata.
 
 ```yaml
 Type: System.String
@@ -54,12 +64,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The module name.
+Specifies the name of the module for which this cmdlet gets metadata.
 
 ```yaml
 Type: System.String
@@ -84,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of a resource group for which this cmdlet gets module metadata.
 
 ```yaml
 Type: System.String
@@ -99,8 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +122,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzAutomationModule](./New-AzAutomationModule.md)
+
+[Remove-AzAutomationModule](./Remove-AzAutomationModule.md)
+
+[Set-AzAutomationModule](./Set-AzAutomationModule.md)
+
+

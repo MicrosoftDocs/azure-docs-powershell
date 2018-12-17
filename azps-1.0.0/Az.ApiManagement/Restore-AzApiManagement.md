@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 022BBF5F-AFF1-45D5-9153-872779FFBAF4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/restore-azapimanagement
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Restore-AzApiManagement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Restore-AzApiManagement.md
 ---
 
 # Restore-AzApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Restores an API Management Service from the specified Azure storage blob.
 
 ## SYNTAX
 
@@ -19,26 +22,29 @@ Restore-AzApiManagement -ResourceGroupName <String> -Name <String> [-StorageCont
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Restore-AzApiManagement** cmdlet restores an API Management Service from the specified backup residing in an Azurestorage blob.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Restore an API Management service
+```
+PS C:\>New-AzStorageAccount -StorageAccountName "ContosoStorage" -Location $location -ResourceGroupName "ContosoGroup02" -Type Standard_LRS
+PS C:\>$storageKey = (Get-AzStorageAccountKey -ResourceGroupName "ContosoGroup02" -StorageAccountName "ContosoStorage")[0].Value
+PS C:\>$storageContext = New-AzStorageContext -StorageAccountName "ContosoStorage" -StorageAccountKey $storageKey
+PS C:\>Restore-AzApiManagement -ResourceGroupName "ContosoGroup" -Name "RestoredContosoApi" -StorageContext $StorageContext -SourceContainerName "ContosoBackups" -SourceBlobName "ContosoBackup.apimbackup"
 ```
 
-{{ Add example description here }}
+This command restores an API Management service from Azure storage blob.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the API Management instance that will be restored with this backup.
+Specifies the name of the API Management instance that will be restored with the backup.
 
 ```yaml
 Type: System.String
@@ -63,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends restored PsApiManagement to pipeline if operation succeeds.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of resource group under which API Management exists.
 
 ```yaml
 Type: System.String
@@ -93,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceBlobName
-Name of Azure Storage backup source blob.
+Specifies the name of the Azure storage backup source blob.
 
 ```yaml
 Type: System.String
@@ -108,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceContainerName
-Name of Azure Storage backup source container.
+Specifies the name of the Azure storage backup source container.
 
 ```yaml
 Type: System.String
@@ -123,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-The storage connection context.
+Specifies the storage connection context.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -138,8 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,3 +158,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Backup-AzApiManagement](./Backup-AzApiManagement.md)
+
+[Get-AzApiManagement](./Get-AzApiManagement.md)
+
+[New-AzApiManagement](./New-AzApiManagement.md)
+
+[Remove-AzApiManagement](./Remove-AzApiManagement.md)
+
+

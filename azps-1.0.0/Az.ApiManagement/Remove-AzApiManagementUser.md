@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 441BC2EE-DBB7-4579-BA64-9D3042B7EBD8
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementuser
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementUser.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzApiManagementUser.md
 ---
 
 # Remove-AzApiManagementUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes an existing user.
 
 ## SYNTAX
 
@@ -18,21 +21,22 @@ Remove-AzApiManagementUser -Context <PsApiManagementContext> -UserId <String> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzApiManagementUser** cmdlet deletes an existing user.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Delete a user
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementUser -Context $apimContext -UserId "0123456789" -Force
 ```
 
-{{ Add example description here }}
+This command deletes an existing user.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
+Specifies a **PsApiManagementContext** object.
 This parameter is required.
 
 ```yaml
@@ -48,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,8 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteSubscriptions
-Whether to delete subscriptions to the product or not.
-If not set and subscription exists exception will be thrown.
+Indicates whether to delete subscriptions to the product.
+If this parameter is not specified and a subscription exists, this cmdlet throws an exception.
 This parameter is optional.
 
 ```yaml
@@ -80,9 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Indicates that this cmdlet returns a value of $Ture, if it succeeds, or a value of $False, otherwise.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -97,8 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
-This parameter is required.
+Specifies the ID of the user to remove.
 
 ```yaml
 Type: System.String
@@ -122,7 +123,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -138,14 +139,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -162,3 +162,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementUser](./Get-AzApiManagementUser.md)
+
+[New-AzApiManagementUser](./New-AzApiManagementUser.md)
+
+[Set-AzApiManagementUser](./Set-AzApiManagementUser.md)
+
+

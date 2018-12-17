@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: C9954E3D-8645-473E-A6D4-86278C2F6BC1
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuit
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzExpressRouteCircuit.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzExpressRouteCircuit.md
 ---
 
 # Get-AzExpressRouteCircuit
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an Azure ExpressRoute circuit from Azure.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Get-AzExpressRouteCircuit [-Name <String>] [-ResourceGroupName <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzExpressRouteCircuit** cmdlet is used to retrieve an ExpressRoute circuit object
+from your subscription. The circuit object returned can be used as input to other cmdlets that
+operate on ExpressRoute circuits.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the ExpressRoute circuit to be deleted
 ```
-
-{{ Add example description here }}
+Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg | Remove-AzExpressRouteCircuit
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+The name of the ExpressRoute circuit.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+The name of the resource group that contains the ExpressRoute circuit.
 
 ```yaml
 Type: System.String
@@ -77,8 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +93,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Move-AzExpressRouteCircuit](Move-AzExpressRouteCircuit.md)
+
+[New-AzExpressRouteCircuit](New-AzExpressRouteCircuit.md)
+
+[Remove-AzExpressRouteCircuit](Remove-AzExpressRouteCircuit.md)
+
+[Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)

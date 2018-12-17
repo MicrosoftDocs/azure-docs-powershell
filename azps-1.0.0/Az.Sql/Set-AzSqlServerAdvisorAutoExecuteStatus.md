@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 6006D3AC-48E1-44A0-8BD5-CE996B8957A2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqlserveradvisorautoexecutestatus
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlServerAdvisorAutoExecuteStatus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Set-AzSqlServerAdvisorAutoExecuteStatus.md
 ---
 
 # Set-AzSqlServerAdvisorAutoExecuteStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the auto execute status of an Azure SQL Server Advisor.
 
 ## SYNTAX
 
@@ -19,21 +22,30 @@ Set-AzSqlServerAdvisorAutoExecuteStatus -AdvisorName <String> -AutoExecuteStatus
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzSqlServerAdvisorAutoExecuteStatus** cmdlet sets the auto execute property for an Azure SQL Server Advisor.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Enable auto execute for an Advisor
+```
+PS C:\>Set-AzSqlServerAdvisorAutoExecuteStatus -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex" -AutoExecuteStatus Enabled
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : CreateIndex
+AdvisorStatus                  : GA
+AutoExecuteStatus              : Enabled
+AutoExecuteStatusInheritedFrom : Server
+LastChecked                    : 8/1/2016 2:36:47 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {}
 ```
 
-{{ Add example description here }}
+This command enables the auto execute status of an Advisor named CreateIndex.
 
 ## PARAMETERS
 
 ### -AdvisorName
-Azure SQL Server Advisor name.
+Specifies the name of the advisor for which this cmdlet updates the auto execute status.
 
 ```yaml
 Type: System.String
@@ -48,7 +60,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoExecuteStatus
-The new auto-execute status of Azure SQL Server Advisor.
+Specifies the value to which this cmdlet updates the auto execute status.
+The acceptable values for this parameter are:
+- Enabled
+- Disabled
+- Default
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.Advisor.Cmdlet.AdvisorAutoExecuteStatus
@@ -64,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -79,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group of the server.
 
 ```yaml
 Type: System.String
@@ -94,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Azure SQL Server name.
+Specifies the name of the server.
 
 ```yaml
 Type: System.String
@@ -118,7 +134,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -134,14 +150,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,5 +169,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Sql.Advisor.Model.AzureSqlServerAdvisorModel
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, sql, server, mssql, advisor
 
 ## RELATED LINKS
+
+[Get-AzSqlServerAdvisor](./Get-AzSqlServerAdvisor.md)
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

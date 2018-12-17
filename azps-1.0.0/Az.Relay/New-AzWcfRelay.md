@@ -1,21 +1,23 @@
 ---
-external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
 Module Name: Az.Relay
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.relay/new-azwcfrelay
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/New-AzWcfRelay.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Relay/Commands.Relay/help/New-AzWcfRelay.md
 ---
 
 # New-AzWcfRelay
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a WcfRelay in the specified Relay namespace.
 
 ## SYNTAX
 
 ### WcfRelayInputObjectSet
 ```
 New-AzWcfRelay [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- [-InputObject <WcfRelayAttributes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-InputObject <PSWcfRelayAttributes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -27,16 +29,53 @@ New-AzWcfRelay [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The New-AzWcfRelay cmdlet creates a WcfRelay in the specified Relay namespace.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 - InputObject
+```
+PS C:\> $getWcfRelay = Get-AzWcfRelay -ResourceGroupName Default-ServiceBus-WestUS -NamespaceName TestNameSpace-Relay1 -WcfRelayName TestWCFRelay1
+PS C:\> $GetWcfRelay.UserMetadata = "TestWCFRelay2"
+PS C:\> $GetWcfRelay.RequiresClientAuthorization = $False
+PS C:\> $GetWcfRelay.RelayType = "Http"
+PS C:\> New-AzWcfRelay -ResourceGroupName Default-Storage-WestUS -Namespace TestNameSpace-Relay1 -Name TestWCFRelay2 -InputObject
+
+RelayType                   : Http
+CreatedAt                   : 4/26/2017 5:14:46 PM
+UpdatedAt                   : 4/26/2017 5:14:46 PM
+ListenerCount               :
+RequiresClientAuthorization : False
+RequiresTransportSecurity   : True
+IsDynamic                   : False
+UserMetadata                : TestWCFRelay2
+Id                          : /subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/Default-Storage-WestUS/providers/Microsoft.Rel
+                              ay/namespaces/TestNameSpace-Relay1/WcfRelays/TestWCFRelay2
+Name                        : TestWCFRelay2
+Type                        : Microsoft.Relay/WcfRelays
 ```
 
-{{ Add example description here }}
+Creates a new WcfRelay \`TestWCFRelay2\` in the specified Relay namespace \`TestNameSpace-Relay\`.
+
+### Example 2 - Properties
+```
+PS C:\> New-AzWcfRelay -ResourceGroupName Default-Storage-WestUS -Namespace TestNameSpace-Relay1 -Name TestWCFRelay -WcfRelayType "NetTcp"  -RequiresClientAuthorization $True -RequiresTransportSecurity $True -UserMetadata "User Meta data"
+
+RelayType                   : NetTcp
+CreatedAt                   : 4/26/2017 5:20:08 PM
+UpdatedAt                   : 4/26/2017 5:20:08 PM
+ListenerCount               :
+RequiresClientAuthorization : True
+RequiresTransportSecurity   : True
+IsDynamic                   : False
+UserMetadata                : User Meta data
+Id                          : /subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/Default-Storage-WestUS/providers/Microsoft.Rel
+                              ay/namespaces/TestNameSpace-Relay1/WcfRelays/TestWCFRelay
+Name                        : TestWCFRelay
+Type                        : Microsoft.Relay/WcfRelays
+```
+
+Creates a new WcfRelay \`TestWCFRelay\` in the specified Relay namespace \`TestNameSpace-Relay1\`.
 
 ## PARAMETERS
 
@@ -44,9 +83,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -59,7 +98,7 @@ Accept wildcard characters: False
 WcfRelay object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Relay.Models.WcfRelayAttributes
+Type: Microsoft.Azure.Commands.Relay.Models.PSWcfRelayAttributes
 Parameter Sets: WcfRelayInputObjectSet
 Aliases:
 
@@ -210,20 +249,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
-### Microsoft.Azure.Commands.Relay.Models.WcfRelayAttributes
+### Microsoft.Azure.Commands.Relay.Models.PSWcfRelayAttributes
 
 ### System.Nullable`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.Relay.Models.WcfRelayAttributes
+### Microsoft.Azure.Commands.Relay.Models.PSWcfRelayAttributes
 
 ## NOTES
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: 6420CBE1-BF9D-493D-BCA8-E8C6688FAF3B
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azstoragefilecontent
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageFileContent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzStorageFileContent.md
 ---
 
 # Get-AzStorageFileContent
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Downloads the contents of a file.
 
 ## SYNTAX
 
@@ -45,21 +48,32 @@ Get-AzStorageFileContent [-File] <CloudFile> [[-Destination] <String>] [-CheckMd
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzStorageFileContent** cmdlet downloads the contents of a file, and then saves it to a destination that you specify.
+This cmdlet does not return the contents of the file.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Download a file from a folder
+```
+PS C:\>Get-AzStorageFileContent -ShareName "ContosoShare06" -Path "ContosoWorkingFolder/CurrentDataFile"
 ```
 
-{{ Add example description here }}
+This command downloads a file that is named CurrentDataFile in the folder ContosoWorkingFolder from the file share ContosoShare06 to current folder.
+
+### Example 2: Downloads the files under sample file share
+```
+PS C:\>Get-AzStorageFile -ShareName sample | ? {$_.GetType().Name -eq "CloudFile"} | Get-AzStorageFileContent
+```
+
+This example downloads the files under sample file share
 
 ## PARAMETERS
 
 ### -CheckMd5
-check the md5sum
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -74,7 +88,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTimeoutPerRequest
-The client side maximum execution time for each request in seconds.
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -89,8 +106,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-The total amount of concurrent async tasks.
-The default value is 10.
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -105,7 +124,10 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Azure Storage Context Object
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -123,7 +145,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -135,7 +157,12 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-Path to the local file or directory when the downloaded file would be put.
+Specifies the destination path.
+This cmdlet downloads the file contents to the location that this parameter specifies.
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: System.String
@@ -150,7 +177,10 @@ Accept wildcard characters: False
 ```
 
 ### -Directory
-CloudFileDirectory object indicated the cloud directory where the file would be downloaded.
+Specifies a folder as a **CloudFileDirectory** object.
+This cmdlet gets content for a file in the folder that this parameter specifies.
+To obtain a directory, use the New-AzStorageDirectory cmdlet.
+You can also use the Get-AzStorageFile cmdlet to obtain a directory.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileDirectory
@@ -165,7 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -File
-CloudFile object indicated the cloud file to be downloaded.
+Specifies a file as a **CloudFile** object.
+This cmdlet gets the file that this parameter specifies.
+To obtain a **CloudFile** object, use the Get-AzStorageFile cmdlet.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFile
@@ -180,7 +212,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Force to overwrite the existing file.
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -195,8 +230,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the downloaded cloud file.
-By default, this cmdlet does not generate any output.
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -211,7 +248,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Path to the cloud file to be downloaded.
+Specifies the path of a file.
+This cmdlet gets the contents the file that this parameter specifies.
+If the file does not exist, this cmdlet returns an error.
 
 ```yaml
 Type: System.String
@@ -226,7 +265,10 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-The server time out for each request in seconds.
+If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -241,7 +283,11 @@ Accept wildcard characters: False
 ```
 
 ### -Share
-CloudFileShare object indicated the share where the file would be downloaded.
+Specifies a **CloudFileShare** object.
+This cmdlet downloads the contents of the file in the share this parameter specifies.
+To obtain a **CloudFileShare** object, use the Get-AzStorageShare cmdlet.
+This object contains the storage context.
+If you specify this parameter, do not specify the *Context* parameter.
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
@@ -256,7 +302,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShareName
-Name of the file share where the file would be downloaded.
+Specifies the name of the file share.
+This cmdlet downloads the contents of the file in the share this parameter specifies.
 
 ```yaml
 Type: System.String
@@ -280,7 +327,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -296,14 +343,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -322,3 +368,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzStorageFile](./Get-AzStorageFile.md)
+
+[Set-AzStorageFileContent](./Set-AzStorageFileContent.md)
+
+

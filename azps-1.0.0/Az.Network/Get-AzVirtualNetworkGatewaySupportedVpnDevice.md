@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvirtualnetworkgatewaysupportedvpndevice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVirtualNetworkGatewaySupportedVpnDevice.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzVirtualNetworkGatewaySupportedVpnDevice.md
 ---
 
 # Get-AzVirtualNetworkGatewaySupportedVpnDevice
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This commandlet returns a list of supported VPN device brands, models, and firmware versions.
 
 ## SYNTAX
 
@@ -18,26 +20,42 @@ Get-AzVirtualNetworkGatewaySupportedVpnDevice -Name <String> -ResourceGroupName 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This commandlet returns a list of supported VPN device brands, models, and firmware versions.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzVirtualNetworkGatewaySupportedVpnDevice -ResourceGroupName TestRG -Name TestGateway 
+<?xml version="1.0" encoding="utf-8"?>
+<RpVpnDeviceList version="1.0">
+  <Vendor name="Cisco-Test">
+    <DeviceFamily name="IOS-Test">
+       <FirmwareVersion name="20" />
+    </DeviceFamily>
+  </Vendor>
+</RpVpnDeviceList>
 ```
 
-{{ Add example description here }}
+Returns list of supported VPN device brands, models and firmware versions:
+<?xml version="1.0" encoding="utf-8"?>
+<RpVpnDeviceList version="1.0">
+  <Vendor name="Cisco-Test">
+    <DeviceFamily name="IOS-Test">
+       <FirmwareVersion name="20" />
+    </DeviceFamily>
+  </Vendor>
+</RpVpnDeviceList>
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.
+The virtual network gateway name.
 
 ```yaml
 Type: System.String
@@ -77,8 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

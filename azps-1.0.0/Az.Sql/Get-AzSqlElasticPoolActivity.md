@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 0DB0B08A-F948-4F6E-9CF0-2FB5DD5064D3
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlelasticpoolactivity
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlElasticPoolActivity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlElasticPoolActivity.md
 ---
 
 # Get-AzSqlElasticPoolActivity
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the status of operations on an elastic pool.
 
 ## SYNTAX
 
@@ -19,26 +22,27 @@ Get-AzSqlElasticPoolActivity [-ServerName] <String> [-ElasticPoolName] <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlElasticPoolActivity** cmdlet gets the status of operations on an elastic pool for an Azure SQL Database.
+You can see the status of both pool creation and configuration updates.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the status of operations for an elastic pool
+```
+PS C:\>Get-AzSqlElasticPoolActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
 ```
 
-{{ Add example description here }}
+This command gets the status of the operations for the elastic pool named ElasticPool01.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ElasticPoolName
-The name of the Azure SQL Elastic Pool.
+Specifies the name of an elastic pool.
 
 ```yaml
 Type: System.String
@@ -78,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of a resource group to which the elastic pool is assigned.
 
 ```yaml
 Type: System.String
@@ -93,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Elastic Pool is in.
+Specifies the name of a server that contains an elastic pool.
 
 ```yaml
 Type: System.String
@@ -117,7 +121,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -133,14 +137,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -155,3 +158,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzSqlElasticPool](./Get-AzSqlElasticPool.md)
+
+[Get-AzSqlElasticPoolDatabase](./Get-AzSqlElasticPoolDatabase.md)
+
+[New-AzSqlElasticPool](./New-AzSqlElasticPool.md)
+
+[Remove-AzSqlElasticPool](./Remove-AzSqlElasticPool.md)
+
+[Set-AzSqlElasticPool](./Set-AzSqlElasticPool.md)
+
+

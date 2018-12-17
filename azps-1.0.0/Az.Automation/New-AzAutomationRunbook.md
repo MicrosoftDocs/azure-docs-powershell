@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version:
+ms.assetid: B6E35D4D-B2C1-4527-94A6-E7E3488F510B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationrunbook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationRunbook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Automation/Commands.Automation/help/New-AzAutomationRunbook.md
 ---
 
 # New-AzAutomationRunbook
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Automation runbook.
 
 ## SYNTAX
 
@@ -19,21 +22,22 @@ New-AzAutomationRunbook [-Name] <String> [-Description <String>] [-Tags <IDictio
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzAutomationRunbook** cmdlet creates an empty Azure Automation runbook by using APS.
+Specify a name for the runbook.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a runbook
+```
+PS C:\>New-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbook02" -ResourceGroupName "ResourceGroup01"
 ```
 
-{{ Add example description here }}
+This command creates a runbook named Runbook02 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
 ### -AutomationAccountName
-The automation account name.
+Specifies the name of the Automation account in which this cmdlet creates a runbook.
 
 ```yaml
 Type: System.String
@@ -48,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The runbook description.
+Specifies a description for the runbook.
 
 ```yaml
 Type: System.String
@@ -78,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogProgress
-Indicate whether progress logging should be turned on or off.
+Specifies whether the runbook logs progress.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -93,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogVerbose
-Indicate whether verbose logging should be turned on or off.
+Specifies whether logging includes detailed information.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -108,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The runbook name.
+Specifies a name for the runbook.
 
 ```yaml
 Type: System.String
@@ -123,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group for which this cmdlet creates a runbook.
 
 ```yaml
 Type: System.String
@@ -138,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The runbook tags.
+Key-value pairs in the form of a hash table. For example:
+@{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -153,7 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Runbook definition type.
+Specifies the type of runbook that this cmdlet creates.
+Valid values are:
+- PowerShell
+- GraphicalPowerShell
+- PowerShellWorkflow
+- GraphicalPowerShellWorkflow
+- Graph
+The value Graph is obsolete.
+It is equivalent to GraphicalPowerShellWorkflow.
 
 ```yaml
 Type: System.String
@@ -169,8 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -187,3 +199,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Export-AzAutomationRunbook](./Export-AzAutomationRunbook.md)
+
+[Get-AzAutomationRunbook](./Get-AzAutomationRunbook.md)
+
+[Import-AzAutomationRunbook](./Import-AzAutomationRunbook.md)
+
+[Publish-AzAutomationRunbook](./Publish-AzAutomationRunbook.md)
+
+[Remove-AzAutomationRunbook](./Remove-AzAutomationRunbook.md)
+
+[Set-AzAutomationRunbook](./Set-AzAutomationRunbook.md)
+
+[Start-AzAutomationRunbook](./Start-AzAutomationRunbook.md)

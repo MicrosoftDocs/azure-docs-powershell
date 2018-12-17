@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/new-azrediscachefirewallrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzRedisCacheFirewallRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzRedisCacheFirewallRule.md
 ---
 
 # New-AzRedisCacheFirewallRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create a firewall rule on a Redis Cache.
 
 ## SYNTAX
 
@@ -31,26 +33,34 @@ New-AzRedisCacheFirewallRule -ResourceId <String> -RuleName <String> -StartIP <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Create a firewall rule on a Redis Cache.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create a firewall rule
+```
+PS C:\>New-AzRedisCacheFirewallRule -Name "mycache" -RuleName "ruleone" -StartIP "10.0.0.1" -EndIP "10.0.0.32"
+
+        ResourceGroupName : myGroup
+        Name              : mycache
+        FirewallRuleId    : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/myGroup/providers/Microsoft.Cache/Redis/mycache/firewallRules/ruleone
+        RuleName          : ruleone
+        Type              : Microsoft.Cache/Redis/firewallRules
+        StartIP           : 10.0.0.1
+        EndIP             : 10.0.0.32
 ```
 
-{{ Add example description here }}
+This command creates firewall rule named ruleone on Redis Cache named mycache.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -75,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Object of type RedisCacheAttributes
+object of type RedisCacheAttributes
 
 ```yaml
 Type: Microsoft.Azure.Commands.RedisCache.Models.RedisCacheAttributes
@@ -196,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -212,3 +221,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRedisCacheFirewallRule](./Get-AzRedisCacheFirewallRule.md)
+
+[Remove-AzRedisCacheFirewallRule](./Remove-AzRedisCacheFirewallRule.md)
+
+[Get-AzRedisCache](./Get-AzRedisCache.md)
+
+[New-AzRedisCache](./New-AzRedisCache.md)
+
+[Remove-AzRedisCache](./Remove-AzRedisCache.md)
+
+[Set-AzRedisCache](./Set-AzRedisCache.md)

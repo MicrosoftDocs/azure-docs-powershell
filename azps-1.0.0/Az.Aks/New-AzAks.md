@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.Aks.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Aks.dll-Help.xml
 Module Name: Az.Aks
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.aks/new-azaks
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Aks/Commands.Aks/help/New-AzAks.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Aks/Commands.Aks/help/New-AzAks.md
 ---
 
 # New-AzAks
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create a new managed Kubernetes cluster.
 
 ## SYNTAX
 
@@ -20,16 +22,18 @@ New-AzAks [-Force] [-ResourceGroupName] <String> [-Name] <String> [[-ClientIdAnd
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+Create a new managed Kubernetes cluster.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+Create a new managed Kubernetes cluster with default params.
+
+```
+PS C:\> New-AzAks -ResourceGroupName group -Name myCluster
+```
 
 ## PARAMETERS
 
@@ -82,9 +86,9 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -185,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeOsDiskSize
-The default number of nodes for the node pools.
+Size in GB of the OS disk for each node in the node pool. Minimum 30 GB.
 
 ```yaml
 Type: System.Int32
@@ -246,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+Tags to be applied to the resource
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -292,8 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 7BCEB0EF-1A09-4CED-9F34-CE3AB03181A7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementpolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzApiManagementPolicy.md
 ---
 
 # Get-AzApiManagementPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the specified scope policy.
 
 ## SYNTAX
 
@@ -40,23 +43,47 @@ Get-AzApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApiManagementPolicy** cmdlet gets the specified scope policy.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the tenant level policy
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementPolicy -Context $apimContext -SaveAs "C:\contoso\policies\tenantpolicy.xml"
 ```
 
-{{ Add example description here }}
+This command gets tenant level policy and saves it to a file named tenantpolicy.xml.
+
+### Example 2: Get the product-scope policy
+```powershell
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementPolicy -Context $apimContext -ProductId "0123456789"
+```
+
+This command gets product-scope policy
+
+### Example 3: Get the API-scope policy
+```powershell
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementPolicy -Context $apimContext -ApiId "9876543210"
+```
+
+This command gets API-scope policy.
+
+### Example 4: Get the operation-scope policy
+```powershell
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Get-AzApiManagementPolicy -Context $apimContext -ApiId "9876543210" -OperationId "777"
+```
+
+This command gets the operation-scope policy.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of existing API.
-If specified will return API-scope policy.
-This parameters is required.
+Specifies the identifier of the existing API.
+If you specify this parameter the cmdlet returns the API-scope policy.
 
 ```yaml
 Type: System.String
@@ -71,9 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-Identifier of API Revision.
-This parameter is optional.
-If not specified, the policy will be retrieved from the currently active api revision.
+Identifier of API Revision. This parameter is optional. If not specified, the policy will be retrieved from the currently active api revision.
 
 ```yaml
 Type: System.String
@@ -88,8 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an instance of **PsApiManagementContext**.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -104,12 +128,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -119,9 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Identifier of existing operation.
-If specified with ApiId will return operation-scope policy.
-This parameters is optional.
+ps_force
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -136,9 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-Format of the policy.
-Default value is 'application/vnd.ms-azure-apim.policy+xml'.
-This parameter is optional.
+Specifies the format of the API management policy.
+The default value for this parameter is "application/vnd.ms-az-apim.policy+xml".
 
 ```yaml
 Type: System.String
@@ -153,9 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier of existing operation.
-If specified with ApiId will return operation-scope policy.
-This parameters is required.
+Specifies the identifier of the existing API operation.
+If you specify this parameter with *ApiId* the cmdlet returns operation-scope policy.
 
 ```yaml
 Type: System.String
@@ -170,9 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing product.
-If specified will return product-scope policy.
-This parameters is optional.
+Specifies the identifier of an existing product.
+If you specify this parameter the cmdlet returns the product-scope policy.
 
 ```yaml
 Type: System.String
@@ -187,9 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -SaveAs
-File path to save the result to.
-If not specified the result will be sent to pipeline as a sting.
-This parameter is optional.
+Specifies the file path to save the result to.
+If you do not specify this parameter the result is pipelined as a sting.
 
 ```yaml
 Type: System.String
@@ -219,8 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -235,8 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -253,3 +269,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzApiManagementPolicy](./Remove-AzApiManagementPolicy.md)
+
+[Set-AzApiManagementPolicy](./Set-AzApiManagementPolicy.md)
+
+

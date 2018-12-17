@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/get-azcontainerregistry
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzContainerRegistry.md
 ---
 
 # Get-AzContainerRegistry
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a container registry.
 
 ## SYNTAX
 
@@ -31,26 +33,77 @@ Get-AzContainerRegistry [-IncludeDetail] -ResourceId <String> [-DefaultProfile <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzContainerRegistry cmdlet gets a specified container registry or all the container registries in a resource group or the subscription.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a specified container registry
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Get-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry"
+
+   Container registry location: westus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
 ```
 
-{{ Add example description here }}
+This command gets the specified container registry.
+
+### Example 2: Get all the container registries in a resource group
+```powershell
+PS C:\>Get-AzContainerRegistry -ResourceGroupName "MyResourceGroup"
+
+   Container registry location: westus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
+
+
+   Container registry location: eastus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry1       Premium    myregistry1.azurecr.io    10/31/2017 6:29:31 PM      Succeeded  True
+```
+
+This command gets all the container registries in a resource group.
+
+### Example 3:  Get all the container registries in the subscription
+```powershell
+PS C:\>Get-AzContainerRegistry
+
+  Container registry location: westus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
+
+
+   Container registry location: eastus
+
+Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                  ngState    nabled     ame
+-------------     ---        -----------               ------------               ---------- ---------- ---------------
+myregistry1       Premium    myregistry1.azurecr.io    10/31/2017 6:29:31 PM      Succeeded  True
+```
+
+This command gets all the container registries in the subscription.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -132,8 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -146,3 +198,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzContainerRegistry](New-AzContainerRegistry.md)
+
+[Update-AzContainerRegistry](Update-AzContainerRegistry.md)
+
+[Remove-AzContainerRegistry](Remove-AzContainerRegistry.md)
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: F41953F1-9515-4081-8624-6A1494DA4BB2
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmchefextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMChefExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Get-AzVMChefExtension.md
 ---
 
 # Get-AzVMChefExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about a Chef extension.
 
 ## SYNTAX
 
@@ -25,26 +28,33 @@ Get-AzVMChefExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Name] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzVMChefExtension** cmdlet gets information about a Chef extension installed on a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get the details of Chef extension for a Windows virtual machine
+```
+PS C:\> Get-AzVMChefExtension -ResourceGroupName "ResourceGroup001" -VMName "WindowsVM001" -Windows
 ```
 
-{{ Add example description here }}
+This command gets the Chef extension from a Windows virtual machine named WindowsVM001 that belongs to the resource group named ResourceGroup001.
+
+### Example 2: Get the details of Chef extension for a Linux virtual machine
+```
+PS C:\> Get-AzVMChefExtension -ResourceGroupName "ResourceGroup002" -VMName "LinuxVM001" -Linux
+```
+
+This command gets the Chef extension from a Linux virtual machine named LinuxVM001 that belongs to the resource group named ResourceGroup002.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-Set extension for Linux.
+Indicates that this cmdlet works on a Linux virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -69,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Extension Name.
+Specifies the name of the Chef extension.
 
 ```yaml
 Type: System.String
@@ -84,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group that contains the virtual machine.
 
 ```yaml
 Type: System.String
@@ -99,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-To show the status.
+Indicates that this cmdlet gets only the instance view of the Chef extension.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -114,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of a virtual machine.
 
 ```yaml
 Type: System.String
@@ -129,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Set extension for Windows.
+Indicates that this cmdlet is for a Windows virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -144,8 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,3 +169,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzVMChefExtension](./Set-AzVMChefExtension.md)
+
+[Remove-AzVMChefExtension](./Remove-AzVMChefExtension.md)
+
+

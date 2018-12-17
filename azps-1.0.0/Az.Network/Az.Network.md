@@ -1,1108 +1,1186 @@
 ---
 Module Name: Az.Network
-Module Guid: f554cfcd-9cbb-4021-b158-fe20f0497f82
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: eb75c732-e274-4a20-b502-e9958e63484a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.network
+Help Version: 5.4.2.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Az.Network.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Az.Network.md
 ---
 
 # Az.Network Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Network Cmdlets.
 
 ## Az.Network Cmdlets
 ### [Add-AzApplicationGatewayAuthenticationCertificate](Add-AzApplicationGatewayAuthenticationCertificate.md)
-{{Manually Enter Add-AzApplicationGatewayAuthenticationCertificate Description Here}}
+Adds an authentication certificate to an application gateway.
 
 ### [Add-AzApplicationGatewayBackendAddressPool](Add-AzApplicationGatewayBackendAddressPool.md)
-{{Manually Enter Add-AzApplicationGatewayBackendAddressPool Description Here}}
+Adds a back-end address pool to an application gateway.
 
 ### [Add-AzApplicationGatewayBackendHttpSettings](Add-AzApplicationGatewayBackendHttpSettings.md)
-{{Manually Enter Add-AzApplicationGatewayBackendHttpSettings Description Here}}
+Adds back-end HTTP settings to an application gateway.
+
+### [Add-AzApplicationGatewayCustomError](Add-AzApplicationGatewayCustomError.md)
+Adds a custom error to an application gateway.
 
 ### [Add-AzApplicationGatewayFrontendIPConfig](Add-AzApplicationGatewayFrontendIPConfig.md)
-{{Manually Enter Add-AzApplicationGatewayFrontendIPConfig Description Here}}
+Adds a front-end IP configuration to an application gateway.
 
 ### [Add-AzApplicationGatewayFrontendPort](Add-AzApplicationGatewayFrontendPort.md)
-{{Manually Enter Add-AzApplicationGatewayFrontendPort Description Here}}
+Adds a front-end port to an application gateway.
 
 ### [Add-AzApplicationGatewayHttpListener](Add-AzApplicationGatewayHttpListener.md)
-{{Manually Enter Add-AzApplicationGatewayHttpListener Description Here}}
+Adds an HTTP listener to an application gateway.
+
+### [Add-AzApplicationGatewayHttpListenerCustomError](Add-AzApplicationGatewayHttpListenerCustomError.md)
+Adds a custom error to a http listener of an application gateway.
 
 ### [Add-AzApplicationGatewayIPConfiguration](Add-AzApplicationGatewayIPConfiguration.md)
-{{Manually Enter Add-AzApplicationGatewayIPConfiguration Description Here}}
+Adds an IP configuration to an application gateway.
 
 ### [Add-AzApplicationGatewayProbeConfig](Add-AzApplicationGatewayProbeConfig.md)
-{{Manually Enter Add-AzApplicationGatewayProbeConfig Description Here}}
+Adds a health probe to an Application Gateway.
 
 ### [Add-AzApplicationGatewayRedirectConfiguration](Add-AzApplicationGatewayRedirectConfiguration.md)
-{{Manually Enter Add-AzApplicationGatewayRedirectConfiguration Description Here}}
+Adds a redirect configuration to an Application Gateway.
 
 ### [Add-AzApplicationGatewayRequestRoutingRule](Add-AzApplicationGatewayRequestRoutingRule.md)
-{{Manually Enter Add-AzApplicationGatewayRequestRoutingRule Description Here}}
+Adds a request routing rule to an application gateway.
+
+### [Add-AzApplicationGatewayRewriteRuleSet](Add-AzApplicationGatewayRewriteRuleSet.md)
+Adds a rewrite rule set to an application gateway.
 
 ### [Add-AzApplicationGatewaySslCertificate](Add-AzApplicationGatewaySslCertificate.md)
-{{Manually Enter Add-AzApplicationGatewaySslCertificate Description Here}}
+Adds an SSL certificate to an application gateway.
 
 ### [Add-AzApplicationGatewayTrustedRootCertificate](Add-AzApplicationGatewayTrustedRootCertificate.md)
-{{Manually Enter Add-AzApplicationGatewayTrustedRootCertificate Description Here}}
+Adds a trusted root certificate to an application gateway.
 
 ### [Add-AzApplicationGatewayUrlPathMapConfig](Add-AzApplicationGatewayUrlPathMapConfig.md)
-{{Manually Enter Add-AzApplicationGatewayUrlPathMapConfig Description Here}}
+Adds an array of URL path mappings to a backend server pool.
 
 ### [Add-AzDelegation](Add-AzDelegation.md)
-{{Manually Enter Add-AzDelegation Description Here}}
+Adds a delegation to a subnet.
 
 ### [Add-AzExpressRouteCircuitAuthorization](Add-AzExpressRouteCircuitAuthorization.md)
-{{Manually Enter Add-AzExpressRouteCircuitAuthorization Description Here}}
+Adds an ExpressRoute circuit authorization.
 
 ### [Add-AzExpressRouteCircuitConnectionConfig](Add-AzExpressRouteCircuitConnectionConfig.md)
-{{Manually Enter Add-AzExpressRouteCircuitConnectionConfig Description Here}}
+Adds a circuit connection configuration to Private Peering of an Express Route Circuit. 
 
 ### [Add-AzExpressRouteCircuitPeeringConfig](Add-AzExpressRouteCircuitPeeringConfig.md)
-{{Manually Enter Add-AzExpressRouteCircuitPeeringConfig Description Here}}
+Adds a peering configuration to an ExpressRoute circuit.
 
 ### [Add-AzLoadBalancerBackendAddressPoolConfig](Add-AzLoadBalancerBackendAddressPoolConfig.md)
-{{Manually Enter Add-AzLoadBalancerBackendAddressPoolConfig Description Here}}
+Adds a backend address pool configuration to a load balancer.
 
 ### [Add-AzLoadBalancerFrontendIpConfig](Add-AzLoadBalancerFrontendIpConfig.md)
-{{Manually Enter Add-AzLoadBalancerFrontendIpConfig Description Here}}
+Adds a front-end IP configuration to a load balancer.
 
 ### [Add-AzLoadBalancerInboundNatPoolConfig](Add-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Add-AzLoadBalancerInboundNatPoolConfig Description Here}}
+
 
 ### [Add-AzLoadBalancerInboundNatRuleConfig](Add-AzLoadBalancerInboundNatRuleConfig.md)
-{{Manually Enter Add-AzLoadBalancerInboundNatRuleConfig Description Here}}
+Adds an inbound NAT rule configuration to a load balancer.
 
 ### [Add-AzLoadBalancerOutboundRuleConfig](Add-AzLoadBalancerOutboundRuleConfig.md)
-{{Manually Enter Add-AzLoadBalancerOutboundRuleConfig Description Here}}
+Adds an outbound rule configuration to a load balancer.
 
 ### [Add-AzLoadBalancerProbeConfig](Add-AzLoadBalancerProbeConfig.md)
-{{Manually Enter Add-AzLoadBalancerProbeConfig Description Here}}
+Adds a probe configuration to a load balancer.
 
 ### [Add-AzLoadBalancerRuleConfig](Add-AzLoadBalancerRuleConfig.md)
-{{Manually Enter Add-AzLoadBalancerRuleConfig Description Here}}
+Adds a rule configuration to a load balancer.
 
 ### [Add-AzNetworkInterfaceIpConfig](Add-AzNetworkInterfaceIpConfig.md)
-{{Manually Enter Add-AzNetworkInterfaceIpConfig Description Here}}
+Adds a network interface IP configuration to a network interface.
 
 ### [Add-AzNetworkInterfaceTapConfig](Add-AzNetworkInterfaceTapConfig.md)
-{{Manually Enter Add-AzNetworkInterfaceTapConfig Description Here}}
+Creates a TapConfiguration resource associated to a NetworkInterface. This will reference to an existing VirtualNetworkTap resource.
 
 ### [Add-AzNetworkSecurityRuleConfig](Add-AzNetworkSecurityRuleConfig.md)
-{{Manually Enter Add-AzNetworkSecurityRuleConfig Description Here}}
+Adds a network security rule configuration to a network security group.
 
 ### [Add-AzRouteConfig](Add-AzRouteConfig.md)
-{{Manually Enter Add-AzRouteConfig Description Here}}
+Adds a route to a route table.
 
 ### [Add-AzRouteFilterRuleConfig](Add-AzRouteFilterRuleConfig.md)
-{{Manually Enter Add-AzRouteFilterRuleConfig Description Here}}
+Adds a route filter rule to a route filter.
 
 ### [Add-AzServiceEndpointPolicyDefinition](Add-AzServiceEndpointPolicyDefinition.md)
-{{Manually Enter Add-AzServiceEndpointPolicyDefinition Description Here}}
+Adds a service endpoint policy definition to a specified policy.
 
 ### [Add-AzVirtualNetworkGatewayIpConfig](Add-AzVirtualNetworkGatewayIpConfig.md)
-{{Manually Enter Add-AzVirtualNetworkGatewayIpConfig Description Here}}
+Adds an IP configuration to a virtual network gateway.
 
 ### [Add-AzVirtualNetworkPeering](Add-AzVirtualNetworkPeering.md)
-{{Manually Enter Add-AzVirtualNetworkPeering Description Here}}
+Creates a peering between two virtual networks.
 
 ### [Add-AzVirtualNetworkSubnetConfig](Add-AzVirtualNetworkSubnetConfig.md)
-{{Manually Enter Add-AzVirtualNetworkSubnetConfig Description Here}}
+Adds a subnet configuration to a virtual network.
 
 ### [Add-AzVpnClientRevokedCertificate](Add-AzVpnClientRevokedCertificate.md)
-{{Manually Enter Add-AzVpnClientRevokedCertificate Description Here}}
+Adds a VPN client-revocation certificate.
 
 ### [Add-AzVpnClientRootCertificate](Add-AzVpnClientRootCertificate.md)
-{{Manually Enter Add-AzVpnClientRootCertificate Description Here}}
+Adds a VPN client root certificate.
 
 ### [Get-AzApplicationGateway](Get-AzApplicationGateway.md)
-{{Manually Enter Get-AzApplicationGateway Description Here}}
+Gets an application gateway.
 
 ### [Get-AzApplicationGatewayAuthenticationCertificate](Get-AzApplicationGatewayAuthenticationCertificate.md)
-{{Manually Enter Get-AzApplicationGatewayAuthenticationCertificate Description Here}}
+Gets an authentication certificate for an application gateway.
 
 ### [Get-AzApplicationGatewayAutoscaleConfiguration](Get-AzApplicationGatewayAutoscaleConfiguration.md)
-{{Manually Enter Get-AzApplicationGatewayAutoscaleConfiguration Description Here}}
+Gets the Autoscale Configuration of the Application Gateway.
 
 ### [Get-AzApplicationGatewayAvailableSslOptions](Get-AzApplicationGatewayAvailableSslOptions.md)
-{{Manually Enter Get-AzApplicationGatewayAvailableSslOptions Description Here}}
+Gets all available ssl options for ssl policy for Application Gateway.
 
 ### [Get-AzApplicationGatewayAvailableWafRuleSets](Get-AzApplicationGatewayAvailableWafRuleSets.md)
-{{Manually Enter Get-AzApplicationGatewayAvailableWafRuleSets Description Here}}
+Gets all available web application firewall rule sets.
 
 ### [Get-AzApplicationGatewayBackendAddressPool](Get-AzApplicationGatewayBackendAddressPool.md)
-{{Manually Enter Get-AzApplicationGatewayBackendAddressPool Description Here}}
+Gets a back-end address pool for an application gateway.
 
 ### [Get-AzApplicationGatewayBackendHealth](Get-AzApplicationGatewayBackendHealth.md)
-{{Manually Enter Get-AzApplicationGatewayBackendHealth Description Here}}
+Gets application gateway backend health.
 
 ### [Get-AzApplicationGatewayBackendHttpSettings](Get-AzApplicationGatewayBackendHttpSettings.md)
-{{Manually Enter Get-AzApplicationGatewayBackendHttpSettings Description Here}}
+Gets the back-end HTTP settings of an application gateway.
 
 ### [Get-AzApplicationGatewayConnectionDraining](Get-AzApplicationGatewayConnectionDraining.md)
-{{Manually Enter Get-AzApplicationGatewayConnectionDraining Description Here}}
+Gets the connection draining configuration of a back-end HTTP settings object.
+
+### [Get-AzApplicationGatewayCustomError](Get-AzApplicationGatewayCustomError.md)
+Gets custom error(s) from an application gateway.
 
 ### [Get-AzApplicationGatewayFrontendIPConfig](Get-AzApplicationGatewayFrontendIPConfig.md)
-{{Manually Enter Get-AzApplicationGatewayFrontendIPConfig Description Here}}
+Gets the front-end IP configuration of an application gateway.
 
 ### [Get-AzApplicationGatewayFrontendPort](Get-AzApplicationGatewayFrontendPort.md)
-{{Manually Enter Get-AzApplicationGatewayFrontendPort Description Here}}
+Gets the front-end port of an application gateway.
 
 ### [Get-AzApplicationGatewayHttpListener](Get-AzApplicationGatewayHttpListener.md)
-{{Manually Enter Get-AzApplicationGatewayHttpListener Description Here}}
+Gets the HTTP listener of an application gateway.
+
+### [Get-AzApplicationGatewayHttpListenerCustomError](Get-AzApplicationGatewayHttpListenerCustomError.md)
+Gets custom error(s) from a http listener of an application gateway.
 
 ### [Get-AzApplicationGatewayIPConfiguration](Get-AzApplicationGatewayIPConfiguration.md)
-{{Manually Enter Get-AzApplicationGatewayIPConfiguration Description Here}}
+Gets the IP configuration of an application gateway.
 
 ### [Get-AzApplicationGatewayProbeConfig](Get-AzApplicationGatewayProbeConfig.md)
-{{Manually Enter Get-AzApplicationGatewayProbeConfig Description Here}}
+Gets an existing health probe configuration from an Application Gateway.
 
 ### [Get-AzApplicationGatewayRedirectConfiguration](Get-AzApplicationGatewayRedirectConfiguration.md)
-{{Manually Enter Get-AzApplicationGatewayRedirectConfiguration Description Here}}
+Gets an existing redirect configuration from an Application Gateway.
 
 ### [Get-AzApplicationGatewayRequestRoutingRule](Get-AzApplicationGatewayRequestRoutingRule.md)
-{{Manually Enter Get-AzApplicationGatewayRequestRoutingRule Description Here}}
+Gets the request routing rule of an application gateway.
+
+### [Get-AzApplicationGatewayRewriteRuleSet](Get-AzApplicationGatewayRewriteRuleSet.md)
+Gets the rewrite rule set of an application gateway.
 
 ### [Get-AzApplicationGatewaySku](Get-AzApplicationGatewaySku.md)
-{{Manually Enter Get-AzApplicationGatewaySku Description Here}}
+Gets the SKU of an application gateway.
 
 ### [Get-AzApplicationGatewaySslCertificate](Get-AzApplicationGatewaySslCertificate.md)
-{{Manually Enter Get-AzApplicationGatewaySslCertificate Description Here}}
+Gets an SSL certificate for an application gateway.
 
 ### [Get-AzApplicationGatewaySslPolicy](Get-AzApplicationGatewaySslPolicy.md)
-{{Manually Enter Get-AzApplicationGatewaySslPolicy Description Here}}
+Gets the SSL policy of an application gateway.
 
 ### [Get-AzApplicationGatewaySslPredefinedPolicy](Get-AzApplicationGatewaySslPredefinedPolicy.md)
-{{Manually Enter Get-AzApplicationGatewaySslPredefinedPolicy Description Here}}
+Gets Predefined SSL Policies provided by Application Gateway.
 
 ### [Get-AzApplicationGatewayTrustedRootCertificate](Get-AzApplicationGatewayTrustedRootCertificate.md)
-{{Manually Enter Get-AzApplicationGatewayTrustedRootCertificate Description Here}}
+Gets the Trusted Root Certificate with a specific name from the Application Gateway.
 
 ### [Get-AzApplicationGatewayUrlPathMapConfig](Get-AzApplicationGatewayUrlPathMapConfig.md)
-{{Manually Enter Get-AzApplicationGatewayUrlPathMapConfig Description Here}}
+Gets an array of URL path mappings to a backend server pool.
 
 ### [Get-AzApplicationGatewayWebApplicationFirewallConfiguration](Get-AzApplicationGatewayWebApplicationFirewallConfiguration.md)
-{{Manually Enter Get-AzApplicationGatewayWebApplicationFirewallConfiguration Description Here}}
+Gets the WAF configuration of an application gateway.
 
 ### [Get-AzApplicationSecurityGroup](Get-AzApplicationSecurityGroup.md)
-{{Manually Enter Get-AzApplicationSecurityGroup Description Here}}
+Gets an application security group.
 
 ### [Get-AzAvailableServiceDelegation](Get-AzAvailableServiceDelegation.md)
-{{Manually Enter Get-AzAvailableServiceDelegation Description Here}}
+Get available service delegations in the region.
 
 ### [Get-AzBgpServiceCommunity](Get-AzBgpServiceCommunity.md)
-{{Manually Enter Get-AzBgpServiceCommunity Description Here}}
+Provides a list of all services / regions, BGP communities, and associated prefixes.
 
 ### [Get-AzDdosProtectionPlan](Get-AzDdosProtectionPlan.md)
-{{Manually Enter Get-AzDdosProtectionPlan Description Here}}
+Gets a DDoS protection plan.
 
 ### [Get-AzDelegation](Get-AzDelegation.md)
-{{Manually Enter Get-AzDelegation Description Here}}
+Get a delegation (or all of the delegations) on a given subnet.
 
 ### [Get-AzEffectiveNetworkSecurityGroup](Get-AzEffectiveNetworkSecurityGroup.md)
-{{Manually Enter Get-AzEffectiveNetworkSecurityGroup Description Here}}
+Gets the effective network security group of a network interface.
 
 ### [Get-AzEffectiveRouteTable](Get-AzEffectiveRouteTable.md)
-{{Manually Enter Get-AzEffectiveRouteTable Description Here}}
+Gets the effective route table of a network interface.
 
 ### [Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)
-{{Manually Enter Get-AzExpressRouteCircuit Description Here}}
+Gets an Azure ExpressRoute circuit from Azure.
 
 ### [Get-AzExpressRouteCircuitARPTable](Get-AzExpressRouteCircuitARPTable.md)
-{{Manually Enter Get-AzExpressRouteCircuitARPTable Description Here}}
+Gets the ARP table from an ExpressRoute circuit.
 
 ### [Get-AzExpressRouteCircuitAuthorization](Get-AzExpressRouteCircuitAuthorization.md)
-{{Manually Enter Get-AzExpressRouteCircuitAuthorization Description Here}}
+Gets information about ExpressRoute circuit authorizations.
 
 ### [Get-AzExpressRouteCircuitConnectionConfig](Get-AzExpressRouteCircuitConnectionConfig.md)
-{{Manually Enter Get-AzExpressRouteCircuitConnectionConfig Description Here}}
+Gets an ExpressRoute circuit connection configuration associated with Private Peering of ExpressRouteCircuit.
 
 ### [Get-AzExpressRouteCircuitPeeringConfig](Get-AzExpressRouteCircuitPeeringConfig.md)
-{{Manually Enter Get-AzExpressRouteCircuitPeeringConfig Description Here}}
+Gets an ExpressRoute circuit peering configuration.
 
 ### [Get-AzExpressRouteCircuitRouteTable](Get-AzExpressRouteCircuitRouteTable.md)
-{{Manually Enter Get-AzExpressRouteCircuitRouteTable Description Here}}
+Gets a route table from an ExpressRoute circuit.
 
 ### [Get-AzExpressRouteCircuitRouteTableSummary](Get-AzExpressRouteCircuitRouteTableSummary.md)
-{{Manually Enter Get-AzExpressRouteCircuitRouteTableSummary Description Here}}
+Gets a route table summary of an ExpressRoute circuit.
 
 ### [Get-AzExpressRouteCircuitStats](Get-AzExpressRouteCircuitStats.md)
-{{Manually Enter Get-AzExpressRouteCircuitStats Description Here}}
+Gets usage statistics of an ExpressRoute circuit.
+
+### [Get-AzExpressRoutePort](Get-AzExpressRoutePort.md)
+Gets an Azure ExpressRoutePort resource.
+
+### [Get-AzExpressRoutePortLinkConfig](Get-AzExpressRoutePortLinkConfig.md)
+Gets an ExpressRoutePort link configuration.
+
+### [Get-AzExpressRoutePortsLocation](Get-AzExpressRoutePortsLocation.md)
+Gets the locations at which ExpressRoutePort resources are available.
 
 ### [Get-AzExpressRouteServiceProvider](Get-AzExpressRouteServiceProvider.md)
-{{Manually Enter Get-AzExpressRouteServiceProvider Description Here}}
+Gets a list ExpressRoute service providers and their attributes.
 
 ### [Get-AzFirewall](Get-AzFirewall.md)
-{{Manually Enter Get-AzFirewall Description Here}}
+Gets a Azure Firewall.
+
+### [Get-AzFirewallFqdnTag](Get-AzFirewallFqdnTag.md)
+Gets the available Azure Firewall Fqdn Tags.
 
 ### [Get-AzInterfaceEndpoint](Get-AzInterfaceEndpoint.md)
-{{Manually Enter Get-AzInterfaceEndpoint Description Here}}
+The Get-AzInterfaceEndpoint cmdlet gets a Interface Endpoint.
 
 ### [Get-AzLoadBalancer](Get-AzLoadBalancer.md)
-{{Manually Enter Get-AzLoadBalancer Description Here}}
+Gets a load balancer.
 
 ### [Get-AzLoadBalancerBackendAddressPoolConfig](Get-AzLoadBalancerBackendAddressPoolConfig.md)
-{{Manually Enter Get-AzLoadBalancerBackendAddressPoolConfig Description Here}}
+Gets a backend address pool configuration for a load balancer.
 
 ### [Get-AzLoadBalancerFrontendIpConfig](Get-AzLoadBalancerFrontendIpConfig.md)
-{{Manually Enter Get-AzLoadBalancerFrontendIpConfig Description Here}}
+Gets a front-end IP configuration in a load balancer.
 
 ### [Get-AzLoadBalancerInboundNatPoolConfig](Get-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Get-AzLoadBalancerInboundNatPoolConfig Description Here}}
+
 
 ### [Get-AzLoadBalancerInboundNatRuleConfig](Get-AzLoadBalancerInboundNatRuleConfig.md)
-{{Manually Enter Get-AzLoadBalancerInboundNatRuleConfig Description Here}}
+Gets an inbound NAT rule configuration for a load balancer.
 
 ### [Get-AzLoadBalancerOutboundRuleConfig](Get-AzLoadBalancerOutboundRuleConfig.md)
-{{Manually Enter Get-AzLoadBalancerOutboundRuleConfig Description Here}}
+Gets an outbound rule configuration in a load balancer.
 
 ### [Get-AzLoadBalancerProbeConfig](Get-AzLoadBalancerProbeConfig.md)
-{{Manually Enter Get-AzLoadBalancerProbeConfig Description Here}}
+Gets a probe configuration for a load balancer.
 
 ### [Get-AzLoadBalancerRuleConfig](Get-AzLoadBalancerRuleConfig.md)
-{{Manually Enter Get-AzLoadBalancerRuleConfig Description Here}}
+Gets the rule configuration for a load balancer.
 
 ### [Get-AzLocalNetworkGateway](Get-AzLocalNetworkGateway.md)
-{{Manually Enter Get-AzLocalNetworkGateway Description Here}}
+Gets a Local Network Gateway
 
 ### [Get-AzNetworkInterface](Get-AzNetworkInterface.md)
-{{Manually Enter Get-AzNetworkInterface Description Here}}
+Gets a network interface.
 
 ### [Get-AzNetworkInterfaceIpConfig](Get-AzNetworkInterfaceIpConfig.md)
-{{Manually Enter Get-AzNetworkInterfaceIpConfig Description Here}}
+Gets a network interface IP configuration for a network interface.
 
 ### [Get-AzNetworkInterfaceTapConfig](Get-AzNetworkInterfaceTapConfig.md)
-{{Manually Enter Get-AzNetworkInterfaceTapConfig Description Here}}
+Gets a Tap configuration resource.
 
 ### [Get-AzNetworkProfile](Get-AzNetworkProfile.md)
-{{Manually Enter Get-AzNetworkProfile Description Here}}
+Gets an existing network profile top level resource
 
 ### [Get-AzNetworkSecurityGroup](Get-AzNetworkSecurityGroup.md)
-{{Manually Enter Get-AzNetworkSecurityGroup Description Here}}
+Gets a network security group.
 
 ### [Get-AzNetworkSecurityRuleConfig](Get-AzNetworkSecurityRuleConfig.md)
-{{Manually Enter Get-AzNetworkSecurityRuleConfig Description Here}}
+Get a network security rule configuration for a network security group.
 
 ### [Get-AzNetworkUsage](Get-AzNetworkUsage.md)
-{{Manually Enter Get-AzNetworkUsage Description Here}}
+Lists network usages for a subscription
 
 ### [Get-AzNetworkWatcher](Get-AzNetworkWatcher.md)
-{{Manually Enter Get-AzNetworkWatcher Description Here}}
+Gets the properties of a Network Watcher
 
 ### [Get-AzNetworkWatcherConnectionMonitor](Get-AzNetworkWatcherConnectionMonitor.md)
-{{Manually Enter Get-AzNetworkWatcherConnectionMonitor Description Here}}
+Returns connection monitor with specified name or the list of connection monitors
 
 ### [Get-AzNetworkWatcherConnectionMonitorReport](Get-AzNetworkWatcherConnectionMonitorReport.md)
-{{Manually Enter Get-AzNetworkWatcherConnectionMonitorReport Description Here}}
+Query a snapshot of the most recent connection states.
 
 ### [Get-AzNetworkWatcherFlowLogStatus](Get-AzNetworkWatcherFlowLogStatus.md)
-{{Manually Enter Get-AzNetworkWatcherFlowLogStatus Description Here}}
+Gets the status of flow logging on a resource.
 
 ### [Get-AzNetworkWatcherNextHop](Get-AzNetworkWatcherNextHop.md)
-{{Manually Enter Get-AzNetworkWatcherNextHop Description Here}}
+Gets the next hop from a VM.
 
 ### [Get-AzNetworkWatcherPacketCapture](Get-AzNetworkWatcherPacketCapture.md)
-{{Manually Enter Get-AzNetworkWatcherPacketCapture Description Here}}
+Gets information and properties and status of a packet capture resource.
 
 ### [Get-AzNetworkWatcherReachabilityProvidersList](Get-AzNetworkWatcherReachabilityProvidersList.md)
-{{Manually Enter Get-AzNetworkWatcherReachabilityProvidersList Description Here}}
+Lists all available internet service providers for a specified Azure region.
 
 ### [Get-AzNetworkWatcherReachabilityReport](Get-AzNetworkWatcherReachabilityReport.md)
-{{Manually Enter Get-AzNetworkWatcherReachabilityReport Description Here}}
+Gets the relative latency score for internet service providers from a specified location to Azure regions.
 
 ### [Get-AzNetworkWatcherSecurityGroupView](Get-AzNetworkWatcherSecurityGroupView.md)
-{{Manually Enter Get-AzNetworkWatcherSecurityGroupView Description Here}}
+View the configured and effective network security group rules applied on a VM.
 
 ### [Get-AzNetworkWatcherTopology](Get-AzNetworkWatcherTopology.md)
-{{Manually Enter Get-AzNetworkWatcherTopology Description Here}}
+Gets a network level view of resources and their relationships in a resource group.
 
 ### [Get-AzNetworkWatcherTroubleshootingResult](Get-AzNetworkWatcherTroubleshootingResult.md)
-{{Manually Enter Get-AzNetworkWatcherTroubleshootingResult Description Here}}
+Gets the troubleshooting result from the previously run or currently running troubleshooting operation.
 
 ### [Get-AzPublicIpAddress](Get-AzPublicIpAddress.md)
-{{Manually Enter Get-AzPublicIpAddress Description Here}}
+Gets a public IP address.
 
 ### [Get-AzPublicIpPrefix](Get-AzPublicIpPrefix.md)
-{{Manually Enter Get-AzPublicIpPrefix Description Here}}
+Gets a public IP prefix
 
 ### [Get-AzRouteConfig](Get-AzRouteConfig.md)
-{{Manually Enter Get-AzRouteConfig Description Here}}
+Gets routes from a route table.
 
 ### [Get-AzRouteFilter](Get-AzRouteFilter.md)
-{{Manually Enter Get-AzRouteFilter Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Get-AzRouteFilterRuleConfig](Get-AzRouteFilterRuleConfig.md)
-{{Manually Enter Get-AzRouteFilterRuleConfig Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Get-AzRouteTable](Get-AzRouteTable.md)
-{{Manually Enter Get-AzRouteTable Description Here}}
+Gets route tables.
 
 ### [Get-AzServiceEndpointPolicy](Get-AzServiceEndpointPolicy.md)
-{{Manually Enter Get-AzServiceEndpointPolicy Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Get-AzServiceEndpointPolicyDefinition](Get-AzServiceEndpointPolicyDefinition.md)
-{{Manually Enter Get-AzServiceEndpointPolicyDefinition Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Get-AzVirtualHub](Get-AzVirtualHub.md)
-{{Manually Enter Get-AzVirtualHub Description Here}}
+Gets an Azure VirtualHub by Name and ResourceGroupName or lists all Virtual Hubs by ResourceGroupName/Subscription.
 
 ### [Get-AzVirtualHubVnetConnection](Get-AzVirtualHubVnetConnection.md)
-{{Manually Enter Get-AzVirtualHubVnetConnection Description Here}}
+Gets a Virtual Network Connection in a virtual hub or lists all virtual network connections in a virtual hub.
 
 ### [Get-AzVirtualNetwork](Get-AzVirtualNetwork.md)
-{{Manually Enter Get-AzVirtualNetwork Description Here}}
+Gets a virtual network in a resource group.
 
 ### [Get-AzVirtualNetworkAvailableEndpointService](Get-AzVirtualNetworkAvailableEndpointService.md)
-{{Manually Enter Get-AzVirtualNetworkAvailableEndpointService Description Here}}
+Lists available endpoint services for location.
 
 ### [Get-AzVirtualNetworkGateway](Get-AzVirtualNetworkGateway.md)
-{{Manually Enter Get-AzVirtualNetworkGateway Description Here}}
+Gets a Virtual Network Gateway
 
 ### [Get-AzVirtualNetworkGatewayAdvertisedRoute](Get-AzVirtualNetworkGatewayAdvertisedRoute.md)
-{{Manually Enter Get-AzVirtualNetworkGatewayAdvertisedRoute Description Here}}
+Lists routes being advertised by an Azure virtual network gateway
 
 ### [Get-AzVirtualNetworkGatewayBGPPeerStatus](Get-AzVirtualNetworkGatewayBGPPeerStatus.md)
-{{Manually Enter Get-AzVirtualNetworkGatewayBGPPeerStatus Description Here}}
+Lists an Azure virtual network gateway's BGP peers
 
 ### [Get-AzVirtualNetworkGatewayConnection](Get-AzVirtualNetworkGatewayConnection.md)
-{{Manually Enter Get-AzVirtualNetworkGatewayConnection Description Here}}
+Gets a Virtual Network Gateway Connection
 
 ### [Get-AzVirtualNetworkGatewayConnectionSharedKey](Get-AzVirtualNetworkGatewayConnectionSharedKey.md)
-{{Manually Enter Get-AzVirtualNetworkGatewayConnectionSharedKey Description Here}}
+Displays the shared key used for the connection.
 
 ### [Get-AzVirtualNetworkGatewayConnectionVpnDeviceConfigScript](Get-AzVirtualNetworkGatewayConnectionVpnDeviceConfigScript.md)
-{{Manually Enter Get-AzVirtualNetworkGatewayConnectionVpnDeviceConfigScript Description Here}}
+This commandlet takes the connection resource, VPN device brand, model, firmware version, and return the corresponding configuration script that customers can apply directly on their on-premises VPN devices. The script will follow the syntax of the selected device, and fill in the necessary parameters such as Azure gateway public IP addresses, virtual network address prefixes, VPN tunnel pre-shared key, etc. so customers can simply copy-paste to their VPN device configurations.
 
 ### [Get-AzVirtualNetworkGatewayLearnedRoute](Get-AzVirtualNetworkGatewayLearnedRoute.md)
-{{Manually Enter Get-AzVirtualNetworkGatewayLearnedRoute Description Here}}
+Lists routes learned by an Azure virtual network gateway
 
 ### [Get-AzVirtualNetworkGatewaySupportedVpnDevice](Get-AzVirtualNetworkGatewaySupportedVpnDevice.md)
-{{Manually Enter Get-AzVirtualNetworkGatewaySupportedVpnDevice Description Here}}
+This commandlet returns a list of supported VPN device brands, models, and firmware versions.
 
 ### [Get-AzVirtualNetworkPeering](Get-AzVirtualNetworkPeering.md)
-{{Manually Enter Get-AzVirtualNetworkPeering Description Here}}
+Gets the virtual network peering.
 
 ### [Get-AzVirtualNetworkSubnetConfig](Get-AzVirtualNetworkSubnetConfig.md)
-{{Manually Enter Get-AzVirtualNetworkSubnetConfig Description Here}}
+Gets a subnet in a virtual network.
 
 ### [Get-AzVirtualNetworkTap](Get-AzVirtualNetworkTap.md)
-{{Manually Enter Get-AzVirtualNetworkTap Description Here}}
+Gets a virtual network tap
 
 ### [Get-AzVirtualNetworkUsageList](Get-AzVirtualNetworkUsageList.md)
-{{Manually Enter Get-AzVirtualNetworkUsageList Description Here}}
+Gets virtual network current usage.
 
 ### [Get-AzVirtualWan](Get-AzVirtualWan.md)
-{{Manually Enter Get-AzVirtualWan Description Here}}
+Gets a Virtual WAN or all Virtual WANs in a resource group or subscription.
 
 ### [Get-AzVirtualWanVpnConfiguration](Get-AzVirtualWanVpnConfiguration.md)
-{{Manually Enter Get-AzVirtualWanVpnConfiguration Description Here}}
+Gets the Vpn configuration for a subset of VpnSites connected to this WAN via VpnConnections. Uploads the generated Vpn
+configuration to a storage blob specified by the customer.
 
 ### [Get-AzVpnClientConfiguration](Get-AzVpnClientConfiguration.md)
-{{Manually Enter Get-AzVpnClientConfiguration Description Here}}
+Allows users to easily download the Vpn Profile package that was generated using the New-AzVpnClientConfiguration commandlet.
 
 ### [Get-AzVpnClientIpsecParameter](Get-AzVpnClientIpsecParameter.md)
-{{Manually Enter Get-AzVpnClientIpsecParameter Description Here}}
+Gets the vpn Ipsec parameters set on Virtual Network Gateway for Point to site connections.
 
 ### [Get-AzVpnClientPackage](Get-AzVpnClientPackage.md)
-{{Manually Enter Get-AzVpnClientPackage Description Here}}
+Gets information about a VPN client package.
 
 ### [Get-AzVpnClientRevokedCertificate](Get-AzVpnClientRevokedCertificate.md)
-{{Manually Enter Get-AzVpnClientRevokedCertificate Description Here}}
+Gets information about VPN client-revocation certificates.
 
 ### [Get-AzVpnClientRootCertificate](Get-AzVpnClientRootCertificate.md)
-{{Manually Enter Get-AzVpnClientRootCertificate Description Here}}
+Gets information about VPN root certificates.
 
 ### [Get-AzVpnConnection](Get-AzVpnConnection.md)
-{{Manually Enter Get-AzVpnConnection Description Here}}
+Gets a vpn connection by name or lists all vpn connections connected to a VpnGateway.
 
 ### [Get-AzVpnGateway](Get-AzVpnGateway.md)
-{{Manually Enter Get-AzVpnGateway Description Here}}
+Gets a VpnGateway resource using ResourceGroupName and GatewayName OR lists all gateways by ResourceGroupName or SubscriptionId.
 
 ### [Get-AzVpnSite](Get-AzVpnSite.md)
-{{Manually Enter Get-AzVpnSite Description Here}}
+Gets an Azure VpnSite resource by name OR lists all VpnSites in a ResourceGroup or SubscriptionId. 
+
+This is an RM representation of customer branches that are uploaded to Azure for S2S connectivity with a Cortex virtual hub.
 
 ### [Move-AzExpressRouteCircuit](Move-AzExpressRouteCircuit.md)
-{{Manually Enter Move-AzExpressRouteCircuit Description Here}}
+Moves an ExpressRoute circuit from the classic deployment model to the Resource Manager deployment model.
 
 ### [New-AzApplicationGateway](New-AzApplicationGateway.md)
-{{Manually Enter New-AzApplicationGateway Description Here}}
+Creates an application gateway.
 
 ### [New-AzApplicationGatewayAuthenticationCertificate](New-AzApplicationGatewayAuthenticationCertificate.md)
-{{Manually Enter New-AzApplicationGatewayAuthenticationCertificate Description Here}}
+Creates an authentication certificate for an application gateway.
 
 ### [New-AzApplicationGatewayAutoscaleConfiguration](New-AzApplicationGatewayAutoscaleConfiguration.md)
-{{Manually Enter New-AzApplicationGatewayAutoscaleConfiguration Description Here}}
+Creates a Autoscale Configuration for the Application Gateway.
 
 ### [New-AzApplicationGatewayBackendAddressPool](New-AzApplicationGatewayBackendAddressPool.md)
-{{Manually Enter New-AzApplicationGatewayBackendAddressPool Description Here}}
+Creates a back-end address pool for an application gateway.
 
 ### [New-AzApplicationGatewayBackendHttpSettings](New-AzApplicationGatewayBackendHttpSettings.md)
-{{Manually Enter New-AzApplicationGatewayBackendHttpSettings Description Here}}
+Creates back-end HTTP settings for an application gateway.
 
 ### [New-AzApplicationGatewayConnectionDraining](New-AzApplicationGatewayConnectionDraining.md)
-{{Manually Enter New-AzApplicationGatewayConnectionDraining Description Here}}
+Creates a new connection draining configuration for back-end HTTP settings.
+
+### [New-AzApplicationGatewayCustomError](New-AzApplicationGatewayCustomError.md)
+Creates a custom error with http status code and custom error page url 
 
 ### [New-AzApplicationGatewayFirewallDisabledRuleGroupConfig](New-AzApplicationGatewayFirewallDisabledRuleGroupConfig.md)
-{{Manually Enter New-AzApplicationGatewayFirewallDisabledRuleGroupConfig Description Here}}
+Creates a new disabled rule group configuration.
+
+### [New-AzApplicationGatewayFirewallExclusionConfig](New-AzApplicationGatewayFirewallExclusionConfig.md)
+Creates a new exclusion rule list for application gateway waf
 
 ### [New-AzApplicationGatewayFrontendIPConfig](New-AzApplicationGatewayFrontendIPConfig.md)
-{{Manually Enter New-AzApplicationGatewayFrontendIPConfig Description Here}}
+Creates a front-end IP configuration for an application gateway.
 
 ### [New-AzApplicationGatewayFrontendPort](New-AzApplicationGatewayFrontendPort.md)
-{{Manually Enter New-AzApplicationGatewayFrontendPort Description Here}}
+Creates a front-end port for an application gateway.
 
 ### [New-AzApplicationGatewayHttpListener](New-AzApplicationGatewayHttpListener.md)
-{{Manually Enter New-AzApplicationGatewayHttpListener Description Here}}
+Creates an HTTP listener for an application gateway.
 
 ### [New-AzApplicationGatewayIPConfiguration](New-AzApplicationGatewayIPConfiguration.md)
-{{Manually Enter New-AzApplicationGatewayIPConfiguration Description Here}}
+Creates an IP configuration for an application gateway.
 
 ### [New-AzApplicationGatewayPathRuleConfig](New-AzApplicationGatewayPathRuleConfig.md)
-{{Manually Enter New-AzApplicationGatewayPathRuleConfig Description Here}}
+Creates an application gateway path rule.
 
 ### [New-AzApplicationGatewayProbeConfig](New-AzApplicationGatewayProbeConfig.md)
-{{Manually Enter New-AzApplicationGatewayProbeConfig Description Here}}
+Creates a health probe.
 
 ### [New-AzApplicationGatewayProbeHealthResponseMatch](New-AzApplicationGatewayProbeHealthResponseMatch.md)
-{{Manually Enter New-AzApplicationGatewayProbeHealthResponseMatch Description Here}}
+Creates a health probe response match used by Health Probe for an application gateway.
 
 ### [New-AzApplicationGatewayRedirectConfiguration](New-AzApplicationGatewayRedirectConfiguration.md)
-{{Manually Enter New-AzApplicationGatewayRedirectConfiguration Description Here}}
+Creates a redirect configuration for an application gateway.
 
 ### [New-AzApplicationGatewayRequestRoutingRule](New-AzApplicationGatewayRequestRoutingRule.md)
-{{Manually Enter New-AzApplicationGatewayRequestRoutingRule Description Here}}
+Creates a request routing rule for an application gateway.
+
+### [New-AzApplicationGatewayRewriteRule](New-AzApplicationGatewayRewriteRule.md)
+Creates a rewrite rule for an application gateway.
+
+### [New-AzApplicationGatewayRewriteRuleActionSet](New-AzApplicationGatewayRewriteRuleActionSet.md)
+Creates a rewrite rule actionset for an application gateway.
+
+### [New-AzApplicationGatewayRewriteRuleHeaderConfiguration](New-AzApplicationGatewayRewriteRuleHeaderConfiguration.md)
+Creates a rewrite rule header configuration for an application gateway.
+
+### [New-AzApplicationGatewayRewriteRuleSet](New-AzApplicationGatewayRewriteRuleSet.md)
+Creates a request routing rule for an application gateway.
 
 ### [New-AzApplicationGatewaySku](New-AzApplicationGatewaySku.md)
-{{Manually Enter New-AzApplicationGatewaySku Description Here}}
+Creates a SKU for an application gateway.
 
 ### [New-AzApplicationGatewaySslCertificate](New-AzApplicationGatewaySslCertificate.md)
-{{Manually Enter New-AzApplicationGatewaySslCertificate Description Here}}
+Creates an SSL certificate for an Azure application gateway.
 
 ### [New-AzApplicationGatewaySslPolicy](New-AzApplicationGatewaySslPolicy.md)
-{{Manually Enter New-AzApplicationGatewaySslPolicy Description Here}}
+Creates an SSL policy for an application gateway.
 
 ### [New-AzApplicationGatewayTrustedRootCertificate](New-AzApplicationGatewayTrustedRootCertificate.md)
-{{Manually Enter New-AzApplicationGatewayTrustedRootCertificate Description Here}}
+Creates a Trusted Root Certificate for an application gateway.
 
 ### [New-AzApplicationGatewayUrlPathMapConfig](New-AzApplicationGatewayUrlPathMapConfig.md)
-{{Manually Enter New-AzApplicationGatewayUrlPathMapConfig Description Here}}
+Creates an array of URL path mappings to a backend server pool.
 
 ### [New-AzApplicationGatewayWebApplicationFirewallConfiguration](New-AzApplicationGatewayWebApplicationFirewallConfiguration.md)
-{{Manually Enter New-AzApplicationGatewayWebApplicationFirewallConfiguration Description Here}}
+Creates a WAF configuration for an application gateway.
 
 ### [New-AzApplicationSecurityGroup](New-AzApplicationSecurityGroup.md)
-{{Manually Enter New-AzApplicationSecurityGroup Description Here}}
+Creates an application security group.
 
 ### [New-AzContainerNicConfig](New-AzContainerNicConfig.md)
-{{Manually Enter New-AzContainerNicConfig Description Here}}
+Creates a new container network interface configuration object.
 
 ### [New-AzContainerNicConfigIpConfig](New-AzContainerNicConfigIpConfig.md)
-{{Manually Enter New-AzContainerNicConfigIpConfig Description Here}}
+Creates a container nic configuration ip configuration object.
 
 ### [New-AzDdosProtectionPlan](New-AzDdosProtectionPlan.md)
-{{Manually Enter New-AzDdosProtectionPlan Description Here}}
+Creates a DDoS protection plan.
 
 ### [New-AzDelegation](New-AzDelegation.md)
-{{Manually Enter New-AzDelegation Description Here}}
+Creates a service delegation.
 
 ### [New-AzExpressRouteCircuit](New-AzExpressRouteCircuit.md)
-{{Manually Enter New-AzExpressRouteCircuit Description Here}}
+Creates an Azure express route circuit.
 
 ### [New-AzExpressRouteCircuitAuthorization](New-AzExpressRouteCircuitAuthorization.md)
-{{Manually Enter New-AzExpressRouteCircuitAuthorization Description Here}}
+Creates an ExpressRoute circuit authorization.
 
 ### [New-AzExpressRouteCircuitPeeringConfig](New-AzExpressRouteCircuitPeeringConfig.md)
-{{Manually Enter New-AzExpressRouteCircuitPeeringConfig Description Here}}
+Creates a new peering configuration to be added to an ExpressRoute circuit.
+
+### [New-AzExpressRoutePort](New-AzExpressRoutePort.md)
+Creates an Azure ExpressRoutePort.
 
 ### [New-AzFirewall](New-AzFirewall.md)
-{{Manually Enter New-AzFirewall Description Here}}
+Creates a new Firewall in a resource group.
 
 ### [New-AzFirewallApplicationRule](New-AzFirewallApplicationRule.md)
-{{Manually Enter New-AzFirewallApplicationRule Description Here}}
+Creates a Firewall Application Rule.
 
 ### [New-AzFirewallApplicationRuleCollection](New-AzFirewallApplicationRuleCollection.md)
-{{Manually Enter New-AzFirewallApplicationRuleCollection Description Here}}
+Creates a collection of Firewall application rules.
 
 ### [New-AzFirewallNatRule](New-AzFirewallNatRule.md)
-{{Manually Enter New-AzFirewallNatRule Description Here}}
+Creates a Firewall NAT Rule.
 
 ### [New-AzFirewallNatRuleCollection](New-AzFirewallNatRuleCollection.md)
-{{Manually Enter New-AzFirewallNatRuleCollection Description Here}}
+Creates a collection of Firewall NAT rules.
 
 ### [New-AzFirewallNetworkRule](New-AzFirewallNetworkRule.md)
-{{Manually Enter New-AzFirewallNetworkRule Description Here}}
+Creates a Firewall Network Rule.
 
 ### [New-AzFirewallNetworkRuleCollection](New-AzFirewallNetworkRuleCollection.md)
-{{Manually Enter New-AzFirewallNetworkRuleCollection Description Here}}
+Creates a Azure Firewall Network Collection of Network rules.
 
 ### [New-AzIpsecPolicy](New-AzIpsecPolicy.md)
-{{Manually Enter New-AzIpsecPolicy Description Here}}
+Creates an IPSec Policy.
 
 ### [New-AzLoadBalancer](New-AzLoadBalancer.md)
-{{Manually Enter New-AzLoadBalancer Description Here}}
+Creates a load balancer.
 
 ### [New-AzLoadBalancerBackendAddressPoolConfig](New-AzLoadBalancerBackendAddressPoolConfig.md)
-{{Manually Enter New-AzLoadBalancerBackendAddressPoolConfig Description Here}}
+Creates a backend address pool configuration for a load balancer.
 
 ### [New-AzLoadBalancerFrontendIpConfig](New-AzLoadBalancerFrontendIpConfig.md)
-{{Manually Enter New-AzLoadBalancerFrontendIpConfig Description Here}}
+Creates a front-end IP configuration for a load balancer.
 
 ### [New-AzLoadBalancerInboundNatPoolConfig](New-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter New-AzLoadBalancerInboundNatPoolConfig Description Here}}
+
 
 ### [New-AzLoadBalancerInboundNatRuleConfig](New-AzLoadBalancerInboundNatRuleConfig.md)
-{{Manually Enter New-AzLoadBalancerInboundNatRuleConfig Description Here}}
+Creates an inbound NAT rule configuration for a load balancer.
 
 ### [New-AzLoadBalancerOutboundRuleConfig](New-AzLoadBalancerOutboundRuleConfig.md)
-{{Manually Enter New-AzLoadBalancerOutboundRuleConfig Description Here}}
+Creates an outbound rule configuration for a load balancer.
 
 ### [New-AzLoadBalancerProbeConfig](New-AzLoadBalancerProbeConfig.md)
-{{Manually Enter New-AzLoadBalancerProbeConfig Description Here}}
+Creates a probe configuration for a load balancer.
 
 ### [New-AzLoadBalancerRuleConfig](New-AzLoadBalancerRuleConfig.md)
-{{Manually Enter New-AzLoadBalancerRuleConfig Description Here}}
+Creates a rule configuration for a load balancer.
 
 ### [New-AzLocalNetworkGateway](New-AzLocalNetworkGateway.md)
-{{Manually Enter New-AzLocalNetworkGateway Description Here}}
+Creates a Local Network Gateway
 
 ### [New-AzNetworkInterface](New-AzNetworkInterface.md)
-{{Manually Enter New-AzNetworkInterface Description Here}}
+Creates a network interface.
 
 ### [New-AzNetworkInterfaceIpConfig](New-AzNetworkInterfaceIpConfig.md)
-{{Manually Enter New-AzNetworkInterfaceIpConfig Description Here}}
+Creates a network interface IP configuration.
 
 ### [New-AzNetworkProfile](New-AzNetworkProfile.md)
-{{Manually Enter New-AzNetworkProfile Description Here}}
+Creates a new network profile.
 
 ### [New-AzNetworkSecurityGroup](New-AzNetworkSecurityGroup.md)
-{{Manually Enter New-AzNetworkSecurityGroup Description Here}}
+Creates a network security group.
 
 ### [New-AzNetworkSecurityRuleConfig](New-AzNetworkSecurityRuleConfig.md)
-{{Manually Enter New-AzNetworkSecurityRuleConfig Description Here}}
+Creates a network security rule configuration.
 
 ### [New-AzNetworkWatcher](New-AzNetworkWatcher.md)
-{{Manually Enter New-AzNetworkWatcher Description Here}}
+Creates a new Network Watcher resource.
 
 ### [New-AzNetworkWatcherConnectionMonitor](New-AzNetworkWatcherConnectionMonitor.md)
-{{Manually Enter New-AzNetworkWatcherConnectionMonitor Description Here}}
+Creates a connection monitor.
 
 ### [New-AzNetworkWatcherPacketCapture](New-AzNetworkWatcherPacketCapture.md)
-{{Manually Enter New-AzNetworkWatcherPacketCapture Description Here}}
+Creates a new packet capture resource and starts a packet capture session on a VM.
 
 ### [New-AzNetworkWatcherProtocolConfiguration](New-AzNetworkWatcherProtocolConfiguration.md)
-{{Manually Enter New-AzNetworkWatcherProtocolConfiguration Description Here}}
+Creates a new protocol configuration object.
 
 ### [New-AzPacketCaptureFilterConfig](New-AzPacketCaptureFilterConfig.md)
-{{Manually Enter New-AzPacketCaptureFilterConfig Description Here}}
+Creates a new packet capture filter object.
 
 ### [New-AzPublicIpAddress](New-AzPublicIpAddress.md)
-{{Manually Enter New-AzPublicIpAddress Description Here}}
+Creates a public IP address.
 
 ### [New-AzPublicIpPrefix](New-AzPublicIpPrefix.md)
-{{Manually Enter New-AzPublicIpPrefix Description Here}}
+Creates a Public IP Prefix
 
 ### [New-AzPublicIpTag](New-AzPublicIpTag.md)
-{{Manually Enter New-AzPublicIpTag Description Here}}
+Creates an IP Tag.
 
 ### [New-AzRouteConfig](New-AzRouteConfig.md)
-{{Manually Enter New-AzRouteConfig Description Here}}
+Creates a route for a route table.
 
 ### [New-AzRouteFilter](New-AzRouteFilter.md)
-{{Manually Enter New-AzRouteFilter Description Here}}
+Creates a route filter.
 
 ### [New-AzRouteFilterRuleConfig](New-AzRouteFilterRuleConfig.md)
-{{Manually Enter New-AzRouteFilterRuleConfig Description Here}}
+Creates a route filter rule for a route filter.
 
 ### [New-AzRouteTable](New-AzRouteTable.md)
-{{Manually Enter New-AzRouteTable Description Here}}
+Creates a route table.
 
 ### [New-AzServiceEndpointPolicy](New-AzServiceEndpointPolicy.md)
-{{Manually Enter New-AzServiceEndpointPolicy Description Here}}
+{{Fill in the Synopsis}}
 
 ### [New-AzServiceEndpointPolicyDefinition](New-AzServiceEndpointPolicyDefinition.md)
-{{Manually Enter New-AzServiceEndpointPolicyDefinition Description Here}}
+{{Fill in the Synopsis}}
 
 ### [New-AzVirtualHub](New-AzVirtualHub.md)
-{{Manually Enter New-AzVirtualHub Description Here}}
+Creates an Azure VirtualHub resource.
 
 ### [New-AzVirtualHubRoute](New-AzVirtualHubRoute.md)
-{{Manually Enter New-AzVirtualHubRoute Description Here}}
+Creates an Azure Virtual Hub Route object.
 
 ### [New-AzVirtualHubRouteTable](New-AzVirtualHubRouteTable.md)
-{{Manually Enter New-AzVirtualHubRouteTable Description Here}}
+Creates an Azure Virtual Hub Route Table object.
 
 ### [New-AzVirtualHubVnetConnection](New-AzVirtualHubVnetConnection.md)
-{{Manually Enter New-AzVirtualHubVnetConnection Description Here}}
+The New-AzVirtualHubVnetConnection cmdlet creates a HubVirtualNetworkConnection resource that peers a Virtual Network to the Azure Virtual Hub.
 
 ### [New-AzVirtualNetwork](New-AzVirtualNetwork.md)
-{{Manually Enter New-AzVirtualNetwork Description Here}}
+Creates a virtual network.
 
 ### [New-AzVirtualNetworkGateway](New-AzVirtualNetworkGateway.md)
-{{Manually Enter New-AzVirtualNetworkGateway Description Here}}
+Creates a Virtual Network Gateway
 
 ### [New-AzVirtualNetworkGatewayConnection](New-AzVirtualNetworkGatewayConnection.md)
-{{Manually Enter New-AzVirtualNetworkGatewayConnection Description Here}}
+Creates the Site-to-Site VPN connection between the virtual network gateway and the on-prem VPN device.
 
 ### [New-AzVirtualNetworkGatewayIpConfig](New-AzVirtualNetworkGatewayIpConfig.md)
-{{Manually Enter New-AzVirtualNetworkGatewayIpConfig Description Here}}
+Creates an IP Configuration for a Virtual Network Gateway
 
 ### [New-AzVirtualNetworkSubnetConfig](New-AzVirtualNetworkSubnetConfig.md)
-{{Manually Enter New-AzVirtualNetworkSubnetConfig Description Here}}
+Creates a virtual network subnet configuration.
 
 ### [New-AzVirtualNetworkTap](New-AzVirtualNetworkTap.md)
-{{Manually Enter New-AzVirtualNetworkTap Description Here}}
+Creates a VirtualNetworkTap resource.
 
 ### [New-AzVirtualWan](New-AzVirtualWan.md)
-{{Manually Enter New-AzVirtualWan Description Here}}
+Creates an Azure Virtual WAN.
 
 ### [New-AzVpnClientConfiguration](New-AzVpnClientConfiguration.md)
-{{Manually Enter New-AzVpnClientConfiguration Description Here}}
+This command allows the users to create the Vpn profile package based on pre-configured vpn settings on the VPN gateway, in addition to some additional settings that users may need to configure, for e.g. some root certificates.
 
 ### [New-AzVpnClientIpsecParameter](New-AzVpnClientIpsecParameter.md)
-{{Manually Enter New-AzVpnClientIpsecParameter Description Here}}
+This command allows the users to create the Vpn ipsec parameters object specifying one or all values such as IpsecEncryption,IpsecIntegrity,IkeEncryption,IkeIntegrity,DhGroup,PfsGroup to set on the existing VPN gateway.
 
 ### [New-AzVpnClientIpsecPolicy](New-AzVpnClientIpsecPolicy.md)
-{{Manually Enter New-AzVpnClientIpsecPolicy Description Here}}
+This command allows the users to create the Vpn ipsec policy object specifying one or all values such as IpsecEncryption,IpsecIntegrity,IkeEncryption,IkeIntegrity,DhGroup,PfsGroup to set on the VPN gateway. This command let output object is used to set vpn ipsec policy for both new / exisitng gateway.
 
 ### [New-AzVpnClientRevokedCertificate](New-AzVpnClientRevokedCertificate.md)
-{{Manually Enter New-AzVpnClientRevokedCertificate Description Here}}
+Creates a new VPN client-revocation certificate.
 
 ### [New-AzVpnClientRootCertificate](New-AzVpnClientRootCertificate.md)
-{{Manually Enter New-AzVpnClientRootCertificate Description Here}}
+Creates a new VPN client root certificate.
 
 ### [New-AzVpnConnection](New-AzVpnConnection.md)
-{{Manually Enter New-AzVpnConnection Description Here}}
+Creates a IPSec connection that connects a VpnGateway to a remote customer branch represented in RM as a VpnSite.
 
 ### [New-AzVpnGateway](New-AzVpnGateway.md)
-{{Manually Enter New-AzVpnGateway Description Here}}
+Creates a Scalable VPN Gateway.
 
 ### [New-AzVpnSite](New-AzVpnSite.md)
-{{Manually Enter New-AzVpnSite Description Here}}
+Creates a new Azure VpnSite resource. This is an RM representation of customer branches that are uploaded to Azure
+for S2S connectivity with a Cortex virtual hub.
 
 ### [Remove-AzApplicationGateway](Remove-AzApplicationGateway.md)
-{{Manually Enter Remove-AzApplicationGateway Description Here}}
+Removes an application gateway.
 
 ### [Remove-AzApplicationGatewayAuthenticationCertificate](Remove-AzApplicationGatewayAuthenticationCertificate.md)
-{{Manually Enter Remove-AzApplicationGatewayAuthenticationCertificate Description Here}}
+Removes an authentication certificate from an application gateway.
 
 ### [Remove-AzApplicationGatewayAutoscaleConfiguration](Remove-AzApplicationGatewayAutoscaleConfiguration.md)
-{{Manually Enter Remove-AzApplicationGatewayAutoscaleConfiguration Description Here}}
+Removes Autoscale Configuration from an application gateway.
 
 ### [Remove-AzApplicationGatewayBackendAddressPool](Remove-AzApplicationGatewayBackendAddressPool.md)
-{{Manually Enter Remove-AzApplicationGatewayBackendAddressPool Description Here}}
+Removes a back-end address pool from an application gateway.
 
 ### [Remove-AzApplicationGatewayBackendHttpSettings](Remove-AzApplicationGatewayBackendHttpSettings.md)
-{{Manually Enter Remove-AzApplicationGatewayBackendHttpSettings Description Here}}
+Removes back-end HTTP settings from an application gateway.
 
 ### [Remove-AzApplicationGatewayConnectionDraining](Remove-AzApplicationGatewayConnectionDraining.md)
-{{Manually Enter Remove-AzApplicationGatewayConnectionDraining Description Here}}
+Removes the connection draining configuration of a back-end HTTP settings object.
+
+### [Remove-AzApplicationGatewayCustomError](Remove-AzApplicationGatewayCustomError.md)
+Removes a custom error from an application gateway.
 
 ### [Remove-AzApplicationGatewayFrontendIPConfig](Remove-AzApplicationGatewayFrontendIPConfig.md)
-{{Manually Enter Remove-AzApplicationGatewayFrontendIPConfig Description Here}}
+Removes a front-end IP configuration from an application gateway.
 
 ### [Remove-AzApplicationGatewayFrontendPort](Remove-AzApplicationGatewayFrontendPort.md)
-{{Manually Enter Remove-AzApplicationGatewayFrontendPort Description Here}}
+Removes a front-end port from an application gateway.
 
 ### [Remove-AzApplicationGatewayHttpListener](Remove-AzApplicationGatewayHttpListener.md)
-{{Manually Enter Remove-AzApplicationGatewayHttpListener Description Here}}
+Removes an HTTP listener from an application gateway.
+
+### [Remove-AzApplicationGatewayHttpListenerCustomError](Remove-AzApplicationGatewayHttpListenerCustomError.md)
+Removes a custom error from a http listener of an application gateway.
 
 ### [Remove-AzApplicationGatewayIPConfiguration](Remove-AzApplicationGatewayIPConfiguration.md)
-{{Manually Enter Remove-AzApplicationGatewayIPConfiguration Description Here}}
+Removes an IP configuration from an application gateway.
 
 ### [Remove-AzApplicationGatewayProbeConfig](Remove-AzApplicationGatewayProbeConfig.md)
-{{Manually Enter Remove-AzApplicationGatewayProbeConfig Description Here}}
+Removes a health probe from an existing application gateway.
 
 ### [Remove-AzApplicationGatewayRedirectConfiguration](Remove-AzApplicationGatewayRedirectConfiguration.md)
-{{Manually Enter Remove-AzApplicationGatewayRedirectConfiguration Description Here}}
+Removes a redirect configuration from an existing Application Gateway.
 
 ### [Remove-AzApplicationGatewayRequestRoutingRule](Remove-AzApplicationGatewayRequestRoutingRule.md)
-{{Manually Enter Remove-AzApplicationGatewayRequestRoutingRule Description Here}}
+Removes a request routing rule from an application gateway.
+
+### [Remove-AzApplicationGatewayRewriteRuleSet](Remove-AzApplicationGatewayRewriteRuleSet.md)
+Removes a rewrite rule set from an application gateway.
 
 ### [Remove-AzApplicationGatewaySslCertificate](Remove-AzApplicationGatewaySslCertificate.md)
-{{Manually Enter Remove-AzApplicationGatewaySslCertificate Description Here}}
+Removes an SSL certificate from an Azure application gateway.
 
 ### [Remove-AzApplicationGatewaySslPolicy](Remove-AzApplicationGatewaySslPolicy.md)
-{{Manually Enter Remove-AzApplicationGatewaySslPolicy Description Here}}
+Removes an SSL policy from an Azure application gateway.
 
 ### [Remove-AzApplicationGatewayTrustedRootCertificate](Remove-AzApplicationGatewayTrustedRootCertificate.md)
-{{Manually Enter Remove-AzApplicationGatewayTrustedRootCertificate Description Here}}
+Removes a Trusted Root Certificate from an application gateway.
 
 ### [Remove-AzApplicationGatewayUrlPathMapConfig](Remove-AzApplicationGatewayUrlPathMapConfig.md)
-{{Manually Enter Remove-AzApplicationGatewayUrlPathMapConfig Description Here}}
+Removes URL path mappings to a backend server pool.
 
 ### [Remove-AzApplicationSecurityGroup](Remove-AzApplicationSecurityGroup.md)
-{{Manually Enter Remove-AzApplicationSecurityGroup Description Here}}
+Removes an application security group.
 
 ### [Remove-AzDdosProtectionPlan](Remove-AzDdosProtectionPlan.md)
-{{Manually Enter Remove-AzDdosProtectionPlan Description Here}}
+Removes a DDoS protection plan.
 
 ### [Remove-AzDelegation](Remove-AzDelegation.md)
-{{Manually Enter Remove-AzDelegation Description Here}}
+Removes a service delegation from the provided subnet.
 
 ### [Remove-AzExpressRouteCircuit](Remove-AzExpressRouteCircuit.md)
-{{Manually Enter Remove-AzExpressRouteCircuit Description Here}}
+Removes an ExpressRoute circuit.
 
 ### [Remove-AzExpressRouteCircuitAuthorization](Remove-AzExpressRouteCircuitAuthorization.md)
-{{Manually Enter Remove-AzExpressRouteCircuitAuthorization Description Here}}
+Removes an existing ExpressRoute configuration authorization.
 
 ### [Remove-AzExpressRouteCircuitConnectionConfig](Remove-AzExpressRouteCircuitConnectionConfig.md)
-{{Manually Enter Remove-AzExpressRouteCircuitConnectionConfig Description Here}}
+Removes an ExpressRoute circuit connection configuration.
 
 ### [Remove-AzExpressRouteCircuitPeeringConfig](Remove-AzExpressRouteCircuitPeeringConfig.md)
-{{Manually Enter Remove-AzExpressRouteCircuitPeeringConfig Description Here}}
+Removes an ExpressRoute circuit peering configuration.
+
+### [Remove-AzExpressRoutePort](Remove-AzExpressRoutePort.md)
+Removes an ExpressRoutePort.
 
 ### [Remove-AzFirewall](Remove-AzFirewall.md)
-{{Manually Enter Remove-AzFirewall Description Here}}
+Remove a Firewall.
 
 ### [Remove-AzLoadBalancer](Remove-AzLoadBalancer.md)
-{{Manually Enter Remove-AzLoadBalancer Description Here}}
+Removes a load balancer.
 
 ### [Remove-AzLoadBalancerBackendAddressPoolConfig](Remove-AzLoadBalancerBackendAddressPoolConfig.md)
-{{Manually Enter Remove-AzLoadBalancerBackendAddressPoolConfig Description Here}}
+Removes a backend address pool configuration from a load balancer.
 
 ### [Remove-AzLoadBalancerFrontendIpConfig](Remove-AzLoadBalancerFrontendIpConfig.md)
-{{Manually Enter Remove-AzLoadBalancerFrontendIpConfig Description Here}}
+Removes a front-end IP configuration from a load balancer.
 
 ### [Remove-AzLoadBalancerInboundNatPoolConfig](Remove-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Remove-AzLoadBalancerInboundNatPoolConfig Description Here}}
+
 
 ### [Remove-AzLoadBalancerInboundNatRuleConfig](Remove-AzLoadBalancerInboundNatRuleConfig.md)
-{{Manually Enter Remove-AzLoadBalancerInboundNatRuleConfig Description Here}}
+Removes an inbound NAT rule configuration from a load balancer.
 
 ### [Remove-AzLoadBalancerOutboundRuleConfig](Remove-AzLoadBalancerOutboundRuleConfig.md)
-{{Manually Enter Remove-AzLoadBalancerOutboundRuleConfig Description Here}}
+Removes an outbound rule configuration from a load balancer.
 
 ### [Remove-AzLoadBalancerProbeConfig](Remove-AzLoadBalancerProbeConfig.md)
-{{Manually Enter Remove-AzLoadBalancerProbeConfig Description Here}}
+Removes a probe configuration from a load balancer.
 
 ### [Remove-AzLoadBalancerRuleConfig](Remove-AzLoadBalancerRuleConfig.md)
-{{Manually Enter Remove-AzLoadBalancerRuleConfig Description Here}}
+Removes a rule configuration for a load balancer.
 
 ### [Remove-AzLocalNetworkGateway](Remove-AzLocalNetworkGateway.md)
-{{Manually Enter Remove-AzLocalNetworkGateway Description Here}}
+Deletes a Local Network Gateway
 
 ### [Remove-AzNetworkInterface](Remove-AzNetworkInterface.md)
-{{Manually Enter Remove-AzNetworkInterface Description Here}}
+Removes a network interface.
 
 ### [Remove-AzNetworkInterfaceIpConfig](Remove-AzNetworkInterfaceIpConfig.md)
-{{Manually Enter Remove-AzNetworkInterfaceIpConfig Description Here}}
+Removes a network interface IP configuration from a network interface.
 
 ### [Remove-AzNetworkInterfaceTapConfig](Remove-AzNetworkInterfaceTapConfig.md)
-{{Manually Enter Remove-AzNetworkInterfaceTapConfig Description Here}}
+Removes a tap configuration from given network interface
 
 ### [Remove-AzNetworkProfile](Remove-AzNetworkProfile.md)
-{{Manually Enter Remove-AzNetworkProfile Description Here}}
+Removes a network profile.
 
 ### [Remove-AzNetworkSecurityGroup](Remove-AzNetworkSecurityGroup.md)
-{{Manually Enter Remove-AzNetworkSecurityGroup Description Here}}
+Removes a network security group.
 
 ### [Remove-AzNetworkSecurityRuleConfig](Remove-AzNetworkSecurityRuleConfig.md)
-{{Manually Enter Remove-AzNetworkSecurityRuleConfig Description Here}}
+Removes a network security rule from a network security group.
 
 ### [Remove-AzNetworkWatcher](Remove-AzNetworkWatcher.md)
-{{Manually Enter Remove-AzNetworkWatcher Description Here}}
+Removes a Network Watcher.
 
 ### [Remove-AzNetworkWatcherConnectionMonitor](Remove-AzNetworkWatcherConnectionMonitor.md)
-{{Manually Enter Remove-AzNetworkWatcherConnectionMonitor Description Here}}
+Remove connection monitor.
 
 ### [Remove-AzNetworkWatcherPacketCapture](Remove-AzNetworkWatcherPacketCapture.md)
-{{Manually Enter Remove-AzNetworkWatcherPacketCapture Description Here}}
+Removes a packet capture resource.
 
 ### [Remove-AzPublicIpAddress](Remove-AzPublicIpAddress.md)
-{{Manually Enter Remove-AzPublicIpAddress Description Here}}
+Removes a public IP address.
 
 ### [Remove-AzPublicIpPrefix](Remove-AzPublicIpPrefix.md)
-{{Manually Enter Remove-AzPublicIpPrefix Description Here}}
+Removes a public IP prefix
 
 ### [Remove-AzRouteConfig](Remove-AzRouteConfig.md)
-{{Manually Enter Remove-AzRouteConfig Description Here}}
+Removes a route from a route table.
 
 ### [Remove-AzRouteFilter](Remove-AzRouteFilter.md)
-{{Manually Enter Remove-AzRouteFilter Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Remove-AzRouteFilterRuleConfig](Remove-AzRouteFilterRuleConfig.md)
-{{Manually Enter Remove-AzRouteFilterRuleConfig Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Remove-AzRouteTable](Remove-AzRouteTable.md)
-{{Manually Enter Remove-AzRouteTable Description Here}}
+Removes a route table.
 
 ### [Remove-AzServiceEndpointPolicy](Remove-AzServiceEndpointPolicy.md)
-{{Manually Enter Remove-AzServiceEndpointPolicy Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Remove-AzServiceEndpointPolicyDefinition](Remove-AzServiceEndpointPolicyDefinition.md)
-{{Manually Enter Remove-AzServiceEndpointPolicyDefinition Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Remove-AzVirtualHub](Remove-AzVirtualHub.md)
-{{Manually Enter Remove-AzVirtualHub Description Here}}
+Removes an Azure VirtualHub resource.
 
 ### [Remove-AzVirtualHubVnetConnection](Remove-AzVirtualHubVnetConnection.md)
-{{Manually Enter Remove-AzVirtualHubVnetConnection Description Here}}
+The Remove-AzVirtualHubVnetConnection cmdlet removes an Azure Virtual Network Connection which peers a remote VNET to the hub VNET.
 
 ### [Remove-AzVirtualNetwork](Remove-AzVirtualNetwork.md)
-{{Manually Enter Remove-AzVirtualNetwork Description Here}}
+Removes a virtual network.
 
 ### [Remove-AzVirtualNetworkGateway](Remove-AzVirtualNetworkGateway.md)
-{{Manually Enter Remove-AzVirtualNetworkGateway Description Here}}
+Deletes a Virtual Network Gateway
 
 ### [Remove-AzVirtualNetworkGatewayConnection](Remove-AzVirtualNetworkGatewayConnection.md)
-{{Manually Enter Remove-AzVirtualNetworkGatewayConnection Description Here}}
+Deletes a Virtual Network Gateway Connection
 
 ### [Remove-AzVirtualNetworkGatewayDefaultSite](Remove-AzVirtualNetworkGatewayDefaultSite.md)
-{{Manually Enter Remove-AzVirtualNetworkGatewayDefaultSite Description Here}}
+Removes the default site from a virtual network gateway.
 
 ### [Remove-AzVirtualNetworkGatewayIpConfig](Remove-AzVirtualNetworkGatewayIpConfig.md)
-{{Manually Enter Remove-AzVirtualNetworkGatewayIpConfig Description Here}}
+Removes an IP Configuration from a Virtual Network Gateway
 
 ### [Remove-AzVirtualNetworkPeering](Remove-AzVirtualNetworkPeering.md)
-{{Manually Enter Remove-AzVirtualNetworkPeering Description Here}}
+Removes a virtual network peering.
 
 ### [Remove-AzVirtualNetworkSubnetConfig](Remove-AzVirtualNetworkSubnetConfig.md)
-{{Manually Enter Remove-AzVirtualNetworkSubnetConfig Description Here}}
+Removes a subnet configuration from a virtual network.
 
 ### [Remove-AzVirtualNetworkTap](Remove-AzVirtualNetworkTap.md)
-{{Manually Enter Remove-AzVirtualNetworkTap Description Here}}
+Removes a virtual network tap.
 
 ### [Remove-AzVirtualWan](Remove-AzVirtualWan.md)
-{{Manually Enter Remove-AzVirtualWan Description Here}}
+Removes an Azure Virtual WAN.
 
 ### [Remove-AzVpnClientIpsecParameter](Remove-AzVpnClientIpsecParameter.md)
-{{Manually Enter Remove-AzVpnClientIpsecParameter Description Here}}
+Removes Vpn custom ipsec policy set on Virtual Network Gateway resource.
 
 ### [Remove-AzVpnClientRevokedCertificate](Remove-AzVpnClientRevokedCertificate.md)
-{{Manually Enter Remove-AzVpnClientRevokedCertificate Description Here}}
+Removes a VPN client-revocation certificate.
 
 ### [Remove-AzVpnClientRootCertificate](Remove-AzVpnClientRootCertificate.md)
-{{Manually Enter Remove-AzVpnClientRootCertificate Description Here}}
+Removes an existing VPN client root certificate.
 
 ### [Remove-AzVpnConnection](Remove-AzVpnConnection.md)
-{{Manually Enter Remove-AzVpnConnection Description Here}}
+Removes a VpnConnection.
 
 ### [Remove-AzVpnGateway](Remove-AzVpnGateway.md)
-{{Manually Enter Remove-AzVpnGateway Description Here}}
+The Remove-AzVpnGateway cmdlet removes an Azure VPN gateway. This is a gateway specific to Azure Virtual WAN's software defined connectivity.
 
 ### [Remove-AzVpnSite](Remove-AzVpnSite.md)
-{{Manually Enter Remove-AzVpnSite Description Here}}
+Removes an Azure VpnSite resource.
 
 ### [Reset-AzVirtualNetworkGateway](Reset-AzVirtualNetworkGateway.md)
-{{Manually Enter Reset-AzVirtualNetworkGateway Description Here}}
+Resets the Virtual Network Gateway
 
 ### [Reset-AzVirtualNetworkGatewayConnectionSharedKey](Reset-AzVirtualNetworkGatewayConnectionSharedKey.md)
-{{Manually Enter Reset-AzVirtualNetworkGatewayConnectionSharedKey Description Here}}
+Resets the shared key of the virtual network gateway connection.
 
 ### [Resize-AzVirtualNetworkGateway](Resize-AzVirtualNetworkGateway.md)
-{{Manually Enter Resize-AzVirtualNetworkGateway Description Here}}
+Resizes an existing virtual network gateway.
 
 ### [Set-AzApplicationGateway](Set-AzApplicationGateway.md)
-{{Manually Enter Set-AzApplicationGateway Description Here}}
+Updates an application gateway.
 
 ### [Set-AzApplicationGatewayAuthenticationCertificate](Set-AzApplicationGatewayAuthenticationCertificate.md)
-{{Manually Enter Set-AzApplicationGatewayAuthenticationCertificate Description Here}}
+Updates an authentication certificate for an application gateway.
 
 ### [Set-AzApplicationGatewayAutoscaleConfiguration](Set-AzApplicationGatewayAutoscaleConfiguration.md)
-{{Manually Enter Set-AzApplicationGatewayAutoscaleConfiguration Description Here}}
+Updates Autoscale Configuration of an application gateway.
 
 ### [Set-AzApplicationGatewayBackendAddressPool](Set-AzApplicationGatewayBackendAddressPool.md)
-{{Manually Enter Set-AzApplicationGatewayBackendAddressPool Description Here}}
+Updates a back-end address pool for an application gateway.
 
 ### [Set-AzApplicationGatewayBackendHttpSettings](Set-AzApplicationGatewayBackendHttpSettings.md)
-{{Manually Enter Set-AzApplicationGatewayBackendHttpSettings Description Here}}
+Updates back-end HTTP settings for an application gateway.
 
 ### [Set-AzApplicationGatewayConnectionDraining](Set-AzApplicationGatewayConnectionDraining.md)
-{{Manually Enter Set-AzApplicationGatewayConnectionDraining Description Here}}
+Modifies the connection draining configuration of a back-end HTTP settings object.
+
+### [Set-AzApplicationGatewayCustomError](Set-AzApplicationGatewayCustomError.md)
+Updates a custom error in an application gateway.
 
 ### [Set-AzApplicationGatewayFrontendIPConfig](Set-AzApplicationGatewayFrontendIPConfig.md)
-{{Manually Enter Set-AzApplicationGatewayFrontendIPConfig Description Here}}
+Modifies a front-end IP address configuration.
 
 ### [Set-AzApplicationGatewayFrontendPort](Set-AzApplicationGatewayFrontendPort.md)
-{{Manually Enter Set-AzApplicationGatewayFrontendPort Description Here}}
+Modifies a front-end port for an application gateway.
 
 ### [Set-AzApplicationGatewayHttpListener](Set-AzApplicationGatewayHttpListener.md)
-{{Manually Enter Set-AzApplicationGatewayHttpListener Description Here}}
+Modifies an HTTP listener for an application gateway.
+
+### [Set-AzApplicationGatewayHttpListenerCustomError](Set-AzApplicationGatewayHttpListenerCustomError.md)
+Updates a custom error in a http listener of an application gateway.
 
 ### [Set-AzApplicationGatewayIPConfiguration](Set-AzApplicationGatewayIPConfiguration.md)
-{{Manually Enter Set-AzApplicationGatewayIPConfiguration Description Here}}
+Modifies an IP configuration for an application gateway.
 
 ### [Set-AzApplicationGatewayProbeConfig](Set-AzApplicationGatewayProbeConfig.md)
-{{Manually Enter Set-AzApplicationGatewayProbeConfig Description Here}}
+Sets the health probe configuration on an existing Application Gateway.
 
 ### [Set-AzApplicationGatewayRedirectConfiguration](Set-AzApplicationGatewayRedirectConfiguration.md)
-{{Manually Enter Set-AzApplicationGatewayRedirectConfiguration Description Here}}
+Sets the redirect configuration on an existing Application Gateway.
 
 ### [Set-AzApplicationGatewayRequestRoutingRule](Set-AzApplicationGatewayRequestRoutingRule.md)
-{{Manually Enter Set-AzApplicationGatewayRequestRoutingRule Description Here}}
+Modifies a request routing rule for an application gateway.
+
+### [Set-AzApplicationGatewayRewriteRuleSet](Set-AzApplicationGatewayRewriteRuleSet.md)
+Modifies a rewrite rule set for an application gateway.
 
 ### [Set-AzApplicationGatewaySku](Set-AzApplicationGatewaySku.md)
-{{Manually Enter Set-AzApplicationGatewaySku Description Here}}
+Modifies the SKU of an application gateway.
 
 ### [Set-AzApplicationGatewaySslCertificate](Set-AzApplicationGatewaySslCertificate.md)
-{{Manually Enter Set-AzApplicationGatewaySslCertificate Description Here}}
+Sets the goal state of an SSL certificate.
 
 ### [Set-AzApplicationGatewaySslPolicy](Set-AzApplicationGatewaySslPolicy.md)
-{{Manually Enter Set-AzApplicationGatewaySslPolicy Description Here}}
+Modifies the SSL policy of an application gateway.
 
 ### [Set-AzApplicationGatewayTrustedRootCertificate](Set-AzApplicationGatewayTrustedRootCertificate.md)
-{{Manually Enter Set-AzApplicationGatewayTrustedRootCertificate Description Here}}
+Updates a Trusted Root Certificate of an application gateway.
 
 ### [Set-AzApplicationGatewayUrlPathMapConfig](Set-AzApplicationGatewayUrlPathMapConfig.md)
-{{Manually Enter Set-AzApplicationGatewayUrlPathMapConfig Description Here}}
+Sets configuration for an array of URL path mappings to a backend server pool.
 
 ### [Set-AzApplicationGatewayWebApplicationFirewallConfiguration](Set-AzApplicationGatewayWebApplicationFirewallConfiguration.md)
-{{Manually Enter Set-AzApplicationGatewayWebApplicationFirewallConfiguration Description Here}}
+Modifies the WAF configuration of an application gateway.
 
 ### [Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)
-{{Manually Enter Set-AzExpressRouteCircuit Description Here}}
+Modifies an ExpressRoute circuit.
 
 ### [Set-AzExpressRouteCircuitPeeringConfig](Set-AzExpressRouteCircuitPeeringConfig.md)
-{{Manually Enter Set-AzExpressRouteCircuitPeeringConfig Description Here}}
+Saves a modified ExpressRoute peering configuration.
+
+### [Set-AzExpressRoutePort](Set-AzExpressRoutePort.md)
+Modifies an ExpressRoutePort.
 
 ### [Set-AzFirewall](Set-AzFirewall.md)
-{{Manually Enter Set-AzFirewall Description Here}}
+Saves a modified Firewall.
 
 ### [Set-AzLoadBalancer](Set-AzLoadBalancer.md)
-{{Manually Enter Set-AzLoadBalancer Description Here}}
+Sets the goal state for a load balancer.
 
 ### [Set-AzLoadBalancerFrontendIpConfig](Set-AzLoadBalancerFrontendIpConfig.md)
-{{Manually Enter Set-AzLoadBalancerFrontendIpConfig Description Here}}
+Sets the goal state for a front-end IP configuration in a load balancer.
 
 ### [Set-AzLoadBalancerInboundNatPoolConfig](Set-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Set-AzLoadBalancerInboundNatPoolConfig Description Here}}
+
 
 ### [Set-AzLoadBalancerInboundNatRuleConfig](Set-AzLoadBalancerInboundNatRuleConfig.md)
-{{Manually Enter Set-AzLoadBalancerInboundNatRuleConfig Description Here}}
+Sets an inbound NAT rule configuration for a load balancer.
 
 ### [Set-AzLoadBalancerOutboundRuleConfig](Set-AzLoadBalancerOutboundRuleConfig.md)
-{{Manually Enter Set-AzLoadBalancerOutboundRuleConfig Description Here}}
+Sets an outbound rule configuration for a load balancer.
 
 ### [Set-AzLoadBalancerProbeConfig](Set-AzLoadBalancerProbeConfig.md)
-{{Manually Enter Set-AzLoadBalancerProbeConfig Description Here}}
+Sets the goal state for a probe configuration.
 
 ### [Set-AzLoadBalancerRuleConfig](Set-AzLoadBalancerRuleConfig.md)
-{{Manually Enter Set-AzLoadBalancerRuleConfig Description Here}}
+Sets the goal state for a load balancer rule configuration.
 
 ### [Set-AzLocalNetworkGateway](Set-AzLocalNetworkGateway.md)
-{{Manually Enter Set-AzLocalNetworkGateway Description Here}}
+Modifies a local network gateway.
 
 ### [Set-AzNetworkInterface](Set-AzNetworkInterface.md)
-{{Manually Enter Set-AzNetworkInterface Description Here}}
+Sets the goal state for a network interface.
 
 ### [Set-AzNetworkInterfaceIpConfig](Set-AzNetworkInterfaceIpConfig.md)
-{{Manually Enter Set-AzNetworkInterfaceIpConfig Description Here}}
+Sets the goal state for an Azure network interface IP configuration.
 
 ### [Set-AzNetworkInterfaceTapConfig](Set-AzNetworkInterfaceTapConfig.md)
-{{Manually Enter Set-AzNetworkInterfaceTapConfig Description Here}}
+Sets the goal state of a Tap Configuration
 
 ### [Set-AzNetworkProfile](Set-AzNetworkProfile.md)
-{{Manually Enter Set-AzNetworkProfile Description Here}}
+Sets the goal state for an existing network profile
 
 ### [Set-AzNetworkSecurityGroup](Set-AzNetworkSecurityGroup.md)
-{{Manually Enter Set-AzNetworkSecurityGroup Description Here}}
+Sets the goal state for a network security group.
 
 ### [Set-AzNetworkSecurityRuleConfig](Set-AzNetworkSecurityRuleConfig.md)
-{{Manually Enter Set-AzNetworkSecurityRuleConfig Description Here}}
+Sets the goal state for a network security rule configuration.
 
 ### [Set-AzNetworkWatcherConfigFlowLog](Set-AzNetworkWatcherConfigFlowLog.md)
-{{Manually Enter Set-AzNetworkWatcherConfigFlowLog Description Here}}
+Configures flow logging for a target resource.
 
 ### [Set-AzNetworkWatcherConnectionMonitor](Set-AzNetworkWatcherConnectionMonitor.md)
-{{Manually Enter Set-AzNetworkWatcherConnectionMonitor Description Here}}
+Update a connection monitor.
 
 ### [Set-AzPublicIpAddress](Set-AzPublicIpAddress.md)
-{{Manually Enter Set-AzPublicIpAddress Description Here}}
+Sets the goal state for a public IP address.
 
 ### [Set-AzPublicIpPrefix](Set-AzPublicIpPrefix.md)
-{{Manually Enter Set-AzPublicIpPrefix Description Here}}
+Sets the Tags for an existing PublicIpPrefix
 
 ### [Set-AzRouteConfig](Set-AzRouteConfig.md)
-{{Manually Enter Set-AzRouteConfig Description Here}}
+Sets the goal state for a route.
 
 ### [Set-AzRouteFilter](Set-AzRouteFilter.md)
-{{Manually Enter Set-AzRouteFilter Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Set-AzRouteFilterRuleConfig](Set-AzRouteFilterRuleConfig.md)
-{{Manually Enter Set-AzRouteFilterRuleConfig Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Set-AzRouteTable](Set-AzRouteTable.md)
-{{Manually Enter Set-AzRouteTable Description Here}}
+Sets the goal state for a route table.
 
 ### [Set-AzServiceEndpointPolicy](Set-AzServiceEndpointPolicy.md)
-{{Manually Enter Set-AzServiceEndpointPolicy Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Set-AzServiceEndpointPolicyDefinition](Set-AzServiceEndpointPolicyDefinition.md)
-{{Manually Enter Set-AzServiceEndpointPolicyDefinition Description Here}}
+{{Fill in the Synopsis}}
 
 ### [Set-AzVirtualNetwork](Set-AzVirtualNetwork.md)
-{{Manually Enter Set-AzVirtualNetwork Description Here}}
+Sets the goal state for a virtual network.
 
 ### [Set-AzVirtualNetworkGateway](Set-AzVirtualNetworkGateway.md)
-{{Manually Enter Set-AzVirtualNetworkGateway Description Here}}
+Updates a virtual network gateway.
 
 ### [Set-AzVirtualNetworkGatewayConnection](Set-AzVirtualNetworkGatewayConnection.md)
-{{Manually Enter Set-AzVirtualNetworkGatewayConnection Description Here}}
+Configures a virtual network gateway connection.
 
 ### [Set-AzVirtualNetworkGatewayConnectionSharedKey](Set-AzVirtualNetworkGatewayConnectionSharedKey.md)
-{{Manually Enter Set-AzVirtualNetworkGatewayConnectionSharedKey Description Here}}
+Configures the shared key of the virtual network gateway connection.
 
 ### [Set-AzVirtualNetworkGatewayDefaultSite](Set-AzVirtualNetworkGatewayDefaultSite.md)
-{{Manually Enter Set-AzVirtualNetworkGatewayDefaultSite Description Here}}
-
-### [Set-AzVirtualNetworkGatewayVpnClientConfig](Set-AzVirtualNetworkGatewayVpnClientConfig.md)
-{{Manually Enter Set-AzVirtualNetworkGatewayVpnClientConfig Description Here}}
+Sets the default site for a virtual network gateway.
 
 ### [Set-AzVirtualNetworkPeering](Set-AzVirtualNetworkPeering.md)
-{{Manually Enter Set-AzVirtualNetworkPeering Description Here}}
+Configures a virtual network peering.
 
 ### [Set-AzVirtualNetworkSubnetConfig](Set-AzVirtualNetworkSubnetConfig.md)
-{{Manually Enter Set-AzVirtualNetworkSubnetConfig Description Here}}
+Configures the goal state for a subnet configuration in a virtual network.
 
 ### [Set-AzVirtualNetworkTap](Set-AzVirtualNetworkTap.md)
-{{Manually Enter Set-AzVirtualNetworkTap Description Here}}
+Sets the goal state for a virtual network tap.
 
 ### [Set-AzVpnClientIpsecParameter](Set-AzVpnClientIpsecParameter.md)
-{{Manually Enter Set-AzVpnClientIpsecParameter Description Here}}
+Sets the vpn ipsec parameters for existing virtual network gateway.
 
 ### [Start-AzApplicationGateway](Start-AzApplicationGateway.md)
-{{Manually Enter Start-AzApplicationGateway Description Here}}
+Starts an application gateway.
 
 ### [Start-AzNetworkWatcherConnectionMonitor](Start-AzNetworkWatcherConnectionMonitor.md)
-{{Manually Enter Start-AzNetworkWatcherConnectionMonitor Description Here}}
+Start a connection monitor
 
 ### [Start-AzNetworkWatcherResourceTroubleshooting](Start-AzNetworkWatcherResourceTroubleshooting.md)
-{{Manually Enter Start-AzNetworkWatcherResourceTroubleshooting Description Here}}
+Starts troubleshooting on a Networking resource in Azure.
 
 ### [Stop-AzApplicationGateway](Stop-AzApplicationGateway.md)
-{{Manually Enter Stop-AzApplicationGateway Description Here}}
+Stops an application gateway
 
 ### [Stop-AzNetworkWatcherConnectionMonitor](Stop-AzNetworkWatcherConnectionMonitor.md)
-{{Manually Enter Stop-AzNetworkWatcherConnectionMonitor Description Here}}
+Stop a connection monitor
 
 ### [Stop-AzNetworkWatcherPacketCapture](Stop-AzNetworkWatcherPacketCapture.md)
-{{Manually Enter Stop-AzNetworkWatcherPacketCapture Description Here}}
+Stops a running packet capture session
 
 ### [Test-AzDnsAvailability](Test-AzDnsAvailability.md)
-{{Manually Enter Test-AzDnsAvailability Description Here}}
+Checks whether a domain name in the cloudapp.azure.com zone is available for use.
 
 ### [Test-AzNetworkWatcherConnectivity](Test-AzNetworkWatcherConnectivity.md)
-{{Manually Enter Test-AzNetworkWatcherConnectivity Description Here}}
+Returns connectivity information for a specified source VM and a destination.
 
 ### [Test-AzNetworkWatcherIPFlow](Test-AzNetworkWatcherIPFlow.md)
-{{Manually Enter Test-AzNetworkWatcherIPFlow Description Here}}
+Returns whether the packet is allowed or denied to or from a particular destination.
 
 ### [Test-AzPrivateIPAddressAvailability](Test-AzPrivateIPAddressAvailability.md)
-{{Manually Enter Test-AzPrivateIPAddressAvailability Description Here}}
+Test availability of a private IP address in a virtual network.
 
 ### [Update-AzVirtualHub](Update-AzVirtualHub.md)
-{{Manually Enter Update-AzVirtualHub Description Here}}
+Updates a Virtual Hub to an intended goal state.
 
 ### [Update-AzVirtualWan](Update-AzVirtualWan.md)
-{{Manually Enter Update-AzVirtualWan Description Here}}
+Updates an Azure Virtual WAN.
 
 ### [Update-AzVpnConnection](Update-AzVpnConnection.md)
-{{Manually Enter Update-AzVpnConnection Description Here}}
+Updates a VpnConnection object to a goal state.
 
 ### [Update-AzVpnGateway](Update-AzVpnGateway.md)
-{{Manually Enter Update-AzVpnGateway Description Here}}
+Update-AzVpnGateway updates a scalable VPN Gateway to the appropriate goal state.
 
 ### [Update-AzVpnSite](Update-AzVpnSite.md)
-{{Manually Enter Update-AzVpnSite Description Here}}
+Updates a VpnSite representing a customer branch to an intended goal state.
 

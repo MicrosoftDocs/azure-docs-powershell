@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/new-azrecoveryservicesasrprotectioncontainermapping
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrProtectionContainerMapping.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/New-AzRecoveryServicesAsrProtectionContainerMapping.md
 ---
 
 # New-AzRecoveryServicesAsrProtectionContainerMapping
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure Site Recovery Protection Container mapping by associating the specified replication policy to the specified ASR protection container.
 
 ## SYNTAX
 
@@ -27,26 +29,68 @@ New-AzRecoveryServicesAsrProtectionContainerMapping -Name <String> -Policy <ASRP
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzRecoveryServicesAsrProtectionContainerMapping** cmdlet creates an Azure Site Recovery Protection Container mapping by associating the specified replication policy to the specified protection container.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> New-AzRecoveryServicesAsrProtectionContainerMapping -Name $ContainerMappingName -Policy $ProtectionProfile -PrimaryProtectionContainer $PrimaryContainer -RecoveryProtectionContainer $RecoveryContainer
+
+Name             : 1f32fee1-05d0-4c11-a997-1618e14b4dab
+ID               : /Subscriptions/xxxxxxxxxxxx/resourceGroups/canaryexproute/providers/Microsoft.RecoveryServices/vaults/IbizaV2ATest/replicationJobs/1f32fee1-05d0-4c11-a997-1618e14b4dab
+Type             :
+JobType          :
+DisplayName      :
+ClientRequestId  : 2870d5ab-f9be-405e-87d5-5bf20387c623 ActivityId: 24b28fc5-509b-4ad3-92c0-c8bb7ced7fb6
+State            : NotStarted
+StateDescription : NotStarted
+StartTime        :
+EndTime          :
+TargetObjectId   :
+TargetObjectType :
+TargetObjectName :
+AllowedActions   :
+Tasks            : {}
+Errors           : {}
 ```
 
-{{ Add example description here }}
+Starts the creation of the protection container mapping with the specified parameters, and returns the ASR job used to track the operation.
+
+### Example 2
+```
+PS C:\> New-AzRecoveryServicesAsrProtectionContainerMapping -Name $PrimaryProtectionContainerMapping -policy $Policy1 -PrimaryProtectionContainer $pc
+
+Name             : 1f32fee1-05d0-4c11-a997-1618e14b4dab
+ID               : /Subscriptions/xxxxxxxxxxxx/resourceGroups/canaryexproute/providers/Microsoft.RecoveryServices/vaults/IbizaV2ATest/replicationJobs/1f32fee1-05d0-4c11-a997-1618e14b4dab
+Type             :
+JobType          :
+DisplayName      :
+ClientRequestId  : 2870d5ab-f9be-405e-87d5-5bf20387c623 ActivityId: 24b28fc5-509b-4ad3-92c0-c8bb7ced7fb6
+State            : NotStarted
+StateDescription : NotStarted
+StartTime        :
+EndTime          :
+TargetObjectId   :
+TargetObjectType :
+TargetObjectName :
+AllowedActions   :
+Tasks            : {}
+Errors           : {}
+```
+
+Starts the creation of the protection container mapping with the specified parameters, and returns the ASR job used to track the operation.
 
 ## PARAMETERS
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -56,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the Protection Container mapping.
 
 ```yaml
 Type: System.String
@@ -71,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-{{Fill Policy Description}}
+Specifies the ASR replication policy object for the replication policy to be used in the mapping.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRPolicy
@@ -86,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryProtectionContainer
-{{Fill PrimaryProtectionContainer Description}}
+Specifies the ASR protection container object for the  primary protection container to be used in the mapping.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
@@ -101,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryProtectionContainer
-{{Fill RecoveryProtectionContainer Description}}
+Specifies the ASR protection container object for the  recovery protection container to be used in the mapping (used if replicating to a recovery location that is not Azure.)
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
@@ -131,8 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -147,8 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -161,3 +203,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesAsrProtectionContainerMapping](./Get-AzRecoveryServicesAsrProtectionContainerMapping.md)
+
+[Remove-AzRecoveryServicesAsrProtectionContainerMapping](./Remove-AzRecoveryServicesAsrProtectionContainerMapping.md)

@@ -1,59 +1,63 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: AC2D64B9-5BCD-45D3-8650-538633F5BBBC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlserverserviceobjective
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlServerServiceObjective.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlServerServiceObjective.md
 ---
 
 # Get-AzSqlServerServiceObjective
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets service objectives for an Azure SQL Database server.
 
 ## SYNTAX
 
 ```
 Get-AzSqlServerServiceObjective [[-ServiceObjectiveName] <String>] [-ServerName] <String>
- [[-DatabaseName] <String>] [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlServerServiceObjective** cmdlet gets the available service objectives for an Azure SQL Database server.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get service objectives
+```
+PS C:\>Get-AzSqlServerServiceObjective -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+ResourceGroupName ServerName ServiceObjectiveName Description Enabled IsDefault IsSystem
+----------------- ---------- -------------------- ----------- ------- --------- --------
+resourcegroup01   server01   ElasticPool                         True     False    False
+resourcegroup01   server01   System                              True     False     True
+resourcegroup01   server01   System0                             True     False     True
+resourcegroup01   server01   System1                             True     False     True
+resourcegroup01   server01   System2                             True      True     True
+resourcegroup01   server01   Basic                               True      True    False
+resourcegroup01   server01   S0                                  True      True    False
+resourcegroup01   server01   S1                                  True     False    False
+resourcegroup01   server01   S2                                  True     False    False
+resourcegroup01   server01   S3                                  True     False    False
+resourcegroup01   server01   P1                                  True      True    False
+resourcegroup01   server01   P2                                  True     False    False
+resourcegroup01   server01   P3                                  True     False    False
+resourcegroup01   server01   P4                                  True     False    False
 ```
 
-{{ Add example description here }}
+This command gets the service objectives for the server named Server01.
 
 ## PARAMETERS
 
-### -DatabaseName
-SQL Database name.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -63,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of a resource group.
+This cmdlet gets service objectives for a SQL Database server assigned to this resource.
 
 ```yaml
 Type: System.String
@@ -78,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-SQL Database server name.
+Specifies the name of a SQL Database SQL Database server.
 
 ```yaml
 Type: System.String
@@ -93,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceObjectiveName
-Azure Sql Database service objective name.
+Specifies the name of a service objective for an Azure SQL Database server.
+The acceptable values for this parameter are: Basic, S0, S1, S2, P1, P2, and P3.
 
 ```yaml
 Type: System.String
@@ -117,7 +123,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -133,14 +139,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -153,3 +158,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+
+

@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/set-aziothub
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Set-AzIotHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/IotHub/Commands.IotHub/help/Set-AzIotHub.md
 ---
 
 # Set-AzIotHub
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the properties of an IotHub.
 
 ## SYNTAX
 
@@ -65,21 +67,28 @@ Set-AzIotHub -ResourceGroupName <String> -Name <String> [-FallbackRoute <PSFallb
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Updates the properties of an IotHub.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1 Update the sku
+```
+PS C:\> Set-AzIotHub -ResourceGroupName "myresourcegroup" -Name "myiothub" -SkuName S1 -Units 5
 ```
 
-{{ Add example description here }}
+Update the sku to S1 and units to 5 for the IotHub named "myiothub"
+
+### Example 2 Update the eventhub properties
+```
+PS C:\> Set-AzIotHub -ResourceGroupName "myresourcegroup" -Name "myiothub" -EventHubRetentionTimeInDays 4
+```
+
+Update the retention time in days to 4 for both the telemetry and operationsmonitoringevents events for the IotHub named "myiothub"
 
 ## PARAMETERS
 
 ### -CloudToDevice
-Properties for CloudToDevice Messages
+The properties for the cloud to device command queue. 
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSCloudToDeviceProperties
@@ -94,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -109,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileUploadNotifications
-Set notifications for FileUpload
+Flag that specifies whether notifications should be enabled for file upload. 
 
 ```yaml
 Type: System.Boolean
@@ -124,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubRetentionTimeInDays
-RetentionTimeInDays for Eventhub
+Retention time in days. 
 
 ```yaml
 Type: System.Int64
@@ -139,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackRoute
-Set Fallback Route
+Fallback Route for Routing
 
 ```yaml
 Type: Microsoft.Azure.Management.IotHub.Models.PSFallbackRouteMetadata
@@ -154,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadContainerName
-Provide the containerName for FileUpload
+The name of the container to upload the files to.
 
 ```yaml
 Type: System.String
@@ -169,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadNotificationMaxDeliveryCount
-Provide notificationMaxDeliveryCount for FileUpload
+The maximum delivery count for file upload notifications.  
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -184,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadNotificationTtl
-Provide notificationTtl for FileUpload
+Time to live value for the messages in the file upload notification queue. 
 
 ```yaml
 Type: System.TimeSpan
@@ -199,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadSasUriTtl
-Provide sas uri ttl for FileUpload
+Time to live for the for the SAS Uri thats generated for file upload. 
 
 ```yaml
 Type: System.TimeSpan
@@ -214,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadStorageConnectionString
-Provide File upload storage connectionstring
+The storage connection string to upload the files to. 
 
 ```yaml
 Type: System.String
@@ -229,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Iot Hub
+Name of the IotHub
 
 ```yaml
 Type: System.String
@@ -244,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationsMonitoringProperties
-Set Operations Monitoring Properties
+The properties related to operations monitoring. 
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSOperationsMonitoringProperties
@@ -259,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group
+Resource Group Name
 
 ```yaml
 Type: System.String
@@ -274,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -Routes
-Add Routes
+Routes to be added for Routing
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Management.IotHub.Models.PSRouteMetadata]
@@ -289,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingProperties
-Set Routing Properties
+The Routing properties for routing messages to external endpoints 
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingProperties
@@ -304,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Name of the Sku
+Name of the Sku.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubSku
@@ -344,7 +353,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -360,14 +369,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

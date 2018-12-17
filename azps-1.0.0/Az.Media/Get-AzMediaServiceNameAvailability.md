@@ -1,14 +1,18 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
-online version:
+ms.assetid: 23C6C9D3-A745-46C8-AB2C-B874223FBFFF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.media/get-azmediaservicenameavailability
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Get-AzMediaServiceNameAvailability.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Media/Commands.Media/help/Get-AzMediaServiceNameAvailability.md
 ---
 
 # Get-AzMediaServiceNameAvailability
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Checks whether a media service name is available.
+Media service names are globally unique.
 
 ## SYNTAX
 
@@ -18,21 +22,22 @@ Get-AzMediaServiceNameAvailability [-DefaultProfile <IAzureContextContainer>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzMediaServiceNameAvailability** cmdlet checks whether a media service name is available.
+Media service names are globally unique.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Check whether a Media Service name is available
+```
+PS C:\>Get-AzMediaServiceNameAvailability -AccountName "MediaService1"
 ```
 
-{{ Add example description here }}
+This command checks if the name MediaService1 is available.
 
 ## PARAMETERS
 
 ### -AccountName
-The media service account name.
+Specifies the name of the media service that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -47,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -76,3 +80,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzMediaService](./Get-AzMediaService.md)
+
+[New-AzMediaService](./New-AzMediaService.md)
+
+[Remove-AzMediaService](./Remove-AzMediaService.md)
+
+[Set-AzMediaService](./Set-AzMediaService.md)
+
+

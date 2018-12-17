@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version:
+ms.assetid: BCF989AE-A718-4AFE-B7C0-8B148468D4EE
+online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/remove-azrediscachediagnostics
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Remove-AzRedisCacheDiagnostics.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RedisCache/Commands.RedisCache/help/Remove-AzRedisCacheDiagnostics.md
 ---
 
 # Remove-AzRedisCacheDiagnostics
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables diagnostics on an Azure Redis Cache.
 
 ## SYNTAX
 
@@ -18,26 +21,27 @@ Remove-AzRedisCacheDiagnostics [-ResourceGroupName <String>] -Name <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzRedisCacheDiagnostics** cmdlet disables diagnostics on an Azure Redis Cache.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Disable diagnostics
+```
+PS C:\>Remove-AzRedisCacheDiagnostics -ResourceGroupName "ContosoResourceGroup" -Name "PeakCache" -Force
 ```
 
-{{ Add example description here }}
+This command disables diagnostics on specified Azure Redis Cache.
+This disables diagnostics for all Azure Redis Caches in the same region for the subscription.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of redis cache.
+Specifies the name of the cache.
 
 ```yaml
 Type: System.String
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which cache exists.
+Specifies the name of the resource group that contains the cache.
 
 ```yaml
 Type: System.String
@@ -86,7 +90,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -102,14 +106,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -120,5 +123,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### System.Void
 
 ## NOTES
+* Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
 
 ## RELATED LINKS
+
+[Set-AzRedisCacheDiagnostics](./Set-AzRedisCacheDiagnostics.md)
+
+

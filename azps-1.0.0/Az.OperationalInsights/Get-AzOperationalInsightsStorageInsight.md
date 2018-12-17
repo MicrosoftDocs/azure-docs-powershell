@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 29ABCC1B-8590-4243-A629-709F207927B4
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightsstorageinsight
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsStorageInsight.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzOperationalInsightsStorageInsight.md
 ---
 
 # Get-AzOperationalInsightsStorageInsight
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about a Storage Insight.
 
 ## SYNTAX
 
@@ -25,26 +28,37 @@ Get-AzOperationalInsightsStorageInsight [-Workspace] <PSWorkspace> [[-Name] <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzOperationalInsightsStorageInsight** cmdlet gets information about an existing Storage Insight.
+If a Storage Insight name is specified, this cmdlet gets information about that Storage Insight.
+If you do not specify a name, this cmdlet gets information about all storage insights in a workspace.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a Storage Insight by name
+```
+PS C:\>Get-AzOperationalInsightsStorageInsight -Name "MyStorageInsight" -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "ContosoWorkspace"
 ```
 
-{{ Add example description here }}
+This command gets the storage insight named MyStorageInsight from the workspace named ContosoWorkspace.
+
+### Example 2: Get a Storage Insight by using a workspace object
+```
+PS C:\>$Workspace = Get-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
+PS C:\>Get-AzOperationalInsightsStorageInsight -Workspace $Workspace -Name "MyStorageInsight"
+```
+
+The first command uses the **Get-AzOperationalInsightsWorkspace** cmdlet to get an Operational Insights workspace, and then stores it in the $Workspace variable.
+The second command gets the storage insight named MyStorageInsight for the workspace in $Workspace.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The storage insight name.
+Specifies the Storage Insight name.
 
 ```yaml
 Type: System.String
@@ -69,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of an Azure resource group.
 
 ```yaml
 Type: System.String
@@ -84,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Workspace
-The workspace that containts the storage insight(s).
+Specifies the workspace that contains the Storage Insights.
 
 ```yaml
 Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
@@ -99,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceName
-The name of the workspace that contains the storage insight(s).
+Specifies the name of the workspace that contains the Storage Insights.
 
 ```yaml
 Type: System.String
@@ -114,8 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -130,3 +143,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
+
+

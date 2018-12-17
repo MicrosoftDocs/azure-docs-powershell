@@ -1,20 +1,23 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
 Module Name: Az.ServiceFabric
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefabric/add-azservicefabricclustercertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzServiceFabricClusterCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzServiceFabricClusterCertificate.md
 ---
 
 # Add-AzServiceFabricClusterCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Add a secondary cluster certificate to the cluster.
 
 ## SYNTAX
 
 ### ByExistingKeyVault
 ```
 Add-AzServiceFabricClusterCertificate [-ResourceGroupName] <String> [-Name] <String> -SecretIdentifier <String>
+ [-CertificateCommonName <String>] [-CertificateIssuerThumbprint <String>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -30,26 +33,53 @@ Add-AzServiceFabricClusterCertificate [-ResourceGroupName] <String> [-Name] <Str
 ```
 Add-AzServiceFabricClusterCertificate [-ResourceGroupName] <String> [-Name] <String>
  [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>] -CertificateFile <String>
- [-CertificatePassword <SecureString>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-CertificatePassword <SecureString>] [-CertificateCommonName <String>]
+ [-CertificateIssuerThumbprint <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use **Add-AzServiceFabricClusterCertificate** to add a secondary cluster certificate, either from an existing Azure key vault or creating a new Azure key vault using an existing certificate provided or from a new self-signed certificate created. 
+It will override the secondary cluster if there is any.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+Add-AzServiceFabricClusterCertificate -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' 
+-SecretIdentifier 'https://contoso03vault.vault.azure.net/secrets/contoso03vaultrg/7f7de9131c034172b9df37ccc549524f'
 ```
 
-{{ Add example description here }}
+This command will add a certificate in the existing Azure key vault as a secondary cluster certificate.
+
+### Example 2
+```
+PS c:\> $pwd = ConvertTo-SecureString -String "123" -AsPlainText -Force
+PS c:\> add-AzServiceFabricClusterCertificate -ResourceGroupName 'Group2' -Name 'Contoso02SFCluster'  -CertificateSubjectName 'Contoso.com' 
+-CertificateOutputFolder 'c:\test' -CertificatePassword $pwd
+```
+
+This command will create a self-signed certificate in the Azure key vault and upgrade the cluster to use it as a secondary cluster certificate.
 
 ## PARAMETERS
 
+### -CertificateCommonName
+Certificate common name
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByExistingPfxAndVaultName
+Aliases: CertCommonName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CertificateFile
-The path to the existing certificate
+The existing certificate file path.
 
 ```yaml
 Type: System.String
@@ -63,8 +93,23 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -CertificateIssuerThumbprint
+Certificate issuer thumbprint, separated by commas if more than one
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByExistingPfxAndVaultName
+Aliases: CertIssuerThumbprint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CertificateOutputFolder
-The folder where the new certificate needs to be downloaded.
+The folder of the new certificate to be created.
 
 ```yaml
 Type: System.String
@@ -79,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-The password of the certificate
+The password of the certificate file.
 
 ```yaml
 Type: System.Security.SecureString
@@ -94,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateSubjectName
-The subject name of the certificate
+The Dns name of the certificate to be created.
 
 ```yaml
 Type: System.String
@@ -109,12 +154,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -124,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultName
-Azure key vault name, if not given it will be defaulted to the resource group name
+Azure key vault name.
 
 ```yaml
 Type: System.String
@@ -139,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultResouceGroupName
-Azure key vault resource group name, if not given it will be defaulted to resource group name
+Azure key vault resource group name.
 
 ```yaml
 Type: System.String
@@ -154,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specify the name of the cluster
+Specify the name of the cluster.
 
 ```yaml
 Type: System.String
@@ -169,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specify the name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: System.String
@@ -184,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecretIdentifier
-The existing Azure key vault secret URL, for example 'https://mykv.vault.azure.net:443/secrets/mysecrets/55ec7c4dc61a462bbc645ffc9b4b225f'
+The existing Azure key vault secret Url.
 
 ```yaml
 Type: System.String
@@ -214,8 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -230,8 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -246,3 +289,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-AzServiceFabricClusterCertificate](./Remove-AzServiceFabricClusterCertificate.md)
+
+[New-AzServiceFabricCluster](./New-AzServiceFabricCluster.md)
+
+[Add-AzServiceFabricApplicationCertificate](./Add-AzServiceFabricApplicationCertificate.md)

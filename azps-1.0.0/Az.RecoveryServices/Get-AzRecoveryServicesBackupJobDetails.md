@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+ms.assetid: 707A3E57-AF46-44B3-A491-89554900EF03
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/get-azrecoveryservicesbackupjobdetails
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupJobDetails.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupJobDetails.md
 ---
 
 # Get-AzRecoveryServicesBackupJobDetails
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets details for a Backup job.
 
 ## SYNTAX
 
@@ -25,26 +28,31 @@ Get-AzRecoveryServicesBackupJobDetails [-JobId] <String> [-VaultId <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesBackupJobDetails** cmdlet gets Azure Backup job details for a specified job.
+Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get Backup job details for failed jobs
+```
+PS C:\>$Jobs = Get-AzRecoveryServicesBackupJob -Status Failed
+PS C:\> $JobDetails = Get-AzRecoveryServicesBackupJobDetails -Job $Jobs[0]
+PS C:\> $JobDetails.ErrorDetails
 ```
 
-{{ Add example description here }}
+The first command gets an array of failed jobs in the vault, and then stores them in the $Jobs array.
+The second command gets the job details for the failed jobs in $Jobs, and then stores them in the $JobDetails variable.
+The final command displays error details for the failed jobs.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -54,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -Job
-Job whose latest object has to be fetched.
+Specifies the job to get.
+To obtain a **BackupJob** object, use the Get-AzRecoveryServicesBackupJob cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
@@ -69,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-Filter value for Id of job.
+Specifies the ID of a Backup job.
+The ID is the InstanceId property of a **BackupJob** object.
 
 ```yaml
 Type: System.String
@@ -99,8 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -113,3 +122,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzRecoveryServicesBackupJob](./Get-AzRecoveryServicesBackupJob.md)
+
+

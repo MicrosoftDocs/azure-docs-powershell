@@ -1,142 +1,144 @@
 ---
 Module Name: Az.LogicApp
-Module Guid: e1e65791-bedc-446d-9d9e-61c544dda1ae
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Guid: 8a7d44bb-e747-4265-8f22-b3937961d709
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.logicapp
+Help Version: 4.0.3.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Az.LogicApp.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/LogicApp/Commands.LogicApp/help/Az.LogicApp.md
 ---
 
 # Az.LogicApp Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Logic Apps cmdlets.
 
 ## Az.LogicApp Cmdlets
 ### [Get-AzIntegrationAccount](Get-AzIntegrationAccount.md)
-{{Manually Enter Get-AzIntegrationAccount Description Here}}
+Gets integration accounts.
 
 ### [Get-AzIntegrationAccountAgreement](Get-AzIntegrationAccountAgreement.md)
-{{Manually Enter Get-AzIntegrationAccountAgreement Description Here}}
+Gets an integration account agreement.
 
 ### [Get-AzIntegrationAccountCallbackUrl](Get-AzIntegrationAccountCallbackUrl.md)
-{{Manually Enter Get-AzIntegrationAccountCallbackUrl Description Here}}
+Gets an integration account callback URL.
 
 ### [Get-AzIntegrationAccountCertificate](Get-AzIntegrationAccountCertificate.md)
-{{Manually Enter Get-AzIntegrationAccountCertificate Description Here}}
+Gets integration account certificates from a resource group.
 
 ### [Get-AzIntegrationAccountGeneratedIcn](Get-AzIntegrationAccountGeneratedIcn.md)
-{{Manually Enter Get-AzIntegrationAccountGeneratedIcn Description Here}}
+This cmdlet retrieves the current value of the generated interchange control number per agreement.
 
 ### [Get-AzIntegrationAccountMap](Get-AzIntegrationAccountMap.md)
-{{Manually Enter Get-AzIntegrationAccountMap Description Here}}
+Gets an integration account map.
 
 ### [Get-AzIntegrationAccountPartner](Get-AzIntegrationAccountPartner.md)
-{{Manually Enter Get-AzIntegrationAccountPartner Description Here}}
+Gets integration account partners.
 
 ### [Get-AzIntegrationAccountReceivedIcn](Get-AzIntegrationAccountReceivedIcn.md)
-{{Manually Enter Get-AzIntegrationAccountReceivedIcn Description Here}}
+This cmdlet retrieves a specific received interchange control number per agreement and control number value.
 
 ### [Get-AzIntegrationAccountSchema](Get-AzIntegrationAccountSchema.md)
-{{Manually Enter Get-AzIntegrationAccountSchema Description Here}}
+Gets integration account schemas.
 
 ### [Get-AzLogicApp](Get-AzLogicApp.md)
-{{Manually Enter Get-AzLogicApp Description Here}}
+Gets a logic app from a resource group.
 
 ### [Get-AzLogicAppRunAction](Get-AzLogicAppRunAction.md)
-{{Manually Enter Get-AzLogicAppRunAction Description Here}}
+Gets an action from a logic app run.
 
 ### [Get-AzLogicAppRunHistory](Get-AzLogicAppRunHistory.md)
-{{Manually Enter Get-AzLogicAppRunHistory Description Here}}
+Gets the run history of a logic app.
 
 ### [Get-AzLogicAppTrigger](Get-AzLogicAppTrigger.md)
-{{Manually Enter Get-AzLogicAppTrigger Description Here}}
+Gets the triggers of a logic app.
 
 ### [Get-AzLogicAppTriggerCallbackUrl](Get-AzLogicAppTriggerCallbackUrl.md)
-{{Manually Enter Get-AzLogicAppTriggerCallbackUrl Description Here}}
+Gets a Logic App trigger callback URL.
 
 ### [Get-AzLogicAppTriggerHistory](Get-AzLogicAppTriggerHistory.md)
-{{Manually Enter Get-AzLogicAppTriggerHistory Description Here}}
+Gets the history of triggers in a logic app.
 
 ### [Get-AzLogicAppUpgradedDefinition](Get-AzLogicAppUpgradedDefinition.md)
-{{Manually Enter Get-AzLogicAppUpgradedDefinition Description Here}}
+Gets the upgraded definition for a logic app.
 
 ### [New-AzIntegrationAccount](New-AzIntegrationAccount.md)
-{{Manually Enter New-AzIntegrationAccount Description Here}}
+Creates an integration account.
 
 ### [New-AzIntegrationAccountAgreement](New-AzIntegrationAccountAgreement.md)
-{{Manually Enter New-AzIntegrationAccountAgreement Description Here}}
+Creates an integration account agreement.
 
 ### [New-AzIntegrationAccountCertificate](New-AzIntegrationAccountCertificate.md)
-{{Manually Enter New-AzIntegrationAccountCertificate Description Here}}
+Creates an integration account certificate.
 
 ### [New-AzIntegrationAccountMap](New-AzIntegrationAccountMap.md)
-{{Manually Enter New-AzIntegrationAccountMap Description Here}}
+Creates an integration account map.
 
 ### [New-AzIntegrationAccountPartner](New-AzIntegrationAccountPartner.md)
-{{Manually Enter New-AzIntegrationAccountPartner Description Here}}
+Creates an integration account partner.
 
 ### [New-AzIntegrationAccountSchema](New-AzIntegrationAccountSchema.md)
-{{Manually Enter New-AzIntegrationAccountSchema Description Here}}
+Creates an integration account schema.
 
 ### [New-AzLogicApp](New-AzLogicApp.md)
-{{Manually Enter New-AzLogicApp Description Here}}
+Creates a logic app in a resource group.
 
 ### [Remove-AzIntegrationAccount](Remove-AzIntegrationAccount.md)
-{{Manually Enter Remove-AzIntegrationAccount Description Here}}
+Removes an integration account.
 
 ### [Remove-AzIntegrationAccountAgreement](Remove-AzIntegrationAccountAgreement.md)
-{{Manually Enter Remove-AzIntegrationAccountAgreement Description Here}}
+Removes an integration account agreement.
 
 ### [Remove-AzIntegrationAccountCertificate](Remove-AzIntegrationAccountCertificate.md)
-{{Manually Enter Remove-AzIntegrationAccountCertificate Description Here}}
+Removes an integration account certificate from a resource group.
 
 ### [Remove-AzIntegrationAccountMap](Remove-AzIntegrationAccountMap.md)
-{{Manually Enter Remove-AzIntegrationAccountMap Description Here}}
+Removes an integration account map.
 
 ### [Remove-AzIntegrationAccountPartner](Remove-AzIntegrationAccountPartner.md)
-{{Manually Enter Remove-AzIntegrationAccountPartner Description Here}}
+Removes an integration account partner.
 
 ### [Remove-AzIntegrationAccountReceivedIcn](Remove-AzIntegrationAccountReceivedIcn.md)
-{{Manually Enter Remove-AzIntegrationAccountReceivedIcn Description Here}}
+This cmdlet removes a specific received interchange control number per agreement and control number value.
 
 ### [Remove-AzIntegrationAccountSchema](Remove-AzIntegrationAccountSchema.md)
-{{Manually Enter Remove-AzIntegrationAccountSchema Description Here}}
+Removes an integration account schema.
 
 ### [Remove-AzLogicApp](Remove-AzLogicApp.md)
-{{Manually Enter Remove-AzLogicApp Description Here}}
+Removes a logic app from a resource group.
 
 ### [Set-AzIntegrationAccount](Set-AzIntegrationAccount.md)
-{{Manually Enter Set-AzIntegrationAccount Description Here}}
+Modifies an integration account.
 
 ### [Set-AzIntegrationAccountAgreement](Set-AzIntegrationAccountAgreement.md)
-{{Manually Enter Set-AzIntegrationAccountAgreement Description Here}}
+Modifies an integration account agreement.
 
 ### [Set-AzIntegrationAccountCertificate](Set-AzIntegrationAccountCertificate.md)
-{{Manually Enter Set-AzIntegrationAccountCertificate Description Here}}
+Modifies an integration account certificate.
 
 ### [Set-AzIntegrationAccountGeneratedIcn](Set-AzIntegrationAccountGeneratedIcn.md)
-{{Manually Enter Set-AzIntegrationAccountGeneratedIcn Description Here}}
+Updates the integration account generated interchange control number (ICN) in the Azure resource group.
 
 ### [Set-AzIntegrationAccountMap](Set-AzIntegrationAccountMap.md)
-{{Manually Enter Set-AzIntegrationAccountMap Description Here}}
+Modifies an integration account map.
 
 ### [Set-AzIntegrationAccountPartner](Set-AzIntegrationAccountPartner.md)
-{{Manually Enter Set-AzIntegrationAccountPartner Description Here}}
+Modifies an integration account partner.
 
 ### [Set-AzIntegrationAccountReceivedIcn](Set-AzIntegrationAccountReceivedIcn.md)
-{{Manually Enter Set-AzIntegrationAccountReceivedIcn Description Here}}
+Updates the integration account received interchange control number (ICN) in the Azure resource group.
 
 ### [Set-AzIntegrationAccountSchema](Set-AzIntegrationAccountSchema.md)
-{{Manually Enter Set-AzIntegrationAccountSchema Description Here}}
+Modifies an integration account schema.
 
 ### [Set-AzLogicApp](Set-AzLogicApp.md)
-{{Manually Enter Set-AzLogicApp Description Here}}
+Modifies a logic app in a resource group.
 
 ### [Start-AzLogicApp](Start-AzLogicApp.md)
-{{Manually Enter Start-AzLogicApp Description Here}}
+Runs a logic app in a resource group.
 
 ### [Stop-AzLogicAppRun](Stop-AzLogicAppRun.md)
-{{Manually Enter Stop-AzLogicAppRun Description Here}}
+Cancels a run of a logic app.
 
 ### [Test-AzLogicApp](Test-AzLogicApp.md)
-{{Manually Enter Test-AzLogicApp Description Here}}
+Validates a logic app definition.
 

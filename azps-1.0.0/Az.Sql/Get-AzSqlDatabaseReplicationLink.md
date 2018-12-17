@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version:
+ms.assetid: 40054224-52FF-4AF6-A090-9F6D07A2BA99
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabasereplicationlink
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseReplicationLink.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Sql/Commands.Sql/help/Get-AzSqlDatabaseReplicationLink.md
 ---
 
 # Get-AzSqlDatabaseReplicationLink
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the geo-replication links between an Azure SQL Database and a resource group or SQL Server.
 
 ## SYNTAX
 
@@ -27,21 +30,15 @@ Get-AzSqlDatabaseReplicationLink [-DatabaseName] <String> -PartnerResourceGroupN
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzSqlDatabaseReplicationLink** cmdlet replaces the **Get-AzSqlDatabaseCopy** cmdlet.
+It gets all geo-replication links between the specified Azure SQL Database and a resource group or AzureSQL Server.
 
 ## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -DatabaseName
-The name of the Azure SQL Database to retrieve links for.
+Specifies the name of the SQL Database for which to retrieve links.
 
 ```yaml
 Type: System.String
@@ -56,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerResourceGroupName
-The name of the resource group for the partner.
+Specifies the name of the resource group to which the partner is assigned.
 
 ```yaml
 Type: System.String
@@ -86,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServerName
-The name of the Azure SQL Server that has the Azure SQL Database partner.
+Specifies the name of the Azure SQL Server for the partner.
 
 ```yaml
 Type: System.String
@@ -101,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the Azure resource group for the database for which to retrieve links.
 
 ```yaml
 Type: System.String
@@ -116,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the database to be replicated is in.
+Specifies the name of the SQL Server for the database to retrieve links for.
 
 ```yaml
 Type: System.String
@@ -146,8 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,8 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -176,3 +171,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

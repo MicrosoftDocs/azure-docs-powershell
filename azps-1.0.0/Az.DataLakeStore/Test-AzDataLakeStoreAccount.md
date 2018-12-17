@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
-online version:
+ms.assetid: 613DE097-65E0-4F08-839D-F9B53F772382
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/test-azdatalakestoreaccount
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Test-AzDataLakeStoreAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Test-AzDataLakeStoreAccount.md
 ---
 
 # Test-AzDataLakeStoreAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Tests the existence of a Data Lake Store account.
 
 ## SYNTAX
 
@@ -18,26 +21,26 @@ Test-AzDataLakeStoreAccount [-Name] <String> [[-ResourceGroupName] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Test-AzDataLakeStoreAccount** cmdlet tests the existence of a Data Lake Store account.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Test an account
+```
+PS C:\>Test-AzDataLakeStoreAccount -Name "ContosoADL"
 ```
 
-{{ Add example description here }}
+This command tests whether the account named ContosoADL exists.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific account.
+Specifies the name of the Data Lake Store account to test.
 
 ```yaml
 Type: System.String
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which want to test the account.
+Specifies the name of the resource group that contains the account to test.
 
 ```yaml
 Type: System.String
@@ -77,8 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +93,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzDataLakeStoreAccount](./Get-AzDataLakeStoreAccount.md)
+
+[New-AzDataLakeStoreAccount](./New-AzDataLakeStoreAccount.md)
+
+[Remove-AzDataLakeStoreAccount](./Remove-AzDataLakeStoreAccount.md)
+
+[Set-AzDataLakeStoreAccount](./Set-AzDataLakeStoreAccount.md)
+
+

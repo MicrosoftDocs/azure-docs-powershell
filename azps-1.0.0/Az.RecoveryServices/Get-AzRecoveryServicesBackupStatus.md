@@ -1,20 +1,28 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.backup/get-azrecoveryservicesbackupstatus
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupStatus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesBackupStatus.md
 ---
 
 # Get-AzRecoveryServicesBackupStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Checks whether your ARM resource is backed up or not.
 
 ## SYNTAX
 
 ### Name (Default)
 ```
 Get-AzRecoveryServicesBackupStatus -Name <String> -ResourceGroupName <String> -Type <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### IdWorkload
+```
+Get-AzureRmRecoveryServicesBackupStatus -Type <String> -ResourceId <String> -ProtectableObjName <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -25,16 +33,20 @@ Get-AzRecoveryServicesBackupStatus -ResourceId <String> [-DefaultProfile <IAzure
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The command returns null/empty if the specified resource is not protected under any Recovery Services vault in the subscription. 
+If it is protected, the relevant vault details will be returned.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
 ```
-
-{{ Add example description here }}
+PS C:\> $status = Get-AzRecoveryServicesBackupStatus -Name "myAzureVM" -ResourceGroupName "myAzureVMRG" -ResourceType "AzureVM"
+PS C:\> If ($status.BackedUp -eq $false) {
+$vault = Get-AzRecoveryServicesVault -Name "testvault" -ResourceGroupName "vaultResourceGroup"
+$defPolicy = Get-AzRecoveryServicesBackupProtectionPolicy -Vault $vault -WorkloadType "AzureVM"
+Enable-AzRecoveryServicesBackupProtection -Vault $vault -Policy $defpol -Name "myAzureVM" -ResourceGroupName "myAzureVMRG"
+}
+```
 
 ## PARAMETERS
 
@@ -42,9 +54,9 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -68,6 +80,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProtectableObjName
+Name of the Azure Resource whose representative item needs to be checked if it is already protected by some Recovery Services Vault in the subscription.
+
+```yaml
+Type: System.String
+Parameter Sets: IdWorkload
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Name of the resource group of the Azure Resource whose representative item needs to be checked if it is already protected by some RecoveryServices Vault in the subscription.
 
@@ -88,7 +115,7 @@ ID of the Azure Resource whose representative item needs to be checked if it is 
 
 ```yaml
 Type: System.String
-Parameter Sets: Id
+Parameter Sets: IdWorkload, Id
 Aliases:
 
 Required: True
@@ -103,9 +130,9 @@ Name of the Azure Resource whose representative item needs to be checked if it i
 
 ```yaml
 Type: System.String
-Parameter Sets: Name
+Parameter Sets: Name, IdWorkload
 Aliases:
-Accepted values: AzureVM
+Accepted values: AzureVM, AzureFiles
 
 Required: True
 Position: Named
@@ -115,8 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

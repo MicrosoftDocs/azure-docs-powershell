@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/set-azservicebussubscription
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusSubscription.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzServiceBusSubscription.md
 ---
 
 # Set-AzServiceBusSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a subscription description for a Service Bus topic in the specified Service Bus namespace.
 
 ## SYNTAX
 
@@ -19,26 +21,45 @@ Set-AzServiceBusSubscription [-ResourceGroupName] <String> [-Namespace] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzServiceBusSubscription** cmdlet updates the description of the subscription for the Service Bus topic in the specified Service Bus namespace.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $subscriptionObj = Get-AzServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionName SB-TopicSubscription-Example1
+
+PS C:\> $subscriptionObj.DeadLetteringOnMessageExpiration = $True
+PS C:\> $subscriptionObj.MaxDeliveryCount = 9
+
+Name                                      : SB-TopicSubscription-Example1
+AccessedAt                                : 1/1/0001 12:00:00 AM
+AutoDeleteOnIdle                          : 10675199.02:48:05.4775807
+CountDetails                              : 
+CreatedAt                                 : 1/20/2017 9:59:15 PM
+DefaultMessageTimeToLive                  : 10675199.02:48:05.4775807
+DeadLetteringOnMessageExpiration          : True
+EnableBatchedOperations                   : True
+LockDuration                              : 00:01:00
+MaxDeliveryCount                          : 9
+MessageCount                              : 0
+RequiresSession                           : False
+Status                                    : Active
+UpdatedAt                                 : 1/20/2017 9:59:15 PM
+PS C:\> Set-AzServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionObj $subscriptionObj
 ```
 
-{{ Add example description here }}
+Updates the description for the specified subscription to the given topic. This example updates the **DeadLetteringOnMessageExpiration** property to **true** and **MaxDeliveryCount** to 9.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-ServiceBus Subscription definition
+ServiceBus Subscription definition.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ServiceBus.Models.PSSubscriptionAttributes
@@ -63,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace Name
+Namespace Name.
 
 ```yaml
 Type: System.String
@@ -93,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Topic
-Topic Name
+Topic Name.
 
 ```yaml
 Type: System.String
@@ -117,7 +138,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -133,14 +154,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

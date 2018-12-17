@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices.siterecovery/get-azrecoveryservicesasrjob
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzRecoveryServicesAsrJob.md
 ---
 
 # Get-AzRecoveryServicesAsrJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of the specified ASR job or the list of recent ASR jobs in the Recovery Services vault.
 
 ## SYNTAX
 
@@ -29,26 +31,28 @@ Get-AzRecoveryServicesAsrJob -Job <ASRJob> [-DefaultProfile <IAzureContextContai
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzRecoveryServicesAsrJob** cmdlet gets Azure Site Recovery jobs.
+You can use this cmdlet to view the ASR jobs in the Recovery Services vault.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> $jobs = Get-AzRecoveryServicesAsrJob -TargetObjectId $ASRObjectId
 ```
 
-{{ Add example description here }}
+Returns all the jobs on a particular ASR object(reference the ASR object such as replicated item or recovery plan by its ID.) 
 
 ## PARAMETERS
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
+
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -58,7 +62,10 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-Represents end time of jobs to query.
+Specifies the end time for the jobs.
+This cmdlet gets all jobs that started before the specified time.
+To obtain a **DateTime** object for this parameter, use the Get-Date cmdlet.
+For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -73,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Job
-{{Fill Job Description}}
+Specifies the ASR job object to get updated details for.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob
@@ -88,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specify the ASR job by name.
 
 ```yaml
 Type: System.String
@@ -103,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Represents start time of jobs to querying, jobs with the start time later than this will be returned
+Specifies the start time for the jobs.
+This cmdlet gets all jobs that started after the specified time.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -118,7 +126,17 @@ Accept wildcard characters: False
 ```
 
 ### -State
-State of job to return.
+Specifies the state for a ASR job.
+This cmdlet gets all jobs that match the specified state.
+The acceptable values for this parameter are:
+
+- NotStarted
+- InProgress
+- Succeeded
+- Other
+- Failed
+- Cancelled
+- Suspended
 
 ```yaml
 Type: System.String
@@ -134,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetObjectId
-ID of the object on which Job was targeted to.
+Specifies the ID of the object. Used to search for jobs on the specified object.
 
 ```yaml
 Type: System.String
@@ -149,8 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -163,3 +180,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Restart-AzRecoveryServicesAsrJob](./Restart-AzRecoveryServicesAsrJob.md)
+
+[Resume-AzRecoveryServicesAsrJob](./Resume-AzRecoveryServicesAsrJob.md)
+
+[Stop-AzRecoveryServicesAsrJob](./Stop-AzRecoveryServicesAsrJob.md)

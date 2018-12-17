@@ -1,14 +1,16 @@
 ---
-external help file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll-Help.xml
 Module Name: Az.EventGrid
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/get-azeventgridsubscription
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzEventGridSubscription.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzEventGridSubscription.md
 ---
 
 # Get-AzEventGridSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of an event subscription, or gets a list of all event subscriptions in the current Azure subscription.
 
 ## SYNTAX
 
@@ -38,26 +40,98 @@ Get-AzEventGridSubscription [-InputObject] <PSTopic> [-DefaultProfile <IAzureCon
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzEventGridSubscription cmdlet gets either the details of a specified Event Grid subscription, or a list of all Event Grid subscriptions in the current Azure subscription or resource group.
+If the event subscription name is provided, the details of a single Event Grid subscription is returned.
+If the event subscription name is not provided, a list of all event subscriptions is returned.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+PS C:\> Get-AzEventGridSubscription -ResourceGroupName MyResourceGroupName -TopicName Topic1 -EventSubscriptionName EventSubscription1
 ```
 
-{{ Add example description here }}
+Gets the details of event subscription \`EventSubscription1\` created for topic \`Topic1\` in resource group \`MyResourceGroupName\`.
+
+### Example 2
+```
+PS C:\> Get-AzEventGridSubscription -ResourceGroupName MyResourceGroupName -TopicName Topic1 -EventSubscriptionName EventSubscription1 -IncludeFullEndpointUrl
+```
+
+Gets the details of event subscription \`EventSubscription1\` created for topic \`Topic1\` in resource group \`MyResourceGroupName\`, including the full endpoint URL if it is a webhook based event subscription.
+
+### Example 3
+```
+PS C:\> Get-AzEventGridSubscription -ResourceGroupName MyResourceGroupName -TopicName Topic1
+```
+
+Get a list of all the event subscriptions created for topic \`Topic1\` in resource group \`MyResourceGroupName\`.
+
+### Example 4
+```
+PS C:\> Get-AzEventGridSubscription -ResourceGroupName MyResourceGroupName -EventSubscriptionName EventSubscription1
+```
+
+Gets the details of event subscription \`EventSubscription1\` created for resource group \`MyResourceGroupName\`.
+
+### Example 5
+```
+PS C:\> Get-AzEventGridSubscription -EventSubscriptionName EventSubscription1
+```
+
+Gets the details of event subscription \`EventSubscription1\` created for the currently selected Azure subscription.
+
+### Example 6
+```
+PS C:\> Get-AzEventGridSubscription -ResourceGroupName MyResourceGroupName
+```
+
+Gets the list of all global event subscriptions created under the resource group \`MyResourceGroupName\`.
+
+### Example 7
+```
+PS C:\> Get-AzEventGridSubscription
+```
+
+Gets the list of all global event subscriptions created under the currently selected Azure subscription.
+
+### Example 8
+```
+PS C:\> Get-AzEventGridSubscription -ResourceGroupName MyResourceGroupName -Location westus2
+```
+
+Gets the list of all regional event subscriptions created under resource group \`MyResourceGroupName\` in the specified location \`westus2\`.
+
+### Example 9
+```
+PS C:\> Get-AzEventGridSubscription -ResourceId "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.EventHub/namespaces/$namespaceName"
+```
+
+Gets the list of all event subscriptions created for the specified EventHub namespace.
+
+### Example 10
+```
+PS C:\> Get-AzEventGridSubscription -TopicTypeName "Microsoft.EventHub.Namespaces" -Location $location
+```
+
+Gets the list of all event subscriptions created for the specified topic type (EventHub namespaces) in the specified location.
+
+### Example 11
+```
+PS C:\> Get-AzEventGridSubscription -TopicTypeName "Microsoft.Resources.ResourceGroups" -ResourceGroupName MyResourceGroupName
+```
+
+Gets the list of all event subscriptions created for the specific resource group.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -97,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-EventGrid Topic object.
+EventGrid Event Subscription object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
@@ -127,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+Resource Group Name.
 
 ```yaml
 Type: System.String
@@ -157,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-The name of the topic type
+EventGrid Topic Name.
 
 ```yaml
 Type: System.String
@@ -172,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicTypeName
-The name of the topic type
+TopicType name
 
 ```yaml
 Type: System.String
@@ -187,8 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

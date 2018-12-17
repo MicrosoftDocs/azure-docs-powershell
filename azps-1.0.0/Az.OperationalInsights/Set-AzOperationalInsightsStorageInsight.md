@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version:
+ms.assetid: 010328F9-C878-4F16-AFD7-2135465A1968
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/set-azoperationalinsightsstorageinsight
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Set-AzOperationalInsightsStorageInsight.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Set-AzOperationalInsightsStorageInsight.md
 ---
 
 # Set-AzOperationalInsightsStorageInsight
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a Storage Insight.
 
 ## SYNTAX
 
@@ -27,21 +30,31 @@ Set-AzOperationalInsightsStorageInsight [-Workspace] <PSWorkspace> [-Name] <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzOperationalInsightsStorageInsight** cmdlet changes the configuration of a Storage Insight.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify a Storage Insight by name
+```
+PS C:\>Set-AzOperationalInsightsStorageInsight -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "MyWorkspace" -Name "MyStorageInsight" -Tables @("WADWindowsEventLogsTable")
 ```
 
-{{ Add example description here }}
+This command modifies the tables from which the Storage Insight named MyStorageInsight reads.
+
+### Example 2: Modify a Storage Insight by using a workspace object
+```
+PS C:\>$Workspace = Get-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
+
+PS C:\>Set-AzOperationalInsightsStorageInsight -Workspace $Workspace -Name "MyStorageInsight" -Containers @("wad-iis-logfiles")
+```
+
+The first command uses the Get-AzOperationalInsightsWorkspace cmdlet to get the workspace named MyWorkspace, and then stores it in the $Workspace variable.
+The second command modifies the containers from which the Storage Insight named MyStorageInsight reads.
 
 ## PARAMETERS
 
 ### -Containers
-The Azure Storage blob containers that the storage insight will read data from.
+Specifies the list of containers that provide the data.
 
 ```yaml
 Type: System.String[]
@@ -56,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -71,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The storage insight name.
+Specifies the name of a Storage Insight.
 
 ```yaml
 Type: System.String
@@ -86,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of an Azure resource group that contains a workspace.
 
 ```yaml
 Type: System.String
@@ -101,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountKey
-The access key for the storage account.
+Specifies the access key for the storage account.
 
 ```yaml
 Type: System.String
@@ -116,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tables
-The Azure Storage tables that the storage insight will read data from.
+Specifies the list of tables that contain the data.
 
 ```yaml
 Type: System.String[]
@@ -131,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -Workspace
-The workspace that will contain the storage insight.
+Specifies the workspace that contains the Storage Insight.
 
 ```yaml
 Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
@@ -146,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceName
-The name of the workspace that will contain the storage insight.
+Specifies the name of a workspace.
 
 ```yaml
 Type: System.String
@@ -161,8 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -179,3 +191,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
+
+[Get-AzOperationalInsightsWorkspace](./Get-AzOperationalInsightsWorkspace.md)
+
+

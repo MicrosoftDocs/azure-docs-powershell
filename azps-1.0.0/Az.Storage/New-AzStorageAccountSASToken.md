@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version:
+ms.assetid: BCCBB05B-A5D7-4796-BE55-6BE5E18E07FC
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azstorageaccountsastoken
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageAccountSASToken.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzStorageAccountSASToken.md
 ---
 
 # New-AzStorageAccountSASToken
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an account-level SAS token.
 
 ## SYNTAX
 
@@ -20,21 +23,30 @@ New-AzStorageAccountSASToken -Service <SharedAccessAccountServices>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzStorageSASToken** cmdlet creates an account-level shared access signature (SAS) token for an Azure Storage account.
+You can use the SAS token to delegate permissions for multiple services, or to delegate permissions for services not available with an object-level SAS token.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Create an account-level SAS token with full permission
+```
+PS C:\> New-AzStorageAccountSASToken -Service Blob,File,Table,Queue -ResourceType Service,Container,Object -Permission "racwdlup"
 ```
 
-{{ Add example description here }}
+This command creates an account-level SAS token with full permission.
+
+### Example 2: Create an account-level SAS token for a range of IP addresses
+```
+PS C:\> New-AzStorageAccountSASToken -Service Blob,File,Table,Queue -ResourceType Service,Container,Object -Permission "racwdlup" -Protocol HttpsOnly -IPAddressOrRange 168.1.5.60-168.1.5.70
+```
+
+This command creates an account-level SAS token for HTTPS-only requests from the specified range of IP addresses.
 
 ## PARAMETERS
 
 ### -Context
-Azure Storage Context Object
+Specifies the Azure storage context.
+You can use the New-AzStorageContext cmdlet to get an **AzureStorageContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
@@ -52,7 +64,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -64,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryTime
-Expiry Time
+Specifies the time at which the shared access signature becomes invalid.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -79,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressOrRange
-IP, or IP range ACL (access control list) that the request would be accepted by Azure Storage.
+Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+The range is inclusive.
 
 ```yaml
 Type: System.String
@@ -94,7 +107,10 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-Permissions.
+Specifies the permissions for Storage account.
+Permissions are valid only if they match the specified resource type.
+It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
+For more information about acceptable permission values, see Constructing an Account SAS http://go.microsoft.com/fwlink/?LinkId=799514
 
 ```yaml
 Type: System.String
@@ -109,7 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Protocol can be used in the request with this SAS token.
+Specifies the protocol permitted for a request made with the account SAS.
+The acceptable values for this parameter are:
+- HttpsOnly
+- HttpsOrHttp
+The default value is HttpsOrHttp.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.WindowsAzure.Storage.SharedAccessProtocol]
@@ -125,7 +145,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-Resource type that this SAS token applies to.
+Specifies the resource types that are available with the SAS token.
+The acceptable values for this parameter are:
+- None
+- Service
+- Container
+- Object
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.SharedAccessAccountResourceTypes
@@ -141,7 +166,13 @@ Accept wildcard characters: False
 ```
 
 ### -Service
-Service type that this SAS token applies to.
+Specifies the service.
+The acceptable values for this parameter are:
+- None
+- Blob
+- File
+- Queue
+- Table
 
 ```yaml
 Type: Microsoft.WindowsAzure.Storage.SharedAccessAccountServices
@@ -157,7 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Start Time
+Specifies the time, as a **DateTime** object, at which the SAS becomes valid.
+To get a **DateTime** object, use the Get-Date cmdlet.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -172,8 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -186,3 +217,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzStorageBlobSASToken](./New-AzStorageBlobSASToken.md)
+
+[New-AzStorageContainerSASToken](./New-AzStorageContainerSASToken.md)
+
+[New-AzStorageFileSASToken](./New-AzStorageFileSASToken.md)
+
+[New-AzStorageQueueSASToken](./New-AzStorageQueueSASToken.md)
+
+[New-AzStorageShareSASToken](./New-AzStorageShareSASToken.md)
+
+[New-AzStorageTableSASToken](./New-AzStorageTableSASToken.md)
+
+

@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version:
+ms.assetid: 6424B740-DBFB-490C-AEAA-EDD60952B435
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azprovideroperation
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzProviderOperation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Resources/Commands.Resources/help/Get-AzProviderOperation.md
 ---
 
 # Get-AzProviderOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the operations for an Azure resource provider that are securable using Azure RBAC.
 
 ## SYNTAX
 
@@ -18,26 +21,38 @@ Get-AzProviderOperation [[-OperationSearchString] <String>] [-DefaultProfile <IA
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-AzProviderOperation gets the operations exposed by Azure resource providers.
+Operations can be composed to create custom roles in Azure RBAC.
+The command takes as input an operation search string (with possible wildcard(*) character(s)) which determines the operations details to display.
+Use Get-AzProviderOperation * to get all operations for all Azure resource providers.
+Use Get-AzProviderOperation Microsoft.Compute/* to get all operations of Microsoft.Compute resource provider.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Get all actions for all providers
+```
+PS C:\> Get-AzProviderOperation *
 ```
 
-{{ Add example description here }}
+### Get actions for a particular resource provider
+```
+PS C:\> Get-AzProviderOperation Microsoft.Insights/*
+```
+
+### Get all actions that can be performed on virtual machines
+```
+PS C:\> Get-AzProviderOperation */virtualMachines/*
+```
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -47,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationSearchString
-The action string.
+The operation search string (with possible wildcard (*) characters)
 
 ```yaml
 Type: System.String
@@ -56,14 +71,13 @@ Aliases: Name
 
 Required: False
 Position: 0
-Default value: None
+Default value: "*"
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -74,5 +88,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ### Microsoft.Azure.Commands.Resources.Models.PSResourceProviderOperation
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS

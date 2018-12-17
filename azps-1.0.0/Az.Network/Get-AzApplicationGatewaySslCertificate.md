@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version:
+ms.assetid: 919B3755-81D4-43FB-AE8C-B071329A61D9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azapplicationgatewaysslcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzApplicationGatewaySslCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Network/Commands.Network/help/Get-AzApplicationGatewaySslCertificate.md
 ---
 
 # Get-AzApplicationGatewaySslCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an SSL certificate for an application gateway.
 
 ## SYNTAX
 
@@ -18,21 +21,34 @@ Get-AzApplicationGatewaySslCertificate [-Name <String>] -ApplicationGateway <PSA
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzApplicationGatewaySslCertificate** cmdlet gets an SSL certificate for an application gateway.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Get a specific SSL certificate
+```
+PS C:\>$AppGW = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Cert = Get-AzApplicationGatewaySslCertificate -Name "Cert01" -ApplicationGateway $AppGW
 ```
 
-{{ Add example description here }}
+The first command gets the Application Gateway named ApplicationGateway01 and stores the result in the variable named $AppGW.
+The second command gets the SSL certificate named Cert01 from the application gateway stored in the variable named $AppGW.
+The command stores the certificate in the variable named $Cert.
+
+### Example 2: Get a list of SSL certificates
+```
+PS C:\>$AppGW = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Certs = Get-AzApplicationGatewaySslCertificate -ApplicationGateway $AppGW
+```
+
+The first command gets the Application Gateway named ApplicationGateway01 and stores the result in the variable named $AppGW.
+This second command gets a list of SSL certificates from the application gateway stored in the variable named $AppGW.
+The command then stores the results in the variable named $Certs.
 
 ## PARAMETERS
 
 ### -ApplicationGateway
-The applicationGateway
+Specifies the application gateway object that contains the SSL certificate.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
@@ -47,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -62,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the ssl certificate
+Specifies the name of SSL certificate pool that this cmdlet gets.
 
 ```yaml
 Type: System.String
@@ -77,8 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,3 +106,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzApplicationGatewaySslCertificate](./Add-AzApplicationGatewaySslCertificate.md)
+
+[New-AzApplicationGatewaySslCertificate](./New-AzApplicationGatewaySslCertificate.md)
+
+[Remove-AzApplicationGatewaySslCertificate](./Remove-AzApplicationGatewaySslCertificate.md)
+
+[Set-AzApplicationGatewaySslCertificate](./Set-AzApplicationGatewaySslCertificate.md)
+
+

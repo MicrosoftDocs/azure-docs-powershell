@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version:
+ms.assetid: 93005775-3AB9-43C5-B353-45B82124ADB7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementauthorizationserver
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementAuthorizationServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzApiManagementAuthorizationServer.md
 ---
 
 # Set-AzApiManagementAuthorizationServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an authorization server.
 
 ## SYNTAX
 
@@ -25,22 +28,23 @@ Set-AzApiManagementAuthorizationServer -Context <PsApiManagementContext> -Server
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzApiManagementAuthorizationServer** cmdlet modifies Azure API Management authorization server details.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Modify an authorization server
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementAuthrizarionServer -Context $ApiMgmtContext -ServerId 0123456789 -Name "Contoso OAuth2 server" -ClientRegistrationPageUrl "https://contoso/signupv2" -AuthorizationEndpointUrl "https://contoso/authv2" -TokenEndpointUrl "https://contoso/tokenv2" -ClientId "clientid" -ClientSecret "e041ed1b660b4eadbad5a29d066e6e88" -AuthorizationRequestMethods @('Get') -GrantTypes @( 'AuthorizationCode', 'Implicit', 'ClientCredentials') -ClientAuthenticationMethods @('Basic') -TokenBodyParameters @{'par1'='val1'} -AccessTokenSendingMethods @('AuthorizationHeader')
 ```
 
-{{ Add example description here }}
+This command modifies the specified API Management authorization server.
 
 ## PARAMETERS
 
 ### -AccessTokenSendingMethods
-Supported methods of sending access token (AuthorizationHeader, Query).
-This parameter is required.
+Specifies an array of methods to send an access token.
+psdx_paramvalues AuthorizationHeader and Query.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessTokenSendingMethod[]
@@ -56,8 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationEndpointUrl
-Authorization endpoint is used to authenticate resource owners and obtain authorization grants.
-This parameter is required.
+Specifies the authorization endpoint to authenticate resource owners and obtain authorization grants.
 
 ```yaml
 Type: System.String
@@ -72,9 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRequestMethods
-Supported authorization request methods (GET, POST).
-This parameter is optional.
-Default value is GET.
+Specifies an array of authorization request methods.
+psdx_paramvalues GET and POST.
+The default value is GET.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAuthorizationRequestMethod[]
@@ -90,8 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAuthenticationMethods
-Supported client authentication methods (Basic, Body).
-This parameter is required.
+Specifies an array of client authentication methods.
+psdx_paramvalues Basic and Body.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementClientAuthenticationMethod[]
@@ -107,8 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientId
-Client ID of developer console which is the client application.
-This parameter is required.
+Specifies the client ID of the developer console that is the client application.
 
 ```yaml
 Type: System.String
@@ -123,8 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientRegistrationPageUrl
-Client registration endpoint is used for registering clients with the authorization server and obtaining client credentials.
-This parameter is required.
+Specifies the client registration endpoint to register clients with the authorization server and obtain client credentials.
 
 ```yaml
 Type: System.String
@@ -139,8 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientSecret
-Client secret of developer console which is the client application.
-This parameter is optional.
+Specifies the client secret of the developer console that is the client application.
 
 ```yaml
 Type: System.String
@@ -155,8 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -171,12 +170,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -186,8 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultScope
-Authorization server default scope.
-This parameter is optional.
+Specifies the default scope for the authorization server.
 
 ```yaml
 Type: System.String
@@ -202,8 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of new authorization server.
-This parameter is optional.
+Specifies a description for an authorization server.
 
 ```yaml
 Type: System.String
@@ -218,8 +215,12 @@ Accept wildcard characters: False
 ```
 
 ### -GrantTypes
-Supported grant types (AuthorizationCode, Implicit, ResourceOwnerPassword, ClientCredentials).
-This parameter is required.
+Specifies an array of grant types.
+psdx_paramvalues
+- AuthorizationCode
+- ClientCredentials 
+- Implicit 
+- ResourceOwnerPassword
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGrantType[]
@@ -235,8 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of new authorization server.
-This parameter is required.
+Specifies the name of the authorization server to modify.
 
 ```yaml
 Type: System.String
@@ -251,8 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write Instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOAuth2AuthrozationServer type .
-This parameter is optional.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -267,8 +266,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceOwnerPassword
-Resource owner password.
-This parameter is required if 'ResourceOwnerPassword' is present in -GrantTypes.
+Specifies the resource owner password.
+You must specify this parameter if ResourceOwnerPassword is specified by the *GrantTypes* parameter.
 
 ```yaml
 Type: System.String
@@ -283,8 +282,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceOwnerUsername
-Resource owner user name.
-This parameter is required if 'ResourceOwnerPassword' is present in -GrantTypes.
+Specifies the resource owner user name.
+You must specify this parameter if ResourceOwnerPassword is specified by the *GrantTypes* parameter.
 
 ```yaml
 Type: System.String
@@ -299,8 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
-Identifier of existing authorization server.
-This parameter is required.
+Specifies the ID of the authorization server to modify.
 
 ```yaml
 Type: System.String
@@ -315,8 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportState
-Whether to support state parameter.
-This parameter is optional.
+Indicates whether to support the *State* parameter.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -331,8 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -TokenBodyParameters
-Additional body parameters using application/x-www-form-urlencoded format.
-This parameter is optional.
+Specifies additional body parameters using application/x-www-form-urlencoded format.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -347,8 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -TokenEndpointUrl
-Token endpoint is used by clients to obtain access tokens in exchange for presenting authorization grants or refresh tokens.
-This parameter is required.
+Specifies the token endpoint for clients to obtain access tokens in exchange for presenting authorization grants or refresh tokens.
 
 ```yaml
 Type: System.String
@@ -363,8 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -393,3 +387,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzApiManagementAuthorizationServer](./Get-AzApiManagementAuthorizationServer.md)
+
+[New-AzApiManagementAuthorizationServer](./New-AzApiManagementAuthorizationServer.md)
+
+[Remove-AzApiManagementAuthorizationServer](./Remove-AzApiManagementAuthorizationServer.md)
+
+

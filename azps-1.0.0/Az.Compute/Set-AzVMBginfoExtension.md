@@ -1,14 +1,17 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version:
+ms.assetid: B2B4E132-4A71-4DB8-A7B9-9ED3FE7EB292
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmbginfoextension
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMBginfoExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceManager/Compute/Commands.Compute/help/Set-AzVMBginfoExtension.md
 ---
 
 # Set-AzVMBginfoExtension
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds the BGInfo extension to a virtual machine.
 
 ## SYNTAX
 
@@ -19,26 +22,28 @@ Set-AzVMBginfoExtension [-ResourceGroupName] <String> [-VMName] <String> [-Name 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzVMBGInfoExtension** cmdlet adds the BGInfo extension to a virtual machine.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example 1: Add the BGInfo extension for a virtual machine
+```
+PS C:\> Set-AzVMBgInfoExtension -ResourceGroupName "ContosoRG" -VMName "ContosoVM" -Name "ExtensionName" -TypeHandlerVersion "2.1" -Location "West Europe"
 ```
 
-{{ Add example description here }}
+This command adds the BGInfo extension to virtual machine named ContosoVM.
+The command specifies the resource group and location of the virtual machine.
+The command specifies the name and version of the extension.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: AzContext, AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -48,7 +53,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoUpgradeMinorVersion
-Disable auto-upgrade of minor version
+Indicates that this cmdlet prevents the Azure guest agent from automatically updating the extension to a newer minor version.
+By default, this cmdlet enables the guest agent to update the extension.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -63,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceRerun
-Force re-run even if extension configuration has not changed
+Specifies that the extension should be run again with the same public or protected settings.
+The value can be any string different from the current value.
+If forceUpdateTag is not changed, updates to public or protected settings are still applied by the handler.
 
 ```yaml
 Type: System.String
@@ -78,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location.
+Specifies the location of the virtual machine.
 
 ```yaml
 Type: System.String
@@ -93,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The extension name.
+Specifies the name of the BGInfo extension that this cmdlet adds to a virtual machine.
 
 ```yaml
 Type: System.String
@@ -108,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group of the virtual machine to which this cmdlet adds an extension.
 
 ```yaml
 Type: System.String
@@ -123,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-The version
+Specifies the version of the extension that this cmdlet adds to the virtual machine.
 
 ```yaml
 Type: System.String
@@ -138,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-The virtual machine name.
+Specifies the name of the virtual machine to which this cmdlet adds the BGInfo extension.
 
 ```yaml
 Type: System.String
@@ -162,7 +170,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -178,14 +186,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
