@@ -53,6 +53,8 @@
     items:
     - name: Breaking changes for Azure PowerShell 6.x
       href: migration-guide.6.0.0.md
+    - name: Introducing the new Azure PowerShell module
+      href: new-azureps-module-az.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines
