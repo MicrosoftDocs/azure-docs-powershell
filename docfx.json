@@ -47,7 +47,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module"
+                "dest": "module/azurerm"
             },
             {
                 "files": [
@@ -56,7 +56,7 @@
                 ],
                 "src": "docs-conceptual/azurermps-2.3.0",
                 "version": "azurermps-2.3.0",
-                "dest": "azure"
+                "dest": "azure/azurerm"
             },
             {
                 "files": [
@@ -68,7 +68,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module"
+                "dest": "module/azurerm"
             },
             {
                 "files": [
@@ -77,7 +77,7 @@
                 ],
                 "src": "docs-conceptual/azurermps-4.4.1",
                 "version": "azurermps-4.4.1",
-                "dest": "azure"
+                "dest": "azure/azurerm"
             },
             {
                 "files": [
@@ -89,7 +89,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module"
+                "dest": "module/azurerm"
             },
             {
                 "files": [
@@ -98,7 +98,7 @@
                 ],
                 "src": "docs-conceptual/azurermps-5.7.0",
                 "version": "azurermps-5.7.0",
-                "dest": "azure"
+                "dest": "azure/azurerm"
             },
             {
                 "files": [
@@ -110,7 +110,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module"
+                "dest": "module/azurerm"
             },
             {
                 "files": [
@@ -119,6 +119,48 @@
                 ],
                 "src": "docs-conceptual/azurermps-6.13.0",
                 "version": "azurermps-6.13.0",
+                "dest": "azure/azurerm"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "azps-1.0.0",
+                "version": "azps-1.0.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azps-1.0.0",
+                "version": "azps-1.0.0",
+                "dest": "azure"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "azps-1.0.0",
+                "version": "azps-1.0.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azps-1.0.0",
+                "version": "azps-1.0.0",
                 "dest": "azure"
             },
             {
@@ -347,6 +389,12 @@
                     "media/**"
                 ],
                 "version": "azurermps-6.13.0"
+            },
+            {
+                "files": [
+                    "media/**"
+                ],
+                "version": "azps-1.0.0"
             }
         ],
         "versions": {
@@ -364,6 +412,9 @@
             },
             "azurermps-6.13.0": {
                 "dest": "azurermps-6.13.0"
+            },
+            "azps-1.0.0": {
+                "dest": "azps-1.0.0"
             },
             "azuresmps-4.0.0": {
                 "dest": "azuresmps-4.0.0"
@@ -443,6 +494,7 @@
                 "azurermps-5.7.0/**/*.md": "07/26/2018",
                 "azurermps-6.10.0/**/*.md": "10/9/2018",
                 "azurermps-6.13.0/**/*.md": "11/16/2018",
+                "azps-1.0.0/**/*.md": "12/14/2018",
                 "azuresmps-4.0.0/**/*.md": "09/11/2018"
             },
             "feedback_system": {
@@ -450,6 +502,7 @@
                 "azurermps-4.4.1/**/*": "None",
                 "azurermps-5.7.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
+                "azps-1.0.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
                 "azurestackps-1.2.11/**/*": "None",
                 "azurestackps-1.3.0/**/*": "None",
