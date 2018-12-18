@@ -31,9 +31,16 @@ AzureRM will continue to get bug fixes, but no longer receive new features.
 
 Learn the full details about the new module, including how commands have been renamed and the maintenance
 plans for AzureRM, in the [Introducing the Azure PowerShell Az module](new-azureps-module-az.md). If you
-want to get started with using the new module right away, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md)
+want to get started with using the new module right away, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
 
-## Common scenarios 
+> [!IMPORTANT]
+>
+> While the Azure documentation is being updated to reflect the new module cmdlet names, articles may still use
+> the AzureRM commands. After installing the Az module, it's recommended that you enable the AzureRM cmdlet aliases
+> with `Enable-AzureRmAlias`. See the [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md) article for more
+> details.
+
+## Common scenarios
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 

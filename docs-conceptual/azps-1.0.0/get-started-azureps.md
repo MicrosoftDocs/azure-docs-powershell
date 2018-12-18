@@ -42,15 +42,11 @@ Once your storage has been created, the Cloud Shell will open a PowerShell sessi
 
 ![Cloud Shell for PowerShell](~/media/get-started-azureps/cloud-powershell.png)
 
-You can also install Azure PowerShell and use it locally in a PowerShell session.
-
 ## Sign in to Azure
 
 Sign on interactively:
 
-1. Type `Connect-AzAccount`. Option
-  '-Environment' can let you authenticate for Azure China or Azure Germany. For example, to connect
-  to Azure China:
+1. Type `Connect-AzAccount`. The `-Environment` argument lets you authenticate for a different region or cloud. For example, to connect to Azure China:
 
     ```powershell-interactive
     Connect-AzAccount -Environment AzureChinaCloud

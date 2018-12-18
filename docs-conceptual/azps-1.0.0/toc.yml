@@ -1,7 +1,7 @@
 - name: Azure PowerShell
   href: overview.md
   items:
-  - name: Introducing the new Azure PowerShell module
+  - name: Introducing the new Az module
     href: new-azureps-module-az.md
   - name: Install
     href: install-az-ps.md
@@ -41,7 +41,7 @@
     - name: PowerShell jobs
       href: using-psjobs.md
   - name: Release notes
-    href: release-notes-az.md
+    href: release-notes-azureps.md
     items:
     - name: Breaking changes for Az 1.0.0
       href: migrate-az-1.0.0.md

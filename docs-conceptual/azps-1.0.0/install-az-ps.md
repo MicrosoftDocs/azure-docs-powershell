@@ -34,11 +34,11 @@ on updating or installing a new version of .NET Framework, see the [.NET Framewo
 
 > [!IMPORTANT]
 >
-> You can have both the `AzureRM` and `Az` modules installed at the same time. If you have both modules installed, __don't enable aliases__.
-> Enabling aliases will cause conflicts between `AzureRM` cmdlets and `Az` command aliases, and could cause unexpected behavior.
-> It's recommended that before installing the `Az` module, you uninstall `AzureRM`. You can always uninstall `AzureRM` or enable aliases
+> You can have both the AzreRM and Az modules installed at the same time. If you have both modules installed, __don't enable aliases__.
+> Enabling aliases will cause conflicts between AzureRM cmdlets and Az command aliases, and could cause unexpected behavior.
+> It's recommended that before installing the Az module, you uninstall AzureRM. You can always uninstall AzureRM or enable aliases
 > at any time. To learn about the AzureRM command aliases, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
-> For uninstall instructions, see [Uninstall the Azure PowerShell module (AzureRM)](uninstall-az-ps.md). 
+> For uninstall instructions, see [Uninstall the AzureRM module](uninstall-az-ps.md#uninstall-the-azurerm-module). 
 
 To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
 run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
@@ -68,7 +68,7 @@ Are you sure you want to install the modules from 'PSGallery'?
 
 Answer `Yes` or `Yes to All` to continue with the installation.
 
-The `Az` module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
+The Az module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
 the available Azure Resource Manager modules, and makes their cmdlets available for use.
 
 ## Sign in
@@ -124,9 +124,9 @@ latest version by default.
 ## Provide feedback
 
 If you find a bug in Azure Powershell, [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
-To provide feedback from the command line, use the
-[Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet.
+To provide feedback from the command line, use the [Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet.
 
 ## Next Steps
 
-To learn more about the Azure PowerShell modules and their features, see [Get Started with Azure PowerShell](get-started-azureps.md). If you're familiar with Azure PowerShell and need to migrate off of AzureRM, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
+To learn more about the Azure PowerShell modules and their features, see [Get Started with Azure PowerShell](get-started-azureps.md).
+If you're familiar with Azure PowerShell and need to migrate from AzureRM, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
