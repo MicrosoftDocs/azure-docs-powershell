@@ -34,7 +34,7 @@ on updating or installing a new version of .NET Framework, see the [.NET Framewo
 
 > [!IMPORTANT]
 >
-> You can have both the AzreRM and Az modules installed at the same time. If you have both modules installed, __don't enable aliases__.
+> You can have both the AzureRM and Az modules installed at the same time. If you have both modules installed, __don't enable aliases__.
 > Enabling aliases will cause conflicts between AzureRM cmdlets and Az command aliases, and could cause unexpected behavior.
 > It's recommended that before installing the Az module, you uninstall AzureRM. You can always uninstall AzureRM or enable aliases
 > at any time. To learn about the AzureRM command aliases, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
