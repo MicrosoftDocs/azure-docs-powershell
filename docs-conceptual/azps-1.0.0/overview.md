@@ -33,6 +33,8 @@ Learn the full details about the new module, including how commands have been re
 plans for AzureRM, in the [Introducing the Azure PowerShell Az module](new-azureps-module-az.md). If you
 want to get started with using the new module right away, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
 
+The [AzureRM documentation](/powershell/azure/azurerm) is also available.
+
 > [!IMPORTANT]
 >
 > While the Azure documentation is being updated to reflect the new module cmdlet names, articles may still use
