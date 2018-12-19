@@ -47,7 +47,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module/azurerm"
+                "dest": "module"
             },
             {
                 "files": [
@@ -68,7 +68,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module/azurerm"
+                "dest": "module"
             },
             {
                 "files": [
@@ -89,7 +89,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module/azurerm"
+                "dest": "module"
             },
             {
                 "files": [
@@ -110,7 +110,7 @@
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module/azurerm"
+                "dest": "module"
             },
             {
                 "files": [
