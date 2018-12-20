@@ -11,6 +11,8 @@ ms.date: 08/31/2017
 ---
 # Overview of Azure PowerShell
 
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+
 Azure PowerShell provides a set of cmdlets that use the [Azure Resource
 Manager](/azure/azure-resource-manager/resource-group-overview) model for managing your Azure
 resources. You can use it in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or
@@ -27,8 +29,6 @@ The following samples can help you learn how to perform common scenarios with Az
 * [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
-
-[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## Learn PowerShell basics
 

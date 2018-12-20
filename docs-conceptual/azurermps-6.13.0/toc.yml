@@ -1,18 +1,11 @@
 - name: Azure PowerShell
   href: overview.md
   items:
-  - name: Introducing the new Az module
-    href: new-azureps-module-az.md
-    items:
-    - name: Install Az
-      href: install-az-ps.md
-    - name: Migrate to Az
-      href: migrate-from-azurerm-to-az.md
   - name: Install
     href: install-azurerm-ps.md
     items:
     - name: Install on macOS or Linux
-      href: install-az-ps.md
+      href: install-azurermps-maclinux.md
     - name: Install with MSI
       href: other-install.md
   - name: Uninstall
@@ -53,8 +46,6 @@
     items:
     - name: Breaking changes for Azure PowerShell 6.x
       href: migration-guide.6.0.0.md
-    - name: Introducing the new Azure PowerShell module
-      href: new-azureps-module-az.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines

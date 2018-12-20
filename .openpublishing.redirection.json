@@ -341,12 +341,27 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "azurermps-2.2.0/docs-conceptual/index.md",
+      "source_path": "docs-conceptual/azurermps-2.3.0/index.md",
       "redirect_url": "/powershell/azure/azurerm/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "azurermps-3.7.0/docs-conceptual/index.md",
+      "source_path": "docs-conceptual/azurermps-3.7.0/index.md",
+      "redirect_url": "/powershell/azure/azurerm/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs-conceptual/azurermps-4.4.1/index.md",
+      "redirect_url": "/powershell/azure/azurerm/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs-conceptual/azurermps-5.7.0/index.md",
+      "redirect_url": "/powershell/azure/azurerm/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs-conceptual/azurermps-6.13.0/index.md",
       "redirect_url": "/powershell/azure/azurerm/overview",
       "redirect_document_id": false
     },
