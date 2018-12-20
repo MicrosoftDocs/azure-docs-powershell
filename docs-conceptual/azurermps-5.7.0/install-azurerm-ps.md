@@ -17,8 +17,6 @@ the Web Platform Installer or MSI package, see [Other installation methods](othe
 
 For instructions to install Azure PowerShell on other platforms, see [Install and configure Azure PowerShell on macOS and Linux](install-azurermps-maclinux.md).
 
-[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
-
 ## Requirements
 
 To install Azure PowerShell, you need PowerShellGet version 1.1.2.0 or higher. To check if it is available
