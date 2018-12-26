@@ -15,7 +15,7 @@ interactively at the command line.
 
 ## Sign in interactively
 
-To sign in interactively, use the [Connect-AzAccount](/powershell/module/az.profile/connect-azaccount) cmdlet.
+To sign in interactively, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.
 
 ```azurepowershell-interactive
 Connect-AzAccount
