@@ -34,7 +34,7 @@ stay secure.
 
 To learn how to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
-To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzureRmAccount` cmdlet. You'll also need the service principal's sign-in credentials and the tenant ID associate with the service principal. To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will display a dialog box to enter the service principal user ID and password into.
+To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzureRmAccount` cmdlet. You'll also need the service principal's sign-in credentials and the tenant ID associated with the service principal. To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will display a dialog box to enter the service principal user ID and password into.
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
