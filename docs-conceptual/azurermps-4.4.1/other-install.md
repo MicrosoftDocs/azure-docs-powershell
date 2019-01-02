@@ -40,7 +40,7 @@ PowerShell is installed properly.
 
 ```powershell-interactive
 # To make sure the Azure PowerShell module is available after you install
-Get-Module -ListAvailable Azure* | Select-Object Name, Version, Path
+Get-InstalledModule -Name AzureRM -AllVersions | Select-Object Name, Version, Path
 ```
 
 > [!NOTE]
