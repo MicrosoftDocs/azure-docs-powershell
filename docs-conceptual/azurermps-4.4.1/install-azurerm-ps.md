@@ -26,7 +26,7 @@ the appropriate version of PowerShellGet and other system requirements. Run the 
 to see if you have PowerShellGet installed on your system.
 
 ```powershell-interactive
-Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
+Get-InstalledModule -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 You should see something similar to the following output:
@@ -132,10 +132,10 @@ feedback from the command line, use the `Send-Feedback` cmdlet.
 
 Although we encourage you to upgrade to the latest version as early as possible, several versions
 of Azure PowerShell are supported. To determine the version of Azure PowerShell you have installed,
-run `Get-Module AzureRM` from your command line.
+run `Get-InstalledModule AzureRM` from your command line.
 
 ```powershell-interactive
-Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
+Get-InstalledModule AzureRM -AllVersions | Select-Object -Property Name,Version,Path
 ```
 
 ### Support for classic deployment methods

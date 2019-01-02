@@ -23,7 +23,7 @@ To install Azure PowerShell, you need PowerShellGet version 1.1.2.0 or higher. T
 on your system, run the following command:
 
 ```powershell-interactive
-Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
+Get-InstalledModule -Name PowerShellGet -AllVersions | Select-Object -Property Name,Version,Path
 ```
 
 You should see something similar to the following output:
