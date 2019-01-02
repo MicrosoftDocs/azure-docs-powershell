@@ -29,7 +29,7 @@ if you can enable command aliases without uninstalling AzureRM.
 To check which version(s) of AzureRM you have installed, run the command:
 
 ```powershell-interactive
-Get-Module -Name AzureRM -ListAvailable
+Get-InstalledModule -Name AzureRM -AllVersions
 ```
 
 ## Ensure your existing scripts work with the latest AzureRM release

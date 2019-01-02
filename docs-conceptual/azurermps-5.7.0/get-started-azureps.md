@@ -23,7 +23,7 @@ information about the latest release, see the [release notes](./release-notes-az
 
 1. [Install Azure PowerShell](install-azurerm-ps.md).
 
-2. To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your
+2. To verify the installation was successful, run `Get-InstalledModule AzureRM -AllVersions` from your
    command line.
 
 ## Azure Cloud Shell
