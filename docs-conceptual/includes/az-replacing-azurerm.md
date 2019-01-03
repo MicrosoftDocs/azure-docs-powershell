@@ -8,8 +8,8 @@ ms.topic: include
 > [!NOTE]
 > 
 > Starting in December 2018, no new features will be added to the AzureRM module. AzureRM will continue to be supported and
-> receive bugfixes. New features are in the Azure PowerShell Az module. To learn more about the Az module, including how to
-> upgrade from AzureRM, see [the main Azure PowerShell documentation](/powershell/azure).
+> receive bugfixes through December 2020. New features are in the Azure PowerShell Az module. To learn more about the Az module,
+> including how to upgrade from AzureRM, see [the main Azure PowerShell documentation](/powershell/azure).
 >
 > Azure Stack users should continue to use AzureRM for now. The latest version of AzureRM which supports Azure Stack is
 > [AzureRM 2.3.0](/powershell/azure/azurerm?view=azurermps-2.3.0).
