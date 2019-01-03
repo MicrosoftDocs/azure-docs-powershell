@@ -44,4 +44,5 @@ For a full description of the migration process, see [Migrate from AzureRM to Az
 ## The future of support for AzureRM
 
 The existing AzureRM module will no longer receive new cmdlets or features. However, AzureRM is still officially
-maintained and will get bug fixes. To keep up with the latest Azure services and features, you should switch to the Az module.
+maintained and will get bug fixes up through December 2020. To keep up with the latest Azure services and features,
+switch to the Az module.
