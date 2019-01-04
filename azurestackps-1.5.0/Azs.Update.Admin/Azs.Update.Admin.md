@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azs.Update.Admin Module
 ## Description
-Preview release of the Azure Stack Update operator module.  This module allows operatos to manage updates for their Azure Stack stamp.
+Preview release of the Azure Stack Update operator module.  This module allows operators to manage updates for their Azure Stack stamp.
 
 ## Azs.Update.Admin Cmdlets
 ### [Get-AzsUpdate](Get-AzsUpdate.md)
