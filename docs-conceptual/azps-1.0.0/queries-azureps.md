@@ -8,89 +8,118 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
 ---
-# Query output of Azure PowerShell cmdlets
+# Query output of Azure PowerShell 
 
-Querying in PowerShell can be completed by using built-in cmdlets. In
-PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the verb **_Get_** are
-the query cmdlets. The cmdlet nouns are the types of Azure resources that are acted upon by the
-cmdlet verbs.
+The results of each Azure PowerShell cmdlet are an Azure PowerShell object. Even cmdlets that aren't explicitly `Get-` operations
+might return a value that can be inspected, to give information about a resource that was created or modified. While most cmdlets
+return a single object, some return an array that should be iterated through.
+
+In almost all cases, you query output from Azure PowerShell with the [Select-Object](/powershell/module/Microsoft.PowerShell.Utility/Select-Object)
+cmdlet, often abbreviated to `select`. Output can be filtered with [Where-Object](/powershell/module/Microsoft.PowerShell.Core/Where-Object), or its alias `where`.
 
 ## Select simple properties
 
-Azure PowerShell has default formatting defined for each cmdlet. The most common properties for
-each resource type are displayed in a table or list format automatically. For more information
-about formatting output, see [Formatting query results](formatting-output.md).
-
-Use the `Get-AzVM` cmdlet to query for a list of VMs in your account.
+In the default table format, Azure PowerShell cmdlets don't display all of their available properties. You can get the full properties by using the
+[Format-List](/powershell/module/microsoft.powershell.utility/format-list) cmdlet, or by piping output to `Select-Object *`:
 
 ```azurepowershell-interactive
-Get-AzVM
-```
-
-The default output is automatically formatted as a table.
-
-```output
-ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
------------------          ----   --------          ------  ------              --- -----------------
-MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
-MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
-```
-
-The `Select-Object` cmdlet can be used to select the specific properties that are interesting to you.
-
-```azurepowershell-interactive
-Get-AzVM | Select Name,ResourceGroupName,Location
+Get-AzVM -Name TestVM -ResourceGroupName TestGroup | Select-Object *
 ```
 
 ```output
-Name          ResourceGroupName Location
-----          ----------------- --------
-MyUnbuntu1610 MYWESTEURG        westeurope
-MyWin2016VM   MYWESTEURG        westeurope
+ResourceGroupName        : TESTGROUP
+Id                       : /subscriptions/711d8ed1-b888-4c52-8ab9-66f07b87eb6b/resourceGroups/TESTGROUP/providers/Micro
+                           soft.Compute/virtualMachines/TestVM
+VmId                     : 711d8ed1-b888-4c52-8ab9-66f07b87eb6b
+Name                     : TestVM
+Type                     : Microsoft.Compute/virtualMachines
+Location                 : westus2
+LicenseType              :
+Tags                     : {}
+AvailabilitySetReference :
+DiagnosticsProfile       :
+Extensions               : {}
+HardwareProfile          : Microsoft.Azure.Management.Compute.Models.HardwareProfile
+InstanceView             :
+NetworkProfile           : Microsoft.Azure.Management.Compute.Models.NetworkProfile
+OSProfile                : Microsoft.Azure.Management.Compute.Models.OSProfile
+Plan                     :
+ProvisioningState        : Succeeded
+StorageProfile           : Microsoft.Azure.Management.Compute.Models.StorageProfile
+DisplayHint              : Compact
+Identity                 :
+Zones                    : {}
+FullyQualifiedDomainName :
+AdditionalCapabilities   :
+RequestId                : 711d8ed1-b888-4c52-8ab9-66f07b87eb6b
+StatusCode               : OK
 ```
 
-## Select complex nested properties
-
-If the property you want is nested in the JSON output, you need to supply the full
-path to the property. The following example shows how to select the VM Name and the OS type
-from the `Get-AzVM` cmdlet.
+Once you know the names of the properties that you're interested in, you can use those property names with `Select-Object` to get them directly:
 
 ```azurepowershell-interactive
-Get-AzVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
+Get-AzVM -Name TestVM -ResourceGroupName TestGroup | Select-Object Name,VmId,ProvisioningState
 ```
 
 ```output
-Name           OSType
-----           ------
-MyUnbuntu1610   Linux
-MyWin2016VM   Windows
+Name   VmId                                 ProvisioningState
+----   ----                                 -----------------
+TestVM 711d8ed1-b888-4c52-8ab9-66f07b87eb6b Succeeded
 ```
 
-## Filter results with the Where-Object cmdlet
+Output from using `Select-Object` is always formatted to display the requested information. To learn about using formatting as part
+of querying cmdlet results, see [Format Azure PowerShell cmdlet output](formatting-output.md).
 
-The `Where-Object` cmdlet allows you to filter the result based on any property value. In the
-following example, the filter selects only VMs that have the text "RGD" in their name.
+## Select nested properties
+
+Some properties in Azure PowerShell cmdlet output use nested objects, like the `StorageProfile` property
+of `Get-AzVM` output. To get a value from a nested property, provide a display name and the full path to the value you
+want to inspect as part of a dictionary argument to `Select-Object`:
 
 ```azurepowershell-interactive
-Get-AzVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
+Get-AzVM -ResourceGroupName TestGroup | `
+    Select-Object Name,@{Name="OSType"; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
 ```output
-ResourceGroupName  Name
------------------  ----
-RGDEMO001          KBDemo001VM
-RGDEMO001          KBDemo020
+Name     OSType
+----     ------
+TestVM    Linux
+TestVM2   Linux
+WinVM   Windows
 ```
 
-With the next example, the results will return the VMs that have the vmSize 'Standard_DS1_V2'.
+Each dictionary argument selects one property from the object. The property to extract must be part
+of an expression.
+
+## Filter results 
+
+The `Where-Object` cmdlet allows you to filter the result based on any property value, including
+nested properties. The next example shows how to use `Where-Object` to find the Linux VMs in a resource group.
 
 ```azurepowershell-interactive
-Get-AzVM | Where vmSize -eq Standard_DS1_V2
+Get-AzVM -ResourceGroupName TestGroup | `
+    Where-Object {$_.StorageProfile.OSDisk.OSType -eq "Linux"}
 ```
 
 ```output
-ResourceGroupName          Name     Location          VmSize  OsType              NIC ProvisioningState
------------------          ----     --------          ------  ------              --- -----------------
-MYWESTEURG        MyUnbuntu1610   westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
-MYWESTEURG          MyWin2016VM   westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
+ResourceGroupName    Name Location          VmSize OsType        NIC ProvisioningState Zone
+-----------------    ---- --------          ------ ------        --- ----------------- ----
+TestGroup          TestVM  westus2 Standard_D2s_v3  Linux  testvm299         Succeeded
+TestGroup         TestVM2  westus2 Standard_D2s_v3  Linux testvm2669         Succeeded
+```
+
+You can pipe the results of `Select-Object` and `Where-Object` to each other. For performance purposes, it's always recommended to put the `Where-Object` operation before `Select-Object`:
+
+```azurepowershell-interactive
+Get-AzVM -ResourceGroupName TestGroup | `
+    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} | `
+    Select-Object Name,VmID,ProvisioningState
+```
+
+```output
+Name    VmId                                 ProvisioningState
+----    ----                                 -----------------
+TestVM  711d8ed1-b888-4c52-8ab9-66f07b87eb6  Succeeded
+TestVM2 cbcee769-dd78-45e3-a14d-2ad11c647d0  Succeeded
 ```
