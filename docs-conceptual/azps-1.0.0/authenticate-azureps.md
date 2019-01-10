@@ -21,10 +21,10 @@ After signing in, commands are run against your default subscription. To change 
 
 ## Sign in interactively
 
-To sign in interactively, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.
+To sign in interactively, use the [Connect-AzureRmAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.
 
 ```azurepowershell-interactive
-Connect-AzAccount
+Connect-AzureRmAccount
 ```
 
 When run, this cmdlet will present a token string. To sign in, copy this string and paste it into https://microsoft.com/devicelogin in a browser. Your PowerShell session will
