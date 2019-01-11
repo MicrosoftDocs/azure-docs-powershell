@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018
+ms.date: 01/10/2019
 ---
 # Query output of Azure PowerShell 
 

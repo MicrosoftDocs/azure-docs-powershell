@@ -7,20 +7,14 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 10/29/2018
+ms.date: 01/10/2019
 ---
 # Overview of Azure PowerShell
 
 Azure PowerShell provides a set of cmdlets that use the [Azure Resource
 Manager](/azure/azure-resource-manager/resource-group-overview) model for managing your Azure
 resources. Azure PowerShell uses .NET Standard, making it available for Windows, macOS, and Linux.
-Azure PowerShell is also available from Azure Cloud Shell.
-
-Use [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell in your browser, or
-[install locally](install-az-ps.md). Check out the [Get Started](get-started-azureps.md)
-article to learn the Azure PowerShell basics and get started with Azure.
-
-For information about the latest Azure PowerShell release, see the [release notes](release-notes-azureps.md).
+Azure PowerShell is also available on Azure Cloud Shell.
 
 ## About the new Az module
 
@@ -42,26 +36,32 @@ The [AzureRM documentation](/powershell/azure/azurerm) is also available.
 > with `Enable-AzureRmAlias`. See the [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md) article for more
 > details.
 
-## Common scenarios
+## Run or install
 
-The following samples can help you learn how to perform common scenarios with Azure PowerShell:
+You can install Azure PowerShell on any platform which supports PowerShell 5.x or PowerShell 6.x, or run
+in Azure Cloud Shell.
+
+* To run in your browser with Azure Cloud Shell, see [Quickstart for PowerShell in Azure Cloud Shell](/azure/cloud-shell/quickstart-powershell).
+* To install Azure PowerShell on your system, see [Install Azure PowerShell](install-az-ps.md).
+
+For information about the latest Azure PowerShell release, see the [release notes](release-notes-azureps.md).
+
+## Get Started
+
+Read the [Get Started with Azure PowerShell](get-started-azureps.md) article to learn the Azure PowerShell basics. If you're not
+familiar with PowerShell, an introduction might be helpful:
+
+* [Install PowerShell](/powershell/scripting/install/installing-powershell)
+* [Scripting with PowerShell](/powershell/scripting/powershell-scripting)
+* [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1)
+* Microsoft Virtual Academy's [Getting Started with PowerShell Jumpstart](https://mva.microsoft.com/liveevents/powershell-jumpstart)
+
+The following samples can help you with some common uses of Azure:
 
 * [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
 * [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
-
-## Learn PowerShell basics
-
-If you're unfamiliar with PowerShell, an introduction may be helpful.
-
-* [Installing PowerShell](/powershell/scripting/setup/installing-windows-powershell)
-* [Scripting with PowerShell](/powershell/scripting/powershell-scripting)
-
-You can also watch this video:
-[PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
-
-Or attend the Microsoft Virtual Academy's [Getting Started with PowerShell Jumpstart](https://mva.microsoft.com/liveevents/powershell-jumpstart).
 
 ## Build your skills with Microsoft Learn
 
