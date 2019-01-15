@@ -6,408 +6,94 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 10/30/2018
+ms.date: 01/14/2019
 ---
 
 # Get started with Azure PowerShell
 
-Azure PowerShell is designed for managing and administering Azure resources from the command line,
-and for building automation scripts that work against the Azure Resource Manager. You can use it in
-your browser with [Azure Cloud Shell](/azure/cloud-shell/overview) or you install it on your
-local machine. This article helps get you started with Azure PowerShell and teaches the core concepts behind it.
+Azure PowerShell is designed for managing and administering Azure resources from the command line. Use Azure PowerShell when you want to build automated tools that use the Azure Resource Manager model.
+Try it out in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or install on your
+local machine.
 
-## Install Azure PowerShell
+This article helps you get started with Azure PowerShell and teaches the core concepts behind it.
 
-The first step is to make sure you have the latest version of the Azure PowerShell installed. For
-information about the latest release, see the [release notes](./release-notes-azureps.md).
+## Install or run in Azure Cloud Shell
 
-1. [Install Azure PowerShell](install-az-ps.md).
+The easiest way to get started with Azure PowerShell is by trying it out in an Azure Cloud Shell environment.
+To get up and running with Cloud Shell, see [Quickstart for PowerShell in Azure Cloud Shell](/azure/cloud-shell/quickstart-powershell).
+Cloud Shell runs PowerShell 6 on a Linux container, so Windows-specific functionality isn't available.
 
-2. To verify the installation was successful, run `Get-InstalledModule Az -AllVersions` from your
-   command line.
-
-## Azure Cloud Shell
-
-The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/quickstart).
-
-1. Launch Cloud Shell from the top navigation of the Azure portal.
-
-   ![Shell icon](~/media/get-started-azureps/shell-icon.png)
-
-2. Choose the subscription you want to use and create a storage account.
-
-   ![Create a storage account](~/media/get-started-azureps/storage-prompt.png)
-
-Once your storage has been created, the Cloud Shell will open a PowerShell session in the browser.
-
-![Cloud Shell for PowerShell](~/media/get-started-azureps/cloud-powershell.png)
+When you're ready to install Azure PowerShell on your local machine, follow the instructions in [Install the Azure PowerShell module](install-az-ps.md).
 
 ## Sign in to Azure
 
-Sign on interactively:
-
-1. Type `Connect-AzAccount`. The `-Environment` argument lets you authenticate for a different region or cloud. For example, to connect to Azure China:
-
-    ```powershell-interactive
-    Connect-AzAccount -Environment AzureChinaCloud
-    ```
-
-2. You'll get a token to use on https://microsoft.com/devicelogin. Open this page in your browser and enter the token to sign in with your Azure credentials, and authorize Azure PowerShell. 
-
-Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and
-manage the resources in your subscription. To learn more about the sign in process and available
-authentication methods, see [Sign in with Azure PowerShell](authenticate-azureps.md).
-
-## Create a Windows virtual machine using simple defaults
-
-The `New-AzVM` cmdlet provides a simplified syntax making it easy to create a new virtual
-machine. There are only two parameter values you must provide: the name of the VM and a set of
-credentials for the local administrator account on the VM.
-
-First, create the credential object.
+Sign in interactively with the `Connect-AzAccount` cmdlet. Skip this step if you use Cloud Shell: Your Auzre Cloud Shell session is already authenticated
+for the environment, subscription, and tenant that launched the Cloud Shell session.
 
 ```azurepowershell-interactive
-$cred = Get-Credential -Message "Enter a username and password for the virtual machine."
+Connect-AzAccount
 ```
 
-```output
-Windows PowerShell credential request.
-Enter a username and password for the virtual machine.
-User: localAdmin
-Password for user localAdmin: *********
-```
-
-Next, create the VM.
+If you're in a non-US region, use the `-Environment` parameter to sign in. Get the name of the environment for your region by using
+the [Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) cmdlet. For example, to sign in to Azure China 21Vianet:
 
 ```azurepowershell-interactive
-New-AzVM -Name SampleVM -Credential $cred
+Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-```output
-ResourceGroupName        : SampleVM
-Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/SampleVM/providers/Microsoft.Compute/virtualMachines/SampleVM
-VmId                     : 43f6275d-ce50-49c8-a831-5d5974006e63
-Name                     : SampleVM
-Type                     : Microsoft.Compute/virtualMachines
-Location                 : eastus
-Tags                     : {}
-HardwareProfile          : {VmSize}
-NetworkProfile           : {NetworkInterfaces}
-OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
-ProvisioningState        : Succeeded
-StorageProfile           : {ImageReference, OsDisk, DataDisks}
-FullyQualifiedDomainName : samplevm-2c0867.eastus.cloudapp.azure.com
-```
+You'll get a token to use on https://microsoft.com/devicelogin. Open this page in your browser and enter the token, then sign in with your Azure
+account credentials and authorize Azure PowerShell. 
 
-You may wonder what else is created and how is the VM configured. First, let's
-look at our resource groups.
+Once signed in, use the Azure PowerShell cmdlets to access and manage resources in your subscription. To learn more about
+the sign-in process and authentication methods, see [Sign in with Azure PowerShell](authenticate-azureps.md).
 
-```azurepowershell-interactive
-Get-AzResourceGroup | Select-Object ResourceGroupName,Location
-```
+## Find commands
 
-```output
-ResourceGroupName          Location
------------------          --------
-cloud-shell-storage-westus westus
-SampleVM                   eastus
-```
+Azure PowerShell cmdlets follow a standard naming convention for PowerShell, `VERB-NOUN`. The verb describes the action (examples include `Create`, `Get`, `Set`, `Delete`)
+and the noun describes the resource type (examples include `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, `AzVirtualNetworkGateway`). Nouns in Azure PowerShell always start with the prefix `Az`. For the full list of standard verbs, see [Approved verbs for PowerShell Commands](/powershell/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
 
-The **cloud-shell-storage-westus** resource group is created the first time you use the Cloud
-Shell. The **SampleVM** resource group was created by the `New-AzVM` cmdlet.
-
-Now, what other resources were created in this new resource group?
-
-```azurepowershell-interactive
-Get-AzResource |
-  Where ResourceGroupName -eq SampleVM |
-    Select-Object ResourceGroupName,Location,ResourceType,Name
-```
-
-```output
-ResourceGroupName          Location ResourceType                            Name
------------------          -------- ------------                            ----
-SAMPLEVM                   eastus   Microsoft.Compute/disks                 SampleVM_OsDisk_1_9b286c54b168457fa1f8c47...
-SampleVM                   eastus   Microsoft.Compute/virtualMachines       SampleVM
-SampleVM                   eastus   Microsoft.Network/networkInterfaces     SampleVM
-SampleVM                   eastus   Microsoft.Network/networkSecurityGroups SampleVM
-SampleVM                   eastus   Microsoft.Network/publicIPAddresses     SampleVM
-SampleVM                   eastus   Microsoft.Network/virtualNetworks       SampleVM
-```
-
-Let's get some more details about the VM. This example shows how to retrieve
-information about the OS Image used to create the VM.
-
-```azurepowershell-interactive
-Get-AzVM -Name SampleVM -ResourceGroupName SampleVM |
-  Select-Object -ExpandProperty StorageProfile |
-    Select-Object -ExpandProperty ImageReference
-```
-
-```output
-Publisher : MicrosoftWindowsServer
-Offer     : WindowsServer
-Sku       : 2016-Datacenter
-Version   : latest
-Id        :
-```
-
-## Create a fully configured Linux Virtual Machine
-
-The previous example used the simplified syntax and default parameter values to create a Windows
-virtual machine. In this example, we provide values for all options of the virtual machine.
-
-### Create a resource group
-
-In this example, we want to create a Resource Group. Resource Groups in Azure provide a way to
-manage multiple resources that you want to logically group together. For example, you might create
-a Resource Group for an application or project and add a virtual machine, a database and a CDN
-service within it.
-
-Let's create a resource group named "MyResourceGroup" in the uswest2 region of Azure. To do so
-type the following command:
-
-```azurepowershell-interactive
-New-AzResourceGroup -Name 'myResourceGroup' -Location 'westus2'
-```
-
-```output
-ResourceGroupName : myResourceGroup
-Location          : westus2
-ProvisioningState : Succeeded
-Tags              :
-ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
-```
-
-This new resource group will be used to contain all of the resources needed for the new VM we
-create. To create a new Linux VM, we must first create the other required resources and assign them
-to a configuration. Then we can use that configuration to create the VM. Also, you will need to
-have an SSH public key named `id_rsa.pub` in the `.ssh` directory of your user profile.
-
-#### Create the required network resources
-
-First we need to create a subnet configuration to be used with the virtual network creation
-process. We also create a public IP address so that we can connect to this VM. We create a network
-security group to secure access to the public address. Finally we create the virtual NIC using all
-of the previous resources.
-
-```azurepowershell-interactive
-# Variables for common values
-$resourceGroup = "myResourceGroup"
-$location = "westus2"
-$vmName = "myLinuxVM"
-
-# Definer user name and blank password
-$securePassword = ConvertTo-SecureString 'azurepassword' -AsPlainText -Force
-$cred = New-Object System.Management.Automation.PSCredential ("azureuser", $securePassword)
-
-# Create a subnet configuration
-$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 192.168.2.0/24
-
-# Create a virtual network
-$vnet = New-AzVirtualNetwork -ResourceGroupName $resourceGroup -Location $location `
-  -Name MYvNET2 -AddressPrefix 192.168.0.0/16 -Subnet $subnetConfig
-
-# Create a public IP address and specify a DNS name
-$publicIp = New-AzPublicIpAddress -ResourceGroupName $resourceGroup -Location $location `
-  -Name "mypublicdns$(Get-Random)" -AllocationMethod Static -IdleTimeoutInMinutes 4
-$publicIp | Select-Object Name,IpAddress
-
-# Create an inbound network security group rule for port 22
-$nsgRuleSSH = New-AzNetworkSecurityRuleConfig -Name myNetworkSecurityGroupRuleSSH  -Protocol Tcp `
-  -Direction Inbound -Priority 1000 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * `
-  -DestinationPortRange 22 -Access Allow
-
-# Create a network security group
-$nsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroup -Location $location `
-  -Name myNetworkSecurityGroup2 -SecurityRules $nsgRuleSSH
-
-# Create a virtual network card and associate with public IP address and NSG
-$nic = New-AzNetworkInterface -Name myNic2 -ResourceGroupName $resourceGroup -Location $location `
-  -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
-```
-
-### Create the VM configuration
-
-Now that we have the required resources we can create the VM configuration object.
-
-```azurepowershell-interactive
-# Create a virtual machine configuration
-$vmConfig = New-AzVMConfig -VMName $vmName -VMSize Standard_B1s |
-  Set-AzVMOperatingSystem -Linux -ComputerName $vmName -Credential $cred -DisablePasswordAuthentication |
-  Set-AzVMSourceImage -PublisherName Canonical -Offer UbuntuServer -Skus 14.04.2-LTS -Version latest |
-  Add-AzVMNetworkInterface -Id $nic.Id
-
-# Configure SSH Keys
-$sshPublicKey = Get-Content -Raw "$env:USERPROFILE\.ssh\id_rsa.pub"
-Add-AzVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azureuser/.ssh/authorized_keys"
-```
-
-### Create the virtual machine
-
-Now we can create the VM using the VM configuration object.
-
-```azurepowershell-interactive
-New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
-```
-
-Now that the VM has been created, you can sign in to your new Linux VM using SSH with the public IP
-address of the VM you created:
+Knowing the nouns, verbs, and the Azure PowerShell modules available help you find commands with the [Get-Command](/powershell/module/microsoft.powershell.core/get-command) cmdlet. For example, to find all VM-related commands that use the `Get` verb:
 
 ```powershell-interactive
-ssh azureuser@$($publicIp.IpAddress)
+Get-Command -Verb Get -Noun AzVM* -Module Az.Compute
 ```
 
-```output
-Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-65-generic x86_64)
+To help you find common commands, this table lists the resource type, corresponding Azure PowerShell module, and noun prefix to use with `Get-Command`:
 
- * Documentation:  https://help.ubuntu.com/
+| Resource type | Azure PowerShell module | Noun prefix |
+|---------------|-------------------------|----------------|
+| [Resource group](/azure/azure-resource-manager/resource-group-overview) | [Az.Resources](/powershell/module/az.resources#resources) | `AzResourceGroup` |
+| [Virtual machines](/azure/virtual-machines) | [Az.Compute](/powershell/module/az.compute#virtual_machines) | `AzVM` |
+| [Storage accounts](/azure/storage/common/storage-introduction) | [Az.Storage](/powershell/module/az.storage/) | `AzStorageAccount` |
+| [Key Vault](/azure/key-vault/key-vault-whatis) | [Az.KeyVault](/powershell/module/az.keyvault) | `AzKeyVault` |
+| [Web applications](/azure/app-service) | [Az.Websites](/powershell/module/az.websites) | `AzWebApp` |
+| [SQL databases](/azure/sql-database) | [Az.Sql](/powershell/module/az.sql) | `AzSqlDatabase` |
 
-  System information as of Sun Feb 19 00:32:28 UTC 2017
+For a full list of the modules in Azure PowerShell, see the [Azure PowerShell modules list](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md) hosted on GitHub.
 
-  System load: 0.31              Memory usage: 3%   Processes:       89
-  Usage of /:  39.6% of 1.94GB   Swap usage:   0%   Users logged in: 0
+## Learn Azure PowerShell basics with quickstarts and tutorials
 
-  Graph this data and manage this system at:
-    https://landscape.canonical.com/
+To get started with Azure PowerShell, try an in-depth tutorial for setting up virtual machines and
+learning how to query them.
 
-  Get cloud support with Ubuntu Advantage Cloud Guest:
-    http://www.ubuntu.com/business/services/cloud
+> [!div class="nextstepaction"]
+> [Create virtual machines with Azure PowerShell](azureps-vm-tutorial.yml)
 
-0 packages can be updated.
-0 updates are security updates.
+There are also Azure PowerShell quickstarts for other popular Azure services:
 
-
-
-The programs included with the Ubuntu system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
-applicable law.
-
-my-login@MyLinuxVM:../../..$
-```
-
-## Creating other resources in Azure
-
-We've now walked through how to create a Resource Group, a Linux VM, and a Windows Server VM. You
-can create many other types of Azure resources as well.
-
-For example, to create an Azure Network Load Balancer that we could then associate with our newly
-created VMs, we can use the following create command:
-
-```azurepowershell-interactive
-New-AzLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westus2
-```
-
-We could also create a new private Virtual Network (commonly referred to as a "VNet" within Azure)
-for our infrastructure using the following command:
-
-```azurepowershell-interactive
-$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
-$vnet = New-AzVirtualNetwork -ResourceGroupName myResourceGroup -Location westus2 `
-  -Name MYvNET3 -AddressPrefix 10.0.0.0/16 -Subnet $subnetConfig
-```
-
-What makes Azure and the Azure PowerShell powerful is that we can use it not just to get
-cloud-based infrastructure but also to create managed platform services. The managed platform
-services can also be combined with infrastructure to build even more powerful solutions.
-
-For example, you can use the Azure PowerShell to create an Azure AppService. Azure AppService is a
-managed platform service that provides a great way to host web apps without having to worry about
-infrastructure. After creating the Azure AppService, you can create two new Azure Web Apps within
-the AppService using the following commands:
-
-```azurepowershell-interactive
-# Get a UUID for creating the apps to avoid name conflicts
-$guid = [System.Guid]::NewGuid().ToString()
-
-# Create an Azure AppService that we can host any number of web apps within
-New-AzAppServicePlan -Name MyAppServicePlan -Tier Basic -NumberofWorkers 2 -WorkerSize Small -ResourceGroupName myResourceGroup -Location westus2
-
-# Create Two Web Apps within the AppService (note: name param must be a unique DNS entry)
-New-AzWebApp -Name MyWebApp-$guid -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westus2
-New-AzWebApp -Name MyWebApp2-$guid -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westus2
-```
-
-## Listing deployed resources
-
-You can use the `Get-AzResource` cmdlet to list the resources running in Azure. The following
-example shows the resources we created in the new resource group.
-
-```azurepowershell-interactive
-Get-AzResource |
-  Where-Object ResourceGroupName -eq myResourceGroup |
-    Select-Object Name,Location,ResourceType
-```
-
-```output
-Name                                                  Location   ResourceType
-----                                                  --------   ------------
-myLinuxVM_OsDisk_1_36ca038791f642ba91270879088c249a   westus2 Microsoft.Compute/disks
-myWindowsVM_OsDisk_1_f627e6e2bb454c72897d72e9632adf9a westus2 Microsoft.Compute/disks
-myLinuxVM                                             westus2 Microsoft.Compute/virtualMachines
-myWindowsVM                                           westus2 Microsoft.Compute/virtualMachines
-myWindowsVM/BGInfo                                    westus2 Microsoft.Compute/virtualMachines/extensions
-myNic1                                                westus2 Microsoft.Network/networkInterfaces
-myNic2                                                westus2 Microsoft.Network/networkInterfaces
-myNetworkSecurityGroup1                               westus2 Microsoft.Network/networkSecurityGroups
-myNetworkSecurityGroup2                               westus2 Microsoft.Network/networkSecurityGroups
-mypublicdns245369171                                  westus2 Microsoft.Network/publicIPAddresses
-mypublicdns779537141                                  westus2 Microsoft.Network/publicIPAddresses
-MYvNET1                                               westus2 Microsoft.Network/virtualNetworks
-MYvNET2                                               westus2 Microsoft.Network/virtualNetworks
-micromyresomywi032907510                              westus2 Microsoft.Storage/storageAccounts
-```
-
-## Deleting resources
-
-To clean up your Azure account, you want to remove the resources we created in this example. You
-can use the `Remove-Az*` cmdlets to delete the resources you no longer need. To remove the
-Windows VM we created, using the following command:
-
-```azurepowershell-interactive
-Remove-AzVM -Name myWindowsVM -ResourceGroupName myResourceGroup
-```
-
-You'll be prompted to confirm that you want to remove the resource.
-
-```output
-Confirm
-Are you sure you want to remove resource group 'myResourceGroup'
-[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
-```
-
-You can also delete many resources at once. For example, the following command deletes
-the resource group "MyResourceGroup" that we've used for all the samples so far.
-All resources in the group are also deleted.
-
-```azurepowershell-interactive
-Remove-AzResourceGroup -Name myResourceGroup
-```
-
-```output
-Confirm
-Are you sure you want to remove resource group 'myResourceGroup'
-[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
-```
-
-The task can take several minutes to complete, depending on the number and type of resources.
-
-## Get samples
-
-To learn more about ways to use the Azure PowerShell, check out our most common scripts for
-[Linux VMs](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json),
-[Windows VMs](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json),
-[Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), and
-[SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json).
+* [Create a storage account](/azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell)
+* [Transfer objects to/from Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-powershell)
+* [Create and retrieve secrets from Azure Key Vault](/azure/key-vault/quick-create-powershell)
+* [Create an Azure SQL database and firewall](/azure/sql-database/scripts/sql-database-create-and-configure-database-powershell)
+* [Run a container in Azure Container Instances](/azure/container-instances/container-instances-quickstart-powershell)
+* [Create a Virtual Machine Scale Set (VMSS)](/azure/virtual-machine-scale-sets/quick-create-powershell)
+* [Create a standard load balancer](/azure/load-balancer/quickstart-create-standard-load-balancer-powershell)
 
 ## Next steps
 
 * [Sign in with Azure PowerShell](authenticate-azureps.md)
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
-* [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
+* [Create service principals with Azure PowerShell](create-azure-service-principal-azureps.md)
 * Get help from the community:
   * [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Stacki Overflow](http://go.microsoft.com/fwlink/?LinkId=320213)
