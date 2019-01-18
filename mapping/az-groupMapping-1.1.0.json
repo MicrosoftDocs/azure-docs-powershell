@@ -887,7 +887,7 @@
   "Get-AzPowerBIEmbeddedCapacity": "Power BI Embedded Capacity",
   "Suspend-AzPowerBIEmbeddedCapacity": "Power BI Embedded Capacity",
   "Reset-AzPowerBIWorkspaceCollectionAccessKeys": "Power BI Workspace Collections",
-  "Invoke-AzStorageSyncCompatibilityCheck": "Storage",
+  "Invoke-AzStorageSyncCompatibilityCheck": "StorageSync",
   "Get-AzMapsAccount": "Maps",
   "New-AzMapsAccountKey": "Maps",
   "Remove-AzMapsAccount": "Maps",
