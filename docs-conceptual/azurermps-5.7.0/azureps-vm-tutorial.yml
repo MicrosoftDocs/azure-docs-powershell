@@ -329,6 +329,6 @@ items:
 
         * `Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide free-form feedback to the team.
         * File a feature request or a bug report in the [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).
-        * Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/Azure/azure-docs-powershell/issues).
+        * Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/MicrosoftDocs/azure-docs-powershell/issues).
 
         We hope that you enjoy using the Azure PowerShell!
