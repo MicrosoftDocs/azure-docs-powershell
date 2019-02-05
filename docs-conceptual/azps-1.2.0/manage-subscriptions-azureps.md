@@ -35,13 +35,11 @@ This is done by modifying the active session context, the information about whic
 In order to change subscriptions, an Azure PowerShell Context object first needs to be retrieved with [Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription)
 and then the current context changed with [Set-AzContext](/powershell/module/az.accounts/set-azcontext).
 
+The next example shows how to get a subscription in the currently active tenant, and set it as the active session:
+
 ```powershell-interactive
-$context = Get-AzSubscription -SubscriptionId -TenantId ...
+$context = Get-AzSubscription -SubscriptionId ...
 Az-SetContext $context
 ```
-
-If only `-TenantId` is provided, then the return value is an array of subscriptions the user has access to inside of that tenant. If only `-SubscriptionId` is provided, then
-the current tenant is queried for that subscription. Without either argument, all subscriptions that the currently signed in user has access to are returned. Since the return
-value of `Get-AzSubscription` could have more than one value in it, take care to make sure that only one context object is passed to `Az-SetContext`.
 
 To learn more about Azure PowerShell contexts, including how to save them and quickly switch between them for working with multiple subscriptions easily, see [Persist credentials with Azure PowerShell contexts](context-persistence.md)
