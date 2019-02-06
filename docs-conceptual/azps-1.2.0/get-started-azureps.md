@@ -27,7 +27,7 @@ When you're ready to install Azure PowerShell on your local machine, follow the 
 
 ## Sign in to Azure
 
-Sign in interactively with the `Connect-AzAccount` cmdlet. Skip this step if you use Cloud Shell: Your Auzre Cloud Shell session is already authenticated
+Sign in interactively with the `Connect-AzAccount` cmdlet. Skip this step if you use Cloud Shell: Your Azure Cloud Shell session is already authenticated
 for the environment, subscription, and tenant that launched the Cloud Shell session.
 
 ```azurepowershell-interactive
@@ -96,4 +96,4 @@ There are also Azure PowerShell quickstarts for other popular Azure services:
 * [Create service principals with Azure PowerShell](create-azure-service-principal-azureps.md)
 * Get help from the community:
   * [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [Stacki Overflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Stack Overflow](http://go.microsoft.com/fwlink/?LinkId=320213)
