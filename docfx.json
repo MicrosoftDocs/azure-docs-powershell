@@ -296,6 +296,62 @@
                 "version": "azurestackps-1.6.0",
                 "dest": "azure/azure-stack"
             },
+             {
+                "files": [
+                    "toc.yml"
+                ],
+                "src": "azurestackps-1.6.0",
+                "version": "azurestackps-1.6.0",
+                "dest": "module/azure-stack"
+            },
+            {
+                "files": [
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.6.0",
+                "version": "azurestackps-1.6.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azurestackps-1.6.0",
+                "version": "azurestackps-1.6.0",
+                "dest": "azure/azure-stack"
+            },
+            {
+                "files": [
+                    "toc.yml"
+                ],
+                "src": "azurestackps-1.7.0",
+                "version": "azurestackps-1.7.0",
+                "dest": "module/azure-stack"
+            },
+            {
+                "files": [
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.7.0",
+                "version": "azurestackps-1.7.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azurestackps-1.7.0",
+                "version": "azurestackps-1.7.0",
+                "dest": "azure/azure-stack"
+            },
             {
                 "files": [
                     "AADRM/**/*.md",
