@@ -1,37 +1,21 @@
 ---
-title: Create an Azure service principal with Azure PowerShell
+title: Use Azure service principals with Azure PowerShell
 description: Learn how to create a service principal for your app or service with Azure PowerShell.
-keywords: Azure PowerShell, Azure Active Directory, Azure Active directory, AD, RBAC
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/13/2018
+ms.date: 02/14/2019
 ---
 # Create an Azure service principal with Azure PowerShell
 
-If you plan to manage your app or service with Azure PowerShell, you should run it under an Azure
-Active Directory (AAD) service principal, rather than your own credentials. This article steps you
-through creating a security principal with Azure PowerShell.
+Automated tools that use Azure services should always have restricted permissions. Instead of having
+applications sign in as a fully privileged user, Azure offers service principals. Service principals are user identities created in Azure associated with an existing account. Service principals can have their access roles customized and restricted to only read or write from specific resources.
 
-## What is a service principal?
+This article runs you through the steps for creating, getting information about, and resetting a service principal with Azure PowerShell.
 
-An Azure service principal is a security identity used by user-created apps, services, and
-automation tools to access specific Azure resources. Service principals are assigned specific permissions
-related to their tasks, giving you better security control. This is unlike a general user identity, which is usually
-authorized to make any changes.
-
-## Verify your own permission level
-
-First, you must have sufficient permissions in both your Azure Active Directory and your Azure
-subscription. You must be able to create an app in the Active Directory and assign a
-role to the service principal.
-
-The easiest way to check whether your account has the right permissions is through the portal. See
-[Check required permission in portal](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
-
-## Create a service principal for your app
+## Create a service principal
 
 Once signed in to your Azure account, you can create the service principal. You must have one
 of the following ways to identify your deployed app:
