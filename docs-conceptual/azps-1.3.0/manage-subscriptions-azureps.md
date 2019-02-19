@@ -39,7 +39,7 @@ The next example shows how to get a subscription in the currently active tenant,
 
 ```powershell-interactive
 $context = Get-AzSubscription -SubscriptionId ...
-Az-SetContext $context
+Set-AzContext $context
 ```
 
 To learn more about Azure PowerShell contexts, including how to save them and quickly switch between them for working with multiple subscriptions easily, see [Persist credentials with Azure PowerShell contexts](context-persistence.md).
