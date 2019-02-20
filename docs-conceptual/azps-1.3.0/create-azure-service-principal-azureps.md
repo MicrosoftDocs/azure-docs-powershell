@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/15/2019
+ms.date: 02/20/2019
 ---
 # Create an Azure service principal with Azure PowerShell
 
@@ -64,15 +64,8 @@ The object returned from `New-AzADServicePrincipal` contains the `Id` and `Displ
 ### Certificate-based authentication
 
 Service principals using certificate-based authentication are created with the `-CertValue` parameter. This parameter takes a base64-encoded ASCII string of the public certificate. This is represented by a PEM file,
-or a text-encoded CRT or CER. Binary encodings of the public certificate aren't supported.
-
-> [!NOTE]
->
-> The process of creating a self-signed certificate isn't covered here. On Windows platforms, use
-> [New-SelfSignedCertificate](/powershell/module/pkiclient/New-SelfSignedCertificate) and on macOS
-> or Linux, use the [SelfSignedCertificate package](/packages/SelfSignedCertificate) or
-> [openSSL](https://www.openssl.org/). Instructions on how to import certificate information into a
-> credential store for sign-in are covered in [Sign in with a service principal](authenticate-azureps.md#sign-in-with-a-service-principal).
+or a text-encoded CRT or CER. Binary encodings of the public certificate aren't supported. These instructions assume that you already
+have a certificate available.
 
 ```azurepowershell-interactive
 $cert = <public certificate as base64-encoded string>
@@ -87,23 +80,9 @@ $credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCreden
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -KeyCredential $credentials
 ```
 
-The object returned from `New-AzADServicePrincipal` contains the `Id` and `DisplayName` members, either of which can be used for sign in with the service principal.
+The object returned from `New-AzADServicePrincipal` contains the `Id` and `DisplayName` members, either of which can be used for sign in with the service principal. Clients which sign in with the service principal also need access to the certificate's private key.
 
 > [!IMPORTANT]
->
-> The process of exporting a credential from the host where the service principal was created isn't covered here.
-> The best solution when using a service principal with a certificate on a client different from where it was created
-> is [Azure Key Vault](/azure/key-vault/certificate-scenarios). From Key Vault, you retrieve the public certificate with
-> [Get-AzKeyVaultCertificate](/powershell/module/Az.KeyVault/Get-AzKeyVaultCertificate) and the private key with
-> [Get-AzKeyVaultSecret](/powershell/module/az.keyvault/get-azkeyvaultsecret).
->
-> If you prefer not to use Key Vault, certificates can be exported from the machine where the service principal was created.
-> On Windows, certificates can be retrieved from the local store with [Export-PfxCertificate](/powershell/module/pkiclient/Export-PfxCertificate).
-> On Linux and macOS, you will need to manually locate and copy your public certificate and private key.
->
-> On all platforms, signing in with a service principal using certificate-based authentication requires Azure PowerShell getting
-> information from a certificate store. See [Sign in with a service principal](authenticate-azureps.md#sign-in-with-a-service-principal) for instructions on how to load a certificate
-> into the certificate store.
 >
 > Signing in with a service principal requires the tenant ID which the service principal was created under. To get the active tenant when the service principal was created, run the following command __immediately after__ service principal creation:
 >

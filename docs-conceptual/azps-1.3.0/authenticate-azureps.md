@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/29/2018
+ms.date: 02/20/2019
 ---
 # Sign in with Azure PowerShell
 
@@ -58,7 +58,7 @@ To get the service principal's credentials as the appropriate object, use the [G
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantid
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
 ```
 
 ### Certificate-based authentication
@@ -67,9 +67,10 @@ Certificate-based authentication requires that Azure PowerShell can retrieve inf
 store based on a certificate thumbprint.
 
 ```azurepowershell-interactive
+Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-On Windows, the store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module, but on other platforms, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
+In PowerShell 5, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module. For PowerShell 6, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
 
 #### Import a certificate in PowerShell 5
 
@@ -94,18 +95,6 @@ $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite
 $store.Add($Certificate) 
 $store.Close()
 ```
-
-> [!IMPORTANT]
->
-> The process of exporting a credential from the host where the service principal was created isn't covered here.
-> The best solution when using a service principal with a certificate on a client different from where it was created
-> is [Azure Key Vault](/azure/key-vault/certificate-scenarios). From Key Vault, you retrieve the public certificate with
-> [Get-AzKeyVaultCertificate](/powershell/module/Az.KeyVault/Get-AzKeyVaultCertificate) and the private key with
-> [Get-AzKeyVaultSecret](/powershell/module/az.keyvault/get-azkeyvaultsecret).
->
-> If you prefer not to use Key Vault, certificates can be exported from the machine where the service principal was created.
-> On Windows, certificates can be retrieved from the local store with [Export-PfxCertificate](/powershell/module/pkiclient/Export-PfxCertificate).
-> On Linux and macOS, you will need to manually locate and copy your public certificate and private key.
 
 ## Sign in using a managed identity 
 
