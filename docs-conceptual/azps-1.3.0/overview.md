@@ -71,6 +71,5 @@ The following samples can help you with some common uses of Azure:
 ## Other Azure PowerShell modules
 
 * [Azure Active Directory](/powershell/azure/active-directory/)
-* [Azure Information Protection](/powershell/azure/aip/)
 * [Azure Service Fabric](/powershell/azure/service-fabric/)
 * [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
