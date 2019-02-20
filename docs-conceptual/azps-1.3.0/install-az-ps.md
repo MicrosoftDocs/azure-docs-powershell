@@ -17,7 +17,7 @@ are supported.
 
 ## Requirements
 
-Azure PowerShell works with PowerShell 5.x on Windows 7 or higher, or PowerShell 6.x on any platform.
+Azure PowerShell works with PowerShell 5.1 or higher on Windows, or PowerShell 6.x on any platform.
 To check your PowerShell version, run the command:
 
 ```powershell-interactive
