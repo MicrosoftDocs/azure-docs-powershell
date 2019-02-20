@@ -50,12 +50,62 @@ Service principals are non-interactive Azure accounts. Like other user accounts,
 To learn how to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
 To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzAccount` cmdlet. You'll also need the service principal's application ID,
-sign-in credentials, and the tenant ID associate with the service principal. To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will present a prompt for the service principal user ID and password.
+sign-in credentials, and the tenant ID associate with the service principal. How you sign in with a service principal will depend on whether it's configured for password-based or certificate-based authentication.
+
+### Password-based authentication
+
+To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will present a prompt for a username and password. Use the service principal ID for the username.
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantid
 ```
+
+### Certificate-based authentication
+
+Certificate-based authentication requires that Azure PowerShell can retrieve information from a local certificate
+store based on a certificate thumbprint.
+
+```azurepowershell-interactive
+```
+
+On Windows, the store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module, but on other platforms, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
+
+#### Import a certificate in PowerShell 5
+
+```azurepowershell-interactive
+# Import a PFX
+$credentials = Get-Credential -Message "Provide PFX private key password"
+Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
+```
+
+#### Import a certificate in PowerShell 6
+
+```azurepowershell-interactive
+# Import a PFX
+$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My 
+$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser 
+$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation) 
+$certPath = <path to certificate>
+$credentials = Get-Credential -Message "Provide PFX private key password"
+$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable 
+$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag) 
+$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite) 
+$store.Add($Certificate) 
+$store.Close()
+```
+
+> [!IMPORTANT]
+>
+> The process of exporting a credential from the host where the service principal was created isn't covered here.
+> The best solution when using a service principal with a certificate on a client different from where it was created
+> is [Azure Key Vault](/azure/key-vault/certificate-scenarios). From Key Vault, you retrieve the public certificate with
+> [Get-AzKeyVaultCertificate](/powershell/module/Az.KeyVault/Get-AzKeyVaultCertificate) and the private key with
+> [Get-AzKeyVaultSecret](/powershell/module/az.keyvault/get-azkeyvaultsecret).
+>
+> If you prefer not to use Key Vault, certificates can be exported from the machine where the service principal was created.
+> On Windows, certificates can be retrieved from the local store with [Export-PfxCertificate](/powershell/module/pkiclient/Export-PfxCertificate).
+> On Linux and macOS, you will need to manually locate and copy your public certificate and private key.
 
 ## Sign in using a managed identity 
 
