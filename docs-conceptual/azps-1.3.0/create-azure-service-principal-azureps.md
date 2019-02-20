@@ -32,51 +32,60 @@ Create a service principal with the [New-AzADServicePrincipal](/powershell/modul
 > If your account doesn't have permission to create a service principal, `New-AzADServicePrincpal` will return an error message containing
 > "Insufficient privileges to complete the operation." Contact your Azure Active Directory admin to create a service principal.
 
-There are two types of authentication available in Azure PowerShell: Password-based authentication, and certificate-based authentication.
+There are two types of authentication available for service principals: Password-based authentication, and certificate-based authentication.
 
-For password-based authentication:
+### Password-based authentication
 
-* Without any other authentication parameters, password-based authentication is used and a random password created for you. If you want password-based authentication, this method is recommended.
+Without any other authentication parameters, password-based authentication is used and a random password created for you. If you want password-based authentication, this method is recommended.
 
-  ```azurepowershell-interactive
-  $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
-  ```
+```azurepowershell-interactive
+$sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
+```
 
-  The returned object contains the `Secret` member, which is a `SecureString` containing the generated password. Make sure that you store this value somewhere secure to authenticate with the service principal. Its value __won't__ be displayed in the console output. If you lose the password, [reset the service principal credentials](#reset-credentials). 
+The returned object contains the `Secret` member, which is a `SecureString` containing the generated password. Make sure that you store this value somewhere secure to authenticate with the service principal. Its value __won't__ be displayed in the console output. If you lose the password, [reset the service principal credentials](#reset-credentials). 
 
-* For user-supplied passwords, the `-PasswordCredential` argument takes `PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
+For user-supplied passwords, the `-PasswordCredential` argument takes `PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
 
-  ```azurepowershell-interactive
-  $credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential -Property @{ StartDate=Get-Date; EndDate=Get-Date -Year 2024; Password=<Choose a strong password>}
-  $sp = New-AzAdServicePrincipal -DisplayName ServicePrincipalName -PasswordCredential $credentials
-  ```
-
-For certificate-based authentication:
-
-* The `-CertValue` parameter takes a Base64-encoded ASCII string of the public certificate to use for authentication.
-
-  ```azurepowershell-interactive
-  $cert = Get-Content -Path <Path to Cert>
-  $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -CertValue $cert
-  ```
-
-* The `-KeyCredential` parameter takes `PSADKeyCredential` objects. These objects are similar to
-  `PSADPasswordCredential`s, except that they use a `CertValue` in place of a `Secret` and are
-  required to have a `KeyId`. The `CertValue` is a Base64-encoded ASCII string of the public
-  certificate to use for authentication.
-
-  ```azurepowershell-interactive
-  $credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential -Property @{ StartDate=Get-Date; EndDate=Get-Date -Year 2024; KeyId=New-Guid; CertValue=(Get-Content -Path <Path to Cert>)}
-  $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -KeyCredential $credentials
-  ```
-
-Make sure any tool that uses this service principal has access to the certificate's private key. If you lose access to the private key, [reset the service principal credentials](#reset-credentials).  
-
-To work with the Windows certificate store to access certificates or create a self-signed certificate, use the [PKIClient](/powershell/module/pkiclient) module.
+```azurepowershell-interactive
+$credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential -Property @{ StartDate=Get-Date; EndDate=Get-Date -Year 2024; Password=<Choose a strong password>}
+$sp = New-AzAdServicePrincipal -DisplayName ServicePrincipalName -PasswordCredential $credentials
+```
 
 The object returned from `New-AzADServicePrincipal` contains the `Id` and `DisplayName` members, either of which can be used for sign in with the service principal.
 
 > [!IMPORTANT]
+>
+> Signing in with a service principal also requires the tenant ID which the service principal was created under. To get the active tenant when the service principal was created, run the following command __immediately after__ service principal creation:
+>
+> ```azurepowershell-interactive
+> (Get-AzContext).Tenant.Id
+> ```
+
+### Certificate-based authentication
+
+Service principals using certificate-based authentication are created with the `-CertValue` parameter. This parameter takes a base64-encoded ASCII string of the public certificate. This is represented by a PEM file,
+or a text-encoded CRT or CER. Binary encodings of the public certificate aren't supported.
+
+```azurepowershell-interactive
+$cert = <public certificate as base64-encoded string>
+$sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -CertValue $cert
+```
+
+You can also use the `-KeyCredential` parameter, which takes `PSADKeyCredential` objects. These objects must have a valid `StartDate`, `EndDate`, and have the `CertValue` member set to a base64-encoded ASCII string of the public certificate.
+
+```azurepowershell-interactive
+$cert = <public certificate as base64-encoded string>
+$credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential -Property @{ StartDate=Get-Date; EndDate=Get-Date -Year 2024; KeyId=New-Guid; CertValue=$cert}
+$sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -KeyCredential $credentials
+```
+
+The object returned from `New-AzADServicePrincipal` contains the `Id` and `DisplayName` members, either of which can be used for sign in with the service principal.
+
+> [!IMPORTANT]
+>
+> On all platforms, signing in with a service principal using certificate-based authentication requires Azure PowerShell getting
+> information from a certificate store. On Windows this store can be easily managed with the [PKI](/powershell/module/pkiclient)
+> module, but on other platforms, the process is more complicated. See [Sign in with a service principal](authenticate-azureps.md#sign-in-with-a-service-principal) for the instructions for all platforms.
 >
 > Signing in with a service principal also requires the tenant ID which the service principal was created under. To get the active tenant when the service principal was created, run the following command __immediately after__ service principal creation:
 >
