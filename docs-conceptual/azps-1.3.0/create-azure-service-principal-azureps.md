@@ -29,7 +29,7 @@ Create a service principal with the [New-AzADServicePrincipal](/powershell/modul
 
 > [!NOTE]
 >
-> If your account doesn't have permission to create a service principal, `New-AzADServicePrincpal` will return an error message containing
+> If your account doesn't have permission to create a service principal, `New-AzADServicePrincipal` will return an error message containing
 > "Insufficient privileges to complete the operation." Contact your Azure Active Directory admin to create a service principal.
 
 There are two types of authentication available for service principals: Password-based authentication, and certificate-based authentication.
@@ -111,7 +111,7 @@ This example adds the **Reader** role and removes the **Contributor** one:
 
 ```azurepowershell-interactive
 New-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName "Reader"
-Delete-AzRoleAssignment -ApplicationId <service prinicpal application ID> -RoleDefinitionName "Contributor"
+Delete-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName "Contributor"
 ```
 
 > [!IMPORTANT]
@@ -148,33 +148,7 @@ store based on a certificate thumbprint.
 Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-In PowerShell 5, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module. For PowerShell 6, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
-
-#### Import a certificate in PowerShell 5
-
-```azurepowershell-interactive
-# Import a PFX
-$credentials = Get-Credential -Message "Provide PFX private key password"
-Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
-```
-
-#### Import a certificate in PowerShell 6
-
-```azurepowershell-interactive
-# Import a PFX
-$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My 
-$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser 
-$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation) 
-$certPath = <path to certificate>
-$credentials = Get-Credential -Message "Provide PFX private key password"
-$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable 
-$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag) 
-$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite) 
-$store.Add($Certificate) 
-$store.Close()
-```
-
-To learn more about signing in with a service principal, see [Sign in with Azure PowerShell](authenticate-azureps.md).
+For instructions on importing a certificate into a credential store accessible by PowerShell, see [Sign in with Azure PowerShell](authenticate-azureps.md#sp-signin)
 
 ## Reset credentials
 

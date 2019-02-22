@@ -43,7 +43,7 @@ $creds = Get-Credential
 Connect-AzAccount -Credential $creds
 ```
 
-## Sign in with a service principal
+## Sign in with a service principal <a name="sp-signin"/>
 
 Service principals are non-interactive Azure accounts. Like other user accounts, their permissions are managed with Azure Active Directory. By granting a service principal only the permissions it needs, your automation scripts stay secure.
 
