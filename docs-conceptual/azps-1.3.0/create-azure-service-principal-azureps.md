@@ -141,9 +141,40 @@ $credentials = Get-Credential
 Connect-AzAccount -ServicePrincipal -Credential $credentials -Tenant <tenant ID> 
 ```
 
-<!-- SIGN IN PENDING RESPONSE FROM MARK ABOUT AVAILABILITY ON LINUX - MAY ALSO CHANGE THE CREATION SEGMENT -->
+Certificate-based authentication requires that Azure PowerShell can retrieve information from a local certificate
+store based on a certificate thumbprint.
 
-To learn more about signing in with a service principal, see [Sign in with the Azure CLI](authenticate-azure-cli.md).
+```azurepowershell-interactive
+Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
+```
+
+In PowerShell 5, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module. For PowerShell 6, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
+
+#### Import a certificate in PowerShell 5
+
+```azurepowershell-interactive
+# Import a PFX
+$credentials = Get-Credential -Message "Provide PFX private key password"
+Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
+```
+
+#### Import a certificate in PowerShell 6
+
+```azurepowershell-interactive
+# Import a PFX
+$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My 
+$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser 
+$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation) 
+$certPath = <path to certificate>
+$credentials = Get-Credential -Message "Provide PFX private key password"
+$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable 
+$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag) 
+$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite) 
+$store.Add($Certificate) 
+$store.Close()
+```
+
+To learn more about signing in with a service principal, see [Sign in with Azure PowerShell](authenticate-azureps.md).
 
 ## Reset credentials
 
