@@ -14,8 +14,8 @@ Starting in December 2018, the Azure PowerShell Az module is in general release 
 PowerShell module for interacting with Azure. Az offers shorter commands, improved stability, and
 cross-platform support. Az also offers feature parity and an easy migration path from AzureRM.
 
-Az uses the .NET Standard library, which means it runs on PowerShell 5.x and PowerShell 6.x.
-Since PowerShell 6.x can run on Linux, macOS, and Windows, Azure PowerShell is now available for all platforms.
+Az uses the .NET Standard library, which means it runs on PowerShell 5 and PowerShell 6.
+Since PowerShell 6 can run on Linux, macOS, and Windows, Azure PowerShell is now available for all platforms.
 Using .NET Standard allows us to unify the code base of Azure PowerShell with minimal impact on users.
 
 Az is a new module, so the version has been reset to 1.0.0.

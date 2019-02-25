@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/29/2018
+ms.date: 02/20/2019
 ---
 # Sign in with Azure PowerShell
 
@@ -43,18 +43,57 @@ $creds = Get-Credential
 Connect-AzAccount -Credential $creds
 ```
 
-## Sign in with a service principal
+## Sign in with a service principal <a name="sp-signin"/>
 
 Service principals are non-interactive Azure accounts. Like other user accounts, their permissions are managed with Azure Active Directory. By granting a service principal only the permissions it needs, your automation scripts stay secure.
 
 To learn how to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
 To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzAccount` cmdlet. You'll also need the service principal's application ID,
-sign-in credentials, and the tenant ID associate with the service principal. To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will present a prompt for the service principal user ID and password.
+sign-in credentials, and the tenant ID associate with the service principal. How you sign in with a service principal will depend on whether it's configured for password-based or certificate-based authentication.
+
+### Password-based authentication
+
+To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will present a prompt for a username and password. Use the service principal ID for the username.
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+```
+
+### Certificate-based authentication
+
+Certificate-based authentication requires that Azure PowerShell can retrieve information from a local certificate
+store based on a certificate thumbprint.
+
+```azurepowershell-interactive
+Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
+```
+
+In PowerShell 5, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module. For PowerShell 6, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
+
+#### Import a certificate in PowerShell 5
+
+```azurepowershell-interactive
+# Import a PFX
+$credentials = Get-Credential -Message "Provide PFX private key password"
+Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
+```
+
+#### Import a certificate in PowerShell 6
+
+```azurepowershell-interactive
+# Import a PFX
+$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My 
+$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser 
+$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation) 
+$certPath = <path to certificate>
+$credentials = Get-Credential -Message "Provide PFX private key password"
+$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable 
+$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag) 
+$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite) 
+$store.Add($Certificate) 
+$store.Close()
 ```
 
 ## Sign in using a managed identity 
