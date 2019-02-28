@@ -30,18 +30,10 @@ Connect-AzAccount
 When run, this cmdlet will present a token string. To sign in, copy this string and paste it into https://microsoft.com/devicelogin in a browser. Your PowerShell session will
 be authenticated to connect to Azure.
 
-## Sign in with credentials
-
-You can also sign in with a `PSCredential` object authorized to connect to Azure.
-The easiest way to get a credential object is with the [Get-Credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential) cmdlet. When run, this cmdlet will prompt you for a username/password credential pair.
-
-> [!Note]
-> This approach doesn't work with Microsoft accounts or accounts that have two-factor authentication enabled.
-
-```azurepowershell-interactive
-$creds = Get-Credential
-Connect-AzAccount -Credential $creds
-```
+> [!IMPORTANT]
+>
+> Username/password credential authorization has been removed in Azure PowerShell due to changes in Active Directory authorization implementations and security concerns.
+> If you use credential authorization for automation purposes, instead [create a service principal](create-azure-service-principal-azureps.md).
 
 ## Sign in with a service principal <a name="sp-signin"/>
 
@@ -61,11 +53,20 @@ $pscredential = Get-Credential
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
 ```
 
+For automation scenarios, you need to create credentials from a user name and secure string:
+
+```azurepowershell-interactive
+$passwd = ConvertTo-SecureString <use a secure password here> -AsPlainText -Force
+$pscredential = New-Object System.Management.Automation.PSCredential('service principal name/id', $passwd)
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+```
+
+Make sure that you use good password storage practices when automating service principal connections.
+
 ### Certificate-based authentication
 
 Certificate-based authentication requires that Azure PowerShell can retrieve information from a local certificate
 store based on a certificate thumbprint.
-
 ```azurepowershell-interactive
 Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
 ```
