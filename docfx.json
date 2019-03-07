@@ -567,7 +567,8 @@
                 "azuredmps-0.9.0/**/*": "None"
             },
             "enable_powershell_try_it": {
-                "azurermps-*/**/*.md": true
+                "azurermps-*/**/*.md": true,
+                "azps-*/**/*.md": true
             }
         },
         "globalMetadata": {
