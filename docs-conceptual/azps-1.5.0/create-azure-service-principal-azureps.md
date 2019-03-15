@@ -133,7 +133,7 @@ Get-AzRoleAssignment -ServicePrinicpalName ServicePrincipalName
 
 Test the new service principal's credentials and permissions by signing in. To sign in with a service principal, you need the `applicationId` value associated with it, and the tenant it was created under.
 
-To sign in with a service principal using a password:
+To sign in with a service principal using a password (provide the ApplicationId when prompted for User Name):
 
 ```azurepowershell-interactive
 # Use the application ID as the username, and the secret as password
