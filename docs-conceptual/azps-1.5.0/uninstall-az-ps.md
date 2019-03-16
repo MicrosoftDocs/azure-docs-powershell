@@ -138,7 +138,7 @@ Once on this screen you should see __Azure PowerShell__ in the program listing. 
 If you installed AzureRM from PowerShellGet, then you can remove the modules with the new `Uninstall-AzureRM` command. This removes _all_ AzureRM modules from your machine, but requires administrator privileges.
 
 ```powershell-interactive
-Uninstall-AzureRm
+Uninstall-Module AzureRm
 ```
 
 If you can't successfully run the `Uninstall-AzureRM` command, use the `Uninstall-AllModules` script provided in this article instead.
