@@ -4,7 +4,7 @@
         "conceptualTocUrl": "/powershell/azure/toc.json",
         "packageRoot": "azps-1.5.0",
         "referenceTocUrl": "/powershell/module/toc.json",
-        "serviceMap": "mapping/az-groupMapping-1.4.0.json"
+        "serviceMap": "mapping/az-groupMapping-1.5.0.json"
     },
     "azuredmps-0.9.0-preview": {
         "conceptualToc": "docs-conceptual/azuredmps-0.9.0/toc.yml",
