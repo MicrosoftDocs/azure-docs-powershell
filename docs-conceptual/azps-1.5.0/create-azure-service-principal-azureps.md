@@ -92,7 +92,7 @@ The object returned from `New-AzADServicePrincipal` contains the `Id` and `Displ
 
 ## Get an existing service principal
 
-A list of service principals for the currently active tenant can be retrieved with [Get-AzADServicePrincipal](/module/az.resources/get-azadserviceprincipal). By default this command returns __all__ service principals in a tenant, so for large organizations, it may take a long time to return results. Instead, using one of the optional server-side filtering arguments is recommended:
+A list of service principals for the currently active tenant can be retrieved with [Get-AzADServicePrincipal](/powershell/module/az.resources/get-azadserviceprincipal). By default this command returns __all__ service principals in a tenant, so for large organizations, it may take a long time to return results. Instead, using one of the optional server-side filtering arguments is recommended:
 
 * `-DisplayNameBeginsWith` requests service principals that have a _prefix_ that match the provided value. The display name of a service principal is the value set with `-DisplayName` during creation.
 * `-DisplayName` requests an _exact match_ of a service principal name.
@@ -115,7 +115,7 @@ Delete-AzRoleAssignment -ApplicationId <service principal application ID> -RoleD
 ```
 
 > [!IMPORTANT]
-> Role assignment cmdlets don't take the service principal object ID. They take the associated application ID, which is generated at creation time. To get the application ID for a service prinicpal, use `Get-AzADServicePrincipal`.
+> Role assignment cmdlets don't take the service principal object ID. They take the associated application ID, which is generated at creation time. To get the application ID for a service principal, use `Get-AzADServicePrincipal`.
 
 > [!NOTE]
 > If your account doesn't have permission to assign a role, you see an error message that your account "does not have authorization to
@@ -126,7 +126,7 @@ Adding a role _doesn't_ restrict previously assigned permissions. When restricti
 The changes can be verified by listing the assigned roles:
 
 ```azurepowershell-interactive
-Get-AzRoleAssignment -ServicePrinicpalName ServicePrincipalName
+Get-AzRoleAssignment -ServicePrincipalName ServicePrincipalName
 ```
 
 ## Sign in using a service principal
