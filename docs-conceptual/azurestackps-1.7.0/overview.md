@@ -12,31 +12,29 @@ ms.date: 02/06/2019
 # Azure Stack Module 1.7.0
 
 ## Requirements:
+
 Minimum supported Azure Stack version is 1901.
 
-Note: If you are using an earlier version install version 1.7.0
+Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
 
 ## Install
-```
-# Remove previous versions of AzureStack and AzureRM modules
-Uninstall-Module -Name AzureRM -Force
-Uninstall-Module -Name Azure.Storage -Force
-Uninstall-Module -Name AzureStack -Force
-Get-Module -Name "Azs*" -ListAvailable | Uninstall-Module  -Force 
-Get-Module -Name "AzureRm*" -ListAvailable | Uninstall-Module  -Force
 
-# Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
-Install-Module -Name AzureRm.BootStrapper
+```powershell
+# Remove previous versions of AzureStack and AzureRM modules
+Get-Module -Name Azs.* -ListAvailable | Uninstall-Module -Force -Verbose
+Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose
 
 # Install and import the API Version Modules required by Azure Stack into the current PowerShell session.
-Install-Module AzureRM -RequiredVersion 2.4.0
+Install-Module -Name AzureRM -RequiredVersion 2.4.0
 
 # Install Azure Stack Admin Module
 Install-Module -Name AzureStack -RequiredVersion 1.7.0
 ```
+
 ## Release Notes
+
 * Supported with 1901 update
-* This a breaking change release. For details on the breaking changes, refer to https://aka.ms/azspshmigration170
+* This a breaking change release. For details on the breaking changes, refer to <https://aka.ms/azspshmigration170>
 * Azs.Backup.Admin Module
         * Breaking change: Backup changes to cert-based encryption mode. Support for symmetric keys is deprecated.
 * Azs.Fabric.Admin Module
@@ -47,6 +45,5 @@ Install-Module -Name AzureStack -RequiredVersion 1.7.0
 * Azs.Compute.Admin Module
             * BugFix: Add-AzsPlatformImage, Get-AzsPlatformImage : Calling ConvertTo-PlatformImageObject only in the success path
             * BugFix: Add-AzsVmExtension, Get-AzsVmExtension : Calling ConvertTo-VmExtensionObject only in the success path
-* Azs.Storage.Admin Module 
+* Azs.Storage.Admin Module
             * Bug fix - New Storage Quota uses defaults if none provided.'
-
