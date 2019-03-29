@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 02/06/2019
 ---
-# Azure Stack Module 1.7.0
+# Azure Stack Module 1.7.1
 
 ## Requirements:
 Minimum supported Azure Stack version is 1901.
 
-Note: If you are using an earlier version install version 1.7.0
+Note: If you are using an earlier version install version 1.7.1
 
 ## Install
 ```
@@ -32,7 +32,7 @@ Install-Module -Name AzureRm.BootStrapper
 Install-Module AzureRM -RequiredVersion 2.4.0
 
 # Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.7.0
+Install-Module -Name AzureStack -RequiredVersion 1.7.1
 ```
 ## Release Notes
 * Supported with 1901 update
