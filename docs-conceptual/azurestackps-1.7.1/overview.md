@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 02/06/2019
 ---
-# Azure Stack Module 1.7.0
+# Azure Stack Module 1.7.1
 
 ## Requirements:
 
@@ -28,7 +28,7 @@ Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose
 Install-Module -Name AzureRM -RequiredVersion 2.4.0
 
 # Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.7.0
+Install-Module -Name AzureStack -RequiredVersion 1.7.1
 ```
 
 ## Release Notes
