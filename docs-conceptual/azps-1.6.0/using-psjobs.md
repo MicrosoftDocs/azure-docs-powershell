@@ -24,7 +24,7 @@ with `Connect-AzAccount`, pass the context to a job.
 
 ```azurepowershell-interactive
 $creds = Get-Credential
-$job = Start-Job { param($context,$vmadmin) New-AzVM -Name MyVm -AzContext $context -Credential $vmadmin} -Arguments (Get-AzContext),$creds
+$job = Start-Job { param($context,$vmadmin) New-AzVM -Name MyVm -AzContext $context -Credential $vmadmin} -ArgumentList (Get-AzContext),$creds
 ```
 
 However, if you have chosen to have your context automatically saved with
@@ -33,7 +33,7 @@ However, if you have chosen to have your context automatically saved with
 ```azurepowershell-interactive
 Enable-AzContextAutosave
 $creds = Get-Credential
-$job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin} -Arguments $creds
+$job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin} -ArgumentList $creds
 ```
 
 ## Automatic Jobs with `-AsJob`
