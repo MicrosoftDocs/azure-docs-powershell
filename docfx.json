@@ -328,16 +328,16 @@
                 "files": [
                     "toc.yml"
                 ],
-                "src": "azurestackps-1.7.0",
-                "version": "azurestackps-1.7.0",
+                "src": "azurestackps-1.7.1",
+                "version": "azurestackps-1.7.1",
                 "dest": "module/azure-stack"
             },
             {
                 "files": [
                     "**/*.md"
                 ],
-                "src": "azurestackps-1.7.0",
-                "version": "azurestackps-1.7.0",
+                "src": "azurestackps-1.7.1",
+                "version": "azurestackps-1.7.1",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -348,8 +348,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "docs-conceptual/azurestackps-1.7.0",
-                "version": "azurestackps-1.7.0",
+                "src": "docs-conceptual/azurestackps-1.7.1",
+                "version": "azurestackps-1.7.1",
                 "dest": "azure/azure-stack"
             },
             {
