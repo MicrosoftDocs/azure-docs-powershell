@@ -44,9 +44,10 @@ $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
 
 The returned object contains the `Secret` member, which is a `SecureString` containing the generated password. Make sure that you store this value somewhere secure to authenticate with the service principal. Its value __won't__ be displayed in the console output. If you lose the password, [reset the service principal credentials](#reset-credentials). 
 
-For user-supplied passwords, the `-PasswordCredential` argument takes `PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
+For user-supplied passwords, the `-PasswordCredential` argument takes `Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
 
 ```azurepowershell-interactive
+Import-Module Az.Resources # Imports the PSADPasswordCredential object
 $credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential -Property @{ StartDate=Get-Date; EndDate=Get-Date -Year 2024; Password=<Choose a strong password>}
 $sp = New-AzAdServicePrincipal -DisplayName ServicePrincipalName -PasswordCredential $credentials
 ```
