@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/20/2019
+ms.date: 04/23/2019
 ---
 # Create an Azure service principal with Azure PowerShell
 
@@ -104,7 +104,7 @@ Azure PowerShell has the following cmdlets to manage role assignments:
 
 * [Get-AzRoleAssignment](/powershell/module/az.resources/get-azroleassignment)
 * [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
-* [Delete-AzRoleAssignment](/powershell/module/az.resources/delete-azroleassignment)
+* [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
 The default role for a service principal is **Contributor**. This role has full permissions to read and write to an Azure account. The **Reader** role is more restrictive, with read-only access.  For more information on Role-Based Access Control (RBAC) and roles, see [RBAC: Built-in roles](/azure/active-directory/role-based-access-built-in-roles).
 
@@ -112,7 +112,7 @@ This example adds the **Reader** role and removes the **Contributor** one:
 
 ```azurepowershell-interactive
 New-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName "Reader"
-Delete-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName "Contributor"
+Remove-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName "Contributor"
 ```
 
 > [!IMPORTANT]
@@ -163,5 +163,5 @@ If you forget the credentials for a service principal, use [New-AzADSpCredential
 > ```
 
 ```azurepowershell-interactive
-$newCredential = New-AzADSpCredential -DisplayName ServicePrincipalName
+$newCredential = New-AzADSpCredential -ServicePrincipalName ServicePrincipalName
 ```
