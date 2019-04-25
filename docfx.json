@@ -487,6 +487,9 @@
             "azurestackps-1.6.0": {
                 "dest": "azurestackps-1.6.0"
             },
+            "azurestackps-1.7.1": {
+                "dest": "azurestackps-1.7.1"
+            },
             "azureipps": {
                 "dest": "azureipps"
             },
