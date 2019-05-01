@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 01/07/2019
 ---
 
-# Format AzurePowerShell cmdlet output
+# Format Azure PowerShell cmdlet output
 
 By default each Azure PowerShell cmdlet formats output to be easy to read. PowerShell allows you to convert or format cmdlet output by piping to one of the following cmdlets:
 
