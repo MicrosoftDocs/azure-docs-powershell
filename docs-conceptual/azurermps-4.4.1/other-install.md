@@ -31,7 +31,7 @@ Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and star
 > `$env:ProgramFiles\WindowsPowerShell\Modules`. In contrast, the WebPI installer
 > installs the Azure modules in `$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\`.
 >
-> If an error occurs during install, you can manually remove the Azure* folders in your
+> If an error occurs during install, you can manually remove the Azure\* folders in your
 > `$env:ProgramFiles\WindowsPowerShell\Modules` folder, and try the installation again.
 
 Once the installation completes, your `$env:PSModulePath` setting should include the directories

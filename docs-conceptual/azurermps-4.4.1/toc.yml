@@ -4,9 +4,7 @@
   - name: Install
     href: install-azurerm-ps.md
     items:
-    - name: Install on macOS and Linux
-      href: install-azurermps-maclinux.md
-    - name: Other installation methods
+    - name: Install on Windows with MSI or WebPI 
       href: other-install.md
   - name: Get started
     href: get-started-azureps.md
