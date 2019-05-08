@@ -15,10 +15,12 @@ This article explains the steps to install the Azure PowerShell modules for Powe
 PowerShellGet. PowerShellGet and module management is the preferred way to install Azure PowerShell but if you would rather install with
 the Web Platform Installer or MSI package, see [Other installation methods](other-install.md).
 
-For instructions to install Azure PowerShell on other platforms, see [Install and configure Azure PowerShell on macOS and Linux](install-azurermps-maclinux.md).
-
 The Azure classic deployment model is not supported by this version of Azure PowerShell. For support for classic deployments,
 follow the instructions in [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
+
+> [!IMPORTANT]
+> The AzureRM module is not supported for macOS or Linux. To use Azure PowerShell cmdlets on these platforms,
+> [Install the Az module](/powershell/azure/install-az-ps).
 
 ## Requirements
 
