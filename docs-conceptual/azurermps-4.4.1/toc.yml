@@ -12,7 +12,7 @@
   href: https://docs.microsoft.com/azure/cloud-shell/overview
 - name: Sign in
   items:
-  - name: Sign-in methods
+  - name: Authentication methods
     href: authenticate-azureps.md
   - name: Create a service principal
     href: create-azure-service-principal-azureps.md
