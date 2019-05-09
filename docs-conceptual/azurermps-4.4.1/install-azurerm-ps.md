@@ -9,21 +9,25 @@ ms.topic: conceptual
 ms.date: 03/27/2018
 ---
 
-# Install and configure Azure PowerShell
+# Install Azure PowerShell on Windows with PowerShellGet
 
-This article explains the steps to install the Azure PowerShell modules in a Windows environment.
-If you want to use Azure PowerShell on macOS or Linux, see the following article:
-[Install and configure Azure PowerShell on macOS and Linux](install-azurermps-maclinux.md).
+This article explains the steps to install the Azure PowerShell modules for PowerShell 5.x for Windows using
+PowerShellGet. PowerShellGet and module management is the preferred way to install Azure PowerShell but if you would rather install with
+the Web Platform Installer or MSI package, see [Other installation methods](other-install.md).
 
-Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.
+The Azure classic deployment model is not supported by this version of Azure PowerShell. For support for classic deployments,
+follow the instructions in [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
 
-[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+> [!IMPORTANT]
+> The AzureRM module is not supported for macOS or Linux. To use Azure PowerShell cmdlets on these platforms,
+> [Install the Az module](/powershell/azure/install-az-ps).
 
 ## Step 1: Install PowerShellGet
 
 Installing items from the PowerShell Gallery requires the PowerShellGet module. Make sure you have
 the appropriate version of PowerShellGet and other system requirements. Run the following command
 to see if you have PowerShellGet installed on your system.
+
 
 ```powershell-interactive
 Get-InstalledModule -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
