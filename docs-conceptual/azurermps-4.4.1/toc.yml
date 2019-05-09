@@ -1,45 +1,41 @@
 - name: Azure PowerShell
   href: overview.md
+- name: Install
   items:
-  - name: Install
+  - name: Install with PowerShellGet
     href: install-azurerm-ps.md
-    items:
-    - name: Install on Windows with MSI or WebPI 
-      href: other-install.md
-  - name: Get started
-    href: get-started-azureps.md
-  - name: Cloud Shell
-    href: https://docs.microsoft.com/azure/cloud-shell/overview
-  - name: Sign in
+  - name: Install with MSI or WebPI 
+    href: other-install.md
+- name: Get started
+  href: get-started-azureps.md
+- name: Cloud Shell
+  href: https://docs.microsoft.com/azure/cloud-shell/overview
+- name: Sign in
+  items:
+  - name: Authentication methods
     href: authenticate-azureps.md
-    items:
-    - name: Create a service principal
-      href: create-azure-service-principal-azureps.md
-    - name: Persistent credentials
-      href: context-persistence.md
-  - name: Queries
-    href: queries-azureps.md
-  - name: Format output 
-    href: formatting-output.md
-  - name: Manage subscriptions
-    href: manage-subscriptions-azureps.md
-  - name: Deploy
-    items:
-    - name: Deploy Resource Manager templates
-      href: /azure/azure-resource-manager/resource-group-template-deploy
-    - name: Export Resource Manager templates
-      href: /azure/azure-resource-manager/resource-manager-export-template-powershell
-    - name: Deploy private Resource Manager templates
-      href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
-  - name: Concepts
-    items:
-    - name: Experimental modules
-      href: using-experimental-modules.md
-  - name: Release notes
-    href: release-notes-azureps.md
-    items:
-    - name: Breaking changes for Azure PowerShell 4.x
-      href: migration-guide.4.0.0.md
+  - name: Create a service principal
+    href: create-azure-service-principal-azureps.md
+  - name: Persistent credentials
+    href: context-persistence.md
+- name: Queries
+  href: queries-azureps.md
+- name: Format output 
+  href: formatting-output.md
+- name: Manage subscriptions
+  href: manage-subscriptions-azureps.md
+- name: Deploy
+  items:
+  - name: Deploy Resource Manager templates
+    href: /azure/azure-resource-manager/resource-group-template-deploy
+  - name: Export Resource Manager templates
+    href: /azure/azure-resource-manager/resource-manager-export-template-powershell
+  - name: Deploy private Resource Manager templates
+    href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
+- name: Concepts
+  items:
+  - name: Experimental modules
+    href: using-experimental-modules.md
 - name: Sample Scripts
   items:
   - name: Linux Virtual Machines
@@ -52,3 +48,7 @@
     href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
   - name: Cosmos DB
     href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
+- name: Release notes
+  href: release-notes-azureps.md
+- name: Breaking changes for Azure PowerShell 4.x
+  href: migration-guide.4.0.0.md
