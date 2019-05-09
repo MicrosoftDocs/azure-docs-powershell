@@ -11,6 +11,8 @@ ms.date: 09/11/2018
 
 # Get started with Azure PowerShell
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 Azure PowerShell is designed for managing and administering Azure resources from the command line,
 and for building automation scripts that work against the Azure Resource Manager. You can use it in
 your browser with [Azure Cloud Shell](/azure/cloud-shell/overview) or you install it on your

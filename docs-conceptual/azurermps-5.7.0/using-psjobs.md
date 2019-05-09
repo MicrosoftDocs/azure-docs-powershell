@@ -11,6 +11,8 @@ ms.date: 12/11/2017
 
 # Running cmdlets in parallel using PowerShell jobs
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 PowerShell supports asynchronous action with [PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 Azure PowerShell is heavily dependent on making, and waiting for, network calls to Azure. As a
 developer, you may often find yourself looking to make multiple non-blocking calls to Azure in a

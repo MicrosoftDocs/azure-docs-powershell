@@ -11,6 +11,8 @@ ms.date: 05/15/2017
 ---
 # Create an Azure service principal with Azure PowerShell
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 If you plan to manage your app or service with Azure PowerShell, you should run it under an Azure
 Active Directory (AAD) service principal, rather than your own credentials. This topic steps you
 through creating a security principal with Azure PowerShell.

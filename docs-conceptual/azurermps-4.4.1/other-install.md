@@ -10,11 +10,11 @@ ms.date: 09/06/2017
 ---
 # Other installation methods
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 Azure PowerShell has multiple installation methods. Using PowerShellGet with the PowerShell Gallery
 is the preferred method. Azure PowerShell can be installed on Windows using the Web Platform
 Installer (WebPI) or by using the MSI file available from GitHub.
-
-[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## Install on Windows using the Web Platform Installer
 

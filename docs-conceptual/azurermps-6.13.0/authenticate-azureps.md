@@ -10,6 +10,8 @@ ms.date: 09/09/2018
 ---
 # Sign in with Azure PowerShell
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 Azure PowerShell supports several authentication methods. The simplest way to get started is to sign in
 interactively at the command line.
 
