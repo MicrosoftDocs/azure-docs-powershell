@@ -30,10 +30,14 @@ We're committed to bringing Azure support to all platforms, which means that the
 needed to be updated to use .NET Standard and be compatible with PowerShell Core. Rather than taking the
 existing AzureRM module and introduce complex changes to add this support, the Az module was created.
 
-<!-- NOTE: nbsp used here to avoid markdown parsing error-->
 Creating a new module also gave our engineers the opportunity to make the design and naming of cmdlets
-and modules consistent. All modules now start with the `Az.` prefix and use the _`Verb`_-Az&nbsp;_`Noun`_
-form. Previously, cmdlet names were not only longer, there were inconsistencies in cmdlet names.
+and modules consistent. All modules now start with the `Az.` prefix and cmdlets all use the
+_Verb_-`Az`_Noun_ form. Previously, cmdlet names were not only longer, there were inconsistencies
+in cmdlet names.
+
+The number of modules was also reduced: Some modules which worked with the same services have been rolled
+together, and magement plane and data plane cmdlets are now contained all within single modules for their
+services. For those of you who manually manage dependencies and imports, this makes things much simpler.
 
 By making these important changes that required building a Azure PowerShell module, the team has
 committed to making it easier than ever, and on more platforms than previously possible, to use
