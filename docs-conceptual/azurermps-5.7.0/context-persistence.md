@@ -10,6 +10,8 @@ ms.date: 08/31/2017
 ---
 # Persisting user credentials across PowerShell sessions
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 Azure PowerShell offers a feature called **Azure Context Autosave**, which gives the following features:
 
 - Retention of sign in information for reuse in new PowerShell sessions.

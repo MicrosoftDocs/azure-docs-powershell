@@ -10,6 +10,8 @@ ms.date: 06/08/2018
 ---
 # Query output of Azure PowerShell cmdlets
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 Querying in PowerShell can be completed by using built-in cmdlets. In
 PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the verb **_Get_** are
 the query cmdlets. The cmdlet nouns are the types of Azure resources that are acted upon by the

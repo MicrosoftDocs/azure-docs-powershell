@@ -10,6 +10,8 @@ ms.date: 03/30/2017
 ---
 # Manage multiple Azure subscriptions
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 If you are brand new to Azure, you probably only have a single subscription. But if you have been
 using Azure for a while, you may have created multiple Azure subscriptions. You can configure Azure
 PowerShell to execute commands against a particular subscription.

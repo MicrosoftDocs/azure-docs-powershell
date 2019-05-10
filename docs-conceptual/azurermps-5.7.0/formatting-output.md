@@ -11,6 +11,8 @@ ms.date: 06/07/2018
 
 # Format AzurePowerShell cmdlet output
 
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+
 By default each Azure PowerShell cmdlet has predefined formatting of output making it easy to read.  PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:
 
 | Formatting      | Conversion       |
