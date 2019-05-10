@@ -391,6 +391,26 @@
         "redirect_document_id": false
     },
     {
+        "source_path": "docs-conceptual/azps-1.8.0/index.md",
+        "redirect_url": "/powershell/azure/overview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs-conceptual/azps-1.8.0/install-azurerm-ps.md",
+        "redirect_url": "/powershell/azure/install-az-ps",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs-conceptual/azps-1.8.0/uninstall-azurerm-ps.md",
+        "redirect_url": "/powershell/azure/uninstall-az-ps",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs-conceptual/azps-1.8.0/other-install.md",
+        "redirect_url": "/powershell/azure/install-az-ps",
+        "redirect_document_id": false
+    },
+    {
         "source_path": "docs-conceptual/azps-2.0.0/index.md",
         "redirect_url": "/powershell/azure/overview",
         "redirect_document_id": false
