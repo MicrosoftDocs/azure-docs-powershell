@@ -17,23 +17,18 @@ are supported.
 
 ## Requirements
 
-Azure PowerShell works with PowerShell 5.1 or higher on Windows, or PowerShell Core 6.x and later on
-all platforms. If you aren't sure if you have PowerShell, or are on macOS or Linux,
-[install the latest PowerShell Core](/powershell/scripting/install/installing-powershell#powershell-core).
-
+Azure PowerShell works with PowerShell 5.1 or higher on Windows, or PowerShell 6 on any platform.
 To check your PowerShell version, run the command:
 
 ```powershell-interactive
 $PSVersionTable.PSVersion
 ```
 
-To run Azure PowerShell in PowerShell 5.1 on Windows:
+If you have an outdated version or need to install PowerShell, see [Installing various versions of PowerShell](/powershell/scripting/setup/installing-powershell). Install
+information for your platform is linked from that page.
 
-1. Update to [Windows PowerShell 5.1](/powershell/scripting/install/installing-windows-powershell#upgrading-existing-windows-powershell) if needed. If you're on Windows 10, you already
-  have PowerShell 5.1 installed.
-2. Install [.NET Framework 4.7.2 or later](/dotnet/framework/install).
-
-There are no additional requirements for Azure PowerShell when using PowerShell Core.
+If you are using PowerShell 5 on Windows, you also need .NET Framework 4.7.2 installed. For instructions
+on updating or installing a new version of .NET Framework, see the [.NET Framework installation guide](/dotnet/framework/install).
 
 ## Install the Azure PowerShell module
 
