@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/13/2018
+ms.date: 05/10/2019
 ---
 
 # Migrate from AzureRM to Azure PowerShell Az
@@ -17,7 +17,8 @@ module. To make the transition easier, Az offers tools to allow you to run your 
 using AzureRM. No migration to a new command set is ever convenient, but this article will help
 you get started on transitioning to the new module.
 
-To see the full list of breaking changes between AzureRM and Az, see the [Migration guide for Az 1.0.0](migrate-az-1.0.0.md)
+To see the full list of breaking changes between AzureRM and Az, see the
+[Migration guide for Az 1.0.0](migrate-az-1.0.0.md)
 
 ## Check for installed versions of AzureRM
 
@@ -36,7 +37,20 @@ Get-InstalledModule -Name AzureRM -AllVersions
 
 This is the most important step! Run your existing scripts, and make sure that they work with the
 _latest_ release of AzureRM (__6.13.1__). If your scripts don't work, make sure to read
-the [AzureRM migration guide](/powershell/azure/azurerm/migration-guide.6.0.0).
+the [AzureRM 5.x to 6.x migration guide](/powershell/azure/azurerm/migration-guide.6.0.0).
+
+## Uninstall AzureRM
+
+The Az module is not guaranteed to be compatible with any existing AzureRM installs in
+PowerShell 5.1 for Windows. Before you install the Az module,
+[uninstall AzureRM](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module).
+
+> [!IMPORTANT]
+>
+> If you're not ready to remove the AzureRM module from your system, you can install the Az
+> module for [PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows)
+> 6.x or later instead. PowerShell Core and PowerShell 5.1 for Windows use different module libraries,
+> so there will be no conflicts. You can still [enable aliases](#aliases) in PowerShell Core.
 
 ## Install the Azure PowerShell Az module
 
@@ -44,20 +58,14 @@ The first step is to install the Az module on your platform. When you install Az
 that you uninstall AzureRM. In the following steps, you'll learn how to keep running your existing
 scripts and enable compatibility for old cmdlet names.
 
-To install the Azure PowerShell Az module, follow these steps:
+To install the Azure PowerShell Az module, follow the instructions in [Install the Az module](install-az-ps.md).
 
-* __RECOMMENDED__: [Uninstall the AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module).
-  Make sure that you remove _all_ installed versions of AzureRM, not just the most recent version.
-* [Install the Az module](install-az-ps.md)
+> [!NOTE]
+> At this point, you might want to run the [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm)
+> cmdlet provided in the Az module, just to make sure that all versions of AzureRM have been uninstalled
+> and won't cause conflicts.
 
-## <a name="aliases"/>Enable AzureRM compatibility aliases 
-
-> [!IMPORTANT]
->
-> Only enable compatibility mode if you've uninstalled _all_ versions of AzureRM. Enabling compatibility
-> mode with AzureRM cmdlets still available may result in unpredictable behavior. Skip this step if you
-> decided to keep AzureRM installed, but be aware that any AzureRM cmdlets will use
-> the older modules and not call any Az cmdlets.
+## <a name="aliases"/>Enable AzureRM compatibility aliases
 
 With AzureRM uninstalled and your scripts working with the latest AzureRM version, the next step is to 
 enable the compatibility mode for the Az module. Compatibility is enabled with the command:
