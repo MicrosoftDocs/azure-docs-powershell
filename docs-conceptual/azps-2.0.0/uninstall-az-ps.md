@@ -36,11 +36,12 @@ Version             Name                           Repository           Descript
 1.0.0               Az                             PSGallery            Azure Resource Manager Module
 ```
 
+<a name="uninstall-script"/>
+
 The following script queries the PowerShell Gallery to get a list of dependent submodules. Then, the script
 uninstalls the correct version of each submodule. You will need to have administrator access to run this script
 in a scope other than `Process` or `CurrentUser`.
 
-<a name="uninstall-script"/>
 ```powershell-interactive
 function Uninstall-AllModules {
   param(

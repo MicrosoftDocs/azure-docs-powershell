@@ -41,14 +41,16 @@ the [AzureRM 5.x to 6.x migration guide](/powershell/azure/azurerm/migration-gui
 
 ## Uninstall AzureRM
 
-The Az module is not guaranteed to be compatible with any existing AzureRM installs in PowerShell 5.1 for Windows.
-Before you install the Az module, you should [uninstall AzureRM](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module).
+The Az module is not guaranteed to be compatible with any existing AzureRM installs in
+PowerShell 5.1 for Windows. Before you install the Az module,
+[uninstall AzureRM](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module).
 
-If you want to keep AzureRM in your local environment, it's possible to do so, but requires that you
-have [PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows) 6.x or later
-installed. Then you can keep the AzureRM module installed under PowerShell 5.1 for Windows, and install
-the Az module in PowerShell Core. This unfortunately requires using two different PowerShell environments, but is
-the only way to guarantee success with having both modules installed at once on a system.
+> [!IMPORTANT]
+>
+> If you're not ready to remove the AzureRM module from your system, you can install the Az
+> module for [PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows)
+> 6.x or later instead. PowerShell Core and PowerShell 5.1 for Windows use different module libraries,
+> so there will be no conflicts. You can still [enable aliases](#aliases) in PowerShell Core.
 
 ## Install the Azure PowerShell Az module
 
