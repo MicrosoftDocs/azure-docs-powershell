@@ -1,7 +1,7 @@
 ---
 title: Introducing the Azure PowerShell Az module
 description: Introducing the new Azure PowerShell module Az, the replacement for the AzureRM module.
-ms.date: 12/13/2018
+ms.date: 05/10/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
@@ -45,12 +45,25 @@ Azure with PowerShell cmdlets.
 
 ## Upgrade to Az
 
-It's recommended that all users upgrade to the new Az module. To do so:
+To keep up with the latest Azure features in PowerShell, you should migrate to the Az module as soon as
+possible. If you're not ready to install the Az module as a replacement for AzureRM, you have a couple of
+options available to experiment with Az:
 
-* __RECOMMENDED__: [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
-* [Install the Azure PowerShell Az module](/powershell/azure/install-az-ps)
-* Enable compatibility mode to add aliases for AzureRM cmdlets with `Enable-AzureRMAlias`
-  while you become familiar with the new command set. __Only__ enable aliases if you do not have AzureRM installed.
+* Use a `PowerShell` environment with [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
+  Azure Cloud Shell is a browser-based shell environment which comes with the Az module installed and `Enable-AzureRM`
+  compatibility aliases enabled.
+* Keep the AzureRM module installed with PowerShell 5.1 for Windows, but install the Az module for PowerShell Core 6.x
+  or later. PowerShell 5.1 for Windows and PowerShell Core use separate collections of modules. Follow the instructions
+  to [install PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows) and then
+  [install the Az module](install-az-ps.md) from a PowerShell Core terminal.
+
+To upgrade from an existing AzureRM install:
+
+1. [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
+2. [Install the Azure PowerShell Az module](install-az-ps.md)
+3. __OPTIONAL__: Enable compatibility mode to add aliases for AzureRM cmdlets with
+  [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) while you become familiar with
+  the new command set.
 
 ## Migrate existing scripts to Az
 
@@ -69,8 +82,10 @@ in cmdlet names, use `Az`. For example, the old command `New-AzureRMVm` has beco
 
 For a full description of the migration process, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
 
-## The future of support for AzureRM
+## Continued support for AzureRM
 
 The existing AzureRM module will no longer receive new cmdlets or features. However, AzureRM is still officially
-maintained and will get bug fixes up through December 2020. To keep up with the latest Azure services and features,
-switch to the Az module.
+maintained and will get bug fixes up through at least December 2020.
+
+The Az module is production-ready, in GA, and does not incur any additional costs on Azure. We recommend
+that you switch to the Az module as soon as possible to keep up with the latest Azure features.
