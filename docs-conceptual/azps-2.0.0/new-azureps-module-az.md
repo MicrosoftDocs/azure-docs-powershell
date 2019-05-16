@@ -50,8 +50,8 @@ possible. If you're not ready to install the Az module as a replacement for Azur
 options available to experiment with Az:
 
 * Use a `PowerShell` environment with [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
-  Azure Cloud Shell is an environment which comes with the Az module installed, `Enable-AzureRM` compatibility aliases
-  enabled, and the [Azure CLI](/cli/azure).
+  Azure Cloud Shell is a browser-based shell environment which comes with the Az module installed and `Enable-AzureRM`
+  compatibility aliases enabled.
 * Keep the AzureRM module installed with PowerShell 5.1 for Windows, but install the Az module for PowerShell Core 6.x
   or later. PowerShell 5.1 for Windows and PowerShell Core use separate collections of modules. Follow the instructions
   to [install PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows) and then
