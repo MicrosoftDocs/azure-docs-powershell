@@ -96,7 +96,7 @@ Once the alias mode is enabled, run your scripts again to confirm that they stil
 Some parameter names have been changed, added, or made required by the Az module. Output types of cmdlets
 may have changed as well. These changes are detailed in the [breaking changes list](migrate-az-1.0.0.md).
 
-### Update cmdlets, modules, and parameters
+## Update cmdlets, modules, and parameters
 
 With scripts updated and running under aliases, you can take your time to update them to use the new
 cmdlets and take advantage of other changes like new features. For most scripts, you will only need
@@ -114,7 +114,7 @@ of breaking changes in Az 1.0.0](migrate-az-1.0.0.md) to make sure that you're n
 'transparent' behavior of aliases which could disappear after you change cmdlet names and disable
 aliases.
 
-### Disable aliases
+## Disable aliases
 
 Once you've completed your migration and are no longer relying on aliasing behavior, it's recommended
 that you disable aliases. This is done with the [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias) cmdlet.

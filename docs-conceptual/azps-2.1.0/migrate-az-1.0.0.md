@@ -25,7 +25,7 @@ AzureRM to Az](migrate-from-azurerm-to-az.md).
   - [Removed modules](#removed-modules)
   - [Windows PowerShell 5.1 and .NET 4.7.2](#windows-powershell-51-and-net-472)
   - [Temporary removal of user login using PSCredential](#temporary-removal-of-user-login-using-pscredential)
-  - [Default device code login instead of web browser prompt](#temporary-default-device-code-login-instead-of-web-browser-prompt)
+  - [Default device code login instead of web browser prompt](#default-device-code-login-instead-of-web-browser-prompt)
 - [Module breaking changes](#module-breaking-changes)
   - [Az.ApiManagement (previously AzureRM.ApiManagement)](#azapimanagement-previously-azurermapimanagement)
   - [Az.Billing (previously AzureRM.Billing, AzureRM.Consumption, and AzureRM.UsageAggregates)](#azbilling-previously-azurermbilling-azurermconsumption-and-azurermusageaggregates)
@@ -200,7 +200,7 @@ Using Az with Windows PowerShell 5.1 requires the installation of .NET 4.7.2. Ho
 
 Due to changes in the authentication flow for .NET Standard, we are temporarily removing user login via PSCredential. This capability will be re-introduced in the 1/15/2019 release for Windows PowerShell 5.1. This is discussed in detail in [this GitHub issue.](https://github.com/Azure/azure-powershell/issues/7430)
 
-### Default Device Code login instead of Web Browser prompt
+### Default device code login instead of web browser prompt
 
 Due to changes in the authentication flow for .NET Standard, we are using device login as the default login flow during interactive login. Web browser based login will be re-introduced for Windows PowerShell 5.1 as the default in the 1/15/2019 release. At that time, users will be able to choose device login using a Switch parameter.
 
