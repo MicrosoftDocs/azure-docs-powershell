@@ -50,7 +50,7 @@ used in your last session.
 The cmdlets that allow you to manage Azure contexts also allow you fine grained control. If you
 want changes to apply only to the current PowerShell session (`Process` scope) or every PowerShell
 session (`CurrentUser` scope). These options are discussed in more detail in [Using Context
-Scopes](#Using-Context-Scopes).
+Scopes](#using-context-scopes).
 
 ## Running Azure PowerShell cmdlets as background jobs
 
