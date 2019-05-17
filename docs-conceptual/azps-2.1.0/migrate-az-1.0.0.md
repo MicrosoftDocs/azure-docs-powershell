@@ -375,7 +375,7 @@ Scripts shoudl no longer make processing decisions based on the values fo these 
 - The `Location` parameter has become mandatory in the `Get-AzStorageUsage` cmdlet
 - The Storage API methods now use the Task-based Asynchronous Pattern (TAP), instead of synchronous API calls. The following examples demonstrate the new asynchronous commands:
 
-#### 1. Blob Snapshot
+#### Blob Snapshot
 
 AzureRM:
 
@@ -393,7 +393,7 @@ $task.Wait()
 $snapshot = $task.Result
 ```
 
-#### 2. Share Snapshot
+#### Share Snapshot
 
 AzureRM:
 
@@ -411,7 +411,7 @@ $task.Wait()
 $snapshot = $task.Result
 ```
 
-#### 3. Undelete a soft delete blob
+#### Undelete soft-deleted blob
 
 AzureRM:
 
@@ -428,7 +428,7 @@ $task = $b.ICloudBlob.UndeleteAsync()
 $task.Wait()
 ```
 
-#### 4. Set Blob Tier
+#### Set Blob Tier
 
 AzureRM:
 
