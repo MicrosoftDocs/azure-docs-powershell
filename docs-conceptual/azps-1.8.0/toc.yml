@@ -24,8 +24,6 @@
     href: create-azure-service-principal-azureps.md
   - name: Persistent credentials
     href: context-persistence.md
-- name: Migrate from AzureRM
-  href: migrate-from-azurerm-to-az.md
 - name: Queries
   href: queries-azureps.md
 - name: Format output 
@@ -64,5 +62,3 @@
     href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
 - name: Release notes
   href: release-notes-azureps.md
-- name: Breaking changes for Az 1.0.0
-  href: migrate-az-1.0.0.md
