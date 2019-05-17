@@ -101,22 +101,22 @@ see the [Disable-AzureRmAlias reference](/powershell/module/az.accounts/disable-
 
 The module names have changed from `AzureRM.*` to `Az.*`, except for the following modules:
 
-| AzureRM module | Az module | Cmdlet suffix changed? |
-|----------------|-----------|------------------------|
-| Azure.Storage | Az.Storage | Yes |
-| Azure.AnalysisServices | Az.AnalysisServices | Yes |
-| AzureRM.Profile | Az.Accounts | Yes |
-| AzureRM.Insights | Az.Monitor | Yes |
-| AzureRM.DataFactories | Az.DataFactory | Yes |
-| AzureRM.DataFactoryV2 | Az.DataFactory | Yes |
-| AzureRM.RecoveryServices.Backup | Az.RecoveryServices | No |
-| AzureRM.RecoveryServices.SiteRecovery | Az.RecoveryServices | No |
-| AzureRM.Tags | Az.Resources | No |
-| AzureRM.MachineLearningCompute | Az.MachineLearning | No |
-| AzureRM.UsageAggregates | Az.Billing | No |
-| AzureRM.Consumption | Az.Billing | No |
+| AzureRM module | Az module |
+|----------------|-----------|
+| Azure.Storage | Az.Storage |
+| Azure.AnalysisServices | Az.AnalysisServices |
+| AzureRM.Profile | Az.Accounts |
+| AzureRM.Insights | Az.Monitor |
+| AzureRM.DataFactories | Az.DataFactory |
+| AzureRM.DataFactoryV2 | Az.DataFactory |
+| AzureRM.RecoveryServices.Backup | Az.RecoveryServices |
+| AzureRM.RecoveryServices.SiteRecovery | Az.RecoveryServices |
+| AzureRM.Tags | Az.Resources |
+| AzureRM.MachineLearningCompute | Az.MachineLearning |
+| AzureRM.UsageAggregates | Az.Billing |
+| AzureRM.Consumption | Az.Billing |
 
-The changes in module names mean that any script that uses ```#Requires``` or ```Import-Module``` to load specific modules will need to be changed to use the new module instead. For modules where the cmdlet suffix has not changed,
+The changes in module names mean that any script that uses `#Requires` or `Import-Module` to load specific modules will need to be changed to use the new module instead. For modules where the cmdlet suffix has not changed,
 this means that although the module name has changed, the suffix indicating the operation space has _not_.
 
 #### Migrating #Requires and Import-Module Statements
@@ -163,13 +163,13 @@ Az.Compute\Get-AzVM
 
 Modules that express dependencies on AzureRM modules through a module manifest (.psd1) file will need to updated the module names in their `RequiredModules` section:
 
-```azurepowershell-interactive
+```powershell
 RequiredModules = @(@{ModuleName="AzureRM.Profile"; ModuleVersion="5.8.2"})
 ```
 
 Must be changed to:
 
-```azurepowershell-interactive
+```powershell
 RequiredModules = @(@{ModuleName="Az.Profile"; ModuleVersion="1.0.0"})
 ```
 
@@ -185,7 +185,8 @@ The tools for these services are no longer actively supported.  Customers are en
 
 ### Windows PowerShell 5.1 and .NET 4.7.2
 
-Using Az with Windows PowerShell 5.1 requires the installation of .NET 4.7.2. However, using Az with PowerShell Core does not require .NET 4.7.2. 
+Using Az with PowerShell 5.1 for Windows requires the installation of .NET Framework 4.7.2. Using PowerShell
+Core 6.x or later does not have a .NET Framework dependency.
 
 ### Temporary removal of User login using PSCredential
 
