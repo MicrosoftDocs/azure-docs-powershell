@@ -63,24 +63,32 @@ To upgrade from an existing AzureRM install:
 2. [Install the Azure PowerShell Az module](install-az-ps.md)
 3. __OPTIONAL__: Enable compatibility mode to add aliases for AzureRM cmdlets with
   [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) while you become familiar with
-  the new command set.
+  the new command set. See the next section or [Start migration from AzureRM to Az](migrate-from-azurerm-to-az.md)
+  for more details.
 
 ## Migrate existing scripts to Az
 
-The Az module has a compatibility mode to help you use existing scripts while you work on
-updates to the new syntax. Use the [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias)
-cmdlet to enable the AzureRM compatibility mode. This cmdlet defines AzureRM cmdlet names as aliases for
-the new Az cmdlet names.
-
-> [!IMPORTANT]
-> Even though the cmdlet names are aliased, there may still be new (or renamed) parameters for the
-> Az cmdlets that will be exposed. Don't expect enabling aliases to take care of the full migration
-> for you! After enabling them, test your scripts to make sure they don't need any immediate updates.
-
 The new cmdlet names have been designed to be easy to learn. Instead of using `AzureRm` or `Azure`
 in cmdlet names, use `Az`. For example, the old command `New-AzureRMVm` has become `New-AzVm`.
+Migration is more than just becoming familiar with the new cmdlet names, though: There are renamed
+modules, parameters, and other important changes.
 
-For a full description of the migration process, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
+To help you with the process of migration from AzureRM to Az, we've got a number of resources:
+
+* [Get started with migration from AzureRM to Az](migrate-from-azurerm-to-az.md)
+* [Full list of breaking changes from AzureRM to Az 1.0.0](migrate-az-1.0.0.md)
+* The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet
+
+The Az module has a compatibility mode to help you use existing scripts while you 
+update to the new syntax. The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias)
+cmdlet enables a compatibility mode through aliases, to allow you to use existing scripts with minimal
+modification while working towards a full migration to Az.
+
+> [!IMPORTANT]
+> Even though the cmdlet names are aliased, there may still be new (or renamed) parameters or changed
+> return values for the Az cmdlets. Don't expect enabling aliases to take care of the migration
+> for you! See the [full breaking changes list](migrate-az-1.0.0.md) to find where your scripts may
+> require updates.
 
 ## Continued support for AzureRM
 
