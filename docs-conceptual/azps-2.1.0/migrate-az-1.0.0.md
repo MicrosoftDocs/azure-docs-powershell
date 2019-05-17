@@ -118,15 +118,6 @@ The module names have changed from `AzureRM.*` to `Az.*`, except for the followi
 
 The changes in module names mean that any script that uses ```#Requires``` or ```Import-Module``` to load specific modules will need to be changed to use the new module instead. For modules where the cmdlet suffix has not changed,
 this means that although the module name has changed, the suffix indicating the operation space has _not_.
-For example:
-
-```azurepowershell-interactive
-```
-
-Is now:
-
-```azurepowershell-interactive
-```
 
 #### Migrating #Requires and Import-Module Statements
 
