@@ -36,10 +36,10 @@ _Verb_-`Az`_Noun_ form. Previously, cmdlet names were not only longer, there wer
 in cmdlet names.
 
 The number of modules was also reduced: Some modules which worked with the same services have been rolled
-together, and magement plane and data plane cmdlets are now contained all within single modules for their
+together, and management plane and data plane cmdlets are now contained all within single modules for their
 services. For those of you who manually manage dependencies and imports, this makes things much simpler.
 
-By making these important changes that required building a Azure PowerShell module, the team has
+By making these important changes that required building an Azure PowerShell module, the team has
 committed to making it easier than ever, and on more platforms than previously possible, to use
 Azure with PowerShell cmdlets.
 
