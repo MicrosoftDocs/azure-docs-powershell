@@ -6,20 +6,24 @@
   href: install-az-ps.md
 - name: Uninstall
   href: uninstall-az-ps.md
+- name: Migrate from AzureRM
+  items:
+  - name: Migration steps
+    href: migrate-from-azurerm-to-az.md
+  - name: Changes between AzureRM and Az
+    href: migrate-az-1.0.0.md
 - name: Get started
   href: get-started-azureps.md
 - name: Cloud Shell
   href: https://docs.microsoft.com/azure/cloud-shell/overview
 - name: Sign in
-  items:
+  items: 
   - name: Authentication methods
     href: authenticate-azureps.md
   - name: Create a service principal
     href: create-azure-service-principal-azureps.md
   - name: Persistent credentials
     href: context-persistence.md
-- name: Migrate from AzureRM
-  href: migrate-from-azurerm-to-az.md
 - name: Queries
   href: queries-azureps.md
 - name: Format output 
@@ -58,5 +62,3 @@
     href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
 - name: Release notes
   href: release-notes-azureps.md
-- name: Breaking changes for Az 1.0.0
-  href: migrate-az-1.0.0.md
