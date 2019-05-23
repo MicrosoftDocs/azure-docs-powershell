@@ -39,7 +39,7 @@ The number of modules was also reduced: Some modules which worked with the same 
 together, and magement plane and data plane cmdlets are now contained all within single modules for their
 services. For those of you who manually manage dependencies and imports, this makes things much simpler.
 
-By making these important changes that required building a Azure PowerShell module, the team has
+By making these important changes that required building a new Azure PowerShell module, the team has
 committed to making it easier than ever, and on more platforms than previously possible, to use
 Azure with PowerShell cmdlets.
 
@@ -95,5 +95,8 @@ modification while working towards a full migration to Az.
 The existing AzureRM module will no longer receive new cmdlets or features. However, AzureRM is still officially
 maintained and will get bug fixes up through at least December 2020.
 
-The Az module is production-ready, in GA, and does not incur any additional costs on Azure. We recommend
-that you switch to the Az module as soon as possible to keep up with the latest Azure features.
+If you have concerns about whether or not the Az module is as fully-featured, tested, or production ready: All
+of the engineering work that went into AzureRM has now been focused on Az, including as much code reuse of the
+existing modules as was possible, and extensive testing to make the new modules feature-compatible. Moving
+onto Az should be influenced by your organization's schedule alone, without needing to wait on specific features
+to appear.

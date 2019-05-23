@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 05/10/2019
 ---
 
-# Start migration from AzureRM to Azure PowerShell Az
+# Migrate AzurePowerShell from AzureRM to Az
 
 The Az module has feature parity with AzureRM, but uses shorter and more consistent cmdlet names.
 Scripts written for the AzureRM cmdlets won't automatically work with the new
@@ -52,7 +52,7 @@ PowerShell 5.1 for Windows. Before you install the Az module,
 > If you're not ready to remove the AzureRM module from your system, you can install the Az
 > module for [PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows)
 > 6.x or later instead. PowerShell Core and PowerShell 5.1 for Windows use different module libraries,
-> so there will be no conflicts. You can still [enable aliases](#aliases) in PowerShell Core.
+> so there will be no conflicts. You can still [enable aliases](#enable-azurerm-compatibility-aliases) in PowerShell Core.
 
 ## Install the Azure PowerShell Az module
 
@@ -67,7 +67,7 @@ To install the Azure PowerShell Az module, follow the instructions in [Install t
 > cmdlet provided in the Az module, just to make sure that all versions of AzureRM have been uninstalled
 > and won't cause conflicts.
 
-## <a name="aliases"/>Enable AzureRM compatibility aliases
+## Enable AzureRM compatibility aliases
 
 With AzureRM uninstalled and your scripts working with the latest AzureRM version, the next step is to 
 enable the compatibility mode for the Az module. Compatibility is enabled with the command:
