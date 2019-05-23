@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 05/10/2019
 ---
 
-# Migrate AzurePowerShell from AzureRM to Az
+# Migrate Azure PowerShell from AzureRM to Az
 
 The Az module has feature parity with AzureRM, but uses shorter and more consistent cmdlet names.
 Scripts written for the AzureRM cmdlets won't automatically work with the new
