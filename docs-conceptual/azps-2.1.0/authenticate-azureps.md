@@ -71,9 +71,9 @@ store based on a certificate thumbprint.
 Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-In PowerShell 5, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module. For PowerShell 6, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
+In PowerShell 5.1, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module. For PowerShell Core 6.x and later, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
 
-#### Import a certificate in PowerShell 5
+#### Import a certificate in PowerShell 5.1
 
 ```azurepowershell-interactive
 # Import a PFX
@@ -81,7 +81,7 @@ $credentials = Get-Credential -Message "Provide PFX private key password"
 Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
 ```
 
-#### Import a certificate in PowerShell 6
+#### Import a certificate in PowerShell Core 6.x and later
 
 ```azurepowershell-interactive
 # Import a PFX
