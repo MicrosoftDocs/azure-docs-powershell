@@ -19,7 +19,7 @@ are supported.
 
 Azure PowerShell works with PowerShell 5.1 or higher on Windows, or PowerShell Core 6.x and later on
 all platforms. If you aren't sure if you have PowerShell, or are on macOS or Linux,
-[install the latest PowerShell Core](/powershell/scripting/install/installing-powershell#powershell-core).
+[install the latest version of PowerShell Core](/powershell/scripting/install/installing-powershell#powershell-core).
 
 To check your PowerShell version, run the command:
 
@@ -95,12 +95,17 @@ across PowerShell sessions, see [Persist user credentials across PowerShell sess
 
 ## Update the Azure PowerShell module
 
-You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module). This command does __not__ uninstall older versions.
+Because of how the Az module is package, the [Update-Module](/powershell/module/powershellget/update-module)
+command won't update your installation correctly. Az is technically a meta-module, encompassing all of
+the submodules that contain cmdlets to interact with Azure services. That means that to update the
+Azure PowerShell module, you will need to __reinstall__, rather than just __update__. This is done in the
+same way as installing, but you may need to add the `-Force` argument:
 
-```powershell-interactive
-Update-Module -Name Az
+```powershell
+Install-Module -Name Az -AllowClobber -Force
 ```
 
+Although this can overwrite installed modules, you may still have older versions left on your system.
 To learn how to remove old versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
 
 ## Use multiple versions of Azure PowerShell

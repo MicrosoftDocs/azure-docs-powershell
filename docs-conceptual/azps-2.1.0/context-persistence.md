@@ -1,5 +1,5 @@
 ---
-title: Persist user credentials across PowerShell sessions
+title: Persist Azure credentials across PowerShell sessions
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 author: sptramer
 ms.author: sttramer
@@ -8,7 +8,7 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/13/2018
 ---
-# Persist user credentials across PowerShell sessions
+# Persist Azure user credentials across PowerShell sessions
 
 Azure PowerShell offers a feature called **Azure Context Autosave**, which gives the following features:
 
