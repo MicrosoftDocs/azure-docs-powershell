@@ -17,6 +17,11 @@ path, including module-specific changes that may affect your scripts.
 For general advice on getting started with a migration from AzureRM to Az, see [Start migration from
 AzureRM to Az](migrate-from-azurerm-to-az.md).
 
+> [!IMPORTANT]
+> There have been breaking changes between Az 1.0.0 and Az 2.0.0 as well. After following this guide
+> for updating from AzureRM to Az, see the [Az 2.0.0 breaking changes](migrate-az-2.0.0.md) to find out
+> if you need to make additional changes.
+
 ## Table of Contents
 
 - [General breaking changes](#general-breaking-changes)
