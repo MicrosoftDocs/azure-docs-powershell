@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ---
-# AzureRM Module 2.3.0
+# AzureRM Module 2.4.0
 
 ## Requirements:
-Minimum supported Azure Stack version is 1808.
+Minimum supported Azure Stack version is 1901.
 
 Note: If you are using an earlier version install version 1.2.11
 
