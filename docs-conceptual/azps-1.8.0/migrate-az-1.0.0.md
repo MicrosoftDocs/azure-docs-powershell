@@ -186,15 +186,15 @@ The tools for these services are no longer actively supported.  Customers are en
 ### Windows PowerShell 5.1 and .NET 4.7.2
 
 Using Az with PowerShell 5.1 for Windows requires the installation of .NET Framework 4.7.2. Using PowerShell
-Core 6.x or later does not have a .NET Framework dependency.
+Core 6.x or later does not require .NET Framework.
 
 ### Temporary removal of User login using PSCredential
 
-Due to changes in the authentication flow for .NET Standard, we are temporarily removing user login via PSCredential. This capability will be re-introduced in the 1/15/2019 release for Windows PowerShell 5.1. This is discussed in detail in [this GitHub issue.](https://github.com/Azure/azure-powershell/issues/7430)
+Due to changes in the authentication flow for .NET Standard, we are temporarily removing user login via PSCredential. This capability will be re-introduced in the 1/15/2019 release for PowerShell 5.1 for Windows. This is discussed in detail in [this GitHub issue.](https://github.com/Azure/azure-powershell/issues/7430)
 
 ### Default device code login instead of web browser prompt
 
-Due to changes in the authentication flow for .NET Standard, we are using device login as the default login flow during interactive login. Web browser based login will be re-introduced for Windows PowerShell 5.1 as the default in the 1/15/2019 release. At that time, users will be able to choose device login using a Switch parameter.
+Due to changes in the authentication flow for .NET Standard, we are using device login as the default login flow during interactive login. Web browser based login will be re-introduced for PowerShell 5.1 for Windows as the default in the 1/15/2019 release. At that time, users will be able to choose device login using a Switch parameter.
 
 ## Module breaking changes
 
@@ -207,7 +207,7 @@ This section details specific breaking changes for individual modules and cmdlet
   - Set-AzureRmApiManagementHostnames
   - Update-AzureRmApiManagementDeployment
   - Import-AzureRmApiManagementHostnameCertificate
-  - Use **Set-AzApiManagement** cmdlet to set these properites instead
+  - Use **Set-AzApiManagement** cmdlet to set these properties instead
 - Removed the following properties:
   - Removed property `PortalHostnameConfiguration`, `ProxyHostnameConfiguration`, `ManagementHostnameConfiguration` and `ScmHostnameConfiguration` of type `PsApiManagementHostnameConfiguration` from `PsApiManagementContext`. Instead use `PortalCustomHostnameConfiguration`, `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration` and `ScmCustomHostnameConfiguration` of type `PsApiManagementCustomHostNameConfiguration`.
   - Removed property `StaticIPs` from PsApiManagementContext. The property has been split into `PublicIPAddresses` and `PrivateIPAddresses`.
@@ -259,8 +259,8 @@ This section details specific breaking changes for individual modules and cmdlet
   New-AzDataLakeStoreAccount -Tag @{TagName="TagValue"}
   ```
 
-- Removed deprecated properties ```Identity```, ```EncryptionState```, ```EncrypotionProvisioningState```, ```EncryptionConfig```, ```FirewallState```, ```FirewallRules```, ```VirtualNetworkRules```, ```TrustedIdProviderState```, ```TrustedIdProviders```, ```DefaultGroup```, ```NewTier```, ```CurrentTier```, ```FirewallAllowAzureIps``` from ```PSDataLakeStoreAccountBasic``` object.  Any script that 
-uses the ```PSDatalakeStoreAccount``` returned from ```Get-AzDataLakeStoreAccount``` should not reference these properties.
+- Removed deprecated properties `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps` from `PSDataLakeStoreAccountBasic` object.  Any script that 
+uses the `PSDatalakeStoreAccount` returned from `Get-AzDataLakeStoreAccount` should not reference these properties.
 
 ### Az.KeyVault (previously AzureRM.KeyVault)
 
@@ -299,7 +299,7 @@ uses the ```PSDatalakeStoreAccount``` returned from ```Get-AzDataLakeStoreAccoun
 - Removed deprecated `EnableVmProtection` property from `PSVirtualNetwork` object
 - Removed deprecated `Set-AzVirtualNetworkGatewayVpnClientConfig` cmdlet
   
-Scripts shoudl no longer make processing decisions based on the values fo these fields.
+Scripts should no longer make processing decisions based on the values fo these fields.
 
 ### Az.OperationalInsights (previously AzureRM.OperationalInsights)
 
@@ -342,7 +342,7 @@ Scripts shoudl no longer make processing decisions based on the values fo these 
 ### Az.ServiceFabric (previously AzureRM.ServiceFabric)
 
 - The following cmdlet return types have been changed:
-  - The property `SerivceTypeHealthPolicies` of type `ApplicationHealthPolicy` has been removed.
+  - The property `ServiceTypeHealthPolicies` of type `ApplicationHealthPolicy` has been removed.
   - The property `ApplicationHealthPolicies` of type `ClusterUpgradeDeltaHealthPolicy` has been removed.
   - The property `OverrideUserUpgradePolicy` of type `ClusterUpgradePolicy` has been removed.
   - These changes affect the following cmdlets:

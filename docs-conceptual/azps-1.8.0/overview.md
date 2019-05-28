@@ -19,8 +19,8 @@ Azure PowerShell is also available on Azure Cloud Shell.
 ## About the new Az module
 
 This documentation describes the new Az module for Azure PowerShell. This new module is written from the
-ground up in .NET Standard. Using .NET Standard allows Azure PowerShell to run under PowerShell 5 on Windows
-or PowerShell 6 on any platform. The Az module is now the intended way to interact with Azure through PowerShell.
+ground up in .NET Standard. Using .NET Standard allows Azure PowerShell to run under PowerShell 5.1 on Windows
+or PowerShell Core 6.x and later on any platform. The Az module is now the intended way to interact with Azure through PowerShell.
 AzureRM will continue to get bug fixes, but no longer receive new features.
 
 Learn the full details about the new module, including how commands have been renamed and the maintenance
@@ -38,8 +38,8 @@ The [AzureRM documentation](/powershell/azure/azurerm) is also available.
 
 ## Run or install
 
-You can install Azure PowerShell on PowerShell 5.1 or higher on Windows, PowerShell 6 on any platform, or run
-in Azure Cloud Shell.
+You can install Azure PowerShell on PowerShell 5.1 or higher on Windows, PowerShell Core 6.x and later on
+any platform, or run in Azure Cloud Shell.
 
 * To run in your browser with Azure Cloud Shell, see [Quickstart for PowerShell in Azure Cloud Shell](/azure/cloud-shell/quickstart-powershell).
 * To install Azure PowerShell on your system, see [Install Azure PowerShell](install-az-ps.md).
