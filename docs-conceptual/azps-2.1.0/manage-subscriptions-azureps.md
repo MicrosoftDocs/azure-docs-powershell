@@ -14,6 +14,8 @@ Most Azure users will only ever have a single subscription. However, if you are 
 divided up access to certain resources across groupings, you may have multiple subscriptions within Azure. The CLI supports selecting a subscription
 both globally and per command.
 
+For detailed information on subscriptions, billing, and cost management, see the [billing and cost management documentation](/azure/billing/).
+
 ## Tenants, users, and subscriptions
 
 You might have some confusion over the difference between tenants, users, and subscriptions within Azure. A _tenant_ is the Azure Active Directory

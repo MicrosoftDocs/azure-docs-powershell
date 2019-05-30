@@ -121,7 +121,7 @@ across PowerShell sessions, see [Persist user credentials across PowerShell sess
 
 ## Update the Azure PowerShell module
 
-Because of how the Az module is package, the [Update-Module](/powershell/module/powershellget/update-module)
+Because of how the Az module is packaged, the [Update-Module](/powershell/module/powershellget/update-module)
 command won't update your installation correctly. Az is technically a meta-module, encompassing all of
 the submodules that contain cmdlets to interact with Azure services. That means that to update the
 Azure PowerShell module, you will need to __reinstall__, rather than just __update__. This is done in the
