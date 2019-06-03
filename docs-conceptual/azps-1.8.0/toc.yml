@@ -57,8 +57,6 @@
     href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
 - name: Concepts
   items:
-  - name: Experimental modules
-    href: using-experimental-modules.md
   - name: PowerShell jobs
     href: using-psjobs.md
     displayName: background, task, scripting, automation
