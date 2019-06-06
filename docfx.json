@@ -42,8 +42,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-2.3.0",
-                "version": "azurermps-2.3.0",
+                "src": "azurermps-2.5.0",
+                "version": "azurermps-2.5.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -54,8 +54,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "docs-conceptual/azurermps-2.3.0",
-                "version": "azurermps-2.3.0",
+                "src": "docs-conceptual/azurermps-2.5.0",
+                "version": "azurermps-2.5.0",
                 "dest": "azure/azurerm"
             },
             {
@@ -426,7 +426,7 @@
                 "files": [
                     "media/**"
                 ],
-                "version": "azurermps-2.3.0"
+                "version": "azurermps-2.5.0"
             },
             {
                 "files": [
@@ -463,8 +463,8 @@
             "azuredmps-0.9.0-preview": {
                 "dest": "azuredmps-0.9.0-preview"
             },
-            "azurermps-2.3.0": {
-                "dest": "azurermps-2.3.0"
+            "azurermps-2.5.0": {
+                "dest": "azurermps-2.5.0"
             },
             "azurermps-4.4.1": {
                 "dest": "azurermps-4.4.1"
@@ -557,7 +557,7 @@
                 "azurestackps-1.4.0/**/*.md": "08/18/2018",
                 "azurestackps-1.5.0/**/*.md": "09/19/2018",
                 "azurestackps-1.6.0/**/*.md": "01/03/2019",
-                "azurermps-2.3.0/**/*.md": "11/02/2017",
+                "azurermps-2.5.0/**/*.md": "11/02/2017",
                 "azurermps-4.4.1/**/*.md": "06/20/2018",
                 "azurermps-5.7.0/**/*.md": "07/26/2018",
                 "azurermps-6.10.0/**/*.md": "10/9/2018",
@@ -567,7 +567,7 @@
                 "azuresmps-4.0.0/**/*.md": "09/11/2018"
             },
             "feedback_system": {
-                "azurermps-2.3.0/**/*": "None",
+                "azurermps-2.5.0/**/*": "None",
                 "azurermps-4.4.1/**/*": "None",
                 "azurermps-5.7.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
