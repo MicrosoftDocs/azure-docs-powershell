@@ -282,7 +282,7 @@ uses the `PSDatalakeStoreAccount` returned from `Get-AzDataLakeStoreAccount` sho
 
   Should be changed to
   ```azurepowershell-interactive
-  New-AzMMediaService -Tag @{TagName="TagValue"}
+  New-AzMediaService -Tag @{TagName="TagValue"}
   ```
 
 ### Az.Monitor (previously AzureRM.Insights)
@@ -393,7 +393,7 @@ $b.ICloudBlob.Snapshot()
 Az:
 
 ```azurepowershell-interactive
-$b = Get-AzureStorageBlob -Container $containerName -Blob $blobName -Context $ctx
+$b = Get-AzStorageBlob -Container $containerName -Blob $blobName -Context $ctx
 $task = $b.ICloudBlob.SnapshotAsync()
 $task.Wait()
 $snapshot = $task.Result
@@ -411,7 +411,7 @@ $snapshot = $Share.Snapshot()
 Az:
 
 ```azurepowershell-interactive
-$Share = Get-AzureStorageShare -Name $containerName -Context $ctx
+$Share = Get-AzStorageShare -Name $containerName -Context $ctx
 $task = $Share.SnapshotAsync()
 $task.Wait()
 $snapshot = $task.Result
@@ -429,7 +429,7 @@ $b.ICloudBlob.Undelete()
 Az:
 
 ```azurepowershell-interactive
-$b = Get-AzureStorageBlob -Container $containerName -Blob $blobName -IncludeDeleted -Context $ctx
+$b = Get-AzStorageBlob -Container $containerName -Blob $blobName -IncludeDeleted -Context $ctx
 $task = $b.ICloudBlob.UndeleteAsync()
 $task.Wait()
 ```
@@ -449,11 +449,11 @@ $pageBlob.ICloudBlob.SetPremiumBlobTier("P4")
 Az:
 
 ```azurepowershell-interactive
-$blockBlob = Get-AzureStorageBlob -Container $containerName -Blob $blockBlobName -Context $ctx
+$blockBlob = Get-AzStorageBlob -Container $containerName -Blob $blockBlobName -Context $ctx
 $task = $blockBlob.ICloudBlob.SetStandardBlobTierAsync("hot")
 $task.Wait()
 
-$pageBlob = Get-AzureStorageBlob -Container $containerName -Blob $pageBlobName -Context $ctx
+$pageBlob = Get-AzStorageBlob -Container $containerName -Blob $pageBlobName -Context $ctx
 $task = $pageBlob.ICloudBlob.SetPremiumBlobTierAsync("P4")
 $task.Wait()
 ```
