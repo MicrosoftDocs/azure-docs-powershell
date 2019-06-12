@@ -1,7 +1,7 @@
 ---
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
-ms.date: 11/30/2018
+ms.date: 06/10/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
@@ -123,10 +123,16 @@ Uninstalling Azure.AnalysisServices version 0.4.7
 ...
 ```
 
+> [!NOTE]
+> If this script can't match an exact dependency with the same version to uninstall, it won't uninstall _any_ version of that dependecy. This is because there may be
+> other versions of the target module on your system which rely on these dependencies. In this case, the available versions of the dependency are listed.
+> You can then remove any old versions manually with `Uninstall-Module`.
+
+
 Run this command for every version of Azure PowerShell that you want to uninstall. For convenience, the following
 script will uninstall all versions of AzureRM __except__ for the latest.
 
 ```powershell-interactive
 $versions = (get-installedmodule AzureRM -AllVersions | Select-Object Version)
-$versions[1..($versions.Length-1)]  | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
+$versions[0..($versions.Length-2)]  | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
 ```
