@@ -61,19 +61,20 @@ function Uninstall-AllModules {
   'Creating list of dependencies...'
   $target = Find-Module $TargetModule -RequiredVersion $version
   $target.Dependencies | ForEach-Object {
-    if ($_.requiredVersion) {
+    if ($_.PSObject.Properties.Name -contains 'requiredVersion') {
       $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$_.requiredVersion}
     }
     else { # Assume minimum version
       # Minimum version actually reports the installed dependency
       # which is used, not the actual "minimum dependency." Check to
       # see if the requested version was installed as a dependency earlier.
-      $candidate = Get-InstalledModule $_.name -RequiredVersion $version
+      $candidate = Get-InstalledModule $_.name -RequiredVersion $version -ErrorAction Ignore
       if ($candidate) {
         $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$version}
       }
       else {
-        Write-Warning ("Could not find uninstall candidate for {0}:{1} - module may require manual uninstall" -f $_.name,$version)
+        $availableModules = Get-InstalledModule $_.name -AllVersions
+        Write-Warning ("Could not find uninstall candidate for {0}:{1} - module may require manual uninstall. Available versions are: {2}" -f $_.name,$version,($availableModules.Version -join ', '))
       }
     }
   }
@@ -109,12 +110,17 @@ Uninstalling Az.AnalysisServices version 0.7.0
 ...
 ```
 
+> [!NOTE]
+> If this script can't match an exact dependent module version to uninstall, it won't uninstall _any_ version of that module. This is because there may be other versions
+> of `Az` on your system which rely on these modules. In this case, the versions of the module that couldn't be found will be listed, if any were installed. You can
+> then remove any old versions manually with `Uninstall-Module`.
+
 Run this command for every version of Azure PowerShell that you want to uninstall. For convenience, the following
 script will uninstall all versions of Az __except__ for the latest.
 
 ```powershell-interactive
 $versions = (Get-InstalledModule Az -AllVersions | Select-Object Version)
-$versions[1..($versions.Length-1)]  | foreach { Uninstall-AllModules -TargetModule Az -Version ($_.Version) -Force }
+$versions[0..($versions.Length-2)]  | foreach { Uninstall-AllModules -TargetModule Az -Version ($_.Version) -Force }
 ```
 
 ## Uninstall the AzureRM module
