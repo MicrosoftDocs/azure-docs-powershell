@@ -153,7 +153,7 @@ For instructions on importing a certificate into a credential store accessible b
 
 ## Reset credentials
 
-If you forget the credentials for a service principal, use [New-AzADSpCredential](/module/az.resources/new-azadspcredential) to add a new credential. This cmdlet takes the same credential arguments and types as `New-AzADServicePrincipal`. Without any credential arguments, a new `PasswordCredential` with a random password is created.
+If you forget the credentials for a service principal, use [New-AzADSpCredential](/powershell/module/az.resources/new-azadspcredential) to add a new credential. This cmdlet takes the same credential arguments and types as `New-AzADServicePrincipal`. Without any credential arguments, a new `PasswordCredential` with a random password is created.
 
 > [!IMPORTANT]
 > Before assigning any new credentials, you may want to remove existing credentials to prevent sign in with them. To do so, use the [Remove-AzADSpCredential](/powershell/module/az.resources/remove-azadspcredential) cmdlet:
