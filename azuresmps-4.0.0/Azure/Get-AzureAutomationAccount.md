@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureAutomationAccount
 
 ## SYNOPSIS
+
 Gets Azure Automation accounts.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Get-AzureAutomationAccount [-Name <String>] [-Location <String>] [-Profile <Azur
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Get-AzureAutomationAccount** cmdlet gets the Microsoft Azure Automation accounts for your subscription.
 An Automation account is a container for Automation resources that is isolated from the resources of other Automation accounts.
 Automation resources include runbooks, jobs, and assets.

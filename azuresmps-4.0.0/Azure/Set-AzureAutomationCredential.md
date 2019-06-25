@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationCredential
 
 ## SYNOPSIS
+
 Modifies a credential in Automation.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Set-AzureAutomationCredential -Name <String> [-Description <String>] [-Value <PS
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationCredential** cmdlet modifies a credential as a **PSCredential** object in Microsoft Azure Automation.
 
 ## EXAMPLES

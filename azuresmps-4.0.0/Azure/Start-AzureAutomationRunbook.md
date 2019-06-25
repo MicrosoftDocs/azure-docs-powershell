@@ -8,6 +8,7 @@ schema: 2.0.0
 # Start-AzureAutomationRunbook
 
 ## SYNOPSIS
+
 Starts a runbook job.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Start-AzureAutomationRunbook -Name <String> [-Parameters <IDictionary>] [-RunOn 
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Start-AzureAutomationRunbook** cmdlet starts a Microsoft Azure Automation runbook job.
 Specify the ID or name of a runbook.
 

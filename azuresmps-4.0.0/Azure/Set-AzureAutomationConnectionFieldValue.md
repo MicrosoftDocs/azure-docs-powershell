@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationConnectionFieldValue
 
 ## SYNOPSIS
+
 Modifies the value of a field for a connection.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Set-AzureAutomationConnectionFieldValue -Name <String> -ConnectionFieldName <Str
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationConnectionFieldValue** cmdlet modifies the value for a field for a connection in Azure Automation.
 
 ## EXAMPLES

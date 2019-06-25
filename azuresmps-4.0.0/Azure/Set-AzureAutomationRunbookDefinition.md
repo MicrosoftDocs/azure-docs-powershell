@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationRunbookDefinition
 
 ## SYNOPSIS
+
 Updates the draft definition of a runbook.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Set-AzureAutomationRunbookDefinition -Name <String> -Path <String> [-Overwrite] 
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationRunbookDefinition** cmdlet updates the draft definition of a Microsoft Azure Automation runbook.
 Specify a Windows PowerShell script (.ps1) file that contains a runbook that becomes the draft runbook.
 

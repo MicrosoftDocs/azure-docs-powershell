@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureAutomationJob
 
 ## SYNOPSIS
+
 Gets one or more Azure Automation runbook jobs.
 
 ## SYNTAX
@@ -31,6 +32,9 @@ Get-AzureAutomationJob -RunbookName <String> [-Status <String>] [-StartTime <Dat
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Get-AzureAutomationJob** cmdlet gets one or more runbook jobs in Microsoft Azure Automation.
 
 ## EXAMPLES

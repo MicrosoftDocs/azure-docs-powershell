@@ -8,6 +8,7 @@ schema: 2.0.0
 # Publish-AzureAutomationRunbook
 
 ## SYNOPSIS
+
 Publishes a runbook.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Publish-AzureAutomationRunbook -Name <String> -AutomationAccountName <String> [-
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Publish-AzureAutomationRunbook** cmdlet publishes a runbook for use in the production environment of Microsoft Azure Automation.
 
 ## EXAMPLES

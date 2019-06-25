@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureAutomationConnection
 
 ## SYNOPSIS
+
 Gets an Azure Automation connection.
 
 ## SYNTAX
@@ -30,6 +31,9 @@ Get-AzureAutomationConnection -ConnectionTypeName <String> -AutomationAccountNam
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Get-AzureAutomationConnection** cmdlet gets one or more Microsoft Azure Automation connections.
 By default, all connections are returned.
 To get a specific connection, specify its name.

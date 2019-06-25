@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationRunbook
 
 ## SYNOPSIS
+
 Creates a runbook.
 
 ## SYNTAX
@@ -25,6 +26,9 @@ New-AzureAutomationRunbook -Path <String> [-Description <String>] [-Tags <String
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationRunbook** cmdlet creates a new, empty Microsoft Azure Automation runbook.
 Specify a name to create a new runbook.
 
