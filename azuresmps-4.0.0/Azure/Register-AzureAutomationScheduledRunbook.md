@@ -25,8 +25,8 @@ Register-AzureAutomationScheduledRunbook -RunbookName <String> -ScheduleName <St
 ```
 
 ## DESCRIPTION
-The **Register-AzureAutomationScheduledRunbook** cmdlet associates a runbook with a schedule.
-The runbook starts based on the schedule you specify using the *ScheduleName* parameter.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

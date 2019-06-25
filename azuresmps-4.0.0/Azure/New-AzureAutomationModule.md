@@ -18,16 +18,8 @@ New-AzureAutomationModule -Name <String> -ContentLink <Uri> [-Tags <IDictionary>
 ```
 
 ## DESCRIPTION
-The **New-AzureAutomationModule** cmdlet imports a module into Azure Automation.
-A module is a compressed file, with a .zip extension, that contains a folder which includes one of the following file types:
 
-- A Windows PowerShell module (psm1 file). 
-
-- A Windows PowerShell module manifest (psd1 file). 
-
-- An assembly (dll file).
-
-The names of the zip file, the folder in the zip file, and file in the folder (.psm1, psd.1, or .dll) must match.
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

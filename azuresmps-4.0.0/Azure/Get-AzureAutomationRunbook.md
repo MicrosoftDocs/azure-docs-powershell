@@ -24,10 +24,8 @@ Get-AzureAutomationRunbook -Name <String> -AutomationAccountName <String> [-Prof
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationRunbook** cmdlet gets one or more Microsoft Azure Automation runbooks.
-By default, all runbooks are returned.
-To get a specific runbook, specify its name or ID.
-To get all runbooks linked to a specific schedule, specify the schedule name.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

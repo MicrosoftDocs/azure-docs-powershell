@@ -18,8 +18,8 @@ Start-AzureAutomationRunbook -Name <String> [-Parameters <IDictionary>] [-RunOn 
 ```
 
 ## DESCRIPTION
-The **Start-AzureAutomationRunbook** cmdlet starts a Microsoft Azure Automation runbook job.
-Specify the ID or name of a runbook.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

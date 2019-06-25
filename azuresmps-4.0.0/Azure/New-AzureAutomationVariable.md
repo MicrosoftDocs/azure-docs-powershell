@@ -18,7 +18,8 @@ New-AzureAutomationVariable -Name <String> -Encrypted <Boolean> [-Description <S
 ```
 
 ## DESCRIPTION
-The **New-AzureAutomationVariable** cmdlet creates a variable in Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

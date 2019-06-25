@@ -33,7 +33,8 @@ New-AzureAutomationSchedule -Name <String> -StartTime <DateTimeOffset> [-Descrip
 ```
 
 ## DESCRIPTION
-The **New-AzureAutomationSchedule** cmdlet creates a schedule in Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

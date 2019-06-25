@@ -18,7 +18,8 @@ Remove-AzureAutomationModule -Name <String> [-Force] -AutomationAccountName <Str
 ```
 
 ## DESCRIPTION
-The **Remove-AzureAutomationModule** cmdlet removes an Automation account from Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

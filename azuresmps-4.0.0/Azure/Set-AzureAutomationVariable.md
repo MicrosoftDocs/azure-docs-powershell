@@ -25,7 +25,8 @@ Set-AzureAutomationVariable -Name <String> -Description <String> -AutomationAcco
 ```
 
 ## DESCRIPTION
-The **Set-AzureAutomationVariable** cmdlet modifies the value or description of a variable in Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

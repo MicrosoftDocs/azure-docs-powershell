@@ -18,7 +18,8 @@ New-AzureAutomationConnection -Name <String> -ConnectionTypeName <String> -Conne
 ```
 
 ## DESCRIPTION
-The **New-AzureAutomationConnection** cmdlet creates a connection in Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

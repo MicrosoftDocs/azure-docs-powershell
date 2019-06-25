@@ -18,8 +18,8 @@ New-AzureAutomationCertificate -Name <String> [-Description <String>] [-Password
 ```
 
 ## DESCRIPTION
-The **New-AzureAutomationCertificate** cmdlet creates a certificate in Microsoft Azure Automation.
-You provide the path to a certificate file to upload.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

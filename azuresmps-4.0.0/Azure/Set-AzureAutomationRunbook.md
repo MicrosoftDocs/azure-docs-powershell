@@ -18,7 +18,8 @@ Set-AzureAutomationRunbook -Name <String> [-Description <String>] [-Tags <String
 ```
 
 ## DESCRIPTION
-The **Set-AzureAutomationRunbook** cmdlet modifies the configuration of a Microsoft Azure Automation runbook.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

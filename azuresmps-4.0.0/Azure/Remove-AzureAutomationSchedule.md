@@ -18,7 +18,8 @@ Remove-AzureAutomationSchedule -Name <String> [-Force] -AutomationAccountName <S
 ```
 
 ## DESCRIPTION
-The **Remove-AzureAutomationSchedule** cmdlet deletes a schedule from Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

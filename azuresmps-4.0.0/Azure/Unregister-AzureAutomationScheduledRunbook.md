@@ -25,7 +25,8 @@ Unregister-AzureAutomationScheduledRunbook -RunbookName <String> -ScheduleName <
 ```
 
 ## DESCRIPTION
-The **Unregister-AzureAutomationScheduledRunbook** cmdlet removes the association between a Microsoft Azure Automation runbook and a schedule, which stops the runbook from starting when the schedule fires.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

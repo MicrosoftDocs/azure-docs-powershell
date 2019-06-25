@@ -24,9 +24,8 @@ Get-AzureAutomationCertificate -Name <String> -AutomationAccountName <String> [-
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationCertificate** cmdlet gets one or more Microsoft Azure Automation certificates.
-By default, all certificates are returned.
-To get a specific certificate, specify its name.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

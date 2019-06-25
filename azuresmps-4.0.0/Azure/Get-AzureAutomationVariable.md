@@ -24,9 +24,8 @@ Get-AzureAutomationVariable -Name <String> -AutomationAccountName <String> [-Pro
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationVariable** cmdlet gets one or more Microsoft Azure Automation variables.
-By default, all variables are returned.
-To get a specific variable, specify its name.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

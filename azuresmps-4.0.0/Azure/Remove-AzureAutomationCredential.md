@@ -18,7 +18,8 @@ Remove-AzureAutomationCredential -Name <String> [-Force] -AutomationAccountName 
 ```
 
 ## DESCRIPTION
-The **Remove-AzureAutomationCredential** cmdlet removes a credential from Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

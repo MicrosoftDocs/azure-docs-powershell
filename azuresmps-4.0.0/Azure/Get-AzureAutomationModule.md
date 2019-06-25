@@ -24,9 +24,8 @@ Get-AzureAutomationModule -Name <String> -AutomationAccountName <String> [-Profi
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationModule** cmdlet gets one or more Microsoft Azure Automation modules.
-By default, all modules are returned.
-To get a specific module, specify its name.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

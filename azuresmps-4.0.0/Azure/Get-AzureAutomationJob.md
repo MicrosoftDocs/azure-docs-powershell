@@ -31,7 +31,8 @@ Get-AzureAutomationJob -RunbookName <String> [-Status <String>] [-StartTime <Dat
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationJob** cmdlet gets one or more runbook jobs in Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

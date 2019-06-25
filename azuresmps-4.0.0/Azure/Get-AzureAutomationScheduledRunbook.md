@@ -43,12 +43,8 @@ Get-AzureAutomationScheduledRunbook -ScheduleName <String> -AutomationAccountNam
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationScheduledRunbook** gets one or more Azure Automation runbooks and associated schedules.
-By default, all scheduled runbooks are returned.
 
-To get a specific scheduled runbook, specify the runbook name and the schedule name.
-To get all schedules associated with a runbook, specify just the runbook name.
-To get all runbooks associated with a schedule, specify just the schedule name.
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

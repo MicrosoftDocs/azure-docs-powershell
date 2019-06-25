@@ -18,7 +18,8 @@ Remove-AzureAutomationConnectionType -Name <String> [-Force] -AutomationAccountN
 ```
 
 ## DESCRIPTION
-The **Remove-AzureAutomationConnectionType** cmdlet removes an Azure Automation connection type.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

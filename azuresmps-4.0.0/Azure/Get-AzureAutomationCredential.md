@@ -24,9 +24,8 @@ Get-AzureAutomationCredential -Name <String> -AutomationAccountName <String> [-P
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationCredential** cmdlet gets one or more Microsoft Azure Automation credentials.
-By default, all credentials are returned.
-To get a specific credential, specify its name.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

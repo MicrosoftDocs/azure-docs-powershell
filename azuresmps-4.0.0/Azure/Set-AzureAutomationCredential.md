@@ -18,7 +18,8 @@ Set-AzureAutomationCredential -Name <String> [-Description <String>] [-Value <PS
 ```
 
 ## DESCRIPTION
-The **Set-AzureAutomationCredential** cmdlet modifies a credential as a **PSCredential** object in Microsoft Azure Automation.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 

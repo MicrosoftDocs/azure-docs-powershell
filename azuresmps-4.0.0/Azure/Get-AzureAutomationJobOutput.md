@@ -18,7 +18,8 @@ Get-AzureAutomationJobOutput -Id <Guid> [-Stream <StreamType>] [-StartTime <Date
 ```
 
 ## DESCRIPTION
-The **Get-AzureAutomationJobOutput** cmdlet gets the output of a Microsoft Azure Automation job.
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
 
 ## EXAMPLES
 
