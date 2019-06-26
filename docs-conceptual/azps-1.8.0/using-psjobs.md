@@ -1,153 +1,57 @@
 ---
-title: Run cmdlets in parallel using PowerShell jobs
-description: How to run cmdlets in parallel using the -AsJob parameter.
+title: Run Azure PowerShell cmdlets in PowerShell Jobs
+description: Learn how to run Azure PowerShell cmdlets in parallel or as background tasks, using -AzJob and Start-Job.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018
+ms.date: 06/25/19
 ---
 
-# Running cmdlets in parallel using PowerShell jobs
+# Run Azure PowerShell cmdlets in PowerShell Jobs
 
-PowerShell supports asynchronous action with [PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
-Azure PowerShell is heavily dependent on making, and waiting for, network calls to Azure. You
-may often find yourself needing to make non-blocking calls. To address this need, Azure PowerShell
-provides first-class [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) support.
+PowerShell supports asynchronous tasks through [PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+Azure PowerShell is heavily dependent on making network calls to the Azure cloud, and then waiting for responses from the service.
+In many situations, non-blocking behavior is preferable so that you can continue to do work in a PowerShell session while waiting
+for an Azure operation to complete. To help with running Azure PowerShell commands in a non-blocking fashion, all Azure PowerShell
+cmdlets offer first-class support for jobs.
 
-## Context Persistence and PSJobs
+## Context Persistence and PowerShell Jobs
 
-Since PSJobs are run as separate processes, your Azure connection must
-be shared with them. After signing in to your Azure account 
-with `Connect-AzAccount`, pass the context to a job.
+Since PowerShell Jobs are run as separate processes, your Azure credentials must be shared with them. This is done through one of two mechanisms:
 
-```azurepowershell-interactive
-$creds = Get-Credential
-$job = Start-Job { param($context,$vmadmin) New-AzVM -Name MyVm -AzContext $context -Credential $vmadmin} -ArgumentList (Get-AzContext),$creds
-```
+* Automatic context persistence, which is enabled by default and preserves your sign in information across multiple sessions:
 
-However, if you have chosen to have your context automatically saved with
-`Enable-AzContextAutosave`, the context is automatically shared with any jobs you create.
+  ```azurepowershell-interactive
+  $creds = Get-Credential
+  $job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin} -ArgumentList $creds }
+  ```
 
-```azurepowershell-interactive
-Enable-AzContextAutosave
-$creds = Get-Credential
-$job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin} -ArgumentList $creds
-```
+* [Azure contexts](context-persistence.md), which can be explicitly passed to a command with the `-DefaultProfile` or `-AzContext` parameter. This
+  allows you to use a context _other_ than the currently active context when running a command as a job:
 
-## Automatic Jobs with `-AsJob`
+  ```azurepowershell-interactive
+  $creds = Get-Credential
+  $context = Get-AzContext -Name 'mycontext'
+  $job = Start-Job { param($context, $vmadmin) New-AzVM -Name MyVm -AzContext $context -Credential $vmadmin} -ArgumentList $context,$creds }
+  ```
 
-As a convenience, Azure PowerShell also provides an `-AsJob` switch on some long-running cmdlets.
-The `-AsJob` switch makes creating PSJobs even easier.
+You can check the status of a running job with the [Get-Job](/powershell/module/microsoft.powershell.core/get-job) cmdlet. To
+get the result of a job, use the [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job) cmdlet. `Receive-Job`
+returns the result of the command that was run in the job.
+
+> [!IMPORTANT]
+> If the operation that you started for the job hasn't gotten a response from the Azure cloud yet, `Recieve-Job` will block
+> until it has a result to pass back. For this reason it's recommended to use `Get-Job` and any `Get-` cmdlets associated with
+> the type of resource being modified to check its current status.
+
+## Starting PowerShell jobs with `-AsJob`
+
+As a convenience, Azure PowerShell also provides an `-AsJob` switch on some long-running cmdlets. This switch automatically
+creates a job, and returns the job object so that you can wait on it or check results.
 
 ```azurepowershell-interactive
 $creds = Get-Credential
 $job = New-AzVM -Name MyVm -Credential $creds -AsJob
-```
-
-You can inspect the job and progress at any time with `Get-Job` and `Get-AzVM`.
-
-```azurepowershell-interactive
-Get-Job $job
-Get-AzVM MyVm
-```
-
-```output
-Id Name                                       PSJobTypeName         State   HasMoreData Location  Command
--- ----                                       -------------         -----   ----------- --------  -------
-1  Long Running Operation for 'New-AzVM' AzureLongRunningJob`1 Running True        localhost New-AzVM
-
-ResourceGroupName    Name Location          VmSize  OsType     NIC ProvisioningState Zone
------------------    ---- --------          ------  ------     --- ----------------- ----
-MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Creating
-```
-
-When the job completes, get the result of the job with `Receive-Job`.
-
-> [!NOTE]
-> `Receive-Job` returns the result from the cmdlet as if the `-AsJob` flag were not present.
-> For example, the `Receive-Job` result of `Do-Action -AsJob` is of the same type as the result of
-> `Do-Action`.
-
-```azurepowershell-interactive
-$vm = Receive-Job $job
-$vm
-```
-
-```output
-ResourceGroupName        : MyVm
-Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyVm/providers/Microsoft.Compute/virtualMachines/MyVm
-VmId                     : dff1f79e-a8f7-4664-ab72-0ec28b9fbb5b
-Name                     : MyVm
-Type                     : Microsoft.Compute/virtualMachines
-Location                 : eastus
-Tags                     : {}
-HardwareProfile          : {VmSize}
-NetworkProfile           : {NetworkInterfaces}
-OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
-ProvisioningState        : Succeeded
-StorageProfile           : {ImageReference, OsDisk, DataDisks}
-FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
-```
-
-## Example Scenarios
-
-Create several VMs at once:
-
-```azurepowershell-interactive
-$creds = Get-Credential
-# Create 10 jobs.
-for($k = 0; $k -lt 10; $k++) {
-    New-AzVm -Name MyVm$k  -Credential $creds -AsJob
-}
-
-# Get all jobs and wait on them.
-Get-Job | Wait-Job
-"All jobs completed"
-Get-AzVM
-```
-
-In this example, the `Wait-Job` cmdlet causes the script to pause while jobs run. The script
-continues executing once all of the jobs have completed. Several jobs run in parallel then the
-script waits for completion before continuing.
-
-```output
-Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
---     ----            -------------   -----         -----------     --------             -------
-2      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-3      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-4      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-5      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-6      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-7      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-8      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-9      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-10     Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-11     Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-2      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-3      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-4      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-5      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-6      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-7      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-8      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-9      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-10     Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-11     Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-All Jobs completed.
-
-ResourceGroupName        Name   Location          VmSize  OsType           NIC ProvisioningState Zone
------------------        ----   --------          ------  ------           --- ----------------- ----
-MYVM                     MyVm     eastus Standard_DS1_v2 Windows          MyVm         Succeeded
-MYVM0                   MyVm0     eastus Standard_DS1_v2 Windows         MyVm0         Succeeded
-MYVM1                   MyVm1     eastus Standard_DS1_v2 Windows         MyVm1         Succeeded
-MYVM2                   MyVm2     eastus Standard_DS1_v2 Windows         MyVm2         Succeeded
-MYVM3                   MyVm3     eastus Standard_DS1_v2 Windows         MyVm3         Succeeded
-MYVM4                   MyVm4     eastus Standard_DS1_v2 Windows         MyVm4         Succeeded
-MYVM5                   MyVm5     eastus Standard_DS1_v2 Windows         MyVm5         Succeeded
-MYVM6                   MyVm6     eastus Standard_DS1_v2 Windows         MyVm6         Succeeded
-MYVM7                   MyVm7     eastus Standard_DS1_v2 Windows         MyVm7         Succeeded
-MYVM8                   MyVm8     eastus Standard_DS1_v2 Windows         MyVm8         Succeeded
-MYVM9                   MyVm9     eastus Standard_DS1_v2 Windows         MyVm9         Succeeded
 ```
