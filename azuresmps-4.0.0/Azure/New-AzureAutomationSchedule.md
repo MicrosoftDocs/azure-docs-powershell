@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationSchedule
 
 ## SYNOPSIS
+
 Creates an Automation schedule.
 
 ## SYNTAX
@@ -33,6 +34,9 @@ New-AzureAutomationSchedule -Name <String> -StartTime <DateTimeOffset> [-Descrip
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationSchedule** cmdlet creates a schedule in Microsoft Azure Automation.
 
 ## EXAMPLES

@@ -8,6 +8,7 @@ schema: 2.0.0
 # Remove-AzureAutomationSchedule
 
 ## SYNOPSIS
+
 Deletes an Azure Automation schedule.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Remove-AzureAutomationSchedule -Name <String> [-Force] -AutomationAccountName <S
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Remove-AzureAutomationSchedule** cmdlet deletes a schedule from Microsoft Azure Automation.
 
 ## EXAMPLES

@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationCertificate
 
 ## SYNOPSIS
+
 Modifies the configuration of an Automation certificate.
 
 ## SYNTAX
@@ -19,6 +20,9 @@ Set-AzureAutomationCertificate -Name <String> [-Description <String>] [-Password
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationCertificate** cmdlet modifies the configuration of a certificate in Microsoft Azure Automation.
 
 ## EXAMPLES

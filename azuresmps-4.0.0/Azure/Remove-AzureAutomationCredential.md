@@ -8,6 +8,7 @@ schema: 2.0.0
 # Remove-AzureAutomationCredential
 
 ## SYNOPSIS
+
 Removes a credential from Automation.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Remove-AzureAutomationCredential -Name <String> [-Force] -AutomationAccountName 
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Remove-AzureAutomationCredential** cmdlet removes a credential from Microsoft Azure Automation.
 
 ## EXAMPLES

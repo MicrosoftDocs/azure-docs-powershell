@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationRunbook
 
 ## SYNOPSIS
+
 Modifies the configuration of a runbook.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Set-AzureAutomationRunbook -Name <String> [-Description <String>] [-Tags <String
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationRunbook** cmdlet modifies the configuration of a Microsoft Azure Automation runbook.
 
 ## EXAMPLES

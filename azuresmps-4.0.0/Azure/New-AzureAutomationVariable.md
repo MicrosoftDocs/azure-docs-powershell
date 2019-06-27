@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationVariable
 
 ## SYNOPSIS
+
 Creates an Automation variable.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ New-AzureAutomationVariable -Name <String> -Encrypted <Boolean> [-Description <S
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationVariable** cmdlet creates a variable in Microsoft Azure Automation.
 
 ## EXAMPLES

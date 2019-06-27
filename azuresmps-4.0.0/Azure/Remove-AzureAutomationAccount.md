@@ -8,6 +8,7 @@ schema: 2.0.0
 # Remove-AzureAutomationAccount
 
 ## SYNOPSIS
+
 Removes an Automation Account.
 
 ## SYNTAX
@@ -17,6 +18,9 @@ Remove-AzureAutomationAccount -Name <String> [-Force] [-Profile <AzureSMProfile>
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Remove-AzureAutomationAccount** cmdlet removes an account from Microsoft Azure Automation.
 
 ## EXAMPLES

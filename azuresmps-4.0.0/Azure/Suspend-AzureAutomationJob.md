@@ -8,6 +8,7 @@ schema: 2.0.0
 # Suspend-AzureAutomationJob
 
 ## SYNOPSIS
+
 Suspends an Automation job.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Suspend-AzureAutomationJob -Id <Guid> -AutomationAccountName <String> [-Profile 
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Suspend-AzureAutomationJob** cmdlet suspends a Microsoft Azure Automation job.
 Specify a running Automation job.
 

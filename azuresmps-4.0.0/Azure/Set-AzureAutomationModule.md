@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationModule
 
 ## SYNOPSIS
+
 Updates a module in Automation.
 
 ## SYNTAX
@@ -19,6 +20,9 @@ Set-AzureAutomationModule -Name <String> [-Tags <IDictionary>] [-ContentLinkUri 
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationModule** cmdlet imports a new version of a module or changes the configuration of the module in Azure Automation.
 
 ## EXAMPLES

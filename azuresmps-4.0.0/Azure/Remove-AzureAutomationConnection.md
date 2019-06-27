@@ -8,6 +8,7 @@ schema: 2.0.0
 # Remove-AzureAutomationConnection
 
 ## SYNOPSIS
+
 Removes a connection from Automation.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Remove-AzureAutomationConnection -Name <String> [-Force] -AutomationAccountName 
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Remove-AzureAutomationConnection** cmdlet removes a connection from Microsoft Azure Automation.
 
 ## EXAMPLES

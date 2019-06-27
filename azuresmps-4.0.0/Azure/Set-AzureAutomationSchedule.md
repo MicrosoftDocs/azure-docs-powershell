@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationSchedule
 
 ## SYNOPSIS
+
 Modifies an Automation schedule.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Set-AzureAutomationSchedule -Name <String> [-IsEnabled <Boolean>] [-Description 
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationSchedule** cmdlet modifies a schedule in Microsoft Azure Automation.
 
 ## EXAMPLES

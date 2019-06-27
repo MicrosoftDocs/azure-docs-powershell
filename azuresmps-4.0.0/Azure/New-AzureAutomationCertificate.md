@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationCertificate
 
 ## SYNOPSIS
+
 Creates an Azure Automation certificate.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ New-AzureAutomationCertificate -Name <String> [-Description <String>] [-Password
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationCertificate** cmdlet creates a certificate in Microsoft Azure Automation.
 You provide the path to a certificate file to upload.
 

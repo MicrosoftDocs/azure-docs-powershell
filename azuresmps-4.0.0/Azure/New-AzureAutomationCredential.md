@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationCredential
 
 ## SYNOPSIS
+
 Creates a credential in Automation.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ New-AzureAutomationCredential -Name <String> [-Description <String>] -Value <PSC
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationCredential** cmdlet creates a credential as a **PSCredential** object in Microsoft Azure Automation.
 
 ## EXAMPLES

@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureAutomationSchedule
 
 ## SYNOPSIS
+
 Gets an Azure Automation schedule.
 
 ## SYNTAX
@@ -24,6 +25,9 @@ Get-AzureAutomationSchedule -Name <String> -AutomationAccountName <String> [-Pro
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Get-AzureAutomationSchedule** cmdlet gets a Microsoft Azure Automation schedule.
 
 ## EXAMPLES
