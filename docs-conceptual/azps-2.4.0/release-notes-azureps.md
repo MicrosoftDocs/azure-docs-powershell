@@ -1,3 +1,86 @@
+## 2.4.0 - July 2019
+#### Az.Accounts
+* Add support for profile cmdlets
+* Add support for environments and data planes in generated cmdlets
+* Fix bug where incorrect endpoint was being used in some cases for data plane cmdlets in Windows PowerShell
+
+#### Az.Advisor
+* GA release of Az.Advisor
+* This module is now included as a part of the roll-up `Az` module
+
+#### Az.ApiManagement
+* Fix for issue https://github.com/Azure/azure-powershell/issues/8671
+    - **Get-AzApiManagementSubscription**
+        - Added support for querying subscriptions by User and Product
+        - Added support for querying using Scope '/', '/apis', '/apis/echo-api'
+* Fix for issue https://github.com/Azure/azure-powershell/issues/9307 and https://github.com/Azure/azure-powershell/issues/8432
+    - **Import-AzApiManagementApi**
+        - Added support for specifiying 'ApiVersion' and 'ApiVersionSetId' when importing Apis
+
+#### Az.Automation
+* Fixed Set-AzAutomationConnectionFieldValue cmdlet bug to handle string value.
+
+#### Az.Compute
+* Add HyperVGeneration parameter to New-AzImageConfig
+
+#### Az.DataFactory
+* Updating the output of get activity runs, get pipeline runs, and get trigger runs ADF cmdlets to support Select-Object pipe.
+
+#### Az.EventGrid
+* Fix typo in 'New-AzEventGridSubscription' documentation
+
+#### Az.IotHub
+* Add support to regenerate authorization policy keys.
+
+#### Az.Network
+* Added 'RoutingPreference' to public ip tags
+* Improve examples for 'Get-AzNetworkServiceTag' reference documentation
+
+#### Az.PolicyInsights
+* Fix null reference issue in Get-AzPolicyState
+    - More information here: https://github.com/Azure/azure-powershell/issues/9446
+
+#### Az.OperationalInsights
+* Fixed CustomLog datasource model returned in Get-AzOperationalInsightsDataSource
+
+#### Az.RecoveryServices
+* Fix for get-policy command for IaaSVMs
+
+#### Az.Resources
+    - Fix help text for Get-AzPolicyState -Top parameter
+    - Add client-side paging support for Get-AzPolicyAlias
+    - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
+    - Handful of doc and example updates for Policy cmdlets
+
+#### Az.ServiceBus
+* Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes
+
+#### Az.Sql
+* Add Instance Failover Group cmdlets from preview release to public release
+* Support Azure SQL Server\Database Auditing with new cmdlets.
+    - Set-AzSqlServerAudit
+    - Get-AzSqlServerAudit
+    - Remove-AzSqlServerAudit
+    - Set-AzSqlDatabaseAudit
+    - Get-AzSqlDatabaseAudit
+    - Remove-AzSqlDatabaseAudit
+* Remove email constraints from Vulnerability Assessment settings
+
+#### Az.Storage
+* Change 2 parameters '-IndexDocument' and '-ErrorDocument404Path' from required to optional  in cmdlet:
+    -  Enable-AzStorageStaticWebsite
+* Update help of Get-AzStorageBlobContent by add an example
+* Show more error information when cmdlet failed with StorageException
+* Support create or update Storage account with Azure Files AAD DS Authentication
+    -  New-AzStorageAccount
+    -  Set-AzStorageAccount
+* Support list or close file handles of a file share, file directory or a file
+    - Get-AzStorageFileHandle
+    - Close-AzStorageFileHandle
+
+#### Az.StorageSync
+* This module is now included as a part of the roll-up `Az` module
+
 ## 2.3.2 - June 2019
 #### Az.Accounts
 * Fix bug with incorrect URL being used in some cases for Functions calls
