@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureAutomationVariable
 
 ## SYNOPSIS
+
 Modifies an Automation variable.
 
 ## SYNTAX
@@ -25,6 +26,9 @@ Set-AzureAutomationVariable -Name <String> -Description <String> -AutomationAcco
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Set-AzureAutomationVariable** cmdlet modifies the value or description of a variable in Microsoft Azure Automation.
 
 ## EXAMPLES

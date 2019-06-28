@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationConnection
 
 ## SYNOPSIS
+
 Creates a connection in Automation.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ New-AzureAutomationConnection -Name <String> -ConnectionTypeName <String> -Conne
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationConnection** cmdlet creates a connection in Microsoft Azure Automation.
 
 ## EXAMPLES

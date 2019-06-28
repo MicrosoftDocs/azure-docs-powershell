@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationModule
 
 ## SYNOPSIS
+
 Imports a module into Automation.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ New-AzureAutomationModule -Name <String> -ContentLink <Uri> [-Tags <IDictionary>
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationModule** cmdlet imports a module into Azure Automation.
 A module is a compressed file, with a .zip extension, that contains a folder which includes one of the following file types:
 

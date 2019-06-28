@@ -8,6 +8,7 @@ schema: 2.0.0
 # Remove-AzureAutomationVariable
 
 ## SYNOPSIS
+
 Removes an Automation variable.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Remove-AzureAutomationVariable -Name <String> [-Force] -AutomationAccountName <S
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Remove-AzureAutomationVariable** cmdlet removes a variable from Microsoft Azure Automation.
 
 ## EXAMPLES

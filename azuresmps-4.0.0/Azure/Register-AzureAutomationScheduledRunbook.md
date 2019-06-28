@@ -8,6 +8,7 @@ schema: 2.0.0
 # Register-AzureAutomationScheduledRunbook
 
 ## SYNOPSIS
+
 Associates a runbook with a schedule.
 
 ## SYNTAX
@@ -25,6 +26,9 @@ Register-AzureAutomationScheduledRunbook -RunbookName <String> -ScheduleName <St
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Register-AzureAutomationScheduledRunbook** cmdlet associates a runbook with a schedule.
 The runbook starts based on the schedule you specify using the *ScheduleName* parameter.
 

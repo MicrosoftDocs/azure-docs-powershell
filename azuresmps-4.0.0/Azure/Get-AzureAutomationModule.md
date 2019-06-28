@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureAutomationModule
 
 ## SYNOPSIS
+
 Get an Azure Automation module.
 
 ## SYNTAX
@@ -24,6 +25,9 @@ Get-AzureAutomationModule -Name <String> -AutomationAccountName <String> [-Profi
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Get-AzureAutomationModule** cmdlet gets one or more Microsoft Azure Automation modules.
 By default, all modules are returned.
 To get a specific module, specify its name.

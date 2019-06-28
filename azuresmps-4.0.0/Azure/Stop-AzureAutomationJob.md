@@ -8,6 +8,7 @@ schema: 2.0.0
 # Stop-AzureAutomationJob
 
 ## SYNOPSIS
+
 Stops an Automation job.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Stop-AzureAutomationJob -Id <Guid> -AutomationAccountName <String> [-Profile <Az
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Stop-AzureAutomationJob** cmdlet stops a Microsoft Azure Automation job.
 Specify a running automation job.
 

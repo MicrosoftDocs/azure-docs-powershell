@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureAutomationAccount
 
 ## SYNOPSIS
+
 Creates an Automation account.
 
 ## SYNTAX
@@ -17,6 +18,9 @@ New-AzureAutomationAccount -Name <String> -Location <String> [-Profile <AzureSMP
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **New-AzureAutomationAccount** cmdlet creates a new account in Microsoft Azure Automation.
 
 ## EXAMPLES

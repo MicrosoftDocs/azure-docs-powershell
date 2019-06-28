@@ -8,6 +8,7 @@ schema: 2.0.0
 # Unregister-AzureAutomationScheduledRunbook
 
 ## SYNOPSIS
+
 Removes an association between a runbook and a schedule.
 
 ## SYNTAX
@@ -25,6 +26,9 @@ Unregister-AzureAutomationScheduledRunbook -RunbookName <String> -ScheduleName <
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Unregister-AzureAutomationScheduledRunbook** cmdlet removes the association between a Microsoft Azure Automation runbook and a schedule, which stops the runbook from starting when the schedule fires.
 
 ## EXAMPLES

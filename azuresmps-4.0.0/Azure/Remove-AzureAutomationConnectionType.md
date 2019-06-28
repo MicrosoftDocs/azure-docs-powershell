@@ -8,6 +8,7 @@ schema: 2.0.0
 # Remove-AzureAutomationConnectionType
 
 ## SYNOPSIS
+
 Removes a connection type.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Remove-AzureAutomationConnectionType -Name <String> [-Force] -AutomationAccountN
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Remove-AzureAutomationConnectionType** cmdlet removes an Azure Automation connection type.
 
 ## EXAMPLES

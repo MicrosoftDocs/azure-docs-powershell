@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureAutomationJobOutput
 
 ## SYNOPSIS
+
 Gets the output of an Azure Automation job.
 
 ## SYNTAX
@@ -18,6 +19,9 @@ Get-AzureAutomationJobOutput -Id <Guid> [-Stream <StreamType>] [-StartTime <Date
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+
 The **Get-AzureAutomationJobOutput** cmdlet gets the output of a Microsoft Azure Automation job.
 
 ## EXAMPLES
