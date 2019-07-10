@@ -21,7 +21,7 @@ Get-AzDataLakeStoreItemPermission [-Account] <String> [-Path] <DataLakeStorePath
 ```
 
 ## DESCRIPTION
-The **Get-AzDataLakeStoreItemPermission** cmdlet gets the the permission octal of a file or folder in Data Lake Store.
+The **Get-AzDataLakeStoreItemPermission** cmdlet gets the permission octal of a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
