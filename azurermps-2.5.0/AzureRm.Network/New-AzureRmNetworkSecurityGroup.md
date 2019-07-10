@@ -30,7 +30,7 @@ The **New-AzureRmNetworkSecurityGroup** cmdlet creates an Azure network security
 New-AzureRmNetworkSecurityGroup -Name "nsg1" -ResourceGroupName "rg1"  -Location  "westus"
 ```
 
-This command ceates a new Azure network security group named "nsg1" in resource group "rg1" in location "westus".
+This command creates a new Azure network security group named "nsg1" in resource group "rg1" in location "westus".
 
 ### 2: Create a detailed network security group
 ```
