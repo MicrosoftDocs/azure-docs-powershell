@@ -26,7 +26,7 @@ The **New-AzNetworkSecurityGroup** cmdlet creates an Azure network security grou
 
 ## EXAMPLES
 
-### 1: Create a new network securtiy group
+### 1: Create a new network security group
 ```
 New-AzNetworkSecurityGroup -Name "nsg1" -ResourceGroupName "rg1"  -Location  "westus"
 ```
