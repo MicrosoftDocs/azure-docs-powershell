@@ -43,7 +43,7 @@ Returns a backup from a location based on name.
 Get-AzsBackup
 ```
 
-Get information sbout all Azure Stack backups.
+Get information about all Azure Stack backups.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
