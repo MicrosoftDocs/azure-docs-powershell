@@ -545,7 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -SystemAssignedIdentity
-If the parameter is present then the VM is assingned a managed system identity that is auto generated.
+If the parameter is present then the VM is assigned a managed system identity that is auto generated.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
