@@ -175,7 +175,7 @@ $a = $s1.NewResource.ServiceBusRuleId
 ```
     
 ### Set-AzureRmDiagnosticSettings
-- The command is going to be renamed to `Update-AzureRmDiagnsoticSettings`
+- The command is going to be renamed to `Update-AzureRmDiagnosticSettings`
 
 ```powershell-interactive
 # Old
