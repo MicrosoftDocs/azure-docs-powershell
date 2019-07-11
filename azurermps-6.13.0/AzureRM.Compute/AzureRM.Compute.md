@@ -233,7 +233,7 @@ Create a gallery image definition.
 Create a gallery image version.
 
 ### [New-AzureRmImage](New-AzureRmImage.md)
-Creats an image.
+Creates an image.
 
 ### [New-AzureRmImageConfig](New-AzureRmImageConfig.md)
 Creates a configurable image object.

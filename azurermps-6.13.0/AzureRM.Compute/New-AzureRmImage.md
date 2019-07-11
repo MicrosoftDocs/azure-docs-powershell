@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # New-AzureRmImage
 
 ## SYNOPSIS
-Creats an image.
+Creates an image.
 
 ## SYNTAX
 
