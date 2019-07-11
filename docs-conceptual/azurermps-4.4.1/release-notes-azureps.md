@@ -332,7 +332,7 @@ This is a list of changes made to Azure PowerShell in this release.
         - 'IdentityType' parameter is added to New-AzureRmVMConfig and UpdateAzureRmVM
         - Get-AzureRmVM shows the information of the identity of the given VM
     * Vmss Identity feature:
-        - 'IdentityType' parameter is added to to New-AzureRmVmssConfig
+        - 'IdentityType' parameter is added to New-AzureRmVmssConfig
         - Get-AzureRmVmss shows the information of the identity of the given Vmss
     * Vmss Boot Diagnostics feature:
         - New cmdlet for setting boot diagnostics of Vmss object: Set-AzureRmVmssBootDiagnostics
