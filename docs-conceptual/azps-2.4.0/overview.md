@@ -54,7 +54,6 @@ familiar with PowerShell, an introduction might be helpful:
 * [Install PowerShell](/powershell/scripting/install/installing-powershell)
 * [Scripting with PowerShell](/powershell/scripting/powershell-scripting)
 * [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1)
-* Microsoft Virtual Academy's [Getting Started with PowerShell Jumpstart](https://mva.microsoft.com/liveevents/powershell-jumpstart)
 
 The following samples can help you with some common uses of Azure:
 
