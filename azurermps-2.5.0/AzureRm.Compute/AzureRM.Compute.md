@@ -15,7 +15,7 @@ This topic displays the help topics for the Azure Compute Cmdlets.
 Adds a container service agent pool profile.
 
 ### [Add-AzureRmImageDataDisk](Add-AzureRmImageDataDisk.md)
-Adds a data disk to an image obejct.
+Adds a data disk to an image object.
 
 ### [Add-AzureRmVhd](Add-AzureRmVhd.md)
 Uploads a virtual hard disk from an on-premises virtual machine to a blob in a cloud storage account in Azure.
