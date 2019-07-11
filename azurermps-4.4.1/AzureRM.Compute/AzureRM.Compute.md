@@ -335,7 +335,7 @@ Sets the image reference properties on a disk object.
 Sets the key encryption key properties on a disk object.
 
 ### [Set-AzureRmDiskUpdateDiskEncryptionKey](Set-AzureRmDiskUpdateDiskEncryptionKey.md)
-Sets the disk encryption key properties on on a disk update object.
+Sets the disk encryption key properties on a disk update object.
 
 ### [Set-AzureRmDiskUpdateImageReference](Set-AzureRmDiskUpdateImageReference.md)
 Sets the image reference properties on a disk update object.
