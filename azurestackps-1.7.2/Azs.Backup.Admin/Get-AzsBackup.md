@@ -50,7 +50,7 @@ Get information sbout all Azure Stack backups.
 Get-AzsBackup -Name 'backupName'
 ```
 
-Get information for the the specified Azure Stack backup.
+Get information for the specified Azure Stack backup.
 
 ## PARAMETERS
 
