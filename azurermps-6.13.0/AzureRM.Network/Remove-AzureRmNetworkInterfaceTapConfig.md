@@ -51,7 +51,7 @@ Because the *Force* parameter is not used, the user will be prompted to confirm 
 PS C:\>Get-AzureRmNetworkInterfaceTapConfig -Name "TapConfiguration" -NetworkInterfaceName "NetworkInterface1" -ResourceGroup "ResourceGroup1" | Remove-AzureRmNetworkInterfaceTapConfig -Force
 ```
 
-This command removes removes the TapConfiguration from NetworkInterface1 in a resource group ResourceGroup1.
+This command removes the TapConfiguration from NetworkInterface1 in a resource group ResourceGroup1.
 Because the *Force* parameter is used, the user is not prompted for confirmation.
 
 ## PARAMETERS
