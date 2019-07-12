@@ -40,8 +40,6 @@ If you're unfamiliar with PowerShell, an introduction to PowerShell may be helpf
 You can also watch this video:
 [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 
-Or attend the Microsoft Virtual Academy's [Getting Started with PowerShell Jumpstart](https://mva.microsoft.com/liveevents/powershell-jumpstart).
-
 ## Build your skills with Microsoft Learn
 
 - [Automate Azure tasks using scripts with PowerShell](/learn/modules/automate-azure-tasks-with-powershell/)

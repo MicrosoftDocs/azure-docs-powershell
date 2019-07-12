@@ -285,7 +285,7 @@ items:
       content: |-
 
         Congratulations! You learned how to create VMs with new or existing resources, used
-        expressions and other Azure PowerShell commands to to capture data to be stored in shell
+        expressions and other Azure PowerShell commands to capture data to be stored in shell
         variables, and looked at some of the resources that get created for Azure VMs.
 
         Where you go from here depends on how you plan to use Azure PowerShell. There are a variety

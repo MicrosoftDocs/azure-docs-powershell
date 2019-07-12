@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-Specifies the ID of the tenant for for the context that this cmdlet sets for the current session.
+Specifies the ID of the tenant for the context that this cmdlet sets for the current session.
 
 ```yaml
 Type: String

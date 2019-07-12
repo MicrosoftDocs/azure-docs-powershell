@@ -43,14 +43,14 @@ Returns a backup from a location based on name.
 Get-AzsBackup
 ```
 
-Get information sbout all Azure Stack backups.
+Get information about all Azure Stack backups.
 
 ### EXAMPLE 2
 ```
 Get-AzsBackup -Name 'backupName'
 ```
 
-Get information for the the specified Azure Stack backup.
+Get information for the specified Azure Stack backup.
 
 ## PARAMETERS
 

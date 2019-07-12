@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/
 # Set-AzDiskUpdateDiskEncryptionKey
 
 ## SYNOPSIS
-Sets the disk encryption key properties on on a disk update object.
+Sets the disk encryption key properties on a disk update object.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Set-AzDiskUpdateDiskEncryptionKey [-DiskUpdate] <PSDiskUpdate> [[-SecretUrl] <St
 ```
 
 ## DESCRIPTION
-The **Set-AzDiskUpdateDiskEncryptionKey** cmdlet sets the disk encryption key properties on on a disk update object.
+The **Set-AzDiskUpdateDiskEncryptionKey** cmdlet sets the disk encryption key properties on a disk update object.
 
 ## EXAMPLES
 

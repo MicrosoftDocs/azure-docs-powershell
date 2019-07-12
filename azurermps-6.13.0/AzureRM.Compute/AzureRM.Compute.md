@@ -17,7 +17,7 @@ This topic displays the help topics for the Azure Compute Cmdlets.
 Adds a container service agent pool profile.
 
 ### [Add-AzureRmImageDataDisk](Add-AzureRmImageDataDisk.md)
-Adds a data disk to an image obejct.
+Adds a data disk to an image object.
 
 ### [Add-AzureRmVhd](Add-AzureRmVhd.md)
 Uploads a virtual hard disk from an on-premises virtual machine to a blob in a cloud storage account in Azure.
@@ -233,7 +233,7 @@ Create a gallery image definition.
 Create a gallery image version.
 
 ### [New-AzureRmImage](New-AzureRmImage.md)
-Creats an image.
+Creates an image.
 
 ### [New-AzureRmImageConfig](New-AzureRmImageConfig.md)
 Creates a configurable image object.
@@ -404,7 +404,7 @@ Sets the image reference properties on a disk object.
 Sets the key encryption key properties on a disk object.
 
 ### [Set-AzureRmDiskUpdateDiskEncryptionKey](Set-AzureRmDiskUpdateDiskEncryptionKey.md)
-Sets the disk encryption key properties on on a disk update object.
+Sets the disk encryption key properties on a disk update object.
 
 ### [Set-AzureRmDiskUpdateKeyEncryptionKey](Set-AzureRmDiskUpdateKeyEncryptionKey.md)
 Sets the key encryption key properties on a disk update object.

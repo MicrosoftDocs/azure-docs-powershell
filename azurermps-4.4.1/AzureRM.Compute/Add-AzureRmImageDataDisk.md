@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Add-AzureRmImageDataDisk
 
 ## SYNOPSIS
-Adds a data disk to an image obejct.
+Adds a data disk to an image object.
 
 ## SYNTAX
 
