@@ -6,96 +6,49 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/21/19
+ms.date: 07/15/2019
 ---
 # Azure PowerShell contexts and persisting sessions
 
-Azure PowerShell uses an object called an _Azure Context_ to hold sign in information and persist it
-across multiple PowerShell sessions. These objects also make it easier to run Azure PowerShell cmdlets
-on multiple Azure accounts, switch quickly between accounts, and run background tasks.
+Azure PowerShell uses _Azure context_ objects to hold subscription information and authentication tokens. Contexts can be saved to allow sign in to persist between PowerShell sessions. Context objects are also used to run cmdlets against multiple accounts, switch between accounts, and run background tasks.
 
-This article covers the details of the information contained within an Azure Context, how contexts
-are preserved across multiple PowerShell sessions, managing contexts, and manually saving and specifying
-contexts on a per-command run.
+This article covers context management and selecting contexts to use in a PowerShell session or with individual cmdlets. To learn about using contexts for running background or parallel tasks, see [Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md).
 
-To learn about using contexts for running background or parallel tasks, see
-[Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md).
+## Accounts, subscriptions, and contexts
 
-<!-- TODO: Is this necessary? -->
-## Credentials and contexts
+Contexts and subscriptions are tightly bound together. Azure contexts are local representations of a subscription, so that Azure PowerShell doesn't need to communicate with the cloud when you switch subscriptions associated with a single account. In detail:
 
-The difference between _credentials_ and _contexts_ is subtle but important for working with Azure
-PowerShell in advanced scenarios. The most important difference between the two is that _credentials are
-used to sign in to Azure_, while _contexts represent a signed in account_. Each context is associated
-with exaction one set of credentials, and each set of credentials is associated with one context.
+* Your _account_ is used to sign in to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). In Azure PowerShell contexts, an account is either a user, an application ID, or a service principal.
+* _Subscriptions_ are collections of Azure resources associated with a _tenant_. An account can belong to multiple tenants, and each tenant can have multiple subscriptions. Tenant administrators manage which accounts have access to which subscriptions.
+* _Azure contexts_ are the local representation of a subscription. Contexts are PowerShell objects which reference the associated account, subscription, and tenant, then tie those values together with an authorization token. This token is what's used to authenticate commands run on the cloud.
+
+For more details on accounts, subscriptions, and tenants, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology).
 
 ## Change context autosave behavior
 
-By default, Azure PowerShell contexts are saved for use between PowerShell sessions. There are a few ways
-that this behavior can be modified:
+By default, Azure PowerShell contexts are saved for use between PowerShell sessions. To manage how contexts are saved:
 
-<!-- TODO: Confirm all of these behaviors -->
-* Sign in using `-Scope Process` with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount).
-  This creates a context that is valid for the current session _only_ and will not be saved, regardless of
+* Sign in using `-Scope Process` with `Connect-AzAccount`.
+  Contexts for this account are valid for the current session _only_ and will not be saved, regardless of
   the Azure PowerShell context autosave setting.
-* Sign out manually with the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) cmdlet.
-  This removes any stored account information for the current context _immediately_ and signs you out.
+* Sign out using `-Scope Process` with `Disconnect-AzAccount`.  
 * Disable context autosave with the [Disable-AzContextAutosave](/powershell/module/az.accounts/disable-azcontextautosave) cmdlet.
-  This will remove stored account information for the current context when the _current_ PowerShell session ends,
-  while keeping you signed in.
-* Context autosave can be explicitly (re)enabled with the [Enable-AzContextAutosave](/powershell/module/az.accounts/enable-azcontextautosave)
-  cmdlet. This will return Azure PowerShell to its default state where account information persists between sessions.
+  Disabling context autosave __doesn't__ clear any stored tokens.
+* Context autosave can be enabled with the [Enable-AzContextAutosave](/powershell/module/az.accounts/enable-azcontextautosave)
+  cmdlet. With autosave enabled, all of a user's contexts are stored locally for later PowerShell sessions.
+* Manually save contexts with [Save-AzContext](/powershell/module/az.accounts/save-azcontext) to be used in future PowerShell sessions.
 
-Each of these commands supports the `-Scope` parameter, which can take a value of `Process` to only apply
-to the current running process. This is most useful with `Disable-AzContextAutosave` when creating more
-than one context as part of a session.
-
-Context information is stored in the `$env:USERPROFILE\.Azure` directory on Windows, and on `$HOME/.azure`
-on other platforms. Tokens themselves are stored in a secure binary format, but other sensitive information
-such as subscription IDs and tenant IDs may still be exposed in this directory.
-
-> [!NOTE]
-> If you are disabling automatic sign in as part of a security policy, consider using more aggressive
-> or standard security practices first, such as decreasing authentication token timeout, restricting
-> Administrator privilges on the local machine, and using more than one local user account. Even without
-> context autosaving, sensitive data may be stored in the directory used by Azure PowerShell.
-
-## Manually manage contexts
-
-To create and manage contexts, you must be signed in to Azure. The `Connect-AzAccount` cmdlet sets the
-default context used by Azure PowerShell cmdlets, and allows you to access any tenants or subscriptions
-allowed by your credentials.
-
-To add a new context after sign-in, use [Set-AzContext](/powershell/module/Az.Accounts/Set-AzContext).
-This context can be named with the `-Name` argument to be easily retrieved later, and requires at least
-the `-Subscription` argument. The `-Subscription` value can either be a subscription ID, or the subscription
-name.
-
-This example adds a new context targeting the subscription `my-subscription-2`, using 
-the current context's tenant:
-
-```azurepowershell-interactive
-Set-AzContext -Subscription "my-subscription-2" -Name "subscription2"
-```
-
-If you don't provide a value for the `-Name` argument, a default name using the subscription name
-and ID is generated. Existing contexts can be renamed with the [Rename-AzContext](/powershell/module/az.accounts/rename-azcontext) cmdlet.
-
-To remove a context, use the [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext) cmdlet.
-To remove the context created in the last example:
-
-```azurepowershell-interactive
-Remove-AzContext -Name "subscription2"
-```
-
-<!-- TODO: Is this section needed here? Should content be reorganized? Should make sure that the behavior is correctly described. -->
-## Remove contexts and credentials
+> [!WARNING]
+> Disabling context autosave __doesn't__ clear any stored context information that was saved. To remove stored information, use the
+> [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext) cmdlet. For more on removing saved contexts, see
+> [Remove contexts and credentials](#remove-contexts-and-credentials)
 
 Each of these commands supports the `-Scope` parameter, which can take a value of `Process` to only apply
 to the current running process. For example, to ensure that newly created contexts aren't saved after exiting a PowerShell session:
 
 ```azurepowershell-interactive
-Disconnect-AzAccount "login@tenant"
+Disable-AzContextAutosave -Scope Process
+$context2 = Set-AzContext -Subscription "sub-id" -Tenant "other-tenant"
 ```
 
 Context information and tokens are stored in the `$env:USERPROFILE\.Azure` directory on Windows, and on `$HOME/.Azure`
@@ -104,22 +57,73 @@ this directory, through logs or unencrypted session information. To learn how to
 information, see the
 [Remove contexts and credentials](#remove-contexts-and-credentials) section.
 
-One of the primary uses of setting up multiple contexts is to change the current active subscription
-without needing to sign in or sign out of the active account. There are several ways to change to
-another context and run Azure cloud tasks from a different subscription.
+## Create, select, and manage contexts
 
-* Change the currently active context with [Select-AzContext](/powershell/module/az.accounts/select-azcontext).
-  By using the `-Scope` parameter of this command, you can set whether or not this is only valid for
-  the current PowerShell session (`Process`) or change to use the selected context as the default for
-  this and future sessions (`CurrentUser`).
-* Store the context object by using [Get-AzContext](/powershell/module/az.accounts/get-azcontext), and then
-  pass it on a per-command basis by using the `-DefaultProfile` (or `-AzContext`) parameter with any Azure
-  PowerShell cmdlet. For example, to get the context named "mysubscription" and create a new VM with
-  those credentials:
-<!-- TODO: Confirm that this is a correct invocation of New-AzVM -->
-  ```azurepowershell-interactive
-  $context = Get-AzContext -Name "mysubscription"
-  New-AzVM -Name "ExampleVM" -DefaultProfile $context 
+To create and update contexts, you must be signed in to Azure. Whenever you sign in to Azure with `Connect-AzAccount`, new contexts are created locally for use with Azure PowerShell. Each subscription for an account's default tenant has an associated context created for it.
+
+To get an existing context, use the [Get-AzContext](/powershell/module/az.accounts/Get-AzContext) cmdlet. All of the stored context information is available with the `-ListAvailable` argument. To get a specific context, use the `-Name` parameter. For example, to get the saved context for `subscription 1`:
+
+```azurepowershell-interactive
+$context = Get-Context -Name "subscription 1"
+```
+
+You change a PowerShell session's active context with the [Select-AzContext](/powershell/module/az.accounts/select-azcontext). This cmdlet can take either a context name or an object:
+
+```azurepowershell-interactive
+Select-AzContext -Name "subscription 1" # By name
+Get-AzContext -Name "subscription 1" | Select-AzContext # With context as input object
+```
+
+To avoid switching contexts for a whole PowerShell session, all Azure PowerShell commands support the `-AzContext`
+optional argument:
+
+```azurepowershell-interactive
+$context = Get-AzContext -Name "subscription 1"
+New-AzVM -Name ExampleVM -AzContext $context
+```
+
+You change the currently active context with the [Select-AzContext](/powershell/module/az.accounts/select-azcontext). Like many other account and context management commands in Azure PowerShell, `Select-AzContext` also supports the `-Scope` argument so that you can control how long the context is active. This lets you change a single session's active context without changing the default.
+
+To create a new context, use [Set-AzContext](/powershell/module/Az.Accounts/Set-AzContext). This command automatically sets the created context as the active context. If the new context doesn't exist in the store yet, a new context is automatically created for you and saved if context autosave is enabled.
+This context can be named with the `-Name` argument to be easily retrieved later, and requires at least
+the `-Subscription` argument. The `-Subscription` value can either be a subscription ID, or the subscription
+name.
+
+This example adds a new context targeting the subscription `sub2` for tenant `tenant2`:
+
+```azurepowershell-interactive
+Set-AzContext -Subscription "my-subscription-2" -Tenant "tenant2" -Name "subscription2"
+```
+
+If you don't provide a value for the `-Name` argument, a default name using the subscription name
+and ID is generated. Existing contexts can be renamed with the
+[Rename-AzContext](/powershell/module/az.accounts/rename-azcontext) cmdlet.
+
+The other main use of contexts is passing them to PowerShell jobs to run background commands. To learn about using contexts
+with PowerShell jobs, see [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md).
+
+## Remove contexts and credentials
+
+To clear stored contexts and credentials:
+
+* Sign out of an account with [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount).
+  You can sign out of any account either by account or context:
+
+  ```azurecli-interactive
+  Disconnect-AzAccount # Disconnect active account 
+  Disconnect-AzAccount -Username "user@contoso.com" # Disconnect by account name
+
+  Disconnect-AzAccount -ContextName "subscription2" # Disconnect by context name
+  Disconnect-AzAccount -AzureContext $contextObject # Disconnect using context object information
   ```
 
-The other major use of context scopes is in handling PowerShell jobs. This is described in detail in [Use Azure PowerShell with PowerShell jobs](using-psjobs.md).
+  Disconnecting always removes stored authentication tokens, and clears saved contexts if context autosave is enabled.
+* Use the [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext) cmdlet. This cmdlet is guaranteed to
+  always remove stored contexts and authentication tokens, and will also sign you out.
+* Remove a context by name with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext).
+
+## See also
+
+* [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md)
+* [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
+* [Az.Accounts reference](/powershell/module/az.accounts)
