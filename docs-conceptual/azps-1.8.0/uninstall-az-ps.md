@@ -1,7 +1,7 @@
 ---
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
-ms.date: 05/10/2019
+ms.date: 06/10/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
@@ -111,9 +111,9 @@ Uninstalling Az.AnalysisServices version 0.7.0
 ```
 
 > [!NOTE]
-> If this script can't match an exact dependent module version to uninstall, it won't uninstall _any_ version of that module. This is because there may be other versions
-> of `Az` on your system which rely on these modules. In this case, the versions of the module that couldn't be found will be listed, if any were installed. You can
-> then remove any old versions manually with `Uninstall-Module`.
+> If this script can't match an exact dependency with the same version to uninstall, it won't uninstall _any_ version of that dependecy. This is because there may be
+> other versions of the target module on your system which rely on these dependencies. In this case, the available versions of the dependency are listed.
+> You can then remove any old versions manually with `Uninstall-Module`.
 
 Run this command for every version of Azure PowerShell that you want to uninstall. For convenience, the following
 script will uninstall all versions of Az __except__ for the latest.
