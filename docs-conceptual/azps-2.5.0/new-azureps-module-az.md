@@ -12,7 +12,8 @@ ms.topic: conceptual
 
 Starting in December 2018, the Azure PowerShell Az module is in general release and now the intended
 PowerShell module for interacting with Azure. Az offers shorter commands, improved stability, and
-cross-platform support. Az also offers feature parity and an easy migration path from AzureRM.
+cross-platform support. Az also has feature parity with AzureRM, giving you an easy migration
+path.
 
 With the Az module, Azure PowerShell is now compatible with PowerShell 5.1 on Windows and PowerShell Core 6.x
 and later on all supported platforms - including Windows, macOS, and Linux.
@@ -92,11 +93,5 @@ modification while working towards a full migration to Az.
 
 ## Continued support for AzureRM
 
-The existing AzureRM module will no longer receive new cmdlets or features. However, AzureRM is still officially
-maintained and will get bug fixes up through at least December 2020.
-
-If you have concerns about whether or not the Az module is as fully-featured, tested, or production ready: All
-of the engineering work that went into AzureRM has now been focused on Az, including as much code reuse of the
-existing modules as was possible, and extensive testing to make the new modules feature-compatible. Moving
-onto Az should be influenced by your organization's schedule alone, without needing to wait on specific features
-to appear.
+AzureRM will no longer receive new cmdlets or features. However, the AzureRM module is still officially maintained
+and will get bug fixes through December 2020.
