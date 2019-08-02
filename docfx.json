@@ -523,13 +523,15 @@
                 "azurermps-*/**/*.md": "jasonsha",
                 "azuresmps-*/**/*.md": "jasonsha",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md": "deveshguha"
+                "azuredmps-*/**/*.md": "deveshguha",
+                "azps-*/**/*.md": "dcaro"
             },
             "author": {
                 "azurermps-*/**/*.md": "JasonRShaver",
                 "azuresmps-*/**/*.md": "JasonRShaver",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md": "deveshguha"
+                "azuredmps-*/**/*.md": "deveshguha",
+                "azps-*/**/*.md": "dcaro"
             },
             "ms.manager": {
                 "azurermps-*/**/*.md": "carmonm",
@@ -611,11 +613,12 @@
                 "az*-*/Az*.Websites/*.md": "app-service"
             },
             "ms.topic": {
+                "azps-*/**/*.md": "reference",
                 "azuredmps-*/**/*.md": "reference",
                 "azurermps-*/**/*.md": "reference",
                 "azuresmps-*/**/*.md": "reference",
                 "azurestackps-*/**/*.md": "reference",
-                "docs-conceptual/**/*.md": "article"
+                "docs-conceptual/**/*.md": "conceptual"
             },
             "ms.date": {
                 "azuredmps-*/**/*.md": "09/28/2018",
