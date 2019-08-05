@@ -37,25 +37,23 @@ There are no additional requirements for Azure PowerShell when using PowerShell 
 
 ## Install the Azure PowerShell module
 
-> [!IMPORTANT]
->
-> You can have both the AzureRM and Az modules installed at the same time. If you have both modules installed, __don't enable aliases__.
-> Enabling aliases will cause conflicts between AzureRM cmdlets and Az command aliases, and could cause unexpected behavior.
-> It's recommended that before installing the Az module, you uninstall AzureRM. You can always uninstall AzureRM or enable aliases
-> at any time. To learn about the AzureRM command aliases, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
-> For uninstall instructions, see [Uninstall the AzureRM module](uninstall-az-ps.md#uninstall-the-azurerm-module). 
+> [!WARNING]
+> You __can't__ have both the AzureRM and Az modules installed for PowerShell 5.1 for Windows at the same time. If you need to keep AzureRM available
+> on your system, install the Az module for PowerShell Core 6.x or later. To do this,
+> [install PowerShell Core 6.x or later](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows) 
+> and then follow these instructions in a PowerShell Core terminal.
 
-To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
-run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
-
-```powershell-interactive
-Install-Module -Name Az -AllowClobber
-```
-
-If you don't have access to administrator privileges, you can install for the current user by adding the `-Scope` argument.
+The recommended install method is to only install for the active user:
 
 ```powershell-interactive
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+If you want to install for all users on a system, this requires administrator privileges. From an elevated PowerShell session either
+run as administrator or with the `sudo` command on macOS or Linux:
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope AllUsers
 ```
 
 By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet. The
@@ -76,6 +74,34 @@ Answer `Yes` or `Yes to All` to continue with the installation.
 The Az module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
 the available Azure Resource Manager modules, and makes their cmdlets available for use.
 
+## Troubleshooting
+
+Here are some common problems seen when installing the Azure PowerShell module. If you experience a problem not listed here,
+please [file an issue on GitHub](https://github.com/azure/azure-powershell/issues).
+
+### Proxy blocks connection
+
+If you get errors from `Install-Module` that indicate the PowerShell Gallery is unreachable, you may be behind
+a proxy. Different operating systems will have different requirements for configuring a system-wide proxy, which
+are not covered in detail here. Contact your system administrator for your proxy settings and how to configure
+them for your OS.
+
+PowerShell itself may not be configured to use this proxy automatically. With PowerShell 5.1 and later, configure
+the proxy to use for a PowerShell session with the following command:
+
+```powershell
+(New-Object System.Net.WebClient).Proxy.Credentials = `
+  [System.Net.CredentialCache]::DefaultNetworkCredentials
+```
+
+If your operating system credentials are configured correctly, this will route PowerShell requests through the proxy.
+In order to have this setting persist between sessions, add the command to a
+[PowerShell profile](/powershell/module/microsoft.powershell.core/about/about_profiles).
+
+In order to install the package, your proxy needs to allow HTTPS connections to the following address:
+
+* `https://www.powershellgallery.com`
+
 ## Sign in
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
@@ -95,7 +121,7 @@ across PowerShell sessions, see [Persist user credentials across PowerShell sess
 
 ## Update the Azure PowerShell module
 
-Because of how the Az module is package, the [Update-Module](/powershell/module/powershellget/update-module)
+Because of how the Az module is packaged, the [Update-Module](/powershell/module/powershellget/update-module)
 command won't update your installation correctly. Az is technically a meta-module, encompassing all of
 the submodules that contain cmdlets to interact with Azure services. That means that to update the
 Azure PowerShell module, you will need to __reinstall__, rather than just __update__. This is done in the

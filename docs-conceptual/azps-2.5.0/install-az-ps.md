@@ -43,17 +43,17 @@ There are no additional requirements for Azure PowerShell when using PowerShell 
 > [install PowerShell Core 6.x or later](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows) 
 > and then follow these instructions in a PowerShell Core terminal.
 
-To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
-run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
-
-```powershell-interactive
-Install-Module -Name Az -AllowClobber
-```
-
-If you don't have access to administrator privileges, you can install for the current user by adding the `-Scope` argument.
+The recommended install method is to only install for the active user:
 
 ```powershell-interactive
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+If you want to install for all users on a system, this requires administrator privileges. From an elevated PowerShell session either
+run as administrator or with the `sudo` command on macOS or Linux:
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope AllUsers
 ```
 
 By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet. The
