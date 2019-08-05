@@ -6,33 +6,33 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 07/15/2019
+ms.date: 08/05/2019
 ---
 
 # Run Azure PowerShell cmdlets in PowerShell Jobs
 
 PowerShell supports asynchronous tasks through PowerShell Jobs. Azure PowerShell depends on connecting to the
-Azure cloud and waiting for responses, so running Azure PowerShell cmdlets in your main PowerShell session blocks it.
-Jobs allow you to run cmdlets in the background or easily do multiple Azure tasks at once.
+cloud and waiting for responses, so running Azure PowerShell cmdlets blocks your PowerShell session.
+Powershell Jobs allow you to run cmdlets in the background or do multiple tasks at once.
 
-This article is an overview of what you need to pass to PowerShell Jobs to have Azure PowerShell cmdlets work
-correctly and how to check for job completion. To learn more about PowerShell Jobs, see
+This article is a brief overview of how to run Azure PowerShell cmdlets in PowerShell Jobs and check for completion. To learn more about PowerShell Jobs, see
 [About PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
-## Context Persistence and PowerShell Jobs
+## Azure contexts with PowerShell jobs
 
-Since PowerShell Jobs are run as separate processes, your Azure credentials must be shared with them. You can pass credentials to a job with:
+Since PowerShell Jobs are run as separate processes, your Azure credentials must be shared with them. Credentials are passed
+as [Azure contexts](context-persistence.md) in the following ways:
 
-* Automatic context persistence, which is enabled by default and preserves your sign in information across multiple sessions.
-  The current context is passed to the new process started by `Start-Job`:
+* Automatic context persistence, which is enabled by default and preserves your sign-in information across multiple sessions.
+  With context persistence enabled, the current context is passed to the new process started by `Start-Job`:
 
   ```azurepowershell-interactive
+  Enable-AzContextAutosave # Enables context autosave if not already on
   $creds = Get-Credential
   $job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin } -ArgumentList $creds
   ```
 
-* [Azure contexts](context-persistence.md), which can be explicitly passed to a command with the `-AzContext` parameter.
-  Using this argument runs the job against that context, instead of the currently active one.
+* Provide the `-AzContext` parameter. Using this argument runs the job against the provided context:
 
   ```azurepowershell-interactive
   $creds = Get-Credential
@@ -42,20 +42,36 @@ Since PowerShell Jobs are run as separate processes, your Azure credentials must
 
   If context persistence is disabled, the `-AzContext` argument is required.
 
+* Some cmdlets that start long-running operations offer the `-AsJob` switch to
+  automatically start the cmdlet in a PowerShell Job:
+
+  ```azurepowershell-interactive
+  $creds = Get-Credential
+  $job = New-AzVM -Name MyVm -Credential $creds -AsJob
+  ```
+
+  This switch works whether or not context persistence is enabled.
+
 You can check the status of a running job with the [Get-Job](/powershell/module/microsoft.powershell.core/get-job) cmdlet. To
-get the result of a job, use the [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job) cmdlet. `Receive-Job`
-returns the result of the command that was run in the job, if it's completed.
+get the output from a job so far, use the [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job) cmdlet.
 
-> [!IMPORTANT]
-> To check the state of a running job on the cloud, use `Get-Job` to see the job status and any
-> `Get-` cmdlets associated with the type of resource being modified to check its current status.
-
-## Starting PowerShell jobs with `-AsJob`
-
-As a convenience, Azure PowerShell also provides an `-AsJob` switch on some long-running cmdlets. This switch automatically creates a job and returns a job object, rather than the standard cmdlet repsonse.
+To check how an operation is progressing on Azure, use the `Get-` cmdlets associated with the
+type of resource being modified by the job:
 
 ```azurepowershell-interactive
 $creds = Get-Credential
-$job = New-AzVM -Name MyVm -Credential $creds -AsJob
-Receive-Job $job
+$context = Get-AzContext -Name 'mycontext'
+$vmName = "MyVm"
+
+$job = Start-Job { param($context, $vmName, $vmadmin) New-AzVM -Name $vmName -AzContext $context -Credential $vmadmin} -ArgumentList $context,$vmName,$creds }
+
+Get-Job $job
+Get-AzVM -Name $vmName
 ```
+
+## See Also
+
+* [Azure PowerShell contexts](context-persistence.md)
+* [About PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs)
+* [Get-Job reference](/powershell/module/microsoft.powershell.core/get-job)
+* [Receive-Job reference](/powershell/module/microsoft.powershell.core/receive-job)
