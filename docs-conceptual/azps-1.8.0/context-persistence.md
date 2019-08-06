@@ -8,9 +8,9 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/05/2019
 ---
-# Azure PowerShell contexts and persisting sessions
+# Azure PowerShell contexts and cross-session credentials
 
-Azure PowerShell uses _Azure context_ objects to hold subscription information and authentication tokens. Context objects are used to run cmdlets against specific
+Azure PowerShell uses _Azure context_ objects to hold some sign-in information and authentication tokens. Context objects are used to run cmdlets against specific
 subscriptions and switch between accounts. Contexts are also used to store sign in information across multiple PowerShell sessions, and run background tasks.
 
 This article covers context management and selecting contexts to use in a PowerShell session or with individual cmdlets.
@@ -24,58 +24,63 @@ communicate with the cloud when you switch subscriptions associated with a singl
 * Your _account_ is used to sign in to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). In Azure PowerShell contexts,
   an account is either a user, an application ID, or a service principal.
 * _Subscriptions_ are collections of Azure resources associated with a _tenant_. An account can belong to multiple tenants, and each tenant can have
-  multiple subscriptions. Tenant administrators manage which accounts have access to which subscriptions.
-* _Azure contexts_ are the local representation of a subscription. Contexts are PowerShell objects which reference the associated account, subscription,
-  and tenant, then tie those values together with an authorization token. This token is what's used to authenticate commands run on the cloud.
+  multiple subscriptions. Tenant administrators manage which accounts have access to which subscriptions. Tenants are also often referred to as "Organizations."
+* _Azure contexts_ are objects representing a subscription sign-in. Contexts contain a an account, subscription, and tenant to identify a
+  user. Context objects also have an authentication token for connecting to Azure. Contexts don't store any passwords.
 
 For more details on accounts, subscriptions, and tenants, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology).
+Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session.
 
-## Create, select, and manage contexts
+## Create contexts and get information
 
-To create and update contexts, you must be signed in to Azure. Whenever you sign in to Azure with `Connect-AzAccount`, new contexts are created locally for use with Azure PowerShell. Each subscription for an account's default tenant has an associated context created for it.
+Contexts for each of your subscriptions are created automatically when you sign in to Azure with `Connect-AzAccount`. This is the only way contexts can be created -
+they are managed entirely by the sign-in process and Azure PowerShell. The return value of `Connect-AzAccount` is the default context used for the rest of the
+PowerShell session. One context is created for every subscription available to the signed in account.
 
-To get an existing context, use the [Get-AzContext](/powershell/module/az.accounts/Get-AzContext) cmdlet. All of the stored context information is available with the `-ListAvailable` argument. To get a specific context, use the `-Name` parameter. For example, to get the saved context for `subscription 1`:
+Contexts are inspected with the [Get-AzContext](...) cmdlet. All of the available contexts can be listed with `-ListAvailable`, or a specific context can be
+inspected with the `-Name` argument:
+
+```azurepowershell-interactive
+Get-AzContext -ListAvailable
+```
+
+A specific context can be inspected with `-Name`:
 
 ```azurepowershell-interactive
 $context = Get-Context -Name "subscription 1"
 ```
 
-You change a PowerShell session's active context with the [Select-AzContext](/powershell/module/az.accounts/select-azcontext). This cmdlet can take either a context name or an object:
+## Change the active context
+
+You change a PowerShell session's active context with [Set-AzContext](/powershell/module/az.accounts/set-azcontext).
+This cmdlet can take a context name, context object, or a tenant and subscription pair:
 
 ```azurepowershell-interactive
-Select-AzContext -Name "subscription 1" # By name
-Get-AzContext -Name "subscription 1" | Select-AzContext # With context as input object
+Set-AzContext -Name "subscription 1" # By name
+Get-AzContext -Name "subscription 1" | Set-AzContext # With context as input object
+Set-AzContext -Tenant "TenantID_or_name" -Subscription "SubID_or_name" # By tenant/subscription pair
 ```
 
-To avoid switching contexts for a whole PowerShell session, all Azure PowerShell commands support the `-AzContext`
-optional argument:
+Like many other account and context management commands in Azure PowerShell, `Select-AzContext` also supports the `-Scope` argument
+so that you can control how long the context is active. This lets you change a single session's active context without changing the
+default:
+
+```azurepowershell-interactive
+Set-AzContext -Name "subscription 1" -Scope Process
+```
+
+To avoid switching contexts for a whole PowerShell session, all Azure PowerShell commands can be run against a given
+context with the `-AzContext` argument:
 
 ```azurepowershell-interactive
 $context = Get-AzContext -Name "subscription 1"
 New-AzVM -Name ExampleVM -AzContext $context
 ```
 
-You change the currently active context with the [Select-AzContext](/powershell/module/az.accounts/select-azcontext). Like many other account and context management commands in Azure PowerShell, `Select-AzContext` also supports the `-Scope` argument so that you can control how long the context is active. This lets you change a single session's active context without changing the default.
+The other main use of contexts with Azure PowerShell cmdlets is to run background commands. To learn more about running
+PowerShell Jobs using Azure PowerShell, see [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md).
 
-To create a new context, use [Set-AzContext](/powershell/module/Az.Accounts/Set-AzContext). This command automatically sets the created context as the active context. If the new context doesn't exist in the store yet, a new context is automatically created for you and saved if context autosave is enabled.
-This context can be named with the `-Name` argument to be easily retrieved later, and requires at least
-the `-Subscription` argument. The `-Subscription` value can either be a subscription ID, or the subscription
-name.
-
-This example adds a new context targeting the subscription `sub2` for tenant `tenant2`:
-
-```azurepowershell-interactive
-Set-AzContext -Subscription "my-subscription-2" -Tenant "tenant2" -Name "subscription2"
-```
-
-If you don't provide a value for the `-Name` argument, a default name using the subscription name
-and ID is generated. Existing contexts can be renamed with the
-[Rename-AzContext](/powershell/module/az.accounts/rename-azcontext) cmdlet.
-
-The other main use of contexts is passing them to PowerShell jobs to run background commands. To learn about using contexts
-with PowerShell jobs, see [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md).
-
-## Change context autosave behavior
+## Save contexts across PowerShell sessions
 
 By default, Azure PowerShell contexts are saved for use between PowerShell sessions. To manage how contexts are saved:
 
@@ -126,7 +131,8 @@ To clear stored contexts and credentials:
   Disconnecting always removes stored authentication tokens, and clears saved contexts if context autosave is enabled.
 * Use the [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext) cmdlet. This cmdlet is guaranteed to
   always remove stored contexts and authentication tokens, and will also sign you out.
-* Remove a context by name with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext).
+* Remove a context by name with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext). Note that this context may be
+  recreated the next time you sign in.
 
 ## See also
 
