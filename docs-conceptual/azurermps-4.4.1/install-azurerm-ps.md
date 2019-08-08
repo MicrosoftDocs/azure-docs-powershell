@@ -131,7 +131,7 @@ feedback from the command line, use the `Send-Feedback` cmdlet.
 |OS Version|Install instructions|
 |---|---|
 |I have Windows 10 or Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
-|I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
+|I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/download/details.aspx?id=54616)|
 |I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
 ### <div id="helpmechoose"/>Checking the version of Azure PowerShell

@@ -40,7 +40,7 @@ There are no additional requirements for Azure PowerShell when using PowerShell 
 > [!WARNING]
 > You __can't__ have both the AzureRM and Az modules installed for PowerShell 5.1 for Windows at the same time. If you need to keep AzureRM available
 > on your system, install the Az module for PowerShell Core 6.x or later. To do this,
-> [install PowerShell Core 6.x or later](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows) 
+> [install PowerShell Core 6.x or later](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) 
 > and then follow these instructions in a PowerShell Core terminal.
 
 The recommended install method is to only install for the active user:
