@@ -2,7 +2,7 @@
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
 * Added wildcard support to Get cmdlets for Az.Compute and Az.Network
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
@@ -106,7 +106,7 @@
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
 * Added wildcard support to Get cmdlets for Az.Compute and Az.Network
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
@@ -163,7 +163,7 @@
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
 * Added wildcard support to Get cmdlets for Az.Compute and Az.Network
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation

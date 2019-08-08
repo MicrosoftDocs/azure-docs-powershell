@@ -111,7 +111,7 @@ If your account is associated with more than one tenant, sign-in requires the us
 when connecting. This parameter will work with any other sign-in method. When logging in, this parameter value
 can either be the Azure object ID of the tenant (Tenant ID) or the fully qualified domain name of the tenant.
 
-If you're a [Cloud Solution Provider (CSP)](https://azure.microsoft.com/en-us/offers/ms-azr-0145p/), the `-TenantId` value **must** be a tenant ID.
+If you're a [Cloud Solution Provider (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/), the `-TenantId` value **must** be a tenant ID.
 
 ```azurepowershell-interactive
 Connect-AzAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
