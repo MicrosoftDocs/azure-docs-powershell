@@ -54,7 +54,7 @@ For more information about managed identities for Azure resources, see
 
 ## Sign in as a Cloud Solution Provider (CSP)
 
-A [Cloud Solution Provider (CSP)](https://azure.microsoft.com/en-us/offers/ms-azr-0145p/) sign-in requires the use of `-TenantId`. Normally, this parameter can be provided as either a tenant ID or a domain name. However, for CSP sign-in, it must be provided a **tenant ID**.
+A [Cloud Solution Provider (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/) sign-in requires the use of `-TenantId`. Normally, this parameter can be provided as either a tenant ID or a domain name. However, for CSP sign-in, it must be provided a **tenant ID**.
 
 ```azurepowershell-interactive
 Connect-AzureRmAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'

@@ -50,7 +50,7 @@ To keep up with the latest Azure features in PowerShell, you should migrate to t
 possible. If you're not ready to install the Az module as a replacement for AzureRM, you have a couple of
 options available to experiment with Az:
 
-* Use a `PowerShell` environment with [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
+* Use a `PowerShell` environment with [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
   Azure Cloud Shell is a browser-based shell environment which comes with the Az module installed and `Enable-AzureRM`
   compatibility aliases enabled.
 * Keep the AzureRM module installed with PowerShell 5.1 for Windows, but install the Az module for PowerShell Core 6.x
