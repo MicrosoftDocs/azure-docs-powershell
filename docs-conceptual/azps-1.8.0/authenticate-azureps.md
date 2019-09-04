@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/20/2019
+ms.date: 09/04/2019
 ---
 # Sign in with Azure PowerShell
 
