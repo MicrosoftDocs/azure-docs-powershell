@@ -45,14 +45,14 @@ Build a Visual Studio web project with "Debug" configuration (meaning use Web.De
 PS C:\> Publish-AzureWebsiteProject -Name site1 -Package .\WebApplication1.zip
 ```
 
-Publish a WebDeploy Pacakge .zip file to a Microsoft Azure Web Site using WebDeploy.
+Publish a WebDeploy Package .zip file to a Microsoft Azure Web Site using WebDeploy.
 
 ### Example 3
 ```
 PS C:\> Publish-AzureWebsiteProject -Name site1 -Package .\WebApplication1
 ```
 
-Publish a WebDeploy Pacakge folder to a Microsoft Azure Web Site using WebDeploy.
+Publish a WebDeploy Package folder to a Microsoft Azure Web Site using WebDeploy.
 
 ### Example 4
 ```
