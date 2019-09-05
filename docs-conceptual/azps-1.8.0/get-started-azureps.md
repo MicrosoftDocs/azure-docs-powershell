@@ -41,8 +41,10 @@ the [Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) cmdlet
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-You'll get a token to use on https://microsoft.com/devicelogin. Open this page in your browser and enter the token, then sign in with your Azure
-account credentials and authorize Azure PowerShell. 
+In PowerShell 5.1 environments, you'll get a sign-in dialog to provide a username and password for your Azure
+account. On every other version of PowerShell, you'll get a token to use on [https://microsoft.com/devicelogin].
+Open this page in your browser and enter the token, then sign in with your Azure account credentials and
+authorize Azure PowerShell.
 
 After signing in, you'll see information indicating which of your Azure subscriptions is active. If you have multiple Azure subscriptions in your
 account and want to select a different one, get your available subscriptions with [Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription) and use the [Set-AzContext](/powershell/module/az.accounts/set-azcontext) cmdlet with your subscription ID.

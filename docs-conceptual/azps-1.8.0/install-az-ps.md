@@ -113,19 +113,19 @@ Connect-AzAccount
 
 > [!NOTE]
 >
-> If you've disabled module autoloading, you need to manually import the module with `Import-Module Az`. Because of
+> If you've disabled module autoloading, manually import the module with `Import-Module Az`. Because of
 > the way the module is structured, this can take a few seconds.
 
-You'll need to repeat these steps for every new PowerShell session you start. To learn how to persist your Azure sign-in
-across PowerShell sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
+You'll need to repeat these steps for every new PowerShell session you start. To learn how to persist your
+Azure sign-in across PowerShell sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
 ## Update the Azure PowerShell module
 
 Because of how the Az module is packaged, the [Update-Module](/powershell/module/powershellget/update-module)
-command won't update your installation correctly. Az is technically a meta-module, encompassing all of
-the submodules that contain cmdlets to interact with Azure services. That means that to update the
-Azure PowerShell module, you will need to __reinstall__, rather than just __update__. This is done in the
-same way as installing, but you may need to add the `-Force` argument:
+command won't update your installation correctly. When you install the Az module, it actually collects
+and installs all of its dependent submodules, and which provide the cmdlets for each service.
+That means that to update the Azure PowerShell module, you will need to __reinstall__, rather than
+just __update__. This is done in the same way as installing, but you may need to add the `-Force` argument:
 
 ```powershell
 Install-Module -Name Az -AllowClobber -Force
