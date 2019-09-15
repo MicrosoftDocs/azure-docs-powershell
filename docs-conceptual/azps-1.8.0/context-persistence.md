@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/05/2019
+ms.date: 09/15/2019
 ---
 # Azure PowerShell contexts and cross-session credentials
 
