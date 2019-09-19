@@ -32,7 +32,7 @@ landingContent:
             url: get-started-azureps.md
           - text: Learn about PowerShell concepts
             url: /powershell/scripting/overview
-      - linkListType: how-to
+      - linkListType: how-to-guide
         links:
           - text: Authenticate with Azure PowerShell
             url: authenticate-azureps.md
@@ -44,7 +44,7 @@ landingContent:
             url: formatting-output.md
   - title: Mange Azure resources
     linkLists:
-      - linkListType: conceptual
+      - linkListType: concept
         links:
           - text: Sample scripts for virtual machines
             url: /azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json
@@ -68,7 +68,7 @@ landingContent:
         links:
           - text: About the Azure PowerShell 'Az' module
             url: new-azureps-module-az.md
-      - linkListType: conceptual
+      - linkListType: concept
         links:
           - text: Migrate from AzureRM to Az
             url: migrate-from-azurerm-to-az.md
