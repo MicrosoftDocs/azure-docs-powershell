@@ -82,8 +82,6 @@ landingContent:
             url: /powershell/module/?view=azps-1.8.0
           - text: Release notes
             url: release-notes-azureps.md
-          - text: Breaking changes in Az 2.0.0
-            url: migrate-az-2.0.0.md
   - title: Other Azure PowerShell modules
     linkLists:
       - linkListType: overview
