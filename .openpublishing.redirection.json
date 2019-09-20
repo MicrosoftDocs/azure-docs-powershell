@@ -341,12 +341,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs-conceptual/azurermps-2.3.0/index.md",
-      "redirect_url": "/powershell/azure/azurerm/overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs-conceptual/azurermps-3.7.0/index.md",
+      "source_path": "docs-conceptual/azurermps-2.5.0/index.md",
       "redirect_url": "/powershell/azure/azurerm/overview",
       "redirect_document_id": false
     },
@@ -391,8 +386,8 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azps-1.8.0/index.md",
-        "redirect_url": "/powershell/azure/overview",
+        "source_path": "docs-conceptual/azps-1.8.0/overview.md",
+        "redirect_url": "/powershell/azure",
         "redirect_document_id": false
     },
     {
@@ -421,32 +416,32 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azps-2.5.0/index.md",
-        "redirect_url": "/powershell/azure/overview",
+        "source_path": "docs-conceptual/azps-2.6.0/overview.md",
+        "redirect_url": "/powershell/azure",
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azps-2.5.0/install-azurerm-ps.md",
+        "source_path": "docs-conceptual/azps-2.6.0/install-azurerm-ps.md",
         "redirect_url": "/powershell/azure/install-az-ps",
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azps-2.5.0/uninstall-azurerm-ps.md",
+        "source_path": "docs-conceptual/azps-2.6.0/uninstall-azurerm-ps.md",
         "redirect_url": "/powershell/azure/uninstall-az-ps",
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azps-2.5.0/other-install.md",
+        "source_path": "docs-conceptual/azps-2.6.0/other-install.md",
         "redirect_url": "/powershell/azure/install-az-ps",
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azps-2.5.0/azurerm-ps-in-docker.md",
+        "source_path": "docs-conceptual/azps-2.6.0/azurerm-ps-in-docker.md",
         "redirect_url": "/powershell/azure/install-az-ps",
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azps-2.5.0/install-azurermps-maclinux.md",
+        "source_path": "docs-conceptual/azps-2.6.0/install-azurermps-maclinux.md",
         "redirect_url": "/powershell/azure/install-az-ps",
         "redirect_document_id": false
     },
