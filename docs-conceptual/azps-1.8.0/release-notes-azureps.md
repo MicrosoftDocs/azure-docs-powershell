@@ -1,3 +1,13 @@
+---
+title: Azure PowerShell release notes
+description: Learn about all of the latest updates to the Azure PowerShell modules.
+author: sptramer
+ms.author: sttramer
+manager: carmonm
+ms.devlang: powershell
+ms.topic: conceptual
+ms.date: 04/30/2019
+---
 ## 1.8.0 - April 2019
 ### Highlights since the last major release
 * General availability of `Az` module
