@@ -21,13 +21,13 @@ Remove-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAzureRmApiManagementApi** cmdlet removes an existing API.
+The **Remove-AzureRmApiManagementApi** cmdlet removes an existing API.
 
 ## EXAMPLES
 
 ### Example 1: Remove an API
 ```
-PS C:\>Remove-AzureRmAzureRmApiManagementApi -Context $ApiMgmtContext -ApiId "0123456789"
+PS C:\>Remove-AzureRmApiManagementApi -Context $ApiMgmtContext -ApiId "0123456789"
 ```
 
 This command removes the API with the specified ID.

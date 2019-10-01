@@ -28,14 +28,14 @@ Remove-AzureRmApiManagementApiRelease -InputObject <PsApiManagementApiRelease> [
 
 ## DESCRIPTION
 
-The **Remove-AzureRmAzureRmApiManagementApiRelease** cmdlet removes an existing API Release.
+The **Remove-AzureRmApiManagementApiRelease** cmdlet removes an existing API Release.
 
 ## EXAMPLES
 
 ### Example 1: Remove an API Release
 ```powershell
 PS C:\>$apimContext = New-AzureRmApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
-PS C:\>Remove-AzureRmAzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
+PS C:\>Remove-AzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
 ```
 
 This command removes the API Release with the specified ApiId and ReleaseId.

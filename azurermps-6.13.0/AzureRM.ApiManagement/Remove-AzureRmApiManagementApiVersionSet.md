@@ -28,7 +28,7 @@ Remove-AzureRmApiManagementApiVersionSet -InputObject <PsApiManagementApiVersion
 
 ## DESCRIPTION
 
-The **Remove-AzureRmAzureRmApiManagementApiVersionSet** cmdlet removes an existing API Version Set.
+The **Remove-AzureRmApiManagementApiVersionSet** cmdlet removes an existing API Version Set.
 
 ## EXAMPLES
 
