@@ -573,6 +573,7 @@
                 "az*-*/Az*.IotCentral/*.md": "iot-central",
                 "az*-*/Az*.IotHub/*.md": "iot-hub",
                 "az*-*/Az*.KeyVault/*.md": "key-vault",
+                "az*-*/Az*.Kusto/*.md": "data-explorer",
                 "az*-*/Az*.LogicApp/*.md": "logic-apps",
                 "az*-*/Az*.MachineLearning*/*.md": "machine-learning",
                 "az*-*/Az*.ManagedServiceIdentity*/*.md": "active-directory",
@@ -647,10 +648,11 @@
                 "azps-*/**/*.md": true
             },
             "searchScope": {
-               "azps-2.7.0/Az.DataLakeAnalytics/**/*.md": ["Azure","Azure Data Lake Analytics"],
-               "azps-2.7.0/Az.DataShare**/*.md": ["Azure","Azure Data Share"],
-               "azps-2.7.0/Az.HDInsight/**/*.md": ["Azure","Azure HDInsight"],
-               "azps-2.7.0/Az.StreamAnalytics**/*.md": ["Azure","Stream Analytics"]
+               "az*-*/Az*.DataLakeAnalytics/*.md": ["Azure","Azure Data Lake Analytics"],
+               "az*-*/Az*.DataShare/*.md": ["Azure","Azure Data Share"],
+               "az*-*/Az*.HDInsight/*.md": ["Azure","Azure HDInsight"],
+               "az*-*/Az*.Kusto/*.md":  ["Azure","Kusto","Azure Data Explorer"],
+               "az*-*/Az*.StreamAnalytics/*.md": ["Azure","Stream Analytics"]
             }
         },
         "globalMetadata": {
