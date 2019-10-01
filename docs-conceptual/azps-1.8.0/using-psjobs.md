@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/05/2019
+ms.date: 10/01/2019
 ---
 
 # Run Azure PowerShell cmdlets in PowerShell Jobs

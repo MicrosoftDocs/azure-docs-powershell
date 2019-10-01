@@ -10,35 +10,37 @@ ms.date: 09/15/2019
 ---
 # Azure PowerShell contexts and cross-session credentials
 
-Azure PowerShell uses _Azure context_ objects to hold some sign-in information and authentication tokens. Context objects are used to run cmdlets against specific
-subscriptions and switch between accounts. Contexts are also used to store sign in information across multiple PowerShell sessions, and run background tasks.
+Azure PowerShell uses _Azure context_ objects to hold some sign-in information and authentication tokens. If you have more than one subscription, you use Azure contexts
+to select the active subscription to run commands again. Contexts are also used to store sign in information across multiple PowerShell sessions, and run background tasks.
 
-This article covers context management and selecting contexts to use in a PowerShell session or with individual cmdlets.
-To learn about using contexts for running background or parallel tasks, see [Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md).
+This article covers context management and switching the active context, not the direct management of subscriptions or accounts. If you're looking to manage users, subscriptions, tenants,
+or other account information, see the [Azure Active Directory](/azure/active-directory) documentation. To learn about using contexts for running background or
+parallel tasks, see [Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md).
 
 ## Accounts, subscriptions, and contexts
 
 Contexts and subscriptions are tightly bound together. Azure contexts are local representations of a subscription, so that Azure PowerShell doesn't need to
 communicate with the cloud when you switch subscriptions associated with a single account. In detail:
 
-* Your _account_ is used to sign in to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). In Azure PowerShell contexts,
-  an account is either a user, an application ID, or a service principal.
-* _Subscriptions_ are collections of Azure resources associated with a _tenant_. An account can belong to multiple tenants, and each tenant can have
-  multiple subscriptions. Tenant administrators manage which accounts have access to which subscriptions. Tenants are also often referred to as "Organizations."
-* _Azure contexts_ are objects representing a subscription sign-in. Contexts contain a an account, subscription, and tenant to identify a
-  user. Context objects also have an authentication token for connecting to Azure. Contexts don't store any passwords.
+* Your _account_ is used to sign in to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Azure contexts treat users, application IDs,
+  and service principals the same.
+* _Subscriptions_ are service agreements with Microsoft to create and run Azure resources, and are associated with a _tenant_. An account can belong to multiple
+  tenants, and each tenant can have multiple subscriptions. Tenant administrators manage which accounts have access to which subscriptions.
+  Tenants are often referred to as "Organizations" in documentation or when working with Active Directory.
+* _Azure contexts_ are PowerShell objects representing a subscription sign-in. Contexts contain a an account, subscription, and tenant to identify a
+  user. Context objects also have an authentication token for connecting to Azure services. Contexts don't store any passwords.
 
-For more details on accounts, subscriptions, and tenants, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology).
+For more details, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology).
 Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session.
 
-## Create contexts and get information
+When you sign in with `Connect-AzAccount`, a context is created for each subscription associated with the signed-in user. Most users will only ever
+have a single context to work with, including service principals and other limited-access identities. The return value of `Connect-AzAccount` is the
+default context used for the rest of the PowerShell session.
 
-Contexts for each of your subscriptions are created automatically when you sign in to Azure with `Connect-AzAccount`. This is the only way contexts can be created -
-they are managed entirely by the sign-in process and Azure PowerShell. The return value of `Connect-AzAccount` is the default context used for the rest of the
-PowerShell session. One context is created for every subscription available to the signed in account.
+## Get context information
 
-Contexts are inspected with the [Get-AzContext](...) cmdlet. All of the available contexts can be listed with `-ListAvailable`, or a specific context can be
-inspected with the `-Name` argument:
+Contexts are inspected with the [Get-AzContext](/powershell/module/az.accounts/get-azcontext) cmdlet. All of the available contexts can be
+listed with `-ListAvailable`:
 
 ```azurepowershell-interactive
 Get-AzContext -ListAvailable
@@ -61,7 +63,7 @@ Get-AzContext -Name "subscription 1" | Set-AzContext # With context as input obj
 Set-AzContext -Tenant "TenantID_or_name" -Subscription "SubID_or_name" # By tenant/subscription pair
 ```
 
-Like many other account and context management commands in Azure PowerShell, `Select-AzContext` also supports the `-Scope` argument
+Like many other account and context management commands in Azure PowerShell, `Set-AzContext` also supports the `-Scope` argument
 so that you can control how long the context is active. This lets you change a single session's active context without changing the
 default:
 
