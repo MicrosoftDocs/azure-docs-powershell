@@ -15,8 +15,8 @@ PowerShell supports asynchronous tasks through PowerShell Jobs. Azure PowerShell
 cloud and waiting for responses, so running Azure PowerShell cmdlets blocks your PowerShell session.
 Powershell Jobs allow you to run cmdlets in the background or do multiple tasks at once.
 
-This article is a brief overview of how to run Azure PowerShell cmdlets in PowerShell Jobs and check for completion. To learn more about PowerShell Jobs, see
-[About PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+This article is a brief overview of how to run Azure PowerShell cmdlets in PowerShell Jobs and check for completion.
+To learn more about PowerShell Jobs, see [About PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
 ## Azure contexts with PowerShell jobs
 
