@@ -645,6 +645,12 @@
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.md": true,
                 "azps-*/**/*.md": true
+            },
+            "searchScope": {
+               "azps-2.7.0/Az.DataLakeAnalytics/**/*.md": ["Azure","Azure Data Lake Analytics"],
+               "azps-2.7.0/Az.DataShare**/*.md": ["Azure","Azure Data Share"],
+               "azps-2.7.0/Az.HDInsight/**/*.md": ["Azure","Azure HDInsight"],
+               "azps-2.7.0/Az.StreamAnalytics**/*.md": ["Azure","Stream Analytics"]
             }
         },
         "globalMetadata": {
