@@ -34,10 +34,11 @@
       automation, application, web app, script, certificate, sign in,
       signin, log in, login, devops, dev ops, itpro, it pro, role,
       aad, authentication, authenticate
-  - name: Persistent credentials
+  - name: Credential contexts
     href: context-persistence.md
     displayName: >-
-      sign in, signin, log in, login, process, session
+      sign in, signin, log in, login, process, session, context,
+      persist, jobs, background, automation, scripting, task
 - name: Queries
   href: queries-azureps.md
   displayName: filter, search, format, output, variable, scripting, array, dictionary, map, object
@@ -59,7 +60,7 @@
   items:
   - name: PowerShell jobs
     href: using-psjobs.md
-    displayName: background, task, scripting, automation
+    displayName: background, task, scripting, automation, context, process
 - name: Tutorials
   items:
   - name: Create Virtual Machines
