@@ -74,6 +74,19 @@ Answer `Yes` or `Yes to All` to continue with the installation.
 The Az module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
 the available Azure Resource Manager modules, and makes their cmdlets available for use.
 
+## Offline Installation
+
+In some environments it is not possible to run the above installation method as it requires internet access and as such the Azure PowerShell Modules cannot be installed in the above manner
+
+To Perform an Offline Installation you can run the following on a machine with Internet Access
+
+```powershell-interactive
+Save-Module -Name Az -Path C:\temp\Az -Force
+```
+This will download all the current Az Modules and place them into the `C:\temp\AzAccount` folder and you can then copy them to machines as required.
+
+Alternatively you can download the MSI installer from [GitHub - Azure PowerShell Releases](https://github.com/Azure/azure-powershell/releases)
+
 ## Troubleshooting
 
 Here are some common problems seen when installing the Azure PowerShell module. If you experience a problem not listed here,
