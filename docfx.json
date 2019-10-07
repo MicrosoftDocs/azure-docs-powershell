@@ -648,11 +648,11 @@
                 "azps-*/**/*.md": true
             },
             "searchScope": {
-               "az*-*/Az*.DataLakeAnalytics/*.md": ["Azure","Azure Data Lake Analytics"],
-               "az*-*/Az*.DataShare/*.md": ["Azure","Azure Data Share"],
-               "az*-*/Az*.HDInsight/*.md": ["Azure","Azure HDInsight"],
-               "az*-*/Az*.Kusto/*.md":  ["Azure","Kusto","Azure Data Explorer"],
-               "az*-*/Az*.StreamAnalytics/*.md": ["Azure","Stream Analytics"]
+               "az*-*/Az*.DataLakeAnalytics/*.md": ["Azure Data Lake Analytics","Azure"],
+               "az*-*/Az*.DataShare/*.md": ["Azure Data Share","Azure"],
+               "az*-*/Az*.HDInsight/*.md": ["Azure HDInsight","Azure"],
+               "az*-*/Az*.Kusto/*.md":  ["Kusto","Azure Data Explorer","Azure"],
+               "az*-*/Az*.StreamAnalytics/*.md": ["Stream Analytics","Azure"]
             }
         },
         "globalMetadata": {
