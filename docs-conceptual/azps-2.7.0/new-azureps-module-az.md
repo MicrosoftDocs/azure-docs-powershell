@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Introducing the new Azure PowerShell Az module
 
-Starting in December 2018, the Azure PowerShell Az module is in general release and now the intended
+Starting in December 2018, the Azure PowerShell Az module is in general release and is now the intended
 PowerShell module for interacting with Azure. Az offers shorter commands, improved stability, and
 cross-platform support. Az also has feature parity with AzureRM, giving you an easy migration
 path.
