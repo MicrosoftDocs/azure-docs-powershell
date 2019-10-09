@@ -573,6 +573,7 @@
                 "az*-*/Az*.IotCentral/*.md": "iot-central",
                 "az*-*/Az*.IotHub/*.md": "iot-hub",
                 "az*-*/Az*.KeyVault/*.md": "key-vault",
+                "az*-*/Az*.Kusto/*.md": "data-explorer",
                 "az*-*/Az*.LogicApp/*.md": "logic-apps",
                 "az*-*/Az*.MachineLearning*/*.md": "machine-learning",
                 "az*-*/Az*.ManagedServiceIdentity*/*.md": "active-directory",
@@ -645,14 +646,19 @@
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.md": true,
                 "azps-*/**/*.md": true
+            },
+            "searchScope": {
+               "az*-*/Az*.DataLakeAnalytics/*.md": ["Azure Data Lake Analytics","Azure","Azure Powershell"],
+               "az*-*/Az*.DataShare/*.md": ["Azure Data Share","Azure","Azure Powershell"],
+               "az*-*/Az*.HDInsight/*.md": ["Azure HDInsight","Azure","Azure Powershell"],
+               "az*-*/Az*.Kusto/*.md":  ["Kusto","Azure Data Explorer","Azure","Azure Powershell"],
+               "az*-*/Az*.StreamAnalytics/*.md": ["Stream Analytics","Azure","Azure Powershell"]
             }
         },
         "globalMetadata": {
             "apiPlatform": "powershell",
             "brand": "azure",
-            "searchScope": [
-                "Azure"
-            ],
+            "searchScope": ["Azure", "Azure Powershell"],
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
