@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/25/2019
+ms.date: 10/15/2019
 ---
 ## 2.8.0 - October 2019
 ### General
