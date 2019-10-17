@@ -13,9 +13,9 @@ ms.date: 09/15/2019
 Azure PowerShell uses _Azure context_ objects to hold some sign-in information and authentication tokens. If you have more than one subscription, you use Azure contexts
 to select the active subscription to run commands again. Contexts are also used to store sign in information across multiple PowerShell sessions, and run background tasks.
 
-This article covers context management and switching the active context, not the direct management of subscriptions or accounts. If you're looking to manage users, subscriptions, tenants,
-or other account information, see the [Azure Active Directory](/azure/active-directory) documentation. To learn about using contexts for running background or
-parallel tasks, see [Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md).
+This article covers context management and switching the active context, not the direct management of subscriptions or accounts. If you're looking to
+manage users, subscriptions, tenants, or other account information, see the [Azure Active Directory](/azure/active-directory) documentation. To learn about
+using contexts for running background or parallel tasks, see [Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md).
 
 ## Accounts, subscriptions, and contexts
 
@@ -46,7 +46,7 @@ listed with `-ListAvailable`:
 Get-AzContext -ListAvailable
 ```
 
-A specific context can be inspected with `-Name`:
+Or you can get a context by name:
 
 ```azurepowershell-interactive
 $context = Get-Context -Name "subscription 1"

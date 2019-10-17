@@ -140,8 +140,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azps-2.7.0",
-                "version": "azps-2.7.0",
+                "src": "azps-2.8.0",
+                "version": "azps-2.8.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -152,8 +152,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "docs-conceptual/azps-2.7.0",
-                "version": "azps-2.7.0",
+                "src": "docs-conceptual/azps-2.8.0",
+                "version": "azps-2.8.0",
                 "dest": "azure"
             },
             {
@@ -449,7 +449,7 @@
                 "files": [
                     "media/**"
                 ],
-                "version": "azps-2.7.0"
+                "version": "azps-2.8.0"
             }
         ],
         "versions": {
@@ -471,8 +471,8 @@
             "azps-1.8.0": {
                 "dest": "azps-1.8.0"
             },
-            "azps-2.7.0": {
-                "dest": "azps-2.7.0"
+            "azps-2.8.0": {
+                "dest": "azps-2.8.0"
             },
             "azuresmps-4.0.0": {
                 "dest": "azuresmps-4.0.0"
@@ -573,6 +573,7 @@
                 "az*-*/Az*.IotCentral/*.md": "iot-central",
                 "az*-*/Az*.IotHub/*.md": "iot-hub",
                 "az*-*/Az*.KeyVault/*.md": "key-vault",
+                "az*-*/Az*.Kusto/*.md": "data-explorer",
                 "az*-*/Az*.LogicApp/*.md": "logic-apps",
                 "az*-*/Az*.MachineLearning*/*.md": "machine-learning",
                 "az*-*/Az*.ManagedServiceIdentity*/*.md": "active-directory",
@@ -625,7 +626,7 @@
                 "azurermps-6.10.0/**/*.md": "10/9/2018",
                 "azurermps-6.13.0/**/*.md": "11/16/2018",
                 "azps-1.8.0/**/*.md": "04/16/2019",
-                "azps-2.7.0/**/*.md": "09/20/2019",
+                "azps-2.8.0/**/*.md": "10/14/2019",
                 "azuresmps-4.0.0/**/*.md": "09/11/2018"
             },
             "feedback_system": {
@@ -634,7 +635,7 @@
                 "azurermps-5.7.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
                 "azps-1.8.0/**/*": "None",
-                "azps-2.7.0/**/*": "None",
+                "azps-2.8.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
                 "azurestackps-1.3.0/**/*": "None",
                 "azurestackps-1.4.0/**/*": "None",
@@ -645,14 +646,19 @@
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.md": true,
                 "azps-*/**/*.md": true
+            },
+            "searchScope": {
+               "az*-*/Az*.DataLakeAnalytics/*.md": ["Azure Data Lake Analytics","Azure","Azure Powershell"],
+               "az*-*/Az*.DataShare/*.md": ["Azure Data Share","Azure","Azure Powershell"],
+               "az*-*/Az*.HDInsight/*.md": ["Azure HDInsight","Azure","Azure Powershell"],
+               "az*-*/Az*.Kusto/*.md":  ["Kusto","Azure Data Explorer","Azure","Azure Powershell"],
+               "az*-*/Az*.StreamAnalytics/*.md": ["Stream Analytics","Azure","Azure Powershell"]
             }
         },
         "globalMetadata": {
             "apiPlatform": "powershell",
             "brand": "azure",
-            "searchScope": [
-                "Azure"
-            ],
+            "searchScope": ["Azure", "Azure Powershell"],
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
