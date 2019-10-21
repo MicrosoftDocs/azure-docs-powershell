@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/13/2018
+ms.date: 10/22/2019 
 ---
 
 # Install the Azure PowerShell module
@@ -74,18 +74,23 @@ Answer `Yes` or `Yes to All` to continue with the installation.
 The Az module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
 the available Azure Resource Manager modules, and makes their cmdlets available for use.
 
-## Offline Installation
+## Install offline
 
-In some environments it is not possible to run the above installation method as it requires internet access and as such the Azure PowerShell Modules cannot be installed in the above manner
+In some environments it's not possible to connect to the PowerShell Gallery. In those situations, you can still install offline using one of these methods:
 
-To Perform an Offline Installation you can run the following on a machine with Internet Access
-
-```powershell-interactive
-Save-Module -Name Az -Path C:\temp\Az -Force
-```
-This will download all the current Az Modules and place them into the `C:\temp\AzAccount` folder and you can then copy them to machines as required.
-
-Alternatively you can download the MSI installer from [GitHub - Azure PowerShell Releases](https://github.com/Azure/azure-powershell/releases)
+* Download the modules to another location and use that as an installation source on your network. This
+  can be a complicated process, but will let you cache PowerShell modules on a single server or file share
+  to be deployed with PowerShellGet to any disconnected systems. Learn how to set up a local repository and
+  install on disconnected systems with [Working with local PowerShellGet repositories](/powershell/scripting/gallery/how-to/working-with-local-psrepositories).
+* [Download the Azure PowerShell MSI](install-az-ps-msi.md) to a machine connected to the network, and
+  then copy the installer to systems without access to PowerShell Gallery. Keep in mind that the MSI
+  installer only works for PowerShell 5.1 on Windows.
+* Save the module with [Save-Module](/powershell/module/PowershellGet/Save-Module) to a file share, or
+  save it to another source and manually copy it to other machines:
+  
+  ```powershell-interactive
+  Save-Module -Name Az -Path '\\someshare\PowerShell\modules' -Force
+  ```
 
 ## Troubleshooting
 
