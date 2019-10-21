@@ -20,7 +20,7 @@ Azure contexts are PowerShell objects representing your active subscription to r
 
 * The _account_ that was used to sign in to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Azure contexts treat users, application IDs, and service principals the same from an account perspective.
 * The active _subscription_, a service agreement with Microsoft to create and run Azure resources, which are associated with a _tenant_. Tenants are often referred to as _organizations_ in documentation or when working with Active Directory.
-* A reference to a _token cache_, a stored authentication token for accessing an Azure cloud. Where this token is stored and how long it persists for is determined by the [context autosave settings](#save-azure-contexts-across-powershell-sessions)
+* A reference to a _token cache_, a stored authentication token for accessing an Azure cloud. Where this token is stored and how long it persists for is determined by the [context autosave settings](#save-azure-contexts-across-powershell-sessions).
 
 For more information on these terms, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session. 
 
