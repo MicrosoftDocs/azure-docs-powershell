@@ -26,7 +26,7 @@ For more information on these terms, see [Azure Active Directory Terminology](/a
 
 When you sign in with `Connect-AzAccount`, at least one Azure context is created for your default subscription. The object returned by `Connect-AzAccount` is the default Azure context used for the rest of the PowerShell session.
 
-## Get context information
+## Get Azure contexts
 
 Available Azure contexts are retrieved with the [Get-AzContext](/powershell/module/az.accounts/get-azcontext) cmdlet. List all of the available contexts with `-ListAvailable`:
 
@@ -136,14 +136,14 @@ on other platforms. Sensitive information such as subscription IDs and tenant ID
 stored information, through logs or saved contexts. To learn how to clear stored information, see the
 [Remove contexts and credentials](#remove-contexts-and-credentials) section.
 
-## Remove contexts and credentials
+## Remove Azure contexts and stored credentials
 
-To clear stored contexts and credentials:
+To clear Azure contexts and credentials:
 
 * Sign out of an account with [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount).
   You can sign out of any account either by account or context:
 
-  ```azurecli-interactive
+  ```azurepowershell-interactive
   Disconnect-AzAccount # Disconnect active account 
   Disconnect-AzAccount -Username "user@contoso.com" # Disconnect by account name
 
@@ -155,7 +155,15 @@ To clear stored contexts and credentials:
   disconnected user or context.
 * Use [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext). This cmdlet is guaranteed to
   always remove stored contexts and authentication tokens, and will also sign you out.
-* Remove a context by name with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext).
+* Remove a context with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext):
+  
+  ```azurepowershell-interactive
+  Remove-AzContext -Name "mycontext" # Remove by name
+  Get-AzContext -Name "mycontext" | Remove-AzContext # Remove by piping Azure context object
+  ```
+
+  If you remove the active context, you will be disconnected from Azure and need to reauthenticate with
+  `Connect-AzAccount`.
 
 ## See also
 
