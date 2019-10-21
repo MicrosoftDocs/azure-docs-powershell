@@ -16,13 +16,13 @@ This article covers managing Azure contexts, not the management of subscriptions
 
 ## Overview of Azure context objects
 
-Azure contexts are PowerShell objects representing your active subscription to run commands against, and the authentication information needed to connect to an Azure cloud. With Azure contexts, Azure PowerShell doesn't need to re-authenticate your account each time you switch subscriptions. An Azure context consists of:
+Azure contexts are PowerShell objects representing your active subscription to run commands against, and the authentication information needed to connect to an Azure cloud. With Azure contexts, Azure PowerShell doesn't need to reauthenticate your account each time you switch subscriptions. An Azure context consists of:
 
 * The _account_ that was used to sign in to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Azure contexts treat users, application IDs, and service principals the same from an account perspective.
-* The active _subscription_, a service agreement with Microsoft to create and run Azure resources, which is associated with a _tenant_. Tenants are often referred to as _organizations_ in documentation or when working with Active Directory.
+* The active _subscription_, a service agreement with Microsoft to create and run Azure resources, which are associated with a _tenant_. Tenants are often referred to as _organizations_ in documentation or when working with Active Directory.
 * A reference to a _token cache_, a stored authentication token for accessing an Azure cloud. Where this token is stored and how long it persists for is determined by the [context autosave settings](#save-azure-contexts-across-powershell-sessions)
 
-For more details on these terms, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session. 
+For more information on these terms, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session. 
 
 When you sign in with `Connect-AzAccount`, at least one Azure context is created for your default subscription. The object returned by `Connect-AzAccount` is the default Azure context used for the rest of the PowerShell session.
 
@@ -57,7 +57,7 @@ a piped value and configure a new Azure context:
 Get-AzSubscription -SubscriptionName 'MySubscriptionName' | Set-AzContext -Name 'MyContextName'
 ```
 
-Or give the subscription name or ID and the tenant ID if required:
+Or give the subscription name or ID and the tenant ID if necessary:
 
 ```azurepowershell-interactive
 Set-AzContext -Name 'MyContextName' -Subscription 'MySubscriptionName' -Tenant '.......'
@@ -76,7 +76,7 @@ Set-AzContext -Context $(Get-AzContext -Name "mycontext") # Set a context with a
 Get-AzContext -Name "mycontext" | Select-AzContext # Set a context with a piped Azure context object
 ```
 
-Like many other account and context management commands in Azure PowerShell, `Set-AzContext` and `Select-AzContext` support the `-Scope` argument so that you can control how long the context is active. This lets you change a single session's active context without changing the default:
+Like many other account and context management commands in Azure PowerShell, `Set-AzContext` and `Select-AzContext` support the `-Scope` argument so that you can control how long the context is active. `-Scope` lets you change a single session's active context without changing the default:
 
 ```azurepowershell-interactive
 Get-AzContext -Name "mycontext" | Select-AzContext -Scope Process
