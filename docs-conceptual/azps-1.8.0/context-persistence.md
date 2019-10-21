@@ -106,7 +106,7 @@ following ways:
   be automatically saved, regardless of the Azure PowerShell context autosave setting.
 * Disable AzurePowershell's context autosave with the [Disable-AzContextAutosave](/powershell/module/az.accounts/disable-azcontextautosave) cmdlet.
   Disabling context autosave __doesn't__ clear any stored tokens. To learn how to clear stored Azure context
-  information, see [Remove contexts and credentials](#remove-contexts-and-credentials).
+  information, see [Remove Azure contexts and credentials](#remove-azure-contexts-and-stored-credentials).
 * Explicitly enable Azure context autosave can be enabled with the [Enable-AzContextAutosave](/powershell/module/az.accounts/enable-azcontextautosave)
   cmdlet. With autosave enabled, all of a user's contexts are stored locally for later PowerShell sessions.
 * Manually save contexts with [Save-AzContext](/powershell/module/az.accounts/save-azcontext) to be used in future PowerShell sessions, where they can be
@@ -121,7 +121,7 @@ following ways:
 > [!WARNING]
 > Disabling context autosave __doesn't__ clear any stored context information that was saved. To remove stored information, use the
 > [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext) cmdlet. For more on removing saved contexts, see
-> [Remove contexts and credentials](#remove-contexts-and-credentials).
+> [Remove contexts and credentials](#remove-azure-contexts-and-stored-credentials).
 
 Each of these commands supports the `-Scope` parameter, which can take a value of `Process` to only apply
 to the current running process. For example, to ensure that newly created contexts aren't saved after exiting a PowerShell session:
@@ -134,7 +134,7 @@ $context2 = Set-AzContext -Subscription "sub-id" -Tenant "other-tenant"
 Context information and tokens are stored in the `$env:USERPROFILE\.Azure` directory on Windows, and on `$HOME/.Azure`
 on other platforms. Sensitive information such as subscription IDs and tenant IDs may still be exposed in
 stored information, through logs or saved contexts. To learn how to clear stored information, see the
-[Remove contexts and credentials](#remove-contexts-and-credentials) section.
+[Remove contexts and credentials](#remove-azure-contexts-and-stored-credentials) section.
 
 ## Remove Azure contexts and stored credentials
 
