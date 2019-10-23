@@ -50,7 +50,7 @@ Connect-AzAccount
 > [!NOTE]
 >
 > If you've disabled module autoloading, you need to manually import the module with `Import-Module Az`. Because of
-> the way the module is structured, this can take a few seconds.
+> the way the module is structured, this can take up to a minute.
 
 You'll need to repeat this step for every new PowerShell session you start. To learn how to persist your
 Azure sign-in across PowerShell sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
