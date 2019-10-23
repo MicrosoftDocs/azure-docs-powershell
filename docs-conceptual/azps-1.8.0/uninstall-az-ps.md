@@ -1,7 +1,7 @@
 ---
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
-ms.date: 06/10/2019
+ms.date: 10/22/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
@@ -15,7 +15,19 @@ your system. If you've decided to completely uninstall the Azure PowerShell, giv
 through the [Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet.
 If you encountered a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues) so that it can be fixed.
 
-## Uninstall the Az module
+## Uninstall Azure PowerShell from MSI
+
+If you installed Azure PowerShell using the MSI package, you must uninstall through the Windows system rather than PowerShell.
+
+| Platform | Instructions |
+|----------|--------------|
+| Windows 10 | Start > Settings > Apps |
+| Windows 7 </br>Windows 8 | Start > Control Panel > Programs > Uninstall a program |
+
+Once on this screen you should see __Azure PowerShell__ in the program listing. This is the app to uninstall. If you don't see this program listed, then
+you installed through PowerShellGet, and should follow the next set of instructions.
+
+## Uninstall Azure PowerShell from PowerShell Get
 
 To uninstall the Az modules, use the
 [Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet. However,
