@@ -1,0 +1,334 @@
+### YamlMime:Tutorial
+title: Create virtual machines with the Azure PowerShell
+metadata:
+    title: Create virtual machines with the Azure PowerShell
+    description: Get started with Azure PowerShell by creating virtual machines.
+    audience: Developer
+    level: Beginner
+    displayType: two-column
+    interactive: azurepowershell
+    ms.date: 12/13/2018
+    ms.author: sttramer
+    author: sptramer
+    manager: carmonm
+    ms.devlang: azure-powershell
+    ms.prod: powershell
+    ms.technology: azure-powershell
+    ms.topic: tutorial
+    clicktale: true
+items:
+    - durationInMinutes: 1
+      content: |-
+        In this tutorial, you learn all of the steps involved in setting up a virtual machine with
+        Azure PowerShell. The tutorial also covers output queries, Azure resource reuse, and
+        resource cleanup.
+
+        This tutorial can be completed with the interactive experience offered through Azure Cloud
+        Shell, or you may [install Azure PowerShell](install-az-ps.md) locally.
+
+        Use __ctrl-shift-v__ (__cmd-shift-v__ on macOS) to paste tutorial text into Azure Cloud
+        Shell.
+
+    - durationInMinutes: 1
+      title: Sign in
+      content: |-
+        If you're using a local install of the Azure PowerShell, you need to sign in before
+        performing any other steps.
+
+        ```powershell-interactive
+        Connect-AzAccount
+        ```
+
+        Complete the sign in process by following the steps displayed in your terminal.
+
+    - durationInMinutes: 1
+      title: Create a resource group
+      content: |-
+        In Azure, all resources are allocated in a resource management group. Resource groups
+        provide logical groupings of resources that make them easier to work with as a collection.
+        For this tutorial, all of the created resources go into a single group named
+        `TutorialResources`.
+
+        ```powershell-interactive
+        New-AzResourceGroup -Name TutorialResources -Location eastus
+        ```
+
+        ```Output
+        ResourceGroupName : TutorialResources
+        Location          : eastus
+        ProvisioningState : Succeeded
+        Tags              :
+        ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources
+        ```
+
+    - durationInMinutes: 1
+      title: Create admin credentials for the VM
+      content: |-
+        Before you can create a new virtual machine, you must create a credential object containing
+        the username and password for the administrator account of the Windows VM.
+
+        ```powershell-interactive
+        $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
+        ```
+
+        Enter the username and password when prompted. The resulting credential object is passed as
+        a parameter in the next step.
+
+        ```Output
+        Windows PowerShell credential request.
+        Enter a username and password for the virtual machine.
+        User: tutorAdmin
+        Password for user tutorAdmin: *********
+        ```
+
+    - durationInMinutes: 4
+      title: Create a virtual machine
+      content: |-
+        Virtual machines in Azure have a large number of dependencies. The Azure PowerShell creates
+        these resources for you based on the command-line arguments you specify. For readability, we
+        are using [PowerShell splatting](/powershell/module/microsoft.powershell.core/about/about_splatting)
+        to pass parameters to the Azure PowerShell cmdlets.
+
+        Create a new virtual machine running Windows.
+
+        ```powershell-interactive
+        $vmParams = @{
+          ResourceGroupName = 'TutorialResources'
+          Name = 'TutorialVM1'
+          Location = 'eastus'
+          ImageName = 'Win2016Datacenter'
+          PublicIpAddressName = 'tutorialPublicIp'
+          Credential = $cred
+          OpenPorts = 3389
+        }
+        $newVM1 = New-AzVM @vmParams
+        ```
+        As the VM is created, you see the parameter values used and Azure resources being created.
+        PowerShell will displace a progress bar as shown below.
+
+        ```Output
+         Creating Azure resources
+          39% \
+          [ooooooooooooooooooooooooooooooooooo                                                                 ]
+
+          Creating TutorialVM1 virtual machine.
+        ```
+
+        Once the VM is ready, we can view the results in the Azure Portal or by inspecting the
+        \$newVM1 variable.
+
+        ```powershell-interactive
+        $newVM1
+        ```
+
+        ```Output
+        ResourceGroupName : TutorialResources
+        Id                : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM1
+        VmId              : 12345678-9abc-def0-1234-56789abcedf0
+        Name              : TutorialVM1
+        Type              : Microsoft.Compute/virtualMachines
+        Location          : eastus
+        Tags              : {}
+        HardwareProfile   : {VmSize}
+        NetworkProfile    : {NetworkInterfaces}
+        OSProfile         : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+        ProvisioningState : Succeeded
+        StorageProfile    : {ImageReference, OsDisk, DataDisks}
+        ```
+
+        Property values listed inside of braces are nested objects. In the next step we will show you
+        how to view specific values in these nested objects.
+
+    - durationInMinutes: 5
+      title: Get VM information with queries
+      content: |-
+        Let's get some more detailed information from the VM we just created. In this example, we verify
+        the Name of the VM and the admin account we created.
+
+        ```powershell-interactive
+        $newVM1.OSProfile | Select-Object ComputerName,AdminUserName
+        ```
+
+        ```Output
+        ComputerName AdminUsername
+        ------------ -------------
+        TutorialVM1  tutorialAdmin
+        ```
+
+        We can use other Azure PowerShell commands to get specific information about the network
+        configuration.
+
+        ```powershell-interactive
+        $newVM1 | Get-AzNetworkInterface |
+          Select-Object -ExpandProperty IpConfigurations |
+            Select-Object Name,PrivateIpAddress
+        ```
+
+        In this example we are using the PowerShell pipeline to send the \$newVM1 object to the
+        `Get-AzNetworkInterface` cmdlet. From the resulting network interface object we are
+        selecting the nested IpConfigurations object. From the IpConfigurations object we are
+        selecting the Name and PrivateIpAddress properties.
+
+        ```Output
+        Name        PrivateIpAddress
+        ----        ----------------
+        TutorialVM1 192.168.1.4
+        ```
+
+        To confirm that the VM is running, we need to connect via Remote Desktop. For that, we need
+        to know the Public IP address.
+
+        ```powershell-interactive
+        $publicIp = Get-AzPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
+
+        $publicIp | Select-Object Name,IpAddress,@{label='FQDN';expression={$_.DnsSettings.Fqdn}}
+        ```
+
+        In this example, we use the `Get-AzPublicIpAddress` and store the results in the
+        \$publicIp variable. From this variable we are selecting properties and using an expression
+        to retrieve the nested Fqdn property.
+
+        ```Output
+        Name             IpAddress           FQDN
+        ----             ---------           ----
+        tutorialPublicIp <PUBLIC_IP_ADDRESS> tutorialvm1-8a0999.eastus.cloudapp.azure.com
+        ```
+
+        From your local machine you can run the following command to connect to the VM over Remote
+        Desktop.
+
+        ```powershell-interactive
+        mstsc.exe /v <PUBLIC_IP_ADDRESS>
+        ```
+
+        For more information about querying for object properties, see
+        [Querying for Azure resources](./queries-azureps.md).
+
+    - durationInMinutes: 4
+      title: Creating a new VM on the existing subnet
+      content: |-
+        The second VM uses the existing subnet.
+
+        ```powershell-interactive
+        $vm2Params = @{
+          ResourceGroupName = 'TutorialResources'
+          Name = 'TutorialVM2'
+          ImageName = 'Win2016Datacenter'
+          VirtualNetworkName = 'TutorialVM1'
+          SubnetName = 'TutorialVM1'
+          PublicIpAddressName = 'tutorialPublicIp2'
+          Credential = $cred
+          OpenPorts = 3389
+        }
+        $newVM2 = New-AzVM @vm2Params
+
+        $newVM2
+        ```
+
+        ```Output
+        ResourceGroupName        : TutorialResources
+        Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM2
+        VmId                     : 12345678-9abc-def0-1234-56789abcedf1
+        Name                     : TutorialVM2
+        Type                     : Microsoft.Compute/virtualMachines
+        Location                 : eastus
+        Tags                     : {}
+        HardwareProfile          : {VmSize}
+        NetworkProfile           : {NetworkInterfaces}
+        OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+        ProvisioningState        : Succeeded
+        StorageProfile           : {ImageReference, OsDisk, DataDisks}
+        FullyQualifiedDomainName : tutorialvm2-dfa5af.eastus.cloudapp.azure.com
+        ```
+
+        You can skip a few steps to get the public IP address of the new VM since it's returned in
+        the FullyQualifiedDomainName property of the \$newVM2 object. Use the following command to
+        connect using Remote Desktop.
+
+        ```powershell-interactive
+        mstsc.exe /v $newVM2.FullyQualifiedDomainName
+        ```
+
+    - durationInMinutes: 4
+      title: Cleanup
+      content: |-
+        Now that the tutorial is complete, it's time to clean up the created resources. You can
+        delete individual resources with the `Remove-AzResource` command, but the safest way
+        to remove all resources in a resource group is delete the group using the
+        `Remove-AzResourceGroup` command.
+
+        ```powershell-interactive
+        $job = Remove-AzResourceGroup -Name TutorialResources -Force -AsJob
+
+        $job
+        ```
+
+        ```Output
+        Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+        --     ----            -------------   -----         -----------     --------             -------
+        1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzResource...
+        ```
+
+        This command deletes the resources created during the tutorial, and is guaranteed to deallocate
+        them in the correct order. The `-AsJob` parameter keeps PowerShell from blocking while the
+        deletion takes place. To wait until the deletion is complete, use the following command:
+
+        ```powershell-interactive
+        Wait-Job -Id $job.Id
+        ```
+
+        With cleanup completed, the tutorial is finished. Continue on for a summary of everything
+        you learned and links to resources that will help you with your next steps.
+
+    - durationInMinutes: 1
+      title: Summary
+      content: |-
+
+        Congratulations! You learned how to create VMs with new or existing resources, used
+        expressions and other Azure PowerShell commands to capture data to be stored in shell
+        variables, and looked at some of the resources that get created for Azure VMs.
+
+        Where you go from here depends on how you plan to use Azure PowerShell. There are a variety
+        of materials that go further in depth on the features covered in this tutorial.
+
+        ### In-depth Azure PowerShell documentation
+
+        You might want to take time to explore the complete [Azure PowerShell documentation](overview.md) set.
+
+        For more information about the commands used in this tutorial, see the following articles.
+
+        - [New-AzResourceGroup](/powershell/module/Az.resources/new-Azresourcegroup)
+        - [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)
+        - [New-AzVM](/powershell/module/Az.compute/new-Azvm)
+        - [Select-Object](/powershell/module/microsoft.powershell.utility/select-object)
+        - [Get-AzPublicIpAddress](/powershell/module/Az.network/get-AzPublicIpAddress)
+        - [Remove-AzResourceGroup](/powershell/module/Az.resources/Remove-AzResourceGroup)
+        - [Wait-Job](/powershell/module/microsoft.powershell.core/wait-job)
+
+        There are also articles that go deeper into the features that were shown in the tutorial.
+
+        - [PowerShell splatting](/powershell/module/microsoft.powershell.core/about/about_splatting)
+        - [Queries](queries-azureps.md)
+        - [Formatting](formatting-output.md)
+        - [Using PowerShell jobs](using-psjobs.md)
+
+        ### Sample scripts
+
+        If you want to get started right away with specific tasks, look at some sample scripts.
+
+        - [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
+        - [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
+        - [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
+        - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
+        - [Cosmos DB](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)
+
+        ### Feedback
+
+        If you'd like to give feedback, suggestions, or ask questions, there are a number of ways
+        for you to get in touch.
+
+        * `Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide free-form feedback to the team.
+        * File a feature request or a bug report in the [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).
+        * Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/MicrosoftDocs/azure-docs-powershell/issues).
+
+        We hope that you enjoy using the Azure PowerShell!

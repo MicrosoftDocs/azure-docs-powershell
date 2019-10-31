@@ -158,6 +158,27 @@
             },
             {
                 "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "azps-3.0.0",
+                "version": "azps-3.0.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azps-3.0.0",
+                "version": "azps-3.0.0",
+                "dest": "azure"
+            },
+            {
+                "files": [
                     "**/*.md",
                     "**/*.yml"
                 ],
@@ -450,6 +471,12 @@
                     "media/**"
                 ],
                 "version": "azps-2.8.0"
+            },
+            {
+                "files": [
+                    "media/**"
+                ],
+                "version": "azps-3.0.0"
             }
         ],
         "versions": {
@@ -473,6 +500,9 @@
             },
             "azps-2.8.0": {
                 "dest": "azps-2.8.0"
+            },
+            "azps-3.0.0": {
+                "dest": "azps-3.0.0"
             },
             "azuresmps-4.0.0": {
                 "dest": "azuresmps-4.0.0"
@@ -627,6 +657,7 @@
                 "azurermps-6.13.0/**/*.md": "11/16/2018",
                 "azps-1.8.0/**/*.md": "04/16/2019",
                 "azps-2.8.0/**/*.md": "10/14/2019",
+                "azps-3.0.0/**/*.md": "11/04/2019",
                 "azuresmps-4.0.0/**/*.md": "09/11/2018"
             },
             "feedback_system": {
@@ -636,6 +667,7 @@
                 "azurermps-6.13.0/**/*": "None",
                 "azps-1.8.0/**/*": "None",
                 "azps-2.8.0/**/*": "None",
+                "azps-3.0.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
                 "azurestackps-1.3.0/**/*": "None",
                 "azurestackps-1.4.0/**/*": "None",
