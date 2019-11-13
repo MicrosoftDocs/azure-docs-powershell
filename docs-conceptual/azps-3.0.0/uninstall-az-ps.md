@@ -151,7 +151,7 @@ system rather than PowerShell.
 | Windows 10 | Start > Settings > Apps |
 | Windows 7 </br>Windows 8 | Start > Control Panel > Programs > Uninstall a program |
 
-Once on this screen you should see __Azure PowerShell__ in the program listing. This is the app to uninstall. If you don't see this program listed, then
+Once on this screen you should see __Azure PowerShell__ or __Microsoft Azure PowerShell - Month Year__ in the program listing. This is the app to uninstall. If you don't see this program listed, then
 you installed through PowerShellGet, and should follow the next set of instructions.
 
 ### Uninstall from PowerShell
