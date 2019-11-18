@@ -617,7 +617,7 @@
                 "az*-*/Az*.Profile/*.md": "azure-resource-manager",
                 "az*-*/Az*.RecoveryServices/*.md": "site-recovery",
                 "az*-*/Az*.RecoveryServices.Backup/*.md": "site-recovery",
-                "az*-*/Az*.RedisCache/*.md": "redis-cache",
+                "az*-*/Az*.RedisCache/*.md": "cache",
                 "az*-*/Az*.Relay/*.md": "service-bus",
                 "az*-*/Az*.ResourceGraph/*.md": "resource-graph",
                 "az*-*/Az*.Resources/*.md": "azure-resource-manager",
@@ -684,6 +684,7 @@
                "az*-*/Az*.DataShare/*.md": ["Azure Data Share","Azure","Azure Powershell"],
                "az*-*/Az*.HDInsight/*.md": ["Azure HDInsight","Azure","Azure Powershell"],
                "az*-*/Az*.Kusto/*.md":  ["Kusto","Azure Data Explorer","Azure","Azure Powershell"],
+               "az*-*/Az*.RedisCache/*.md": ["Cache for Redis","Azure","Azure Powershell"],
                "az*-*/Az*.StreamAnalytics/*.md": ["Stream Analytics","Azure","Azure Powershell"]
             }
         },
