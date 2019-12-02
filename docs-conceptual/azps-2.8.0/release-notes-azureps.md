@@ -50,7 +50,7 @@ ms.date: 10/15/2019
 * Minor bug fix: Get-AzIothub not returning subscriptionId 
 
 #### Az.Monitor
-* New action group receivers added for action group
+* New action group receivers added for New-AzActionGroupReceiver:
 	-ItsmReceiver
 	-VoiceReceiver
 	-ArmRoleReceiver
@@ -59,16 +59,16 @@ ms.date: 10/15/2019
 	-AutomationRunbookReceiver
 	-AzureAppPushReceiver
 * Use common alert schema enabled for the receivers. This is not applicable for SMS, Azure App push , ITSM and Voice recievers
-* Webhooks now supports Azure active directory authentication .
+* Webhooks now supports Azure active directory authentication.
 
 #### Az.Network
 * Add new cmdlet Get-AzAvailableServiceAlias which can be called to get the aliases that can be used for Service Endpoint Policies.
 * Added support for the adding traffic selectors to Virtual Network Gateway Connections
     - New cmdlets added:
-        - New-AzureRmTrafficSelectorPolicy
+        - New-AzIpsecTrafficSelectorPolicy
     - Cmdlets updated with optional parameter -TrafficSelectorPolicies
-        -New-AzureRmVirtualNetworkGatewayConnection
-        -Set-AzureRmVirtualNetworkGatewayConnection
+        -New-AzVirtualNetworkGatewayConnection
+        -Set-AzVirtualNetworkGatewayConnection
 * Add support for ESP and AH protocols in network security rule configurations
     - Updated cmdlets:
         - Add-AzNetworkSecurityRuleConfig
@@ -223,7 +223,7 @@ ms.date: 10/15/2019
     -  Remove-AzRmStorageShare
 
 #### Az.Websites
-* Fixing issue where webapp Tags were getting deleted when migrating App to new ASPwhere webapp Tags were getting deleted when migrating App to new ASP
+* Fixing issue where webapp Tags were getting deleted when migrating App to new ASP
 * Fixing the Publish-AzureWebapp to work across Linux and windows
 * Update example in 'Get-AzWebAppPublishingProfile' reference documentation
 
