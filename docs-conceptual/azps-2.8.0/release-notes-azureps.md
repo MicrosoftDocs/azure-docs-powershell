@@ -67,8 +67,8 @@ ms.date: 10/15/2019
     - New cmdlets added:
         - New-AzIpsecTrafficSelectorPolicy
     - Cmdlets updated with optional parameter -TrafficSelectorPolicies
-        -New-AzVirtualNetworkGatewayConnection
-        -Set-AzVirtualNetworkGatewayConnection
+        - New-AzVirtualNetworkGatewayConnection
+        - Set-AzVirtualNetworkGatewayConnection
 * Add support for ESP and AH protocols in network security rule configurations
     - Updated cmdlets:
         - Add-AzNetworkSecurityRuleConfig
