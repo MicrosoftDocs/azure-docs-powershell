@@ -110,8 +110,11 @@ $store.Close()
 Managed identities are a feature of Azure Active Directory. Managed identities are service principals assigned to resources that run in Azure. You can use a managed identity
 service principal for sign-in, and acquire an app-only access token to access other resources. Managed identities are only available on resources running in an Azure cloud.
 
-To learn more about managed identities for Azure resources, see
-[How to use managed identities for Azure resources on an Azure VM to acquire an access token](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token).
+This command connects using the managed identity of the host environment. For example, if executed on a VirtualMachine with an assigned Managed Service Identity, this allows the code to sign in using that assigned identity.
+
+```azurepowershell-interactive
+ Connect-AzAccount -Identity 
+```
 
 ## Sign in with a non-default tenant or as a Cloud Solution Provider (CSP)
 
