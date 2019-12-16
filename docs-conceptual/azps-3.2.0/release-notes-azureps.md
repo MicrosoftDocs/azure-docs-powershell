@@ -18,7 +18,7 @@ ms.date: 10/15/2019
 * Display user friendly error message when context is null in Az 4.0 preview
 
 #### Az.Batch
-* Fix issue #10602, where **New-AzBatchPool** did not properly send 'VirtualMachineConfiguration.ContainerConfiguration' or 'VirtualMachineConfiguration.DataDisks' to the server.
+* Fix issue [#10602](https://github.com/Azure/azure-powershell/issues/10602), where **New-AzBatchPool** did not properly send 'VirtualMachineConfiguration.ContainerConfiguration' or 'VirtualMachineConfiguration.DataDisks' to the server.
 
 #### Az.DataFactory
 * Update ADF .Net SDK version to 4.5.0
