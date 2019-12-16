@@ -34,7 +34,7 @@ The following samples can help you learn how to perform common scenarios with Az
 
 If you're unfamiliar with PowerShell, an introduction to PowerShell may be helpful.
 
-* [Installing PowerShell](/powershell/scripting/setup/installing-windows-powershell)
+* [Installing PowerShell](/powershell/scripting/install/installing-windows-powershell)
 * [Scripting with PowerShell](/powershell/scripting/powershell-scripting)
 
 You can also watch this video:
