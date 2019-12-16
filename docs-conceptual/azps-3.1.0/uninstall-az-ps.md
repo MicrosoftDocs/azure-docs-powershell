@@ -162,10 +162,21 @@ part of the `Az.Accounts` module. This removes _all_ AzureRM modules from your m
 ```powershell-interactive
 Uninstall-AzureRm
 ```
+or
+```powershell-interactive
+Uninstall-Module AzureRm
+```
 
 If you can't successfully run the `Uninstall-AzureRM` command, use the [`Uninstall-AllModules` script](#uninstall-script) provided in this article with the following invocation:
 
 ```powershell-interactive
 $versions = (Get-InstalledModule AzureRM -AllVersions | Select-Object Version)
 $versions | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
+```
+or
+```powershell-interactive
+foreach ($module in (Get-Module -ListAvailable AzureRM*).Name |Get-Unique) {
+   write-host "Removing Module $module"
+   Uninstall-module $module
+}
 ```
