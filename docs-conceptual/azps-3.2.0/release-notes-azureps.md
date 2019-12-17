@@ -41,10 +41,6 @@ ms.date: 10/15/2019
 #### Az.Network
 * Support for IpGroups in AzureFirewall Application,Nat & Network Rules.
 
-#### Az.RecoveryServices
-* Added SoftDelete feature for VM and added tests for softdelete
-* Azure Site Recovery support for Azure Disk Encryption One Pass for Azure to Azure.
-
 #### Az.Resources
 * Fix an issue where template deployment fails to read a template parameter if its name conflicts with some built-in parameter name.
 * Updated policy cmdlets to use new api version 2019-09-01 that introduces grouping support within policy set definitions.
