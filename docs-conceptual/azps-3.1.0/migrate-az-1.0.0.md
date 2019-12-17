@@ -233,7 +233,7 @@ This section details specific breaking changes for individual modules and cmdlet
 - The type of `InstanceView` property of `PSVirtualMachineScaleSetVM` object is changed from `VirtualMachineInstanceView` to `VirtualMachineScaleSetVMInstanceView`
 - `AutoOSUpgradePolicy` and `AutomaticOSUpgrade` properties are removed from `UpgradePolicy` property
 - The type of `Sku` property in `PSSnapshotUpdate` object is changed from `DiskSku` to `SnapshotSku`
-- `VmScaleSetVMParameterSet` is removed from `Add-AzVMDataDisk` cmdlet, you cna no longer add a data disk individually to a ScaleSet VM.
+- `VmScaleSetVMParameterSet` is removed from `Add-AzVMDataDisk` cmdlet, you can no longer add a data disk individually to a ScaleSet VM.
 
 ### Az.DataFactory (previously AzureRM.DataFactories and AzureRM.DataFactoryV2)
 
@@ -264,7 +264,7 @@ This section details specific breaking changes for individual modules and cmdlet
   New-AzDataLakeStoreAccount -Tag @{TagName="TagValue"}
   ```
 
-- Removed deprecated properties `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps` from `PSDataLakeStoreAccountBasic` object.  Any script that 
+- Removed deprecated properties `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps` from `PSDataLakeStoreAccountBasic` object.  Any script that
 uses the `PSDatalakeStoreAccount` returned from `Get-AzDataLakeStoreAccount` should not reference these properties.
 
 ### Az.KeyVault (previously AzureRM.KeyVault)
@@ -303,7 +303,7 @@ uses the `PSDatalakeStoreAccount` returned from `Get-AzDataLakeStoreAccount` sho
 - Removed deprecated `ResourceId` parameter from `Get-AzServiceEndpointPolicyDefinition` cmdlet
 - Removed deprecated `EnableVmProtection` property from `PSVirtualNetwork` object
 - Removed deprecated `Set-AzVirtualNetworkGatewayVpnClientConfig` cmdlet
-  
+
 Scripts should no longer make processing decisions based on the values fo these fields.
 
 ### Az.OperationalInsights (previously AzureRM.OperationalInsights)
