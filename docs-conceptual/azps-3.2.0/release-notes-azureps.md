@@ -55,7 +55,7 @@ ms.date: 10/15/2019
 * Support revoke Storage Account User Delegation Keys, so all Idenity SAS tokens are revoked
     - Revoke-AzStorageAccountUserDelegationKeys
 * Upgrade to Microsoft.Azure.Management.Storage 14.2.0, to support new API version 2019-06-01.
-* Support Share QuotaGiB more than 5120 in Management plane File Share cmdlets, and add parameter alias 'Quota' to parameter 'QuotaGiB' 
+* Support of QuotaGiB (Share Quota in Gibibye) for values of more than 5120 in the Management plane of File Share cmdlets and added the 'Quota' parameter alias to the 'QuotaGiB' parameter. 
 	- New-AzRmStorageShare
 	- Update-AzRmStorageShare
 * Add parameter alias 'QuotaGiB' to parameter 'Quota'
