@@ -37,7 +37,7 @@ Get-AzContext -ListAvailable
 Or get a context by name:
 
 ```azurepowershell-interactive
-$context = Get-Context -Name "mycontext"
+$context = Get-AzContext -Name "mycontext"
 ```
 
 Context names may be different from the name of the associated subscription.
