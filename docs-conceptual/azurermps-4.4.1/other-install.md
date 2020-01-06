@@ -19,7 +19,7 @@ Installer (WebPI) or by using the MSI file available from GitHub.
 ## Install on Windows using the Web Platform Installer
 
 Installing the latest Azure PowerShell from WebPI is the same as it was for previous versions.
-Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and start the install.
+Download the [Azure PowerShell WebPI package](https://aka.ms/webpi-azps) and start the install.
 
 > [!NOTE]
 > If you have previously installed Azure modules from the PowerShell Gallery, the installer
