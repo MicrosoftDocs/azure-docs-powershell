@@ -411,5 +411,5 @@ To learn more about ways to use the Azure PowerShell, check out our most common 
 * Read the release notes about migrating from an older release:
   [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
 * Get help from the community:
-  * [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Azure forum on MSDN](https://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](https://go.microsoft.com/fwlink/?LinkId=320213)
