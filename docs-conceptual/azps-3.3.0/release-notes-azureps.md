@@ -8,6 +8,9 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
 ---
+
+# Azure PowerShell release notes
+
 ## 3.3.0 - January 2020
 #### Az.Accounts
 * Updated Add-AzEnvironment and Set-AzEnvironment to accept parameters AzureAttestationServiceEndpointResourceId and AzureAttestationServiceEndpointSuffix
