@@ -101,5 +101,5 @@ There are also Azure PowerShell quickstarts for other popular Azure services:
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals with Azure PowerShell](create-azure-service-principal-azureps.md)
 * Get help from the community:
-  * [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [Stack Overflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Azure forum on MSDN](https://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [Stack Overflow](https://go.microsoft.com/fwlink/?LinkId=320213)
