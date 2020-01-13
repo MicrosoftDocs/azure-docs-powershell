@@ -56,7 +56,7 @@ If you don't have PowerShellGet installed, follow the instructions in the table 
 |---|---|
 |Windows 10<br/>Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
 |Upgrade to PowerShell 5| <ol><li>[Install the latest version of WMF](https://www.microsoft.com/download/details.aspx?id=54616)</li><li>Run the following command:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
-|Windows with PowerShell 3 or PowerShell 4|<ol><il>[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Run the following command:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
+|Windows with PowerShell 3 or PowerShell 4|<ol><il>[Get the PackageManagement modules](https://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Run the following command:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
 
 > [!NOTE]
 > Using PowerShellGet requires an Execution Policy that allows you to run scripts. For more

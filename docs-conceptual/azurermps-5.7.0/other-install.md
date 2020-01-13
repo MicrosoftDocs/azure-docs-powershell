@@ -44,7 +44,7 @@ To learn how to persist your Azure sign in across sessions, see [Persist user cr
 
 ## Install or update on Windows using the Web Platform Installer
 
-Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and start the install. If you have installed
+Download the [Azure PowerShell WebPI package](https://aka.ms/webpi-azps) and start the install. If you have installed
 previous versions of Azure modules from an MSI or with WebPI, the installer automatically removes them. Modules are
 installed into `${env:ProgramFiles}\WindowsPowerShell\Modules`. Both the `AzureRM` and `Azure` modules are installed.
 

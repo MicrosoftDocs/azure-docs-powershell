@@ -1,4 +1,5 @@
 ---
+title: Service Bus deprecation notice
 author: sptramer
 ms.author: sttramer
 manager: carmonm
