@@ -111,7 +111,7 @@ Valid values are:
 - Premium (P3): a7c4c615-cfb1-464b-b252-925be0a19446
 
 *Standard (S3) is part of the Latest SQL Database Update V12 (preview).
-For more information, see [What's New in the Azure SQL Database V12 Preview](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/) (`http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/`) in the Azure library.
+For more information, see [What's New in the Azure SQL Database V12 Preview](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/) (`http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/`) in the Azure library.
 
 ```yaml
 Type: ServiceObjective
@@ -156,7 +156,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure SQL Database](http://msdn.microsoft.com/library/ee336279.aspx)
+[Azure SQL Database](https://msdn.microsoft.com/library/ee336279.aspx)
 
 [Get Service Level Objective](https://msdn.microsoft.com/en-us/library/azure/dn505709.aspx)
 

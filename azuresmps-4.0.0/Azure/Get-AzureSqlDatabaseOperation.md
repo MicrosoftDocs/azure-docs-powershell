@@ -165,7 +165,7 @@ This cmdlet returns an array of **DatabaseOperationResponseList** objects if you
 
 ## RELATED LINKS
 
-[Azure SQL Database](http://msdn.microsoft.com/library/ee336279.aspx)
+[Azure SQL Database](https://msdn.microsoft.com/library/ee336279.aspx)
 
 [Database Operation Status](https://msdn.microsoft.com/en-us/library/azure/dn720371.aspx)
 

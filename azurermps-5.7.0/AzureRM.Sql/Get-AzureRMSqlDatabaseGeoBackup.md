@@ -153,9 +153,9 @@ This cmdlet does not accept any input.
 
 ## RELATED LINKS
 
-[Overview: Cloud business continuity and database disaster recovery with SQL Database](http://go.microsoft.com/fwlink/?LinkId=746881)
+[Overview: Cloud business continuity and database disaster recovery with SQL Database](https://go.microsoft.com/fwlink/?LinkId=746881)
 
-[Recover an Azure SQL Database from an outage](http://go.microsoft.com/fwlink/?LinkId=746882)
+[Recover an Azure SQL Database from an outage](https://go.microsoft.com/fwlink/?LinkId=746882)
 
 [Restore-AzureRmSqlDatabase](./Restore-AzureRmSqlDatabase.md)
 

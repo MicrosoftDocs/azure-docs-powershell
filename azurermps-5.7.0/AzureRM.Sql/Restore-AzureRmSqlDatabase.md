@@ -372,9 +372,9 @@ This cmdlet does not accept any input.
 
 ## RELATED LINKS
 
-[Recover an Azure SQL Database from an outage](http://go.microsoft.com/fwlink/?LinkId=746882)
+[Recover an Azure SQL Database from an outage](https://go.microsoft.com/fwlink/?LinkId=746882)
 
-[Recover an Azure SQL Database from a user error](http://go.microsoft.com/fwlink/?LinkId=746944)
+[Recover an Azure SQL Database from a user error](https://go.microsoft.com/fwlink/?LinkId=746944)
 
 [Get-AzureRmSqlDatabase](./Get-AzureRmSqlDatabase.md)
 
