@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 01/14/2019
+ms.date: 01/17/2020
 ---
 
 # Get started with Azure PowerShell
@@ -56,7 +56,7 @@ the sign-in process and authentication methods, see [Sign in with Azure PowerShe
 ## Find commands
 
 Azure PowerShell cmdlets follow a standard naming convention for PowerShell, `VERB-NOUN`. The verb describes the action (examples include `New`, `Get`, `Set`, `Remove`)
-and the noun describes the resource type (examples include `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, `AzVirtualNetworkGateway`). Nouns in Azure PowerShell always start with the prefix `Az`. For the full list of standard verbs, see [Approved verbs for PowerShell Commands](/powershell/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
+and the noun describes the resource type (examples include `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, `AzVirtualNetworkGateway`). Nouns in Azure PowerShell always start with the prefix `Az`. For the full list of standard verbs, see [Approved verbs for PowerShell Commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
 
 Knowing the nouns, verbs, and the Azure PowerShell modules available help you find commands with the [Get-Command](/powershell/module/microsoft.powershell.core/get-command) cmdlet. For example, to find all VM-related commands that use the `Get` verb:
 
