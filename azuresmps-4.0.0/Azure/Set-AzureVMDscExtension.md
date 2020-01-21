@@ -355,7 +355,7 @@ This parameter specifies which version of the update to install on the virtual m
 The acceptable values for this parameter are:
 
 - 4.0.
-Installs KB3000850http://support.microsoft.com/kb/3000850 (http://support.microsoft.com/kb/3000850) on Windows 8.1 or Windows Server 2012 R2, or WMF 4.0http://www.microsoft.com/en-us/download/details.aspx?id=40855 (http://www.microsoft.com/en-us/download/details.aspx?id=40855) on other versions of the Windows operating system, unless a newer version is already installed. 
+Installs KB3000850https://support.microsoft.com/kb/3000850 (https://support.microsoft.com/kb/3000850) on Windows 8.1 or Windows Server 2012 R2, or WMF 4.0https://www.microsoft.com/en-us/download/details.aspx?id=40855 (https://www.microsoft.com/en-us/download/details.aspx?id=40855) on other versions of the Windows operating system, unless a newer version is already installed. 
 - 5.0.
 Installs the latest release of WMF 5.0https://www.microsoft.com/en-us/download/details.aspx?id=50395 (https://www.microsoft.com/en-us/download/details.aspx?id=50395). 
 - latest.
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

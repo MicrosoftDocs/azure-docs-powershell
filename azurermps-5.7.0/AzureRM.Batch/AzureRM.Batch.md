@@ -1,7 +1,7 @@
 ---
 Module Name: AzureRM.Batch
 Module Guid: a8f00f40-1c1a-49b5-9db3-24076b75c3cf
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
+Download Help Link: https://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/AzureRM.Batch.md

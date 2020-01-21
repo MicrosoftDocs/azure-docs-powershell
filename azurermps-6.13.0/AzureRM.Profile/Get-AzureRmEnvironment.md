@@ -43,9 +43,9 @@ EnableAdfsAuthentication                          : False
 ActiveDirectoryServiceEndpointResourceId          : https://management.core.chinacloudapi.cn/
 AdTenant                                          :
 GalleryUrl                                        : https://gallery.chinacloudapi.cn/
-ManagementPortalUrl                               : http://go.microsoft.com/fwlink/?LinkId=301902
+ManagementPortalUrl                               : https://go.microsoft.com/fwlink/?LinkId=301902
 ServiceManagementUrl                              : https://management.core.chinacloudapi.cn/
-PublishSettingsFileUrl                            : http://go.microsoft.com/fwlink/?LinkID=301776
+PublishSettingsFileUrl                            : https://go.microsoft.com/fwlink/?LinkID=301776
 ResourceManagerUrl                                : https://management.chinacloudapi.cn/
 SqlDatabaseDnsSuffix                              : .database.chinacloudapi.cn
 StorageEndpointSuffix                             : core.chinacloudapi.cn
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
