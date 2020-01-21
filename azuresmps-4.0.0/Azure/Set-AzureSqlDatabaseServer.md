@@ -35,7 +35,7 @@ This command changes the administrator account password for the Azure SQL Databa
 ### -AdminPassword
 Specifies the administrator account password for the Azure SQL Database server.
 You must specify a strong password.
-For more information, see [Strong Passwords](http://go.microsoft.com/fwlink/p/?LinkId=154152) (http://go.microsoft.com/fwlink/p/?LinkId=154152) at the Microsoft Developer Network.
+For more information, see [Strong Passwords](https://go.microsoft.com/fwlink/p/?LinkId=154152) (http://go.microsoft.com/fwlink/p/?LinkId=154152) at the Microsoft Developer Network.
 
 ```yaml
 Type: String

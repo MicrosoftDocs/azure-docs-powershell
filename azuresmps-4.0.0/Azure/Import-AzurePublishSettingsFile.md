@@ -48,7 +48,7 @@ Specifies an Azure environment.
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see [Azure Pack](http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
 
 ```yaml
 Type: String
@@ -110,7 +110,7 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[How to Install and Configure Azure PowerShell](http://azure.microsoft.com/documentation/articles/install-configure-powershell/)
+[How to Install and Configure Azure PowerShell](https://azure.microsoft.com/documentation/articles/install-configure-powershell/)
 
 [Add-AzureAccount](./Add-AzureAccount.md)
 

@@ -22,8 +22,8 @@ The **Get-AzureWebsite** cmdlet gets information about Azure websites in the cur
 By default, **Get-AzureWebsite** gets all Azure websites in the current subscription and returns an object that provides basic information about the sites.
 When you use the *Name* parameter, **Get-AzureWebsite** returns an object with extensive information, including configuration details.
 
-The current subscription is the subscription that is designated as "current." To find the current subscription, use the *Current* parameter of the [Get-AzureSubscription](http://go.microsoft.com/fwlink/?LinkID=397623) cmdlet.
-To change the current subscription, use the [Select-AzureSubscription](http://go.microsoft.com/fwlink/?LinkID=397628) cmdlet.
+The current subscription is the subscription that is designated as "current." To find the current subscription, use the *Current* parameter of the [Get-AzureSubscription](https://go.microsoft.com/fwlink/?LinkID=397623) cmdlet.
+To change the current subscription, use the [Select-AzureSubscription](https://go.microsoft.com/fwlink/?LinkID=397628) cmdlet.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.

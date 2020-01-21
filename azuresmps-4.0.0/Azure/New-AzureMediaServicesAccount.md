@@ -107,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to use Azure PowerShell for Media Services](http://go.microsoft.com/fwlink/?LinkId=324179)
+[How to use Azure PowerShell for Media Services](https://go.microsoft.com/fwlink/?LinkId=324179)
 
 [Get-AzureMediaServicesAccount](./Get-AzureMediaServicesAccount.md)
 
