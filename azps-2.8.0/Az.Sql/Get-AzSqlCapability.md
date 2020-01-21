@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -LocationName
 Specifies the name of the Location for which this cmdlet gets capabilities.
-For more information, see Azure Regionshttp://azure.microsoft.com/en-us/regions/ (http://azure.microsoft.com/en-us/regions/).
+For more information, see Azure Regionshttps://azure.microsoft.com/en-us/regions/ (https://azure.microsoft.com/en-us/regions/).
 
 ```yaml
 Type: System.String

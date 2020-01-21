@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ### -Slot
 Gets the specified deployment slot of the website.
 Enter the slot name, such as "Staging" or "Production".
-For more information about deployment slots, see Staged Deployment on Microsoft Azure Web Siteshttp://azure.microsoft.com/en-us/documentation/articles/web-sites-staged-publishing/.
+For more information about deployment slots, see Staged Deployment on Microsoft Azure Web Siteshttps://azure.microsoft.com/en-us/documentation/articles/web-sites-staged-publishing/.
 To add a deployment slot to an existing Azure website, use the Set-AzureWebsite cmdlet.
 
 ```yaml
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
