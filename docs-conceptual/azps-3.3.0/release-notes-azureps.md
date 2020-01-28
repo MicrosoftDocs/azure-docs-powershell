@@ -73,7 +73,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
 * Upgrade dependency of Microsoft.Azure.Management.Sql from 1.36-preview to 1.37-preview
 
 #### Az.RecoveryServices
-* Azure Site Recovery change support for managed disk vms encrypted at rest with customer managed leys for Azure to Azure provider.
+* Azure Site Recovery change support for managed disk vms encrypted at rest with customer managed keys for Azure to Azure provider.
 * Azure Site Recovery support to input disk encryption Set Id as optional input at enabling protection for Vmware to Azure.
 * Azure Site Recovery support to input disk encryption Set Id as optional input at disk level to enable protection for Vmware to Azure.
 * Azure Site Recovery support to update replication protected item with disk encryption set Map for HyperV to Azure.
