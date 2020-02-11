@@ -70,7 +70,7 @@ C:\PS> Select-AzureSubscription -Current -SubscriptionName ContosoEngineering
 
 This command makes "ContosoEngineering" the current subscription.
 
-### Example 2: Set the default description
+### Example 2: Set the default subscription
 ```
 C:\PS> Select-AzureSubscription -Default -SubscriptionName ContosoFinance -SubscriptionDataFile "C:\subs\MySubscriptions.xml"
 ```
