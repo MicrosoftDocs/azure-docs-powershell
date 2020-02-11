@@ -139,7 +139,7 @@ Azure sign-in across PowerShell sessions, see [Persist user credentials across P
 
 ## Update the Azure PowerShell module
 
-If you originally used Install-Module, then you should use [Update-Module](/powershell/module/powershellget/update-module) to get the latest version. If you originally used th MSI package then you should download and install the new MSI in order to udpate. If you have any issues with updating using the package from PowershellGet then you will need to __reinstall__, rather than
+If you originally used Install-Module, then you should use [Update-Module](/powershell/module/powershellget/update-module) to get the latest version. If you originally used the MSI package then you should download and install the new MSI in order to udpate. If you have any issues with updating using the package from PowershellGet then you will need to __reinstall__, rather than
 just __update__. This is done in the same way as installing, but you may need to add the `-Force` argument:
 
 ```powershell
