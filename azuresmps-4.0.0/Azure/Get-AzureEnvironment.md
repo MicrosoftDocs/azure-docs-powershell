@@ -21,7 +21,7 @@ The **Get-AzureEnvironment** cmdlet gets the Azure environments that are availab
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see [Azure Pack](http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
 
 The **Get-AzureEnvironment** cmdlet gets environments from your subscription data file, not from Azure.
 If the subscription data file is outdated, run the **Add-AzureAccount** or **Import-PublishSettingsFile** cmdlet to refresh it.
@@ -38,8 +38,8 @@ PS C:\> Get-AzureEnvironment
 EnvironmentName               ServiceEndpoint               ResourceManagerEndpoint       PublishSettingsFileUrl
 ---------------               ---------------               -----------------------       ----------------------
 
-AzureCloud                    https://management.core.wi... https://management.azure.com/ http://go.microsoft.com/fw... 
-AzureChinaCloud               https://management.core.ch... https://not-supported-serv... http://go.microsoft.com/fw...
+AzureCloud                    https://management.core.wi... https://management.azure.com/ https://go.microsoft.com/fw... 
+AzureChinaCloud               https://management.core.ch... https://not-supported-serv... https://go.microsoft.com/fw...
 ```
 
 This command gets all environments that are available to Windows PowerShell.
@@ -50,13 +50,13 @@ PS C:\> Get-AzureEnvironment -Name AzureCloud
 
 Name                          : AzureCloud
 
-PublishSettingsFileUrl        : http://go.microsoft.com/fwlink/?LinkID=301775
+PublishSettingsFileUrl        : https://go.microsoft.com/fwlink/?LinkID=301775
 
 ServiceEndpoint               : https://management.core.windows.net/
 
 ResourceManagerEndpoint       : https://management.azure.com/
 
-ManagementPortalUrl           : http://go.microsoft.com/fwlink/?LinkId=254433
+ManagementPortalUrl           : https://go.microsoft.com/fwlink/?LinkId=254433
 
 ActiveDirectoryEndpoint       : https://login.windows.net/
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

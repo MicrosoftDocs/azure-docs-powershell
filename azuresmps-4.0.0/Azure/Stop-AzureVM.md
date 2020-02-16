@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine to shut down.
 
 Use the wildcard character to stop multiple virtual machines asynchronously.
-With a wildcard character, this cmdlet calls the Shutdown Roleshttp://msdn.microsoft.com/en-us/library/azure/dn469421.aspx operation (http://msdn.microsoft.com/en-us/library/azure/dn469421.aspx), instead of the Shutdown Rolehttp://msdn.microsoft.com/en-us/library/azure/jj157195.aspx operation (http://msdn.microsoft.com/en-us/library/azure/jj157195.aspx).
+With a wildcard character, this cmdlet calls the Shutdown Roleshttps://msdn.microsoft.com/en-us/library/azure/dn469421.aspx operation (https://msdn.microsoft.com/en-us/library/azure/dn469421.aspx), instead of the Shutdown Rolehttps://msdn.microsoft.com/en-us/library/azure/jj157195.aspx operation (https://msdn.microsoft.com/en-us/library/azure/jj157195.aspx).
 
 ```yaml
 Type: String[]
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

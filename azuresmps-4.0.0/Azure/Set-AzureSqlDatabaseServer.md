@@ -35,7 +35,7 @@ This command changes the administrator account password for the Azure SQL Databa
 ### -AdminPassword
 Specifies the administrator account password for the Azure SQL Database server.
 You must specify a strong password.
-For more information, see [Strong Passwords](http://go.microsoft.com/fwlink/p/?LinkId=154152) (http://go.microsoft.com/fwlink/p/?LinkId=154152) at the Microsoft Developer Network.
+For more information, see [Strong Passwords](https://go.microsoft.com/fwlink/p/?LinkId=154152) (https://go.microsoft.com/fwlink/p/?LinkId=154152) at the Microsoft Developer Network.
 
 ```yaml
 Type: String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
