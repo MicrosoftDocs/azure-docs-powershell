@@ -16,7 +16,7 @@ PowerShellGet. For instructions on using PowerShellGet to install Azure PowerShe
 
 ## Requirements
 
-The MSI installer on Windows and is designed to install Azure PowerShell for PowerShell 5.1 only.
+The MSI installer on Windows is designed to install Azure PowerShell for PowerShell 5.1 only.
 For installation on non-Windows platforms or later versions of PowerShell,
 [Install with PowerShellGet](install-az-ps.md). To check your PowerShell version, run the command:
 
