@@ -188,10 +188,10 @@ You can install or load a specific version of the `Az` module by using the `-Req
 parameter:
 
 ```powershell-interactive
-# Install Az version 0.7.0
-Install-Module -Name Az -RequiredVersion 0.7.0
-# Load Az version 0.7.0
-Import-Module -Name Az -RequiredVersion 0.7.0
+# Install Az version 3.5.0
+Install-Module -Name Az -RequiredVersion 3.5.0
+# Load Az version 3.5.0
+Import-Module -Name Az -RequiredVersion 3.5.0
 ```
 
 ## Provide feedback
