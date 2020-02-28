@@ -17,7 +17,7 @@ The released images require Docker 17.05 or newer. It is also expected that you 
 Docker without `sudo` or local administrative rights. Please follow Docker's official
 [instructions][install] to install `docker` correctly.
 
-The release containers are built from the official PowerShell containers, then the Az module added
+The released containers are built from the official PowerShell containers, then the Az module added
 as a layer.
 
 The latest stable image includes:
