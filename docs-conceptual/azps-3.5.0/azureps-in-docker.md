@@ -23,7 +23,7 @@ as a layer.
 The latest stable image includes:
 
 - PowerShell version 6.2.4
-- Azure PowerShell Az modules version 3.5.0
+- Azure PowerShell most current Az module 
 
 A full list of available images can be found on our [Docker image][az image] page.
 
