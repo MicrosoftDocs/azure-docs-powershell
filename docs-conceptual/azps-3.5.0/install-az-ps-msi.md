@@ -36,7 +36,7 @@ To use Azure PowerShell in PowerShell 5.1, you need to:
 ## Install or update on Windows using the MSI Package
 
 Azure PowerShell for Windows is installed using the MSI file available from
-[GitHub](https://github.com/Azure/azure-powershell/releases/tag/v3.3.0-January2020). If you have installed earlier
+[GitHub](https://github.com/Azure/azure-powershell/releases/tag/v3.5.0-February2020). If you have installed earlier
 versions of Azure modules as an MSI, the installer automatically removes them. The MSI package installs
 modules in `${env:ProgramFiles}\WindowsPowerShell\Modules`.
 
