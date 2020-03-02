@@ -73,7 +73,7 @@ Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint
 ```
 
 When using a service principal instead of a registered application, add the `-ServicePrincipal` argument
-and provide the service principal's ID as the `-ApplicationId` parameter's value.
+and provide the service principal's Application ID as the `-ApplicationId` parameter's value.
 
 ```azurepowershell-interactive
 Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
