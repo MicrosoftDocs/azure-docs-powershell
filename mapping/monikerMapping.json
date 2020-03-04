@@ -85,5 +85,11 @@
         "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
         "packageRoot": "azurestackps-1.8.0",
         "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
+    },
+    "azurestackps-1.8.1": {
+        "conceptualToc": "docs-conceptual/azurestackps-1.8.1/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
+        "packageRoot": "azurestackps-1.8.1",
+        "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
     }
 }
