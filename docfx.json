@@ -396,6 +396,34 @@
             },
             {
                 "files": [
+                    "toc.yml"
+                ],
+                "src": "azurestackps-2.0.0",
+                "version": "azurestackps-2.0.0",
+                "dest": "module/azure-stack"
+            },
+            {
+                "files": [
+                    "**/*.md"
+                ],
+                "src": "azurestackps-2.0.0",
+                "version": "azurestackps-v",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azurestackps-2.0.0",
+                "version": "azurestackps-2.0.0",
+                "dest": "azure/azure-stack"
+            },
+            {
+                "files": [
                     "AADRM/**/*.md",
                     "AADRM/**/*.yml",
                     "AzureInformationProtection/**/*.md",
@@ -552,6 +580,9 @@
             },
             "azurestackps-1.8.0": {
                 "dest": "azurestackps-1.8.0"
+            },
+            "azurestackps-2.0.0": {
+                "dest": "azurestackps-2.0.0"
             },
             "azureipps": {
                 "dest": "azureipps"
