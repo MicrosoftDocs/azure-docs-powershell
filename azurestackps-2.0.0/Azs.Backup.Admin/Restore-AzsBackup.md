@@ -46,7 +46,7 @@ Restore a backup.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Restore Backup
 ```powershell
 PS C:\> Restore-AzsBackup -Name $backupResourceName -DecryptionCertPath $decryptionCertPath -DecryptionCertPassword $decryptionCertPassword
 

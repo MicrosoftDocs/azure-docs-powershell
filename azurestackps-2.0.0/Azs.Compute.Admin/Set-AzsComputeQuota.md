@@ -8,27 +8,17 @@ schema: 2.0.0
 # Set-AzsComputeQuota
 
 ## SYNOPSIS
-Creates or Updates a Compute Quota with the provided quota parameters.
+
 
 ## SYNTAX
 
-### UpdateExpanded (Default)
 ```
-Set-AzsComputeQuota -Name <String> [-Location <String>] [-SubscriptionId <String>]
- [-AvailabilitySetCount <Int32>] [-CoresCount <Int32>] [-Location1 <String>]
- [-PremiumManagedDiskAndSnapshotSize <Int32>] [-StandardManagedDiskAndSnapshotSize <Int32>]
- [-VirtualMachineCount <Int32>] [-VMScaleSetCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Update
-```
-Set-AzsComputeQuota -Name <String> -NewQuota <IQuota> [-Location <String>] [-SubscriptionId <String>]
- [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-AzsComputeQuota -NewQuota <IQuota> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates or Updates a Compute Quota with the provided quota parameters.
+
 
 ## EXAMPLES
 
@@ -49,44 +39,13 @@ VMScaleSetCount                    : 0
 VirtualMachineCount                : 0
 ```
 
-Set the parameters specified on the command line. Any parameters not set will default to 0
+Set the parameters specified on the command line.
+Any parameters not set will default to 0
 
 ## PARAMETERS
 
-### -AvailabilitySetCount
-Maximum number of availability sets allowed.
-
-```yaml
-Type: System.Int32
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -CoresCount
-Maximum number of cores allowed.
-
-```yaml
-Type: System.Int32
-Parameter Sets: UpdateExpanded
-Aliases: CoresLimit
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -101,61 +60,12 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -Location
-Location of the resource.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: (Get-AzLocation)[0].Location
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Location1
-Location of the resource.
-
-```yaml
-Type: System.String
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -Name
-Name of the quota.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: QuotaName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -NewQuota
-Holds Compute quota information used to control resource allocation.
 To construct, see NOTES section for NEWQUOTA properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
-Parameter Sets: Update
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -166,41 +76,8 @@ Accept wildcard characters: False
 Dynamic: False
 ```
 
-### -PremiumManagedDiskAndSnapshotSize
-Maximum number of managed disks and snapshots of type premium allowed.
-
-```yaml
-Type: System.Int32
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -StandardManagedDiskAndSnapshotSize
-Maximum number of managed disks and snapshots of type standard allowed.
-
-```yaml
-Type: System.Int32
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
 ### -SubscriptionId
-Subscription credentials that uniquely identify Microsoft Azure subscription.
-The subscription ID forms part of the URI for every service call.
+
 
 ```yaml
 Type: System.String
@@ -210,38 +87,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -VirtualMachineCount
-Maximum number of virtual machines allowed.
-
-```yaml
-Type: System.Int32
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Dynamic: False
-```
-
-### -VMScaleSetCount
-Maximum number of scale sets allowed.
-
-```yaml
-Type: System.Int32
-Parameter Sets: UpdateExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Dynamic: False
@@ -298,7 +143,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### NEWQUOTA <IQuota>: Holds Compute quota information used to control resource allocation.
+#### NEWQUOTA <IQuota>: 
   - `[Location <String>]`: Location of the resource.
   - `[AvailabilitySetCount <Int32?>]`: Maximum number of availability sets allowed.
   - `[CoresLimit <Int32?>]`: Maximum number of cores allowed.

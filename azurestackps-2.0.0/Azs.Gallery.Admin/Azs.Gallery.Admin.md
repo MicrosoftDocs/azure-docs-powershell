@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Gallery.Admin
-Module Guid: e81965bb-05c9-4488-99b0-385b466c4b6d
+Module Guid: 33e0c641-80fc-493b-b065-25280c018e90
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.gallery.admin
 Help Version: 1.0.0.0
 Locale: en-US

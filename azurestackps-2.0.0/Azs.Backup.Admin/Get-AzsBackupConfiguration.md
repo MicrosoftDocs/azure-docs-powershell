@@ -35,7 +35,7 @@ Returns a specific backup location based on name.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Get-AzsBackupConfiguration
 ```powershell
 PS C:\> Get-AzsBackupConfiguration
 

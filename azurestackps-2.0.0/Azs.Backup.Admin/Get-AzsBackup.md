@@ -34,7 +34,7 @@ Returns a backup from a location based on name.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: List Backups
 ```powershell
 PS C:\> Get-AzsBackup
 
@@ -42,7 +42,7 @@ PS C:\> Get-AzsBackup
 
 Get information sbout all Azure Stack backups.
 
-### Example 2: {{ Add title here }}
+### Example 2: Get specific backup
 ```powershell
 PS C:\> Get-AzsBackup -Name 'backupName'
 
