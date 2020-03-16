@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Azs.Compute.Admin-help.xml
 Module Name: Azs.Compute.Admin
 online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/get-azsvmextension
 schema: 2.0.0

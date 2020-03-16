@@ -1,4 +1,5 @@
 ---
+external help file: Azs.Compute.Admin-help.xml
 Module Name: Azs.Compute.Admin
 Module Guid: ef24d091-a5a0-428f-b80c-25140b0f1045
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin
