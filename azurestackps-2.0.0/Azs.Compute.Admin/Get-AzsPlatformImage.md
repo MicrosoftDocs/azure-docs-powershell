@@ -51,7 +51,7 @@ ProvisioningState : Succeeded
 Type              : Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions
 ```
 
-Get a list of all Platform Images by leaving all parameters blank. 
+Get a list of all Platform Images by leaving all parameters blank.
 
 ### Example 2: Get Specific Platform Image
 ```powershell
@@ -70,7 +70,7 @@ ProvisioningState : Succeeded
 Type              : Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions
 ```
 
-Specify the Offer, Publisher, Location, Sku, and Version to retrieve a Platform Image. 
+Specify the Offer, Publisher, Location, Sku, and Version to retrieve a Platform Image.
 
 ## PARAMETERS
 

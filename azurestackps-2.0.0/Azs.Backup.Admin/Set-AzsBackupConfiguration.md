@@ -33,7 +33,7 @@ Update a backup location.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Set backup configuration
 ```powershell
 PS C:\> Set-AzsBackupConfiguration -Path "\\***.***.***.***\Share" -Username "asdomain1\azurestackadmin" -Password $password  -EncryptionCertPath $encryptionCertPath
 

@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Backup.Admin
-Module Guid: f9197ea9-14c2-474d-9ece-6453cd315036
+Module Guid: c1157b29-2b5d-4d44-8e50-c9630d257155
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.backup.admin
 Help Version: 1.0.0.0
 Locale: en-US
@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azs.Backup.Admin Module
 ## Description
-Microsoft Azure PowerShell: BackupAdmin cmdlets
+Microsoft AzureStack PowerShell: BackupAdmin cmdlets
 
 ## Azs.Backup.Admin Cmdlets
 ### [Get-AzsBackup](Get-AzsBackup.md)

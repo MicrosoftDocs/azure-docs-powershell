@@ -39,7 +39,8 @@ Returns the disk.
 ```powershell
 PS C:\> Get-AzsDisk
 ```
-Without any parameters, `Get-AzsDisk` will list all Disks. 
+
+Without any parameters, `Get-AzsDisk` will list all Disks.
 
 ### Example 2: Get a Disk by Name
 ```powershell
@@ -116,7 +117,8 @@ Type            : Microsoft.Compute.Admin/locations/disks
 UserResourceId  : /subscriptions/74c72bdc-d917-431c-a377-8ca80f4238a0/resourceGroups/LADTEST/providers/Microsoft.Comput
                   e/Disks/TEST_OsDisk_1_426b89458a2442adacdcc26f16202489
 ```
-Use the `Count` parameter to retrieve a specific number of disks. 
+
+Use the `Count` parameter to retrieve a specific number of disks.
 
 ## PARAMETERS
 

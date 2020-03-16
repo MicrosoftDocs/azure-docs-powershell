@@ -37,6 +37,7 @@ Returns requested Virtual Machine Extension Image matching publisher, type, vers
 ### Example 1:  Get All VM Extensions
 ```powershell
 PS C:\> Get-AzsVMExtension
+
 ExtensionType            : IaaSDiagnostics
 TypeHandlerVersion       : 1.11.3.12
 ComputeRole              : IaaS

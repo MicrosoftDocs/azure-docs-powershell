@@ -51,7 +51,7 @@ VMScaleSetCount                    : 100
 VirtualMachineCount                : 100
 ```
 
-Run `Get-AzsComputeQuota` with no parameters to get a list of all Compute Quotas. 
+Run `Get-AzsComputeQuota` with no parameters to get a list of all Compute Quotas.
 
 ### Example 2: Get Compute Quota by Name
 ```powershell
@@ -70,7 +70,7 @@ VMScaleSetCount                    : 0
 VirtualMachineCount                : 100
 ```
 
-Specify the Quota's name on the command line to retrieve a specific quota. 
+Specify the Quota's name on the command line to retrieve a specific quota.
 
 ## PARAMETERS
 
