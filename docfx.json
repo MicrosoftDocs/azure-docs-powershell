@@ -57,6 +57,10 @@
             { "files": ["**/*.md"], "src": "azurestackps-1.8.1", "version": "azurestackps-1.8.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-1.8.1", "version": "azurestackps-1.8.1", "dest": "azure/azure-stack" },
 
+            { "files": ["toc.yml"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "module/azure-stack" },
+            { "files": ["**/*.md"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "azure/azure-stack" },
+
             {
                 "files": [
                     "AADRM/**/*.md",
@@ -116,6 +120,7 @@
             "azurestackps-1.7.2": { "dest": "azurestackps-1.7.2" },
             "azurestackps-1.8.0": { "dest": "azurestackps-1.8.0" },
             "azurestackps-1.8.1": { "dest": "azurestackps-1.8.1" },
+            "azurestackps-1.8.1": { "dest": "azurestackps-2.0.0" },
             "azureipps": { "dest": "azureipps" },
             "azureservicefabricps": { "dest": "azureservicefabricps" },
             "azureadps-1.0": { "dest": "azureadps-1.0" },
