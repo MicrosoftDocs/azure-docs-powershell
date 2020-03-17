@@ -81,7 +81,7 @@ Create a disk migration job to migrate disks to the target share.
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ To construct, see NOTES section for DISKS properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDisk[]
 Parameter Sets: (All)
-Aliases:
+
 
 Required: True
 Position: Named
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: MigrationId
+
 
 Required: True
 Position: Named
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Volume
-Aliases:
+
 
 Required: True
 Position: Named
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Share
-Aliases:
+
 
 Required: True
 Position: Named
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Volume
-Aliases:
+
 
 Required: True
 Position: Named
@@ -209,7 +209,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

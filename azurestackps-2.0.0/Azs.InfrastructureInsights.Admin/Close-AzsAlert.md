@@ -76,7 +76,7 @@ To construct, see NOTES section for ALERT properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.Api20160501.IAlert
 Parameter Sets: Close, CloseViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ Gets or sets the ID of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Properties of the alert.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ User alias who closed the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ Timestamp when the alert was closed.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ Timestamp when the alert was created.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ Description of the alert.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.Api20160501.IDictionary[]
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ Gets or sets the fault ID of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ Gets or sets the fault type ID of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -236,7 +236,7 @@ Indicates if the alert can be remediated.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ Display name for the impacted item.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -268,7 +268,7 @@ Gets or sets the Resource ID for the impacted item.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -285,7 +285,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.IInfrastructureInsightsAdminIdentity
 Parameter Sets: CloseViaIdentity, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -301,7 +301,7 @@ Timestamp when the alert was last updated.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ Name of the region
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -333,7 +333,7 @@ The Azure Region where the resource lives
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -349,7 +349,7 @@ Name of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded
-Aliases: AlertName
+
 
 Required: True
 Position: Named
@@ -365,7 +365,7 @@ Gets or sets the admin friendly remediation instructions for the alert.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.Api20160501.IDictionary[]
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -381,7 +381,7 @@ The name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -397,7 +397,7 @@ Gets or sets the registration ID of the service the alert belongs to.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -414,7 +414,7 @@ If the alert is not associated with a resource, the resource registration ID is 
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -430,7 +430,7 @@ Severity of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -446,7 +446,7 @@ State of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -463,7 +463,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -479,7 +479,7 @@ Resource tags.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -495,7 +495,7 @@ Gets or sets the Resource ID for the impacted item.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -511,7 +511,7 @@ The username used to perform the operation.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: True
 Position: Named
@@ -527,7 +527,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -544,7 +544,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

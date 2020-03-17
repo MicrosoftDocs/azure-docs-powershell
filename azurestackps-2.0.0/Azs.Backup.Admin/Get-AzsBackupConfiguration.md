@@ -51,7 +51,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -68,7 +68,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.IBackupAdminIdentity
 Parameter Sets: GetViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ Name of the backup location.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases:
+
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ OData skip parameter.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ OData top parameter.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named

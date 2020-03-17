@@ -68,7 +68,7 @@ Add a Platform Image from Blob Storage. Use the a SasUri to specify the location
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ The part number is used to bill for software costs.
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ To construct, see NOTES section for DATADISKS properties and create a hash table
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20151201Preview.IDataDisk[]
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
 Parameter Sets: CreateViaIdentity, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -150,7 +150,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ To construct, see NOTES section for NEWIMAGE properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20151201Preview.IPlatformImageParameters
 Parameter Sets: Create, CreateViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -183,7 +183,7 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ Name of the offer.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -215,7 +215,7 @@ Operating system type.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Support.OSType
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -231,7 +231,7 @@ Location of the disk.
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -247,7 +247,7 @@ Provisioning status of the platform image.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Support.ProvisioningState
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -263,7 +263,7 @@ Name of the publisher.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -279,7 +279,7 @@ Name of the SKU.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -296,7 +296,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ The version of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -328,7 +328,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -345,7 +345,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

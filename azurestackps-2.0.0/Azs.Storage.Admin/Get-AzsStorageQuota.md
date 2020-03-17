@@ -56,7 +56,7 @@ Get details of the specified storage quota by name.
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -72,7 +72,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.IStorageAdminIdentity
 Parameter Sets: GetViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases: QuotaName
+
 
 Required: True
 Position: Named
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named

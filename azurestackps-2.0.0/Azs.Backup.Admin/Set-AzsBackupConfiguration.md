@@ -49,7 +49,7 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -66,7 +66,7 @@ To construct, see NOTES section for BACKUP properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IBackupLocation
 Parameter Sets: Update
-Aliases:
+
 
 Required: True
 Position: Named
@@ -82,7 +82,7 @@ The interval, in hours, for the frequency that the scheduler takes a backup.
 ```yaml
 Type: System.Int32
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ The retention period, in days, for backs in the storage location.
 ```yaml
 Type: System.Int32
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ Path to the encryption cert file with public key (.cer).
 ```yaml
 Type: System.String
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ True if the backup scheduler is enabled.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ Name of the backup location.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ Password to access the location.
 ```yaml
 Type: System.Security.SecureString
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ Path to the update location
 ```yaml
 Type: System.String
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ List of key value pairs.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ Username to access the location.
 ```yaml
 Type: System.String
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -308,7 +308,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

@@ -58,7 +58,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -74,7 +74,7 @@ OData filter parameter.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.IFabricAdminIdentity
 Parameter Sets: GetViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Fabric file share name.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases:
+
 
 Required: True
 Position: Named
@@ -139,7 +139,7 @@ Returns true when the command succeeds
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ OData skip parameter.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ OData top parameter.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named

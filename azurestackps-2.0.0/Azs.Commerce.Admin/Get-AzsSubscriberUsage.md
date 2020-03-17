@@ -49,7 +49,7 @@ The aggregation granularity.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -65,7 +65,7 @@ The continuation token.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ The reported end time (exclusive).
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
-Aliases:
+
 
 Required: True
 Position: Named
@@ -113,7 +113,7 @@ The reported start time (inclusive).
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
-Aliases:
+
 
 Required: True
 Position: Named
@@ -129,7 +129,7 @@ The tenant subscription identifier.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ Subscription credentials which uniquely identify Microsoft Azure subscription.Th
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named

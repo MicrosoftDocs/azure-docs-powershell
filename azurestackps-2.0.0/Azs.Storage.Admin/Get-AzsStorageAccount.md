@@ -64,7 +64,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -80,7 +80,7 @@ Filter string
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.IStorageAdminIdentity
 Parameter Sets: GetViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -113,7 +113,7 @@ Resource location.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Internal storage account ID, which is not visible to tenant.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases: AccountId
+
 
 Required: True
 Position: Named
@@ -145,7 +145,7 @@ Subscription Id.
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ Switch for whether summary or detailed information is returned.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named

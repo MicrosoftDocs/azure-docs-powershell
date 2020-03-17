@@ -62,7 +62,7 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -78,7 +78,7 @@ Flag indicates if the operation should wait for storage to converge before retur
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ScaleExpanded, ScaleViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.IFabricAdminIdentity
 Parameter Sets: ScaleViaIdentity, ScaleViaIdentityExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -127,7 +127,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ To construct, see NOTES section for NODELIST properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.Api20160501.IScaleOutScaleUnitParameters[]
 Parameter Sets: ScaleExpanded, ScaleViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ Returns true when the command succeeds
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ Name of the scale units.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -225,7 +225,7 @@ To construct, see NOTES section for SCALEUNITNODEPARAMETER properties and create
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.Api20160501.IScaleOutScaleUnitParametersList
 Parameter Sets: Scale, ScaleViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -242,7 +242,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

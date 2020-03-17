@@ -49,7 +49,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -65,7 +65,7 @@ URI for your gallery package that has already been uploaded online.
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ To construct, see NOTES section for GALLERYITEMURIPAYLOAD properties and create 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Gallery.Models.Api20150401.IGalleryItemUriPayload
 Parameter Sets: Create
-Aliases:
+
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

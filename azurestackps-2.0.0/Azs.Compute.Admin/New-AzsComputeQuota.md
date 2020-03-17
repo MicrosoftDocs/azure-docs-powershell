@@ -78,7 +78,7 @@ Maximum number of availability sets allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Maximum number of cores allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-Aliases: CoresLimit
+
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ Name of the quota.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: QuotaName
+
 
 Required: True
 Position: Named
@@ -175,7 +175,7 @@ To construct, see NOTES section for NEWQUOTA properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
 Parameter Sets: Create
-Aliases:
+
 
 Required: True
 Position: Named
@@ -191,7 +191,7 @@ Maximum number of managed disks and snapshots of type premium allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ Maximum number of managed disks and snapshots of type standard allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -224,7 +224,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ Maximum number of virtual machines allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -256,7 +256,7 @@ Maximum number of scale sets allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

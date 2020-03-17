@@ -52,7 +52,7 @@ Update an existing storage quota by piping.
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Name
-Aliases: QuotaName
+
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ To construct, see NOTES section for QUOTAOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 Parameter Sets: QuotaObject
-Aliases:
+
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

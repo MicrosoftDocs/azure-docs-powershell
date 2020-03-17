@@ -78,7 +78,7 @@ Compute role
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ To construct, see NOTES section for EXTENSION properties and create a hash table
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20151201Preview.IVMExtensionParameters
 Parameter Sets: Create, CreateViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
 Parameter Sets: CreateViaIdentity, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -144,7 +144,7 @@ Indicates if the extension is for the system.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ The publisher of the VM Extension
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ Provisioning state of extension.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Support.ProvisioningState
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ Name of the publisher.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -224,7 +224,7 @@ URI to Azure or AzureStack blob.
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -257,7 +257,7 @@ True if supports multiple extensions.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ Type of extension.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -289,7 +289,7 @@ The version of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -305,7 +305,7 @@ Target virtual machine operating system type necessary for deploying the extensi
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Support.OSType
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -321,7 +321,7 @@ Value indicating whether the extension is enabled for virtual machine scale set 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -337,7 +337,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -354,7 +354,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

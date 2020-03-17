@@ -55,7 +55,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -71,7 +71,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ Maximum number of load balancers a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ Maximum number of NICs a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Maximum number of public IP addresses a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Maximum number of security groups a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Maximum number of virtual network gateway Connections a tenant subscription can 
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ Maximum number of virtual network gateways a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ Maximum number of virtual networks a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ Name of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: True
 Position: Named
@@ -216,7 +216,7 @@ To construct, see NOTES section for QUOTA properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.IQuota
 Parameter Sets: Update
-Aliases:
+
 
 Required: True
 Position: Named
@@ -233,7 +233,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ List of key value pairs.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: UpdateExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -265,7 +265,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

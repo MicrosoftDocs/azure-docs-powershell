@@ -128,7 +128,7 @@ The maximum number of disks to return.
 ```yaml
 Type: System.Int32
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
 Parameter Sets: GetViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -177,7 +177,7 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ The disk guid as identity.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases: DiskId
+
 
 Required: True
 Position: Named
@@ -209,7 +209,7 @@ The source share which the resource belongs to.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ The start index of disks in query.
 ```yaml
 Type: System.Int32
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ The parameters of disk state.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-Aliases:
+
 
 Required: False
 Position: Named
@@ -274,7 +274,7 @@ User Subscription Id which the resource belongs to.
 ```yaml
 Type: System.String
 Parameter Sets: List
-Aliases:
+
 
 Required: False
 Position: Named

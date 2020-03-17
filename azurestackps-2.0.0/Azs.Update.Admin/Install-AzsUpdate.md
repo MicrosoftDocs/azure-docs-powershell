@@ -45,7 +45,7 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -61,7 +61,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -78,7 +78,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.UpdateAdmin.Models.IUpdateAdminIdentity
 Parameter Sets: ApplyViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -94,7 +94,7 @@ The name of the update location.
 ```yaml
 Type: System.String
 Parameter Sets: Apply
-Aliases:
+
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Name of the update.
 ```yaml
 Type: System.String
 Parameter Sets: Apply
-Aliases:
+
 
 Required: True
 Position: Named
@@ -126,7 +126,7 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Resource group name.
 ```yaml
 Type: System.String
 Parameter Sets: Apply
-Aliases:
+
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Apply
-Aliases:
+
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named

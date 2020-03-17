@@ -62,7 +62,7 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -78,7 +78,7 @@ The password for the decryption certificate.
 ```yaml
 Type: System.Security.SecureString
 Parameter Sets: RestoreExpanded, RestoreViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Path to the decryption cert file with private key (.pfx).
 ```yaml
 Type: System.String
 Parameter Sets: RestoreExpanded, RestoreViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzureRMContext, AzureCredential
+
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Don't ask for confirmation
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.IBackupAdminIdentity
 Parameter Sets: RestoreViaIdentity, RestoreViaIdentityExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -159,7 +159,7 @@ Name of the backup location.
 ```yaml
 Type: System.String
 Parameter Sets: Restore, RestoreExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ Name of the backup.
 ```yaml
 Type: System.String
 Parameter Sets: Restore, RestoreExpanded
-Aliases:
+
 
 Required: True
 Position: Named
@@ -191,7 +191,7 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ Returns true when the command succeeds
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
 
 Required: False
 Position: Named
@@ -223,7 +223,7 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Restore, RestoreExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ To construct, see NOTES section for RESTOREOPTION properties and create a hash t
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IRestoreOptions
 Parameter Sets: Restore, RestoreViaIdentity
-Aliases:
+
 
 Required: True
 Position: Named
@@ -256,7 +256,7 @@ The Azure Stack role name for restore, set it to empty for all infrastructure ro
 ```yaml
 Type: System.String
 Parameter Sets: RestoreExpanded, RestoreViaIdentityExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Restore, RestoreExpanded
-Aliases:
+
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+
 
 Required: False
 Position: Named
@@ -306,7 +306,7 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+
 
 Required: False
 Position: Named
