@@ -153,7 +153,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.Gallery.Models.Api20150401.IGalleryItem
 
-## ALIASES
+
 
 ## NOTES
 
