@@ -8,33 +8,39 @@ schema: 2.0.0
 # Get-AzsBackup
 
 ## SYNOPSIS
+
 Returns a backup from a location based on name.
 
 ## SYNTAX
 
 ### List (Default)
+
 ```
 Get-AzsBackup [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String[]>] [-Skip <String>]
  [-Top <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
+
 ```
 Get-AzsBackup -Name <String> [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
+
 ```
 Get-AzsBackup -InputObject <IBackupAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Returns a backup from a location based on name.
 
 ## EXAMPLES
 
 ### Example 1: List Backups
+
 ```powershell
 PS C:\> Get-AzsBackup
 
@@ -43,6 +49,7 @@ PS C:\> Get-AzsBackup
 Get information sbout all Azure Stack backups.
 
 ### Example 2: Get specific backup
+
 ```powershell
 PS C:\> Get-AzsBackup -Name 'backupName'
 
@@ -53,6 +60,7 @@ Get information for the the specified Azure Stack backup.
 ## PARAMETERS
 
 ### -DefaultProfile
+
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
@@ -69,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
@@ -86,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
+
 Name of the backup location.
 
 ```yaml
@@ -102,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Name of the backup.
 
 ```yaml
@@ -118,6 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+
 Name of the resource group.
 
 ```yaml
@@ -134,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
+
 OData skip parameter.
 
 ```yaml
@@ -150,6 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
+
 Subscription credentials that uniquely identify Microsoft Azure subscription.
 The subscription ID forms part of the URI for every service call.
 
@@ -167,6 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Top
+
 OData top parameter.
 
 ```yaml
@@ -183,6 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -193,19 +209,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IBackup
 
-
-
 ## NOTES
 
-## COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 #### INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
-  - `[Backup <String>]`: Name of the backup.
-  - `[Id <String>]`: Resource identity path
-  - `[Location <String>]`: Name of the backup location.
-  - `[ResourceGroupName <String>]`: Name of the resource group.
-  - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+
+- `[Backup <String>]`: Name of the backup.
+- `[Id <String>]`: Resource identity path
+- `[Location <String>]`: Name of the backup location.
+- `[ResourceGroupName <String>]`: Name of the resource group.
+- `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
 ## RELATED LINKS
-
