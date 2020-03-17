@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Storage.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/get-azsstoragesettings
+online version: https://docs.microsoft.com/powershell/module/azs.storage.admin/get-azsstoragesettings
 schema: 2.0.0
 ---
 
@@ -44,7 +44,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Location
@@ -60,7 +60,7 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -76,7 +76,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters

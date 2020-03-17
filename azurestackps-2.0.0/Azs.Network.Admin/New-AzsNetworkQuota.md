@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Network.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/new-azsnetworkquota
+online version: https://docs.microsoft.com/powershell/module/azs.network.admin/new-azsnetworkquota
 schema: 2.0.0
 ---
 
@@ -78,7 +78,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -95,7 +95,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Location
@@ -111,7 +111,7 @@ Position: Named
 Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -MaxLoadBalancersPerSubscription
@@ -127,7 +127,7 @@ Position: Named
 Default value: 50
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -MaxNicsPerSubscription
@@ -143,7 +143,7 @@ Position: Named
 Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -MaxPublicIpsPerSubscription
@@ -159,7 +159,7 @@ Position: Named
 Default value: 50
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -MaxSecurityGroupsPerSubscription
@@ -175,7 +175,7 @@ Position: Named
 Default value: 50
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -MaxVirtualNetworkGatewayConnectionsPerSubscription
@@ -191,7 +191,7 @@ Position: Named
 Default value: 2
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -MaxVirtualNetworkGatewaysPerSubscription
@@ -207,7 +207,7 @@ Position: Named
 Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -MaxVnetsPerSubscription
@@ -223,7 +223,7 @@ Position: Named
 Default value: 50
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Name
@@ -239,7 +239,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Quota
@@ -256,7 +256,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -273,7 +273,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Tag
@@ -289,7 +289,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Confirm
@@ -305,7 +305,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -WhatIf
@@ -322,7 +322,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters

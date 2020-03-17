@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Network.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/get-azspublicipaddress
+online version: https://docs.microsoft.com/powershell/module/azs.network.admin/get-azspublicipaddress
 schema: 2.0.0
 ---
 
@@ -45,7 +45,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Filter
@@ -61,7 +61,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InlineCount
@@ -77,7 +77,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -OrderBy
@@ -93,7 +93,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Skip
@@ -109,7 +109,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -126,7 +126,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Top
@@ -142,7 +142,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters

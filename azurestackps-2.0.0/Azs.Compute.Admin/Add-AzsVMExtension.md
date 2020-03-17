@@ -1,7 +1,7 @@
 ---
 external help file: Azs.Compute.Admin-help.xml
 Module Name: Azs.Compute.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/add-azsvmextension
+online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/add-azsvmextension
 schema: 2.0.0
 ---
 
@@ -85,7 +85,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -DefaultProfile
@@ -101,7 +101,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Extension
@@ -118,7 +118,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -135,7 +135,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -IsSystemExtension
@@ -151,7 +151,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Location
@@ -167,7 +167,7 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -PropertiesPublisher
@@ -183,7 +183,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -ProvisioningState
@@ -199,7 +199,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Publisher
@@ -215,7 +215,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SourceBlob
@@ -231,7 +231,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -248,7 +248,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SupportMultipleExtensions
@@ -264,7 +264,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Type
@@ -280,7 +280,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Version
@@ -296,7 +296,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -VmOsType
@@ -312,7 +312,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -VMScaleSetEnabled
@@ -328,7 +328,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Confirm
@@ -344,7 +344,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -WhatIf
@@ -361,7 +361,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters

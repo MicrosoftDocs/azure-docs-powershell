@@ -1,7 +1,7 @@
 ---
 external help file: Azs.Compute.Admin-help.xml
 Module Name: Azs.Compute.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/set-azscomputequota
+online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/set-azscomputequota
 schema: 2.0.0
 ---
 
@@ -57,7 +57,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -NewQuota
@@ -73,7 +73,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -89,7 +89,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Confirm
@@ -105,7 +105,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -WhatIf
@@ -122,7 +122,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters

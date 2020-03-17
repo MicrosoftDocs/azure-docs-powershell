@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Gallery.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.gallery.admin/get-azsgalleryitem
+online version: https://docs.microsoft.com/powershell/module/azs.gallery.admin/get-azsgalleryitem
 schema: 2.0.0
 ---
 
@@ -106,7 +106,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -123,7 +123,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Name
@@ -140,7 +140,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -PassThru
@@ -156,7 +156,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -173,7 +173,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters
