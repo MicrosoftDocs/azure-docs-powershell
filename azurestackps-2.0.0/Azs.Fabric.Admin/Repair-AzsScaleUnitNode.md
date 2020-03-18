@@ -428,7 +428,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[SerialNumber <String>]`: Serial number of the physical machine.
   - `[Vendor <String>]`: Vendor of the physical machine.
 
-#### INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
+INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
   - `[Drive <String>]`: Name of the storage drive.
   - `[EdgeGateway <String>]`: Name of the edge gateway.
   - `[EdgeGatewayPool <String>]`: Name of the edge gateway pool.

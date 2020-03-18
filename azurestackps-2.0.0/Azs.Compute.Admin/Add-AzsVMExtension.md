@@ -394,7 +394,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[VMScaleSetEnabled <Boolean?>]`: Value indicating whether the extension is enabled for virtual machine scale set support.
   - `[VmosType <OSType?>]`: Target virtual machine operating system type necessary for deploying the extension handler.
 
-#### INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.

@@ -598,7 +598,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[State <String>]`: State of the alert.
   - `[Title <String>]`: Gets or sets the Resource ID for the impacted item.
 
-#### INPUTOBJECT <IInfrastructureInsightsAdminIdentity>: Identity Parameter
+INPUTOBJECT <IInfrastructureInsightsAdminIdentity>: Identity Parameter
   - `[AlertName <String>]`: Name of the alert.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the region

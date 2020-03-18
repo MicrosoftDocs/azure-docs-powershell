@@ -379,7 +379,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[Lun <Int32?>]`: Logical unit number.
   - `[Uri <String>]`: Location of the disk template.
 
-#### INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
