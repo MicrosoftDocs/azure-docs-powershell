@@ -351,7 +351,7 @@ INPUTOBJECT <INetworkAdminIdentity>: Identity Parameter
   - `[ResourceName <String>]`: Name of the resource.
   - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-#### QUOTA <IQuota>: Network quota resource.
+QUOTA <IQuota>: Network quota resource.
   - `[Tag <IResourceTags>]`: List of key value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[MaxLoadBalancersPerSubscription <Int64?>]`: Maximum number of load balancers a tenant subscription can provision.

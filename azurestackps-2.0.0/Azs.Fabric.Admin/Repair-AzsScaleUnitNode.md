@@ -418,7 +418,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### BAREMETALNODE <IBareMetalNodeDescription>: Identity Parameter
+BAREMETALNODE <IBareMetalNodeDescription>: Identity Parameter
   - `[BiosVersion <String>]`: Bios version of the physical machine.
   - `[BmciPv4Address <String>]`: BMC address of the physical machine.
   - `[ClusterName <String>]`: Name of the cluster.
