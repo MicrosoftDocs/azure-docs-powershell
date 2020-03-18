@@ -328,11 +328,11 @@ INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
   - `[Volume <String>]`: Name of the storage volume.
 
-#### NODELIST <IScaleOutScaleUnitParameters[]>: List of nodes in the scale unit.
+NODELIST <IScaleOutScaleUnitParameters[]>: List of nodes in the scale unit.
   - `[BmciPv4Address <String>]`: BMC address of the physical machine.
   - `[ComputerName <String>]`: Computer name of the physical machine.
 
-#### SCALEUNITNODEPARAMETER <IScaleOutScaleUnitParametersList>: A list of input data that allows for adding a set of scale unit nodes.
+SCALEUNITNODEPARAMETER <IScaleOutScaleUnitParametersList>: A list of input data that allows for adding a set of scale unit nodes.
   - `[AwaitStorageConvergence <Boolean?>]`: Flag indicates if the operation should wait for storage to converge before returning.
   - `[NodeList <IScaleOutScaleUnitParameters[]>]`: List of nodes in the scale unit.
     - `[BmciPv4Address <String>]`: BMC address of the physical machine.

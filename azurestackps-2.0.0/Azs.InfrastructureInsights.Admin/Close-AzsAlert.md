@@ -574,7 +574,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### ALERT <IAlert>: This object represents an alert resource.
+ALERT <IAlert>: This object represents an alert resource.
   - `[Location <String>]`: The Azure Region where the resource lives
   - `[Tag <ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

@@ -11,7 +11,7 @@ Locale: en-US
 ## Description
 Microsoft AzureStack PowerShell: ComputeAdmin cmdlets
 
-## Azs.Compute.Admin Cmdlets
+### Azs.Compute.Admin Cmdlets
 ### [Add-AzsPlatformImage](Add-AzsPlatformImage.md)
 Creates a new platform image with given publisher, offer, skus and version.
 
