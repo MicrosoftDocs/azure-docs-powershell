@@ -1,37 +1,36 @@
 ---
-external help file: Azs.Compute.Admin-help.xml
 Module Name: Azs.Compute.Admin
-Module Guid: ef24d091-a5a0-428f-b80c-25140b0f1045
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin
+Module Guid: e662cef1-a477-40a2-ab9f-06e8de7cc423
+Download Help Link: {{Please enter FwLink manually}}
+Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
 # Azs.Compute.Admin Module
-
 ## Description
-Microsoft AzureStack PowerShell: ComputeAdmin cmdlets
+Preview release of the AzureStack Compute administrator module which provides functionality to manage compute quotas, platform images, and virtual machine extensions, as well as managed disks migration jobs to rebalance storage.
 
 ## Azs.Compute.Admin Cmdlets
 ### [Add-AzsPlatformImage](Add-AzsPlatformImage.md)
-Creates a new platform image with given publisher, offer, skus and version.
+Add a virtual machine platform image from a given image configuration.
 
 ### [Add-AzsVMExtension](Add-AzsVMExtension.md)
-Create a Virtual Machine Extension Image with publisher, version.
+Create a new virtual machine extension image.
 
 ### [Get-AzsComputeQuota](Get-AzsComputeQuota.md)
-Get an existing Compute Quota.
+Returns quotas specifying the quota limits for compute objects.
 
 ### [Get-AzsDisk](Get-AzsDisk.md)
-Returns the disk.
+Returns the list of managed disks which can be migrated in the specified share.
 
 ### [Get-AzsDiskMigrationJob](Get-AzsDiskMigrationJob.md)
-Returns the requested disk migration job.
+Returns the list of managed disk migration jobs.
 
 ### [Get-AzsPlatformImage](Get-AzsPlatformImage.md)
-Returns the specific platform image matching publisher, offer, skus and version.
+Returns virtual machine images loaded into the platform image repository.
 
 ### [Get-AzsVMExtension](Get-AzsVMExtension.md)
-Returns requested Virtual Machine Extension Image matching publisher, type, version.
+Returns virtual machine image extensions currently available.
 
 ### [New-AzsComputeQuota](New-AzsComputeQuota.md)
 Create a new compute quota used to limit compute resources.
@@ -39,18 +38,21 @@ Create a new compute quota used to limit compute resources.
 ### [New-AzsDiskMigrationJob](New-AzsDiskMigrationJob.md)
 Starts a managed disk migration job to migrate managed disks to the specified destination share.
 
+### [New-DataDiskObject](New-DataDiskObject.md)
+Creates a data disk which is used to create a new virtual machine platform image.
+
 ### [Remove-AzsComputeQuota](Remove-AzsComputeQuota.md)
-Delete an existing Compute quota.
+Deletes specified compute quota.
 
 ### [Remove-AzsPlatformImage](Remove-AzsPlatformImage.md)
-Delete a platform image
+Delete a virtual machine image from the platform image repository.
 
 ### [Remove-AzsVMExtension](Remove-AzsVMExtension.md)
-Deletes specified Virtual Machine Extension Image.
+Deletes a virtual machine extension image.
 
 ### [Set-AzsComputeQuota](Set-AzsComputeQuota.md)
 Update an existing compute quota using the provided parameters.
 
 ### [Stop-AzsDiskMigrationJob](Stop-AzsDiskMigrationJob.md)
-Cancel a disk migration job.
+Cancel a managed disk migration job.
 
