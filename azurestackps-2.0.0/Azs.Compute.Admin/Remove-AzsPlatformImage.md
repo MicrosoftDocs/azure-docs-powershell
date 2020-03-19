@@ -1,8 +1,10 @@
 ---
 external help file: Azs.Compute.Admin-help.xml
+Module Guid: e662cef1-a477-40a2-ab9f-06e8de7cc423
 Module Name: Azs.Compute.Admin
 online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/remove-azsplatformimage
 schema: 2.0.0
+Locale: en-US
 ---
 
 # Remove-AzsPlatformImage
@@ -231,13 +233,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
+Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
 
 ## OUTPUTS
-
-### System.Boolean
-
-
 
 ## NOTES
 
