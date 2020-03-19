@@ -3,7 +3,6 @@ external help file: Azs.Compute.Admin-help.xml
 Module Name: Azs.Compute.Admin
 Module Guid: ef24d091-a5a0-428f-b80c-25140b0f1045
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin
-Help Version: 1.0.0.0
 Locale: en-US
 ---
 
@@ -35,10 +34,10 @@ Returns the specific platform image matching publisher, offer, skus and version.
 Returns requested Virtual Machine Extension Image matching publisher, type, version.
 
 ### [New-AzsComputeQuota](New-AzsComputeQuota.md)
-
+Create a new compute quota used to limit compute resources.
 
 ### [New-AzsDiskMigrationJob](New-AzsDiskMigrationJob.md)
-
+Starts a managed disk migration job to migrate managed disks to the specified destination share.
 
 ### [Remove-AzsComputeQuota](Remove-AzsComputeQuota.md)
 Delete an existing Compute quota.
@@ -50,7 +49,7 @@ Delete a platform image
 Deletes specified Virtual Machine Extension Image.
 
 ### [Set-AzsComputeQuota](Set-AzsComputeQuota.md)
-
+Update an existing compute quota using the provided parameters.
 
 ### [Stop-AzsDiskMigrationJob](Stop-AzsDiskMigrationJob.md)
 Cancel a disk migration job.
