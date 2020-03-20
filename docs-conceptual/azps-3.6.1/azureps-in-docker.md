@@ -23,7 +23,7 @@ as a layer.
 The latest stable image includes:
 
 - Ubuntu 18.04
-- PowerShell version 6.2.4
+- PowerShell version 7
 - Azure PowerShell most current Az module
 
 A full list of available images can be found on our [Docker image][az image] page.
