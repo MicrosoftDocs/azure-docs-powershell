@@ -266,17 +266,16 @@
                 "azps-*/**/*.md": true
             },
             "searchScope": {
-                "az*-*/Az*.Billing/*.md": ["Azure", "Cost Management", "Billing"],
-                "az*-*/Az*.Compute/*.md": ["Azure", "Virtual Machines", "Virtual Machine Scale Sets"],
-                "az*-*/Az*.CosmosDB/*.md": ["Azure", "Azure Cosmos DB"],
+                "az*-*/Az*.Billing/*.md": ["Billing", "Cost Management", "Azure", "Azure Powershell"],
+                "az*-*/Az*.Compute/*.md": ["Virtual Machines", "Virtual Machine Scale Sets", "Azure", "Azure Powershell"],
+                "az*-*/Az*.CosmosDB/*.md": ["Azure Cosmos DB", "Azure", "Azure Powershell"],
                 "az*-*/Az*.DataLakeAnalytics/*.md": ["Azure Data Lake Analytics", "Azure", "Azure Powershell"],
                 "az*-*/Az*.DataShare/*.md": ["Azure Data Share", "Azure", "Azure Powershell"],
                 "az*-*/Az*.HDInsight/*.md": ["Azure HDInsight", "Azure", "Azure Powershell"],
                 "az*-*/Az*.Kusto/*.md": ["Kusto", "Azure Data Explorer", "Azure", "Azure Powershell"],
-                "az*-*/Az*.RedisCache/*.md": ["Azure", "Cache for Redis"],
                 "az*-*/Az*.RedisCache/*.md": ["Cache for Redis", "Azure", "Azure Powershell"],
                 "az*-*/Az*.StreamAnalytics/*.md": ["Stream Analytics", "Azure", "Azure Powershell"],
-                "az*-*/Az*.Websites/*.md": ["Azure", "App Service"]
+                "az*-*/Az*.Websites/*.md": ["App Service", "Azure", "Azure Powershell"]
             }
         },
         "globalMetadata": {
