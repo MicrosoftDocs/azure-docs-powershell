@@ -1,7 +1,7 @@
 ---
-external help file: Azs.Compute.Admin-help.xml
+external help file:
 Module Name: Azs.Compute.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/get-azsdisk
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/get-azsdisk
 schema: 2.0.0
 ---
 
@@ -14,9 +14,9 @@ Returns the disk.
 
 ### List (Default)
 ```
-Get-AzsDisk [-Location <String>] [-SubscriptionId <String[]>] [-Count <Int32>] [-SharePath <String>]
- [-Start <Int32>] [-Status <String>] [-UserSubscriptionId <String>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+Get-AzsDisk [-Location <String>] [-SubscriptionId <String[]>] [-Count <Int32>] [-ScaleUnit <String>]
+ [-SharePath <String>] [-Start <Int32>] [-Status <String>] [-UserSubscriptionId <String>]
+ [-VolumeLabel <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
@@ -65,7 +65,7 @@ UserResourceId  : /subscriptions/74c72bdc-d917-431c-a377-8ca80f4238a0/resourceGr
 
 Specify a disk by its `Name` to retrieve it.
 
-### Example 2: Get a Specified number of Disks
+### Example 3: Get a Specified number of Disks
 ```powershell
 PS C:\>  Get-AzsDisk -Count 3
 
@@ -120,6 +120,55 @@ UserResourceId  : /subscriptions/74c72bdc-d917-431c-a377-8ca80f4238a0/resourceGr
 
 Use the `Count` parameter to retrieve a specific number of disks.
 
+### Example 4: Get all disks in specific location
+```powershell
+PS C:\> Get-AzsDisk -Status All -ScaleUnit s-cluster -VolumeLabel Objstore_4
+
+ActualSizeGb    : 2
+DiskId          : e4732f76-0753-40ec-80f5-8effdd0b437d
+DiskSku         : Premium_LRS
+DiskType        : Disk
+Id              : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/providers/Microsoft.Compute.Admin/locations/redmond/disks/e4732f76-0753-40ec-80f5-8effdd0b437d
+Location        : redmond
+ManagedBy       : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/resourceGroups/rbactest/providers/Microsoft.Compute/virtualMachines/test1
+Name            : redmond/e4732f76-0753-40ec-80f5-8effdd0b437d
+ProvisionSizeGb : 30
+SharePath       : \\SU1FileServer.s11r0401.masd.stbtest.microsoft.com\SU1_ObjStore_4
+Status          : Reserved
+Type            : Microsoft.Compute.Admin/locations/disks
+UserResourceId  : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/resourceGroups/RBACTEST/providers/Microsoft.Compute/Disks/test1_OsDisk_1_e4732f76075340ec80f58effdd0b437d
+
+ActualSizeGb    : 1
+DiskId          : 0485cbc9-1efa-43bd-86c2-0e201d79c528
+DiskSku         : Premium_LRS
+DiskType        : Disk
+Id              : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/providers/Microsoft.Compute.Admin/locations/redmond/disks/0485cbc9-1efa-43bd-86c2-0e201d79c528
+Location        : redmond
+ManagedBy       : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/resourceGroups/rbactest/providers/Microsoft.Compute/virtualMachines/test1
+Name            : redmond/0485cbc9-1efa-43bd-86c2-0e201d79c528
+ProvisionSizeGb : 64
+SharePath       : \\SU1FileServer.s11r0401.masd.stbtest.microsoft.com\SU1_ObjStore_4
+Status          : Reserved
+Type            : Microsoft.Compute.Admin/locations/disks
+UserResourceId  : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/resourceGroups/TESTRG1/providers/Microsoft.Compute/Disks/gpsdisk
+
+ActualSizeGb    : 1
+DiskId          : 137893db-e7ce-4907-a488-b35c5e928614
+DiskSku         : Premium_LRS
+DiskType        : Disk
+Id              : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/providers/Microsoft.Compute.Admin/locations/redmond/disks/137893db-e7ce-4907-a488-b35c5e928614
+Location        : redmond
+ManagedBy       : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/resourceGroups/rbactest/providers/Microsoft.Compute/virtualMachines/test1
+Name            : redmond/137893db-e7ce-4907-a488-b35c5e928614
+ProvisionSizeGb : 55
+SharePath       : \\SU1FileServer.s11r0401.masd.stbtest.microsoft.com\SU1_ObjStore_4
+Status          : Reserved
+Type            : Microsoft.Compute.Admin/locations/disks
+UserResourceId  : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/resourceGroups/RBACTEST/providers/Microsoft.Compute/Disks/testdd
+```
+
+Use the `ScaleUnit` or `VolumeLabel` parameter to list all disks in specific location
+
 ## PARAMETERS
 
 ### -Count
@@ -128,14 +177,14 @@ The maximum number of disks to return.
 ```yaml
 Type: System.Int32
 Parameter Sets: List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -144,14 +193,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -InputObject
@@ -161,14 +210,14 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
 Parameter Sets: GetViaIdentity
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -177,14 +226,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -193,30 +242,46 @@ The disk guid as identity.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-
+Aliases: DiskId
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
-### -SharePath
-The source share which the resource belongs to.
+### -ScaleUnit
+The scale unit which the resource belongs to.
 
 ```yaml
 Type: System.String
 Parameter Sets: List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+Dynamic: False
+```
 
+### -SharePath
+The share which the resource belongs to.
+
+```yaml
+Type: System.String
+Parameter Sets: List
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
 ```
 
 ### -Start
@@ -225,14 +290,14 @@ The start index of disks in query.
 ```yaml
 Type: System.Int32
 Parameter Sets: List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Status
@@ -241,14 +306,14 @@ The parameters of disk state.
 ```yaml
 Type: System.String
 Parameter Sets: List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -258,14 +323,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -UserSubscriptionId
@@ -274,14 +339,30 @@ User Subscription Id which the resource belongs to.
 ```yaml
 Type: System.String
 Parameter Sets: List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+Dynamic: False
+```
 
+### -VolumeLabel
+The volume label of the volume which the resource belongs to.
+
+```yaml
+Type: System.String
+Parameter Sets: List
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -295,14 +376,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDisk
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+#### INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.

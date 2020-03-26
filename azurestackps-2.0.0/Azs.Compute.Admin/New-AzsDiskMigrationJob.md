@@ -1,7 +1,7 @@
 ---
-external help file: Azs.Compute.Admin-help.xml
+external help file:
 Module Name: Azs.Compute.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/new-azsdiskmigrationjob
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/new-azsdiskmigrationjob
 schema: 2.0.0
 ---
 
@@ -81,14 +81,14 @@ Create a disk migration job to migrate disks to the target share.
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Disks
@@ -97,14 +97,14 @@ To construct, see NOTES section for DISKS properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDisk[]
 Parameter Sets: (All)
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -113,14 +113,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -129,14 +129,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases: MigrationId
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -145,14 +145,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -TargetScaleUnit
@@ -161,14 +161,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Volume
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -TargetShare
@@ -177,14 +177,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Share
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -TargetVolumeLabel
@@ -193,14 +193,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Volume
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -209,14 +209,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -226,14 +226,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -247,16 +247,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDiskMigrationJob
 
-
+## ALIASES
 
 ### Start-AzsDiskMigrationJob
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-DISKS <IDisk[]>: 
+#### DISKS <IDisk[]>: 
   - `[Location <String>]`: Location of the resource.
   - `[DiskId <String>]`: The disk id.
   - `[SharePath <String>]`: The disk share path.

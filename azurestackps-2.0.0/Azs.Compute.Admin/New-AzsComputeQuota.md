@@ -1,7 +1,7 @@
 ---
-external help file: Azs.Compute.Admin-help.xml
+external help file:
 Module Name: Azs.Compute.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/new-azscomputequota
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/new-azscomputequota
 schema: 2.0.0
 ---
 
@@ -78,14 +78,14 @@ Maximum number of availability sets allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: 10
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -CoresCount
@@ -94,14 +94,14 @@ Maximum number of cores allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases: CoresLimit
 
 Required: False
 Position: Named
 Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -110,14 +110,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -126,14 +126,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location1
@@ -142,14 +142,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -158,14 +158,14 @@ Name of the quota.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases: QuotaName
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -NewQuota
@@ -175,14 +175,14 @@ To construct, see NOTES section for NEWQUOTA properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
 Parameter Sets: Create
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -PremiumManagedDiskAndSnapshotSize
@@ -191,14 +191,14 @@ Maximum number of managed disks and snapshots of type premium allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: 2048
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -StandardManagedDiskAndSnapshotSize
@@ -207,14 +207,14 @@ Maximum number of managed disks and snapshots of type standard allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: 2048
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -224,14 +224,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -VirtualMachineCount
@@ -240,14 +240,14 @@ Maximum number of virtual machines allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -VMScaleSetCount
@@ -256,14 +256,14 @@ Maximum number of scale sets allowed.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -272,14 +272,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -289,14 +289,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -310,14 +310,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-NEWQUOTA <IQuota>: Holds Compute quota information used to control resource allocation.
+#### NEWQUOTA <IQuota>: Holds Compute quota information used to control resource allocation.
   - `[Location <String>]`: Location of the resource.
   - `[AvailabilitySetCount <Int32?>]`: Maximum number of availability sets allowed.
   - `[CoresLimit <Int32?>]`: Maximum number of cores allowed.

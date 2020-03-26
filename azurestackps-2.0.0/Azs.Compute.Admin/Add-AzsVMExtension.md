@@ -1,7 +1,7 @@
 ---
-external help file: Azs.Compute.Admin-help.xml
+external help file:
 Module Name: Azs.Compute.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/add-azsvmextension
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/add-azsvmextension
 schema: 2.0.0
 ---
 
@@ -78,14 +78,14 @@ Compute role
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -94,14 +94,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Extension
@@ -111,14 +111,14 @@ To construct, see NOTES section for EXTENSION properties and create a hash table
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20151201Preview.IVMExtensionParameters
 Parameter Sets: Create, CreateViaIdentity
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -InputObject
@@ -128,14 +128,14 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
 Parameter Sets: CreateViaIdentity, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -IsSystemExtension
@@ -144,14 +144,14 @@ Indicates if the extension is for the system.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -160,14 +160,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -PropertiesPublisher
@@ -176,14 +176,14 @@ The publisher of the VM Extension
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ProvisioningState
@@ -192,14 +192,14 @@ Provisioning state of extension.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Support.ProvisioningState
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Publisher
@@ -208,14 +208,14 @@ Name of the publisher.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SourceBlob
@@ -224,14 +224,14 @@ URI to Azure or AzureStack blob.
 ```yaml
 Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -241,14 +241,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SupportMultipleExtensions
@@ -257,14 +257,14 @@ True if supports multiple extensions.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Type
@@ -273,14 +273,14 @@ Type of extension.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Version
@@ -289,14 +289,14 @@ The version of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Create, CreateExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -VmOsType
@@ -305,14 +305,14 @@ Target virtual machine operating system type necessary for deploying the extensi
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Support.OSType
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -VMScaleSetEnabled
@@ -321,14 +321,14 @@ Value indicating whether the extension is enabled for virtual machine scale set 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -337,14 +337,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -354,14 +354,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -377,14 +377,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20151201Preview.IVMExtension
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-EXTENSION <IVMExtensionParameters>: Parameters used to create a new Virtual Machine Extension Image.
+#### EXTENSION <IVMExtensionParameters>: Parameters used to create a new Virtual Machine Extension Image.
   - `[ComputeRole <String>]`: Compute role
   - `[IsSystemExtension <Boolean?>]`: Indicates if the extension is for the system.
   - `[ProvisioningState <ProvisioningState?>]`: Provisioning state of extension.
@@ -394,7 +394,7 @@ EXTENSION <IVMExtensionParameters>: Parameters used to create a new Virtual Mach
   - `[VMScaleSetEnabled <Boolean?>]`: Value indicating whether the extension is enabled for virtual machine scale set support.
   - `[VmosType <OSType?>]`: Target virtual machine operating system type necessary for deploying the extension handler.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+#### INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.

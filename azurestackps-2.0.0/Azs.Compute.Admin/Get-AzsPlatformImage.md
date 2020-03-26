@@ -1,7 +1,7 @@
 ---
-external help file: Azs.Compute.Admin-help.xml
+external help file:
 Module Name: Azs.Compute.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/get-azsplatformimage
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.compute.admin/get-azsplatformimage
 schema: 2.0.0
 ---
 
@@ -80,14 +80,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -InputObject
@@ -97,14 +97,14 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.IComputeAdminIdentity
 Parameter Sets: GetViaIdentity
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -113,14 +113,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Get, List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Offer
@@ -129,14 +129,14 @@ Name of the offer.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Publisher
@@ -145,14 +145,14 @@ Name of the publisher.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Sku
@@ -161,14 +161,14 @@ Name of the SKU.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -178,14 +178,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Version
@@ -194,14 +194,14 @@ The version of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -215,14 +215,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20151201Preview.IPlatformImage
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+#### INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.

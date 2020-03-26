@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Storage.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.storage.admin/new-azsstoragequota
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/new-azsstoragequota
 schema: 2.0.0
 ---
 
@@ -44,14 +44,14 @@ Create a new storage quota with specified values.
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: 500
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -60,14 +60,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -76,14 +76,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -92,14 +92,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases: QuotaName
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -NumberOfStorageAccounts
@@ -108,14 +108,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Int32
 Parameter Sets: CreateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: 20
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -QuotaObject
@@ -124,14 +124,14 @@ To construct, see NOTES section for QUOTAOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 Parameter Sets: Create
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -140,14 +140,14 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -156,14 +156,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -173,14 +173,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -194,14 +194,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-QUOTAOBJECT <IStorageQuota>: 
+#### QUOTAOBJECT <IStorageQuota>: 
   - `[CapacityInGb <Int32?>]`: Maximum capacity (GB).
   - `[NumberOfStorageAccounts <Int32?>]`: Total number of storage accounts.
 

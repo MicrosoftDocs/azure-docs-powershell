@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Network.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.network.admin/set-azsnetworkquota
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/set-azsnetworkquota
 schema: 2.0.0
 ---
 
@@ -55,14 +55,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -71,14 +71,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Name
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MaxLoadBalancersPerSubscription
@@ -87,14 +87,14 @@ Maximum number of load balancers a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MaxNicsPerSubscription
@@ -103,14 +103,14 @@ Maximum number of NICs a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MaxPublicIpsPerSubscription
@@ -119,14 +119,14 @@ Maximum number of public IP addresses a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MaxSecurityGroupsPerSubscription
@@ -135,14 +135,14 @@ Maximum number of security groups a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MaxVirtualNetworkGatewayConnectionsPerSubscription
@@ -151,14 +151,14 @@ Maximum number of virtual network gateway Connections a tenant subscription can 
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MaxVirtualNetworkGatewaysPerSubscription
@@ -167,14 +167,14 @@ Maximum number of virtual network gateways a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MaxVnetsPerSubscription
@@ -183,14 +183,14 @@ Maximum number of virtual networks a tenant subscription can provision.
 ```yaml
 Type: System.Int64
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -199,14 +199,14 @@ Name of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Quota
@@ -216,14 +216,14 @@ To construct, see NOTES section for QUOTA properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.IQuota
 Parameter Sets: Update
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -233,14 +233,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Tag
@@ -249,14 +249,14 @@ List of key value pairs.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -265,14 +265,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -282,14 +282,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -303,14 +303,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.IQuota
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-QUOTA <IQuota>: Network quota resource.
+#### QUOTA <IQuota>: Network quota resource.
   - `[Tag <IResourceTags>]`: List of key value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[MaxLoadBalancersPerSubscription <Int64?>]`: Maximum number of load balancers a tenant subscription can provision.

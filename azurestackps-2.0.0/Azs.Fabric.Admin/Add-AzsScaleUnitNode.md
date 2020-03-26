@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Fabric.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.fabric.admin/add-azsscaleunitnode
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.fabric.admin/add-azsscaleunitnode
 schema: 2.0.0
 ---
 
@@ -62,14 +62,14 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -AwaitStorageConvergence
@@ -78,14 +78,14 @@ Flag indicates if the operation should wait for storage to converge before retur
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ScaleExpanded, ScaleViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -94,14 +94,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -InputObject
@@ -111,14 +111,14 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.IFabricAdminIdentity
 Parameter Sets: ScaleViaIdentity, ScaleViaIdentityExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -127,14 +127,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -NodeList
@@ -144,14 +144,14 @@ To construct, see NOTES section for NODELIST properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.Api20160501.IScaleOutScaleUnitParameters[]
 Parameter Sets: ScaleExpanded, ScaleViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -NoWait
@@ -160,14 +160,14 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -PassThru
@@ -176,14 +176,14 @@ Returns true when the command succeeds
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ResourceGroupName
@@ -192,14 +192,14 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: -join("System.",(Get-AzLocation)[0].Location)
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ScaleUnit
@@ -208,14 +208,14 @@ Name of the scale units.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ScaleUnitNodeParameter
@@ -225,14 +225,14 @@ To construct, see NOTES section for SCALEUNITNODEPARAMETER properties and create
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.Api20160501.IScaleOutScaleUnitParametersList
 Parameter Sets: Scale, ScaleViaIdentity
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -242,14 +242,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Scale, ScaleExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -258,14 +258,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -275,14 +275,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -298,14 +298,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Boolean
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
+#### INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
   - `[Drive <String>]`: Name of the storage drive.
   - `[EdgeGateway <String>]`: Name of the edge gateway.
   - `[EdgeGatewayPool <String>]`: Name of the edge gateway pool.
@@ -328,11 +328,11 @@ INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
   - `[Volume <String>]`: Name of the storage volume.
 
-NODELIST <IScaleOutScaleUnitParameters[]>: List of nodes in the scale unit.
+#### NODELIST <IScaleOutScaleUnitParameters[]>: List of nodes in the scale unit.
   - `[BmciPv4Address <String>]`: BMC address of the physical machine.
   - `[ComputerName <String>]`: Computer name of the physical machine.
 
-SCALEUNITNODEPARAMETER <IScaleOutScaleUnitParametersList>: A list of input data that allows for adding a set of scale unit nodes.
+#### SCALEUNITNODEPARAMETER <IScaleOutScaleUnitParametersList>: A list of input data that allows for adding a set of scale unit nodes.
   - `[AwaitStorageConvergence <Boolean?>]`: Flag indicates if the operation should wait for storage to converge before returning.
   - `[NodeList <IScaleOutScaleUnitParameters[]>]`: List of nodes in the scale unit.
     - `[BmciPv4Address <String>]`: BMC address of the physical machine.

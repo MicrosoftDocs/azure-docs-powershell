@@ -56,7 +56,7 @@ Name of the activation.
 ```yaml
 Type: String
 Parameter Sets: List, Get
-
+Aliases: 
 
 Required: True
 Position: Named
@@ -71,7 +71,7 @@ Name of the product.
 ```yaml
 Type: String
 Parameter Sets: Get
-
+Aliases: 
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ The resource group the resource is located under.
 ```yaml
 Type: String
 Parameter Sets: List, Get
-
+Aliases: 
 
 Required: True
 Position: Named
@@ -101,7 +101,7 @@ The resource id.
 ```yaml
 Type: String
 Parameter Sets: ResourceId
-
+Aliases: id
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Skip the first N items as specified by the parameter value.
 ```yaml
 Type: Int32
 Parameter Sets: List
-
+Aliases: 
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Applies after the -Skip parameter.
 ```yaml
 Type: Int32
 Parameter Sets: List
-
+Aliases: 
 
 Required: False
 Position: Named

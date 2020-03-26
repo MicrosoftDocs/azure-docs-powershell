@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Gallery.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.gallery.admin/get-azsgalleryitem
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.gallery.admin/get-azsgalleryitem
 schema: 2.0.0
 ---
 
@@ -99,14 +99,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -InputObject
@@ -116,14 +116,14 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Gallery.Models.IGalleryIdentity
 Parameter Sets: GetViaIdentity
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -133,14 +133,14 @@ Includes publisher name, item name, and may include version separated by period 
 ```yaml
 Type: System.String
 Parameter Sets: Get
-
+Aliases: GalleryItemName
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -PassThru
@@ -149,14 +149,14 @@ Returns true when the command succeeds
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Get, GetViaIdentity
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -166,14 +166,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String[]
 Parameter Sets: Get, List
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -187,14 +187,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.Gallery.Models.Api20150401.IGalleryItem
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IGalleryIdentity>: Identity Parameter
+#### INPUTOBJECT <IGalleryIdentity>: Identity Parameter
   - `[GalleryItemName <String>]`: Identity of the gallery item. Includes publisher name, item name, and may include version separated by period character.
   - `[Id <String>]`: Resource identity path
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.

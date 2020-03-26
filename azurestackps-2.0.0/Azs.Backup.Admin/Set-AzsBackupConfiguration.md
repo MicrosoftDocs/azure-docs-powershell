@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Backup.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.backup.admin/set-azsbackupconfiguration
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.backup.admin/set-azsbackupconfiguration
 schema: 2.0.0
 ---
 
@@ -49,14 +49,14 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Backup
@@ -66,14 +66,14 @@ To construct, see NOTES section for BACKUP properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IBackupLocation
 Parameter Sets: Update
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -BackupFrequencyInHours
@@ -82,14 +82,14 @@ The interval, in hours, for the frequency that the scheduler takes a backup.
 ```yaml
 Type: System.Int32
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -BackupRetentionPeriodInDays
@@ -98,14 +98,14 @@ The retention period, in days, for backs in the storage location.
 ```yaml
 Type: System.Int32
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -114,14 +114,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -EncryptionCertPath
@@ -130,14 +130,14 @@ Path to the encryption cert file with public key (.cer).
 ```yaml
 Type: System.String
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -IsBackupSchedulerEnabled
@@ -146,14 +146,14 @@ True if the backup scheduler is enabled.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -162,14 +162,14 @@ Name of the backup location.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -NoWait
@@ -178,14 +178,14 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Password
@@ -194,14 +194,14 @@ Password to access the location.
 ```yaml
 Type: System.Security.SecureString
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Path
@@ -210,14 +210,14 @@ Path to the update location
 ```yaml
 Type: System.String
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ResourceGroupName
@@ -226,14 +226,14 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: "system.$((Get-AzLocation)[0].Location)"
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -243,14 +243,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Tag
@@ -259,14 +259,14 @@ List of key value pairs.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -UserName
@@ -275,14 +275,14 @@ Username to access the location.
 ```yaml
 Type: System.String
 Parameter Sets: UpdateExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -291,14 +291,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -308,14 +308,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -329,14 +329,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IBackupLocation
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-BACKUP <IBackupLocation>: Information about the backup location.
+#### BACKUP <IBackupLocation>: Information about the backup location.
   - `[Location <String>]`: Location of the resource.
   - `[Tag <IResourceTags>]`: List of key value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

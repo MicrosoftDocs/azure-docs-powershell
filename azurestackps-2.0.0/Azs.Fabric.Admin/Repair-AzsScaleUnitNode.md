@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Fabric.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.fabric.admin/repair-azsscaleunitnode
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.fabric.admin/repair-azsscaleunitnode
 schema: 2.0.0
 ---
 
@@ -65,14 +65,14 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -BareMetalNode
@@ -82,14 +82,14 @@ To construct, see NOTES section for BAREMETALNODE properties and create a hash t
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.Api20160501.IBareMetalNodeDescription
 Parameter Sets: Repair, RepairViaIdentity
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -BiosVersion
@@ -98,14 +98,14 @@ Bios version of the physical machine.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -BmciPv4Address
@@ -114,14 +114,14 @@ BMC address of the physical machine.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ClusterName
@@ -130,14 +130,14 @@ Name of the cluster.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ComputerName
@@ -146,14 +146,14 @@ Name of the computer.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -162,14 +162,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Force
@@ -178,14 +178,14 @@ Don't ask for confirmation.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -InputObject
@@ -194,14 +194,14 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FabricAdmin.Models.IFabricAdminIdentity
 Parameter Sets: RepairViaIdentity, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -210,14 +210,14 @@ Location of the resource.
 ```yaml
 Type: System.String
 Parameter Sets: Repair, RepairExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -MacAddress
@@ -226,14 +226,14 @@ Name of the MAC address of the bare metal node.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Model
@@ -242,14 +242,14 @@ Model of the physical machine.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -258,14 +258,14 @@ Name of the scale unit node.
 ```yaml
 Type: System.String
 Parameter Sets: Repair, RepairExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -NoWait
@@ -274,14 +274,14 @@ Run the command asynchronously
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -PassThru
@@ -290,14 +290,14 @@ Returns true when the command succeeds
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ResourceGroupName
@@ -306,14 +306,14 @@ Name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Repair, RepairExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: -join("System.",(Get-AzLocation)[0].Location)
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SerialNumber
@@ -322,14 +322,14 @@ Serial number of the physical machine.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -339,14 +339,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Repair, RepairExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Vendor
@@ -355,14 +355,14 @@ Vendor of the physical machine.
 ```yaml
 Type: System.String
 Parameter Sets: RepairExpanded, RepairViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -371,14 +371,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -388,14 +388,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -411,14 +411,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Boolean
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-BAREMETALNODE <IBareMetalNodeDescription>: Identity Parameter
+#### BAREMETALNODE <IBareMetalNodeDescription>: Identity Parameter
   - `[BiosVersion <String>]`: Bios version of the physical machine.
   - `[BmciPv4Address <String>]`: BMC address of the physical machine.
   - `[ClusterName <String>]`: Name of the cluster.
@@ -428,7 +428,7 @@ BAREMETALNODE <IBareMetalNodeDescription>: Identity Parameter
   - `[SerialNumber <String>]`: Serial number of the physical machine.
   - `[Vendor <String>]`: Vendor of the physical machine.
 
-INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
+#### INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
   - `[Drive <String>]`: Name of the storage drive.
   - `[EdgeGateway <String>]`: Name of the edge gateway.
   - `[EdgeGatewayPool <String>]`: Name of the edge gateway pool.

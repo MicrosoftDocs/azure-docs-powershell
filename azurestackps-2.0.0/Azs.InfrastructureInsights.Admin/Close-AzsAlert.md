@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.InfrastructureInsights.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.infrastructureinsights.admin/close-azsalert
+online version: https://docs.microsoft.com/en-us/powershell/module/azs.infrastructureinsights.admin/close-azsalert
 schema: 2.0.0
 ---
 
@@ -76,14 +76,14 @@ To construct, see NOTES section for ALERT properties and create a hash table.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.Api20160501.IAlert
 Parameter Sets: Close, CloseViaIdentity
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -AlertId
@@ -92,14 +92,14 @@ Gets or sets the ID of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -AlertProperty
@@ -108,14 +108,14 @@ Properties of the alert.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ClosedByUserAlias
@@ -124,14 +124,14 @@ User alias who closed the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ClosedTimestamp
@@ -140,14 +140,14 @@ Timestamp when the alert was closed.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -CreatedTimestamp
@@ -156,14 +156,14 @@ Timestamp when the alert was created.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -DefaultProfile
@@ -172,14 +172,14 @@ The credentials, account, tenant, and subscription used for communication with A
 ```yaml
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Description
@@ -188,14 +188,14 @@ Description of the alert.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.Api20160501.IDictionary[]
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -FaultId
@@ -204,14 +204,14 @@ Gets or sets the fault ID of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -FaultTypeId
@@ -220,14 +220,14 @@ Gets or sets the fault type ID of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -HasValidRemediationAction
@@ -236,14 +236,14 @@ Indicates if the alert can be remediated.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ImpactedResourceDisplayName
@@ -252,14 +252,14 @@ Display name for the impacted item.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ImpactedResourceId
@@ -268,14 +268,14 @@ Gets or sets the Resource ID for the impacted item.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -InputObject
@@ -285,14 +285,14 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.IInfrastructureInsightsAdminIdentity
 Parameter Sets: CloseViaIdentity, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -LastUpdatedTimestamp
@@ -301,14 +301,14 @@ Timestamp when the alert was last updated.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location
@@ -317,14 +317,14 @@ Name of the region
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Location1
@@ -333,14 +333,14 @@ The Azure Region where the resource lives
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Name
@@ -349,14 +349,14 @@ Name of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded
-
+Aliases: AlertName
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Remediation
@@ -365,14 +365,14 @@ Gets or sets the admin friendly remediation instructions for the alert.
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.Api20160501.IDictionary[]
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ResourceGroupName
@@ -381,14 +381,14 @@ The name of the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: -join("System.",(Get-AzLocation)[0].Location)
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ResourceProviderRegistrationId
@@ -397,14 +397,14 @@ Gets or sets the registration ID of the service the alert belongs to.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -ResourceRegistrationId
@@ -414,14 +414,14 @@ If the alert is not associated with a resource, the resource registration ID is 
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Severity
@@ -430,14 +430,14 @@ Severity of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -State
@@ -446,14 +446,14 @@ State of the alert.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -SubscriptionId
@@ -463,14 +463,14 @@ The subscription ID forms part of the URI for every service call.
 ```yaml
 Type: System.String
 Parameter Sets: Close, CloseExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Tag
@@ -479,14 +479,14 @@ Resource tags.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Title
@@ -495,14 +495,14 @@ Gets or sets the Resource ID for the impacted item.
 ```yaml
 Type: System.String
 Parameter Sets: CloseExpanded, CloseViaIdentityExpanded
-
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -User
@@ -511,14 +511,14 @@ The username used to perform the operation.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -Confirm
@@ -527,14 +527,14 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### -WhatIf
@@ -544,14 +544,14 @@ The cmdlet is not run.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+Dynamic: False
 ```
 
 ### CommonParameters
@@ -567,14 +567,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.InfrastructureInsightsAdmin.Models.Api20160501.IAlert
 
-
+## ALIASES
 
 ## NOTES
 
-COMPLEX PARAMETER PROPERTIES
+### COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-ALERT <IAlert>: This object represents an alert resource.
+#### ALERT <IAlert>: This object represents an alert resource.
   - `[Location <String>]`: The Azure Region where the resource lives
   - `[Tag <ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
@@ -598,7 +598,7 @@ ALERT <IAlert>: This object represents an alert resource.
   - `[State <String>]`: State of the alert.
   - `[Title <String>]`: Gets or sets the Resource ID for the impacted item.
 
-INPUTOBJECT <IInfrastructureInsightsAdminIdentity>: Identity Parameter
+#### INPUTOBJECT <IInfrastructureInsightsAdminIdentity>: Identity Parameter
   - `[AlertName <String>]`: Name of the alert.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the region

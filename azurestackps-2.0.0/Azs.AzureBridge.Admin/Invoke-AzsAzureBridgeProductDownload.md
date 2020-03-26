@@ -44,7 +44,7 @@ Name of the activation.
 ```yaml
 Type: String
 Parameter Sets: Products_Download
-
+Aliases: 
 
 Required: True
 Position: Named
@@ -59,7 +59,7 @@ Run asynchronous as a job and return the job object.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-
+Aliases: 
 
 Required: False
 Position: Named
@@ -74,7 +74,7 @@ Don't ask for confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-
+Aliases: 
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ Name of the product.
 ```yaml
 Type: String
 Parameter Sets: Products_Download
-
+Aliases: 
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ The resource group the resource is located under.
 ```yaml
 Type: String
 Parameter Sets: Products_Download
-
+Aliases: 
 
 Required: True
 Position: Named
@@ -119,7 +119,7 @@ Resource identifier for azure bridge product.
 ```yaml
 Type: String
 Parameter Sets: ResourceId
-
+Aliases: id
 
 Required: True
 Position: Named
@@ -134,7 +134,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-
+Aliases: cf
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-
+Aliases: wi
 
 Required: False
 Position: Named
