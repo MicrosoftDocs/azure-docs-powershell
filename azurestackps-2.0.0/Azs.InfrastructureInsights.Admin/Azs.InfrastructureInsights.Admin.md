@@ -1,7 +1,7 @@
 ---
 Module Name: Azs.InfrastructureInsights.Admin
 Module Guid: 36c9368d-435f-401d-92e3-a02d918fa4e0
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.infrastructureinsights.admin
+Download Help Link: https://docs.microsoft.com/powershell/module/azs.infrastructureinsights.admin
 Help Version: 1.0.0.0
 Locale: en-US
 ---

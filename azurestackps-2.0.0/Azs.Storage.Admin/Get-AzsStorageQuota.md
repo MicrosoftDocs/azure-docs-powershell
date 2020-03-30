@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Storage.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.storage.admin/get-azsstoragequota
+online version: https://docs.microsoft.com/powershell/module/azs.storage.admin/get-azsstoragequota
 schema: 2.0.0
 ---
 
@@ -63,7 +63,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -79,7 +79,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Location
@@ -95,7 +95,7 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Name
@@ -111,7 +111,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -127,7 +127,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters
@@ -141,14 +141,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.StorageAdmin.Models.Api201908Preview.IStorageQuota
 
-## ALIASES
+
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### INPUTOBJECT <IStorageAdminIdentity>: 
+INPUTOBJECT <IStorageAdminIdentity>: 
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
   - `[AsyncOperationId <String>]`: Async Operation Id.
   - `[Id <String>]`: Resource identity path

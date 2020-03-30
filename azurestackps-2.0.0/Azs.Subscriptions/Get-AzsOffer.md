@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions/get-azsoffer
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions/get-azsoffer
 schema: 2.0.0
 ---
 
@@ -53,7 +53,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters
@@ -65,7 +65,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.Api20151101.IOffer
 
-## ALIASES
+
 
 ## NOTES
 

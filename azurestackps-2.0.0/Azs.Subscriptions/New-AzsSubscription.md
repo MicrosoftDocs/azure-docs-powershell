@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscription/new-azssubscription
+online version: https://docs.microsoft.com/powershell/module/azs.subscription/new-azssubscription
 schema: 2.0.0
 ---
 
@@ -52,7 +52,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -DisplayName
@@ -68,7 +68,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Id
@@ -84,7 +84,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -OfferId
@@ -100,7 +100,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -State
@@ -116,7 +116,7 @@ Position: Named
 Default value: Write-Output "Enabled"
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -132,7 +132,7 @@ Position: Named
 Default value: $([Guid]::NewGuid().ToString())
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -TenantId
@@ -148,7 +148,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Confirm
@@ -164,7 +164,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -WhatIf
@@ -181,7 +181,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters
@@ -193,7 +193,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.Api20151101.ISubscription
 
-## ALIASES
+
 
 ## NOTES
 

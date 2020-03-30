@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions/get-azssubscription
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions/get-azssubscription
 schema: 2.0.0
 ---
 
@@ -68,7 +68,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -85,7 +85,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -101,7 +101,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters
@@ -115,14 +115,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.Api20151101.ISubscription
 
-## ALIASES
+
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### INPUTOBJECT <ISubscriptionIdentity>: Identity Parameter
+INPUTOBJECT <ISubscriptionIdentity>: Identity Parameter
   - `[DelegatedProviderId <String>]`: Id of the delegated provider.
   - `[Id <String>]`: Resource identity path
   - `[OfferName <String>]`: Name of the offer.

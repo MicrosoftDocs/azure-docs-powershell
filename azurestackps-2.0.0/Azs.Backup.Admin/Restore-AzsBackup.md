@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Backup.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.backup.admin/restore-azsbackup
+online version: https://docs.microsoft.com/powershell/module/azs.backup.admin/restore-azsbackup
 schema: 2.0.0
 ---
 
@@ -69,7 +69,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -DecryptionCertPassword
@@ -85,7 +85,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -DecryptionCertPath
@@ -101,7 +101,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -DefaultProfile
@@ -117,7 +117,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Force
@@ -133,7 +133,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -150,7 +150,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Location
@@ -166,7 +166,7 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Name
@@ -182,7 +182,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -NoWait
@@ -198,7 +198,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -PassThru
@@ -214,7 +214,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -ResourceGroupName
@@ -230,7 +230,7 @@ Position: Named
 Default value: "system.$((Get-AzLocation)[0].Location)"
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -RestoreOption
@@ -247,7 +247,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -RoleName
@@ -263,7 +263,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -280,7 +280,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Confirm
@@ -296,7 +296,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -WhatIf
@@ -313,7 +313,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters
@@ -327,21 +327,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Boolean
 
-## ALIASES
+
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
+INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
   - `[Backup <String>]`: Name of the backup.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the backup location.
   - `[ResourceGroupName <String>]`: Name of the resource group.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-#### RESTOREOPTION <IRestoreOptions>: Properties for restore options.
+RESTOREOPTION <IRestoreOptions>: Properties for restore options.
   - `[DecryptionCertBase64 <String>]`: The certificate file raw data in Base64 string. This should be the .pfx file with the private key.
   - `[DecryptionCertPassword <String>]`: The password for the decryption certificate.
   - `[RoleName <String>]`: The Azure Stack role name for restore, set it to empty for all infrastructure role

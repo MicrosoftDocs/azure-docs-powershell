@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Network.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/get-azsnetworkadminoverview
+online version: https://docs.microsoft.com/powershell/module/azs.network.admin/get-azsnetworkadminoverview
 schema: 2.0.0
 ---
 
@@ -31,7 +31,7 @@ Get an overview of the state of the network resource provider.
 ### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
 Get-AzsNetworkAdminOverview
-To view examples, please use the -Online parameter with Get-Help or navigate to: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin/get-azsnetworkadminoverview
+To view examples, please use the -Online parameter with Get-Help or navigate to: https://docs.microsoft.com/powershell/module/azs.network.admin/get-azsnetworkadminoverview
 ```
 
 
@@ -51,7 +51,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -68,7 +68,7 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -SubscriptionId
@@ -85,7 +85,7 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### CommonParameters
@@ -99,14 +99,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.NetworkAdmin.Models.Api20150615.IAdminOverview
 
-## ALIASES
+
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### INPUTOBJECT <INetworkAdminIdentity>: Identity Parameter
+INPUTOBJECT <INetworkAdminIdentity>: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[ResourceName <String>]`: Name of the resource.
