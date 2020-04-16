@@ -44,8 +44,8 @@ Specifies the name of the network security group that this cmdlet gets.
 
 > [!NOTE]
 > When a classic network security group is created in a resource group other than
-> ***Default-Networking*** using the Azure portal, you must use the following syntax to see it from
-> within PowerShell `Get-AzureNetworkSecurityGroup -Name 'Group myResouceGroup myNetworkSecurityGroup'`.
+> ***Default-Networking*** using the Azure portal, you must use the following PowerShell syntax: 
+> `Get-AzureNetworkSecurityGroup -Name 'Group myResouceGroup myNetworkSecurityGroup'`.
 
 ```yaml
 Type: String
@@ -89,5 +89,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureNetworkSecurityGroup](./New-AzureNetworkSecurityGroup.md)
 
 [Remove-AzureNetworkSecurityGroup](./Remove-AzureNetworkSecurityGroup.md)
-
 
