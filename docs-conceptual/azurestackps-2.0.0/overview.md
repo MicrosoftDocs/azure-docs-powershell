@@ -7,13 +7,13 @@ manager: knithinc
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
-ms.date: 03/17/2020
+ms.date: 04/16/2020
 ---
 # Azure Stack Hub Module 2.0.0
 
 ## Requirements:
 
-Minimum supported Azure Stack version is 2002.
+Minimum supported Azure Stack Hub version is 2002.
 
 Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
 
@@ -21,11 +21,11 @@ Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell]
 
 ```powershell
 # Remove previous versions of AzureStack and AzureRM modules
-Get-Module -Name Azs.* -ListAvailable | Uninstall-Module -Force -Verbose
-Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose
+Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
+Get-Module -Name Azs.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
+Get-Module -Name Az.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
 
-Install-Module -Name Az -AllowClobber
-Install-Module -Name Az.BootStrapper
+Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
 
 # Install and import the API Version Modules required by Azure Stack into the current PowerShell session.
 Use-AzProfile -Profile 2019-03-01-hybrid -Force
