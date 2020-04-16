@@ -125,7 +125,7 @@
             "azurestackps-1.7.2": { "dest": "azurestackps-1.7.2" },
             "azurestackps-1.8.0": { "dest": "azurestackps-1.8.0" },
             "azurestackps-1.8.1": { "dest": "azurestackps-1.8.1" },
-            "azurestackps-1.8.1": { "dest": "azurestackps-2.0.0" },
+            "azurestackps-2.0.0": { "dest": "azurestackps-2.0.0" },
             "azureipps": { "dest": "azureipps" },
             "azureservicefabricps": { "dest": "azureservicefabricps" },
             "azureadps-1.0": { "dest": "azureadps-1.0" },
