@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 ms.assetid: 4E19A767-8233-42A0-95C5-1547B4DF297E
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -30,7 +30,7 @@ Indicates that this cmdlet returns the network security rules for the network se
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -42,10 +42,15 @@ Accept wildcard characters: False
 ### -Name
 Specifies the name of the network security group that this cmdlet gets.
 
+> [!NOTE]
+> When a classic network security group is created in a resource group other than
+> ***Default-Networking*** using the Azure portal, you must use the following PowerShell syntax: 
+> `Get-AzureNetworkSecurityGroup -Name 'Group myResouceGroup myNetworkSecurityGroup'`.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -55,13 +60,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. 
+Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,5 +89,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureNetworkSecurityGroup](./New-AzureNetworkSecurityGroup.md)
 
 [Remove-AzureNetworkSecurityGroup](./Remove-AzureNetworkSecurityGroup.md)
-
 
