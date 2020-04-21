@@ -1,0 +1,96 @@
+- name: Azure PowerShell
+  href: index.yml
+- name: Introducing the new Az module
+  href: new-azureps-module-az.md
+  displayName: intro, introduction, azurerm
+- name: Install
+  items:
+    - name: Install with PowerShellGet
+      href: install-az-ps.md
+    - name: Install with MSI
+      href: install-az-ps-msi.md
+- name: Uninstall
+  href: uninstall-az-ps.md
+- name: Migrate from AzureRM
+  items:
+    - name: Migration steps
+      href: migrate-from-azurerm-to-az.md
+      displayName: migrate, azurerm, az
+    - name: Changes between AzureRM and Az
+      href: migrate-az-1.0.0.md
+      displayName: breaking, cmdlet, module, names
+- name: Get started
+  href: get-started-azureps.md
+  displayName: sign in, signin, log in, login, find, feedback, intro, introduction
+- name: Cloud Shell
+  href: https://docs.microsoft.com/azure/cloud-shell/overview
+- name: Azure PowerShell in Docker
+  href: azureps-in-docker.md
+- name: Sign in
+  items:
+    - name: Authentication methods
+      href: authenticate-azureps.md
+      displayName: >-
+        sign in, signin, log in, login, credentials, msi, managed identity,
+        tenant, subscription, region, certificate, service principal,
+        authenticate
+    - name: Create a service principal
+      href: create-azure-service-principal-azureps.md
+      displayName: >-
+        automation, application, web app, script, certificate, sign in,
+        signin, log in, login, devops, dev ops, itpro, it pro, role,
+        aad, authentication, authenticate
+    - name: Credential contexts
+      href: context-persistence.md
+      displayName: >-
+        sign in, signin, log in, login, process, session, context,
+        persist, jobs, background, automation, scripting, task
+- name: Queries
+  href: queries-azureps.md
+  displayName: filter, search, format, output, variable, scripting, array, dictionary, map, object
+- name: Format output
+  href: formatting-output.md
+  displayName: object, table, yaml, json, xml, csv, html, list
+- name: Manage subscriptions
+  href: manage-subscriptions-azureps.md
+  displayName: tenant, user, sign in, signin, log in, login, authenticate, authentication, accounts
+- name: Deploy
+  items:
+    - name: Deploy Resource Manager templates
+      href: /azure/azure-resource-manager/resource-group-template-deploy
+    - name: Export Resource Manager templates
+      href: /azure/azure-resource-manager/resource-manager-export-template-powershell
+    - name: Deploy private Resource Manager templates
+      href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
+- name: Concepts
+  items:
+    - name: PowerShell jobs
+      href: using-psjobs.md
+      displayName: background, task, scripting, automation, context, process
+- name: Tutorials
+  items:
+    - name: Create Virtual Machines
+      href: azureps-vm-tutorial.yml
+- name: Sample Scripts
+  items:
+    - name: Linux Virtual Machines
+      href: /azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+      displayName: vms
+    - name: Windows Virtual Machines
+      href: /azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+      displayName: vms
+    - name: Web Apps
+      href: /azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+    - name: SQL Databases
+      href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+    - name: Cosmos DB
+      href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
+      displayName: database, nosql, mongodb, couchdb
+- name: Release notes
+  items:
+    - name: Release notes
+      href: release-notes-azureps.md
+    - name: Az 2.0.0 breaking changes
+      href: migrate-az-2.0.0.md
+    - name: Az 3.0.0 breaking changes
+      href: migrate-az-3.0.0.md
