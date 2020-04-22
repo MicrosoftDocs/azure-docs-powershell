@@ -123,7 +123,7 @@ ms.date: 03/10/2020
   - Az.Websites
 * Three new PowerShell modules for az have been introduced that work with Azure Stack Hub, which are Az.Databox, Az.IotHub, and Az.EventHub
 * Commands remain relatively the same, with minor changes such as changing AzureRM to Az
-* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](aka.ms/InstallASHPowerShell)
+* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](https://aka.ms/InstallASHPowerShell)
 
 ## 3.7.0 - March 2020
 #### Az.Accounts
