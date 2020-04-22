@@ -5,7 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ---
+# Azure PowerShell release notes
+
 ## 3.8.0 - April 2020
+### Highlights since the last release
+* PowerShell versions that Az.Storage supports: Windows PowerShell 5.1, PowerShell Core 6.2.4+, PowerShell 7
+
 #### Az.Accounts
 * Updated Azure PowerShell survey URL in 'Resolve-AzError' [#11507]
 
@@ -17,7 +22,7 @@ ms.date: 03/10/2020
 * Fixed ChinaCDN related pricing SKU display
 
 #### Az.CognitiveServices
-* Supported Identity, Encryption, UserOwnedStorage 
+* Supported Identity, Encryption, UserOwnedStorage
 
 #### Az.Compute
 * Added 'Set-AzVmssOrchestrationServiceState' cmdlet.
@@ -91,7 +96,7 @@ ms.date: 03/10/2020
 * Supported new SkuName StandardGZRS, StandardRAGZRS when create/update Storage account
     - 'New-AzStorageAccount'
     - 'Set-AzStorageAccount'
-* Supported DataLake Gen2 
+* Supported DataLake Gen2
     - 'New-AzDataLakeGen2Item'
     - 'Get-AzDataLakeGen2Item'
     - 'Get-AzDataLakeGen2ChildItem'
@@ -101,13 +106,31 @@ ms.date: 03/10/2020
     - 'Get-AzDataLakeGen2ItemContent'
     - 'Remove-AzDataLakeGen2Item'
 
-# Azure PowerShell release notes
+## 0.10.0-preview - April 2020
+### General
+* Az modules is now available in preview on Azure Stack Hub. This allows for cross-platform compatibility with Linux and macOs. Azure Stack Hub now supports PowerShell core with the Az modules, more information [here](https://aka.ms/az4AzureStack)
+* Az modules support profile 2019-03-01-hybrid:
+  - Az.Billing
+  - Az.Compute
+  - Az.DataBoxEdge
+  - Az.EventHub
+  - Az.IotHub
+  - Az.KeyVault
+  - Az.Monitor
+  - Az.Network
+  - Az.Resources
+  - Az.Storage
+  - Az.Websites
+* Three new PowerShell modules for az have been introduced that work with Azure Stack Hub, which are Az.Databox, Az.IotHub, and Az.EventHub
+* Commands remain relatively the same, with minor changes such as changing AzureRM to Az
+* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](https://aka.ms/InstallASHPowerShell)
+
 ## 3.7.0 - March 2020
 #### Az.Accounts
 * Fixed 'Get-AzTenant'/'Get-AzDefault'/'Set-AzDefault' throw NullReferenceException when not login [#10292]
 
 #### Az.Compute
-* Added the following parameters to 'New-AzDiskConfig' cmdlet: 
+* Added the following parameters to 'New-AzDiskConfig' cmdlet:
     - DiskIOPSReadOnly, DiskMBpsReadOnly, MaxSharesCount, GalleryImageReference
 * Allowed Encryption property to Target parameter of 'New-AzGalleryImageVersion' cmdlet.
 * Fixed tempDisk issue for 'Set-AzVmss' -Reimage and 'Invoke-AzVMReimage' cmdlets. [#11354]
