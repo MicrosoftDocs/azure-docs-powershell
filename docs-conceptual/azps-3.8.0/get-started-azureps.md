@@ -50,8 +50,8 @@ Connect-AzAccount -Environment AzureChinaCloud
 
 In Windows PowerShell 5.1 environments, you'll receive a sign-in dialog to provide a username and
 password for your Azure account. On every other version of PowerShell, you'll get a token to use on
-[https://microsoft.com/devicelogin]. Open this page in your browser and enter the token, then sign
-in with your Azure account credentials and authorize Azure PowerShell.
+[microsoft.com/devicelogin](https://microsoft.com/devicelogin). Open this page in your browser and
+enter the token, then sign in with your Azure account credentials and authorize Azure PowerShell.
 
 After signing in, you'll see information indicating which of your Azure subscriptions is active. If
 you have multiple Azure subscriptions in your account and want to select a different one, get your
@@ -74,9 +74,9 @@ resource type (examples include `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`,
 full list of standard verbs, see
 [Approved verbs for PowerShell Commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
 
-Knowing the nouns, verbs, and the Azure PowerShell modules available help you find commands with the
-[Get-Command](/powershell/module/microsoft.powershell.core/get-command) cmdlet. For example, to find
-all VM-related commands that use the `Get` verb:
+Knowing the nouns, verbs, and the Azure PowerShell modules available helps you find commands with
+the [Get-Command](/powershell/module/microsoft.powershell.core/get-command) cmdlet. For example, to
+find all VM-related commands that use the `Get` verb:
 
 ```powershell-interactive
 Get-Command -Verb Get -Noun AzVM* -Module Az.Compute
