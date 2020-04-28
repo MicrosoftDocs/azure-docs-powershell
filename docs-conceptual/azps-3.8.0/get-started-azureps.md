@@ -39,10 +39,10 @@ subscription, and tenant that launched the Cloud Shell session.
 Connect-AzAccount
 ```
 
-If you're in a non-US region, use the **Environment** parameter to sign in. Get the name of the
-environment for your region by using the
-[Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) cmdlet. For example, to sign
-in to Azure China 21Vianet:
+Azure cloud services offer environments compliant with regional data-handling laws. For accounts in
+a regional cloud, use the **Environment** parameter to sign in. Get the name of the environment for
+your region using the [Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) cmdlet.
+For example, to sign in to Azure China 21Vianet:
 
 ```azurepowershell-interactive
 Connect-AzAccount -Environment AzureChinaCloud
