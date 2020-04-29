@@ -34,7 +34,7 @@ To use Azure PowerShell in PowerShell 5.1 on Windows:
    [Windows PowerShell 5.1](/powershell/scripting/install/installing-windows-powershell#upgrading-existing-windows-powershell)
    if needed. If you're on Windows 10, you already have PowerShell 5.1 installed.
 2. Install [.NET Framework 4.7.2 or later](/dotnet/framework/install).
-3. Make sure you have the latest version of PowerShellGet. Run `Update-Module PowerShellGet -Force`.
+3. Make sure you have the latest version of PowerShellGet. Run `Install-Module -Name PowerShellGet -Force`.
 
 ## Install the Azure PowerShell module
 
