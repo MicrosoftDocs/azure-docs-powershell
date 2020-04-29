@@ -113,7 +113,7 @@ You can pipe the results of `Select-Object` and `Where-Object` to each other. Fo
 
 ```azurepowershell-interactive
 Get-AzVM -ResourceGroupName TestGroup |
-    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} | `
+    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} |
     Select-Object Name,VmID,ProvisioningState
 ```
 
