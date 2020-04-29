@@ -8,7 +8,7 @@ ms.date: 02/26/2020
 
 # Install Azure PowerShell
 
-This article explains how to install the Azure PowerShell modules using PowerShellGet. These
+This article explains how to install the Azure PowerShell modules using [PowerShellGet](/powershell/scripting/gallery/installing-psget). These
 instructions work on Windows, macOS, and Linux platforms.
 
 Azure PowerShell is also available in Azure [Cloud Shell](/azure/cloud-shell/overview) and is now
