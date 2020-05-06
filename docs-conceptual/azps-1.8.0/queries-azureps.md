@@ -77,7 +77,7 @@ of `Get-AzVM` output. To get a value from a nested property, provide a display n
 want to inspect as part of a dictionary argument to `Select-Object`:
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Select-Object Name,@{Name="OSType"; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -98,7 +98,7 @@ The `Where-Object` cmdlet allows you to filter the result based on any property 
 nested properties. The next example shows how to use `Where-Object` to find the Linux VMs in a resource group.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Where-Object {$_.StorageProfile.OSDisk.OSType -eq "Linux"}
 ```
 
@@ -112,8 +112,8 @@ TestGroup         TestVM2  westus2 Standard_D2s_v3  Linux testvm2669         Suc
 You can pipe the results of `Select-Object` and `Where-Object` to each other. For performance purposes, it's always recommended to put the `Where-Object` operation before `Select-Object`:
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
-    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} | `
+Get-AzVM -ResourceGroupName TestGroup |
+    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} |
     Select-Object Name,VmID,ProvisioningState
 ```
 
