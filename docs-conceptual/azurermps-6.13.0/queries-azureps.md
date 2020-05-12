@@ -1,9 +1,6 @@
 ---
 title: Query output of Azure PowerShell cmdlets
 description: How to query for resources in Azure and format the results.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018

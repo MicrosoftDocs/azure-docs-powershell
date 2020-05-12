@@ -1,9 +1,6 @@
 ---
 title: Breaking changes for Microsoft Azure PowerShell 4.0.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the version 4 release.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
