@@ -1,9 +1,6 @@
 ---
 title: Format Azure PowerShell cmdlet output
 description: How to format cmdlet output for Azure PowerShell.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/09/2018

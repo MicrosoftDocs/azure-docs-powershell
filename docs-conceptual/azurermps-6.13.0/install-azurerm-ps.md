@@ -1,9 +1,6 @@
 ---
 title: Install Azure PowerShell on Windows with PowerShellGet
 description: How to install Azure PowerShell with PowerShellGet
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/16/2018

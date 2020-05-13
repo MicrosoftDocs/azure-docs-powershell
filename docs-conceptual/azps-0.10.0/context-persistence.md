@@ -1,9 +1,6 @@
 ---
 title: Azure contexts and sign-in credentials
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
