@@ -1,9 +1,6 @@
 ---
 title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
