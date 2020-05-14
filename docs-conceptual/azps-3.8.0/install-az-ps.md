@@ -3,7 +3,7 @@ title: Install Azure PowerShell with PowerShellGet
 description: How to install Azure PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/26/2020
+ms.date: 05/14/2020
 ---
 
 # Install Azure PowerShell
@@ -17,10 +17,14 @@ preinstalled in [Docker images](azureps-in-docker.md).
 
 ## Requirements
 
-Azure PowerShell works with PowerShell 7.x and later on all platforms. It is also supported with
+> [!NOTE]
+> PowerShell 7.x and later is the recommended version of PowerShell for use with Azure PowerShell on
+> all platforms.
+
+Azure PowerShell works with PowerShell 6.2.4 and later on all platforms. It is also supported with
 PowerShell 5.1 on Windows. Install the
 [latest version of PowerShell](/powershell/scripting/install/installing-powershell) available for
-your operating system. Azure PowerShell has no additional requirements when run on PowerShell 7.x
+your operating system. Azure PowerShell has no additional requirements when run on PowerShell 6.2.4
 and later.
 
 To check your PowerShell version, run the command:
@@ -42,7 +46,7 @@ To use Azure PowerShell in PowerShell 5.1 on Windows:
 > [!WARNING]
 > We do not support having both the AzureRM and Az modules installed for PowerShell 5.1 on Windows
 > at the same time. If you need to keep AzureRM available on your system, install the Az module for
-> PowerShell 7.x or later.
+> PowerShell 6.2.4 or later.
 
 Using the PowerShellGet cmdlets is the preferred installation method. Install the Az module for the
 current user only. This is the recommended installation scope. This method works the same on
@@ -56,8 +60,8 @@ if (Get-Module -Name AzureRM -ListAvailable) {
 }
 ```
 
-By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet. The
-first time you use the PSGallery you see the following prompt:
+By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet and
+you see the following prompt:
 
 ```Output
 Untrusted repository
@@ -143,8 +147,8 @@ Connect-AzAccount
 ```
 
 > [!NOTE]
-> If you've disabled module autoloading, manually import the module with `Import-Module Az`. Because
-> of the way the module is structured, this can take a few seconds.
+> If you've disabled module autoloading, manually import the module with `Import-Module -Name Az`.
+> Because of the way the module is structured, this can take a few seconds.
 
 You'll need to repeat these steps for every new PowerShell session you start. To learn how to
 persist your Azure sign in across PowerShell sessions, see
@@ -163,7 +167,11 @@ updating using PowershellGet, then you should **reinstall**, rather than **updat
 done the same way as installing, but you need to add the `-Force` parameter:
 
 ```powershell
-Install-Module -Name Az -AllowClobber -Force
+if (Get-Module -Name AzureRM -ListAvailable) {
+    Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
+} else {
+    Install-Module -Name Az -AllowClobber -Force
+}
 ```
 
 Unlike MSI-based installations, installing or updating using PowerShellGet does not remove older
@@ -182,7 +190,7 @@ Get-InstalledModule -Name Az -AllVersions | Select-Object -Property Name, Versio
 
 To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
 
-If you have more than one version of the module installed, module autoload and `Import-Module` load
+If you have more than one version of the module installed, module autoload, and `Import-Module` load
 the latest version by default.
 
 You can install or load a specific version of the `Az` module by using the `-RequiredVersion`
