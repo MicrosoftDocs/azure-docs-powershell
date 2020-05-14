@@ -135,27 +135,41 @@
         },
         "filemetadata": {
             "ms.author": {
+                "azps-*/**/*.md": "dcaro",
+                "azuredmps-*/**/*.md": "deoletim",
                 "azurermps-*/**/*.md": "jasonsha",
                 "azuresmps-*/**/*.md": "jasonsha",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md": "deveshguha",
-                "azps-*/**/*.md": "dcaro",
-                "docs-conceptual/azps-*/**/*.md": "mirobb"
+                "docs-conceptual/azps-*/*.md": "mirobb",
+                "docs-conceptual/azuredmps-*/*.md": "deoletim",
+                "docs-conceptual/azurermps-*/*.md": "mirobb",
+                "docs-conceptual/azuresmps-*/*.md": "mirobb",
+                "docs-conceptual/azurestackps-*/*.md": "mabrigg",
+                "docs-conceptual/includes/*.md": "mirobb"
             },
             "author": {
+                "azps-*/**/*.md": "dcaro",
+                "azuredmps-*/**/*.md": "deveshguha",
                 "azurermps-*/**/*.md": "JasonRShaver",
                 "azuresmps-*/**/*.md": "JasonRShaver",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md": "deveshguha",
-                "azps-*/**/*.md": "dcaro",
-                "docs-conceptual/azps-*/**/*.md": "mikefrobbins"
+                "docs-conceptual/azps-*/*.md": "mikefrobbins",
+                "docs-conceptual/azuredmps-*/*.md": "deveshguha",
+                "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
+                "docs-conceptual/azuresmps-*/*.md": "mikefrobbins",
+                "docs-conceptual/azurestackps-*/*.md": "mattbriggs",
+                "docs-conceptual/includes/*.md": "mikefrobbins"
             },
             "ms.manager": {
+                "azps-*/**/*.md": "barbkess",
                 "azurermps-*/**/*.md": "barbkess",
                 "azuresmps-*/**/*.md": "barbkess",
                 "azurestackps-*/**/*.md": "femila",
-                "azps-*/**/*.md": "barbkess",
-                "docs-conceptual/azps-*/**/*.md": "barbkess"
+                "docs-conceptual/azps-*/*.md": "barbkess",
+                "docs-conceptual/azurermps-*/*.md": "barbkess",
+                "docs-conceptual/azuresmps-*/*.md": "barbkess",
+                "docs-conceptual/azurestackps-*/*.md": "femila",
+                "docs-conceptual/includes/*.md": "barbkess"
             },
             "ms.service": {
                 "docs-conceptual/azurestackps-*/**/*.md": "azure-stack",
