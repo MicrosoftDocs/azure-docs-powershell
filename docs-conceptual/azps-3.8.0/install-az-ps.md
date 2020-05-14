@@ -87,7 +87,7 @@ if (Get-Module -Name AzureRM -ListAvailable) {
 ```
 
 The Az module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
-the available Az PowerShell modules, and makes their cmdlets available for use.
+the generally available Az PowerShell modules, and makes their cmdlets available for use.
 
 ## Install offline
 
