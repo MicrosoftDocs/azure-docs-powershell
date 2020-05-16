@@ -16,7 +16,7 @@ migration path.
 > PowerShell 7.x and later is the recommended version of PowerShell for use with Azure PowerShell on
 > all platforms.
 
-With the Az module, Azure PowerShell works with PowerShell 6.2.4 and later on all platforms
+With the latest Az module, Azure PowerShell works with PowerShell 6.2.4 and later on all platforms
 including Windows, macOS, and Linux. It is also compatible with PowerShell 5.1 on Windows.
 
 Az is a new module, so the version has been reset to 1.0.0.
