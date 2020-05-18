@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/get-azsdirectorytenant
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/get-azsdirectorytenant
 schema: 2.0.0
 ---
 
@@ -62,7 +62,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -135,20 +135,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IDirectoryTenant
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IDirectoryTenant
 
 ## ALIASES
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
+INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
   - `[DelegatedProvider <String>]`: DelegatedProvider identifier.
   - `[DelegatedProviderSubscriptionId <String>]`: Delegated provider subscription identifier.
   - `[Id <String>]`: Resource identity path

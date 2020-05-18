@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/remove-azsacquiredplan
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/remove-azsacquiredplan
 schema: 2.0.0
 ---
 
@@ -52,7 +52,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -InputObject
@@ -174,15 +174,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
 
 ## OUTPUTS
 
-### System.Boolean
+System.Boolean
 
 ## ALIASES
 
-### Remove-AzsSubscriptionPlan
+Remove-AzsSubscriptionPlan
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/new-azsusersubscription
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/new-azsusersubscription
 schema: 2.0.0
 ---
 
@@ -65,7 +65,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -DelegatedProviderSubscriptionId
@@ -283,20 +283,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ISubscriptionDefinition
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ISubscriptionDefinition
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ISubscriptionDefinition
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ISubscriptionDefinition
 
 ## ALIASES
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### SUBSCRIPTIONDEFINITION <ISubscriptionDefinition>: Subscription object properties.
+SUBSCRIPTIONDEFINITION <ISubscriptionDefinition>: Subscription object properties.
   - `[DelegatedProviderSubscriptionId <String>]`: Parent DelegatedProvider subscription identifier.
   - `[DisplayName <String>]`: Subscription name.
   - `[ExternalReferenceId <String>]`: External reference identifier.

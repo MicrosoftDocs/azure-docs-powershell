@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/new-azsofferdelegation
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/new-azsofferdelegation
 schema: 2.0.0
 ---
 
@@ -61,7 +61,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -Location
@@ -215,20 +215,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IOfferDelegation
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IOfferDelegation
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IOfferDelegation
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IOfferDelegation
 
 ## ALIASES
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### OFFERDELEGATIONDEFINITION <IOfferDelegation>: Offer delegation.
+OFFERDELEGATIONDEFINITION <IOfferDelegation>: Offer delegation.
   - `[Location <String>]`: Location of the resource
   - `[SubscriptionId <String>]`: Identifier of the subscription receiving the delegated offer.
 

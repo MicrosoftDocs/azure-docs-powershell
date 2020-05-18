@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/new-azsacquiredplan
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/new-azsacquiredplan
 schema: 2.0.0
 ---
 
@@ -82,7 +82,7 @@ Dynamic: False
 ```
 
 ### -DefaultProfile
-
+The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -94,7 +94,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -ExternalReferenceId
@@ -247,22 +247,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IPlanAcquisition
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IPlanAcquisition
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IPlanAcquisition
+Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IPlanAcquisition
 
 ## ALIASES
 
-### New-AzsSubscriptionPlan
+New-AzsSubscriptionPlan
 
 ## NOTES
 
-### COMPLEX PARAMETER PROPERTIES
+COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-#### ACQUIREDPLANDEFINITION <IPlanAcquisition>: 
+ACQUIREDPLANDEFINITION <IPlanAcquisition>: 
   - `[AcquisitionId <String>]`: Acquisition identifier.
   - `[AcquisitionTime <DateTime?>]`: Acquisition time.
   - `[ExternalReferenceId <String>]`: External reference identifier.

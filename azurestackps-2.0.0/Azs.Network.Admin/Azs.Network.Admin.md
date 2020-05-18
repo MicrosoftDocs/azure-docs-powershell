@@ -1,7 +1,7 @@
 ---
 Module Name: Azs.Network.Admin
 Module Guid: 818c880d-2aa0-4aa3-961c-cc58c4ef12b2
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.network.admin
+Download Help Link: https://docs.microsoft.com/powershell/module/azs.network.admin
 Help Version: 1.0.0.0
 Locale: en-US
 ---

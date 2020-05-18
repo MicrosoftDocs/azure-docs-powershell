@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/get-azsplanmetric
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/get-azsplanmetric
 schema: 2.0.0
 ---
 
@@ -49,7 +49,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Dynamic: False
+
 ```
 
 ### -PlanName
