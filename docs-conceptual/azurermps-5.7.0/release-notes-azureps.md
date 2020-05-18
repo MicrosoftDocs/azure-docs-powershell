@@ -1,9 +1,6 @@
 ---
 title: Azure PowerShell Change Log | Microsoft Docs
 description: This is a history of changes made to Azure PowerShell in the latest release.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:

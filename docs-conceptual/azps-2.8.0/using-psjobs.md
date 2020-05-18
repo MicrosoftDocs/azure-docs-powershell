@@ -1,9 +1,6 @@
 ---
 title: Run Azure PowerShell cmdlets in PowerShell Jobs
 description: Learn how to run Azure PowerShell cmdlets in parallel or as background tasks, using -AsJob and Start-Job.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019

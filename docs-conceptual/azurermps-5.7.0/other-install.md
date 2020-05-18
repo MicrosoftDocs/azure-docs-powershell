@@ -1,9 +1,6 @@
 ---
 title: Other ways to install  Azure PowerShell
 description: How to install Azure PowerShell without PowerShellGet
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/20/2018

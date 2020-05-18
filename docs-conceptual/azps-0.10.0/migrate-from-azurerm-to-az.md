@@ -1,9 +1,6 @@
 ---
 title: Migrate Azure PowerShell scripts from AzureRM to Az
 description: Learn the steps and tools for migrating scripts from the AzureRM module to the new Az module.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/10/2019

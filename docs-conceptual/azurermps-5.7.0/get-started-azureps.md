@@ -1,9 +1,6 @@
 ---
 title: Get started with Azure PowerShell
 description:
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/15/2017

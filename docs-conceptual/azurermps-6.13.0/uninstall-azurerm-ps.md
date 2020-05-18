@@ -2,9 +2,6 @@
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
 ms.date: 06/10/2019
-author: sptramer
-ms.author: sttramer
-ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ---

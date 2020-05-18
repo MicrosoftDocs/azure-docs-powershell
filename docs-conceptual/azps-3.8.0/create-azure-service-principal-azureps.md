@@ -1,9 +1,6 @@
 ---
 title: Use Azure service principals with Azure PowerShell
 description: Learn how to create and use service principals with Azure PowerShell.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/23/2019
@@ -47,8 +44,7 @@ The returned object contains the `Secret` member, which is a `SecureString` cont
 The following code will allow you to export the secret:
 
 ```azurepowershell-interactive
-$BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sp.Secret)
-$UnsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+$UnsecureSecret = ConvertFrom-SecureString -SecureString $sp.Secret -AsPlainText
 ```
 
 For user-supplied passwords, the `-PasswordCredential` argument takes `Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
