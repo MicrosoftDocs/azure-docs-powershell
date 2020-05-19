@@ -94,3 +94,5 @@
       href: migrate-az-2.0.0.md
     - name: Az 3.0.0 breaking changes
       href: migrate-az-3.0.0.md
+    - name: Az 4.1.0 breaking changes
+      href: migrate-az-4.1.0.md
