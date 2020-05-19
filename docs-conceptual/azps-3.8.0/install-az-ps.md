@@ -22,10 +22,10 @@ preinstalled in [Docker images](azureps-in-docker.md).
 > all platforms.
 
 Azure PowerShell works with PowerShell 6.2.4 and later on all platforms. It is also supported with
-PowerShell 5.1 on Windows. Install the
+PowerShell 5.1 on Windows. Installing the
 [latest version of PowerShell](/powershell/scripting/install/installing-powershell) available for
-your operating system. Azure PowerShell has no additional requirements when run on PowerShell 6.2.4
-and later.
+your operating system is recommended. Azure PowerShell has no additional requirements when run on
+PowerShell 6.2.4 and later.
 
 To check your PowerShell version, run the command:
 
@@ -39,7 +39,8 @@ To use Azure PowerShell in PowerShell 5.1 on Windows:
    [Windows PowerShell 5.1](/powershell/scripting/install/installing-windows-powershell#upgrading-existing-windows-powershell).
    If you're on Windows 10 version 1607 or higher, you already have PowerShell 5.1 installed.
 2. Install [.NET Framework 4.7.2 or later](/dotnet/framework/install).
-3. Make sure you have the latest version of PowerShellGet. Run `Install-Module -Name PowerShellGet -Force`.
+3. Make sure you have the latest version of PowerShellGet. Start a PowerShell 5.1 session using
+   **Run as administrator** and run `Install-Module -Name PowerShellGet -AllowClobber -Force`.
 
 ## Install the Azure PowerShell module
 
@@ -53,7 +54,7 @@ current user only. This is the recommended installation scope. This method works
 Windows, macOS, and Linux platforms. Run the following command from a PowerShell session:
 
 ```powershell-interactive
-if (Get-Module -Name AzureRM -ListAvailable) {
+if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
     Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
 } else {
     Install-Module -Name Az -AllowClobber -Scope CurrentUser
@@ -79,7 +80,7 @@ Installing the module for all users on a system requires elevated privileges. St
 session using **Run as administrator** in Windows or use the `sudo` command on macOS or Linux:
 
 ```powershell-interactive
-if (Get-Module -Name AzureRM -ListAvailable) {
+if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
     Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
 } else {
     Install-Module -Name Az -AllowClobber -Scope AllUsers
@@ -117,7 +118,7 @@ problem not listed here, [file an issue on GitHub](https://github.com/azure/azur
 ### Proxy blocks connection
 
 If you get errors from `Install-Module` that indicate the PowerShell Gallery is unreachable, you may
-be behind a proxy. Different operating systems and network environment have different requirements
+be behind a proxy. Different operating systems and network environments have different requirements
 for configuring a system-wide proxy. Contact your system administrator for your proxy settings and
 how to configure them for your environment.
 
@@ -167,7 +168,7 @@ updating using PowershellGet, then you should **reinstall**, rather than **updat
 done the same way as installing, but you need to add the `-Force` parameter:
 
 ```powershell
-if (Get-Module -Name AzureRM -ListAvailable) {
+if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
     Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
 } else {
     Install-Module -Name Az -AllowClobber -Force
@@ -193,7 +194,7 @@ To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell mod
 If you have more than one version of the module installed, module autoload, and `Import-Module` load
 the latest version by default.
 
-You can install or load a specific version of the `Az` module by using the `-RequiredVersion`
+You can install or load a specific version of the `Az` module using the `-RequiredVersion`
 parameter:
 
 ```powershell-interactive
@@ -201,6 +202,19 @@ parameter:
 Install-Module -Name Az -RequiredVersion 3.6.1
 # Load Az version 3.6.1
 Import-Module -Name Az -RequiredVersion 3.6.1
+```
+
+## Use multiple repositories with PowerShellGet
+
+The **Repository** parameter is required if you have added additional repositories to PowerShellGet
+on your system and the Az module can be found in more than one of them.
+
+```powershell-interactive
+if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
+    Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
+} else {
+    Install-Module -Name Az -Repository PSGallery -AllowClobber -Force
+}
 ```
 
 ## Provide feedback
