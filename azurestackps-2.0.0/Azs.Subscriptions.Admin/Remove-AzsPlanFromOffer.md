@@ -57,7 +57,7 @@ Unlink a plan from an offer.
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
@@ -74,7 +74,7 @@ Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
+Type: String
 Parameter Sets: UnlinkViaIdentity, UnlinkViaIdentityExpanded
 Aliases:
 
@@ -90,7 +90,7 @@ Dynamic: False
 The maximum acquisition count by subscribers
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: UnlinkExpanded, UnlinkViaIdentityExpanded
 Aliases:
 
@@ -106,7 +106,7 @@ Dynamic: False
 Name of an offer.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Unlink, UnlinkExpanded
 Aliases:
 
@@ -123,7 +123,7 @@ Definition for linking and unlinking plans to offers.
 To construct, see NOTES section for PLANLINK properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IPlanLinkDefinition
+Type: String
 Parameter Sets: Unlink, UnlinkViaIdentity
 Aliases:
 
@@ -155,7 +155,7 @@ Dynamic: False
 Name of the plan.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UnlinkExpanded, UnlinkViaIdentityExpanded
 Aliases:
 
@@ -171,7 +171,7 @@ Dynamic: False
 The resource group the resource is located under.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Unlink, UnlinkExpanded
 Aliases:
 
@@ -187,7 +187,7 @@ Dynamic: False
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Unlink, UnlinkExpanded
 Aliases:
 
@@ -203,7 +203,7 @@ Dynamic: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -220,7 +220,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

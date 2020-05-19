@@ -58,7 +58,7 @@ Updates a subscription
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Parent DelegatedProvider subscription identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -90,7 +90,7 @@ Dynamic: False
 Subscription name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -106,7 +106,7 @@ Dynamic: False
 External reference identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -122,7 +122,7 @@ Dynamic: False
 Fully qualified identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -138,7 +138,7 @@ Dynamic: False
 Identifier of the offer under the scope of a delegated provider.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -154,7 +154,7 @@ Dynamic: False
 Subscription owner.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -203,7 +203,7 @@ Subscription object properties.
 To construct, see NOTES section for SUBSCRIPTIONDEFINITION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.ISubscriptionDefinition
+Type: String
 Parameter Sets: Update
 Aliases:
 
@@ -219,7 +219,7 @@ Dynamic: False
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -235,7 +235,7 @@ Dynamic: False
 Subscription identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -251,7 +251,7 @@ Dynamic: False
 The target subscription ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -267,7 +267,7 @@ Dynamic: False
 Directory tenant identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -283,7 +283,7 @@ Dynamic: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -300,7 +300,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

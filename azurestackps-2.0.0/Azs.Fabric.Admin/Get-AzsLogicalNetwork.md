@@ -59,7 +59,7 @@ Get a specific logical networks at a location based on a name.
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

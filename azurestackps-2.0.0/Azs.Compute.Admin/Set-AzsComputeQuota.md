@@ -66,7 +66,7 @@ Any parameters not set will default to 0
 
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

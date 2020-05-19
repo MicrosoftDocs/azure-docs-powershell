@@ -46,7 +46,7 @@ Get the status of the Identity Health.
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
@@ -63,7 +63,7 @@ Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
+Type: String
 Parameter Sets: CheckViaIdentity
 Aliases:
 
@@ -79,7 +79,7 @@ Dynamic: False
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: Check
 Aliases:
 
@@ -95,7 +95,7 @@ Dynamic: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -112,7 +112,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

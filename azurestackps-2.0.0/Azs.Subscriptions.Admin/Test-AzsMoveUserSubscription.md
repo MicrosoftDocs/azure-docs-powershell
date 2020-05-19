@@ -70,7 +70,7 @@ Test that user subscriptions can be moved from a delegated provider to the Defau
 Run the command as a job
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -86,7 +86,7 @@ Dynamic: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ValidateExpanded, ValidateViaIdentityExpanded
 Aliases:
 
@@ -119,7 +119,7 @@ Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
+Type: String
 Parameter Sets: ValidateViaIdentity, ValidateViaIdentityExpanded
 Aliases:
 
@@ -136,7 +136,7 @@ The move subscriptions action definition
 To construct, see NOTES section for MOVESUBSCRIPTIONSDEFINITION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IMoveSubscriptionsDefinition
+Type: String
 Parameter Sets: Validate, ValidateViaIdentity
 Aliases:
 
@@ -152,7 +152,7 @@ Dynamic: False
 Run the command asynchronously
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -168,7 +168,7 @@ Dynamic: False
 Returns true when the command succeeds
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -184,7 +184,7 @@ Dynamic: False
 A collection of subscriptions to move to the target delegated provider offer.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: ValidateExpanded, ValidateViaIdentityExpanded
 Aliases:
 
@@ -200,7 +200,7 @@ Dynamic: False
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Validate, ValidateExpanded
 Aliases:
 
@@ -216,7 +216,7 @@ Dynamic: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -233,7 +233,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

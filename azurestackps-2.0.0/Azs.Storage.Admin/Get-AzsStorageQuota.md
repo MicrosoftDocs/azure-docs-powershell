@@ -54,7 +54,7 @@ Get details of the specified storage quota by name.
 
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

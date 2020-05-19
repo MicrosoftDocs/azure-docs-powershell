@@ -59,7 +59,7 @@ Get a specific scale unit node at a location given a name.
 
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

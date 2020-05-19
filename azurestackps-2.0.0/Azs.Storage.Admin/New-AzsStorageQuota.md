@@ -58,7 +58,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

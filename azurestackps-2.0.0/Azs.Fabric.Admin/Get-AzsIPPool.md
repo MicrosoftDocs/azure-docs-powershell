@@ -59,7 +59,7 @@ Get an infrastructure ip pool based on name.
 
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

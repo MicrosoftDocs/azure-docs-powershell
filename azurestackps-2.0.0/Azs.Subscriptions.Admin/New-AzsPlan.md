@@ -57,7 +57,7 @@ Creates a new plan
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Description of the plan.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -89,7 +89,7 @@ Dynamic: False
 Display name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -105,7 +105,7 @@ Dynamic: False
 External reference identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -121,7 +121,7 @@ Dynamic: False
 Location of the resource
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -137,7 +137,7 @@ Dynamic: False
 Name of the plan.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -155,7 +155,7 @@ A tenant can acquire this plan through an offer to upgrade his access to underly
 To construct, see NOTES section for PLANDEFINITION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IPlan
+Type: String
 Parameter Sets: Create
 Aliases:
 
@@ -171,7 +171,7 @@ Dynamic: False
 Name of the plan.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -187,7 +187,7 @@ Dynamic: False
 Quota identifiers under the plan.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -203,7 +203,7 @@ Dynamic: False
 The resource group the resource is located under.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -219,7 +219,7 @@ Dynamic: False
 SKU identifiers.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -235,7 +235,7 @@ Dynamic: False
 Subscription count.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -251,7 +251,7 @@ Dynamic: False
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -267,7 +267,7 @@ Dynamic: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -284,7 +284,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

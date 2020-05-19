@@ -59,7 +59,7 @@ Get the list of user subscriptions as operator.
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 OData filter parameter.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: List
 Aliases:
 
@@ -92,7 +92,7 @@ Identity Parameter
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.ISubscriptionsAdminIdentity
+Type: String
 Parameter Sets: GetViaIdentity
 Aliases:
 
@@ -108,7 +108,7 @@ Dynamic: False
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: Get, List
 Aliases:
 
@@ -124,7 +124,7 @@ Dynamic: False
 The target subscription ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Get
 Aliases:
 

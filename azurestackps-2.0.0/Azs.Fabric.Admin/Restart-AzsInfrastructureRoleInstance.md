@@ -61,7 +61,7 @@ The credentials, account, tenant, and subscription used for communication with A
 
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

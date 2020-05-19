@@ -84,7 +84,7 @@ Will retrieve all UpdateRuns associated with a specific Update and a specific Na
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

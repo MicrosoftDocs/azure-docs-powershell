@@ -42,7 +42,7 @@ To view examples, please use the -Online parameter with Get-Help or navigate to:
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 

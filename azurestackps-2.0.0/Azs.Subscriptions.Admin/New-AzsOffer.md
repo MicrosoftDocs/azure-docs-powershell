@@ -61,7 +61,7 @@ References to add-on plans that a tenant can optionally acquire as a part of the
 To construct, see NOTES section for ADDONPLANDEFINITION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IAddonPlanDefinition[]
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -77,7 +77,7 @@ Dynamic: False
 Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -93,7 +93,7 @@ Dynamic: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: String
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 Description of offer.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -125,7 +125,7 @@ Dynamic: False
 Display name of offer.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -141,7 +141,7 @@ Dynamic: False
 External reference identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -157,7 +157,7 @@ Dynamic: False
 Location of the resource
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -173,7 +173,7 @@ Dynamic: False
 Maximum subscriptions per account.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -189,7 +189,7 @@ Dynamic: False
 Name of an offer.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -206,7 +206,7 @@ Represents an offering of services against which a subscription can be created.
 To construct, see NOTES section for OFFERDEFINITION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SubscriptionsAdmin.Models.Api20151101.IOffer
+Type: String
 Parameter Sets: Create
 Aliases:
 
@@ -222,7 +222,7 @@ Dynamic: False
 Name of the Offer.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -238,7 +238,7 @@ Dynamic: False
 The resource group the resource is located under.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -270,7 +270,7 @@ Dynamic: False
 Current subscription count.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -286,7 +286,7 @@ Dynamic: False
 Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -302,7 +302,7 @@ Dynamic: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -319,7 +319,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
