@@ -42,7 +42,7 @@ Download a product from Azure Marketplace
 Name of the activation.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Products_Download
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Name of the product.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Products_Download
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 The resource group the resource is located under.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Products_Download
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Resource identifier for azure bridge product.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: ResourceId
 Aliases: id
 
