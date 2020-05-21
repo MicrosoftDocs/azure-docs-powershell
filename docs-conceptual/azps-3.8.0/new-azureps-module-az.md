@@ -1,7 +1,7 @@
 ---
 title: Introducing the Azure PowerShell Az module
 description: Introducing the new Azure PowerShell module Az, the replacement for the AzureRM module.
-ms.date: 05/15/2020
+ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ---
@@ -16,7 +16,7 @@ migration path.
 > PowerShell 7.x and later is the recommended version of PowerShell for use with Azure PowerShell on
 > all platforms.
 
-With the latest Az module, Azure PowerShell works with PowerShell 6.2.4 and later on all platforms
+With the latest Az module, Azure PowerShell works with PowerShell 6.x and later on all platforms
 including Windows, macOS, and Linux. It is also compatible with PowerShell 5.1 on Windows.
 
 Az is a new module, so the version has been reset to 1.0.0.
@@ -29,7 +29,7 @@ to introduce a new set of modules, with new cmdlets, for interacting with Azure 
 The biggest and most important change is that PowerShell has been a cross-platform product since the
 introduction of [PowerShell 6.x](/powershell/scripting/overview), based on the .NET Standard
 library. We're committed to bringing Azure support to all platforms. This means the Azure PowerShell
-modules needed to be updated to use .NET Standard and be compatible with PowerShell 6.2.4 and later.
+modules needed to be updated to use .NET Standard and be compatible with PowerShell 6.x and later.
 Rather than taking the existing AzureRM module and introduce complex changes to add this support,
 the Az module was created.
 
@@ -58,10 +58,10 @@ couple of options available to experiment with Az:
   browser-based shell environment that comes with the Az module installed and `Enable-AzureRM`
   compatibility aliases enabled.
 - Keep the AzureRM module installed with PowerShell 5.1 for Windows, but install the Az module for
-  PowerShell 6.2.4 or later. PowerShell 5.1 for Windows and PowerShell 6.2.4 and later use separate
+  PowerShell 6.x or later. PowerShell 5.1 for Windows and PowerShell 6.x and later use separate
   collections of modules. Follow the instructions to install the
   [latest version of PowerShell](/powershell/scripting/install/installing-powershell) and then
-  [install the Az module](install-az-ps.md) from PowerShell 6.2.4 or later.
+  [install the Az module](install-az-ps.md) from PowerShell 6.x or later.
 
 To upgrade from an existing AzureRM install:
 
@@ -88,7 +88,10 @@ We have several resources to help you with the process of migration from AzureRM
 The Az module has a compatibility mode to help you use existing scripts while you update to the new
 syntax. The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet enables
 a compatibility mode through aliases, to allow you to use existing scripts with minimal modification
-while working towards a full migration to Az.
+while working towards a full migration to Az. By default, `Enable-AzureRmAlias` only enables
+compatibility aliases for the current PowerShell session. Use its `Scope` parameter to persist
+compatibility aliases across PowerShell sessions. For more information, see
+[the Enable-AzureRmAlias reference documentation](/powershell/module/az.accounts/enable-azurermalias).
 
 > [!IMPORTANT]
 > Even though the cmdlet names are aliased, there may still be new (or renamed) parameters or
