@@ -54,7 +54,7 @@ Get a product info available for download from Azure Marketplace by Name.
 Name of the activation.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: List, Get
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Name of the product.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Get
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 The resource group the resource is located under.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: List, Get
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 The resource id.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: ResourceId
 Aliases: id
 
