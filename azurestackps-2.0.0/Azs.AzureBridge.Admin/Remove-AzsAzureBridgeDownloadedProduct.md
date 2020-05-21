@@ -42,7 +42,7 @@ Delete a product downloaded from Azure Marketplace
 Name of the activation.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Delete
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Name of the product.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Delete
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 The resource group the resource is located under.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Delete
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 The resource id.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: ResourceId
 Aliases: id
 
