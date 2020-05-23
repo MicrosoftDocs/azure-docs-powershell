@@ -126,23 +126,19 @@ The type of property `Type` of type
 
 ### `Get-AzApiManagementProperty`
 
-The cmdlet `Get-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `Get-AzApiManagementProperty` has been replaced by `Get-AzureApiManagementNamedValue`.
 
 ### `New-AzApiManagementProperty`
 
-The cmdlet `New-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `New-AzApiManagementProperty` has been replaced by `New-AzureApiManagementNamedValue`.
 
 ### `Remove-AzApiManagementProperty`
 
-The cmdlet `Remove-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `Remove-AzApiManagementProperty` has been replaced by `Remove-AzureApiManagementNamedValue`.
 
 ### `Set-AzApiManagementProperty`
 
-The cmdlet `Set-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `Set-AzApiManagementProperty` has been replaced by `Set-AzureApiManagementNamedValue`.
 
 ## Az.Batch
 
@@ -703,8 +699,7 @@ has been removed.
 
 ### `Get-AzOperationalInsightsLinkTarget`
 
-The cmdlet `Get-AzOperationalInsightsLinkTarget` has been removed and no alias was found for the
-original cmdlet name.
+The cmdlet `Get-AzOperationalInsightsLinkTarget` has been removed.
 
 ### `Get-AzOperationalInsightsWorkspace`
 
