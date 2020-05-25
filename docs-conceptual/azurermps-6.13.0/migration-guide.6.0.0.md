@@ -9,14 +9,17 @@ ms.date: 05/01/2018
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
-This document serves as both a breaking change notification and migration guide for consumers of the Microsoft Azure PowerShell cmdlets. Each section describes both the impetus for the breaking change and the migration path of least resistance. For in-depth context, please refer to the pull request associated with each change.
+This document serves as both a breaking change notification and migration guide for consumers of the
+Microsoft Azure PowerShell cmdlets. Each section describes both the impetus for the breaking change
+and the migration path of least resistance. For in-depth context, please refer to the pull request
+associated with each change.
 
 ## Table of Contents
 
 - [General breaking changes](#general-breaking-changes)
-    - [Minimum PowerShell version required bumped to 5.0](#minimum-powershell-version-required-bumped-to-50)
-    - [Context autosaved enabled by default](#context-autosave-enabled-by-default)
-    - [Removal of Tags alias](#removal-of-tags-alias)
+  - [Minimum PowerShell version required bumped to 5.0](#minimum-powershell-version-required-bumped-to-50)
+  - [Context autosaved enabled by default](#context-autosave-enabled-by-default)
+  - [Removal of Tags alias](#removal-of-tags-alias)
 - [Breaking changes to AzureRM.Compute cmdlets](#breaking-changes-to-azurermcompute-cmdlets)
 - [Breaking changes to AzureRM.DataLakeStore cmdlets](#breaking-changes-to-azurermdatalakestore-cmdlets)
 - [Breaking changes to AzureRM.Dns cmdlets](#breaking-changes-to-azurermdns-cmdlets)
@@ -27,26 +30,39 @@ This document serves as both a breaking change notification and migration guide 
 - [Breaking changes to AzureRM.Resources cmdlets](#breaking-changes-to-azurermresources-cmdlets)
 - [Breaking changes to AzureRM.Storage cmdlets](#breaking-changes-to-azurermstorage-cmdlets)
 - [Removed modules](#removed-modules)
-    - [`AzureRM.ServerManagement`](#azurermservermanagement)
-    - [`AzureRM.SiteRecovery`](#azurermsiterecovery)
+  - [`AzureRM.ServerManagement`](#azurermservermanagement)
+  - [`AzureRM.SiteRecovery`](#azurermsiterecovery)
 
 ## General breaking changes
 
 ### Minimum PowerShell version required bumped to 5.0
 
-Previously, Azure PowerShell required _at least_ version 3.0 of PowerShell to run any cmdlet. Moving forward, this requirement will be raised to version 5.0 of PowerShell. For information on upgrading to PowerShell 5.0, please see [this table](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell).
+Previously, Azure PowerShell required _at least_ version 3.0 of PowerShell to run any cmdlet. Moving
+forward, this requirement will be raised to version 5.0 of PowerShell. For information on upgrading
+to PowerShell 5.0, please see
+[this table](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell).
 
 ### Context autosave enabled by default
 
-Context autosave is the storage of Azure sign in information that can be used between new and different PowerShell sessions. For more information on context autosave, please see [this document](https://docs.microsoft.com/powershell/azure/context-persistence).
+Context autosave is the storage of Azure sign in information that can be used between new and
+different PowerShell sessions. For more information on context autosave, please see
+[this document](/powershell/azure/context-persistence).
 
-Previously by default, context autosave was disabled, which meant the user's Azure authentication information was not stored between sessions until they ran the `Enable-AzureRmContextAutosave` cmdlet to turn on context persistence. Moving forward, context autosave will be enabled by default, which means that users _with no saved context autosave settings_ will have their context stored the next time they sign in. Users can opt out of this functionality by using the `Disable-AzureRmContextAutosave` cmdlet.
+Previously by default, context autosave was disabled, which meant the user's Azure authentication
+information was not stored between sessions until they ran the `Enable-AzureRmContextAutosave`
+cmdlet to turn on context persistence. Moving forward, context autosave will be enabled by default,
+which means that users _with no saved context autosave settings_ will have their context stored the
+next time they sign in. Users can opt out of this functionality by using the
+`Disable-AzureRmContextAutosave` cmdlet.
 
-_Note_: users that previously disabled context autosave or users with context autosave enabled and existing contexts will not be affected by this change
+> [!NOTE]
+> Users who previously disabled context autosave or users with context autosave enabled and existing
+> contexts will not be affected by this change.
 
 ### Removal of Tags alias
 
-The alias `Tags` for the `Tag` parameter has been removed across numerous cmdlets. Below is a list of modules (and the corresponding cmdlets) affected by this:
+The alias `Tags` for the `Tag` parameter has been removed across numerous cmdlets. Below is a list
+of modules (and the corresponding cmdlets) affected by this:
 
 #### `AzureRM.ApiManagement`
 
@@ -90,7 +106,9 @@ The alias `Tags` for the `Tag` parameter has been removed across numerous cmdlet
 ## Breaking changes to AzureRM.Compute cmdlets
 
 **Miscellaneous**
-- The sku name property nested in types `PSDisk` and `PSSnapshot` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+
+- The sku name property nested in types `PSDisk` and `PSSnapshot` changed from `StandardLRS` and
+  `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
 
 ```powershell-interactive
 $disk = Get-AzureRmDisk -ResourceGroupName "MyResourceGroup" -DiskName "MyDiskName"
@@ -100,7 +118,9 @@ $snapshot = Get-AzureRmSnapshot -ResourceGroupName "MyResourceGroup" -SnapshotNa
 $snapshot.Sku.Name   # This will now return Standard_LRS or Premium_LRS
 ```
 
-- The storage account type property nested in types `PSVirtualMachine`, `PSVirtualMachineScaleSet` and `PSImage` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The storage account type property nested in types `PSVirtualMachine`, `PSVirtualMachineScaleSet`
+  and `PSImage` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`,
+  respectively
 
 ```powershell-interactive
 $vm = Get-AzureRmVM -ResourceGroupName "MyResourceGroup" -Name "MyVM"
@@ -108,13 +128,19 @@ $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now
 ```
 
 **Add-AzureRmImageDataDisk**
-- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+
+- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS`
+  to `Standard_LRS` and `Premium_LRS`, respectively
 
 **Add-AzureRmVMDataDisk**
-- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+
+- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS`
+  to `Standard_LRS` and `Premium_LRS`, respectively
 
 **Add-AzureRmVmssDataDisk**
-- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+
+- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS`
+  to `Standard_LRS` and `Premium_LRS`, respectively
 
 **New-AzureRmAvailabilitySet**
 - The parameter `Managed` was removed in favor of `Sku`
@@ -128,40 +154,50 @@ New-AzureRmAvailabilitySet -ResourceGroupName "MyRG" -Name "MyAvailabilitySet" -
 ```
 
 **New-AzureRmDiskConfig**
-- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to
+  `Standard_LRS` and `Premium_LRS`, respectively
 
 **New-AzureRmDiskUpdateConfig**
-- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to
+  `Standard_LRS` and `Premium_LRS`, respectively
 
 **New-AzureRmSnapshotConfig**
-- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to
+  `Standard_LRS` and `Premium_LRS`, respectively
 
 **New-AzureRmSnapshotUpdateConfig**
-- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `SkuName` changed from `StandardLRS` and `PremiumLRS` to
+  `Standard_LRS` and `Premium_LRS`, respectively
 
 **Set-AzureRmImageOsDisk**
-- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS`
+  to `Standard_LRS` and `Premium_LRS`, respectively
 
 **Set-AzureRmVMAEMExtension**
 - The parameter `DisableWAD` was removed
     -  Windows Azure Diagnostics is disabled by default
 
 **Set-AzureRmVMDataDisk**
-- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS`
+  to `Standard_LRS` and `Premium_LRS`, respectively
 
 **Set-AzureRmVMOSDisk**
-- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `StorageAccountType` changed from `StandardLRS` and `PremiumLRS`
+  to `Standard_LRS` and `Premium_LRS`, respectively
 
 **Set-AzureRmVmssStorageProfile**
-- The accepted values for parameter `ManagedDisk` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `ManagedDisk` changed from `StandardLRS` and `PremiumLRS` to
+  `Standard_LRS` and `Premium_LRS`, respectively
 
 **Update-AzureRmVmss**
-- The accepted values for parameter `ManagedDiskStorageAccountType` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
+- The accepted values for parameter `ManagedDiskStorageAccountType` changed from `StandardLRS` and
+  `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
 
 ## Breaking changes to AzureRM.DataLakeStore cmdlets
 
 **Export-AzureRmDataLakeStoreItem**
-- Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the `Concurrency` parameter moving forward
+- Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the
+  `Concurrency` parameter moving forward
 
 ```powershell-interactive
 # Old
@@ -172,7 +208,8 @@ Export-AzureRmDataLakeStoreItem -Account contoso -Path /test -Destination C:\tes
 ```
 
 **Import-AzureRmDataLakeStoreItem**
-- Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the `Concurrency` parameter moving forward
+- Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the
+  `Concurrency` parameter moving forward
 
 ```powershell-interactive
 # Old
@@ -231,7 +268,8 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - The parameter alias `Properties` was removed
 
 **New-AzureRmAutoscaleNotification**
-- The parameter aliases `CustomEmails`, `SendEmailToSubscriptionCoAdministrators` and `Webhooks` were removed
+- The parameter aliases `CustomEmails`, `SendEmailToSubscriptionCoAdministrators` and `Webhooks`
+  were removed
 
 **New-AzureRmAutoscaleProfile**
 - The parameter aliases `Rules`, `ScheduleDays`, `ScheduleHours` and `ScheduleMinutes` were removed
@@ -245,11 +283,17 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - The `CertificatePolicy` parameter has become mandatory.
 
 **Set-AzureKeyVaultManagedStorageSasDefinition**
-- The cmdlet no longer accepts individual parameters that compose the access token; instead, the cmdlet replaces explicit token parameters, such as `Service` or `Permissions`, with a generic `TemplateUri` parameter, corresponding to a sample access token defined elsewhere (presumably using Storage PowerShell cmdlets, or composed manually according to the Storage documentation.) The cmdlet retains the `ValidityPeriod` parameter.
+- The cmdlet no longer accepts individual parameters that compose the access token; instead, the
+  cmdlet replaces explicit token parameters, such as `Service` or `Permissions`, with a generic
+  `TemplateUri` parameter, corresponding to a sample access token defined elsewhere (presumably
+  using Storage PowerShell cmdlets, or composed manually according to the Storage documentation.)
+  The cmdlet retains the `ValidityPeriod` parameter.
 
-For more information on composing shared access tokens for Azure Storage, please refer to the documentation pages, respectively:
-- [Constructing a Service SAS](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
-- [Constructing an Account SAS](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
+For more information on composing shared access tokens for Azure Storage, please refer to the
+documentation pages, respectively:
+
+- [Constructing a Service SAS](/rest/api/storageservices/Constructing-a-Service-SAS)
+- [Constructing an Account SAS](/rest/api/storageservices/constructing-an-account-sas)
 
 ```powershell-interactive
 # Old
@@ -270,13 +314,16 @@ $sas=Set-AzureKeyVaultManagedStorageSasDefinition -AccountName $sa.StorageAccoun
 - The output of this cmdlet has changed from `CertificateBundle` to `PSKeyVaultCertificate`.
 
 **Undo-AzureRmKeyVaultRemoval**
-- `ResourceGroupName` has been removed from the `InputObject` parameter set, and is instead obtained from the `InputObject` parameter's `ResourceId` property.
+- `ResourceGroupName` has been removed from the `InputObject` parameter set, and is instead obtained
+  from the `InputObject` parameter's `ResourceId` property.
 
 **Set-AzureRmKeyVaultAccessPolicy**
-- The `all` permission was removed from `PermissionsToKeys`, `PermissionsToSecrets`, and `PermissionsToCertificates`.
+- The `all` permission was removed from `PermissionsToKeys`, `PermissionsToSecrets`, and
+  `PermissionsToCertificates`.
 
 **General**
-- The `ValueFromPipelineByPropertyName` property was removed from all cmdlets where piping by `InputObject` was enabled.  The cmdlets affected are:
+- The `ValueFromPipelineByPropertyName` property was removed from all cmdlets where piping by
+  `InputObject` was enabled. The cmdlets affected are:
     - `Add-AzureKeyVaultCertificate`
     - `Add-AzureKeyVaultCertificateContact`
     - `Add-AzureKeyVaultKey`
@@ -446,11 +493,16 @@ Get-AzureRmRoleDefinition [other required parameters]
 
 ### `AzureRM.ServerManagement`
 
-The Server Management Tools service was [retired last year](https://blogs.technet.microsoft.com/servermanagement/2017/05/17/smt-preview-service-is-being-retired-on-june-30-2017/), and as a result, the corresponding module for SMT, `AzureRM.ServerManagement`, was removed from `AzureRM` and will stop shipping moving forward.
+The Server Management Tools service was
+[retired last year](https://blogs.technet.microsoft.com/servermanagement/2017/05/17/smt-preview-service-is-being-retired-on-june-30-2017/),
+and as a result, the corresponding module for SMT, `AzureRM.ServerManagement`, was removed from
+`AzureRM` and will stop shipping moving forward.
 
 ### `AzureRM.SiteRecovery`
 
-The `AzureRM.SiteRecovery` module is being superseded by `AzureRM.RecoveryServices.SiteRecovery`, which is a functional superset of the `AzureRM.SiteRecovery` module and includes a new set of equivalent cmdlets. The full list of mappings from old to new cmdlets can be found below:
+The `AzureRM.SiteRecovery` module is being superseded by `AzureRM.RecoveryServices.SiteRecovery`,
+which is a functional superset of the `AzureRM.SiteRecovery` module and includes a new set of
+equivalent cmdlets. The full list of mappings from old to new cmdlets can be found below:
 
 | Deprecated cmdlet                                        | Equivalent cmdlet                                                | Aliases                                  |
 |----------------------------------------------------------|------------------------------------------------------------------|------------------------------------------|

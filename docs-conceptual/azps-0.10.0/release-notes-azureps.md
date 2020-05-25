@@ -24,7 +24,7 @@ ms.date: 03/10/2020
   - Az.Websites
 * Three new PowerShell modules for az have been introduced that work with Azure Stack Hub, which are Az.Databox, Az.IotHub, and Az.EventHub
 * Commands remain relatively the same, with minor changes such as changing AzureRM to Az
-* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](aka.ms/InstallASHPowerShell)
+* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](https://aka.ms/InstallASHPowerShell)
 
 #### Az.Accounts
 * Upgrade from ADAL to MSAL
@@ -35,7 +35,7 @@ ms.date: 03/10/2020
 * Fixed 'Get-AzTenant'/'Get-AzDefault'/'Set-AzDefault' throw NullReferenceException when not login [#10292]
 
 #### Az.Compute
-* Added the following parameters to 'New-AzDiskConfig' cmdlet: 
+* Added the following parameters to 'New-AzDiskConfig' cmdlet:
     - DiskIOPSReadOnly, DiskMBpsReadOnly, MaxSharesCount, GalleryImageReference
 * Allowed Encryption property to Target parameter of 'New-AzGalleryImageVersion' cmdlet.
 * Fixed tempDisk issue for 'Set-AzVmss' -Reimage and 'Invoke-AzVMReimage' cmdlets. [#11354]

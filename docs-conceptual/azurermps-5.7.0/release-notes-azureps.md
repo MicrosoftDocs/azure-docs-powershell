@@ -1,13 +1,12 @@
 ---
-title: Azure PowerShell Change Log | Microsoft Docs
+title: Azure PowerShell Change Log
 description: This is a history of changes made to Azure PowerShell in the latest release.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
 ms.date: 2/20/2018
 ---
-
-# Release notes
+# Azure PowerShell Release notes
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
@@ -15,7 +14,7 @@ This is a list of changes made to Azure PowerShell in this release.
 
 ---
 
-# Azure PowerShell 5.7.0
+## Azure PowerShell 5.7.0
 
 Azure PowerShell 5.7.0 Installer: [link](https://github.com/Azure/azure-powershell/releases/download/v5.7.0-April2018/azure-powershell.5.7.0.msi)
 
@@ -33,7 +32,7 @@ To update from an older version of `AzureRM`, run the following command:
 Update-Module -Name AzureRM
 ```
 
-## Changes Since Last Release
+### Changes Since Last Release
 
 #### General
 * Updated to the latest version of the Azure ClientRuntime
