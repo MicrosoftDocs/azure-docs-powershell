@@ -677,13 +677,11 @@ removed.
 
 ### `Get-AzOperationalInsightsSavedSearchResult`
 
-The cmdlet `Get-AzOperationalInsightsSavedSearchResult` has been removed and no alias was found for
-the original cmdlet name.
+The cmdlet `Get-AzOperationalInsightsSavedSearchResult` was not supported by SDK anymore and has been removed.
 
 ### `Get-AzOperationalInsightsSearchResult`
 
-The cmdlet `Get-AzOperationalInsightsSearchResult` has been removed and no alias was found for the
-original cmdlet name.
+The cmdlet `Get-AzOperationalInsightsSearchResult` was not supported by SDK anymore and has been removed.
 
 ### `Get-AzOperationalInsightsStorageInsight`
 
@@ -707,7 +705,7 @@ has been removed.
 
 ### `Get-AzOperationalInsightsLinkTarget`
 
-The cmdlet `Get-AzOperationalInsightsLinkTarget` has been removed.
+The cmdlet `Get-AzOperationalInsightsLinkTarget` was not supported by SDK anymore and has been removed.
 
 ### `Get-AzOperationalInsightsWorkspace`
 
