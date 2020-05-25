@@ -27,11 +27,11 @@ Major updates can be inconvenient, so it's important that we let you know why th
 to introduce a new set of modules, with new cmdlets, for interacting with Azure from PowerShell.
 
 The biggest and most important change is that PowerShell has been a cross-platform product since the
-introduction of [PowerShell 6.x](/powershell/scripting/overview), based on the .NET Standard
-library. We're committed to bringing Azure support to all platforms. This means the Azure PowerShell
-modules needed to be updated to use .NET Standard and be compatible with PowerShell 6.2.4 and later.
-Rather than taking the existing AzureRM module and introduce complex changes to add this support,
-the Az module was created.
+introduction of [PowerShell](/powershell/scripting/overview), based on the .NET Standard library.
+We're committed to bringing Azure support to all platforms, which means that the Azure PowerShell
+modules needed to be updated to use .NET Standard and be compatible with PowerShell Core. Rather
+than taking the existing AzureRM module and introduce complex changes to add this support, the Az
+module was created.
 
 Creating a new module also allowed our engineers to make the design and naming of cmdlets and
 modules consistent. All modules now start with the `Az.` prefix and cmdlets all use the
@@ -67,10 +67,10 @@ To upgrade from an existing AzureRM install:
 
 1. [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Install the Azure PowerShell Az module](install-az-ps.md)
-3. __OPTIONAL__: Enable compatibility mode to add aliases for AzureRM cmdlets with
+3. **OPTIONAL**: Enable compatibility mode to add aliases for AzureRM cmdlets with
    [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) while you become
-   familiar with the new command set. For more information, see the next section or the
-   [Start migration from AzureRM to Az](migrate-from-azurerm-to-az.md).
+   familiar with the new command set. See the next section or
+   [Start migration from AzureRM to Az](migrate-from-azurerm-to-az.md) for more details.
 
 ## Migrate existing scripts to Az
 
