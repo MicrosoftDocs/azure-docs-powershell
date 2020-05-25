@@ -1,3 +1,11 @@
+---
+title: Migration guide for Az 4.1.0
+description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 4.1.0 release.
+ms.devlang: powershell
+ms.topic: conceptual
+ms.date: 05/23/2020
+---
+
 # Migration Guide for Az 4.1.0
 
 This document describes the changes between the 3.0.0 and 4.1.0 versions of Az.
@@ -126,23 +134,19 @@ The type of property `Type` of type
 
 ### `Get-AzApiManagementProperty`
 
-The cmdlet `Get-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `Get-AzApiManagementProperty` has been replaced by `Get-AzureApiManagementNamedValue`.
 
 ### `New-AzApiManagementProperty`
 
-The cmdlet `New-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `New-AzApiManagementProperty` has been replaced by `New-AzureApiManagementNamedValue`.
 
 ### `Remove-AzApiManagementProperty`
 
-The cmdlet `Remove-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `Remove-AzApiManagementProperty` has been replaced by `Remove-AzureApiManagementNamedValue`.
 
 ### `Set-AzApiManagementProperty`
 
-The cmdlet `Set-AzApiManagementProperty` has been removed and no alias was found for the original
-cmdlet name.
+The cmdlet `Set-AzApiManagementProperty` has been replaced by `Set-AzureApiManagementNamedValue`.
 
 ## Az.Batch
 
@@ -673,13 +677,11 @@ removed.
 
 ### `Get-AzOperationalInsightsSavedSearchResult`
 
-The cmdlet `Get-AzOperationalInsightsSavedSearchResult` has been removed and no alias was found for
-the original cmdlet name.
+The cmdlet `Get-AzOperationalInsightsSavedSearchResult` was not supported by SDK anymore and has been removed.
 
 ### `Get-AzOperationalInsightsSearchResult`
 
-The cmdlet `Get-AzOperationalInsightsSearchResult` has been removed and no alias was found for the
-original cmdlet name.
+The cmdlet `Get-AzOperationalInsightsSearchResult` was not supported by SDK anymore and has been removed.
 
 ### `Get-AzOperationalInsightsStorageInsight`
 
@@ -703,8 +705,7 @@ has been removed.
 
 ### `Get-AzOperationalInsightsLinkTarget`
 
-The cmdlet `Get-AzOperationalInsightsLinkTarget` has been removed and no alias was found for the
-original cmdlet name.
+The cmdlet `Get-AzOperationalInsightsLinkTarget` was not supported by SDK anymore and has been removed.
 
 ### `Get-AzOperationalInsightsWorkspace`
 
