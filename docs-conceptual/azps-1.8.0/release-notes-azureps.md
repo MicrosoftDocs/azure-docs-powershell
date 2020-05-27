@@ -5,6 +5,7 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
 ---
+# Azure PowerShell release notes
 ## 1.8.0 - April 2019
 ### Highlights since the last major release
 * General availability of `Az` module
@@ -42,7 +43,7 @@ ms.date: 04/30/2019
 * Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.
 
 #### Az.EventHub
-* Added new cmdlets for NetworkRuleSet of Namespace 
+* Added new cmdlets for NetworkRuleSet of Namespace
 
 #### Az.HDInsight
 * Updated cmdlets with plural nouns to singular, and deprecated plural names.
@@ -132,7 +133,7 @@ ms.date: 04/30/2019
 
 #### Az.Compute
 * Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig
-* Allow VM creation with galley image from other tenants. 
+* Allow VM creation with galley image from other tenants.
 
 #### Az.ContainerInstance
 * Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument
@@ -214,7 +215,7 @@ ms.date: 04/30/2019
     - New-AzStorageAccountManagementPolicyRule
 
 #### Az.Websites
-* Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots' 
+* Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'
 
 ## 1.5.0 - March 2019
 #### Az.Accounts
@@ -284,7 +285,7 @@ ms.date: 04/30/2019
 * Add cmdlets for ADL deleted item enumerate and restore
 
 #### Az.EventHub
-* Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub 
+* Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub
 
 #### Az.KeyVault
 * Fix tagging on Set-AzKeyVaultSecret
@@ -312,8 +313,8 @@ ms.date: 04/30/2019
 
 #### Az.OperationalInsights
 * Additional support for New and Get ApplicationInsights data source.
-    - Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace. 
-    - Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name. 
+    - Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.
+    - Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.
 
 #### Az.Resources
 * Fix for issue https://github.com/Azure/azure-powershell/issues/8166
@@ -344,9 +345,9 @@ General availability for Az.AnalysisServices module.
 General availability for Az.RecoveryServices module.
 
 #### Az.Resources
-* Fix tagging for resource groups 
+* Fix tagging for resource groups
     - More information here: https://github.com/Azure/azure-powershell/issues/8166
-* Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction 
+* Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction
     - More information here: https://github.com/Azure/azure-powershell/issues/8235
 
 #### Az.Sql
@@ -652,7 +653,7 @@ Added KeyVault Support to Application Gateway using Identity.
 
 ### Az.Websites
 
-* Set-AzureRmWebApp and Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp and Set-AzureRmWebAppSlot
     - New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps. Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.
 
 ## 0.6.1 - November 2018
@@ -680,7 +681,7 @@ Added KeyVault Support to Application Gateway using Identity.
 ### Az.Network
 * Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError
 * Added ICMP back to supported AzureFirewall Network Protocols
-* Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port. 
+* Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.
 * Fix issues with memory usage in VirtualNetwork map
 
 ### Az.RecoveryServices.Backup
@@ -812,7 +813,7 @@ Added KeyVault Support to Application Gateway using Identity.
     - Start-AzureStorageFileCopy
 * Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.
     - Get-AzStorageUsage
-    
+
 #### Az.CognitiveServices
 * Support Get-AzCognitiveServicesAccountSkus without an existing account.
 

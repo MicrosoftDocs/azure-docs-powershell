@@ -5,6 +5,7 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
 ---
+# Azure PowerShell release notes
 ## 2.8.0 - October 2019
 ### General
 * Az.HealthcareApis 1.0.0 release
@@ -17,7 +18,7 @@ ms.date: 10/15/2019
     - Fix for issue https://github.com/Azure/azure-powershell/issues/10068
 
 #### Az.Automation
-* Fixed New-AzureAutomationSoftwareUpdateConfiguration cmdlet for Linux reboot setting parameter. 
+* Fixed New-AzureAutomationSoftwareUpdateConfiguration cmdlet for Linux reboot setting parameter.
 
 #### Az.Batch
 * **Get-AzBatchNodeAgentSku** is deprecated and will be replaced by **Get-AzBatchSupportImage** in version 2.0.0.
@@ -25,7 +26,7 @@ ms.date: 10/15/2019
 #### Az.Compute
 * Add Priority, EvictionPolicy, and MaxPrice parameters to New-AzVM and New-AzVmss cmdlets
 * Fix warning message and help document for Add-AzVMAdditionalUnattendContent and Add-AzVMSshPublicKey cmdlets
-* Fix -skipVmBackup exception for Linux VMs with managed disks for Set-AzVMDiskEncryptionExtension. 
+* Fix -skipVmBackup exception for Linux VMs with managed disks for Set-AzVMDiskEncryptionExtension.
 * Fix bug in update encryption settings in Set-AzVMDiskEncryptionExtension, two pass scenario.
 
 #### Az.DataFactory
@@ -44,7 +45,7 @@ ms.date: 10/15/2019
 
 #### Az.IotHub
 * Add new routing source: DigitalTwinChangeEvents
-* Minor bug fix: Get-AzIothub not returning subscriptionId 
+* Minor bug fix: Get-AzIothub not returning subscriptionId
 
 #### Az.Monitor
 * New action group receivers added for New-AzActionGroupReceiver:
@@ -149,7 +150,7 @@ ms.date: 10/15/2019
 * Fix bug in determining scope type for 'Set-AzActionRule'
 
 #### Az.Network
-* Fix incorrect example in 'New-AzApplicationGateway' reference documentation 
+* Fix incorrect example in 'New-AzApplicationGateway' reference documentation
 * Add note in 'Get-AzNetworkWatcherPacketCapture' reference documentation about retrieving all properties for a packet capture
 * Fixed example in 'Test-AzNetworkWatcherIPFlow' reference documentation to correctly enumerate NICs
 * Improved cloud exception parsing to display additional details if they are present
@@ -293,7 +294,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     - Added one optional parameter 'Primary' that indicate the current ip configuration is primary one or not.
 * Improved handling of request error exception from SDK
     -Fixes the issue that previously SDK exceptions aren't handled correctly which results in key error details not being displayed
-* Adjusted validation logic for Ipv6 IP Prefix to check for correct IPv6 prefix length. 
+* Adjusted validation logic for Ipv6 IP Prefix to check for correct IPv6 prefix length.
 * Updated Get-AzVirtualNetworkSubnetConfig: Added parameter set to get by subnet resource id.
 * Updated description of Location parameter for AzNetworkServiceTag
 
@@ -316,7 +317,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 #### Az.ServiceBus
 * Fix for issue #9658 : Typo VirtualNetworkRule parameter in Set-AzServiceBusNetworkRuleSet
 * Fix for issue #9786 : cannot create a rule with Listen only rights
-* Added new command 'Test-AzServiceBusNameAvailability' to check the name availability for queue and topic 
+* Added new command 'Test-AzServiceBusNameAvailability' to check the name availability for queue and topic
 
 #### Az.ServiceFabric
 * Fix add node type cmdlet bugs:
@@ -343,10 +344,10 @@ https://github.com/Azure/azure-powershell/issues/9752
 * Update common code to use latest version of ClientRuntime
 
 #### Az.ApplicationInsights
-* Fix example typo in 'Remove-AzApplicationInsightsApiKey' documentation 
+* Fix example typo in 'Remove-AzApplicationInsightsApiKey' documentation
 
 #### Az.Automation
-* Fix typo in resource string 
+* Fix typo in resource string
 
 #### Az.CognitiveServices
 * Added NetworkRuleSet support.
@@ -407,7 +408,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     - Updated New-AzApplicationGatewayProbeConfig: Added optional parameter Port which is used for probing backend server. This parameter is applicable for Standard_V2 and WAF_V2 SKU.
 
 #### Az.OperationalInsights
-* Updated default version for saved searches to be 1. 
+* Updated default version for saved searches to be 1.
 * Fixed custom log null regex handling
 
 #### Az.RecoveryServices
@@ -561,7 +562,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     - New-AzureRmEventGridDomainTopic:
         - Creates a new Azure Event Grid Domain Topic.
     - Get-AzureRmEventGridDomainTopic
-        - Gets the details of an Event Grid Domain Topic, or gets a list of all Event Grid Domain Topics under specific Event Grid Domain in the current Azure 
+        - Gets the details of an Event Grid Domain Topic, or gets a list of all Event Grid Domain Topics under specific Event Grid Domain in the current Azure
     - Remove-AzureRmEventGridDomainTopic:
         - Removes an existing Azure Event Grid Domain Topic.
 * Updated cmdlets:
@@ -573,7 +574,7 @@ https://github.com/Azure/azure-powershell/issues/9752
             - Event subscription expiration date,
             - Advanced filtering parameters.
         - Add new enum for servicebusqueue as destination.
-        - Disallow usage of 'All' in -IncludedEventType option and replace it with 
+        - Disallow usage of 'All' in -IncludedEventType option and replace it with
     - Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:
         - Add new optional parameters (Top, ODataQuery and NextLink) to support results pagination and filtering.
     - Remove-AzureRmEventGridSubscription
@@ -591,11 +592,11 @@ https://github.com/Azure/azure-powershell/issues/9752
     - New cmdlets
         - Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
 * Add AvailablePrivateEndpointType
-    - New cmdlets 
+    - New cmdlets
         - Get-AzAvailablePrivateEndpointType
 * Add PrivatePrivateLinkService
-    - New cmdlets 
-        - Get-AzPrivateLinkService 
+    - New cmdlets
+        - Get-AzPrivateLinkService
         - New-AzPrivateLinkService
         - Remove-AzPrivateLinkService
         - New-AzPrivateLinkServiceIpConfig
@@ -624,8 +625,8 @@ https://github.com/Azure/azure-powershell/issues/9752
         - Added parameter -PublicIpAddress which accepts one or more Public IP Address objects
         - Added parameter -VirtualNetwork which accepts a Virtual Network object
         - Added methods AddPublicIpAddress and RemovePublicIpAddress on firewall object - these accept a Public IP Address object as input
-        - Deprecated parameters -PublicIpName and -VirtualNetworkName 
-* Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource. 
+        - Deprecated parameters -PublicIpName and -VirtualNetworkName
+* Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource.
     - Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.
     - Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.
     - Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient AAD authentication options from Gateway.
@@ -745,19 +746,19 @@ https://github.com/Azure/azure-powershell/issues/9752
     - **Get-AzApiManagementSchema** - Get the schemas configured in the API
     - **Remove-AzApiManagementSchema** - Remove the schema configured in the API
     - **Set-AzApiManagementSchema** - Update the schema configured in the API
-* Created new Cmdlet for generating a User Token. 
+* Created new Cmdlet for generating a User Token.
     - **New-AzApiManagementUserToken** - Generate a new User Token valid for 8 hours by default.Token for the 'GIT' user can be generated using this cmdlet./
 * Created a new cmdlet to retrieving the Network Status
     - **Get-AzApiManagementNetworkStatus** - Get the Network status connectivity of resources on which API Management service depends on. This is useful when deploying ApiManagement service into a Virtual Network and validing whether any of the dependencies are broken.
-* Updated cmdlet **New-AzApiManagement** to manage ApiManagement service 
+* Updated cmdlet **New-AzApiManagement** to manage ApiManagement service
     - Added support for the new 'Consumption' SKU
     - Added support to turn the 'EnableClientCertificate' flag on for 'Consumption' SKU
     - The new cmdlet **New-AzApiManagementSslSetting** allows configuring 'TLS/SSL' setting on the 'Backend' and 'Frontend'. This can also be used to configure 'Ciphers' like '3DES' and 'ServerProtocols' like 'Http2' on the 'Frontend' of an ApiManagement service.
     - Added support for configuring the 'DeveloperPortal' hostname on ApiManagement service.
 * Updated cmdlets **Get-AzApiManagementSsoToken** to take 'PsApiManagement' object as input
-* Updated the cmdlet to display Error Messages inline 
+* Updated the cmdlet to display Error Messages inline
      > PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin
-     >   Set-AzApiManagementPolicy : 
+     >   Set-AzApiManagementPolicy :
      Error Code: ValidationError
      Error Message: One or more fields contain incorrect values:
      Error Details:
@@ -769,15 +770,15 @@ https://github.com/Azure/azure-powershell/issues/9752
     - To override the 'ServiceUrl' property specified in any document.
 * Updated cmdlet **Get-AzApiManagementPolicy** to return policy in Non-Xml escaped 'format' using 'rawxml'
 * Updated cmdlet **Set-AzApiManagementPolicy** to accept policy in Non-Xml escaped 'format' using 'rawxml' and Xml escaped using 'xml'
-* Updated cmdlet **New-AzApiManagementApi** 
+* Updated cmdlet **New-AzApiManagementApi**
     - To configure API with 'OpenId' authorization server.
     - To create an API in an 'ApiVersionSet'
     - To clone an API using 'SourceApiId' and 'SourceApiRevision'.
-    - Ability to configure 'SubscriptionRequired' at the Api scope. 
+    - Ability to configure 'SubscriptionRequired' at the Api scope.
 * Updated cmdlet **Set-AzApiManagementApi**
     - To configure API with 'OpenId' authorization server.
-    - To updated an API into an 'ApiVersionSet'    
-    - Ability to configure 'SubscriptionRequired' at the Api scope. 
+    - To updated an API into an 'ApiVersionSet'
+    - Ability to configure 'SubscriptionRequired' at the Api scope.
 * Updated cmdlet **New-AzApiManagementRevision**
     - To clone (copy tags, products, operations and policies) an existing revision using 'SourceApiRevision'. The new Revision assumes the 'ApiId' of the parent.
     - To provide an 'ApiRevisionDescription'
@@ -803,7 +804,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     - 'Get-AzApiManagementAuthorizationServer'
     - 'Get-AzApiManagementBackend'
         > Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric
-    - 'Get-AzApiManagementCertificate' 
+    - 'Get-AzApiManagementCertificate'
     - 'Remove-AzApiManagementApiVersionSet'
     - 'Remove-AzApiManagementSubscription'
 
@@ -857,7 +858,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 		New-AzVmssConfig
 * StorageAccountType parameter is added to New-AzGalleryImageVersion.
 * TargetRegion of New-AzGalleryImageVersion can contain StorageAccountType.
-* SkipShutdown switch parameter is added to Stop-AzVM and Stop-AzVmss		
+* SkipShutdown switch parameter is added to Stop-AzVM and Stop-AzVmss
 * Breaking changes
     - Set-AzVMBootDiagnostics is changed to Set-AzVMBootDiagnostic.
     - Export-AzLogAnalyticThrottledRequests is changed to Export-AzLogAnalyticThrottledRequests.
@@ -892,7 +893,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 	- Users with hdinsight operator role will not be affected.
 
 #### Az.Monitor
-* New cmdlets for SQR API (Scheduled Query Rule)  
+* New cmdlets for SQR API (Scheduled Query Rule)
     - New-AzScheduledQueryRuleAlertingAction
 	- New-AzScheduledQueryRuleAznsActionGroup
 	- New-AzScheduledQueryRuleLogMetricTrigger
@@ -990,7 +991,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 * Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.
 
 #### Az.EventHub
-* Added new cmdlets for NetworkRuleSet of Namespace 
+* Added new cmdlets for NetworkRuleSet of Namespace
 
 #### Az.HDInsight
 * Updated cmdlets with plural nouns to singular, and deprecated plural names.
@@ -1080,7 +1081,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 
 #### Az.Compute
 * Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig
-* Allow VM creation with galley image from other tenants. 
+* Allow VM creation with galley image from other tenants.
 
 #### Az.ContainerInstance
 * Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument
@@ -1162,7 +1163,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     - New-AzStorageAccountManagementPolicyRule
 
 #### Az.Websites
-* Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots' 
+* Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'
 
 ## 1.5.0 - March 2019
 #### Az.Accounts
@@ -1232,7 +1233,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 * Add cmdlets for ADL deleted item enumerate and restore
 
 #### Az.EventHub
-* Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub 
+* Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub
 
 #### Az.KeyVault
 * Fix tagging on Set-AzKeyVaultSecret
@@ -1260,8 +1261,8 @@ https://github.com/Azure/azure-powershell/issues/9752
 
 #### Az.OperationalInsights
 * Additional support for New and Get ApplicationInsights data source.
-    - Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace. 
-    - Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name. 
+    - Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.
+    - Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.
 
 #### Az.Resources
 * Fix for issue https://github.com/Azure/azure-powershell/issues/8166
@@ -1292,9 +1293,9 @@ General availability for Az.AnalysisServices module.
 General availability for Az.RecoveryServices module.
 
 #### Az.Resources
-* Fix tagging for resource groups 
+* Fix tagging for resource groups
     - More information here: https://github.com/Azure/azure-powershell/issues/8166
-* Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction 
+* Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction
     - More information here: https://github.com/Azure/azure-powershell/issues/8235
 
 #### Az.Sql
@@ -1600,7 +1601,7 @@ Added KeyVault Support to Application Gateway using Identity.
 
 ### Az.Websites
 
-* Set-AzureRmWebApp and Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp and Set-AzureRmWebAppSlot
     - New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps. Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.
 
 ## 0.6.1 - November 2018
@@ -1628,7 +1629,7 @@ Added KeyVault Support to Application Gateway using Identity.
 ### Az.Network
 * Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError
 * Added ICMP back to supported AzureFirewall Network Protocols
-* Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port. 
+* Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.
 * Fix issues with memory usage in VirtualNetwork map
 
 ### Az.RecoveryServices.Backup
@@ -1760,7 +1761,7 @@ Added KeyVault Support to Application Gateway using Identity.
     - Start-AzureStorageFileCopy
 * Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.
     - Get-AzStorageUsage
-    
+
 #### Az.CognitiveServices
 * Support Get-AzCognitiveServicesAccountSkus without an existing account.
 

@@ -8,9 +8,9 @@ metadata:
     displayType: two-column
     interactive: azurepowershell
     ms.date: 12/13/2018
-    ms.author: sttramer
-    author: sptramer
-    manager: carmonm
+    ms.author: mirobb
+    author: mikefrobbins
+    manager: barbkess
     ms.devlang: azure-powershell
     ms.prod: powershell
     ms.technology: azure-powershell
@@ -26,7 +26,7 @@ items:
         This tutorial can be completed with the interactive experience offered through Azure Cloud
         Shell, or you may [install Azure PowerShell](install-az-ps.md) locally.
 
-        Use __ctrl-shift-v__ (__cmd-shift-v__ on macOS) to paste tutorial text into Azure Cloud
+        Use **ctrl-shift-v** (**cmd-shift-v** on macOS) to paste tutorial text into Azure Cloud
         Shell.
 
     - durationInMinutes: 1
@@ -293,7 +293,8 @@ items:
 
         ### In-depth Azure PowerShell documentation
 
-        You might want to take time to explore the complete [Azure PowerShell documentation](overview.md) set.
+        You might want to take time to explore the complete
+        [Azure PowerShell documentation](/powershell/azure/new-azureps-module-az?view=azps-0.10.0) set.
 
         For more information about the commands used in this tutorial, see the following articles.
 
