@@ -68,77 +68,82 @@ function Uninstall-AzModule {
     [switch]$AllowPrerelease
   )
 
-  $AllModules = @()
   $Params = @{}
-
-  if ((Get-Process -Name powershell, pwsh -OutVariable Sessions -ErrorAction SilentlyContinue).Count -gt 1) {
-    Write-Warning -Message "Uninstall aborted. Please close all other PowerShell sessions before continuing. There are currently $($Sessions.Count) PowerShell sessions running."
-    Break
-  }
 
   if ($PSBoundParameters.AllowPrerelease) {
     $Params.AllowPrerelease = $true
   }
 
-  if (-not(Get-InstalledModule -Name $Name -RequiredVersion $Version -ErrorAction SilentlyContinue -OutVariable RootModule @Params)) {
-    Write-Warning -Message "Uninstall aborted. $Name module version $Version not found."
-    Break
-  }
-
   $IsAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')
 
-  if (($RootModule.InstalledLocation -notlike "*$env:USERPROFILE*") -and ($IsAdmin -eq $false)) {
-    Write-Warning -Message "'$Name' module version $Version exists in a system path. PowerShell must be run elevated as an admin to remove it."
-    Break
-  }
+  if (-not(Get-InstalledModule -Name $Name -RequiredVersion $Version -ErrorAction SilentlyContinue -OutVariable RootModule @Params)) {
 
-  Write-Verbose -Message 'Creating list of dependencies...'
-  $target = Find-Module -Name $Name -RequiredVersion $Version @Params
+    Write-Warning -Message "Uninstall aborted. $Name version $Version not found."
 
-  foreach ($dependency in $target.Dependencies) {
-    switch ($dependency.keys) {
-      {$_ -contains 'RequiredVersion'} {$UninstallVersion = $dependency.RequiredVersion; break}
-      {$_ -contains 'MinimumVersion'} {$UninstallVersion = $dependency.MinimumVersion; break}
-    }
-    $AllModules += New-Object -TypeName psobject -Property @{Name=$dependency.Name; Version=$UninstallVersion}
-  }
+  } elseif (($RootModule.InstalledLocation -notlike "*$env:USERPROFILE*") -and ($IsAdmin -eq $false)) {
 
-  $AllModules += New-Object -TypeName psobject -Property @{name=$Name; version=$Version}
+    Write-Warning -Message "Uninstall aborted. $Name version $Version exists in a system path. PowerShell must be run elevated as an admin to remove it."
 
-  [int]$i = 100 / $AllModules.Count
+  } elseif ((Get-Process -Name powershell, pwsh -OutVariable Sessions -ErrorAction SilentlyContinue).Count -gt 1) {
 
-  foreach ($module in $AllModules) {
-    Write-Progress -Activity 'Uninstallation in Progress' -Status "$i% Complete:" -PercentComplete $i
-    $i++
+    Write-Warning -Message "Uninstall aborted. Please close all other PowerShell sessions before continuing. There are currently $($Sessions.Count) PowerShell sessions running."
 
-    if (Get-InstalledModule -Name $module.Name -RequiredVersion $module.Version -ErrorAction SilentlyContinue @Params) {
-      Write-Verbose -Message "Uninstalling $($module.Name) module version $($module.Version)"
+  } else {
+    Write-Verbose -Message 'Creating list of dependencies...'
+    $target = Find-Module -Name $Name -RequiredVersion $Version @Params
 
-      Remove-Module -FullyQualifiedName @{ModuleName=$module.Name;ModuleVersion=$module.Version} -ErrorAction SilentlyContinue
+    $AllModules = @([pscustomobject]@{
+      Name = $Name
+      Version = $Version
+    })
 
-      try {
-        if ($PSCmdlet.ShouldProcess("$($module.Name) version $($module.Version)")) {
-          Uninstall-Module -Name $module.Name -RequiredVersion $module.Version -Force -ErrorAction Stop @Params
-        }
-        $State = 'Uninstalled'
-      } Catch {
-        $State = 'Manual uninstall required'
-        Write-Verbose -Message "$($module.Name) module version: $($module.Version) may require manual uninstallation."
+    $AllModules += foreach ($dependency in $target.Dependencies) {
+      switch ($dependency.keys) {
+        {$_ -contains 'RequiredVersion'} {$UninstallVersion = $dependency.RequiredVersion; break}
+        {$_ -contains 'MinimumVersion'} {$UninstallVersion = $dependency.MinimumVersion; break}
       }
 
-    } else {
-      $State = 'Not found'
-      Write-Verbose -Message "$($module.Name) module version: $($module.Version) not found."
-    }
-
-    if (-not $PSBoundParameters.WhatIf) {
       [pscustomobject]@{
-        ModuleName = $module.Name
-        Version = $module.Version
-        State = $State
+        Name = $dependency.Name
+        Version = $UninstallVersion
       }
     }
 
+    [int]$i = 100 / $AllModules.Count
+
+    foreach ($module in $AllModules) {
+      Write-Progress -Activity 'Uninstallation in Progress' -Status "$i% Complete:" -PercentComplete $i
+      $i++
+
+      if (Get-InstalledModule -Name $module.Name -RequiredVersion $module.Version -ErrorAction SilentlyContinue @Params) {
+        Write-Verbose -Message "Uninstalling $($module.Name) version $($module.Version)"
+
+        Remove-Module -FullyQualifiedName @{ModuleName=$module.Name;ModuleVersion=$module.Version} -ErrorAction SilentlyContinue
+
+        try {
+          if ($PSCmdlet.ShouldProcess("$($module.Name) version $($module.Version)")) {
+            Uninstall-Module -Name $module.Name -RequiredVersion $module.Version -Force -ErrorAction Stop @Params
+          }
+          $State = 'Uninstalled'
+        } Catch {
+          $State = 'Manual uninstall required'
+          Write-Verbose -Message "$($module.Name) version: $($module.Version) may require manual uninstallation."
+        }
+
+      } else {
+        $State = 'Not found'
+        Write-Verbose -Message "$($module.Name) version: $($module.Version) not found."
+      }
+
+      if (-not $PSBoundParameters.WhatIf) {
+        [pscustomobject]@{
+          ModuleName = $module.Name
+          Version = $module.Version
+          State = $State
+        }
+      }
+
+    }
   }
 }
 ```
