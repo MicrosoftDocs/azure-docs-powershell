@@ -179,7 +179,9 @@ Run the following example for every version of Azure PowerShell that you want to
 convenience, the following script uninstalls all versions of Az **except** for the latest.
 
 ```powershell-interactive
-$Modules = Get-InstalledModule -Name Az -AllVersions | Sort-Object -Property Version -Descending | Select-Object -Skip 1
+$Modules = Get-InstalledModule -Name Az -AllVersions | 
+    Sort-Object -Property Version -Descending | 
+        Select-Object -Skip 1
 $Modules | ForEach-Object {Uninstall-AzModule -Name $_.Name -Version $_.Version}
 ```
 
