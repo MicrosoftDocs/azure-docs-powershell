@@ -39,7 +39,7 @@ authentication, and certificate-based authentication.
 > The default role for a password-based authentication service principal is **Contributor**. This
 > role has full permissions to read and write to an Azure account. For information on managing role
 > assignments, see
-> [Manage service principal roles](authenticate-azureps.md#manage-service-principal-roles).
+> [Manage service principal roles](#manage-service-principal-roles).
 
 Without any other authentication parameters, password-based authentication is used and a random
 password created for you. If you want password-based authentication, this method is recommended.
@@ -90,7 +90,7 @@ either of which can be used for sign in with the service principal.
 > [!IMPORTANT]
 > There is no default role assigned when creating a certificate-based authentication service
 > principal. For information on managing role assignments, see
-> [Manage service principal roles](authenticate-azureps.md#manage-service-principal-roles).
+> [Manage service principal roles](#manage-service-principal-roles).
 
 Service principals using certificate-based authentication are created with the `-CertValue`
 parameter. This parameter takes a base64-encoded ASCII string of the public certificate. This is
