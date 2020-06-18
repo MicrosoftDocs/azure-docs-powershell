@@ -35,6 +35,12 @@ authentication, and certificate-based authentication.
 
 ### Password-based authentication
 
+> [!IMPORTANT]
+> The default role for a password-based authentication service principal is **Contributor**. This
+> role has full permissions to read and write to an Azure account. For information on managing role
+> assignments, see
+> [Manage service principal roles](#manage-service-principal-roles).
+
 Without any other authentication parameters, password-based authentication is used and a random
 password created for you. If you want password-based authentication, this method is recommended.
 
@@ -80,6 +86,11 @@ either of which can be used for sign in with the service principal.
 ```
 
 ### Certificate-based authentication
+
+> [!IMPORTANT]
+> There is no default role assigned when creating a certificate-based authentication service
+> principal. For information on managing role assignments, see
+> [Manage service principal roles](#manage-service-principal-roles).
 
 Service principals using certificate-based authentication are created with the `-CertValue`
 parameter. This parameter takes a base64-encoded ASCII string of the public certificate. This is
@@ -135,9 +146,9 @@ Azure PowerShell has the following cmdlets to manage role assignments:
 * [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
 * [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
-The default role for a service principal is **Contributor**. This role has full permissions to read
-and write to an Azure account. The **Reader** role is more restrictive, with read-only access. For
-more information on Role-Based Access Control (RBAC) and roles, see
+The default role for a password-based authentication service principal is **Contributor**. This role
+has full permissions to read and write to an Azure account. The **Reader** role is more restrictive,
+with read-only access. For more information on Role-Based Access Control (RBAC) and roles, see
 [RBAC: Built-in roles](/azure/active-directory/role-based-access-built-in-roles).
 
 This example adds the **Reader** role and removes the **Contributor** one:
