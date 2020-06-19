@@ -155,7 +155,7 @@ This example adds the **Reader** role and removes the **Contributor** one:
 
 ```azurepowershell-interactive
 New-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName 'Reader'
-Remove-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName 'Contributor'
+Remove-AzRoleAssignment -ObjectId <service principal object ID> -RoleDefinitionName 'Contributor'
 ```
 
 > [!IMPORTANT]
