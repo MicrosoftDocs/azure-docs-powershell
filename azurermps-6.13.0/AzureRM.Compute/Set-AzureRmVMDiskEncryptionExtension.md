@@ -68,7 +68,7 @@ $KeyVaultResourceId = $KeyVault.ResourceId
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
 ```
 
-This example demonstrates enabling encryption without specifying AD credentials.   
+This example demonstrates enabling encryption without specifying AD credentials.
 
 ### Example 2: Enable encryption with pipelined input
 ```
@@ -85,7 +85,7 @@ $params = New-Object PSObject -Property @{
 $params | Set-AzureRmVmDiskEncryptionExtension
 ```
 
-This example demonstrates sending parameters using pipelined input to enable encryption without specifying AD credentials.  
+This example demonstrates sending parameters using pipelined input to enable encryption without specifying AD credentials.
 
 ### Example 3: Enable encryption using Azure AD Client ID and Client Secret
 ```
@@ -117,22 +117,22 @@ $CertPath = "C:\certificates\examplecert.pfx"
 $CertPassword = "Password"
 $Cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($CertPath, $CertPassword)
 $CertValue = [System.Convert]::ToBase64String($cert.GetRawCertData())
-$AzureAdApplication = New-AzureRmADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -CertValue $CertValue 
+$AzureAdApplication = New-AzureRmADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -CertValue $CertValue
 $ServicePrincipal = New-AzureRmADServicePrincipal -ApplicationId $AzureAdApplication.ApplicationId
 
 $AADClientID = $AzureAdApplication.ApplicationId
 $aadClientCertThumbprint= $cert.Thumbprint
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 $KeyVaultSecretName = "MyAADCert"
 $FileContentBytes = get-content $CertPath -Encoding Byte
 $FileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes)
 $JSONObject = @"
-    { 
-        "data" : "$filecontentencoded", 
-        "dataType" : "pfx", 
-        "password" : "$CertPassword" 
-    } 
+    {
+        "data" : "$filecontentencoded",
+        "dataType" : "pfx",
+        "password" : "$CertPassword"
+    }
 "@
 $JSONObjectBytes = [System.Text.Encoding]::UTF8.GetBytes($jsonObject)
 $JSONEncoded = [System.Convert]::ToBase64String($jsonObjectBytes)
@@ -144,9 +144,9 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName $RGName
 #deploy cert to VM
 $CertUrl = (Get-AzureKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 $SourceVaultId = (Get-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName 
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 $VM = Add-AzureRmVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
-Update-AzureRmVM -VM $VM -ResourceGroupName $RGName 
+Update-AzureRmVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
@@ -200,16 +200,16 @@ $ServicePrincipal = New-AzureRmADServicePrincipal -ApplicationId $AzureAdApplica
 $AADClientID = $AzureAdApplication.ApplicationId
 $AADClientCertThumbprint= $Cert.Thumbprint
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 $KeyVaultSecretName = "MyAADCert"
 $FileContentBytes = get-content $CertPath -Encoding Byte
 $FileContentEncoded = [System.Convert]::ToBase64String($FileContentBytes)
 $JSONObject = @"
-    { 
-        "data" : "$filecontentencoded", 
-        "dataType" : "pfx", 
-        "password" : "$CertPassword" 
-    } 
+    {
+        "data" : "$filecontentencoded",
+        "dataType" : "pfx",
+        "password" : "$CertPassword"
+    }
 "@
 $JSONObjectBytes = [System.Text.Encoding]::UTF8.GetBytes($JSONObject)
 $JsonEncoded = [System.Convert]::ToBase64String($JSONObjectBytes)
@@ -220,9 +220,9 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName $RGName
 #deploy cert to VM
 $CertUrl = (Get-AzureKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 $SourceVaultId = (Get-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName 
-$VM = Add-AzureRmVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl 
-Update-AzureRmVM -VM $VM -ResourceGroupName $RGName 
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+$VM = Add-AzureRmVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
+Update-AzureRmVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGname -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId -KeyEncryptionKeyUrl $KeyEncryptionKeyUrl -KeyEncryptionKeyVaultId $KeyVaultResourceId
@@ -562,7 +562,7 @@ Accept wildcard characters: False
 ### -VolumeType
 Specifies the type of virtual machine volumes to perform the encryption operation.
 Allowed values for virtual machines that run the Windows operating system are as follows: All, OS, and Data.
-The allowed values for Linux virtual machines are as follows: Data only.
+The allowed values for Linux virtual machines are as follows: All, OS, and Data when supported by the Linux distribution.
 
 ```yaml
 Type: System.String
