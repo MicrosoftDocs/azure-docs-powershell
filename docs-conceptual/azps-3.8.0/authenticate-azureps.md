@@ -43,6 +43,13 @@ web browser. Your PowerShell session will be authenticated to connect to Azure. 
 > authorization for automation purposes, instead
 > [create a service principal](create-azure-service-principal-azureps.md).
 
+Use the [Get-AzContext](/powershell/module/az.accounts/get-azcontext) cmdlet to store your tenant ID
+in a variable to be used in the next two sections of this article.
+
+```azurepowershell-interactive
+$tenantId = (Get-AzContext).Tenant.Id
+```
+
 ## Sign in with a service principal <a name="sp-signin"/>
 
 Service principals are non-interactive Azure accounts. Like other user accounts, their permissions
