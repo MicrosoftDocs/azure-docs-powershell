@@ -69,7 +69,7 @@
 
             { "files": ["toc.yml"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "module/azure-stack" },
             { "files": ["**/*.md"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "azure/azure-stack" }
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "azure/azure-stack" },
 
             {
                 "files": [
