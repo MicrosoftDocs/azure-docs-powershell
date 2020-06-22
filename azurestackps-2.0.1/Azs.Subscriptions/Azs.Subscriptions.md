@@ -1,6 +1,5 @@
 ---
 Module Name: Azs.Subscriptions
-Module Guid: 14141e86-b5d1-482d-9cd0-1ef146c658b9
 Download Help Link: https://docs.microsoft.com/powershell/module/azs.subscriptions
 Help Version: 1.0.0.0
 Locale: en-US
