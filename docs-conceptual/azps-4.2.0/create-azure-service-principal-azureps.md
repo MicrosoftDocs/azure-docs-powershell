@@ -133,18 +133,18 @@ this command returns _all_ service principals in a tenant. For large organizatio
 a long time to return results. Instead, using one of the optional server-side filtering arguments is
 recommended:
 
-* `-DisplayNameBeginsWith` requests service principals that have a _prefix_ that match the provided
+- `-DisplayNameBeginsWith` requests service principals that have a _prefix_ that match the provided
   value. The display name of a service principal is the value set with `-DisplayName` during
   creation.
-* `-DisplayName` requests an _exact match_ of a service principal name.
+- `-DisplayName` requests an _exact match_ of a service principal name.
 
 ## Manage service principal roles
 
 Azure PowerShell has the following cmdlets to manage role assignments:
 
-* [Get-AzRoleAssignment](/powershell/module/az.resources/get-azroleassignment)
-* [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
-* [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
+- [Get-AzRoleAssignment](/powershell/module/az.resources/get-azroleassignment)
+- [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
+- [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
 The default role for a password-based authentication service principal is **Contributor**. This role
 has full permissions to read and write to an Azure account. The **Reader** role is more restrictive,
@@ -206,7 +206,7 @@ For instructions on importing a certificate into a credential store accessible b
 
 If you forget the credentials for a service principal, use
 [New-AzADSpCredential](/powershell/module/az.resources/new-azadspcredential) to add a new credential
-with a random password. This cmdlet does not support user defined credentials when resetting the
+with a random password. This cmdlet does not support user-defined credentials when resetting the
 password.
 
 > [!IMPORTANT]
@@ -221,3 +221,40 @@ Remove-AzADSpCredential -DisplayName ServicePrincipalName
 ```azurepowershell-interactive
 $newCredential = New-AzADSpCredential -ServicePrincipalName ServicePrincipalName
 ```
+
+## Troubleshooting
+
+If you receive the error: _"New-AzADServicePrincipal: Another object with the same value for
+property identifierUris already exists."_, verify that a service principal with the same name
+doesn't already exist.
+
+```azurepowershell-interactive
+Get-AzAdServicePrincipal -DisplayName ServicePrincipalName
+```
+
+If the existing service principal is no longer needed, you can remove it using the following
+example.
+
+```azurepowershell-interactive
+Remove-AzAdServicePrincipal -DisplayName ServicePrincipalName
+```
+
+This error can also occur when you've previously created a service principal for an Azure Active
+Directory application. If you remove the service principal, the application is still available. This
+application prevents you from creating another service principal with the same name.
+
+You can use the following example to verify that an Azure Active Directory application with the same
+name doesn't exist:
+
+```azurepowershell-interactive
+Get-AzADApplication -DisplayName ServicePrincipalName
+```
+
+If an application with the same name does exist and is no longer needed, it can be removed using the
+following example.
+
+```azurepowershell-interactive
+Remove-AzADApplication -DisplayName ServicePrincipalName
+```
+
+Otherwise, choose an alternate name for the new service principal that you're attempting to create.
