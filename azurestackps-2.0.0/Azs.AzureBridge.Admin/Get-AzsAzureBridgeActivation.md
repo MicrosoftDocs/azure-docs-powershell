@@ -52,7 +52,7 @@ Get an Azure Bridge Activation by name 'myActivation' situated under 'activation
 Name of the activation.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: Get
 Aliases: 
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 The Resource Group used during the registration of Azure Stack; you can also view Resource Group names in the portal.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: List, Get
 Aliases: 
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 The resource id.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.PSObject
 Parameter Sets: ResourceId
 Aliases: id
 
