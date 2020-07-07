@@ -3,7 +3,7 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/18/2020
+ms.date: 7/7/2020
 ---
 # Sign in with Azure PowerShell
 
@@ -14,10 +14,11 @@ the recommended approach is to use a [service principal](create-azure-service-pr
 with the necessary permissions. When you restrict sign-in permissions as much as possible for your
 use case, you help keep your Azure resources secure.
 
-After signing in, commands are run against your default subscription. To change your active
+Initially, you're signed into the first subscription Azure returns if you have access to more than
+one subscription. Commands are run against this subscription by default. To change your active
 subscription for a session, use the [Set-AzContext](/powershell/module/az.accounts/set-azcontext)
-cmdlet. To change the default subscription used when logging in with Azure PowerShell, use
-[Set-AzDefault](/powershell/module/az.accounts/set-azdefault).
+cmdlet. To change your active subscription and have it persist between sessions on the same system,
+use the [Select-AzContext](/powershell/module/az.accounts/select-azcontext) cmdlet.
 
 > [!IMPORTANT]
 > Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.
