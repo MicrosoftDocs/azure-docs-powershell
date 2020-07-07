@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 64EF867E-5142-4317-9552-8BC94117208D
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -59,7 +59,7 @@ Specifies the name of the data disk configuration that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: Resize
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -69,17 +69,26 @@ Accept wildcard characters: False
 ```
 
 ### -HostCaching
-Specifies the host level caching settings of the disk.
-Valid values are: 
 
-- None 
-- ReadOnly 
+> [!WARNING]
+> Disk Caching is not supported for disks 4 TiB and larger. If multiple disks are attached to your
+> VM, each disk that is smaller than 4 TiB will support caching. Changing the cache setting of an
+> Azure disk detaches and re-attaches the target disk. If it is the operating system disk, the VM is
+> restarted. Stop all applications/services that might be affected by this disruption before
+> changing the disk cache >setting. Not following those recommendations could lead to data
+> corruption.
+
+Specifies the host level caching settings of the disk.
+Valid values are:
+
+- None
+- ReadOnly
 - ReadWrite
 
 ```yaml
 Type: String
 Parameter Sets: NoResize
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -134,7 +143,7 @@ Valid values are: 0 through 15.
 ```yaml
 Type: Int32
 Parameter Sets: NoResize
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -150,7 +159,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +175,7 @@ The new size must be larger than the current size.
 ```yaml
 Type: Int32
 Parameter Sets: Resize
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
