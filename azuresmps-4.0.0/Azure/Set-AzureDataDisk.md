@@ -72,11 +72,12 @@ Accept wildcard characters: False
 
 > [!WARNING]
 > Disk Caching is not supported for disks 4 TiB and larger. If multiple disks are attached to your
-> VM, each disk that is smaller than 4 TiB will support caching. Changing the cache setting of an
-> Azure disk detaches and re-attaches the target disk. If it is the operating system disk, the VM is
-> restarted. Stop all applications/services that might be affected by this disruption before
-> changing the disk cache >setting. Not following those recommendations could lead to data
-> corruption.
+> VM, each disk that is smaller than 4 TiB will support caching.
+>
+> Changing the cache setting of an Azure disk detaches and re-attaches the target disk. If it is the
+> operating system disk, the VM is restarted. Stop all applications/services that might be affected
+> by this disruption before changing the disk cache setting. Not following those recommendations
+> could lead to data corruption.
 
 Specifies the host level caching settings of the disk.
 Valid values are:
