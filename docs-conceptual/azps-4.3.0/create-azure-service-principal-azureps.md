@@ -196,7 +196,7 @@ Certificate-based authentication requires that Azure PowerShell can retrieve inf
 local certificate store based on a certificate thumbprint.
 
 ```azurepowershell-interactive
-Connect-AzAccount -ServicePrincipal -Tenant <tenant ID> -CertificateThumbprint <thumbprint>
+Connect-AzAccount -ServicePrincipal -Tenant <TenantId> -CertificateThumbprint <Thumbprint> -ApplicationId <ApplicationId>
 ```
 
 For instructions on importing a certificate into a credential store accessible by PowerShell, see
