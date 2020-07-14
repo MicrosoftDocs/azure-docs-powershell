@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.AzureBridge.Admin
-
+Module Guid: 82d2260a-95ae-44bb-af8b-afd67d38f6db
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
