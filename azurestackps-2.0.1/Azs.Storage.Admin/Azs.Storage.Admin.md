@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Storage.Admin
-Module Guid: {{Module-Guid}}
+Module Guid: 9dbccb05-3016-4031-87bf-dd66baef639b
 Download Help Link: https://docs.microsoft.com/powershell/module/azs.storage.admin
 Help Version: 1.0.0.0
 Locale: en-US

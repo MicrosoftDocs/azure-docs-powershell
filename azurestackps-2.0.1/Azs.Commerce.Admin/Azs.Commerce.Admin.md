@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Commerce.Admin
-Module Guid: {{Module-Guid}}
+Module Guid: f4849893-57ef-47dc-8089-8e2ae6473c8b
 Download Help Link: https://docs.microsoft.com/powershell/module/azs.commerce.admin
 Help Version: 1.0.0.0
 Locale: en-US
