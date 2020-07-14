@@ -11,17 +11,17 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "azuresmps-4.0.0/docs-conceptual/index.md",
+      "source_path": "docs-conceptual/azuresmps-4.0.0/index.md",
       "redirect_url": "/powershell/azure/servicemanagement/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "azurestackps-1.2.9/docs-conceptual/index.md",
+      "source_path": "docs-conceptual/azurestackps-1.2.9/index.md",
       "redirect_url": "/powershell/azure/azure-stack/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "azurestackps-1.2.10/docs-conceptual/index.md",
+      "source_path": "docs-conceptual/azurestackps-1.2.10/index.md",
       "redirect_url": "/powershell/azure/azure-stack/overview",
       "redirect_document_id": false
     },
