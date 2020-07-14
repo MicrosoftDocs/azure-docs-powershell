@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Gallery.Admin
+Module Guid: {{Module-Guid}}
 online version: https://docs.microsoft.com/powershell/module/azs.gallery.admin/add-azsgalleryitem
 schema: 2.0.0
 ---

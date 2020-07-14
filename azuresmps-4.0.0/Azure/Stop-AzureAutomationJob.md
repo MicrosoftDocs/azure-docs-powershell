@@ -20,7 +20,7 @@ Stop-AzureAutomationJob -Id <Guid> -AutomationAccountName <String> [-Profile <Az
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **Stop-AzureAutomationJob** cmdlet stops a Microsoft Azure Automation job.
 Specify a running automation job.

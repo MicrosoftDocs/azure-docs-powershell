@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Subscriptions.Admin
-
+Module Guid: {{Module-Guid}}
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin
 Help Version: 1.0.0.0
 Locale: en-US

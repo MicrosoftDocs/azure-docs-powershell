@@ -21,7 +21,7 @@ Set-AzureAutomationCertificate -Name <String> [-Description <String>] [-Password
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **Set-AzureAutomationCertificate** cmdlet modifies the configuration of a certificate in Microsoft Azure Automation.
 

@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.KeyVault.Admin
-
+Module Guid: {{Module-Guid}}
 Download Help Link: https://docs.microsoft.com/powershell/module/azs.keyvault.admin
 Help Version: 1.0.0.0
 Locale: en-US

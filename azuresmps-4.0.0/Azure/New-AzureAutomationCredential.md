@@ -20,7 +20,7 @@ New-AzureAutomationCredential -Name <String> [-Description <String>] -Value <PSC
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **New-AzureAutomationCredential** cmdlet creates a credential as a **PSCredential** object in Microsoft Azure Automation.
 

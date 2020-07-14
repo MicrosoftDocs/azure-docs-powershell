@@ -20,7 +20,7 @@ Suspend-AzureAutomationJob -Id <Guid> -AutomationAccountName <String> [-Profile 
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **Suspend-AzureAutomationJob** cmdlet suspends a Microsoft Azure Automation job.
 Specify a running Automation job.

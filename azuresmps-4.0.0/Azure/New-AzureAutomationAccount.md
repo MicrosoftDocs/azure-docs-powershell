@@ -19,7 +19,7 @@ New-AzureAutomationAccount -Name <String> -Location <String> [-Profile <AzureSMP
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **New-AzureAutomationAccount** cmdlet creates a new account in Microsoft Azure Automation.
 

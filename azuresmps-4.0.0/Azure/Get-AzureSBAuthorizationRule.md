@@ -28,7 +28,7 @@ Get-AzureSBAuthorizationRule [-Name <String>] [-Permission <AccessRights[]>] -Na
 ## DESCRIPTION
 Gets Service bus authorization rules.
 
-[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+[!INCLUDE [sb-deprecation.md](../../include/sb-deprecation.md)]
 
 ## EXAMPLES
 

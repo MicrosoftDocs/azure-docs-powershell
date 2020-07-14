@@ -20,7 +20,7 @@ Remove-AzureAutomationVariable -Name <String> [-Force] -AutomationAccountName <S
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **Remove-AzureAutomationVariable** cmdlet removes a variable from Microsoft Azure Automation.
 

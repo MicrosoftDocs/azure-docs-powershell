@@ -26,7 +26,7 @@ Get-AzureAutomationRunbook -Name <String> -AutomationAccountName <String> [-Prof
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **Get-AzureAutomationRunbook** cmdlet gets one or more Microsoft Azure Automation runbooks.
 By default, all runbooks are returned.

@@ -20,7 +20,7 @@ Set-AzureAutomationConnectionFieldValue -Name <String> -ConnectionFieldName <Str
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **Set-AzureAutomationConnectionFieldValue** cmdlet modifies the value for a field for a connection in Azure Automation.
 

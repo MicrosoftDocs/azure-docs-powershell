@@ -20,7 +20,7 @@ Remove-AzureAutomationCertificate -Name <String> [-Force] -AutomationAccountName
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../include/aa-deprecation.md)]
 
 The **Remove-AzureAutomationAccount** cmdlet removes a certificate from Microsoft Azure Automation.
 
