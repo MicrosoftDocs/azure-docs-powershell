@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Compute.Admin
-
+Module Guid: {{Module-Guid}}
 Download Help Link: https://docs.microsoft.com/powershell/module/azs.compute.admin
 Help Version: 1.0.0.0
 Locale: en-US
