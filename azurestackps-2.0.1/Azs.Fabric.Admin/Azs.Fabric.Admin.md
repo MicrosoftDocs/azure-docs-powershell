@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Fabric.Admin
-
+Module Guid: {{Module-Guid}}
 Download Help Link: https://docs.microsoft.com/powershell/module/azs.fabric.admin
 Help Version: 1.0.0.0
 Locale: en-US

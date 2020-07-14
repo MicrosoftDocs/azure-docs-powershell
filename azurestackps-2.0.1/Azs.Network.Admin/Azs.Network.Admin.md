@@ -1,6 +1,6 @@
 ---
 Module Name: Azs.Network.Admin
-
+Module Guid: {{Module-Guid}}
 Download Help Link: https://docs.microsoft.com/powershell/module/azs.network.admin
 Help Version: 1.0.0.0
 Locale: en-US
