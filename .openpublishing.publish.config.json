@@ -53,20 +53,6 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {
-    "live": [
-      "Publish"
-    ]
-  },
-  "need_generate_pdf_url_template": false,
-  "targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  },
-  "error_log_codes": [
-    "DuplicateOutputFiles"
-  ],
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
