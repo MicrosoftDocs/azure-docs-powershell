@@ -32,12 +32,12 @@
     }
   ],
   "notification_subscribers": [],
-  "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "enable_incremental_build": false,
+  "error_log_codes": ["DuplicateOutputFiles"],
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
@@ -51,8 +51,22 @@
       "url": "https://github.com/MicrosoftDocs/dotnet-xref",
       "branch": "live",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish"
+    ]
+  },
+  "need_generate_pdf_url_template": false,
+  "targets": {
+  },
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
