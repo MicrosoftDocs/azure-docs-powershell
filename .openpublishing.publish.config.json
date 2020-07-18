@@ -60,9 +60,6 @@
   },
   "need_generate_pdf_url_template": false,
   "targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
   },
   "error_log_codes": [
     "DuplicateOutputFiles"
