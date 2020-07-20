@@ -43,7 +43,7 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "ps-fix",
       "branch_mapping": {}
     },
     {
@@ -77,10 +77,10 @@
     },
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "nuget_feed": "https://www.myget.org/F/op-dev/api/v2",
       "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
-      "version": "latest"
+      "version": "latest-prerelease"
     }
   ],
   "monikerPath": [
