@@ -1,10 +1,10 @@
 ---
 title: Service Bus deprecation notice
-ms.date: 11/28/2018
+ms.date: 05/25/2020
 ms.topic: include
 ---
 > [!IMPORTANT]
-> 
-> This PowerShell command for Service Bus will no longer be supported on __11/1/2019__. The Azure Service Management model is deprecated for Service Bus,
-> and will be disabled on that date. Please use the commands which support the Azure Resource Management model in [AzureRM.ServiceBus](https://docs.microsoft.com/en-us/powershell/module/azurerm.servicebus).
-
+> This PowerShell command for Service Bus is no longer supported as of **11/1/2019**. The Azure
+> Service Management model is deprecated for Service Bus and was disabled on that date. Please
+> use the commands that support the Azure Resource Management model in
+> [AzureRM.ServiceBus](/powershell/module/azurerm.servicebus).
