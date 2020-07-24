@@ -38,7 +38,7 @@ If you have an outdated version, see
 > [!IMPORTANT]
 > The module described in this document, AzureRM, uses .NET Framework. This makes it incompatible
 > with PowerShell 6.0, which uses .NET Core. If you are using PowerShell 6.0, follow the
-> [installation instructions for macOS and Linux](install-azurermps-maclinux.md).
+> [installation instructions for macOS and Linux](/powershell/azure/install-az-ps).
 
 ## Install the Azure PowerShell module
 
