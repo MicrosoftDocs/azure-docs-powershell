@@ -152,7 +152,7 @@ To use this function, copy and paste the code into your PowerShell session. The 
 shows how to run the function to remove an older version of Azure PowerShell.
 
 ```powershell-interactive
-Uninstall-AzModule -Name Az -Version 1.8.0
+Uninstall-Module -Name Az -Version 1.8.0
 ```
 
 As the script runs, it displays the **Name**, **Version**, and **State** of each submodule that is
