@@ -323,7 +323,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [Get-AzBatchNodeFile](./Get-AzBatchNodeFile.md)
 

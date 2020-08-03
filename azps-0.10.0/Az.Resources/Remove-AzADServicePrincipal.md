@@ -292,8 +292,6 @@ Keywords: azure, Az, arm, resource, management, manager, resource, group, templa
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
 
-[Set-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
-
 [Remove-AzADApplication](./Remove-AzADApplication.md)
 
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)

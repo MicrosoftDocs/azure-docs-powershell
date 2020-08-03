@@ -147,7 +147,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzBatchCertificate](./Get-AzBatchCertificate.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [Remove-AzBatchCertificate](./Remove-AzBatchCertificate.md)
 

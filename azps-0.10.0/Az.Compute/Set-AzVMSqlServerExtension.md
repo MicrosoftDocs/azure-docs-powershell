@@ -229,9 +229,9 @@ This cmdlet does not accept any input.
 
 [Get-AzVMSqlServerExtension](./Get-AzVMSqlServerExtension.md)
 
-[New-AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
 
-[New-AzureVMSqlServerAutoBackupConfig](./New-AzureVMSqlServerAutoBackupConfig.md)
+
+
 
 [Remove-AzVMSqlServerExtension](./Remove-AzVMSqlServerExtension.md)
 

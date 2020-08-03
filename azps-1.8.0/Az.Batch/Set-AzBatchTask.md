@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzBatchTask](./Get-AzBatchTask.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [New-AzBatchTask](./New-AzBatchTask.md)
 

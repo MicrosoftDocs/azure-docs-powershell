@@ -130,6 +130,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Sync-AzMediaServiceStorageKeys](./Sync-AzMediaServiceStorageKeys.md)
+
 
 

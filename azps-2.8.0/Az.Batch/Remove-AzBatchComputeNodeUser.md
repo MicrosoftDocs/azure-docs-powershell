@@ -165,7 +165,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzBatchComputeNodeUser](./New-AzBatchComputeNodeUser.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [Azure Batch Cmdlets](./Az.Batch.md)
 

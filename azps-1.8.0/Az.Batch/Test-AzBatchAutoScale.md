@@ -121,7 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AzBatchAutoScale](./Enable-AzBatchAutoScale.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [Azure Batch Cmdlets](./Az.Batch.md)
 

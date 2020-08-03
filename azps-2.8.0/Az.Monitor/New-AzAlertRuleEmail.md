@@ -110,7 +110,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
+
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 

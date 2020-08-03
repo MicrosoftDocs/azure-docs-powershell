@@ -177,7 +177,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AzBatchJobSchedule](./Enable-AzBatchJobSchedule.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [Get-AzBatchJobSchedule](./Get-AzBatchJobSchedule.md)
 

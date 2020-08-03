@@ -98,10 +98,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [Get-AzBatchPoolStatistic](./Get-AzBatchPoolStatistic.md)
 
-[Get-AzBatchPoolUsageMetrics](./Get-AzBatchPoolUsageMetrics.md)
+
 
 

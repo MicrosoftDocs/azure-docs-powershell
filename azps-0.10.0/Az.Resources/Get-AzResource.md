@@ -344,7 +344,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Find-AzResource](./Find-AzResource.md)
+
 
 [Move-AzResource](./Move-AzResource.md)
 

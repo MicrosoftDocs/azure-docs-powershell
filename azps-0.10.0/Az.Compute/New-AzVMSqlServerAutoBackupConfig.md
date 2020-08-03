@@ -330,7 +330,7 @@ This cmdlet does not accept any input.
 
 ## RELATED LINKS
 
-[New-AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
+
 
 [Set-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
 

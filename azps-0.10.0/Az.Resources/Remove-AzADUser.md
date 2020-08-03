@@ -251,5 +251,5 @@ Parameters: InputObject (ByValue)
 
 [Get-AzADUser](./Get-AzADUser.md)
 
-[Set-AzADUser](./Set-AzADUser.md)
+
 

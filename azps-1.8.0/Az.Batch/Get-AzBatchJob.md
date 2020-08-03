@@ -295,7 +295,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AzBatchJob](./Enable-AzBatchJob.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+
 
 [Get-AzBatchJobSchedule](./Get-AzBatchJobSchedule.md)
 
