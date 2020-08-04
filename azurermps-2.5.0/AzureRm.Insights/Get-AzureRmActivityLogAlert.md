@@ -128,7 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzureRmActivityLogAlert](./Set-AzureRmActivityLogAlert.md)
 
-[Update-AzureRmActivityLogAlert](./Update-AzureRmActivityLogAlert.md)
+
 
 [Remove-AzureRmActivityLogAlert](./Remove-AzureRmActivityLogAlert.md)
 
