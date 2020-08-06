@@ -342,7 +342,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Find-AzureRmResource](./Find-AzureRmResource.md)
+
 
 [Move-AzureRmResource](./Move-AzureRmResource.md)
 

@@ -249,5 +249,5 @@ Parameters: InputObject (ByValue)
 
 [Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Set-AzureRmADUser](./Set-AzureRmADUser.md)
+
 
