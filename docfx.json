@@ -66,6 +66,10 @@
             { "files": ["**/*.md"], "src": "azurestackps-1.8.1", "version": "azurestackps-1.8.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-1.8.1", "version": "azurestackps-1.8.1", "dest": "azure/azure-stack" },
 
+            { "files": ["toc.yml"], "src": "azurestackps-1.8.2", "version": "azurestackps-1.8.2", "dest": "module/azure-stack" },
+            { "files": ["**/*.md"], "src": "azurestackps-1.8.2", "version": "azurestackps-1.8.2", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-1.8.2", "version": "azurestackps-1.8.2", "dest": "azure/azure-stack" },
+
             { "files": ["toc.yml"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "module/azure-stack" },
             { "files": ["**/*.md"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "azure/azure-stack" },
@@ -73,6 +77,10 @@
             { "files": ["toc.yml"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "module/azure-stack" },
             { "files": ["**/*.md"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "azure/azure-stack" },
+
+            { "files": ["toc.yml"], "src": "azurestackps-2.0.2", "version": "azurestackps-2.0.2", "dest": "module/azure-stack" },
+            { "files": ["**/*.md"], "src": "azurestackps-2.0.2", "version": "azurestackps-2.0.2", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.2", "version": "azurestackps-2.0.2", "dest": "azure/azure-stack" },
 
             {
                 "files": [
@@ -139,8 +147,10 @@
             "azurestackps-1.7.2": { "dest": "azurestackps-1.7.2" },
             "azurestackps-1.8.0": { "dest": "azurestackps-1.8.0" },
             "azurestackps-1.8.1": { "dest": "azurestackps-1.8.1" },
+            "azurestackps-1.8.2": { "dest": "azurestackps-1.8.2" },
             "azurestackps-2.0.0": { "dest": "azurestackps-2.0.0" },
             "azurestackps-2.0.1": { "dest": "azurestackps-2.0.1" },
+            "azurestackps-2.0.2": { "dest": "azurestackps-2.0.2" },
             "azureipps": { "dest": "azureipps" },
             "azureservicefabricps": { "dest": "azureservicefabricps" },
             "azureadps-1.0": { "dest": "azureadps-1.0" },
