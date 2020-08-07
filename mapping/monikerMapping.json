@@ -113,6 +113,12 @@
         "packageRoot": "azurestackps-1.8.1",
         "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
     },
+    "azurestackps-1.8.2": {
+        "conceptualToc": "docs-conceptual/azurestackps-1.8.2/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
+        "packageRoot": "azurestackps-1.8.2",
+        "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
+    },
     "azurestackps-2.0.0": {
         "conceptualToc": "docs-conceptual/azurestackps-2.0.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
@@ -123,6 +129,12 @@
         "conceptualToc": "docs-conceptual/azurestackps-2.0.1/toc.yml",
         "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
         "packageRoot": "azurestackps-2.0.1",
+        "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
+    },
+    "azurestackps-2.0.2": {
+        "conceptualToc": "docs-conceptual/azurestackps-2.0.2/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
+        "packageRoot": "azurestackps-2.0.2",
         "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
     }
 }
