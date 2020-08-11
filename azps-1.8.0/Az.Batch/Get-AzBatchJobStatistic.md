@@ -102,6 +102,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzBatchPoolStatistic](./Get-AzBatchPoolStatistic.md)
 
-[Get-AzBatchPoolUsageMetrics](./Get-AzBatchPoolUsageMetrics.md)
+[Get-AzBatchPoolUsageMetrics](./Get-AzBatchPoolUsageMetric.md)
 
 
