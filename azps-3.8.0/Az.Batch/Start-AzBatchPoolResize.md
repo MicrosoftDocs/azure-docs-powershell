@@ -182,6 +182,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Stop-AzBatchPoolResize](./Stop-AzBatchPoolResize.md)
 
-[Azure Batch Cmdlets](./Az.Batch.md)
+[Azure Batch Cmdlets](/powershell/module/az.batch)
 
 

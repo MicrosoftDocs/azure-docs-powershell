@@ -158,12 +158,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzBatchCertificate](./Get-AzBatchCertificate.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKey.md)
 
 [New-AzBatchCertificate](./New-AzBatchCertificate.md)
 
 [Stop-AzBatchCertificateDeletion](./Stop-AzBatchCertificateDeletion.md)
 
-[Azure Batch Cmdlets](./Az.Batch.md)
+[Azure Batch Cmdlets](/powershell/module/az.batch)
 
 

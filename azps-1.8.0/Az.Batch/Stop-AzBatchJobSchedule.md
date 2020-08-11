@@ -102,7 +102,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AzBatchJobSchedule](./Enable-AzBatchJobSchedule.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKey.md)
 
 [Get-AzBatchJobSchedule](./Get-AzBatchJobSchedule.md)
 
@@ -110,6 +110,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzBatchJobSchedule](./Remove-AzBatchJobSchedule.md)
 
-[Azure Batch Cmdlets](./Az.Batch.md)
+[Azure Batch Cmdlets](/powershell/module/az.batch)
 
 
