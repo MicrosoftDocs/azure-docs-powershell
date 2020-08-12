@@ -97,6 +97,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
+[Azure Operational Insights Cmdlets](/powershell/module/az.operationalinsights)
 
 

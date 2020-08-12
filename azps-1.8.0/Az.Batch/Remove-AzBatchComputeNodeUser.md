@@ -165,8 +165,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzBatchComputeNodeUser](./New-AzBatchComputeNodeUser.md)
 
-[Get-AzBatchAccountKeys](./Get-AzBatchAccountKeys.md)
+[Get-AzBatchAccountKeys](./Get-AzBatchAccountKey.md)
 
-[Azure Batch Cmdlets](./Az.Batch.md)
+[Azure Batch Cmdlets](/powershell/module/az.batch)
 
 

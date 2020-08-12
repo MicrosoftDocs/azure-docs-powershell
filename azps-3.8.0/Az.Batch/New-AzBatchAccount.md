@@ -208,4 +208,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzBatchAccount](./Set-AzBatchAccount.md)
 
-[Azure Batch Cmdlets](./Az.Batch.md)
+[Azure Batch Cmdlets](/powershell/module/az.batch)
