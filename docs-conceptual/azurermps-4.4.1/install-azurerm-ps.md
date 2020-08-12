@@ -1,9 +1,6 @@
 ---
 title: Install and configure Azure PowerShell | Microsoft Docs
 description: How to install and configure Azure PowerShell for first time use.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
@@ -63,7 +60,7 @@ section of this article.
 > [!IMPORTANT]
 > The module described in this document, AzureRM, uses .NET Framework. This makes it incompatible with PowerShell 6.0,
 > which uses .NET Core. If you are using PowerShell 6.0, follow the [installation instructions for
-> macOS and Linux](install-azurermps-maclinux.md).
+> macOS and Linux](/powershell/azure/install-az-ps).
 
 ## Step 2: Install Azure PowerShell
 

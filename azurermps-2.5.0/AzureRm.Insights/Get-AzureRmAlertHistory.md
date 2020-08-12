@@ -391,7 +391,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmLogAlertRule](./Add-AzureRmLogAlertRule.md)
+
 
 [Add-AzureRmMetricAlertRule](./Add-AzureRmMetricAlertRule.md)
 
