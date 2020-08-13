@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a network interface IP configuration to a network interface.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

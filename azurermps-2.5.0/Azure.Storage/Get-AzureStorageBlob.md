@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists blobs in a container.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### BlobName (Default)

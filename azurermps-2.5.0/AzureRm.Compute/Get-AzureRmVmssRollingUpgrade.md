@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Shows the status of the latest virtual machine scale set rolling upgrade.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

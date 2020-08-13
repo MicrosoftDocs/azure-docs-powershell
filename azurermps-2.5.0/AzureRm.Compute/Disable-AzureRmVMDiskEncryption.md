@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 979E956B-4C74-426E-A617-E50C4EBC8A20
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Disables encryption on an IaaS virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

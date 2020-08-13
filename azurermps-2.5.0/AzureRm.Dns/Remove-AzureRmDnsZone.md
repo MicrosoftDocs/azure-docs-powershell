@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a DNS zone from a resource group.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### Fields

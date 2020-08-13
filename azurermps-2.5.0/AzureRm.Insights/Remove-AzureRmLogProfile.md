@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a log profile.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

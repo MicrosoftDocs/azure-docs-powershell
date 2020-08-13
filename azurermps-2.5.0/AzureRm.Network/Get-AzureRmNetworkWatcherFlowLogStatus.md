@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the status of flow logging on a resource.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.UsageAggregates.dll-Help.xml
 Module Name: AzureRM
 ms.assetid: 52B3ECCB-80E5-4E16-954A-B83D0BDC7E22
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Gets the reported Azure subscription usage details.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

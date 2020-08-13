@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 47F0EE55-78C0-4C71-BD32-C7CB7B200DC3
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Restarts the VMSS or a virtual machine within the VMSS.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

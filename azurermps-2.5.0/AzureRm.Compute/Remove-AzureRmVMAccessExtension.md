@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 22C490C2-0135-4375-897E-7224DBBE13A7
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Removes the VMAccess extension from a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the relative latency score for internet service providers from a specified location to Azure regions.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByName (Default)

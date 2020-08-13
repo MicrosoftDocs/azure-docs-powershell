@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the snapshots available for a web app.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### FromResourceName

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Query a snapshot of the most recent connection states.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

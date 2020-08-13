@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: AF0DDDD0-B664-4AD8-A569-1363FB2EDB40
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Stops the VMSS or a set of virtual machines within the VMSS.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

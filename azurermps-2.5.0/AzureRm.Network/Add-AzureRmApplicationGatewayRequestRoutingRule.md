@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a request routing rule to an application gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResourceId

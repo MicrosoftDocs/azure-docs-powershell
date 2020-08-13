@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Registers an Azure provider feature in your account.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

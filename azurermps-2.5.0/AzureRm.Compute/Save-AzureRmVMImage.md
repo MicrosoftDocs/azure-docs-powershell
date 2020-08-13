@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: D2B5BC27-6D51-45BC-AE6A-F7FED11B8651
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Saves a virtual machine as a VMImage.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

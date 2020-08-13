@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a role assignment to the specified principal who is assigned to a particular role at a particular scope.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)

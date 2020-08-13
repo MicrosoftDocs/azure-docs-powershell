@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Moves a resource to a different resource group or subscription.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

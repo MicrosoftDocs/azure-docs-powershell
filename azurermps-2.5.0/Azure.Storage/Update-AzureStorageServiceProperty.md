@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies the properties for the Azure Storage service.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

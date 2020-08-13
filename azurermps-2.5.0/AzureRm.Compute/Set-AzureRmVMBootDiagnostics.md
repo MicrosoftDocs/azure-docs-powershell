@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies boot diagnostics properties of a virtual machine.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### EnableBootDiagnostics

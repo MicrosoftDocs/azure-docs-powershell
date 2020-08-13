@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the Storage resource usage of the current subscription.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```
