@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a DNS record set.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### Fields

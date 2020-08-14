@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Disable delete retention policy  for the Azure Storage Blob service.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

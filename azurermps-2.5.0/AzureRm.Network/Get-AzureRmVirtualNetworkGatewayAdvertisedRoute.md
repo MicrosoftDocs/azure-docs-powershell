@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists routes being advertised by an Azure virtual network gateway
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

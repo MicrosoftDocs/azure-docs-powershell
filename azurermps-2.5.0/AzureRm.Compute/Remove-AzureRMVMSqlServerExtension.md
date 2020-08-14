@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: B02CEAC8-C838-4890-8C21-9897CA39EF45
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Removes a SQL Server extension from a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

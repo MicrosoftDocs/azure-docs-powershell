@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Assigns the specified RBAC role to the specified principal, at the specified scope.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)

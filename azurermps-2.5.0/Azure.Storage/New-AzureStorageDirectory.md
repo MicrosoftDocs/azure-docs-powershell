@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a directory.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ShareName (Default)

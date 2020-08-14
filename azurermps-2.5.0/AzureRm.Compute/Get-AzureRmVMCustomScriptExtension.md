@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 1017A74D-6420-4E51-A4A4-1AD3AD6D8122
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Gets information about a custom script extension.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

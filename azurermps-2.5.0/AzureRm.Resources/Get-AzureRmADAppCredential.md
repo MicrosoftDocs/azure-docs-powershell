@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves a list of credentials associated with an application.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ApplicationObjectIdParameterSet (Default)

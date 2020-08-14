@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a health probe from an existing application gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

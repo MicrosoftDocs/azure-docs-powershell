@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 34985F06-4D8D-463B-B113-972666D18485
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Removes a certificate from a key vault.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

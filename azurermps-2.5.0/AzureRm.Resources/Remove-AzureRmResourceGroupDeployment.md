@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a resource group deployment and any associated operations.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### RemoveByResourceGroupName (Default)

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists all Azure RBAC roles that are available for assignment.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### RoleDefinitionNameParameterSet

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 3BD243C7-A40E-4061-93FF-DDE7DECAD0A7
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Modifies editable attributes of a certificate.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

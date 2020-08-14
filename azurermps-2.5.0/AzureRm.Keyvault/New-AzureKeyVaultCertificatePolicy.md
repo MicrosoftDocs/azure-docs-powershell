@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 25E0F0E9-BF8C-49DF-87BA-31E2103A29A9
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates an in-memory certificate policy object.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

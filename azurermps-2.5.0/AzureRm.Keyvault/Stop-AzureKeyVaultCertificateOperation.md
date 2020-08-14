@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 3B042D79-658F-41F0-BD4D-9955F2E71CA1
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Cancels a certificate operation in key vault.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

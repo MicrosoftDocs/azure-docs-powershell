@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the properties of a Managed disk.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

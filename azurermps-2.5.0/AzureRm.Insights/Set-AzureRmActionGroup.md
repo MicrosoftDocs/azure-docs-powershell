@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new or updates an existing action group.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByPropertyName (Default)

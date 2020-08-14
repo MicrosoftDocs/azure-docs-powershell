@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets policy set definitions.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### NameParameterSet (Default)

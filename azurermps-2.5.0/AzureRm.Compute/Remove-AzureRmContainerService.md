@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 8180092D-5B1D-43A0-B830-D009B30E2DDF
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Removes a container service.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

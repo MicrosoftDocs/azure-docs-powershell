@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a stored access policy on a Storage share.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the stored access policy or policies for an Azure storage table.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

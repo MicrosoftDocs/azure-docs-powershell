@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

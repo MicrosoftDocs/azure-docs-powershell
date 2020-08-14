@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets configuration for an array of URL path mappings to a backend server pool.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResourceId

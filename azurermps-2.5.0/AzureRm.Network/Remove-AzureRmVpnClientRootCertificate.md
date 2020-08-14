@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an existing VPN client root certificate.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

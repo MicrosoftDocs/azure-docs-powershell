@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Disables an activity log alert and sets its tags.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### DisableByNameAndResourceGroup

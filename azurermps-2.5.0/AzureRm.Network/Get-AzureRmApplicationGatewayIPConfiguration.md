@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the IP configuration of an application gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the troubleshooting result from the previously run or currently running troubleshooting operation.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

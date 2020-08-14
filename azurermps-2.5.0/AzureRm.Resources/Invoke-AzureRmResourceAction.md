@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Invokes an action on a resource.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByResourceId (Default)

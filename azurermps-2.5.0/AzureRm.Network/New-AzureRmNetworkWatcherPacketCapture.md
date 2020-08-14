@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new packet capture resource and starts a packet capture session on a VM.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

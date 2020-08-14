@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures flow logging for a target resource.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

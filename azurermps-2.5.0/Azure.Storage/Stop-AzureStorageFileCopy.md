@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Stops a copy operation to the specified destination file.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ShareName

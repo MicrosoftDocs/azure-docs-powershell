@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 View the configured and effective network security group rules applied on a VM.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)
