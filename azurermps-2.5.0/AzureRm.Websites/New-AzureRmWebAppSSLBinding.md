@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates an SSL certificate binding for an Azure Web App.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### S1

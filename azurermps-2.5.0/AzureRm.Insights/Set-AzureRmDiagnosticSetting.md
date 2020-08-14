@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the logs and metrics settings for the resource.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### OldSetDiagnosticSetting (Default)

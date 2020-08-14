@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a credential from a service principal.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ObjectIdWithKeyIdParameterSet (Default)

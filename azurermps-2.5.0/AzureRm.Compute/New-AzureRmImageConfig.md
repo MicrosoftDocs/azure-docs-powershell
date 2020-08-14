@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/new-azurermimageconfig
@@ -9,6 +9,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a configurable image object.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

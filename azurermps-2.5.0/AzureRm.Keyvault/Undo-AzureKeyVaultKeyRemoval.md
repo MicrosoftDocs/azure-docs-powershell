@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/undo-azurekeyvaultkeyremoval
@@ -9,6 +9,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Recovers a deleted key in a key vault into an active state.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

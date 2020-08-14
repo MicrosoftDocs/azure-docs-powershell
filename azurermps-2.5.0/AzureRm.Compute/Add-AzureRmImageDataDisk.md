@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a data disk to an image object.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

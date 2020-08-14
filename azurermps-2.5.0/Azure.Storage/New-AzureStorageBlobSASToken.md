@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates a SAS token for an Azure storage blob.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### BlobNameWithPermission (Default)

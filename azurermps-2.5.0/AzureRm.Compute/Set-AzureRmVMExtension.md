@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 064196C3-ABF3-4F3A-A4AB-EB0D27098C70
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Updates extension properties or adds an extension to a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

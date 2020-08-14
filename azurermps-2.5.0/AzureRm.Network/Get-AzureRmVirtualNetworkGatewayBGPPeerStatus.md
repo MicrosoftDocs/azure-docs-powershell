@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists an Azure virtual network gateway's BGP peers
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

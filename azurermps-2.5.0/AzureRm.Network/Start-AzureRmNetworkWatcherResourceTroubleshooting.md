@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts troubleshooting on a Networking resource in Azure.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

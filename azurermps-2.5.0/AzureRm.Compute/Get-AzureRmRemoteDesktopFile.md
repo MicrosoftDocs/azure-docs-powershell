@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: E2A56E55-30A3-4A2F-80AE-9D166840909E
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Gets an .rdp file.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

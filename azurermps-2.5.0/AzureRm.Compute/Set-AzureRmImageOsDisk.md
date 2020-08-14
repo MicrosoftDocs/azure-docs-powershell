@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the operating system disk properties on an image object.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: B30C2BDD-6DA9-47B5-88FE-3AD43E15A072
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a configuration object for SQL server key vault credential on a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the default site from a virtual network gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a metric dimension filter that can be used to query metrics.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

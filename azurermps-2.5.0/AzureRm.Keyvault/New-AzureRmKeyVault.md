@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 4C40DAC9-5C0B-4AFD-9BDB-D407E0B9F701
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a key vault.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

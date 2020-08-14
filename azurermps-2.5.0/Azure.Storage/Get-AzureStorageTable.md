@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists the storage tables.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### TableName (Default)

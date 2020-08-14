@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: CE32F620-8DB2-4004-8012-F1C4AA235B60
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a VMSS configuration object.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

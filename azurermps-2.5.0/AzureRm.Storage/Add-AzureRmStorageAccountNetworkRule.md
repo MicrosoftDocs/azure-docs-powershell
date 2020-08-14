@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
  Add IpRules or VirtualNetworkRules to the NetworkRule property of a Storage account
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### NetWorkRuleString (Default)

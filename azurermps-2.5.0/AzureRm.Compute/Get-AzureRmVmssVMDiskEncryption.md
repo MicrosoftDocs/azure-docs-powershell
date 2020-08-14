@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Shows the disk encryption status of VMs in a VM scale set.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Saves a modified ExpressRoute peering configuration.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove a diagnostic setting for the a resource.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

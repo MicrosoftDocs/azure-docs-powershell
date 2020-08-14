@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: E8C9D68E-7C68-43D0-B348-72E9713CB99F
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Starts a manual upgrade of the VMSS instance.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes back-end HTTP settings from an application gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

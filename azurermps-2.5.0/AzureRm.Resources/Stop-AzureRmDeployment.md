@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Cancal a running deployment
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### StopByDeploymentName (Default)

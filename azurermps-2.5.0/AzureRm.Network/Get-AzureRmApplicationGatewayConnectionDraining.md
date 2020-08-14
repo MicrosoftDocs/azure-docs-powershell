@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the connection draining configuration of a back-end HTTP settings object.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

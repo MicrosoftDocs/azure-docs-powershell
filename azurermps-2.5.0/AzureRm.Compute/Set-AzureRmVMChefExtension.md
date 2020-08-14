@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: CC306D8C-A5EE-4655-B686-E5A77CCE5042
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Adds a Chef extension to a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

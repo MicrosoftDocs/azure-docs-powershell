@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 92F192A5-F75E-4EFE-B2D2-B0DF0B78D3B5
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates an IP configuration for a network interface of a VMSS.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 
