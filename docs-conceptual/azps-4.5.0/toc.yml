@@ -64,6 +64,8 @@
       href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
 - name: Concepts
   items:
+    - name: Manage Azure resources with Invoke-AzRestMethod
+      href: manage-azure-resources-invoke-azrestmethod.md
     - name: PowerShell jobs
       href: using-psjobs.md
       displayName: background, task, scripting, automation, context, process
