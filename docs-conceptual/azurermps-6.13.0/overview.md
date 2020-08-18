@@ -22,8 +22,8 @@ release, see the [release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
-- [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
-- [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
+- [Linux Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/linux/powershell-samples)
+- [Windows Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/powershell-samples)
 - [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
