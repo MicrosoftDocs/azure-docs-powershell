@@ -12,6 +12,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/e87bc1c9e534808427b7dc
 ## SYNOPSIS
 Start an Incremental copy operation from a Page blob snapshot to the specified destination Page blob.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ContainerInstance (Default)

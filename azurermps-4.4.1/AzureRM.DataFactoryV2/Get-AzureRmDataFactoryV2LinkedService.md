@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/c396953644d237789e0f4e
 ## SYNOPSIS
 Gets information about linked services in Data Factory.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByFactoryName (Default)

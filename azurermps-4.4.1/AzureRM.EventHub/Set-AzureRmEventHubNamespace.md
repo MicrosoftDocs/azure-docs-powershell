@@ -12,6 +12,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/6911f050bfba3248a3fd99
 ## SYNOPSIS
 Updates the specified Event Hubs namespace.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### NamespaceParameterSet (Default)

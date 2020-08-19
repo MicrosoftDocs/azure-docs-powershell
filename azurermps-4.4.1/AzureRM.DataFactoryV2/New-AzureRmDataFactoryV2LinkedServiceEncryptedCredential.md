@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/db8032a9100d47fd3aa424
 ## SYNOPSIS
 Encrypt credential in linked service with specified integration runtime.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByFactoryName (Default)

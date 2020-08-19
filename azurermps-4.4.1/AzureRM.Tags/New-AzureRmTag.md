@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
 Module Name: AzureRM.Tags
 ms.assetid: 23DB0AD2-7EB7-4373-BB8D-BB6CB651DD54
@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Creates a predefined Azure tag or adds values to an existing tag.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

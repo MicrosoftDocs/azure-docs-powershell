@@ -12,6 +12,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c0
 ## SYNOPSIS
 Deletes the specified authorization rule on the given Event Hubs namespace.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

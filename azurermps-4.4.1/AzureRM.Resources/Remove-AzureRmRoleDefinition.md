@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: 2D882B33-2B62-4785-AF8F-5F4644E9504D
@@ -14,6 +14,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 Deletes a custom role in Azure RBAC.
 The role to be deleted is specified using the Id property of the role.
 Delete will fail if there are existing role assignments made to the custom role.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 
