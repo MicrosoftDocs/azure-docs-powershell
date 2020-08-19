@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 Module Name: AzureRM.Batch
 ms.assetid: DBA02017-8372-4A91-A4F1-985777DEDAB9
@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Deletes a node file for a task or compute node.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

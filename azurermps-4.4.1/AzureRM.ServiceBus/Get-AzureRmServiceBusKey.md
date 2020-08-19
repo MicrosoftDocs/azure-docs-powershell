@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
 Module Name: AzureRM.ServiceBus
 online version:
@@ -11,6 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Gets the primary and secondary connection strings for the given Namespace or Queue or Topic.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

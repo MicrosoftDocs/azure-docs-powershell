@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 Module Name: AzureRM.DataFactories
 ms.assetid: 1FF0B0F9-4B2C-46BC-8BED-12BE865E4480
@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Suspends a pipeline in Azure Data Factory.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

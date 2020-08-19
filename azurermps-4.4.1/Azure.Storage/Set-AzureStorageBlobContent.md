@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/a2772c13c7cb665d748563
 ## SYNOPSIS
 Uploads a local file to an Azure Storage blob.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SendManual (Default)

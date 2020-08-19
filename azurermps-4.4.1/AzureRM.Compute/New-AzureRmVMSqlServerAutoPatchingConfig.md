@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 Module Name: Azure
 ms.assetid: 7016BAA9-C25D-404E-9F75-2BE49FBF91A8
@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Creates a configuration object for automatic patching on a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

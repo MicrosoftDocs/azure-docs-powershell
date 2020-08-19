@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
 Module Name: AzureRM.CognitiveServices
 ms.assetid: 73B1EB7E-568E-44E8-993A-91678B7D8AEE
@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Gets the API keys for an account.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

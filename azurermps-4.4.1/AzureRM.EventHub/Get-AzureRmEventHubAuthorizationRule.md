@@ -12,6 +12,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c0
 ## SYNOPSIS
 Gets the details of an authorization rule, or gets a list of authorization rules.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### NamespaceAuthorizationRuleSet (Default)

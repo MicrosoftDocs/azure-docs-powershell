@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: AzureRM.ApiManagement
 ms.assetid: 894297BF-2771-4871-9E4C-8684364DAC4B
@@ -11,6 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Get-AzureRmApiManagementProperty
 
 ## SYNOPSIS
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

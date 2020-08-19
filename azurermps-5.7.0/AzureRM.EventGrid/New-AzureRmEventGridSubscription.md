@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Creates a new Azure Event Grid Event Subscription to a topic, Azure resource, Azure subscription or Resource Group.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ResourceGroupNameParameterSet (Default)

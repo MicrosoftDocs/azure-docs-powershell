@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 18D5B95E-4CF1-4C79-AE8B-9F4DA49B46A9
@@ -20,6 +20,8 @@ Creates a new activity log profile. This profile is used to either archive the a
 In the activity log, events can pertain to a region or could be "Global". Global essentially means these events are region agnostics and are independent of region, in fact majority of events fall into this category. If the activity log profile is set from the portal, it implicitly adds "Global" along with any other region selected in the user interface. When using the cmdlet, the location as "Global" must be explicitly mentioned apart from any other region. 
 
 **Note** :- **Failing to set "Global" in the locations will result in a majority of activity log not getting exported.** 
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

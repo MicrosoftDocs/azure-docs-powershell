@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 Module Name: AzureRM.ServerManagement
 ms.assetid: 5981D3D8-E2E7-4905-8CD0-8BDC35BB39AC
@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Creates a Server Management session.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

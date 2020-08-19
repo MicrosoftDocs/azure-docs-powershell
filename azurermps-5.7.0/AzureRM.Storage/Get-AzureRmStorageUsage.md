@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 Module Name: AzureRM.Storage
 ms.assetid: 11AAA319-DDBB-4156-9BE7-4DE8B80A904C
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Gets the Storage resource usage of the current subscription.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

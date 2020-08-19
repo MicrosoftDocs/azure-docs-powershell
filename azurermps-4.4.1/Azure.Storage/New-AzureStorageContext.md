@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/89262bc4144696c69376c3
 ## SYNOPSIS
 Creates an Azure Storage context.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### AccountNameAndKey (Default)

@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/7fe7039e96038b4a91513d
 ## SYNOPSIS
 Returns information about trigger runs.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByFactoryName (Default)
