@@ -14,6 +14,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 Gets the specified firewall rules in the specified Data Lake Store.
 If no firewall rule is specified, then lists all firewall rules for the account.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

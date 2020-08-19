@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 939320CB-2595-4150-AFDD-500CEA78559C
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Marks a virtual machine as generalized.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 
