@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Get geo replication link for Redis Cache.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### AllLinksForCache (Default)

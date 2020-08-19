@@ -14,6 +14,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 Checks whether a media service name is available.
 Media service names are globally unique.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

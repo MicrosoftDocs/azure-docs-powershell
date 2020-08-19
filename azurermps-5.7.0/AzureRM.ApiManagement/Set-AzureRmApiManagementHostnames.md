@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Sets a custom hostname configuration for an API Management service proxy or portal.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetSpecificService (Default)

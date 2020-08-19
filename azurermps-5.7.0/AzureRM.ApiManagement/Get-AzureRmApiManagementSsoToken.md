@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Gets a link with an SSO token to a deployed management portal of an API Management service.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Removes all permissions for a user or application from a key vault.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByUserPrincipalName (Default)

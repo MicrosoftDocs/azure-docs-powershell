@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Adds a data source to a Data Lake Analytics account.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### AddDataLakeStorageAccount
