@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 Gets the API keys for an account.
 These keys are the authentication mechanism used in subsequent calls to Azure Maps.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### NameParameterSet (Default)

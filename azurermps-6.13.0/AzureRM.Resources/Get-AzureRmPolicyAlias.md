@@ -14,6 +14,8 @@ Get-AzureRmPolicyAlias retrieves and outputs Azure provider resource types that 
 given parameter values. If no parameters are provided, all provider resource types that contain an alias will be output.
 The -ListAvailable switch modifies this behavior by listing all matching resource types including those without aliases.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

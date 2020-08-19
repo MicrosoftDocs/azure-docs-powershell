@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 Creates a new Azure VpnSite resource. This is an RM representation of customer branches that are uploaded to Azure
 for S2S connectivity with a Cortex virtual hub.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByVirtualWanName (Default)
