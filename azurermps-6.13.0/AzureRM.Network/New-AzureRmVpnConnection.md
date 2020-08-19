@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Creates a IPSec connection that connects a VpnGateway to a remote customer branch represented in RM as a VpnSite.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByVpnGatewayNameByVpnSiteObject (Default)
