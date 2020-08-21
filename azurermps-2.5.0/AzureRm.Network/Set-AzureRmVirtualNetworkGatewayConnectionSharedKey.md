@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures the shared key of the virtual network gateway connection.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

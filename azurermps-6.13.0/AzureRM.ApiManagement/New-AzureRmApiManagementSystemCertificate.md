@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Creates an instance of `PsApiManagementSystemCertificate`. The certificate can be issued by private CA's and will be installed on the API Management service into `CertificateAuthority` or `Root` store.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

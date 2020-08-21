@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets all available web application firewall rule sets.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -17,6 +17,8 @@ First, use the Get-AzureRmRoleDefinition command to retrieve the custom role tha
 Then, modify the properties that you wish to change.
 Finally, save the role definition using this command.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### InputFileParameterSet

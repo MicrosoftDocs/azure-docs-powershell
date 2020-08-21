@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## SYNOPSIS
 Adds a Transparent Data Encryption Certificate for the given SQL Server instance
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### AddAzureRmSqlServerTransparentDataEncryptionCertificateDefaultParameterSet (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates an existing active directory user.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### UPNOrObjectIdParameterSet (Default)

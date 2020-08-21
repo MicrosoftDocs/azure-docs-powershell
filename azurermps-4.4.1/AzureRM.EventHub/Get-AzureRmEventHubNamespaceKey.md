@@ -12,6 +12,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c0
 ## SYNOPSIS
 Gets details of Primary, Secondary connectionstrings and keys for the authorization rule of the specified Event Hubs namespace authorization rule.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists members of an AD group in the current tenant.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ObjectIdParameterSet (Default)

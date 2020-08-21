@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generate Shared Access Signature token for Azure Storage share.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SasPolicy

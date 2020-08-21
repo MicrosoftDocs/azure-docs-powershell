@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Regenerates a storage key for an Azure Storage account.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

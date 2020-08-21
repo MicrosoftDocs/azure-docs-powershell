@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 List all compute resource Skus
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

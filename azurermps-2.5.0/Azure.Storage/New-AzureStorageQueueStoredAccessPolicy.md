@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a stored access policy for an Azure storage queue.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

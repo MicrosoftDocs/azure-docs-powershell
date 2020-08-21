@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an agent pool profile from a container service.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

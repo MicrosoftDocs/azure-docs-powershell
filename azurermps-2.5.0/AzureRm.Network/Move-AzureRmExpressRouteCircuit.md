@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Moves an ExpressRoute circuit from the classic deployment model to the Resource Manager deployment model.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

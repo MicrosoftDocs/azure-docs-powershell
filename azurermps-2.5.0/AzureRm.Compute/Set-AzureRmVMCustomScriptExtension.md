@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 64AB1BAE-A756-43A8-A40F-10B746EA0946
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Adds a custom script extension to a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

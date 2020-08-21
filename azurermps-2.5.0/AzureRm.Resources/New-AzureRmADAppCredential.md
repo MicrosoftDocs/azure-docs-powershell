@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a credential to an existing application.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ApplicationObjectIdWithPasswordParameterSet (Default)

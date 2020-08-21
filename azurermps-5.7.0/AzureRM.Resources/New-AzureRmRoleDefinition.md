@@ -17,6 +17,8 @@ First, use the Get-AzureRmRoleDefinition command to generate a baseline role def
 Then, modify its properties as required.
 Finally, use this command to create a custom role using role definition.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### InputFileParameterSet

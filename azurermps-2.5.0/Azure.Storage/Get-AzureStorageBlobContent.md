@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Downloads a storage blob.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ReceiveManual (Default)

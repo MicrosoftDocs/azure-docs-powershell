@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns connection monitor with specified name or the list of connection monitors
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

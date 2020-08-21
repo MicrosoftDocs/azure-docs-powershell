@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists existing azure active directory applications.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)

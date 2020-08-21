@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 4C2C77F7-ECE4-4106-8AF1-256A496A977B
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Sets a certificate issuer in a key vault.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

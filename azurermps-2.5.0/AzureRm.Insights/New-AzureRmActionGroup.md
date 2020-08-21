@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates an ActionGroup reference object in memory.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

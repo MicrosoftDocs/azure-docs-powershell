@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns connectivity information for a specified source VM and a destination.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByResource (Default)

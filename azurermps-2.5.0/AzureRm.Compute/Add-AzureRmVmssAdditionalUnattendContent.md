@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds information to the unattended Windows Setup answer file.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

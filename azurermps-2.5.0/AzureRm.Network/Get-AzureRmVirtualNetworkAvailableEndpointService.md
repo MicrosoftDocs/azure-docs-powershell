@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists available endpoint services for location.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

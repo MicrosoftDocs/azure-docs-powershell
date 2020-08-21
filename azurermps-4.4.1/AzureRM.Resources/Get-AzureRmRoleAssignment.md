@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: 488229AF-FD6D-4E1B-B3DA-E57CA781D91E
@@ -14,6 +14,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 Lists Azure RBAC role assignments at the specified scope.
 By default it lists all role assignments in the selected Azure subscription.
 Use respective parameters to list assignments to a specific user, or to list assignments on a specific resource group or resource.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

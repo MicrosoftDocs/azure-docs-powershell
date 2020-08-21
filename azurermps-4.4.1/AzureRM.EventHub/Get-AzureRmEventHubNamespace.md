@@ -12,6 +12,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c0
 ## SYNOPSIS
 Gets the details of an Event Hubs namespace, or gets a list of all Event Hubs namespaces in the current Azure subscription.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

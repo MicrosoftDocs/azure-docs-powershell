@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds the public keys for SSH for a virtual machine.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

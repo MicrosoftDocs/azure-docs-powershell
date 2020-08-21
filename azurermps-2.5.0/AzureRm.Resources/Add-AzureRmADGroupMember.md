@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a user to an existing AD group.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### MemberObjectIdWithGroupObjectId (Default)

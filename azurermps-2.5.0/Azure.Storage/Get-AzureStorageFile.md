@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists directories and files for a path.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ShareName (Default)

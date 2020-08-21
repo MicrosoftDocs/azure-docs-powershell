@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets an Azure App Service plan in the specified resource group.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### S1
