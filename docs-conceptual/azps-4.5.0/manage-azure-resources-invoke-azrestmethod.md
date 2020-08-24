@@ -3,7 +3,7 @@ title: Manage Azure resources with Invoke-AzRestMethod
 description: How to use Azure PowerShell to manage resources with the Invoke-AzRestMethod cmdlet.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/17/2020
+ms.date: 08/24/2020
 ---
 
 # Manage Azure resources with Invoke-AzRestMethod
@@ -18,8 +18,9 @@ in the Az PowerShell module.
 ## How to use Invoke-AzRestMethod
 
 As an example, you can allow access to Azure Container Registry (ACR) only for specific networks or
-deny public access. This feature isn't available yet in the [Az.ContainerRegistry PowerShell module](/powershell/module/Az.ContainerRegistry/).
-However, it can be managed in the interim with `Invoke-AzRestMethod`.
+deny public access. As of Az PowerShell module version 4.5.0, that feature isn't available yet in
+the [Az.ContainerRegistry PowerShell module](/powershell/module/Az.ContainerRegistry/). However, it
+can be managed in the interim with `Invoke-AzRestMethod`.
 
 ## Using Invoke-AzRestMethod with GET operations
 
@@ -60,7 +61,7 @@ You can find the definition for the 2019-12-01-preview version of ACR in the fol
 ## Using Invoke-AzRestMethod with PATCH operations
 
 You can disable public access to the existing ACR named `myacr` in the `myresourcegroup` resource
-group using the Invoke-AzRestMethod cmdlet.
+group using the `Invoke-AzRestMethod` cmdlet.
 
 To disable the public network access, you need to make a **PATCH** call to the API that changes the
 value of the `publicNetwokAccess` parameter as shown in the following example:
@@ -115,14 +116,15 @@ Invoke-AzRestMethod @specificIpParams
 
 The `*-AzResource` cmdlets allow you to customize the REST API call to Azure by specifying the
 resource type, the API version, and the properties to be updated. However, the properties need to be
-a `PSObject` that can easily become complicated to create.
+created first as a `PSObject`. This process adds an additional level of complexity and can easily
+become complicated.
 
-`Invoke-AzRestMethod` offers a simpler way to manage Azure resources. In the previous example, you
-can see that the payload is a JSON string. You don't have to struggle with the conversion between
-JSON and `PSObjects`.
+`Invoke-AzRestMethod` offers a simple way to manage Azure resources. As shown in the previous
+example, you can build a JSON string and use it to customize the REST API call without having to
+precreate any `PSObjects`.
 
 If you're already familiar with the `*-AzResource` cmdlets, you can continue using them. We have no
-plans to stop supporting them. With `Invoke-AzRestMethod`, we have added a new cmdlet to the family.
+plans to stop supporting them. With `Invoke-AzRestMethod`, we have added a new cmdlet to your toolkit.
 
 ## See Also
 
