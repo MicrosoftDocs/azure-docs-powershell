@@ -9,7 +9,7 @@ ms.date: 08/28/2018
 
 # Release notes
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 This is a list of changes made to Azure PowerShell in this release.
 
@@ -41,7 +41,7 @@ This is a list of changes made to Azure PowerShell in this release.
 #### AzureRM.Network
 * Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError
 * Added ICMP back to supported AzureFirewall Network Protocols
-* Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port. 
+* Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.
 * Fix issues with memory usage in VirtualNetwork map
 
 #### AzureRM.RecoveryServices.Backup
@@ -226,14 +226,14 @@ This is a list of changes made to Azure PowerShell in this release.
 #### AzureRM.Profile
 * Minor changes to the storage common code
 * Updated help files to include full parameter types.
-* Changed -ServicePrincipal to non-mandatory in the ServicePrincipalCertificateWithSubscriptionId parameter set 
+* Changed -ServicePrincipal to non-mandatory in the ServicePrincipalCertificateWithSubscriptionId parameter set
 
 #### Azure.Storage
-* Support create Storage Context with OAuth. 
+* Support create Storage Context with OAuth.
 	- New-AzureStorageContext
 
 #### AzureRM.Cdn
-* Added Standard_Microsoft in Cdn pricing sku. 
+* Added Standard_Microsoft in Cdn pricing sku.
 
 #### AzureRM.Compute
 * Move dependencies on Keyvault and Storage to the common dependencies
@@ -344,7 +344,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Add version field to the PSSignalRResource object and connection string to the PSSignalRKeys object.
 
 #### AzureRM.Storage
-* Support Immutability Policy in AzureRm.Storage 
+* Support Immutability Policy in AzureRm.Storage
     - Remove-AzureRmStorageAccountNetworkRule
     - Get-AzureRmStorageContainer
     - Update-AzureRmStorageContainer
@@ -372,7 +372,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Fixed issue https://github.com/Azure/azure-powershell/issues/6603
     - Import-AzureRmApiManagementApi and *-AzureRmApiManagementCertificate cmdlets now handle relative Paths
 * Fixed issue https://github.com/Azure/azure-powershell/issues/6879
-    - The CertificateInformation is a settable property allowing for Set-AzureRmApiManagement cmdlet to work property. Fixed by upgrading to 
+    - The CertificateInformation is a settable property allowing for Set-AzureRmApiManagement cmdlet to work property. Fixed by upgrading to
 	4.0.4-preview nuget
 * Fixed issue https://github.com/Azure/azure-powershell/issues/6853
     - Fixed the Odata filter for Search by Name on Product
@@ -681,7 +681,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Update example for New-AzureRmDisk
 * Add example for 'New-AzureRmVM'
 * Update description for Set-AzureRmVMOSDisk
-* Update Example 1 for Set-AzureRmVMBginfoExtension to correct spelling and prefix. 
+* Update Example 1 for Set-AzureRmVMBginfoExtension to correct spelling and prefix.
 
 #### AzureRM.DataFactoryV2
 * Updated the ADF .Net SDK version to 1.1.0.
@@ -893,7 +893,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Added additional information about -Permissions parameter in help files.
 
 #### AzureRM.Compute
-* 'Get-AzureRmVmDiskEncryptionStatus' fixes an issue observed for VMs with no data disks 
+* 'Get-AzureRmVmDiskEncryptionStatus' fixes an issue observed for VMs with no data disks
 * Update Compute client library version to fix following cmdlets
     - Grant-AzureRmDiskAccess
     - Grant-AzureRmSnapshotAccess
@@ -1017,8 +1017,8 @@ NOTE: The following cmdlets will be deprecated in future release
 
 #### AzureRM.DataLakeStore
 * Fix example for Export-AzureRmDataLakeStoreChildItemProperties
-* Fix null parameter exception for Recurse case in Set-AzureRmDataLakeStoreItemAclEntry 
-* Fix the help files for Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry 
+* Fix null parameter exception for Recurse case in Set-AzureRmDataLakeStoreItemAclEntry
+* Fix the help files for Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry
 
 #### AzureRM.Network
 * Bump up Network SDK version from 18.0.0-preview to 19.0.0-preview
@@ -1038,7 +1038,7 @@ NOTE: The following cmdlets will be deprecated in future release
 * Updated Auditing cmdlets to allow removing AuditActions or AuditActionGroups
 * Fixed issue with Set-AzureRmSqlDatabaseBackupLongTermRetentionPolicy when setting a new flexible retention policy where the command would fail with 'Configure long term retention policy with azure recovery service vault and policy is no longer supported. Please submit request with the new flexible retention policy'.
 * Update all Azure Sql Database/ElasticPool Creation/Update related cmdlets to use the new Database API, which support Sku property for scale and tier-related properties.
-* The updated cmdlets including: 
+* The updated cmdlets including:
 	- New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase
 	- New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool
 	- New-AzureRmSqlDatabaseCopy

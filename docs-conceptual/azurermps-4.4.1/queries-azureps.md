@@ -8,7 +8,7 @@ ms.date: 03/30/2017
 
 # Querying for Azure resources
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Querying in PowerShell can be completed by using built-in cmdlets. In
 PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the verb **_Get_** are

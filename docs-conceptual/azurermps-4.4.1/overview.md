@@ -7,7 +7,7 @@ ms.date: 08/31/2017
 ---
 # Overview of Azure PowerShell
 
-[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell provides a set of cmdlets that use the
 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) model for managing

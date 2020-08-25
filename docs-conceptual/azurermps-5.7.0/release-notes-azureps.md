@@ -8,7 +8,7 @@ ms.date: 2/20/2018
 ---
 # Azure PowerShell Release notes
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 This is a list of changes made to Azure PowerShell in this release.
 
