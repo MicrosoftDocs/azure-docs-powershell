@@ -8,7 +8,7 @@ ms.date: 09/11/2018
 
 # Running cmdlets in parallel using PowerShell jobs
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 PowerShell supports asynchronous action with [PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 Azure PowerShell is heavily dependent on making, and waiting for, network calls to Azure. You
@@ -18,7 +18,7 @@ provides first-class [PSJob](/powershell/module/microsoft.powershell.core/about/
 ## Context Persistence and PSJobs
 
 Since PSJobs are run as separate processes, your Azure connection must
-be shared with them. After signing in to your Azure account 
+be shared with them. After signing in to your Azure account
 with `Connect-AzureRmAccount`, pass the context to a job.
 
 ```azurepowershell-interactive

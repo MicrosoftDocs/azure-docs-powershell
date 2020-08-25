@@ -7,7 +7,7 @@ ms.topic: conceptual
 ---
 # Uninstall the Azure PowerShell module
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 This article tells you how to uninstall an older version of Azure PowerShell, or completely remove it from
 your system. If you've decided to completely uninstall the Azure PowerShell, give us some feedback
@@ -65,9 +65,9 @@ function Uninstall-AllModules {
 
     [switch]$WhatIf
   )
-  
+
   $AllModules = @()
-  
+
   'Creating list of dependencies...'
   $target = Find-Module $TargetModule -RequiredVersion $version
   $target.Dependencies | ForEach-Object {
