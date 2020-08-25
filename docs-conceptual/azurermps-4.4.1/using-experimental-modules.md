@@ -7,7 +7,7 @@ ms.date: 09/05/2017
 ---
 # Using experimental Azure PowerShell modules
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 With the emphasis on developer tools (especially CLIs) in Azure, the Azure PowerShell team is
 experimenting with many improvements to the Azure PowerShell experience.

@@ -7,7 +7,7 @@ ms.date: 05/01/2018
 ---
 # Breaking changes for Microsoft Azure PowerShell 6.0.0
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 This document serves as both a breaking change notification and migration guide for consumers of the
 Microsoft Azure PowerShell cmdlets. Each section describes both the impetus for the breaking change

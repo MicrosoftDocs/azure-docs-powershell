@@ -7,7 +7,7 @@ ms.date: 09/06/2017
 ---
 # Other installation methods
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell has multiple installation methods. Using PowerShellGet with the PowerShell Gallery
 is the preferred method. Azure PowerShell can be installed on Windows using the Web Platform
