@@ -3,7 +3,8 @@ title: Frequently Asked Questions (FAQ)
 description: Frequently Asked Questions about Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/17/2020
+ms.date: 08/17/2020 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Frequently asked questions about Azure PowerShell

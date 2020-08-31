@@ -2,7 +2,8 @@
 title: Overview of the Azure PowerShell Service Management module | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 ms.devlang: powershell
-ms.topic: conceptual
+ms.topic: conceptual 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Overview of the Azure PowerShell Service Management module

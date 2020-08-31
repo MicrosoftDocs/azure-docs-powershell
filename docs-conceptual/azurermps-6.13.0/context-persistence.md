@@ -3,7 +3,8 @@ title: Persist user credentials across PowerShell sessions
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018
+ms.date: 09/09/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Persist user credentials across PowerShell sessions
 

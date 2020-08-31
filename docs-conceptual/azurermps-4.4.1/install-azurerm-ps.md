@@ -3,7 +3,8 @@ title: Install and configure Azure PowerShell | Microsoft Docs
 description: How to install and configure Azure PowerShell for first time use.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/27/2018
+ms.date: 03/27/2018 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Install Azure PowerShell on Windows with PowerShellGet
