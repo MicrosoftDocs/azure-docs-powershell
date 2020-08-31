@@ -3,7 +3,8 @@ title: Overview of Azure PowerShell | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/20/2018
+ms.date: 12/20/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Overview of Azure PowerShell
 

@@ -3,7 +3,8 @@ title: Manage Azure resources with Invoke-AzRestMethod
 description: How to use Azure PowerShell to manage resources with the Invoke-AzRestMethod cmdlet.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/24/2020
+ms.date: 08/24/2020 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Manage Azure resources with Invoke-AzRestMethod

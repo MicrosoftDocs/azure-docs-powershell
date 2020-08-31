@@ -3,7 +3,8 @@ title: Other ways to install Azure PowerShell | Microsoft Docs
 description: How to install Azure PowerShell using the MSI package or the Web Platform Installer.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/06/2017
+ms.date: 09/06/2017 
+ms.custom: devx-track-azurepowershell
 ---
 # Other installation methods
 

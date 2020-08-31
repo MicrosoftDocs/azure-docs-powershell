@@ -3,7 +3,8 @@ title: Manage Azure subscriptions with Azure PowerShell
 description: Manage Azure subscriptions with Azure PowerShell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
+ms.date: 03/30/2017 
+ms.custom: devx-track-azurepowershell
 ---
 # Manage multiple Azure subscriptions
 
