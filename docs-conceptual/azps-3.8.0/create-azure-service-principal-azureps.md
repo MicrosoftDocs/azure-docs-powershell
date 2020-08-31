@@ -56,8 +56,7 @@ principal. Its value _won't_ be displayed in the console output. If you lose the
 The following code will allow you to export the secret:
 
 ```azurepowershell-interactive
-$BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sp.Secret)
-$UnsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+$UnsecureSecret = ConvertFrom-SecureString $sp.Secret
 ```
 
 For user-supplied passwords, the `-PasswordCredential` argument takes

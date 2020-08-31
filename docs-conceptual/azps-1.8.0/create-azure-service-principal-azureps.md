@@ -44,8 +44,7 @@ The returned object contains the `Secret` member, which is a `SecureString` cont
 The following code will allow you to export the secret:
 
 ```azurepowershell-interactive
-$BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sp.Secret)
-$UnsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+$UnsecureSecret = ConvertFrom-SecureString $sp.Secret
 ```
 
 For user-supplied passwords, the `-PasswordCredential` argument takes `Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
@@ -143,7 +142,7 @@ To sign in with a service principal using a password:
 ```azurepowershell-interactive
 # Use the application ID as the username, and the secret as password
 $credentials = Get-Credential
-Connect-AzAccount -ServicePrincipal -Credential $credentials -Tenant <tenant ID> 
+Connect-AzAccount -ServicePrincipal -Credential $credentials -Tenant <tenant ID>
 ```
 
 Certificate-based authentication requires that Azure PowerShell can retrieve information from a local certificate
