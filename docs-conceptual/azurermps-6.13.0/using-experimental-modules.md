@@ -3,7 +3,8 @@ title: Using experimental Azure PowerShell modules
 description: Understand the philosophy and usage of experimental Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018
+ms.date: 09/11/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Use experimental Azure PowerShell modules
 

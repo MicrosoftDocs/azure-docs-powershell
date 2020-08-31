@@ -3,7 +3,8 @@ title: Get started with Azure PowerShell
 description:
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/15/2017
+ms.date: 11/15/2017 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Get started with Azure PowerShell

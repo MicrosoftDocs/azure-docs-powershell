@@ -3,7 +3,8 @@ title: Other ways to install  Azure PowerShell
 description: How to install Azure PowerShell without PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/20/2018
+ms.date: 06/20/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Install Azure PowerShell on Windows with MSI or Web Platform Installer
 

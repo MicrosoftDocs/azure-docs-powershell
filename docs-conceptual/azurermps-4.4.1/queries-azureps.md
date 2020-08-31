@@ -3,7 +3,8 @@ title: Querying for Azure resources and formatting results | Microsoft Docs
 description: How to query for resources in Azure and format the results.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
+ms.date: 03/30/2017 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Querying for Azure resources

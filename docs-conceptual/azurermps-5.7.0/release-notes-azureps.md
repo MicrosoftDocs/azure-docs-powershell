@@ -4,7 +4,8 @@ description: This is a history of changes made to Azure PowerShell in the latest
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 2/20/2018
+ms.date: 2/20/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Azure PowerShell Release notes
 
