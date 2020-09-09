@@ -38,7 +38,9 @@
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "enable_incremental_build": false,
-  "error_log_codes": ["DuplicateOutputFiles"],
+  "error_log_codes": [
+    "DuplicateOutputFiles"
+  ],
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
@@ -66,8 +68,7 @@
     ]
   },
   "need_generate_pdf_url_template": false,
-  "targets": {
-  },
+  "targets": {},
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
@@ -78,5 +79,8 @@
       "version": "latest"
     }
   ],
-  "dest": "_site"
+  "dest": "_site",
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
