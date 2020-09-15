@@ -49,8 +49,6 @@ Version             Name                           Repository           Descript
 4.1.0               Az                             PSGallery            Microsoft Azure PowerShell
 ```
 
-<a name="uninstall-script"/>
-
 The following script queries the PowerShell Gallery to get a list of dependent submodules. Then,
 the script uninstalls the correct version of each submodule. You need to have administrator access
 to run this script in a scope other than **Process** or **Current User**.
