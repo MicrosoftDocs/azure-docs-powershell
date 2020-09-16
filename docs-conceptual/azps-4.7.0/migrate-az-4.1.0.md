@@ -135,19 +135,19 @@ The type of property `Type` of type
 
 ### `Get-AzApiManagementProperty`
 
-The cmdlet `Get-AzApiManagementProperty` has been replaced by `Get-AzureApiManagementNamedValue`.
+The cmdlet `Get-AzApiManagementProperty` has been replaced by `Get-AzApiManagementNamedValue`.
 
 ### `New-AzApiManagementProperty`
 
-The cmdlet `New-AzApiManagementProperty` has been replaced by `New-AzureApiManagementNamedValue`.
+The cmdlet `New-AzApiManagementProperty` has been replaced by `New-AzApiManagementNamedValue`.
 
 ### `Remove-AzApiManagementProperty`
 
-The cmdlet `Remove-AzApiManagementProperty` has been replaced by `Remove-AzureApiManagementNamedValue`.
+The cmdlet `Remove-AzApiManagementProperty` has been replaced by `Remove-AzApiManagementNamedValue`.
 
 ### `Set-AzApiManagementProperty`
 
-The cmdlet `Set-AzApiManagementProperty` has been replaced by `Set-AzureApiManagementNamedValue`.
+The cmdlet `Set-AzApiManagementProperty` has been replaced by `Set-AzApiManagementNamedValue`.
 
 ## Az.Batch
 
