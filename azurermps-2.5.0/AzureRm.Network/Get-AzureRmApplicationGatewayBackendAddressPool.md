@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a back-end address pool for an application gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

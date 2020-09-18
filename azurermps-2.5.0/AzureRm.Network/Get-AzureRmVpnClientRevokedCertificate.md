@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets information about VPN client-revocation certificates.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

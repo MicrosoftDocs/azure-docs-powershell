@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates an SAS token for an Azure Storage table.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SasPolicy

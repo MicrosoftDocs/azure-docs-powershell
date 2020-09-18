@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/f8503a90f782f51c8baa03
 ## SYNOPSIS
 Lists blobs in a container.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### BlobName (Default)

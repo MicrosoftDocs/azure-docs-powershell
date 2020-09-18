@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 Gets the specified virtual network rules in the specified Data Lake Store.
 If no virtual network rule is specified, then lists all virtual network rules for the account.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

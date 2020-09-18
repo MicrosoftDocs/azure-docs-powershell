@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: D4188DC6-A8AB-4B45-9781-94B74C338C63
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Imports a certificate to a key vault.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

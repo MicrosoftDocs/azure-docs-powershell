@@ -3,11 +3,12 @@ title: Overview of Azure PowerShell | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/20/2018
+ms.date: 12/20/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Overview of Azure PowerShell
 
-[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell provides a set of cmdlets that use the
 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) model for managing
@@ -22,8 +23,8 @@ release, see the [release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
-- [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
-- [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
+- [Linux Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/linux/powershell-samples)
+- [Windows Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/powershell-samples)
 - [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 

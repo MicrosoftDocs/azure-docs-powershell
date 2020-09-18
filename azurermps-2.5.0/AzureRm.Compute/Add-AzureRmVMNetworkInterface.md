@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a network interface to a virtual machine.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### GetNicFromNicId (Default)

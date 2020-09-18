@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 80AAA327-77C6-4372-9461-FFED5A15E678
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Backs up a secret in a key vault.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

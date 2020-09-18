@@ -146,7 +146,7 @@ Uri https://configuredmetadata.net returns an array of environment metadata. The
     "sqlManagement": "https://management.core.windows.net:8443/",
     "gallery": "https://gallery.azure.com/"
   },
-……
+...
 ]
 #>
 

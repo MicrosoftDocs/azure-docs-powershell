@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies the current Storage account of the specified subscription.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### UsingResourceGroupAndNameParameterSet (Default)

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the VMSS operating system profile properties.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

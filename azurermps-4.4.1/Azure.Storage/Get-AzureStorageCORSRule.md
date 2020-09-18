@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e4
 ## SYNOPSIS
 Gets CORS rules for a Storage service type.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

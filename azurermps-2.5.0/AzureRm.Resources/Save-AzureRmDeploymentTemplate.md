@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Saves a deployment template to a file.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SaveByDeploymentName (Default)

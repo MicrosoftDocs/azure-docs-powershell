@@ -3,12 +3,13 @@ title: Get started with Azure PowerShell
 description:
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018
+ms.date: 09/11/2018 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Get started with Azure PowerShell
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell is designed for managing and administering Azure resources from the command line,
 and for building automation scripts that work against the Azure Resource Manager. You can use it in

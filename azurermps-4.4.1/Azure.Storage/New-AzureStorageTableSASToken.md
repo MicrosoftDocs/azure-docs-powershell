@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb
 ## SYNOPSIS
 Generates an SAS token for an Azure Storage table.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SasPolicy

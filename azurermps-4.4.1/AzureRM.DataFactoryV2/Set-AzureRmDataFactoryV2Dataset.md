@@ -13,6 +13,8 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/7fe7039e96038b4a91513d
 ## SYNOPSIS
 Creates a dataset in Data Factory.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ByFactoryName (Default)

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: 115A7612-4856-47AE-AEE4-918350CD7009
@@ -16,6 +16,8 @@ Provide the modified role definition either as a JSON file or as a PSRoleDefinit
 First, use the Get-AzureRmRoleDefinition command to retrieve the custom role that you wish to modify.
 Then, modify the properties that you wish to change.
 Finally, save the role definition using this command.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

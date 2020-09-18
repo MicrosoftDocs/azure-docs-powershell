@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets metrics for an Azure Web App slot.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### S1

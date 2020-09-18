@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Captures a resource group as a template and saves it to a file.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

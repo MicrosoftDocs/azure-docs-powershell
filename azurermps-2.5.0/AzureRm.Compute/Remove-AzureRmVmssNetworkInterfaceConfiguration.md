@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a network interface configuration from a VMSS.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### NameParameterSet

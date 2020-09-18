@@ -14,6 +14,8 @@ Update the sync schema for a sync member database or a sync hub database.
 It will get the latest database schema from the real database and then use it refresh the schema cached by Sync metadata database.
 If "SyncMemberName" is specified, it will refresh the member database schema; if not, it will refresh the hub database schema.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

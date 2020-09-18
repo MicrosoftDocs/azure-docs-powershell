@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 Module Name: AzureRM.ServerManagement
 ms.assetid: 22B63259-799B-4F25-A06B-7A818D295870
@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNOPSIS
 Resets the profile of a Server Management gateway.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

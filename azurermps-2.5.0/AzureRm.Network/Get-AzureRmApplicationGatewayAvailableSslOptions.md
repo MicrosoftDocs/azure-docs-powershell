@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets all available ssl options for ssl policy for Application Gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

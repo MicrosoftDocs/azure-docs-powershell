@@ -7,7 +7,8 @@ manager: knithinc
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
-ms.date: 09/21/2018
+ms.date: 09/21/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # AzureRM Module 2.5.0
 

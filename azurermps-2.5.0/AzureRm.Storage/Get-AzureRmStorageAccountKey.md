@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the access keys for an Azure Storage account.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

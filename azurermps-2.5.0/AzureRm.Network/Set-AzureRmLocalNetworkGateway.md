@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies a local network gateway.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Specifies the image for a virtual machine.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ImageReferenceSkuParameterSet (Default)

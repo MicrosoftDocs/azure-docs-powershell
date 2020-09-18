@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the CORS rules for a type of Storage service.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

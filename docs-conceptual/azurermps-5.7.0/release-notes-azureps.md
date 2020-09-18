@@ -4,11 +4,12 @@ description: This is a history of changes made to Azure PowerShell in the latest
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 2/20/2018
+ms.date: 2/20/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Azure PowerShell Release notes
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 This is a list of changes made to Azure PowerShell in this release.
 

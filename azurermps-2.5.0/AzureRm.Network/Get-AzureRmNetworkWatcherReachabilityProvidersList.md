@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists all available internet service providers for a specified Azure region.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### SetByName (Default)

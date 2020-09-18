@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: 8300B143-E322-419E-BC98-DBA56DD90A59
@@ -16,6 +16,8 @@ Provide either a JSON role definition file or a PSRoleDefinition object as input
 First, use the Get-AzureRmRoleDefinition command to generate a baseline role definition object.
 Then, modify its properties as required.
 Finally, use this command to create a custom role using role definition.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

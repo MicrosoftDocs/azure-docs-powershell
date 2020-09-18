@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: CBFFBF1B-1AF0-4D2F-9315-C3790A4E9346
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Sets the backup extension properties on a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

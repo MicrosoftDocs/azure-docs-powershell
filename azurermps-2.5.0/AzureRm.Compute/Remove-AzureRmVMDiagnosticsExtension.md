@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 89DA3965-5344-4A1D-AEF1-10EA58E129CF
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Removes the Diagnostics extension from a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

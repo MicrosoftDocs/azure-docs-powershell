@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts to copy a source file.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### ContainerName

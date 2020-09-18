@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a DNS zone.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### Default (Default)

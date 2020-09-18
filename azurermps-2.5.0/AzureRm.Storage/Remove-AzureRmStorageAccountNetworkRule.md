@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove IpRules or VirtualNetworkRules from the NetWorkRule property of a Storage account
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ### NetWorkRuleString (Default)

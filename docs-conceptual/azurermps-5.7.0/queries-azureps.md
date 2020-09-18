@@ -3,11 +3,12 @@ title: Query output of Azure PowerShell cmdlets
 description: How to query for resources in Azure and format the results.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/08/2018
+ms.date: 06/08/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Query output of Azure PowerShell cmdlets
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Querying in PowerShell can be completed by using built-in cmdlets. In
 PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the verb **_Get_** are

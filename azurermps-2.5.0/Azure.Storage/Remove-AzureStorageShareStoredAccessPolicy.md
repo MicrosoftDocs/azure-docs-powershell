@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a stored access policy from a Storage share.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

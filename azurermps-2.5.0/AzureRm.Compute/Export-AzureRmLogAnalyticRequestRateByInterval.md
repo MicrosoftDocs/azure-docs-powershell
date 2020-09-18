@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Export logs that show Api requests made by this subscription in the given time window to show throttling activities.
 
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
 ## SYNTAX
 
 ```

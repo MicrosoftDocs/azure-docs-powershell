@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 18E1AD70-42A6-47A2-A685-6E218B6DC4BE
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Saves downloaded .vhd images locally.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

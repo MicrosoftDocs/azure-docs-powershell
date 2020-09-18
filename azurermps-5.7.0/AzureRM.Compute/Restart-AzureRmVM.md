@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: EF155949-5766-4BC4-9C8A-2B97E8EA032D
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Restarts an Azure virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: D5BEA683-44AE-4D71-827D-02A03F0BEAE9
@@ -10,6 +10,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Gets the settings of the Diagnostics extension on a virtual machine.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## SYNTAX
 
