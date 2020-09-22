@@ -153,6 +153,19 @@ ms.custom: devx-track-azurepowershell
     - 'New-AzStorageAccountManagementPolicyRule'
 * Upgraded Microsoft.Azure.Cosmos.Table SDK to 1.0.8
 
+### Thanks to our community contributors
+* Thomas Van Laere (@ThomVanL), Add Dockerfile-alpine-3.10 (#12911) 
+* Lohith Chowdary Chilukuri (@Lochiluk), Update Remove-AzNetworkInterfaceIpConfig.md (#12807) 
+* Roberth Strand (@roberthstrand), Get-AzResourceGroup - New example, and cleanup (#12828) 
+* Ravi Mishra (@inmishrar), update Azure Web App runtime stack to DOTNETCORE (#12833) 
+* @jack-education, Updated Set-AzVirtualNetworkSubnetConfig to allow NSG and Route Table to be removed from subnet (#12351) 
+* @hagop-globanet, Update Add-AzApplicationGatewayCustomError.md (#12784) 
+* Joshua Van Daalen (@greenSacrifice)
+* Update spelling of Property to Property (#12821) 
+* Update New-AzResourceLock.md examples (#12806)
+* Eragon Riddle (@eragonriddle), Corrected parameter field name in the example (#12825) 
+* @rossifumax, Fix typo in New-AzConfigurationAssignment.md (#12701)
+
 ## 4.6.1 - August 2020
 #### Az.Compute
 * Patched '-EncryptionAtHost' parameter in 'New-AzVm' to remove default value of false [#12776]
