@@ -49,7 +49,7 @@ ms.custom: devx-track-azurepowershell
 * Added 'Get-AzDeploymentManagementGroupWhatIfResult' for getting ARM template What-If results at management Group scope
 * Added 'Get-AzTenantWhatIfResult' new cmdlet for getting ARM template What-If results at tenant scope
 * Overrode '-WhatIf' and '-Confirm' for 'New-AzManagementGroupDeployment' and 'New-AzTenantDeployment' to use ARM template What-If results
-* Fixed the behaviors of '-WhatIf' and '-Confirm' for new deployment cmdlets so they comply with False and 
+* Fixed the behaviors of '-WhatIf' and '-Confirm' for new deployment cmdlets so they comply with $WhatIfPreference and $ConfirmPreference.
 * Fixed serialization error for '-TemplateObject' and 'TemplateParameterObject' [#1528] [#6292]
 * Added breaking change attribute to 'Get-AzResourceGroupDeploymentOperation' for the upcoming output type change
 
