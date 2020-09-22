@@ -161,8 +161,8 @@ ms.custom: devx-track-azurepowershell
 * @jack-education, Updated Set-AzVirtualNetworkSubnetConfig to allow NSG and Route Table to be removed from subnet (#12351) 
 * @hagop-globanet, Update Add-AzApplicationGatewayCustomError.md (#12784) 
 * Joshua Van Daalen (@greenSacrifice)
-* Update spelling of Property to Property (#12821) 
-* Update New-AzResourceLock.md examples (#12806)
+  * Update spelling of Property to Property (#12821) 
+  * Update New-AzResourceLock.md examples (#12806)
 * Eragon Riddle (@eragonriddle), Corrected parameter field name in the example (#12825) 
 * @rossifumax, Fix typo in New-AzConfigurationAssignment.md (#12701)
 
