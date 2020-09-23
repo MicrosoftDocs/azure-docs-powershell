@@ -1,5 +1,5 @@
 ---
-external help file: Azs.Azurebridge.Admin-help.xml
+external help file: Azs.AzureBridge.Admin-help.xml
 Module Name: Azs.AzureBridge.Admin
 online version: 
 schema: 2.0.0
