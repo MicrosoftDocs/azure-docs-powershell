@@ -6,7 +6,7 @@ ms.devlang: powershell
 ms.topic: conceptual 
 ms.custom: devx-track-azurepowershell
 ---
-# Uninstall the Azure PowerShell module
+# How to uninstall Azure PowerShell modules
 
 This article tells you how to uninstall an older version of Azure PowerShell, or completely remove
 it from your system. If you've decided to completely uninstall Azure PowerShell, give us some
@@ -14,7 +14,13 @@ feedback through the [Send-Feedback](/powershell/module/az.accounts/send-feedbac
 encountered a bug, we'd appreciate it if you
 [file a GitHub issue](https://github.com/azure/azure-powershell/issues) so that it can be fixed.
 
-## Uninstall the Az PowerShell module from MSI
+## Uninstall the Az module
+
+If you have the Az module installed on your system and would like to uninstall it, there are
+two options. Which method you follow depends on how you installed the Az module. If you're not
+sure of your original installation method, follow the MSI steps for uninstalling first.
+
+### Option 1: Uninstall the Az PowerShell module from MSI
 
 If you installed Az PowerShell module using the MSI package, you must uninstall through the Windows
 system rather than PowerShell.
@@ -28,7 +34,7 @@ Once on this screen, you should see **Azure PowerShell** in the program listing.
 uninstall. If you don't see this program listed, then you installed through PowerShellGet, and
 should follow the next set of instructions.
 
-## Uninstall the Az PowerShell module from PowerShellGet
+### Option 2: Uninstall the Az PowerShell module from PowerShellGet
 
 To uninstall the Az modules, you can use the
 [Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet. However,
@@ -189,9 +195,9 @@ $Modules | ForEach-Object {Uninstall-AzModule -Name $_.Name -Version $_.Version}
 
 If you have the Az module installed on your system and would like to uninstall AzureRM, there are
 two options. Which method you follow depends on how you installed the AzureRM module. If you're not
-sure of your original installation method, follow the steps for uninstalling an MSI first.
+sure of your original installation method, follow the MSI steps for uninstalling first.
 
-### Uninstall the AzureRM PowerShell module from MSI
+### Option 1: Uninstall the AzureRM PowerShell module from MSI
 
 If you installed the AzureRM PowerShell module using the MSI package, you must uninstall through the
 Windows system rather than PowerShell.
@@ -205,11 +211,19 @@ Once on this screen, you should see **Azure PowerShell** or **Microsoft Azure Po
 Year** in the program listing. This is the app to uninstall. If you don't see this program listed,
 then you installed through PowerShellGet, and should follow the next set of instructions.
 
-### Uninstall the AzureRM PowerShell module from PowerShellGet
+### Option 2: Uninstall the AzureRM PowerShell module from PowerShellGet
 
 If you installed AzureRM with PowerShellGet, then you can remove the modules with the
 [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) cmdlet, available as part of
-the `Az.Accounts` module. The following example removes _all_ AzureRM modules from your machine. It
+the `Az.Accounts` module.
+
+In order to use the `Az.Accounts` module, you will need to have the Az module installed.  Having both the AzureRM and the Az modules installed at the same time is not supported however the Az module can be used to immediately uninstall the AzureRM module.  You can install the Az module and bypass the AzureRM module warning with the following command if you do not have the Az module installed already:
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+Once the Az module is installed, the following command removes _all_ AzureRM modules from your machine. It
 requires administrator privileges.
 
 ```powershell-interactive
