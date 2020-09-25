@@ -1,7 +1,7 @@
 ---
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
-ms.date: 05/28/2020
+ms.date: 09/15/2020
 ms.devlang: powershell
 ms.topic: conceptual 
 ms.custom: devx-track-azurepowershell
@@ -48,8 +48,6 @@ Version             Name                           Repository           Descript
 3.8.0               Az                             PSGallery            Microsoft Azure PowerShell
 4.1.0               Az                             PSGallery            Microsoft Azure PowerShell
 ```
-
-<a name="uninstall-script"/>
 
 The following script queries the PowerShell Gallery to get a list of dependent submodules. Then,
 the script uninstalls the correct version of each submodule. You need to have administrator access
