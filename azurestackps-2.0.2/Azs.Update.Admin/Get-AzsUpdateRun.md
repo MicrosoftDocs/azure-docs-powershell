@@ -49,7 +49,7 @@ northwest/Microsoft1.1907.0.10/51e878... Succeeded       7/11/2019 3:07:10 PM   
 ```
 
 If a UpdateName value is not specified, Get-UpdateRun will always ask for input.
-Once provided, it will output all instances of UpdateRun that were Failed or Successfull
+Once provided, it will output all instances of UpdateRun that were Failed or Successful
 
 ### Example 2: Get-AzsUpdateRun By UpdateName
 ```powershell
