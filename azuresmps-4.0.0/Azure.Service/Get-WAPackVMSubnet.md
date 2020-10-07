@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 0E358CEF-69E4-4639-918C-CE593E97B189
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -29,7 +29,6 @@ Get-WAPackVMSubnet -VNet <VMNetwork> -ID <Guid> [-Profile <AzureSMProfile>] [<Co
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see [Azure WAPack Cmdlets](https://msdn.microsoft.com/library/dn776450.aspx) (https://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
 To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
@@ -69,7 +68,7 @@ Specifies the unique ID of a virtual machine subnet.
 ```yaml
 Type: Guid
 Parameter Sets: FromId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,7 +83,7 @@ Specifies the name of a virtual machine subnet.
 ```yaml
 Type: String
 Parameter Sets: FromName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,7 +99,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +114,7 @@ Specifies the VNet associated with a virtual machine subnet.
 ```yaml
 Type: VMNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
