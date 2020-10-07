@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: E7766E3D-D8C2-42F1-840A-8EA633E98500
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -19,7 +19,6 @@ Remove-WAPackVMSubnet -VMSubnet <VMSubnet> [-PassThru] [-Force] [-Profile <Azure
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see [Azure WAPack Cmdlets](https://msdn.microsoft.com/library/dn776450.aspx) (https://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
 To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
@@ -58,7 +57,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +73,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +89,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +105,7 @@ To obtain a virtual machine subnet, use the **Get-WAPackVMSubnet** cmdlet.
 ```yaml
 Type: VMSubnet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

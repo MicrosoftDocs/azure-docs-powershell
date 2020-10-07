@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: AA7BD103-5C91-4E3B-9E46-2CAEDA5BA615
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -32,7 +32,6 @@ New-WAPackVM -Name <String> [-VNet <VMNetwork>] -OSDisk <VirtualHardDisk> -VMSiz
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see [Azure WAPack Cmdlets](https://msdn.microsoft.com/library/dn776450.aspx) (https://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
 To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
@@ -56,7 +55,7 @@ The command specifies the *Windows* parameter, and, therefore, the virtual machi
 
 ### Example 2: Create a virtual machine for the Linux operating system by using a template
 ```
-PS C:\> $Credentials = Get-Credential 
+PS C:\> $Credentials = Get-Credential
 PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate19"
 PS C:\> New-WAPackVM -Linux -Name "ContosoV028" -Template $Template -VMCredential $Credentials
 ```
@@ -89,7 +88,7 @@ Specifies the Secure Shell (SSH) key for the Administrator account.
 ```yaml
 Type: String
 Parameter Sets: CreateLinuxVMFromTemplate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +103,7 @@ Indicates that the cmdlet creates a virtual machine to run the Linux operating s
 ```yaml
 Type: SwitchParameter
 Parameter Sets: CreateLinuxVMFromTemplate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +118,7 @@ Specifies a name for the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,7 +134,7 @@ To obtain an operating system disk, use the **Get-WAPackVMOSDisk** cmdlet.
 ```yaml
 Type: VirtualHardDisk
 Parameter Sets: CreateVMFromOSDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -152,7 +151,7 @@ Use a product key for an operating system that you plan to install on a virtual 
 ```yaml
 Type: String
 Parameter Sets: CreateVMFromTemplate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +167,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +184,7 @@ To obtain a template object, use the Get-WAPackVMTemplate cmdlet.
 ```yaml
 Type: VMTemplate
 Parameter Sets: CreateVMFromTemplate, CreateLinuxVMFromTemplate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,7 +201,7 @@ For more information, type `Get-Help Get-Credential`.
 ```yaml
 Type: PSCredential
 Parameter Sets: CreateVMFromTemplate, CreateLinuxVMFromTemplate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -218,7 +217,7 @@ To obtain a size profile, use the **Get-WAPackVMSizeProfile** cmdlet.
 ```yaml
 Type: HardwareProfile
 Parameter Sets: CreateVMFromOSDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -235,7 +234,7 @@ To obtain a virtual network, use the **Get-WAPackVNet** cmdlet.
 ```yaml
 Type: VMNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +249,7 @@ Indicates that the cmdlet creates a virtual machine to run the Windows operating
 ```yaml
 Type: SwitchParameter
 Parameter Sets: CreateVMFromTemplate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

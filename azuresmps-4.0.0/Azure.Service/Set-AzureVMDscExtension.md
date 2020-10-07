@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 649D0A6C-77CE-4E49-AFF8-DF70ABE9FA13
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -31,24 +31,24 @@ The **Set-AzureVMDscExtension** cmdlet configures the Desired State Configuratio
 PS C:\> Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
 DeploymentName              : my-vm-svc
 Name                        : my-vm
-Label                       : 
+Label                       :
 VM                          : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVM
 InstanceStatus              : ReadyRole
 IpAddress                   : 10.10.10.10
-InstanceStateDetails        : 
+InstanceStateDetails        :
 PowerState                  : Started
-InstanceErrorCode           : 
+InstanceErrorCode           :
 InstanceFaultDomain         : 0
 InstanceName                : my-vm
 InstanceUpgradeDomain       : 0
 InstanceSize                : Small
-AvailabilitySetName         : 
+AvailabilitySetName         :
 DNSName                     : http://my-vm-svc.cloudapp.net/
 Status                      : ReadyRole
 GuestAgentStatus            : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVMModel.GuestAgentStatus
 ResourceExtensionStatusList : {Contoso.Compute.BGInfo}
-PublicIPAddress             : 
-PublicIPName                : 
+PublicIPAddress             :
+PublicIPName                :
 ServiceName                 : my-vm-svc
 OperationDescription        : Get-AzureVM
 OperationId                 : a0217a7af900c1f8a212299a3333cdbd6
@@ -64,27 +64,27 @@ The -*ConfigurationArgument* parameter specifies a hashtable with the arguments 
 
 ### Example 2: Configure the DSC extension on a virtual machine using a path to the configuration data
 ```
-PS C:\> $VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1 
+PS C:\> $VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1
 DeploymentName              : my-vm-svc
 Name                        : my-vm
-Label                       : 
+Label                       :
 VM                          : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVM
 InstanceStatus              : ReadyRole
 IpAddress                   : 10.10.10.10
-InstanceStateDetails        : 
+InstanceStateDetails        :
 PowerState                  : Started
-InstanceErrorCode           : 
+InstanceErrorCode           :
 InstanceFaultDomain         : 0
 InstanceName                : my-vm
 InstanceUpgradeDomain       : 0
 InstanceSize                : Small
-AvailabilitySetName         : 
+AvailabilitySetName         :
 DNSName                     : http://my-vm-svc.cloudapp.net/
 Status                      : ReadyRole
 GuestAgentStatus            : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVMModel.GuestAgentStatus
 ResourceExtensionStatusList : {Microsoft.Compute.BGInfo, Microsoft.Powershell.DSC}
-PublicIPAddress             : 
-PublicIPName                : 
+PublicIPAddress             :
+PublicIPName                :
 ServiceName                 : my-vm-svc
 OperationDescription        : Get-AzureVM
 OperationId                 : a0217a7af900c1f8a212299a3333cdbd7
@@ -102,7 +102,7 @@ This parameter must specify only the name of the file, without any path.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -125,7 +125,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ This file must contain a hashtable as described in Separating Configuration and 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ For instance, if *ConfigurationArchive* is "SalesWebSite.ps1.zip", the default v
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ Specifies the name of the Azure storage container where the *ConfigurationArchiv
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ Indicates that this cmdlet overwrites existing blobs.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,7 +277,7 @@ The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,7 +293,7 @@ This context provides read access to the container specified by the *ContainerNa
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,7 +308,7 @@ Specifies the DNS endpoint suffix for all storage services, for instance, "core.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ The default value is set to "1.*" if this parameter is not specified.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,18 +355,18 @@ This parameter specifies which version of the update to install on the virtual m
 The acceptable values for this parameter are:
 
 - 4.0.
-Installs KB3000850https://support.microsoft.com/kb/3000850 (https://support.microsoft.com/kb/3000850) on Windows 8.1 or Windows Server 2012 R2, or WMF 4.0https://www.microsoft.com/en-us/download/details.aspx?id=40855 (https://www.microsoft.com/en-us/download/details.aspx?id=40855) on other versions of the Windows operating system, unless a newer version is already installed. 
+Installs WMF 4.0 unless a newer version is already installed.
 - 5.0.
-Installs the latest release of WMF 5.0https://www.microsoft.com/en-us/download/details.aspx?id=50395 (https://www.microsoft.com/en-us/download/details.aspx?id=50395). 
+Installs the latest release of WMF 5.0.
 - latest.
-Installs the latest WMF, currently WMF 5.0. 
+Installs the latest WMF, currently WMF 5.0.
 
 The default value is latest.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
