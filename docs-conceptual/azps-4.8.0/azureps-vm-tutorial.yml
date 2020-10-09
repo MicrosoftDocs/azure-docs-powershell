@@ -104,7 +104,7 @@ items:
         $newVM1 = New-AzVM @vmParams
         ```
         As the VM is created, you see the parameter values used and Azure resources being created.
-        PowerShell will displace a progress bar as shown below.
+        PowerShell will display a progress bar as shown below.
 
         ```Output
          Creating Azure resources
