@@ -2,6 +2,7 @@
 title: Migrate Azure PowerShell scripts from AzureRM to Az
 description: Learn the steps and tools for migrating scripts from the AzureRM module to the new Az module.
 ms.devlang: powershell
+ms.service: azure-powershell
 ms.topic: conceptual
 ms.date: 10/12/2020
 ms.custom: devx-track-azurepowershell
@@ -18,7 +19,7 @@ transition easier, the
 [AzureRM to Az migration toolkit](https://github.com/Azure/azure-powershell-migration) was
 developed. No migration to a new command set is ever convenient, but this article will help you get
 started on transitioning to the Az PowerShell module. To learn more about why the Az PowerShell
-module was created, see [Introducing the new Azure PowerShell Az module](new-azureps-module-az).
+module was created, see [Introducing the new Azure PowerShell Az module](new-azureps-module-az.md).
 
 To see the full list of breaking changes between AzureRM and Az, see the
 [full changes from AzureRM to Az](migrate-az-1.0.0.md).
@@ -60,4 +61,4 @@ The [Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell 
 ## Next steps
 
 [Install Azure PowerShell](install-az-ps.md)
-[Uninstall AzureRM](uninstall-az-ps#uninstall-the-azurerm-module)
+[Uninstall AzureRM](uninstall-az-ps.md#uninstall-the-azurerm-module)
