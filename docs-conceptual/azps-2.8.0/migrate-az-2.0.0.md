@@ -3,7 +3,8 @@ title: Migration guide for Az 2.0.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 2.0 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/24/2019
+ms.date: 05/24/2019 
+ms.custom: devx-track-azurepowershell
 ---
 # Migration Guide for Az 2.0.0
 

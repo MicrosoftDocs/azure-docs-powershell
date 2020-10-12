@@ -3,12 +3,13 @@ title: Formatting query results | Microsoft Docs
 description: How to query for resources in Azure and format the results.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
+ms.date: 03/30/2017 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Formatting query results
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 By default each PowerShell cmdlet has predefined formatting of output making it easy to read.  PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:
 

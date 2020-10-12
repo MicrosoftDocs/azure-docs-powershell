@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 08A7556E-C07F-4B3B-B9D6-B241C72860FA
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -19,7 +19,6 @@ Set-WAPackVM -VM <VirtualMachine> -VMSizeProfile <HardwareProfile> [-PassThru] [
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see [Azure WAPack Cmdlets](https://msdn.microsoft.com/library/dn776450.aspx) (https://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
 To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
@@ -49,7 +48,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -65,7 +64,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +80,7 @@ To obtain a virtual machine, use the **Get-WAPackVM** cmdlet.
 ```yaml
 Type: VirtualMachine
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,7 +96,7 @@ To obtain a size profile, use the **Get-WAPackVMSizeProfile** cmdlet.
 ```yaml
 Type: HardwareProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

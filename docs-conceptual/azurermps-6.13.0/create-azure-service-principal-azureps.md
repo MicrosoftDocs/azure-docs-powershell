@@ -4,11 +4,12 @@ description: Learn how to create a service principal for your app or service wit
 keywords: Azure PowerShell, Azure Active Directory, Azure Active directory, AD, RBAC
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018
+ms.date: 09/09/2018 
+ms.custom: devx-track-azurepowershell
 ---
 # Create an Azure service principal with Azure PowerShell
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 If you plan to manage your app or service with Azure PowerShell, you should run it under an Azure
 Active Directory (AAD) service principal, rather than your own credentials. This article steps you
@@ -89,8 +90,8 @@ $password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
 
 ### Sign in using the service principal
 
-You can now sign in as the new service principal for your app using the *appId* you provided and *password* that was automatically 
-generated. You also need the Tenant ID for the service principal. Your Tenant ID is displayed when you sign into Azure with your 
+You can now sign in as the new service principal for your app using the *appId* you provided and *password* that was automatically
+generated. You also need the Tenant ID for the service principal. Your Tenant ID is displayed when you sign into Azure with your
 personal credentials. To sign in with a service principal, use the following commands:
 
 ```azurepowershell-interactive

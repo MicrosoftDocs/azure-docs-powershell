@@ -3,12 +3,13 @@ title: Format Azure PowerShell cmdlet output
 description: How to format cmdlet output for Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018
+ms.date: 09/09/2018 
+ms.custom: devx-track-azurepowershell
 ---
 
 # Format AzurePowerShell cmdlet output
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 By default each Azure PowerShell cmdlet has predefined formatting of output making it easy to read.  PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:
 

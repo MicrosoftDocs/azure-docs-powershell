@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 22A9B83D-789D-4722-BDD1-D8C448CFB88A
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -19,7 +19,6 @@ New-WAPackStaticIPAddressPool -VMSubnet <VMSubnet> -Name <String> -IPAddressRang
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see [Azure WAPack Cmdlets](https://msdn.microsoft.com/library/dn776450.aspx) (https://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
 To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
@@ -49,7 +48,7 @@ Specifies an IP address range end for the static IP address pool.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,7 +63,7 @@ Specifies an IP address range start for the static IP address pool.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +78,7 @@ Specifies a name for the static IP address pool.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -95,7 +94,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +109,7 @@ Specifies a VMSubnet associated with the static IP address pool.
 ```yaml
 Type: VMSubnet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

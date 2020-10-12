@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 53BD6ED4-EA66-448B-8B18-F078C0738AF5
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -19,7 +19,6 @@ New-WAPackQuickVM -Name <String> -Template <VMTemplate> -VMCredential <PSCredent
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see [Azure WAPack Cmdlets](https://msdn.microsoft.com/library/dn776450.aspx) (https://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
 To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
@@ -53,7 +52,7 @@ Specifies a name for the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -69,7 +68,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +85,7 @@ To obtain a template object, use the **Get-WAPackVMTemplate** cmdlet.
 ```yaml
 Type: VMTemplate
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -103,7 +102,7 @@ For more information, type `Get-Help Get-Credential`.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
