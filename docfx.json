@@ -26,11 +26,8 @@
             { "files": ["**/*.yml"], "src": "azps-3.8.0", "version": "azps-3.8.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-3.8.0", "version": "azps-3.8.0", "dest": "azure" },
 
-            { "files": ["**/*.yml"], "src": "azps-4.6.1", "version": "azps-4.6.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-4.6.1", "version": "azps-4.6.1", "dest": "azure" },
-
-            { "files": ["**/*.yml"], "src": "azps-4.6.0", "version": "azps-4.6.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-4.6.0", "version": "azps-4.6.0", "dest": "azure" },
+            { "files": ["**/*.yml"], "src": "azps-4.8.0", "version": "azps-4.8.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-4.8.0", "version": "azps-4.8.0", "dest": "azure" },
 
             { "files": ["**/*.yml"], "src": "azps-4.7.0", "version": "azps-4.7.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-4.7.0", "version": "azps-4.7.0", "dest": "azure" },
@@ -126,8 +123,7 @@
             { "files": ["media/**"], "version": "azps-1.8.0" },
             { "files": ["media/**"], "version": "azps-2.8.0" },
             { "files": ["media/**"], "version": "azps-3.8.0" },
-            { "files": ["media/**"], "version": "azps-4.6.1" },
-            { "files": ["media/**"], "version": "azps-4.6.0" },
+            { "files": ["media/**"], "version": "azps-4.8.0" },
             { "files": ["media/**"], "version": "azps-4.7.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
@@ -140,8 +136,7 @@
             "azps-1.8.0": { "dest": "azps-1.8.0" },
             "azps-2.8.0": { "dest": "azps-2.8.0" },
             "azps-3.8.0": { "dest": "azps-3.8.0" },
-            "azps-4.6.1": { "dest": "azps-4.6.1" },
-            "azps-4.6.0": { "dest": "azps-4.6.0" },
+            "azps-4.8.0": { "dest": "azps-4.8.0" },
             "azps-4.7.0": { "dest": "azps-4.7.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
@@ -298,8 +293,7 @@
                 "azps-1.8.0/**/*.yml": "04/16/2019",
                 "azps-2.8.0/**/*.yml": "10/14/2019",
                 "azps-3.8.0/**/*.yml": "4/20/2020",
-                "azps-4.6.1/**/*.yml": "8/28/2020",
-                "azps-4.6.0/**/*.yml": "8/21/2020",
+                "azps-4.8.0/**/*.yml": "10/09/2020",
                 "azps-4.7.0/**/*.yml": "9/16/2020",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azuresmps-4.0.0/**/*.yml": "09/11/2018"
@@ -312,8 +306,7 @@
                 "azps-1.8.0/**/*": "None",
                 "azps-2.8.0/**/*": "None",
                 "azps-3.8.0/**/*": "None",
-                "azps-4.6.1/**/*": "None",
-                "azps-4.6.0/**/*": "None",
+                "azps-4.8.0/**/*": "None",
                 "azps-4.7.0/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
