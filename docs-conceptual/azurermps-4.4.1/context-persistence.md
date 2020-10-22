@@ -3,7 +3,7 @@ title: Persist user credentials across PowerShell sessions
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017 
+ms.date: 08/31/2017
 ms.custom: devx-track-azurepowershell
 ---
 # Persisting user credentials across PowerShell sessions
@@ -192,5 +192,4 @@ Changes to existing profile cmdlets
 
 <!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Add-AzureRmAccount
-[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext

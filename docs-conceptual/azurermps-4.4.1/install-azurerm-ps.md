@@ -3,7 +3,7 @@ title: Install and configure Azure PowerShell | Microsoft Docs
 description: How to install and configure Azure PowerShell for first time use.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/27/2018 
+ms.date: 03/27/2018
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -130,7 +130,6 @@ feedback from the command line, use the `Send-Feedback` cmdlet.
 |---|---|
 |I have Windows 10 or Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
 |I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/download/details.aspx?id=54616)|
-|I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 ### <div id="helpmechoose"/>Checking the version of Azure PowerShell
 
