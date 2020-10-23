@@ -3,7 +3,7 @@ title: Get started with Azure PowerShell | Microsoft Docs
 description:
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/15/2017 
+ms.date: 11/15/2017
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -395,8 +395,8 @@ This can take several minutes to complete.
 ## Get samples
 
 To learn more about ways to use the Azure PowerShell, check out our most common scripts for
-[Linux VMs](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json),
-[Windows VMs](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json),
+[Linux VMs](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json),
+[Windows VMs](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json),
 [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), and
 [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json).
 
@@ -405,8 +405,7 @@ To learn more about ways to use the Azure PowerShell, check out our most common 
 * [Sign in with Azure PowerShell](authenticate-azureps.md)
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
-* Read the Release notes about migrating from an older release:
-  [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
+* Read the [Release notes](./release-notes-azureps.md) about migrating from an older release.
 * Get help from the community:
   * [Azure forum on MSDN](https://go.microsoft.com/fwlink/p/?LinkId=320212)
   * [stackoverflow](https://go.microsoft.com/fwlink/?LinkId=320213)
