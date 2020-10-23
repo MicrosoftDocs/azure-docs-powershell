@@ -88,7 +88,7 @@ Sets the InputObject tags property of the call to extract the required name, res
 ```yaml
 Type: PSActivityLogAlertResource
 Parameter Sets: DisableByInputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -103,7 +103,7 @@ The name of the activity log alert.
 ```yaml
 Type: String
 Parameter Sets: DisableByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,7 +118,7 @@ The name of the resource group where the alert resource is going to exist.
 ```yaml
 Type: String
 Parameter Sets: DisableByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ Sets the ResourceId tags property of the call to extract the required name, reso
 ```yaml
 Type: String
 Parameter Sets: DisableByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -195,7 +195,5 @@ This cmdlet does not accept any input.
 [Remove-AzureRmActivityLogAlert](./Remove-AzureRmActivityLogAlert.md)
 
 [New-AzureRmActionGroup](./New-AzureRmActionGroup.md)
-
-[New-AzureRmActivityLogAlertCondition](./Get-AzureRmActivityLogAlertCondition.md)
 
 [Enable-AzureRmActivityLogAlert](./Enable-AzureRmActivityLogAlert.md)

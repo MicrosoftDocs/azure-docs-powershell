@@ -48,7 +48,6 @@ Accept wildcard characters: False
 ### -Name
 Specifies the name of the image from the Marketplace.
 This is the same value that is returned by the Get-AzureRmVMImageSku cmdlet.
-For more information about how to find image information, see Navigating and Selecting Azure Virtual Machine images with PowerShell and the Azure CLIhttps://azure.microsoft.com/documentation/articles/resource-groups-vm-searching/ (https://azure.microsoft.com/documentation/articles/resource-groups-vm-searching/) in the Microsoft Azure documentation.
 
 ```yaml
 Type: System.String

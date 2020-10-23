@@ -144,5 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementApiRelease](./Get-AzureRmApiManagementApiRelease.md)
 
 [Remove-AzureRmApiManagementApiRelease](./Remove-AzureRmApiManagementApiRelease.md)
-
-[Set-AzureRmApiManagementApiRelease](./Set-AzureRmApiManagementApiRelease.md)

@@ -97,7 +97,7 @@ The pool is configured to use small virtual machines imaged with the latest oper
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSApplicationPackageReference[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ The default value is 15 minutes, and the minimum value is 5 minutes.
 ```yaml
 Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ Specifies the formula for automatically scaling the pool.
 ```yaml
 Type: System.String
 Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ To obtain a **BatchAccountContext** object that contains access keys for your su
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +160,7 @@ The Batch service installs the referenced certificates on each compute node of t
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSCertificateReference[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ Specifies configuration settings for a pool based on the Azure cloud service pla
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSCloudServiceConfiguration
 Parameter Sets: CloudServiceAndTargetDedicated, CloudServiceAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +190,7 @@ Specifies the display name of the pool.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ Specifies the ID of the pool to create.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -220,7 +220,7 @@ Indicates that this cmdlet sets up the pool for direct communication between ded
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +235,7 @@ Specifies the maximum number of tasks that can run on a single compute node.
 ```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ The value is the metadata value.
 ```yaml
 Type: System.Collections.IDictionary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSNetworkConfiguration
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +280,7 @@ Specifies the time-out for allocating compute nodes to the pool.
 ```yaml
 Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +296,7 @@ The start task is run when a compute node joins the pool, or when the compute no
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSStartTask
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +311,7 @@ Specifies the target number of compute nodes to allocate to the pool.
 ```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +326,7 @@ Specifies the task scheduling policy, such as the ComputeNodeFillType.
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSTaskSchedulingPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -341,7 +341,7 @@ Specifies configuration settings for a pool on the virtual machines infrastructu
 ```yaml
 Type: Microsoft.Azure.Commands.Batch.Models.PSVirtualMachineConfiguration
 Parameter Sets: VirtualMachineAndTargetDedicated, VirtualMachineAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -352,12 +352,12 @@ Accept wildcard characters: False
 
 ### -VirtualMachineSize
 Specifies the size of the virtual machines in the pool.
-For more information about virtual machine sizes, see Sizes for virtual machineshttps://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/ (https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/) in the Microsoft Azure site.
+For more information about virtual machine sizes, see [Sizes for virtual machines](/azure/virtual-machines/sizes) in the Microsoft Azure site.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

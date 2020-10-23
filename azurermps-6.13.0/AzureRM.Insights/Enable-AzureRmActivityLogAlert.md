@@ -196,6 +196,4 @@ Parameters: InputObject (ByValue)
 
 [New-AzureRmActionGroup](./New-AzureRmActionGroup.md)
 
-[New-AzureRmActivityLogAlertCondition](./Get-AzureRmActivityLogAlertCondition.md)
-
 [Disable-AzureRmActivityLogAlert](./Disable-AzureRmActivityLogAlert.md)

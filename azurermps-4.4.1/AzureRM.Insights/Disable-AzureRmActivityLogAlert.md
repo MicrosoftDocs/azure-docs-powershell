@@ -73,7 +73,7 @@ The name of the activity log alert.
 ```yaml
 Type: System.String
 Parameter Sets: Default parameters for disable an activity log alert
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ The name of the resource group where the alert resource is going to exist.
 ```yaml
 Type: System.String
 Parameter Sets: Default parameters for disable an activity log alert
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -103,7 +103,7 @@ Sets the InputObject tags property of the call to extract the required name, res
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 Parameter Sets: Parameters to disable an activity log alerts taking value from the pipe
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,7 +118,7 @@ Sets the ResourceId tags property of the call to extract the required name, reso
 ```yaml
 Type: System.String
 Parameter Sets: Parameters to disable an activity log alerts taking the value of ResourceId from the pipe
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -192,7 +192,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmActivityLogAlert](./Remove-AzureRmActivityLogAlert.md)
 
 [New-AzureRmActionGroup](./New-AzureRmActionGroup.md)
-
-[New-AzureRmActivityLogAlertCondition](./Get-AzureRmActivityLogAlertCondition.md)
 
 [Enable-AzureRmActivityLogAlert](./Enable-AzureRmActivityLogAlert.md)
