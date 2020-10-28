@@ -3,7 +3,7 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/15/2017 
+ms.date: 05/15/2017
 ms.custom: devx-track-azurepowershell
 ---
 # Sign in with Azure PowerShell
@@ -83,4 +83,4 @@ Azure PowerShell cmdlets for role management:
 * [New-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/New-AzureRmRoleDefinition)
 * [Remove-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/Remove-AzureRmRoleAssignment)
 * [Remove-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Remove-AzureRmRoleDefinition)
-* [Set-AzureRmRoleDefinition](/powershell/moduel/AzureRM.Resources/Set-AzureRmRoleDefinition)
+* [Set-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Set-AzureRmRoleDefinition)

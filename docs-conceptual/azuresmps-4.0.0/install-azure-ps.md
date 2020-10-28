@@ -3,7 +3,7 @@ title: Install and configure the Azure PowerShell Service Management module | Mi
 description: How to install and configure Azure PowerShell for first time use.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/06/2017 
+ms.date: 03/06/2017
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -83,7 +83,7 @@ For sample scripts that can help you automate some of the common tasks in Azure,
 [Windows Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
 
 For general information about installing, learning, using, and customizing Windows PowerShell, see
-[Scripting with Windows PowerShell](https://go.microsoft.com/fwlink/p/?linkid=320210).
+[Scripting with Windows PowerShell](/powershell/scripting/learn/ps101/00-introduction).
 
 ### How to get PowerShellGet
 
@@ -91,7 +91,6 @@ For general information about installing, learning, using, and customizing Windo
 |---|---|
 |I have Windows 10 or Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
 |I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/download/details.aspx?id=54616)|
-|I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
 
