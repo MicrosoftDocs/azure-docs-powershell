@@ -4,7 +4,8 @@ description: Learn how to reuse Azure credentials and other information across m
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # Azure PowerShell context objects
 
