@@ -117,6 +117,11 @@ Creates a new azure active directory service principal. The default parameter se
 This cmdlet has the ability to assign a role to the service principal with the `Role` and `Scope` parameters; if neither of these parameters are provided, no role will be assigned to the service principal. The default values for the `Role` and `Scope` parameters are "Contributor" and the current subscription, respectively (_note_: the defaults are only used when the user provides a value for one of the two parameters, but not the other).
 The cmdlet also implicitly creates an application and sets its properties (if the ApplicationId is not provided). In order to update the application specific parameters please use Set-AzADApplication cmdlet.
 
+> [!WARNING]
+> When you create a service principal using the **New-AzADServicePrincipal** command, the output includes credentials that you must protect. Be sure that you do not include these credentials in your code or check the credentials into your source control. As an alternative, consider using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid the need to use credentials.
+>
+> By default, **New-AzADServicePrincipal** assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the service principal at the subscription scope. To reduce your risk of a compromised service principal, assign a more specific role and narrow the scope to a resource or resource group. See [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps) for more information.
+
 ## EXAMPLES
 
 ### Example 1 - Simple AD service principal creation
