@@ -4,7 +4,8 @@ description: Learn how to run Azure PowerShell cmdlets in parallel or as backgro
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 
 # Run Azure PowerShell cmdlets in PowerShell Jobs
