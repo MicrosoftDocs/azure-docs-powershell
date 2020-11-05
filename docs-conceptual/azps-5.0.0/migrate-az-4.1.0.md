@@ -3,8 +3,9 @@ title: Migration guide for Az 4.1.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 4.1.0 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/23/2020 
+ms.date: 05/23/2020
 ms.custom: devx-track-azurepowershell
+ms.service: azure-powershell
 ---
 
 # Migration Guide for Az 4.1.0

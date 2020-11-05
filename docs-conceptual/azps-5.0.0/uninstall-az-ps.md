@@ -4,7 +4,8 @@ description: How to perform a complete uninstall of Azure PowerShell
 ms.date: 09/15/2020
 ms.devlang: powershell
 ms.topic: conceptual 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # How to uninstall Azure PowerShell modules
 

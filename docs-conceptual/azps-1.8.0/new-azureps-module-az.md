@@ -4,7 +4,8 @@ description: Introducing the new Azure PowerShell module Az, the replacement for
 ms.date: 05/10/2019
 ms.devlang: powershell
 ms.topic: conceptual 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # Introducing the new Azure PowerShell Az module
 

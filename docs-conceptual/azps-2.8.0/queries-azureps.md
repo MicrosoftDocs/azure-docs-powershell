@@ -4,7 +4,8 @@ description: How to query for resources in Azure and format the results.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # Query output of Azure PowerShell 
 
