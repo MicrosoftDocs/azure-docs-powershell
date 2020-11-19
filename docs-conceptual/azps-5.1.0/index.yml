@@ -1,0 +1,100 @@
+###YamlMime:Landing
+
+title: Azure PowerShell documentation
+summary: |
+  Azure PowerShell is a set of cmdlets for managing Azure resources directly from the
+  PowerShell command line. Azure PowerShell is designed to make it easy to learn and get started
+  with, but provides powerful features for automation. Written in .NET Standard, Azure PowerShell
+  works with PowerShell 5.1 on Windows, and PowerShell 7.x and higher on all platforms.
+
+metadata:
+  title: Overview of Azure PowerShell
+  description: Get started with Azure PowerShell by installing and learning about its features and capabilities.
+  ms.topic: landing-page
+  author: mikefrobbins
+  ms.author: mirobb
+  ms.date: 10/22/2020
+
+landingContent:
+  - title: Get started with Azure PowerShell
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Install Azure PowerShell
+            url: install-az-ps.md
+          - text: Install PowerShell
+            url: /powershell/scripting/install/installing-powershell
+          - text: Run in Azure Cloud Shell
+            url: https://shell.azure.com
+      - linkListType: get-started
+        links:
+          - text: Get started
+            url: get-started-azureps.md
+          - text: Learn about PowerShell concepts
+            url: /powershell/scripting/overview
+      - linkListType: how-to-guide
+        links:
+          - text: Authenticate with Azure PowerShell
+            url: authenticate-azureps.md
+          - text: Create a service principal
+            url: create-azure-service-principal-azureps.md
+          - text: Filter cmdlet results
+            url: queries-azureps.md
+          - text: Format cmdlet output
+            url: formatting-output.md
+  - title: Manage Azure resources
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Sample scripts for virtual machines
+            url: /azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json
+          - text: Sample scripts for Azure App Service
+            url: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
+          - text: Sample scripts for SQL databases
+            url: /azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json
+      - linkListType: tutorial
+        links:
+          - text: Create virtual machines on the same subnet
+            url: azureps-vm-tutorial.yml
+      - linkListType: learn
+        links:
+          - text: Automate Azure tasks from PowerShell
+            url: /learn/modules/automate-azure-tasks-with-powershell/
+  - title: Migrate from AzureRM
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: About the Azure PowerShell 'Az' module
+            url: new-azureps-module-az.md
+      - linkListType: concept
+        links:
+          - text: Migrate from AzureRM to Az
+            url: migrate-from-azurerm-to-az.md
+      - linkListType: reference
+        links:
+          - text: Breaking changes between AzureRM and Az
+            url: migrate-az-1.0.0.md
+  - title: Azure PowerShell Reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Cmdlet reference
+            url: /powershell/module/?view=azps-4.8.0
+          - text: Release notes
+            url: release-notes-azureps.md
+          - text: Breaking changes in Az 2.0.0
+            url: migrate-az-2.0.0.md
+          - text: Breaking changes in Az 3.0.0
+            url: migrate-az-3.0.0.md
+          - text: Breaking changes in Az 4.1.0
+            url: migrate-az-4.1.0.md
+  - title: Other Azure PowerShell modules
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Azure Active Directory for PowerShell
+            url: /powershell/module/azuread/
+          - text: Azure Service Fabric for PowerShell
+            url: /powershell/module/servicefabric/
+          - text: Azure SQL Database Cmdlets
+            url: /powershell/module/az.sql/
