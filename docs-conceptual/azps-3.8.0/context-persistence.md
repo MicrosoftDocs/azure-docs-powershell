@@ -3,8 +3,9 @@ title: Azure contexts and sign-in credentials
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/21/2019 
+ms.date: 10/21/2019
 ms.custom: devx-track-azurepowershell
+ms.service: azure-powershell
 ---
 # Azure PowerShell context objects
 
@@ -20,7 +21,7 @@ Azure contexts are PowerShell objects representing your active subscription to r
 * The active _subscription_, a service agreement with Microsoft to create and run Azure resources, which are associated with a _tenant_. Tenants are often referred to as _organizations_ in documentation or when working with Active Directory.
 * A reference to a _token cache_, a stored authentication token for accessing an Azure cloud. Where this token is stored and how long it persists for is determined by the [context autosave settings](#save-azure-contexts-across-powershell-sessions).
 
-For more information on these terms, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session. 
+For more information on these terms, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session.
 
 When you sign in with `Connect-AzAccount`, at least one Azure context is created for your default subscription. The object returned by `Connect-AzAccount` is the default Azure context used for the rest of the PowerShell session.
 
@@ -43,7 +44,7 @@ Context names may be different from the name of the associated subscription.
 > [!IMPORTANT]
 > The available Azure contexts __aren't__ always your available subscriptions. Azure contexts only
 > represent locally-stored information. You can get your subscriptions
-> with the [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription?view=azps-1.8.0) cmdlet.
+> with the [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription) cmdlet.
 
 ## Create a new Azure context from subscription information
 
@@ -142,7 +143,7 @@ To clear Azure contexts and credentials:
   You can sign out of any account either by account or context:
 
   ```azurepowershell-interactive
-  Disconnect-AzAccount # Disconnect active account 
+  Disconnect-AzAccount # Disconnect active account
   Disconnect-AzAccount -Username "user@contoso.com" # Disconnect by account name
 
   Disconnect-AzAccount -ContextName "subscription2" # Disconnect by context name
@@ -154,7 +155,7 @@ To clear Azure contexts and credentials:
 * Use [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext). This cmdlet is guaranteed to
   always remove stored contexts and authentication tokens, and will also sign you out.
 * Remove a context with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext):
-  
+
   ```azurepowershell-interactive
   Remove-AzContext -Name "mycontext" # Remove by name
   Get-AzContext -Name "mycontext" | Remove-AzContext # Remove by piping Azure context object

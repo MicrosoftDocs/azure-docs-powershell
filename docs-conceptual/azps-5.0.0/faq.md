@@ -4,7 +4,8 @@ description: Frequently Asked Questions about Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/17/2020 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 
 # Frequently asked questions about Azure PowerShell

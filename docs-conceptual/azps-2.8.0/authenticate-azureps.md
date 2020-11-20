@@ -4,7 +4,8 @@ description: How to sign in with Azure PowerShell as a user, service principal, 
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/04/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # Sign in with Azure PowerShell
 

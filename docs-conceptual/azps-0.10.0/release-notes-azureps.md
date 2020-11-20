@@ -4,7 +4,8 @@ description: Learn about all of the latest updates to the Azure PowerShell modul
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 
 # Azure PowerShell release notes

@@ -4,7 +4,8 @@ description: How to install Azure PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/14/2020 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 
 # Install Azure PowerShell
