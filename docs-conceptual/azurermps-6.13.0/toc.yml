@@ -11,7 +11,7 @@
 - name: Get started
   href: get-started-azureps.md
 - name: Cloud Shell
-  href: https://docs.microsoft.com/azure/cloud-shell/overview
+  href: /azure/cloud-shell/overview
 - name: Sign in
   items:
   - name: Authentication methods

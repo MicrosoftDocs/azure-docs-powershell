@@ -112,4 +112,4 @@ $Results | Where-Object UpgradeResult -ne UpgradeCompleted | Format-List
 
 ## Next steps
 
-To learn more about the Az PowerShell module, see the [Azure PowerShell documentation](https://docs.microsoft.com/powershell/azure/)
+To learn more about the Az PowerShell module, see the [Azure PowerShell documentation](/powershell/azure/)
