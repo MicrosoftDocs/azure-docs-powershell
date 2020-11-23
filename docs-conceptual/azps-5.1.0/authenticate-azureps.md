@@ -3,8 +3,8 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 7/7/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 11/23/2020
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Sign in with Azure PowerShell
@@ -35,10 +35,9 @@ To sign in interactively, use the
 Connect-AzAccount
 ```
 
-When run from PowerShell version 6 and higher, this cmdlet presents a token string. To sign in, copy
-this string and paste it into [microsoft.com/devicelogin](https://microsoft.com/devicelogin) in a
-web browser. Your PowerShell session will be authenticated to connect to Azure. You can specify the
-`UseDeviceAuthentication` parameter to receive a token string on Windows PowerShell.
+Beginning with Az PowerShell module version 5.0.0, this cmdlet presents an interactive browser based
+login prompt by default. You can specify the `UseDeviceAuthentication` parameter to receive a token
+string which was previously the default for PowerShell version 6 and higher.
 
 > [!IMPORTANT]
 > Username/password credential authorization has been removed in Azure PowerShell due to changes in
