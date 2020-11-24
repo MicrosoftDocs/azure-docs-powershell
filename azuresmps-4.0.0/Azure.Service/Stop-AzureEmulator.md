@@ -20,7 +20,7 @@ Stop-AzureEmulator [-PassThru] [-Profile <AzureSMProfile>] [<CommonParameters>]
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-The **Stop-AzureEmulator** cmdlet stops the Azure compute emulator.
+The **Stop-AzureEmulator** cmdlet stops the Azure Compute Emulator.
 Any services currently running in the emulator are removed.
 
 ## EXAMPLES
