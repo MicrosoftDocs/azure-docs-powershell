@@ -683,7 +683,7 @@ ms.service: azure-powershell
 * Fixed an issue that may cause 'Connect-AzAccount' to fail in multi-threaded execution [#11201]
 
 #### Az.Aks
-* Replaced usage of old [AccessProfile API](https://docs.microsoft.com/rest/api/aks/managedclusters/getaccessprofile) with calls to [ListClusterAdmin](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusteradmincredentials) and [ListClusterUser](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusterusercredentials) APIs
+* Replaced usage of old [AccessProfile API](/rest/api/aks/managedclusters/getaccessprofile) with calls to [ListClusterAdmin](/rest/api/aks/managedclusters/listclusteradmincredentials) and [ListClusterUser](/rest/api/aks/managedclusters/listclusterusercredentials) APIs
 
 #### Az.Batch
 * Updated Az.Batch to use 'Microsoft.Azure.Management.Batch' SDK version to 11.0.0
@@ -1202,7 +1202,7 @@ ms.service: azure-powershell
 
 ## 0.10.0-preview - April 2020
 ### General
-* Az modules is now available in preview on Azure Stack Hub. This allows for cross-platform compatibility with Linux and macOs. Azure Stack Hub now supports PowerShell core with the Az modules, more information [here](https://aka.ms/az4AzureStack)
+* Az modules is now available in preview on Azure Stack Hub. This allows for cross-platform compatibility with Linux and macOs. Azure Stack Hub now supports PowerShell core with the Az modules, more information [here](/azure-stack/operator/powershell-install-az-module)
 * Az modules support profile 2019-03-01-hybrid:
   - Az.Billing
   - Az.Compute
@@ -1217,7 +1217,7 @@ ms.service: azure-powershell
   - Az.Websites
 * Three new PowerShell modules for az have been introduced that work with Azure Stack Hub, which are Az.Databox, Az.IotHub, and Az.EventHub
 * Commands remain relatively the same, with minor changes such as changing AzureRM to Az
-* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](https://aka.ms/InstallASHPowerShell)
+* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](/azure-stack/operator/powershell-install-az-module)
 
 ## 3.7.0 - March 2020
 #### Az.Accounts
@@ -2873,7 +2873,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     - Set-AzScheduledQueryRule
     - Update-AzScheduledQueryRule
     - Remove-AzScheduledQueryRule
-    - [More](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information about SQR API
+    - [More](/rest/api/monitor/scheduledqueryrules) information about SQR API
     - Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule
 
 #### Az.Network
