@@ -1,41 +1,39 @@
 ---
 title: Migrate Azure PowerShell scripts from AzureRM to Az
-description: Learn the steps and tools for migrating scripts from the AzureRM module to the new Az module.
+description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.date: 10/12/2020
+ms.date: 12/1/2020
 ms.custom: devx-track-azurepowershell
 ---
 
 # Migrate Azure PowerShell from AzureRM to Az
 
-All versions of the AzureRM PowerShell module are outdated, the [Az
-PowerShell module](install-az-ps.md) is now the recommended PowerShell module for interacting with
-Azure.
+All versions of the AzureRM PowerShell module are outdated. The [Az PowerShell
+module](install-az-ps.md) is now the recommended PowerShell module for interacting with Azure.
 
 ## Why a new module?
 
-The biggest and most important change is that PowerShell has been a cross-platform product since the
-introduction of [PowerShell](/powershell/scripting/overview), based on the .NET Standard library.
-We're committed to bringing Azure support to all platforms, which means that the Azure PowerShell
-modules needed to be updated to use .NET Standard and be compatible with PowerShell Core. Rather
-than taking the existing AzureRM module and introduce complex changes to add this support, the Az
-module was created.
+The biggest and most important change is that [PowerShell](/powershell/scripting/overview), being
+based on the .NET Standard library, has been a cross-platform product since its introduction.
 
-Creating a new module also allowed our engineers to make the design and naming of cmdlets and
-modules consistent. All modules now start with the `Az.` prefix and cmdlets all use the
-_Verb_-`Az`_Noun_ form. Previously, cmdlet names were not only longer, there were also
-inconsistencies in cmdlet names.
+Like the PowerShell language, we're committed to bringing Azure support to all platforms. Our
+commitment meant that the Azure PowerShell modules needed to be updated to use .NET Standard and be
+compatible with PowerShell Core. Rather than modifying the existing AzureRM module and introducing
+complex changes to add this support, the Az module was created.
 
-The number of modules was also reduced: Some modules that worked with the same services have been
-rolled together. Management plane and data plane cmdlets are now contained all within single modules
-for their services. For those of you who manually manage dependencies and imports, this makes things
-much simpler.
+Creating a new module also allowed our engineers to make the design, naming of cmdlets, and modules
+consistent. All modules now start with the `Az.` prefix and cmdlets all use the `Verb-AzNoun` naming
+convention. Previously, cmdlet names were longer and inconsistent.
 
-By making these important changes that required building a new Azure PowerShell module, the team has
-committed to making it easier than ever, and on more platforms than previously possible, to use
-Azure with PowerShell cmdlets.
+The number of modules were also reduced: Some modules that worked with the same services have been
+combined. Management plane and data plane cmdlets for the same service are now contained within a
+single module. For those of you who manually manage dependencies and imports, this consolidation
+makes things much simpler.
+
+By making these important changes, the team has committed to making it easier than ever before and
+on more platforms than previously possible to use Azure with PowerShell cmdlets.
 
 ## Upgrading to Az PowerShell
 
@@ -47,9 +45,9 @@ started on transitioning to the Az PowerShell module. To learn more about why th
 module was created, see [Introducing the new Azure PowerShell Az module](new-azureps-module-az.md).
 
 The new cmdlet names have been designed to be easy to learn. Instead of using `AzureRm` or `Azure`
-in cmdlet names, use `Az`. For example, the old command `New-AzureRMVm` has become `New-AzVm`. 
-However, migration is more than just becoming familiar with the new cmdlet names, though. There are renamed
-modules, parameters, and other important changes.
+in cmdlet names, use `Az`. For example, the old cmdlet `New-AzureRMVm` has become `New-AzVm`.
+However, migration is more than just becoming familiar with the new cmdlet names, though. There are
+renamed modules, parameters, and other important changes.
 
 To see the full list of breaking changes between AzureRM and Az, see the
 [full changes from AzureRM to Az](migrate-az-1.0.0.md).
@@ -57,7 +55,7 @@ To see the full list of breaking changes between AzureRM and Az, see the
 ## Ensure existing scripts work with the latest AzureRM release
 
 Before taking any migration steps, check which versions of AzureRM are installed on your system.
-Doing so allows you to make sure scripts are already running on the latest release, and let you know
+Doing so allows you to make sure scripts are already running on the latest release and let you know
 which versions of AzureRM must be uninstalled.
 
 To check which version(s) of AzureRM you have installed, run the following example:
@@ -67,8 +65,8 @@ Get-Module -Name AzureRM -ListAvailable -All
 ```
 
 The **latest** available release of AzureRM is **6.13.1**. If you don't have this version installed,
-your existing scripts may need additional modifications to work with the Az module beyond what's
-described in this article and in the [breaking changes list](migrate-az-1.0.0.md).
+your existing scripts may need additional modifications to work with the Az module beyond the scope
+of what's described in this article and in the [breaking changes list](migrate-az-1.0.0.md).
 
 If your scripts don't work with AzureRM 6.13.1, update them according to the
 [AzureRM 5.x to 6.x migration guide](/powershell/azure/azurerm/migration-guide.6.0.0). If you use an
@@ -90,16 +88,17 @@ With the AzureRM to Az migration toolkit, you can generate a plan to determine w
 performed on your scripts before making any modifications to them and before installing the Az
 PowerShell module.
 
-The [Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module](quickstart-migrate-azurerm-to-az-automatically.md) quickstart walks you through the entire process of automatically updating your PowerShell scripts from AzureRM to the Az PowerShell module.
+The [Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module](quickstart-migrate-azurerm-to-az-automatically.md) quickstart walks you through the entire process
+of automatically updating your PowerShell scripts from AzureRM to the Az PowerShell module.
 
-## Option 2: Use the compatibility mode with `Enable-AzureRmAlias`
+## Option 2: Use compatibility mode with Enable-AzureRmAlias
 
 The Az module has a compatibility mode to help you use existing scripts while you update to the new
 syntax. The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet enables
-a compatibility mode through aliases, to allow you to use existing scripts with minimal modification
-while working towards a full migration to Az. By default, `Enable-AzureRmAlias` only enables
-compatibility aliases for the current PowerShell session. Use its `Scope` parameter to persist
-compatibility aliases across PowerShell sessions. For more information, see
+a compatibility mode through aliases. This mode allows you to use existing scripts with minimal
+modification while working towards a full migration to Az. By default, `Enable-AzureRmAlias` only
+enables compatibility aliases for the current PowerShell session. Use its `Scope` parameter to
+persist compatibility aliases across PowerShell sessions. For more information, see
 [the Enable-AzureRmAlias reference documentation](/powershell/module/az.accounts/enable-azurermalias).
 
 > [!IMPORTANT]
@@ -119,7 +118,7 @@ Install the [Azure PowerShell extension for VSCode](https://marketplace.visualst
 1. Load your AzureRM script in VSCode
 2. Start the migration by opening the command palette `Ctrl+Shift+P` and select `Migrate Azure PowerShell script`
 3. Select source version `AzureRM`
-4. Follow the recommnended actions for each underlined command or parameter.
+4. Follow the recommended actions for each underlined command or parameter.
 
 ## Next steps
 
