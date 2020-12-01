@@ -1,107 +1,109 @@
 ---
-title: Introducing the Azure PowerShell Az module
-description: Introducing the new Azure PowerShell module Az, the replacement for the AzureRM module.
-ms.date: 05/20/2020
+title: Introducing the Azure Az PowerShell module
+description: Introducing the Az PowerShell module, recommended for interacting with Azure, and the replacement for the AzureRM PowerShell module.
+ms.date: 12/1/2020
 ms.devlang: powershell
-ms.topic: conceptual 
-ms.custom: devx-track-azurepowershell 
+ms.topic: conceptual
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
-# Introducing the new Azure PowerShell Az module
 
-Starting in December 2018, the Azure PowerShell Az module is in general release and is now the
-intended PowerShell module for interacting with Azure. Az offers shorter commands, improved
-stability, and cross-platform support. Az also has feature parity with AzureRM, giving you an easy
-migration path.
+# Introducing the Azure Az PowerShell module
+
+## Overview
+
+The Az PowerShell module is a set of cmdlets for managing Azure resources directly from PowerShell. PowerShell
+provides powerful features for automation that can be leveraged for managing your Azure resources
+for examples in the context of a CI/CD pipeline.
+
+The Az PowerShell module is the replacement of AzureRM and is the recommended version to use for
+interacting with Azure.
+
+You can use the Az PowerShell module with one of the following methods:
+
+* [Install the Az PowerShell module via PowerShellGet](install-az-ps.md) (recommended option).
+* [Install the Az PowerShell module with MSI](install-az-ps-msi.md).
+* [Use Azure Cloud Shell](/azure/cloud-shell/overview).
+* [Use the Az PowerShell Docker container](azureps-in-docker.md).
+
+## Features
+
+The Az PowerShell module features the following benefits:
+
+* Security and stability
+  * Token cache encryption
+  * Support for ADKS 2019
+  * Security mechanism preventing man-in-the-middle attack types
+  * Support for features like continuous access evaluation (coming in 2021)
+* Support for all Azure services
+  * A module is available for each Azure service
+  * Multiple bug fixes and API version upgrades since AzureRM
+* Several additional new capabilities
+  * Support in Cloud Shell and cross-platform
+  * Can get and use access token to access Azure resources
+  * Generic Az cmdlet for escape hatch type operations
 
 > [!NOTE]
-> PowerShell 7.x and later is the recommended version of PowerShell for use with Azure PowerShell on
+> PowerShell 7 and later is the recommended version of PowerShell for use with Az PowerShell on
 > all platforms.
 
-With the latest Az module, Azure PowerShell works with PowerShell 6.2.4 and later on all platforms
-including Windows, macOS, and Linux. It is also compatible with PowerShell 5.1 on Windows.
+The Az PowerShell module is based on the .NET Standard library and works with PowerShell 7 and later
+on all platforms including Windows, macOS, and Linux. It's also compatible with Windows PowerShell
+5.1.
 
-Az is a new module, so the version has been reset to 1.0.0.
+We're committed to bringing Azure support to all platforms and all Az PowerShell modules are cross-platforms.
 
-## Why a new module?
+## Upgrade your environment to Az
 
-Major updates can be inconvenient, so it's important that we let you know why the decision was made
-to introduce a new set of modules, with new cmdlets, for interacting with Azure from PowerShell.
+To keep up with the latest Azure features in PowerShell, you should migrate to the Az module. If
+you're not ready to install the Az module as a replacement for AzureRM, you have a couple of options
+available to experiment with Az:
 
-The biggest and most important change is that PowerShell has been a cross-platform product since the
-introduction of [PowerShell](/powershell/scripting/overview), based on the .NET Standard library.
-We're committed to bringing Azure support to all platforms, which means that the Azure PowerShell
-modules needed to be updated to use .NET Standard and be compatible with PowerShell Core. Rather
-than taking the existing AzureRM module and introduce complex changes to add this support, the Az
-module was created.
-
-Creating a new module also allowed our engineers to make the design and naming of cmdlets and
-modules consistent. All modules now start with the `Az.` prefix and cmdlets all use the
-_Verb_-`Az`_Noun_ form. Previously, cmdlet names were not only longer, there were also
-inconsistencies in cmdlet names.
-
-The number of modules was also reduced: Some modules that worked with the same services have been
-rolled together. Management plane and data plane cmdlets are now contained all within single modules
-for their services. For those of you who manually manage dependencies and imports, this makes things
-much simpler.
-
-By making these important changes that required building a new Azure PowerShell module, the team has
-committed to making it easier than ever, and on more platforms than previously possible, to use
-Azure with PowerShell cmdlets.
-
-## Upgrade to Az
-
-To keep up with the latest Azure features in PowerShell, you should migrate to the Az module as soon
-as possible. If you're not ready to install the Az module as a replacement for AzureRM, you have a
-couple of options available to experiment with Az:
-
-- Use a `PowerShell` environment with
-  [Azure Cloud Shell](/azure/cloud-shell/overview). Azure Cloud Shell is a
-  browser-based shell environment that comes with the Az module installed and `Enable-AzureRM`
-  compatibility aliases enabled.
-- Keep the AzureRM module installed with PowerShell 5.1 for Windows, but install the Az module for
-  PowerShell 6.2.4 or later. PowerShell 5.1 for Windows and PowerShell 6.2.4 and later use separate
+* Use a `PowerShell` environment with [Azure Cloud Shell](/azure/cloud-shell/overview). Azure Cloud
+  Shell is a browser-based shell environment that comes with the Az module installed and
+  `Enable-AzureRM` compatibility aliases enabled.
+* Keep the AzureRM module installed in Windows PowerShell 5.1 and install the Az module in
+  PowerShell 7 or later. Windows PowerShell 5.1 and PowerShell 7 and later use separate
   collections of modules. Follow the instructions to install the
   [latest version of PowerShell](/powershell/scripting/install/installing-powershell) and then
-  [install the Az module](install-az-ps.md) from PowerShell 6.2.4 or later.
+  [install the Az module](install-az-ps.md) from PowerShell 7 or later.
 
 To upgrade from an existing AzureRM install:
 
 1. [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
-2. [Install the Azure PowerShell Az module](install-az-ps.md)
-3. **OPTIONAL**: Enable compatibility mode to add aliases for AzureRM cmdlets with
+1. [Install the Azure PowerShell Az module](install-az-ps.md)
+1. **OPTIONAL**: Enable compatibility mode to add aliases for AzureRM cmdlets with
    [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) while you become
-   familiar with the new command set. See the next section or
-   [Start migration from AzureRM to Az](migrate-from-azurerm-to-az.md) for more details.
+   familiar with the new command set. For more information, see the next section or
+   [Start migration from AzureRM to Az](migrate-from-azurerm-to-az.md).
 
-## Migrate existing scripts to Az
+## Migrate existing scripts from AzureRM to Az
 
-The new cmdlet names have been designed to be easy to learn. Instead of using `AzureRm` or `Azure`
-in cmdlet names, use `Az`. For example, the old command `New-AzureRMVm` has become `New-AzVm`.
-Migration is more than just becoming familiar with the new cmdlet names, though. There are renamed
-modules, parameters, and other important changes.
+If your scripts are still based on the AzureRM module, we have several resources to help you with
+the migration:
 
-We have several resources to help you with the process of migration from AzureRM to Az:
+* [Get started with migration from AzureRM to Az](migrate-from-azurerm-to-az.md)
+* [Full list of breaking changes from AzureRM to Az 1.0.0](migrate-az-1.0.0.md)
+* The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet
 
-- [Get started with migration from AzureRM to Az](migrate-from-azurerm-to-az.md)
-- [Full list of breaking changes from AzureRM to Az 1.0.0](migrate-az-1.0.0.md)
-- The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet
+## Supportability
 
-The Az module has a compatibility mode to help you use existing scripts while you update to the new
-syntax. The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet enables
-a compatibility mode through aliases, to allow you to use existing scripts with minimal modification
-while working towards a full migration to Az. By default, `Enable-AzureRmAlias` only enables
-compatibility aliases for the current PowerShell session. Use its `Scope` parameter to persist
-compatibility aliases across PowerShell sessions. For more information, see
-[the Enable-AzureRmAlias reference documentation](/powershell/module/az.accounts/enable-azurermalias).
-
-> [!IMPORTANT]
-> Even though the cmdlet names are aliased, there may still be new (or renamed) parameters or
-> changed return values for the Az cmdlets. Don't expect enabling aliases to take care of the
-> migration for you! See the [full breaking changes list](migrate-az-1.0.0.md) to find where your
-> scripts may require updates.
-
-## Continued support for AzureRM
+Az is the most current PowerShell module for Azure. Issues or feature requests can be logged
+directly on the [GitHub repository](https://github.com/Azure/azure-powershell), or via Microsoft
+support if you have a support contract. Feature requests will be implemented in the latest version
+of Az. Critical issues will be implemented on the last two versions of Az.
 
 AzureRM will no longer receive new cmdlets or features. However, the AzureRM module is still
-officially maintained and will get bug fixes through December 2020.
+officially maintained and will receive critical fixes through February 2020.
+
+## Data collection
+
+Azure PowerShell collects telemetry data by default. Microsoft aggregates collected data to identify
+patterns of usage to identify common issues and to improve the experience of Azure PowerShell.
+Microsoft Azure PowerShell does not collect any private or personal data. For example, the usage
+data helps identify issues such as cmdlets with low success and helps prioritize our work.
+
+While we appreciate the insights this data provides, we also understand that not everyone wants to
+send usage data. You can disable data collection with the
+[`Disable-AzDataCollection`](/powershell/module/az.accounts/disable-azdatacollection) cmdlet. You
+can also read our [privacy statement](https://privacy.microsoft.com/privacystatement) to learn more.
