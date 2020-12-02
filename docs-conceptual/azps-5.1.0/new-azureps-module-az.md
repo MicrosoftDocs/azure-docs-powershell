@@ -32,7 +32,7 @@ The Az PowerShell module features the following benefits:
 
 * Security and stability
   * Token cache encryption
-  * Support for ADKS 2019
+  * Support for ADFS 2019
   * Security mechanism preventing man-in-the-middle attack types
   * Support for features like continuous access evaluation (coming in 2021)
 * Support for all Azure services
