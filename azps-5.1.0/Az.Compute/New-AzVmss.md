@@ -276,9 +276,6 @@ $ExpectedLb = Get-AzLoadBalancer -Name $LBName -ResourceGroupName $RGName
 # New VMSS Parameters
 $VMSSName = "VMSS" + $RGName;
 
-$AdminUsername = "Admin01";
-$AdminPassword = "p4ssw0rd@123" + $RGName;
-
 $ImageID       = "/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage"
 
 #IP Config for the NIC
