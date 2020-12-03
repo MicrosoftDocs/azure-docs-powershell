@@ -175,7 +175,7 @@ Install-Module -Name AzureRM -AllowClobber
 ```
 
 For more information, see the help topic for
-[Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module).
+[Install-Module](/powershell/module/powershellget/install-module).
 
 ### Installing module versions side by side
 
