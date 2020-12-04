@@ -94,7 +94,7 @@ support if you have a support contract. Feature requests will be implemented in 
 of Az. Critical issues will be implemented on the last two versions of Az.
 
 AzureRM will no longer receive new cmdlets or features. However, the AzureRM module is still
-officially maintained and will receive critical fixes through February 2020.
+officially maintained and will receive critical fixes through February 2021.
 
 ## Data collection
 
