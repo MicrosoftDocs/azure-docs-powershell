@@ -28,7 +28,7 @@ Create a gallery image version.
 
 ## EXAMPLES
 
-### Example #1 Create a gallery image version using a managed image, virtual machine, or image version
+### Example 1 Create a gallery image version using a managed image, virtual machine, or image version
 ```powershell
 PS C:\> $region1 = @{Name='West US';ReplicaCount=1}
 PS C:\> $region2 = @{Name='East US';ReplicaCount=2}
@@ -37,7 +37,7 @@ PS C:\> $targetRegions = @($region1,$region2,$region3)
 PS C:\> New-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageDefinitionName -Name $versionName -Location $location -SourceImageId $sourceId -ReplicaCount 2 -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegions
 ```
 
-### Example #2 Create a gallery image version using disks and/or snapshots
+### Example 2 Create a gallery image version using disks and/or snapshots
 ```powershell
 PS C:\> $osDisk = @{Source=@{Id=$osDiskOrSnapshotId}}
 PS C:\> $dataDisk1 = @{Source=@{Id=$dataDisk1OrSnapshot1Id}; Lun=0}
@@ -50,7 +50,7 @@ PS C:\> $targetRegions = @($region1,$region2,$region3)
 PS C:\> New-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageDefinitionName -Name $versionName -Location $location -OSDiskImage $osdisk -DataDiskImage $datadisks -ReplicaCount 2 -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegions
 ```
 
-### Example #3 Add encryption to the disks of an image version
+### Example 3 Add encryption to the disks of an image version
 Add disk image encryption to an image version containing two data disks.
 ```powershell
 PS C:\> $westUS2osDiskImageEncryption = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/mywestUS2DES'}
