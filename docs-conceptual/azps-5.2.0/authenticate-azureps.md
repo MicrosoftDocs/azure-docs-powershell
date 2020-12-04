@@ -7,7 +7,6 @@ ms.date: 11/23/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
-
 # Sign in with Azure PowerShell
 
 Azure PowerShell supports several authentication methods. The easiest way to get started is with
