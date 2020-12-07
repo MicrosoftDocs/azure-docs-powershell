@@ -72,7 +72,7 @@ PS C:\> New-AzDisk -ResourceGroupName 'ResourceGroup01' -DiskName 'Disk01' -Disk
 
 The above command creates a disk with two encryption settings.
 
-### Example 3 Create a disk from the OS or Data disk of a shared image
+### Example 3: Create a disk from the OS or Data disk of a shared image
 ```powershell
 PS C:\> $customImageID = '/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage/versions/1.0.0'
 
