@@ -15,7 +15,7 @@ ms.date: 04/16/2020
 
 Minimum supported Azure Stack Hub version is 2002.
 
-Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
+Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
 
 ## Install
 
@@ -39,4 +39,4 @@ Install-Module -Name AzureStack -RequiredVersion 2.0.0-preview -AllowPrerelease
 
 * Supported with 2002 update.  
 
-  The Azure Stack Hub 2.0.0 is a breaking change. The module uses the Az module rather than the AzureRM module. You can find a migration guide and a list of breaking changes in [Migrate from AzureRM to Azure PowerShell Az in Azure Stack Hub](https://aka.ms/AA7qsji).
+  The Azure Stack Hub 2.0.0 is a breaking change. The module uses the Az module rather than the AzureRM module. You can find a migration guide and a list of breaking changes in [Migrate from AzureRM to Azure PowerShell Az in Azure Stack Hub](/azure-stack/operator/azure-stack-powershell-install).
