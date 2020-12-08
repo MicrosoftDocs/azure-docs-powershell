@@ -72,6 +72,19 @@ PS C:\> New-AzDisk -ResourceGroupName 'ResourceGroup01' -DiskName 'Disk01' -Disk
 
 The above command creates a disk with two encryption settings.
 
+### Example 3: Create a disk from the OS or Data disk of a shared image
+```powershell
+PS C:\> $customImageID = '/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage/versions/1.0.0'
+
+PS C:\> $customImageOSDisk = @{Id = $imageVersion.Id }
+PS C:\> $diskConfigOS = New-AzDiskConfig -Location $region -CreateOption 'FromImage' -GalleryImageReference $customImageOSDisk
+PS C:\> New-AzDisk -ResourceGroupName $rg -DiskName 'OSDisk' -Disk $diskConfigOS
+
+PS C:\> $customImageDataDisk = @{Id = $imageVersion.Id; Lun=0 }
+PS C:\> $diskConfigDD = New-AzDiskConfig -Location $region -CreateOption 'FromImage' -GalleryImageReference $customImageDataDisk
+PS C:\> New-AzDisk -ResourceGroupName $rg -DiskName 'DataDisk0' -Disk $diskConfigDD
+```
+
 ## PARAMETERS
 
 ### -AsJob

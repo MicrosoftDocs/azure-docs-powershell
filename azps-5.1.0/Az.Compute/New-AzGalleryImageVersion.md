@@ -28,30 +28,46 @@ Create a gallery image version.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a gallery image version using a managed image, virtual machine, or image version
 ```powershell
 PS C:\> $region1 = @{Name='West US';ReplicaCount=1}
 PS C:\> $region2 = @{Name='East US';ReplicaCount=2}
 PS C:\> $region3 = @{Name='Central US'}
 PS C:\> $targetRegions = @($region1,$region2,$region3)
-PS C:\> New-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageDefinitionName -Name $versionName -Location $location -SourceImageId $sourceImageId -ReplicaCount 2 -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegions
+PS C:\> New-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageDefinitionName -Name $versionName -Location $location -SourceImageId $sourceId -ReplicaCount 2 -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegions
 ```
 
-Create a gallery image version.
-
-### Example 2
+### Example 2: Create a gallery image version using disks and/or snapshots
 ```powershell
-PS C:\> $osDiskImageEncryption = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/myDES'}
-PS C:\> $dataDiskImageEncryption1 = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/myDES1';Lun=1}
-PS C:\> $dataDiskImageEncryption2 = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/myDES2';Lun=2}
-PS C:\> $dataDiskImageEncryptions = @($dataDiskImageEncryption1,$dataDiskImageEncryption2)
-PS C:\> $encryption1 = @{OSDiskImage=$osDiskImageEncryption;DataDiskImages=$dataDiskImageEncryptions}
-PS C:\> $region1 = @{Name='West US';ReplicaCount=1;StorageAccountType=Standard_LRS;Encryption=$encryption1}
-PS C:\> $targetRegions = @{$region1}
+PS C:\> $osDisk = @{Source=@{Id=$osDiskOrSnapshotId}}
+PS C:\> $dataDisk1 = @{Source=@{Id=$dataDisk1OrSnapshot1Id}; Lun=0}
+PS C:\> $dataDisk2 = @{Source=@{Id=$dataDisk2OrSnapshot2Id}; Lun=1}
+PS C:\> $dataDisks = @($dataDisk1,$dataDisk2)
+PS C:\> $region1 = @{Name='West US';ReplicaCount=1}
+PS C:\> $region2 = @{Name='East US';ReplicaCount=2}
+PS C:\> $region3 = @{Name='Central US'}
+PS C:\> $targetRegions = @($region1,$region2,$region3)
+PS C:\> New-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageDefinitionName -Name $versionName -Location $location -OSDiskImage $osdisk -DataDiskImage $datadisks -ReplicaCount 2 -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegions
+```
+
+### Example 3: Add encryption to the disks of an image version
+Add disk image encryption to an image version containing two data disks.
+```powershell
+PS C:\> $westUS2osDiskImageEncryption = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/mywestUS2DES'}
+PS C:\> $westUS2dataDiskImageEncryption1 = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/mywestUS2DES1';Lun=1}
+PS C:\> $westUS2dataDiskImageEncryption2 = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/mywestUS2DES2';Lun=2}
+PS C:\> $westUS2dataDiskImageEncryptions = @($westUS2dataDiskImageEncryption1,$westUS2dataDiskImageEncryption2)
+PS C:\> $westUS2encryption = @{OSDiskImage=$westUS2osDiskImageEncryption;DataDiskImages=$westUS2dataDiskImageEncryptions}
+PS C:\> $eastUSosDiskImageEncryption = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/myeastUSDES'}
+PS C:\> $eastUSdataDiskImageEncryption1 = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/myeastUSDES1';Lun=1}
+PS C:\> $eastUSdataDiskImageEncryption2 = @{DiskEncryptionSetId='subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/diskEncryptionSets/myeastUSDES2';Lun=2}
+PS C:\> $eastUSdataDiskImageEncryptions = @($eastUSdataDiskImageEncryption1,$eastUSdataDiskImageEncryption2)
+PS C:\> $eastUSencryption = @{OSDiskImage=$eastUSosDiskImageEncryption;DataDiskImages=$eastUSdataDiskImageEncryptions}
+PS C:\> $region1 = @{Name='West US 2';ReplicaCount=1;StorageAccountType=Standard_LRS;Encryption=$westUS2encryption}
+PS C:\> $region2 = @{Name='East US';ReplicaCount=1;StorageAccountType=Standard_LRS;Encryption=$eastUSencryption}
+PS C:\> $targetRegions = @{$region1, $region2}
 PS C:\> New-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageDefinitionName -Name $versionName -Location $location -SourceImageId $SourceImageId -ReplicaCount 2 -StorageAccountType Standard_LRS -PublishingProfileExcludeFromLatest -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegion
 ```
-
-Create a gallery image version with disk image encryption.
 
 ## PARAMETERS
 
