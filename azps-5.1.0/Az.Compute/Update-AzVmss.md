@@ -73,6 +73,14 @@ PS C:\> Update-AzVmss -ResourceGroupName "Group001" -Name "VMSS001" -VirtualMach
 
 This command updates the state of the VMSS named VMSS001 that belongs to the resource group named Group001 to the state of a local VMSS object, $LocalVMSS.
 
+### Example 2: Update the reference image of the VMSS to a shared image.
+```
+PS C:\> $imageID = "/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage"
+PS C:\> Update-AzVmss -ResourceGroupName "Group001" -Name "VMSS001" -ImageReferenceId $imageID
+```
+
+This command updates the image reference property of the VMSS VMSS001 to a shared image. If the previous image reference is from the marketplace or a generalized shared image, the new image reference must be a generalized shared image. If the previous image reference is a specialized shared image, the new image must be a specialized shared image. The OS type of both the previous and new image reference must be the same. 
+
 ## PARAMETERS
 
 ### -AsJob

@@ -42,7 +42,7 @@ Update a gallery image version.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a gallery image version
 ```powershell
 PS C:\> $region1 = @{Name='West US';ReplicaCount=1}
 PS C:\> $region2 = @{Name='East US';ReplicaCount=2}
@@ -51,7 +51,15 @@ PS C:\> $targetRegions = @($region1,$region2,$region3)
 PS C:\> Update-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageName $imageName -Name $versionName -ReplicaCount 2 -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegions
 ```
 
-Update a gallery image version.
+### Example 2: Include an image version for consideration as latest within its definition
+```powershell
+PS C:\> Update-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageName $imageName -Name $versionName -PublishingProfileExcludeFromLatest:$false
+```
+
+### Example 3: Exclude  an image version from consideration as latest within its definition
+```powershell
+PS C:\> Update-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageName $imageName -Name $versionName -PublishingProfileExcludeFromLatest
+```
 
 ## PARAMETERS
 

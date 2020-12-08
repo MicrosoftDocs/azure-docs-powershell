@@ -168,6 +168,101 @@ New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $Virt
 This example provisions a new network and deploys a Windows VM from the Marketplace without creating a public IP address or Network Security Group.
 This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
 
+### Example 4: Create a virtual machine from a generalized shared image
+```
+PS C:\> ## VM Account
+# Credentials for Local Admin account you created in the sysprepped (generalized) shared image
+$VMLocalAdminUser = "LocalAdminUser"
+$VMLocalAdminSecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
+## Azure Account
+$LocationName = "westus"
+$ResourceGroupName = "MyResourceGroup"
+
+## VM
+$OSDiskName = "MyClient"
+$ComputerName = "MyClientVM"
+$ImageID = "/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage"
+$VMName = "MyVM"
+# Modern hardware environment with fast disk, high IOPs performance.
+# Required to run a client VM with efficiency and performance
+$VMSize = "Standard_DS3"
+$OSDiskCaching = "ReadWrite"
+$OSCreateOption = "FromImage"
+
+## Networking
+$DNSNameLabel = "mydnsname" # mydnsname.westus.cloudapp.azure.com
+$NetworkName = "MyNet"
+$NICName = "MyNIC"
+$PublicIPAddressName = "MyPIP"
+$SubnetName = "MySubnet"
+$SubnetAddressPrefix = "10.0.0.0/24"
+$VnetAddressPrefix = "10.0.0.0/16"
+
+$SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
+$Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
+$PIP = New-AzPublicIpAddress -Name $PublicIPAddressName -DomainNameLabel $DNSNameLabel -ResourceGroupName $ResourceGroupName -Location $LocationName -AllocationMethod Dynamic
+$NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id -PublicIpAddressId $PIP.Id
+
+$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+
+$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
+$VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
+$VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
+$VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -Id $ImageID
+
+New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+```
+
+This example takes an existing sys-prepped, generalized custom operating system image, provisions a new network, deploys the image, and runs it.
+This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
+This script assumes that you are already logged into your Azure account.
+You can confirm your login status by using the **Get-AzSubscription** cmdlet.
+
+### Example 5: Create a virtual machine from a specialized shared image
+```
+PS C:\> ## VM Account
+## Azure Account
+$LocationName = "westus"
+$ResourceGroupName = "MyResourceGroup"
+
+## VM
+$OSDiskName = "MyClient"
+$ComputerName = "MyClientVM"
+$ImageID = "/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage"
+$VMName = "MyVM"
+# Modern hardware environment with fast disk, high IOPs performance.
+# Required to run a client VM with efficiency and performance
+$VMSize = "Standard_DS3"
+$OSDiskCaching = "ReadWrite"
+$OSCreateOption = "FromImage"
+
+## Networking
+$DNSNameLabel = "mydnsname" # mydnsname.westus.cloudapp.azure.com
+$NetworkName = "MyNet"
+$NICName = "MyNIC"
+$PublicIPAddressName = "MyPIP"
+$SubnetName = "MySubnet"
+$SubnetAddressPrefix = "10.0.0.0/24"
+$VnetAddressPrefix = "10.0.0.0/16"
+
+$SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
+$Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
+$PIP = New-AzPublicIpAddress -Name $PublicIPAddressName -DomainNameLabel $DNSNameLabel -ResourceGroupName $ResourceGroupName -Location $LocationName -AllocationMethod Dynamic
+$NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id -PublicIpAddressId $PIP.Id
+
+$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+
+$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
+$VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
+$VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -Id $ImageID
+
+New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+```
+
+This example takes a specialized custom operating system image. This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
+This script assumes that you are already logged into your Azure account.
+You can confirm your login status by using the **Get-AzSubscription** cmdlet.
+
 ## PARAMETERS
 
 ### -AddressPrefix

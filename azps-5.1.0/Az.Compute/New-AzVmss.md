@@ -168,6 +168,138 @@ The complex example above creates a VMSS, following is an explanation of what is
 * The eighteenth command uses the **New-AzVmssConfig** cmdlet to create a VMSS configuration object and stores the result in the variable named $VMSS.
 * The nineteenth command uses the **New-AzVmss** cmdlet to create the VMSS.
 
+### Example 3: Create a VMSS using a generalized shared image
+```powershell
+# Common
+$LOC = "WestUs";
+$RGName = "rgkyvms";
+
+# NRP
+$SubNet = New-AzVirtualNetworkSubnetConfig -Name ("subnet" + $RGName) -AddressPrefix "10.0.0.0/24";
+$VNet = New-AzVirtualNetwork -Force -Name ("vnet" + $RGName) -ResourceGroupName $RGName -Location $LOC -AddressPrefix "10.0.0.0/16" -DnsServer "10.1.1.1" -Subnet $SubNet;
+$VNet = Get-AzVirtualNetwork -Name ('vnet' + $RGName) -ResourceGroupName $RGName;
+$SubNetId = $VNet.Subnets[0].Id;
+
+$PubIP = New-AzPublicIpAddress -Force -Name ("PubIP" + $RGName) -ResourceGroupName $RGName -Location $LOC -AllocationMethod Dynamic -DomainNameLabel ("PubIP" + $RGName);
+$PubIP = Get-AzPublicIpAddress -Name ("PubIP"  + $RGName) -ResourceGroupName $RGName;
+
+# Create LoadBalancer
+$FrontendName = "fe" + $RGName
+$BackendAddressPoolName = "bepool" + $RGName
+$ProbeName = "vmssprobe" + $RGName
+$InboundNatPoolName  = "innatpool" + $RGName
+$LBRuleName = "lbrule" + $RGName
+$LBName = "vmsslb" + $RGName
+
+$Frontend = New-AzLoadBalancerFrontendIpConfig -Name $FrontendName -PublicIpAddress $PubIP
+$BackendAddressPool = New-AzLoadBalancerBackendAddressPoolConfig -Name $BackendAddressPoolName
+$Probe = New-AzLoadBalancerProbeConfig -Name $ProbeName -RequestPath healthcheck.aspx -Protocol http -Port 80 -IntervalInSeconds 15 -ProbeCount 2
+$InboundNatPool = New-AzLoadBalancerInboundNatPoolConfig -Name $InboundNatPoolName  -FrontendIPConfigurationId `
+    $Frontend.Id -Protocol Tcp -FrontendPortRangeStart 3360 -FrontendPortRangeEnd 3362 -BackendPort 3370;
+$LBRule = New-AzLoadBalancerRuleConfig -Name $LBRuleName `
+    -FrontendIPConfiguration $Frontend -BackendAddressPool $BackendAddressPool `
+    -Probe $Probe -Protocol Tcp -FrontendPort 80 -BackendPort 80 `
+    -IdleTimeoutInMinutes 15 -EnableFloatingIP -LoadDistribution SourceIP;
+$ActualLb = New-AzLoadBalancer -Name $LBName -ResourceGroupName $RGName -Location $LOC `
+    -FrontendIpConfiguration $Frontend -BackendAddressPool $BackendAddressPool `
+    -Probe $Probe -LoadBalancingRule $LBRule -InboundNatPool $InboundNatPool;
+$ExpectedLb = Get-AzLoadBalancer -Name $LBName -ResourceGroupName $RGName
+
+# New VMSS Parameters
+$VMSSName = "VMSS" + $RGName;
+
+$AdminUsername = "Admin01";
+$AdminPassword = "p4ssw0rd@123" + $RGName;
+
+$ImageID       = "/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage"
+
+#IP Config for the NIC
+$IPCfg = New-AzVmssIPConfig -Name "Test" `
+    -LoadBalancerInboundNatPoolsId $ExpectedLb.InboundNatPools[0].Id `
+    -LoadBalancerBackendAddressPoolsId $ExpectedLb.BackendAddressPools[0].Id `
+    -SubnetId $SubNetId;
+            
+#VMSS Config
+$VMSS = New-AzVmssConfig -Location $LOC -SkuCapacity 2 -SkuName "Standard_E4-2ds_v4" -UpgradePolicyMode "Automatic" `
+    | Add-AzVmssNetworkInterfaceConfiguration -Name "Test" -Primary $True -IPConfiguration $IPCfg `
+    | Add-AzVmssNetworkInterfaceConfiguration -Name "Test2"  -IPConfiguration $IPCfg `
+    | Set-AzVmssOSProfile -ComputerNamePrefix "Test"  -AdminUsername $AdminUsername -AdminPassword $AdminPassword `
+    | Set-AzVmssStorageProfile -Name "Test"  -OsDiskCreateOption 'FromImage' -OsDiskCaching "None" 
+
+#Create the VMSS
+New-AzVmss -ResourceGroupName $RGName -Name $VMSSName -VirtualMachineScaleSet $VMSS;
+```
+
+The command above creates the following with the name `$vmssName` :
+* A virtual network
+* A load balancer
+* A public IP
+* the VMSS with 2 instances running off a custom image that has been generalized
+
+### Example 4: Create a VMSS using a specialized shared image
+```powershell
+# Common
+$LOC = "WestUs";
+$RGName = "rgkyvms";
+
+# NRP
+$SubNet = New-AzVirtualNetworkSubnetConfig -Name ("subnet" + $RGName) -AddressPrefix "10.0.0.0/24";
+$VNet = New-AzVirtualNetwork -Force -Name ("vnet" + $RGName) -ResourceGroupName $RGName -Location $LOC -AddressPrefix "10.0.0.0/16" -DnsServer "10.1.1.1" -Subnet $SubNet;
+$VNet = Get-AzVirtualNetwork -Name ('vnet' + $RGName) -ResourceGroupName $RGName;
+$SubNetId = $VNet.Subnets[0].Id;
+
+$PubIP = New-AzPublicIpAddress -Force -Name ("PubIP" + $RGName) -ResourceGroupName $RGName -Location $LOC -AllocationMethod Dynamic -DomainNameLabel ("PubIP" + $RGName);
+$PubIP = Get-AzPublicIpAddress -Name ("PubIP"  + $RGName) -ResourceGroupName $RGName;
+
+# Create LoadBalancer
+$FrontendName = "fe" + $RGName
+$BackendAddressPoolName = "bepool" + $RGName
+$ProbeName = "vmssprobe" + $RGName
+$InboundNatPoolName  = "innatpool" + $RGName
+$LBRuleName = "lbrule" + $RGName
+$LBName = "vmsslb" + $RGName
+
+$Frontend = New-AzLoadBalancerFrontendIpConfig -Name $FrontendName -PublicIpAddress $PubIP
+$BackendAddressPool = New-AzLoadBalancerBackendAddressPoolConfig -Name $BackendAddressPoolName
+$Probe = New-AzLoadBalancerProbeConfig -Name $ProbeName -RequestPath healthcheck.aspx -Protocol http -Port 80 -IntervalInSeconds 15 -ProbeCount 2
+$InboundNatPool = New-AzLoadBalancerInboundNatPoolConfig -Name $InboundNatPoolName  -FrontendIPConfigurationId `
+    $Frontend.Id -Protocol Tcp -FrontendPortRangeStart 3360 -FrontendPortRangeEnd 3362 -BackendPort 3370;
+$LBRule = New-AzLoadBalancerRuleConfig -Name $LBRuleName `
+    -FrontendIPConfiguration $Frontend -BackendAddressPool $BackendAddressPool `
+    -Probe $Probe -Protocol Tcp -FrontendPort 80 -BackendPort 80 `
+    -IdleTimeoutInMinutes 15 -EnableFloatingIP -LoadDistribution SourceIP;
+$ActualLb = New-AzLoadBalancer -Name $LBName -ResourceGroupName $RGName -Location $LOC `
+    -FrontendIpConfiguration $Frontend -BackendAddressPool $BackendAddressPool `
+    -Probe $Probe -LoadBalancingRule $LBRule -InboundNatPool $InboundNatPool;
+$ExpectedLb = Get-AzLoadBalancer -Name $LBName -ResourceGroupName $RGName
+
+# New VMSS Parameters
+$VMSSName = "VMSS" + $RGName;
+
+$ImageID       = "/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/galleries/MyGallery/images/MyImage"
+
+#IP Config for the NIC
+$IPCfg = New-AzVmssIPConfig -Name "Test" `
+    -LoadBalancerInboundNatPoolsId $ExpectedLb.InboundNatPools[0].Id `
+    -LoadBalancerBackendAddressPoolsId $ExpectedLb.BackendAddressPools[0].Id `
+    -SubnetId $SubNetId;
+            
+#VMSS Config
+$VMSS = New-AzVmssConfig -Location $LOC -SkuCapacity 2 -SkuName "Standard_E4-2ds_v4" -UpgradePolicyMode "Automatic" `
+    | Add-AzVmssNetworkInterfaceConfiguration -Name "Test" -Primary $True -IPConfiguration $IPCfg `
+    | Add-AzVmssNetworkInterfaceConfiguration -Name "Test2"  -IPConfiguration $IPCfg `
+    | Set-AzVmssStorageProfile -Name "Test"  -OsDiskCreateOption 'FromImage' -OsDiskCaching "None" 
+
+#Create the VMSS
+New-AzVmss -ResourceGroupName $RGName -Name $VMSSName -VirtualMachineScaleSet $VMSS;
+```
+
+The command above creates the following with the name `$vmssName` :
+* A virtual network
+* A load balancer
+* A public IP
+* the VMSS with 2 instances running off a custom image that has been specialized
+
 ## PARAMETERS
 
 ### -AllocationMethod
