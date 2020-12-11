@@ -37,7 +37,7 @@ The Az PowerShell module features the following benefits:
   * Username and password authentication in PowerShell 7
   * Support for features like continuous access evaluation (coming in 2021)
 * Support for all Azure services
-  * All generally available Azure services have a corresponding supported PowerShell module.
+  * All generally available Azure services have a corresponding supported PowerShell module
   * Multiple bug fixes and API version upgrades since AzureRM
 * New capabilities
   * Support in Cloud Shell and cross-platform
