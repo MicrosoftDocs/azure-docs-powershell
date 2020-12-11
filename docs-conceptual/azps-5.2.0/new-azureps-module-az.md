@@ -32,16 +32,17 @@ The Az PowerShell module features the following benefits:
 
 * Security and stability
   * Token cache encryption
-  * Support for ADFS 2019
-  * Security mechanism preventing man-in-the-middle attack types
+  * Prevention of man-in-the-middle attack type
+  * Support authentication with ADFS 2019
+  * Username and password authentication in PowerShell 7
   * Support for features like continuous access evaluation (coming in 2021)
 * Support for all Azure services
-  * A module is available for each Azure service
+  * All generally available Azure services have a corresponding supported PowerShell module
   * Multiple bug fixes and API version upgrades since AzureRM
-* Several additional new capabilities
+* New capabilities
   * Support in Cloud Shell and cross-platform
   * Can get and use access token to access Azure resources
-  * Generic Az cmdlet for escape hatch type operations
+  * Cmdlet available for advanced REST operations with Azure resources
 
 > [!NOTE]
 > PowerShell 7 and later is the recommended version of PowerShell for use with Az PowerShell on
