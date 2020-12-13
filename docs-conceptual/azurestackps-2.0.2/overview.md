@@ -25,7 +25,7 @@ Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose -Error
 Get-Module -Name Azs.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
 Get-Module -Name Az.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
 
-Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
+Install-Module -Name Az.BootStrapper -Force -AllowPrerelease -SkipPublisherCheck
 
 # Install and import the API Version Modules required by Azure Stack into the current PowerShell session.
 Use-AzProfile -Profile 2019-03-01-hybrid -Force
