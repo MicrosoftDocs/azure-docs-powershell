@@ -5,7 +5,7 @@ ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 ms.date: 12/1/2020
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, contperf-fy21q2
 ---
 
 # Migrate Azure PowerShell from AzureRM to Az
