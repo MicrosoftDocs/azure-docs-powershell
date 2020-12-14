@@ -186,7 +186,7 @@ Replacement            :
 * AzureRM cmdlets passed as arguments to Pester unit test mock statements aren't detected.
 * Currently, only Az PowerShell module version 4.6.1 is supported as a target.
 
-## Feedback
+## How to report issues
 
 Report feedback and issues about the Az.Tools.Migration PowerShell module via
 [a GitHub issue](https://github.com/Azure/azure-powershell-migration/issues) in the
