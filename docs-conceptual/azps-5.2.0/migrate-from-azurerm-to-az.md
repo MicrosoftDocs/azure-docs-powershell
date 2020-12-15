@@ -4,7 +4,7 @@ description: Learn the steps and tools for migrating Azure PowerShell scripts fr
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.date: 12/1/2020
+ms.date: 12/15/2020
 ms.custom: devx-track-azurepowershell, contperf-fy21q2
 ---
 
@@ -122,5 +122,5 @@ Install the [Azure PowerShell extension for VSCode](https://marketplace.visualst
 
 ## Next steps
 
-[Uninstall AzureRM](uninstall-az-ps.md#uninstall-the-azurerm-module)
-[Install Azure PowerShell](install-az-ps.md)
+* [Uninstall AzureRM](uninstall-az-ps.md#uninstall-the-azurerm-module)
+* [Install Azure PowerShell](install-az-ps.md)
