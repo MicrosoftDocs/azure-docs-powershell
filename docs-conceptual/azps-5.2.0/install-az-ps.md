@@ -50,6 +50,8 @@ To use Azure PowerShell in PowerShell 5.1 on Windows:
 > at the same time. If you need to keep AzureRM available on your system, install the Az module for
 > PowerShell 6.2.4 or later.
 
+### Install for Current User
+
 Using the PowerShellGet cmdlets is the preferred installation method. Install the Az module for the
 current user only. This is the recommended installation scope. This method works the same on
 Windows, macOS, and Linux platforms. Run the following command from a PowerShell session:
@@ -77,6 +79,8 @@ Are you sure you want to install the modules from 'PSGallery'?
 ```
 
 Answer `Yes` or `Yes to All` to continue with the installation.
+
+### Install for All Users
 
 Installing the module for all users on a system requires elevated privileges. Start the PowerShell
 session using **Run as administrator** in Windows or use the `sudo` command on macOS or Linux:
