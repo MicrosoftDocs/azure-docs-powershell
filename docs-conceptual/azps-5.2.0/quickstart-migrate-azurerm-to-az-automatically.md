@@ -6,19 +6,15 @@ ms.service: azure-powershell
 ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
 ms.author: mirobb
-ms.date: 12/10/2020
+ms.date: 12/18/2020
 ---
 
 # Quickstart: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module
 
 In this article, you'll learn how to use the Az.Tools.Migration PowerShell module to automatically
-upgrade your PowerShell scripts and script modules from AzureRM to the Az PowerShell module.
-
-> [!IMPORTANT]
-> The Az.Tools.Migration PowerShell module is currently in public preview. This preview version is
-> provided without a service level agreement. It's not recommended for production workloads. Certain
-> features might not be supported or might have constrained capabilities. For more information, see
-> [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+upgrade your PowerShell scripts and script modules from AzureRM to the Az PowerShell module. For
+additional migration options, see
+[Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az).
 
 ## Requirements
 
