@@ -84,8 +84,7 @@ $Plan | Where-Object PlanResult -ne ReadyToUpgrade | Format-List
 ```
 
 The items shown in the following output will not be upgraded automatically without manually
-correcting the issues first. Known issues that can’t be upgraded automatically include any commands
-that use splatting.
+correcting the issues first.
 
 ```Output
 Order                  : 42
@@ -176,8 +175,6 @@ Replacement            :
 
 ## Limitations
 
-* Automated parameter name updates to splatted parameter sets aren't supported. If any are found
-  during upgrade plan generation, a warning is returned.
 * File I/O operations use default encoding. Unusual file encoding situations may cause problems.
 * AzureRM cmdlets passed as arguments to Pester unit test mock statements aren't detected.
 * Currently, only Az PowerShell module version 4.6.1 is supported as a target.
