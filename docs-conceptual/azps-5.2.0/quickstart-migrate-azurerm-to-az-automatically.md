@@ -42,7 +42,7 @@ variable named **`Plan`**.
 
 ```powershell
 # Generate an upgrade plan for all the scripts and module files in the specified folder and save it to a variable.
-New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 5.3.0 -DirectoryPath 'C:\Scripts' -OutVariable Plan
+New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 5.2.0 -DirectoryPath 'C:\Scripts' -OutVariable Plan
 ```
 
 As shown in the following output, the upgrade plan details the specific file and offset points that
