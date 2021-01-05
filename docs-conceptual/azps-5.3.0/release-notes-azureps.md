@@ -9,6 +9,7 @@ ms.service: azure-powershell
 ---
 # Azure PowerShell release notes
 
+## 5.3.0 - December 2020
 #### Az.Accounts
 * Fixed the issue that Http proxy is not respected in Windows PowerShell [#13647]
 * Improved debug log of long running operations in generated modules
