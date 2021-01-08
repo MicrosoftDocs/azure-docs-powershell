@@ -14,7 +14,7 @@ Create a new website to run in Azure.
 
 ```
 New-AzureWebsite [-Location <String>] [-Hostname <String>] [-PublishingUsername <String>] [-Git] [-GitHub]
- [-GithubCredentials <PSCredential>] [-GithubRepository <String>] [-Name <String>] [-Slot <String>]
+ [-GitHubCredentials <PSCredential>] [-GitHubRepository <String>] [-Name <String>] [-Slot <String>]
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
@@ -22,7 +22,7 @@ New-AzureWebsite [-Location <String>] [-Hostname <String>] [-PublishingUsername 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-The cmdlet creates a new website to run in Azure and prepares for deployment through Github.
+The cmdlet creates a new website to run in Azure and prepares for deployment through GitHub.
 
 ## EXAMPLES
 
@@ -33,13 +33,13 @@ PS C:\> New-AzureWebsite mySite -Git
 
 This example creates a new website in Azure and a local Git repository to use for deploying files to the new website.
 
-### Example 2: Create website integrated with Github
+### Example 2: Create website integrated with GitHub
 ```
-PS C:\> New-AzureWebsite mysite -Github -GithubRepository myaccount/myrepo
+PS C:\> New-AzureWebsite mysite -GitHub -GitHubRepository myaccount/myrepo
 ```
 
-This example creates a new website linked to a Github repository named myaccount/myrepo.
-Commits to the Github repository are pushed to the website in Azure.
+This example creates a new website linked to a GitHub repository named myaccount/myrepo.
+Commits to the GitHub repository are pushed to the website in Azure.
 
 ## PARAMETERS
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -GitHub
-Indicates that this cmdlet links the new website to an existing Github repository.
+Indicates that this cmdlet links the new website to an existing GitHub repository.
 Commits to the Giuthub repository are pushed to the website in Azure.
 
 ```yaml
@@ -75,8 +75,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -GithubCredentials
-Specifies the user name and password credentials to connect to Github.
+### -GitHubCredentials
+Specifies the user name and password credentials to connect to GitHub.
 
 ```yaml
 Type: PSCredential
@@ -90,8 +90,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -GithubRepository
-Specifies the full name of the Github repository to link to this website.
+### -GitHubRepository
+Specifies the full name of the GitHub repository to link to this website.
 For example, `myaccount/myrepo`.
 
 ```yaml
