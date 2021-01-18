@@ -1,6 +1,6 @@
 ---
 title: Get started with Azure PowerShell
-description:
+description: "Learn more about: Get started with Azure PowerShell"
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/15/2017
