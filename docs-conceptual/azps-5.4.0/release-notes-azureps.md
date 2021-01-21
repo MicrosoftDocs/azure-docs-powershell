@@ -46,10 +46,10 @@ ms.service: azure-powershell
 
 #### Az.Network
 * Added new cmdlets for CRUD of VpnGatewayNATRule.
-    - 'New-AzAzVpnGatewayNatRule'
-    - 'Update-AzAzVpnGatewayNatRule'
-    - 'Get-AzAzVpnGatewayNatRule'
-    - 'Remove-AzAzVpnGatewayNatRule'	
+    - 'New-AzVpnGatewayNatRule'
+    - 'Update-AzVpnGatewayNatRule'
+    - 'Get-AzVpnGatewayNatRule'
+    - 'Remove-AzVpnGatewayNatRule'	
 * Updated cmdlets to set NATRule on VpnGateway resource and associate it with VpnSiteLinkConnection resource.
     - 'New-AzVpnGateway'
     - 'Update-AzVpnGateway'	
