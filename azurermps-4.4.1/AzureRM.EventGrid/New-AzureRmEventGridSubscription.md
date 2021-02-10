@@ -62,21 +62,21 @@ To create an event subscription to a supported Azure resource, specify the full 
 PS C:\> New-AzureRmEventGridSubscription -ResourceGroup MyResourceGroup -TopicName Topic1 -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Creates a new event subscription \`EventSubscription1\` to an Azure Event Grid topic \`Topic1\` in resource group \`MyResourceGroupName\` with the webhook destination endpoint https://requestb.in/19qlscd1. This event subscription uses default filters.
+Creates a new event subscription \`EventSubscription1\` to an Azure Event Grid topic \`Topic1\` in resource group \`MyResourceGroupName\` with the webhook destination endpoint `https://requestb.in/19qlscd1`. This event subscription uses default filters.
 
 ### Example 2
 ```
 PS C:\> New-AzureRmEventGridSubscription -ResourceGroup MyResourceGroupName -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Creates a new event subscription \`EventSubscription1\` to a resource group \`MyResourceGroupName\` with the webhook destination endpoint https://requestb.in/19qlscd1. This event subscription uses default filters.
+Creates a new event subscription \`EventSubscription1\` to a resource group \`MyResourceGroupName\` with the webhook destination endpoint `https://requestb.in/19qlscd1`. This event subscription uses default filters.
 
 ### Example 3
 ```
 PS C:\> New-AzureRmEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint https://requestb.in/19qlscd1. This event subscription uses default filters.
+Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint `https://requestb.in/19qlscd1`. This event subscription uses default filters.
 
 ### Example 4
 ```
@@ -85,7 +85,7 @@ PS C:\> $labels = "Finance", "HR"
 PS C:\> New-AzureRmEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1 -SubjectBeginsWith "TestPrefix" -SubjectEndsWith "TestSuffix" -IncludedEventType $includedEventTypes -Label $labels
 ```
 
-Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint https://requestb.in/19qlscd1. This event subscription specifies the additional filters for event types and subject, and only events matching those filters will be delivered to the destination endpoint.
+Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint `https://requestb.in/19qlscd1`. This event subscription specifies the additional filters for event types and subject, and only events matching those filters will be delivered to the destination endpoint.
 
 ### Example 5
 ```
@@ -99,7 +99,7 @@ Creates a new event subscription \`EventSubscription1\` to the currently selecte
 PS C:\> New-AzureRmEventGridSubscription -ResourceId "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Creates a new event subscription \`EventSubscription1\` to an EventHub namespace with the specified webhhok destination endpoint https://requestb.in/19qlscd1. This event subscription uses default filters.
+Creates a new event subscription \`EventSubscription1\` to an EventHub namespace with the specified webhhok destination endpoint `https://requestb.in/19qlscd1`. This event subscription uses default filters.
 
 ## PARAMETERS
 
@@ -110,7 +110,7 @@ This can be a webhook URL or the Azure resource ID of an EventHub.
 ```yaml
 Type: System.String
 Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -138,7 +138,7 @@ This can be webhook or eventhub
 ```yaml
 Type: System.String
 Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 Accepted values: webhook, eventhub, webhook, eventhub
 
 Required: False
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 Accepted values: webhook, eventhub, webhook, eventhub
 
 Required: False
@@ -167,7 +167,7 @@ The name of the event subscription
 ```yaml
 Type: System.String
 Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -194,7 +194,7 @@ Filter that specifies a list of event types to include.If not specified, all eve
 ```yaml
 Type: System.String[]
 Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String[]
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -221,7 +221,7 @@ EventGrid Topic object.
 ```yaml
 Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -236,7 +236,7 @@ Labels for the event subscription
 ```yaml
 Type: System.String[]
 Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String[]
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -290,7 +290,7 @@ The identifier of the resource to which the event subscription should be created
 ```yaml
 Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -306,7 +306,7 @@ If not specified, events with all subject prefixes will be included.
 ```yaml
 Type: System.String
 Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -334,7 +334,7 @@ If not specified, subject will be compared in a case insensitive manner.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -350,7 +350,7 @@ If not specified, events with all subject suffixes will be included.
 ```yaml
 Type: System.String
 Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -377,7 +377,7 @@ The name of the topic to which the event subscription should be created.
 ```yaml
 Type: System.String
 Parameter Sets: CustomTopicEventSubscriptionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
