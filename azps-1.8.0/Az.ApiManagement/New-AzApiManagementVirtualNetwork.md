@@ -22,7 +22,7 @@ New-AzApiManagementVirtualNetwork -SubnetResourceId <String> [-DefaultProfile <I
 
 ## DESCRIPTION
 The **New-AzApiManagementVirtualNetwork** cmdlet is a helper command to create an instance of **PsApiManagementVirtualNetwork**.
-This command is used with **Update-AzApiManagementDeployment** cmdlet.
+This command is used with **Set-AzApiManagement** cmdlet.
 
 ## EXAMPLES
 
@@ -37,15 +37,15 @@ PS C:\>$vnet = New-AzvirtualNetwork -Name $vnetName -ResourceGroupName $resource
 PS C:\>$virtualNetwork = New-AzApiManagementVirtualNetwork -Location $location -SubnetResourceId $vnet.Subnets[0].Id
 
 # Get the service
-PS C:\>$service = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName    
+PS C:\>$service = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName
 PS C:\>$service.VirtualNetwork = $virtualNetwork
 PS C:\>$service.VpnType = "External"
 
 # Update the Deployment with Virtual Network
-PS C:\>Update-AzApiManagementDeployment -ApiManagement $service
+PS C:\>Set-AzApiManagement -ApiManagement $service
 ```
 
-This example creates a virtual network and then calls the **Update-AzApiManagementDeployment** cmdlet.
+This example creates a virtual network and then calls the **Set-AzApiManagement** cmdlet.
 
 ## PARAMETERS
 
@@ -94,5 +94,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Update-AzApiManagementDeployment](./Update-AzApiManagementDeployment.md)
+[Set-AzApiManagement](./Set-AzApiManagement.md)
 
