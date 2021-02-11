@@ -3,8 +3,8 @@ title: Introducing the Azure PowerShell Az module
 description: Introducing the new Azure PowerShell module Az, the replacement for the AzureRM module.
 ms.date: 05/10/2019
 ms.devlang: powershell
-ms.topic: conceptual 
-ms.custom: devx-track-azurepowershell 
+ms.topic: conceptual
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Introducing the new Azure PowerShell Az module
@@ -94,7 +94,7 @@ while working towards a full migration to Az.
 > migration for you! See the [full breaking changes list](migrate-az-1.0.0.md) to find where your
 > scripts may require updates.
 
-## Continued support for AzureRM
+## Support for AzureRM
 
-AzureRM will no longer receive new cmdlets or features. However, the AzureRM module is still
-officially maintained and will get bug fixes through December 2020.
+All versions of the AzureRM PowerShell module will be retired on February 29, 2024 and will no
+longer receive critical fixes.

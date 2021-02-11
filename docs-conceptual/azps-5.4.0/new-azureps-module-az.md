@@ -94,8 +94,8 @@ directly on the [GitHub repository](https://github.com/Azure/azure-powershell), 
 support if you have a support contract. Feature requests will be implemented in the latest version
 of Az. Critical issues will be implemented on the last two versions of Az.
 
-AzureRM will no longer receive new cmdlets or features. However, the AzureRM module is still
-officially maintained and will receive critical fixes through February 2021.
+All versions of the AzureRM PowerShell module will be retired on February 29, 2024 and will no
+longer receive critical fixes.
 
 ## Data collection
 
