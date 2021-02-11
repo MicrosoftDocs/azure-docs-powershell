@@ -148,7 +148,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzApiManagementCache](./Get-AzApiManagementCache)
+[New-AzApiManagementCache](./New-AzApiManagementCache)
 
 [Remove-AzApiManagementCache](./Remove-AzApiManagementCache.md)
 
