@@ -130,7 +130,7 @@ This command uses the PowerShell pipeline to set (no change made) a diagnostic s
 
 ### -Category
 Specifies the list of log categories to enable or disable, according to the value of *Enabled*.
-If no category is specified, this command operates on all supported categories. 
+If no category is specified, this command operates on all supported categories.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -238,8 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -MetricCategory
-The list of metric categories. 
-If no category is specified, this command operates on all supported categories. 
+The list of metric categories.
+If no category is specified, this command operates on all supported categories.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -360,7 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceId
-The Id of the workspace
+The resource Id of the Log Analytics workspace to send logs/metrics to
 
 ```yaml
 Type: System.String
