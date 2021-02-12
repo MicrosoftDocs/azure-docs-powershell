@@ -155,4 +155,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzureRmApiManagementApiSet](./Remove-AzureRmApiManagementApiVersionSet.md)
 
-[Set-AzureRmApiManagementApiVersionSet](./Set-AzureRmApiManagementApiSet.md)
+[Set-AzureRmApiManagementApiVersionSet](./Set-AzureRmApiManagementApiVersionSet.md)
