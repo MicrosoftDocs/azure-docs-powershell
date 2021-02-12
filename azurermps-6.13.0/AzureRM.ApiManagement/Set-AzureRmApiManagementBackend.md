@@ -318,7 +318,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementBackend](./Get-AzureRmApiManagementBackend)
+[Get-AzureRmApiManagementBackend](./Get-AzureRmApiManagementBackend.md)
 
 [New-AzureRmApiManagementBackend](./New-AzureRmApiManagementBackend.md)
 

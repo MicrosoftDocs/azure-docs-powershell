@@ -98,7 +98,7 @@ This cmdlet does not accept any input.
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementBackend](./Get-AzureRmApiManagementBackend)
+[Get-AzureRmApiManagementBackend](./Get-AzureRmApiManagementBackend.md)
 
 [New-AzureRmApiManagementBackend](./New-AzureRmApiManagementBackend.md)
 
