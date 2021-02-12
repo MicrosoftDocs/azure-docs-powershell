@@ -46,7 +46,7 @@ Specifies whether the threat detection policy contacts administrators by using e
 ```yaml
 Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -67,7 +67,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, None
 
 Required: False
@@ -83,7 +83,7 @@ Specifies a semicolon-separated list of email addresses to which the policy send
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ Specifies the name of the resource group to which the server belongs.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -129,7 +129,7 @@ The number of retention days for the audit logs
 ```yaml
 Type: System.Nullable`1[System.UInt32]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ Specifies the name of the server.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +159,7 @@ Specifies the name of the storage account to be used. Wildcards are not permitte
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+###
 You cannot pipe input to this cmdlet.
 
 ## OUTPUTS
@@ -232,7 +232,5 @@ This cmdlet returns a **ServerThreatDetectionPolicyModel** object.
 ## RELATED LINKS
 
 [Get-AzureRmSqlServerThreatDetectionPolicy](./Get-AzureRmSqlServerThreatDetectionPolicy.md)
-
-[Remove-AzureRmSqlServerThreatDetectionPolicy](03e90cd1-6ae2-4134-bc5e-28cc080614c9)
 
 [SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
