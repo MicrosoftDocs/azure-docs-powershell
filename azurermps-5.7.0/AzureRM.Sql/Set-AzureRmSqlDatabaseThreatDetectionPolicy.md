@@ -92,9 +92,9 @@ Accept wildcard characters: False
 Specifies an array of detection types to exclude from the policy.
 The acceptable values for this parameter are:
 
-- Sql_Injection 
-- Sql_Injection_Vulnerability 
-- Access_Anomaly 
+- Sql_Injection
+- Sql_Injection_Vulnerability
+- Access_Anomaly
 - None
 
 ```yaml
@@ -237,7 +237,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### None
 You cannot pipe input to this cmdlet.
 
 ## OUTPUTS
