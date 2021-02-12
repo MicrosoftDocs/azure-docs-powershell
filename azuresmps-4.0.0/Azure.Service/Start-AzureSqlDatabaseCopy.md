@@ -309,7 +309,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Start Database Copy](https://msdn.microsoft.com/en-us/library/azure/dn509576.aspx)
 
-[Azure SQL Database Cmdlets](./Azure.SQLDatabase.md)
+
 
 [Get-AzureSqlDatabaseCopy](./Get-AzureSqlDatabaseCopy.md)
 
