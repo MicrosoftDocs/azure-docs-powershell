@@ -287,7 +287,6 @@ This cmdlet does not accept any input.
 
 ## RELATED LINKS
 
-[Set-AzureRmSqlSyncGroup](./Set-AzureRmSqlSyncGroup.md)
 
 [Remove-AzureRmSqlSyncGroup](./Remove-AzureRmSqlSyncGroup.md)
 

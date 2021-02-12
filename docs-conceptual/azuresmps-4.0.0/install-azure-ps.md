@@ -80,7 +80,7 @@ cmdlets or parameters that are not in your module, download and install the late
 module. To find the version of your module, type: `(Get-InstalledModule Azure).Version`.
 
 For sample scripts that can help you automate some of the common tasks in Azure, see the
-[Windows Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
+[Windows Azure Script Center](https://www.windowsazure.com/documentation/scripts/).
 
 For general information about installing, learning, using, and customizing Windows PowerShell, see
 [Scripting with Windows PowerShell](/powershell/scripting/learn/ps101/00-introduction).

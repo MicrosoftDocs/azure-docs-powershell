@@ -386,7 +386,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzureRmSqlSyncMember](./Get-AzureRmSqlSyncMember.md)
 
-[Set-AzureRmSqlSyncMember](./Set-AzureRmSqlSyncMember.md)
 
 [Remove-AzureRmSqlSyncMember](./Remove-AzureRmSqlSyncMember.md)
 

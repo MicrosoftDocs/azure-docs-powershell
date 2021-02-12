@@ -197,4 +197,3 @@ Parameters: InputObject (ByValue)
 
 ## RELATED LINKS
 
-[New-AzureRmVpnClientIpsecParameters](./New-AzureRmVpnClientIpsecParameters.md)

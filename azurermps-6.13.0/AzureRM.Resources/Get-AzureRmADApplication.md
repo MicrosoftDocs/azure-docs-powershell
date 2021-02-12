@@ -254,7 +254,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzureRmADApplication](./Remove-AzureRmADApplication.md)
 
-[Set-AzureRmADApplication](./Set-AzureRmADApplication.md)
 
 [New-AzureRmADApplication](./New-AzureRmADApplication.md)
 

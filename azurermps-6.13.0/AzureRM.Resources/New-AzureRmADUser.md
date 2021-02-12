@@ -201,6 +201,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Set-AzureRmADUser](./Set-AzureRmADUser.md)
 
 [Remove-AzureRmADUser](./Remove-AzureRmADUser.md)

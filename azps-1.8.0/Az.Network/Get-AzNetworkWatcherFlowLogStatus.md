@@ -33,9 +33,9 @@ Get-AzNetworkWatcherFlowLogStatus -Location <String> -TargetResourceId <String> 
 ```
 
 ## DESCRIPTION
-The Get-AzNetworkWatcherFlowLogStatus cmdlet Gets the status of flow logging on a resource. 
-The status includes whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, and the retention policy for the logs. 
-Currently Network Security Groups are supported for flow logging. 
+The Get-AzNetworkWatcherFlowLogStatus cmdlet Gets the status of flow logging on a resource.
+The status includes whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, and the retention policy for the logs.
+Currently Network Security Groups are supported for flow logging.
 
 ## EXAMPLES
 
@@ -269,6 +269,6 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)

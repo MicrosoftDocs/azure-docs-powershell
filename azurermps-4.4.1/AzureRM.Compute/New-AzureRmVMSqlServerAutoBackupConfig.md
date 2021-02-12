@@ -341,7 +341,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
 
 [Set-AzureRmVMSqlServerExtension](./Set-AzureRMVMSqlServerExtension.md)
 

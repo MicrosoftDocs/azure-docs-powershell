@@ -290,7 +290,6 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
 
-[Set-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
 
 [Remove-AzADApplication](./Remove-AzADApplication.md)
 
