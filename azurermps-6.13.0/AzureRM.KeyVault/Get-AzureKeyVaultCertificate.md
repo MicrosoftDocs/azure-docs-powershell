@@ -361,4 +361,3 @@ Parameters: InputObject (ByValue)
 
 [Remove-AzureKeyVaultCertificate](./Remove-AzureKeyVaultCertificate.md)
 
-[Undo-AzureKeyVaultSecretCertificate](./Undo-AzureKeyVaultSecretCertificate.md)

@@ -193,4 +193,3 @@ Parameters: InputObject (ByValue)
 
 [New-AzureRmApiManagementApiRelease](./New-AzureRmApiManagementApiRelease.md)
 
-[Set-AzureRmApiManagementApiRelease](./Set-AzureRmApiManagementApiRelease.md)

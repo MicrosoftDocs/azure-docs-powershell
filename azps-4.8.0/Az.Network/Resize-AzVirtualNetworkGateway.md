@@ -132,4 +132,3 @@ You cannot resize from Basic/Standard/HighPerformance SKUs to the new VpnGw1/Vpn
 
 [Get-AzVpnClientPackage](./Get-AzVpnClientPackage.md)
 
-[Set-AzVirtualNetworkGatewayVpnClientConfig](./Set-AzVirtualNetworkGatewayVpnClientConfig.md)

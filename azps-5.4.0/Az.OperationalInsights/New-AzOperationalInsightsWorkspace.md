@@ -261,6 +261,5 @@ A new pricing model has been released. If you are a CSP that means that you have
 
 [Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
 
-[Get-AzOperationalInsightsLinkTargets](./Get-AzOperationalInsightsLinkTargets.md)
 
 

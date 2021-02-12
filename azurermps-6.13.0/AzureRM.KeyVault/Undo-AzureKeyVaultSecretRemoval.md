@@ -167,6 +167,5 @@ Parameters: InputObject (ByValue)
 
 [Remove-AzureKeyVaultSecret](./Remove-AzureKeyVaultSecret.md)
 
-[Add-AzureKeyVaultSecret](./Add-AzureKeyVaultSecret.md)
 
 [Get-AzureKeyVaultSecret](./Get-AzureKeyVaultSecret.md)

@@ -586,4 +586,3 @@ Replace the values of Default-Web-WestUS with your resource group name of the we
 
 [Stop-AzWebApp](./Stop-AzWebApp.md)
 
-[New-AzResource](./New-AzResource.md)

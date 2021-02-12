@@ -247,4 +247,3 @@ This cmdlet does not accept any input.
 
 [Remove-AzureKeyVaultCertificate](./Remove-AzureKeyVaultCertificate.md)
 
-[Undo-AzureKeyVaultSecretCertificate](./Undo-AzureKeyVaultSecretCertificate.md)

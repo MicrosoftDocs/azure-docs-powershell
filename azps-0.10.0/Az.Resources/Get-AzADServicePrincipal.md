@@ -276,7 +276,6 @@ Parameters: ApplicationObject (ByValue)
 
 [New-AzADServicePrincipal](./New-AzADServicePrincipal.md)
 
-[Set-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
 
 [Remove-AzADServicePrincipal](./Remove-AzADServicePrincipal.md)
 
