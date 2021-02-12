@@ -1,13 +1,12 @@
 ---
 ms.topic: include
-ms.date: 09/03/2020
+ms.date: 02/12/2021
 ---
 
 > [!IMPORTANT]
-> You've reached a webpage for an outdated version of Azure PowerShell. All versions of the AzureRM
-> PowerShell module are outdated, but not out of support. The Az PowerShell module is now the
-> recommended PowerShell module for interacting with Azure. To get started with the Az PowerShell
-> module, see
-> [_Install Azure PowerShell_](https://docs.microsoft.com/powershell/azure/install-az-ps). To learn
-> how to migrate to the Az PowerShell module, see
-> [_Migrate Azure PowerShell from AzureRM to Az_](https://aka.ms/azpsmigrate).
+> Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more,
+> we'll retire AzureRM PowerShell modules on 29 February 2024.
+
+> To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
+> PowerShell modules to use Az PowerShell modules by 29 February 2024. To automatically update your
+> scripts, follow the [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
