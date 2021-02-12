@@ -170,4 +170,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzureRmActionGroup](./Set-AzureRmActionGroup.md)
 [Get-AzureRmActionGroup](./Get-AzureRmActionGroup.md)
-[New-AzureRmActionGroupReceiver](./AzureRmActionGroupReceiver.md)
+[New-AzureRmActionGroupReceiver](./New-AzureRmActionGroupReceiver.md)

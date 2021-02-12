@@ -175,4 +175,4 @@ Parameters: InputObject (ByValue)
 
 [Set-AzureRmActionGroup](./Set-AzureRmActionGroup.md)
 [Get-AzureRmActionGroup](./Get-AzureRmActionGroup.md)
-[New-AzureRmActionGroupReceiver](./AzureRmActionGroupReceiver.md)
+[New-AzureRmActionGroupReceiver](./New-AzureRmActionGroupReceiver.md)
