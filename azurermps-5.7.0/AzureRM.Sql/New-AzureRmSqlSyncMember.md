@@ -387,7 +387,6 @@ This cmdlet does not accept any input.
 
 [Get-AzureRmSqlSyncMember](./Get-AzureRmSqlSyncMember.md)
 
-[Set-AzureRmSqlSyncMember](./Set-AzureRmSqlSyncMember.md)
 
 [Remove-AzureRmSqlSyncMember](./Remove-AzureRmSqlSyncMember.md)
 

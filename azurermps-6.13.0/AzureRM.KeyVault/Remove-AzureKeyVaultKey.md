@@ -243,7 +243,6 @@ Parameters: InputObject (ByValue)
 
 [Get-AzureKeyVaultKey](./Get-AzureKeyVaultKey.md)
 
-[Set-AzureKeyVaultKeyAttribute](./Set-AzureKeyVaultKeyAttribute.md)
 
 [Undo-AzureKeyVaultKeyRemoval](./Undo-AzureKeyVaultKeyRemoval.md)
 
