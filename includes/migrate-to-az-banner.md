@@ -1,11 +1,12 @@
 ---
 ms.topic: include
-ms.date: 02/10/2021
+ms.date: 02/12/2021
 ---
 
 > [!IMPORTANT]
-> All versions of the AzureRM PowerShell module will be retired on February 29, 2024 and will no
-> longer receive critical fixes. The Az PowerShell module is now the supported PowerShell module for
-> interacting with Azure. To get started with the Az PowerShell module, see
-> [Install Azure PowerShell](/powershell/azure/install-az-ps). To learn how to migrate to the Az
-> PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](https://aka.ms/azpsmigrate).
+> Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more,
+> we'll retire AzureRM PowerShell modules on 29 February 2024.
+
+> To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
+> PowerShell modules to use Az PowerShell modules by 29 February 2024. To automatically update your
+> scripts, follow the [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
