@@ -230,7 +230,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure SQL Database Cmdlets](./Azure.SQLDatabase.md)
+
 
 [Get-AzureSqlDatabase](./Get-AzureSqlDatabase.md)
 

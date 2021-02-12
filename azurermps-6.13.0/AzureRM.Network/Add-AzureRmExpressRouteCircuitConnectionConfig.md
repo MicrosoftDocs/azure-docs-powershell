@@ -202,9 +202,9 @@ Parameters: ExpressRouteCircuit (ByValue)
 
 [Remove-AzureRmExpressRouteCircuitConnectionConfig](Remove-AzureRmExpressRouteCircuitConnectionConfig.md)
 
-[Set-AzureRmExpressRouteCircuitConnectionConfig](Set-AzureRmExpressRouteCircuitConnectionConfig.md)
 
-[New-AzureRmExpressRouteCircuitConnectionConfig](New-AzureRmExpressRouteCircuitConnectionConfig.md)
+
+
 
 [Set-AzureRmExpressRouteCircuit](Set-AzureRmExpressRouteCircuit.md)
 

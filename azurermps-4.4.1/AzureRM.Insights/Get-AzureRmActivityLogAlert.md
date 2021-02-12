@@ -63,7 +63,7 @@ The name of the activity log alert.
 ```yaml
 Type: System.String
 Parameter Sets: Default parameters for get an activity log alert
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +79,7 @@ If Name is not null or empty, this parameter must contain and non empty string.
 ```yaml
 Type: System.String
 Parameter Sets: Default parameters for get an activity log alert
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: Parameters to make sure the resource group is given when the name is given
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,10 +134,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzureRmActivityLogAlert](./Set-AzureRmActivityLogAlert.md)
 
-[Update-AzureRmActivityLogAlert](./Update-AzureRmActivityLogAlert.md)
-
 [Remove-AzureRmActivityLogAlert](./Remove-AzureRmActivityLogAlert.md)
 
 [New-AzureRmActionGroup](./New-AzureRmActionGroup.md)
-
-[New-AzureRmActivityLogAlertCondition](./Get-AzureRmActivityLogAlertCondition.md)

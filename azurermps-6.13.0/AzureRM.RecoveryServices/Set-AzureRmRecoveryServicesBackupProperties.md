@@ -132,7 +132,6 @@ Parameters: Vault (ByValue)
 
 ## RELATED LINKS
 
-[Get-AzureRmRecoveryServicesBackupProperties](./Get-AzureRmRecoveryServicesBackupProperties.md)
 
 [Get-AzureRmRecoveryServicesVault](./Get-AzureRmRecoveryServicesVault.md)
 

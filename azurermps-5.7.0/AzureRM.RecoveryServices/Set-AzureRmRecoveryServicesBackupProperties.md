@@ -131,7 +131,6 @@ Parameter 'Vault' accepts value of type 'ARSVault' from the pipeline
 
 ## RELATED LINKS
 
-[Get-AzureRmRecoveryServicesBackupProperties](./Get-AzureRmRecoveryServicesBackupProperties.md)
 
 [Get-AzureRmRecoveryServicesVault](./Get-AzureRmRecoveryServicesVault.md)
 
