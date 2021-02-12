@@ -184,6 +184,7 @@
                 "azurermps-*/**/*.yml": "dcaro",
                 "azuresmps-*/**/*.yml": "dcaro",
                 "azurestackps-*/**/*.yml": "mattbriggs",
+                "azurestackps-*/**/*.md": "mattbriggs",
                 "docs-conceptual/azps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azuredmps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
