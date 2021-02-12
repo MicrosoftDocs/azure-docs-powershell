@@ -108,5 +108,5 @@ This cmdlet does not accept any input.
 
 [Remove-AzureRmActivityLogAlert](./Remove-AzureRmActivityLogAlert.md)
 
-[New-AzureRmActivityLogAlertCondition](./Get-AzureRmActivityLogAlertCondition.md)
+
 
