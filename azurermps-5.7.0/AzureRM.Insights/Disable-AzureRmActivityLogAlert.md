@@ -196,6 +196,6 @@ This cmdlet does not accept any input.
 
 [New-AzureRmActionGroup](./New-AzureRmActionGroup.md)
 
-[New-AzureRmActivityLogAlertCondition](./Get-AzureRmActivityLogAlertCondition.md)
+
 
 [Enable-AzureRmActivityLogAlert](./Enable-AzureRmActivityLogAlert.md)

@@ -196,7 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Operations for Azure SQL Databases](https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx)
 
-[Azure SQL Database Cmdlets](./Azure.SQLDatabase.md)
+
 
 [Start-AzureSqlDatabaseCopy](./Start-AzureSqlDatabaseCopy.md)
 
