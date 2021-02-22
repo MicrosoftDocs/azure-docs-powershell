@@ -4,7 +4,7 @@ description: This migration guide contains a list of breaking changes made to Az
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/27/2020
-ms.custom: devx-track-azurepowershell 
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
@@ -247,7 +247,8 @@ The ability to update soft-delete setting is deprecated in Az.KeyVault 3.0.0. Re
 ### Get-AzKeyVaultSecret
 
 The property `SecretValueText` of type `Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSecret`
-has been removed. The `SecretValueText` property has been replaced with `SecretValue`.
+has been removed. Either apply a `-AsPlainText` to the call to get the plain text secret,
+or use `$secret.SecretValue` of type `SecureString` in your script.
 
 #### Before
 
@@ -259,13 +260,7 @@ $secretInPlainText = $secret.SecretValueText
 #### After
 
 ```powershell
-# PowerShell 7 or newer
-$secret = Get-AzKeyVaultSecret -VaultName myVault -Name mySecret
-$secretInPlainText = ConvertFrom-SecureString -SecureString $secret.SecretValue -AsPlainText
-
-# Prior to PowerShell 7, or Windows PowerShell
-$secret = Get-AzKeyVaultSecret -VaultName myVault -Name mySecret
-$secretInPlainText = [System.Runtime.InteropServices.Marshal]::PtrToStringBSTR([System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($secret.SecretValue))
+$secretInPlainText = Get-AzKeyVaultSecret -VaultName myVault -Name mySecret -AsPlainText
 ```
 
 ## Az.ManagedServices
