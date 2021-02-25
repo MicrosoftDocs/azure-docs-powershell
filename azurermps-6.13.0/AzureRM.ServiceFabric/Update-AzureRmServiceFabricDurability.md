@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Update-AzureRmServiceFabricDurability
 
 ## SYNOPSIS
-Update the durability tier or VmSku of a node type in the cluster.
+Update the durability tier or VmSku of a node type in the cluster. It will also update the durability tier in the Service Fabric VM extension on the associated Virtual Machine Scale Set.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
