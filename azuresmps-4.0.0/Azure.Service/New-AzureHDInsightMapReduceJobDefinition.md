@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: A8953045-3836-4C5A-96F8-461CB1DB6BBD
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -25,7 +25,7 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx) (https://msdn.microsoft.com/en-us/library/mt438705.aspx).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
 
 The **New-AzureHDInsightMapReduceJobDefinition** cmdlet defines a new MapReduce job to run on an Azure HDInsight cluster.
 
@@ -34,10 +34,10 @@ The **New-AzureHDInsightMapReduceJobDefinition** cmdlet defines a new MapReduce 
 ### Example 1: Define a MapReduce job, run the job, and get the output
 ```
 PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
-PS C:\> $ClusterName = "MyCluster" 
-PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "WordCount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" 
-PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName 
-    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600 
+PS C:\> $ClusterName = "MyCluster"
+PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "WordCount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount"
+PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName
+    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600
     | Get-AzureHDInsightJobOutput -Cluster $ClusterName -Subscription $SubId -StandardError
 ```
 
@@ -47,9 +47,9 @@ The second command assigns the name MyCluster to the $Clustername variable.
 
 The third command uses the **New-AzureHDInsightMapReduceJobDefinition** cmdlet to create a MapReduce job definition, and then store it in the $WordCountJob variable.
 
-The fourth command performs a sequence of operations by using these cmdlets: 
+The fourth command performs a sequence of operations by using these cmdlets:
 
-- **Start-AzureHDInsightJob** to start the job on $ClusterName. 
+- **Start-AzureHDInsightJob** to start the job on $ClusterName.
 - **Wait-AzureHDInsightJob** to wait for the job to finish and to display the progress toward completion.
 - **Get-AzureHDInsightJobOutput** to get the job output.
 
@@ -107,7 +107,7 @@ Specifies an array of WASB files that are required for a job.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies an array of LibJar references of the job.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ Specifies the location of the folder that contains standard outputs and error ou
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

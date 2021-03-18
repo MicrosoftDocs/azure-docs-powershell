@@ -84,7 +84,7 @@ Cmdlet constructs the FQDN of a vault based on the name and currently selected e
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -109,5 +109,4 @@ Microsoft.Azure.Commands.KeyVault.Models.ManagedStorageAccount
 
 ## RELATED LINKS
 
-[https://msdn.microsoft.com/en-us/library/dn868052.aspx](https://msdn.microsoft.com/en-us/library/dn868052.aspx)
-
+[Azure Key Vault cmdlets](/powershell/module/azurerm.keyvault/)

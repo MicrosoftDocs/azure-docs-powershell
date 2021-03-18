@@ -85,7 +85,7 @@ PS C:\> $labels = "Finance", "HR"
 PS C:\> New-AzureRmEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1 -SubjectBeginsWith "TestPrefix" -SubjectEndsWith "TestSuffix" -IncludedEventType $includedEventTypes -Label $labels
 ```
 
-Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint https://requestb.in/19qlscd1. This event subscription specifies the additional filters for event types and subject, and only events matching those filters will be delivered to the destination endpoint.
+Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint `https://requestb.in/19qlscd1`. This event subscription specifies the additional filters for event types and subject, and only events matching those filters will be delivered to the destination endpoint.
 
 ### Example 5
 ```

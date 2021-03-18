@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: E4B1AA31-1185-4035-86E6-2BB2587285C6
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -22,8 +22,8 @@ The **Get-AzureWebsite** cmdlet gets information about Azure websites in the cur
 By default, **Get-AzureWebsite** gets all Azure websites in the current subscription and returns an object that provides basic information about the sites.
 When you use the *Name* parameter, **Get-AzureWebsite** returns an object with extensive information, including configuration details.
 
-The current subscription is the subscription that is designated as "current." To find the current subscription, use the *Current* parameter of the [Get-AzureSubscription](https://go.microsoft.com/fwlink/?LinkID=397623) cmdlet.
-To change the current subscription, use the [Select-AzureSubscription](https://go.microsoft.com/fwlink/?LinkID=397628) cmdlet.
+The current subscription is the subscription that is designated as "current." To find the current subscription, use the *Current* parameter of the [Get-AzureSubscription](/powershell/module/servicemanagement/azure.service/get-azuresubscription) cmdlet.
+To change the current subscription, use the [Select-AzureSubscription](/powershell/module/servicemanagement/azure.service/select-azuresubscription) cmdlet.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
@@ -92,7 +92,7 @@ The *Name* value does not support wildcard characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ To add a deployment slot to an existing Azure website, use the Set-AzureWebsite 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
