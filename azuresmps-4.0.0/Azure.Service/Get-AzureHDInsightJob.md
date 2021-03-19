@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 3E3C9626-7AED-4B15-93D0-0B79AD17A834
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -32,7 +32,7 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx) (https://msdn.microsoft.com/en-us/library/mt438705.aspx).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
 
 The **Get-AzureHDInsightJob** cmdlet gets recent Azure HDInsight jobs for a specified cluster and displays them in reverse chronological order.
 
@@ -94,7 +94,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 ```yaml
 Type: Uri
 Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
