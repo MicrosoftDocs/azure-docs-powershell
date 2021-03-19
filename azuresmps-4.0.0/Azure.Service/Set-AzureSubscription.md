@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: 6185C6BA-460E-4EEA-B1EF-CD67629AA75E
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -52,7 +52,7 @@ To get the version of the module you're using, in the Azure PowerShell console, 
 ### Example 1: Change an existing subscription1
 ```
 C:\PS> $thumbprint = <Thumbprint-2>
-C:\PS> $differentCert = Get-Item cert:\\CurrentUser\My\$thumbprint 
+C:\PS> $differentCert = Get-Item cert:\\CurrentUser\My\$thumbprint
 C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -Certificate $differentCert
 ```
 
@@ -88,7 +88,7 @@ By default, **Set-AzureSubscription** uses the default subscription data file in
 ```yaml
 Type: X509Certificate2
 Parameter Sets: UpdateSubscriptionByIdParameterSetName, UpdateSubscriptionByNameParameterSetName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```yaml
 Type: X509Certificate2
 Parameter Sets: AddSubscriptionParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,12 +140,12 @@ Specifies an Azure environment.
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see [Azure Pack](https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ By default, this cmdlet does not return any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,13 +170,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. 
+Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ For more information about Azure Resource Manager, see [Azure Resource Manager C
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: UpdateSubscriptionByIdParameterSetName, AddSubscriptionParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: UpdateSubscriptionByNameParameterSetName, AddSubscriptionParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
