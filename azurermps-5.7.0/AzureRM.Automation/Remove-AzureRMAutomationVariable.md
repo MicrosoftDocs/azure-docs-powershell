@@ -30,7 +30,7 @@ The **Remove-AzureRmAutomationVariable** cmdlet removes a variable from Azure Au
 
 ### Example 1: Remove a variable
 ```
-PS C:\>Remove-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -Force -ResourceGroupName "ResourceGroup01"
+PS C:\>Remove-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes a variable named StringVariable22 in the Automation account named Contoso17.
@@ -45,7 +45,7 @@ Specifies the name of the Automation account that contains the variable that thi
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -75,7 +75,7 @@ Specifies the name of the variable that this cmdlet deletes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -90,7 +90,7 @@ Specifies the resource group for which this cmdlet deletes a variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
