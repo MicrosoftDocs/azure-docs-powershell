@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 60A5ACF7-2637-4BDC-BF41-80E81B23F4CD
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -32,7 +32,7 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx) (https://msdn.microsoft.com/en-us/library/mt438705.aspx).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
 
 The **Start-AzureHDInsightJob** cmdlet starts a defined Azure HDInsight job on a specified cluster.
 The job to start can be a MapReduce job, a streaming job, a Hive job, or a Pig job.
@@ -42,10 +42,10 @@ The job to start can be a MapReduce job, a streaming job, a Hive job, or a Pig j
 ### Example 1: Start an HDInsight job
 ```
 PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
-PS C:\> $ClusterName = "Cluster01" 
-PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" 
-PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName 
-    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600 
+PS C:\> $ClusterName = "Cluster01"
+PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount"
+PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName
+    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600
     | Get-AzureHDInsightJobOutput -Cluster $ClusterName -Subscription $SubId -StandardError
 ```
 
@@ -114,7 +114,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 ```yaml
 Type: Uri
 Parameter Sets: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 ```yaml
 Type: Boolean
 Parameter Sets: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

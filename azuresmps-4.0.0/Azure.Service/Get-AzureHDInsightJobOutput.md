@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 0B194605-F6B2-4FBC-ABF8-E49876EC7CFD
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -26,7 +26,7 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see Create Linux-based clusters in [HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
 
 The **Get-AzureHDInsightJobOutput** cmdlet gets the log output for a job from the storage account associated with a cluster.
 You can get various types of job logs including standard output, standard error, task logs, and a summary of the task logs.
@@ -90,7 +90,7 @@ Indicates that this cmdlet gets the task logs for a job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ Indicates that this cmdlet gets the StdErr output of a job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ Indicates that this cmdlet gets the SdtOut output of a job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,7 +242,7 @@ Indicates that this cmdlets gets the task log summary.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

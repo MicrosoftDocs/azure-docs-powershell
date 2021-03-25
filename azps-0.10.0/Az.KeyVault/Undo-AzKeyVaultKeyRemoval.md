@@ -73,7 +73,7 @@ Cmdlet constructs the FQDN of a vault based on the name and currently selected e
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -130,7 +130,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
 
-[Add-AzKeyVaultKey](./Add-AzKeyVaultKey.md)
+[Set-AzKeyVaultSecret](./Set-AzKeyVaultSecret.md)
 
 [Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
 

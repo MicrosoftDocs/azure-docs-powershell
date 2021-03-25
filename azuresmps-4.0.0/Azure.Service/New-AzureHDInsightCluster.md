@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 3EDD612F-AC5D-4D4D-BB14-2FB8DE5EDCCE
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -40,7 +40,7 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx) (https://msdn.microsoft.com/en-us/library/mt438705.aspx).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
 
 The **New-AzureHDInsightCluster** cmdlet creates an Azure HDInsight cluster by using the specified parameters or by using a configuration object that is created by using the **New-AzureHDInsightClusterConfig** cmdlet.
 
@@ -53,12 +53,12 @@ PS C:\> $Key1 = Get-AzureStorageKey -StorageAccountName "MyBlobStorage" | %{ $_.
 PS C:\> $Key2 = Get-AzureStorageKey -StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
 PS C:\> $Creds = Get-Credential
 PS C:\> $OozieCreds = Get-Credential
-PS C:\> $HiveCreds = Get-Credential 
-PS C:\> New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4 
-    | Set-AzureHDInsightDefaultStorage -StorageAccountName "MyBlobStorage.blob.core.windows.net" -StorageAccountKey $Key1 -StorageContainerName "MyContainer" 
-    | Add-AzureHDInsightStorage -StorageAccountName "MySecondBlobStorage.blob.core.windows.net" -StorageAccountKey $Key2 
-    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyOozieDatabaseName" -Credential $OozieCreds -MetastoreType OozieMetastore 
-    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyHiveDatabaseName" -Credential $HiveCreds -MetastoreType HiveMetastore 
+PS C:\> $HiveCreds = Get-Credential
+PS C:\> New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4
+    | Set-AzureHDInsightDefaultStorage -StorageAccountName "MyBlobStorage.blob.core.windows.net" -StorageAccountKey $Key1 -StorageContainerName "MyContainer"
+    | Add-AzureHDInsightStorage -StorageAccountName "MySecondBlobStorage.blob.core.windows.net" -StorageAccountKey $Key2
+    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyOozieDatabaseName" -Credential $OozieCreds -MetastoreType OozieMetastore
+    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyHiveDatabaseName" -Credential $HiveCreds -MetastoreType HiveMetastore
     | New-AzureHDInsightCluster -Subscription $SubId -Credential $Creds
 ```
 
@@ -116,7 +116,7 @@ Specifies the type of cluster to create.
 ```yaml
 Type: ClusterType
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ Specifies a configuration object that is created by using the **New-AzureHDInsig
 ```yaml
 Type: AzureHDInsightConfig
 Parameter Sets: Cluster By Config (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -162,7 +162,7 @@ Specifies the size of the virtual machine for the data node.
 ```yaml
 Type: String
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -223,7 +223,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ Specifies the size of the virtual machine for the head node.
 ```yaml
 Type: String
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +269,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +326,7 @@ Specifies the operating system for a cluster.
 ```yaml
 Type: OSType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +342,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +357,7 @@ Specifies the expiration, as a **DateTime** object, for Remote Desktop Protocol 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -372,7 +372,7 @@ Specifies the credentials for RDP access to a cluster.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,7 +388,7 @@ This parameter is valid only for Linux clusters.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -404,7 +404,7 @@ This parameter is valid only for Linux clusters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -419,7 +419,7 @@ Specifies the name of a subnet.
 ```yaml
 Type: String
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -464,7 +464,7 @@ Specifies the ID of the virtual network into which to provision the cluster.
 ```yaml
 Type: String
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -480,7 +480,7 @@ This parameter is valid only for HBase or Storm clusters.
 ```yaml
 Type: String
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

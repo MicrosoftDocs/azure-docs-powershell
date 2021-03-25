@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 2EA36090-1A45-4F77-9222-9C0E9C07656C
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -44,7 +44,7 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx) (https://msdn.microsoft.com/en-us/library/mt438705.aspx).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
 
 The **Wait-AzureHDInsightJob** cmdlet awaits the completion or failure of an Azure HDInsight job and displays the progress of the job.
 
@@ -54,9 +54,9 @@ The **Wait-AzureHDInsightJob** cmdlet awaits the completion or failure of an Azu
 ```
 PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
 PS C:>\ $ClusterName = "MyCluster"
-PS C:>\ $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" 
-PS C:>\ $WordCountJob | Start-AzureHDInsightJob -Subscription $SubId -Cluster $ClusterName 
-    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600 
+PS C:>\ $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount"
+PS C:>\ $WordCountJob | Start-AzureHDInsightJob -Subscription $SubId -Cluster $ClusterName
+    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600
     | Get-AzureHDInsightJobOutput -Cluster $ClusterName -Subscription $SubId -StandardError
 ```
 
@@ -66,10 +66,10 @@ The second command gets the specified cluster, and then stores it in the $Cluste
 
 The third command uses the **New-AzureHDInsightMapReduceJobDefinition** cmdlet to create a MapReduce job definition, and then stores it in the $WordCountJob variable.
 
-The fourth command uses several cmdlets in sequence: 
+The fourth command uses several cmdlets in sequence:
 
-- It uses the pipeline operator to pass $WordCountJob to the **Start-AzureHDInsightJob** cmdlet to start the job. 
-- The job is passed to the **Wait-AzureHDInsightJob** cmdlet to wait 3600 seconds for the job to complete. 
+- It uses the pipeline operator to pass $WordCountJob to the **Start-AzureHDInsightJob** cmdlet to start the job.
+- The job is passed to the **Wait-AzureHDInsightJob** cmdlet to wait 3600 seconds for the job to complete.
 - If the job completes, the command uses the **Get-AzureHDInsightJobOutput** cmdlet to get the job output.
 
 ## PARAMETERS
@@ -96,7 +96,7 @@ This cmdlet waits for a job on the cluster that this parameter specifies.
 ```yaml
 Type: String
 Parameter Sets: Wait Job with JobId on an HDInsight Cluster
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 ```yaml
 Type: Uri
 Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 ```yaml
 Type: Boolean
 Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +174,7 @@ Specifies an Azure HDInsight job.
 ```yaml
 Type: AzureHDInsightJob
 Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential), Wait Job with Job on an HDInsight Cluster
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +189,7 @@ Specifies the ID of the job to wait for.
 ```yaml
 Type: String
 Parameter Sets: Wait Job with JobId on an HDInsight Cluster
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -205,7 +205,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ If the time-out expires before the job completes, the cmdlet ceases to run.
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
