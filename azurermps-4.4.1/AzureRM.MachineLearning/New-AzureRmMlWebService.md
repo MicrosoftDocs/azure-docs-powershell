@@ -65,12 +65,12 @@ You can obtain a web service object instance to customize before publishing as a
 
 ### -DefinitionFile
 Specifes the path to the file containing the JSON format definition of the web service.
-You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning.
+You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/blob/master/specification/machinelearning/resource-manager/Microsoft.MachineLearning/.
 
 ```yaml
 Type: System.String
 Parameter Sets: Create a new Azure ML webservice from a JSON definiton file.
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -85,7 +85,7 @@ Do not ask for confirmation.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ To determine which regions support each resource type, use the Get-AzureRmResour
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ The name must be unique in the resource group.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,12 +133,12 @@ Accept wildcard characters: False
 ### -NewWebServiceDefinition
 The definition for the new web service, containing all the properties that make up the service.
 This parameter is required and represents an instance of the Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService class.
-You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2017-01-01/swagger/webservices.json.
+You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/blob/master/specification/machinelearning/resource-manager/Microsoft.MachineLearning/stable/2017-01-01/webservices.json.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
 Parameter Sets: Create a new Azure ML webservice from a WebService instance definition.
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +158,7 @@ To determine which regions support each resource type, use the Get-AzureRmResour
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

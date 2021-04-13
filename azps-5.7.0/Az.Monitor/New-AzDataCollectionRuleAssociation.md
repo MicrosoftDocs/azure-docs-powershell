@@ -219,6 +219,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzDataCollectionRuleAssociation](./Set-AzDataCollectionRuleAssociation.md)
+
 [Remove-AzDataCollectionRuleAssociation](./Remove-AzDataCollectionRuleAssociation.md)
 [Get-AzDataCollectionRuleAssociation](./Get-AzDataCollectionRuleAssociation.md)

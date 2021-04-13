@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: 6C435518-06EA-41B7-9585-44107B026FF1
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -29,7 +29,7 @@ When the command completes, you can use the environment in Windows PowerShell.
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see [Azure Pack](https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx) (https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/).
 
 Only the **Name** parameter of this cmdlet is mandatory.
 If you omit a parameter, its value is null ($Null), and the service that uses that endpoint might not function properly.
@@ -53,21 +53,21 @@ PublishSettingsFileUrl        : https://contoso.com/fwlink/?LinkID=101
 
 ServiceEndpoint               : https://contoso.com/fwlink/?LinkID=102
 
-ResourceManagerEndpoint       : 
+ResourceManagerEndpoint       :
 
-ManagementPortalUrl           : 
+ManagementPortalUrl           :
 
-ActiveDirectoryEndpoint       : 
+ActiveDirectoryEndpoint       :
 
-ActiveDirectoryCommonTenantId : 
+ActiveDirectoryCommonTenantId :
 
-StorageEndpointSuffix         : 
+StorageEndpointSuffix         :
 
-StorageBlobEndpointFormat     : 
+StorageBlobEndpointFormat     :
 
-StorageQueueEndpointFormat    : 
+StorageQueueEndpointFormat    :
 
-StorageTableEndpointFormat    : 
+StorageTableEndpointFormat    :
 
 GalleryEndpoint               :
 ```
@@ -97,7 +97,7 @@ Specifies the resource ID of a management API whose access is managed by Azure A
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ Specifies the URL of the Azure Management Portal in the new environment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ Do not use the names of the default environments, AzureCloud and AzureChinaCloud
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -220,13 +220,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. 
+Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,7 +242,7 @@ An Azure publish settings file is an XML file that contains information about yo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

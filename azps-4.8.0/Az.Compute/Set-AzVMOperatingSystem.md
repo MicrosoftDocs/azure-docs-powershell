@@ -63,8 +63,8 @@ You can specify logon credentials, computer name, and operating system type.
 ### Example 1: Set operating system properties for a new virtual machines
 ```
 $SecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
-$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword); 
-$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03" 
+$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword);
+$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
 $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
 $ComputerName = "ContosoVM122"
 $WinRMCertUrl = "http://keyVaultName.vault.azure.net/secrets/secretName/secretVersion"
@@ -128,8 +128,7 @@ This is decoded to a binary array that is saved as a file on the virtual machine
 The maximum length of the binary array is 65535 bytes.<br>
 **Note: Do not pass any secrets or passwords in customData property**<br>
 This property cannot be updated after the VM is created. <br>
-customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br>
-For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init)
+customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/).
 
 ```yaml
 Type: System.String
