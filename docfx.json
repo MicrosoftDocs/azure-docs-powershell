@@ -278,6 +278,300 @@
                 "az*-*/Az*.UsageAggregates/*.yml": "cost-management-billing",
                 "az*-*/Az*.Websites/*.yml": "app-service"
             },
+            "products": {
+                "az*-*/Az*.Consumption/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/**/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DNS/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/56421ca4-1511-4101-aef6-352d15722ed5",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.IotHub/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/816835a3-1c5d-4536-835c-4b59dc9c9d97",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ServerManagement/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.HDInsight/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/31f0a52b-651f-4010-94e9-e671670147d1",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DevTestLabs/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/1b517c82-7903-4c65-882b-062988a9836b",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Backup/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/aebdc4a3-c54b-4eea-94e3-663d5e166f57",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Azure.Storage/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/de8ce683-cbe1-461b-bae7-77db0888ec6d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ResourceGraph/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/d3928677-9b71-43a6-875f-004dc4f98b65",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Network/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/20ed8455-bc18-4537-87a4-83784e7b2a39",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DataMigration/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DevSpaces/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/370da7f1-c94e-4c53-93ac-84e54eb74153",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.OperationalInsights/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.RecoveryServices.Backup/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.SignalR/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/82a8fddb-4a3d-422c-a2ff-5e883e8135cd",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.NotificationHubs/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/d9f9b1db-eed4-493c-a161-3c802931422e",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ManagedServiceIdentity*/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/b1cfdec6-b0c3-4209-818c-736879856e0e",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.PolicyInsights/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/eea02214-631d-404a-92d1-5a3357c32a26",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.TrafficManager/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/a21829dd-8109-415c-84d3-07c42e4d33fd",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "docs-conceptual/azurestackps-*/**/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/ApiManagement.ServiceManagement/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bf4dbf7f-261c-4ae9-9fee-5989668a780a",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.StreamAnalytics/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/9f747546-6aa0-47b1-90d7-ee9646fdb207",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Kusto/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/26e1a60c-4ce1-41de-b2d1-e5f3b7e68e6e",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.FrontDoor/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/b5e53e15-0a76-4936-b270-8b2badca62ac",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DataLakeAnalytics/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4ef79e2a-6d1f-4255-bfab-1f30062ad80a",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Sql/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/6ab7faaf-d791-4a26-96a2-3b11738538e7",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Automation/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/43093068-2dda-408b-b3fe-dfd705c84f78",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.MachineLearning*/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/d6f38669-3d05-40f2-afd8-e49f7dd20884",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.RecoveryServices/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DataFactoryV2/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/655f39c4-21c5-49d3-8367-a1f9c1a0b930",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.AzureStackStorage/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ContainerInstance/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/dcc344b3-3794-4849-9766-7ea55b09218c",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Relay/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/828c518e-a2df-46f1-8871-b760959c8fa8",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.UsageAggregates/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ServiceBus/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/828c518e-a2df-46f1-8871-b760959c8fa8",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.AzureStackAdmin/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Profile/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Media/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/257159d6-c458-401e-89a4-9ec054d5b64a",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.CognitiveServices/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/a94ab64b-48cb-4632-97ad-5f94d09fb030",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Scheduler/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/5f78585d-b424-4082-82e6-8f6af0cf7090",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.EventGrid/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/467aaae1-e916-4fcd-a463-5b27f9d4745c",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Resources/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.EventHub/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/f0234678-3067-4edc-abf7-8142d54bb7d2",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.KeyVault/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/f488294d-f483-456e-94e3-755f933b811b",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.RedisCache/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/f80a1aa9-ec39-45c7-bff1-e6916def6921",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.IotCentral/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/fb0664a1-e4dc-44b0-bd81-3e27f372682a",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Maps*/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/cdf84aa8-8dea-4da6-9d1d-74eaf3cb9ded",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Batch/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/86a4b315-a9f1-4577-b985-6fb0e0e67420",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ContainerRegistry/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/cb49e66a-8528-497d-adaa-eade2d009d1b",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Compute/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/2ed91286-6cf7-4b83-810d-75d0ee3b09dd",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Billing/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Storage/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/de8ce683-cbe1-461b-bae7-77db0888ec6d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "azuresmps-*/**/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "docs-conceptual/azurermps-*/**/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Azure.aks/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DeviceProvisioningServices/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/80e1eb26-63c4-488d-bfbb-a542c5c2c3f6",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Security/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8ec9c8c5-6896-4ce1-a3ad-777f6eabcdf7",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.AnalysisServices/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/000aaee4-f890-4b0a-bd33-24fb2aefa882",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ServiceFabric/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/e23899b2-c37a-45de-abc2-b8ae68bc8d1b",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Tags/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ApplicationInsights/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/07bb3e10-d135-43ff-bc8b-360497cb39fa",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.PowerBIEmbedded/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/faa132eb-b7da-40a8-bd96-ea68e77ec6fd",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "azurestackps-*/**/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DataFactories/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/655f39c4-21c5-49d3-8367-a1f9c1a0b930",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Insights/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/07bb3e10-d135-43ff-bc8b-360497cb39fa",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.DataLakeStore/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/5c1f3bfc-fced-4ad1-b4e6-b7200832734d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.LogicApp/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/e60d1924-c4ad-4104-bd1b-973758bbac7a",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.ApiManagement/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bf4dbf7f-261c-4ae9-9fee-5989668a780a",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.SiteRecovery/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "docs-conceptual/azuresmps-*/**/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Cdn/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/befac1c4-b371-401f-bb32-b2c555258404",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ],
+                "az*-*/Az*.Websites/*.md": [
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/7ebba99b-05c3-4387-8883-f7bbf6632cb8",
+                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+                ]
+            },
             "ms.topic": {
                 "azps-*/**/*.yml": "reference",
                 "azuredmps-*/**/*.yml": "reference",

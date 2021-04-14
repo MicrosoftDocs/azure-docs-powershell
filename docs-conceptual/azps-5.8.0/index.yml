@@ -79,7 +79,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-5.6.0
+            url: /powershell/module/?view=azps-5.8.0
           - text: Release notes
             url: release-notes-azureps.md
           - text: Breaking changes in Az 2.0.0
