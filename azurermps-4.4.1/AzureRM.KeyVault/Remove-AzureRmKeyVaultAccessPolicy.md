@@ -72,7 +72,7 @@ PS C:\>Remove-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePr
 ```
 
 This command removes all the permissions that an application has on the key vault named Contoso03Vault.
-This example identifies the application by using the service principal name registered in Azure Active Directory, http://payroll.contoso.com.
+This example identifies the application by using the service principal name registered in Azure Active Directory, `http://payroll.contoso.com`.
 
 ### Example 3: Remove permissions for an application by using its object ID
 ```
@@ -97,7 +97,7 @@ For future use.
 ```yaml
 Type: System.Nullable`1[System.Guid]
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Specifies the user email address of the user whose access you want to remove.
 ```yaml
 Type: System.String
 Parameter Sets: ByEmail
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -127,7 +127,7 @@ Enables the Microsoft.Compute resource provider to retrieve secrets from this ke
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Enables the Azure disk encryption service to get secrets and unwrap keys from th
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ Enables Azure Resource Manager to get secrets from this key vault when this key 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Specifies the object ID of the user or service principal in Azure Active Directo
 ```yaml
 Type: System.String
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +188,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ If not specified, this cmdlet searches for the key vault in the current subscrip
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -251,7 +251,7 @@ This cmdlet removes permissions for the key vault that this parameter specifies.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

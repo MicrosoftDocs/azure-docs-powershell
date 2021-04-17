@@ -278,7 +278,6 @@ Parameters: ApplicationObject (ByValue)
 
 [New-AzureRmADServicePrincipal](./New-AzureRmADServicePrincipal.md)
 
-[Set-AzureRmADServicePrincipal](./Set-AzureRmADServicePrincipal.md)
 
 [Remove-AzureRmADServicePrincipal](./Remove-AzureRmADServicePrincipal.md)
 

@@ -3,7 +3,7 @@ title: Overview of Azure PowerShell | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017 
+ms.date: 08/31/2017
 ms.custom: devx-track-azurepowershell
 ---
 # Overview of Azure PowerShell
@@ -23,8 +23,8 @@ release, see the [release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
-- [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
-- [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
+- [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json)
+- [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=/powershell/azure/toc.json)
 - [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
@@ -40,7 +40,5 @@ You can also watch this video:
 
 ## Other Azure PowerShell modules
 
-- [Azure Active Directory](/powershell/azure/active-directory/)
-- [Azure Information Protection](/powershell/azure/aip/)
-- [Azure Service Fabric](/powershell/azure/service-fabric/)
-- [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
+- [Azure Active Directory](/powershell/module/activedirectory/)
+- [Azure Service Fabric](/powershell/module/AzureRM.ServiceFabric/)

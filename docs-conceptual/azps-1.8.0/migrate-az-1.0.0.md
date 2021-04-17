@@ -4,7 +4,8 @@ description: This migration guide contains a list of breaking changes made to Az
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # Breaking changes for Az 1.0.0
 

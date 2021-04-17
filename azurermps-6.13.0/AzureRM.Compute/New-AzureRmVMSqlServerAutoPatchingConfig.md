@@ -152,7 +152,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureVMSqlServerAutoBackupConfig](./New-AzureVMSqlServerAutoBackupConfig.md)
 
 [Set-AzureRmVMSqlServerExtension](./Set-AzureRMVMSqlServerExtension.md)
 

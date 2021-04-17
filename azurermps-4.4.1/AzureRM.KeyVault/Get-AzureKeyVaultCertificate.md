@@ -217,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzureKeyVaultCertificate](./Remove-AzureKeyVaultCertificate.md)
 
-[Undo-AzureKeyVaultSecretCertificate](./Undo-AzureKeyVaultSecretCertificate.md)

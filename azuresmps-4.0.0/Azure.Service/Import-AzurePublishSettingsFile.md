@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: 79D64D7C-6671-4F03-8776-70A716F36512
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -48,12 +48,12 @@ Specifies an Azure environment.
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see [Azure Pack](https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,13 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. 
+Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

@@ -103,7 +103,7 @@ PS C:\>Remove-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePr
 ```
 
 This command removes all the permissions that an application has on the key vault named Contoso03Vault.
-This example identifies the application by using the service principal name registered in Azure Active Directory, http://payroll.contoso.com.
+This example identifies the application by using the service principal name registered in Azure Active Directory, `http://payroll.contoso.com`.
 
 ### Example 3: Remove permissions for an application by using its object ID
 ```

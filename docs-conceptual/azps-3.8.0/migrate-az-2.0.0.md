@@ -4,7 +4,8 @@ description: This migration guide contains a list of breaking changes made to Az
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/24/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # Migration Guide for Az 2.0.0
 
@@ -321,7 +322,7 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
     - Users with HDInsight Cluster Operator, Contributor, or Owner roles will not be affected.
     - Users with only the Reader role will need to specify `DefaultStorageAccountKey` parameter explicitly.
 
-For more information about these role-based access changes, see [aka.ms/hdi-config-update](https://aka.ms/hdi-config-update)
+For more information about these role-based access changes, see [aka.ms/hdi-config-update](/azure/hdinsight/hdinsight-migrate-granular-access-cluster-configurations)
 
   #### Before
 

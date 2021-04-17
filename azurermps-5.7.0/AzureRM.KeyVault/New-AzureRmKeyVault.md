@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the Azure region in which to create the key vault. Use the command [Get-AzureLocation](https://docs.microsoft.com/powershell/module/Azure/Get-AzureLocation) to see your choices.
+Specifies the Azure region in which to create the key vault. Use the command [Get-AzureRmLocation](/powershell/module/azurerm.resources/get-azurermlocation) to see your choices.
 
 ```yaml
 Type: String

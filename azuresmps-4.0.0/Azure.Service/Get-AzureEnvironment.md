@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: BF5E3E1A-14B6-4630-8168-628057009D5E
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -21,7 +21,7 @@ The **Get-AzureEnvironment** cmdlet gets the Azure environments that are availab
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see [Azure Pack](https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/)).
 
 The **Get-AzureEnvironment** cmdlet gets environments from your subscription data file, not from Azure.
 If the subscription data file is outdated, run the **Add-AzureAccount** or **Import-PublishSettingsFile** cmdlet to refresh it.
@@ -38,7 +38,7 @@ PS C:\> Get-AzureEnvironment
 EnvironmentName               ServiceEndpoint               ResourceManagerEndpoint       PublishSettingsFileUrl
 ---------------               ---------------               -----------------------       ----------------------
 
-AzureCloud                    https://management.core.wi... https://management.azure.com/ https://go.microsoft.com/fw... 
+AzureCloud                    https://management.core.wi... https://management.azure.com/ https://go.microsoft.com/fw...
 AzureChinaCloud               https://management.core.ch... https://not-supported-serv... https://go.microsoft.com/fw...
 ```
 
@@ -99,7 +99,7 @@ Wildcard characters are not permitted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,13 +109,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. 
+Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

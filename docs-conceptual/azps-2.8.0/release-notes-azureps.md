@@ -4,7 +4,8 @@ description: Learn about all of the latest updates to the Azure PowerShell modul
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 # Azure PowerShell release notes
 ## 2.8.0 - October 2019
@@ -906,7 +907,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 	- Set-AzScheduledQueryRule
 	- Update-AzScheduledQueryRule
 	- Remove-AzScheduledQueryRule
-	- [More](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information about SQR API
+	- [More](/rest/api/monitor/scheduledqueryrules) information about SQR API
 	- Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule
 
 #### Az.Network

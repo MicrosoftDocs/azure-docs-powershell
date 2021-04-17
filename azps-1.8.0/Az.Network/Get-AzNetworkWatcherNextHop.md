@@ -36,15 +36,15 @@ Get-AzNetworkWatcherNextHop -Location <String> -TargetVirtualMachineId <String> 
 ```
 
 ## DESCRIPTION
-The Get-AzNetworkWatcherNextHop cmdlet gets the next hop from a VM. 
+The Get-AzNetworkWatcherNextHop cmdlet gets the next hop from a VM.
 Next hop allows you to view the type of Azure resource, the associated IP address of that resource, and the routing table rule that is responsible for the route.
 
 ## EXAMPLES
 
 ### Example 1: Get the Next Hop when communicating with an Internet IP
 ```
-$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
-$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
 $VM = Get-AzVM -ResourceGroupName ContosoResourceGroup -Name VM0
 $Nics = Get-AzNetworkInterface | Where {$_.Id -eq $vm.NetworkInterfaceIDs.ForEach({$_})}
 Get-AzNetworkWatcherNextHop -NetworkWatcher $networkWatcher -TargetVirtualMachineId $VM.Id -SourceIPAddress $nics[0].IpConfigurations[0].PrivateIpAddress  -DestinationIPAddress 204.79.197.200
@@ -223,7 +223,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.Network.Models.PSNextHopResult
 
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, next, hop 
+Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, next, hop
 
 ## RELATED LINKS
 
@@ -277,6 +277,6 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)

@@ -198,5 +198,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzureRmActionGroup](./New-AzureRmActionGroup.md)
 
-[New-AzureRmActivityLogAlertCondition](./Get-AzureRmActivityLogAlertCondition.md)
+
 

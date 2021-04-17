@@ -130,6 +130,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzKeyVaultSecret](./Remove-AzKeyVaultSecret.md)
 
-[Add-AzKeyVaultSecret](./Add-AzKeyVaultSecret.md)
 
 [Get-AzKeyVaultSecret](./Get-AzKeyVaultSecret.md)

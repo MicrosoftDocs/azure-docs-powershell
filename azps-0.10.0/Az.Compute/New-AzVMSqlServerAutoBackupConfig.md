@@ -89,7 +89,7 @@ Backup schedule type, manual or automated
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Manual, Automated
 
 Required: False
@@ -105,7 +105,7 @@ Backup system databases
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Specifies a password to encrypt the certificate that is used to perform SQL Serv
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -152,7 +152,7 @@ This updates your Managed Backup settings to follow this schedule.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -167,7 +167,7 @@ Indicates that this cmdlet enables encryption.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -182,7 +182,7 @@ Sql Server Full Backup frequency, daily or weekly
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Daily, Weekly
 
 Required: False
@@ -198,7 +198,7 @@ Hour of the day (0-23) when the Sql Server Full Backup should start
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Sql Server Full Backup window in hours
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ Sql Server Log Backup frequency, once every 1-60 minutes
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -258,7 +258,7 @@ Specifies the number of days to retain a backup.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -275,7 +275,7 @@ The default is the storage account that is associated with the SQL Server virtua
 ```yaml
 Type: IStorageContext
 Parameter Sets: StorageContextSqlServerAutoBackup
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -290,7 +290,7 @@ Specifies the storage key of the blob storage account.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -305,7 +305,7 @@ Specifies the Uniform Resource Identifier (URI) of the blob storage account.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -330,7 +330,7 @@ This cmdlet does not accept any input.
 
 ## RELATED LINKS
 
-[New-AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
+[New-AzureVMSqlServerAutoPatchingConfig](./New-AzVMSqlServerAutoPatchingConfig.md)
 
 [Set-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
 

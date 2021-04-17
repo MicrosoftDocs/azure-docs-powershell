@@ -4,7 +4,8 @@ description: Learn the steps and tools for migrating scripts from the AzureRM mo
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/10/2019 
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell 
+ms.service: azure-powershell
 ---
 
 # Migrate Azure PowerShell from AzureRM to Az

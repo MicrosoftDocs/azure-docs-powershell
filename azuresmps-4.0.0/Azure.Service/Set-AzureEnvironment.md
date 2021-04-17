@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: 1094497D-2CBE-41DF-9ED1-8E7D3F14B05A
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -30,8 +30,7 @@ You cannot use **Set-AzureEnvironment** to change the name of an Azure environme
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see [Azure Pack](https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)
-(https://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/).
 
 NOTE:  Do not change the properties of the AzureCloud or AzureChinaCloud environments.
 Use this cmdlet to change the values of private environments that you create.
@@ -68,7 +67,7 @@ Specifies the resource ID of a management API whose access is managed by Azure A
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +80,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +93,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +106,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +164,7 @@ Changes the URL of the Azure Management Portal to the specified value.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +182,7 @@ Wildcard characters are not permitted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,13 +192,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. 
+Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +214,7 @@ An Azure publish settings file is an XML file that contains information about yo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +259,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -288,7 +287,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

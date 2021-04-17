@@ -154,7 +154,6 @@ This cmdlet does not accept any input.
 
 ## RELATED LINKS
 
-[Add-AzureRmLogAlertRule](./Add-AzureRmLogAlertRule.md)
 
 [Add-AzureRmMetricAlertRule](./Add-AzureRmMetricAlertRule.md)
 

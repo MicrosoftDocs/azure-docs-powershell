@@ -286,7 +286,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmSqlSyncGroup](./Set-AzureRmSqlSyncGroup.md)
 
 [Remove-AzureRmSqlSyncGroup](./Remove-AzureRmSqlSyncGroup.md)
 

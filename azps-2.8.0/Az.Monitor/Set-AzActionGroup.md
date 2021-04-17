@@ -282,4 +282,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzActionGroup](./Get-AzActionGroup.md)
 [Remove-AzActionGroup](./Remove-AzActionGroup.md)
-[New-AzActionGroupReceiver](./AzureRmActionGroupReceiver.md)
+

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 7D51BE56-C0A2-4A32-BB7F-8FA9CC67F8F9
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -24,7 +24,6 @@ Get-WAPackLogicalNetwork [-Name <String>] [-Profile <AzureSMProfile>] [<CommonPa
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see [Azure WAPack Cmdlets](https://msdn.microsoft.com/library/dn776450.aspx) (https://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
 To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
@@ -54,7 +53,7 @@ Specifies the name of a logical network.
 ```yaml
 Type: String
 Parameter Sets: FromName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +69,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

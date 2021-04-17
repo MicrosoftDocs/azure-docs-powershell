@@ -233,6 +233,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzSqlServerThreatDetectionPolicy](./Get-AzSqlServerThreatDetectionPolicy.md)
 
-[Remove-AzSqlServerThreatDetectionPolicy](03e90cd1-6ae2-4134-bc5e-28cc080614c9)
-
 [SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)

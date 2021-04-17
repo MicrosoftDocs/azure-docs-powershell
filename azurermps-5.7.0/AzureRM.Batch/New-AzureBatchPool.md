@@ -147,7 +147,7 @@ The default value is 15 minutes, and the minimum value is 5 minutes.
 ```yaml
 Type: TimeSpan
 Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ Specifies the formula for automatically scaling the pool.
 ```yaml
 Type: String
 Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, t
 ```yaml
 Type: BatchAccountContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -209,7 +209,7 @@ Specifies configuration settings for a pool based on the Azure cloud service pla
 ```yaml
 Type: PSCloudServiceConfiguration
 Parameter Sets: CloudServiceAndTargetDedicated, CloudServiceAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,7 +239,7 @@ Specifies the display name of the pool.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ Specifies the ID of the pool to create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -269,7 +269,7 @@ Indicates that this cmdlet sets up the pool for direct communication between ded
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,7 +284,7 @@ Specifies the maximum number of tasks that can run on a single compute node.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -301,7 +301,7 @@ The value is the metadata value.
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -316,7 +316,7 @@ The network configuration for the pool.
 ```yaml
 Type: PSNetworkConfiguration
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,7 +331,7 @@ Specifies the time-out for allocating compute nodes to the pool.
 ```yaml
 Type: TimeSpan
 Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -347,7 +347,7 @@ The start task is run when a compute node joins the pool, or when the compute no
 ```yaml
 Type: PSStartTask
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -377,7 +377,7 @@ Specifies the target number of low-priority compute nodes to allocate to the poo
 ```yaml
 Type: Int32
 Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -392,7 +392,7 @@ Specifies the task scheduling policy, such as the ComputeNodeFillType.
 ```yaml
 Type: PSTaskSchedulingPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -407,7 +407,7 @@ The list of user accounts to be created on each node in the pool.
 ```yaml
 Type: PSUserAccount[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -422,7 +422,7 @@ Specifies configuration settings for a pool on the virtual machines infrastructu
 ```yaml
 Type: PSVirtualMachineConfiguration
 Parameter Sets: VirtualMachineAndTargetDedicated, VirtualMachineAndAutoScale
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -433,12 +433,12 @@ Accept wildcard characters: False
 
 ### -VirtualMachineSize
 Specifies the size of the virtual machines in the pool.
-For more information about virtual machine sizes, see Sizes for virtual machineshttps://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/ (https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/) in the Microsoft Azure site.
+For more information about virtual machine sizes, see [Sizes for virtual machines](/azure/virtual-machines/sizes) in the Microsoft Azure site.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

@@ -195,4 +195,3 @@ Parameters: Context (ByValue)
 
 [Remove-AzureRmApiManagementApiRelease](./Remove-AzureRmApiManagementApiRelease.md)
 
-[Set-AzureRmApiManagementApiRelease](./Set-AzureRmApiManagementApiRelease.md)

@@ -193,8 +193,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Find-AzResource](./Find-AzResource.md)
-
 [Get-AzResource](./Get-AzResource.md)
 
 [New-AzResource](./New-AzResource.md)
