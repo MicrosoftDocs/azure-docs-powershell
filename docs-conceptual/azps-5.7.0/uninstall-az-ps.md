@@ -75,16 +75,17 @@ Remove the Az modules from memory and then uninstall them.
 ```azurepowershell-interactive
 $AzModules |
   ForEach-Object {
-    Remove-Module -Name $_
-    Uninstall-Module -Name $_
+    Remove-Module -Name $_ -ErrorAction SilentlyContinue
+    Write-Output "Attempting to uninstall module: $_"
+    Uninstall-Module -Name $_ -AllVersions
   }
 ```
 
 The final step is to remove the Az PowerShell module.
 
 ```azurepowershell-interactive
-Remove-Module -Name Az
-Uninstall-Module -Name Az
+Remove-Module -Name Az -ErrorAction SilentlyContinue
+Uninstall-Module -Name Az -AllVersions
 ```
 
 ## Uninstall the AzureRM module
