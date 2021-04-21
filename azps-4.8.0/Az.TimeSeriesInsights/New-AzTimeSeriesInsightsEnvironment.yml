@@ -1,0 +1,271 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create an environment in the specified subscription and resource group.
+module: Az.TimeSeriesInsights
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  PARTITIONKEYPROPERTY <ITimeSeriesIdProperty[]>: The list of event properties which will be used to partition data in the environment.
+    - `[Name <String>]`: The name of the property.
+    - `[Type <PropertyType?>]`: The type of the property.
+
+  TIMESERIESIDPROPERTY <ITimeSeriesIdProperty[]>: The list of event properties which will be used to define the environment's time series id.
+    - `[Name <String>]`: The name of the property.
+    - `[Type <PropertyType?>]`: The type of the property.
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20200515.IEnvironmentResource" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzTimeSeriesInsightsEnvironment -Name <String> -ResourceGroupName <String> -Capacity <Int32>
+
+   -DataRetentionTime <TimeSpan> -Kind <Kind> -Location <String> -Sku <SkuName> [-SubscriptionId <String>]
+
+   [-PartitionKeyProperty <ITimeSeriesIdProperty[]>] [-StorageLimitExceededBehavior <String>] [-Tag <Hashtable>]
+
+   [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+- >-
+  New-AzTimeSeriesInsightsEnvironment -Name <String> -ResourceGroupName <String> -Kind <Kind> -Location <String>
+
+   -Sku <SkuName> -StorageAccountKey <SecureString> -StorageAccountName <String>
+
+   -TimeSeriesIdProperty <ITimeSeriesIdProperty[]> [-SubscriptionId <String>] [-Tag <Hashtable>]
+
+   [-WarmStoreDataRetentionTime <TimeSpan>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Gen1 time series insights environment'
+  code: |-
+    PS C:\> $TimeSpan = New-TimeSpan -Days 1 -Hours 1 -Minutes 25
+    PS C:\> New-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup -Name tsitest001 -Kind Gen1 -Location eastus -Sku S1 -DataRetentionTime $TimeSpan -Capacity 2
+
+    Kind     Location Name       SkuCapacity SkuName Type
+    ----     -------- ----       ----------- ------- ----
+    Gen1 eastus   tsitest001 2           S1      Microsoft.TimeSeriesInsights/Environments
+  description: |-
+    This command creates a Gen1 time series insights environment.
+  summary: ""
+- title: 'Example 2: Create a Gen2 time series insights environment'
+  code: |-
+    PS C:\> $ks = Get-AzStorageAccountKey -ResourceGroupName "testgroup" -Name "staccount001"
+    PS C:\> $k  = $ks[0].Value | ConvertTo-SecureString -AsPlainText -Force
+    PS C:\> New-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup -Name tsitest002 -Kind Gen2 -Location eastus -Sku L1 -StorageAccountName staccount001 -StorageAccountKey $k -TimeSeriesIdProperty @{name='cdc';type='string'}
+
+    Kind     Location Name       SkuCapacity SkuName Type
+    ----     -------- ----       ----------- ------- ----
+    Gen2 eastus   tsitest002 1           L1      Microsoft.TimeSeriesInsights/Environments
+  description: |-
+    This command creates a Gen2 time series insights environment.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run the command as a job
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Capacity
+  isRequired: true
+  description: |+
+    The capacity of the sku.
+    For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: DataRetentionTime
+  isRequired: true
+  description: |+
+    The data retention time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Support.Kind" data-throw-if-not-resolved="False" />
+  name: Kind
+  isRequired: true
+  description: |+
+    The kind of the environment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location of the resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the environment
+
+  defaultValue: None
+  position: Named
+  aliases: EnvironmentName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Run the command asynchronously
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20200515.ITimeSeriesIdProperty" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PartitionKeyProperty
+  description: |+
+    The list of event properties which will be used to partition data in the environment.
+    To construct, see NOTES section for PARTITIONKEYPROPERTY properties and create a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Name of an Azure Resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Support.SkuName" data-throw-if-not-resolved="False" />
+  name: Sku
+  isRequired: true
+  description: |+
+    The name of this SKU.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: StorageAccountKey
+  isRequired: true
+  description: |+
+    The value of the management key that grants the Time Series Insights service write access to the storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  isRequired: true
+  description: |+
+    The name of the storage account that will hold the environment's long term data.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageLimitExceededBehavior
+  description: |+
+    The behavior the Time Series Insights service should take when the environment's capacity has been exceeded
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Azure Subscription ID.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs of additional properties for the resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20200515.ITimeSeriesIdProperty" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TimeSeriesIdProperty
+  isRequired: true
+  description: |+
+    The list of event properties which will be used to define the environment's time series id.
+    To construct, see NOTES section for TIMESERIESIDPROPERTY properties and create a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: WarmStoreDataRetentionTime
+  description: |+
+    ISO8601 timespan specifying the number of days the environment's events will be available for query from the warm store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.TimeSeriesInsights.New-AzTimeSeriesInsightsEnvironment
+name: New-AzTimeSeriesInsightsEnvironment
+description: |-
+  Create an environment in the specified subscription and resource group.
+metadata:
+  external help file: ""
+  Module Name: Az.TimeSeriesInsights
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.timeseriesinsights/new-aztimeseriesinsightsenvironment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TimeSeriesInsights/help/New-AzTimeSeriesInsightsEnvironment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TimeSeriesInsights/help/New-AzTimeSeriesInsightsEnvironment.md

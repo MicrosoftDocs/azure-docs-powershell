@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the details of an authorization rule, or gets a list of authorization rules.
+module: Az.EventHub
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSSharedAccessAuthorizationRuleAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [[-Name] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Eventhub] <String>
+
+   [[-Name] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-AliasName] <String>
+
+   [[-Name] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: AuthorizationRule for namespace'
+  code: |-
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Name MyAuthRuleName
+  description: |-
+    Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+  summary: ""
+- title: 'Example 2: AuthorizationRules for namespace'
+  code: |-
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
+  description: |-
+    Gets a list of all authorization rules in the namespace \`MyNamespaceName\`.
+  summary: ""
+- title: 'Example 3: AuthorizationRule for EventHub'
+  code: |-
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -Name MyAuthRuleName
+  description: |-
+    Gets the authorization rule \`MyAuthRuleName\` in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
+  summary: ""
+- title: 'Example 4: AuthorizationRules for EventHub'
+  code: |-
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
+  description: |-
+    Gets list authorization rules in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
+  summary: ""
+- title: 'Example 5: AuthorizationRule for Alias (GeoRecovery Configuration)'
+  code: |-
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName -Name MyAuthRuleName
+  description: |-
+    Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+  summary: ""
+- title: 'Example 6: AuthorizationRules for Alias (GeoRecovery Configuration)'
+  code: |-
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName
+  description: |-
+    Gets a list of all authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AliasName
+  isRequired: true
+  description: |+
+    Alias Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Eventhub
+  isRequired: true
+  description: |+
+    Eventhub Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: EventHubName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    AuthorizationRule Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: AuthorizationRuleName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  isRequired: true
+  description: |+
+    Namespace Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: NamespaceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.EventHub.Get-AzEventHubAuthorizationRule
+name: Get-AzEventHubAuthorizationRule
+description: |-
+  The Get-AzEventHubAuthorizationRule cmdlet gets either the details of an authorization rule, or a list of all authorization rules for a specified Event Hub.
+  If the name of an authorization rule is provided, the details of that single authorization rule are returned.
+  If the name of an authorization rule is not provided, a list of all authorization rules for the specified Event Hub is returned.
+  If (Disaster Recovery) Alias name provided, the details of authorization rule of the Namespace for Alias configured is returned.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+  Module Name: Az.EventHub
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/get-azeventhubauthorizationrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/Get-AzEventHubAuthorizationRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/Get-AzEventHubAuthorizationRule.md

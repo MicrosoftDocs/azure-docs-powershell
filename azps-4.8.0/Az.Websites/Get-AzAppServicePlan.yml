@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an Azure App Service plan in the specified resource group.
+module: Az.Websites
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzAppServicePlan
+  href: ./New-AzAppServicePlan.yml
+- text: Remove-AzAppServicePlan
+  href: ./Remove-AzAppServicePlan.yml
+- text: Set-AzAppServicePlan
+  href: ./Set-AzAppServicePlan.yml
+syntaxes:
+- >-
+  Get-AzAppServicePlan [[-ResourceGroupName] <String>] [[-Name] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzAppServicePlan [-Location] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an App Service plan from a resource group'
+  code: |-
+    PS C:\>Get-AzAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP"
+  description: |-
+    This command gets the App Service plan named ContosoASP that belongs to the resource group named Default-Web-WestUS.
+  summary: ""
+- title: 'Example 2: Get all App Service plans in a location'
+  code: |-
+    PS C:\>Get-AzAppServicePlan -Location "West US"
+  description: |-
+    This command gets all App Service plans located in the "West US" region.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Location 
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    App Service Plan Name
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Websites.Get-AzAppServicePlan
+name: Get-AzAppServicePlan
+description: |-
+  The **Get-AzAppServicePlan** cmdlet gets an Azure App Service plan in the specified resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  Module Name: Az.Websites
+  ms.assetid: 89ED4231-7616-47D0-BDAA-D849C245DC79
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/get-azappserviceplan
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Get-AzAppServicePlan.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Get-AzAppServicePlan.md

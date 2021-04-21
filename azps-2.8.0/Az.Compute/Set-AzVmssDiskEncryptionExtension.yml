@@ -1,0 +1,247 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables disk encryption on a VM scale set.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineScaleSetExtension" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzVmssDiskEncryptionExtension [-ResourceGroupName] <String> [-VMScaleSetName] <String>
+
+   [-DiskEncryptionKeyVaultUrl] <String> [-DiskEncryptionKeyVaultId] <String> [-KeyEncryptionKeyUrl <String>]
+
+   [-KeyEncryptionKeyVaultId <String>] [-KeyEncryptionAlgorithm <String>] [-VolumeType <String>] [-ForceUpdate]
+
+   [-TypeHandlerVersion <String>] [-ExtensionName <String>] [-Passphrase <String>] [-Force]
+
+   [-DisableAutoUpgradeMinorVersion] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $RGName = "MyResourceGroup"
+    $VmssName = "MyTestVmss"
+    $VaultName= "MyKeyVault"
+    $KeyVault = Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName
+    $DiskEncryptionKeyVaultUrl = $KeyVault.VaultUri
+    $KeyVaultResourceId = $KeyVault.ResourceId
+
+    PS C:\> Set-AzVmssDiskEncryptionExtension -ResourceGroupName $RGName -VMScaleSetName $VmssName -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
+  description: |-
+    This command enables encryption on all disks of all Windows VMs in a VM scale set.
+  summary: ""
+- title: Example 2
+  code: |-
+    $RGName = "MyResourceGroup"
+    $VmssName = "MyTestVmss"
+    $VaultName= "MyKeyVault"
+    $KeyVault = Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName
+    $DiskEncryptionKeyVaultUrl = $KeyVault.VaultUri
+    $KeyVaultResourceId = $KeyVault.ResourceId
+    $VolumeType = "Data"
+
+    PS C:\> Set-AzVmssDiskEncryptionExtension -ResourceGroupName $RGName -VMScaleSetName $VmssName -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
+     -VolumeType $volumeType
+  description: |-
+    This command enables encryption on the data disks of all Linux VMs in a VM scale set.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableAutoUpgradeMinorVersion
+  description: |+
+    Disable auto-upgrade of minor version
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiskEncryptionKeyVaultId
+  isRequired: true
+  description: |+
+    ResourceID of the KeyVault where generated encryption key will be placed to
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiskEncryptionKeyVaultUrl
+  isRequired: true
+  description: |+
+    URL of the KeyVault where generated encryption key will be placed to
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExtensionName
+  description: |+
+    The extension name.
+    If this parameter is not specified, default values used are AzureDiskEncryption for windows VMs and AzureDiskEncryptionForLinux for Linux VMs
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    To force enabling encryption on the virtual machine scale set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceUpdate
+  description: |+
+    Generate a tag for force update.  This should be given to perform repeated encryption operations on the same VM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyEncryptionAlgorithm
+  description: |+
+    KeyEncryption Algorithm used to encrypt the volume encryption key
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: RSA-OAEP, RSA1_5
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyEncryptionKeyUrl
+  description: |+
+    Versioned KeyVault URL of the KeyEncryptionKey used to encrypt the disk encryption key
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyEncryptionKeyVaultId
+  description: |+
+    ResourceID of the KeyVault containing the KeyEncryptionKey used to encrypt the disk encryption key
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Passphrase
+  description: |+
+    The passphrase specified in parameters.
+    This parameter only works for Linux VM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name to which the VM Scale Set belongs to
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TypeHandlerVersion
+  description: |+
+    The type handler version.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: HandlerVersion, Version
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VMScaleSetName
+  isRequired: true
+  description: |+
+    Name of the virtual machine scale set
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VolumeType
+  description: |+
+    Specifies the type of virtual machine volumes on which to perform encryption operation: OS, Data, or All. 
+
+    Linux: The **VolumeType** parameter must be present and must be set to Data. 
+
+    Windows: The **VolumeType** parameter, if present, must be set to either All or OS. If the **VolumeType** parameter is omitted it defaults to "All".
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: OS, Data, All
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Compute.Set-AzVmssDiskEncryptionExtension
+name: Set-AzVmssDiskEncryptionExtension
+description: |-
+  The **Set-AzVmssDiskEncryptionExtension** cmdlet enables encryption on a VM scale set. This cmdlet enables encryption by installing the disk encryption extension on the VM scale set.
+
+  For Linux virtual machines, the *VolumeType* parameter must be present and must be set to "Data"
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssdiskencryptionextension
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVmssDiskEncryptionExtension.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVmssDiskEncryptionExtension.md

@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a rewrite rule set from an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayRewriteRuleSet
+  href: ./Add-AzApplicationGatewayRewriteRuleSet.yml
+- text: Get-AzApplicationGatewayRewriteRuleSet
+  href: ./Get-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRuleSet
+  href: ./New-AzApplicationGatewayRewriteRuleSet.yml
+- text: Set-AzApplicationGatewayRewriteRuleSet
+  href: ./Set-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRule
+  href: ./New-AzApplicationGatewayRewriteRule.yml
+- text: New-AzApplicationGatewayRewriteRuleActionSet
+  href: ./New-AzApplicationGatewayRewriteRuleActionSet.yml
+- text: New-AzApplicationGatewayRewriteRuleHeaderConfiguration
+  href: ./New-AzApplicationGatewayRewriteRuleHeaderConfiguration.yml
+syntaxes:
+- >-
+  Remove-AzApplicationGatewayRewriteRuleSet -Name <String> -ApplicationGateway <PSApplicationGateway>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> Remove-AzApplicationGatewayRewriteRuleSet -ApplicationGateway $AppGw -Name "RuleSet02"
+  description: |-
+    The first command gets an application gateway and stores it in the $AppGw variable.
+    The second command removes the rewrite rule set named RuleSet02 from the application gateway stored in $AppGw.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    The applicationGateway
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the application gateway RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Remove-AzApplicationGatewayRewriteRuleSet
+name: Remove-AzApplicationGatewayRewriteRuleSet
+description: |-
+  The **Remove-AzApplicationGatewayRewriteRuleSet** cmdlet removes a rewrite rule set from an Azure application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azapplicationgatewayrewriteruleset
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzApplicationGatewayRewriteRuleSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzApplicationGatewayRewriteRuleSet.md

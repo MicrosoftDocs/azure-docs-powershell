@@ -1,0 +1,211 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a request routing rule to an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApplicationGatewayRequestRoutingRule
+  href: ./Get-AzApplicationGatewayRequestRoutingRule.yml
+- text: New-AzApplicationGatewayRequestRoutingRule
+  href: ./New-AzApplicationGatewayRequestRoutingRule.yml
+- text: Remove-AzApplicationGatewayRequestRoutingRule
+  href: ./Remove-AzApplicationGatewayRequestRoutingRule.yml
+- text: Set-AzApplicationGatewayRequestRoutingRule
+  href: ./Set-AzApplicationGatewayRequestRoutingRule.yml
+syntaxes:
+- >-
+  Add-AzApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   -RuleType <String> [-BackendHttpSettingsId <String>] [-HttpListenerId <String>]
+
+   [-BackendAddressPoolId <String>] [-UrlPathMapId <String>] [-RewriteRuleSetId <String>]
+
+   [-RedirectConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Add-AzApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   -RuleType <String> [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
+
+   [-HttpListener <PSApplicationGatewayHttpListener>]
+
+   [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
+
+   [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet>]
+
+   [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a request routing rule to an application gateway'
+  code: |-
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $Appgw = Add-AzApplicationGatewayRequestRoutingRule -ApplicationGateway $AppGw -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
+  description: |-
+    The first command gets the application gateway and stores it in the $AppGw variable.
+    The second command adds the request routing rule to the application gateway.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies an application gateway to which this cmdlet adds a request routing rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" />
+  name: BackendAddressPool
+  description: |+
+    Specifies an application gateway back-end address pool object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendAddressPoolId
+  description: |+
+    Specifies an application gateway back-end address pool ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+  name: BackendHttpSettings
+  description: |+
+    Specifies a back-end HTTP settings object for an application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendHttpSettingsId
+  description: |+
+    Specifies a backend HTTP settings ID for an application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+  name: HttpListener
+  description: |+
+    Specifies application gateway HTTP listener object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HttpListenerId
+  description: |+
+    Specifies application gateway HTTP listener ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of request routing rule this cmdlet adds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" />
+  name: RedirectConfiguration
+  description: |+
+    Application gateway RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RedirectConfigurationId
+  description: |+
+    ID of the application gateway RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet" data-throw-if-not-resolved="False" />
+  name: RewriteRuleSet
+  description: |+
+    Application gateway RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RewriteRuleSetId
+  description: |+
+    ID of the application gateway RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuleType
+  isRequired: true
+  description: |+
+    Specifies the type of request routing rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Basic, PathBasedRouting
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap" data-throw-if-not-resolved="False" />
+  name: UrlPathMap
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UrlPathMapId
+  description: |+
+    Specifies the URL path map ID for the routing rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Add-AzApplicationGatewayRequestRoutingRule
+name: Add-AzApplicationGatewayRequestRoutingRule
+description: |-
+  The **Add-AzApplicationGatewayRequestRoutingRule** cmdlet adds a request routing rule to an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: BBA600C2-4813-4C12-8447-E770A949DA32
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayrequestroutingrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzApplicationGatewayRequestRoutingRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzApplicationGatewayRequestRoutingRule.md

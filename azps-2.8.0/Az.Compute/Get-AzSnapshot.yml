@@ -1,0 +1,228 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the properties of a snapshot
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSnapshot [[-ResourceGroupName] <String>] [[-SnapshotName] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzSnapshot
+
+    ResourceGroupName  : ResourceGroupName1
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName1/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName1
+    Name               : SnapshotName1
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+
+    ResourceGroupName  : ResourceGroupName1
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName1/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName2
+    Name               : SnapshotName2
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+
+    ResourceGroupName  : ResourceGroupName2
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName2/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName3
+    Name               : SnapshotName3
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+  description: |-
+    This command gets the properties of all snapshots of the subscription.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzSnapshot -ResourceGroupName "ResourceGroupName1"
+
+    ResourceGroupName  : ResourceGroupName1
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName1/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName1
+    Name               : SnapshotName1
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+
+    ResourceGroupName  : ResourceGroupName1
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName1/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName2
+    Name               : SnapshotName2
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+  description: |-
+    This command gets the properties of all snapshots in the resource group named "ResourceGroupName1"
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzSnapshot -ResourceGroupName "ResourceGroupName1" -SnapshotName "SnapshotName1"
+
+    ResourceGroupName  : ResourceGroupName1
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName1/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName1
+    Name               : SnapshotName1
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+  description: |-
+    This command gets the properties of the snapshot named "SnapshotName1" in the resource group named "ResourceGroupName1"
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-AzSnapshot -SnapshotName "SnapshotName*"
+
+    ResourceGroupName  : ResourceGroupName1
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName1/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName1
+    Name               : SnapshotName1
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+
+    ResourceGroupName  : ResourceGroupName1
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName1/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName2
+    Name               : SnapshotName2
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+
+    ResourceGroupName  : ResourceGroupName2
+    ManagedBy          :
+    Sku                : Microsoft.Azure.Management.Compute.Models.SnapshotSku
+    TimeCreated        : 4/10/2018 7:05:42 PM
+    OsType             : Windows
+    CreationData       : Microsoft.Azure.Management.Compute.Models.CreationData
+    DiskSizeGB         : 127
+    EncryptionSettings :
+    ProvisioningState  : Succeeded
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroupName2/providers/Microsoft.Compu
+                         te/snapshots/SnapshotName3
+    Name               : SnapshotName3
+    Type               : Microsoft.Compute/snapshots
+    Location           : westus2
+    Tags               : {}
+  description: |-
+    This command gets all snapshots that start with "SnapshotName"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SnapshotName
+  description: |+
+    Specifies the name of a snapshot.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+uid: Az.Compute.Get-AzSnapshot
+name: Get-AzSnapshot
+description: |-
+  The **Get-AzSnapshot** cmdlet gets the properties of a snapshot.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azsnapshot
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzSnapshot.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzSnapshot.md

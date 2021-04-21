@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the single sign-on URL of a CDN profile.
+module: Az.Cdn
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Profile.PSSsoUri" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzCdnProfile
+  href: ./Get-AzCdnProfile.yml
+syntaxes:
+- >-
+  Get-AzCdnProfileSsoUrl -ProfileName <String> -ResourceGroupName <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzCdnProfileSsoUrl -CdnProfile <PSProfile> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile" data-throw-if-not-resolved="False" />
+  name: CdnProfile
+  isRequired: true
+  description: |+
+    Specifies the CDN profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProfileName
+  isRequired: true
+  description: |+
+    Specifies the name of the CDN profile.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group name to which the profile belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Cdn.Get-AzCdnProfileSsoUrl
+name: Get-AzCdnProfileSsoUrl
+description: |-
+  The **Get-AzCdnProfileSsoUrl** cmdlet gets the single sign-on URL of the Azure Content Delivery Network (CDN) profile.
+  This URL lets users connect to a supplementary portal and use additional features of  CDN.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
+  Module Name: Az.Cdn
+  ms.assetid: 93D5E2D9-FB89-4311-8E8E-44CBFAFC98A9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/get-azcdnprofilessourl
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Get-AzCdnProfileSsoUrl.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Get-AzCdnProfileSsoUrl.md

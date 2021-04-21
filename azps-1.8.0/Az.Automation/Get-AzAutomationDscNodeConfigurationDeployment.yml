@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets DSC Node configuration deployments in Automation.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeployment" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-AzAutomationDscCompilationJob
+  href: ./Start-AzAutomationDscCompilationJob.yml
+- text: Import-AzAutomationDscNodeConfiguration
+  href: ./Import-AzAutomationDscNodeConfiguration.yml
+- text: Start-AzAutomationDscNodeConfigurationDeployment
+  href: ./Start-AzAutomationDscNodeConfigurationDeployment.yml
+- text: Stop-AzAutomationDscNodeConfigurationDeployment
+  href: ./Stop-AzAutomationDscNodeConfigurationDeployment.yml
+- text: Get-AzAutomationDscNodeConfigurationDeploymentSchedule
+  href: ./Get-AzAutomationDscNodeConfigurationDeploymentSchedule.yml
+syntaxes:
+- >-
+  Get-AzAutomationDscNodeConfigurationDeployment [-Status <String>] [-StartTime <DateTimeOffset>]
+
+   [-EndTime <DateTimeOffset>] [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzAutomationDscNodeConfigurationDeployment -JobId <Guid> [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a node configuration deployment'
+  code: "PS C:\\> $deployment = Get-AzAutomationDscNodeConfigurationDeployment `\r\n                         -JobId 35b14eb4-52b7-4a1d-ad62-8e9f84adc657 `\r\n                         -AutomationAccountName \"Contoso01\"  `\r\n                         -ResourceGroupName \"ResourceGroup01\" `\r\n            \r\nResourceGroupName     : ResourceGroup01\r\nAutomationAccountName : Contoso01\r\nJobId                 : 35b14eb4-52b7-4a1d-ad62-8e9f84adc657\r\nJob                   : Microsoft.Azure.Commands.Automation.Model.Job\r\nJobStatus             : Running\r\nNodeStatus            : {System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.Dictionary`2[System.String,System.String]}\r\nNodeConfigurationName : Config01.Node1\r\nJobSchedule           :\r\nJobScheduleId         : 00000000-0000-0000-0000-000000000000\r\n\r\nPS C:\\> $deployment | Select -expand nodeStatus\r\n\r\nKey        Value\r\n---        -----\r\nWebServer  Pending\r\nWebServer2 Pending\r\nWebServer3 Compliant"
+  description: |-
+    The above command deploys the DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EndTime
+  description: |+
+    End time filter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the Job id of an existing deployment job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group in which this cmdlet compiles a configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Start time filter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Status
+  description: |+
+    Status of the Job filter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Completed, Failed, Queued, Starting, Resuming, Running, Stopped, Stopping, Suspended, Suspending, Activating
+uid: Az.Automation.Get-AzAutomationDscNodeConfigurationDeployment
+name: Get-AzAutomationDscNodeConfigurationDeployment
+description: |-
+  The **Get-AzAutomationDscNodeConfigurationDeployment** cmdlet deployes an APS Desired State Configuration (DSC) node configuration in Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationdscnodeconfigurationdeployment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscNodeConfigurationDeployment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscNodeConfigurationDeployment.md

@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the location where Azure Security Center will automatically save data for the specific subscription
+module: Az.Security
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.Locations.PSSecurityLocation" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzSecurityLocation [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzSecurityLocation -Name <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzSecurityLocation -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzSecurityLocation
+    Id                                                                                                   Name
+    --                                                                                                   ----
+    /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/locations/centralus centralus
+  description: |-
+    Gets the location where Azure Security Center saves the calculated security data.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Resource ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Security.Get-AzSecurityLocation
+name: Get-AzSecurityLocation
+description: |-
+  Azure Security Center will automatically decide on a location to save some of your data.
+  Use this cmdlet to discover that location.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  Module Name: Az.Security
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.security/Get-AzSecurityLocation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Get-AzSecurityLocation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Get-AzSecurityLocation.md

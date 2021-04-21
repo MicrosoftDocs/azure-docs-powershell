@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies the image for a virtual machine.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAvailabilitySet
+  href: ./Get-AzAvailabilitySet.yml
+- text: Get-AzVMImage
+  href: ./Get-AzVMImage.yml
+- text: Get-AzVMImageOffer
+  href: ./Get-AzVMImageOffer.yml
+- text: Get-AzVMImagePublisher
+  href: ./Get-AzVMImagePublisher.yml
+- text: Get-AzVMImageSku
+  href: ./Get-AzVMImageSku.yml
+- text: New-AzVMConfig
+  href: ./New-AzVMConfig.yml
+syntaxes:
+- >-
+  Set-AzVMSourceImage [-VM] <PSVirtualMachine> [-PublisherName] <String> [-Offer] <String> [-Skus] <String>
+
+   [-Version] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Set-AzVMSourceImage [-VM] <PSVirtualMachine> [-Id] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set values for an image'
+  code: |-
+    PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
+    PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id 
+    PS C:\> Set-AzVMSourceImage -VM $VirtualMachine -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2012-R2-Datacenter" -Version "latest"
+  description: |-
+    The first command gets the availability set named AvailablitySet03 in the resource group named ResourceGroup11, and then stores that object in the $AvailabilitySet variable.
+    The second command creates a virtual machine object, and then stores it in the $VirtualMachine variable.
+    The command assigns a name and size to the virtual machine.
+    The virtual machine belongs to the availability set stored in $AvailabilitySet.
+    The final command sets values for publisher name, offer, SKU, and version.
+    The **Get-AzVMImagePublisher**, **Get-AzVMImageOffer**, **Get-AzVMImageSku**, and **Get-AzVMImage** cmdlets can discover these settings.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Offer
+  isRequired: true
+  description: |+
+    Specifies the type of VMImage offer.
+    To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PublisherName
+  isRequired: true
+  description: |+
+    Specifies the name of a publisher of a VMImage.
+    To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Skus
+  isRequired: true
+  description: |+
+    Specifies a VMImage SKU.
+    To obtain SKUs, use the Get-AzVMImageSku cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Version
+  isRequired: true
+  description: |+
+    Specifies a version of a VMImage.
+    To use the latest version, specify a value of latest instead of a particular version.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the local virtual machine object to configure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMProfile
+  parameterValueGroup: ""
+uid: Az.Compute.Set-AzVMSourceImage
+name: Set-AzVMSourceImage
+description: |-
+  The **Set-AzVMSourceImage** cmdlet specifies the platform image to use for a virtual machine.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: 91B2DE2F-442D-4428-8A6F-9C2CEC181CA7
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmsourceimage
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVMSourceImage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVMSourceImage.md

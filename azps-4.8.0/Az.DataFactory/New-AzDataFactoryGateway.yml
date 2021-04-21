@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a gateway for an Azure Data Factory.
+module: Az.DataFactory
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactoryGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzDataFactoryGateway
+  href: ./Remove-AzDataFactoryGateway.yml
+- text: Set-AzDataFactoryGateway
+  href: ./Set-AzDataFactoryGateway.yml
+syntaxes:
+- >-
+  New-AzDataFactoryGateway [-DataFactoryName] <String> [-Name] <String> [[-Description] <String>]
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzDataFactoryGateway [-DataFactory] <PSDataFactory> [-Name] <String> [[-Description] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a gateway'
+  code: |-
+    PS C:\>New-AzDataFactoryGateway -ResourceGroupName "ADF" -Name "ContosoGateway" -DataFactoryName "WikiADF" -Description "my gateway"
+    Name              : ContosoGateway
+    Description       : my gateway
+    Version           : 
+    Status            : NeedRegistration
+    VersionStatus     : None
+    CreateTime        : 8/22/2014 1:40:34 AM
+    RegisterTime      : 
+    LastConnectTime   : 
+    ExpiryTime        : 
+    ProvisioningState : Succeeded
+    Key               : ADF#40cbb3d9-2736-4794-a8a6-e6b839b4894f@a2d875ce-c9d7-4b8b-ad65-dd3ebbb9a940@8c0d1801-e863-44af-82e6-fb2f0c00f2ae@xz#Y9R0NhAeH3u7wgnrJyiWj4Y/QIhH4fFilIdzZgwsVQA=
+  description: |-
+    This command creates a gateway named ContosoGateway in the data factory named WikiADF in the resource group named ADF.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  name: DataFactory
+  isRequired: true
+  description: |+
+    Specifies a **PSDataFactory** object.
+    This cmdlet creates a gateway for the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet creates a gateway for the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the gateway to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet creates a gateway that belongs to the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataFactory.New-AzDataFactoryGateway
+name: New-AzDataFactoryGateway
+description: |-
+  The **New-AzDataFactoryGateway** cmdlet creates a gateway in Azure Data Factory.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
+  Module Name: Az.DataFactory
+  ms.assetid: 4DCF54BA-CFFA-4555-8CA3-66B98F704EFB
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/new-azdatafactorygateway
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryGateway.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryGateway.md

@@ -1,0 +1,21 @@
+### YamlMime:PowershellModule
+children:
+- title: DataBox
+  cmdlets:
+  - Az.DataBox.Get-AzDataBoxCredential
+  - Az.DataBox.Get-AzDataBoxJob
+  - Az.DataBox.New-AzDataBoxJob
+  - Az.DataBox.Remove-AzDataBoxJob
+  - Az.DataBox.Stop-AzDataBoxJob
+uid: Az.DataBox
+name: Az.DataBox
+description: |-
+  Module to Create, Cancel, Delete and Fetch Databox Jobs
+metadata:
+  Module Name: Az.DataBox
+  Module Guid: "'39B6B3E6-A15E-48BA-BE20-FE0D441D92B4'"
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.databox
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBox/DataBox/help/Az.DataBox.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBox/DataBox/help/Az.DataBox.md

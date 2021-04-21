@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the auto shutdown policy of a lab in DevTest Labs.
+module: Az.DevTestLabs
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DevTestLabs.Models.PSSchedule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzDtlAutoShutdownPolicy
+  href: ./Set-AzDtlAutoShutdownPolicy.yml
+syntaxes:
+- >-
+  Get-AzDtlAutoShutdownPolicy [-LabName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LabName
+  isRequired: true
+  description: |+
+    Specifies the name of the lab for which this cmdlet gets the auto shutdown policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that the lab belongs to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DevTestLabs.Get-AzDtlAutoShutdownPolicy
+name: Get-AzDtlAutoShutdownPolicy
+description: |-
+  The **Get-AzDtlAutoShutdownPolicy** cmdlet gets the auto shutdown policy of a lab, which allows you to automatically shut down all the virtual machines in a lab at a specified time of the day.
+  The cmdlet returns whether the status of the policy is enabled, and the time of day that you have set to automatically shut down the lab virtual machines.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DevTestLabs.dll-Help.xml
+  Module Name: Az.DevTestLabs
+  ms.assetid: 52DD0511-915F-4144-B47F-E4B7AF403AA5
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.devtestlabs/get-azdtlautoshutdownpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DevTestLabs/DevTestLabs/help/Get-AzDtlAutoShutdownPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DevTestLabs/DevTestLabs/help/Get-AzDtlAutoShutdownPolicy.md

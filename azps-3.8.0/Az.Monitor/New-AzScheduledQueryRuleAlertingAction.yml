@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an object of type Alerting Action
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleAlertingAction" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzScheduledQueryRuleAlertingAction [-AznsAction <PSScheduledQueryRuleAznsAction>] -Severity <String>
+
+   [-ThrottlingInMinutes <Int32>] -Trigger <PSScheduledQueryRuleTriggerCondition>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $alertingAction = New-AzScheduledQueryRuleAlertingAction -AznsAction $aznsActionGroup -Severity "1" -Trigger $triggerCondition
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleAznsAction" data-throw-if-not-resolved="False" />
+  name: AznsAction
+  description: |+
+    The AzNS action details
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Severity
+  isRequired: true
+  description: |+
+    The severity for this alert
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ThrottlingInMinutes
+  description: |+
+    The duration in minutes for which alert should be throttled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleTriggerCondition" data-throw-if-not-resolved="False" />
+  name: Trigger
+  isRequired: true
+  description: |+
+    The alert trigger condition
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzScheduledQueryRuleAlertingAction
+name: New-AzScheduledQueryRuleAlertingAction
+description: |-
+  Creates an object of type Alerting Action
+  This object is to be passed to the command that creates Log Alert Rule
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azscheduledqueryrulealertingaction
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzScheduledQueryRuleAlertingAction.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzScheduledQueryRuleAlertingAction.md

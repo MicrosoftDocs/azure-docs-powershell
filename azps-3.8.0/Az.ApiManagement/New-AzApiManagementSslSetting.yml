@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an instance of PsApiManagementSslSetting
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApiManagement
+  href: ./New-AzApiManagement.yml
+syntaxes:
+- >-
+  New-AzApiManagementSslSetting [-FrontendProtocol <Hashtable>] [-BackendProtocol <Hashtable>]
+
+   [-CipherSuite <Hashtable>] [-ServerProtocol <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1 : Create an SSL Setting to enable TLS 1.0 on both Backend and Frontend'
+  code: |-
+    PS D:\github\azure-powershell\artifacts\Debug\Az.ApiManagement> $enableTls=@{"Tls10" = "True"}
+    PS D:\github\azure-powershell\artifacts\Debug\Az.ApiManagement> New-AzApiManagementSslSetting -FrontendProtocol $enableTls -BackendProtocol $enableTls
+
+    FrontendProtocols BackendProtocols CipherSuites ServerProtocols
+    ----------------- ---------------- ------------ ---------------
+    {Tls10}           {Tls10}
+  description: |-
+    Create an new instance of PsApiManagementSslSetting to Enable TLSv 1.0 in both Frontend (between client and APIM) and Backend (between APIM and Backend) of ApiManagement Gateway.
+  summary: ""
+parameters:
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: BackendProtocol
+  description: |+
+    Backend Security protocol settings. This parameter is optional.
+    The valid Protocol Settings are 
+    `Tls11` - Tls 1.1
+    `Tls10` - Tls 1.0
+    `Ssl30` - SSL 3.0
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: CipherSuite
+  description: |+
+    Ssl cipher suites settings in the specified order. This parameter is optional.
+    The valid Settings are 
+    `TripleDes168` - Enable / Disable Tripe Des 168
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: FrontendProtocol
+  description: |+
+    Frontend Security protocols settings. This parameter is optional.
+    The valid Protocol Settings are 
+    `Tls11` - Tls 1.1
+    `Tls10` - Tls 1.0
+    `Ssl30` - SSL 3.0
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: ServerProtocol
+  description: |+
+    Server protocol settings like Http2. This parameter is optional.
+    The valid Settings are 
+    `Http2` - Enable Http 2.0
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.New-AzApiManagementSslSetting
+name: New-AzApiManagementSslSetting
+description: |-
+  Helper command to create an instance of PsApiManagementSslSetting.
+  This command is to be used with New-AzApiManagement command.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementsslsetting
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementSslSetting.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementSslSetting.md

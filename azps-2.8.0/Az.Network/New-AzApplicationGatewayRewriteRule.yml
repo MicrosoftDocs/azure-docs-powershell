@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a rewrite rule for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayRewriteRuleSet
+  href: ./Add-AzApplicationGatewayRewriteRuleSet.yml
+- text: Get-AzApplicationGatewayRewriteRuleSet
+  href: ./Get-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRuleSet
+  href: ./New-AzApplicationGatewayRewriteRuleSet.yml
+- text: Remove-AzApplicationGatewayRewriteRuleSet
+  href: ./Remove-AzApplicationGatewayRewriteRuleSet.yml
+- text: Set-AzApplicationGatewayRewriteRuleSet
+  href: ./Set-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRuleActionSet
+  href: ./New-AzApplicationGatewayRewriteRuleActionSet.yml
+- text: New-AzApplicationGatewayRewriteRuleHeaderConfiguration
+  href: ./New-AzApplicationGatewayRewriteRuleHeaderConfiguration.yml
+syntaxes:
+- >-
+  New-AzApplicationGatewayRewriteRule -Name <String> -ActionSet <PSApplicationGatewayRewriteRuleActionSet>
+
+   [-RuleSequence <Int32>]
+
+   [-Condition <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleCondition]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1 : Create a rewrite rule for an application gateway'
+  code: |-
+    PS C:\> $rule = New-AzApplicationGatewayRewriteRule -Name rule1 -ActionSet $action -RuleSequence 101 -Condition $condition
+  description: |-
+    This command creates a rewrite rule named rule1 and stores the result in the variable named $rule.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleActionSet" data-throw-if-not-resolved="False" />
+  name: ActionSet
+  isRequired: true
+  description: |+
+    ActionSet of the rewrite rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleCondition" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Condition
+  description: |+
+    Condition for the rewrite rule to execute
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the RewriteRule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: RuleSequence
+  description: |+
+    The rule ordering of this rewrite rule in the rewrite rule set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGatewayRewriteRule
+name: New-AzApplicationGatewayRewriteRule
+description: |-
+  **The New-AzApplicationGatewayRewriteRule** cmdlet creates a rewrite rule for an Azure application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewayrewriterule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayRewriteRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayRewriteRule.md

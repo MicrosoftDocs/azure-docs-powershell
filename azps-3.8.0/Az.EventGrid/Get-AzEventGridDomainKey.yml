@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the shared access keys used to publish events to an Event Grid domain.
+module: Az.EventGrid
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.EventGrid.Models.PSDomain" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.EventGrid.Models.DomainSharedAccessKeys" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzEventGridDomainKey [-ResourceGroupName] <String> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzEventGridDomainKey [-DomainObject] <PSDomain> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzEventGridDomainKey [-DomainResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzEventGridDomainKey -ResourceGroup MyResourceGroupName -Name Domain1
+
+    Key1                                         Key2
+    ----                                         ----
+    <Key1 value>                                <Key 2 value>
+  description: ""
+  summary: |+
+    Gets the shared access keys of Event Grid domain \`Domain1\` in resource group \`MyResourceGroupName\`.
+
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzEventGridDomain -ResourceGroup MyResourceGroupName -Name Domain1 | Get-AzEventGridDomainKey
+
+    Key1                                         Key2
+    ----                                         ----
+    <Key1 value>                                <Key 2 value>
+  description: ""
+  summary: |+
+    Gets the shared access keys of Event Grid domain \`Domain1\` in resource group \`MyResourceGroupName\`.
+
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.EventGrid.Models.PSDomain" data-throw-if-not-resolved="False" />
+  name: DomainObject
+  isRequired: true
+  description: |+
+    EventGrid Domain object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DomainResourceId
+  isRequired: true
+  description: |+
+    Resource Identifier representing the Event Grid Domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    EventGrid domain name.
+
+  defaultValue: None
+  position: "1"
+  aliases: DomainName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ResourceGroup
+  parameterValueGroup: ""
+uid: Az.EventGrid.Get-AzEventGridDomainKey
+name: Get-AzEventGridDomainKey
+description: |-
+  Gets the shared access keys used to publish events to an Event Grid domain.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll-Help.xml
+  Module Name: Az.EventGrid
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/get-azeventgriddomainkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/Get-AzEventGridDomainKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/Get-AzEventGridDomainKey.md

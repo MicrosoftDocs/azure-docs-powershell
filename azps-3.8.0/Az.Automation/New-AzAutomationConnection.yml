@@ -1,0 +1,147 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Automation connection.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Connection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationConnection
+  href: ./Get-AzAutomationConnection.yml
+- text: Remove-AzAutomationConnection
+  href: ./Remove-AzAutomationConnection.yml
+syntaxes:
+- >-
+  New-AzAutomationConnection [-Name] <String> [-ConnectionTypeName] <String>
+
+   [-ConnectionFieldValues] <IDictionary> [-Description <String>] [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a connection for ConnectionTypeName=Azure'
+  code: |-
+    PS C:\> $FieldValues = @{"AutomationCertificateName"="ContosoCertificate";"SubscriptionID"="81b59010-dc55-45b7-89cd-5ca26db62472"}
+    PS C:\> New-AzAutomationConnection -Name "Connection12" -ConnectionTypeName Azure -ConnectionFieldValues $FieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
+  description: |-
+    The first command assigns a hash table of field values to the $FieldValue variable.
+    The second command creates an Azure connection named Connection12 in the Automation account named AutomationAccount01.
+    The command uses the connection field values in $FieldValues.
+  summary: ""
+- title: 'Example 2: Create a connection for ConnectionTypeName=AzureServicePrincipal'
+  code: |-
+    PS C:\> $Thumbprint = "0SZTNJ34TCCMUJ5MJZGR8XQD3S0RVHJBA33Z8ZXV"
+    PS C:\> $TenantId = "4cd76576-b611-43d0-8f2b-adcb139531bf"
+    PS C:\> $ApplicationId = "3794a65a-e4e4-493d-ac1d-f04308d712dd"
+    PS C:\> $SubscriptionId = "81b59010-dc55-45b7-89cd-5ca26db62472"
+    PS C:\> $RunAsAccountConnectionFieldValues = @{"ApplicationId" = $ApplicationId; "TenantId" = $TenantId; "CertificateThumbprint" = $Thumbprint; "SubscriptionId" = $SubscriptionId}
+    PS C:\> New-AzAutomationConnection -Name "Connection13" -ConnectionTypeName AzureServicePrincipal -ConnectionFieldValues $RunAsAccountConnectionFieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
+  description: |-
+    The command creates an Azure connection named Connection13 in the Automation account named AutomationAccount01 using $RunAsAccountConnectionFieldValues and ConnectionTypeName=AzureServicePrincipal.
+    This ConnectionTypeName=AzureServicePrincipal is mainly used for Azure Run As Account.
+  summary: ""
+- title: 'Example 3: Create a connection for ConnectionTypeName=AzureClassicCertificate'
+  code: |-
+    PS C:\> $SubscriptionName = "MyTestSubscription"
+    PS C:\> $SubscriptionId = "81b59010-dc55-45b7-89cd-5ca26db62472"
+    PS C:\> $ClassicRunAsAccountCertifcateAssetName = "AzureClassicRunAsCertificate"
+    PS C:\> $ClassicRunAsAccountConnectionFieldValues = @{"SubscriptionName" = $SubscriptionName; "SubscriptionId" = $SubscriptionId; "CertificateAssetName" = $ClassicRunAsAccountCertifcateAssetName}
+    PS C:\> New-AzAutomationConnection -Name "Connection14" -ConnectionTypeName AzureClassicCertificate  -ConnectionFieldValues $ClassicRunAsAccountConnectionFieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
+  description: |-
+    The command creates an Azure connection named Connection14 in the Automation account named AutomationAccount01 using $ClassicRunAsAccountConnectionFieldValues and ConnectionTypeName=AzureClassicCertificate.
+    This ConnectionTypeName=AzureClassicCertificate is mainly used for Azure Classic Run As Account.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account for which this cmdlet creates a connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: ConnectionFieldValues
+  isRequired: true
+  description: |+
+    Specifies a hash table that contains key/value pairs.
+    The keys represent the connection fields for the specified connection type.
+    The values represent the specific values of each connection field for the connection instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ConnectionTypeName
+  isRequired: true
+  description: |+
+    Specifies the name of the connection type.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for which this cmdlet creates a connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.New-AzAutomationConnection
+name: New-AzAutomationConnection
+description: |-
+  The **New-AzAutomationConnection** cmdlet creates a connection in Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 95103160-8101-4C43-8DAA-0BD75DFF3150
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationconnection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationConnection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationConnection.md

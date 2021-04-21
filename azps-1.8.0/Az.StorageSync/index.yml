@@ -1,0 +1,35 @@
+### YamlMime:PowershellModule
+children:
+- title: StorageSync
+  cmdlets:
+  - Az.StorageSync.Get-AzStorageSyncCloudEndpoint
+  - Az.StorageSync.Get-AzStorageSyncGroup
+  - Az.StorageSync.Get-AzStorageSyncServer
+  - Az.StorageSync.Get-AzStorageSyncServerEndpoint
+  - Az.StorageSync.Get-AzStorageSyncService
+  - Az.StorageSync.Invoke-AzStorageSyncCompatibilityCheck
+  - Az.StorageSync.Invoke-AzStorageSyncFileRecall
+  - Az.StorageSync.New-AzStorageSyncCloudEndpoint
+  - Az.StorageSync.New-AzStorageSyncGroup
+  - Az.StorageSync.New-AzStorageSyncServerEndpoint
+  - Az.StorageSync.New-AzStorageSyncService
+  - Az.StorageSync.Register-AzStorageSyncServer
+  - Az.StorageSync.Remove-AzStorageSyncCloudEndpoint
+  - Az.StorageSync.Remove-AzStorageSyncGroup
+  - Az.StorageSync.Remove-AzStorageSyncServerEndpoint
+  - Az.StorageSync.Remove-AzStorageSyncService
+  - Az.StorageSync.Reset-AzStorageSyncServerCertificate
+  - Az.StorageSync.Set-AzStorageSyncServerEndpoint
+  - Az.StorageSync.Unregister-AzStorageSyncServer
+uid: Az.StorageSync
+name: Az.StorageSync
+description: |-
+  The cmdlets in the Storage Sync module enable you to manage operations pertaining to Azure File Sync in PowerShell.
+metadata:
+  Module Name: Az.StorageSync
+  Module Guid: 001b4bbc-9d7d-43b2-9e95-7a70325e9509
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.storagesync
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Az.StorageSync.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Az.StorageSync.md

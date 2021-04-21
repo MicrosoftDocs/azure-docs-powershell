@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of peering service locations offered by Microsoft.
+module: Az.Peering
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSPeeringServiceLocation" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzPeeringServiceLocation [-Country <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-AzPeeringServiceLocation -Country "United States" | Where-Object { $_.State -match "Washington"}
+
+    Country     : United States
+    State       : Washington
+    AzureRegion : West US
+    Name        : Washington
+    Id          :
+    Type        : Microsoft.Peering/peeringServiceLocations
+  description: |-
+    Retrieves the peering locations for washington.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-AzPeeringServiceLocation -Country "United States"
+
+    Country     : United States
+    State       : Alabama
+    AzureRegion : East US
+    Name        : Alabama
+    Id          :
+    Type        : Microsoft.Peering/peeringServiceLocations
+
+    Country     : United States
+    State       : Arizona
+    AzureRegion : West US
+    Name        : Arizona
+    Id          :
+    Type        : Microsoft.Peering/peeringServiceLocations
+
+    ...
+  description: |-
+    Retrieves the peering locations for washington.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Country
+  description: |+
+    The country filter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Peering.Get-AzPeeringServiceLocation
+name: Get-AzPeeringServiceLocation
+description: |-
+  List peering locations.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
+  Module Name: Az.Peering
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.peering/get-azpeeringservicelocation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Get-AzPeeringServiceLocation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Get-AzPeeringServiceLocation.md

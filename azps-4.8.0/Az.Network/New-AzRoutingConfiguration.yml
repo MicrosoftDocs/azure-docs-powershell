@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a RoutingConfiguration object.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSStaticRoute" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzStaticRoute
+  href: ./New-AzStaticRoute.yml
+- text: New-AzExpressRouteConnection
+  href: ./New-AzExpressRouteConnection.yml
+- text: Set-AzExpressRouteConnection
+  href: ./Set-AzExpressRouteConnection.yml
+- text: New-AzVirtualHubVnetConnection
+  href: ./New-AzVpnConnection.yml
+- text: Update-AzVirtualHubVnetConnection
+  href: ./Update-AzVpnConnection.yml
+- text: New-AzP2sVpnGateway
+  href: ./New-AzP2sVpnGateway.yml
+- text: Update-AzP2sVpnGateway
+  href: ./Update-AzP2sVpnGateway.yml
+- text: New-AzVpnConnection
+  href: ./New-AzVpnConnection.yml
+- text: Update-AzVpnConnection
+  href: ./Update-AzVpnConnection.yml
+syntaxes:
+- New-AzRoutingConfiguration -AssociatedRouteTable <String> -Label <String[]> -Id <String[]> [-StaticRoute <PSStaticRoute[]>]  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $rgName = "testRg"
+    PS C:\> $virtualHubName = "testHub"
+    PS C:\> $rt1 = Get-AzVHubRouteTable -ResourceGroupName $rgName -VirtualHubName $virtualHubName -Name "defaultRouteTable"
+    PS C:\> $rt2 = Get-AzVHubRouteTable -ResourceGroupName $rgName -VirtualHubName $virtualHubName -Name "noneRouteTable"
+    PS C:\> $route1 = New-AzStaticRoute -Name "route1" -AddressPrefix @("10.20.0.0/16", "10.30.0.0/16")-NextHopIpAddress "10.90.0.5"
+    PS C:\> New-AzRoutingConfiguration -AssociatedRouteTable $rt1.Id -Label @("testLabel") -Id @($rt2.Id) -StaticRoute @($route1)
+
+    AssociatedRouteTable  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubRouteTables/defaultRouteTable"
+    PropagatedRouteTables : {
+                              "Labels": [
+                                "testLabel"
+                              ],
+                              "Ids": [
+                                {
+                                  "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubRouteTables/noneRouteTable"
+                                }
+                              ]
+                            }
+    VnetRoutes            : {
+                              "StaticRoutes": [
+                                {
+                                  "Name": "route1",
+                                  "AddressPrefixes": [
+                                    "10.20.0.0/16",
+                                    "10.30.0.0/16"
+                                  ],
+                                  "NextHopIpAddress": "10.90.0.5"
+                                }
+                              ]
+                            }
+  description: |-
+    The above command will create a RoutingConfiguration object which can then be added to a connection resource. Static routes are only allowed with a HubVirtualNetworkConnection object.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AssociatedRouteTable
+  isRequired: true
+  description: |+
+    The hub route table associated with this routing configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Id
+  isRequired: true
+  description: |+
+    The list of resource ids of all the hub route tables to advertise the routes to for the PropagatedRouteTables property.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Label
+  isRequired: true
+  description: |+
+    The list of labels for the PropagatedRouteTables property.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSStaticRoute" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StaticRoute
+  isRequired: true
+  description: |+
+    List of routes that control routing from VirtualHub into a virtual network connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzRoutingConfiguration
+name: New-AzRoutingConfiguration
+description: |-
+  Creates a RoutingConfiguration object.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azroutingconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzRoutingConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzRoutingConfiguration.md

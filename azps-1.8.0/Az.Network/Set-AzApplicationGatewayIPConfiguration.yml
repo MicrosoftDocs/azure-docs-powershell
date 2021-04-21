@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an IP configuration for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayIPConfiguration
+  href: ./Add-AzApplicationGatewayIPConfiguration.yml
+- text: Add-AzApplicationGatewayIPConfiguration
+  href: ./Add-AzApplicationGatewayIPConfiguration.yml
+- text: Get-AzApplicationGatewayIPConfiguration
+  href: ./Get-AzApplicationGatewayIPConfiguration.yml
+- text: New-AzApplicationGatewayIPConfiguration
+  href: ./New-AzApplicationGatewayIPConfiguration.yml
+- text: Remove-AzApplicationGatewayIPConfiguration
+  href: ./Remove-AzApplicationGatewayIPConfiguration.yml
+syntaxes:
+- >-
+  Set-AzApplicationGatewayIPConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   [-SubnetId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Set-AzApplicationGatewayIPConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   [-Subnet <PSSubnet>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update an IP configuration for an application gateway'
+  code: |-
+    PS C:\>$VNet = Get-AzVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $VNet 
+    PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $AppGw = Set-AzApplicationGatewayIPConfiguration -ApplicationGateway $AppGw -Name "AppgwSubnet01" -Subnet $Subnets
+  description: |-
+    The first command gets the virtual network named VNet01 that belongs to the resource group named ResourceGroup01 and stores it in the $VNet variable.
+    The second command gets the subnet configuration named Subnet01 using $VNet and stores it in the $Subnet variable.
+    The third command gets an application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable.
+    The forth command sets the IP configuration of the application gateway stored in $AppGw to the subnet configuration stored in $Subnet.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies an application gateway object with which this cmdlet associates an IP configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IP configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSSubnet" data-throw-if-not-resolved="False" />
+  name: Subnet
+  description: |+
+    Specifies the subnet.
+    This is the subnet in which the application gateway is deployed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubnetId
+  description: |+
+    Specifies the subnet ID.
+    This is the subnet in which the application gateway is deployed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzApplicationGatewayIPConfiguration
+name: Set-AzApplicationGatewayIPConfiguration
+description: |-
+  The **Set-AzApplicationGatewayIPConfiguration** cmdlet modifies an IP configuration.
+  An IP configuration contains the subnet in which an application gateway is deployed.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 4D5F469D-FF1F-4D49-AC42-26E6DECFAA26
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewayipconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayIPConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayIPConfiguration.md

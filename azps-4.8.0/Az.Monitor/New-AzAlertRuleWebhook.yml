@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an alert rule webhook.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.RuleWebhookAction" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzMetricAlertRule
+  href: ./Add-AzMetricAlertRule.yml
+- text: Add-AzWebtestAlertRule
+  href: ./Add-AzWebtestAlertRule.yml
+- text: New-AzAlertRuleEmail
+  href: ./New-AzAlertRuleEmail.yml
+- text: New-AzAutoscaleWebhook
+  href: ./New-AzAutoscaleWebhook.yml
+syntaxes:
+- >-
+  New-AzAlertRuleWebhook [-ServiceUri] <String> [[-Property] <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an alert rule webhook'
+  code: |-
+    PS C:\>New-AzAlertRuleWebhook -ServiceUri "http://contoso.com"
+  description: |-
+    This command creates an alert rule webhook by specifying only the service URI.
+  summary: ""
+- title: 'Example 2: Create a webhook with one property'
+  code: |-
+    PS C:\>$Actual = New-AzAlertRuleWebhook -ServiceUri "http://contoso.com" -Property @{prop1 = 'value1'}
+  description: |-
+    This command creates an alert rule webhook for Contoso.com that has one property, and then stores it in the $Actual variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Property
+  description: |+
+    Specifies the list of properties in the format @(property1 = 'value1',....).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServiceUri
+  isRequired: true
+  description: |+
+    Specifies the service URI.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzAlertRuleWebhook
+name: New-AzAlertRuleWebhook
+description: |-
+  The **New-AzAlertRuleWebhook** cmdlet creates an alert rule webhook.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: 0137ECA3-37E1-4064-8A65-A582519E9017
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azalertrulewebhook
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md

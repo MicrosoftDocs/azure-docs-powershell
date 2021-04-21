@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the SKU of an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApplicationGatewaySku
+  href: ./Get-AzApplicationGatewaySku.yml
+- text: New-AzApplicationGatewaySku
+  href: ./New-AzApplicationGatewaySku.yml
+syntaxes:
+- >-
+  Set-AzApplicationGatewaySku -ApplicationGateway <PSApplicationGateway> -Name <String> -Tier <String>
+
+   [-Capacity <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the application gateway SKU'
+  code: |-
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $AppGw = Set-AzApplicationGatewaySku -ApplicationGateway $AppGw -Name "Standard_Small" -Tier "Standard" -Capacity 2
+  description: |-
+    The first command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01, and stores it in the $AppGw variable.
+    The second command updates the SKU of the application gateway.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies the application gateway object with which this cmdlet associates the SKU.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Capacity
+  description: |+
+    Specifies the instance count of the application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the application gateway.
+    The acceptable values for this parameter are:
+    - Standard_Small
+    - Standard_Medium
+    - Standard_Large
+    - WAF_Medium
+    - WAF_Large
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Standard_Small, Standard_Medium, Standard_Large, WAF_Medium, WAF_Large, Standard_v2, WAF_v2
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Tier
+  isRequired: true
+  description: |+
+    Specifies the tier of the application gateway.
+    The acceptable values for this parameter are:
+    - Standard
+    - WAF
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Standard, WAF, Standard_v2, WAF_v2
+uid: Az.Network.Set-AzApplicationGatewaySku
+name: Set-AzApplicationGatewaySku
+description: |-
+  The **Set-AzApplicationGatewaySku** cmdlet modifies the stock keeping unit (SKU) of an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 3D88F561-7FE4-4017-BAC4-8F085AD037A9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaysku
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewaySku.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewaySku.md

@@ -1,0 +1,324 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uploads a local file to an Azure Storage blob.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageBlob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageBlobContent
+  href: ./Get-AzStorageBlobContent.yml
+- text: Get-AzStorageBlob
+  href: ./Get-AzStorageBlob.yml
+- text: Remove-AzStorageBlob
+  href: ./Remove-AzStorageBlob.yml
+syntaxes:
+- >-
+  Set-AzStorageBlobContent [-File] <String> [-Container] <String> [-Blob <String>] [-BlobType <String>]
+
+   [-Properties <Hashtable>] [-Metadata <Hashtable>] [-PremiumPageBlobTier <PremiumPageBlobTier>]
+
+   [-StandardBlobTier <String>] [-Force] [-AsJob] [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzStorageBlobContent [-File] <String> [-Blob <String>] -CloudBlobContainer <CloudBlobContainer>
+
+   [-BlobType <String>] [-Properties <Hashtable>] [-Metadata <Hashtable>]
+
+   [-PremiumPageBlobTier <PremiumPageBlobTier>] [-StandardBlobTier <String>] [-Force] [-AsJob]
+
+   [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzStorageBlobContent [-File] <String> -CloudBlob <CloudBlob> [-BlobType <String>] [-Properties <Hashtable>]
+
+   [-Metadata <Hashtable>] [-PremiumPageBlobTier <PremiumPageBlobTier>] [-StandardBlobTier <String>] [-Force]
+
+   [-AsJob] [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Upload a named file'
+  code: |-
+    PS C:\>Set-AzStorageBlobContent -Container "ContosoUpload" -File ".\PlanningData" -Blob "Planning2015"
+  description: |-
+    This command uploads the file that is named PlanningData to a blob named Planning2015.
+  summary: ""
+- title: 'Example 2: Upload all files under the current folder'
+  code: |-
+    PS C:\>Get-ChildItem -File -Recurse | Set-AzStorageBlobContent -Container "ContosoUploads"
+  description: |-
+    This command uses the core Windows PowerShell cmdlet Get-ChildItem to get all the files in the current folder and in subfolders, and then passes them to the current cmdlet by using the pipeline operator.
+    The **Set-AzStorageBlobContent** cmdlet uploads the files to the container named ContosoUploads.
+  summary: ""
+- title: 'Example 3: Overwrite an existing blob'
+  code: |-
+    PS C:\>Get-AzStorageBlob -Container "ContosoUploads" -Blob "Planning2015" | Set-AzStorageBlobContent -File "ContosoPlanning"
+  description: |-
+    This command gets the blob named Planning2015 in the ContosoUploads container by using the Get-AzStorageBlob cmdlet, and then passes that blob to the current cmdlet.
+    The command uploads the file that is named ContosoPlanning as Planning2015.
+    This command does not specify the *Force* parameter.
+    The command prompts you for confirmation.
+    If you confirm the command, the cmdlet overwrites the existing blob.
+  summary: ""
+- title: 'Example 4: Upload a file to a container by using the pipeline'
+  code: |-
+    PS C:\>Get-AzStorageContainer -Container "ContosoUpload*" | Set-AzStorageBlobContent -File "ContosoPlanning" -Blob "Planning2015"
+  description: |-
+    This command gets the container that starts with the string ContosoUpload by using the **Get-AzStorageContainer** cmdlet, and then passes that blob to the current cmdlet.
+    The command uploads the file that is named ContosoPlanning as Planning2015.
+  summary: ""
+- title: 'Example 5: Upload a file to page blob with metadata and PremiumPageBlobTier as P10'
+  code: |-
+    PS C:\>$Metadata = @{"key" = "value"; "name" = "test"}
+    PS C:\> Set-AzStorageBlobContent -File "ContosoPlanning" -Container "ContosoUploads" -Metadata $Metadata -BlobType Page -PremiumPageBlobTier P10
+  description: |-
+    The first command creates a hash table that contains metadata for a blob, and stores that hash table in the $Metadata variable.
+    The second command uploads the file that is named ContosoPlanning to the container named ContosoUploads.
+    The blob includes the metadata stored in $Metadata, and has PremiumPageBlobTier as P10.
+  summary: ""
+- title: 'Example 6: Upload a file to blob with specified blob properties, and set StandardBlobTier as Cool'
+  code: |-
+    PS C:\> $filepath = "c:\temp\index.html"
+    PS C:\> Set-AzStorageBlobContent -File $filepath -Container "contosouploads" -Properties @{"ContentType" = [System.Web.MimeMapping]::GetMimeMapping($filepath); "ContentMD5" = "i727sP7HigloQDsqadNLHw=="} -StandardBlobTier Cool
+
+       AccountName: storageaccountname, ContainerName: contosouploads
+
+    Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
+    ----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
+    index.html           BlockBlob 403116          text/html                      2020-09-22 08:06:53Z Cool                                    False
+  description: |-
+    This command uploads the file c:\temp\index.html to the container named contosouploads with specified blob properties, and set StandardBlobTier as Cool.
+    This command gets ContentType value set to blob properties by [System.Web.MimeMapping]::GetMimeMapping() API.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Blob
+  description: |+
+    Specifies the name of a blob.
+    This cmdlet uploads a file to the Azure Storage blob that this parameter specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BlobType
+  description: |+
+    Specifies the type for the blob that this cmdlet uploads.
+    The acceptable values for this parameter are:
+    - Block
+    - Page
+    The default value is Block.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Block, Page, Append
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ClientTimeoutPerRequest
+  description: |+
+    Specifies the client-side time-out interval, in seconds, for one service request.
+    If the previous call fails in the specified interval, this cmdlet retries the request.
+    If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ClientTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  name: CloudBlob
+  isRequired: true
+  description: |+
+    Specifies a **CloudBlob** object.
+    To obtain a **CloudBlob** object, use the Get-AzStorageBlob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ICloudBlob
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  name: CloudBlobContainer
+  isRequired: true
+  description: |+
+    Specifies a **CloudBlobContainer** object from the Azure Storage Client library.
+    This cmdlet uploads content to a blob in the container that this parameter specifies.
+    To obtain a **CloudBlobContainer** object, use the Get-AzStorageContainer cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ConcurrentTaskCount
+  description: |+
+    Specifies the maximum concurrent network calls.
+    You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+    The specified value is an absolute count and is not multiplied by the core count.
+    This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Container
+  isRequired: true
+  description: |+
+    Specifies the name of a container.
+    This cmdlet uploads a file to a blob in the container that this parameter specifies.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure storage context.
+    To obtain a storage context, use the New-AzStorageContext cmdlet.
+    To use a storage context created from a SAS Token without read permission, need add -Force parameter to skip check blob existence.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: File
+  isRequired: true
+  description: |+
+    Specifies a local file path for a file to upload as blob content.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that this cmdlet overwrites an existing blob without prompting you for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Specifies metadata for the uploaded blob.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Storage.Blob.PremiumPageBlobTier" data-throw-if-not-resolved="False" />
+  name: PremiumPageBlobTier
+  description: |+
+    Page Blob Tier
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, P4, P6, P10, P20, P30, P40, P50, P60, P70, P80
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Properties
+  description: |+
+    Specifies properties for the uploaded blob. 
+    The supported properties are: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, ContentMD5, ContentType.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ServerTimeoutPerRequest
+  description: |+
+    Specifies the service side time-out interval, in seconds, for a request.
+    If the specified interval elapses before the service processes the request, the storage service returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ServerTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StandardBlobTier
+  description: |+
+    Block Blob Tier, valid values are Hot/Cool/Archive.
+    See detail in https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Hot, Cool, Archive
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Set-AzStorageBlobContent
+name: Set-AzStorageBlobContent
+description: |-
+  The **Set-AzStorageBlobContent** cmdlet uploads a local file to an Azure Storage blob.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: F20A5FD3-6EC3-4EFE-988C-75F8583961A4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/set-azstorageblobcontent
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageBlobContent.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageBlobContent.md

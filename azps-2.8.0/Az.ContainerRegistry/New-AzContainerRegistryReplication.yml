@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a container registry replication.
+module: Az.ContainerRegistry
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryReplication" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzContainerRegistryReplication
+  href: New-AzContainerRegistryReplication.yml
+- text: Remove-AzContainerRegistryReplication
+  href: Remove-AzContainerRegistryReplication.yml
+syntaxes:
+- >-
+  New-AzContainerRegistryReplication [-ResourceGroupName] <String> [-RegistryName] <String> -Location <String>
+
+   [-Name <String>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzContainerRegistryReplication -Registry <PSContainerRegistry> -Location <String> [-Name <String>]
+
+   [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzContainerRegistryReplication -Location <String> [-Name <String>] [-Tag <Hashtable>] -ResourceId <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new container registry replication.'
+  code: |-
+    PS C:\>New-AzContainerRegistryReplication -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name replication001 -Location 'west us' -Tag @{tagName='MyTag'}
+
+    Name                 Location   Provisioni Status               StatusTimestamp                Tags
+                                    ngState
+    ----                 --------   ---------- ------               ---------------                ----
+    replication001       westus     Succeeded  Ready                11/17/2017 10:19:45 PM         {[tagName, MyTag]}
+  description: |-
+    Create a new container registry replication.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Container Registry Location.
+    Default to the location of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ReplicationLocation
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Container Registry Replication Name.
+    Default to the location name.
+
+  defaultValue: None
+  position: Named
+  aliases: ReplicationName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistry" data-throw-if-not-resolved="False" />
+  name: Registry
+  isRequired: true
+  description: |+
+    Container Registry Object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RegistryName
+  isRequired: true
+  description: |+
+    Container Registry Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ContainerRegistryName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The container registry resource id
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Container Registry Tags.
+
+  defaultValue: None
+  position: Named
+  aliases: Tags
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ContainerRegistry.New-AzContainerRegistryReplication
+name: New-AzContainerRegistryReplication
+description: |-
+  The New-AzContainerRegistryReplication cmdlet creates a new container registry replication.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
+  Module Name: Az.ContainerRegistry
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/new-azcontainerregistryreplication
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/New-AzContainerRegistryReplication.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/New-AzContainerRegistryReplication.md

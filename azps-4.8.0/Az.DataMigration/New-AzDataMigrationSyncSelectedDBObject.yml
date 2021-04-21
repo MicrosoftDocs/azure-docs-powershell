@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a database info object specific to the sync scenario to be used for a migration task.
+module: Az.DataMigration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataMigration.Models.MigrateSqlServerSqlDbSyncTaskInput" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzDataMigrationSyncSelectedDBObject -TargetDatabaseName <String> -SchemaName <String> -TableMap <Hashtable>
+
+   [-MigrationSetting <Hashtable>] [-SourceSetting <Hashtable>] [-TargetSetting <Hashtable>]
+
+   -SourceDatabaseName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $tableMap = New-Object 'system.collections.hashtable'
+    	$tableMap.Add("dbo.TestTable1", "dbo.TestTable1")
+    	$tableMap.Add("dbo.TestTable2","dbo.TestTable2")
+
+    	$selectedDbs = New-AzDmsSyncSelectedDBObject 
+    		-TargetDatabaseName DatabaseName `
+    		-SchemaName dbo `
+    		-TableMap $tableMap `
+    		-SourceDatabaseName DatabaseName
+  description: |-
+    This example creates a database metadata object describing the migrating settings for $DatabaseName to database $DatabaseName.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: MigrationSetting
+  description: |+
+    Migration settings which tune the migration behavior
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SchemaName
+  isRequired: true
+  description: |+
+    Schema name to be migrated
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SourceDatabaseName
+  isRequired: true
+  description: |+
+    The name of the source database.
+
+  defaultValue: None
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: SourceSetting
+  description: |+
+    Source settings to tune source endpoint migration behavior
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: TableMap
+  isRequired: true
+  description: |+
+    Mapping of source to target tables
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TargetDatabaseName
+  isRequired: true
+  description: |+
+    The name of the target database
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: TargetSetting
+  description: |+
+    Target settings to tune target endpoint migration behavior
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataMigration.New-AzDataMigrationSyncSelectedDBObject
+name: New-AzDataMigrationSyncSelectedDBObject
+description: |-
+  The New-AzDataMigrationSyncSelectedDB cmdlet creates a database info object specific to the sync scenario which contains information about source and target databases.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  Module Name: Az.DataMigration
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datamigration/New-AzDataMigrationSyncSelectedDBObject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationSyncSelectedDBObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationSyncSelectedDBObject.md

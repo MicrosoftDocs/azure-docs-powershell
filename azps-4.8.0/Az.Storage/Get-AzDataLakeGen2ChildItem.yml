@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists sub directorys and files from a directory or filesystem root.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureDataLakeGen2Item" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzDataLakeGen2ChildItem [-FileSystem] <String> [[-Path] <String>] [-FetchProperty] [-Recurse]
+
+   [-MaxCount <Int32>] [-ContinuationToken <String>] [-AsJob] [-OutputUserPrincipalName]
+
+   [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List the direct sub items from a Filesystem'
+  code: |-
+    PS C:\>Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1" 
+
+       FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
+    ----                 -----------  ------          ------------         -----------  -----                -----               
+    dir1                 True                         2020-03-13 13:07:34Z rwxr-x---    $superuser           $superuser          
+    dir2                 True                         2020-03-23 09:28:36Z rwxr-x---    $superuser           $superuser
+  description: |-
+    This command lists the direct sub items from a Filesystem
+  summary: ""
+- title: 'Example 2: List recursively from a directory, and fetch Properties/ACL'
+  code: |-
+    PS C:\>Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1" -Path "dir1/" -Recurse -FetchProperty
+
+       FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
+    ----                 -----------  ------          ------------         -----------  -----                -----               
+    dir1/dir3            True                         2020-03-23 09:34:31Z rwx---rwx    $superuser           $superuser          
+    dir1/file1           False        1024            2020-03-23 09:29:18Z rwx---rwx    $superuser           $superuser           
+    dir1/testfile_1K_0   False        1024            2020-03-23 09:29:21Z rw-r-----    $superuser           $superuser
+  description: |-
+    This command lists the direct sub items from a Filesystem
+  summary: ""
+- title: 'Example 3: List items recursively from a Filesystem in multiple batches'
+  code: |-
+    PS C:\> $MaxReturn = 10000
+    PS C:\> $FileSystemName = "filesystem1"
+    PS C:\> $Total = 0
+    PS C:\> $Token = $Null
+    PS C:\> do
+     {
+         $items = Get-AzDataLakeGen2ChildItem -FileSystem $FileSystemName -Recurse -MaxCount $MaxReturn  -ContinuationToken $Token
+         $Total += $items.Count
+         if($items.Length -le 0) { Break;}
+         $Token = $items[$items.Count -1].ContinuationToken;
+     }
+     While ($Token -ne $Null)
+    PS C:\> Echo "Total $Total items in Filesystem $FileSystemName"
+  description: |-
+    This example uses the *MaxCount* and *ContinuationToken* parameters to list items recursively from a Filesystem in multiple batches.
+    The first four commands assign values to variables to use in the example.
+    The fifth command specifies a **Do-While** statement that uses the **Get-AzDataLakeGen2ChildItem** cmdlet to list items.
+    The statement includes the continuation token stored in the $Token variable.
+    $Token changes value as the loop runs.
+    The final command uses the **Echo** command to display the total.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Azure Storage Context Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContinuationToken
+  description: |+
+    Continuation Token.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FetchProperty
+  description: |+
+    Fetch the datalake item properties and ACL.
+
+  defaultValue: None
+  position: Named
+  aliases: FetchPermission
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FileSystem
+  isRequired: true
+  description: |+
+    FileSystem name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxCount
+  description: |+
+    The max count of the blobs that can return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OutputUserPrincipalName
+  description: |+
+    If speicify this parameter, the user identity values returned in the owner and group fields of each list entry will be transformed from Azure Active Directory Object IDs to User Principal Names. If not speicify this parameter, the values will be returned as Azure Active Directory Object IDs. Note that group and application Object IDs are not translated because they do not have unique friendly names.
+
+  defaultValue: None
+  position: Named
+  aliases: UserPrincipalName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    The path in the specified Filesystem that should be retrieved.
+    Should be a directory, in the format 'directory1/directory2/'.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recurse
+  description: |+
+    Indicates if will recursively get the Child Item.
+    The default is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.Get-AzDataLakeGen2ChildItem
+name: Get-AzDataLakeGen2ChildItem
+description: |-
+  The **Get-AzDataLakeGen2ChildItem** cmdlet lists sub directorys and files in a directory or Filesystem in an Azure storage account.
+  This cmdlet only works if Hierarchical Namespace is enabled for the Storage account. This kind of account can be created by run "New-AzStorageAccount" cmdlet with "-EnableHierarchicalNamespace $true".
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azdatalakegen2childitem
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzDataLakeGen2ChildItem.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzDataLakeGen2ChildItem.md

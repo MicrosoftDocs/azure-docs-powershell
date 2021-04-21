@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the properties of the specified connected cluster, including name, identity, properties, and additional cluster details.
+module: Az.ConnectedKubernetes
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IConnectedKubernetesIdentity>: Identity Parameter
+    - `[ClusterName <String>]`: The name of the Kubernetes cluster on which get is called.
+    - `[Id <String>]`: Resource identity path
+    - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+    - `[SubscriptionId <String>]`: The ID of the target subscription.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedKubernetes.Models.IConnectedKubernetesIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedKubernetes.Models.Api202001Preview.IConnectedCluster" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzConnectedKubernetes [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzConnectedKubernetes -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzConnectedKubernetes -InputObject <IConnectedKubernetesIdentity> [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzConnectedKubernetes -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all connected kubernetes under a subscription'
+  code: |-
+    PS C:\> Get-AzConnectedKubernetes
+
+    Location Name              Type
+    -------- ----              ----
+    eastus   connected-aks       Microsoft.Kubernetes/connectedClusters
+    eastus   connected-pwsh-aks  Microsoft.Kubernetes/connectedClusters
+    eastus   connected-pwsh-aks1 Microsoft.Kubernetes/connectedClusters
+    eastus   connected-pwsh-aks3 Microsoft.Kubernetes/connectedClusters
+    eastus   connected-aks-cli1  Microsoft.Kubernetes/connectedClusters
+  description: |-
+    This command gets all connected kubernetes under a subscription.
+  summary: ""
+- title: 'Example 2: Get all connected kubernetes under the resource group'
+  code: |-
+    PS C:\> Get-AzConnectedKubernetes -ResourceGroupName connected-aks
+
+    Location Name              Type
+    -------- ----              ----
+    eastus   connected-aks       Microsoft.Kubernetes/connectedClusters
+    eastus   connected-pwsh-aks  Microsoft.Kubernetes/connectedClusters
+    eastus   connected-pwsh-aks1 Microsoft.Kubernetes/connectedClusters
+    eastus   connected-pwsh-aks3 Microsoft.Kubernetes/connectedClusters
+    eastus   connected-aks-cli1  Microsoft.Kubernetes/connectedClusters
+  description: |-
+    This command gets all connected kubernetes under the resource group.
+  summary: ""
+- title: 'Example 3: Get a connected kubernetes'
+  code: |-
+    PS C:\> Get-AzConnectedKubernetes -ResourceGroupName connected-aks -Name connected-pwsh-aks
+
+    Location Name             Type
+    -------- ----             ----
+    eastus   connected-pwsh-aks Microsoft.Kubernetes/connectedClusters
+  description: |-
+    This command gets a connected kubernetes.
+  summary: ""
+- title: 'Example 4: Get a connected kubernetes by object'
+  code: |-
+    PS C:\> $conAks = Get-AzConnectedKubernetes -ResourceGroupName connected-aks -Name connected-pwsh-aks
+    PS C:\> Get-AzConnectedKubernetes -InputObject $conAks
+
+    Location Name             Type
+    -------- ----             ----
+    eastus   connected-pwsh-aks Microsoft.Kubernetes/connectedClusters
+  description: |-
+    This command gets a connected kubernetes by object.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    The name of the Kubernetes cluster on which get is called.
+
+  defaultValue: None
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedKubernetes.Models.IConnectedKubernetesIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The ID of the target subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ConnectedKubernetes.Get-AzConnectedKubernetes
+name: Get-AzConnectedKubernetes
+description: |-
+  Returns the properties of the specified connected cluster, including name, identity, properties, and additional cluster details.
+metadata:
+  external help file: ""
+  Module Name: Az.ConnectedKubernetes
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.connectedkubernetes/get-azconnectedkubernetes
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedKubernetes/help/Get-AzConnectedKubernetes.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedKubernetes/help/Get-AzConnectedKubernetes.md

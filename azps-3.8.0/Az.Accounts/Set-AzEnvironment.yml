@@ -1,0 +1,435 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties for an Azure environment.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureEnvironment" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzEnvironment
+  href: ./Add-AzEnvironment.yml
+- text: Get-AzEnvironment
+  href: ./Get-AzEnvironment.yml
+- text: Remove-AzEnvironment
+  href: ./Remove-AzEnvironment.yml
+syntaxes:
+- >-
+  Set-AzEnvironment [-Name] <String> [[-PublishSettingsFileUrl] <String>] [[-ServiceEndpoint] <String>]
+
+   [[-ManagementPortalUrl] <String>] [[-StorageEndpoint] <String>] [[-ActiveDirectoryEndpoint] <String>]
+
+   [[-ResourceManagerEndpoint] <String>] [[-GalleryEndpoint] <String>]
+
+   [[-ActiveDirectoryServiceEndpointResourceId] <String>] [[-GraphEndpoint] <String>]
+
+   [[-AzureKeyVaultDnsSuffix] <String>] [[-AzureKeyVaultServiceEndpointResourceId] <String>]
+
+   [[-TrafficManagerDnsSuffix] <String>] [[-SqlDatabaseDnsSuffix] <String>]
+
+   [[-AzureDataLakeStoreFileSystemEndpointSuffix] <String>]
+
+   [[-AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix] <String>] [-EnableAdfsAuthentication]
+
+   [[-AdTenant] <String>] [[-GraphAudience] <String>] [[-DataLakeAudience] <String>]
+
+   [[-BatchEndpointResourceId] <String>] [[-AzureOperationalInsightsEndpointResourceId] <String>]
+
+   [[-AzureOperationalInsightsEndpoint] <String>] [-AzureAnalysisServicesEndpointSuffix <String>]
+
+   [-AzureAnalysisServicesEndpointResourceId <String>] [-AzureAttestationServiceEndpointSuffix <String>]
+
+   [-AzureAttestationServiceEndpointResourceId <String>] [-Scope <ContextModificationScope>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzEnvironment [-Name] <String> [[-StorageEndpoint] <String>] [-ARMEndpoint] <String>
+
+   [[-AzureKeyVaultDnsSuffix] <String>] [[-AzureKeyVaultServiceEndpointResourceId] <String>]
+
+   [[-DataLakeAudience] <String>] [[-BatchEndpointResourceId] <String>]
+
+   [[-AzureOperationalInsightsEndpointResourceId] <String>] [[-AzureOperationalInsightsEndpoint] <String>]
+
+   [-AzureAnalysisServicesEndpointSuffix <String>] [-AzureAnalysisServicesEndpointResourceId <String>]
+
+   [-AzureAttestationServiceEndpointSuffix <String>] [-AzureAttestationServiceEndpointResourceId <String>]
+
+   [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Creating and modifying a new environment'
+  code: |-
+    PS C:\> Add-AzEnvironment -Name TestEnvironment `
+            -ActiveDirectoryEndpoint TestADEndpoint `
+            -ActiveDirectoryServiceEndpointResourceId TestADApplicationId `
+            -ResourceManagerEndpoint TestRMEndpoint `
+            -GalleryEndpoint TestGalleryEndpoint `
+            -GraphEndpoint TestGraphEndpoint
+
+    Name            Resource Manager Url ActiveDirectory Authority
+    ----            -------------------- -------------------------
+    TestEnvironment TestRMEndpoint       TestADEndpoint/
+
+    PS C:\> Set-AzEnvironment -Name TestEnvironment
+            -ActiveDirectoryEndpoint NewTestADEndpoint
+            -GraphEndpoint NewTestGraphEndpoint | Format-List
+
+    Name                                              : TestEnvironment
+    EnableAdfsAuthentication                          : False
+    ActiveDirectoryServiceEndpointResourceId          : TestADApplicationId
+    AdTenant                                          :
+    GalleryUrl                                        : TestGalleryEndpoint
+    ManagementPortalUrl                               :
+    ServiceManagementUrl                              : 
+    PublishSettingsFileUrl                            :
+    ResourceManagerUrl                                : TestRMEndpoint
+    SqlDatabaseDnsSuffix                              :
+    StorageEndpointSuffix                             :
+    ActiveDirectoryAuthority                          : NewTestADEndpoint
+    GraphUrl                                          : NewTestGraphEndpoint
+    GraphEndpointResourceId                           :
+    TrafficManagerDnsSuffix                           :
+    AzureKeyVaultDnsSuffix                            :
+    AzureDataLakeStoreFileSystemEndpointSuffix        :
+    AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix :
+    AzureKeyVaultServiceEndpointResourceId            :
+    BatchEndpointResourceId                           :
+    AzureOperationalInsightsEndpoint                  :
+    AzureOperationalInsightsEndpointResourceId        :
+    AzureAttestationServiceEndpointSuffix             :
+    AzureAttestationServiceEndpointResourceId         :
+  description: |-
+    In this example we are creating a new Azure environment with sample endpoints using Add-AzEnvironment, and then we are changing the value of the ActiveDirectoryEndpoint and GraphEndpoint attributes of the created environment using the cmdlet Set-AzEnvironment.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ActiveDirectoryEndpoint
+  description: |+
+    Specifies the base authority for Azure Active Directory authentication.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: AdEndpointUrl, ActiveDirectory, ActiveDirectoryAuthority
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ActiveDirectoryServiceEndpointResourceId
+  description: |+
+    Specifies the audience for tokens that authenticate requests to Azure Resource Manager or Service Management (RDFE) endpoints.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AdTenant
+  description: |+
+    Specifies the default Active Directory tenant.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "17"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ARMEndpoint
+  isRequired: true
+  description: |+
+    The Azure Resource Manager endpoint.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ArmUrl
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureAnalysisServicesEndpointResourceId
+  description: |+
+    The resource identifier of the Azure Analysis Services resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureAnalysisServicesEndpointSuffix
+  description: |+
+    The endpoint to use when communicating with the Azure Log Analytics API.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureAttestationServiceEndpointResourceId
+  description: |+
+    The The resource identifier of the Azure Attestation service that is the recipient of the requested token.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureAttestationServiceEndpointSuffix
+  description: |+
+    Dns suffix of Azure Attestation service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix
+  description: |+
+    Dns Suffix of Azure Data Lake Analytics job and catalog services
+
+  defaultValue: None
+  pipelineInput: true
+  position: "15"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureDataLakeStoreFileSystemEndpointSuffix
+  description: |+
+    Dns Suffix of Azure Data Lake Store FileSystem. Example: azuredatalake.net
+
+  defaultValue: None
+  pipelineInput: true
+  position: "14"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureKeyVaultDnsSuffix
+  description: |+
+    Dns suffix of Azure Key Vault service. Example is vault-int.azure-int.net
+
+  defaultValue: None
+  pipelineInput: true
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureKeyVaultServiceEndpointResourceId
+  description: |+
+    Resource identifier of Azure Key Vault data service that is the recipient of the requested token.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "11"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureOperationalInsightsEndpoint
+  description: |+
+    The endpoint to use when communicating with the Azure Log Analytics API.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "22"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureOperationalInsightsEndpointResourceId
+  description: |+
+    The audience for tokens authenticating with the Azure Log Analytics API.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "21"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BatchEndpointResourceId
+  description: |+
+    The resource identifier of the Azure Batch service that is the recipient of the requested token
+
+  defaultValue: None
+  pipelineInput: true
+  position: "20"
+  aliases: BatchResourceId, BatchAudience
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataLakeAudience
+  description: |+
+    The audience for tokens authenticating with the AD Data Lake services Endpoint.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "19"
+  aliases: DataLakeEndpointResourceId, DataLakeResourceId
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAdfsAuthentication
+  description: |+
+    Indicates that Active Directory Federation Services (ADFS) on-premise authentication is allowed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "16"
+  aliases: OnPremise
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GalleryEndpoint
+  description: |+
+    Specifies the endpoint for the Azure Resource Manager gallery of deployment templates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "7"
+  aliases: Gallery, GalleryUrl
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GraphAudience
+  description: |+
+    The audience for tokens authenticating with the AD Graph Endpoint.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "18"
+  aliases: GraphEndpointResourceId, GraphResourceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GraphEndpoint
+  description: |+
+    Specifies the URL for Graph (Active Directory metadata) requests.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9"
+  aliases: Graph, GraphUrl
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ManagementPortalUrl
+  description: |+
+    Specifies the URL for the Management Portal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the environment to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PublishSettingsFileUrl
+  description: |+
+    Specifies the URL from which .publishsettings files can be downloaded.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceManagerEndpoint
+  description: |+
+    Specifies the URL for Azure Resource Manager requests.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ResourceManager, ResourceManagerUrl
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Profile.Common.ContextModificationScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Process, CurrentUser
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServiceEndpoint
+  description: |+
+    Specifies the endpoint for Service Management (RDFE) requests.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ServiceManagement, ServiceManagementUrl
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SqlDatabaseDnsSuffix
+  description: |+
+    Specifies the domain-name suffix for Azure SQL Database servers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "13"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageEndpoint
+  description: |+
+    Specifies the endpoint for storage (blob, table, queue, and file) access.
+
+  defaultValue: None
+  position: "4"
+  aliases: StorageEndpointSuffix
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TrafficManagerDnsSuffix
+  description: |+
+    Specifies the domain-name suffix for Azure Traffic Manager services.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "12"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Accounts.Set-AzEnvironment
+name: Set-AzEnvironment
+description: |-
+  The Set-AzEnvironment cmdlet sets endpoints and metadata for connecting to an instance of Azure.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/set-azenvironment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Set-AzEnvironment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Set-AzEnvironment.md

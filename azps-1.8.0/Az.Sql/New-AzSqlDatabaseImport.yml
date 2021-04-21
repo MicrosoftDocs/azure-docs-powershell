@@ -1,0 +1,233 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a .bacpac file and create a new database on the server.
+module: Az.Sql
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, sql, database, mssql
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.AzureSqlDatabaseImportExportBaseModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlDatabaseImportExportStatus
+  href: ./Get-AzSqlDatabaseImportExportStatus.yml
+- text: New-AzSqlDatabaseExport
+  href: ./New-AzSqlDatabaseExport.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  New-AzSqlDatabaseImport -DatabaseName <String> -Edition <DatabaseEdition> -ServiceObjectiveName <String>
+
+   -DatabaseMaxSizeBytes <Int64> [-ServerName] <String> -StorageKeyType <StorageKeyType> -StorageKey <String>
+
+   -StorageUri <Uri> -AdministratorLogin <String> -AdministratorLoginPassword <SecureString>
+
+   [-AuthenticationType <AuthenticationType>] [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an import request for a bacpac file'
+  code: |-
+    PS C:\>New-AzSqlDatabaseImport -ResourceGroupName "RG01" -ServerName "Server01" -DatabaseName "Database01" -StorageKeyType "StorageAccessKey" -StorageKey "StorageKey01" -StorageUri "http://account01.blob.core.contoso.net/bacpacs/database01.bacpac" -AdministratorLogin "User" -AdministratorLoginPassword $SecureString -Edition Standard -ServiceObjectiveName S0 -DatabaseMaxSizeBytes 5000000
+    ResourceGroupName          : RG01
+    ServerName                 : Server01
+    DatabaseName               : Database01
+    StorageKeyType             : StorageAccessKey
+    StorageKey                 : 
+    StorageUri                 : http://account01.blob.core.contoso.net/bacpacs/database01.bacpac
+    AdministratorLogin         : User
+    AdministratorLoginPassword : 
+    AuthenticationType         : None
+    OperationStatusLink        : https://management.contoso.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-00
+                                 0-0000-0000-000000000000?api-version=2014-04-01
+    Status                     : InProgress
+    ErrorMessage               :
+  description: |-
+    This command creates an import request to import a .bacpac to a new database.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AdministratorLogin
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: AdministratorLoginPassword
+  isRequired: true
+  description: |+
+    Specifies the password of the SQL administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.AuthenticationType" data-throw-if-not-resolved="False" />
+  name: AuthenticationType
+  description: |+
+    Specifies the type of authentication used to access the server.
+    This parameter defaults to SQL if no authentication type is set.
+    The acceptable values for this parameter are:
+    - SQL.
+    SQL authentication.
+    Set the *AdministratorLogin* and *AdministratorLoginPassword* parameters to the SQL administrator username and password. 
+    - ADPassword.
+    Azure Active Directory authentication.
+    Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure Active Directory administrator username and password.
+    This parameter is only available on SQL Database V12 servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Sql, AdPassword
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+  name: DatabaseMaxSizeBytes
+  isRequired: true
+  description: |+
+    Specifies the maximum size for the newly imported database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL Database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition" data-throw-if-not-resolved="False" />
+  name: Edition
+  isRequired: true
+  description: |+
+    Specifies the edition of the new database to import to.
+    The acceptable values for this parameter are:
+    - Premium
+    - Basic
+    - Standard
+    - DataWarehouse
+    - Free
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS, GeneralPurpose, BusinessCritical
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for the SQL Database server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL Database server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServiceObjectiveName
+  isRequired: true
+  description: |+
+    Specifies the name of the service objective to assign to the Azure SQL Database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageKey
+  isRequired: true
+  description: |+
+    Specifies the access key for the storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.StorageKeyType" data-throw-if-not-resolved="False" />
+  name: StorageKeyType
+  isRequired: true
+  description: |+
+    Specifies the type of access key for the storage account.
+    The acceptable values for this parameter are:
+    - StorageAccessKey.
+    Uses the storage account key. 
+    - SharedAccessKey.
+    Uses the Shared Access Signature (SAS) key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: StorageAccessKey, SharedAccessKey
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: StorageUri
+  isRequired: true
+  description: |+
+    Specifies the blob URI of the .bacpac file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.New-AzSqlDatabaseImport
+name: New-AzSqlDatabaseImport
+description: |-
+  The **New-AzSqlDatabaseImport** cmdlet imports a bacpac file from an Azure storage account to a new Azure SQL Database.
+  The get import database status request may be sent to retrieve status information for this request.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: A1327BC6-F090-490E-8DC2-2CC48A21C2C0
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqldatabaseimport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlDatabaseImport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlDatabaseImport.md

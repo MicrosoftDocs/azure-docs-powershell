@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This command lists all server endpoints within a given sync group.
+module: Az.StorageSync
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSSyncGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSServerEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzStorageSyncServerEndpoint [-ParentObject] <PSSyncGroup> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzStorageSyncServerEndpoint [-ResourceGroupName] <String> [-StorageSyncServiceName] <String>
+
+   [-SyncGroupName] <String> [-Name <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzStorageSyncServerEndpoint [-ParentResourceId] <String> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzStorageSyncServerEndpoint -ResourceGroupName "myResourceGroup" -StorageSyncServiceName "myStorageSyncServiceName" -SyncGroupName "mySyncGroupName"
+  description: |-
+    This command gets all server endpoints contained within the specified sync group. Specify -ServerEndpointName to return a specific one.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the server endpoint.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ServerEndpointName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSSyncGroup" data-throw-if-not-resolved="False" />
+  name: ParentObject
+  isRequired: true
+  description: |+
+    StorageSyncService Object, normally passed through the parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SyncGroup
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceId
+  isRequired: true
+  description: |+
+    StorageSyncService Object, normally passed through the parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SyncGroupId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageSyncServiceName
+  isRequired: true
+  description: |+
+    Name of the StorageSyncService.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ParentName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncGroupName
+  isRequired: true
+  description: |+
+    Name of the SyncGroup.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.StorageSync.Get-AzStorageSyncServerEndpoint
+name: Get-AzStorageSyncServerEndpoint
+description: |-
+  This command lists all server endpoints within a given sync group. It can be used to also list the attributes of each server endpoint.
+metadata:
+  external help file: Microsoft.Azure.Commands.StorageSync.dll-Help.xml
+  Module Name: Az.StorageSync
+  online version: https://docs.microsoft.com/en-us/powershell/module/Az.storagesync/get-Azstoragesyncserverendpoint
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Get-AzStorageSyncServerEndpoint.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Get-AzStorageSyncServerEndpoint.md

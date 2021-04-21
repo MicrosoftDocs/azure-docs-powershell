@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates back-end HTTP setting for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayBackendHttpSetting
+  href: ./Add-AzApplicationGatewayBackendHttpSetting.yml
+- text: Get-AzApplicationGatewayBackendHttpSetting
+  href: ./Get-AzApplicationGatewayBackendHttpSetting.yml
+- text: Remove-AzApplicationGatewayBackendHttpSetting
+  href: ./Remove-AzApplicationGatewayBackendHttpSetting.yml
+- text: Set-AzApplicationGatewayBackendHttpSetting
+  href: ./Set-AzApplicationGatewayBackendHttpSetting.yml
+syntaxes:
+- >-
+  New-AzApplicationGatewayBackendHttpSetting -Name <String> -Port <Int32> -Protocol <String>
+
+   -CookieBasedAffinity <String> [-RequestTimeout <Int32>]
+
+   [-ConnectionDraining <PSApplicationGatewayConnectionDraining>] [-ProbeId <String>]
+
+   [-Probe <PSApplicationGatewayProbe>]
+
+   [-AuthenticationCertificates <PSApplicationGatewayAuthenticationCertificate[]>]
+
+   [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>] [-PickHostNameFromBackendAddress]
+
+   [-HostName <String>] [-AffinityCookieName <String>] [-Path <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create back-end HTTP settings'
+  code: |-
+    PS C:\>$Setting = New-AzApplicationGatewayBackendHttpSetting -Name "Setting01" -Port 80 -Protocol Http -CookieBasedAffinity Disabled
+  description: |-
+    This command creates back-end HTTP settings named Setting01 on port 80, using the HTTP protocol, with cookie-based affinity disabled.
+    The settings are stored in the $Setting variable.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AffinityCookieName
+  description: |+
+    Cookie name to use for the affinity cookie
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AuthenticationCertificates
+  description: |+
+    Specifies authentication certificates for the application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayConnectionDraining" data-throw-if-not-resolved="False" />
+  name: ConnectionDraining
+  description: |+
+    Connection draining of the backend http settings resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CookieBasedAffinity
+  isRequired: true
+  description: |+
+    Specifies whether cookie-based affinity should be enabled or disabled for the back-end server pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Sets host header to be sent to the backend servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the back-end HTTP settings that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Path which should be used as a prefix for all HTTP requests.
+    If no value is provided for this parameter, then no path will be prefixed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PickHostNameFromBackendAddress
+  description: |+
+    Flag if host header should be picked from the host name of the backend server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  isRequired: true
+  description: |+
+    Specifies the port of the back-end server pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe" data-throw-if-not-resolved="False" />
+  name: Probe
+  description: |+
+    Specifies a probe to associate with the back-end server pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProbeId
+  description: |+
+    Specifies the ID of the probe to associate with the back-end server pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  isRequired: true
+  description: |+
+    Specifies the protocol to use for communication between the application gateway and the back-end servers.
+    The acceptable values for this parameter are: Http and Https.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Http, Https
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: RequestTimeout
+  description: |+
+    Specifies a request time-out value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TrustedRootCertificate
+  description: |+
+    Application gateway Trusted Root Certificates
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGatewayBackendHttpSetting
+name: New-AzApplicationGatewayBackendHttpSetting
+description: |-
+  The New-AzApplicationGatewayBackendHttpSetting cmdlet creates back-end HTTP settings for an application gateway.
+  Back-end HTTP settings are applied to all back-end servers in a pool.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewaybackendhttpsetting
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayBackendHttpSetting.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayBackendHttpSetting.md

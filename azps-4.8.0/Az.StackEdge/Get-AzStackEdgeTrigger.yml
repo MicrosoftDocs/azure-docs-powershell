@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the Triggers configured on a device
+module: Az.StackEdge
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackEdge.Models.PSStackEdgeDevice" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackEdge.Models.PSStackEdgeTrigger" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzStackEdgeTrigger [-ResourceGroupName] <String> [-DeviceName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzStackEdgeTrigger -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzStackEdgeTrigger [-ResourceGroupName] <String> [-DeviceName] <String> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzStackEdgeTrigger [[-Name] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   -DeviceObject <PSStackEdgeDevice> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzStackEdgeTrigger -ResourceGroupName resourceGroupName -DeviceName deviceName
+    Name                  Kind               
+    ----                  ----               
+    triggerName          PeriodicTimerEvent
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeviceName
+  isRequired: true
+  description: |+
+    Device Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackEdge.Models.PSStackEdgeDevice" data-throw-if-not-resolved="False" />
+  name: DeviceObject
+  isRequired: true
+  description: |+
+    Please provide corresponding device object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Device
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Resource Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: TriggerName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Azure ResourceId
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.StackEdge.Get-AzStackEdgeTrigger
+name: Get-AzStackEdgeTrigger
+description: |-
+  The **Get-AzStackEdgeTriger** cmdlet gets the triggers for a device. You can specify the name as a parameter in the cmdlet to fetch the details of a specific  specific Triggers
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.StackEdge.dll-Help.xml
+  Module Name: Az.StackEdge
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.stackedge/get-azstackedgetrigger
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackEdge/StackEdge/help/Get-AzStackEdgeTrigger.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackEdge/StackEdge/help/Get-AzStackEdgeTrigger.md

@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets events of a container registry webhook.
+module: Az.ContainerRegistry
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryWebhookEvent" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzContainerRegistryWebhook
+  href: New-AzContainerRegistryWebhook.yml
+- text: Get-AzContainerRegistryWebhook
+  href: Get-AzContainerRegistryWebhook.yml
+- text: Update-AzContainerRegistryWebhook
+  href: Update-AzContainerRegistryWebhook.yml
+- text: Remove-AzContainerRegistryWebhook
+  href: Remove-AzContainerRegistryWebhook.yml
+- text: Test-AzContainerRegistryWebhook
+  href: Test-AzContainerRegistryWebhook.yml
+syntaxes:
+- >-
+  Get-AzContainerRegistryWebhookEvent [-WebhookName] <String> [-ResourceGroupName] <String>
+
+   [-RegistryName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzContainerRegistryWebhookEvent -Webhook <PSContainerRegistryWebhook>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzContainerRegistryWebhookEvent -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Gets all the events of a webhook.'
+  code: |-
+    PS C:\>Get-AzContainerRegistryWebhookEvent -ResourceGroupName mattacrtest001 -RegistryName premium001 -Name webhook001
+
+       Webhook service Uri: http://www.bing.com/
+
+    ID                                       Action   Timestamp                      Response
+                                                                                     StatusCode
+    --                                       ------   ---------                      ----------
+    3c6281b6-47cd-4129-948b-4036780236f0     ping     11/17/2017 5:10:09 PM          200
+    70f1d41d-15fe-4251-87b6-43c32a91eae7     ping     11/17/2017 6:56:23 AM          200
+    5d25556b-32d0-4377-8031-d8ba7a263d6a     ping     11/17/2017 6:27:41 AM          200
+    c1e7d8aa-9f1b-447c-9583-2a58b7f81026     ping     11/17/2017 12:09:41 AM         200
+    eb4aa503-0d14-4f25-8ae5-33cce9a8fd50     ping     11/16/2017 11:35:03 PM         200
+    85a93d7f-3923-4ec5-bb8e-9ded5b6549c1     ping     11/17/2017 5:10:09 PM          200
+    9e3c8b5f-e0ee-47cf-9727-df1c8d45a497     ping     11/17/2017 6:56:23 AM          200
+    2d0ce294-9b59-4f5c-953a-47f2b270526f     ping     11/17/2017 6:27:41 AM          200
+  description: |-
+    Gets all the events of a webhook.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RegistryName
+  isRequired: true
+  description: |+
+    Container Registry Name.
+
+  defaultValue: None
+  position: "2"
+  aliases: ContainerRegistryName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The container registry Webhook resource id
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryWebhook" data-throw-if-not-resolved="False" />
+  name: Webhook
+  isRequired: true
+  description: |+
+    Container Registry Object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WebhookName
+  isRequired: true
+  description: |+
+    Webhook Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ContainerRegistry.Get-AzContainerRegistryWebhookEvent
+name: Get-AzContainerRegistryWebhookEvent
+description: |-
+  The Get-AzContainerRegistryWebhookEvent cmdlet lists all the events of a webhook.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
+  Module Name: Az.ContainerRegistry
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/get-azcontainerregistrywebhookevent
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/Get-AzContainerRegistryWebhookEvent.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/Get-AzContainerRegistryWebhookEvent.md

@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends feedback to the Azure PowerShell team via a set of guided prompts.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Send-Feedback [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1:'
+  code: |-
+    PS C:\> Send-Feedback
+
+    With zero (0) being the least and ten (10) being the most, how likely are you to recommend Azure PowerShell to a friend or colleague?
+
+    10
+
+    What does Azure PowerShell do well?
+
+    Response.
+
+    Upon what could Azure PowerShell improve?
+
+    Response.
+
+    Please enter your email if you are interested in providing follow up information:
+
+    your@email.com
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Accounts.Send-Feedback
+name: Send-Feedback
+description: |-
+  The Send-Feedback cmdlet sends feedback to the Azure PowerShell team.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/send-feedback
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Send-Feedback.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Send-Feedback.md

@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a stored access policy for an Azure storage table.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageTableStoredAccessPolicy
+  href: ./Get-AzStorageTableStoredAccessPolicy.yml
+- text: New-AzStorageContext
+  href: ./New-AzStorageContext.yml
+- text: Remove-AzStorageTableStoredAccessPolicy
+  href: ./Remove-AzStorageTableStoredAccessPolicy.yml
+- text: Set-AzStorageTableStoredAccessPolicy
+  href: ./Set-AzStorageTableStoredAccessPolicy.yml
+syntaxes:
+- >-
+  New-AzStorageTableStoredAccessPolicy [-Table] <String> [-Policy] <String> [-Permission <String>]
+
+   [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-Context <IStorageContext>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a stored access policy in a table'
+  code: |-
+    PS C:\>New-AzStorageTableStoredAccessPolicy -Table "MyTable" -Policy "Policy02"
+  description: |-
+    This command creates an access policy named Policy02 in the storage table named MyTable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure storage context.
+    To obtain a storage context, use the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ExpiryTime
+  description: |+
+    Specifies the time at which the stored access policy becomes invalid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Specifies permissions in the stored access policy to access the storage table.
+    It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a name for the stored access policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies the time at which the stored access policy becomes valid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Table
+  isRequired: true
+  description: |+
+    Specifies the Azure storage table name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: N, Name
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageTableStoredAccessPolicy
+name: New-AzStorageTableStoredAccessPolicy
+description: |-
+  The **New-AzStorageTableStoredAccessPolicy** cmdlet creates a stored access policy for an Azure storage table.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: CF3B6E3B-3FC1-4871-AFE0-366B17A9E4F8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstoragetablestoredaccesspolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageTableStoredAccessPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageTableStoredAccessPolicy.md

@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get Front Door load balancer
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontDoor" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoor
+  href: ./New-AzFrontDoor.yml
+- text: Set-AzFrontDoor
+  href: ./Set-AzFrontDoor.yml
+- text: Remove-AzFrontDoor
+  href: ./Remove-AzFrontDoor.yml
+syntaxes:
+- >-
+  Get-AzFrontDoor [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all FrontDoors in the current subscription.'
+  code: |-
+    PS C:\> Get-AzFrontDoor
+
+    FriendlyName          : frontdoor1
+    RoutingRules          : {routingrule1}
+    BackendPools          : {backendpool1}
+    HealthProbeSettings   : {healthProbeSetting1}
+    LoadBalancingSettings : {loadbalancingsetting1}
+    FrontendEndpoints     : {frontendendpoint1}
+    EnabledState          : Enabled
+    ResourceState         : Enabled
+    ProvisioningState     : Succeeded
+    Cname                 :
+    Tags                  : {tag1, tag2}
+    Id                    : /subscriptions/{guid}/resourcegroups/{guid1}/providers/M
+                            icrosoft.Network/frontdoors/frontdoor1
+    Name                  : frontdoor1
+    Type                  : Microsoft.Network/frontdoor1
+
+    FriendlyName          : frontdoor1
+    RoutingRules          : {routingrule1}
+    BackendPools          : {backendpool1}
+    HealthProbeSettings   : {healthProbeSetting1}
+    LoadBalancingSettings : {loadbalancingsetting1}
+    FrontendEndpoints     : {frontendendpoint1}
+    EnabledState          : Enabled
+    ResourceState         : Enabled
+    ProvisioningState     : Succeeded
+    Cname                 :
+    Tags                  : {tag1, tag2}
+    Id                    : /subscriptions/{guid}/resourcegroups/{guid2}/providers/M
+                            icrosoft.Network/frontdoors/frontdoor1
+    Name                  : frontdoor1
+    Type                  : Microsoft.Network/frontdoor1
+  description: |-
+    Get all FrontDoors in the current subscription.
+  summary: ""
+- title: 'Example 2: Get all FrontDoors in resource group "rg1" in the current subscription.'
+  code: |-
+    PS C:\> Get-AzFrontDoor -ResourceGroupName "rg1"
+
+    FriendlyName          : frontdoor1
+    RoutingRules          : {routingrule1}
+    BackendPools          : {backendpool1}
+    HealthProbeSettings   : {healthProbeSetting1}
+    LoadBalancingSettings : {loadbalancingsetting1}
+    FrontendEndpoints     : {frontendendpoint1}
+    EnabledState          : Enabled
+    ResourceState         : Enabled
+    ProvisioningState     : Succeeded
+    Cname                 :
+    Tags                  : {tag1, tag2}
+    Id                    : /subscriptions/{guid}/resourcegroups/rg1/providers/M
+                            icrosoft.Network/frontdoors/frontdoor1
+    Name                  : frontdoor1
+    Type                  : Microsoft.Network/frontdoor1
+
+    FriendlyName          : frontdoor2
+    RoutingRules          : {routingrule1}
+    BackendPools          : {backendpool1}
+    HealthProbeSettings   : {healthProbeSetting1}
+    LoadBalancingSettings : {loadbalancingsetting1}
+    FrontendEndpoints     : {frontendendpoint1}
+    EnabledState          : Enabled
+    ResourceState         : Enabled
+    ProvisioningState     : Succeeded
+    Cname                 :
+    Tags                  : {tag1, tag2}
+    Id                    : /subscriptions/{guid}/resourcegroups/rg1/providers/M
+                            icrosoft.Network/frontdoors/frontdoor1
+    Name                  : frontdoor1
+    Type                  : Microsoft.Network/frontdoor1
+  description: |-
+    Get all FrontDoors in resource group "rg1" in the current subscription.
+  summary: ""
+- title: 'Example 3: Get the FrontDoors in resource group "rg1" with name "frontDoor1" in the current subscription.'
+  code: |-
+    PS C:\> Get-AzFrontDoor -ResourceGroupName "rg1" -Name "frontDoor1"
+
+    FriendlyName          : frontdoor1
+    RoutingRules          : {routingrule1}
+    BackendPools          : {backendpool1}
+    HealthProbeSettings   : {healthProbeSetting1}
+    LoadBalancingSettings : {loadbalancingsetting1}
+    FrontendEndpoints     : {frontendendpoint1}
+    EnabledState          : Enabled
+    ResourceState         : Enabled
+    ProvisioningState     : Succeeded
+    Cname                 :
+    Tags                  : {tag1, tag2}
+    Id                    : /subscriptions/{guid}/resourcegroups/rg1/providers/M
+                            icrosoft.Network/frontdoors/frontdoor1
+    Name                  : frontdoor1
+    Type                  : Microsoft.Network/frontdoor1
+  description: |-
+    Get the FrontDoors in resource group "rg1" with name "frontDoor1" in the current subscription.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Front Door name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.Get-AzFrontDoor
+name: Get-AzFrontDoor
+description: |-
+  The **Get-AzFrontDoor** cmdletGet gets all existing Front Doors in the current subscription that matches provided information.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/get-azfrontdoor
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoor.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoor.md

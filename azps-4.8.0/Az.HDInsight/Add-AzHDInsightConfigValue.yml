@@ -1,0 +1,277 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a Hadoop configuration value customization and/or a Hive shared library customization to a cluster configuration object.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzHDInsightClusterConfig
+  href: ./New-AzHDInsightClusterConfig.yml
+syntaxes:
+- >-
+  Add-AzHDInsightConfigValue [-Config] <AzureHDInsightConfig> [-Core <Hashtable>] [-HiveSite <Hashtable>]
+
+   [-HiveEnv <Hashtable>] [-OozieSite <Hashtable>] [-OozieEnv <Hashtable>] [-WebHCat <Hashtable>]
+
+   [-HBaseSite <Hashtable>] [-HBaseEnv <Hashtable>] [-Storm <Hashtable>] [-Yarn <Hashtable>]
+
+   [-MapRed <Hashtable>] [-Tez <Hashtable>] [-Hdfs <Hashtable>] [-RServer <Hashtable>]
+
+   [-SparkDefaults <Hashtable>] [-SparkThriftConf <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Add-AzHDInsightConfigValue [-Config] <AzureHDInsightConfig> [-Core <Hashtable>] [-HiveSite <Hashtable>]
+
+   [-HiveEnv <Hashtable>] [-OozieSite <Hashtable>] [-OozieEnv <Hashtable>] [-WebHCat <Hashtable>]
+
+   [-HBaseSite <Hashtable>] [-HBaseEnv <Hashtable>] [-Storm <Hashtable>] [-Yarn <Hashtable>]
+
+   [-MapRed <Hashtable>] [-Tez <Hashtable>] [-Hdfs <Hashtable>] [-RServer <Hashtable>]
+
+   [-Spark2Defaults <Hashtable>] [-Spark2ThriftConf <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a custom configuration value to the cluster configuration object'
+  code: |-
+    PS C:\># Primary storage account info
+    PS C:\> $storageAccountResourceGroupName = "Group"
+    PS C:\> $storageAccountName = "yourstorageacct001"
+    PS C:\> $storageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+
+    PS C:\> $storageContainer = "container001"
+
+    # Cluster configuration info
+    PS C:\> $location = "East US 2"
+    PS C:\> $clusterResourceGroupName = "Group"
+    PS C:\> $clusterName = "your-hadoop-001"
+    PS C:\> $clusterCreds = Get-Credential
+
+    # If the cluster's resource group doesn't exist yet, run:
+    #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+    # Config values
+    PS C:\> $coreConfigs = @{"io.file.buffer.size"="300000"}
+    PS C:\> $mapRedConfigs = @{"mapred.map.max.attempts"="2"}
+
+    # Create the cluster
+    PS C:\> New-AzHDInsightClusterConfig `
+                | Add-AzHDInsightConfigValue `
+                    -Core $coreConfigs `
+                    -MapRed $mapRedConfigs `
+                | New-AzHDInsightCluster `
+                    -ClusterType Hadoop `
+                    -OSType Windows `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location `
+                    -DefaultStorageAccountName "$storageAccountName.blob.core.windows.net" `
+                    -DefaultStorageAccountKey $storageAccountKey `
+                    -DefaultStorageContainer $storageAccountContainer
+  description: |-
+    This command adds a Hadoop configuration value to the cluster named your-hadoop-001.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+  name: Config
+  isRequired: true
+  description: |+
+    Specifies the HDInsight cluster configuration object that this cmdlet modifies.
+    This object is created by the New-AzHDInsightClusterConfig cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Core
+  description: |+
+    Specifies the Core Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: HBaseEnv
+  description: |+
+    Specifies the HBase Env configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: HBaseSite
+  description: |+
+    Specifies the HBase Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Hdfs
+  description: |+
+    Specifies the HDFS configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: HiveEnv
+  description: |+
+    Specifies the Hive Env configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: HiveSite
+  description: |+
+    Specifies the Hive Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: MapRed
+  description: |+
+    Specifies the MapRed Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: OozieEnv
+  description: |+
+    Specifies the Oozie Env configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: OozieSite
+  description: |+
+    Specifies the Oozie Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: RServer
+  description: |+
+    Specifies the RServer configurations. Valid only for RServer clusters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Spark2Defaults
+  description: |+
+    Specifies the Spark2 Defaults configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Spark2ThriftConf
+  description: |+
+    Specifies the Spark2 Thrift SparkConf configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: SparkDefaults
+  description: |+
+    Specifies the Spark Defaults configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: SparkThriftConf
+  description: |+
+    Specifies the Spark Thrift SparkConf configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Storm
+  description: |+
+    Specifies the Storm Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tez
+  description: |+
+    Specifies the Tez Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: WebHCat
+  description: |+
+    Specifies the WebHCat Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Yarn
+  description: |+
+    Specifies the YARN Site configurations of this HDInsight cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Add-AzHDInsightConfigValue
+name: Add-AzHDInsightConfigValue
+description: |-
+  The **Add-AzHDInsightConfigValue** cmdlet adds a Hadoop configuration value customization, such as core-site.xml or hive-site.xml, and/or a Hive shared library customization to the HDInsight configuration object created by the New-AzHDInsightClusterConfig cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 4C3CF283-DD4F-4D2A-ABEC-84AC7B005D6A
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/add-azhdinsightconfigvalue
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Add-AzHDInsightConfigValue.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Add-AzHDInsightConfigValue.md

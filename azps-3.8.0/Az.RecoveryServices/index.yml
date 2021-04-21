@@ -1,0 +1,123 @@
+### YamlMime:PowershellModule
+children:
+- title: Recovery Services
+  cmdlets:
+  - Az.RecoveryServices.Add-AzRecoveryServicesAsrReplicationProtectedItemDisk
+  - Az.RecoveryServices.Backup-AzRecoveryServicesBackupItem
+  - Az.RecoveryServices.Disable-AzRecoveryServicesBackupAutoProtection
+  - Az.RecoveryServices.Disable-AzRecoveryServicesBackupProtection
+  - Az.RecoveryServices.Disable-AzRecoveryServicesBackupRPMountScript
+  - Az.RecoveryServices.Edit-AzRecoveryServicesAsrRecoveryPlan
+  - Az.RecoveryServices.Enable-AzRecoveryServicesBackupAutoProtection
+  - Az.RecoveryServices.Enable-AzRecoveryServicesBackupProtection
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrAlertSetting
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrEvent
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrFabric
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrJob
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrNetwork
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrNetworkMapping
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrPolicy
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrProtectableItem
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrProtectionContainer
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrProtectionContainerMapping
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrRecoveryPlan
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrRecoveryPoint
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrReplicationProtectedItem
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrServicesProvider
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrStorageClassification
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrStorageClassificationMapping
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrVaultContext
+  - Az.RecoveryServices.Get-AzRecoveryServicesAsrvCenter
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupContainer
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupItem
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupJob
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupJobDetail
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupManagementServer
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupProperty
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupProtectableItem
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupProtectionPolicy
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupRecoveryLogChain
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupRecoveryPoint
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupRetentionPolicyObject
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupRPMountScript
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupSchedulePolicyObject
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupStatus
+  - Az.RecoveryServices.Get-AzRecoveryServicesBackupWorkloadRecoveryConfig
+  - Az.RecoveryServices.Get-AzRecoveryServicesVault
+  - Az.RecoveryServices.Get-AzRecoveryServicesVaultProperty
+  - Az.RecoveryServices.Get-AzRecoveryServicesVaultSettingsFile
+  - Az.RecoveryServices.Import-AzRecoveryServicesAsrVaultSettingsFile
+  - Az.RecoveryServices.Initialize-AzRecoveryServicesBackupProtectableItem
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrFabric
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrInMageAzureV2DiskInput
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrNetworkMapping
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrPolicy
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrProtectableItem
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrProtectionContainer
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrProtectionContainerMapping
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrRecoveryPlan
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrReplicationProtectedItem
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrStorageClassificationMapping
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrvCenter
+  - Az.RecoveryServices.New-AzRecoveryServicesAsrVMNicConfig
+  - Az.RecoveryServices.New-AzRecoveryServicesBackupProtectionPolicy
+  - Az.RecoveryServices.New-AzRecoveryServicesVault
+  - Az.RecoveryServices.Register-AzRecoveryServicesBackupContainer
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrFabric
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrNetworkMapping
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrPolicy
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrProtectionContainer
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrProtectionContainerMapping
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrRecoveryPlan
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrReplicationProtectedItem
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrReplicationProtectedItemDisk
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrServicesProvider
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrStorageClassificationMapping
+  - Az.RecoveryServices.Remove-AzRecoveryServicesAsrvCenter
+  - Az.RecoveryServices.Remove-AzRecoveryServicesBackupProtectionPolicy
+  - Az.RecoveryServices.Remove-AzRecoveryServicesVault
+  - Az.RecoveryServices.Restart-AzRecoveryServicesAsrJob
+  - Az.RecoveryServices.Restore-AzRecoveryServicesBackupItem
+  - Az.RecoveryServices.Resume-AzRecoveryServicesAsrJob
+  - Az.RecoveryServices.Set-AzRecoveryServicesAsrAlertSetting
+  - Az.RecoveryServices.Set-AzRecoveryServicesAsrReplicationProtectedItem
+  - Az.RecoveryServices.Set-AzRecoveryServicesAsrVaultContext
+  - Az.RecoveryServices.Set-AzRecoveryServicesBackupProperty
+  - Az.RecoveryServices.Set-AzRecoveryServicesBackupProtectionPolicy
+  - Az.RecoveryServices.Set-AzRecoveryServicesVaultContext
+  - Az.RecoveryServices.Set-AzRecoveryServicesVaultProperty
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrApplyRecoveryPoint
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrCommitFailoverJob
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrPlannedFailoverJob
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrResynchronizeReplicationJob
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrSwitchProcessServerJob
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrTestFailoverCleanupJob
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrTestFailoverJob
+  - Az.RecoveryServices.Start-AzRecoveryServicesAsrUnplannedFailoverJob
+  - Az.RecoveryServices.Stop-AzRecoveryServicesAsrJob
+  - Az.RecoveryServices.Stop-AzRecoveryServicesBackupJob
+  - Az.RecoveryServices.Undo-AzRecoveryServicesBackupItemDeletion
+  - Az.RecoveryServices.Unregister-AzRecoveryServicesBackupContainer
+  - Az.RecoveryServices.Unregister-AzRecoveryServicesBackupManagementServer
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrMobilityService
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrNetworkMapping
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrPolicy
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrProtectionContainerMapping
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrProtectionDirection
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrRecoveryPlan
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrServicesProvider
+  - Az.RecoveryServices.Update-AzRecoveryServicesAsrvCenter
+  - Az.RecoveryServices.Wait-AzRecoveryServicesBackupJob
+uid: Az.RecoveryServices
+name: Az.RecoveryServices
+description: |-
+  This topic displays help topics for the Azure Recovery Services cmdlets.
+metadata:
+  Module Name: Az.RecoveryServices
+  Module Guid: 4aa53b7e-fcfe-4e22-979c-9a4e6380de58
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices
+  Help Version: 4.1.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Az.RecoveryServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Az.RecoveryServices.md

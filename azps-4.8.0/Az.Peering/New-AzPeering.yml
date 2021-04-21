@@ -1,0 +1,251 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Peering ARM Resource
+module: Az.Peering
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSPeering" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSPeering" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzPeering [-ResourceGroupName] <String> [-Name] <String> [-PeeringLocation] <String>
+
+   [-PeerAsnResourceId] <String> -ExchangeConnection <PSExchangeConnection[]> [-Tag <Hashtable>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzPeering -InputObject <PSPeering> [-ResourceGroupName] <String> [-Name] <String>
+
+   [-PeerAsnResourceId] <String> [-ExchangeConnection <PSExchangeConnection[]>]
+
+   [-DirectConnection <PSDirectConnection[]>] [-Tag <Hashtable>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzPeering [-ResourceGroupName] <String> [-Name] <String> [-PeeringLocation] <String>
+
+   -MicrosoftNetwork <String> [-PeerAsnResourceId] <String> -DirectConnection <PSDirectConnection[]>
+
+   -Sku <String> [-Tag <Hashtable>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Create New Direct Peering
+  code: |-
+    #Gets the ASN
+    PS C:> $asn = Get-AzPeerAsn -PeerName Contoso
+    #Gets the Direct Peering Location
+    PS C:> $location = Get-AzPeeringLocation Direct -PeeringLocation Seattle
+    #Creates the ARM Resource
+    PS C:> New-AzPeering -Name ContosoSeattlePeering -ResourceGroupName testCarrier -PeeringLocation $location.PeeringLocation -PeerAsnResourceId $asn.Id -DirectConnection $connection
+
+    Name                 : ContosoSeattlePeering
+    Sku.Name             : Basic_Direct_Free
+    Kind                 : Direct
+    Connections          : {99999}
+    PeerAsn.Id           : /subscriptions//providers/Microsoft.Peering/peerAsns/Contoso
+    UseForPeeringService : False
+    PeeringLocation      : Seattle
+    ProvisioningState    : Succeeded
+    Location             : centralus
+    Id                   : /subscriptions//resourceGroups/testCarrier/providers/Microsoft.Peering/peerings/ContosoSeattlePeering
+    Type                 : Microsoft.Peering/peerings
+    Tags                 : {}
+  description: |-
+    Create a new Direct Peering with a single connection at the Seattle facility using PeerAsn 65000
+  summary: ""
+- title: Create New Exchange Peering
+  code: |-
+    #Gets the ASN
+    PS C:> $asn = Get-AzPeerAsn -PeerName Contoso
+    #Gets the Exchange Peering Location
+    PS C:> $location = Get-AzPeeringLocation Exchange -PeeringLocation Seattle
+    #Creates the ARM Resource
+    PS C:> New-AzPeering -Name ContosoSeattlePeering -ResourceGroupName testCarrier -PeeringLocation $location.PeeringLocation -PeerAsnResourceId $asn.Id -ExchangeConnection $connection
+
+    Name              : myExchangePeering1
+    Sku.Name          : Basic_Exchange_Free
+    Kind              : Exchange
+    Connections       : {99999}
+    PeerAsn.Id        : /subscriptions//providers/Microsoft.Peering/peerAsns/Contoso
+    PeeringLocation   : Seattle
+    ProvisioningState : Succeeded
+    Location          : centralus
+    Id                : /subscriptions//resourceGroups/test/providers/Microsoft.Peering/peerings/myExchangePeering1
+    Type              : Microsoft.Peering/peerings
+    Tags              : {}
+  description: |-
+    Create a new exchange peering
+  summary: ""
+- title: Convert Legacy Peering to ARM Peering
+  code: |-
+    #Gets the ASN
+    PS C:> $asn = Get-AzPeerAsn -PeerName Contoso
+    #Gets the legacy Peering
+    PS C:> $legacy = Get-AzLegacyPeering -PeeringLocation Amsterdam -Kind Direct | New-AzPeering -Name ContosoAmsterdamPeering -ResourceGroupName testCarrier -PeeringLocation $location.PeeringLocation -PeerAsnResourceId $asn.Id
+
+    Name              : ContosoAmsterdamPeering
+    Sku.Name          : Basic_Direct_Free
+    Kind              : Direct
+    Connections       : {64}
+    PeerAsn.Id        : /subscriptions//providers/Microsoft.Peering/peerAsns/Contoso
+    PeeringLocation   : Seattle
+    ProvisioningState : Succeeded
+    Location          : centralus
+    Id                : /subscriptions//resourceGroups/test/providers/Microsoft.Peering/peerings/ContosoAmsterdamPeering
+    Type              : Microsoft.Peering/peerings
+    Tags              : {}
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run in the background.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSDirectConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DirectConnection
+  isRequired: true
+  description: |+
+    Create a new Direct connections using the New-AzExchangePeeringConnection and pipe to this command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSExchangeConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExchangeConnection
+  isRequired: true
+  description: |+
+    Create a new Exchange connections using the New-AzExchangePeeringConnection and pipe to this command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSPeering" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Use Get-AzLegacyPeering to retrieve this object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MicrosoftNetwork
+  isRequired: true
+  description: |+
+    Select the Microsoft network you want to peer with.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The unique name of the PSPeering.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeerAsnResourceId
+  isRequired: true
+  description: |+
+    The Peer Asn Resource Id. Use Get-AzPeerAsn to retrieve the Id.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeeringLocation
+  isRequired: true
+  description: |+
+    The Physical Location Different from Azure Region.
+    Use Get-AzPeeringLocation -Kind \<kind\> use City name as key.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Sku
+  isRequired: true
+  description: |+
+    Select Basic_Direct_Free or Premium_Direct_Free unless explicitly told to select another option.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    The tags to associate with the Microsoft Peering Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Peering.New-AzPeering
+name: New-AzPeering
+description: |-
+  Creates an ARM Peering for the subscription. See [New-AzPeeringDirectConnectionObject](https://docs.microsoft.com/en-us/powershell/module/az.peering/new-azpeeringdirectconnectionobject) or [New-AzPeeringExchangeConnectionObject](https://docs.microsoft.com/en-us/powershell/module/az.peering/new-azpeeringexchangeconnectionobject) for more information on creating a connection object.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
+  Module Name: Az.Peering
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.peering/new-azpeering
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/New-AzPeering.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/New-AzPeering.md

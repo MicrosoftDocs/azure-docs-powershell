@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the BitLocker Keys for all drives in the specified job.
+module: Az.ImportExport
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IDriveBitLockerKey" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzImportExportBitLockerKey -JobName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-AcceptLanguage <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all BitLocker Keys in specified ImportExport job'
+  code: |-
+    PS C:\> Get-AzImportExportBitLockerKey -JobName test-job -ResourceGroupName ImportTestRG 
+    BitLockerKey                                            DriveId
+    ------------                                            -------
+    238810-662376-448998-450120-652806-203390-606320-483076 9CA995BA
+  description: |-
+    This cmdlet lists all BitLocker Keys in specified ImportExport job.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AcceptLanguage
+  description: |+
+    Specifies the preferred language for the response.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobName
+  isRequired: true
+  description: |+
+    The name of the import/export job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name uniquely identifies the resource group within the user subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The subscription ID for the Azure user.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ImportExport.Get-AzImportExportBitLockerKey
+name: Get-AzImportExportBitLockerKey
+description: |-
+  Returns the BitLocker Keys for all drives in the specified job.
+metadata:
+  external help file: ""
+  Module Name: Az.ImportExport
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.importexport/get-azimportexportbitlockerkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/Get-AzImportExportBitLockerKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/Get-AzImportExportBitLockerKey.md

@@ -1,0 +1,209 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a request routing rule for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayRequestRoutingRule
+  href: ./Add-AzApplicationGatewayRequestRoutingRule.yml
+- text: Get-AzApplicationGatewayRequestRoutingRule
+  href: ./Get-AzApplicationGatewayRequestRoutingRule.yml
+- text: New-AzApplicationGatewayRequestRoutingRule
+  href: ./New-AzApplicationGatewayRequestRoutingRule.yml
+- text: Remove-AzApplicationGatewayRequestRoutingRule
+  href: ./Remove-AzApplicationGatewayRequestRoutingRule.yml
+syntaxes:
+- >-
+  Set-AzApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   -RuleType <String> [-BackendHttpSettingsId <String>] [-HttpListenerId <String>]
+
+   [-BackendAddressPoolId <String>] [-UrlPathMapId <String>] [-RewriteRuleSetId <String>]
+
+   [-RedirectConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Set-AzApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   -RuleType <String> [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
+
+   [-HttpListener <PSApplicationGatewayHttpListener>]
+
+   [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
+
+   [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet>]
+
+   [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a request routing rule'
+  code: |-
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $AppGw = Set-AzApplicationGatewayRequestRoutingRule -ApplicationGateway $AppGw -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
+  description: |-
+    The first command gets the application gateway named ApplicationGateway01 and stores it in the $AppGw variable.
+    The second command modifies the request routing rule for the application gateway to use back-end HTTP settings specified in the $Setting variable, an HTTP listener specified in the $Listener variable, and a back-end address pool specified in the $Pool variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies the application gateway object with which this cmdlet associates a request routing rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" />
+  name: BackendAddressPool
+  description: |+
+    Specifies the application gateway back-end address pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendAddressPoolId
+  description: |+
+    Specifies the application gateway back-end address pool ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+  name: BackendHttpSettings
+  description: |+
+    Specifies the application gateway backend HTTP settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendHttpSettingsId
+  description: |+
+    Specifies the application gateway back-end HTTP settings ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+  name: HttpListener
+  description: |+
+    Specifies the application gateway HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HttpListenerId
+  description: |+
+    Specifies the application gateway HTTP listener ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the request routing rule that this cmdlet modifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" />
+  name: RedirectConfiguration
+  description: |+
+    Application gateway RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RedirectConfigurationId
+  description: |+
+    ID of the application gateway RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet" data-throw-if-not-resolved="False" />
+  name: RewriteRuleSet
+  description: |+
+    Application gateway RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RewriteRuleSetId
+  description: |+
+    ID of the application gateway RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuleType
+  isRequired: true
+  description: |+
+    Specifies the type of request routing rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Basic, PathBasedRouting
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap" data-throw-if-not-resolved="False" />
+  name: UrlPathMap
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UrlPathMapId
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzApplicationGatewayRequestRoutingRule
+name: Set-AzApplicationGatewayRequestRoutingRule
+description: |-
+  The **Set-AzApplicationGatewayRequestRoutingRule** cmdlet modifies a request routing rule.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 75A4826A-7A5F-4742-9DC4-DC728CED63D0
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewayrequestroutingrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayRequestRoutingRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayRequestRoutingRule.md

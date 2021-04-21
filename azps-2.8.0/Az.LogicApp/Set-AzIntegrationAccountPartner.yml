@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an integration account partner.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccountPartner" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzIntegrationAccountPartner
+  href: ./Get-AzIntegrationAccountPartner.yml
+- text: New-AzIntegrationAccountPartner
+  href: ./New-AzIntegrationAccountPartner.yml
+- text: Remove-AzIntegrationAccountPartner
+  href: ./Remove-AzIntegrationAccountPartner.yml
+syntaxes:
+- >-
+  Set-AzIntegrationAccountPartner -ResourceGroupName <String> -Name <String> -PartnerName <String>
+
+   [-PartnerType <String>] [-BusinessIdentities <Object>] [-Metadata <Object>] [-Force]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify an integration account partner'
+  code: |-
+    PS C:\>Set-AzIntegrationAccountPartner -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -PartnerName "IntegrationAccountPartner22" -PartnerType "B2B" -BusinessIdentities $BusinessIdentities
+    Id                 : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/partners/IntegrationAccountPartner1
+    Name               : IntegrationAccountPartner1
+    Type               : Microsoft.Logic/integrationAccounts/partners
+    PartnerType        : B2B
+    CreatedTime        : 3/26/2016 7:29:30 PM
+    ChangedTime        : 3/26/2016 7:29:30 PM
+    BusinessIdentities : [{"Qualifier":"ZZ","Value":"AA"},{"Qualifier":"XX","Value":"GG"}]
+    Metadata
+  description: |-
+    This command modify the integration account partner named IntegrationAccountPartner22 in the specified resource group.
+  summary: ""
+parameters:
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  name: BusinessIdentities
+  description: |+
+    Specifies business identities for the integration account partner.
+    Specify a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Specifies a metadata object for the partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an integration account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IntegrationAccountName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PartnerName
+  isRequired: true
+  description: |+
+    Specifies the name of the integration account partner.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PartnerType
+  description: |+
+    Specifies the type of the integration account.
+    This parameter supports the type B2B.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: B2B
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.LogicApp.Set-AzIntegrationAccountPartner
+name: Set-AzIntegrationAccountPartner
+description: |-
+  The **Set-AzIntegrationAccountPartner** cmdlet modifies an integration account partner.
+  This cmdlet returns an object that represents the integration account partner.
+  Specify the integration account name, resource group name, and partner name.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: 9B3B6AD4-C37C-4877-9864-9FB2E3B0BDAB
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/set-azintegrationaccountpartner
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountPartner.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountPartner.md

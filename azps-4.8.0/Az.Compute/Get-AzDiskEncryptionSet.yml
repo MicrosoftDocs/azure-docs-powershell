@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get or list disk encryption sets.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSDiskEncryptionSet" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzDiskEncryptionSet [[-ResourceGroupName] <String>] [[-Name] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzDiskEncryptionSet -ResourceGroupName rg1 -Name enc1;
+
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc1
+    Name              : enc1
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+  description: |-
+    Get disk encryption set 'enc1'
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzDiskEncryptionSet
+
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc1
+    Name              : enc1
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc2
+    Name              : enc2
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+  description: |-
+    Get all disk encryption sets in resource group 'rg1'.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzDiskEncryptionSet -ResourceGroupName rg1
+
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc1
+    Name              : enc1
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc2
+    Name              : enc2
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+
+    ResourceGroupName : rg2
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc3
+    Name              : enc3
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+  description: |-
+    Get all disk encryption sets in subscription.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of disk encryption set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DiskEncryptionSetName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.Get-AzDiskEncryptionSet
+name: Get-AzDiskEncryptionSet
+description: |-
+  Get or list disk encryption sets.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azdiskencryptionset.md
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzDiskEncryptionSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzDiskEncryptionSet.md

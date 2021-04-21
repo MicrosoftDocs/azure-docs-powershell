@@ -1,0 +1,272 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a new VpnServerConfiguration for point to site connectivity.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzVpnServerConfiguration -ResourceGroupName <String> -Name <String> -Location <String>
+
+   [-VpnProtocol <String[]>] [-VpnAuthenticationType <String[]>] [-VpnClientRootCertificateFilesList <String[]>]
+
+   [-VpnClientRevokedCertificateFilesList <String[]>] [-VpnClientIpsecPolicy <PSIpsecPolicy[]>]
+
+   [-Tag <Hashtable>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzVpnServerConfiguration -ResourceGroupName <String> -Name <String> -Location <String>
+
+   [-VpnProtocol <String[]>] [-VpnAuthenticationType <String[]>] -RadiusServerAddress <String>
+
+   -RadiusServerSecret <SecureString> [-RadiusServerRootCertificateFilesList <String[]>]
+
+   [-RadiusClientRootCertificateFilesList <String[]>] [-VpnClientIpsecPolicy <PSIpsecPolicy[]>]
+
+   [-Tag <Hashtable>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzVpnServerConfiguration -ResourceGroupName <String> -Name <String> -Location <String>
+
+   [-VpnProtocol <String[]>] [-VpnAuthenticationType <String[]>] [-AadTenant <String>] [-AadAudience <String>]
+
+   [-AadIssuer <String>] [-VpnClientIpsecPolicy <PSIpsecPolicy[]>] [-Tag <Hashtable>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $VpnServerConfigCertFilePath = Join-Path -Path $basedir -ChildPath "\ScenarioTests\Data\ApplicationGatewayAuthCert.cer"
+    PS C:\> $listOfCerts = New-Object "System.Collections.Generic.List[String]"
+    PS C:\> $listOfCerts.Add($VpnServerConfigCertFilePath)
+    PS C:\> New-AzVpnServerConfiguration -Name "test1config" -ResourceGroupName "P2SCortexGATesting" -VpnProtocol IkeV2 -VpnAuthenticationType Certificate -VpnClientRootCertificateFilesList $listOfCerts -VpnClientRevokedCertificateFilesList $listOfCerts -Location "westus"
+    ResourceGroupName            : P2SCortexGATesting
+    Name                         : test1config
+    Id                           : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/vpnServerConfigurations/test1config
+    Location                     : westus
+    VpnProtocols                 : {IkeV2, OpenVPN}
+    VpnAuthenticationTypes       : {Certificate}
+    VpnClientRootCertificates    :
+    VpnClientRevokedCertificates : [
+                                     {
+                                       "Name": "cert2",
+                                       "Thumbprint": "83FFBFC8848B5A5836C94D0112367E16148A286F"
+                                     }
+                                   ]
+    RadiusServerAddress          :
+    RadiusServerRootCertificates : []
+    RadiusClientRootCertificates : []
+    VpnClientIpsecPolicies       : []
+    AadAuthenticationParameters  : null
+    P2sVpnGateways               : []
+    Type                         : Microsoft.Network/vpnServerConfigurations
+    ProvisioningState            : Succeeded
+  description: |-
+    The above command will create a new VpnServerConfiguration with VpnAuthenticationType as Certificate.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AadAudience
+  description: |+
+    AAD audience for P2S AAD authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AadIssuer
+  description: |+
+    AAD issuer for P2S AAD authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AadTenant
+  description: |+
+    AAD tenant for P2S AAD authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The resource location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceName, VpnServerConfigurationName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RadiusClientRootCertificateFilesList
+  description: |+
+    A list of RadiusClientRootCertificate files' paths
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RadiusServerAddress
+  isRequired: true
+  description: |+
+    P2S External Radius server address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RadiusServerRootCertificateFilesList
+  description: |+
+    A list of RadiusClientRootCertificate files' paths
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: RadiusServerSecret
+  isRequired: true
+  description: |+
+    P2S External Radius server secret.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    A hashtable which represents resource tags.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VpnAuthenticationType
+  description: |+
+    The list of P2S VPN client tunneling protocols.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Certificate, Radius, AAD
+- type: <xref href="PSIpsecPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VpnClientIpsecPolicy
+  description: |+
+    A list of IPSec policies for VpnServerConfiguration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VpnClientRevokedCertificateFilesList
+  description: |+
+    A list of VpnClientCertificates to be revoked files' paths
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VpnClientRootCertificateFilesList
+  description: |+
+    A list of VpnClientRootCertificates to be added files' paths
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VpnProtocol
+  description: |+
+    The list of P2S VPN client tunneling protocols.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: IkeV2, OpenVPN
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzVpnServerConfiguration
+name: New-AzVpnServerConfiguration
+description: |-
+  The **New-AzVpnServerConfiguration** cmdlet enables you to create a new VpnServerConfiguration with different VpnProtocols, VpnAuthenticationTypes, IpsecPolicies and to set selected vpn authentication type related parameters as  per the customer's requirement for Point to site connectivity.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvpnserverconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVpnServerConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVpnServerConfiguration.md

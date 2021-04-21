@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new CosmosDB Cassandra Schema.
+module: Az.CosmosDB
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSCassandraSchema" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzCosmosDBCassandraSchema [-Column <PSColumn[]>] [-PartitionKey <String[]>] [-ClusterKey <PSClusterKey[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzCosmosDBCassandraSchema -Column {PSColumn[]} -PartitionKey <String[]> -ClusterKey {PSClusterKey[]}
+
+    Columns PartitionKeys ClusterKeys
+    ------- ------------- -----------
+    {column1}     {a}     {clusterkey1}
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="PSClusterKey" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClusterKey
+  description: |+
+    Array of PSClusterKey objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSColumn" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Column
+  description: |+
+    PSColumn object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PartitionKey
+  description: |+
+    Array of strings containing Partition Keys.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.CosmosDB.New-AzCosmosDBCassandraSchema
+name: New-AzCosmosDBCassandraSchema
+description: |-
+  The **New-AzCosmosDBCassandraSchema** creates a new CosmosDB Cassandra Schema.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  Module Name: Az.CosmosDB
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.cosmosdb/new-azcosmosdbcassandraschema
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CosmosDB/CosmosDB/help/New-AzCosmosDBCassandraSchema.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CosmosDB/CosmosDB/help/New-AzCosmosDBCassandraSchema.md

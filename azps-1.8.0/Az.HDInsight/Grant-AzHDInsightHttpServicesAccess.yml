@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants HTTP access to the cluster.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.HDInsight.Models.HttpConnectivitySettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Revoke-AzHDInsightHttpServicesAccess
+  href: ./Revoke-AzHDInsightHttpServicesAccess.yml
+syntaxes:
+- >-
+  Grant-AzHDInsightHttpServicesAccess [-ClusterName] <String> [-HttpCredential] <PSCredential>
+
+   [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Grant HTTP access to an Azure HDInsight cluster'
+  code: |-
+    PS C:\># Cluster info
+    PS C:\> $clusterName = "your-hadoop-001"
+    PS C:\> $clusterCreds = Get-Credential
+
+    PS C:\> Grant-AzHDInsightHttpServicesAccess `
+                -ClusterName $clusterName `
+                -HttpCredential $newClusterCreds
+  description: |-
+    This command grants HTTP access to the cluster named your-hadoop-001.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: HttpCredential
+  isRequired: true
+  description: |+
+    Specifies the cluster login (HTTP) credentials for the cluster.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Grant-AzHDInsightHttpServicesAccess
+name: Grant-AzHDInsightHttpServicesAccess
+description: |-
+  The **Grant-AzHDInsightHttpServicesAccess** cmdlet grants HTTP access to an Azure HDInsight cluster using ODBC, Ambari, Oozie and web services.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 3F321D94-2B0B-48CA-9778-8090373F7FE0
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/grant-azhdinsighthttpservicesaccess
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Grant-AzHDInsightHttpServicesAccess.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Grant-AzHDInsightHttpServicesAccess.md

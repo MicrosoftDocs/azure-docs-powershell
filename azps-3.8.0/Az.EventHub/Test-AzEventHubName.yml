@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks the Availability of the given NameSpace Name or Alias (DR Configuration Name)
+module: Az.EventHub
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSCheckNameAvailabilityResultAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Test-AzEventHubName [-Namespace] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Test-AzEventHubName [-ResourceGroupName] <String> [-Namespace] <String> [-AliasName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Test-AzEventhubName -Namespace MyNameSapceName
+  description: |-
+    Returns the status on availability of the namespace name 'MyNameSapceName' as True if available
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Test-AzEventhubName -Namespace MyNameSapceName
+  description: |-
+    Returns the status on availability of the namespace name 'MyNameSapceName' as False with Reason
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Test-AzEventhubName -ResourceGroupName MyResourceGroup -Namespace Test123 -AliasName myAliasName
+  description: |-
+    Returns the status on availability of the alias name 'myAliasName' for namespace 'MyNameSapceName' as True if available
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AliasName
+  isRequired: true
+  description: |+
+    DR Configuration Name - Alias Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  isRequired: true
+  description: |+
+    Eventhub Namespace Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.EventHub.Test-AzEventHubName
+name: Test-AzEventHubName
+description: |-
+  The **Test-AzEventhubName** Cmdlet Check Availability of the NameSpace Name or Alias (DR Configuration Name)
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+  Module Name: Az.EventHub
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/test-azeventhubname
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/Test-AzEventHubName.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/Test-AzEventHubName.md

@@ -1,0 +1,366 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates or updates the policy for a certificate in a key vault.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzKeyVaultCertificatePolicy
+  href: ./Get-AzKeyVaultCertificatePolicy.yml
+- text: New-AzKeyVaultCertificatePolicy
+  href: ./New-AzKeyVaultCertificatePolicy.yml
+syntaxes:
+- >-
+  Set-AzKeyVaultCertificatePolicy [-VaultName] <String> [-Name] <String> [-RenewAtPercentageLifetime <Int32>]
+
+   [-SecretContentType <String>] [-ReuseKeyOnRenewal <Boolean>] [-Disabled] [-SubjectName <String>]
+
+   [-DnsName <System.Collections.Generic.List`1[System.String]>]
+
+   [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+
+   [-Ekus <System.Collections.Generic.List`1[System.String]>] [-ValidityInMonths <Int32>] [-IssuerName <String>]
+
+   [-CertificateType <String>] [-EmailAtNumberOfDaysBeforeExpiry <Int32>] [-EmailAtPercentageLifetime <Int32>]
+
+   [-KeyType <String>] [-KeySize <Int32>] [-KeyNotExportable] [-CertificateTransparency <Boolean>] [-PassThru]
+
+   [-Curve <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzKeyVaultCertificatePolicy [-VaultName] <String> [-Name] <String>
+
+   [-InputObject] <PSKeyVaultCertificatePolicy> [-EmailAtNumberOfDaysBeforeExpiry <Int32>]
+
+   [-EmailAtPercentageLifetime <Int32>] [-KeyType <String>] [-KeySize <Int32>]
+
+   [-CertificateTransparency <Boolean>] [-PassThru] [-Curve <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzKeyVaultCertificatePolicy [-VaultName] <String> [-Name] <String> -RenewAtNumberOfDaysBeforeExpiry <Int32>
+
+   [-SecretContentType <String>] [-ReuseKeyOnRenewal <Boolean>] [-Disabled] [-SubjectName <String>]
+
+   [-DnsName <System.Collections.Generic.List`1[System.String]>]
+
+   [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+
+   [-Ekus <System.Collections.Generic.List`1[System.String]>] [-ValidityInMonths <Int32>] [-IssuerName <String>]
+
+   [-CertificateType <String>] [-EmailAtNumberOfDaysBeforeExpiry <Int32>] [-EmailAtPercentageLifetime <Int32>]
+
+   [-KeyType <String>] [-KeySize <Int32>] [-KeyNotExportable] [-CertificateTransparency <Boolean>] [-PassThru]
+
+   [-Curve <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a certificate policy'
+  code: |-
+    PS C:\> Set-AzKeyVaultCertificatePolicy -VaultName "ContosoKV01" -Name "TestCert01" -SecretContentType "application/x-pkcs12" -SubjectName "CN=contoso.com" -IssuerName "Self" -ValidityInMonths 6 -ReuseKeyOnRenewal $True -PassThru
+
+    SecretContentType               : application/x-pkcs12
+    Kty                             :
+    KeySize                         : 2048
+    Curve                           :
+    Exportable                      :
+    ReuseKeyOnRenewal               : True
+    SubjectName                     : CN=contoso.com
+    DnsNames                        :
+    KeyUsage                        :
+    Ekus                            :
+    ValidityInMonths                : 6
+    IssuerName                      : Self
+    CertificateType                 :
+    RenewAtNumberOfDaysBeforeExpiry :
+    RenewAtPercentageLifetime       :
+    EmailAtNumberOfDaysBeforeExpiry :
+    EmailAtPercentageLifetime       :
+    CertificateTransparency         :
+    Enabled                         : True
+    Created                         :
+    Updated                         :
+  description: |-
+    This command sets the policy for the TestCert01 certificate in the ContosoKV01 key vault.
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: CertificateTransparency
+  description: |+
+    Indicates whether certificate transparency is enabled for this certificate/issuer; if not specified, the default is 'true'.
+    `-IssuerName` needs to be specified when setting this property.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateType
+  description: |+
+    Specifies the type of certificate to the issuer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Curve
+  description: |+
+    Specifies the elliptic curve name of the key of the certificate.
+    The acceptable values for this parameter are:
+    - P-256
+    - P-384
+    - P-521
+    - P-256K
+    - SECP256K1
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: P-256, P-384, P-521, P-256K, SECP256K1
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    Indicates that the certificate policy is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: DnsName
+  description: |+
+    Specifies the subject name of the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: DnsNames
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Ekus
+  description: |+
+    Specifies the enhanced key usages (EKUs) in the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EmailAtNumberOfDaysBeforeExpiry
+  description: |+
+    Specifies the number of days before expiration when automatic renewal should start.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EmailAtPercentageLifetime
+  description: |+
+    Specifies the percentage of the lifetime after which the automatic process for the notification begins.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the certificate policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: CertificatePolicy
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IssuerName
+  description: |+
+    Specifies the name of the issuer for this certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeyNotExportable
+  description: |+
+    Indicates that the key is not exportable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: KeySize
+  description: |+
+    Specifies the key size of the certificate.
+    The acceptable values for this parameter are:
+    - 2048
+    - 3072
+    - 4096
+    - 256
+    - 384
+    - 521
+
+  defaultValue: "2048"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: 2048, 3072, 4096, 256, 384, 521
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyType
+  description: |+
+    Specifies the key type of the key that backs the certificate.
+    The acceptable values for this parameter are:
+    - RSA
+    - RSA-HSM
+    - EC
+    - EC-HSM
+
+  defaultValue: RSA
+  position: Named
+  aliases: ""
+  parameterValueGroup: RSA, RSA-HSM, EC, EC-HSM
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Security.Cryptography.X509Certificates.X509KeyUsageFlags" data-throw-if-not-resolved="False" /><span>]</span>
+  name: KeyUsage
+  description: |+
+    Specifies the key usages in the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, EncipherOnly, CrlSign, KeyCertSign, KeyAgreement, DataEncipherment, KeyEncipherment, NonRepudiation, DigitalSignature, DecipherOnly
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the certificate.
+
+  defaultValue: None
+  position: "1"
+  aliases: CertificateName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: RenewAtNumberOfDaysBeforeExpiry
+  isRequired: true
+  description: |+
+    Specifies the number of days before expiry after which the automatic process for certificate renewal begins.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: RenewAtPercentageLifetime
+  description: |+
+    Specifies the percentage of the lifetime after which the automatic process for certificate renewal begins.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ReuseKeyOnRenewal
+  description: |+
+    Indicates that the certificate reuse the key during renewal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecretContentType
+  description: |+
+    Specifies the content type of the new key vault secret.
+    The acceptable values for this parameter are:
+    - application/x-pkcs12
+    - application/x-pem-file
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: application/x-pkcs12, application/x-pem-file
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubjectName
+  description: |+
+    Specifies the subject name of the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ValidityInMonths
+  description: |+
+    Specifies the number of months the certificate is valid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Specifies the name of a key vault.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.KeyVault.Set-AzKeyVaultCertificatePolicy
+name: Set-AzKeyVaultCertificatePolicy
+description: |-
+  The **Set-AzKeyVaultCertificatePolicy** cmdlet creates or updates the policy for a certificate in a key vault.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  ms.assetid: 28BC1B99-946C-4A8D-9581-4D5CC0BCEF8B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/set-azkeyvaultcertificatepolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificatePolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificatePolicy.md

@@ -1,0 +1,31 @@
+### YamlMime:PowershellModule
+children:
+- title: Kubernetes Service
+  cmdlets:
+  - Az.Aks.Disable-AzAksAddon
+  - Az.Aks.Enable-AzAksAddon
+  - Az.Aks.Get-AzAksCluster
+  - Az.Aks.Get-AzAksNodePool
+  - Az.Aks.Get-AzAksVersion
+  - Az.Aks.Import-AzAksCredential
+  - Az.Aks.Install-AzAksKubectl
+  - Az.Aks.New-AzAksCluster
+  - Az.Aks.New-AzAksNodePool
+  - Az.Aks.Remove-AzAksCluster
+  - Az.Aks.Remove-AzAksNodePool
+  - Az.Aks.Set-AzAksCluster
+  - Az.Aks.Start-AzAksDashboard
+  - Az.Aks.Stop-AzAksDashboard
+  - Az.Aks.Update-AzAksNodePool
+uid: Az.Aks
+name: Az.Aks
+description: |-
+  Commands to interact with Azure managed Kubernetes clusters.
+metadata:
+  Module Name: Az.Aks
+  Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.aks
+  Help Version: 0.0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Aks/Aks/help/Az.Aks.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Aks/Aks/help/Az.Aks.md

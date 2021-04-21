@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the deployments in a resource group.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceGroupDeployment" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzResourceGroup
+  href: ./Get-AzResourceGroup.yml
+- text: New-AzResourceGroup
+  href: ./New-AzResourceGroup.yml
+- text: New-AzResourceGroupDeployment
+  href: ./New-AzResourceGroupDeployment.yml
+- text: Remove-AzResourceGroupDeployment
+  href: ./Remove-AzResourceGroupDeployment.yml
+- text: Stop-AzResourceGroupDeployment
+  href: ./Stop-AzResourceGroupDeployment.yml
+- text: Test-AzResourceGroupDeployment
+  href: ./Test-AzResourceGroupDeployment.yml
+syntaxes:
+- >-
+  Get-AzResourceGroupDeployment [-ResourceGroupName] <String> [[-Name] <String>] [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all deployments for a resource group'
+  code: |-
+    PS C:\>Get-AzResourceGroupDeployment -ResourceGroupName "ContosoLabsRG"
+  description: |-
+    This command gets all deployments for the ContosoLabsRG resource group.
+    The output shows a deployment for a WordPress blog that used a gallery template.
+  summary: ""
+- title: 'Example 2: Get a deployment by name'
+  code: |-
+    PS C:\>Get-AzResourceGroupDeployment -ResourceGroupName "ContosoLabsRG" -Name "DeployWebsite01"
+  description: |-
+    This command gets the DeployWebsite01 deployment of the ContosoLabsRG resource group.
+    You can assign a name to a deployment when you create it by using the **New-AzResourceGroup** or **New-AzResourceGroupDeployment** cmdlets.
+    If you do not assign a name, the cmdlets provide a default name based on the template that is used to create the deployment.
+  summary: ""
+- title: 'Example 3: Get the deployments of all resource groups'
+  code: |-
+    PS C:\>Get-AzResourceGroup | Get-AzResourceGroupDeployment | Format-Table ResourceGroupName, DeploymentName, ProvisioningState
+  description: |-
+    This command gets all resource groups in your subscription by using the Get-AzResourceGroup cmdlet.
+    The command passes the resource groups to the current cmdlet by using the pipeline operator.
+    The current cmdlet gets all deployments of all resource groups in the subscription, and passes the results to the Format-Table cmdlet to display their **ResourceGroupName**, **DeploymentName**, and **ProvisioningState** property values.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiVersion
+  description: |+
+    Specifies the API version that is supported by the resource Provider.
+    You can specify a different version than the default version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of the resource group deployment to get.
+
+  defaultValue: None
+  position: Named
+  aliases: DeploymentId, ResourceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the deployment to get.
+    Wildcard characters are not permitted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DeploymentName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Pre
+  description: |+
+    Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+    The cmdlet gets the deployments for the resource group that this parameter specifies.
+    Wildcard characters are not permitted.
+    This parameter is required and you can specify only one resource group in each command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzResourceGroupDeployment
+name: Get-AzResourceGroupDeployment
+description: |-
+  The **Get-AzResourceGroupDeployment** cmdlet gets the deployments in an Azure resource group.
+  Specify the *Name* or *Id* parameter to filter the results.
+  By default, **Get-AzResourceGroupDeployment** gets all deployments for a specified resource group.
+  An Azure resource is a user-managed Azure entity, such as a database server, database, or web site.
+  An Azure resource group is a collection of Azure resources that are deployed as a unit.
+  A deployment is the operation that makes the resources in the resource group available for use.
+  For more information about Azure resources and Azure resource groups, see the New-AzResourceGroup cmdlet.
+  You can use this cmdlet for tracking.
+  For debugging, use this cmdlet with the Get-AzLog cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 20CB842B-F7A9-4052-85D9-0DF9586D5FEA
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourcegroupdeployment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResourceGroupDeployment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResourceGroupDeployment.md

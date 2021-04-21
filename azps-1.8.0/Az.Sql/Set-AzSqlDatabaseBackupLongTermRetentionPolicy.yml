@@ -1,0 +1,282 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a server long term retention policy.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseBackupLongTermRetentionPolicyModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlDatabaseBackupLongTermRetentionPolicy
+  href: ./Get-AzSqlDatabaseBackupLongTermRetentionPolicy.yml
+- text: Get-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Get-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Remove-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Remove-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Set-AzSqlDatabaseBackupLongTermRetentionPolicy -WeeklyRetention <String> [-ServerName] <String>
+
+   [-DatabaseName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzSqlDatabaseBackupLongTermRetentionPolicy [-RemovePolicy] [-ServerName] <String> [-DatabaseName] <String>
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzSqlDatabaseBackupLongTermRetentionPolicy [-WeeklyRetention <String>] -MonthlyRetention <String>
+
+   [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzSqlDatabaseBackupLongTermRetentionPolicy [-WeeklyRetention <String>] [-MonthlyRetention <String>]
+
+   -YearlyRetention <String> -WeekOfYear <Int32> [-ServerName] <String> [-DatabaseName] <String>
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the weekly retention for the current version of long term retention policy'
+  code: |-
+    PS C:\> Set-AzSqlDatabaseBackupLongTermRetentionPolicy -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01 -WeeklyRetention P2W
+
+
+    ResourceGroupName                      : resourcegroup01
+    ServerName                             : server01
+    DatabaseName                           : database01
+    WeeklyRetention                        : P2W
+    MonthlyRetention                       : PT0S
+    YearlyRetention                        : PT0S
+    WeekOfYear                             : 0
+    Location                               :
+  description: |-
+    This sets the long term retention policy of database01 to save every weekly full backup for 2 weeks
+  summary: ""
+- title: 'Example 2: Set the monthly retention for the current version of long term retention policy'
+  code: |-
+    PS C:\> Set-AzSqlDatabaseBackupLongTermRetentionPolicy -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01 -MonthlyRetention P5Y
+
+
+    ResourceGroupName                      : resourcegroup01
+    ServerName                             : server01
+    DatabaseName                           : database01
+    WeeklyRetention                        : PT0S
+    MonthlyRetention                       : P5Y
+    YearlyRetention                        : PT0S
+    WeekOfYear                             : 0
+    Location                               :
+  description: |-
+    This sets the long term retention policy of database01 to save the first full backup of each month for 5 years
+  summary: ""
+- title: 'Example 3: Set the yearly retention for the current version of long term retention policy'
+  code: |-
+    PS C:\> Set-AzSqlDatabaseBackupLongTermRetentionPolicy -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01 -YearlyRetention P10Y -WeekOfYear 26
+
+
+    ResourceGroupName                      : resourcegroup01
+    ServerName                             : server01
+    DatabaseName                           : database01
+    WeeklyRetention                        : PT0S
+    MonthlyRetention                       : PT0S
+    YearlyRetention                        : P10Y
+    WeekOfYear                             : 26
+    Location                               :
+  description: |-
+    This sets the long term retention policy of database01 to save the full backup taken on the 26th week of the year for 10 years
+  summary: ""
+- title: 'Example 4: Set each retention for the current version of long term retention policy'
+  code: |-
+    PS C:\> Set-AzSqlDatabaseBackupLongTermRetentionPolicy -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01 -WeeklyRetention 14 -MonthlyRetention P24W -YearlyRetention P10Y -WeekOfYear 26
+
+
+    ResourceGroupName                      : resourcegroup01
+    ServerName                             : server01
+    DatabaseName                           : database01
+    WeeklyRetention                        : P14D
+    MonthlyRetention                       : P24W
+    YearlyRetention                        : P10Y
+    WeekOfYear                             : 26
+    Location                               :
+  description: |-
+    This sets the long term retention policy of database01 to save each full backup for 14 days, the first full backup of each month for 24 weeks, and the full backup taken on the 26th week of the year for 10 years
+  summary: ""
+- title: 'Example 4: Remove the long term retention policy'
+  code: |-
+    PS C:\> Set-AzSqlDatabaseBackupLongTermRetentionPolicy -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01 -RemovePolicy
+
+
+    ResourceGroupName                      : resourcegroup01
+    ServerName                             : server01
+    DatabaseName                           : database01
+    WeeklyRetention                        : PT0S
+    MonthlyRetention                       : PT0S
+    YearlyRetention                        : PT0S
+    WeekOfYear                             : 0
+    Location                               :
+  description: |-
+    Removes the policy for database01 so it no longer saves any long term retention backups.
+    This will not affect backups that have already been taken
+  summary: ""
+- title: 'Example 4: Remove the long term retention policy'
+  code: |-
+    PS C:\> Set-AzSqlDatabaseBackupLongTermRetentionPolicy -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01 -WeeklyRetention P0D
+
+
+    ResourceGroupName                      : resourcegroup01
+    ServerName                             : server01
+    DatabaseName                           : database01
+    WeeklyRetention                        : PT0S
+    MonthlyRetention                       : PT0S
+    YearlyRetention                        : PT0S
+    WeekOfYear                             : 0
+    Location                               :
+  description: |-
+    This is another way of removing the policy for database01 so it no longer saves any long term retention backups.
+    This will not affect backups that have already been taken
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Database to use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MonthlyRetention
+  isRequired: true
+  description: |+
+    The Monthly Retention.
+    If just a number is passed instead of an ISO 8601 string, days will be assumed as the units.
+    There is a minumum of 7 days and a maximum of 10 years.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemovePolicy
+  isRequired: true
+  description: |+
+    If provided, the policy for the database will be removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Server the database is in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WeeklyRetention
+  isRequired: true
+  description: |+
+    The Weekly Retention.
+    If just a number is passed instead of an ISO 8601 string, days will be assumed as the units.
+    There is a minumum of 7 days and a maximum of 10 years.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: WeekOfYear
+  isRequired: true
+  description: |+
+    The Week of Year, 1 to 52, to save for the Yearly Retention.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: YearlyRetention
+  isRequired: true
+  description: |+
+    The Yearly Retention.
+    If just a number is passed instead of an ISO 8601 string, days will be assumed as the units.
+    There is a minumum of 7 days and a maximum of 10 years.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Set-AzSqlDatabaseBackupLongTermRetentionPolicy
+name: Set-AzSqlDatabaseBackupLongTermRetentionPolicy
+description: |-
+  The **Set-AzSqlDatabaseBackupLongTermRetentionPolicy** cmdlet sets the long term retention policy registered to this database.
+  The policy is an Azure Backup resource used to define backup storage policy.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqldatabasebackuplongtermretentionpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlDatabaseBackupLongTermRetentionPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlDatabaseBackupLongTermRetentionPolicy.md

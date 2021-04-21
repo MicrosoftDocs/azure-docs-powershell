@@ -1,0 +1,221 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a job in the Batch service.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AzBatchJob
+  href: ./Disable-AzBatchJob.yml
+- text: Enable-AzBatchJob
+  href: ./Enable-AzBatchJob.yml
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchJob
+  href: ./Get-AzBatchJob.yml
+- text: Get-AzBatchJobSchedule
+  href: ./Get-AzBatchJobSchedule.yml
+- text: Remove-AzBatchJob
+  href: ./Remove-AzBatchJob.yml
+- text: Stop-AzBatchJob
+  href: ./Stop-AzBatchJob.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/az.batch
+syntaxes:
+- >-
+  New-AzBatchJob [-Id] <String> [-CommonEnvironmentSettings <IDictionary>] [-DisplayName <String>]
+
+   [-Constraints <PSJobConstraints>] [-JobManagerTask <PSJobManagerTask>]
+
+   [-JobPreparationTask <PSJobPreparationTask>] [-JobReleaseTask <PSJobReleaseTask>] [-Metadata <IDictionary>]
+
+   -PoolInformation <PSPoolInformation> [-Priority <Int32>] [-UsesTaskDependencies]
+
+   [-OnTaskFailure <OnTaskFailure>] [-OnAllTasksComplete <OnAllTasksComplete>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a job'
+  code: |-
+    PS C:\>$PoolInformation = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSPoolInformation" 
+    PS C:\> $PoolInformation.PoolId = "Pool22" 
+    PS C:\> New-AzBatchJob -Id "ContosoJob35" -PoolInformation $PoolInformation -BatchContext $Context
+  description: |-
+    The first command creates a **PSPoolInformation** object by using the New-Object cmdlet.
+    The command stores that object in the $PoolInformation variable.
+    The second command assigns the ID Pool22 to the **PoolId** property of the object in $PoolInformation.
+    The final command creates a job that has the ID ContosoJob35.
+    Tasks added to the job run on the pool that has the ID Pool22.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: CommonEnvironmentSettings
+  description: |+
+    Specifies the common environment variables, as key/value pairs, that this cmdlet sets for all tasks in the job.
+    The key is the environment variable name.
+    The value is the environment variable value.
+
+  defaultValue: None
+  position: Named
+  aliases: CommonEnvironmentSetting
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobConstraints" data-throw-if-not-resolved="False" />
+  name: Constraints
+  description: |+
+    Specifies the execution constraints for the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies the display name for the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies an ID for the job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobManagerTask" data-throw-if-not-resolved="False" />
+  name: JobManagerTask
+  description: |+
+    Specifies the Job Manager task.
+    The Batch service runs the Job Manager task when the job is started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTask" data-throw-if-not-resolved="False" />
+  name: JobPreparationTask
+  description: |+
+    Specifies the Job Preparation task.
+    The Batch service runs the Job Preparation task on a compute node before it starts any tasks of that job on that compute node.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobReleaseTask" data-throw-if-not-resolved="False" />
+  name: JobReleaseTask
+  description: |+
+    Specifies the Job Release task.
+    The Batch service runs the Job Release task when the job ends.
+    The Batch service runs the Job Release task on each compute node where it ran any task of the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Specifies metadata, as key/value pairs, to add to the job.
+    The key is the metadata name.
+    The value is the metadata value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Batch.Common.OnAllTasksComplete" data-throw-if-not-resolved="False" /><span>]</span>
+  name: OnAllTasksComplete
+  description: |+
+    Specifies an action the Batch service takes if all tasks in the job are in the completed state.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoAction, TerminateJob
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Batch.Common.OnTaskFailure" data-throw-if-not-resolved="False" /><span>]</span>
+  name: OnTaskFailure
+  description: |+
+    Specifies an action the Batch service takes if any task in the job fails.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoAction, PerformExitOptionsJobAction
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSPoolInformation" data-throw-if-not-resolved="False" />
+  name: PoolInformation
+  isRequired: true
+  description: |+
+    Specifies the details of the pool on which the Batch service runs the tasks of the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Specifies the priority of the job.
+    Valid values are: integers from -1000 to 1000.
+    A value of -1000 is the lowest priority.
+    A value of 1000 is the highest priority.
+    The default value is 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UsesTaskDependencies
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.New-AzBatchJob
+name: New-AzBatchJob
+description: |-
+  The **New-AzBatchJob** cmdlet creates a job in the Azure Batch service in the account specified by the *BatchAccountContext* parameter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: B6229D26-D38C-44CD-B9CA-7F39365C8B9D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchJob.md

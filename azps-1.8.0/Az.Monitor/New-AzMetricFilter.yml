@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a metric dimension filter that can be used to query metrics.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzMetric
+  href: ./Get-AzMetric.yml
+- text: Get-AzMetricDefinition
+  href: ./Get-AzMetricDefinition.yml
+syntaxes:
+- >-
+  New-AzMetricFilter [-Dimension] <String> [-Operator] <String> [-Value] <String[]>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a metric dimension filter'
+  code: |-
+    PS C:\>New-AzMetricFilter -Dimension City -Operator eq -Value "Seattle","New York"
+  description: |-
+    This command creates metric dimension filter of the format "City eq 'Seattle' or City eq 'New York'".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Dimension
+  isRequired: true
+  description: |+
+    The name of the metric dimension. 
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Operator
+  isRequired: true
+  description: |+
+    Specifies the operator used to select the metric dimension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Value
+  isRequired: true
+  description: |+
+    Specifies the array of metric dimension values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzMetricFilter
+name: New-AzMetricFilter
+description: |-
+  The **New-AzMetricFilter** cmdlet creates a metric dimension filter that can be used to query metrics.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: B5F2388E-0136-4F8A-8577-67CE2A45671E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azmetricfilter
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzMetricFilter.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzMetricFilter.md

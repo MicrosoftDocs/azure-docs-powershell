@@ -1,0 +1,185 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a Management Group
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSManagementGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSManagementGroup" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzManagementGroup -GroupName <String> [-DisplayName <String>] [-ParentId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzManagementGroup -InputObject <PSManagementGroup> [-DisplayName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] -ParentObject <PSManagementGroup> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Update-AzManagementGroup -InputObject <PSManagementGroup> [-DisplayName <String>] [-ParentId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzManagementGroup -GroupName <String> [-DisplayName <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   -ParentObject <PSManagementGroup> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: "Example 1: Update a Management Group's Display Name"
+  code: |-
+    PS C:\> Update-AzManagementGroup -Group "TestGroup" -DisplayName "New Display Name"
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+    DisplayName       : New Display Name
+    UpdatedTime       : 2/1/2018 12:03:37 PM
+    UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
+    ParentId          : /providers/Microsoft.Management/managementGroups/6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+    ParentName        : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+    ParentDisplayName : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+  description: ""
+  summary: ""
+- title: "Example 2: Update a Management Group's Parent"
+  code: |-
+    PS C:\> Update-AzManagementGroup -Group "TestGroup" -ParentId "/providers/Microsoft.Management/managementGroups/TestGroupParent"
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+    DisplayName       : TestGroup
+    UpdatedTime       : 2/1/2018 12:03:37 PM
+    UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+    ParentName        : TestGroupParent
+    ParentDisplayName : TestGroupParent
+  description: ""
+  summary: ""
+- title: 'Example 3: Update a Management Group by piping PSManagementGroup Object'
+  code: |-
+    PS C:\> Get-AzManagementGroup -GroupName "TestGroup" | Update-AzManagementGroup -DisplayName "TestDisplayName" -ParentId "/providers/Microsoft.Management/managementGroups/TestGroupParent"
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+    DisplayName       : TestDisplayName
+    UpdatedTime       : 2/1/2018 12:03:37 PM
+    UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+    ParentName        : TestGroupParent
+    ParentDisplayName : TestGroupParent
+  description: ""
+  summary: ""
+- title: "Example 4: Update a Management Group's parent using the ParentObject"
+  code: |-
+    PS C:\> $parentObject = Get-AzManagementGroup -GroupName "TestGroupParent"
+    PS C:\> Update-AzManagementGroup -GroupName "TestGroup" -ParentObject $parentObject
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    DisplayName       : TestGroupDisplayName
+    UpdatedTime       : 2/1/2018 11:16:12 AM
+    UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+    ParentName        : TestGroupParent
+    ParentDisplayName : TestGroupParent
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Display Name of the management group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  isRequired: true
+  description: |+
+    Management Group Id
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSManagementGroup" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Input Object from the Get call
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentId
+  description: |+
+    Parent Id of the management group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSManagementGroup" data-throw-if-not-resolved="False" />
+  name: ParentObject
+  isRequired: true
+  description: |+
+    Input Object from the Get call
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Resources.Update-AzManagementGroup
+name: Update-AzManagementGroup
+description: |-
+  The **Update-AzManagementGroup** cmdlet updates the **ParentId** or **DisplayName** for a Management Group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/update-azmanagementgroup/
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Update-AzManagementGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Update-AzManagementGroup.md

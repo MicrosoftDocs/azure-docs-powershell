@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a data source.
+module: Az.OperationalInsights
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, operational, insights
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzOperationalInsightsDataSource
+  href: ./Get-AzOperationalInsightsDataSource.yml
+- text: Remove-AzOperationalInsightsDataSource
+  href: ./Remove-AzOperationalInsightsDataSource.yml
+syntaxes:
+- >-
+  Set-AzOperationalInsightsDataSource [-DataSource] <PSDataSource> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+  name: DataSource
+  isRequired: true
+  description: |+
+    Specifies the data source that this cmdlet updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.OperationalInsights.Set-AzOperationalInsightsDataSource
+name: Set-AzOperationalInsightsDataSource
+description: |-
+  The **Set-AzOperationalInsightsDataSource** cmdlet updates a data source.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+  Module Name: Az.OperationalInsights
+  ms.assetid: 3992E6B5-F794-4C7A-BB59-C8D60E2CD7BC
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/set-azoperationalinsightsdatasource
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/Set-AzOperationalInsightsDataSource.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/Set-AzOperationalInsightsDataSource.md

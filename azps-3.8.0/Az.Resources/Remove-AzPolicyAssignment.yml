@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a policy assignment.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzPolicyAssignment
+  href: ./Get-AzPolicyAssignment.yml
+- text: New-AzPolicyAssignment
+  href: ./New-AzPolicyAssignment.yml
+- text: Set-AzPolicyAssignment
+  href: ./Set-AzPolicyAssignment.yml
+syntaxes:
+- >-
+  Remove-AzPolicyAssignment -Name <String> [-Scope <String>] [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AzPolicyAssignment -Id <String> [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove policy assignment by name and scope'
+  code: |-
+    PS C:\> $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    PS C:\> Remove-AzPolicyAssignment -Name 'PolicyAssignment07' -Scope $ResourceGroup.ResourceId -Force
+  description: |-
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet.
+    The command stores that object in the $ResourceGroup variable.
+    The second command removes the policy assignment named PolicyAssignment07 that was assigned at a resource group level.
+    The **ResourceId** property of $ResourceGroup identifies the resource group.
+  summary: ""
+- title: 'Example 2: Remove policy assignment by ID'
+  code: |-
+    PS C:\> $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11' 
+    PS C:\> $PolicyAssignment = Get-AzPolicyAssignment -Name 'PolicyAssignment07' -Scope $ResourceGroup.ResourceId
+    PS C:\> Remove-AzPolicyAssignment -Id $PolicyAssignment.ResourceId -Force
+  description: |-
+    The first command gets a resource group named ResourceGroup11, and then stores that object in the $ResourceGroup variable.
+    The second command gets the policy assignment at a resource group level, and then stores it in the $PolicyAssignment variable.
+    The **ResourceId** property of $ResourceGroup identifies the resource group.
+    The final command removes the policy assignment that the **ResourceId** property of $PolicyAssignment identifies.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiVersion
+  description: |+
+    Specifies the version of the resource provider API to use.
+    If you do not specify a version, this cmdlet uses the latest available version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the fully qualified resource ID for the policy assignment that this cmdlet removes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the policy assignment that this cmdlet removes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Pre
+  description: |+
+    Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Specifies the scope at which the policy is applied.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Resources.Remove-AzPolicyAssignment
+name: Remove-AzPolicyAssignment
+description: |-
+  The **Remove-AzPolicyAssignment** cmdlet removes the specified policy assignment.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 36399302-3EA5-45A3-A042-536CC7EC2E6D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azpolicyassignment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzPolicyAssignment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzPolicyAssignment.md

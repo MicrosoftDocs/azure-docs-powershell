@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Resource File for usage by `New-AzBatchTask`.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSResourceFile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzBatchTask
+  href: ./New-AzBatchTask.yml
+syntaxes:
+- >-
+  New-AzBatchResourceFile -HttpUrl <String> -FilePath <String> [-FileMode <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzBatchResourceFile [-FilePath <String>] [-FileMode <String>] [-BlobPrefix <String>]
+
+   -StorageContainerUrl <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzBatchResourceFile [-FilePath <String>] [-FileMode <String>] -AutoStorageContainerName <String>
+
+   [-BlobPrefix <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a resource file from an HTTP URL pointing at a single file'
+  code: |-
+    PS C:\> $file = New-AzBatchResourceFile -HttpUrl "https://testacct.blob.core.windows.net/" -FilePath "file1"
+    PS C:\> New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -ResourceFiles $file -BatchContext $Context
+  description: |-
+    Creates a `PSResourceFile` referencing an HTTP url.
+  summary: ""
+- title: 'Example 2: Create a resource file from an Azure Storage container URL'
+  code: |-
+    PS C:\> $file = New-AzBatchResourceFile -StorageContainerUrl "https://testacct.blob.core.windows.net/mycontainer" -FilePath "myfolder"
+    PS C:\> New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -ResourceFiles $file -BatchContext $Context
+  description: |-
+    Creates a `PSResourceFile` referencing an Azure Storage container URL. All files in the container will be downloaded to the specified folder.
+  summary: ""
+- title: 'Example 3: Create a resource file from an Auto Storage container name'
+  code: |-
+    PS C:\> $file = New-AzBatchResourceFile -AutoStorageContainerName "mycontainer" -FilePath "myfolder"
+    PS C:\> New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -ResourceFiles $file -BatchContext $Context
+  description: |-
+    Creates a `PSResourceFile` referencing an Auto Storage container name. All files in the container will be downloaded to the specified folder.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutoStorageContainerName
+  isRequired: true
+  description: |+
+    The storage container name in the auto storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BlobPrefix
+  description: |+
+    Gets the blob prefix to use when downloading blobs from an Azure Storage container.
+    Only the blobs whose names begin with the specified prefix will be downloaded.
+    This prefix can be a partial filename or a subdirectory.
+    If a prefix is not specified, all the files in the container will be downloaded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FileMode
+  description: |+
+    Gets the file permission mode attribute in octal format.
+    This property is applicable only if the resource file is downloaded to a Linux node.
+    If this property is not specified for a Linux node, then the default value is 0770.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    The location on the compute node to which to download the file(s), relative to the task's working directory. If the HttpUrl parameter is specified, the FilePath is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the AutoStorageContainerName or StorageContainerUrl parameters are specified, FilePath is optional and is the directory to download the files to. In the case where FilePath is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified FilePath directory. The specified relative path cannot break out of the task's working directory (for example by using '..').
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HttpUrl
+  isRequired: true
+  description: |+
+    The URL of the file to download.
+    If the URL is Azure Blob Storage, it must be readable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob.
+    There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, or set the ACL for the blob or its container to allow public access.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageContainerUrl
+  isRequired: true
+  description: |+
+    The URL of the blob container within Azure Blob Storage.
+    This URL must be readable and listable using anonymous access; that is, the Batch service does not present any credentials when downloading blobs from the container.
+    There are two ways to get such a URL for a container in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the container, or set the ACL for the container to allow public access.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.New-AzBatchResourceFile
+name: New-AzBatchResourceFile
+description: |-
+  Creates a Resource File for usage by `New-AzBatchTask`.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchresourcefile
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchResourceFile.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchResourceFile.md

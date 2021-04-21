@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a module into Automation.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Module" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationModule
+  href: ./Get-AzAutomationModule.yml
+- text: Remove-AzAutomationModule
+  href: ./Remove-AzAutomationModule.yml
+- text: Set-AzAutomationModule
+  href: ./Set-AzAutomationModule.yml
+syntaxes:
+- >-
+  New-AzAutomationModule [-Name] <String> [-ContentLinkUri] <Uri> [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Import a module'
+  code: |-
+    PS C:\>New-AzAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip" -ResourceGroupName "ResourceGroup01"
+  description: |-
+    This command imports a module named ContosoModule into the Automation account named Contoso17.
+    The module is stored in an Azure blob in a storage account named contosostorage and a container named modules.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account for which this cmdlet imports a module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: ContentLinkUri
+  isRequired: true
+  description: |+
+    The url to a module zip package
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ContentLink
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the module that this cmdlet imports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group for which this cmdlet imports a module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.New-AzAutomationModule
+name: New-AzAutomationModule
+description: |-
+  The **New-AzAutomationModule** cmdlet imports a module into Azure Automation.
+  This command accepts a compressed file that has a .zip file name extension.
+  The file contains a folder that includes a file that is one of the following types: 
+  - wps_2 module, which has a .psm1 or .dll file name extension 
+  - wps_2 module manifest, which has a .psd1 file name extension
+  The name of the .zip file, the name of the folder, and the name of the file in the folder must be the same.
+  Specify the .zip file as a URL that the Automation service can access.
+  If you import a wps_2 module into Automation by using this cmdlet or the Set-AzAutomationModule cmdlet, the operation is asynchronous.
+  The command finishes whether the import succeeds or fails.
+  To check whether it succeeded, run the following command:
+  `PS C:\\\> $ModuleInstance = Get-AzAutomationModule -Name `ModuleName
+  Check the **ProvisioningState** property for a value of Succeeded.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 2DC97415-D59A-428E-8FFE-56B17B320DAF
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationmodule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationModule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationModule.md

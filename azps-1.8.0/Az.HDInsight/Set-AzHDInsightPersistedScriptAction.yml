@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a previously executed script action to be a persisted script action.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzHDInsightPersistedScriptAction
+  href: ./Get-AzHDInsightPersistedScriptAction.yml
+- text: Remove-AzHDInsightPersistedScriptAction
+  href: ./Remove-AzHDInsightPersistedScriptAction.yml
+syntaxes:
+- >-
+  Set-AzHDInsightPersistedScriptAction [-ClusterName] <String> [-ScriptExecutionId] <Int64>
+
+   [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a previously successful script action to be persisted, or run on cluster scale up'
+  code: |-
+    PS C:\>Set-AzHDInsightPersistedScriptAction `
+                -ClusterName "your-hadoop-001" `
+                -ScriptExecutionId "<id>"
+  description: |-
+    This command sets a previously successful script action to be a persisted script action.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+  name: ScriptExecutionId
+  isRequired: true
+  description: |+
+    Specifies the execution ID of the script action to promote to persisted.
+    This script action must have succeeded in order to be promoted.
+    You can find the script action execution ID using Get-AzHDInsightScriptActionHistory.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Set-AzHDInsightPersistedScriptAction
+name: Set-AzHDInsightPersistedScriptAction
+description: |-
+  The **Set-AzHDInsightPersistedScriptAction** cmdlet sets a previously executed script action to be a persisted script action.
+  The specified script action must have previously succeeded.
+  The script action will run each time the Azure HDInsight cluster is scaled up.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 92F21752-4FB6-4162-B542-DA25ACA3340B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/set-azhdinsightpersistedscriptaction
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Set-AzHDInsightPersistedScriptAction.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Set-AzHDInsightPersistedScriptAction.md

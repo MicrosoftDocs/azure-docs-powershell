@@ -1,0 +1,325 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a Chef extension to a virtual machine.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSAzureOperationResponse" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVMChefExtension
+  href: ./Get-AzVMChefExtension.yml
+- text: Remove-AzVMChefExtension
+  href: ./Remove-AzVMChefExtension.yml
+syntaxes:
+- >-
+  Set-AzVMChefExtension [-ResourceGroupName] <String> [-VMName] <String> [[-TypeHandlerVersion] <String>]
+
+   -ValidationPem <String> [-ClientRb <String>] [-BootstrapOptions <String>] [-JsonAttribute <String>]
+
+   [-ChefDaemonInterval <String>] [-Daemon <String>] [-Secret <String>] [-SecretFile <String>]
+
+   [-RunList <String>] [-ChefServerUrl <String>] [-ValidationClientName <String>] [-OrganizationName <String>]
+
+   [-BootstrapVersion <String>] [-Linux] [[-Location] <String>] [[-Name] <String>]
+
+   [[-AutoUpgradeMinorVersion] <Boolean>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzVMChefExtension [-ResourceGroupName] <String> [-VMName] <String> [[-TypeHandlerVersion] <String>]
+
+   -ValidationPem <String> [-ClientRb <String>] [-BootstrapOptions <String>] [-JsonAttribute <String>]
+
+   [-ChefDaemonInterval <String>] [-Daemon <String>] [-Secret <String>] [-SecretFile <String>]
+
+   [-RunList <String>] [-ChefServerUrl <String>] [-ValidationClientName <String>] [-OrganizationName <String>]
+
+   [-BootstrapVersion <String>] [-Windows] [[-Location] <String>] [[-Name] <String>]
+
+   [[-AutoUpgradeMinorVersion] <Boolean>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a Chef extension to a Windows virtual machine'
+  code: |-
+    PS C:\> Set-AzVMChefExtension -ResourceGroupName "ResourceGroup001" -VMName "WindowsVM001" -ValidationPem "C:\my-org-validator.pem" -ClientRb "C:\client.rb" -RunList "Apache" -Daemon "service" -SecretFile "C:\my_encrypted_data_bag_secret" -Windows
+  description: |-
+    This command adds a Chef extension to a Windows virtual machine named WindowsVM001.
+    When the virtual machine starts, Chef bootstraps the virtual machine to run Apache.
+  summary: ""
+- title: 'Example 2: Add a Chef extension to a Linux virtual machine'
+  code: |-
+    PS C:\> Set-AzVMChefExtension -ResourceGroupName "ResourceGroup002" -VMName "LinuxVM001" -ValidationPem "C:\my-org-validator.pem" -ClientRb "C:\client.rb" -RunList "Apache" -Secret "my_secret" -Linux
+  description: |-
+    This command adds a Chef extension to a Linux virtual machine named LinuxVM001.
+    When the virtual machine starts, Chef bootstraps the virtual machine to run Apache.
+  summary: ""
+- title: 'Example 3: Add a Chef extension to a Windows virtual machine with bootstrap options'
+  code: |-
+    PS C:\> Set-AzVMChefExtension -ResourceGroupName "ResourceGroup003" -VMName "WindowsVM002" -ValidationPem C:\my-org-validator.pem -ClientRb C:\client.rb -BootstrapOptions '{"chef_node_name":"your_node_name","chef_server_url":"https://api.opscode.com/organizations/some-org", "validation_client_name":"some-org-validator"}' -RunList "Apache" -Windows
+  description: |-
+    This command adds the Chef extension to a Windows virtual machine named WindowsVM002.
+    When the virtual machine starts, Chef bootstraps the virtual machine to run Apache.
+    After bootstrapping, the virtual machine refers to the BootstrapOptions specified in JSON format.
+  summary: ""
+parameters:
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: AutoUpgradeMinorVersion
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BootstrapOptions
+  description: |+
+    Specifies configuration settings in the client_rb option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BootstrapVersion
+  description: |+
+    Specifies the version of the bootstrap configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ChefDaemonInterval
+  description: |+
+    Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ChefServiceInterval
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ChefServerUrl
+  description: |+
+    Specifies the Chef server link, as a URL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClientRb
+  description: |+
+    Specifies the full path of the Chef client.rb.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Daemon
+  description: |+
+    Configures the chef-client service for unattended execution. The node platform should be Windows.
+    Allowed options: 'none','service' and 'task'.
+    none - Currently prevents the chef-client service from being configured as a service.
+    service - Configures the chef-client to run automatically in the background as a service.
+    task - Configures the chef-client to run automatically in the background as a secheduled task.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: none, service, task
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JsonAttribute
+  description: |+
+    A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Linux
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet creates a Windows virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the location of the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Chef extension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "8"
+  aliases: ExtensionName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OrganizationName
+  description: |+
+    Specifies the organization name of the Chef extension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunList
+  description: |+
+    Specifies the Chef node run list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Secret
+  description: |+
+    The encryption key used to encrypt and decrypt the data bag item values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecretFile
+  description: |+
+    The path to the file that contains the encryption key used to encrypt and decrypt the data bag item values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TypeHandlerVersion
+  description: |+
+    Specifies the version of the extension to use for this virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9"
+  aliases: HandlerVersion, Version
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ValidationClientName
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ValidationPem
+  isRequired: true
+  description: |+
+    Specifies the Chef validator .pem file path
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual machine.
+    This cmdlet adds the Chef extension for the virtual machine that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Windows
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet creates a Windows virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.Set-AzVMChefExtension
+name: Set-AzVMChefExtension
+description: |-
+  The **Set-AzVMChefExtension** cmdlet adds the Chef extension to the virtual machine.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: CC306D8C-A5EE-4655-B686-E5A77CCE5042
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmchefextension
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVMChefExtension.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVMChefExtension.md

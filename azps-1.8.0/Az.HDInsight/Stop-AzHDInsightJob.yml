@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops a specified running job on a cluster.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightJob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzHDInsightJob
+  href: ./Get-AzHDInsightJob.yml
+- text: Start-AzHDInsightJob
+  href: ./Start-AzHDInsightJob.yml
+- text: Wait-AzHDInsightJob
+  href: ./Wait-AzHDInsightJob.yml
+syntaxes:
+- >-
+  Stop-AzHDInsightJob [-ClusterName] <String> [-JobId] <String> [-HttpCredential] <PSCredential>
+
+   [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop a job on the specified cluster'
+  code: |-
+    PS C:\># Cluster info
+    PS C:\> $clusterName = "your-hadoop-001"
+    PS C:\> $clusterCreds = Get-Credential
+    PS C:\> Stop-AzHDInsightJob `
+                -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds `
+                -JobId $jobId
+  description: |-
+    This command stops a job on the cluster named your-hadoop-001.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: HttpCredential
+  isRequired: true
+  description: |+
+    Specifies the cluster login (HTTP) credentials for the cluster.
+
+  defaultValue: None
+  position: "2"
+  aliases: ClusterCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the job ID of the job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Stop-AzHDInsightJob
+name: Stop-AzHDInsightJob
+description: |-
+  The **Stop-AzHDInsightJob** cmdlet stops a specified running job on an Azure HDInsight cluster.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: FD27C755-9AAF-42DA-8425-1661C92B6C68
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/stop-azhdinsightjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Stop-AzHDInsightJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Stop-AzHDInsightJob.md

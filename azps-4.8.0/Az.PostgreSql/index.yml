@@ -1,0 +1,35 @@
+### YamlMime:PowershellModule
+children:
+- title: Database for PostgreSQL
+  cmdlets:
+  - Az.PostgreSql.Get-AzPostgreSqlConfiguration
+  - Az.PostgreSql.Get-AzPostgreSqlConnectionString
+  - Az.PostgreSql.Get-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.Get-AzPostgreSqlReplica
+  - Az.PostgreSql.Get-AzPostgreSqlServer
+  - Az.PostgreSql.Get-AzPostgreSqlVirtualNetworkRule
+  - Az.PostgreSql.New-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.New-AzPostgreSqlReplica
+  - Az.PostgreSql.New-AzPostgreSqlServer
+  - Az.PostgreSql.New-AzPostgreSqlVirtualNetworkRule
+  - Az.PostgreSql.Remove-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.Remove-AzPostgreSqlServer
+  - Az.PostgreSql.Remove-AzPostgreSqlVirtualNetworkRule
+  - Az.PostgreSql.Restart-AzPostgreSqlServer
+  - Az.PostgreSql.Restore-AzPostgreSqlServer
+  - Az.PostgreSql.Update-AzPostgreSqlConfiguration
+  - Az.PostgreSql.Update-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.Update-AzPostgreSqlServer
+  - Az.PostgreSql.Update-AzPostgreSqlVirtualNetworkRule
+uid: Az.PostgreSql
+name: Az.PostgreSql
+description: |-
+  Microsoft Azure PowerShell: PostgreSql cmdlets
+metadata:
+  Module Name: Az.PostgreSql
+  Module Guid: b09b1b72-75a0-43a4-a342-b69a27eb64b5
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.postgresql
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PostgreSql/help/Az.PostgreSql.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PostgreSql/help/Az.PostgreSql.md

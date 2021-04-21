@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Private DNS zone.
+module: Az.PrivateDns
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsZone" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzPrivateDnsZone
+  href: ./New-AzPrivateDnsZone.yml
+- text: Remove-AzPrivateDnsZone
+  href: ./Remove-AzPrivateDnsZone.yml
+- text: Set-AzPrivateDnsZone
+  href: ./Set-AzPrivateDnsZone.yml
+syntaxes:
+- >-
+  Get-AzPrivateDnsZone [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a zone'
+  code: |-
+    PS C:\> $Zone = Get-AzPrivateDnsZone -ResourceGroupName "MyResourceGroup" -Name "myzone.com"
+
+    This example gets the Private DNS zone named myzone.com from the specified resource group, and then stores it in the $Zone variable.
+    $Zone looks something like this: 
+
+    Name                          : myzone.com
+    ResourceId:                   : "/subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/PrivateZones/myzone.com"
+    ResourceGroupName             : MyResourceGroup
+    Location					  : 
+    Etag                          : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Tags                          : {}
+    NumberOfRecordSets            : 1
+    MaxNumberOfRecordSets         : 5000
+  description: ""
+  summary: ""
+- title: 'Example 2: Get all of the zones in a resource group'
+  code: |-
+    PS C:\> $Zones = Get-AzPrivateDnsZone -ResourceGroupName "MyResourceGroup"
+
+    Name                  : zone1.com
+    ResourceId            : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Micros
+                            oft.Network/privateDnsZones/zone1.com
+    ResourceGroupName     : MyResourceGroup
+    Location              :
+    Etag                  : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Tags                  :
+    NumberOfRecordSets    : 1
+    MaxNumberOfRecordSets : 5000
+
+    Name                  : zone2.com
+    ResourceId            : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Micros
+                            oft.Network/privateDnsZones/zone2.com
+    ResourceGroupName     : MyResourceGroup
+    Location              :
+    Etag                  : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Tags                  :
+    NumberOfRecordSets    : 1
+    MaxNumberOfRecordSets : 5000
+  description: |-
+    This example gets all of the Private DNS zones in the specified resource group, and then stores it in the $Zones variable.
+  summary: ""
+- title: 'Example 3: Get all of the zones in a subscription'
+  code: |-
+    PS C:\> $Zones = Get-AzPrivateDnsZone
+
+    Name                  : zone1.com
+    ResourceId            : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup1/providers/Micros
+                            oft.Network/privateDnsZones/zone1.com
+    ResourceGroupName     : MyResourceGroup1
+    Location              :
+    Etag                  : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Tags                  :
+    NumberOfRecordSets    : 1
+    MaxNumberOfRecordSets : 5000
+
+    Name                  : zone2.com
+    ResourceId            : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup2/providers/Micros
+                            oft.Network/privateDnsZones/zone2.com
+    ResourceGroupName     : MyResourceGroup2
+    Location              :
+    Etag                  : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Tags                  :
+    NumberOfRecordSets    : 1
+    MaxNumberOfRecordSets : 5000
+  description: |-
+    This example gets all of the Private DNS zones in the current Azure subscription, and then stores them in the $Zones variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Private DNS zone to get.
+    If you do not specify a value for the *Name* parameter, this cmdlet gets all Private DNS zones in the specified resource group.
+    If you also omit the *ResourceGroupName* parameter, this cmdlet gets all Private DNS zones in the current Azure subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group that contains the Private DNS zone to get.
+    If you do not specify the *ResourceGroupName*, then you must also omit the *Name* parameter.
+    In this case, this cmdlet gets all Private DNS zones in the current Azure subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.PrivateDns.Get-AzPrivateDnsZone
+name: Get-AzPrivateDnsZone
+description: |-
+  The **Get-AzPrivateDnsZone** cmdlet gets a Private Domain Name System (DNS) zone from the specified resource group.
+  If you specify the *Name* parameter, a single **PrivateDnsZone** object is returned.
+  If you do not specify the *Name* parameter, an array containing all of the zones in the specified resource group is returned.
+  You can use the **PrivateDnsZone** object to update the zone, for example you can add **RecordSet** objects to it.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
+  Module Name: Az.PrivateDns
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.privatedns/get-azprivatednszone
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Get-AzPrivateDnsZone.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Get-AzPrivateDnsZone.md

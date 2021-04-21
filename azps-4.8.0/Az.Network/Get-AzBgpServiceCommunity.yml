@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Provides a list of all services / regions, BGP communities, and associated prefixes.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSBgpServiceCommunity" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Move-AzExpressRouteCircuit
+  href: Move-AzExpressRouteCircuit.yml
+- text: New-AzExpressRouteCircuit
+  href: New-AzExpressRouteCircuit.yml
+- text: Remove-AzExpressRouteCircuit
+  href: Remove-AzExpressRouteCircuit.yml
+- text: Set-AzExpressRouteCircuit
+  href: Set-AzExpressRouteCircuit.yml
+- text: Get-AzRouteFilter
+  href: Get-AzRouteFilter.yml
+- text: Get-AzRouteFilterRuleConfig
+  href: Get-AzRouteFilterRuleConfig.yml
+- text: Remove-AzRouteFilter
+  href: Remove-AzRouteFilter.yml
+- text: Remove-AzRouteFilterRuleConfig
+  href: Remove-AzRouteFilterRuleConfig.yml
+- text: Set-AzRouteFilter
+  href: Set-AzRouteFilter.yml
+- text: Set-AzRouteFilterRuleConfig
+  href: Set-AzRouteFilterRuleConfig.yml
+- text: New-AzRouteFilter
+  href: New-AzRouteFilter.yml
+- text: New-AzRouteFilterRuleConfig
+  href: New-AzRouteFilterRuleConfig.yml
+syntaxes:
+- Get-AzBgpServiceCommunity [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-AzBgpServiceCommunity
+
+    ...
+
+    Name           : AzureCentralIndia
+    Id             : /subscriptions//resourceGroups//providers/Microsoft.Network/bgpServiceCommunities/AzureCentralIndia
+    Type           : Microsoft.Network/bgpServiceCommunities
+    BgpCommunities : [
+                       {
+                         "ServiceSupportedRegion": "Global",
+                         "CommunityName": "Azure Central India",
+                         "CommunityValue": "12076:51017",
+                         "CommunityPrefixes": [
+                           "13.71.0.0/18",
+                           "20.190.146.0/25",
+                           "40.79.214.0/24",
+                           "40.81.224.0/19",
+                           "40.87.224.0/22",
+                           "40.112.39.0/25",
+                           "40.112.39.128/26",
+                           "40.126.18.0/25",
+                           "52.136.24.0/24",
+                           "52.140.64.0/18",
+                           "52.159.64.0/19",
+                           "52.172.128.0/17",
+                           "52.239.135.64/26",
+                           "52.239.202.0/24",
+                           "52.245.96.0/22",
+                           "52.253.168.0/22",
+                           "104.47.210.0/23",
+                           "104.211.64.0/20",
+                           "104.211.81.0/24",
+                           "104.211.82.0/23",
+                           "104.211.84.0/22",
+                           "104.211.88.0/21",
+                           "104.211.96.0/19"
+                         ],
+                         "IsAuthorizedToUse": true,
+                         "ServiceGroup": "Azure"
+                       }
+                     ]
+    ...
+  description: |-
+    This cmdlet provides a list of all services / regions, BGP communities, and associated prefixes.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzBgpServiceCommunity
+name: Get-AzBgpServiceCommunity
+description: |-
+  This cmdlet provides a list of all services / regions, BGP communities, and associated prefixes.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azbgpservicecommunity
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzBgpServiceCommunity.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzBgpServiceCommunity.md

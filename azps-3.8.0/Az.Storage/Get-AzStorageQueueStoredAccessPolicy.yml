@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the stored access policy or policies for an Azure storage queue.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Storage.Queue.SharedAccessQueuePolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzStorageQueueStoredAccessPolicy
+  href: ./New-AzStorageQueueStoredAccessPolicy.yml
+- text: Remove-AzStorageQueueStoredAccessPolicy
+  href: ./Remove-AzStorageQueueStoredAccessPolicy.yml
+- text: Set-AzStorageQueueStoredAccessPolicy
+  href: ./Set-AzStorageQueueStoredAccessPolicy.yml
+- text: New-AzStorageContext
+  href: ./New-AzStorageContext.yml
+syntaxes:
+- >-
+  Get-AzStorageQueueStoredAccessPolicy [-Queue] <String> [[-Policy] <String>] [-Context <IStorageContext>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a stored access policy in the queue'
+  code: |-
+    PS C:\>Get-AzStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy12"
+  description: |-
+    This command gets the access policy named Policy12 in the storage queue named MyQueue.
+  summary: ""
+- title: 'Example 2: Get all stored access policies in the queue'
+  code: |-
+    PS C:\>Get-AzStorageQueueStoredAccessPolicy -Queue "MyQueue"
+  description: |-
+    This command gets all stored access policies in the queue named MyQueue.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies the Azure storage context.
+    To obtain a storage context, use the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Policy
+  description: |+
+    Specifies a stored access policy, which includes the permissions for this Shared Access Signature (SAS) token.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Queue
+  isRequired: true
+  description: |+
+    Specifies the Azure storage queue name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: N, Name
+  parameterValueGroup: ""
+uid: Az.Storage.Get-AzStorageQueueStoredAccessPolicy
+name: Get-AzStorageQueueStoredAccessPolicy
+description: |-
+  The **Get-AzStorageQueueStoredAccessPolicy** cmdlet lists the stored access policy or policies for an Azure storage queue.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: F1EC601C-3ADD-402A-A5F7-84A95D312187
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstoragequeuestoredaccesspolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageQueueStoredAccessPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageQueueStoredAccessPolicy.md

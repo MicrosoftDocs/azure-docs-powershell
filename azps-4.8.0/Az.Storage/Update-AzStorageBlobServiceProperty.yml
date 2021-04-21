@@ -1,0 +1,193 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the service properties for the Azure Storage Blob service.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSBlobServiceProperties" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzStorageBlobServiceProperty [-ResourceGroupName] <String> [-StorageAccountName] <String>
+
+   [-DefaultServiceVersion <String>] [-EnableChangeFeed <Boolean>] [-IsVersioningEnabled <Boolean>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzStorageBlobServiceProperty -StorageAccount <PSStorageAccount> [-DefaultServiceVersion <String>]
+
+   [-EnableChangeFeed <Boolean>] [-IsVersioningEnabled <Boolean>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzStorageBlobServiceProperty [-ResourceId] <String> [-DefaultServiceVersion <String>]
+
+   [-EnableChangeFeed <Boolean>] [-IsVersioningEnabled <Boolean>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set Blob service DefaultServiceVersion to 2018-03-28'
+  code: |-
+    C:\PS> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -DefaultServiceVersion 2018-03-28 
+
+    StorageAccountName            : mystorageaccount
+    ResourceGroupName             : myresourcegroup
+    DefaultServiceVersion         : 2018-03-28
+    DeleteRetentionPolicy.Enabled : False
+    DeleteRetentionPolicy.Days    : 
+    RestorePolicy.Enabled         : 
+    RestorePolicy.Days            : 
+    ChangeFeed                    : 
+    IsVersioningEnabled           :
+  description: |-
+    This command sets the DefaultServiceVersion of Blob Service to 2018-03-28.
+  summary: ""
+- title: 'Example 2: Enable Changefeed on Blob service of a Storage account'
+  code: |-
+    C:\PS> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -EnableChangeFeed $true
+
+    StorageAccountName            : mystorageaccount
+    ResourceGroupName             : myresourcegroup
+    DefaultServiceVersion         : 
+    DeleteRetentionPolicy.Enabled : False
+    DeleteRetentionPolicy.Days    : 
+    RestorePolicy.Enabled         : 
+    RestorePolicy.Days            : 
+    ChangeFeed                    : True
+    IsVersioningEnabled           :
+  description: |-
+    This command enables Changefeed on Blob service of a Storage account
+    Change feed support in Azure Blob Storage works by listening to a GPv2 or Blob storage account for any blob level creation, modification, or deletion events. 
+    It then outputs an ordered log of events for the blobs stored in the $blobchangefeed container within the storage account. 
+    The serialized changes are persisted as an Apache Avro file and can be processed asynchronously and incrementally.
+  summary: ""
+- title: 'Example 3: Enable Versioning on Blob service of a Storage account'
+  code: |-
+    C:\PS> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -IsVersioningEnabled $true
+
+    StorageAccountName            : mystorageaccount
+    ResourceGroupName             : myresourcegroup
+    DefaultServiceVersion         : 
+    DeleteRetentionPolicy.Enabled : False
+    DeleteRetentionPolicy.Days    : 
+    RestorePolicy.Enabled         : 
+    RestorePolicy.Days            : 
+    ChangeFeed                    : 
+    IsVersioningEnabled           : True
+  description: |-
+    This command enables Versioning on Blob service of a Storage account
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultServiceVersion
+  description: |+
+    Default Service Version to Set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: EnableChangeFeed
+  description: |+
+    Enable Change Feed logging for the storage account by set to $true, disable Change Feed logging by set to $false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: IsVersioningEnabled
+  description: |+
+    Gets or sets versioning is enabled if set to true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Input a Storage account Resource Id, or a Blob service properties Resource Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+  name: StorageAccount
+  isRequired: true
+  description: |+
+    Storage account object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  isRequired: true
+  description: |+
+    Storage Account Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: AccountName, Name
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Update-AzStorageBlobServiceProperty
+name: Update-AzStorageBlobServiceProperty
+description: |-
+  The **Update-AzStorageBlobServiceProperty** cmdlet modifies the service properties for the Azure Storage Blob service.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/update-azstorageblobserviceproperty
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Update-AzStorageBlobServiceProperty.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Update-AzStorageBlobServiceProperty.md

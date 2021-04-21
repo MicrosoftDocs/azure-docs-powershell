@@ -1,0 +1,20 @@
+### YamlMime:PowershellModule
+children:
+- title: Management Partner
+  cmdlets:
+  - Az.ManagementPartner.Get-AzManagementPartner
+  - Az.ManagementPartner.New-AzManagementPartner
+  - Az.ManagementPartner.Remove-AzManagementPartner
+  - Az.ManagementPartner.Update-AzManagementPartner
+uid: Az.ManagementPartner
+name: Az.ManagementPartner
+description: |-
+  Management Partner cmdlets for Azure Resource Manager.
+metadata:
+  Module Name: Az.ManagementPartner
+  Module Guid: bf60f35d-6c0b-42f2-be30-eb333a31279d
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.managementpartner
+  Help Version: 0.1.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ManagementPartner/ManagementPartner/help/Az.ManagementPartner.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ManagementPartner/ManagementPartner/help/Az.ManagementPartner.md

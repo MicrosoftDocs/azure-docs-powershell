@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an ActionGroup reference object in memory.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzActivityLogAlert
+  href: ./Set-AzActivityLogAlert.yml
+- text: Enable-AzActivityLogAlert
+  href: ./Enable-AzActivityLogAlert.yml
+- text: Disable-AzActivityLogAlert
+  href: ./Disable-AzActivityLogAlert.yml
+- text: Get-AzActivityLogAlert
+  href: ./Get-AzActivityLogAlert.yml
+- text: Remove-AzActivityLogAlert
+  href: ./Remove-AzActivityLogAlert.yml
+- text: New-AzActivityLogAlertCondition
+  href: ./New-AzActivityLogAlertCondition.yml
+syntaxes:
+- >-
+  New-AzActionGroup -ActionGroupId <String>
+
+   [-WebhookProperty <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an action group reference object in memory'
+  code: |-
+    PS C:\>$dict = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
+    PS C:\>$dict.Add('key1', 'value1')
+    PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProperty $dict
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ActionGroupId
+  isRequired: true
+  description: |+
+    The Id/name of the action group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: WebhookProperty
+  description: |+
+    The webhook properties of the action group
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzActionGroup
+name: New-AzActionGroup
+description: |-
+  The **New-AzActionGroup** cmdlet creates an action group reference object in memory.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azactiongroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md

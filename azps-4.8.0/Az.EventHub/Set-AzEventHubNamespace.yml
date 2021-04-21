@@ -1,0 +1,349 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the specified Event Hubs namespace.
+module: Az.EventHub
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.EventHub.Models.NamespaceState, Microsoft.Azure.PowerShell.Cmdlets.EventHub, Version=1.4.3.0, Culture=neutral, PublicKeyToken=null" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNamespaceAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
+
+   [[-SkuName] <String>] [[-SkuCapacity] <Int32>] [[-State] <NamespaceState>] [[-Tag] <Hashtable>] [-EnableKafka]
+
+   [-Identity] [-IdentityUserDefined <String>] [-KeySource <String>]
+
+   [-KeyProperty <System.Collections.Generic.List`1[System.String[]]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
+
+   [[-SkuName] <String>] [[-SkuCapacity] <Int32>] [[-State] <NamespaceState>] [[-Tag] <Hashtable>]
+
+   [-EnableAutoInflate] [-MaximumThroughputUnits <Int32>] [-EnableKafka] [-Identity]
+
+   [-IdentityUserDefined <String>] [-KeySource <String>]
+
+   [-KeyProperty <System.Collections.Generic.List`1[System.String[]]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
+
+   [[-SkuName] <String>] [[-SkuCapacity] <Int32>] [[-Tag] <Hashtable>] [-EnableAutoInflate]
+
+   [-MaximumThroughputUnits <Int32>] [-EnableKafka] [-Identity] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location "WestUS" -Tag @{Tag1='TagValue1'; Tag2='TagValue2'}
+
+    Name                   : MyNamespaceName
+    Id                     : /subscriptions/{subscriptionId}/resourceGroups/Default-EventHub-WestCentralUS/providers/Microsoft.EventHub/namespaces/MyNamespaceName
+    ResourceGroupName      : Default-EventHub-WestCentralUS
+    Location               : West US
+    Sku                    : Name : Standard , Capacity : 1 , Tier : Standard
+    Tags                   : {Tag2, TagValue2, Tag1, TagValue1}
+    ProvisioningState      : Succeeded
+    Status                 : Active
+    CreatedAt              : 5/24/2019 12:47:27 AM
+    UpdatedAt              : 5/24/2019 12:48:14 AM
+    ServiceBusEndpoint     : #########
+    Enabled                : True
+    KafkaEnabled           : True
+    IsAutoInflateEnabled   : True
+    MaximumThroughputUnits : 10
+  description: |-
+    Updates the Tags for namespace \`MyNamespaceName\` to Created .
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location "WestUS" -State Created -EnableAutoInflate -MaximumThroughputUnits 10 
+
+    Name                   : MyNamespaceName
+    Id                     : /subscriptions/{subscriptionId}/resourceGroups/Default-EventHub-WestCentralUS/providers/Microsoft.EventHub/namespaces/MyNamespaceName
+    ResourceGroup          : Default-EventHub-WestCentralUS
+    ResourceGroupName      : Default-EventHub-WestCentralUS
+    Location               : West US
+    Sku                    : Name : Standard , Capacity : 1 , Tier : Standard
+    Tags                   :
+    ProvisioningState      : Succeeded
+    Status                 : Active
+    CreatedAt              : 5/24/2019 12:47:27 AM
+    UpdatedAt              : 5/24/2019 12:48:14 AM
+    ServiceBusEndpoint     : #########
+    Enabled                : True
+    KafkaEnabled           : True
+    IsAutoInflateEnabled   : True
+    MaximumThroughputUnits : 10
+  description: |-
+    Updates the state of namespace \`MyNamespaceName\` with AutoInflate = enabled and MaximumThroughputUnits = 10
+  summary: ""
+- title: Example 3
+  code: |-
+    <!-- Aladdin Generated Example --> 
+    Set-AzEventHubNamespace -Location 'WestUS' -Name MyNamespaceName -ResourceGroupName MyResourceGroupName -SkuName Basic
+  description: ""
+  summary: |+
+    Updates the specified Event Hubs namespace. (autogenerated)
+
+- title: 'Example 5: Creating and updating Namespace with Manage Identity in a cluster'
+  code: |-
+    PS C:\> New-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location MyLocation --EnableAutoInflate -MaximumThroughputUnits 12 -EnableKafka -ZoneRedundant -Identity
+
+    Name                          : MyNamespaceName
+    Id                            : /subscriptions/{subscriptionId}/resourceGroups/Default-EventHub-WestCentralUS/providers/Microsoft.EventHub/namespaces/MyNamespaceName
+    ResourceGroupName             : Default-EventHub-WestCentralUS
+    Location                      : West US
+    Sku                           : Name : Standard , Capacity : 1 , Tier : Standard
+    Tags                          :
+    ProvisioningState             : Succeeded
+    Status                        : Active
+    CreatedAt                     : 6/12/2020 4:00:29 AM
+    UpdatedAt                     : 6/14/2020 11:33:12 PM
+    ServiceBusEndpoint            : #########
+    Enabled                       : True
+    IsAutoInflateEnabled          : True
+    MaximumThroughputUnits        : 12
+    ZoneRedundant                 : True
+    ClusterArmId                  :	/subscriptions/{subscriptionId}/resourceGroups/Default-EventHub-WestCentralUS/providers/Microsoft.EventHub/clusters/TestCluster
+    Identity.PrincipalId          : ##########
+    Identity.TenantId             : ##########
+    Identity.Type                 : SystemAssigned
+    Encryption                    : Microsoft.Azure.Commands.EventHub.Models.PSEncryptionAttributes
+    Encryption.KeySource          :
+    Encryption.KeyVaultProperties :
+
+    # Get created namespace
+    PS C:\> $getnamespace = Get-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName
+
+    # Create KeyVault
+    PS C:\>$Keyvault = New-AzKeyVault -ResourceGroupName prod-by3-533-rg -Name testingnewCluster -EnableSoftDelete -EnablePurgeProtection -Location westus
+
+    # Set Access policy on the KeyVault
+    PS C:\> Set-AzKeyVaultAccessPolicy -VaultName testingnewCluster -ObjectId $getnamespace.Identity.PrincipalId -PermissionsToKeys wrapkey,unwrapkey,get -BypassObjectIdValidation
+
+    # Add a key to KeyVault
+    $key = New-AzKeyVault -ResourceGroupName prod-by3-533-rg -Name testingnewCluster -EnableSoftDelete -EnablePurgeProtection -Location westus
+
+    # Update Namespace with KeyVault properties
+
+    PS C:\> Set-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -Name MyNamespaceName -Location westus -KeySource Microsoft.KeyVault -KeyProperty @(@($key.Name, $keyvault.VaultUri,""))
+
+    Name                          : MyNamespaceName
+    Id                            : /subscriptions/{subscriptionId}/resourceGroups/Default-EventHub-WestCentralUS/providers/Microsoft.EventHub/namespaces/MyNamespaceName
+    ResourceGroupName             : Default-EventHub-WestCentralUS
+    Location                      : West US
+    Sku                           : Name : Standard , Capacity : 1 , Tier : Standard
+    Tags                          :
+    ProvisioningState             : Succeeded
+    Status                        : Active
+    CreatedAt                     : 6/12/2020 4:00:29 AM
+    UpdatedAt                     : 6/14/2020 11:33:12 PM
+    ServiceBusEndpoint            : #########
+    Enabled                       : True
+    KafkaEnabled                  : True
+    IsAutoInflateEnabled          : True
+    MaximumThroughputUnits        : 10
+    ZoneRedundant                 : False
+    ClusterArmId                  : /subscriptions/{subscriptionId}/resourceGroups/Default-EventHub-WestCentralUS/providers/Microsoft.EventHub/clusters/TestCluster
+    Identity                      : Microsoft.Azure.Commands.EventHub.Models.PSIdentityAttributes
+    Identity.PrincipalId          : #########
+    Identity.TenantId             : #########
+    Identity.Type                 : SystemAssigned
+    Encryption                    : Microsoft.Azure.Commands.EventHub.Models.PSEncryptionAttributes
+    Encryption.KeySource          : MicrosoftKeyVault
+    Encryption.KeyVaultProperties : {testkey, https://myvaultname.vault.azure.net, }
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAutoInflate
+  isRequired: true
+  description: |+
+    Indicates whether AutoInflate is enabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableKafka
+  description: |+
+    enabling or disabling Kafka for namespace
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    enabling or disabling Identity for namespace
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IdentityUserDefined
+  description: |+
+    User defined Identity or None
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span><span>]</span>
+  name: KeyProperty
+  description: |+
+    List of Key Properties, @(@(KeyName,KeyVaultUri,Keyversion),@(KeyName,KeyVaultUri,Keyversion))
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeySource
+  description: |+
+    Key Source
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    EventHub Namespace Location.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaximumThroughputUnits
+  description: |+
+    Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    EventHub Namespace Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: NamespaceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SkuCapacity
+  description: |+
+    The eventhub throughput units.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SkuName
+  description: |+
+    Namespace Sku Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: Basic, Standard, Premium
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.EventHub.Models.NamespaceState" data-throw-if-not-resolved="False" /><span>]</span>
+  name: State
+  description: |+
+    Disable/Enable Namespace.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: Unknown, Active, Disabled
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Hashtables which represents resource Tag.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.EventHub.Set-AzEventHubNamespace
+name: Set-AzEventHubNamespace
+description: |-
+  The Set-AzEventHubNamespace cmdlet updates the properties of the specified Event Hubs namespace.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+  Module Name: Az.EventHub
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/set-azeventhubnamespace
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/Set-AzEventHubNamespace.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/Set-AzEventHubNamespace.md

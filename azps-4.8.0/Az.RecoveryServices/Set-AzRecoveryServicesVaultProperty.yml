@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates properties of a Vault.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.VaultSoftDeleteFeatureState" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfigResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRecoveryServicesVault
+  href: ./Get-AzRecoveryServicesVault.yml
+- text: Get-AzRecoveryServicesVaultProperty
+  href: ./Get-AzRecoveryServicesVaultProperty.yml
+syntaxes:
+- >-
+  Set-AzRecoveryServicesVaultProperty -SoftDeleteFeatureState <String> [-VaultId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update SoftDeleteFeatureState of a vault'
+  code: |-
+    PS C:\> $vault = Get-AzRecoveryServicesVault -Name "MyVaultName"
+    PS C:\> $props = Set-AzRecoveryServicesVaultProperty -VaultId $vault.Id -SoftDeleteFeatureState Enable
+  description: |-
+    The first command gets a Vault object and then stores it in the $vault variable.
+    The second command Updates the SoftDeleteFeatureState property of the vault to "Enabled" state.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SoftDeleteFeatureState
+  isRequired: true
+  description: |+
+    SoftDeleteFeatureState of the Recovery Services Vault.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enable, Disable
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultId
+  description: |+
+    ARM ID of the Recovery Services Vault.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Set-AzRecoveryServicesVaultProperty
+name: Set-AzRecoveryServicesVaultProperty
+description: |-
+  The **Set-AzRecoveryServicesVaultProperty** cmdlet updates properties of a Recovery services vault.
+  This cmdlet returns the updated vault properties after the current set operation.
+  Using this cmdlet properties of vault such as soft-delete can be enabled at any point of time.
+  **SoftDeleteFeatureState** property of a vault can be disabled only if there are no registered containers in the vault.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  ms.assetid: C2A7F37B-5713-4430-B83F-C6745692396D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/set-azrecoveryservicesvaultproperty
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesVaultProperty.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesVaultProperty.md

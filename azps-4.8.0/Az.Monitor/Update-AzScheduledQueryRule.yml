@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a Log Alert rule
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleResource" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzScheduledQueryRule -Name <String> -ResourceGroupName <String> -Enabled <Boolean>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzScheduledQueryRule -InputObject <PSScheduledQueryRuleResource> -Enabled <Boolean>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzScheduledQueryRule -ResourceId <String> -Enabled <Boolean> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update by rule name'
+  code: |-
+    PS C:\> Update-AzScheduledQueryRule -ResourceGroupName "MyResourceGroup" -Name "LogAlertRule1" -Enabled $false
+
+    Description       : description
+    Enabled           : false
+    LastUpdatedTime   : 19-Apr-19 12:49:15 PM
+    ProvisioningState : Succeeded
+    Source            : Microsoft.Azure.Management.Monitor.Models.Source
+    Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
+    Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
+    Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+    Name              : LogAlertRule1
+    Type              : microsoft.insights/scheduledqueryrules
+    Location          : centralindia
+    Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+  description: ""
+  summary: ""
+- title: 'Example 2: Update by input object'
+  code: |-
+    PS C:\> Update-AzScheduledQueryRule -InputObject $sqr -Enabled $false
+
+    Description       : description
+    Enabled           : false
+    LastUpdatedTime   : 19-Apr-19 12:50:18 PM
+    ProvisioningState : Succeeded
+    Source            : Microsoft.Azure.Management.Monitor.Models.Source
+    Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
+    Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
+    Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+    Name              : LogAlertRule1
+    Type              : microsoft.insights/scheduledqueryrules
+    Location          : centralindia
+    Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+  description: ""
+  summary: ""
+- title: 'Example 3: Update by resource Id'
+  code: |-
+    PS C:\> Update-AzScheduledQueryRule -ResourceId /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1 -Enabled $true
+
+    Description       : description
+    Enabled           : true
+    LastUpdatedTime   : 19-Apr-19 12:51:14 PM
+    ProvisioningState : Succeeded
+    Source            : Microsoft.Azure.Management.Monitor.Models.Source
+    Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
+    Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
+    Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+    Name              : LogAlertRule1
+    Type              : microsoft.insights/scheduledqueryrules
+    Location          : centralindia
+    Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  isRequired: true
+  description: |+
+    The azure alert state - valid values - $true, $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleResource" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    The Scheduled Query Rule resource
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The alert name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The resource Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Monitor.Update-AzScheduledQueryRule
+name: Update-AzScheduledQueryRule
+description: |-
+  Updates a Log Alert rule, updating only "Enabled" property is supported by this command.
+  To update other properties, see "Set-AzScheduledQueryRule" command.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/update-azscheduledqueryrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Update-AzScheduledQueryRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Update-AzScheduledQueryRule.md

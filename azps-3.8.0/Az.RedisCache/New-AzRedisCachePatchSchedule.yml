@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a patch schedule.
+module: Az.RedisCache
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRedisCachePatchSchedule
+  href: ./Get-AzRedisCachePatchSchedule.yml
+- text: New-AzRedisCacheScheduleEntry
+  href: ./New-AzRedisCacheScheduleEntry.yml
+- text: Remove-AzRedisCachePatchSchedule
+  href: ./Remove-AzRedisCachePatchSchedule.yml
+syntaxes:
+- >-
+  New-AzRedisCachePatchSchedule [-ResourceGroupName <String>] -Name <String> -Entries <PSScheduleEntry[]>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create and add a patch schedule on a cache'
+  code: |-
+    PS C:\>New-AzRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06" -Entries @(New-AzRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00")
+  description: |-
+    This command adds a patch schedule to the cache named RedisCache06.
+    The Entries parameter takes as its value a command that uses **New-AzRedisCacheScheduleEntry** to create a schedule.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Entries
+  isRequired: true
+  description: |+
+    Specifies an array of schedules that this cmdlet sets on a cache. 
+    To obtain a **PSScheduleEntry** object, use the New-AzRedisCacheScheduleEntry cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the cache.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group which contains the cache.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.RedisCache.New-AzRedisCachePatchSchedule
+name: New-AzRedisCachePatchSchedule
+description: |-
+  The **New-AzRedisCachePatchSchedule** cmdlet adds a patch schedule to a cache in Azure Redis Cache.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
+  Module Name: Az.RedisCache
+  ms.assetid: F7FAFF52-5E07-4D88-B48F-BC70C43E8691
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/new-azrediscachepatchschedule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/New-AzRedisCachePatchSchedule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/New-AzRedisCachePatchSchedule.md

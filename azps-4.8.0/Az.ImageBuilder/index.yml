@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: Image Builder
+  cmdlets:
+  - Az.ImageBuilder.Get-AzImageBuilderRunOutput
+  - Az.ImageBuilder.Get-AzImageBuilderTemplate
+  - Az.ImageBuilder.New-AzImageBuilderCustomizerObject
+  - Az.ImageBuilder.New-AzImageBuilderDistributorObject
+  - Az.ImageBuilder.New-AzImageBuilderSourceObject
+  - Az.ImageBuilder.New-AzImageBuilderTemplate
+  - Az.ImageBuilder.Remove-AzImageBuilderTemplate
+  - Az.ImageBuilder.Start-AzImageBuilderTemplate
+  - Az.ImageBuilder.Stop-AzImageBuilderTemplate
+uid: Az.ImageBuilder
+name: Az.ImageBuilder
+description: |-
+  Microsoft Azure PowerShell: ImageBuilder cmdlets
+metadata:
+  Module Name: Az.ImageBuilder
+  Module Guid: 8ff047e4-15bb-4b53-a728-75641c49958b
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.imagebuilder
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImageBuilder/help/Az.ImageBuilder.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImageBuilder/help/Az.ImageBuilder.md

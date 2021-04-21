@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get IoT security solution
+module: Az.Security
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.IotSecuritySolutions.PSIotSecuritySolution" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzIotSecuritySolution [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzIotSecuritySolution -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzIotSecuritySolution -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzIotSecuritySolution -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzIotSecuritySolution -Name "MySample" -ResourceGroupName "MyResourceGroup"
+
+    Id: "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Security/IoTSecuritySolutions/MySample"
+    Name: "MySample"
+    Type: "Microsoft.Security/IoTSecuritySolutions"
+    Location: "centraluseuap"
+    DisplayName: "MySample"
+    status: "Enabled"
+    Export: ["RawEvents"]
+    DisabledDataSources: ["TwinData"]
+    Workspace: "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourcegroups/MyResourceGroup/providers/microsoft.operationalinsights/workspaces/MyLA"
+    AdditionalWorkspaces: null
+    IotHubs: ["/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourcegroups/MyResourceGroup/providers/microsoft.devices/iothubs/MySample"]
+    UserDefinedResources: {
+    	Query: "" 
+    	QuerySubscriptions: []
+    }
+    RecommendationsConfiguration: [
+    {
+    	RecommendationType: "IoT_ACRAuthentication"
+    	Name: "Service prinicpal not used with ACR repository"
+    	Status: "Enabled"
+    }
+    {
+    	RecommendationType: "IoT_AgentSendsUnutilizedMessages"
+    	Name: "Agent sending underutilized messages"
+    	Status: "Enabled"
+    	}]
+    AutoDiscoveredResources: ["/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourcegroups/MyResourceGroup/providers/microsoft.devices/iothubs/MySample"]
+    UnmaskedIpLoggingStatus: "Enabled"
+    Tags: {}
+  description: |-
+    Get the solution "MySample" in resource group "MyResourceGroup"
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzIotSecuritySolution -ResourceGroupName "MyResourceGroup"
+
+    Array of security solution items as shown is example 1
+  description: |-
+    Get list of all security solutions in resource group "MyResourceGroup"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    ID of the security resource that you want to invoke the command on.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Security.Get-AzIotSecuritySolution
+name: Get-AzIotSecuritySolution
+description: |-
+  The Get-AzIotSecuritySolution cmdlet returns one or more iot security solutions. 
+  The IoT security solution collects security data and events from iot devices and iot hub to help prevent and detect threats.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  Module Name: Az.Security
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.security/Get-AzIotSecuritySolution
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Get-AzIotSecuritySolution.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Get-AzIotSecuritySolution.md

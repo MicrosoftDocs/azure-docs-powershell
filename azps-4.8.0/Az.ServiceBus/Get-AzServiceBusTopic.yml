@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a description for the specified Service Bus topic.
+module: Az.ServiceBus
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ServiceBus.Models.PSTopicAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzServiceBusTopic [-ResourceGroupName <String>] [-Namespace <String>] [-Name <String>]
+
+   [-MaxCount <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1
+
+    Name                                : SB-Topic_example1
+    Id                                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ServiceBus/namespaces/SB-Example1/topics/SB-Topic_example1
+    Type                                : Microsoft.ServiceBus/Namespaces/Topics
+    AccessedAt                          : 1/1/0001 12:00:00 AM
+    AutoDeleteOnIdle                    : P10675199DT2H48M5.4775807S
+    CreatedAt                           : 10/11/2018 11:51:24 PM
+    CountDetails                        : Microsoft.Azure.Management.ServiceBus.Models.MessageCountDetails
+    DefaultMessageTimeToLive            : P10675199DT2H48M5.4775807S
+    DuplicateDetectionHistoryTimeWindow : PT10M
+    EnableBatchedOperations             : True
+    EnableExpress                       : False
+    EnablePartitioning                  : False
+    MaxSizeInMegabytes                  : 81920
+    RequiresDuplicateDetection          : False
+    SizeInBytes                         : 0
+    Status                              : Active
+    SubscriptionCount                   : 0
+    SupportOrdering                     : True
+    UpdatedAt                           : 10/11/2018 11:51:24 PM
+  description: |-
+    Returns the description of the specified topic for the given Service Bus namespace.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1
+  description: |-
+    Returns list of topics for given Service Bus namespace. By default 100 topics will be returned, if more than 100 topics to be returned, please use -MaxCount Parameter.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -MaxCount 150
+  description: |-
+    Returns list of first 150 topics for given Service Bus namespace.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxCount
+  description: |+
+    Determine the maximum number of Topics to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Topic Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: TopicName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  isRequired: true
+  description: |+
+    Namespace Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: NamespaceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ResourceGroup
+  parameterValueGroup: ""
+uid: Az.ServiceBus.Get-AzServiceBusTopic
+name: Get-AzServiceBusTopic
+description: |-
+  The **Get-AzServiceBusTopic** cmdlet returns a topic description for the specified Service Bus namespace.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
+  Module Name: Az.ServiceBus
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/get-azservicebustopic
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceBus/ServiceBus/help/Get-AzServiceBusTopic.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceBus/ServiceBus/help/Get-AzServiceBusTopic.md

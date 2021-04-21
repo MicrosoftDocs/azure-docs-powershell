@@ -1,0 +1,32 @@
+### YamlMime:PowershellModule
+children:
+- title: Container Registry
+  cmdlets:
+  - Az.ContainerRegistry.Get-AzContainerRegistry
+  - Az.ContainerRegistry.Get-AzContainerRegistryCredential
+  - Az.ContainerRegistry.Get-AzContainerRegistryReplication
+  - Az.ContainerRegistry.Get-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Get-AzContainerRegistryWebhookEvent
+  - Az.ContainerRegistry.New-AzContainerRegistry
+  - Az.ContainerRegistry.New-AzContainerRegistryReplication
+  - Az.ContainerRegistry.New-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Remove-AzContainerRegistry
+  - Az.ContainerRegistry.Remove-AzContainerRegistryReplication
+  - Az.ContainerRegistry.Remove-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Test-AzContainerRegistryNameAvailability
+  - Az.ContainerRegistry.Test-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Update-AzContainerRegistry
+  - Az.ContainerRegistry.Update-AzContainerRegistryCredential
+  - Az.ContainerRegistry.Update-AzContainerRegistryWebhook
+uid: Az.ContainerRegistry
+name: Az.ContainerRegistry
+description: |-
+  This topic displays help topics for the Azure Container Registry Management Cmdlets.
+metadata:
+  Module Name: Az.ContainerRegistry
+  Module Guid: b3ca459c-feb9-41cc-a954-46222505acb3
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/Az.ContainerRegistry.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/Az.ContainerRegistry.md

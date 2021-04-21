@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a delivery rule.
+module: Az.Cdn
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSDeliveryRule" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzCdnDeliveryRule [-Name <String>] -Order <Int32> [-Condition <PSDeliveryRuleCondition[]>]
+
+   -Action <PSDeliveryRuleAction[]> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzCdnDeliveryRule -Name "rule1" -Order 1 -Condition $cond1 -Action $action1
+
+    Name  Order Actions           Conditions
+    ----  ----- -------           ----------
+    rule1     1 {Accept-Encoding} {Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSDeliveryRuleCondition}
+  description: |-
+    Create a simple rule.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSDeliveryRuleAction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Action
+  isRequired: true
+  description: |+
+    A list of actions that are executed when all the conditions of a rule are satisfied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSDeliveryRuleCondition" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Condition
+  description: |+
+    A list of conditions that must be matched for the actions to be executed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Order
+  isRequired: true
+  description: |+
+    Order of the rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Cdn.New-AzCdnDeliveryRule
+name: New-AzCdnDeliveryRule
+description: |-
+  The **New-AzCdnDeliveryRule** cmdlet creates a delivery rule for CDN endpoint creation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
+  Module Name: Az.Cdn
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/new-azcdndeliveryrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/New-AzCdnDeliveryRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/New-AzCdnDeliveryRule.md

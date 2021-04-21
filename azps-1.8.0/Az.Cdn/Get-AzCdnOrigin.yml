@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a CDN origin server.
+module: Az.Cdn
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Origin.PSOrigin" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzCdnOrigin
+  href: ./Set-AzCdnOrigin.yml
+syntaxes:
+- >-
+  Get-AzCdnOrigin [-OriginName <String>] -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzCdnOrigin [-OriginName <String>] -CdnEndpoint <PSEndpoint> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint" data-throw-if-not-resolved="False" />
+  name: CdnEndpoint
+  isRequired: true
+  description: |+
+    Specifies the CDN endpoint object to which the origin belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EndpointName
+  isRequired: true
+  description: |+
+    Specifies the name of the endpoint to which the origin server belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OriginName
+  description: |+
+    Specifies the name of the origin server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProfileName
+  isRequired: true
+  description: |+
+    Specifies the name of the profile to which the origin server belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which the origin server belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Cdn.Get-AzCdnOrigin
+name: Get-AzCdnOrigin
+description: |-
+  The **Get-AzCdnOrigin** cmdlet gets an Azure Content Delivery Network (CDN) origin server and its configuration data.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
+  Module Name: Az.Cdn
+  ms.assetid: 91919242-59ED-4938-A3A3-23A66F85FBC1
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/get-azcdnorigin
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Get-AzCdnOrigin.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Get-AzCdnOrigin.md

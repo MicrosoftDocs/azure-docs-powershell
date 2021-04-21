@@ -1,0 +1,176 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Azure App Service plan in a given Geo location.
+module: Az.Websites
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAppServicePlan
+  href: ./Get-AzAppServicePlan.yml
+- text: Remove-AzAppServicePlan
+  href: ./Remove-AzAppServicePlan.yml
+- text: Set-AzAppServicePlan
+  href: ./Set-AzAppServicePlan.yml
+syntaxes:
+- >-
+  New-AzAppServicePlan [-Location] <String> [[-Tier] <String>] [[-NumberofWorkers] <Int32>]
+
+   [[-WorkerSize] <String>] [[-AseName] <String>] [[-AseResourceGroupName] <String>] [-PerSiteScaling <Boolean>]
+
+   [-HyperV] [-AsJob] [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  New-AzAppServicePlan [-Location] <String> [[-Tier] <String>] [[-NumberofWorkers] <Int32>]
+
+   [[-WorkerSize] <String>] [[-AseName] <String>] [[-AseResourceGroupName] <String>] [-PerSiteScaling <Boolean>]
+
+   [-AsJob] [-AppServicePlan] <PSAppServicePlan> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an App Service plan'
+  code: |-
+    PS C:\>New-AzAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -Location "West US" -Tier "Basic" -NumberofWorkers 2 -WorkerSize "Small"
+  description: |-
+    This command creates an App Service plan named ContosoASP in the resource group named Default-Web-WestUS in Geo location West US.
+    The command specifies a Basic Tier and allocates two small workers.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan" data-throw-if-not-resolved="False" />
+  name: AppServicePlan
+  isRequired: true
+  description: |+
+    App Service Plan Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AseName
+  description: |+
+    App Service Environment Name
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AseResourceGroupName
+  description: |+
+    App Service Environment Resource Group Name
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HyperV
+  description: |+
+    Specify this, App Service Plan will run Windows Containers
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Location 
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    App Service Plan Name
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: NumberofWorkers
+  description: |+
+    Number Of Workers
+
+  defaultValue: "1"
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: PerSiteScaling
+  description: |+
+    Whether or not to enable Per Site Scaling
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Tier
+  description: |+
+    Tier
+
+  defaultValue: Free
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WorkerSize
+  description: |+
+    Size of web worker
+
+  defaultValue: Small
+  position: "5"
+  aliases: ""
+  parameterValueGroup: Small, Medium, Large, ExtraLarge
+uid: Az.Websites.New-AzAppServicePlan
+name: New-AzAppServicePlan
+description: |-
+  The **New-AzAppServicePlan** cmdlet creates an Azure App Service plan in a given Geo location with the specified Tier, worker size, and number of workers.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  Module Name: Az.Websites
+  ms.assetid: 8F36244D-A4D7-40BB-AC4C-E9AD445549F8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/new-azappserviceplan
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/New-AzAppServicePlan.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/New-AzAppServicePlan.md

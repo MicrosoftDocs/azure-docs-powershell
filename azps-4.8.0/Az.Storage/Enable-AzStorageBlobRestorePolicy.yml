@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables Blob Restore Policy on a Storage account.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSRestorePolicy" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Enable-AzStorageBlobRestorePolicy [-ResourceGroupName] <String> [-StorageAccountName] <String>
+
+   -RestoreDays <Int32> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Enable-AzStorageBlobRestorePolicy -StorageAccount <PSStorageAccount> -RestoreDays <Int32> [-PassThru]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Enable-AzStorageBlobRestorePolicy [-ResourceId] <String> -RestoreDays <Int32> [-PassThru]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enables Blob Restore Policy for the Azure Storage Blob service on a Storage account'
+  code: |-
+    PS C:\> Enable-AzStorageBlobDeleteRetentionPolicy -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount" $accountName -RetentionDays 5
+
+    PS C:\> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount" -EnableChangeFeed $true
+
+    StorageAccountName            : mystorageaccount
+    ResourceGroupName             : myresourcegoup
+    DefaultServiceVersion         : 
+    DeleteRetentionPolicy.Enabled : True
+    DeleteRetentionPolicy.Days    : 5
+    RestorePolicy.Enabled         : False
+    RestorePolicy.Days            : 
+    RestorePolicy.MinRestoreTime  : 
+    ChangeFeed                    : True
+    IsVersioningEnabled           : True
+
+    PS C:\> Enable-AzStorageBlobRestorePolicy -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount" -RestoreDays 4
+
+    PS C:\> Get-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount"
+
+    StorageAccountName            : mystorageaccount
+    ResourceGroupName             : myresourcegoup
+    DefaultServiceVersion         : 
+    DeleteRetentionPolicy.Enabled : True
+    DeleteRetentionPolicy.Days    : 5
+    RestorePolicy.Enabled         : True
+    RestorePolicy.Days            : 4
+    RestorePolicy.MinRestoreTime  : 8/28/2020 6:00:59 AM
+    ChangeFeed                    : True
+    IsVersioningEnabled           : True
+  description: |-
+    This command first enable Blob softdelete and changefeed, then enables Blob Restore Policy, finally check the setting in Blob service properties.
+    The Blob service RestorePolicy.Days must be smaller than DeleteRetentionPolicy.Days.
+    Blob softdelete and ChangeFeed must be enabled before enable blob Restore Policy.
+    If softdelete and Changefeed are just enabled, might need wait for some time for server to handle the setting, before enable Blob restore policy.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Display ServiceProperties
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Input a Storage account Resource Id, or a Blob service properties Resource Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: RestoreDays
+  isRequired: true
+  description: |+
+    Sets the number of days for the blob can be restored..
+
+  defaultValue: None
+  position: Named
+  aliases: Days
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+  name: StorageAccount
+  isRequired: true
+  description: |+
+    Storage account object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  isRequired: true
+  description: |+
+    Storage Account Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: AccountName, Name
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Enable-AzStorageBlobRestorePolicy
+name: Enable-AzStorageBlobRestorePolicy
+description: |-
+  The **Enable-AzStorageBlobRestorePolicy** cmdlet enables Blob Restore Policy for the Azure Storage Blob service.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/enable-azstorageblobrestorepolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Enable-AzStorageBlobRestorePolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Enable-AzStorageBlobRestorePolicy.md

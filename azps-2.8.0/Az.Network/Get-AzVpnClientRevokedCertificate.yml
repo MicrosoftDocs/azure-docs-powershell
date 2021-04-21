@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about VPN client-revocation certificates.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzVpnClientRevokedCertificate
+  href: ./Add-AzVpnClientRevokedCertificate.yml
+- text: New-AzVpnClientRevokedCertificate
+  href: ./New-AzVpnClientRevokedCertificate.yml
+- text: Remove-AzVpnClientRevokedCertificate
+  href: ./Remove-AzVpnClientRevokedCertificate.yml
+syntaxes:
+- >-
+  Get-AzVpnClientRevokedCertificate [-VpnClientRevokedCertificateName <String>]
+
+   -VirtualNetworkGatewayName <String> -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about all client-revocation certificates'
+  code: |-
+    PS C:\>Get-AzVpnClientRevokedCertificate -VirtualNetworkGatewayName "ContosoVirtualNetworkGateway" -ResourceGroupName "ContosoResourceGroup"
+  description: |-
+    This command gets information about all the client-revocation certificates associated with the virtual network gateway named ContosoVirtualNetworkGateway.
+  summary: ""
+- title: 'Example 2: Get information about specific client-revocation certificates'
+  code: |-
+    PS C:\>Get-AzVpnClientRevokedCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup" -VpnClientRevokedCertificateName "ContosoRevokedClientCertificate"
+  description: |-
+    This command is a variation of the command shown in Example 1.
+    In this case, however, the *VpnClientRevokedCertificateName* parameter is used to limit the returned data to a specific client-revoked certificate: the certificate with the name ContosoRevokedClientCertificate.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that the virtual network gateway is assigned to.
+    Resource groups categorize items to help simplify inventory management and general Azure administration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkGatewayName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual network gateway where the revoked certificate information is assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VpnClientRevokedCertificateName
+  description: |+
+    Specifies the name of the VPN client certificate that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzVpnClientRevokedCertificate
+name: Get-AzVpnClientRevokedCertificate
+description: |-
+  The **Get-AzVpnClientRevokedCertificate** cmdlet returns information about the client-revocation certificates assigned to a virtual network gateway.
+  Client-revocation certificates prevent client computers from using the specified certificate for authentication.
+  **Get-AzVpnClientRevokedCertificate** enables you to return information about all the client-revocation certificates on the gateway or, by using the *VpnClientRevokedCertificateName* parameter, to get information about a single certificate.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 05626BF7-F886-4C76-8FC2-DDF783DEB539
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvpnclientrevokedcertificate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientRevokedCertificate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientRevokedCertificate.md

@@ -1,0 +1,196 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a request routing rule for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRequestRoutingRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayRequestRoutingRule
+  href: ./Add-AzApplicationGatewayRequestRoutingRule.yml
+- text: Get-AzApplicationGatewayRequestRoutingRule
+  href: ./Get-AzApplicationGatewayRequestRoutingRule.yml
+- text: Remove-AzApplicationGatewayRequestRoutingRule
+  href: ./Remove-AzApplicationGatewayRequestRoutingRule.yml
+- text: Set-AzApplicationGatewayRequestRoutingRule
+  href: ./Set-AzApplicationGatewayRequestRoutingRule.yml
+syntaxes:
+- >-
+  New-AzApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String> [-BackendHttpSettingsId <String>]
+
+   [-HttpListenerId <String>] [-BackendAddressPoolId <String>] [-UrlPathMapId <String>]
+
+   [-RewriteRuleSetId <String>] [-RedirectConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  New-AzApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String>
+
+   [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
+
+   [-HttpListener <PSApplicationGatewayHttpListener>]
+
+   [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
+
+   [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet>]
+
+   [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a request routing rule for an application gateway'
+  code: |-
+    PS C:\>$Rule = New-AzApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
+  description: |-
+    This command creates a basic request routing rule named Rule01 and stores the result in the variable named $Rule.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" />
+  name: BackendAddressPool
+  description: |+
+    Specifies the back-end address pool, as an object, for the request routing rule to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendAddressPoolId
+  description: |+
+    Specifies the back-end address pool ID of the request routing rule to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+  name: BackendHttpSettings
+  description: |+
+    Specifies the back-end HTTP settings, as an object, for the request routing rule to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendHttpSettingsId
+  description: |+
+    Specifies the back-end HTTP settings ID of the request routing rule to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+  name: HttpListener
+  description: |+
+    Specifies the back-end HTTP listener for the request routing rule to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HttpListenerId
+  description: |+
+    Specifies the backend HTTP listener ID for the request routing rule to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the request routing rule that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" />
+  name: RedirectConfiguration
+  description: |+
+    Application gateway RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RedirectConfigurationId
+  description: |+
+    ID of the application gateway RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet" data-throw-if-not-resolved="False" />
+  name: RewriteRuleSet
+  description: |+
+    Application gateway RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RewriteRuleSetId
+  description: |+
+    ID of the application gateway RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuleType
+  isRequired: true
+  description: |+
+    Specifies type of the request routing rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Basic, PathBasedRouting
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap" data-throw-if-not-resolved="False" />
+  name: UrlPathMap
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UrlPathMapId
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGatewayRequestRoutingRule
+name: New-AzApplicationGatewayRequestRoutingRule
+description: |-
+  **The Add-AzApplicationGatewayRequestRoutingRule** cmdlet creates a request routing rule for an Azure application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 622FE9AC-1CC4-489C-BB17-9D6B9D1C151D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewayrequestroutingrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayRequestRoutingRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayRequestRoutingRule.md

@@ -1,0 +1,201 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the environment with the specified name in the specified subscription and resource group.
+module: Az.TimeSeriesInsights
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <ITimeSeriesInsightsIdentity>: Identity Parameter
+    - `[AccessPolicyName <String>]`: Name of the access policy.
+    - `[EnvironmentName <String>]`: Name of the environment
+    - `[EventSourceName <String>]`: The name of the Time Series Insights event source associated with the specified environment.
+    - `[Id <String>]`: Resource identity path
+    - `[ReferenceDataSetName <String>]`: Name of the reference data set.
+    - `[ResourceGroupName <String>]`: Name of an Azure Resource group.
+    - `[SubscriptionId <String>]`: Azure Subscription ID.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20200515.IEnvironmentResource" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzTimeSeriesInsightsEnvironment -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+
+   [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+- >-
+  Update-AzTimeSeriesInsightsEnvironment -InputObject <ITimeSeriesInsightsIdentity> [-Tag <Hashtable>]
+
+   [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a Gen1 time series insights environment'
+  code: |-
+    PS C:\> Update-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup -Name tsitest001 -Tag @{'key1'='val1'}
+
+    DataAccessFqdn               : b6d113a4-0865-405f-b09e-ad4355b5d046.env.timeseries.azure.com
+    DataAccessId                 : b6d113a4-0865-405f-b09e-ad4355b5d046
+    DataRetentionTime            : 1.01:25:00
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest 
+                                   001
+    IngressState                 :
+    Kind                         : Gen1
+    Location                     : eastus
+    Name                         : tsitest001
+    PartitionKeyProperty         :
+    PropertyUsageState           :
+    Sku                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.Sku
+    SkuCapacity                  : 5
+    SkuName                      : S1
+    StateDetailCode              :
+    StateDetailCurrentCount      :
+    StateDetailMaxCount          :
+    StateDetailMessage           :
+    StorageLimitExceededBehavior : PurgeOldData
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.TrackedResourceTags
+    Type                         : Microsoft.TimeSeriesInsights/Environments
+  description: |-
+    This command updates a Gen1 time series insights environment.
+  summary: ""
+- title: 'Example 2:  Update a Gen1 time series insights environment'
+  code: |-
+    PS C:\> $env = Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup -Name tsitest001
+    PS C:\> Update-AzTimeSeriesInsightsEnvironment -InputObject $env -Tag @{'key2'='val2'}
+
+    DataAccessFqdn               : b6d113a4-0865-405f-b09e-ad4355b5d046.env.timeseries.azure.com
+    DataAccessId                 : b6d113a4-0865-405f-b09e-ad4355b5d046
+    DataRetentionTime            : 1.01:25:00
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest 
+                                   001
+    IngressState                 :
+    Kind                         : Gen1
+    Location                     : eastus
+    Name                         : tsitest001
+    PartitionKeyProperty         :
+    PropertyUsageState           :
+    Sku                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.Sku
+    SkuCapacity                  : 5
+    SkuName                      : S1
+    StateDetailCode              :
+    StateDetailCurrentCount      :
+    StateDetailMaxCount          :
+    StateDetailMessage           :
+    StorageLimitExceededBehavior : PurgeOldData
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.TrackedResourceTags
+    Type                         : Microsoft.TimeSeriesInsights/Environments
+  description: |-
+    This command updates a Gen1 time series insights environment.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run the command as a job
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the Time Series Insights environment associated with the specified resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: EnvironmentName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Run the command asynchronously
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Name of an Azure Resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Azure Subscription ID.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs of additional properties for the environment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.TimeSeriesInsights.Update-AzTimeSeriesInsightsEnvironment
+name: Update-AzTimeSeriesInsightsEnvironment
+description: |-
+  Updates the environment with the specified name in the specified subscription and resource group.
+metadata:
+  external help file: ""
+  Module Name: Az.TimeSeriesInsights
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.timeseriesinsights/update-aztimeseriesinsightsenvironment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TimeSeriesInsights/help/Update-AzTimeSeriesInsightsEnvironment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TimeSeriesInsights/help/Update-AzTimeSeriesInsightsEnvironment.md

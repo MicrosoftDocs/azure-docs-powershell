@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a stored access policy for an Azure storage container.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageContainerStoredAccessPolicy
+  href: ./Get-AzStorageContainerStoredAccessPolicy.yml
+- text: New-AzStorageContext
+  href: ./New-AzStorageContext.yml
+- text: Remove-AzStorageContainerStoredAccessPolicy
+  href: ./Remove-AzStorageContainerStoredAccessPolicy.yml
+- text: Set-AzStorageContainerStoredAccessPolicy
+  href: ./Set-AzStorageContainerStoredAccessPolicy.yml
+syntaxes:
+- >-
+  New-AzStorageContainerStoredAccessPolicy [-Container] <String> [-Policy] <String> [-Permission <String>]
+
+   [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-Context <IStorageContext>]
+
+   [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a stored access policy in a storage container'
+  code: |-
+    PS C:\>New-AzStorageContainerStoredAccessPolicy -Container "MyContainer" -Policy "Policy01"
+  description: |-
+    This command creates an access policy named Policy01 in the storage container named MyContainer.
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ClientTimeoutPerRequest
+  description: |+
+    Specifies the client-side time-out interval, in seconds, for one service request.
+    If the previous call fails in the specified interval, this cmdlet retries the request.
+    If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ClientTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ConcurrentTaskCount
+  description: |+
+    Specifies the maximum concurrent network calls.
+    You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+    The specified value is an absolute count and is not multiplied by the core count.
+    This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Container
+  isRequired: true
+  description: |+
+    Specifies the Azure storage container name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: N, Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure storage context.
+    To obtain a storage context, use the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ExpiryTime
+  description: |+
+    Specifies the time at which the stored access policy becomes invalid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Specifies permissions in the stored access policy to access the container.
+    It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies a stored access policy, which includes the permissions for this SAS token.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ServerTimeoutPerRequest
+  description: |+
+    Specifies the client-side time-out interval, in seconds, for one service request.
+    If the previous call fails in the specified interval, this cmdlet retries the request.
+    If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ServerTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies the time at which the stored access policy becomes valid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageContainerStoredAccessPolicy
+name: New-AzStorageContainerStoredAccessPolicy
+description: |-
+  The **New-AzStorageContainerStoredAccessPolicy** cmdlet creates a stored access policy for an Azure storage container.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: C324F28A-7215-4F10-A012-92B4F6544BC0
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstoragecontainerstoredaccesspolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageContainerStoredAccessPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageContainerStoredAccessPolicy.md

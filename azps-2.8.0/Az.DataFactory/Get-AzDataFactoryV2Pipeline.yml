@@ -1,0 +1,193 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about pipelines in Data Factory.
+module: Az.DataFactory
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSPipeline" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzDataFactoryV2Pipeline [[-Name] <String>] [-ResourceGroupName] <String> [-DataFactoryName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataFactoryV2Pipeline [[-Name] <String>] [-DataFactory] <PSDataFactory>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataFactoryV2Pipeline [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about all pipelines'
+  code: |-
+    PS C:\> Get-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -DataFactoryName "WikiADF" 
+
+        PipelineName      : DPWikisample
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        Activities        : {MyWebActivity}
+        Parameters        : {[url, Microsoft.Azure.Management.DataFactory.Models.ParameterSpecification]}
+
+        PipelineName      : DPTwittersample
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        Activities        : {MyCopyActivity_0_0, MyCopyActivity_1_0}
+        Parameters        : {[OutputBlobName, Microsoft.Azure.Management.DataFactory.Models.ParameterSpecification]}
+  description: |-
+    This command gets information about all pipelines in the data factory named WikiADF.
+    You can use either one of the following example commands.
+    The second one uses a DataFactory object as a parameter.
+  summary: ""
+- title: 'Example 2: Get information about a specific pipeline'
+  code: |-
+    PS C:\> Get-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF" | Format-List
+
+        PipelineName      : DPWikisample
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        Activities        : {MyCopyActivity_0_0, MyCopyActivity_1_0}
+        Parameters        : {[OutputBlobName, Microsoft.Azure.Management.DataFactory.Models.ParameterSpecification]}
+  description: |-
+    This command gets information about the pipeline named DPWikisample in the data factory named WikiADF.
+    The command passes that information to the Format-List cmdlet by using the pipeline operator.
+    That Windows PowerShell cmdlet formats the results.
+    For more information, type Get-Help Format-List.
+  summary: ""
+- title: 'Example 3: Get the properties for a specific pipeline'
+  code: |-
+    PS C:\> (Get-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name DPWikisample -DataFactoryName "WikiADF").Activities
+
+        Source                          : Microsoft.Azure.Management.DataFactory.Models.BlobSource
+        Sink                            : Microsoft.Azure.Management.DataFactory.Models.BlobSink
+        Translator                      :
+        EnableStaging                   :
+        StagingSettings                 :
+        ParallelCopies                  :
+        CloudDataMovementUnits          :
+        EnableSkipIncompatibleRow       :
+        RedirectIncompatibleRowSettings :
+        Inputs                          : {}
+        Outputs                         : {}
+        LinkedServiceName               :
+        Policy                          :
+        Name                            : MyCopyActivity_0_0
+        Description                     :
+        DependsOn                       :
+
+        Source                          : Microsoft.Azure.Management.DataFactory.Models.BlobSource
+        Sink                            : Microsoft.Azure.Management.DataFactory.Models.BlobSink
+        Translator                      :
+        EnableStaging                   :
+        StagingSettings                 :
+        ParallelCopies                  :
+        CloudDataMovementUnits          :
+        EnableSkipIncompatibleRow       :
+        RedirectIncompatibleRowSettings :
+        Inputs                          : {}
+        Outputs                         : {}
+        LinkedServiceName               :
+        Policy                          :
+        Name                            : MyCopyActivity_1_0
+        Description                     :
+        DependsOn                       : {Microsoft.Azure.Management.DataFactory.Models.ActivityDependency}
+  description: |-
+    This command gets information for the pipeline named DPWikisample in the data factory named WikiADF, and then uses standard dot notation to view the Activities property associated with that pipeline.
+  summary: ""
+- title: 'Example 6: Get information about inputs for the first activity'
+  code: |-
+    PS C:\> (Get-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF11").Activities[0].Inputs | Format-List
+
+        ReferenceName : dsIn
+        Parameters    :
+  description: |-
+    This command gets information for the pipeline named DPWikisample in the data factory named WikiADF, and then uses standard dot notation to view the Activities property associated with that pipeline.
+    The command displays the Inputs property of the first element of the Activities array by using the Format-List cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  name: DataFactory
+  isRequired: true
+  description: |+
+    Specifies a PSDataFactory object.
+    This cmdlet gets pipelines that belong to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet gets pipelines that belong to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the pipeline about which to get information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: PipelineName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet gets pipelines that belong to the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The Azure resource ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataFactory.Get-AzDataFactoryV2Pipeline
+name: Get-AzDataFactoryV2Pipeline
+description: |-
+  The Get-AzDataFactoryV2Pipeline cmdlet gets information about pipelines in Azure Data Factory.
+  If you specify the name of a pipeline, this cmdlet gets information about that pipeline.
+  If you do not specify a name, this cmdlet gets information about all the pipelines in the data factory.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  Module Name: Az.DataFactory
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/get-azdatafactoryv2pipeline
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2Pipeline.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2Pipeline.md

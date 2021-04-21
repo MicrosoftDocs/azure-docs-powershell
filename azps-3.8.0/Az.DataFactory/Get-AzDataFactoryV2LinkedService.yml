@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about linked services in Data Factory.
+module: Az.DataFactory
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSLinkedService" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzDataFactoryV2LinkedService [[-Name] <String>] [-ResourceGroupName] <String> [-DataFactoryName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataFactoryV2LinkedService [[-Name] <String>] [-DataFactory] <PSDataFactory>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataFactoryV2LinkedService [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about all linked services'
+  code: |-
+    PS C:\> Get-AzDataFactoryV2LinkedService -ResourceGroupName "ADF" -DataFactoryName "WikiADF" | Format-List
+
+        LinkedServiceName : LinkedServiceCuratedWikiData
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureStorageLinkedService
+
+        LinkedServiceName : LinkedServiceHDIStorage
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureStorageLinkedService
+
+        LinkedServiceName : LinkedServiceWikipediaClickEvents
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureStorageLinkedService
+  description: |-
+    This command gets information about all linked services in the data factory named WikiADF, and then passes the linked services to the Format-List cmdlet by using the pipeline operator.
+    That Windows PowerShell cmdlet formats the results.
+    For more information, type Get-Help Format-List.
+    You can use either one of the following ways:
+  summary: ""
+- title: 'Example 2: Get information about a specific linked service'
+  code: |-
+    PS C:\> Get-AzDataFactoryV2LinkedService -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "LinkedServiceCuratedWikiData"
+
+        LinkedServiceName : LinkedServiceCuratedWikiData
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureStorageLinkedService
+  description: |-
+    This command gets information about the linked service named LinkedServiceCuratedWikiData in the data factory named WikiADF.
+  summary: ""
+- title: 'Example 3: Get information about a specific linked service by specifying the DataFactory parameter'
+  code: |-
+    PS C:\>$DataFactory = Get-AzDataFactoryV2 -ResourceGroupName "ADF" -Name "ContosoFactory"PS C:\> Get-AzDataFactoryV2LinkedService -DataFactory $DataFactory | Format-Table -Property LinkedServiceName, DataFactoryName, ResourceGroupName
+  description: |-
+    The first command uses the Get-AzDataFactoryV2 cmdlet to get the data factory named ContosoFactory, and then stores it in the $DataFactory variable.
+    The second command gets information about the linked service for the data factory stored in $DataFactory, and then passes that information to the Format-Table cmdlet by using the pipeline operator.
+    The Format-Table cmdlet formats the output as a dataset with the specified properties as dataset columns.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  name: DataFactory
+  isRequired: true
+  description: |+
+    Specifies a PSDataFactory object.
+    This cmdlet gets linked services that belong to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet gets linked services that belong to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the linked service about which to get information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: LinkedServiceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet gets linked services that belong to the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The Azure resource ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataFactory.Get-AzDataFactoryV2LinkedService
+name: Get-AzDataFactoryV2LinkedService
+description: |-
+  The Get-AzDataFactoryV2LinkedService cmdlet gets information about linked services in Azure Data Factory.
+  If you specify the name of a linked service, this cmdlet gets information about that linked service.
+  If you do not specify a name, this cmdlet gets information about all the linked services in the data factory.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  Module Name: Az.DataFactory
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/get-azdatafactoryv2linkedservice
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2LinkedService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2LinkedService.md

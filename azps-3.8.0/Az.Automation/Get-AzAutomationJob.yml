@@ -1,0 +1,166 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Automation runbook jobs.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Job" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationJobOutput
+  href: ./Get-AzAutomationJobOutput.yml
+- text: Resume-AzAutomationJob
+  href: ./Resume-AzAutomationJob.yml
+- text: Stop-AzAutomationJob
+  href: ./Stop-AzAutomationJob.yml
+- text: Suspend-AzAutomationJob
+  href: ./Suspend-AzAutomationJob.yml
+syntaxes:
+- >-
+  Get-AzAutomationJob [-Status <String>] [-StartTime <DateTimeOffset>] [-EndTime <DateTimeOffset>]
+
+   [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzAutomationJob -Id <Guid> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzAutomationJob -RunbookName <String> [-Status <String>] [-StartTime <DateTimeOffset>]
+
+   [-EndTime <DateTimeOffset>] [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a specific runbook job'
+  code: |-
+    PS C:\>Get-AzAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b647
+  description: |-
+    This command gets the job that has the specified GUID.
+  summary: ""
+- title: 'Example 2: Get all jobs for a runbook'
+  code: |-
+    PS C:\>Get-AzAutomationJob -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -RunbookName "Runbook02"
+  description: |-
+    This command gets all jobs associated with a runbook named Runbook02.
+  summary: ""
+- title: 'Example 3: Get all running jobs'
+  code: |-
+    PS C:\>Get-AzAutomationJob -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -Status "Running"
+  description: |-
+    This command gets all running jobs in the Automation account named Contoso17.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of an Automation account for which this cmdlet gets jobs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EndTime
+  description: |+
+    Specifies the end time for a job as a **DateTimeOffset** object.
+    You can specify a string that can be converted to a valid **DateTimeOffset**.
+    This cmdlet gets jobs that have an end time at or before the value that this parameter specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of a job that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: JobId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group in which this cmdlet gets jobs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunbookName
+  isRequired: true
+  description: |+
+    Specifies the name of a runbook for which this cmdlet gets jobs.
+
+  defaultValue: None
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies the start time of a job as a **DateTimeOffset** object.
+    This cmdlet gets jobs that have a start time at or after the value that this parameter specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Status
+  description: |+
+    Specifies the status of a job.
+    This cmdlet gets jobs that have a status matching this parameter.
+    Valid values are: 
+    - Activating
+    - Completed
+    - Failed
+    - Queued
+    - Resuming
+    - Running
+    - Starting
+    - Stopped
+    - Stopping
+    - Suspended
+    - Suspending
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Completed, Failed, Queued, Starting, Resuming, Running, Stopped, Stopping, Suspended, Suspending, Activating
+uid: Az.Automation.Get-AzAutomationJob
+name: Get-AzAutomationJob
+description: |-
+  The **Get-AzAutomationJob** cmdlet gets runbook jobs in Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: BD32B909-296B-4E46-A24F-6E2BD4B9764B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationJob.md

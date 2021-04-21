@@ -1,0 +1,21 @@
+### YamlMime:PowershellModule
+children:
+- title: Portal
+  cmdlets:
+  - Az.Portal.Get-AzPortalDashboard
+  - Az.Portal.New-AzPortalDashboard
+  - Az.Portal.Remove-AzPortalDashboard
+  - Az.Portal.Set-AzPortalDashboard
+  - Az.Portal.Update-AzPortalDashboard
+uid: Az.Portal
+name: Az.Portal
+description: |-
+  Microsoft Azure PowerShell: Portal Dashboard cmdlets
+metadata:
+  Module Name: Az.Portal
+  Module Guid: abd8c13e-6209-4e5a-a276-61e7a80845f9
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.portal
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Portal/help/Az.Portal.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Portal/help/Az.Portal.md

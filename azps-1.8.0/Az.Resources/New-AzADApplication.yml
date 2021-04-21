@@ -1,0 +1,245 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new azure active directory application.
+module: Az.Resources
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADApplication" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzADApplication
+  href: ./Remove-AzADApplication.yml
+- text: Get-AzADApplication
+  href: ./Get-AzADApplication.yml
+- text: New-AzADServicePrincipal
+  href: ./New-AzADServicePrincipal.yml
+- text: Get-AzADAppCredential
+  href: ./Get-AzADAppCredential.yml
+- text: New-AzADAppCredential
+  href: ./New-AzADAppCredential.yml
+- text: Remove-AzADAppCredential
+  href: ./Remove-AzADAppCredential.yml
+syntaxes:
+- >-
+  New-AzADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+
+   [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+
+   [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -Password <SecureString> [-StartDate <DateTime>]
+
+   [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+
+   [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -PasswordCredentials <PSADPasswordCredential[]>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+
+   [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -CertValue <String> [-StartDate <DateTime>]
+
+   [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
+
+   [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -KeyCredentials <PSADKeyCredential[]>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1 - Create new AAD application.
+  code: |-
+    PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "https://www.microsoft.com" -IdentifierUris "http://NewApplication"
+  description: |-
+    Creates a new azure active directory application without any credentials.
+  summary: ""
+- title: Example 2 - Create new AAD application with password.
+  code: |-
+    PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
+    PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "https://www.microsoft.com" -IdentifierUris "http:
+    //NewApplication" -Password $SecureStringPassword
+  description: |-
+    Creates a new azure active directory application and associates password credentials with it.
+  summary: ""
+parameters:
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: AvailableToOtherTenants
+  description: |+
+    The value specifying whether the application is a single tenant or a multi-tenant.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertValue
+  isRequired: true
+  description: |+
+    The value of the "asymmetric" credential type.
+    It represents the base 64 encoded certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Display name of the new application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: EndDate
+  description: |+
+    The effective end date of the credential usage.
+    The default end date value is one year from today. 
+    For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HomePage
+  description: |+
+    The URL to the application homepage.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IdentifierUris
+  isRequired: true
+  description: |+
+    The URIs that identify the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyCredentials
+  isRequired: true
+  description: |+
+    The list of certificate credentials associated with the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    The password to be associated with the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PasswordCredentials
+  isRequired: true
+  description: |+
+    The list of password credentials associated with the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReplyUrls
+  description: |+
+    The application reply urls.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: StartDate
+  description: |+
+    The effective start date of the credential usage.
+    The default start date value is today. 
+    For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Resources.New-AzADApplication
+name: New-AzADApplication
+description: |-
+  Creates a new azure active directory application.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: F58FD77E-2946-44B1-B410-6E983FC20E21
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azadapplication
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADApplication.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADApplication.md

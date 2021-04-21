@@ -1,0 +1,35 @@
+### YamlMime:PowershellModule
+children:
+- title: Event Grid
+  cmdlets:
+  - Az.EventGrid.Get-AzEventGridDomain
+  - Az.EventGrid.Get-AzEventGridDomainKey
+  - Az.EventGrid.Get-AzEventGridDomainTopic
+  - Az.EventGrid.Get-AzEventGridSubscription
+  - Az.EventGrid.Get-AzEventGridTopic
+  - Az.EventGrid.Get-AzEventGridTopicKey
+  - Az.EventGrid.Get-AzEventGridTopicType
+  - Az.EventGrid.New-AzEventGridDomain
+  - Az.EventGrid.New-AzEventGridDomainKey
+  - Az.EventGrid.New-AzEventGridDomainTopic
+  - Az.EventGrid.New-AzEventGridSubscription
+  - Az.EventGrid.New-AzEventGridTopic
+  - Az.EventGrid.New-AzEventGridTopicKey
+  - Az.EventGrid.Remove-AzEventGridDomain
+  - Az.EventGrid.Remove-AzEventGridDomainTopic
+  - Az.EventGrid.Remove-AzEventGridSubscription
+  - Az.EventGrid.Remove-AzEventGridTopic
+  - Az.EventGrid.Set-AzEventGridTopic
+  - Az.EventGrid.Update-AzEventGridSubscription
+uid: Az.EventGrid
+name: Az.EventGrid
+description: |-
+  This topic displays help for the Azure Event Grid PowerShell resource manager cmdlets.
+metadata:
+  Module Name: Az.EventGrid
+  Module Guid: 53BF7132-5BB4-46EB-AC05-61A49A6CD5EB
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/Az.EventGrid.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/Az.EventGrid.md

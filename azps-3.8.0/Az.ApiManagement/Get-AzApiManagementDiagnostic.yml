@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get details of the Diagnostic configured at the service level or the Api Level. Diagnostics are used to log requests/responses from Api Management gateway.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementDiagnostic" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzApiManagementDiagnostic -Context <PsApiManagementContext> [-DiagnosticId <String>] [-ApiId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementDiagnostic -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all the diagnostic configured at the tenant scope.'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementDiagnostic -Context $apimContext
+
+    DiagnosticId                 : applicationinsights
+    ApiId                        :
+    AlwaysLog                    : allErrors
+    LoggerId                     : backendapisachinc
+    EnableHttpCorrelationHeaders : True
+    SamplingSetting              : Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSamplingSetting
+    FrontendSetting              :
+    BackendSetting               :
+    Id                           : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/diagnostics/applicationinsights
+    ResourceGroupName            : Api-Default-WestUS
+    ServiceName                  : contoso
+
+    DiagnosticId                 : azuremonitor
+    ApiId                        :
+    AlwaysLog                    :
+    LoggerId                     : azuremonitor
+    EnableHttpCorrelationHeaders :
+    SamplingSetting              : Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSamplingSetting
+    FrontendSetting              :
+    BackendSetting               : 
+    Id                           : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/diagnostics/azuremonitor
+    ResourceGroupName            : Api-Default-WestUS
+    ServiceName                  : contoso
+  description: |-
+    This command gets all the diagnostics configured in the Api Management service.
+  summary: ""
+- title: 'Example 2: Get all the diagnostics configured at the Api scope'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementDiagnostic -Context $apimContext -ApiId "echo-api"
+
+    DiagnosticId                 : applicationinsights
+    ApiId                        : echo-api
+    AlwaysLog                    : allErrors
+    LoggerId                     : backendapisachinc
+    EnableHttpCorrelationHeaders : True
+    SamplingSetting              : Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSamplingSetting
+    FrontendSetting              : Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementPipelineDiagnosticSetting
+    BackendSetting               : Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementPipelineDiagnosticSetting
+    Id                           : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/diagnostics/applicationinsights
+    ResourceGroupName            : Api-Default-WestUS
+    ServiceName                  : contoso
+  description: |-
+    This command gets all the diagnostics configured at the `echo-api` Api scope
+  summary: ""
+- title: 'Example 3: Get the API-scope diagnostic specified by an Id'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementDiagnostic -Context $apimContext -ApiId "echo-api" -DiagnosticId "applicationinsights"
+
+    DiagnosticId                 : applicationinsights
+    ApiId                        : echo-api
+    AlwaysLog                    : allErrors
+    LoggerId                     : backendapisachinc
+    EnableHttpCorrelationHeaders : True
+    SamplingSetting              : Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSamplingSetting
+    FrontendSetting              :
+    BackendSetting               :
+    Id                           : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/diagnostics/applicationinsights
+    ResourceGroupName            : Api-Default-WestUS
+    ServiceName                  : contoso
+  description: |-
+    This command gets the `applicationinsights` diagnostics configured in api `echo-api`.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiId
+  description: |+
+    Identifier of existing API.
+    If specified will return API-scope diagnostic.
+    This parameters is required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Instance of PsApiManagementContext.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiagnosticId
+  description: |+
+    Identifier of existing diagnostic.
+    If specified will return product-scope policy.
+    This parameters is optional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Arm Resource Identifier of a Diagnostic or Api Diagnostic. If specified will try to find diagnostic by the identifier. This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagementDiagnostic
+name: Get-AzApiManagementDiagnostic
+description: |-
+  The **Get-AzApiManagementDiagnostic** gets details of the diagnostics configured in the Api management service at a given scope.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementdiagnostic
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementDiagnostic.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementDiagnostic.md

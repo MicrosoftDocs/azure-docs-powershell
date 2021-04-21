@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the task counts for the specified job.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSTaskCounts" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchJob
+  href: ./Get-AzBatchJob.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+syntaxes:
+- >-
+  Get-AzBatchTaskCount [-JobId] <String> -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzBatchTaskCount [[-Job] <PSCloudJob>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get task counts by ID'
+  code: |-
+    PS C:\> Get-AzBatchTaskCount -JobId "Job01" -Id "Task03" -BatchContext $Context
+    Active              : 1
+    Completed           : 0
+    Failed              : 0
+    Running             : 1
+    Succeeded           : 5
+    ValidationStatus    : Validated
+  description: |-
+    This command gets the task counts for job Job01.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    The BatchAccountContext instance to use when interacting with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
+    To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated.
+    When using shared key authentication, the primary access key is used by default.
+    To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  name: Job
+  description: |+
+    Specifies the job that contains tasks that this cmdlet gets.
+    To obtain a **PSCloudJob** object, use the Get-AzBatchJob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    The id of the job for which to get task counts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Get-AzBatchTaskCount
+name: Get-AzBatchTaskCount
+description: |-
+  The **Get-AzBatchTaskCount** cmdlet gets the Azure Batch tasks count for a Batch job.
+  Specify a job by either the *JobId* parameter or the *Job* parameter.
+  Task counts provide a count of the tasks by active, running or completed task state, and a count of tasks which succeeded or failed. Tasks in the preparing state are counted as running. If the validationStatus is unvalidated, then the Batch service has not been able to check state counts against the task states as reported in the List Tasks API. The validationStatus may be unvalidated if the job contains more than 200,000 tasks.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchtaskcount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchTaskCount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchTaskCount.md

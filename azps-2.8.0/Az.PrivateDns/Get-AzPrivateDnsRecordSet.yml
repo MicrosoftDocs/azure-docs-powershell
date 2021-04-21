@@ -1,0 +1,231 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a record set from a Private DNS zone.
+module: Az.PrivateDns
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsZone" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordSet" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzPrivateDnsRecordSet -ResourceGroupName <String> -ZoneName <String> [-RecordType <RecordType>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPrivateDnsRecordSet -ResourceGroupName <String> -ZoneName <String> -Name <String>
+
+   -RecordType <RecordType> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPrivateDnsRecordSet -Zone <PSPrivateDnsZone> -Name <String> -RecordType <RecordType>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPrivateDnsRecordSet -Zone <PSPrivateDnsZone> [-RecordType <RecordType>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPrivateDnsRecordSet -ParentResourceId <String> -Name <String> -RecordType <RecordType>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPrivateDnsRecordSet -ParentResourceId <String> [-RecordType <RecordType>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get record sets with a specified name and type'
+  code: |-
+    PS C:\>$RecordSet = Get-AzPrivateDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com" -Name "www" -RecordType A
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www
+    Name              : www
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command gets the record set of record type A named www in the specified resource group and private zone, and then stores it in the $RecordSet variable. Because the Name and RecordType parameters are specified, only one RecordSet object is returned.
+  summary: ""
+- title: 'Example 2: Get record sets of a specified type'
+  code: |-
+    PS C:\>$RecordSets = Get-AzPrivateDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com" -RecordType A
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www1
+    Name              : www1
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4}
+    Metadata          :
+    IsAutoRegistered  :
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www2
+    Name              : www2
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {2.3.4.5}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command gets an array of all record sets of record type A in the private zone named myzone.com in the resource group named MyResourceGroup, and then stores them in the $RecordSets variable.
+  summary: ""
+- title: 'Example 3: Get all record sets in a private zone'
+  code: |-
+    PS C:\>$RecordSets = Get-AzPrivateDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www1
+    Name              : www1
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4}
+    Metadata          :
+    IsAutoRegistered  :
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www1
+    Name              : www1
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : AAAA
+    Records           : {2001:DB80:4009:1803::1005}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command gets an array of all record sets in the private zone named myzone.com in the resource group named MyResourceGroup, and then stores them in the $RecordSets variable.
+  summary: ""
+- title: 'Example 4: Get all record sets in a private zone, using a PSPrivateDnsZone object'
+  code: |-
+    PS C:\> $Zone = Get-AzPrivateDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGroup"
+    PS C:\> $RecordSets = Get-AzPrivateDnsRecordSet -Zone $Zone
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www1
+    Name              : www1
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4}
+    Metadata          :
+    IsAutoRegistered  :
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www1
+    Name              : www1
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : AAAA
+    Records           : {2001:DB80:4009:1803::1005}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This example is equivalent to Example 3 above. This time, the private zone is specified using a private zone object.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the records in this record set (relative to the name of the zone and without a terminating dot).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceId
+  isRequired: true
+  description: |+
+    Private DNS Zone ResourceID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.PrivateDns.Models.RecordType" data-throw-if-not-resolved="False" /><span>]</span>
+  name: RecordType
+  isRequired: true
+  description: |+
+    The type of DNS records in this record set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: A, AAAA, CNAME, MX, PTR, SOA, SRV, TXT, A, AAAA, CNAME, MX, PTR, SOA, SRV, TXT
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group to which the zone belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsZone" data-throw-if-not-resolved="False" />
+  name: Zone
+  isRequired: true
+  description: |+
+    The DnsZone object representing the zone in which to create the record set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ZoneName
+  isRequired: true
+  description: |+
+    The zone in which to create the record set (without a terminating dot).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.PrivateDns.Get-AzPrivateDnsRecordSet
+name: Get-AzPrivateDnsRecordSet
+description: |-
+  The Get-AzPrivateDnsRecordSet cmdlet gets the Private Domain Name System (DNS) record set with the specified name and type, in the specified private zone. If you do not specify the Name or RecordType parameters, this cmdlet returns all record sets of the specified type in the private zone. If you specify the RecordType parameter but not the Name parameter, this cmdlet returns all record sets of the specified record type. You can use the pipeline operator to pass a PSPrivateDnsZone object to this cmdlet, or you can pass a PSPrivateDnsZone object as the Zone parameter, or alternatively you can specify the zone and resource group by name. You can also specify the private zone using the Resource Id of the private zone.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
+  Module Name: Az.PrivateDns
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.privatedns/get-azprivatednsrecordset
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Get-AzPrivateDnsRecordSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Get-AzPrivateDnsRecordSet.md

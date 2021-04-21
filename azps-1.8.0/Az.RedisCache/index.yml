@@ -1,0 +1,37 @@
+### YamlMime:PowershellModule
+children:
+- title: Redis Cache
+  cmdlets:
+  - Az.RedisCache.Export-AzRedisCache
+  - Az.RedisCache.Get-AzRedisCache
+  - Az.RedisCache.Get-AzRedisCacheFirewallRule
+  - Az.RedisCache.Get-AzRedisCacheKey
+  - Az.RedisCache.Get-AzRedisCacheLink
+  - Az.RedisCache.Get-AzRedisCachePatchSchedule
+  - Az.RedisCache.Import-AzRedisCache
+  - Az.RedisCache.New-AzRedisCache
+  - Az.RedisCache.New-AzRedisCacheFirewallRule
+  - Az.RedisCache.New-AzRedisCacheKey
+  - Az.RedisCache.New-AzRedisCacheLink
+  - Az.RedisCache.New-AzRedisCachePatchSchedule
+  - Az.RedisCache.New-AzRedisCacheScheduleEntry
+  - Az.RedisCache.Remove-AzRedisCache
+  - Az.RedisCache.Remove-AzRedisCacheDiagnostic
+  - Az.RedisCache.Remove-AzRedisCacheFirewallRule
+  - Az.RedisCache.Remove-AzRedisCacheLink
+  - Az.RedisCache.Remove-AzRedisCachePatchSchedule
+  - Az.RedisCache.Reset-AzRedisCache
+  - Az.RedisCache.Set-AzRedisCache
+  - Az.RedisCache.Set-AzRedisCacheDiagnostic
+uid: Az.RedisCache
+name: Az.RedisCache
+description: |-
+  This topic displays help topics for the Azure Redis Cache cmdlets.
+metadata:
+  Module Name: Az.RedisCache
+  Module Guid: 820628d7-6938-488a-8760-43373a5ffce6
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.rediscache
+  Help Version: 4.1.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/Az.RedisCache.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/Az.RedisCache.md

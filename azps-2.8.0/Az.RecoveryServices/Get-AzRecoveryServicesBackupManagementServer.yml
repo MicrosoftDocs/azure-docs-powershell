@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets SCDPM and Azure Backup management servers.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupEngineBase" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Unregister-AzRecoveryServicesBackupManagementServer
+  href: ./Unregister-AzRecoveryServicesBackupManagementServer.yml
+syntaxes:
+- >-
+  Get-AzRecoveryServicesBackupManagementServer [[-Name] <String>] [-VaultId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all Backup management servers'
+  code: |-
+    PS C:\>Get-AzRecoveryServicesBackupManagementServer
+  description: |-
+    This command gets all Backup management servers registered with the vault.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Backup management server to get.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultId
+  description: |+
+    ARM ID of the Recovery Services Vault.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Get-AzRecoveryServicesBackupManagementServer
+name: Get-AzRecoveryServicesBackupManagementServer
+description: |-
+  The **Get-AzRecoveryServicesBackupManagementServer** cmdlet gets a list of Backup management servers that are registered in a vault.
+  There are two types of Backup management servers: System Center Data Protection Manager (SCDPM) and Azure Backup management servers.
+  Backup management servers are installed separately to manage Backup orchestration.
+  Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  ms.assetid: 4B7ACEC8-29BB-4791-8087-801300F246B4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupmanagementserver
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupManagementServer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupManagementServer.md

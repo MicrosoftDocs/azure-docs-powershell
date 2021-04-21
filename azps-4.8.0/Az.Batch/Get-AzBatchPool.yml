@@ -1,0 +1,187 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Batch pools under the specified Batch account.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: New-AzBatchPool
+  href: ./New-AzBatchPool.yml
+- text: Remove-AzBatchPool
+  href: ./Remove-AzBatchPool.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+syntaxes:
+- >-
+  Get-AzBatchPool [-Filter <String>] [-MaxCount <Int32>] [-Select <String>] [-Expand <String>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzBatchPool [[-Id] <String>] [-Select <String>] [-Expand <String>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a pool by ID'
+  code: |-
+    PS C:\>Get-AzBatchPool -Id "MyPool" -BatchContext $Context
+    AllocationState                      : Resizing
+    AllocationStateTransitionTime        : 7/25/2015 9:30:28 PM
+    AutoScaleEnabled                     : False
+    AutoScaleFormula                     :
+    AutoScaleRun                         :
+    CertificateReferences                :
+    CreationTime                         : 7/25/2015 9:30:28 PM
+    CurrentDedicated                     : 0
+    CurrentOSVersion                     : *
+    DisplayName                          :
+    ETag                                 : 0x8D29538429CF04C
+    Id                                   : MyPool
+    InterComputeNodeCommunicationEnabled : False
+    LastModified                         : 7/25/2015 9:30:28 PM
+    MaxTasksPerComputeNode               : 1
+    Metadata                             :
+    OSFamily                             : 4
+    ResizeError                          :
+    ResizeTimeout                        : 00:05:00
+    TaskSchedulingPolicy                 : Microsoft.Azure.Commands.Batch.Models.PSTaskSchedulingPolicy
+    StartTask                            :
+    State                                : Active
+    StateTransitionTime                  : 7/25/2015 9:30:28 PM
+    Statistics                           :
+    TargetDedicated                      : 1
+    TargetOSVersion                      : *
+    Url                                  : https://cmdletexample.westus.batch.azure.com/pools/MyPool
+    VirtualMachineSize                   : standard_d1_v2
+  description: |-
+    This command gets the pool with ID MyPool.
+  summary: ""
+- title: 'Example 2: Get all pools using an OData filter'
+  code: |-
+    PS C:\>Get-AzBatchPool -Filter "startswith(id,'My')" -BatchContext $Context
+    AllocationState                      : Resizing
+    AllocationStateTransitionTime        : 7/25/2015 9:30:28 PM
+    AutoScaleEnabled                     : False
+    AutoScaleFormula                     :
+    AutoScaleRun                         :
+    CertificateReferences                :
+    CreationTime                         : 7/25/2015 9:30:28 PM
+    CurrentDedicated                     : 0
+    CurrentOSVersion                     : *
+    DisplayName                          :
+    ETag                                 : 0x8D29538429CF04C
+    Id                                   : MyPool
+    InterComputeNodeCommunicationEnabled : False
+    LastModified                         : 7/25/2015 9:30:28 PM
+    MaxTasksPerComputeNode               : 1
+    Metadata                             :
+    OSFamily                             : 4
+    ResizeError                          :
+    ResizeTimeout                        : 00:05:00
+    TaskSchedulingPolicy                 : Microsoft.Azure.Commands.Batch.Models.PSTaskSchedulingPolicy
+    StartTask                            :
+    State                                : Active
+    StateTransitionTime                  : 7/25/2015 9:30:28 PM
+    Statistics                           :
+    TargetDedicated                      : 1
+    TargetOSVersion                      : *
+    Url                                  : https://cmdletexample.westus.batch.azure.com/pools/MyPool
+    VirtualMachineSize                   : standard_d1_v2
+  description: |-
+    This command gets the pools whose IDs start with My by using the *Filter* parameter.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Expand
+  description: |+
+    Specifies an Open Data Protocol (OData) expand clause.
+    Specify a value for this parameter to get associated entities of the main entity that you get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Specifies the OData filter clause to use when querying for pools.
+    If you do not specify a filter, all pools under the Batch account specified with the *BatchContext* parameter are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies the ID of the pool to get.
+    You cannot specify wildcard characters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxCount
+  description: |+
+    Specifies the maximum number of pools to return.
+    If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+    The default value is 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Select
+  description: |+
+    Specifies an OData select clause.
+    Specify a value for this parameter to get specific properties rather than all object properties.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Get-AzBatchPool
+name: Get-AzBatchPool
+description: |-
+  The **Get-AzBatchPool** cmdlet gets the Azure Batch pools under the Batch account specified with the *BatchContext* parameter.
+  You can use the *Id* parameter to get a single pool, or you can use the *Filter* parameter to get the pools that match an Open Data Protocol (OData) filter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 44D877F1-D066-4C9C-A797-05EF03785B54
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchpool
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchPool.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchPool.md

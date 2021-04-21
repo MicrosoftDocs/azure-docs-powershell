@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the move collection.
+module: Az.ResourceMover
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Api20191001Preview.IMoveCollection" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzResourceMoverMoveCollection [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzResourceMoverMoveCollection -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzResourceMoverMoveCollection -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1:  Get details of all the Move collections in the subscription'
+  code: |-
+    PS C:\>Get-AzResourceMoverMoveCollection  -SubscriptionId e80eb9fa-c996-4435-aa32-5af6f3d3077c
+
+    Location    Name                                            Type
+    --------    ----                                            ----
+    eastus2     mvcolle2e07001                                  Microsoft.Migrate/moveCollections
+    eastus2     mvcolle2e34745                                  Microsoft.Migrate/moveCollections
+    eastus2     mvcolle2e56720                                  Microsoft.Migrate/moveCollections
+  description: |-
+    Get details of all the Move collections in the subscription.
+  summary: ""
+- title: 'Example 2: Get details of the Move collection with a specified move collection name in the subscription'
+  code: |-
+    PS C:\>Get-AzResourceMoverMoveCollection -ResourceGroupName RG-MoveCollection-demoRM -Name PS-centralus-westcentralus-demoRM
+
+    Location    Name                              Type
+    --------    ----                              ----
+    eastus2     PS-centralus-westcentralus-demoRM Microsoft.Migrate/moveCollections
+  description: |-
+    Get details of the Move collection with a specified move collection name in the subscription.
+  summary: ""
+- title: 'Example 3: Get details of the Move collection with a specified resource group name in the subscription'
+  code: |-
+    PS C:\> Get-AzResourceMoverMoveCollection -ResourceGroupName RG-MoveCollection-demoRM 
+
+    Location    Name                               Type
+    --------    ----                               ----
+    eastus2     PS-centralus-westcentralus-demoRM  Microsoft.Migrate/moveCollections
+    eastus2euap PS-centralus-westcentralus-demoRM2 Microsoft.Migrate/moveCollections
+  description: |-
+    Get details of the Move Collection with a specified resource group name in the subscription.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The Move Collection Name.
+
+  defaultValue: None
+  position: Named
+  aliases: MoveCollectionName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The Resource Group Name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The Subscription ID.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ResourceMover.Get-AzResourceMoverMoveCollection
+name: Get-AzResourceMoverMoveCollection
+description: |-
+  Gets the move collection.
+metadata:
+  external help file: ""
+  Module Name: Az.ResourceMover
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resourcemover/get-azresourcemovermovecollection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceMover/help/Get-AzResourceMoverMoveCollection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceMover/help/Get-AzResourceMoverMoveCollection.md

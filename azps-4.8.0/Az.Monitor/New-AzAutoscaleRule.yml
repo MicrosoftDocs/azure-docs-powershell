@@ -1,0 +1,256 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Autoscale rule.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ComparisonOperationType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.MetricStatisticType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Double" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.TimeAggregationType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleDirection" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleType" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzAutoscaleSetting
+  href: ./Add-AzAutoscaleSetting.yml
+- text: Get-AzAutoscaleHistory
+  href: ./Get-AzAutoscaleHistory.yml
+- text: Get-AzAutoscaleSetting
+  href: ./Get-AzAutoscaleSetting.yml
+- text: New-AzAutoscaleProfile
+  href: ./New-AzAutoscaleProfile.yml
+- text: Remove-AzAutoscaleSetting
+  href: ./Remove-AzAutoscaleSetting.yml
+syntaxes:
+- >-
+  New-AzAutoscaleRule -MetricName <String> -MetricResourceId <String> -Operator <ComparisonOperationType>
+
+   -MetricStatistic <MetricStatisticType> -Threshold <Double> [-TimeAggregationOperator <TimeAggregationType>]
+
+   -TimeGrain <TimeSpan> [-TimeWindow <TimeSpan>] -ScaleActionCooldown <TimeSpan>
+
+   -ScaleActionDirection <ScaleDirection> [-ScaleActionScaleType <ScaleType>] -ScaleActionValue <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a rule'
+  code: |-
+    PS C:\>$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1"
+    MetricTrigger                                               ScaleAction
+    -------------                                               -----------
+    Microsoft.Azure.Management.Insights.Models.MetricTrigger    Microsoft.Azure.Management.Insights.Models.ScaleAction
+  description: |-
+    This command creates a rule.
+  summary: ""
+- title: 'Example 2: Create two rules'
+  code: |-
+    PS C:\>$Rule1 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+
+    PS C:\> $Rule2 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:10:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "2"
+    MetricTrigger                                               ScaleAction
+    -------------                                               -----------
+    Microsoft.Azure.Management.Insights.Models.MetricTrigger    Microsoft.Azure.Management.Insights.Models.ScaleAction
+    Microsoft.Azure.Management.Insights.Models.MetricTrigger    Microsoft.Azure.Management.Insights.Models.ScaleAction
+  description: |-
+    The first command creates a rule for the Requests metric, and then stores it in the $Rule1 variable.
+    The second command creates a second rule for the Requests metric, and then stores it in the $Rule2 variable.
+  summary: ""
+- title: Example 3
+  code: |-
+    <!-- Aladdin Generated Example --> 
+    New-AzAutoscaleRule -MetricName 'Requests' -MetricResourceId '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite' -MetricStatistic Average -Operator Equals -ScaleActionCooldown 00:05:00 -ScaleActionDirection None -ScaleActionScaleType ChangeCount -ScaleActionValue '1' -Threshold 10 -TimeGrain 00:01:00 -TimeWindow <TimeSpan>
+  description: ""
+  summary: |+
+    Creates an Autoscale rule. (autogenerated)
+
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MetricName
+  isRequired: true
+  description: |+
+    Specifies the name of the metric.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MetricResourceId
+  isRequired: true
+  description: |+
+    Specifies the metric resource ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.MetricStatisticType" data-throw-if-not-resolved="False" />
+  name: MetricStatistic
+  isRequired: true
+  description: |+
+    Specifies the metric statistic.
+    The acceptable values for this parameter are:
+    - Average
+    - Min
+    - Max
+    - Sum
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Average, Min, Max, Sum
+- type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ComparisonOperationType" data-throw-if-not-resolved="False" />
+  name: Operator
+  isRequired: true
+  description: |+
+    Specifies the operator.
+    The acceptable values for this parameter are:
+    - Equals
+    - NotEquals
+    - GreaterThan
+    - GreaterThanOrEqual
+    - LessThan
+    - LessThanOrEqual
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Equals, NotEquals, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: ScaleActionCooldown
+  isRequired: true
+  description: |+
+    Specifies the Autoscale action cooldown time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleDirection" data-throw-if-not-resolved="False" />
+  name: ScaleActionDirection
+  isRequired: true
+  description: |+
+    Specifies the scale action direction.
+    The acceptable values for this parameter are:
+    - None
+    - Increase
+    - Decrease
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Increase, Decrease
+- type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleType" data-throw-if-not-resolved="False" />
+  name: ScaleActionScaleType
+  description: |+
+    Specifies the scale type.
+    The acceptable values for this parameter are:
+    - ChangeSize
+    - ChangeCount
+    - PercentChangeCount
+    - ExactCount
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ChangeCount, PercentChangeCount, ExactCount
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ScaleActionValue
+  isRequired: true
+  description: |+
+    Specifies the action value.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+  name: Threshold
+  isRequired: true
+  description: |+
+    Specifies the threshold of the metric value.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.TimeAggregationType" data-throw-if-not-resolved="False" />
+  name: TimeAggregationOperator
+  description: |+
+    Specifies the time aggregation operator.
+    The acceptable values for this parameter are:
+    - Average
+    - Minimum
+    - Maximum
+    - Last
+    - Total, Count
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Average, Minimum, Maximum, Total, Count
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: TimeGrain
+  isRequired: true
+  description: |+
+    Specifies the time grain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: TimeWindow
+  description: |+
+    Specifies the time window.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzAutoscaleRule
+name: New-AzAutoscaleRule
+description: |-
+  The **New-AzAutoscaleRule** cmdlet creates an Autoscale rule.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: 5E854358-CA9D-4336-BA6A-BF7B1FADAB50
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azautoscalerule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAutoscaleRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAutoscaleRule.md

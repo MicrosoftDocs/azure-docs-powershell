@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get an application.
+module: Az.DesktopVirtualization
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IDesktopVirtualizationIdentity>: Identity Parameter
+    - `[ApplicationGroupName <String>]`: The name of the application group
+    - `[ApplicationName <String>]`: The name of the application within the specified application group
+    - `[DesktopName <String>]`: The name of the desktop within the specified desktop group
+    - `[HostPoolName <String>]`: The name of the host pool within the specified resource group
+    - `[Id <String>]`: Resource identity path
+    - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+    - `[SessionHostName <String>]`: The name of the session host within the specified host pool
+    - `[SubscriptionId <String>]`: The ID of the target subscription.
+    - `[UserSessionId <String>]`: The name of the user session within the specified session host
+    - `[WorkspaceName <String>]`: The name of the workspace
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20191210Preview.IApplication" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzWvdApplication -GroupName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String>
+
+   [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzWvdApplication -InputObject <IDesktopVirtualizationIdentity> [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a Windows Virtual Desktop Application by name'
+  code: |-
+    PS C:\> Get-AzWvdApplication -ResourceGroupName ResourceGroupName -ApplicationGroupName ApplicationGroupName -Name ApplicationName
+
+    Name                                 Type
+    ----                                 ----
+    ApplicationGroupName/ApplicationName Microsoft.DesktopVirtualization/applicationgroups/applications
+  description: |-
+    This command gets a Windows Virtual Desktop Application in an applicaton Group.
+  summary: ""
+- title: 'Example 2: List Windows Virtual Desktop Applications'
+  code: |-
+    PS C:\> Get-AzWvdApplication -ResourceGroupName ResourceGroupName -ApplicationGroupName ApplicationGroupName
+
+    Name                                 Type
+    ----                                 ----
+    ApplicationGroupName/ApplicationName1 Microsoft.DesktopVirtualization/applicationgroups/applications
+    ApplicationGroupName/ApplicationName2 Microsoft.DesktopVirtualization/applicationgroups/applications
+  description: |-
+    This command Lists Windows Virtual Desktop Applications in an applicaton Group.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  isRequired: true
+  description: |+
+    The name of the application group
+
+  defaultValue: None
+  position: Named
+  aliases: ApplicationGroupName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the application within the specified application group
+
+  defaultValue: None
+  position: Named
+  aliases: ApplicationName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The ID of the target subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DesktopVirtualization.Get-AzWvdApplication
+name: Get-AzWvdApplication
+description: |-
+  Get an application.
+metadata:
+  external help file: ""
+  Module Name: Az.DesktopVirtualization
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization/get-azwvdapplication
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Get-AzWvdApplication.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Get-AzWvdApplication.md

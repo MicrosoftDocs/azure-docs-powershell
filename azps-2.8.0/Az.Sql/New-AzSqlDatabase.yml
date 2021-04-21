@@ -1,0 +1,402 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a database or an elastic database.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlDatabase
+  href: ./Get-AzSqlDatabase.yml
+- text: New-AzSqlElasticPool
+  href: ./New-AzSqlElasticPool.yml
+- text: New-AzSqlServer
+  href: ./New-AzSqlServer.yml
+- text: Remove-AzSqlDatabase
+  href: ./Remove-AzSqlDatabase.yml
+- text: Resume-AzSqlDatabase
+  href: ./Resume-AzSqlDatabase.yml
+- text: Set-AzSqlDatabase
+  href: ./Set-AzSqlDatabase.yml
+- text: Suspend-AzSqlDatabase
+  href: ./Suspend-AzSqlDatabase.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  New-AzSqlDatabase -DatabaseName <String> [-CollationName <String>] [-CatalogCollation <String>]
+
+   [-MaxSizeBytes <Int64>] [-Edition <String>] [-RequestedServiceObjectiveName <String>]
+
+   [-ElasticPoolName <String>] [-ReadScale <DatabaseReadScale>] [-Tags <Hashtable>] [-SampleName <String>]
+
+   [-ZoneRedundant] [-AsJob] [-LicenseType <String>] [-AutoPauseDelayInMinutes <Int32>] [-MinimumCapacity <Double>]
+
+   [-ServerName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSqlDatabase -DatabaseName <String> [-CollationName <String>] [-CatalogCollation <String>]
+
+   [-MaxSizeBytes <Int64>] -Edition <String> [-ReadScale <DatabaseReadScale>] [-Tags <Hashtable>]
+
+   [-SampleName <String>] [-ZoneRedundant] [-AsJob] -VCore <Int32> -ComputeGeneration <String>
+
+   [-LicenseType <String>] [-ComputeModel <String>] [-AutoPauseDelayInMinutes <Int32>] [-MinimumCapacity <Double>]
+
+   [-ServerName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a database on a specified server'
+  code: |-
+    PS C:\>New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database01
+    Location                      : Central US
+    DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+    Edition                       : Standard
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 7/3/2015 7:33:37 AM
+    CurrentServiceObjectiveId     : f1173c43-91bd-4aaa-973c-54e79e15235b
+    CurrentServiceObjectiveName   : S0
+    RequestedServiceObjectiveId   : f1173c43-91bd-4aaa-973c-54e79e15235b
+    RequestedServiceObjectiveName :
+    ElasticPoolName               :
+    EarliestRestoreDate           :
+    LicenseType                   :
+    Tags                          :
+  description: |-
+    This command creates a database named Database01 on server Server01.
+  summary: ""
+- title: 'Example 2: Create an elastic database on a specified server'
+  code: |-
+    PS C:\>New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database02" -ElasticPoolName "ElasticPool01"
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database02
+    Location                      : Central US
+    DatabaseId                    : 7bd9d561-42a7-484e-bf05-62ddef8015ab
+    Edition                       : Standard
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 8/26/2015 10:04:29 PM
+    CurrentServiceObjectiveId     : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+    CurrentServiceObjectiveName   : ElasticPool
+    RequestedServiceObjectiveId   : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+    RequestedServiceObjectiveName :
+    ElasticPoolName               : ElasticPool01
+    EarliestRestoreDate           :
+    LicenseType                   :
+    Tags                          :
+  description: |-
+    This command creates a database named Database02 in the elastic pool named ElasticPool01 on server Server01.
+  summary: ""
+- title: 'Example 3: Create an Vcore database on a specified server'
+  code: |-
+    PS C:\>New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database03" -Edition "GeneralPurpose" -Vcore 2 -ComputeGeneration "Gen4"
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database03
+    Location                      : Central US
+    DatabaseId                    : 34d9d561-42a7-484e-bf05-62ddef8000ab
+    Edition                       : GeneralPurpose
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 8/26/2015 10:04:29 PM
+    CurrentServiceObjectiveName   : GP_Gen4_2
+    RequestedServiceObjectiveName :
+    ElasticPoolName               :
+    EarliestRestoreDate           :
+    LicenseType                   : LicenseIncluded
+    Tags                          :
+  description: |-
+    This command creates a Vcore database named Database03 on server Server01.
+  summary: ""
+- title: 'Example 4: Create an Serverless database on the specified server'
+  code: |-
+    PS C:\>New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database04" -Edition "GeneralPurpose" -Vcore 2 -ComputeGeneration "Gen5" -ComputeModel Serverless
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database04
+    Location                      : Central US
+    DatabaseId                    : ef5a9698-012c-4def-8d94-7f6bfb7b4f04
+    Edition                       : GeneralPurpose
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 34359738368
+    Status                        : Online
+    CreationDate                  : 4/12/2019 11:20:29 PM
+    CurrentServiceObjectiveName   : GP_S_Gen5_2
+    RequestedServiceObjectiveName : GP_S_Gen5_2
+    ElasticPoolName               :
+    EarliestRestoreDate           : 4/12/2019 11:50:29 PM
+    Tags                          :
+    CreateMode                    :
+    ReadScale                     : Disabled
+    ZoneRedundant                 : False
+    Capacity                      : 2
+    Family                        : Gen5
+    SkuName                       : GP_S_Gen5
+    LicenseType                   : LicenseIncluded
+    AutoPauseDelayInMinutes       : 360
+    MinimumCapacity          : 0.5
+  description: |-
+    This command creates a Serverless database named Database04 on server Server01.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: AutoPauseDelayInMinutes
+  description: |+
+    The auto pause delay in minutes for database(serverless only), -1 to opt out
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CatalogCollation
+  description: |+
+    Specifies the name of the SQL database catalog collation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CollationName
+  description: |+
+    Specifies the name of the SQL database collation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ComputeGeneration
+  isRequired: true
+  description: |+
+    The compute generation to assign.
+
+  defaultValue: None
+  position: Named
+  aliases: Family
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ComputeModel
+  description: |+
+    The compute model for Azure Sql database. Serverless or Provisioned
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of the database.
+
+  defaultValue: None
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Edition
+  isRequired: true
+  description: |+
+    Specifies the edition to assign to the database. The acceptable values for this parameter are:
+    - None
+    - Basic
+    - Standard
+    - Premium
+    - DataWarehouse
+    - Free
+    - Stretch
+    - GeneralPurpose
+    - BusinessCritical
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ElasticPoolName
+  description: |+
+    Specifies the name of the elastic pool in which to put the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LicenseType
+  description: |+
+    The license type for the Azure Sql database. Possible values are:
+    - BasePrice - Azure Hybrid Benefit (AHB) discounted pricing for existing SQL Server license owners is applied. Database price will be discounted for existing SQL Server license owners.
+    - LicenseIncluded - Azure Hybrid Benefit (AHB) discount pricing for existing SQL Server license owners is not applied. Database price will include a new SQL Server license costs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+  name: MaxSizeBytes
+  description: |+
+    Specifies the maximum size of the database in bytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+  name: MinimumCapacity
+  description: |+
+    The Minimal capacity that database will always have allocated, if not paused.
+    For serverless Azure Sql databases only.
+
+  defaultValue: None
+  position: Named
+  aliases: MinVCore, MinCapacity
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.DatabaseReadScale" data-throw-if-not-resolved="False" />
+  name: ReadScale
+  description: |+
+    The read scale option to assign to the Azure SQL Database.(Enabled/Disabled)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RequestedServiceObjectiveName
+  description: |+
+    Specifies the name of the service objective to assign to the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which the server is assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SampleName
+  description: |+
+    The name of the sample schema to apply when creating this database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AdventureWorksLT
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server that hosts the database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    Specifies a dictionary of Key-value pairs in the form of a hash table that this cmdlet associates
+    with the new database. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  position: Named
+  aliases: Tag
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: VCore
+  isRequired: true
+  description: |+
+    The Vcore number for the Azure Sql database
+
+  defaultValue: None
+  position: Named
+  aliases: Capacity, MaxVCore, MaxCapacity
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ZoneRedundant
+  description: |+
+    The zone redundancy to associate with the Azure Sql Database
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.New-AzSqlDatabase
+name: New-AzSqlDatabase
+description: |-
+  The **New-AzSqlDatabase** cmdlet creates an Azure SQL database.
+  You can also create an elastic database by setting the *ElasticPoolName* parameter to an existing elastic pool.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: D2DB7821-A7D2-4017-8522-78793DDE040E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqldatabase
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlDatabase.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlDatabase.md

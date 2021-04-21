@@ -1,0 +1,21 @@
+### YamlMime:PowershellModule
+children:
+- title: Maps
+  cmdlets:
+  - Az.Maps.Get-AzMapsAccount
+  - Az.Maps.Get-AzMapsAccountKey
+  - Az.Maps.New-AzMapsAccount
+  - Az.Maps.New-AzMapsAccountKey
+  - Az.Maps.Remove-AzMapsAccount
+uid: Az.Maps
+name: Az.Maps
+description: |-
+  This topic displays help for the Azure Maps Cmdlets.
+metadata:
+  Module Name: Az.Maps
+  Module Guid: bf60f35d-6c0b-42f2-be30-eb333a31279d
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.maps
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maps/Maps/help/Az.Maps.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maps/Maps/help/Az.Maps.md

@@ -1,0 +1,152 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the specified Azure dedicated HSM.
+module: Az.DedicatedHsm
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IDedicatedHsmIdentity>: Identity Parameter
+    - `[Id <String>]`: Resource identity path
+    - `[Name <String>]`: Name of the dedicated Hsm
+    - `[ResourceGroupName <String>]`: The name of the Resource Group to which the resource belongs.
+    - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.IDedicatedHsmIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.Api20181031.IDedicatedHsm" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzDedicatedHsm [-SubscriptionId <String[]>] [-Top <Int32>] [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzDedicatedHsm -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- Get-AzDedicatedHsm -InputObject <IDedicatedHsmIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzDedicatedHsm -ResourceGroupName <String> [-SubscriptionId <String[]>] [-Top <Int32>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all Dedicated HSM under a subscription'
+  code: |-
+    PS C:\> Get-AzDedicatedHsm
+
+    Name       Provisioning State SKU                           Location
+    ----       ------------------ ---                           --------
+    hsm-7t2xaf Succeeded          SafeNet Luna Network HSM A790 eastus
+    yeminghsm  Succeeded          SafeNet Luna Network HSM A790 eastus
+  description: |-
+    This command gets all Dedicated HSM under a subscription
+  summary: ""
+- title: 'Example 2: Get all Dedicated HSM under a resource group.'
+  code: |-
+    PS C:\> Get-AzDedicatedHsm -ResourceGroupName dedicatedhsm-rg-n359cz
+
+    Name       Provisioning State SKU                           Location
+    ----       ------------------ ---                           --------
+    hsm-7t2xaf Succeeded          SafeNet Luna Network HSM A790 eastus
+  description: |-
+    This command gets all Dedicated HSM under a resource group.
+  summary: ""
+- title: 'Example 3: Get a Dedicated HSM by name'
+  code: |-
+    PS C:\> Get-AzDedicatedHsm -Name hsm-7t2xaf -ResourceGroupName dedicatedhsm-rg-n359cz
+
+    Name       Provisioning State SKU                           Location
+    ----       ------------------ ---                           --------
+    hsm-7t2xaf Succeeded          SafeNet Luna Network HSM A790 eastus
+  description: |-
+    This command gets a Dedicated HSM by name.
+  summary: ""
+- title: 'Example 4: Get a Dedicated HSM by object'
+  code: |-
+    PS C:\> $hsm = New-AzDedicatedHsm -Name  hsm-n7wfxi -ResourceGroupName dedicatedhsm-rg-n359cz -Location eastus -Sku "SafeNet Luna Network HSM A790" -StampId stamp1 -SubnetId "/subscriptions/xxxx-xxxx-xxx-xxx/resourceGroups/dedicatedhsm-rg-n359cz/providers/Microsoft.Network/virtualNetworks/vnetq30la9/subnets/hsmsubnet" -NetworkInterface @{PrivateIPAddress = '10.2.1.120' }
+    PS C:\> Get-AzDedicatedHsm -InputObject $hsm
+
+    Name       Provisioning State SKU                           Location
+    ----       ------------------ ---                           --------
+    hsm-n7wfxi Succeeded          SafeNet Luna Network HSM A790 eastus
+  description: |-
+    This command gets a Dedicated HSM by object.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.IDedicatedHsmIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the dedicated HSM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the Resource Group to which the dedicated hsm belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    Subscription credentials which uniquely identify Microsoft Azure subscription.
+    The subscription ID forms part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Top
+  description: |+
+    Maximum number of results to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DedicatedHsm.Get-AzDedicatedHsm
+name: Get-AzDedicatedHsm
+description: |-
+  Gets the specified Azure dedicated HSM.
+metadata:
+  external help file: ""
+  Module Name: Az.DedicatedHsm
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.dedicatedhsm/get-azdedicatedhsm
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DedicatedHsm/help/Get-AzDedicatedHsm.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DedicatedHsm/help/Get-AzDedicatedHsm.md

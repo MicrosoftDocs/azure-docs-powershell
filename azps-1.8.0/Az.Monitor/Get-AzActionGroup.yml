@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets action group(s).
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzActionGroup
+  href: ./Set-AzActionGroup.yml
+- text: Remove-AzActionGroup
+  href: ./Remove-AzActionGroup.yml
+- text: New-AzActionGroupReceiver
+  href: ./New-AzActionGroupReceiver.yml
+syntaxes:
+- Get-AzActionGroup [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzActionGroup -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an action group by subscription ID'
+  code: |-
+    PS C:\>Get-AzActionGroup
+  description: |-
+    This command lists all the action group for the current subscription.
+  summary: ""
+- title: 'Example 2: Get action groups for the given resource group'
+  code: |-
+    PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts"
+  description: |-
+    This command lists action groups for the given resource group.
+  summary: ""
+- title: 'Example 3: Get an action group.'
+  code: |-
+    PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts" -Name "actionGroup1"
+  description: |-
+    This command lists one (a list with a single element) action group.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the action group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.Get-AzActionGroup
+name: Get-AzActionGroup
+description: |-
+  The **Get-AzActionGroup** cmdlet gets one or more action groups.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: 1CA26790-C791-4BFD-B986-70F28E3B095B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/get-azactiongroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md

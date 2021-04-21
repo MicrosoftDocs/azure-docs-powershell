@@ -1,0 +1,176 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies editable attributes of a certificate.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificate" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzKeyVaultCertificate [-VaultName] <String> [-Name] <String> [[-Version] <String>] [-Enable <Boolean>]
+
+   [-Tag <Hashtable>] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Update-AzKeyVaultCertificate [-InputObject] <PSKeyVaultCertificateIdentityItem> [[-Version] <String>]
+
+   [-Enable <Boolean>] [-Tag <Hashtable>] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the tags associated with a certificate'
+  code: |-
+    PS C:\> $Tags = @{ "Team" = "Azure" ; "Role" = "Engg" }
+    PS C:\> Update-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01" -Tag $Tags -PassThru
+
+    Name        : TestCert01
+    Certificate : [Subject]
+                    CN=AZURE
+
+                  [Issuer]
+                    CN=AZURE
+
+                  [Serial Number]
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+                  [Not Before]
+                    7/27/2016 6:50:01 PM
+
+                  [Not After]
+                    7/27/2018 7:00:01 PM
+
+                  [Thumbprint]
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+    Id          : https://ContosoKV01.vault.azure.net:443/certificates/TestCert01
+    KeyId       : https://ContosoKV01.vault.azure.net:443/keys/TestCert01
+    SecretId    : https://ContosoKV01.vault.azure.net:443/secrets/TestCert01
+    Thumbprint  : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    Tags        : {[Role, Engg], [Team, Azure]}
+    Enabled     : True
+    Created     : 7/28/2016 2:00:01 AM
+    Updated     : 8/1/2016 5:37:48 PM
+  description: |-
+    The first command assigns an array of key/value pairs to the $Tags variable.
+    The second command sets the tags value of the certificate named TestCert01 to be $Tags.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Enable
+  description: |+
+    If present, enable a certificate if value is true.
+    Disable a certificate if value is false.
+    If not specified, the existing value of the certificate's enabled/disabled state remains unchanged.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Certificate object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Certificate name.
+    Cmdlet constructs the FQDN of a secret from vault name, currently selected environment and secret name.
+
+  defaultValue: None
+  position: "1"
+  aliases: CertificateName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Cmdlet does not return object by default.
+    If this switch is specified, return certificate object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    A hashtable representing certificate tags.
+    If not specified, the existing tags of the sertificate remain unchanged.
+    Remove a tag by specifying an empty Hashtable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Vault name.
+    Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Certificate version.
+    Cmdlet constructs the FQDN of a certificate from vault name, currently selected environment, certificate name and certificate version.
+
+  defaultValue: None
+  position: "2"
+  aliases: CertificateVersion
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.KeyVault.Update-AzKeyVaultCertificate
+name: Update-AzKeyVaultCertificate
+description: |-
+  The **Update-AzKeyVaultCertificate** cmdlet modifies the editable attributes of a certificate.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/update-azkeyvaultcertificate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Update-AzKeyVaultCertificate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Update-AzKeyVaultCertificate.md

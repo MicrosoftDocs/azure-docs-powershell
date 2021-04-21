@@ -1,0 +1,182 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a local criteria object that can be used to create a new metric alert
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricDimension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricCriteria" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzMetricAlertRuleV2Criteria -MetricName <String> [-MetricNamespace <String>]
+
+   [-DimensionSelection <PSMetricDimension[]>] -TimeAggregation <String> -Operator <String> -Threshold <Double>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzMetricAlertRuleV2Criteria -MetricName <String> [-MetricNamespace <String>]
+
+   [-DimensionSelection <PSMetricDimension[]>] -TimeAggregation <String> -Operator <String>
+
+   -DynamicThreshold <String> [-Sensitivity <String>] [-FailingPeriod <Int32>] [-TotalPeriod <Int32>]
+
+   [-IgnoreDataBefore <DateTime>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a simple metric alert criteria'
+  code: |-
+    PS C:\> New-AzMetricAlertRuleV2Criteria -MetricName "Percentage CPU" -MetricNameSpace "Microsoft.Compute/virtualMachines" -TimeAggregation Average -Operator GreaterThan -Threshold 5
+
+    Name                 : metric1
+    MetricName           : Percentage CPU
+    MetricNamespace      : Microsoft.Compute/virtualMachines
+    OperatorProperty     : GreaterThan
+    TimeAggregation      : Average
+    Threshold            : 5
+    Dimensions           :
+    AdditionalProperties :
+  description: |-
+    This command creates a simple metric alert criteria that can be used in a metric alert rule
+  summary: ""
+- title: 'Example 2: Create a more complex metric alert criteria'
+  code: |-
+    PS C:\>New-AzMetricAlertRuleV2DimensionSelection -DimensionName "availabilityResult/name" -ValuesToInclude "gdtest" | New-AzMetricAlertRuleV2Criteria -MetricName "availabilityResults/availabilityPercentage" -TimeAggregation Average -Operator GreaterThan -Threshold 2
+    Name                 : metric1
+    MetricName           : availabilityResults/availabilityPercentage
+    MetricNamespace      :
+    OperatorProperty     : GreaterThan
+    TimeAggregation      : Average
+    Threshold            : 2
+    Dimensions           : {availabilityResult/name}
+    AdditionalProperties :
+  description: |-
+    This set of commands creates a more complex metric alert criteria which includes dimension selection
+  summary: ""
+parameters:
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="PSMetricDimension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DimensionSelection
+  description: |+
+    List of dimension conditions
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DynamicThreshold
+  isRequired: true
+  description: |+
+    The Dynamic Threshold for rule condition
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: FailingPeriod
+  description: |+
+    The Failing Period for rule condition
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: IgnoreDataBefore
+  description: |+
+    The IgnoreDataBefore parameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MetricName
+  isRequired: true
+  description: |+
+    The metric name for rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MetricNamespace
+  description: |+
+    The Namespace of the metric
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Operator
+  isRequired: true
+  description: |+
+    The rule condition operator
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Sensitivity
+  description: |+
+    The sensitivity for rule condition
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: Threshold
+  isRequired: true
+  description: |+
+    The threshold for rule condition
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TimeAggregation
+  isRequired: true
+  description: |+
+    The aggregation operation used to roll up multiple metric values across the window interval
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TotalPeriod
+  description: |+
+    The Total Period for rule condition
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzMetricAlertRuleV2Criteria
+name: New-AzMetricAlertRuleV2Criteria
+description: |-
+  The **New-AzMetricAlertRuleV2Criteria** cmdlet creates a local metric criteria object to be used as an input Add-AzMetricAlertRuleV2 cmdlet which creates a new metric alert rule.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azmetricalertrulev2criteria
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzMetricAlertRuleV2Criteria.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzMetricAlertRuleV2Criteria.md

@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get information about a virtual machine image template
+module: Az.ImageBuilder
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IImageBuilderIdentity>: Identity Parameter
+    - `[Id <String>]`: Resource identity path
+    - `[ImageTemplateName <String>]`: The name of the image Template
+    - `[ResourceGroupName <String>]`: The name of the resource group.
+    - `[RunOutputName <String>]`: The name of the run output
+    - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription Id forms part of the URI for every service call.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.IImageBuilderIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.Api20200214.IImageTemplate" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzImageBuilderTemplate [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzImageBuilderTemplate -ImageTemplateName <String> -ResourceGroupName <String>
+
+   [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzImageBuilderTemplate -InputObject <IImageBuilderIdentity> [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzImageBuilderTemplate -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all template under a subscription'
+  code: |-
+    PS C:\> Get-AzImageBuilderTemplate
+
+    Location Name                      Type
+    -------- ----                      ----
+    eastus   HelloImageTemplateLinux01 Microsoft.VirtualMachineImages/imageTemplates
+    eastus   lucas-imagetemplate       Microsoft.VirtualMachineImages/imageTemplates
+    eastus   test-imagebuilder         Microsoft.VirtualMachineImages/imageTemplates
+  description: |-
+    This command lists all template under a subscription.
+  summary: ""
+- title: 'Example 2: List all template under a resource group'
+  code: |-
+    PS C:\> Get-AzImageBuilderTemplate -ResourceGroupName wyunchi-imagebuilder
+
+    Location Name                       Type
+    -------- ----                       ----
+    eastus   HelloImageTemplateLinux01  Microsoft.VirtualMachineImages/imageTemplates
+    eastus   template-name-ax01b7       Microsoft.VirtualMachineImages/imageTemplates
+    eastus   template-name-ep5z7v       Microsoft.VirtualMachineImages/imageTemplates
+    eastus   template-name-klcuav       Microsoft.VirtualMachineImages/imageTemplates
+    eastus   template-name-u7gjqx       Microsoft.VirtualMachineImages/imageTemplates
+    eastus   test-imagebuilder          Microsoft.VirtualMachineImages/imageTemplates
+    eastus   tmpl-managedimg-managedimg Microsoft.VirtualMachineImages/imageTemplates
+    eastus   tmpl-platform-managed      Microsoft.VirtualMachineImages/imageTemplates
+    eastus   tmpl-shareimg-managedimg   Microsoft.VirtualMachineImages/imageTemplates
+  description: |-
+    This command lists all template under a resource group.
+  summary: ""
+- title: 'Example 3: Get a template under a resource group'
+  code: |-
+    PS C:\> Get-AzImageBuilderTemplate -ImageTemplateName lucas-imagetemplate -ResourceGroupName wyunchi-imagebuilder
+
+    Location Name                Type
+    -------- ----                ----
+    eastus   lucas-imagetemplate Microsoft.VirtualMachineImages/imageTemplates
+  description: |-
+    This command gets a template under a resource group.
+  summary: ""
+- title: 'Example 4: Get a template under a resource group'
+  code: |-
+    PS C:\> $template = Get-AzImageBuilderTemplate -ResourceGroupName wyunchi-imagebuilder -ImageTemplateName template-name-ep5z7v
+    PS C:\> Get-AzImageBuilderTemplate -InputObject $template
+
+    Location Name                 Type
+    -------- ----                 ----
+    eastus   template-name-ep5z7v Microsoft.VirtualMachineImages/imageTemplates
+  description: |-
+    This command gets a template under a resource group.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageTemplateName
+  isRequired: true
+  description: |+
+    The name of the image Template
+
+  defaultValue: None
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.IImageBuilderIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    Subscription credentials which uniquely identify Microsoft Azure subscription.
+    The subscription Id forms part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ImageBuilder.Get-AzImageBuilderTemplate
+name: Get-AzImageBuilderTemplate
+description: |-
+  Get information about a virtual machine image template
+metadata:
+  external help file: ""
+  Module Name: Az.ImageBuilder
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.imagebuilder/get-azimagebuildertemplate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImageBuilder/help/Get-AzImageBuilderTemplate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImageBuilder/help/Get-AzImageBuilderTemplate.md

@@ -1,0 +1,38 @@
+### YamlMime:PowershellModule
+children:
+- title: Traffic Manager
+  cmdlets:
+  - Az.TrafficManager.Add-AzTrafficManagerCustomHeaderToEndpoint
+  - Az.TrafficManager.Add-AzTrafficManagerCustomHeaderToProfile
+  - Az.TrafficManager.Add-AzTrafficManagerEndpointConfig
+  - Az.TrafficManager.Add-AzTrafficManagerExpectedStatusCodeRange
+  - Az.TrafficManager.Add-AzTrafficManagerIpAddressRange
+  - Az.TrafficManager.Disable-AzTrafficManagerEndpoint
+  - Az.TrafficManager.Disable-AzTrafficManagerProfile
+  - Az.TrafficManager.Enable-AzTrafficManagerEndpoint
+  - Az.TrafficManager.Enable-AzTrafficManagerProfile
+  - Az.TrafficManager.Get-AzTrafficManagerEndpoint
+  - Az.TrafficManager.Get-AzTrafficManagerProfile
+  - Az.TrafficManager.New-AzTrafficManagerEndpoint
+  - Az.TrafficManager.New-AzTrafficManagerProfile
+  - Az.TrafficManager.Remove-AzTrafficManagerCustomHeaderFromEndpoint
+  - Az.TrafficManager.Remove-AzTrafficManagerCustomHeaderFromProfile
+  - Az.TrafficManager.Remove-AzTrafficManagerEndpoint
+  - Az.TrafficManager.Remove-AzTrafficManagerEndpointConfig
+  - Az.TrafficManager.Remove-AzTrafficManagerExpectedStatusCodeRange
+  - Az.TrafficManager.Remove-AzTrafficManagerIpAddressRange
+  - Az.TrafficManager.Remove-AzTrafficManagerProfile
+  - Az.TrafficManager.Set-AzTrafficManagerEndpoint
+  - Az.TrafficManager.Set-AzTrafficManagerProfile
+uid: Az.TrafficManager
+name: Az.TrafficManager
+description: |-
+  This topic lists the help topics for the Azure Traffic Manager cmdlets. The cmdlets use Azure Resource Manager.
+metadata:
+  Module Name: Az.TrafficManager
+  Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
+  Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280237
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Az.TrafficManager.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Az.TrafficManager.md

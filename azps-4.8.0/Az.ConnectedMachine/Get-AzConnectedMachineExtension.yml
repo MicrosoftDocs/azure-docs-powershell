@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The operation to get the extension.
+module: Az.ConnectedMachine
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.Api20200802.IMachineExtension" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzConnectedMachineExtension -MachineName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-Expand <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzConnectedMachineExtension -MachineName <String> -Name <String> -ResourceGroupName <String>
+
+   [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all extensions for a machine'
+  code: |-
+    PS C:\> Get-AzConnectedMachineExtension -ResourceGroupName contoso-connected-machines -MachineName winwestus2_2
+
+    Name    Location  PropertiesType        ProvisioningState
+    ----    --------  --------------        -----------------
+    custom  westus2   CustomScriptExtension Succeeded
+    custom  westus2   CustomScriptExtension Succeeded
+    dsc     westus2   DSC                   Succeeded
+  description: |-
+    Lists all extensions for a specific machine.
+  summary: ""
+- title: 'Example 2: Get a specific extension on a machine'
+  code: |-
+    PS C:\> Get-AzConnectedMachineExtension -ResourceGroupName contoso-connected-machines -MachineName winwestus2_2 -Name dsc
+
+    Name  Location  PropertiesType        ProvisioningState
+    ----  --------  --------------        -----------------
+    dsc   westus2   CustomScriptExtension Succeeded
+  description: |-
+    Gets a specific extension on a machine.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Expand
+  description: |+
+    The expand expression to apply on the operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MachineName
+  isRequired: true
+  description: |+
+    The name of the machine containing the extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the machine extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    Subscription credentials which uniquely identify Microsoft Azure subscription.
+    The subscription ID forms part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ConnectedMachine.Get-AzConnectedMachineExtension
+name: Get-AzConnectedMachineExtension
+description: |-
+  The operation to get the extension.
+metadata:
+  external help file: ""
+  Module Name: Az.ConnectedMachine
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.connectedmachine/get-azconnectedmachineextension
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Get-AzConnectedMachineExtension.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Get-AzConnectedMachineExtension.md

@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a CDN origin server.
+module: Az.Cdn
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Origin.PSOrigin" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Origin.PSOrigin" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzCdnOrigin
+  href: ./Get-AzCdnOrigin.yml
+syntaxes:
+- Set-AzCdnOrigin -CdnOrigin <PSOrigin> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Cdn.Models.Origin.PSOrigin" data-throw-if-not-resolved="False" />
+  name: CdnOrigin
+  isRequired: true
+  description: |+
+    Specifies the origin server that this cmdlet updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Cdn.Set-AzCdnOrigin
+name: Set-AzCdnOrigin
+description: |-
+  The **Set-AzCdnOrigin** cmdlet updates an Azure Content Delivery Network (CDN) origin server.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
+  Module Name: Az.Cdn
+  ms.assetid: 0EB9F1C9-54CC-4794-9E37-108342341FE5
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/set-azcdnorigin
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Set-AzCdnOrigin.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Set-AzCdnOrigin.md

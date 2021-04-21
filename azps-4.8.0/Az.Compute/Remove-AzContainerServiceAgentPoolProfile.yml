@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an agent pool profile from a container service.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzContainerServiceAgentPoolProfile
+  href: ./Add-AzContainerServiceAgentPoolProfile.yml
+- text: Get-AzContainerService
+  href: ./Get-AzContainerService.yml
+syntaxes:
+- >-
+  Remove-AzContainerServiceAgentPoolProfile [-ContainerService] <PSContainerService> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a profile from a container service'
+  code: |-
+    PS C:\> $Container = Get-AzContainerService -ResourceGroupName "ResourceGroup17" -Name "CSResourceGroup17" 
+    PS C:\> Remove-AzContainerServiceAgentPoolProfile -ContainerService $Container -Name "AgentPool01"
+  description: |-
+    The first command gets a container service named CSResourceGroup17 by using the Get-AzContainerService cmdlet.
+    The command stores the service in the $Container variable.
+    The second command removes the profile named AgentPool01 from the container service in $Container.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService" data-throw-if-not-resolved="False" />
+  name: ContainerService
+  isRequired: true
+  description: |+
+    Specifies the container service object from which this cmdlet removes an agent pool profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the agent pool profile that this cmdlet removes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Compute.Remove-AzContainerServiceAgentPoolProfile
+name: Remove-AzContainerServiceAgentPoolProfile
+description: |-
+  The **Remove-AzContainerServiceAgentPoolProfile** cmdlet removes an agent pool profile from a container service.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: ED37B17D-C513-422A-89EA-A6AF1C9A5FEE
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azcontainerserviceagentpoolprofile
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Remove-AzContainerServiceAgentPoolProfile.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Remove-AzContainerServiceAgentPoolProfile.md

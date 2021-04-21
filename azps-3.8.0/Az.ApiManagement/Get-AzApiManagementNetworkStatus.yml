@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Connectivity Status to the external resources on which the Api Management service depends from inside the Cloud Service. This also returns the DNS Servers as visible to the CloudService.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementNetworkStatus" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzApiManagementNetworkStatus -ApiManagementObject <PsApiManagement> [-Location <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementNetworkStatus -ResourceGroupName <String> -Name <String> [-Location <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS D:\github\azure-powershell> Get-AzApiManagementNetworkStatus -ResourceGroupName powershelltest -Name powershellsdkservice
+
+    Location DnsServers      ConnectivityStatus
+    -------- ----------      ------------------
+    West US  {168.63.129.16} {apimgmtstaoonqs7wwzjosky.blob.core.windows.net, apimgmtstaoonqs7wwzjosky.file.core.windows.net, apimgmtstaoonqs7wwzjosky.queue.core.windows.net, apimgmtstaoonqs7wwzjosk...
+
+
+    PS D:\github\azure-powershell> $networkStatus = Get-AzApiManagementNetworkStatus -ResourceGroupName powershelltest -Name powershellsdkservice
+    PS D:\github\azure-powershell> $networkStatus.ConnectivityStatus
+
+
+    Name             : apimgmtstaoonqs7wwzjosky.blob.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:38 PM
+
+    Name             : apimgmtstaoonqs7wwzjosky.file.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:39 PM
+
+    Name             : apimgmtstaoonqs7wwzjosky.queue.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:39 PM
+
+    Name             : apimgmtstaoonqs7wwzjosky.table.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:38 PM
+
+    Name             : bx9gltecfv.database.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:41 PM
+    LastStatusChange : 1/30/2019 5:31:39 PM
+
+    Name             : https://prod3.metrics.nsatc.net:1886/RecoveryService
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:07:11 PM
+    LastStatusChange : 4/29/2019 1:31:30 PM
+
+    Name             : prod.warmpath.msftcloudes.com
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:38 PM
+
+    Name             : Scm
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:04:27 PM
+    LastStatusChange : 4/30/2019 11:16:20 PM
+  description: |-
+    Gets the connectivity status of the different resources on which ApiManagement service depends upon.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  name: ApiManagementObject
+  isRequired: true
+  description: |+
+    Instance of PsApiManagement. This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Location of the API Management Service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of API Management.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Name of resource group under which API Management exists.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagementNetworkStatus
+name: Get-AzApiManagementNetworkStatus
+description: |-
+  Gets the Network status of their Api Management service
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementnetworkstatus
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementNetworkStatus.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementNetworkStatus.md

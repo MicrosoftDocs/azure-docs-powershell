@@ -1,0 +1,231 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Data Lake Analytics job.
+module: Az.DataLakeAnalytics
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+ExtendedJobData" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobResult" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobInformation" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Stop-AzDataLakeAnalyticsJob
+  href: ./Stop-AzDataLakeAnalyticsJob.yml
+- text: Submit-AzDataLakeAnalyticsJob
+  href: ./Submit-AzDataLakeAnalyticsJob.yml
+- text: Wait-AzDataLakeAnalyticsJob
+  href: ./Wait-AzDataLakeAnalyticsJob.yml
+syntaxes:
+- >-
+  Get-AzDataLakeAnalyticsJob [-Account] <String> [[-Name] <String>] [[-Submitter] <String>]
+
+   [[-SubmittedAfter] <DateTimeOffset>] [[-SubmittedBefore] <DateTimeOffset>] [[-State] <JobState[]>]
+
+   [[-Result] <JobResult[]>] [-Top <Int32>] [-PipelineId <Guid>] [-RecurrenceId <Guid>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataLakeAnalyticsJob [-Account] <String> [-JobId] <Guid> [[-Include] <ExtendedJobData>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a specified job'
+  code: |-
+    PS C:\>Get-AzDataLakeAnalyticsJob -Account "contosoadla" -JobId $JobID01
+  description: |-
+    This command gets the job with the specified ID.
+  summary: ""
+- title: 'Example 2: Get jobs submitted in the past week'
+  code: |-
+    PS C:\>Get-AzDataLakeAnalyticsJob -Account "contosoadla" -SubmittedAfter (Get-Date).AddDays(-7)
+  description: |-
+    This command gets jobs submitted in the past week.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    Specifies the name of a Data Lake Analytics account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+ExtendedJobData" data-throw-if-not-resolved="False" />
+  name: Include
+  description: |+
+    Specifies options that indicate the type of additional information to retrieve about the job.
+    The acceptable values for this parameter are:
+    - None
+    - DebugInfo
+    - Statistics
+    - All
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: None, All, DebugInfo, Statistics
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the ID of the job to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name to use to filter the job list results.
+    The acceptable values for this parameter are:
+    - None
+    - DebugInfo
+    - Statistics
+    - All
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+  name: PipelineId
+  description: |+
+    An optional ID that indicates only jobs part of the specified pipeline should be returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+  name: RecurrenceId
+  description: |+
+    An optional ID that indicates only jobs part of the specified recurrence should be returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobResult" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Result
+  description: |+
+    Specifies a result filter for the job results.
+    The acceptable values for this parameter are:
+    - None
+    - Cancelled
+    - Failed
+    - Succeeded
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  parameterValueGroup: None, Succeeded, Cancelled, Failed
+- type: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: State
+  description: |+
+    Specifies a state filter for the job results.
+    The acceptable values for this parameter are:
+    - Accepted
+    - New
+    - Compiling
+    - Scheduling
+    - Queued
+    - Starting
+    - Paused
+    - Running
+    - Ended
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: Accepted, Compiling, Ended, New, Queued, Running, Scheduling, Starting, Paused, WaitingForCapacity
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SubmittedAfter
+  description: |+
+    Specifies a date filter.
+    Use this parameter to filter the job list result to jobs submitted after the specified date.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SubmittedBefore
+  description: |+
+    Specifies a date filter.
+    Use this parameter to filter the job list result to jobs submitted before the specified date.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Submitter
+  description: |+
+    Specifies the email address of a user.
+    Use this parameter to filter the job list results to jobs submitted by a specified user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Top
+  description: |+
+    An optional value which indicates the number of jobs to return. Default value is 500
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJob
+name: Get-AzDataLakeAnalyticsJob
+description: |-
+  The **Get-AzDataLakeAnalyticsJob** cmdlet gets an Azure Data Lake Analytics job.
+  If you do not specify a job, this cmdlet gets all jobs.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: A0293D80-5935-4D2C-AF11-2837FEC95760
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJob.md

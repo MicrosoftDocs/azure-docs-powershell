@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: Az.Websites
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.WebSites.Models.ResourceMetric" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzAppServicePlanMetric [-Metrics] <String[]> [-StartTime] <DateTime> [[-EndTime] <DateTime>]
+
+   [-Granularity] <String> [-InstanceDetails] [-ResourceGroupName] <String> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzAppServicePlanMetric [-Metrics] <String[]> [-StartTime] <DateTime> [[-EndTime] <DateTime>]
+
+   [-Granularity] <String> [-InstanceDetails] [-AppServicePlan] <PSAppServicePlan>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: |-
+    PS C:\>Get-AzAppServicePlanMetric -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics "CPU Percentage"
+  description: |-
+    This command gets CPU percentage of the App Service Plan 
+        per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.WebApps.Models.WebApp.PSAppServicePlan" data-throw-if-not-resolved="False" />
+  name: AppServicePlan
+  isRequired: true
+  description: |+
+    App Service Plan Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EndTime
+  description: |+
+    End Time in UTC
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Granularity
+  isRequired: true
+  description: |+
+    Granularity
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: PT1M, PT1H, P1D
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InstanceDetails
+  description: |+
+    Instance Details
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Metrics
+  isRequired: true
+  description: |+
+    Metrics
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    App Service Plan Name
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: StartTime
+  isRequired: true
+  description: |+
+    Start Time in UTC
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Websites.Get-AzAppServicePlanMetric
+name: Get-AzAppServicePlanMetric
+description: |-
+  The **Get-AzAppServicePlanMetric** gets App Service Plan metrics.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  Module Name: Az.Websites
+  ms.assetid: 0AC0C4F9-4138-49EA-88CB-DC220DE7E9F4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/get-azappserviceplanmetric
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Get-AzAppServicePlanMetric.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Get-AzAppServicePlanMetric.md

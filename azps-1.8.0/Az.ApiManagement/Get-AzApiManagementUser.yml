@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a user or users.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUser" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApiManagementUser
+  href: ./New-AzApiManagementUser.yml
+- text: Remove-AzApiManagementUser
+  href: ./Remove-AzApiManagementUser.yml
+- text: Set-AzApiManagementUser
+  href: ./Set-AzApiManagementUser.yml
+syntaxes:
+- >-
+  Get-AzApiManagementUser -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzApiManagementUser -Context <PsApiManagementContext> [-UserId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementUser -Context <PsApiManagementContext> [-FirstName <String>] [-LastName <String>]
+
+   [-State <PsApiManagementUserState>] [-Email <String>] [-GroupId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all users'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementUser -Context $apimContext
+  description: |-
+    This command gets all users.
+  summary: ""
+- title: 'Example 2: Get a user by ID'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementUser -Context $apimContext -UserId "0123456789"
+  description: |-
+    This command gets a user by ID.
+  summary: ""
+- title: 'Example: Get users by last name'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementUser -Context $apimContext -LastName "Fuller"
+  description: |-
+    This command gets users that have a specified last name, Fuller.
+  summary: ""
+- title: 'Example 4: Get a user by email address'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementUser -Context $apimContext -Email "user@contoso.com"
+  description: |-
+    This command gets the user that has the specified email address.
+  summary: ""
+- title: 'Example 5: Get all users within a group'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementUser -Context $apimContext -GroupId "0001"
+  description: |-
+    This command gets all users within the specified group.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Specifies an instance of **PsApiManagementContext**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Email
+  description: |+
+    Specifies the email address of the user.
+    If this parameter is specified, this cmdlet finds a user by email.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FirstName
+  description: |+
+    Specifies the first name of the user.
+    If this parameter is specified, this cmdlet finds a user by first name.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  description: |+
+    Specifies the group identifier.
+    If specified, this cmdlet finds all users within the specified group.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LastName
+  description: |+
+    Specifies the last name of a user.
+    If specified, this cmdlet finds users by last name.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState" data-throw-if-not-resolved="False" /><span>]</span>
+  name: State
+  description: |+
+    Specifies the user state.
+    If specified, this cmdlet finds users in this state.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Active, Blocked, Deleted, Pending
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UserId
+  description: |+
+    Specifies a user ID.
+    If specified, this cmdlet finds the user by this identifier.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagementUser
+name: Get-AzApiManagementUser
+description: |-
+  The **Get-AzApiManagementUser** cmdlet gets a specified user, or all users, if no user is specified.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  ms.assetid: 638B2BF6-23F8-4038-B20B-1CFABFDBF5D3
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementuser
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementUser.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementUser.md

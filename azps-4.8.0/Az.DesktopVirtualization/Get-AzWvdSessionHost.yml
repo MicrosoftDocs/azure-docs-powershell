@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get a session host.
+module: Az.DesktopVirtualization
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IDesktopVirtualizationIdentity>: Identity Parameter
+    - `[ApplicationGroupName <String>]`: The name of the application group
+    - `[ApplicationName <String>]`: The name of the application within the specified application group
+    - `[DesktopName <String>]`: The name of the desktop within the specified desktop group
+    - `[HostPoolName <String>]`: The name of the host pool within the specified resource group
+    - `[Id <String>]`: Resource identity path
+    - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+    - `[SessionHostName <String>]`: The name of the session host within the specified host pool
+    - `[SubscriptionId <String>]`: The ID of the target subscription.
+    - `[UserSessionId <String>]`: The name of the user session within the specified session host
+    - `[WorkspaceName <String>]`: The name of the workspace
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20191210Preview.ISessionHost" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzWvdSessionHost -HostPoolName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzWvdSessionHost -HostPoolName <String> -Name <String> -ResourceGroupName <String>
+
+   [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzWvdSessionHost -InputObject <IDesktopVirtualizationIdentity> [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a Windows Virtual Desktop SessionHost by name'
+  code: |-
+    PS C:\> Get-AzWvdSessionHost -ResourceGroupName ResourceGroupName -HostPoolName HostPoolName -Name SessionHostName
+
+    Name                                               Type
+    ----                                               ----
+    HostPoolName/SessionHostName Microsoft.DesktopVirtualization/hostpools/sessionhosts
+  description: |-
+    This command gets a Windows Virtual Desktop SessionHost in a Host Pool.
+  summary: ""
+- title: 'Example 2: List Windows Virtual Desktop SessionHosts'
+  code: |-
+    PS C:\> Get-AzWvdSessionHost -ResourceGroupName ResourceGroupName -HostPoolName HostPoolName
+
+    Name                                               Type
+    ----                                               ----
+    HostPoolName/SessionHostName1 Microsoft.DesktopVirtualization/hostpools/sessionhosts
+    HostPoolName/SessionHostName2 Microsoft.DesktopVirtualization/hostpools/sessionhosts
+  description: |-
+    This command lists a Windows Virtual Desktop SessionHosts in a Host Pool.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostPoolName
+  isRequired: true
+  description: |+
+    The name of the host pool within the specified resource group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the session host within the specified host pool
+
+  defaultValue: None
+  position: Named
+  aliases: SessionHostName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The ID of the target subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DesktopVirtualization.Get-AzWvdSessionHost
+name: Get-AzWvdSessionHost
+description: |-
+  Get a session host.
+metadata:
+  external help file: ""
+  Module Name: Az.DesktopVirtualization
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization/get-azwvdsessionhost
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Get-AzWvdSessionHost.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Get-AzWvdSessionHost.md

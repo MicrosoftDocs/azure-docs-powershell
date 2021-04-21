@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Kusto cluster.
+module: Az.Kusto
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IKustoIdentity>: Identity Parameter
+    - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
+    - `[ClusterName <String>]`: The name of the Kusto cluster.
+    - `[DataConnectionName <String>]`: The name of the data connection.
+    - `[DatabaseName <String>]`: The name of the database in the Kusto cluster.
+    - `[Id <String>]`: Resource identity path
+    - `[Location <String>]`: Azure location.
+    - `[PrincipalAssignmentName <String>]`: The name of the Kusto principalAssignment.
+    - `[ResourceGroupName <String>]`: The name of the resource group containing the Kusto cluster.
+    - `[SubscriptionId <String>]`: Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20200614.ICluster" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzKustoCluster [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzKustoCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- Get-AzKustoCluster -InputObject <IKustoIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzKustoCluster -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: List all Kusto clusters in a resource group'
+  code: |-
+    PS C:\> Get-AzKustoCluster -ResourceGroupName testrg
+
+    Location Name                 Type                     Zone
+    -------- ----                 ----                     ----
+    East US  testnewkustocluster  Microsoft.Kusto/Clusters
+    East US  testnewkustocluster2 Microsoft.Kusto/Clusters
+  description: |-
+    The above command lists all Kusto clusters in the resource group "testrg".
+  summary: ""
+- title: 'Example 2: Get a specific Kusto cluster by name'
+  code: |-
+    PS C:\>  Get-AzKustoCluster -ResourceGroupName testrg -Name testnewkustocluster
+
+    Location Name                Type                     Zone
+    -------- ----                ----                     ----
+    East US  testnewkustocluster Microsoft.Kusto/Clusters
+  description: |-
+    The above command returns the Kusto cluster named "testnewkustocluster" in the resource group "testrg".
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the Kusto cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ClusterName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group containing the Kusto cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    Gets subscription credentials which uniquely identify Microsoft Azure subscription.
+    The subscription ID forms part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Kusto.Get-AzKustoCluster
+name: Get-AzKustoCluster
+description: |-
+  Gets a Kusto cluster.
+metadata:
+  external help file: ""
+  Module Name: Az.Kusto
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.kusto/get-azkustocluster
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/help/Get-AzKustoCluster.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/help/Get-AzKustoCluster.md

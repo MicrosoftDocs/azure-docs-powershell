@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the account.
+module: Az.Maps
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Maps.Models.PSMapsAccount" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzMapsAccount [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzMapsAccount [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzMapsAccount [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzMapsAccount -ResourceGroupName MyResourceGroup -Name MyAccount
+
+    ResourceGroupName AccountName Id
+    ----------------- ----------- --
+    MyResourceGroup   MyAccount   /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/MyResourceGroup/providers/Microsoft.Maps/accounts/MyAccount
+  description: |-
+    Gets the account named MyAccount in the resource group MyResourceGroup, if it exists.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzMapsAccount -ResourceGroupName MyResourceGroup
+
+    ResourceGroupName AccountName Id
+    ----------------- ----------- --
+    MyResourceGroup   MyAccount   /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/MyResourceGroup/providers/Microsoft.Maps/accounts/MyAccount
+    [...]
+  description: |-
+    Gets all Azure Maps accounts in the resource group MyResourceGroup.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzMapsAccount
+
+    ResourceGroupName   AccountName            Id
+    -----------------   -----------            --
+    [...]
+    MyResourceGroup     MyAccount              /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/MyResourceGroup/providers/Microsoft.Maps/accounts/MyAccount
+    [...]
+  description: |-
+    Gets all Azure Maps accounts in the current subscription.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-AzMapsAccount -ResourceId /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/MyResourceGroup/providers/Microsoft.Maps/accounts/MyAccount
+
+    ResourceGroupName AccountName Id
+    ----------------- ----------- --
+    MyResourceGroup   MyAccount   /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/MyResourceGroup/providers/Microsoft.Maps/accounts/MyAccount
+  description: |-
+    Gets the Maps account specified by the Resource Id.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Maps Account Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: MapsAccountName, AccountName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Maps Account ResourceId.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Maps.Get-AzMapsAccount
+name: Get-AzMapsAccount
+description: |-
+  The Get-AzMapsAccount cmdlet gets a provisioned Azure Maps account, either by resource group and name, or by resource id.
+  Additionally, it can return a list of all accounts in the ResourceGroup, or all Azure Maps accounts for the current subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Maps.dll-Help.xml
+  Module Name: Az.Maps
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.maps/get-azmapsaccount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maps/Maps/help/Get-AzMapsAccount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maps/Maps/help/Get-AzMapsAccount.md

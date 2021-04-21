@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get subscriptions that the current account can access.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureSubscription" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSubscription [-SubscriptionId <String>] [-TenantId <String>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSubscription [-SubscriptionName <String>] [-TenantId <String>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all subscriptions in all tenants'
+  code: |-
+    PS C:\>Get-AzSubscription
+
+    Name                               Id                      TenantId                        State
+    ----                               --                      --------                        -----
+    Subscription1                      yyyy-yyyy-yyyy-yyyy     aaaa-aaaa-aaaa-aaaa             Enabled
+    Subscription2                      xxxx-xxxx-xxxx-xxxx     aaaa-aaaa-aaaa-aaaa             Enabled
+    Subscription3                      zzzz-zzzz-zzzz-zzzz     bbbb-bbbb-bbbb-bbbb             Enabled
+  description: |-
+    This command gets all subscriptions in all tenants that are authorized for
+    the current account.
+  summary: ""
+- title: 'Example 2: Get all subscriptions for a specific tenant'
+  code: |-
+    PS C:\>Get-AzSubscription -TenantId "aaaa-aaaa-aaaa-aaaa"
+
+    Name                               Id                      TenantId                        State
+    ----                               --                      --------                        -----
+    Subscription1                      yyyy-yyyy-yyyy-yyyy     aaaa-aaaa-aaaa-aaaa             Enabled
+    Subscription2                      xxxx-xxxx-xxxx-xxxx     aaaa-aaaa-aaaa-aaaa             Enabled
+  description: |-
+    List all subscriptions in the given tenant that are authorized for the
+    current account.
+  summary: ""
+- title: 'Example 3: Get all subscriptions in the current tenant'
+  code: |-
+    PS C:\>Get-AzSubscription
+
+    Name                               Id                      TenantId                        State
+    ----                               --                      --------                        -----
+    Subscription1                      yyyy-yyyy-yyyy-yyyy     aaaa-aaaa-aaaa-aaaa             Enabled
+    Subscription2                      xxxx-xxxx-xxxx-xxxx     aaaa-aaaa-aaaa-aaaa             Enabled
+  description: |-
+    This command gets all subscriptions in the current tenant that are
+    authorized for the current user.
+  summary: ""
+- title: 'Example 4: Change the current context to use a specific subscription'
+  code: |-
+    PS C:\>Get-AzSubscription -SubscriptionId "xxxx-xxxx-xxxx-xxxx" -TenantId "yyyy-yyyy-yyyy-yyyy" | Set-AzContext
+
+    Name                                     Account             SubscriptionName    Environment         TenantId
+    ----                                     -------             ----------------    -----------         --------
+    Subscription1 (xxxx-xxxx-xxxx-xxxx)      azureuser@micros... Subscription1       AzureCloud          yyyy-yyyy-yyyy-yyyy
+  description: |-
+    This command gets the specified subscription, and then sets the current
+    context to use it. All subsequent cmdlets in this session use the new
+    subscription (Contoso Subscription 1) by default.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background and return a Job to track progress.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, tenant and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Specifies the ID of the subscription to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionName
+  description: |+
+    Specifies the name of the subscription to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TenantId
+  description: |+
+    Specifies the ID of the tenant that contains subscriptions to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Accounts.Get-AzSubscription
+name: Get-AzSubscription
+description: |-
+  The Get-AzSubscription cmdlet gets the subscription ID, subscription
+  name, and home tenant for subscriptions that the current account can
+  access.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/get-azsubscription
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Get-AzSubscription.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Get-AzSubscription.md

@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates Schedule-based autoscale condition.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightAutoscaleCondition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzHDInsightClusterAutoscaleConfiguration
+  href: ./New-AzHDInsightClusterAutoscaleConfiguration.yml
+- text: Set-AzHDInsightClusterAutoscaleConfiguration
+  href: ./Set-AzHDInsightClusterAutoscaleConfiguration.yml
+syntaxes:
+- >-
+  New-AzHDInsightClusterAutoscaleScheduleCondition -Time <DateTime> -WorkerNodeCount <Int32>
+
+   -Day <AzureHDInsightDaysOfWeek[]> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzHDInsightClusterAutoscaleScheduleCondition -Time 09:00 -WorkerNodeCount 5 -Day Monday,Wednesday
+  description: |-
+    This command creates a condition where cluster autoscale to 5 worker nodes at 09:00 every Monday, Wednesday.
+  summary: ""
+- title: 'Example 2: Enable Schedule-based autoscale of a cluster with autoscale condition.'
+  code: |-
+    # create a autoscale condition
+    PS C:\> $condition=New-AzHDInsightClusterAutoscaleScheduleCondition -Time 09:00 -WorkerNodeCount 5 -Day Monday,Wednesday
+
+    # Set the cluster autoscale configuration
+    PS C:\> $clusterResourceGroup="group"
+    PS C:\> $clusterName="MyCluster"
+    PS C:\> Set-AzHDInsightClusterAutoscaleConfiguration -ResourceGroupName $clusterResourceGroup -ClusterName $clusterName -Schedule -TimeZone "Pacific Standard Time" -Condition $condition
+  description: |-
+    This command creates a condition where cluster autoscale to 5 worker nodes at 09:00 every Monday, Wednesday.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightDaysOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Day
+  isRequired: true
+  description: |+
+    Gets or sets the days of Autoscale schedule condition.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: Time
+  isRequired: true
+  description: |+
+    Gets or sets the time of Autoscale schedule condition.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: WorkerNodeCount
+  isRequired: true
+  description: |+
+    Gets or sets the schedule workernode count of Autoscale schedule condition.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.New-AzHDInsightClusterAutoscaleScheduleCondition
+name: New-AzHDInsightClusterAutoscaleScheduleCondition
+description: |-
+  The **New-AzHDInsightClusterAutoscaleScheduleCondition** cmdlet creates Schedule-based autoscale condition.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 86276DF3-95E2-405F-BA46-F188B7AE3B9B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/new-azhdinsightclusterautoscaleschedulecondition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightClusterAutoscaleScheduleCondition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightClusterAutoscaleScheduleCondition.md

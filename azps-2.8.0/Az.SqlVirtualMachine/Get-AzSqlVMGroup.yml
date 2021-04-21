@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more sql virtual machine groups.
+module: Az.SqlVirtualMachine
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.SqlVirtualMachine.SqlVirtualMachine.Model.AzureSqlVMGroupModel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSqlVMGroup [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzSqlVMGroup [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzSqlVMGroup [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzSqlVMGroup
+
+    Name       ResourceGroupName  Sku       Offer
+    ----       -----------------  ---       -----
+    test-group ResourceGroup01	  Developer SQL2017-WS2016
+    group1     ResourceGroup02	  Developer SQL2017-WS2016
+  description: |-
+    This command gets information about all the Azure SQL virtual machine groups in the current subscription.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzSqlVMGroup -ResourceGroupName "ResourceGroup01"
+    Name       ResourceGroupName  Sku       Offer
+    ----       -----------------  ---       -----
+    test-group ResourceGroup01	  Developer SQL2017-WS2016
+  description: |-
+    This command gets information about all the Azure SQL virtual machine groups in the current subscription assigned to the resource group ResourceGroup01.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzSqlVMGroup -ResourceGroupName "ResourceGroup01" -Name "test-group"
+    Name       ResourceGroupName  Sku       Offer
+    ----       -----------------  ---       -----
+    test-group ResourceGroup01	  Developer SQL2017-WS2016
+  description: |-
+    This command gets information about the SQL virtual machine group "test-group" assigned to the resource group ResourceGroup01.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    SQL virtual machine group name.
+
+  defaultValue: None
+  position: "1"
+  aliases: SqlVMGroupName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    SQL virtual machine group resource id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SqlVMGroupId
+  parameterValueGroup: ""
+uid: Az.SqlVirtualMachine.Get-AzSqlVMGroup
+name: Get-AzSqlVMGroup
+description: |-
+  The Get-AzSqlVMGroup cmdlet gets one or more sql virtual machine groups.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.dll-Help.xml
+  Module Name: Az.SqlVirtualMachine
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sqlvirtualmachine/get-azsqlvmgroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SqlVirtualMachine/SqlVirtualMachine/help/Get-AzSqlVMGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SqlVirtualMachine/SqlVirtualMachine/help/Get-AzSqlVMGroup.md

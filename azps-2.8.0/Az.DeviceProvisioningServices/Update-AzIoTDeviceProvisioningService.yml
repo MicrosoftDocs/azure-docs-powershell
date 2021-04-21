@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Update an Azure IoT Hub device provisioning service.
+module: Az.DeviceProvisioningServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzIoTDeviceProvisioningService [-ResourceGroupName] <String> [-Name] <String> [-Tag] <Hashtable>
+
+   [-Reset] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzIoTDeviceProvisioningService [-InputObject] <PSProvisioningServiceDescription> [-Tag] <Hashtable>
+
+   [-Reset] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzIoTDeviceProvisioningService [-InputObject] <PSProvisioningServiceDescription>
+
+   [-AllocationPolicy] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Update-AzIoTDeviceProvisioningService [-ResourceId] <String> [-Tag] <Hashtable> [-Reset]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzIoTDeviceProvisioningService [-ResourceId] <String> [-AllocationPolicy] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzIoTDeviceProvisioningService [-ResourceGroupName] <String> [-Name] <String>
+
+   [-AllocationPolicy] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Update-AzIoTDeviceProvisioningService -ResourceGroupName "myresourcegroup" -Name "myiotdps" -AllocationPolicy "GeoLatency"
+
+    ResourceGroupName			: myresourcegroup
+    Name						: myiotdps
+    Type						: Microsoft.Devices/provisioningServices
+    ServiceOperationsHostName	: myiotdps.azure-devices-provisioning.net
+    IotHubs						: 0
+    State						: Active
+    AllocationPolicy			: GeoLatency
+    Tags						: {}
+    SkuName						: S1
+    SkuTier						: Standard
+    Etag						: AAAAAAAT52k=
+  description: |-
+    Update Allocation Policy to "GeoLatency" of an Azure IoT Hub device provisioning service "myiotdps".
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Update-AzIoTDeviceProvisioningService -ResourceGroupName "myresourcegroup" -Name "myiotdps" -Tag @tags
+
+    ResourceGroupName			: myresourcegroup
+    Name						: myiotdps
+    Type						: Microsoft.Devices/provisioningServices
+    ServiceOperationsHostName	: myiotdps.azure-devices-provisioning.net
+    IotHubs						: 0
+    State						: Active
+    AllocationPolicy			: Hashed
+    Tags						: {['key1','Value1']}
+    SkuName						: S1
+    SkuTier						: Standard
+    Etag						: AAAAAAAPoOk=
+  description: |-
+    Add "@tags" to the Tag of an Azure IoT Hub device provisioning service "myiotdps".
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzIoTDps -ResourceGroupName "myresourcegroup" -Name "myiotdps" | Update-AzIoTDps -Tag @tags -Reset
+
+    ResourceGroupName			: myresourcegroup
+    Name						: myiotdps
+    Type						: Microsoft.Devices/provisioningServices
+    ServiceOperationsHostName	: myiotdps.azure-devices-provisioning.net
+    IotHubs						: 0
+    State						: Active
+    AllocationPolicy			: Hashed
+    Tags						: {['key1','Value1']}
+    SkuName						: S1
+    SkuTier						: Standard
+    Etag						: AAAAAAAS1dY=
+  description: |-
+    Delete Tag and add new "@tags" to the Tag of an Azure IoT Hub device provisioning service "myiotdps" using pipeline.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AllocationPolicy
+  isRequired: true
+  description: |+
+    IoT Device Provisioning Service Allocation policy
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Hashed, GeoLatency, Static
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    IoT Device Provisioning Service Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the IoT Device Provisioning Service
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Reset
+  description: |+
+    Reset IoT Device Provisioning Service Tags
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Name of the Resource Group
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    IoT Device Provisioning Service Resource Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  isRequired: true
+  description: |+
+    IoT Device Provisioning Service Tag collection
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DeviceProvisioningServices.Update-AzIoTDeviceProvisioningService
+name: Update-AzIoTDeviceProvisioningService
+description: |-
+  For an introduction to Azure IoT Hub Device Provisioning Service, see https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.dll-Help.xml
+  Module Name: Az.DeviceProvisioningServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.deviceprovisioningservices/update-aziotdeviceprovisioningservice
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Update-AzIoTDeviceProvisioningService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Update-AzIoTDeviceProvisioningService.md

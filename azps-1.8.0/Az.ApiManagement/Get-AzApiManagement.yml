@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list or a particular API Management Service description.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Backup-AzApiManagement
+  href: ./Backup-AzApiManagement.yml
+- text: New-AzApiManagement
+  href: ./New-AzApiManagement.yml
+- text: Remove-AzApiManagement
+  href: ./Remove-AzApiManagement.yml
+- text: Restore-AzApiManagement
+  href: ./Restore-AzApiManagement.yml
+syntaxes:
+- Get-AzApiManagement [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzApiManagement -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagement -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all API Management services'
+  code: |-
+    PS C:\>Get-AzApiManagement
+  description: |-
+    This command gets all API Management services within a subscription.
+  summary: ""
+- title: 'Example 2: Get all API Management services by a specific name'
+  code: |-
+    PS C:\>Get-AzApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
+  description: |-
+    This command gets all API Management service by name.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of API Management service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group under in which this cmdlet gets the API Management service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagement
+name: Get-AzApiManagement
+description: |-
+  The **Get-AzApiManagement** cmdlet gets a list of all API Management services under subscription or specified resource group or a particular API Management.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  ms.assetid: DBA7AD5F-CC13-417A-B753-F998942530BB
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagement
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagement.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagement.md

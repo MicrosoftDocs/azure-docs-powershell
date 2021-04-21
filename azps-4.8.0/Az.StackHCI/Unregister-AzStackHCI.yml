@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Unregister-AzStackHCI deletes the Microsoft.AzureStackHCI cloud resource representing the on-premise cluster and unregisters the on-premise cluster with Azure.
+  The registered information available on the cluster is used to unregister the cluster if no parameters are passed.
+module: Az.StackHCI
+notes: ""
+outputs:
+- name: <xref href="PSCustomObject. Returns following Properties in PSCustomObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: '<xref href="Result: Success or Failed or Cancelled." data-throw-if-not-resolved="False" />'
+  description: ""
+syntaxes:
+- >-
+  Unregister-AzStackHCI [[-SubscriptionId] <String>] [[-ResourceName] <String>] [[-TenantId] <String>]
+
+   [[-ResourceGroupName] <String>] [[-ArmAccessToken] <String>] [[-GraphAccessToken] <String>]
+
+   [[-AccountId] <String>] [[-EnvironmentName] <String>] [[-ComputerName] <String>]
+
+   [[-Credential] <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Invoking on one of the cluster node
+  description: |-
+    C:\PS\>Unregister-AzStackHCI
+    Result: Success
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Invoking from the management node
+  description: |-
+    C:\PS\>Unregister-AzStackHCI -ComputerName ClusterNode1
+    Result: Success
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Invoking from WAC
+  description: |-
+    C:\PS\>Unregister-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -ArmAccessToken etyer..ere= -GraphAccessToken acyee..rerrer -AccountId user1@corp1.com -ResourceName DemoHCICluster3 -ResourceGroupName DemoHCIRG -Confirm:$False
+    Result: Success
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Invoking with all the parameters
+  description: |-
+    C:\PS\>Unregister-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -ResourceName HciCluster1 -TenantId "c31c0dbb-ce27-4c78-ad26-a5f717c14557" -ResourceGroupName HciClusterRG -ArmAccessToken eerrer..ere= -GraphAccessToken acee..rerrer -AccountId user1@corp1.com -EnvironmentName AzureCloud -ComputerName node1hci -Credential Get-Credential
+    Result: Success
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccountId
+  description: |+
+    Specifies the ARM access token.
+    Specifying this along with ArmAccessToken and GraphAccessToken will avoid Azure interactive logon.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ArmAccessToken
+  description: |+
+    Specifies the ARM access token.
+    Specifying this along with GraphAccessToken and AccountId will avoid Azure interactive logon.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies one of the cluster node in on-premise cluster that is being registered to Azure.
+
+  defaultValue: None
+  position: "9"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential for the ComputerName.
+    Default is the current user executing the Cmdlet.
+
+  defaultValue: None
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EnvironmentName
+  description: |+
+    Specifies the Azure Environment.
+    Default is AzureCloud.
+    Valid values are AzureCloud, AzureChinaCloud, AzureUSGovernment, AzureGermanCloud, AzurePPE
+
+  defaultValue: $AzureCloud
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GraphAccessToken
+  description: |+
+    Specifies the Graph access token.
+    Specifying this along with ArmAccessToken and AccountId will avoid Azure interactive logon.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the Azure Resource Group name.
+    If not specified \<LocalClusterName\>-rg will be used as resource group name.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceName
+  description: |+
+    Specifies the resource name of the resource created in Azure.
+    If not specified, on-premise cluster name is used.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Specifies the Azure Subscription to create the resource
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantId
+  description: |+
+    Specifies the Azure TenantId.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.StackHCI.Unregister-AzStackHCI
+name: Unregister-AzStackHCI
+description: |-
+  Unregister-AzStackHCI deletes the Microsoft.AzureStackHCI cloud resource representing the on-premise cluster and unregisters the on-premise cluster with Azure.
+  The registered information available on the cluster is used to unregister the cluster if no parameters are passed.
+metadata:
+  external help file: Az.StackHCI-help.xml
+  Module Name: Az.StackHCI
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.stackhci/unregister-azstackhci
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackHCI/help/Unregister-AzStackHCI.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackHCI/help/Unregister-AzStackHCI.md

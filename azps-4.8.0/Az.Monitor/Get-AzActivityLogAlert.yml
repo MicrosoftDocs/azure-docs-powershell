@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more activity log alert resources.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzActivityLogAlert
+  href: ./Set-AzActivityLogAlert.yml
+- text: Remove-AzActivityLogAlert
+  href: ./Remove-AzActivityLogAlert.yml
+- text: New-AzActionGroup
+  href: ./New-AzActionGroup.yml
+- text: New-AzActivityLogAlertCondition
+  href: ./New-AzActivityLogAlertCondition.yml
+syntaxes:
+- >-
+  Get-AzActivityLogAlert [-ResourceGroupName] <String> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzActivityLogAlert [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a activity log alerts by subscription ID'
+  code: |-
+    PS C:\>Get-AzActivityLogAlert
+  description: |-
+    This command lists all the activity log alerts for the current subscription.
+  summary: ""
+- title: 'Example 2: Get activity log alerts for the given resource group'
+  code: |-
+    PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts"
+  description: |-
+    This command lists activity log alerts for the given resource group.
+  summary: ""
+- title: 'Example 3: Get an activity log alert.'
+  code: |-
+    PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts" -Name "alert1"
+  description: |-
+    This command lists one (a list with a single element) activity log alert.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the activity log alert.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group where the alert resource exists.
+    If Name is not null or empty, this parameter must contain and non empty string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.Get-AzActivityLogAlert
+name: Get-AzActivityLogAlert
+description: |-
+  The **Get-AzActivityLogAlert** cmdlet gets one or more activity log alert resources.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: 85492E00-3776-4F20-A444-9C28CC6154B7
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/get-azactivitylogalert
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md

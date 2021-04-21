@@ -1,0 +1,225 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new server.
+module: Az.PostgreSql
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.Api20171201.IServer" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzPostgreSqlServer -Name <String> -ResourceGroupName <String> -AdministratorLoginPassword <SecureString>
+
+   -AdministratorUserName <String> -Location <String> -Sku <String> [-SubscriptionId <String>]
+
+   [-BackupRetentionDay <Int32>] [-GeoRedundantBackup <GeoRedundantBackup>]
+
+   [-SslEnforcement <SslEnforcementEnum>] [-StorageAutogrow <StorageAutogrow>] [-StorageInMb <Int32>]
+
+   [-Tag <Hashtable>] [-Version <ServerVersion>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new PostgreSql server'
+  code: |-
+    PS C:\> New-AzPostgreSqlServer -Name PostgreSqlTestServer -ResourceGroupName PostgreSqlTestRG -Location eastus -AdministratorUserName pwsh -AdministratorLoginPassword $password -Sku GP_Gen5_4
+
+    Name                 Location AdministratorLogin Version StorageProfileStorageMb SkuName   SkuTier        SslEnforcement
+    ----                 -------- ------------------ ------- ----------------------- -------   -------        --------------
+    postgresqltestserver eastus   pwsh               9.6     5120                    GP_Gen5_4 GeneralPurpose Enabled
+  description: |-
+    These cmdlets create a new PostgreSql server.
+  summary: ""
+parameters:
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: AdministratorLoginPassword
+  isRequired: true
+  description: |+
+    The location the resource resides in.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AdministratorUserName
+  isRequired: true
+  description: |+
+    The location the resource resides in.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run the command as a job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: BackupRetentionDay
+  description: |+
+    Backup retention days for the server.
+    Day count is between 7 and 35.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Support.GeoRedundantBackup" data-throw-if-not-resolved="False" />
+  name: GeoRedundantBackup
+  description: |+
+    Enable Geo-redundant or not for server backup.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location the resource resides in.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the server.
+
+  defaultValue: None
+  position: Named
+  aliases: ServerName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Run the command asynchronously.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group that contains the resource, You can obtain this value from the Azure Resource Manager API or the portal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Sku
+  isRequired: true
+  description: |+
+    The name of the sku, typically, tier + family + cores, e.g.
+    B_Gen4_1, GP_Gen5_8.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Support.SslEnforcementEnum" data-throw-if-not-resolved="False" />
+  name: SslEnforcement
+  description: |+
+    Enable ssl enforcement or not when connect to server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Support.StorageAutogrow" data-throw-if-not-resolved="False" />
+  name: StorageAutogrow
+  description: |+
+    Enable Storage Auto Grow.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: StorageInMb
+  description: |+
+    Max storage allowed for a server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The subscription ID that identifies an Azure subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Application-specific metadata in the form of key-value pairs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Support.ServerVersion" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Server version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.PostgreSql.New-AzPostgreSqlServer
+name: New-AzPostgreSqlServer
+description: |-
+  Creates a new server.
+metadata:
+  external help file: ""
+  Module Name: Az.PostgreSql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.postgresql/new-azpostgresqlserver
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PostgreSql/help/New-AzPostgreSqlServer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PostgreSql/help/New-AzPostgreSqlServer.md

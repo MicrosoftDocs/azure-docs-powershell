@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Batch service quotas for your subscription at the given location.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSBatchLocationQuotas" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzBatchLocationQuota [-Location] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the Batch service quotas for the subscription in the West US region'
+  code: |-
+    PS C:\>Get-AzBatchLocationQuota -Location "westus"
+              AccountQuota Location
+              ------------ --------
+              1            westus
+  description: |-
+    This command gets the quotas for the current subscription in the West US region.
+    The return value indicates that this subscription can create only one Batch account in that region.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the region for which this cmdlet checks the quotas.
+    For more information, see Azure Regions (https://azure.microsoft.com/regions).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Get-AzBatchLocationQuota
+name: Get-AzBatchLocationQuota
+description: |-
+  Gets the Batch service quotas for the specified subscription at the given location.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: A39A415A-B403-48D3-AF80-CF7CFE382577
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchlocationquota
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchLocationQuota.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchLocationQuota.md

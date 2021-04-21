@@ -1,0 +1,31 @@
+### YamlMime:PowershellModule
+children:
+- title: Functions
+  cmdlets:
+  - Az.Functions.Get-AzFunctionApp
+  - Az.Functions.Get-AzFunctionAppAvailableLocation
+  - Az.Functions.Get-AzFunctionAppPlan
+  - Az.Functions.Get-AzFunctionAppSetting
+  - Az.Functions.New-AzFunctionApp
+  - Az.Functions.New-AzFunctionAppPlan
+  - Az.Functions.Remove-AzFunctionApp
+  - Az.Functions.Remove-AzFunctionAppPlan
+  - Az.Functions.Remove-AzFunctionAppSetting
+  - Az.Functions.Restart-AzFunctionApp
+  - Az.Functions.Start-AzFunctionApp
+  - Az.Functions.Stop-AzFunctionApp
+  - Az.Functions.Update-AzFunctionApp
+  - Az.Functions.Update-AzFunctionAppPlan
+  - Az.Functions.Update-AzFunctionAppSetting
+uid: Az.Functions
+name: Az.Functions
+description: |-
+  Microsoft Azure PowerShell - Azure Functions service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.\n\nFor information on Azure Functions, please visit the following: https://docs.microsoft.com/azure/azure-functions/
+metadata:
+  Module Name: Az.Functions
+  Module Guid: eafced71-8742-4a2c-5afd-13117428dd90
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.functions
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/Az.Functions.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/Az.Functions.md

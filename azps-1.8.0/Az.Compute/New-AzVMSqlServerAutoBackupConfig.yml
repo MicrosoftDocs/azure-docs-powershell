@@ -1,0 +1,254 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a configuration object for SQL Server automatic backup.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.AutoBackupSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzVMSqlServerAutoPatchingConfig
+  href: ./New-AzVMSqlServerAutoPatchingConfig.yml
+- text: Set-AzVMSqlServerExtension
+  href: ./Set-AzVMSqlServerExtension.yml
+syntaxes:
+- >-
+  New-AzVMSqlServerAutoBackupConfig [-ResourceGroupName] <String> [-Enable] [[-RetentionPeriodInDays] <Int32>]
+
+   [-EnableEncryption] [[-CertificatePassword] <SecureString>] [[-StorageUri] <Uri>]
+
+   [[-StorageKey] <SecureString>] [-BackupSystemDbs] [-BackupScheduleType <String>]
+
+   [-FullBackupFrequency <String>] [-FullBackupStartHour <Int32>] [-FullBackupWindowInHours <Int32>]
+
+   [-LogBackupFrequencyInMinutes <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzVMSqlServerAutoBackupConfig [-ResourceGroupName] <String> [-Enable] [[-RetentionPeriodInDays] <Int32>]
+
+   [-EnableEncryption] [[-CertificatePassword] <SecureString>] [[-StorageContext] <IStorageContext>]
+
+   [[-StorageUri] <Uri>] [[-StorageKey] <SecureString>] [-BackupSystemDbs] [-BackupScheduleType <String>]
+
+   [-FullBackupFrequency <String>] [-FullBackupStartHour <Int32>] [-FullBackupWindowInHours <Int32>]
+
+   [-LogBackupFrequencyInMinutes <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an automatic backup configuration using storage URI and account key'
+  code: |-
+    PS C:\> $AutoBackupConfig = New-AzVMSqlServerAutoBackupConfig -Enable -RetentionPeriod 10 -StorageUri "\\contoso\StorageGeneral" -StorageKey "< Storage Key for ContosoGeneral >"
+    Enable                : True
+    EnableEncryption      : False
+    RetentionPeriodInDays : 10
+  description: |-
+    This command creates an automatic backup configuration object by specifying storage URI and account key.
+    Automatic backup is enabled and automatic backups are kept for 10 days.
+    The command stores the result in the $AutoBackupConfig variable.
+    You can specify this configuration item for other cmdlets, such as the Set-AzVMSqlServerExtension cmdlet.
+  summary: ""
+- title: 'Example 2: Create an automatic backup configuration using storage context'
+  code: |-
+    PS C:\> $StorageContext = New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral >"
+    PS C:\> $AutoBackupConfig = New-AzVMSqlServerAutoBackupConfig -StorageContext $StorageContext -Enable -RetentionPeriod 10
+    Enable                : True
+    EnableEncryption      : False
+    RetentionPeriodInDays : 10
+  description: |-
+    The first command creates a storage context, and then stores it in the $StorageContext variable.
+    For more information, see New-AzStorageContext.
+    The second command creates an automatic backup configuration object by specifying the storage context in $StorageContext.
+    Automatic backup is enabled and automatic backups are kept for 10 days.
+  summary: ""
+- title: 'Example 3: Create an automatic backup configuration using storage context with encryption and password'
+  code: |-
+    PS C:\> $StorageContext = New-AzVMSqlServerAutoBackupConfig -StorageContext $StorageContext -Enable -RetentionPeriod 10 -EnableEncryption -CertificatePassword $CertificatePassword
+    Enable                : True
+    EnableEncryption      : True
+    RetentionPeriodInDays : 10
+  description: |-
+    This command creates and stores an automatic backup configuration object.
+    The command specifies the storage context created in a previous example.
+    The command enables encryption with password.
+    The password was previously stored as a secure string in the $CertificatePassword variable.
+    To create a secure string, use the ConvertTo-SecureString cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackupScheduleType
+  description: |+
+    Backup schedule type, manual or automated
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Manual, Automated
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BackupSystemDbs
+  description: |+
+    Backup system databases
+
+  defaultValue: "False"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: CertificatePassword
+  description: |+
+    Specifies a password to encrypt the certificate that is used to perform SQL Server encrypted backups.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    Indicates that automated backup for the SQL Server virtual machine is enabled.
+    If you specify this parameter, automated backup sets a backup schedule for all current and new databases.
+    This updates your Managed Backup settings to follow this schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableEncryption
+  description: |+
+    Indicates that this cmdlet enables encryption.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FullBackupFrequency
+  description: |+
+    Sql Server Full Backup frequency, daily or weekly
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Daily, Weekly
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: FullBackupStartHour
+  description: |+
+    Hour of the day (0-23) when the Sql Server Full Backup should start
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: FullBackupWindowInHours
+  description: |+
+    Sql Server Full Backup window in hours
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: LogBackupFrequencyInMinutes
+  description: |+
+    Sql Server Log Backup frequency, once every 1-60 minutes
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group of the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: RetentionPeriodInDays
+  description: |+
+    Specifies the number of days to retain a backup.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: StorageContext
+  description: |+
+    Specifies the storage account that will be used to store backups.
+    To obtain an **AzureStorageContext** object, use the New-AzStorageContext cmdlet.
+    The default is the storage account that is associated with the SQL Server virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: StorageKey
+  description: |+
+    Specifies the storage key of the blob storage account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: StorageUri
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the blob storage account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.New-AzVMSqlServerAutoBackupConfig
+name: New-AzVMSqlServerAutoBackupConfig
+description: |-
+  The **New-AzVMSqlServerAutoBackupConfig** cmdlet creates a configuration object for SQL Server automatic backup.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: 0AC17275-17A9-47DE-BF04-C1A51DF057DC
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmsqlserverautobackupconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzVMSqlServerAutoBackupConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzVMSqlServerAutoBackupConfig.md

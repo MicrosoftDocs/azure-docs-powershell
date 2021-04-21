@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more sql virtual machines.
+module: Az.SqlVirtualMachine
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.SqlVirtualMachine.SqlVirtualMachine.Model.AzureSqlVMModel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzSqlVM [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSqlVM [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzSqlVM [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzSqlVM
+
+    Name ResourceGroupName  LicenseType Sku       Offer          SqlManagementType
+    ---- -----------------  ----------- ---       -----          -----------------
+    vm   ResourceGroup01	PAYG        Developer SQL2017-WS2016 Full
+    vm2  ResourceGroup02	PAYG        Developer SQL2017-WS2016 Full
+  description: |-
+    This command gets information about all the Azure SQL virtual machines in the current subscription.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzSqlVM -ResourceGroupName "ResourceGroup01"
+    Name ResourceGroupName  LicenseType Sku       Offer          SqlManagementType
+    ---- -----------------  ----------- ---       -----          -----------------
+    vm   ResourceGroup01	PAYG        Developer SQL2017-WS2016 Full
+  description: |-
+    This command gets information about all the Azure SQL virtual machines in the current subscription assigned to the resource group ResourceGroup01.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzSqlVM -ResourceGroupName "ResourceGroup01" -Name "vm"
+    Name ResourceGroupName  LicenseType Sku       Offer          SqlManagementType
+    ---- -----------------  ----------- ---       -----          -----------------
+    vm   ResourceGroup01	PAYG        Developer SQL2017-WS2016 Full
+  description: |-
+    This command gets information about the SQL virtual machine "vm" assigned to the resource group ResourceGroup01.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    SQL virtual machine name.
+
+  defaultValue: None
+  position: "1"
+  aliases: SqlVMName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    SQL virtual machine resource id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SqlVMId
+  parameterValueGroup: ""
+uid: Az.SqlVirtualMachine.Get-AzSqlVM
+name: Get-AzSqlVM
+description: |-
+  The Get-AzSqlVM cmdlet gets one or more sql virtual machines.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.dll-Help.xml
+  Module Name: Az.SqlVirtualMachine
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sqlvirtualmachine/get-azsqlvm
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SqlVirtualMachine/SqlVirtualMachine/help/Get-AzSqlVM.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SqlVirtualMachine/SqlVirtualMachine/help/Get-AzSqlVM.md

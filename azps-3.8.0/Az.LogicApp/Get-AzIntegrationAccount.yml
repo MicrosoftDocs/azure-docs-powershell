@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets integration accounts.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccount" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzIntegrationAccountCallbackUrl
+  href: ./Get-AzIntegrationAccountCallbackUrl.yml
+- text: New-AzIntegrationAccount
+  href: ./New-AzIntegrationAccount.yml
+- text: Remove-AzIntegrationAccount
+  href: ./Remove-AzIntegrationAccount.yml
+- text: Set-AzIntegrationAccount
+  href: ./Set-AzIntegrationAccount.yml
+syntaxes:
+- >-
+  Get-AzIntegrationAccount [-ResourceGroupName <String>] [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an integration account by name'
+  code: |-
+    PS C:\>Get-AzIntegrationAccount -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31"
+    Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31
+    Name        : IntegrationAccount31
+    Type        : Microsoft.Logic/integrationAccounts
+    Location    : brazilsouth
+    Sku         : 
+    CreatedTime : 3/26/2016 4:26:07 PM
+    ChangedTime : 3/26/2016 4:26:07 PM
+  description: |-
+    This command gets an integration account named IntegrationAccount31 from the specified resource group.
+  summary: ""
+- title: 'Example 2: Get integration accounts in a resource group'
+  code: |-
+    PS C:\>Get-AzIntegrationAccount -ResourceGroupName "ResourceGroup11"
+    Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup1/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31
+    Name        : IntegrationAccount31
+    Type        : Microsoft.Logic/integrationAccounts
+    Location    : brazilsouth
+    Sku         : 
+    CreatedTime : 3/26/2016 4:26:07 PM
+    ChangedTime : 3/26/2016 4:26:07 PM
+  description: |-
+    This command gets integration accounts from a resource group named ResourceGroup11.
+  summary: ""
+- title: 'Example 3: Get all integration accounts'
+  code: |-
+    PS C:\>Get-AzIntegrationAccount
+    Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31
+    Name        : IntegrationAccount31
+    Type        : Microsoft.Logic/integrationAccounts
+    Location    : brazilsouth
+    Sku         : 
+    CreatedTime : 3/26/2016 4:26:07 PM
+    ChangedTime : 3/26/2016 4:26:07 PM
+  description: |-
+    This command gets all the integration accounts in your Azure subscription.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of an integration account.
+
+  defaultValue: None
+  position: Named
+  aliases: IntegrationAccountName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.LogicApp.Get-AzIntegrationAccount
+name: Get-AzIntegrationAccount
+description: |-
+  The **Get-AzIntegrationAccount** cmdlet gets integration accounts from a resource group. 
+  Specify an integration account name and resource group name.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: 7BCF2086-05FA-43FB-9D19-7277374CB03E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azintegrationaccount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccount.md

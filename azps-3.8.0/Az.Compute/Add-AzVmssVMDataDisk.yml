@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a data disk to a Vmss VM.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSetVM" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.Compute.Models.CachingTypes" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSetVM" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Add-AzVmssVMDataDisk [-VirtualMachineScaleSetVM] <PSVirtualMachineScaleSetVM> [-Lun] <Int32>
+
+   [-CreateOption] <String> [-ManagedDiskId] <String> [-StorageAccountType <String>]
+
+   [-DiskEncryptionSetId <String>] [-Caching <CachingTypes>] [-DiskSizeInGB <Int32>] [-WriteAccelerator]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a managed data disk to a Vmss VM.'
+  code: |-
+    PS C:\> $disk = Get-AzDisk -ResourceGroupName $rgname -DiskName $diskname0
+    PS C:\> $VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0
+    PS C:\> $VmssVM = Add-AzVmssVMDataDisk -VirtualMachineScaleSetVM $VmssVM -Lun 0 -DiskSizeInGB 10 -CreateOption Attach -StorageAccountType Standard_LRS -ManagedDiskId $disk.Id
+    PS C:\> Update-AzVmssVM -VirtualMachineScaleSetVM $VmssVM
+  description: |-
+    The first command gets an existing managed disk.
+    The next command gets an existing Vmss VM given by the resource group name, the vmss name and the instance ID.
+    The next command adds the managed disk to the Vmss VM stored locally in $VmssVM.
+    The final command updates the Vmss VM with added data disk.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Management.Compute.Models.CachingTypes" data-throw-if-not-resolved="False" />
+  name: Caching
+  description: |+
+    Specifies the caching mode of the disk.
+    The acceptable values for this parameter are:
+    - ReadOnly
+    - ReadWrite
+    - None
+    The default value is ReadWrite.
+    Changing this value causes the virtual machine to restart.
+    This setting affects the consistency and performance of the disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, ReadOnly, ReadWrite
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CreateOption
+  isRequired: true
+  description: |+
+    Specifies whether this cmdlet creates a disk in the virtual machine from a platform or user image, creates an empty disk, or attaches an existing disk.
+    The acceptable values for this parameter are:
+    - Attach.
+    Specify this option to create a virtual machine from a specialized disk.
+    When you specify this option, do not specify the *SourceImageUri* parameter.
+    The *VhdUri* is all that is needed in order to tell the Azure platform the location of the virtual hard disk (VHD) to attach as a data disk to the virtual machine.
+    - Empty.
+    Specify this to create an empty data disk.
+    - FromImage.
+    Specify this option to create a virtual machine from a generalized image or disk.
+    When you specify this option, you must specify the *SourceImageUri* parameter also in order to tell the Azure platform the location of the VHD to attach as a data disk.
+    The *VhdUri* parameter is used as the location identifying where the data disk VHD will be stored when it is used by the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiskEncryptionSetId
+  description: |+
+    Specifies the resource Id of customer managed disk encryption set.  This can only be specified for managed disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: DiskSizeInGB
+  description: |+
+    Specifies the size, in gigabytes, of an empty disk to attach to a virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Lun
+  isRequired: true
+  description: |+
+    Specifies the logical unit number (LUN) for a data disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ManagedDiskId
+  isRequired: true
+  description: |+
+    Specifies the ID of a managed disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountType
+  description: |+
+    Specifies the storage account type of managed disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSetVM" data-throw-if-not-resolved="False" />
+  name: VirtualMachineScaleSetVM
+  isRequired: true
+  description: |+
+    Specifies the local virtual machine scale set VM object to which to add a data disk.
+    You can use the **Get-AzVmssVM** cmdlet to obtain a virtual machine scale set VM object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WriteAccelerator
+  description: |+
+    Specifies whether WriteAccelerator should be enabled or disabled on a managed data disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.Add-AzVmssVMDataDisk
+name: Add-AzVmssVMDataDisk
+description: |-
+  The **Add-AzVmssVMDataDisk** cmdlet adds a data disk to a Vmss VM.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssvmdatadisk
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVmssVMDataDisk.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVmssVMDataDisk.md

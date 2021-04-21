@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an outbound rule configuration in a load balancer.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancer" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSOutboundRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzLoadBalancerOutboundRuleConfig
+  href: ./Add-AzLoadBalancerOutboundRuleConfig.yml
+- text: New-AzLoadBalancerOutboundRuleConfig
+  href: ./New-AzLoadBalancerOutboundRuleConfig.yml
+- text: Remove-AzLoadBalancerOutboundRuleConfig
+  href: ./Remove-AzLoadBalancerOutboundRuleConfig.yml
+- text: Set-AzLoadBalancerOutboundRuleConfig
+  href: ./Set-AzLoadBalancerOutboundRuleConfig.yml
+syntaxes:
+- >-
+  Get-AzLoadBalancerOutboundRuleConfig -LoadBalancer <PSLoadBalancer> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an outbound rule configuration in a load balancer'
+  code: |-
+    PS C:\>$slb = Get-AzLoadBalancer -ResourceGroupName "MyResourceGroup" -Name "MyLoadBalancer"
+    PS C:\>Get-AzLoadBalancerOutboundRuleConfig -LoadBalancer $slb -Name "MyRule"
+  description: |-
+    The first command gets the load balancer named MyLoadBalancer, and then stores it in the variable $slb.
+    The second command gets the outbound rule configuration named MyRule associated with that load balancer.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancer" data-throw-if-not-resolved="False" />
+  name: LoadBalancer
+  isRequired: true
+  description: |+
+    The reference of the load balancer resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the outbound rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzLoadBalancerOutboundRuleConfig
+name: Get-AzLoadBalancerOutboundRuleConfig
+description: |-
+  The **Get-AzLoadBalancerOutboundRuleConfig** cmdlet gets an outbound rule configuration or a list of outbound rule configurations in a load balancer.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azloadbalanceroutboundruleconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzLoadBalancerOutboundRuleConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzLoadBalancerOutboundRuleConfig.md

@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generic distribution object
+module: Az.ImageBuilder
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.Api20200214.IImageTemplateDistributor" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzImageBuilderDistributorObject -ArtifactTag <Hashtable> -ImageId <String> -Location <String>
+
+   -ManagedImageDistributor -RunOutputName <String> [<CommonParameters>]
+- >-
+  New-AzImageBuilderDistributorObject -ArtifactTag <Hashtable> -ExcludeFromLatest <Boolean>
+
+   -GalleryImageId <String> -ReplicationRegion <String[]> -RunOutputName <String> -SharedImageDistributor
+
+   [-StorageAccountType <SharedImageStorageAccountType>] [<CommonParameters>]
+- >-
+  New-AzImageBuilderDistributorObject -ArtifactTag <Hashtable> -RunOutputName <String> -VhdDistributor
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a managed image distributor'
+  code: |-
+    PS C:\> New-AzImageBuilderDistributorObject -ManagedImageDistributor  -ArtifactTag @{tag='lucasManage'} -ImageId /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/images/lucas-linux-imageshare -RunOutputName luacas-runout -Location eastus
+
+    RunOutputName Type         ImageId                                                                                                                                           Location
+    ------------- ----         -------                                                                                                                                           --------
+    luacas-runout ManagedImage /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/images/lucas-linux-imageshare eastus
+  description: |-
+    This command creates a managed image distributor.
+  summary: ""
+- title: 'Example 2: Create a VHD distributor'
+  code: |-
+    PS C:\> New-AzImageBuilderDistributorObject -ArtifactTag @{tag='vhd'} -VhdDistributor -RunOutputName image-vhd
+
+    RunOutputName Type
+    ------------- ----
+    image-vhd     Vhd
+  description: |-
+    This command creates a VHD distributor.
+  summary: ""
+- title: 'Example 3: Create a shared image distributor'
+  code: |-
+    PS C:\> New-AzImageBuilderDistributorObject -SharedImageDistributor -ArtifactTag @{tag='dis-share'} -GalleryImageId '/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/galleries/myimagegallery/images/lcuas-linux-share' -ReplicationRegion eastus2 -RunOutputName 'outname' -ExcludeFromLatest $false 
+
+    RunOutputName Type        ExcludeFromLatest GalleryImageId                                                                                                                                                        ReplicationRegi
+                                                                                                                                                                                                                      on
+    ------------- ----        ----------------- --------------                                                                                                                                                        ---------------
+    outname       SharedImage False             /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/galleries/myimagegallery/images/lcuas-linux-share {eastus2}
+  description: |-
+    This command creates a shared image distributor.
+  summary: ""
+parameters:
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: ArtifactTag
+  isRequired: true
+  description: |+
+    Tags that will be applied to the artifact once it has been created/updated by the distributor.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: ExcludeFromLatest
+  isRequired: true
+  description: |+
+    Flag that indicates whether created image version should be excluded from latest.
+    Omit to use the default (false).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GalleryImageId
+  isRequired: true
+  description: |+
+    Resource Id of the Shared Image Gallery image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageId
+  isRequired: true
+  description: |+
+    Resource Id of the Managed Disk Image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Azure location for the image, should match if image already exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagedImageDistributor
+  isRequired: true
+  description: |+
+    Distribute as a Managed Disk Image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReplicationRegion
+  isRequired: true
+  description: |+
+    A list of regions that the image will be replicated to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunOutputName
+  isRequired: true
+  description: |+
+    The name to be used for the associated RunOutput.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SharedImageDistributor
+  isRequired: true
+  description: |+
+    Distribute via Shared Image Gallery.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Support.SharedImageStorageAccountType" data-throw-if-not-resolved="False" />
+  name: StorageAccountType
+  description: |+
+    Storage account type to be used to store the shared image.
+    Omit to use the default (Standard_LRS).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VhdDistributor
+  isRequired: true
+  description: |+
+    Distribute via VHD in a storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ImageBuilder.New-AzImageBuilderDistributorObject
+name: New-AzImageBuilderDistributorObject
+description: |-
+  Generic distribution object
+metadata:
+  external help file: ""
+  Module Name: Az.ImageBuilder
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.imagebuilder/new-AzImageBuilderDistributorObject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImageBuilder/help/New-AzImageBuilderDistributorObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImageBuilder/help/New-AzImageBuilderDistributorObject.md

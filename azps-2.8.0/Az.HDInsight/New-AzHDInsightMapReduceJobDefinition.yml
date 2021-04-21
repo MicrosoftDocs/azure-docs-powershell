@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a MapReduce job object.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightMapReduceJobDefinition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-AzHDInsightJob
+  href: ./Start-AzHDInsightJob.yml
+syntaxes:
+- >-
+  New-AzHDInsightMapReduceJobDefinition [-Arguments <String[]>] [-Files <String[]>] [-StatusFolder <String>]
+
+   -ClassName <String> [-Defines <Hashtable>] -JarFile <String> [-JobName <String>] [-LibJars <String[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a MapReduce job definition'
+  code: |-
+    PS C:\># Cluster info
+    PS C:\>$clusterName = "your-hadoop-001"
+    PS C:\>$clusterCreds = Get-Credential
+
+    PS C:\>New-AzHDInsightMapReduceJobDefinition -StatusFolder $statusFolder `
+                -ClassName $className `
+                -JarFile $jarFilePath `
+            | Start-AzHDInsightJob `
+                -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds
+  description: |-
+    This command creates a MapReduce job definition.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Arguments
+  description: |+
+    Specifies an array of arguments for the job.
+    The arguments are passed as command-line arguments to each task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClassName
+  isRequired: true
+  description: |+
+    Specifies the job class in the JAR file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Defines
+  description: |+
+    Specifies Hadoop configuration values to set for when the job runs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Files
+  description: |+
+    Specifies a collection of files that are associated with a Hive job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JarFile
+  isRequired: true
+  description: |+
+    Specifies the JAR file to use for the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobName
+  description: |+
+    Specifies the name of the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LibJars
+  description: |+
+    Specifies the lib JARS for the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StatusFolder
+  description: |+
+    Specifies the location of the folder that contains standard outputs and error outputs for a job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.New-AzHDInsightMapReduceJobDefinition
+name: New-AzHDInsightMapReduceJobDefinition
+description: |-
+  The **New-AzHDInsightMapReduceJobDefinition** cmdlet defines a new MapReduce job for use with an Azure HDInsight cluster.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 6BF6F9A7-BED3-4CCE-9E0A-46ECBFF55DA9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/new-azhdinsightmapreducejobdefinition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightMapReduceJobDefinition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightMapReduceJobDefinition.md

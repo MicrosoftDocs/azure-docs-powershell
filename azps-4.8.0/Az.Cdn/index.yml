@@ -1,0 +1,50 @@
+### YamlMime:PowershellModule
+children:
+- title: CDN
+  cmdlets:
+  - Az.Cdn.Confirm-AzCdnEndpointProbeURL
+  - Az.Cdn.Disable-AzCdnCustomDomain
+  - Az.Cdn.Disable-AzCdnCustomDomainHttps
+  - Az.Cdn.Enable-AzCdnCustomDomain
+  - Az.Cdn.Enable-AzCdnCustomDomainHttps
+  - Az.Cdn.Get-AzCdnCustomDomain
+  - Az.Cdn.Get-AzCdnEdgeNode
+  - Az.Cdn.Get-AzCdnEndpoint
+  - Az.Cdn.Get-AzCdnEndpointNameAvailability
+  - Az.Cdn.Get-AzCdnEndpointResourceUsage
+  - Az.Cdn.Get-AzCdnOrigin
+  - Az.Cdn.Get-AzCdnProfile
+  - Az.Cdn.Get-AzCdnProfileResourceUsage
+  - Az.Cdn.Get-AzCdnProfileSsoUrl
+  - Az.Cdn.Get-AzCdnProfileSupportedOptimizationType
+  - Az.Cdn.Get-AzCdnSubscriptionResourceUsage
+  - Az.Cdn.New-AzCdnCustomDomain
+  - Az.Cdn.New-AzCdnDeliveryPolicy
+  - Az.Cdn.New-AzCdnDeliveryRule
+  - Az.Cdn.New-AzCdnDeliveryRuleAction
+  - Az.Cdn.New-AzCdnDeliveryRuleCondition
+  - Az.Cdn.New-AzCdnEndpoint
+  - Az.Cdn.New-AzCdnProfile
+  - Az.Cdn.Publish-AzCdnEndpointContent
+  - Az.Cdn.Remove-AzCdnCustomDomain
+  - Az.Cdn.Remove-AzCdnEndpoint
+  - Az.Cdn.Remove-AzCdnProfile
+  - Az.Cdn.Set-AzCdnEndpoint
+  - Az.Cdn.Set-AzCdnOrigin
+  - Az.Cdn.Set-AzCdnProfile
+  - Az.Cdn.Start-AzCdnEndpoint
+  - Az.Cdn.Stop-AzCdnEndpoint
+  - Az.Cdn.Test-AzCdnCustomDomain
+  - Az.Cdn.Unpublish-AzCdnEndpointContent
+uid: Az.Cdn
+name: Az.Cdn
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure Content Delivery Network (CDN) in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.Cdn namespace.
+metadata:
+  Module Name: Az.Cdn
+  Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.cdn
+  Help Version: 4.2.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Az.Cdn.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Az.Cdn.md

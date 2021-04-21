@@ -1,0 +1,248 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Traffic Manager profile.
+module: Az.TrafficManager
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzTrafficManagerEndpointConfig
+  href: ./Add-AzTrafficManagerEndpointConfig.yml
+- text: Disable-AzTrafficManagerProfile
+  href: ./Disable-AzTrafficManagerProfile.yml
+- text: Enable-AzTrafficManagerProfile
+  href: ./Enable-AzTrafficManagerProfile.yml
+- text: Get-AzTrafficManagerProfile
+  href: ./Get-AzTrafficManagerProfile.yml
+- text: Remove-AzTrafficManagerProfile
+  href: ./Remove-AzTrafficManagerProfile.yml
+- text: Set-AzTrafficManagerProfile
+  href: ./Set-AzTrafficManagerProfile.yml
+syntaxes:
+- >-
+  New-AzTrafficManagerProfile -Name <String> -ResourceGroupName <String> [-ProfileStatus <String>]
+
+   -RelativeDnsName <String> -Ttl <UInt32> -TrafficRoutingMethod <String> -MonitorProtocol <String>
+
+   -MonitorPort <UInt32> [-MonitorPath <String>] [-MonitorIntervalInSeconds <Int32>]
+
+   [-MonitorTimeoutInSeconds <Int32>] [-MonitorToleratedNumberOfFailures <Int32>] [-MaxReturn <Int64>]
+
+   [-Tag <Hashtable>]
+
+   [-CustomHeader <System.Collections.Generic.List`1[Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerCustomHeader]>]
+
+   [-ExpectedStatusCodeRange <System.Collections.Generic.List`1[Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerExpectedStatusCodeRange]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a profile'
+  code: |-
+    PS C:\>New-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" -ProfileStatus Enabled -TrafficRoutingMethod Performance -RelativeDnsName "contosoapp" -TTL 30 -MonitorProtocol HTTP -MonitorPort 80 -MonitorPath "/default.aspx"
+  description: |-
+    This command creates an Azure Traffic Manager profile named ContosoProfile in resource group ResourceGroup11.
+    The DNS FQDN is contosoapp.trafficmanager.net.
+  summary: ""
+parameters:
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerCustomHeader" data-throw-if-not-resolved="False" /><span>]</span>
+  name: CustomHeader
+  description: |+
+    List of custom header name and value pairs for probe requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerExpectedStatusCodeRange" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ExpectedStatusCodeRange
+  description: |+
+    List of expected HTTP status code ranges for probe requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxReturn
+  description: |+
+    The maximum number of answers returned for profiles with a MultiValue routing method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MonitorIntervalInSeconds
+  description: |+
+    The interval (in seconds) at which Traffic Manager will check the health of each endpoint in this profile. The default is 30.
+
+  defaultValue: None
+  position: Named
+  aliases: IntervalInSecondsForMonitor
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MonitorPath
+  description: |+
+    Specifies the path that is used to monitor endpoint health.
+    Specify a value relative to the endpoint domain name.
+    This value must begin with a slash (/).
+
+  defaultValue: None
+  position: Named
+  aliases: PathForMonitor
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: MonitorPort
+  isRequired: true
+  description: |+
+    Specifies the TCP port that is used to monitor endpoint health.
+    Valid values are integers from 1 through 65535.
+
+  defaultValue: None
+  position: Named
+  aliases: PortForMonitor
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MonitorProtocol
+  isRequired: true
+  description: |+
+    Specifies the protocol to use to monitor endpoint health.
+    Valid values are:
+
+    - HTTP
+    - HTTPS
+
+  defaultValue: None
+  position: Named
+  aliases: ProtocolForMonitor
+  parameterValueGroup: HTTP, HTTPS, TCP
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MonitorTimeoutInSeconds
+  description: |+
+    The time (in seconds) that Traffic Manager allows endpoints in this profile to respond to the health check. The default is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: TimeoutInSecondsForMonitor
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MonitorToleratedNumberOfFailures
+  description: |+
+    The number of consecutive failed health checks that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next consecutive failed health check. The default is 3.
+
+  defaultValue: None
+  position: Named
+  aliases: ToleratedNumberOfFailuresForMonitor
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the Traffic Manager profile that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProfileStatus
+  description: |+
+    Specifies the status of the profile.
+    Valid values are: Enabled and Disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RelativeDnsName
+  isRequired: true
+  description: |+
+    Specifies the relative DNS name that this Traffic Manager profile provides.
+    Traffic Manager combines this value and the DNS domain name that Azure Traffic Manager uses to form the fully qualified domain name (FQDN) of the profile.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+    This cmdlet creates a Traffic Manager profile in the group that this parameter specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs in the form of a hash table set as tags on the server. For example:
+
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  position: Named
+  aliases: Tags
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TrafficRoutingMethod
+  isRequired: true
+  description: |+
+    Specifies the traffic routing method.
+    This method determines which endpoint Traffic Manager returns in response to incoming DNS queries.
+    Valid values are:
+
+    - Performance
+    - Weighted
+    - Priority
+    - Geographic
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Performance, Weighted, Priority, Geographic, Subnet, MultiValue
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: Ttl
+  isRequired: true
+  description: |+
+    Specifies the DNS Time to Live (TTL) value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.TrafficManager.New-AzTrafficManagerProfile
+name: New-AzTrafficManagerProfile
+description: |-
+  The **New-AzTrafficManagerProfile** cmdlet creates an Azure Traffic Manager profile.
+  Specify the *Name* parameter and required settings.
+  This cmdlet returns a local object that represents the new profile.
+
+  This cmdlet does not configure Traffic Manager endpoints.
+  You can update the local profile object by using the Add-AzTrafficManagerEndpointConfig cmdlet.
+  Then upload changes to Traffic Manager by using the Set-AzTrafficManagerProfile cmdlet.
+  Alternatively, you can add endpoints by using the New-AzTrafficManagerEndpoint cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
+  Module Name: Az.TrafficManager
+  ms.assetid: DE31891A-0EF7-44D7-B955-A3279D27CC21
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/new-aztrafficmanagerprofile
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/New-AzTrafficManagerProfile.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/New-AzTrafficManagerProfile.md

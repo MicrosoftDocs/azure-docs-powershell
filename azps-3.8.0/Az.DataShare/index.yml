@@ -1,0 +1,52 @@
+### YamlMime:PowershellModule
+children:
+- title: Data Share
+  cmdlets:
+  - Az.DataShare.Get-AzDataShare
+  - Az.DataShare.Get-AzDataShareAccount
+  - Az.DataShare.Get-AzDataShareDataSet
+  - Az.DataShare.Get-AzDataShareDataSetMapping
+  - Az.DataShare.Get-AzDataShareInvitation
+  - Az.DataShare.Get-AzDataShareProviderShareSubscription
+  - Az.DataShare.Get-AzDataShareReceivedInvitation
+  - Az.DataShare.Get-AzDataShareSourceDataSet
+  - Az.DataShare.Get-AzDataShareSubscription
+  - Az.DataShare.Get-AzDataShareSubscriptionSynchronization
+  - Az.DataShare.Get-AzDataShareSubscriptionSynchronizationDetail
+  - Az.DataShare.Get-AzDataShareSynchronization
+  - Az.DataShare.Get-AzDataShareSynchronizationDetail
+  - Az.DataShare.Get-AzDataShareSynchronizationSetting
+  - Az.DataShare.Get-AzDataShareTrigger
+  - Az.DataShare.Grant-AzDataShareSubscriptionAccess
+  - Az.DataShare.New-AzDataShare
+  - Az.DataShare.New-AzDataShareAccount
+  - Az.DataShare.New-AzDataShareDataSet
+  - Az.DataShare.New-AzDataShareDataSetMapping
+  - Az.DataShare.New-AzDataShareInvitation
+  - Az.DataShare.New-AzDataShareSubscription
+  - Az.DataShare.New-AzDataShareSynchronizationSetting
+  - Az.DataShare.New-AzDataShareTrigger
+  - Az.DataShare.Remove-AzDataShare
+  - Az.DataShare.Remove-AzDataShareAccount
+  - Az.DataShare.Remove-AzDataShareDataSet
+  - Az.DataShare.Remove-AzDataShareDataSetMapping
+  - Az.DataShare.Remove-AzDataShareInvitation
+  - Az.DataShare.Remove-AzDataShareSubscription
+  - Az.DataShare.Remove-AzDataShareSynchronizationSetting
+  - Az.DataShare.Remove-AzDataShareTrigger
+  - Az.DataShare.Revoke-AzDataShareSubscriptionAccess
+  - Az.DataShare.Set-AzDataShare
+  - Az.DataShare.Start-AzDataShareSubscriptionSynchronization
+  - Az.DataShare.Stop-AzDataShareSubscriptionSynchronization
+uid: Az.DataShare
+name: Az.DataShare
+description: |-
+  Azure Data Share is a first party resource provider that enables customers to easily and securely share big data with other organizations in Azure, with centralized management, monitoring and governance.
+metadata:
+  Module Name: Az.DataShare
+  Module Guid: fe925c54-a246-4a80-89ed-b8768f5dc3cd
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.datashare
+  Help Version: 0.1.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataShare/DataShare/help/Az.DataShare.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataShare/DataShare/help/Az.DataShare.md

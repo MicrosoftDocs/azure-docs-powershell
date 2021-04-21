@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the recommended information types and sensitivity labels of columns in the database.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataClassification.Model.SqlDatabaseSensitivityClassificationModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Learn more about Azure SQL Database data discovery and classification
+  href: https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification
+syntaxes:
+- >-
+  Get-AzSqlDatabaseSensitivityRecommendation -DatabaseObject <AzureSqlDatabaseModel> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSqlDatabaseSensitivityRecommendation [-ResourceGroupName] <String> [-ServerName] <String>
+
+   [-DatabaseName] <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get recommended information types and sensitivity labels of an Azure SQL database.'
+  code: |-
+    PS C:\> Get-AzSqlDatabaseSensitivityRecommendation -ResourceGroupName resourceGroup -ServerName server -DatabaseName database
+
+    ResourceGroupName : resourceGroup
+    ServerName        : server
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+  description: ""
+  summary: ""
+- title: 'Example 2: Get recommended information types and sensitivity labels of an Azure SQL database using Piping.'
+  code: |-
+    PS C:\> Get-AzSqlDatabase -ResourceGroupName resourceGroup -ServerName server -DatabaseName database | Get-AzSqlDatabaseSensitivityRecommendation
+
+    ResourceGroupName : resourceGroup
+    ServerName        : server
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+  name: DatabaseObject
+  isRequired: true
+  description: |+
+    The SQL database object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    SQL server name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlDatabaseSensitivityRecommendation
+name: Get-AzSqlDatabaseSensitivityRecommendation
+description: |-
+  The Get-AzSqlDatabaseSensitivityRecommendation cmdlet returns the recommended information types and sensitivity labels of columns in the database.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 14814BF3-51AF-4E51-A8A6-661825BD88D1
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/Get-AzSqlDatabaseSensitivityRecommendation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseSensitivityRecommendation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseSensitivityRecommendation.md

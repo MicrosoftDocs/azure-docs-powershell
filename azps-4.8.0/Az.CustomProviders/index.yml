@@ -1,0 +1,23 @@
+### YamlMime:PowershellModule
+children:
+- title: Custom Resource Providers
+  cmdlets:
+  - Az.CustomProviders.Get-AzCustomProvider
+  - Az.CustomProviders.Get-AzCustomProviderAssociation
+  - Az.CustomProviders.New-AzCustomProvider
+  - Az.CustomProviders.New-AzCustomProviderAssociation
+  - Az.CustomProviders.Remove-AzCustomProvider
+  - Az.CustomProviders.Remove-AzCustomProviderAssociation
+  - Az.CustomProviders.Update-AzCustomProvider
+uid: Az.CustomProviders
+name: Az.CustomProviders
+description: |-
+  Microsoft Azure PowerShell: Custom Providers cmdlets
+metadata:
+  Module Name: Az.CustomProviders
+  Module Guid: b98dded0-6e9a-4371-b2c6-d74464fb724b
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.customproviders
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CustomProviders/help/Az.CustomProviders.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CustomProviders/help/Az.CustomProviders.md

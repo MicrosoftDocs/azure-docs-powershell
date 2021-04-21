@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create or update an applicationGroup.
+module: Az.DesktopVirtualization
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20191210Preview.IApplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzWvdApplicationGroup -Name <String> -ResourceGroupName <String>
+
+   -ApplicationGroupType <ApplicationGroupType> -HostPoolArmPath <String> -Location <String>
+
+   [-SubscriptionId <String>] [-Description <String>] [-FriendlyName <String>] [-Tag <Hashtable>]
+
+   [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Windows Virtual Desktop ApplicationGroup by name'
+  code: |-
+    PS C:\> New-AzWvdApplicationGroup -ResourceGroupName ResourceGroupName `
+                                -Name ApplicationGroupName `
+                                -Location 'eastus' `
+                                -FriendlyName 'Friendly Name' `
+                                -Description 'Description' `
+                                -HostPoolArmPath '/subscriptions/SubscriptionId/resourcegroups/ResourceGroupName/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolName' `
+                                -ApplicationGroupType 'RemoteApp'
+
+    Location   Name                 Type
+    --------   ----                 ----
+    eastus     ApplicationGroupName Microsoft.DesktopVirtualization/applicationgroups
+  description: |-
+    This command creates a Windows Virtual Desktop ApplicationGroup in a Resource Group.
+  summary: ""
+- title: 'Example 2: Create a Windows Virtual Desktop ApplicationGroup by name'
+  code: |-
+    PS C:\> New-AzWvdApplicationGroup -ResourceGroupName ResourceGroupName `
+                                -Name ApplicationGroupName `
+                                -Location 'eastus' `
+                                -FriendlyName 'Friendly Name' `
+                                -Description 'Description' `
+                                -HostPoolArmPath '/subscriptions/SubscriptionId/resourcegroups/ResourceGroupName/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolName' `
+                                -ApplicationGroupType 'Desktop'
+
+    Location   Name                 Type
+    --------   ----                 ----
+    eastus     ApplicationGroupName Microsoft.DesktopVirtualization/applicationgroups
+  description: |-
+    This command creates a Windows Virtual Desktop ApplicationGroup in a Resource Group.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.ApplicationGroupType" data-throw-if-not-resolved="False" />
+  name: ApplicationGroupType
+  isRequired: true
+  description: |+
+    Resource Type of ApplicationGroup.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Description of ApplicationGroup.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  description: |+
+    Friendly name of ApplicationGroup.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostPoolArmPath
+  isRequired: true
+  description: |+
+    HostPool arm path of ApplicationGroup.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The geo-location where the resource lives
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the application group
+
+  defaultValue: None
+  position: Named
+  aliases: ApplicationGroupName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The ID of the target subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Resource tags.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DesktopVirtualization.New-AzWvdApplicationGroup
+name: New-AzWvdApplicationGroup
+description: |-
+  Create or update an applicationGroup.
+metadata:
+  external help file: ""
+  Module Name: Az.DesktopVirtualization
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization/new-azwvdapplicationgroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/New-AzWvdApplicationGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/New-AzWvdApplicationGroup.md

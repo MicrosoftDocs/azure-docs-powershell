@@ -1,0 +1,134 @@
+### YamlMime:PowershellModule
+children:
+- title: API Management
+  cmdlets:
+  - Az.ApiManagement.Add-AzApiManagementApiToProduct
+  - Az.ApiManagement.Add-AzApiManagementProductToGroup
+  - Az.ApiManagement.Add-AzApiManagementRegion
+  - Az.ApiManagement.Add-AzApiManagementUserToGroup
+  - Az.ApiManagement.Backup-AzApiManagement
+  - Az.ApiManagement.Export-AzApiManagementApi
+  - Az.ApiManagement.Get-AzApiManagement
+  - Az.ApiManagement.Get-AzApiManagementApi
+  - Az.ApiManagement.Get-AzApiManagementApiRelease
+  - Az.ApiManagement.Get-AzApiManagementApiRevision
+  - Az.ApiManagement.Get-AzApiManagementApiSchema
+  - Az.ApiManagement.Get-AzApiManagementApiVersionSet
+  - Az.ApiManagement.Get-AzApiManagementAuthorizationServer
+  - Az.ApiManagement.Get-AzApiManagementBackend
+  - Az.ApiManagement.Get-AzApiManagementCache
+  - Az.ApiManagement.Get-AzApiManagementCertificate
+  - Az.ApiManagement.Get-AzApiManagementDiagnostic
+  - Az.ApiManagement.Get-AzApiManagementGroup
+  - Az.ApiManagement.Get-AzApiManagementIdentityProvider
+  - Az.ApiManagement.Get-AzApiManagementLogger
+  - Az.ApiManagement.Get-AzApiManagementNetworkStatus
+  - Az.ApiManagement.Get-AzApiManagementOpenIdConnectProvider
+  - Az.ApiManagement.Get-AzApiManagementOperation
+  - Az.ApiManagement.Get-AzApiManagementPolicy
+  - Az.ApiManagement.Get-AzApiManagementProduct
+  - Az.ApiManagement.Get-AzApiManagementProperty
+  - Az.ApiManagement.Get-AzApiManagementSsoToken
+  - Az.ApiManagement.Get-AzApiManagementSubscription
+  - Az.ApiManagement.Get-AzApiManagementTenantAccess
+  - Az.ApiManagement.Get-AzApiManagementTenantGitAccess
+  - Az.ApiManagement.Get-AzApiManagementTenantSyncState
+  - Az.ApiManagement.Get-AzApiManagementUser
+  - Az.ApiManagement.Get-AzApiManagementUserSsoUrl
+  - Az.ApiManagement.Import-AzApiManagementApi
+  - Az.ApiManagement.New-AzApiManagement
+  - Az.ApiManagement.New-AzApiManagementApi
+  - Az.ApiManagement.New-AzApiManagementApiRelease
+  - Az.ApiManagement.New-AzApiManagementApiRevision
+  - Az.ApiManagement.New-AzApiManagementApiSchema
+  - Az.ApiManagement.New-AzApiManagementApiVersionSet
+  - Az.ApiManagement.New-AzApiManagementAuthorizationServer
+  - Az.ApiManagement.New-AzApiManagementBackend
+  - Az.ApiManagement.New-AzApiManagementBackendCredential
+  - Az.ApiManagement.New-AzApiManagementBackendProxy
+  - Az.ApiManagement.New-AzApiManagementBackendServiceFabric
+  - Az.ApiManagement.New-AzApiManagementCache
+  - Az.ApiManagement.New-AzApiManagementCertificate
+  - Az.ApiManagement.New-AzApiManagementContext
+  - Az.ApiManagement.New-AzApiManagementCustomHostnameConfiguration
+  - Az.ApiManagement.New-AzApiManagementDiagnostic
+  - Az.ApiManagement.New-AzApiManagementGroup
+  - Az.ApiManagement.New-AzApiManagementHttpMessageDiagnostic
+  - Az.ApiManagement.New-AzApiManagementIdentityProvider
+  - Az.ApiManagement.New-AzApiManagementLogger
+  - Az.ApiManagement.New-AzApiManagementOpenIdConnectProvider
+  - Az.ApiManagement.New-AzApiManagementOperation
+  - Az.ApiManagement.New-AzApiManagementPipelineDiagnosticSetting
+  - Az.ApiManagement.New-AzApiManagementProduct
+  - Az.ApiManagement.New-AzApiManagementProperty
+  - Az.ApiManagement.New-AzApiManagementRegion
+  - Az.ApiManagement.New-AzApiManagementSamplingSetting
+  - Az.ApiManagement.New-AzApiManagementSslSetting
+  - Az.ApiManagement.New-AzApiManagementSubscription
+  - Az.ApiManagement.New-AzApiManagementSystemCertificate
+  - Az.ApiManagement.New-AzApiManagementUser
+  - Az.ApiManagement.New-AzApiManagementUserToken
+  - Az.ApiManagement.New-AzApiManagementVirtualNetwork
+  - Az.ApiManagement.Publish-AzApiManagementTenantGitConfiguration
+  - Az.ApiManagement.Remove-AzApiManagement
+  - Az.ApiManagement.Remove-AzApiManagementApi
+  - Az.ApiManagement.Remove-AzApiManagementApiFromProduct
+  - Az.ApiManagement.Remove-AzApiManagementApiRelease
+  - Az.ApiManagement.Remove-AzApiManagementApiRevision
+  - Az.ApiManagement.Remove-AzApiManagementApiSchema
+  - Az.ApiManagement.Remove-AzApiManagementApiVersionSet
+  - Az.ApiManagement.Remove-AzApiManagementAuthorizationServer
+  - Az.ApiManagement.Remove-AzApiManagementBackend
+  - Az.ApiManagement.Remove-AzApiManagementCache
+  - Az.ApiManagement.Remove-AzApiManagementCertificate
+  - Az.ApiManagement.Remove-AzApiManagementDiagnostic
+  - Az.ApiManagement.Remove-AzApiManagementGroup
+  - Az.ApiManagement.Remove-AzApiManagementIdentityProvider
+  - Az.ApiManagement.Remove-AzApiManagementLogger
+  - Az.ApiManagement.Remove-AzApiManagementOpenIdConnectProvider
+  - Az.ApiManagement.Remove-AzApiManagementOperation
+  - Az.ApiManagement.Remove-AzApiManagementPolicy
+  - Az.ApiManagement.Remove-AzApiManagementProduct
+  - Az.ApiManagement.Remove-AzApiManagementProductFromGroup
+  - Az.ApiManagement.Remove-AzApiManagementProperty
+  - Az.ApiManagement.Remove-AzApiManagementRegion
+  - Az.ApiManagement.Remove-AzApiManagementSubscription
+  - Az.ApiManagement.Remove-AzApiManagementUser
+  - Az.ApiManagement.Remove-AzApiManagementUserFromGroup
+  - Az.ApiManagement.Restore-AzApiManagement
+  - Az.ApiManagement.Save-AzApiManagementTenantGitConfiguration
+  - Az.ApiManagement.Set-AzApiManagement
+  - Az.ApiManagement.Set-AzApiManagementApi
+  - Az.ApiManagement.Set-AzApiManagementApiRevision
+  - Az.ApiManagement.Set-AzApiManagementApiSchema
+  - Az.ApiManagement.Set-AzApiManagementApiVersionSet
+  - Az.ApiManagement.Set-AzApiManagementAuthorizationServer
+  - Az.ApiManagement.Set-AzApiManagementBackend
+  - Az.ApiManagement.Set-AzApiManagementCertificate
+  - Az.ApiManagement.Set-AzApiManagementDiagnostic
+  - Az.ApiManagement.Set-AzApiManagementGroup
+  - Az.ApiManagement.Set-AzApiManagementIdentityProvider
+  - Az.ApiManagement.Set-AzApiManagementLogger
+  - Az.ApiManagement.Set-AzApiManagementOpenIdConnectProvider
+  - Az.ApiManagement.Set-AzApiManagementOperation
+  - Az.ApiManagement.Set-AzApiManagementPolicy
+  - Az.ApiManagement.Set-AzApiManagementProduct
+  - Az.ApiManagement.Set-AzApiManagementProperty
+  - Az.ApiManagement.Set-AzApiManagementSubscription
+  - Az.ApiManagement.Set-AzApiManagementTenantAccess
+  - Az.ApiManagement.Set-AzApiManagementUser
+  - Az.ApiManagement.Update-AzApiManagementApiRelease
+  - Az.ApiManagement.Update-AzApiManagementCache
+  - Az.ApiManagement.Update-AzApiManagementRegion
+uid: Az.ApiManagement
+name: Az.ApiManagement
+description: |-
+  This topic displays help topics for the Azure API Management Cmdlets.
+metadata:
+  Module Name: Az.ApiManagement
+  Module Guid: f875725d-8ce4-423f-a6af-ea880bc63f13
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Az.ApiManagement.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Az.ApiManagement.md

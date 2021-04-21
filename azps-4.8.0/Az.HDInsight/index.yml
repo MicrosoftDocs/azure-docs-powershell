@@ -1,0 +1,59 @@
+### YamlMime:PowershellModule
+children:
+- title: HDInsight
+  cmdlets:
+  - Az.HDInsight.Add-AzHDInsightClusterIdentity
+  - Az.HDInsight.Add-AzHDInsightComponentVersion
+  - Az.HDInsight.Add-AzHDInsightConfigValue
+  - Az.HDInsight.Add-AzHDInsightMetastore
+  - Az.HDInsight.Add-AzHDInsightScriptAction
+  - Az.HDInsight.Add-AzHDInsightSecurityProfile
+  - Az.HDInsight.Add-AzHDInsightStorage
+  - Az.HDInsight.Disable-AzHDInsightMonitoring
+  - Az.HDInsight.Enable-AzHDInsightMonitoring
+  - Az.HDInsight.Get-AzHDInsightCluster
+  - Az.HDInsight.Get-AzHDInsightClusterAutoscaleConfiguration
+  - Az.HDInsight.Get-AzHDInsightHost
+  - Az.HDInsight.Get-AzHDInsightJob
+  - Az.HDInsight.Get-AzHDInsightJobOutput
+  - Az.HDInsight.Get-AzHDInsightMonitoring
+  - Az.HDInsight.Get-AzHDInsightPersistedScriptAction
+  - Az.HDInsight.Get-AzHDInsightProperty
+  - Az.HDInsight.Get-AzHDInsightScriptActionHistory
+  - Az.HDInsight.Invoke-AzHDInsightHiveJob
+  - Az.HDInsight.New-AzHDInsightCluster
+  - Az.HDInsight.New-AzHDInsightClusterAutoscaleConfiguration
+  - Az.HDInsight.New-AzHDInsightClusterAutoscaleScheduleCondition
+  - Az.HDInsight.New-AzHDInsightClusterConfig
+  - Az.HDInsight.New-AzHDInsightHiveJobDefinition
+  - Az.HDInsight.New-AzHDInsightMapReduceJobDefinition
+  - Az.HDInsight.New-AzHDInsightPigJobDefinition
+  - Az.HDInsight.New-AzHDInsightSqoopJobDefinition
+  - Az.HDInsight.New-AzHDInsightStreamingMapReduceJobDefinition
+  - Az.HDInsight.Remove-AzHDInsightCluster
+  - Az.HDInsight.Remove-AzHDInsightClusterAutoscaleConfiguration
+  - Az.HDInsight.Remove-AzHDInsightPersistedScriptAction
+  - Az.HDInsight.Restart-AzHDInsightHost
+  - Az.HDInsight.Set-AzHDInsightClusterAutoscaleConfiguration
+  - Az.HDInsight.Set-AzHDInsightClusterDiskEncryptionKey
+  - Az.HDInsight.Set-AzHDInsightClusterSize
+  - Az.HDInsight.Set-AzHDInsightDefaultStorage
+  - Az.HDInsight.Set-AzHDInsightGatewayCredential
+  - Az.HDInsight.Set-AzHDInsightPersistedScriptAction
+  - Az.HDInsight.Start-AzHDInsightJob
+  - Az.HDInsight.Stop-AzHDInsightJob
+  - Az.HDInsight.Submit-AzHDInsightScriptAction
+  - Az.HDInsight.Use-AzHDInsightCluster
+  - Az.HDInsight.Wait-AzHDInsightJob
+uid: Az.HDInsight
+name: Az.HDInsight
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Microsoft Azure HDInsight in the Azure Resource Manager (ARM) framework. These cmdlets are used to manage HDInsight clusters and the jobs that run on them. The cmdlets exist in the Microsoft.Azure.Commands.HDInsight namespace.
+metadata:
+  Module Name: Az.HDInsight
+  Module Guid: 3fd1475f-cb23-4ffb-bf08-33d94b7d1acb
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight
+  Help Version: 4.1.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Az.HDInsight.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Az.HDInsight.md

@@ -1,0 +1,269 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a PSRoutingRuleObject for Front Door creation
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRoutingRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoor
+  href: ./New-AzFrontDoor.yml
+- text: Set-AzFrontDoor
+  href: ./Set-AzFrontDoor.yml
+syntaxes:
+- >-
+  New-AzFrontDoorRoutingRuleObject -ResourceGroupName <String> -FrontDoorName <String> -Name <String>
+
+   -FrontendEndpointName <String[]> -BackendPoolName <String> [-AcceptedProtocol <PSProtocol[]>]
+
+   [-PatternToMatch <String[]>] [-CustomForwardingPath <String>] [-ForwardingProtocol <PSForwardingProtocol>]
+
+   [-EnableCaching <Boolean>] [-QueryParameterStripDirective <PSQueryParameterStripDirective>]
+
+   [-DynamicCompression <PSEnabledState>] [-EnabledState <PSEnabledState>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzFrontDoorRoutingRuleObject -ResourceGroupName <String> -FrontDoorName <String> -Name <String>
+
+   -FrontendEndpointName <String[]> [-AcceptedProtocol <PSProtocol[]>] [-PatternToMatch <String[]>]
+
+   [-RedirectType <PSRedirectType>] [-RedirectProtocol <PSRedirectProtocol>] [-CustomHost <String>]
+
+   [-CustomPath <String>] [-CustomFragment <String>] [-CustomQueryString <String>]
+
+   [-EnabledState <PSEnabledState>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a PSRoutingRuleObject for Front Door creation'
+  code: |-
+    PS C:\> New-AzFrontDoorRoutingRuleObject -Name $routingRuleName -FrontDoorName $frontDoorName -ResourceGroupName  -FrontendEndpointName "frontendEndpoint1" -BackendPoolName "backendPool1" 
+
+    FrontendEndpointIds          : {/subscriptions/{subid}/resourceGroups/{rgname}/pro
+                                   viders/Microsoft.Network/frontDoors/{frontdoorname}/FrontendEndpoints/frontendEndpoint1}
+    AcceptedProtocols            : {Http, Https}
+    PatternsToMatch              : {/*}
+    ForwardingProtocol           : MatchRequest
+    CustomForwardingPath         :
+    QueryParameterStripDirective : StripAll
+    DynamicCompression           : Enabled
+    HealthProbeSettings          :
+    BackendPoolId                : /subscriptions/{subid}/resourceGroups/{rgname}/prov
+                                   iders/Microsoft.Network/frontDoors/{frontdoorname}/BackendPools/backendPool1
+    EnableCaching                : Disabled
+    EnabledState                 : Enabled
+    ResourceState                :
+    Id                           :
+    Name                         : routingrule1
+    Type                         :
+  description: |-
+    Create a PSRoutingRuleObject for Front Door creation
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSProtocol" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AcceptedProtocol
+  description: |+
+    Protocol schemes to match for this rule.
+    Default value is {Https, Http}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Http, Https
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendPoolName
+  isRequired: true
+  description: |+
+    Resource id of the BackendPool which this rule routes to
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomForwardingPath
+  description: |+
+    The custom path used to rewrite resource paths matched by this rule.
+    Leave empty to use incoming path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomFragment
+  description: |+
+    Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomHost
+  description: |+
+    Host to redirect. Leave empty to use the incoming host as the destination host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomPath
+  description: |+
+    The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomQueryString
+  description: |+
+    The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: DynamicCompression
+  description: |+
+    Whether to enable dynamic compression for cached content when caching is enabled.
+    Default value is Enabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: EnableCaching
+  description: |+
+    Whether to enable caching for this route. 
+    Default value is false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: EnabledState
+  description: |+
+    Whether to enable use of this rule.
+    Default value is Enabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSForwardingProtocol" data-throw-if-not-resolved="False" />
+  name: ForwardingProtocol
+  description: |+
+    The protocol this rule will use when forwarding traffic to backends
+    Default value is MatchRequest.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FrontDoorName
+  isRequired: true
+  description: |+
+    The name of the Front Door to which this routing rule belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FrontendEndpointName
+  isRequired: true
+  description: |+
+    The names of Frontend endpoints associated with this rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    RoutingRule name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PatternToMatch
+  description: |+
+    The route patterns of the rule,  Must not have any * except possibly after the final / at the end of the path. 
+    Default value is /*
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSQueryParameterStripDirective" data-throw-if-not-resolved="False" />
+  name: QueryParameterStripDirective
+  description: |+
+    The treatment of URL query terms when forming the cache key.
+    Default value is StripAll
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: StripNone, StripAll
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRedirectProtocol" data-throw-if-not-resolved="False" />
+  name: RedirectProtocol
+  description: |+
+    The protocol of the destination to where the traffic is redirected. Default value is MatchRequest
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRedirectType" data-throw-if-not-resolved="False" />
+  name: RedirectType
+  description: |+
+    The redirect type the rule will use when redirecting traffic. Default Value is Moved
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Moved, Found, TemporaryRedirect, PermanentRedirect
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name that the RoutingRule will be created in.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorRoutingRuleObject
+name: New-AzFrontDoorRoutingRuleObject
+description: |-
+  Create a PSRoutingRuleObject for Front Door creation
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorroutingruleobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRoutingRuleObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRoutingRuleObject.md

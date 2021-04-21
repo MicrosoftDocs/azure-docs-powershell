@@ -1,0 +1,27 @@
+### YamlMime:PowershellModule
+children:
+- title: Kusto
+  cmdlets:
+  - Az.Kusto.Get-AzKustoCluster
+  - Az.Kusto.Get-AzKustoDatabase
+  - Az.Kusto.New-AzKustoCluster
+  - Az.Kusto.New-AzKustoDatabase
+  - Az.Kusto.Remove-AzKustoCluster
+  - Az.Kusto.Remove-AzKustoDatabase
+  - Az.Kusto.Resume-AzKustoCluster
+  - Az.Kusto.Suspend-AzKustoCluster
+  - Az.Kusto.Test-AzKustoClusterName
+  - Az.Kusto.Update-AzKustoCluster
+  - Az.Kusto.Update-AzKustoDatabase
+uid: Az.Kusto
+name: Az.Kusto
+description: |-
+  Module to manage Kusto resources in PowerShell.
+metadata:
+  Module Name: Az.Kusto
+  Module Guid: 868389ce-dd36-4f57-a674-0970db085d9b
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.kusto
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Az.Kusto.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Az.Kusto.md

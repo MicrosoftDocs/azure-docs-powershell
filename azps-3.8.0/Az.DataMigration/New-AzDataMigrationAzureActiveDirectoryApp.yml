@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a new instance DataMigration Azure ActiveDirectory Application details.
+module: Az.DataMigration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataMigration.Models.PSAzureActiveDirectoryApp" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzDataMigrationAzureActiveDirectoryApp -ApplicationId <String> -AppKey <SecureString>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $secpasswd = ConvertTo-SecureString "Your Secret Key Here" -AsPlainText -Force
+    C:\> New-AzDmsAadApp -ApplicationId "Your AppId/Service Principal ID here" -AppKey $secpasswd
+  description: |-
+    ApplicationId : "Your AppId/Service Principal Id here"
+    AppKey        : System.Security.SecureString
+    TenantId      : "Tenant Id"
+  summary: ""
+parameters:
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: AppKey
+  isRequired: true
+  description: |+
+    Azure Active Directory Key
+
+  defaultValue: None
+  position: Named
+  aliases: Key
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  isRequired: true
+  description: |+
+    Azure Active Directory Application Id
+
+  defaultValue: None
+  position: Named
+  aliases: AppId
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.DataMigration.New-AzDataMigrationAzureActiveDirectoryApp
+name: New-AzDataMigrationAzureActiveDirectoryApp
+description: |-
+  Create a new instance DataMigration Azure ActiveDirectory Application details.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  Module Name: Az.DataMigration
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datamigration/New-AzDataMigrationAzureActiveDirectoryApp
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationAzureActiveDirectoryApp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationAzureActiveDirectoryApp.md

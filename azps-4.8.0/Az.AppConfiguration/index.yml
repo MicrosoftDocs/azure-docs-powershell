@@ -1,0 +1,23 @@
+### YamlMime:PowershellModule
+children:
+- title: App Configuration
+  cmdlets:
+  - Az.AppConfiguration.Get-AzAppConfigurationStore
+  - Az.AppConfiguration.Get-AzAppConfigurationStoreKey
+  - Az.AppConfiguration.New-AzAppConfigurationStore
+  - Az.AppConfiguration.New-AzAppConfigurationStoreKey
+  - Az.AppConfiguration.Remove-AzAppConfigurationStore
+  - Az.AppConfiguration.Test-AzAppConfigurationStoreNameAvailability
+  - Az.AppConfiguration.Update-AzAppConfigurationStore
+uid: Az.AppConfiguration
+name: Az.AppConfiguration
+description: |-
+  Microsoft Azure PowerShell: AppConfiguration cmdlets
+metadata:
+  Module Name: Az.AppConfiguration
+  Module Guid: 3ff16738-381e-4d5a-9d90-c7ef6816f78e
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.appconfiguration
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AppConfiguration/help/Az.AppConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AppConfiguration/help/Az.AppConfiguration.md

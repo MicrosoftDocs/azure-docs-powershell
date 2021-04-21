@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a route filter rule for a route filter.
+module: Az.Network
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteFilterRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzRouteFilterRuleConfig
+  href: ./Add-AzRouteFilterRuleConfig.yml
+- text: Get-AzRouteFilterRuleConfig
+  href: ./Get-AzRouteFilterRuleConfig.yml
+- text: Remove-AzRouteFilterRuleConfig
+  href: ./Remove-AzRouteFilterRuleConfig.yml
+- text: Set-AzRouteFilterRuleConfig
+  href: ./Set-AzRouteFilterRuleConfig.yml
+- text: Get-AzRouteFilter
+  href: ./Get-AzRouteFilter.yml
+- text: New-AzRouteFilter
+  href: ./New-AzRouteFilter.yml
+- text: Remove-AzRouteFilter
+  href: ./Remove-AzRouteFilter.yml
+- text: Set-AzRouteFilter
+  href: ./Set-AzRouteFilter.yml
+syntaxes:
+- >-
+  New-AzRouteFilterRuleConfig [-Force] -Name <String> -Access <String> -RouteFilterRuleType <String>
+
+   -CommunityList <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $rule1 = New-AzRouteFilterRuleConfig -Name "Rule01" -Access "Allow" -RouteFilterRuleType "Community" -CommunityList "12076:5040"
+  description: |-
+    The command creates a new route filter rule and stores it in variable $rule1.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Access
+  isRequired: true
+  description: |+
+    Access for route filter rule.
+    Valid values are Allow or Deny.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Allow, Deny
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CommunityList
+  isRequired: true
+  description: |+
+    The list of community value that route filter will filter on
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Do not ask for confirmation if you want to overrite a resource
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the route filter rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RouteFilterRuleType
+  isRequired: true
+  description: |+
+    Route Filter Rule Type.
+    Valid values are: Community
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Community
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzRouteFilterRuleConfig
+name: New-AzRouteFilterRuleConfig
+description: |-
+  The New-AzRouteFilterRuleConfig cmdlet creates a route filter rule for an Azure route filter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azroutefilterruleconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzRouteFilterRuleConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzRouteFilterRuleConfig.md

@@ -1,0 +1,176 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Nat Gateway resource in a resource group by name or NatGateway Id  or all Nat Gateway resources in a resource group.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNatGateway" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzNatGateway [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNatGateway -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzNatGateway -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:> Get-AzNatGateway -ResourceGroupName "natgateway_test"
+
+
+    IdleTimeoutInMinutes  : 4
+    ProvisioningState     : Succeeded
+    Sku                   : Microsoft.Azure.Commands.Network.Models.PSNatGatewaySku
+    PublicIpAddresses     : {/subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/publicIPAddresses/Test_Pip}
+    PublicIpPrefixes      : {}
+    SkuText               : {
+                              "Name": "Standard"
+                            }
+    PublicIpAddressesText : [
+                              {
+                                "Id": "/subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/publicIPAddresses/Test_Pip"
+                              }
+                            ]
+    PublicIpPrefixesText  : []
+    ResourceGroupName     : natgateway_test
+    Location              : eastus2
+    ResourceGuid          :
+    Type                  : Microsoft.Network/natGateways
+    Tag                   :
+    TagsTable             :
+    Name                  : nat_gateway
+    Etag                  : W/"178470d2-7b86-4ddd-b954-e0cd3ab30a90"
+    Id                    : /subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/natGateways/nat_gateway
+
+    IdleTimeoutInMinutes  : 4
+    ProvisioningState     : Succeeded
+    Sku                   : Microsoft.Azure.Commands.Network.Models.PSNatGatewaySku
+    PublicIpAddresses     : {}
+    PublicIpPrefixes      : {}
+    SkuText               : {
+                              "Name": "Standard"
+                            }
+    PublicIpAddressesText : []
+    PublicIpPrefixesText  : []
+    ResourceGroupName     : natgateway_test
+    Location              : eastus2
+    ResourceGuid          :
+    Type                  : Microsoft.Network/natGateways
+    Tag                   :
+    TagsTable             :
+    Name                  : ng1
+    Etag                  : W/"bdf98e30-d6c6-4af2-8f62-10d1fdaa6e84"
+    Id                    : /subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/natGateways/ng1
+
+
+    PS C:> Get-AzNatGateway -ResourceGroupName "natgateway_test" -Name "nat_gateway"
+
+
+    IdleTimeoutInMinutes  : 4
+    ProvisioningState     : Succeeded
+    Sku                   : Microsoft.Azure.Commands.Network.Models.PSNatGatewaySku
+    PublicIpAddresses     : {/subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/publicIPAddresses/Test_Pip}
+    PublicIpPrefixes      : {}
+    SkuText               : {
+                              "Name": "Standard"
+                            }
+    PublicIpAddressesText : [
+                              {
+                                "Id": "/subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/publicIPAddresses/Test_Pip"
+                              }
+                            ]
+    PublicIpPrefixesText  : []
+    ResourceGroupName     : natgateway_test
+    Location              : eastus2
+    ResourceGuid          :
+    Type                  : Microsoft.Network/natGateways
+    Tag                   :
+    TagsTable             :
+    Name                  : nat_gateway
+    Etag                  : W/"178470d2-7b86-4ddd-b954-e0cd3ab30a90"
+    Id                    : /subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/natGateways/nat_gateway
+
+    PS C:> Get-AzNatGateway -ResourceId "/subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/natGateways/nat_gateway"
+
+
+    IdleTimeoutInMinutes  : 4
+    ProvisioningState     : Succeeded
+    Sku                   : Microsoft.Azure.Commands.Network.Models.PSNatGatewaySku
+    PublicIpAddresses     : {/subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/publicIPAddresses/Test_Pip}
+    PublicIpPrefixes      : {}
+    SkuText               : {
+                              "Name": "Standard"
+                            }
+    PublicIpAddressesText : [
+                              {
+                                "Id": "/subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/publicIPAddresses/Test_Pip"
+                              }
+                            ]
+    PublicIpPrefixesText  : []
+    ResourceGroupName     : natgateway_test
+    Location              : eastus2
+    ResourceGuid          :
+    Type                  : Microsoft.Network/natGateways
+    Tag                   :
+    TagsTable             :
+    Name                  : nat_gateway
+    Etag                  : W/"178470d2-7b86-4ddd-b954-e0cd3ab30a90"
+    Id                    : /subscriptions/<subid>/resourceGroups/natgateway_test/providers/Microsoft.Network/natGateways/nat_gateway
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the nat gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name of the nat gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Nat Gateway Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzNatGateway
+name: Get-AzNatGateway
+description: |-
+  Gets a Nat Gateway resource in a resource group by name OR NatGateway Id OR all Nat Gateway resources in a resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznatgateway
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNatGateway.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNatGateway.md

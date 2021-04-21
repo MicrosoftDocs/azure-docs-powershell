@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an array of URL path mappings to a backend server pool.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayUrlPathMapConfig
+  href: ./Add-AzApplicationGatewayUrlPathMapConfig.yml
+- text: Get-AzApplicationGatewayUrlPathMapConfig
+  href: ./Get-AzApplicationGatewayUrlPathMapConfig.yml
+- text: Remove-AzApplicationGatewayUrlPathMapConfig
+  href: ./Remove-AzApplicationGatewayUrlPathMapConfig.yml
+- text: Set-AzApplicationGatewayUrlPathMapConfig
+  href: ./Set-AzApplicationGatewayUrlPathMapConfig.yml
+syntaxes:
+- >-
+  New-AzApplicationGatewayUrlPathMapConfig -Name <String> -PathRules <PSApplicationGatewayPathRule[]>
+
+   -DefaultBackendAddressPool <PSApplicationGatewayBackendAddressPool>
+
+   -DefaultBackendHttpSettings <PSApplicationGatewayBackendHttpSettings>
+
+   [-DefaultRewriteRuleSet <PSApplicationGatewayRewriteRuleSet>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  New-AzApplicationGatewayUrlPathMapConfig -Name <String> -PathRules <PSApplicationGatewayPathRule[]>
+
+   -DefaultBackendAddressPoolId <String> -DefaultBackendHttpSettingsId <String>
+
+   [-DefaultRewriteRuleSetId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzApplicationGatewayUrlPathMapConfig -Name <String> -PathRules <PSApplicationGatewayPathRule[]>
+
+   [-DefaultRewriteRuleSet <PSApplicationGatewayRewriteRuleSet>]
+
+   -DefaultRedirectConfiguration <PSApplicationGatewayRedirectConfiguration>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzApplicationGatewayUrlPathMapConfig -Name <String> -PathRules <PSApplicationGatewayPathRule[]>
+
+   [-DefaultRewriteRuleSetId <String>] -DefaultRedirectConfigurationId <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an array of URL path mappings to a backend server pool'
+  code: |-
+    PS C:\>New-AzApplicationGatewayUrlPathMapConfig -Name $UrlPathMapName -PathRules $VideoPathRule, $ImagePathRule -DefaultBackendAddressPool $Pool -DefaultBackendHttpSettings $PoolSetting02
+  description: |-
+    This command creates an array of URL path mappings to a backend server pool.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" />
+  name: DefaultBackendAddressPool
+  isRequired: true
+  description: |+
+    Specifies the default backend address pool to route in case none of the rules specified in the *pathRules* parameter match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultBackendAddressPoolId
+  isRequired: true
+  description: |+
+    Specifies the default backend address pool ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+  name: DefaultBackendHttpSettings
+  isRequired: true
+  description: |+
+    Specifies the default backend HTTP settings to use in case none of the rules specified in the *pathRules* parameter match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultBackendHttpSettingsId
+  isRequired: true
+  description: |+
+    Specifies the default backend HTTP settings ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" />
+  name: DefaultRedirectConfiguration
+  isRequired: true
+  description: |+
+    Application gateway default RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultRedirectConfigurationId
+  isRequired: true
+  description: |+
+    ID of the application gateway default RedirectConfiguration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet" data-throw-if-not-resolved="False" />
+  name: DefaultRewriteRuleSet
+  description: |+
+    Application gateway default rewrite rule set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultRewriteRuleSetId
+  description: |+
+    ID of the application gateway default rewrite rule set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the URL path map name that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPathRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PathRules
+  isRequired: true
+  description: |+
+    Specifies a list of path rules.
+    Note that the path rules are order sensitive, they are applied in order they are specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGatewayUrlPathMapConfig
+name: New-AzApplicationGatewayUrlPathMapConfig
+description: |-
+  The **New-AzApplicationGatewayUrlPathMapConfig** cmdlet creates an array of URL path mappings to a backend server pool.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: F312FD6E-AF0F-4901-B763-741E1B46A654
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewayurlpathmapconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayUrlPathMapConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayUrlPathMapConfig.md

@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the list of jobs from a cluster and lists them in reverse chronological order, or retrieves a specific job.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightJob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzHDInsightHiveJobDefinition
+  href: ./New-AzHDInsightHiveJobDefinition.yml
+- text: Start-AzHDInsightJob
+  href: ./Start-AzHDInsightJob.yml
+- text: Stop-AzHDInsightJob
+  href: ./Stop-AzHDInsightJob.yml
+- text: Wait-AzHDInsightJob
+  href: ./Wait-AzHDInsightJob.yml
+syntaxes:
+- >-
+  Get-AzHDInsightJob [-ClusterName] <String> [-HttpCredential] <PSCredential> [[-JobId] <String>]
+
+   [-NumOfJobs <Int32>] [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get recent jobs for a specified Azure HDInsight cluster'
+  code: |-
+    PS C:\># Cluster info
+    PS C:\> $clusterName = "your-hadoop-001"
+    PS C:\> $clusterCreds = Get-Credential
+
+    # Hive job details
+    PS C:\> $statusFolder = "tempStatusFolder/"
+    PS C:\> $query = "SHOW TABLES"
+
+    PS C:\> New-AzHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+                -Query $query `
+            | Start-AzHDInsightJob -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds `
+            | Get-AzHDInsightJob -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds
+  description: |-
+    This command gets all recent jobs for the cluster named your-hadoop-001.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: HttpCredential
+  isRequired: true
+  description: |+
+    Specifies the cluster login (HTTP) credentials for the cluster.
+
+  defaultValue: None
+  position: "1"
+  aliases: ClusterCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobId
+  description: |+
+    Specifies the job ID of the job to get.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: NumOfJobs
+  description: |+
+    Specifies the number of jobs to retrieve.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Get-AzHDInsightJob
+name: Get-AzHDInsightJob
+description: |-
+  The **Get-AzHDInsightJob** cmdlet gets recent jobs for a specified Azure HDInsight cluster in reverse chronological order, with the most recent job at the top of the list.
+  Get a specific job by providing the *JobId* parameter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: AFE90092-8B25-4897-8D3A-3E732CC5CBA6
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/get-azhdinsightjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Get-AzHDInsightJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Get-AzHDInsightJob.md

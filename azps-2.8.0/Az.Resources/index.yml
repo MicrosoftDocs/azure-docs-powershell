@@ -1,0 +1,118 @@
+### YamlMime:PowershellModule
+children:
+- title: Active Directory
+  cmdlets:
+  - Az.Resources.Add-AzADGroupMember
+  - Az.Resources.Get-AzADAppCredential
+  - Az.Resources.Get-AzADApplication
+  - Az.Resources.Get-AzADGroup
+  - Az.Resources.Get-AzADGroupMember
+  - Az.Resources.Get-AzADServicePrincipal
+  - Az.Resources.Get-AzADSpCredential
+  - Az.Resources.Get-AzADUser
+  - Az.Resources.New-AzADAppCredential
+  - Az.Resources.New-AzADApplication
+  - Az.Resources.New-AzADGroup
+  - Az.Resources.New-AzADServicePrincipal
+  - Az.Resources.New-AzADSpCredential
+  - Az.Resources.New-AzADUser
+  - Az.Resources.Remove-AzADAppCredential
+  - Az.Resources.Remove-AzADApplication
+  - Az.Resources.Remove-AzADGroup
+  - Az.Resources.Remove-AzADGroupMember
+  - Az.Resources.Remove-AzADServicePrincipal
+  - Az.Resources.Remove-AzADSpCredential
+  - Az.Resources.Remove-AzADUser
+  - Az.Resources.Update-AzADApplication
+  - Az.Resources.Update-AzADServicePrincipal
+  - Az.Resources.Update-AzADUser
+- title: Policies
+  cmdlets:
+  - Az.Resources.Get-AzPolicyAlias
+  - Az.Resources.Get-AzPolicyAssignment
+  - Az.Resources.Get-AzPolicyDefinition
+  - Az.Resources.Get-AzPolicySetDefinition
+  - Az.Resources.New-AzPolicyAssignment
+  - Az.Resources.New-AzPolicyDefinition
+  - Az.Resources.New-AzPolicySetDefinition
+  - Az.Resources.Remove-AzPolicyAssignment
+  - Az.Resources.Remove-AzPolicyDefinition
+  - Az.Resources.Remove-AzPolicySetDefinition
+  - Az.Resources.Set-AzPolicyAssignment
+  - Az.Resources.Set-AzPolicyDefinition
+  - Az.Resources.Set-AzPolicySetDefinition
+- title: Resources
+  cmdlets:
+  - Az.Resources.Export-AzResourceGroup
+  - Az.Resources.Get-AzDenyAssignment
+  - Az.Resources.Get-AzDeployment
+  - Az.Resources.Get-AzDeploymentOperation
+  - Az.Resources.Get-AzLocation
+  - Az.Resources.Get-AzManagedApplication
+  - Az.Resources.Get-AzManagedApplicationDefinition
+  - Az.Resources.Get-AzManagementGroup
+  - Az.Resources.Get-AzProviderFeature
+  - Az.Resources.Get-AzProviderOperation
+  - Az.Resources.Get-AzResource
+  - Az.Resources.Get-AzResourceGroup
+  - Az.Resources.Get-AzResourceGroupDeployment
+  - Az.Resources.Get-AzResourceGroupDeploymentOperation
+  - Az.Resources.Get-AzResourceLock
+  - Az.Resources.Get-AzResourceProvider
+  - Az.Resources.Get-AzRoleAssignment
+  - Az.Resources.Get-AzRoleDefinition
+  - Az.Resources.Get-AzTag
+  - Az.Resources.Invoke-AzResourceAction
+  - Az.Resources.Move-AzResource
+  - Az.Resources.New-AzDeployment
+  - Az.Resources.New-AzManagedApplication
+  - Az.Resources.New-AzManagedApplicationDefinition
+  - Az.Resources.New-AzManagementGroup
+  - Az.Resources.New-AzManagementGroupSubscription
+  - Az.Resources.New-AzResource
+  - Az.Resources.New-AzResourceGroup
+  - Az.Resources.New-AzResourceGroupDeployment
+  - Az.Resources.New-AzResourceLock
+  - Az.Resources.New-AzRoleAssignment
+  - Az.Resources.New-AzRoleDefinition
+  - Az.Resources.New-AzTag
+  - Az.Resources.Register-AzProviderFeature
+  - Az.Resources.Register-AzResourceProvider
+  - Az.Resources.Remove-AzDeployment
+  - Az.Resources.Remove-AzManagedApplication
+  - Az.Resources.Remove-AzManagedApplicationDefinition
+  - Az.Resources.Remove-AzManagementGroup
+  - Az.Resources.Remove-AzManagementGroupSubscription
+  - Az.Resources.Remove-AzResource
+  - Az.Resources.Remove-AzResourceGroup
+  - Az.Resources.Remove-AzResourceGroupDeployment
+  - Az.Resources.Remove-AzResourceLock
+  - Az.Resources.Remove-AzRoleAssignment
+  - Az.Resources.Remove-AzRoleDefinition
+  - Az.Resources.Remove-AzTag
+  - Az.Resources.Save-AzDeploymentTemplate
+  - Az.Resources.Save-AzResourceGroupDeploymentTemplate
+  - Az.Resources.Set-AzManagedApplication
+  - Az.Resources.Set-AzManagedApplicationDefinition
+  - Az.Resources.Set-AzResource
+  - Az.Resources.Set-AzResourceGroup
+  - Az.Resources.Set-AzResourceLock
+  - Az.Resources.Set-AzRoleDefinition
+  - Az.Resources.Stop-AzDeployment
+  - Az.Resources.Stop-AzResourceGroupDeployment
+  - Az.Resources.Test-AzDeployment
+  - Az.Resources.Test-AzResourceGroupDeployment
+  - Az.Resources.Unregister-AzResourceProvider
+  - Az.Resources.Update-AzManagementGroup
+uid: Az.Resources
+name: Az.Resources
+description: |-
+  This topic displays help topics for the Azure Resource Manager Cmdlets.
+metadata:
+  Module Name: Az.Resources
+  Module Guid: ab3ca893-26fe-44b0-bd3c-8933df144d7b
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.resources
+  Help Version: 5.5.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Az.Resources.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Az.Resources.md

@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet retrieves the current value of the generated interchange control number per agreement.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.LogicApp.Utilities.IntegrationAccountControlNumber" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzIntegrationAccountGeneratedIcn
+  href: ./Set-AzIntegrationAccountGeneratedIcn.yml
+syntaxes:
+- >-
+  Get-AzIntegrationAccountGeneratedIcn -ResourceGroupName <String> -Name <String> [-AgreementName <String>]
+
+   [-AgreementType <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzIntegrationAccountGeneratedIcn -AgreementType "X12" -ResourceGroupName "ResourceGroup1" -Name "IntegrationAccount1" -AgreementName "X12IntegrationAccountAgreement"
+    ControlNumber            : 1000
+    ControlNumberChangedTime : 2/15/2017 12:36:00 AM
+    IsMessageProcessingFailed:
+  description: |-
+    This command gets the integration account generated X12 interchange control number by agreement name. Please make sure agreement specified is of type "X12"
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzIntegrationAccountGeneratedIcn -AgreementType "Edifact" -ResourceGroupName "ResourceGroup1" -Name "IntegrationAccount1" -AgreementName "EdifactIntegrationAccountAgreement"
+    ControlNumber            : 1000
+    ControlNumberChangedTime : 2/15/2017 12:36:00 AM
+    IsMessageProcessingFailed:
+  description: |-
+    This command gets the integration account generated Edifact interchange control number by agreement name. Please make sure agreement specified is of type "Edifact"
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzIntegrationAccountGeneratedIcn -AgreementType "X12" -ResourceGroupName "ResourceGroup1" -Name "IntegrationAccount1"
+    ControlNumber            : 1000
+    ControlNumberChangedTime : 2/22/2017 8:05:41 PM
+    AgreementName            : X12IntegrationAccountAgreement1
+    IsMessageProcessingFailed:
+
+    ControlNumber            : 1000
+    ControlNumberChangedTime : 2/22/2017 8:05:41 PM
+    AgreementName            : X12IntegrationAccountAgreement2
+    IsMessageProcessingFailed:
+
+    ControlNumber            : No generated control number was found for this agreement.
+    ControlNumberChangedTime : 1/1/0001 12:00:00 AM
+    AgreementName            : X12IntegrationAccountAgreement3
+    IsMessageProcessingFailed:
+  description: |-
+    This command gets all the generated X12 interchange control numbers by integration account name.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AgreementName
+  description: |+
+    The integration account agreement name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AgreementType
+  description: |+
+    The integration account agreement type.
+
+  defaultValue: None
+  position: Named
+  aliases: MessageType
+  parameterValueGroup: X12, Edifact
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The integration account name.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The integration account resource group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.LogicApp.Get-AzIntegrationAccountGeneratedIcn
+name: Get-AzIntegrationAccountGeneratedIcn
+description: |-
+  This cmdlet is meant to be used in disaster recovery scenarios to retrieve the current value of the generated interchange control number so to write back an increased value with Set-AzIntegrationAccountGeneratedIcn.
+  The interchange control number should be increased to avoid duplicate interchange control numbers for the numbers that could not yet be replicated to the passive region when the disaster happened in the active region.
+  Please do provide the "-AgreementType" parameter to specify whether X12 or Edifact control numbers to return
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azintegrationaccountgeneratedicn
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountGeneratedIcn.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountGeneratedIcn.md

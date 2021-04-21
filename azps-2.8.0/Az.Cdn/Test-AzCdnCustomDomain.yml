@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks whether a custom domain can be added to an endpoint.
+module: Az.Cdn
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSValidateCustomDomainOutput" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzCdnCustomDomain
+  href: ./Get-AzCdnCustomDomain.yml
+- text: New-AzCdnCustomDomain
+  href: ./New-AzCdnCustomDomain.yml
+- text: Remove-AzCdnCustomDomain
+  href: ./Remove-AzCdnCustomDomain.yml
+syntaxes:
+- >-
+  Test-AzCdnCustomDomain -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
+
+   -CustomDomainHostName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Test-AzCdnCustomDomain -CdnEndpoint <PSEndpoint> -CustomDomainHostName <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint" data-throw-if-not-resolved="False" />
+  name: CdnEndpoint
+  isRequired: true
+  description: |+
+    Specifies the endpoint to which you want to add the custom domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomDomainHostName
+  isRequired: true
+  description: |+
+    Specifies the host name of the custom domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EndpointName
+  isRequired: true
+  description: |+
+    Specifies the name of the endpoint to which you want to add the custom domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProfileName
+  isRequired: true
+  description: |+
+    Specifies the name of the profile.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Cdn.Test-AzCdnCustomDomain
+name: Test-AzCdnCustomDomain
+description: |-
+  The **Test-AzCdnCustomDomain** cmdlet checks whether a custom domain can be added to an endpoint by validating the CName mapping.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
+  Module Name: Az.Cdn
+  ms.assetid: 8C4E824F-FB4A-4DE7-8FD9-3FDA3848F25C
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/test-azcdncustomdomain
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Test-AzCdnCustomDomain.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Test-AzCdnCustomDomain.md

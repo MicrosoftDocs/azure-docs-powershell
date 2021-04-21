@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about a media service.
+module: Az.Media
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Media.Models.PSMediaService" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzMediaService
+  href: ./New-AzMediaService.yml
+- text: Remove-AzMediaService
+  href: ./Remove-AzMediaService.yml
+- text: Set-AzMediaService
+  href: ./Set-AzMediaService.yml
+syntaxes:
+- >-
+  Get-AzMediaService [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzMediaService [-ResourceGroupName] <String> [-AccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all media services in a resource group'
+  code: |-
+    PS C:\>Get-AzMediaService -ResourceGroupName "ResourceGroup001"
+  description: |-
+    This command gets properties for all media services in the resource group named ResourceGroup001.
+  summary: ""
+- title: 'Example 2: Get media service properties'
+  code: |-
+    PS C:\>Get-AzMediaService -ResourceGroupName "ResourceGroup002" -AccountName "MediaService1"
+  description: |-
+    This command gets the properties of the media service named MediaService1 that belongs to the resource group named ResourceGroup002.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the media service that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the media service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Media.Get-AzMediaService
+name: Get-AzMediaService
+description: |-
+  The **Get-AzMediaService** cmdlet gets information about a media service.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
+  Module Name: Az.Media
+  ms.assetid: 9843D191-CBC4-481A-BD36-D7B2D7917BD9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.media/get-azmediaservice
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Get-AzMediaService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Get-AzMediaService.md

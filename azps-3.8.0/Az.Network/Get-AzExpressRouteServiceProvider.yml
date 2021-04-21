@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list ExpressRoute service providers and their attributes.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteServiceProvider" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzExpressRouteCircuitARPTable
+  href: Get-AzExpressRouteCircuitARPTable.yml
+- text: Get-AzExpressRouteCircuitRouteTable
+  href: Get-AzExpressRouteCircuitRouteTable.yml
+- text: Get-AzExpressRouteCircuitRouteTableSummary
+  href: Get-AzExpressRouteCircuitRouteTableSummary.yml
+- text: Get-AzExpressRouteCircuitStat
+  href: Get-AzExpressRouteCircuitStat.yml
+syntaxes:
+- Get-AzExpressRouteServiceProvider [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a list of service provider with locations in "Silicon Valley"'
+  code: |-
+    Get-AzExpressRouteServiceProvider |
+       Where-Object PeeringLocations -Contains "Silicon Valley" |
+       Select-Object Name
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzExpressRouteServiceProvider
+name: Get-AzExpressRouteServiceProvider
+description: |-
+  The **Get-AzExpressRouteServiceProvider** cmdlet retrieves a list ExpressRoute service
+  providers and their attributes. Attribute include location and bandwidth options.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 009F6E65-0268-4505-AEC1-FF379CB96804
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azexpressrouteserviceprovider
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteServiceProvider.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteServiceProvider.md

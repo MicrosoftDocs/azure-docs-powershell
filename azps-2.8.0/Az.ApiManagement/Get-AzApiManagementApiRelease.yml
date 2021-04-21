@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the API Release.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApiManagementApiRelease
+  href: ./Get-AzApiManagementApiRelease.yml
+- text: Remove-AzApiManagementApiRelease
+  href: ./Remove-AzApiManagementApiRelease.yml
+- text: Update-AzApiManagementApiRelease
+  href: ./Update-AzApiManagementApiRelease.yml
+syntaxes:
+- >-
+  Get-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> [-ReleaseId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementApiRelease -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all releases of the API'
+  code: |-
+    PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementApiRelease -Context $ApiMgmtContext -ApiId 5adf6fbf0faadf3ad8558065
+    ReleaseId         : 5afccaf6b89fd067426d402e
+    ApiId             : 5adf6fbf0faadf3ad8558065
+    CreatedDateTime   : 5/17/2018 12:21:12 AM
+    UpdatedDateTime   : 5/17/2018 12:21:12 AM
+    Notes             : creating a new release
+    Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/apis/5adf6fbf0faadf3ad8558065/releases/5afccaf6b89fd067426d402e
+    ResourceGroupName : Api-Default-WestUS
+    ServiceName       : contoso
+  description: |-
+    This command gets all of the releases of the `echo-api` API for the specified context.
+  summary: ""
+- title: 'Example 2: Get the release information of the particular API release'
+  code: |-
+    PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementApiRelease -Context $ApiMgmtContext -ApiId 5adf6fbf0faadf3ad8558065 -ReleaseId 5afccaf6b89fd067426d402e
+    ReleaseId         : 5afccaf6b89fd067426d402e
+    ApiId             : 5adf6fbf0faadf3ad8558065
+    CreatedDateTime   : 5/17/2018 12:21:12 AM
+    UpdatedDateTime   : 5/17/2018 12:21:12 AM
+    Notes             : creating a new release
+    Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Mi
+                        crosoft.ApiManagement/service/contoso/apis/5adf6fbf0faadf3ad8558065/releases/5afccaf6b89fd067426d402
+                        e
+    ResourceGroupName : Api-Default-WestUS
+    ServiceName       : contoso
+  description: |-
+    This command gets the releases information of a particular API with the specified releaseId.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiId
+  isRequired: true
+  description: |+
+    API identifier to look for.
+    If specified will try to get the API by the Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Instance of PsApiManagementContext.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReleaseId
+  description: |+
+    The identifier of the Release.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Arm Resource Identifier of a Api Release. If specified will try to find api release by the identifier. This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagementApiRelease
+name: Get-AzApiManagementApiRelease
+description: |-
+  The **Get-AzApiManagementApiRelease** cmdlet gets one or more releases of the Azure API Management API.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementapirelease
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiRelease.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiRelease.md

@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generate Shared Access Signature token for Azure Storage share.
+module: Az.Storage
+notes: |-
+  * Keywords: common, azure, services, data, storage, blob, queue, table
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageShare
+  href: ./Get-AzStorageShare.yml
+- text: New-AzStorageFileSASToken
+  href: ./New-AzStorageFileSASToken.yml
+syntaxes:
+- >-
+  New-AzStorageShareSASToken [-ShareName] <String> -Policy <String> [-Protocol <SharedAccessProtocol>]
+
+   [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
+
+   [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzStorageShareSASToken [-ShareName] <String> [-Permission <String>] [-Protocol <SharedAccessProtocol>]
+
+   [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
+
+   [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Generate a shared access signature token for a share'
+  code: |-
+    PS C:\>New-AzStorageShareSASToken -ShareName "ContosoShare" -Permission "rwdl"
+  description: |-
+    This command creates a shared access signature token for the share named ContosoShare.
+  summary: ""
+- title: 'Example 2: Generate multiple shared access signature token by using the pipeline'
+  code: |-
+    PS C:\>Get-AzStorageShare -Prefix "test" | New-AzStorageShareSASToken -Permission "rwdl"
+  description: |-
+    This command gets all the Storage shares that match the prefix test.
+    The command passes them to the current cmdlet by using the pipeline operator.
+    The current cmdlet creates a shared access token for each Storage share that has the specified permissions.
+  summary: ""
+- title: 'Example 3: Generate a shared access signature token that uses a shared access policy'
+  code: |-
+    PS C:\>New-AzStorageShareSASToken -ShareName "ContosoShare" -Policy "ContosoPolicy03"
+  description: |-
+    This command creates a shared access signature token for the Storage share named ContosoShare that has the policy named ContosoPolicy03.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure Storage context.
+    To obtain a context, use the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ExpiryTime
+  description: |+
+    Specifies the time at which the shared access signature becomes invalid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FullUri
+  description: |+
+    Indicates that this cmdlet return the full blob URI and the shared access signature token.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IPAddressOrRange
+  description: |+
+    Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+    The range is inclusive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Specifies the permissions in the token to access the share and files under the share.
+    It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the stored access policy for a share.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Storage.SharedAccessProtocol" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Protocol
+  description: |+
+    Specifies the protocol permitted for a request.
+    The acceptable values for this parameter are:
+    * HttpsOnly
+    * HttpsOrHttp
+    The default value is HttpsOrHttp.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: HttpsOnly, HttpsOrHttp
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShareName
+  isRequired: true
+  description: |+
+    Specifies the name of the Storage share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: N, Name
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies the time at which the shared access signature becomes valid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageShareSASToken
+name: New-AzStorageShareSASToken
+description: |-
+  The **New-AzStorageShareSASToken** cmdlet generates a shared access signature token for an Azure Storage share.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: BDF42420-3616-4A64-9562-1A896F828728
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstoragesharesastoken
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageShareSASToken.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageShareSASToken.md

@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a PSBackendPoolsSetting object for Front Door creation.
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSBackendPoolsSetting" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzFrontDoorBackendPoolsSettingObject [-EnforceCertificateNameCheck <PSEnabledState>]
+
+   [-SendRecvTimeoutInSeconds <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create BackendPoolsSettings object using defaults'
+  code: |-
+    PS C:\> New-AzFrontDoorBackendpoolsSettingObject
+
+
+    EnforceCertificateNameCheck : Enabled
+    SendRecvTimeoutInSeconds      : 30
+    Id                          :
+    Name                        :
+    Type                        :
+  description: ""
+  summary: ""
+- title: 'Example 2: Create BackendPoolsSettings object with user specified values'
+  code: |-
+    PS C:\> New-AzFrontDoorBackendpoolsSettingObject -SendRecvTimeoutInSeconds 60 -EnforceCertificateNameCheck Enabled
+
+
+    EnforceCertificateNameCheck : Enabled
+    SendRecvTimeoutInSeconds      : 60
+    Id                          :
+    Name                        :
+    Type                        :
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: EnforceCertificateNameCheck
+  description: |+
+    Whether to enforce certificate name check on HTTPS requests to all backend pools.
+    No effect on non-HTTPS requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SendRecvTimeoutInSeconds
+  description: |+
+    Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorBackendPoolsSettingObject
+name: New-AzFrontDoorBackendPoolsSettingObject
+description: |-
+  The **New-AzFrontDoorBackendpoolsSettingObject** cmdlet creates a new PSBackendPoolsSettings object for Front Door creation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorbackendpoolssettingobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendPoolsSettingObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendPoolsSettingObject.md

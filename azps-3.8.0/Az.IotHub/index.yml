@@ -1,0 +1,80 @@
+### YamlMime:PowershellModule
+children:
+- title: IoT
+  cmdlets:
+  - Az.IotHub.Add-AzIotHubCertificate
+  - Az.IotHub.Add-AzIotHubConfiguration
+  - Az.IotHub.Add-AzIotHubDevice
+  - Az.IotHub.Add-AzIotHubDeviceChildren
+  - Az.IotHub.Add-AzIotHubEventHubConsumerGroup
+  - Az.IotHub.Add-AzIotHubKey
+  - Az.IotHub.Add-AzIotHubMessageEnrichment
+  - Az.IotHub.Add-AzIotHubModule
+  - Az.IotHub.Add-AzIotHubRoute
+  - Az.IotHub.Add-AzIotHubRoutingEndpoint
+  - Az.IotHub.Get-AzIotHub
+  - Az.IotHub.Get-AzIotHubCertificate
+  - Az.IotHub.Get-AzIotHubCertificateVerificationCode
+  - Az.IotHub.Get-AzIotHubConfiguration
+  - Az.IotHub.Get-AzIotHubConnectionString
+  - Az.IotHub.Get-AzIotHubDevice
+  - Az.IotHub.Get-AzIotHubDeviceChildren
+  - Az.IotHub.Get-AzIotHubDeviceConnectionString
+  - Az.IotHub.Get-AzIotHubDeviceParent
+  - Az.IotHub.Get-AzIotHubDeviceTwin
+  - Az.IotHub.Get-AzIotHubDistributedTracing
+  - Az.IotHub.Get-AzIotHubEventHubConsumerGroup
+  - Az.IotHub.Get-AzIotHubJob
+  - Az.IotHub.Get-AzIotHubKey
+  - Az.IotHub.Get-AzIotHubMessageEnrichment
+  - Az.IotHub.Get-AzIotHubModule
+  - Az.IotHub.Get-AzIotHubModuleConnectionString
+  - Az.IotHub.Get-AzIotHubModuleTwin
+  - Az.IotHub.Get-AzIotHubQuotaMetric
+  - Az.IotHub.Get-AzIotHubRegistryStatistic
+  - Az.IotHub.Get-AzIotHubRoute
+  - Az.IotHub.Get-AzIotHubRoutingEndpoint
+  - Az.IotHub.Get-AzIotHubValidSku
+  - Az.IotHub.Invoke-AzIotHubDeviceMethod
+  - Az.IotHub.Invoke-AzIotHubManualFailover
+  - Az.IotHub.Invoke-AzIotHubModuleMethod
+  - Az.IotHub.New-AzIotHub
+  - Az.IotHub.New-AzIotHubExportDevice
+  - Az.IotHub.New-AzIotHubImportDevice
+  - Az.IotHub.New-AzIotHubKey
+  - Az.IotHub.Remove-AzIotHub
+  - Az.IotHub.Remove-AzIotHubCertificate
+  - Az.IotHub.Remove-AzIotHubConfiguration
+  - Az.IotHub.Remove-AzIotHubDevice
+  - Az.IotHub.Remove-AzIotHubDeviceChildren
+  - Az.IotHub.Remove-AzIotHubEventHubConsumerGroup
+  - Az.IotHub.Remove-AzIotHubKey
+  - Az.IotHub.Remove-AzIotHubMessageEnrichment
+  - Az.IotHub.Remove-AzIotHubModule
+  - Az.IotHub.Remove-AzIotHubRoute
+  - Az.IotHub.Remove-AzIotHubRoutingEndpoint
+  - Az.IotHub.Set-AzIotHub
+  - Az.IotHub.Set-AzIotHubConfiguration
+  - Az.IotHub.Set-AzIotHubDevice
+  - Az.IotHub.Set-AzIotHubDeviceParent
+  - Az.IotHub.Set-AzIotHubDistributedTracing
+  - Az.IotHub.Set-AzIotHubMessageEnrichment
+  - Az.IotHub.Set-AzIotHubModule
+  - Az.IotHub.Set-AzIotHubRoute
+  - Az.IotHub.Set-AzIotHubVerifiedCertificate
+  - Az.IotHub.Test-AzIotHubRoute
+  - Az.IotHub.Update-AzIotHub
+  - Az.IotHub.Update-AzIotHubDeviceTwin
+  - Az.IotHub.Update-AzIotHubModuleTwin
+uid: Az.IotHub
+name: Az.IotHub
+description: |-
+  Commands for Managing Azure IotHubs
+metadata:
+  Module Name: Az.IotHub
+  Module Guid: 51a3a993-fe39-4f8f-a437-2cb751584af5
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.iothub
+  Help Version: 3.1.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/IotHub/IotHub/help/Az.IotHub.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/IotHub/IotHub/help/Az.IotHub.md

@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the details of a file or folder in Data Lake Store.
+module: Az.DataLakeStore
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItem" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-AzDataLakeStoreItem
+  href: ./Export-AzDataLakeStoreItem.yml
+- text: Get-AzDataLakeStoreChildItem
+  href: ./Get-AzDataLakeStoreChildItem.yml
+- text: Import-AzDataLakeStoreItem
+  href: ./Import-AzDataLakeStoreItem.yml
+- text: Join-AzDataLakeStoreItem
+  href: ./Join-AzDataLakeStoreItem.yml
+- text: Move-AzDataLakeStoreItem
+  href: ./Move-AzDataLakeStoreItem.yml
+- text: New-AzDataLakeStoreItem
+  href: ./New-AzDataLakeStoreItem.yml
+- text: Remove-AzDataLakeStoreItem
+  href: ./Remove-AzDataLakeStoreItem.yml
+- text: Test-AzDataLakeStoreItem
+  href: ./Test-AzDataLakeStoreItem.yml
+syntaxes:
+- >-
+  Get-AzDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInstance>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get details of a file from the Data Lake Store'
+  code: |-
+    PS C:\>Get-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "/MyFiles/Test.csv"
+  description: |-
+    This command gets the details of the file Test.csv from the Data Lake Store.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    Specifies the name of the Data Lake Store account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the Data Lake Store path from which to get details of an item, starting with the root directory (/).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataLakeStore.Get-AzDataLakeStoreItem
+name: Get-AzDataLakeStoreItem
+description: |-
+  The **Get-AzDataLakeStoreItem** cmdlet gets the details of a file or folder in Data Lake Store.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  Module Name: Az.DataLakeStore
+  ms.assetid: ECA70C6C-E0B0-445D-BCAD-041625FAC632
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/get-azdatalakestoreitem
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItem.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItem.md

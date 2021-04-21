@@ -1,0 +1,50 @@
+### YamlMime:PowershellModule
+children:
+- title: Front Door
+  cmdlets:
+  - Az.FrontDoor.Disable-AzFrontDoorCustomDomainHttps
+  - Az.FrontDoor.Enable-AzFrontDoorCustomDomainHttps
+  - Az.FrontDoor.Get-AzFrontDoor
+  - Az.FrontDoor.Get-AzFrontDoorFrontendEndpoint
+  - Az.FrontDoor.Get-AzFrontDoorRulesEngine
+  - Az.FrontDoor.Get-AzFrontDoorWafManagedRuleSetDefinition
+  - Az.FrontDoor.Get-AzFrontDoorWafPolicy
+  - Az.FrontDoor.New-AzFrontDoor
+  - Az.FrontDoor.New-AzFrontDoorBackendObject
+  - Az.FrontDoor.New-AzFrontDoorBackendPoolObject
+  - Az.FrontDoor.New-AzFrontDoorBackendPoolsSettingObject
+  - Az.FrontDoor.New-AzFrontDoorFrontendEndpointObject
+  - Az.FrontDoor.New-AzFrontDoorHeaderActionObject
+  - Az.FrontDoor.New-AzFrontDoorHealthProbeSettingObject
+  - Az.FrontDoor.New-AzFrontDoorLoadBalancingSettingObject
+  - Az.FrontDoor.New-AzFrontDoorRoutingRuleObject
+  - Az.FrontDoor.New-AzFrontDoorRulesEngine
+  - Az.FrontDoor.New-AzFrontDoorRulesEngineActionObject
+  - Az.FrontDoor.New-AzFrontDoorRulesEngineMatchConditionObject
+  - Az.FrontDoor.New-AzFrontDoorRulesEngineRuleObject
+  - Az.FrontDoor.New-AzFrontDoorWafCustomRuleObject
+  - Az.FrontDoor.New-AzFrontDoorWafManagedRuleExclusionObject
+  - Az.FrontDoor.New-AzFrontDoorWafManagedRuleObject
+  - Az.FrontDoor.New-AzFrontDoorWafManagedRuleOverrideObject
+  - Az.FrontDoor.New-AzFrontDoorWafMatchConditionObject
+  - Az.FrontDoor.New-AzFrontDoorWafPolicy
+  - Az.FrontDoor.New-AzFrontDoorWafRuleGroupOverrideObject
+  - Az.FrontDoor.Remove-AzFrontDoor
+  - Az.FrontDoor.Remove-AzFrontDoorContent
+  - Az.FrontDoor.Remove-AzFrontDoorRulesEngine
+  - Az.FrontDoor.Remove-AzFrontDoorWafPolicy
+  - Az.FrontDoor.Set-AzFrontDoor
+  - Az.FrontDoor.Set-AzFrontDoorRulesEngine
+  - Az.FrontDoor.Update-AzFrontDoorWafPolicy
+uid: Az.FrontDoor
+name: Az.FrontDoor
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure Front Door Service in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.FrontDoor namespace.
+metadata:
+  Module Name: Az.FrontDoor
+  Module Guid: 91832aaa-dc11-4583-8239-adb7df531604
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor
+  Help Version: 0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Az.FrontDoor.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Az.FrontDoor.md

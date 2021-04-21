@@ -1,0 +1,241 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Update an application.
+module: Az.DesktopVirtualization
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IDesktopVirtualizationIdentity>: Identity Parameter
+    - `[ApplicationGroupName <String>]`: The name of the application group
+    - `[ApplicationName <String>]`: The name of the application within the specified application group
+    - `[DesktopName <String>]`: The name of the desktop within the specified desktop group
+    - `[HostPoolName <String>]`: The name of the host pool within the specified resource group
+    - `[Id <String>]`: Resource identity path
+    - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+    - `[SessionHostName <String>]`: The name of the session host within the specified host pool
+    - `[SubscriptionId <String>]`: The ID of the target subscription.
+    - `[UserSessionId <String>]`: The name of the user session within the specified session host
+    - `[WorkspaceName <String>]`: The name of the workspace
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20191210Preview.IApplication" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String>
+
+   [-SubscriptionId <String>] [-CommandLineArgument <String>] [-CommandLineSetting <CommandLineSetting>]
+
+   [-Description <String>] [-FilePath <String>] [-FriendlyName <String>] [-IconIndex <Int32>]
+
+   [-IconPath <String>] [-ShowInPortal] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Update-AzWvdApplication -InputObject <IDesktopVirtualizationIdentity> [-CommandLineArgument <String>]
+
+   [-CommandLineSetting <CommandLineSetting>] [-Description <String>] [-FilePath <String>]
+
+   [-FriendlyName <String>] [-IconIndex <Int32>] [-IconPath <String>] [-ShowInPortal] [-Tag <Hashtable>]
+
+   [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a Windows Virtual Desktop Application'
+  code: |-
+    PS C:\> Update-AzWvdApplication -ResourceGroupName ResourceGroupName `
+                                 -GroupName ApplicationGroupName `
+                                 -Name ApplicationName `
+                                 -FilePath 'C:\windows\system32\mspaint.exe' `
+                                 -FriendlyName 'Friendly name' `
+                                 -Description 'Description' `
+                                 -IconIndex 0 `
+                                 -IconPath 'C:\windows\system32\mspaint.exe' `
+                                 -CommandLineSetting 'Allow' `
+                                 -ShowInPortal:$true
+
+    Name                                 Type
+    ----                                 ----
+    ApplicationGroupName/ApplicationName Microsoft.DesktopVirtualization/applicationgroups/applications
+  description: |-
+    This command updates a Windows Virtual Desktop Application in an applicaton Group.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CommandLineArgument
+  description: |+
+    Command Line Arguments for Application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.CommandLineSetting" data-throw-if-not-resolved="False" />
+  name: CommandLineSetting
+  description: |+
+    Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Description of Application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  description: |+
+    Specifies a path for the executable file for the application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  description: |+
+    Friendly name of Application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  isRequired: true
+  description: |+
+    The name of the application group
+
+  defaultValue: None
+  position: Named
+  aliases: ApplicationGroupName
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: IconIndex
+  description: |+
+    Index of the icon.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IconPath
+  description: |+
+    Path to icon.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the application within the specified application group
+
+  defaultValue: None
+  position: Named
+  aliases: ApplicationName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowInPortal
+  description: |+
+    Specifies whether to show the RemoteApp program in the RD Web Access server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The ID of the target subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    tags to be updated
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DesktopVirtualization.Update-AzWvdApplication
+name: Update-AzWvdApplication
+description: |-
+  Update an application.
+metadata:
+  external help file: ""
+  Module Name: Az.DesktopVirtualization
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization/update-azwvdapplication
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Update-AzWvdApplication.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Update-AzWvdApplication.md

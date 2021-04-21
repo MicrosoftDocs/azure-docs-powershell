@@ -1,0 +1,27 @@
+### YamlMime:PowershellModule
+children:
+- title: Alerts Management
+  cmdlets:
+  - Az.AlertsManagement.Get-AzActionRule
+  - Az.AlertsManagement.Get-AzAlert
+  - Az.AlertsManagement.Get-AzAlertObjectHistory
+  - Az.AlertsManagement.Get-AzSmartGroup
+  - Az.AlertsManagement.Get-AzSmartGroupHistory
+  - Az.AlertsManagement.Measure-AzAlertStatistic
+  - Az.AlertsManagement.Remove-AzActionRule
+  - Az.AlertsManagement.Set-AzActionRule
+  - Az.AlertsManagement.Update-AzActionRule
+  - Az.AlertsManagement.Update-AzAlertState
+  - Az.AlertsManagement.Update-AzSmartGroupState
+uid: Az.AlertsManagement
+name: Az.AlertsManagement
+description: |-
+  Manages alerts, smart groups and action rule configuration for Alerts Management Platform.
+metadata:
+  Module Name: Az.AlertsManagement
+  Module Guid: ab73cb67-5713-4179-b6d7-f76ab3ad148f
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.alertsmanagement
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AlertsManagement/AlertsManagement/help/Az.AlertsManagement.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AlertsManagement/AlertsManagement/help/Az.AlertsManagement.md

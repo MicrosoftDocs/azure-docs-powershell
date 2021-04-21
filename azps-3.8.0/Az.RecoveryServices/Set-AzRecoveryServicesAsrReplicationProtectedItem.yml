@@ -1,0 +1,376 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets recovery properties such as target network and virtual machine size for the specified replication protected item.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRecoveryServicesAsrReplicationProtectedItem
+  href: ./Get-AzRecoveryServicesAsrReplicationProtectedItem.yml
+- text: New-AzRecoveryServicesAsrReplicationProtectedItem
+  href: ./New-AzRecoveryServicesAsrReplicationProtectedItem.yml
+- text: Remove-AzRecoveryServicesAsrReplicationProtectedItem
+  href: ./Remove-AzRecoveryServicesAsrReplicationProtectedItem.yml
+syntaxes:
+- >-
+  Set-AzRecoveryServicesAsrReplicationProtectedItem -InputObject <ASRReplicationProtectedItem> [-Name <String>]
+
+   [-Size <String>] [-UpdateNic <String>] [-RecoveryNetworkId <String>] [-PrimaryNic <String>]
+
+   [-RecoveryCloudServiceId <String>] [-RecoveryNicSubnetName <String>] [-RecoveryNicStaticIPAddress <String>]
+
+   [-NicSelectionType <String>] [-RecoveryResourceGroupId <String>] [-LicenseType <String>]
+
+   [-RecoveryAvailabilitySet <String>] [-EnableAcceleratedNetworkingOnRecovery]
+
+   [-RecoveryBootDiagStorageAccountId <String>]
+
+   [-AzureToAzureUpdateReplicationConfiguration <ASRAzuretoAzureDiskReplicationConfig[]>]
+
+   [-DiskEncryptionVaultId <String>] [-DiskEncryptionSecretUrl <String>] [-KeyEncryptionKeyUrl <String>]
+
+   [-KeyEncryptionVaultId <String>] [-UseManagedDisk <String>]
+
+   [-DiskIdToDiskEncryptionSetMap <System.Collections.Generic.IDictionary`2[System.String,System.String]>]
+
+   [-RecoveryPublicIPAddressId <String>] [-RecoveryNetworkSecurityGroupId <String>]
+
+   [-RecoveryLBBackendAddressPoolId <String[]>] [-TfoAzureVMName <String>]
+
+   [-ASRVMNicConfiguration <ASRVMNicConfig[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $currentJob = Set-AzRecoveryServicesAsrReplicationProtectedItem -ReplicationProtectedItem $RPI -UpdateNic $NicId -RecoveryNetworkId $AzureNetworkID -RecoveryNicSubnetName $subnetName
+  description: |-
+    Starts the operation of updating the replication protected item settings using the specified parameters and returns the ASR job used to track the operation.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> $currentJob = Set-AzRecoveryServicesAsrReplicationProtectedItem -InputObject $rpi -UpdateNic "00:50:56:8F:3F:7B" -RecoveryNetworkId $recoveryNetwork -RecoveryNicSubnetName $recoverySubnet -NicSelectionType NotSelected
+  description: |-
+    Starts the operation of updating the replication protected item Network Interface card(NIC Reduction) settings using the specified parameters and returns the ASR job used to track the operation.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> $currentJob = Set-AzRecoveryServicesAsrReplicationProtectedItem -InputObject $rpi -PrimaryNic "00:50:56:8F:3F:7B"
+  description: |-
+    Starts the operation of updating the replication protected item primary NIC(to used for recovered vm )settings using the specified parameters and returns the ASR job used to track the operation.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\>Set-ASRReplicationProtectedItem -InputObject $rpi -UpdateNic $updateNic -RecoveryNetworkId $recoveryNetworkId -RecoveryNicSubnetName $recoveryNicSubnetName�-NicSelectionType SelectedByUser
+  description: |-
+    Starts the operation of updating the replication protected item NIC (to used for recovered vm )settings using the specified parameters and returns the ASR job used to track the operation.
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> $currentJob = Set-AzureRmRecoveryServicesAsrReplicationProtectedItem -InputObject $ rpi -UpdateNic $updateNic `
+    		-RecoveryNetworkId $recoveryNetworkId -RecoveryNicSubnetName $recoveryNicSubnetName -EnableAcceleratedNetworkingOnRecovery
+  description: |-
+    Starts the operation of updating the replication protected item selected noc tp enable accelerated networking on recovery VM(for Azure to Azure disaster recovery).
+    Don�t pass -EnableAcceleratedNetworkingOnRecovery to disable accelerated Networking.
+  summary: ""
+- title: Example 6
+  code: |-
+    PS C:\> $currentJob = Set-AzureRmRecoveryServicesAsrReplicationProtectedItem -InputObject $ rpi `
+    	-DiskEncryptionVaultId  $DiskEncryptionVaultId   �-DiskEncryptionSecertUrl $DiskEncryptionSecertUrl `
+    	 -KeyEncryptionVaultId $KeyEncryptionVaultId  -KeyEncryptionKeyUrl $KeyEncryptionKeyUrl
+  description: |-
+    Start the update operation for the specified encrypted replication protected item to use supplied encryption details for failover VM.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVMNicConfig" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ASRVMNicConfiguration
+  description: |+
+    Specifies the test failover and failover NIC configuration details.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRAzuretoAzureDiskReplicationConfig" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AzureToAzureUpdateReplicationConfiguration
+  description: |+
+    Specifies the disk configuration to udpated for managed disk Vm (Azure to Azure DR scenrio).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiskEncryptionSecretUrl
+  description: |+
+    Specifies the disk encryption secret URL with version(Azure disk encryption) to be used be recovery VM after failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiskEncryptionVaultId
+  description: |+
+    Specifies the disk encryption secret key vault ID(Azure disk encryption) to be used be recovery VM after failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.IDictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: DiskIdToDiskEncryptionSetMap
+  description: |+
+    The dictionary of disk resource Id to disk encryption set ARM Id.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAcceleratedNetworkingOnRecovery
+  description: |+
+    Specifies the specified NIC on recovery vm after failover uses accelerated networking.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    The input object to the cmdlet: The ASR replication protected item object corresponding to the replication protected item to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ReplicationProtectedItem
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyEncryptionKeyUrl
+  description: |+
+    Specifies the disk encryption key URL version(Azure disk encryption) to be used be recovery VM after failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyEncryptionVaultId
+  description: |+
+    Specifies the disk encryption key keyVault ID(Azure disk encryption) to be used be recovery VM after failover.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LicenseType
+  description: |+
+    Specifiy the license type selection to be used for Windows Server virtual machines. If you are entitled to use the Azure Hybrid Use Benefit (HUB) for migrations and would like to specify that the HUB setting be used while failing over this protected item set the license type to be WindowsServer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoLicenseType, WindowsServer
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the recovery virtual machine that will be created on failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NicSelectionType
+  description: |+
+    Specifies the network interface card (NIC) properties set by user or set by default.
+    You can specify NotSelected to go back to the default values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotSelected, SelectedByUser
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrimaryNic
+  description: |+
+    Specifies the NIC which will be used as primary NIC for recvcovery VM after after failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryAvailabilitySet
+  description: |+
+    Availability set for replication protected item after failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryBootDiagStorageAccountId
+  description: |+
+    Specifies the storage account for boot diagnostics for recovery azure VM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryCloudServiceId
+  description: |+
+    The resource ID of the recovery cloud service to failover this virtual machine to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RecoveryLBBackendAddressPoolId
+  description: |+
+    Specifies the target backend address pools to be associated with the recovery NIC.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryNetworkId
+  description: |+
+    Specifies the ID of the Azure virtual network to which the protected item should be failed over.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryNetworkSecurityGroupId
+  description: |+
+    Specifies the ID of the network security group to be associated with the recovery NIC.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryNicStaticIPAddress
+  description: |+
+    Specifies the static IP address that should be assigned to primary NIC on recovery.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryNicSubnetName
+  description: |+
+    Specifies the name of the subnet on the recovery Azure virtual network to which this NIC of the protected item should be connected to on failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryPublicIPAddressId
+  description: |+
+    Specifies the ID of the public IP address resource to be associated with the recovery NIC.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryResourceGroupId
+  description: |+
+    The ID of the Azure resource group in the recovery region in which the protected item will be recovered on failover.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Size
+  description: |+
+    Specifies the recovery virtual machine size.
+    The value should be from the set of sizes supported by Azure virtual machines.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TfoAzureVMName
+  description: |+
+    Specifies the name of the test failover VM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UpdateNic
+  description: |+
+    Specifies the NIC of the virtual machine for which this cmdlet sets the recovery network property needs to udpated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UseManagedDisk
+  description: |+
+    Specifies if the Azure virtual machine that is created on failover should use managed disks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: True, False
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Set-AzRecoveryServicesAsrReplicationProtectedItem
+name: Set-AzRecoveryServicesAsrReplicationProtectedItem
+description: |-
+  The **Set-AzRecoveryServicesAsrReplicationProtectedItem** cmdlet sets the recovery properties for a Replication Protected Item.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/set-azrecoveryservicesasrreplicationprotecteditem
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesAsrReplicationProtectedItem.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesAsrReplicationProtectedItem.md

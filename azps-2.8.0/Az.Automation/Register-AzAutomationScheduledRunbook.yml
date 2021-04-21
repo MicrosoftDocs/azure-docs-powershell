@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Associates a runbook to a schedule.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.JobSchedule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationScheduledRunbook
+  href: ./Get-AzAutomationScheduledRunbook.yml
+- text: Unregister-AzAutomationScheduledRunbook
+  href: ./Unregister-AzAutomationScheduledRunbook.yml
+syntaxes:
+- >-
+  Register-AzAutomationScheduledRunbook [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Register-AzAutomationScheduledRunbook -RunbookName <String> -ScheduleName <String> [-Parameters <IDictionary>]
+
+   [-RunOn <String>] [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Associate a runbook with a schedule'
+  code: |-
+    PS C:\>Register-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ScheduleName "Sched01" -ResourceGroupName "ResourceGroup01"
+  description: |-
+    This command associates the runbook named Runbk01 with the schedule named Sched01 in the Azure Automation account named Contoso17.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies an Automation account for the runbook on which this cmdlet operates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: Parameters
+  description: |+
+    Specifies a hash table of key/value pairs.
+    The keys are runbook parameter names.
+    The values are runbook parameter values.
+    When the runbook starts in response to the associated schedule, these parameters are passed to the runbook.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group for the scheduled runbook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunbookName
+  isRequired: true
+  description: |+
+    Specifies the name of the runbook that this cmdlet associates to a schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunOn
+  description: |+
+    The name of the hybrid runbook worker group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: HybridWorker
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ScheduleName
+  isRequired: true
+  description: |+
+    Specifies the name of the schedule to which this cmdlet associates a runbook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.Register-AzAutomationScheduledRunbook
+name: Register-AzAutomationScheduledRunbook
+description: |-
+  The **Register-AzAutomationScheduledRunbook** cmdlet associates an Azure Automation runbook to a schedule.
+  The runbook starts based on the schedule you specify using the *ScheduleName* parameter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: F79AFF9A-CEDA-4E57-B5DB-9D0A7CDA6D27
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/register-azautomationscheduledrunbook
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Register-AzAutomationScheduledRunbook.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Register-AzAutomationScheduledRunbook.md

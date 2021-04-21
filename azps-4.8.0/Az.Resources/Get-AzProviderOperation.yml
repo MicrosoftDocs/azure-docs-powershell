@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the operations for an Azure resource provider that are securable using Azure RBAC.
+module: Az.Resources
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.PSResourceProviderOperation" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzProviderOperation [[-OperationSearchString] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all actions for all providers'
+  code: |-
+    PS C:\> Get-AzProviderOperation *
+  description: ""
+  summary: ""
+- title: 'Example 2: Get actions for a particular resource provider'
+  code: |-
+    PS C:\> Get-AzProviderOperation Microsoft.Insights/*
+  description: ""
+  summary: ""
+- title: 'Example 3: Get all actions that can be performed on virtual machines'
+  code: |-
+    PS C:\> Get-AzProviderOperation */virtualMachines/*
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OperationSearchString
+  description: |+
+    The operation search string (with possible wildcard (*) characters)
+
+  defaultValue: '"*"'
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzProviderOperation
+name: Get-AzProviderOperation
+description: |-
+  The Get-AzProviderOperation gets the operations exposed by Azure resource providers.
+  Operations can be composed to create custom roles in Azure RBAC.
+  The command takes as input an operation search string (with possible wildcard(*) character(s)) which determines the operations details to display.
+  Use Get-AzProviderOperation * to get all operations for all Azure resource providers.
+  Use Get-AzProviderOperation Microsoft.Compute/* to get all operations of Microsoft.Compute resource provider.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 6424B740-DBFB-490C-AEAA-EDD60952B435
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azprovideroperation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzProviderOperation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzProviderOperation.md

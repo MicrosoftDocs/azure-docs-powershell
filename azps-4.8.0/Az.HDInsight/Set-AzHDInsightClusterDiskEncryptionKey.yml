@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Rotates the disk encryption key of the specified HDInsight cluster.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.HDInsight.Models.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Customer-managed key disk encryption
+  href: https://docs.microsoft.com/en-us/azure/hdinsight/disk-encryption
+syntaxes:
+- >-
+  Set-AzHDInsightClusterDiskEncryptionKey [-ResourceGroupName] <String> [-Name] <String>
+
+   -EncryptionKeyName <String> -EncryptionKeyVersion <String> -EncryptionVaultUri <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzHDInsightClusterDiskEncryptionKey [-ResourceId] <String> -EncryptionKeyName <String>
+
+   -EncryptionKeyVersion <String> -EncryptionVaultUri <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzHDInsightClusterDiskEncryptionKey [-InputObject] <AzureHDInsightCluster> -EncryptionKeyName <String>
+
+   -EncryptionKeyVersion <String> -EncryptionVaultUri <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> # Cluster configuration info
+            $clusterResourceGroupName = "Group"
+            $clusterName = "your-cmk-cluster"
+
+    Set-AzHDInsightClusterDiskEncryptionKey `
+    		-ResourceGroupName $clusterResourceGroupName `
+    		-ClusterName $clusterName `
+    		-EncryptionKeyName new-key `
+    		-EncryptionVaultUri https://MyKeyVault.vault.azure.net `
+    		-EncryptionKeyVersion 00000000000000000000000000000000
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> # Cluster configuration info
+            $clusterName = "your-cmk-cluster"
+
+    $cluster= Get-AzHDInsightCluster -ClusterName $clusterName 
+    $cluster |  Set-AzHDInsightClusterDiskEncryptionKey `
+        -EncryptionKeyName new-key `
+        -EncryptionVaultUri https://MyKeyVault.vault.azure.net `
+        -EncryptionKeyVersion 00000000000000000000000000000000
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EncryptionKeyName
+  isRequired: true
+  description: |+
+    Gets or sets the encryption key name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EncryptionKeyVersion
+  isRequired: true
+  description: |+
+    Gets or sets the encryption key version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EncryptionVaultUri
+  isRequired: true
+  description: |+
+    Gets or sets the encryption vault uri.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightCluster" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Gets or sets the input object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Gets or sets the name of the cluster.
+
+  defaultValue: None
+  position: "1"
+  aliases: ClusterName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Gets or sets the name of the resource group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Gets or sets the resource id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.HDInsight.Set-AzHDInsightClusterDiskEncryptionKey
+name: Set-AzHDInsightClusterDiskEncryptionKey
+description: |-
+  Rotate the disk encryption key of the specified HDInsight cluster. For this operation, the cluster must have access to both the current key and the intended new key, otherwise the rotate key operation will fail.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 5141D84C-3C58-42B9-890F-C3C9049BC1C5
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/set-azhdinsightclusterdiskencryptionkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Set-AzHDInsightClusterDiskEncryptionKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Set-AzHDInsightClusterDiskEncryptionKey.md

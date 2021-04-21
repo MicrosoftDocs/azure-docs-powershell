@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a PSLoadBalancingSetting object for Front Door creation
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSLoadBalancingSetting" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoor
+  href: ./New-AzFrontDoor.yml
+- text: Set-AzFrontDoor
+  href: ./Set-AzFrontDoor.yml
+syntaxes:
+- >-
+  New-AzFrontDoorLoadBalancingSettingObject -Name <String> [-SampleSize <Int32>]
+
+   [-SuccessfulSamplesRequired <Int32>] [-AdditionalLatencyInMilliseconds <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzFrontDoorLoadBalancingSettingObject -Name "loadbalancingsetting1"
+
+
+    SampleSize                    : 4
+    AdditionalLatencyMilliseconds : 0
+    SuccessfulSamplesRequired     : 2
+    ResourceState                 :
+    Id                            :
+    Name                          : loadbalancingsetting1
+    Type                          :
+  description: |-
+    Create a PSLoadBalancingSetting object for Front Door creation
+  summary: ""
+parameters:
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: AdditionalLatencyInMilliseconds
+  description: |+
+    The additional latency in milliseconds for probes to fall into the lowest latency bucket. 
+    Default value is 0
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    health probe setting name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SampleSize
+  description: |+
+    The number of samples to consider for load balancing decisions.
+    Default value is 4
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SuccessfulSamplesRequired
+  description: |+
+    The number of samples within the sample period that must succeed
+    Default value is 2
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorLoadBalancingSettingObject
+name: New-AzFrontDoorLoadBalancingSettingObject
+description: |-
+  Create a PSLoadBalancingSetting object for Front Door creation
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorloadbalancingsettingobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorLoadBalancingSettingObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorLoadBalancingSettingObject.md

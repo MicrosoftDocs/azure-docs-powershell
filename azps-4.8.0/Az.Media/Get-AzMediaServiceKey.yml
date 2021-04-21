@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets key information for accessing the REST endpoint associated with the media service.
+module: Az.Media
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Media.Models.PSServiceKeys" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzMediaServiceKey
+  href: ./Set-AzMediaServiceKey.yml
+syntaxes:
+- >-
+  Get-AzMediaServiceKey [-ResourceGroupName] <String> [-AccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the key information for accessing the media service'
+  code: |-
+    PS C:\>Get-AzMediaServiceKey -ResourceGroupName "ResourceGroup001" -AccountName "MediaService001"
+  description: |-
+    This command gets the key information for accessing the media service named MediaService001 that belongs to the resource group named ResourceGroup001.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the media service that this cmdlet gets the media service keys from.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the media service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Media.Get-AzMediaServiceKey
+name: Get-AzMediaServiceKey
+description: |-
+  The **Get-AzMediaServiceKey** cmdlet gets key information for accessing the Representational State Transfer (REST) endpoint associated with the Azure media service.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
+  Module Name: Az.Media
+  ms.assetid: 2099938F-5325-416C-AE10-6813546A1055
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.media/get-azmediaservicekey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Get-AzMediaServiceKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Get-AzMediaServiceKey.md

@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Backup protection policy.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType, Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.RetentionPolicyBase" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.SchedulePolicyBase" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable-AzRecoveryServicesBackupProtection
+  href: ./Enable-AzRecoveryServicesBackupProtection.yml
+- text: Get-AzRecoveryServicesBackupProtectionPolicy
+  href: ./Get-AzRecoveryServicesBackupProtectionPolicy.yml
+- text: Get-AzRecoveryServicesBackupRetentionPolicyObject
+  href: ./Get-AzRecoveryServicesBackupRetentionPolicyObject.yml
+- text: Get-AzRecoveryServicesBackupSchedulePolicyObject
+  href: ./Get-AzRecoveryServicesBackupSchedulePolicyObject.yml
+- text: Remove-AzRecoveryServicesBackupProtectionPolicy
+  href: ./Remove-AzRecoveryServicesBackupProtectionPolicy.yml
+- text: Set-AzRecoveryServicesBackupProtectionPolicy
+  href: ./Set-AzRecoveryServicesBackupProtectionPolicy.yml
+syntaxes:
+- >-
+  New-AzRecoveryServicesBackupProtectionPolicy [-Name] <String> [-WorkloadType] <WorkloadType>
+
+   [[-BackupManagementType] <BackupManagementType>] [[-RetentionPolicy] <RetentionPolicyBase>]
+
+   [[-SchedulePolicy] <SchedulePolicyBase>] [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Backup protection policy'
+  code: |-
+    PS C:\> $SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM" 
+    PS C:\> $SchPol.ScheduleRunTimes.Clear()
+    PS C:\> $Dt = Get-Date
+    PS C:\> $SchPol.ScheduleRunTimes.Add($Dt.ToUniversalTime())
+    PS C:\> $RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType "AzureVM" 
+    PS C:\> $RetPol.DailySchedule.DurationCountInDays = 365
+    PS C:\> New-AzRecoveryServicesBackupProtectionPolicy -Name "NewPolicy" -WorkloadType AzureVM -RetentionPolicy $RetPol -SchedulePolicy $SchPol
+  description: |-
+    The first command gets a base **SchedulePolicyObject**, and then stores it in the $SchPol variable.
+    The second command removes all scheduled run times from the schedule policy in $SchPol.
+    The third command uses the Get-Date cmdlet to get the current date and time.
+    The fourth command adds the current date and time in $Dt as the scheduled run time to the schedule policy.
+    The fifth command gets a base **RetentionPolicy** object, and then stores it in the $RetPol variable.
+    The sixth command sets the retention duration policy to 365 days.
+    The final command creates a **BackupProtectionPolicy** object based on the schedule and retention policies created by the previous commands.
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType" data-throw-if-not-resolved="False" /><span>]</span>
+  name: BackupManagementType
+  description: |+
+    Specifies the Backup management type.
+    The acceptable values for this parameter are:
+    - AzureVM 
+    - AzureSQLDatabase
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL, AzureStorage, AzureWorkload
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.RetentionPolicyBase" data-throw-if-not-resolved="False" />
+  name: RetentionPolicy
+  description: |+
+    Specifies the base **RetentionPolicy** object.
+    You can use the Get-AzRecoveryServicesBackupRetentionPolicyObject cmdlet to get a **RetentionPolicy** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.SchedulePolicyBase" data-throw-if-not-resolved="False" />
+  name: SchedulePolicy
+  description: |+
+    Specifies the base **SchedulePolicy** object.
+    You can use the Get-AzRecoveryServicesBackupSchedulePolicyObject cmdlet to get a **SchedulePolicy** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultId
+  description: |+
+    ARM ID of the Recovery Services Vault.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType" data-throw-if-not-resolved="False" />
+  name: WorkloadType
+  isRequired: true
+  description: |+
+    Specifies the workload type.
+    The acceptable values for this parameter are:
+    - AzureVM 
+    - AzureSQLDatabase
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: AzureVM, AzureSQLDatabase, AzureFiles, MSSQL
+uid: Az.RecoveryServices.New-AzRecoveryServicesBackupProtectionPolicy
+name: New-AzRecoveryServicesBackupProtectionPolicy
+description: |-
+  The **New-AzRecoveryServicesBackupProtectionPolicy** cmdlet creates a Backup protection policy in a vault.
+  A protection policy is associated with at least one retention policy.
+  The retention policy defines how long a recovery point is kept with Azure Backup.
+  You can use the Get-AzRecoveryServicesBackupRetentionPolicyObject cmdlet to get the default retention policy.
+  And you can use the Get-AzRecoveryServicesBackupSchedulePolicyObject cmdlet to get the default schedule policy.
+  The **SchedulePolicy** and **RetentionPolicy** objects are used as inputs to the **New-AzRecoveryServicesBackupProtectionPolicy** cmdlet.
+  Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  ms.assetid: C2A7F37B-5713-4430-B83F-C6745692396D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/new-azrecoveryservicesbackupprotectionpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesBackupProtectionPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesBackupProtectionPolicy.md

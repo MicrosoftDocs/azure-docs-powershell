@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds new deployment regions to a PsApiManagement instance.
+module: Az.ApiManagement
+notes: |-
+  * The cmdlet writes updated **PsApiManagement** instance to pipeline.
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzApiManagementRegion
+  href: ./Remove-AzApiManagementRegion.yml
+- text: Update-AzApiManagementRegion
+  href: ./Update-AzApiManagementRegion.yml
+- text: Set-AzApiManagement
+  href: ./Set-AzApiManagement.yml
+syntaxes:
+- >-
+  Add-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> [-Sku <PsApiManagementSku>]
+
+   [-Capacity <Int32>] [-VirtualNetwork <PsApiManagementVirtualNetwork>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add new deployment regions to a PsApiManagement instance'
+  code: |-
+    PS C:\>Add-AzApiManagementRegion -ApiManagement $ApiManagement -Location "East US" -Sku "Premium" -Capacity 2
+  description: |-
+    This command adds two premium SKU units and the region named East US to the **PsApiManagement** instance.
+  summary: ""
+- title: 'Example 2: Add new deployment regions to a PsApiManagement instance and then update deployment'
+  code: |-
+    PS C:\>$service = Get-AzApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
+    PS C:\>$service = Add-AzApiManagementRegion -ApiManagement $service -Location $secondarylocation -VirtualNetwork $additionalRegionVirtualNetwork
+    PS C:\>$service = Set-AzApiManagement -InputObject $service -PassThru
+  description: |-
+    This command gets a **PsApiManagement** object, adds two premium SKU units for the region named East US, and then updates deployment.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  name: ApiManagement
+  isRequired: true
+  description: |+
+    Specifies the **PsApiManagement** instance that this cmdlet adds additional deployment regions to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Capacity
+  description: |+
+    Specifies the SKU capacity of the deployment region.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the location of the new deployment region amongst the supported region for Api Management service.
+    To obtain valid locations, use the cmdlet
+    Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | where {$_.ResourceTypes[0].ResourceTypeName -eq "service"} | Select-Object Locations
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Sku
+  description: |+
+    Specifies the tier of the deployment region.
+    Valid values are: 
+    - Developer
+    - Standard
+    - Premium
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Developer, Standard, Premium, Basic, Consumption
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork" data-throw-if-not-resolved="False" />
+  name: VirtualNetwork
+  description: |+
+    Specifies a virtual network configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Add-AzApiManagementRegion
+name: Add-AzApiManagementRegion
+description: |-
+  The **Add-AzApiManagementRegion** cmdlet adds new instance of type **PsApiManagementRegion** to the collection of **AdditionalRegions** of provided instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement**.
+  This cmdlet does not deploy anything by itself but updates instance of **PsApiManagement** in-memory.
+  To update a deployment of an API Management pass the modified **PsApiManagement** Instance to Set-AzApiManagement.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  ms.assetid: 9D4A68A8-0A39-4C9A-8EA6-391A5E7A0E25
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/add-azapimanagementregion
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Add-AzApiManagementRegion.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Add-AzApiManagementRegion.md

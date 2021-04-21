@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Filters active directory service principals.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADApplication" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzADServicePrincipal
+  href: ./New-AzADServicePrincipal.yml
+- text: Remove-AzADServicePrincipal
+  href: ./Remove-AzADServicePrincipal.yml
+- text: Get-AzADApplication
+  href: ./Get-AzADApplication.yml
+- text: Get-AzADSpCredential
+  href: ./Get-AzADSpCredential.yml
+syntaxes:
+- >-
+  Get-AzADServicePrincipal [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount] [-Skip <UInt64>]
+
+   [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADServicePrincipal -DisplayNameBeginsWith <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADServicePrincipal -DisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADServicePrincipal -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADServicePrincipal -ApplicationId <Guid> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADServicePrincipal -ApplicationObject <PSADApplication> [-DefaultProfile <IAzureContextContainer>]
+
+   [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADServicePrincipal -ServicePrincipalName <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+examples:
+- title: Example 1 - List AD service principals
+  code: |-
+    PS C:\> Get-AzADServicePrincipal
+  description: |-
+    Lists all AD service principals in a tenant.
+  summary: ""
+- title: Example 2 - List AD service principals using paging
+  code: |-
+    PS C:\> Get-AzADServicePrincipal -First 100
+  description: |-
+    Lists the first 100 AD service principals in a tenant.
+  summary: ""
+- title: Example 3 - List service principals by SPN
+  code: |-
+    PS C:\> Get-AzADServicePrincipal -ServicePrincipalName 36f81fc3-b00f-48cd-8218-3879f51ff39f
+  description: |-
+    Lists service principals with the SPN '36f81fc3-b00f-48cd-8218-3879f51ff39f'.
+  summary: ""
+- title: Example 4 - List service principals by search string
+  code: |-
+    PS C:\> Get-AzADServicePrincipal -SearchString "Web"
+  description: |-
+    Lists all AD service principals whose display name start with "Web".
+  summary: ""
+- title: Example 5 - List service principals by piping
+  code: |-
+    PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69 | Get-AzADServicePrincipal
+  description: |-
+    Gets the AD application with object id '39e64ec6-569b-4030-8e1c-c3c519a05d69' and pipes it to the Get-AzADServicePrincipal cmdlet to list all service principals for that application.
+  summary: ""
+parameters:
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  isRequired: true
+  description: |+
+    The service principal application id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADApplication" data-throw-if-not-resolved="False" />
+  name: ApplicationObject
+  isRequired: true
+  description: |+
+    The application object whose service principal is being retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    The service principal display name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayNameBeginsWith
+  isRequired: true
+  description: |+
+    The service principal search string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SearchString
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The maximum number of objects to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeTotalCount
+  description: |+
+    Reports the number of objects in the data set. Currently, this parameter does nothing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  isRequired: true
+  description: |+
+    Object id of the service principal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServicePrincipalName
+  isRequired: true
+  description: |+
+    SPN of the service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SPN
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    Ignores the first N objects and then gets the remaining objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzADServicePrincipal
+name: Get-AzADServicePrincipal
+description: |-
+  Filters active directory service principals.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 4DC26C26-6162-4A15-BFCB-4D2B6B52DD81
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azadserviceprincipal
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADServicePrincipal.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADServicePrincipal.md

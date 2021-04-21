@@ -1,3 +1,4 @@
+items:
 - name: Azure PowerShell
   href: index.yml
 - name: Introducing the new Az module
@@ -25,28 +26,20 @@
 - name: Cloud Shell
   href: /azure/cloud-shell/overview
 - name: Sign in
-  items: 
+  items:
   - name: Authentication methods
     href: authenticate-azureps.md
-    displayName: >-
-      sign in, signin, log in, login, credentials, msi, managed identity,
-      tenant, subscription, region, certificate, service principal,
-      authenticate
+    displayName: sign in, signin, log in, login, credentials, msi, managed identity, tenant, subscription, region, certificate, service principal, authenticate
   - name: Create a service principal
     href: create-azure-service-principal-azureps.md
-    displayName: >-
-      automation, application, web app, script, certificate, sign in,
-      signin, log in, login, devops, dev ops, itpro, it pro, role,
-      aad, authentication, authenticate
+    displayName: automation, application, web app, script, certificate, sign in, signin, log in, login, devops, dev ops, itpro, it pro, role, aad, authentication, authenticate
   - name: Credential contexts
     href: context-persistence.md
-    displayName: >-
-      sign in, signin, log in, login, process, session, context,
-      persist, jobs, background, automation, scripting, task
+    displayName: sign in, signin, log in, login, process, session, context, persist, jobs, background, automation, scripting, task
 - name: Queries
   href: queries-azureps.md
   displayName: filter, search, format, output, variable, scripting, array, dictionary, map, object
-- name: Format output 
+- name: Format output
   href: formatting-output.md
   displayName: object, table, yaml, json, xml, csv, html, list
 - name: Manage subscriptions
@@ -86,3 +79,5 @@
     displayName: database, nosql, mongodb, couchdb
 - name: Release notes
   href: release-notes-azureps.md
+metadata:
+  universal_ref_toc: /powershell/module/toc.json

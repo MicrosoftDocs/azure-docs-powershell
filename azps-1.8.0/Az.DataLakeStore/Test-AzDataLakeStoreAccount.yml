@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests the existence of a Data Lake Store account.
+module: Az.DataLakeStore
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzDataLakeStoreAccount
+  href: ./Get-AzDataLakeStoreAccount.yml
+- text: New-AzDataLakeStoreAccount
+  href: ./New-AzDataLakeStoreAccount.yml
+- text: Remove-AzDataLakeStoreAccount
+  href: ./Remove-AzDataLakeStoreAccount.yml
+- text: Set-AzDataLakeStoreAccount
+  href: ./Set-AzDataLakeStoreAccount.yml
+syntaxes:
+- >-
+  Test-AzDataLakeStoreAccount [-Name] <String> [[-ResourceGroupName] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test an account'
+  code: |-
+    PS C:\>Test-AzDataLakeStoreAccount -Name "ContosoADL"
+  description: |-
+    This command tests whether the account named ContosoADL exists.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the Data Lake Store account to test.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group that contains the account to test.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataLakeStore.Test-AzDataLakeStoreAccount
+name: Test-AzDataLakeStoreAccount
+description: |-
+  The **Test-AzDataLakeStoreAccount** cmdlet tests the existence of a Data Lake Store account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  Module Name: Az.DataLakeStore
+  ms.assetid: 613DE097-65E0-4F08-839D-F9B53F772382
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/test-azdatalakestoreaccount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Test-AzDataLakeStoreAccount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Test-AzDataLakeStoreAccount.md

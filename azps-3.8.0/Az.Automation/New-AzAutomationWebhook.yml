@@ -1,0 +1,192 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a webhook for an Automation runbook.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Webhook" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationWebhook
+  href: ./Get-AzAutomationWebhook.yml
+- text: Remove-AzAutomationWebhook
+  href: ./Remove-AzAutomationWebhook.yml
+- text: Set-AzAutomationWebhook
+  href: ./Set-AzAutomationWebhook.yml
+syntaxes:
+- >-
+  New-AzAutomationWebhook [-Name] <String> [-RunbookName] <String> [-IsEnabled] <Boolean>
+
+   [-ExpiryTime] <DateTimeOffset> [-Parameters <IDictionary>] [-Force] [-RunOn <String>]
+
+   [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a webhook'
+  code: |-
+    PS C:\>$Webhook = New-AzAutomationWebhook -Name "Webhook06" -IsEnabled $True -ExpiryTime "10/2/2016" -RunbookName "ContosoRunbook" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Force
+  description: |-
+    This command creates a webhook named Webhook06 for the runbook named ContosoRunbook in the Automation account named AutomationAccount01.
+    The command stores the webhook in the $Webhook variable.
+    The webhook is enabled.
+    The webhook expires at the specified time.
+    This command does not provide any values for webhook parameters.
+    This command specifies the *Force* parameter.
+    Therefore, it does not prompt you for confirmation.
+  summary: ""
+- title: 'Example 2: Create a webhook with parameters'
+  code: |-
+    PS C:\>$Params = @{"StringParam"="Hello World";"IntegerParam"=32}
+    PS C:\> $Webhook = New-AzAutomationWebhook -Name "Webhook11" -Parameters $Params -IsEnabled $True -ExpiryTime "10/2/2016" -RunbookName "ContosoRunbook" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Force
+  description: |-
+    The first command creates a dictionary of parameters, and stores them in the $Params variable.
+    The second command creates a webhook named Webhook11 for the runbook named ContosoRunbook in the Automation account named AutomationAccount01.
+    The command assigns the parameters in $Params to the webhook.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of an Automation account in which this cmdlet creates a webhook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+  name: ExpiryTime
+  isRequired: true
+  description: |+
+    Specifies the expiry time for the webhook as a **DateTimeOffset** object.
+    You can specify a string or a **DateTime** that can be converted to a valid **DateTimeOffset**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    ps_force
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: IsEnabled
+  isRequired: true
+  description: |+
+    Specifies whether the webhook is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the webhook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: Parameters
+  description: |+
+    Specifies a dictionary of key/value pairs.
+    The keys are the runbook parameter names.
+    The values are the runbook parameter values.
+    When the runbook starts in response to a webhook, these parameters are passed to the runbook.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for which this cmdlet creates a webhook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunbookName
+  isRequired: true
+  description: |+
+    Specifies the name of the runbook to associate to the webhook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunOn
+  description: |+
+    Optional name of the hybrid worker group which should execute the runbook
+
+  defaultValue: None
+  position: Named
+  aliases: HybridWorker
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Automation.New-AzAutomationWebhook
+name: New-AzAutomationWebhook
+description: |-
+  The **New-AzAutomationWebhook** cmdlet creates a webhook for an Azure Automation runbook.
+  Be sure to save the webhook URL that this cmdlet returns, because it cannot be retrieved again.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: E1FC931E-4EB8-4DCA-92BD-8013DDC13219
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationwebhook
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationWebhook.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationWebhook.md

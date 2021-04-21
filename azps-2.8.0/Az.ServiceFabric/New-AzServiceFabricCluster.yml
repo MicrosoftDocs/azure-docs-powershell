@@ -1,0 +1,370 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This command uses certificates that you provide or system generated self-signed certificates to set up a new service fabric cluster. It can use a default template or a custom template that you provide. You have the option of specifying a folder to export the self-signed certificates to or fetching them later from the key vault.
+module: Az.ServiceFabric
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.OperatingSystem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSDeploymentResult" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzServiceFabricCluster [-ResourceGroupName] <String> [-CertificateOutputFolder <String>]
+
+   [-CertificatePassword <SecureString>] [-KeyVaultResourceGroupName <String>] [-KeyVaultName <String>]
+
+   -Location <String> [-Name <String>] [-VmUserName <String>] [-ClusterSize <Int32>]
+
+   [-CertificateSubjectName <String>] -VmPassword <SecureString> [-OS <OperatingSystem>] [-VmSku <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+
+   [-CertificateCommonName <String>] [-CertificateIssuerThumbprint <String>] [-VmPassword <SecureString>]
+
+   -SecretIdentifier <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+
+   [-CertificateOutputFolder <String>] [-CertificatePassword <SecureString>]
+
+   [-KeyVaultResourceGroupName <String>] [-KeyVaultName <String>] [-CertificateSubjectName <String>]
+
+   [-VmPassword <SecureString>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+
+   -CertificateFile <String> [-CertificatePassword <SecureString>] [-SecondaryCertificateFile <String>]
+
+   [-SecondaryCertificatePassword <SecureString>] [-KeyVaultResourceGroupName <String>] [-KeyVaultName <String>]
+
+   [-CertificateCommonName <String>] [-CertificateIssuerThumbprint <String>] [-VmPassword <SecureString>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Specify only the cluster size, the cert subject name, and the OS to deploy a cluster.'
+  code: |-
+    $pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+    $RGname="test01"
+    $clusterloc="SouthCentralUS"
+    $subname="{0}.{1}.cloudapp.azure.com" -f $RGname, $clusterloc
+    $pfxfolder="c:\certs"
+
+    Write-Output "Create cluster in '$clusterloc' with cert subject name '$subname' and cert output path '$pfxfolder'"
+
+    New-AzServiceFabricCluster -ResourceGroupName $RGname -Location $clusterloc -ClusterSize 5 -VmPassword $pass -CertificateSubjectName $subname -CertificateOutputFolder $pfxfolder -CertificatePassword $pass -OS WindowsServer2016Datacenter
+  description: |-
+    This command specifies only the cluster size, the cert subject name, and the OS to deploy a cluster.
+  summary: ""
+- title: 'Example 2: Specify an existing Certificate resource in a key vault and a custom template to deploy a cluster'
+  code: |-
+    $RGname="test20"
+    $templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+    $templateFile="C:\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+    $secretId="https://test1.vault.azure.net:443/secrets/testcertificate4/56ec774dc61a462bbc645ffc9b4b225f"
+
+    New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -SecretIdentifier $secretId
+  description: |-
+    This command specifies an existing Certificate resource in a key vault and a custom template to deploy a cluster.
+  summary: ""
+- title: 'Example 3: Create a new cluster using a custom template. Specify a different resource group name for the key vault and have the system upload a new certificate to it'
+  code: |-
+    $pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+    $RGname="test20"
+    $keyVaultRG="test20kvrg"
+    $keyVault="test20kv"
+    $clusterloc="SouthCentralUS"
+    $subname="{0}.{1}.$clusterloc.cloudapp.azure.com" -f $RGName, $clusterloc
+    $pfxfolder="~\Documents"
+    $templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+    $templateFile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+
+    New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateOutputFolder $pfxfolder -CertificatePassword $pass -KeyVaultResourceGroupName $keyVaultRG  -KeyVaultName $keyVault -CertificateSubjectName $subname
+  description: |-
+    This command creates a new cluster using a custom template. Specify a different resource group name for the key vault and have the system upload a new certificate to it
+  summary: ""
+- title: 'Example 4: Bring your own Certificate and custom template and create a new cluster'
+  code: |-
+    $pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+    $RGname="test20"
+    $keyVaultRG="test20kvrg"
+    $keyVault="test20kv"
+    $pfxsourcefile="c:\Mycertificates\my2017Prodcert.pfx"
+    $templateParmfile="~\Documents\GitHub\azure-quickstart-templates-parms\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+    $templateFile="~\GitHub\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+
+    New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateFile $pfxsourcefile -CertificatePassword $pass -KeyVaultResourceGroupName $keyVaultRG -KeyVaultName $keyVault
+  description: |-
+    This command will let you bring your own Certificate and custom template and create a new cluster.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateCommonName
+  description: |+
+    Certificate common name
+
+  defaultValue: None
+  position: Named
+  aliases: CertCommonName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateFile
+  isRequired: true
+  description: |+
+    The existing certificate file path for the primary cluster certificate
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Source
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateIssuerThumbprint
+  description: |+
+    Certificate issuer thumbprint, separated by commas if more than one
+
+  defaultValue: None
+  position: Named
+  aliases: CertIssuerThumbprint
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateOutputFolder
+  description: |+
+    The folder of the new certificate file to be created
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Destination
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: CertificatePassword
+  description: |+
+    The password of the certificate file
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: CertPassword
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateSubjectName
+  description: |+
+    The subject name of the certificate to be created
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Subject
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ClusterSize
+  description: |+
+    The number of nodes in the cluster.
+    Default are 5 nodes
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVaultName
+  description: |+
+    Azure key vault name, if not given it will be defaulted to the resource group name
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVaultResourceGroupName
+  description: |+
+    Azure key vault resource group name, if not given it will be defaulted to resource group name
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: KeyVaultResouceGroupName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The resource group location
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specify the name of the cluster, if not given it will be same as resource group name
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ClusterName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.OperatingSystem" data-throw-if-not-resolved="False" />
+  name: OS
+  description: |+
+    The Operating System of the VMs that make up the cluster.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: VmImage
+  parameterValueGroup: WindowsServer2012R2Datacenter, WindowsServer2016Datacenter, WindowsServer2016DatacenterwithContainers, UbuntuServer1604
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParameterFile
+  isRequired: true
+  description: |+
+    The path to the template parameter file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specify the name of the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecondaryCertificateFile
+  description: |+
+    The existing certificate file path for the secondary cluster certificate
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SecSource
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: SecondaryCertificatePassword
+  description: |+
+    The password of the certificate file
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SecCertPassword
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecretIdentifier
+  isRequired: true
+  description: |+
+    The existing Azure key vault secret URL, for example 'https://mykv.vault.azure.net:443/secrets/mysecrets/55ec7c4dc61a462bbc645ffc9b4b225f'
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TemplateFile
+  isRequired: true
+  description: |+
+    The path to the template file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: VmPassword
+  isRequired: true
+  description: |+
+    The password of the Vm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VmSku
+  description: |+
+    The Vm Sku
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Sku
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VmUserName
+  description: |+
+    The user name for logging to Vm
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ServiceFabric.New-AzServiceFabricCluster
+name: New-AzServiceFabricCluster
+description: |-
+  The **New-AzServiceFabricCluster** command uses certificates that you provide or system generated self-signed certificates to set up a new service fabric cluster. The template used can be a default template or a custom template that you provide. You have the option of specifying a folder to export the self-signed certificates or fetching them later from the key vault.
+  If you are specifying a custom template and parameter file, you don't need to provide the certificate information in the parameter file, the system will populate these parameters.
+  The four options are detailed below. Scroll down for explanations of each of the parameters.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
+  Module Name: Az.ServiceFabric
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefabric/new-azservicefabriccluster
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/New-AzServiceFabricCluster.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/New-AzServiceFabricCluster.md

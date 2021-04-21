@@ -1,0 +1,306 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Autoscale profile.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.RecurrenceFrequency" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.AutoscaleProfile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzAutoscaleSetting
+  href: ./Add-AzAutoscaleSetting.yml
+- text: Get-AzAutoscaleHistory
+  href: ./Get-AzAutoscaleHistory.yml
+- text: Get-AzAutoscaleSetting
+  href: ./Get-AzAutoscaleSetting.yml
+- text: New-AzAutoscaleRule
+  href: ./New-AzAutoscaleRule.yml
+- text: Remove-AzAutoscaleSetting
+  href: ./Remove-AzAutoscaleSetting.yml
+syntaxes:
+- >-
+  New-AzAutoscaleProfile -Name <String> -DefaultCapacity <String> -MaximumCapacity <String>
+
+   -MinimumCapacity <String>
+
+   -Rule <System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule]>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzAutoscaleProfile -Name <String> -DefaultCapacity <String> -MaximumCapacity <String>
+
+   -MinimumCapacity <String> -StartTimeWindow <DateTime> -EndTimeWindow <DateTime> -TimeWindowTimeZone <String>
+
+   -Rule <System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule]>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzAutoscaleProfile -Name <String> -DefaultCapacity <String> -MaximumCapacity <String>
+
+   -MinimumCapacity <String> -RecurrenceFrequency <RecurrenceFrequency>
+
+   -ScheduleDay <System.Collections.Generic.List`1[System.String]>
+
+   -ScheduleHour <System.Collections.Generic.List`1[System.Nullable`1[System.Int32]]>
+
+   -ScheduleMinute <System.Collections.Generic.List`1[System.Nullable`1[System.Int32]]>
+
+   -ScheduleTimeZone <String>
+
+   -Rule <System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule]>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create single profile with a fixed date'
+  code: |-
+    PS C:\>$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+
+    PS C:\> $Profile = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -StartTimeWindow 2015-03-05T14:00:00 -EndTimeWindow 2015-03-05T14:30:00 -TimeWindowTimeZone GMT -Rule $Rule -Name "Profile01"
+    Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
+    FixedDate  : Microsoft.Azure.Management.Insights.Models.TimeWindow
+    Name       : adios
+    Recurrence : 
+    Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+                 Microsoft.Azure.Management.Insights.Models.ScaleRule}
+  description: |-
+    The first command creates an Autoscale rule named Requests, and then stores it in the $Rule variable.
+    The second command creates a profile named Profile01 with a fixed date using the rule in $Rule.
+  summary: ""
+- title: 'Example 2: Create a profile with a schedule'
+  code: |-
+    PS C:\>$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+
+    PS C:\> $Profile = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -Rule $Rule -Name "SecondProfileName" -RecurrenceFrequency Minute -ScheduleDays "1", "2", "3" -ScheduleHours 5, 10, 15 -ScheduleMinutes 15, 30, 45 -ScheduleTimeZone GMT
+    Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
+    FixedDate  : 
+    Name       : secondProfileName
+    Recurrence : Microsoft.Azure.Management.Insights.Models.Recurrence
+    Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+                 Microsoft.Azure.Management.Insights.Models.ScaleRule}
+  description: |-
+    The first command creates an Autoscale rule named Requests, and then stores it in the $Rule variable.
+    The second command creates a profile named SecondProfileName with a recurring schedule using the rule in $Rule.
+  summary: ""
+- title: 'Example 3: Create profiles with two rules'
+  code: |-
+    PS C:\>$Rule1 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+
+    PS C:\> $Rule2 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:10:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "2"
+
+    PS C:\> $Profile1 = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -StartTimeWindow 2015-03-05T14:00:00 -EndTimeWindow 2015-03-05T14:30:00 -TimeWindowTimeZone GMT -Rule $Rule1, $Rule2 -Name "ProfileName"
+
+    PS C:\> $Profile2 = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -Rule $Rule1, $Rule2 -Name "SecondProfileName" -RecurrenceFrequency Week -ScheduleDays "1" -ScheduleHours 5 -ScheduleMinutes 15 -ScheduleTimeZone UTC
+    Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
+    FixedDate  : Microsoft.Azure.Management.Insights.Models.TimeWindow
+    Name       : profileName
+    Recurrence : 
+    Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+                 Microsoft.Azure.Management.Insights.Models.ScaleRule}
+    Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
+    FixedDate  : 
+    Name       : secondProfileName
+    Recurrence : Microsoft.Azure.Management.Insights.Models.Recurrence
+    Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+                 Microsoft.Azure.Management.Insights.Models.ScaleRule}
+  description: |-
+    The first two commands create rules, and store them in the variables $Rule1 and $Rule2, respectively.
+    The third command creates a profile named ProfileName using the rules in Rule1 and Rule2, and then stores it in the $Profile1 variable.
+    The final command creates a profile named SecondProfileName using the rules in Rule1 and Rule2, and then stores it in the $Profile2 variable.
+  summary: ""
+- title: 'Example 4: Create a profile with no schedule or fixed date'
+  code: |-
+    PS C:\>$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+
+    PS C:\> $Profile = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -Rule $Rule -Name "ProfileName"
+  description: |-
+    The first command creates an Autoscale rule named Requests, and then stores it in the $Rule variable.
+    The second command creates a profile without a schedule or a fixed date, and then stores it in the $Profile variable.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultCapacity
+  isRequired: true
+  description: |+
+    Specifies the default capacity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: EndTimeWindow
+  isRequired: true
+  description: |+
+    Specifies the end of the time window.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MaximumCapacity
+  isRequired: true
+  description: |+
+    Specifies the maximum capacity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MinimumCapacity
+  isRequired: true
+  description: |+
+    Specifies the minimum capacity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the profile to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.RecurrenceFrequency" data-throw-if-not-resolved="False" />
+  name: RecurrenceFrequency
+  isRequired: true
+  description: |+
+    Specifies the frequency of recurrence.
+    The acceptable values for this parameter are:
+    - None
+    - Second
+    - Minute
+    - Hour
+    - Day
+    - Week
+    - Month
+    - Year
+    Not all of these values are supported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Second, Minute, Hour, Day, Week, Month, Year
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Rule
+  isRequired: true
+  description: |+
+    Specifies the list of rules to add to the profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ScheduleDay
+  isRequired: true
+  description: |+
+    Specifies the scheduled days.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  name: ScheduleHour
+  isRequired: true
+  description: |+
+    Specifies the scheduled hours.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  name: ScheduleMinute
+  isRequired: true
+  description: |+
+    Specifies the scheduled minutes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ScheduleTimeZone
+  isRequired: true
+  description: |+
+    Specifies the time zone of the schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: StartTimeWindow
+  isRequired: true
+  description: |+
+    Specifies the start of the time window.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TimeWindowTimeZone
+  isRequired: true
+  description: |+
+    Specifies the time zone of the time window.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzAutoscaleProfile
+name: New-AzAutoscaleProfile
+description: |-
+  The **New-AzAutoscaleProfile** cmdlet creates an Autoscale profile.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azautoscaleprofile
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAutoscaleProfile.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAutoscaleProfile.md

@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get application insights resources
+module: Az.ApplicationInsights
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApplicationInsights.Models.PSApplicationInsightsComponent" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzApplicationInsights [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzApplicationInsights [-ResourceGroupName] <String> [-Name] <String> [-Full]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApplicationInsights [-ResourceId] <String> [-Full] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1 Get application insights resource
+  code: |-
+    PS C:\> Get-AzApplicationInsights -ResourceGroupName "testgroup" -Name "test"
+
+    Id                 : /subscriptions/{subid}/resourceGroups/testgroup/providers/microsoft.insights/components/test
+    ResourceGroupName  : testgroup
+    Name               : test
+    Kind               : web
+    Location           : eastus
+    Type               : microsoft.insights/components
+    AppId              : 7c8f0641-d307-41bc-b8f2-d30701adb4b3
+    ApplicationType    : web
+    Tags               : {}
+    CreationDate       : 7/5/2017 4:37:22 PM
+    FlowType           : Redfield
+    HockeyAppId        :
+    HockeyAppToken     :
+    InstrumentationKey : 1e30d092-4b4b-47c6-ad39-7c10785d80f5
+    ProvisioningState  : Succeeded
+    RequestSource      : IbizaAIExtension
+    SamplingPercentage :
+    TenantId           : b90b0dec-9b9a-4778-a84e-4ffb73bb17f7
+  description: |-
+    Get application insights resource named "test" in resoruce group "testgroup"
+  summary: ""
+- title: Example 2 Get application insights resource with pricing plan information
+  code: |-
+    PS C:\> Get-AzApplicationInsights -ResourceGroupName "testgroup" -Name "test" -IncludePricingPlan
+
+    Cap                            : 330
+    ResetTime                      : 0
+    StopSendNotificationWhenHitCap : True
+    CapExpirationTime              :
+    IsCapped                       : False
+    Id                 : /subscriptions/{subid}/resourceGroups/testgroup/providers/microsoft.insights/components/test
+    ResourceGroupName  : testgroup
+    Name               : test
+    Kind               : web
+    Location           : eastus
+    Type               : microsoft.insights/components
+    AppId              : 7c8f0641-d307-41bc-b8f2-d30701adb4b3
+    ApplicationType    : web
+    Tags               : {}
+    CreationDate       : 7/5/2017 4:37:22 PM
+    FlowType           : Redfield
+    HockeyAppId        :
+    HockeyAppToken     :
+    InstrumentationKey : 1e30d092-4b4b-47c6-ad39-7c10785d80f5
+    ProvisioningState  : Succeeded
+    RequestSource      : IbizaAIExtension
+    SamplingPercentage :
+    TenantId           : b90b0dec-9b9a-4778-a84e-4ffb73bb17f7
+    PricingPlan        : Basic
+  description: |-
+    Get application insights resource and include pricing plan information for resource named "test" in resoruce group "testgroup"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Full
+  description: |+
+    If specified, it will get back pricing plan/daily cap and status of the application insights component.
+
+  defaultValue: None
+  position: Named
+  aliases: IncludeDailyCap, IncludeDailyCapStatus, IncludePricingPlan
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Application Insights Resource Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ApplicationInsightsComponentName, ComponentName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Application Insights Component Resource Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApplicationInsights.Get-AzApplicationInsights
+name: Get-AzApplicationInsights
+description: |-
+  Get application insights resources in a resource group or specific resource
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.dll-Help.xml
+  Module Name: Az.ApplicationInsights
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.applicationinsights/get-azapplicationinsights
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApplicationInsights/ApplicationInsights/help/Get-AzApplicationInsights.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApplicationInsights/ApplicationInsights/help/Get-AzApplicationInsights.md

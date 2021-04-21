@@ -1,0 +1,182 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists existing azure active directory applications.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADApplication" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzADAppCredential
+  href: ./Remove-AzADAppCredential.yml
+- text: New-AzADAppCredential
+  href: ./New-AzADAppCredential.yml
+- text: Get-AzADAppCredential
+  href: ./Get-AzADAppCredential.yml
+- text: Remove-AzADApplication
+  href: ./Remove-AzADApplication.yml
+- text: New-AzADApplication
+  href: ./New-AzADApplication.yml
+- text: Update-AzADApplication
+  href: ./Update-AzADApplication.yml
+syntaxes:
+- >-
+  Get-AzADApplication [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount] [-Skip <UInt64>]
+
+   [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADApplication -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADApplication -ApplicationId <Guid> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADApplication -DisplayNameStartWith <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADApplication -DisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+examples:
+- title: Example 1 - List all applications
+  code: |-
+    PS C:\> Get-AzADApplication
+  description: |-
+    Lists all the applications under a tenant.
+  summary: ""
+- title: Example 2 - List applications using paging
+  code: |-
+    PS C:\> Get-AzADApplication -First 100
+  description: |-
+    Lists the first 100 applications under a tenant.
+  summary: ""
+- title: Example 3 - Get application by identifier URI
+  code: |-
+    PS C:\> Get-AzADApplication -IdentifierUri http://mySecretApp1
+  description: |-
+    Gets the application with identifier uri as "http://mySecretApp1".
+  summary: ""
+- title: Example 4 - Get application by object id
+  code: |-
+    PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69
+  description: |-
+    Gets the application with the object id '39e64ec6-569b-4030-8e1c-c3c519a05d69'.
+  summary: ""
+parameters:
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  isRequired: true
+  description: |+
+    The application id of the application to fetch.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    The display name of the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayNameStartWith
+  isRequired: true
+  description: |+
+    Fetch all applications starting with the display name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The maximum number of objects to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IdentifierUri
+  isRequired: true
+  description: |+
+    Unique identifier Uri of the application to fetch.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeTotalCount
+  description: |+
+    Reports the number of objects in the data set. Currently, this parameter does nothing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  isRequired: true
+  description: |+
+    The object id of the application to fetch.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    Ignores the first N objects and then gets the remaining objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzADApplication
+name: Get-AzADApplication
+description: |-
+  Lists existing azure active directory applications.
+  Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.
+  If no parameter is provided, it fetches all applications under the tenant.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 66AC5120-80B1-46F2-AA51-132BF361602E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azadapplication
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADApplication.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADApplication.md

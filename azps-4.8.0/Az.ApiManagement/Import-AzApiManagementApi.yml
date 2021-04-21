@@ -1,0 +1,309 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports an API from a file or a URL.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiFormat" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiType, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-AzApiManagementApi
+  href: ./Export-AzApiManagementApi.yml
+- text: Get-AzApiManagementApi
+  href: ./Get-AzApiManagementApi.yml
+- text: New-AzApiManagementApi
+  href: ./New-AzApiManagementApi.yml
+- text: Remove-AzApiManagementApi
+  href: ./Remove-AzApiManagementApi.yml
+- text: Set-AzApiManagementApi
+  href: ./Set-AzApiManagementApi.yml
+syntaxes:
+- >-
+  Import-AzApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>] [-ApiRevision <String>]
+
+   -SpecificationFormat <PsApiManagementApiFormat> -SpecificationPath <String> [-Path <String>]
+
+   [-WsdlServiceName <String>] [-WsdlEndpointName <String>] [-ApiType <PsApiManagementApiType>]
+
+   [-Protocol <PsApiManagementSchema[]>] [-ServiceUrl <String>] [-ApiVersionSetId <String>]
+
+   [-ApiVersion <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Import-AzApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>] [-ApiRevision <String>]
+
+   -SpecificationFormat <PsApiManagementApiFormat> -SpecificationUrl <String> [-Path <String>]
+
+   [-WsdlServiceName <String>] [-WsdlEndpointName <String>] [-ApiType <PsApiManagementApiType>]
+
+   [-Protocol <PsApiManagementSchema[]>] [-ServiceUrl <String>] [-ApiVersionSetId <String>]
+
+   [-ApiVersion <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Import an API from a WADL file'
+  code: |-
+    PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Import-AzApiManagementApi -Context $ApiMgmtContext -SpecificationFormat "Wadl" -SpecificationPath "C:\contoso\specifications\echoapi.wadl" -Path "apis"
+  description: |-
+    This command imports an API from the specified WADL file.
+  summary: ""
+- title: 'Example 2: Import an API from a Swagger file'
+  code: |-
+    PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Import-AzApiManagementApi -Context $ApiMgmtContext -SpecificationFormat "Swagger" -SpecificationPath "C:\contoso\specifications\echoapi.swagger" -Path "apis"
+  description: |-
+    This command imports an API from the specified Swagger file.
+  summary: ""
+- title: 'Example 3: Import an API from a WADL link'
+  code: |-
+    PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Import-AzApiManagementApi -Context $ApiMgmtContext -SpecificationFormat "Wadl" -SpecificationUrl "http://contoso.com/specifications/wadl/echoapi" -Path "apis"
+  description: |-
+    This command imports an API from the specified WADL link.
+  summary: ""
+- title: 'Example 4: Import an API from a Open Api Link'
+  code: |-
+    PS C:\>$context = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\> Import-AzApiManagementApi -Context $context -SpecificationFormat OpenApi -SpecificationUrl https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml -Path "petstore30"
+
+    ApiId                         : af3f57bab399455aa875d7050654e9d1
+    Name                          : Swagger Petstore
+    Description                   :
+    ServiceUrl                    : http://petstore.swagger.io/v1
+    Path                          : petstore30
+    ApiType                       : http
+    Protocols                     : {Https}
+    AuthorizationServerId         :
+    AuthorizationScope            :
+    OpenidProviderId              :
+    BearerTokenSendingMethod      : {}
+    SubscriptionKeyHeaderName     : Ocp-Apim-Subscription-Key
+    SubscriptionKeyQueryParamName : subscription-key
+    ApiRevision                   : 1
+    ApiVersion                    :
+    IsCurrent                     : True
+    IsOnline                      : False
+    SubscriptionRequired          :
+    ApiRevisionDescription        :
+    ApiVersionSetDescription      :
+    ApiVersionSetId               :
+    Id                            : /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/apis/af3f57bab399455aa875d7050654e9d1     
+    ResourceGroupName             : Api-Default-West-US
+    ServiceName                   : contoso
+  description: |-
+    This command imports an API from the specified Open 3.0 specification link.
+  summary: ""
+- title: 'Example 5:  Import an API from a Open Api Link into a ApiVersion Set'
+  code: |-
+    PS C:\>$context = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\> Import-AzApiManagementApi -Context $context -SpecificationPath "C:\contoso\specifications\uspto.yml" -SpecificationFormat OpenApi -Path uspostal -ApiVersionSetId 0d50e2cf-aaeb-4ea3-8a58-db9ec079c6cd -ApiVersion v2
+
+    ApiId                         : 6c3f20c66e5745b19229d06cd865948f
+    Name                          : USPTO Data Set API
+    Description                   : The Data Set API (DSAPI) allows the public users to discover and search USPTO exported data sets. This is a generic API that allows USPTO users to make any CSV based data files
+                                    searchable through API. With the help of GET call, it returns the list of data fields that are searchable. With the help of POST call, data can be fetched based on the filters on the    
+                                    field names. Please note that POST call is used to search the actual data. The reason for the POST call is that it allows users to specify any complex search criteria without worry      
+                                    about the GET size limitations as well as encoding of the input parameters.
+    ServiceUrl                    : https://developer.uspto.gov/ds-api
+    Path                          : uspostal
+    ApiType                       : http
+    Protocols                     : {Https}
+    AuthorizationServerId         :
+    AuthorizationScope            :
+    OpenidProviderId              :
+    BearerTokenSendingMethod      : {}
+    SubscriptionKeyHeaderName     : Ocp-Apim-Subscription-Key
+    SubscriptionKeyQueryParamName : subscription-key
+    ApiRevision                   : 1
+    ApiVersion                    : v2
+    IsCurrent                     : True
+    IsOnline                      : False
+    SubscriptionRequired          :
+    ApiRevisionDescription        :
+    ApiVersionSetDescription      :
+    ApiVersionSetId               : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apiVersionSets/0d50e2cf-aaeb-4ea3-8a58-db9ec079c6cd
+    Id                            : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apis/6c3f20c66e5745b19229d06cd865948f    
+    ResourceGroupName             : Api-Default-East-US
+    ServiceName                   : contoso
+  description: |-
+    This command imports an API from the specified Open 3.0 specification document and create a new ApiVersion.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiId
+  description: |+
+    Specifies an ID for the API to import.
+    If you do not specify this parameter, an ID is generated for you.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiRevision
+  description: |+
+    Identifier of API Revision. This parameter is optional. If not specified, the import will be done onto the currently active revision or a new api.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiType" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ApiType
+  description: |+
+    This parameter is optional with a default value of Http. The Soap option is only applicable when importing WSDL and will create a SOAP Passthrough API.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Http, Soap
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiVersion
+  description: |+
+    Api Version of the Api to create. This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiVersionSetId
+  description: |+
+    A resource identifier for the related Api Version Set. This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Specifies a **PsApiManagementContext** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies a web API path as the last part of the API's public URL.
+    This URL is used by API consumers for sending requests to the web service.
+    Must be 1 to 400 characters long.
+    The default value is $Null.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Protocol
+  description: |+
+    Web API protocols (http, https). Protocols over which API is made available. This parameter is optional. If provided it will override the protocols specified in the specifications document.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Http, Https
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServiceUrl
+  description: |+
+    A URL of the web service exposing the API. This URL will be used by Azure API Management only, and will not be made public. This parameter is optional. If provided it will override the ServiceUrl specified in the Specifications document.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiFormat" data-throw-if-not-resolved="False" />
+  name: SpecificationFormat
+  isRequired: true
+  description: |+
+    Specifies the specification format.
+    psdx_paramvalues Wadl, Wsdl, and Swagger.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Wadl, Swagger, Wsdl, OpenApi, OpenApiJson
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SpecificationPath
+  isRequired: true
+  description: |+
+    Specifies the specification file path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SpecificationUrl
+  isRequired: true
+  description: |+
+    Specifies the specification URL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WsdlEndpointName
+  description: |+
+    Local name of WSDL Endpoint (port) to be imported. Must be 1 to 400 characters long. This parameter is optional and only required for importing Wsdl. Default value is $null.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WsdlServiceName
+  description: |+
+    Local name of WSDL Service to be imported. Must be 1 to 400 characters long. This parameter is optional and only required for importing Wsdl . Default value is $null.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Import-AzApiManagementApi
+name: Import-AzApiManagementApi
+description: |-
+  The **Import-AzApiManagementApi** cmdlet imports an Azure API Management API from a file or a URL in Web Application Description Language (WADL), Web Services Description Language (WSDL), or Swagger format.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  ms.assetid: 48C143BE-3BF6-43E3-99B0-1A1D12A0A3F3
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/import-azapimanagementapi
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Import-AzApiManagementApi.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Import-AzApiManagementApi.md

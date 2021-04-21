@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Check the availability of a name. Alias: Test-AzSignal.
+module: Az.SignalR
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Test-AzSignalRName [-Name] <String> [-Location] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Check an existed name.
+  code: |-
+    PS C:\> Test-AzSignalRName -Name existedsignalr -Location eastus
+    False
+  description: ""
+  summary: ""
+- title: Check an unexisted name.
+  code: |-
+    powershell
+    PS C:\> Test-AzSignalR unexistedsignalr eastus
+    True
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The SignalR service location.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The SignalR service name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.SignalR.Test-AzSignalRName
+name: Test-AzSignalRName
+description: |-
+  Check the availability of a name. Alias: Test-AzSignal.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.SignalR.dll-Help.xml
+  Module Name: Az.SignalR
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.signalr/test-azsignalrname
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SignalR/SignalR/help/Test-AzSignalRName.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SignalR/SignalR/help/Test-AzSignalRName.md

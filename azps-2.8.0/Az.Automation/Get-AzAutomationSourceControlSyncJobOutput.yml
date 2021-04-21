@@ -1,0 +1,156 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the output of an Azure Automation source control sync job.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Automation.Common.SourceControlSyncJobStreamType" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.SourceControlSyncJobStream" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.SourceControlSyncJobStreamRecord" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzAutomationSourceControlSyncJobOutput -SourceControlName <String> -JobId <Guid>
+
+   [-Stream <SourceControlSyncJobStreamType>] [-StreamId <String>] [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzAutomationSourceControlSyncJobOutput -ResourceGroupName "rg1" `
+                                                            -AutomationAccountName "devAccount" `
+                                                            -Name "VSTSNative"
+                                                            -Id "08d6d266-27b6-463c-beea-bc48a67ace15" `
+                                                            -Stream Output | ForEach-Object {$_.summary}
+
+    ========================================================================================================
+
+    Azure Automation Source Control Public Preview.
+    Supported runbooks to sync: PowerShell Workflow, PowerShell Scripts, DSC Configurations, Graphical, and Python 2.
+    Setting AzureRmEnvironment.
+    Getting AzureRunAsConnection.
+    Logging in to Azure...
+    Source control information for syncing:
+    [RepoUrl = https://contoso.visualstudio.com/_git/GitDemo] [Branch  = master] [FolderPath = /]
+    Verifying url: https://fcontoso.visualstudio.com/_git/GitDemo
+    Connecting to VSTS...
+
+    Source Control Sync Summary:
+
+    2 files synced:
+     - RunbookA.ps1
+     - RunbookB.ps1
+
+    Failed to import runbook:
+     - RunbookC.ps1
+
+    File is not a runbook:
+     - README.md
+     - text_file.txt
+
+    File size exceeds 1Mb:
+     - RunbookD_GreatherThan1MB.ps1
+
+    Invalid runbook name:
+     - RunbookZ_ĈĦŕĬŞ.ps1
+
+    ========================================================================================================
+  description: ""
+  summary: |+
+    This command gets the output of source control sync job with id 08d6d266-27b6-463c-beea-bc48a67ace15 for the source control VSTSNative. 
+
+
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    The automation account name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    The source control sync job id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SourceControlSyncJobId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SourceControlName
+  isRequired: true
+  description: |+
+    The source control name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Automation.Common.SourceControlSyncJobStreamType" data-throw-if-not-resolved="False" />
+  name: Stream
+  description: |+
+    The stream type.
+    Defaults to Any.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Any, Output, Error
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StreamId
+  description: |+
+    The stream id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SourceControlSyncJobStreamId
+  parameterValueGroup: ""
+uid: Az.Automation.Get-AzAutomationSourceControlSyncJobOutput
+name: Get-AzAutomationSourceControlSyncJobOutput
+description: |-
+  The **Get-AzAutomationSourceControlSyncJobOutput** cmdlet gets the output for a Azure Automation source control sync job.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationsourcecontrolsyncjoboutput
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationSourceControlSyncJobOutput.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationSourceControlSyncJobOutput.md

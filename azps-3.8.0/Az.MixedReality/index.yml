@@ -1,0 +1,21 @@
+### YamlMime:PowershellModule
+children:
+- title: Mixed Reality
+  cmdlets:
+  - Az.MixedReality.Get-AzSpatialAnchorsAccount
+  - Az.MixedReality.Get-AzSpatialAnchorsAccountKey
+  - Az.MixedReality.New-AzSpatialAnchorsAccount
+  - Az.MixedReality.New-AzSpatialAnchorsAccountKey
+  - Az.MixedReality.Remove-AzSpatialAnchorsAccount
+uid: Az.MixedReality
+name: Az.MixedReality
+description: |-
+  Azure PowerShell Module of Mixed Reality Cloud Service
+metadata:
+  Module Name: Az.MixedReality
+  Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
+  Download Help Link: https://aka.ms/mixed-reality-azure-powershell-help
+  Help Version: 0.1.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MixedReality/MixedReality/help/Az.MixedReality.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MixedReality/MixedReality/help/Az.MixedReality.md

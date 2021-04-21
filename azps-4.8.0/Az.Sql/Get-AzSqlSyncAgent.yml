@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about Azure SQL Sync Agents.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataSync.Model.AzureSqlSyncAgentModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzSqlSyncAgent
+  href: ./Remove-AzSqlSyncAgent.yml
+- text: New-AzSqlSyncAgent
+  href: ./New-AzSqlSyncAgent.yml
+syntaxes:
+- >-
+  Get-AzSqlSyncAgent [[-Name] <String>] [-ServerName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all instances of Azure SQL Sync Agent assigned to an Azure SQL Server'
+  code: |-
+    PS C:\>Get-AzSqlSyncAgent -ResourceGroupName "ResourceGroup01" -ServerName "Server01" | Format-List
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/syncAgents/{SyncAgent01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncAgentName               : SyncAgent01
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    LastAliveTime:              : 6/1/2017 5:08:48 AM
+    Version                     : 4.3.6348.1
+    IsUpToDate                  : False
+    ExpiryTime                  : 
+    State                       : Online
+
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/syncAgents/{SyncAgent02}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncAgentName               : SyncAgent02
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    LastAliveTime:              : 6/1/2017 5:08:48 AM
+    Version                     : 4.3.6348.1
+    IsUpToDate                  : False
+    ExpiryTime                  : 
+    State                       : Online
+  description: |-
+    This command gets information about all the Azure SQL Sync Agents assigned to an Azure SQL Server.
+  summary: ""
+- title: 'Example 2: Get information about an Azure SQL Sync Agent'
+  code: |-
+    PS C:\>Get-AzSqlSyncAgent -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -Name "SyncAgent01" | Format-List
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/syncAgents/{SyncAgent01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncAgentName               : SyncAgent01
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    LastAliveTime:              : 6/1/2017 5:08:48 AM
+    Version                     : 4.3.6348.1
+    IsUpToDate                  : False
+    ExpiryTime                  : 
+    State                       : Online
+  description: |-
+    This command gets information about the Azure SQL Database Sync Agent with name "SyncAgent01"
+  summary: ""
+- title: 'Example 3: Get all instances of Azure SQL Sync Agent assigned to an Azure SQL Server using filtering'
+  code: |-
+    PS C:\>Get-AzSqlSyncAgent -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -Name SyncAgent* | Format-List
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/syncAgents/{SyncAgent01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncAgentName               : SyncAgent01
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    LastAliveTime:              : 6/1/2017 5:08:48 AM
+    Version                     : 4.3.6348.1
+    IsUpToDate                  : False
+    ExpiryTime                  : 
+    State                       : Online
+
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/syncAgents/{SyncAgent02}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncAgentName               : SyncAgent02
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    LastAliveTime:              : 6/1/2017 5:08:48 AM
+    Version                     : 4.3.6348.1
+    IsUpToDate                  : False
+    ExpiryTime                  : 
+    State                       : Online
+  description: |-
+    This command gets information about all the Azure SQL Sync Agents assigned to an Azure SQL Server that start with "SyncAgent".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The sync agent name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: SyncAgentName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Server the sync agent is in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlSyncAgent
+name: Get-AzSqlSyncAgent
+description: |-
+  The **Get-AzSqlSyncAgent** cmdlet returns information about one or more Azure SQL Sync Agents.
+  Specify the name of a sync agent to see information for only that sync agent.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlsyncagent
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlSyncAgent.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlSyncAgent.md

@@ -1,0 +1,27 @@
+### YamlMime:PowershellModule
+children:
+- title: Maintenance
+  cmdlets:
+  - Az.Maintenance.Get-AzApplyUpdate
+  - Az.Maintenance.Get-AzConfigurationAssignment
+  - Az.Maintenance.Get-AzMaintenanceConfiguration
+  - Az.Maintenance.Get-AzMaintenancePublicConfiguration
+  - Az.Maintenance.Get-AzMaintenanceUpdate
+  - Az.Maintenance.New-AzApplyUpdate
+  - Az.Maintenance.New-AzConfigurationAssignment
+  - Az.Maintenance.New-AzMaintenanceConfiguration
+  - Az.Maintenance.Remove-AzConfigurationAssignment
+  - Az.Maintenance.Remove-AzMaintenanceConfiguration
+  - Az.Maintenance.Update-AzMaintenanceConfiguration
+uid: Az.Maintenance
+name: Az.Maintenance
+description: |-
+  This topic displays help topics for the Azure Maintenance Cmdlets.
+metadata:
+  Module Name: Az.Maintenance
+  Module Guid: 9b895a4cb333f6bf9176b1eeb9260782R21
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.maintenance
+  Help Version: 0.2.5.0
+  Locale: en-us
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maintenance/Maintenance/help/Az.Maintenance.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maintenance/Maintenance/help/Az.Maintenance.md

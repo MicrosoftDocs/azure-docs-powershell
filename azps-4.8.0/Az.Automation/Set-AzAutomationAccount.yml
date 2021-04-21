@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an Automation account.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.AutomationAccount" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationAccount
+  href: ./Get-AzAutomationAccount.yml
+- text: New-AzAutomationAccount
+  href: ./New-AzAutomationAccount.yml
+- text: Remove-AzAutomationAccount
+  href: ./Remove-AzAutomationAccount.yml
+syntaxes:
+- >-
+  Set-AzAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Plan <String>] [-Tags <IDictionary>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the tags for an Automation account'
+  code: |-
+    PS C:\>$Tags = @{"tag01"="value01";"tag02"="value02"}
+    PS C:\> Set-AzAutomationAccount -Name "AutomationAccount01" -ResourceGroupName "ResourceGroup01" -Tags $Tags
+  description: |-
+    The first command assigns two key/value pairs to the $Tags variable.
+    The second command sets tags in $Tags for the Automation account named AutomationAccount01.
+  summary: ""
+- title: 'Example 2: Change the plan for an Automation account'
+  code: |-
+    PS C:\>Set-AzAutomationAccount -Name "AutomationAccount01" -ResourceGroupName "ResourceGroup01" -Plan Basic
+  description: |-
+    This command changes the plan to Basic for the Automation account named AutomationAccount01.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account that this cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: AutomationAccountName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Plan
+  description: |+
+    Specifies the plan for the Automation account.
+    Valid values are:
+    - Basic
+    - Free
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Free, Basic
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group that contains the Automation account that this cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Tag
+  parameterValueGroup: ""
+uid: Az.Automation.Set-AzAutomationAccount
+name: Set-AzAutomationAccount
+description: |-
+  The **Set-AzAutomationAccount** cmdlet modifies an Azure Automation account.
+  For more information about Automation accounts, see the New-AzAutomationAccount cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: B1897EFC-0184-4A8B-B8E4-203CC8E3B179
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationaccount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationAccount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationAccount.md

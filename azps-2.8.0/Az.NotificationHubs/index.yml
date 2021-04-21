@@ -1,0 +1,37 @@
+### YamlMime:PowershellModule
+children:
+- title: Notification Hubs
+  cmdlets:
+  - Az.NotificationHubs.Get-AzNotificationHub
+  - Az.NotificationHubs.Get-AzNotificationHubAuthorizationRule
+  - Az.NotificationHubs.Get-AzNotificationHubListKey
+  - Az.NotificationHubs.Get-AzNotificationHubPNSCredential
+  - Az.NotificationHubs.Get-AzNotificationHubsNamespace
+  - Az.NotificationHubs.Get-AzNotificationHubsNamespaceAuthorizationRule
+  - Az.NotificationHubs.Get-AzNotificationHubsNamespaceListKey
+  - Az.NotificationHubs.New-AzNotificationHub
+  - Az.NotificationHubs.New-AzNotificationHubAuthorizationRule
+  - Az.NotificationHubs.New-AzNotificationHubKey
+  - Az.NotificationHubs.New-AzNotificationHubsNamespace
+  - Az.NotificationHubs.New-AzNotificationHubsNamespaceAuthorizationRule
+  - Az.NotificationHubs.New-AzNotificationHubsNamespaceKey
+  - Az.NotificationHubs.Remove-AzNotificationHub
+  - Az.NotificationHubs.Remove-AzNotificationHubAuthorizationRule
+  - Az.NotificationHubs.Remove-AzNotificationHubsNamespace
+  - Az.NotificationHubs.Remove-AzNotificationHubsNamespaceAuthorizationRule
+  - Az.NotificationHubs.Set-AzNotificationHub
+  - Az.NotificationHubs.Set-AzNotificationHubAuthorizationRule
+  - Az.NotificationHubs.Set-AzNotificationHubsNamespace
+  - Az.NotificationHubs.Set-AzNotificationHubsNamespaceAuthorizationRule
+uid: Az.NotificationHubs
+name: Az.NotificationHubs
+description: |-
+  This topic displays help topics for the Azure Notification Hub cmdlets. Notification hubs are used to send push notifications to multiple clients regardless of the platform (iOS, Android, Windows Phone 8, Windows Store, etc.) used by those clients. These hubs are roughly equivalent to individual apps: each of your apps will typically have its own notification hub. Notification hubs are organized within logical containers known as namespaces, and Shared Access Signature (SAS) authorization rules are used to manage access to hubs and namespaces. All of these elements can be administered by using the Notification Hub cmdlets.
+metadata:
+  Module Name: Az.NotificationHubs
+  Module Guid: f875725d-8ce4-423f-a6af-ea880bc63f13
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs
+  Help Version: 4.1.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Az.NotificationHubs.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Az.NotificationHubs.md

@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a network interface IP configuration from a network interface.
+module: Az.Network
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzNetworkInterfaceIpConfig
+  href: ./Add-AzNetworkInterfaceIpConfig.yml
+- text: Get-AzNetworkInterfaceIpConfig
+  href: ./Get-AzNetworkInterfaceIpConfig.yml
+- text: New-AzNetworkInterfaceIpConfig
+  href: ./New-AzNetworkInterfaceIpConfig.yml
+- text: Set-AzNetworkInterfaceIpConfig
+  href: ./Set-AzNetworkInterfaceIpConfig.yml
+syntaxes:
+- >-
+  Remove-AzNetworkInterfaceIpConfig -Name <String> -NetworkInterface <PSNetworkInterface>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Delete an IP configuration from a network interface'
+  code: |-
+    $nic = Get-AzNetworkInterface -Name mynic -ResourceGroupName myrg
+
+    Remove-AzNetworkInterfaceIpConfig -Name IPConfig-1 -NetworkInterface $nic
+
+    Set-AzNetworkInterface -NetworkInterface $nic
+  description: |-
+    The first command gets a network interface called mynic and stores it in the variable $nic. The second command
+        removes the IP configuration called IPConfig-1 associated with this network interface. The third command sets changes made to the network interface.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the network interface IP configuration to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterface" data-throw-if-not-resolved="False" />
+  name: NetworkInterface
+  isRequired: true
+  description: |+
+    Specifies a **NetworkInterface** object.
+    This object contains the network interface IP configuration to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Remove-AzNetworkInterfaceIpConfig
+name: Remove-AzNetworkInterfaceIpConfig
+description: |-
+  The **Remove-AzNetworkInterfaceIpConfig** cmdlet removes a network interface IP configuration from an Azure network interface.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 015C7DB7-2B08-4033-9B6E-1738D4DDACDA
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkinterfaceipconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkInterfaceIpConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkInterfaceIpConfig.md

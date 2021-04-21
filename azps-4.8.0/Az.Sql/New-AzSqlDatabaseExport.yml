@@ -1,0 +1,228 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports an Azure SQL Database as a .bacpac file to a storage account.
+module: Az.Sql
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, sql, database, mssql
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.AzureSqlDatabaseImportExportBaseModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlDatabaseImportExportStatus
+  href: ./Get-AzSqlDatabaseImportExportStatus.yml
+- text: New-AzSqlDatabaseImport
+  href: ./New-AzSqlDatabaseImport.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  New-AzSqlDatabaseExport [-DatabaseName] <String> [-ServerName] <String> -StorageKeyType <StorageKeyType>
+
+   -StorageKey <String> -StorageUri <Uri> -AdministratorLogin <String> -AdministratorLoginPassword <SecureString>
+
+   [-AuthenticationType <AuthenticationType>] [-UseNetworkIsolation <Boolean>]
+
+   [-StorageAccountResourceIdForPrivateLink <String>] [-SqlServerResourceIdForPrivateLink <String>]
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an export request for a database'
+  code: |-
+    PS C:\>New-AzSqlDatabaseExport -ResourceGroupName "RG01" -ServerName "Server01" -DatabaseName "Database01" -StorageKeyType "StorageAccessKey" -StorageKey "StorageKey01" -StorageUri "http://account01.blob.core.contoso.net/bacpacs/database01.bacpac" -AdministratorLogin "User" -AdministratorLoginPassword "secure password"
+    ResourceGroupName          : RG01
+    ServerName                 : Server01
+    DatabaseName               : Database01
+    StorageKeyType             : StorageAccessKey
+    StorageKey                 : 
+    StorageUri                 : http://account01.blob.core.contoso.net/bacpacs/database01.bacpac
+    AdministratorLogin         : User
+    AdministratorLoginPassword : 
+    AuthenticationType         : None
+    OperationStatusLink        : https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-00
+                                 0-0000-0000-000000000000?api-version=2014-04-01
+    Status                     : InProgress
+    ErrorMessage               :
+  description: |-
+    This command creates an export request for the specified database.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AdministratorLogin
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: AdministratorLoginPassword
+  isRequired: true
+  description: |+
+    Specifies the password of the SQL administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.AuthenticationType" data-throw-if-not-resolved="False" />
+  name: AuthenticationType
+  description: |+
+    Specifies the type of authentication used to access the server.
+    The default value is SQL if no authentication type is set.
+    The acceptable values for this parameter are:
+    - Sql.
+    SQL authentication.
+    Set the *AdministratorLogin* and *AdministratorLoginPassword* to the SQL administrator username and password. 
+    - ADPassword.
+    Azure Active Directory authentication.
+    Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure AD administrator username and password.
+    This parameter is only available on SQL Database V12 servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Sql, AdPassword
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL Database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for the SQL Database server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL Database server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SqlServerResourceIdForPrivateLink
+  description: |+
+    The sql server resource id to create private link
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountResourceIdForPrivateLink
+  description: |+
+    The storage account resource id to create private link
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageKey
+  isRequired: true
+  description: |+
+    Specifies the access key for the storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.StorageKeyType" data-throw-if-not-resolved="False" />
+  name: StorageKeyType
+  isRequired: true
+  description: |+
+    Specifies the type of access key for the storage account.
+    The acceptable values for this parameter are:
+    - StorageAccessKey.
+    This value uses a storage account key. 
+    - SharedAccessKey.
+    This value uses a Shared Access Signature (SAS) key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: StorageAccessKey, SharedAccessKey
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: StorageUri
+  isRequired: true
+  description: |+
+    Specifies the blob link, as a URL, to the .bacpac file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: UseNetworkIsolation
+  description: |+
+    If set, will create private link for storage account and/or SQL server
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.New-AzSqlDatabaseExport
+name: New-AzSqlDatabaseExport
+description: |-
+  The **New-AzSqlDatabaseExport** cmdlet exports an Azure SQL Database as a .bacpac file to a storage account.
+  The get export database status request may be sent to retrieve status information for this request.
+  This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 3D4822DD-736B-42DF-8D9A-1CB23FEF052E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqldatabaseexport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlDatabaseExport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlDatabaseExport.md

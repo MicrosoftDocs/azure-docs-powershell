@@ -1,0 +1,191 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new replica from an existing database.
+module: Az.PostgreSql
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  MASTER <IServer>: The source server object to create replica from.
+    - `Location <String>`: The location the resource resides in.
+    - `[Tag <ITrackedResourceTags>]`: Application-specific metadata in the form of key-value pairs.
+      - `[(Any) <String>]`: This indicates any property can be added to this object.
+    - `[AdministratorLogin <String>]`: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+    - `[EarliestRestoreDate <DateTime?>]`: Earliest restore point creation time (ISO8601 format)
+    - `[FullyQualifiedDomainName <String>]`: The fully qualified domain name of a server.
+    - `[IdentityType <IdentityType?>]`: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+    - `[InfrastructureEncryption <InfrastructureEncryption?>]`: Status showing whether the server enabled infrastructure encryption.
+    - `[MasterServerId <String>]`: The master server id of a replica server.
+    - `[MinimalTlsVersion <MinimalTlsVersionEnum?>]`: Enforce a minimal Tls version for the server.
+    - `[PublicNetworkAccess <PublicNetworkAccessEnum?>]`: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+    - `[ReplicaCapacity <Int32?>]`: The maximum number of replicas that a master server can have.
+    - `[ReplicationRole <String>]`: The replication role of the server.
+    - `[SkuCapacity <Int32?>]`: The scale up/out capacity, representing server's compute units.
+    - `[SkuFamily <String>]`: The family of hardware.
+    - `[SkuName <String>]`: The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+    - `[SkuSize <String>]`: The size code, to be interpreted by resource as appropriate.
+    - `[SkuTier <SkuTier?>]`: The tier of the particular SKU, e.g. Basic.
+    - `[SslEnforcement <SslEnforcementEnum?>]`: Enable ssl enforcement or not when connect to server.
+    - `[StorageProfileBackupRetentionDay <Int32?>]`: Backup retention days for the server.
+    - `[StorageProfileGeoRedundantBackup <GeoRedundantBackup?>]`: Enable Geo-redundant or not for server backup.
+    - `[StorageProfileStorageAutogrow <StorageAutogrow?>]`: Enable Storage Auto Grow.
+    - `[StorageProfileStorageMb <Int32?>]`: Max storage allowed for a server.
+    - `[UserVisibleState <ServerState?>]`: A state of a server that is visible to user.
+    - `[Version <ServerVersion?>]`: Server version.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.Api20171201.IServer" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.Api20171201.IServer" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzPostgreSqlReplica -ReplicaName <String> -ResourceGroupName <String> -Master <IServer>
+
+   [-SubscriptionId <String>] [-Location <String>] [-Sku <String>] [-DefaultProfile <PSObject>] [-AsJob]
+
+   [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new PostgreSql server replica'
+  code: |-
+    PS C:\> Get-AzPostgreSqlServer -ResourceGroupName PostgreSqlTestRG -ServerName PostgreSqlTestServer | New-AzPostgreSqlReplica -ReplicaName PostgreSqlTestServerReplica -ResourceGroupName PostgreSqlTestRG
+
+    Name                        Location AdministratorLogin Version StorageProfileStorageMb SkuName   SkuTier        SslEnforcement
+    ----                        -------- ------------------ ------- ----------------------- -------   -------        --------------
+    postgresqltestserverreplica eastus   pwsh               9.6     5120                    GP_Gen5_4 GeneralPurpose Enabled
+  description: |-
+    This cmdlet creates a new PostgreSql server replica.
+  summary: ""
+- title: 'Example 2: Create a new PostgreSql server replica'
+  code: |-
+    PS C:\> $pgDb = Get-AzPostgreSqlServer -ResourceGroupName PostgreSqlTestRG -ServerName PostgreSqlTestServer 
+    PS C:\> New-AzPostgreSqlReplica -Master $pgDb -ReplicaName PostgreSqlTestServerReplica -ResourceGroupName PostgreSqlTestRG
+
+    Name                        Location AdministratorLogin Version StorageProfileStorageMb SkuName   SkuTier        SslEnforcement
+    ----                        -------- ------------------ ------- ----------------------- -------   -------        --------------
+    postgresqltestserverreplica eastus   pwsh               9.6     5120                    GP_Gen5_4 GeneralPurpose Enabled
+  description: |-
+    This cmdlet creates a new PostgreSql server replica.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run the command as a job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    The location the resource resides in.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.Api20171201.IServer" data-throw-if-not-resolved="False" />
+  name: Master
+  isRequired: true
+  description: |+
+    The source server object to create replica from.
+    To construct, see NOTES section for MASTER properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: InputObject
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Run the command asynchronously.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReplicaName
+  isRequired: true
+  description: |+
+    The name of the server.
+
+  defaultValue: None
+  position: Named
+  aliases: ReplicaServerName, Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group that contains the resource, You can obtain this value from the Azure Resource Manager API or the portal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Sku
+  description: |+
+    The name of the sku, typically, tier + family + cores, e.g.
+    B_Gen4_1, GP_Gen5_8.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The subscription ID that identifies an Azure subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.PostgreSql.New-AzPostgreSqlReplica
+name: New-AzPostgreSqlReplica
+description: |-
+  Creates a new replica from an existing database.
+metadata:
+  external help file: ""
+  Module Name: Az.PostgreSql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.postgresql/new-azpostgresqlreplica
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PostgreSql/help/New-AzPostgreSqlReplica.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PostgreSql/help/New-AzPostgreSqlReplica.md

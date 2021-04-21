@@ -1,0 +1,20 @@
+### YamlMime:PowershellModule
+children:
+- title: Monitor
+  cmdlets:
+  - Az.MonitoringSolutions.Get-AzMonitorLogAnalyticsSolution
+  - Az.MonitoringSolutions.New-AzMonitorLogAnalyticsSolution
+  - Az.MonitoringSolutions.Remove-AzMonitorLogAnalyticsSolution
+  - Az.MonitoringSolutions.Update-AzMonitorLogAnalyticsSolution
+uid: Az.MonitoringSolutions
+name: Az.MonitoringSolutions
+description: |-
+  Microsoft Azure PowerShell: MonitoringSolutions cmdlets
+metadata:
+  Module Name: Az.MonitoringSolutions
+  Module Guid: 4e0cdc62-833e-41bd-aa97-f8f042986de3
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.monitoringsolutions
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MonitoringSolutions/help/Az.MonitoringSolutions.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MonitoringSolutions/help/Az.MonitoringSolutions.md

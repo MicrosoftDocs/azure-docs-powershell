@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a runbook.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-AzAutomationRunbook
+  href: ./Export-AzAutomationRunbook.yml
+- text: Get-AzAutomationRunbook
+  href: ./Get-AzAutomationRunbook.yml
+- text: Import-AzAutomationRunbook
+  href: ./Import-AzAutomationRunbook.yml
+- text: New-AzAutomationRunbook
+  href: ./New-AzAutomationRunbook.yml
+- text: New-AzAutomationRunbook
+  href: ./New-AzAutomationRunbook.yml
+- text: Publish-AzAutomationRunbook
+  href: ./Publish-AzAutomationRunbook.yml
+- text: Set-AzAutomationRunbook
+  href: ./Set-AzAutomationRunbook.yml
+- text: Start-AzAutomationRunbook
+  href: ./Start-AzAutomationRunbook.yml
+syntaxes:
+- >-
+  Remove-AzAutomationRunbook [-Name] <String> [-Force] [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a runbook'
+  code: |-
+    PS C:\>Remove-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbook03" -ResourceGroupName "ResourceGroup01"
+  description: |-
+    This command removes the runbook named Runbook03 in the Azure Automation account named Contoso17.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account in which this cmdlet removes a runbook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    ps_force
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the runbook that this cmdlet removes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: RunbookName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for which this cmdlet publishes a runbook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Automation.Remove-AzAutomationRunbook
+name: Remove-AzAutomationRunbook
+description: |-
+  The **Remove-AzAutomationRunbook** cmdlet removes a runbook from Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 16055879-C001-46E7-B8C3-1FE2A1A67AC4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/remove-azautomationrunbook
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Remove-AzAutomationRunbook.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Remove-AzAutomationRunbook.md

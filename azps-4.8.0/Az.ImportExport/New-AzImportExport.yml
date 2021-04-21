@@ -1,0 +1,558 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new job or updates an existing job in the specified subscription.
+module: Az.ImportExport
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  DRIVELIST <IDriveStatus[]>: List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
+    - `[BitLockerKey <String>]`: The BitLocker key used to encrypt the drive.
+    - `[BytesSucceeded <Int64?>]`: Bytes successfully transferred for the drive.
+    - `[CopyStatus <String>]`: Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+    - `[DriveHeaderHash <String>]`: The drive header hash value.
+    - `[DriveId <String>]`: The drive's hardware serial number, without spaces.
+    - `[ErrorLogUri <String>]`: A URI that points to the blob containing the error log for the data transfer operation.
+    - `[ManifestFile <String>]`: The relative path of the manifest file on the drive. 
+    - `[ManifestHash <String>]`: The Base16-encoded MD5 hash of the manifest file on the drive.
+    - `[ManifestUri <String>]`: A URI that points to the blob containing the drive manifest file. 
+    - `[PercentComplete <Int32?>]`: Percentage completed for the drive. 
+    - `[State <DriveState?>]`: The drive's current state. 
+    - `[VerboseLogUri <String>]`: A URI that points to the blob containing the verbose log for the data transfer operation.
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IJobResponse" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzImportExport -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+
+   [-AcceptLanguage <String>] [-ClientTenantId <String>] [-BackupDriveManifest] [-BlobListBlobPath <String[]>]
+
+   [-BlobListBlobPathPrefix <String[]>] [-CancelRequested] [-DeliveryPackageCarrierName <String>]
+
+   [-DeliveryPackageDriveCount <Int32>] [-DeliveryPackageShipDate <String>]
+
+   [-DeliveryPackageTrackingNumber <String>] [-DiagnosticsPath <String>] [-DriveList <IDriveStatus[]>]
+
+   [-ExportBlobListblobPath <String>] [-IncompleteBlobListUri <String>] [-JobType <String>] [-Location <String>]
+
+   [-LogLevel <String>] [-PercentComplete <Int32>] [-ProvisioningState <String>] [-ReturnAddressCity <String>]
+
+   [-ReturnAddressCountryOrRegion <String>] [-ReturnAddressEmail <String>] [-ReturnAddressPhone <String>]
+
+   [-ReturnAddressPostalCode <String>] [-ReturnAddressRecipientName <String>]
+
+   [-ReturnAddressStateOrProvince <String>] [-ReturnAddressStreetAddress1 <String>]
+
+   [-ReturnAddressStreetAddress2 <String>] [-ReturnPackageCarrierName <String>]
+
+   [-ReturnPackageDriveCount <Int32>] [-ReturnPackageShipDate <String>] [-ReturnPackageTrackingNumber <String>]
+
+   [-ReturnShippingCarrierAccountNumber <String>] [-ReturnShippingCarrierName <String>]
+
+   [-ShippingInformationCity <String>] [-ShippingInformationCountryOrRegion <String>]
+
+   [-ShippingInformationPhone <String>] [-ShippingInformationPostalCode <String>]
+
+   [-ShippingInformationRecipientName <String>] [-ShippingInformationStateOrProvince <String>]
+
+   [-ShippingInformationStreetAddress1 <String>] [-ShippingInformationStreetAddress2 <String>] [-State <String>]
+
+   [-StorageAccountId <String>] [-Tag <IPutJobParametersTags>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new ImportExport job'
+  code: |-
+    PS C:\> $driveList = @( @{ DriveId = "9CA995BA"; BitLockerKey = "238810-662376-448998-450120-652806-203390-606320-483076"; ManifestFile = "\\DriveManifest.xml"; ManifestHash = "109B21108597EF36D5785F08303F3638"; DriveHeaderHash = "" })
+    PS C:\> New-AzImportExport -Name test-job -ResourceGroupName ImportTestRG -Location eastus -StorageAccountId "/subscriptions/<SubscriptionId>/resourcegroups/ImportTestRG/providers/Microsoft.Storage/storageAccounts/teststorageforimport" -JobType Import -ReturnAddressRecipientName "Some name" -ReturnAddressStreetAddress1 "Street1" -ReturnAddressCity "Redmond" -ReturnAddressStateOrProvince "WA" -ReturnAddressPostalCode "98008" -ReturnAddressCountryOrRegion "USA" -ReturnAddressPhone "4250000000" -ReturnAddressEmail test@contoso.com -DiagnosticsPath "waimportexport" -BackupDriveManifest -DriveList $driveList
+    Location Name     Type
+    -------- ----     ----
+    eastus   test-job Microsoft.ImportExport/jobs
+  description: |-
+    These cmdlets create a new ImportExport job.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AcceptLanguage
+  description: |+
+    Specifies the preferred language for the response.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BackupDriveManifest
+  description: |+
+    Default value is false.
+    Indicates whether the manifest files on the drives should be copied to block blobs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BlobListBlobPath
+  description: |+
+    A collection of blob-path strings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BlobListBlobPathPrefix
+  description: |+
+    A collection of blob-prefix strings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CancelRequested
+  description: |+
+    Indicates whether a request has been submitted to cancel the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClientTenantId
+  description: |+
+    The tenant ID of the client making the request.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageCarrierName
+  description: |+
+    The name of the carrier that is used to ship the import or export drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageDriveCount
+  description: |+
+    The number of drives included in the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageShipDate
+  description: |+
+    The date when the package is shipped.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageTrackingNumber
+  description: |+
+    The tracking number of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiagnosticsPath
+  description: |+
+    The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IDriveStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriveList
+  description: |+
+    List of up to ten drives that comprise the job.
+    The drive list is a required element for an import job; it is not specified for export jobs.
+    To construct, see NOTES section for DRIVELIST properties and create a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExportBlobListblobPath
+  description: |+
+    The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name.
+    If the blob is in root container, the URI must begin with $root.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IncompleteBlobListUri
+  description: |+
+    A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space.
+    If all blobs were exported successfully, then this element is not included in the response.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobType
+  description: |+
+    The type of job
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the supported Azure location where the job should be created
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Default value is Error.
+    Indicates whether error logging or verbose logging will be enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the import/export job.
+
+  defaultValue: None
+  position: Named
+  aliases: JobName
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: PercentComplete
+  description: |+
+    Overall percentage completed for the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProvisioningState
+  description: |+
+    Specifies the provisioning state of the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name uniquely identifies the resource group within the user subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressCity
+  description: |+
+    The city name to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressCountryOrRegion
+  description: |+
+    The country or region to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressEmail
+  description: |+
+    Email address of the recipient of the returned drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressPhone
+  description: |+
+    Phone number of the recipient of the returned drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressPostalCode
+  description: |+
+    The postal code to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressRecipientName
+  description: |+
+    The name of the recipient who will receive the hard drives when they are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressStateOrProvince
+  description: |+
+    The state or province to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressStreetAddress1
+  description: |+
+    The first line of the street address to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressStreetAddress2
+  description: |+
+    The second line of the street address to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnPackageCarrierName
+  description: |+
+    The name of the carrier that is used to ship the import or export drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ReturnPackageDriveCount
+  description: |+
+    The number of drives included in the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnPackageShipDate
+  description: |+
+    The date when the package is shipped.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnPackageTrackingNumber
+  description: |+
+    The tracking number of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnShippingCarrierAccountNumber
+  description: |+
+    The customer's account number with the carrier.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnShippingCarrierName
+  description: |+
+    The carrier's name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationCity
+  description: |+
+    The city name to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationCountryOrRegion
+  description: |+
+    The country or region to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationPhone
+  description: |+
+    Phone number of the recipient of the returned drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationPostalCode
+  description: |+
+    The postal code to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationRecipientName
+  description: |+
+    The name of the recipient who will receive the hard drives when they are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationStateOrProvince
+  description: |+
+    The state or province to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationStreetAddress1
+  description: |+
+    The first line of the street address to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShippingInformationStreetAddress2
+  description: |+
+    The second line of the street address to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Current state of the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountId
+  description: |+
+    The resource identifier of the storage account where data will be imported to or exported from.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The subscription ID for the Azure user.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IPutJobParametersTags" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Specifies the tags that will be assigned to the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ImportExport.New-AzImportExport
+name: New-AzImportExport
+description: |-
+  Creates a new job or updates an existing job in the specified subscription.
+metadata:
+  external help file: ""
+  Module Name: Az.ImportExport
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.importexport/new-azimportexport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/New-AzImportExport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/New-AzImportExport.md

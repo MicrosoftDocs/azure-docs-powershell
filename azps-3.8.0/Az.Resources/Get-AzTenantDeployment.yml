@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get deployment at tenant scope
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSDeployment" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzTenantDeployment [[-Name] <String>] [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzTenantDeployment -Id <String> [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all deployments at the tenant scope'
+  code: |-
+    PS C:\>Get-AzTenantDeployment
+  description: |-
+    This command gets all deployments at the current tenant scope.
+  summary: ""
+- title: 'Example 2: Get a deployment by name'
+  code: |-
+    PS C:\>Get-AzDeployment -Name "Deploy01"
+  description: |-
+    This command gets the "Deploy01" deployment at the current tenant scope.
+    You can assign a name to a deployment when you create it by using the **New-AzTenantDeployment** cmdlets.
+    If you do not assign a name, the cmdlets provide a default name based on the template that is used to create the deployment.
+  summary: ""
+- title: 'Example 3: Get a deployment by ID'
+  code: |-
+    PS C:\>Get-AzDeployment -Id "/providers/Microsoft.Resources/deployments/Deploy01"
+  description: |-
+    This command gets the "Deploy01" deployment at the tenant scope.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApiVersion
+  description: |+
+    When set, indicates the version of the resource provider API to use.
+    If not specified, the API version is automatically determined as the latest available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    The fully qualified resource Id of the deployment.
+    example: /providers/Microsoft.Resources/deployments/{deploymentName}
+
+  defaultValue: None
+  position: Named
+  aliases: DeploymentId, ResourceId
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of deployment.
+
+  defaultValue: None
+  position: "0"
+  aliases: DeploymentName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Pre
+  description: |+
+    When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzTenantDeployment
+name: Get-AzTenantDeployment
+description: |-
+  The **Get-AzTenantDeployment** cmdlet gets the deployments at the tenant scope.
+  Specify the *Name* or *Id* parameter to filter the results.
+  By default, **Get-AzTenantDeployment** gets all deployments at the tenant scope.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  Module Name: Az.Resources
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-aztenantdeployment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzTenantDeployment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzTenantDeployment.md

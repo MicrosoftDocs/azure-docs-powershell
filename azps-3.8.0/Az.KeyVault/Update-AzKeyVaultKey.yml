@@ -1,0 +1,213 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the attributes of a key in a key vault.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzKeyVaultKey [-VaultName] <String> [-Name] <String> [[-Version] <String>] [-Enable <Boolean>]
+
+   [-Expires <DateTime>] [-NotBefore <DateTime>] [-KeyOps <String[]>] [-Tag <Hashtable>] [-PassThru]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzKeyVaultKey [-InputObject] <PSKeyVaultKeyIdentityItem> [[-Version] <String>] [-Enable <Boolean>]
+
+   [-Expires <DateTime>] [-NotBefore <DateTime>] [-KeyOps <String[]>] [-Tag <Hashtable>] [-PassThru]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a key to enable it, and set the expiration date and tags'
+  code: |-
+    PS C:\> $Expires = (Get-Date).AddYears(2).ToUniversalTime()
+    PS C:\> $Tags = @{'Severity' = 'high'; 'Accounting' = 'true'}
+    PS C:\> Update-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Expires $Expires -Enable $True -Tag $Tags -PassThru
+
+    Vault Name     : Contoso
+    Name           : ITSoftware
+    Version        : 394f9379a47a4e2086585468de6c7ae5
+    Id             : https://Contoso.vault.azure.net:443/keys/ITSoftware/394f9379a47a4e2086585468de6c7ae5
+    Enabled        : True
+    Expires        : 5/25/2020 7:58:07 PM
+    Not Before     :
+    Created        : 4/6/2018 11:31:36 PM
+    Updated        : 5/25/2018 7:59:02 PM
+    Purge Disabled : False
+    Tags           : Name        Value
+                     Severity    high
+                     Accounting  true
+  description: |-
+    The first command creates a **DateTime** object by using the **Get-Date** cmdlet. That object
+    specifies a time two years in the future. The command stores that date in the $Expires variable.
+    For more information, type `Get-Help Get-Date`.
+    The second command creates a variable to store tag values of high severity and Accounting.
+    The final command modifies a key named ITSoftware. The command enables the key, sets its expiration
+    time to the time stored in $Expires, and sets the tags that are stored in $Tags.
+  summary: ""
+- title: 'Example 2: Modify a key to delete all tags'
+  code: |-
+    PS C:\> Update-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Version '394f9379a47a4e2086585468de6c7ae5' -Tag @{}
+
+    Vault Name     : Contoso
+    Name           : ITSoftware
+    Version        : 394f9379a47a4e2086585468de6c7ae5
+    Id             : https://Contoso.vault.azure.net:443/keys/ITSoftware/394f9379a47a4e2086585468de6c7ae5
+    Enabled        : True
+    Expires        : 5/25/2020 7:58:07 PM
+    Not Before     :
+    Created        : 4/6/2018 11:31:36 PM
+    Updated        : 5/25/2018 8:00:08 PM
+    Purge Disabled : False
+    Tags           :
+  description: |-
+    This commands deletes all tags for a specific version of a key named ITSoftware.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Enable
+  description: |+
+    Value of true enables the key and a value of false disabless the key.
+    If not specified, the existing enabled/disabled state remains unchanged.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Expires
+  description: |+
+    The expiration time of a key in UTC time.
+    If not specified, the existing expiration time of the key remains unchanged.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Key object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: KeyOps
+  description: |+
+    The operations that can be performed with the key.
+    If not specified, the existing key operations of the key remain unchanged.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Key name.
+    Cmdlet constructs the FQDN of a key from vault name, currently selected environment and key name.
+
+  defaultValue: None
+  position: "1"
+  aliases: KeyName
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: NotBefore
+  description: |+
+    The UTC time before which key can't be used.
+    If not specified, the existing NotBefore attribute of the key remains unchanged.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Cmdlet does not return an object by default.
+    If this switch is specified, returns the updated key bundle object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    A hashtable represents key tags.
+    If not specified, the existings tags of the key remain unchanged.
+
+  defaultValue: None
+  position: Named
+  aliases: Tags
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Vault name.
+    Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Key version.
+    Cmdlet constructs the FQDN of a key from vault name, currently selected environment, key name and key version.
+
+  defaultValue: None
+  position: "2"
+  aliases: KeyVersion
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.KeyVault.Update-AzKeyVaultKey
+name: Update-AzKeyVaultKey
+description: |-
+  The **Update-AzKeyVaultKey** cmdlet updates the editable attributes of a key in a key vault.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/update-azkeyvaultkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Update-AzKeyVaultKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Update-AzKeyVaultKey.md

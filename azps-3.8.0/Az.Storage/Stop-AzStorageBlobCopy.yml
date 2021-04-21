@@ -1,0 +1,216 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops a copy operation.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageBlob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageBlob
+  href: ./Get-AzStorageBlob.yml
+- text: Get-AzStorageContainer
+  href: ./Get-AzStorageContainer.yml
+- text: Start-AzStorageBlobCopy
+  href: ./Start-AzStorageBlobCopy.yml
+- text: Get-AzStorageBlobCopyState
+  href: ./Get-AzStorageBlobCopyState.yml
+syntaxes:
+- >-
+  Stop-AzStorageBlobCopy [-Blob] <String> [-Container] <String> [-Force] [-CopyId <String>]
+
+   [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Stop-AzStorageBlobCopy -CloudBlob <CloudBlob> [-Force] [-CopyId <String>] [-Context <IStorageContext>]
+
+   [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Stop-AzStorageBlobCopy -CloudBlobContainer <CloudBlobContainer> [-Blob] <String> [-Force] [-CopyId <String>]
+
+   [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop copy operation by name'
+  code: |-
+    PS C:\>Stop-AzStorageBlobCopy -Container "ContainerName" -Blob "BlobName" -CopyId "CopyID"
+  description: |-
+    This command stops the copy operation by name.
+  summary: ""
+- title: 'Example 2: Stop copy operation by using the pipeline'
+  code: |-
+    PS C:\>Get-AzStorageContainer container* | Stop-AzStorageBlobCopy -Blob "BlobName"
+  description: |-
+    This command stops the copy operation by passing the container on the pipeline from **Get-AzStorageContainer**.
+  summary: ""
+- title: 'Example 3: Stop copy operation by using the pipeline and Get-AzStorageBlob'
+  code: |-
+    PS C:\>Get-AzStorageBlob -Container "ContainerName" | Stop-AzStorageBlobCopy -Force
+  description: |-
+    This example stops the copy operation by passing the container on the pipeline from the Get-AzStorageBlob cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Blob
+  isRequired: true
+  description: |+
+    Specifies the name of the blob.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ClientTimeoutPerRequest
+  description: |+
+    Specifies the client-side time-out interval, in seconds, for one service request.
+    If the previous call fails in the specified interval, this cmdlet retries the request.
+    If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ClientTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  name: CloudBlob
+  isRequired: true
+  description: |+
+    Specifies a **CloudBlob** object from Azure Storage Client library.
+    To obtain a **CloudBlob** object, use the Get-AzStorageBlob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ICloudBlob
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  name: CloudBlobContainer
+  isRequired: true
+  description: |+
+    Specifies a **CloudBlobContainer** object from the Azure Storage Client library.
+    You can create the object or use the Get-AzStorageContainer cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ConcurrentTaskCount
+  description: |+
+    Specifies the maximum concurrent network calls.
+    You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+    The specified value is an absolute count and is not multiplied by the core count.
+    This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Container
+  isRequired: true
+  description: |+
+    Specifies the name of the container.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies the Azure storage context.
+    You can create the context by using the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CopyId
+  description: |+
+    Specifies the copy ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Stops the current copy task on the specified blob without prompting for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ServerTimeoutPerRequest
+  description: |+
+    Specifies the service side time-out interval, in seconds, for a request.
+    If the specified interval elapses before the service processes the request, the storage service returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ServerTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Stop-AzStorageBlobCopy
+name: Stop-AzStorageBlobCopy
+description: |-
+  The **Stop-AzStorageBlobCopy** cmdlet stops a copy operation to the specified destination blob.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: C274DFBD-6C93-4043-AF93-DAF7BEA1F11F
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/stop-azstorageblobcopy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Stop-AzStorageBlobCopy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Stop-AzStorageBlobCopy.md

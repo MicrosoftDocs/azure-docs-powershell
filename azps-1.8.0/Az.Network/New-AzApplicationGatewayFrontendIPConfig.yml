@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a front-end IP configuration for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayFrontendIPConfig
+  href: ./Add-AzApplicationGatewayFrontendIPConfig.yml
+- text: Get-AzApplicationGatewayFrontendIPConfig
+  href: ./Get-AzApplicationGatewayFrontendIPConfig.yml
+- text: Remove-AzApplicationGatewayFrontendIPConfig
+  href: ./Remove-AzApplicationGatewayFrontendIPConfig.yml
+- text: Set-AzApplicationGatewayFrontendIPConfig
+  href: ./Set-AzApplicationGatewayFrontendIPConfig.yml
+syntaxes:
+- >-
+  New-AzApplicationGatewayFrontendIPConfig -Name <String> [-PrivateIPAddress <String>] [-SubnetId <String>]
+
+   [-PublicIPAddressId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzApplicationGatewayFrontendIPConfig -Name <String> [-PrivateIPAddress <String>] [-Subnet <PSSubnet>]
+
+   [-PublicIPAddress <PSPublicIpAddress>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a front-end IP configuration using a public IP resource object'
+  code: |-
+    PS C:\>$PublicIP = New-AzPublicIpAddress -ResourceGroupName "ResourceGroup01" -Name "PublicIP01" -location "West US" -AllocationMethod Dynamic
+    PS C:\> $FrontEnd = New-AzApplicationGatewayFrontendIPConfig -Name "FrontEndIP01" -PublicIPAddress $PublicIP
+  description: |-
+    The first command creates a public IP resource object and stores it in the $PublicIP variable.
+    The second command uses $PublicIP to create a new front-end IP configuration named FrontEndIP01 and stores it in the $FrontEnd variable.
+  summary: ""
+- title: 'Example 2: Create a static private IP as the front-end IP address'
+  code: |-
+    PS C:\>$VNet = Get-AzvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $VNet
+    PS C:\> $FrontEnd = New-AzApplicationGatewayFrontendIPConfig -Name "FrontendIP02" -Subnet $Subnet -PrivateIPAddress 10.0.1.1
+  description: |-
+    The first command gets a virtual network named VNet01 that belongs to the resource group named ResourceGroup01, and stores it in the $VNet variable.
+    The second command gets a subnet configuration named Subnet01 using $VNet from the first command and stores it in the $Subnet variable.
+    The third command creates a front-end IP configuration named FrontEndIP02 using $Subnet from the second command and the private IP address 10.0.1.1, and then stores it in the $FrontEnd variable.
+  summary: ""
+- title: 'Example 3: Create a dynamic private IP as the front-end IP address'
+  code: |-
+    PS C:\>$VNet = Get-AzvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $VNet
+    PS C:\> $FrontEnd = New-AzApplicationGatewayFrontendIPConfig -Name "FrontendIP03" -Subnet $Subnet
+  description: |-
+    The first command gets a virtual network named VNet01 that belongs to the resource group named ResourceGroup01, and stores it in the $VNet variable.
+    The second command gets a subnet configuration named Subnet01 using $VNet from the first command and stores it in the $Subnet variable.
+    The third command creates a front-end IP configuration named FrontEndIP03 using $Subnet from the second command, and stores it in the $FrontEnd variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the front-end IP configuration that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrivateIPAddress
+  description: |+
+    Specifies the private IP address which this cmdlet associates with the front-end IP address of the application gateway.
+    This can be specified only if a subnet is specified.
+    This IP is statically allocated from the subnet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+  name: PublicIPAddress
+  description: |+
+    Specifies the public IP address object which this cmdlet associates with the front-end IP address of the application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PublicIPAddressId
+  description: |+
+    Specifies the public IP address ID which this cmdlet associates with the front-end IP of the application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSSubnet" data-throw-if-not-resolved="False" />
+  name: Subnet
+  description: |+
+    Specifies the subnet object which this cmdlet associates with the front-end IP address of the application gateway.
+    If you specify this parameter, it implies that the gateway uses a private IP address.
+    If the *PrivateIPAddresss* parameter is specified, it should belong to the subnet specified by this parameter.
+    If *PrivateIPAddress* is not specified, one of the IP addresses from this subnet is dynamically picked up as the front-end IP address of the application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubnetId
+  description: |+
+    Specifies the subnet ID which this cmdlet associates with the front-end IP configuration of the application gateway.
+    If you specify the *Subnet* parameter, it implies that the gateway uses a private IP address.
+    If the *PrivateIPAddress* parameter is specified, it should belong to the subnet specified by *Subnet*.
+    If *PrivateIPAddress* is not specified, one of the IP addresses from this subnet is dynamically picked up as the front-end IP address of the application gateway.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGatewayFrontendIPConfig
+name: New-AzApplicationGatewayFrontendIPConfig
+description: |-
+  The **New-AzApplicationGatewayFrontendIPConfig** cmdlet creates a front-end IP configuraton for an Azure application gateway.
+  An application gateway supports two types of front-end IP configuration: 
+  - Public IP addresses 
+   -- Private IP addresses using internal load balancing (ILB).
+  An application gateway can have at most one public IP address and one private IP address.
+  The public IP address and private IP address should be added separately as front-end IP addresses.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: AE8E26F2-CF8E-4340-936D-230731B5BA32
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewayfrontendipconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayFrontendIPConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayFrontendIPConfig.md

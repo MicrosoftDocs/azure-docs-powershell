@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Saves the current authentication information for use in other PowerShell sessions.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Models.AzureRmProfile" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureProfile" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Save-AzContext [[-Profile] <AzureRmProfile>] [-Path] <String> [-Force]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: "Example 1: Saving the current session's context"
+  code: |-
+    PS C:\> Connect-AzAccount
+    PS C:\> Save-AzContext -Path C:\test.json
+  description: |-
+    This example saves the current session's Azure context to the JSON file provided.
+  summary: ""
+- title: 'Example 2: Saving a given context'
+  code: |-
+    PS C:\> Save-AzContext -Profile (Connect-AzAccount) -Path C:\test.json
+  description: |-
+    This example saves the Azure context that is passed through to the cmdlet to the JSON file provided.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overwrite the given file if it exists
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the file to which to save authentication information.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Models.AzureRmProfile" data-throw-if-not-resolved="False" />
+  name: Profile
+  description: |+
+    Specifies the Azure context from which this cmdlet reads.
+    If you do not specify a context, this cmdlet reads from the local default context.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Accounts.Save-AzContext
+name: Save-AzContext
+description: |-
+  The Save-AzContext cmdlet saves the current authentication information for use in other PowerShell sessions.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/save-azcontext
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Save-AzContext.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Save-AzContext.md

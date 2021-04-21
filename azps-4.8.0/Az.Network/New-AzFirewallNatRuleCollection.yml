@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a collection of Firewall NAT rules.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFirewallNatRule
+  href: ./New-AzFirewallNatRule.yml
+- text: New-AzFirewall
+  href: ./New-AzFirewall.yml
+- text: Get-AzFirewall
+  href: ./Get-AzFirewall.yml
+syntaxes:
+- >-
+  New-AzFirewallNatRuleCollection -Name <String> -Priority <UInt32> -Rule <PSAzureFirewallNatRule[]>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a collection with one rule'
+  code: |-
+    $rule1 = New-AzFirewallNatRule -Name "natRule" -Protocol "TCP" -SourceAddress "*" -DestinationAddress "10.0.0.1" -DestinationPort "80" -TranslatedAddress "10.0.0.2" -TranslatedPort "8080"
+    New-AzFirewallNatRuleCollection -Name "MyNatRuleCollection" -Priority 1000 -Rule $rule1
+  description: |-
+    This example creates a collection with one rule. All traffic that matches the conditions identified in $rule1 will be DNAT'ed to translated address and port.
+  summary: ""
+- title: 'Example 2: Add a rule to a rule collection'
+  code: |-
+    $rule1 = New-AzFirewallNatRule -Name R1 -Protocol "UDP","TCP" -SourceAddress "*" -DestinationAddress "10.0.0.1" -DestinationPort "80" -TranslatedAddress "10.0.0.2" -TranslatedPort "8080"
+    $ruleCollection = New-AzFirewallNatRuleCollection -Name "MyNatRuleCollection" -Priority 100 -Rule $rule1
+
+    $rule2 = New-AzFirewallNatRule -Name R2 -Protocol "TCP" -SourceAddress "*" -DestinationAddress "10.0.0.1" -DestinationPort "443" -TranslatedAddress "10.0.0.2" -TranslatedPort "8443"
+    $ruleCollection.AddRule($rule2)
+  description: |-
+    This example creates a new NAT rule collection with one rule and then adds a second rule to the rule collection using method
+    AddRule on the rule collection object. Each rule name in a given rule collection must have an unique name and is case insensitive.
+  summary: ""
+- title: 'Example 3: Get a rule from a rule collection'
+  code: |-
+    $rule1 = New-AzFirewallNatRule -Name R1 -Protocol "TCP" -SourceAddress "10.0.0.0/24" -DestinationAddress "10.0.1.0/24" -DestinationPort "443" -TranslatedAddress "10.0.0.2" -TranslatedPort "8443"
+    $ruleCollection = New-AzFirewallNatRuleCollection -Name "MyNatRuleCollection" -Priority 100 -Rule $rule1
+
+    $rule=$ruleCollection.GetRuleByName("r1")
+  description: |-
+    This example creates a new NAT rule collection with one rule and then gets the rule by name, calling method GetRuleByName on the 
+    rule collection object. The rule name for method GetRuleByName is case-insensitive.
+  summary: ""
+- title: 'Example 4: Remove a rule from a rule collection'
+  code: |-
+    $rule1 = New-AzFirewallNatRule -Name R1 -Protocol "UDP","TCP" -SourceAddress "*" -DestinationAddress "10.0.0.1" -DestinationPort "80" -TranslatedAddress "10.0.0.2" -TranslatedPort "8080"
+    $rule2 = New-AzFirewallNatRule -Name R2 -Protocol "TCP" -SourceAddress "*" -DestinationAddress "10.0.0.1" -DestinationPort "443" -TranslatedAddress "10.0.0.2" -TranslatedPort "8443"
+    $ruleCollection = New-AzFirewallNatRuleCollection -Name "MyNatRuleCollection" -Priority 100 -Rule $rule1, $rule2
+    $ruleCollection.RemoveRuleByName("r1")
+  description: |-
+    This example creates a new NAT rule collection with two rules and then removes the first rule from the rule collection by calling method
+    RemoveRuleByName on the rule collection object. The rule name for method RemoveRuleByName is case-insensitive.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of this NAT rule. The name must be unique inside a rule collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: Priority
+  isRequired: true
+  description: |+
+    Specifies the priority of this rule. Priority is a number between 100 and 65000. The smaller the number, the bigger the priority.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Rule
+  isRequired: true
+  description: |+
+    Specifies the list of rules to be grouped under this collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzFirewallNatRuleCollection
+name: New-AzFirewallNatRuleCollection
+description: |-
+  The **New-AzFirewallNatRuleCollection** cmdlet creates a collection of Firewall NAT Rules.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: A29E9921-C1B9-42C2-B816-5D4873AC6688
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azfirewallnatrulecollection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzFirewallNatRuleCollection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzFirewallNatRuleCollection.md

@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an application package in a Batch account.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSApplicationPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchApplication
+  href: ./Get-AzBatchApplication.yml
+- text: Get-AzBatchApplicationPackage
+  href: ./Get-AzBatchApplicationPackage.yml
+- text: New-AzBatchApplication
+  href: ./New-AzBatchApplication.yml
+- text: Remove-AzBatchApplication
+  href: ./Remove-AzBatchApplication.yml
+- text: Remove-AzBatchApplicationPackage
+  href: ./Remove-AzBatchApplicationPackage.yml
+- text: Set-AzBatchApplication
+  href: ./Set-AzBatchApplication.yml
+syntaxes:
+- >-
+  New-AzBatchApplicationPackage [-AccountName] <String> [-ResourceGroupName] <String> [-ApplicationName] <String>
+
+   [-ApplicationVersion] <String> [-Format] <String> -FilePath <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzBatchApplicationPackage [-AccountName] <String> [-ResourceGroupName] <String> [-ApplicationName] <String>
+
+   [-ApplicationVersion] <String> [-Format] <String> [-ActivateOnly] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Install an application package into a Batch account'
+  code: |-
+    PS C:\>New-AzBatchApplicationPackage -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup" -ApplicationName "Litware" -ApplicationVersion "1.0" -FilePath "litware.1.0.zip" -Format "zip"
+  description: |-
+    This command creates and activates version 1.0 of the Litware application, and uploads the contents of litware.1.0.zip as the application package content.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Batch account to which this cmdlet adds an application package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ActivateOnly
+  description: |+
+    Indicates that this cmdlet activates an application package that has already been uploaded.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApplicationName
+  isRequired: true
+  description: |+
+    Specifies the name of the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ApplicationId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApplicationVersion
+  isRequired: true
+  description: |+
+    Specifies the version of the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the file to be uploaded as the application package binary file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Format
+  isRequired: true
+  description: |+
+    Specifies the format of the application package binary file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the Batch account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.New-AzBatchApplicationPackage
+name: New-AzBatchApplicationPackage
+description: |-
+  The **New-AzBatchApplicationPackage** cmdlet creates an application package in an Azure Batch account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: D53DAEB6-DC4F-473C-A193-A1E2A65326D4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchapplicationpackage
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchApplicationPackage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchApplicationPackage.md

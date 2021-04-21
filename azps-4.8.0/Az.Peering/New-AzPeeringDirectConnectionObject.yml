@@ -1,0 +1,189 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a in memory PSObject to be used for creating or modifying a Peering.
+module: Az.Peering
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSDirectConnection" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzPeeringDirectConnectionObject [-PeeringDBFacilityId] <Int32> [-SessionPrefixV4 <String>]
+
+   [-SessionPrefixV6 <String>] -BandwidthInMbps <Int32> [-UseForPeeringService]
+
+   [-MaxPrefixesAdvertisedIPv4 <Int32>] [-MaxPrefixesAdvertisedIPv6 <Int32>] [-MD5AuthenticationKey <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzPeeringDirectConnectionObject [-PeeringDBFacilityId] <Int32> [-MicrosoftProvidedIPAddress]
+
+   -BandwidthInMbps <Int32> [-UseForPeeringService] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:>New-AzPeeringDirectConnectionObject -PeeringDBFacilityId 99999 -BandwidthInMbps 30000 -SessionPrefixV4 192.168.1.0/31 -SessionPrefixV6 fe01::0/127 -MaxPrefixesAdvertisedIPv4 20000 -MaxPrefixesAdvertisedIPv6 2000 -MD5AuthenticationKey 25234523452123411fd234qdwfas3234
+
+    PeeringDBFacilityId    : 99999
+    UseForPeeringService   : False
+    SessionAddressProvider : Peer
+    SessionPrefixV4        : 192.168.1.0/31
+    ConnectionIdentifier   : 6d771cef-7169-4b0a-b028-c7270054bd31
+    SessionPrefixV6        : fe01::0/127
+    BandwidthInMbps        : 30000
+    Md5AuthenticationKey   : 25234523452123411fd234qdwfas3234
+    SessionStateV4         :
+    SessionStateV6         :
+  description: |-
+    New local connection
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:>New-AzPeeringDirectConnectionObject -PeeringDBFacilityId 99999 -MicrosoftProvidedIPAddress -BandwidthInMbps 30000 -UseForPeeringService
+
+    PeeringDBFacilityId    : 99999
+    UseForPeeringService   : True
+    SessionAddressProvider : Microsoft
+    ConnectionIdentifier   : 1de364bf-74ea-4088-ad17-bb79c16cfa81
+    BandwidthInMbps        : 30000
+  description: |-
+    Create direct peering connection with use for peering service enabled and Microsoft provided IP addresses
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:>New-AzPeeringDirectConnectionObject -PeeringDBFacilityId 99999 -BandwidthInMbps 30000 -SessionPrefixV4 192.168.1.0/31 -SessionPrefixV6 fe01::0/127 -UseForPeeringService
+
+    PeeringDBFacilityId    : 99999
+    UseForPeeringService   : True
+    SessionAddressProvider : Peer
+    SessionPrefixV4        : 192.168.1.0/31
+    ConnectionIdentifier   : 74ea6eab-5625-4170-a642-822e85d97566
+    SessionPrefixV6        : fe01::0/127
+    BandwidthInMbps        : 30000
+    SessionStateV4         :
+    SessionStateV6         :
+  description: |-
+    Create direct peering connection with use for peering service enabled and peer provided IP Addresses
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:>New-AzPeeringDirectConnectionObject -PeeringDBFacilityId 99999 -BandwidthInMbps 30000
+
+    PeeringDBFacilityId    : 99999
+    UseForPeeringService   : False
+    SessionAddressProvider : Peer
+    ConnectionIdentifier   : 920f128a-c9d8-4514-a2e0-c533ab1a550c
+    BandwidthInMbps        : 30000
+  description: |-
+    Create direct peering connection without bgp session IP addresses. The peer will have to set the IP addresses before the bgp session can be configured.
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: BandwidthInMbps
+  isRequired: true
+  description: |+
+    The Bandwidth offered at this location in Mbps.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxPrefixesAdvertisedIPv4
+  description: |+
+    The maximum advertised IPv4
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxPrefixesAdvertisedIPv6
+  description: |+
+    The maximum advertised IPv6
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MD5AuthenticationKey
+  description: |+
+    The MD5 authentication key for session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MicrosoftProvidedIPAddress
+  isRequired: true
+  description: |+
+    Enable flag that tells Microsoft to provide the BGP session addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: PeeringDBFacilityId
+  isRequired: true
+  description: |+
+    The peering facility Id found on https://peeringdb.com
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SessionPrefixV4
+  description: |+
+    The peer session IPv4 address
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SessionPrefixV6
+  description: |+
+    The peer session IPv6 address
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseForPeeringService
+  description: |+
+    Enable for use with Microsoft Peering Service (MPS).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Peering.New-AzPeeringDirectConnectionObject
+name: New-AzPeeringDirectConnectionObject
+description: |-
+  Creates an in memory PSObject
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
+  Module Name: Az.Peering
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.peering/new-azpeeringdirectconnectionobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/New-AzPeeringDirectConnectionObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/New-AzPeeringDirectConnectionObject.md

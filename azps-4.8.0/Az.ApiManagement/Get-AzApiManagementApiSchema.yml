@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the details of the API Schema
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiSchema" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApiManagementApiSchema
+  href: ./New-AzApiManagementApiSchema.yml
+- text: Remove-AzApiManagementApiSchema
+  href: ./Remove-AzApiManagementApiSchema.yml
+- text: Set-AzApiManagementApiSchema
+  href: ./Set-AzApiManagementApiSchema.yml
+syntaxes:
+- >-
+  Get-AzApiManagementApiSchema -Context <PsApiManagementContext> -ApiId <String> [-SchemaId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementApiSchema -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the details of all the Api Schema of an Api'
+  code: |-
+    PS D:\github\azure-powershell> $context = New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.ApiManagement/service/sdktestapim4163
+    PS D:\github\azure-powershell> Get-AzApiManagementApiSchema -Context $context -ApiId wsdlapitest
+
+    SchemaId           : 2a03e1b4-1826-4e59-b372-4711f575db28
+    Api Id             : wsdlapitest
+    Schema ContentType : xsdschema
+    Schema Document    : <s:schema elementFormDefault="qualified"....
+
+    SchemaId           : b6e5497d-f65a-4851-9f5b-b5684cdae688
+    Api Id             : wsdlapitest
+    Schema ContentType : xsdschema
+    Schema Document    : <?xml version=""1.0"" encoding=""UTF-8""....
+  description: |-
+    This command gets all the API schemas associated with an Api `swagger-petstore-extensive` for particular ApiManagement Context.
+  summary: ""
+- title: 'Example 2: Get the specific schema associated with an Api'
+  code: |-
+    PS D:\github\azure-powershell> $context = New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.ApiManagement/service/sdktestapim4163
+    PS D:\github\azure-powershell> Get-AzApiManagementApiSchema -Context $context -ApiId swagger-petstore-extensive -SchemaId 5cc9cf67e6ed3b1154e638bd
+
+    SchemaId           : 5cc9cf67e6ed3b1154e638bd
+    Api Id             : swagger-petstore-extensive
+    Schema ContentType : swaggerdefinition
+    Schema Document    : {
+                           "definitions": {
+                             "pet": {
+                            ....
+  description: |-
+    This command gets the API schema `5cc9cf67e6ed3b1154e638bd` associated with an Api `swagger-petstore-extensive` for particular ApiManagement Context.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiId
+  isRequired: true
+  description: |+
+    API identifier to look for.
+    If specified will try to get the API by the Id.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Instance of PsApiManagementContext.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Arm Resource Identifier of a Api Schema. If specified will try to find api schema by the identifier. This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SchemaId
+  description: |+
+    The identifier of the Schema.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagementApiSchema
+name: Get-AzApiManagementApiSchema
+description: |-
+  The **Get-AzApiManagementApiSchema** cmdlet gets the details of the API Schema
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementapischema
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiSchema.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiSchema.md

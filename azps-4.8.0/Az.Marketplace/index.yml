@@ -1,0 +1,20 @@
+### YamlMime:PowershellModule
+children:
+- title: Marketplace
+  cmdlets:
+  - Az.Marketplace.Get-AzMarketplacePrivateStore
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreOffer
+  - Az.Marketplace.Remove-AzMarketplacePrivateStoreOffer
+  - Az.Marketplace.Set-AzMarketplacePrivateStoreOffer
+uid: Az.Marketplace
+name: Az.Marketplace
+description: |-
+  Commands to interact with Azure Marketplace.
+metadata:
+  Module Name: Az.Marketplace
+  Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.marketplace
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Marketplace/Marketplace/help/Az.Marketplace.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Marketplace/Marketplace/help/Az.Marketplace.md

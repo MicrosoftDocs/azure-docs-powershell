@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the location where a function app for the given os and plan type is available.
+module: Az.Functions
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20190801.IGeoRegion" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzFunctionAppAvailableLocation [[-SubscriptionId] <String[]>] [[-PlanType] <String>] [[-OSType] <String>]
+
+   [[-DefaultProfile] <PSObject>] [<CommonParameters>]
+examples:
+- title: "Example 1: Get the locations where Premium is available for Windows. If no parameters are specified, PlanType is set to 'Premium' and OSType is set to 'Windows'."
+  code: |-
+    PS C:\> Get-AzFunctionAppAvailableLocation
+
+    Name
+    ----
+    Central US
+    North Europe
+    West Europe
+    Southeast Asia
+    East Asia
+    West US
+    East US
+    Japan West
+    Japan East
+    East US 2
+    North Central US
+    South Central US
+    Brazil South
+    Australia East
+    Australia Southeast
+    East Asia (Stage)
+    West India
+    South India
+    Canada Central
+    West US 2
+    UK West
+    UK South
+    East US 2 EUAP
+    Central US EUAP
+    Korea Central
+    France Central
+    Australia Central 2
+    Australia Central
+    Germany West Central
+    Norway East
+  description: |-
+    This command gets the locations where Premium is available for Windows.
+  summary: ""
+- title: 'Example 2: Get the locations where Premium is available for Linux.'
+  code: |-
+    PS C:\> Get-AzFunctionAppAvailableLocation -PlanType Premium -OSType Linux
+
+    Name
+    ----
+    Central US
+    North Europe
+    West Europe
+    Southeast Asia
+    East Asia
+    West US
+    East US
+    Japan West
+    Japan East
+    East US 2
+    North Central US
+    South Central US
+    Brazil South
+    Australia East
+    Australia Southeast
+    West India
+    Canada Central
+    West Central US
+    West US 2
+    UK West
+    UK South
+    Central US EUAP
+    Korea Central
+    France Central
+    Norway East
+  description: |-
+    This command gets the locations where Premium is available for Linux.
+  summary: ""
+- title: 'Example 3: Get the locations where Consumption is available for Windows.'
+  code: |-
+    PS C:\> Get-AzFunctionAppAvailableLocation -PlanType Consumption -OSType Windows
+
+    Name
+    ----
+    Central US
+    North Europe
+    West Europe
+    Southeast Asia
+    East Asia
+    West US
+    East US
+    Japan West
+    Japan East
+    East US 2
+    North Central US
+    South Central US
+    Brazil South
+    Australia East
+    Australia Southeast
+    East Asia (Stage)
+    Central India
+    West India
+    South India
+    Canada Central
+    Canada East
+    West Central US
+    West US 2
+    UK West
+    UK South
+    East US 2 EUAP
+    Central US EUAP
+    Korea Central
+    France Central
+    Australia Central 2
+    Australia Central
+    South Africa North
+    Switzerland North
+    Germany West Central
+  description: |-
+    This command gets the locations where Consumption is available for Windows.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: "3"
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OSType
+  description: |+
+    The OS type for the service plan.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PlanType
+  description: |+
+    The plan type.
+    Valid inputs: Consumption or Premium
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The Azure subscription ID.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Functions.Get-AzFunctionAppAvailableLocation
+name: Get-AzFunctionAppAvailableLocation
+description: |-
+  Gets the location where a function app for the given os and plan type is available.
+metadata:
+  external help file: ""
+  Module Name: Az.Functions
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.functions/get-azfunctionappavailablelocation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/Get-AzFunctionAppAvailableLocation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/Get-AzFunctionAppAvailableLocation.md

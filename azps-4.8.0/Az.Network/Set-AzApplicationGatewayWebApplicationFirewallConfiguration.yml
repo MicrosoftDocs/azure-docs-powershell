@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the WAF configuration of an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApplicationGateway
+  href: ./Get-AzApplicationGateway.yml
+- text: Get-AzApplicationGatewayWebApplicationFirewallConfiguration
+  href: ./Get-AzApplicationGatewayWebApplicationFirewallConfiguration.yml
+- text: New-AzApplicationGatewayWebApplicationFirewallConfiguration
+  href: ./New-AzApplicationGatewayWebApplicationFirewallConfiguration.yml
+syntaxes:
+- >-
+  Set-AzApplicationGatewayWebApplicationFirewallConfiguration -ApplicationGateway <PSApplicationGateway>
+
+   -Enabled <Boolean> -FirewallMode <String> [-RuleSetType <String>] [-RuleSetVersion <String>]
+
+   [-DisabledRuleGroup <PSApplicationGatewayFirewallDisabledRuleGroup[]>] [-RequestBodyCheck <Boolean>]
+
+   [-MaxRequestBodySizeInKb <Int32>] [-FileUploadLimitInMb <Int32>]
+
+   [-Exclusion <PSApplicationGatewayFirewallExclusion[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the application gateway web application firewall configuration'
+  code: |-
+    PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> Set-AzApplicationGatewayWebApplicationFirewallConfiguration -ApplicationGateway $AppGw -Enabled $True -FirewallMode "Detection" -RuleSetType "OWASP" -RuleSetVersion "3.0"
+  description: |-
+    The first command gets the application gateway named ApplicationGateway01 and then stores it in the $AppGw variable.
+    The second command enables the firewall configuration for the application gateway stored in $AppGw and sets the firewall mode to "Detection", RuleSetType to "OWASP" and the RuleSetVersion to "3.0".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies an application gateway object.
+    You can use the Get-AzApplicationGateway cmdlet to get an application gateway object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallDisabledRuleGroup" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisabledRuleGroup
+  description: |+
+    The disabled rule groups.
+
+  defaultValue: None
+  position: Named
+  aliases: DisabledRuleGroups
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  isRequired: true
+  description: |+
+    Indicates whether the web application firewall is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallExclusion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Exclusion
+  description: |+
+    The exclusion lists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: FileUploadLimitInMb
+  description: |+
+    Max file upload limit in MB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FirewallMode
+  isRequired: true
+  description: |+
+    Specifies the web application firewall mode.
+    The acceptable values for this parameter are:
+    - Detection
+    - Prevention
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Detection, Prevention
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxRequestBodySizeInKb
+  description: |+
+    Max request body size in KB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: RequestBodyCheck
+  description: |+
+    Whether request body is checked or not.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuleSetType
+  description: |+
+    The type of the web application firewall rule set. 
+    The acceptable values for this parameter are: 
+    - OWASP
+
+  defaultValue: OWASP
+  position: Named
+  aliases: ""
+  parameterValueGroup: OWASP
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuleSetVersion
+  description: |+
+    The version of the rule set type.
+
+  defaultValue: "3.0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzApplicationGatewayWebApplicationFirewallConfiguration
+name: Set-AzApplicationGatewayWebApplicationFirewallConfiguration
+description: |-
+  The **Set-AzApplicationGatewayWebApplicationFirewallConfiguration** cmdlet modifies the web application firewall (WAF) configuration of an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 46FDE4D8-08E0-4465-8BF9-849A108628B8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaywebapplicationfirewallconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayWebApplicationFirewallConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayWebApplicationFirewallConfiguration.md

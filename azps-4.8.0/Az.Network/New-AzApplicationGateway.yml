@@ -1,0 +1,695 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayIPConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRequestRoutingRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAutoscaleConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSManagedServiceIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApplicationGatewayBackendAddressPool
+  href: ./New-AzApplicationGatewayBackendAddressPool.yml
+- text: New-AzApplicationGatewayBackendHttpSetting
+  href: ./New-AzApplicationGatewayBackendHttpSetting.yml
+- text: New-AzApplicationGatewayFrontendIPConfig
+  href: ./New-AzApplicationGatewayFrontendIPConfig.yml
+- text: New-AzApplicationGatewayFrontendPort
+  href: ./New-AzApplicationGatewayFrontendPort.yml
+- text: New-AzApplicationGatewayHttpListener
+  href: ./New-AzApplicationGatewayHttpListener.yml
+- text: New-AzApplicationGatewayIPConfiguration
+  href: ./New-AzApplicationGatewayIPConfiguration.yml
+- text: New-AzApplicationGatewayRequestRoutingRule
+  href: ./New-AzApplicationGatewayRequestRoutingRule.yml
+- text: New-AzApplicationGatewaySku
+  href: ./New-AzApplicationGatewaySku.yml
+- text: New-AzVirtualNetwork
+  href: ./New-AzVirtualNetwork.yml
+- text: New-AzVirtualNetworkSubnetConfig
+  href: ./New-AzVirtualNetworkSubnetConfig.yml
+syntaxes:
+- >-
+  New-AzApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
+
+   -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
+
+   -GatewayIPConfigurations <PSApplicationGatewayIPConfiguration[]>
+
+   [-SslCertificates <PSApplicationGatewaySslCertificate[]>]
+
+   [-AuthenticationCertificates <PSApplicationGatewayAuthenticationCertificate[]>]
+
+   [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>]
+
+   [-FrontendIPConfigurations <PSApplicationGatewayFrontendIPConfiguration[]>]
+
+   -FrontendPorts <PSApplicationGatewayFrontendPort[]> [-Probes <PSApplicationGatewayProbe[]>]
+
+   -BackendAddressPools <PSApplicationGatewayBackendAddressPool[]>
+
+   -BackendHttpSettingsCollection <PSApplicationGatewayBackendHttpSettings[]>
+
+   -HttpListeners <PSApplicationGatewayHttpListener[]> [-UrlPathMaps <PSApplicationGatewayUrlPathMap[]>]
+
+   -RequestRoutingRules <PSApplicationGatewayRequestRoutingRule[]>
+
+   [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet[]>]
+
+   [-RedirectConfigurations <PSApplicationGatewayRedirectConfiguration[]>]
+
+   [-WebApplicationFirewallConfiguration <PSApplicationGatewayWebApplicationFirewallConfiguration>]
+
+   [-AutoscaleConfiguration <PSApplicationGatewayAutoscaleConfiguration>] [-EnableHttp2] [-EnableFIPS]
+
+   [-ForceFirewallPolicyAssociation] [-Zone <String[]>] [-Tag <Hashtable>] [-UserAssignedIdentityId <String>]
+
+   [-Force] [-AsJob] [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>]
+
+   [-PrivateLinkConfiguration <PSApplicationGatewayPrivateLinkConfiguration[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
+
+   -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
+
+   -GatewayIPConfigurations <PSApplicationGatewayIPConfiguration[]>
+
+   [-SslCertificates <PSApplicationGatewaySslCertificate[]>]
+
+   [-AuthenticationCertificates <PSApplicationGatewayAuthenticationCertificate[]>]
+
+   [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>]
+
+   [-FrontendIPConfigurations <PSApplicationGatewayFrontendIPConfiguration[]>]
+
+   -FrontendPorts <PSApplicationGatewayFrontendPort[]> [-Probes <PSApplicationGatewayProbe[]>]
+
+   -BackendAddressPools <PSApplicationGatewayBackendAddressPool[]>
+
+   -BackendHttpSettingsCollection <PSApplicationGatewayBackendHttpSettings[]>
+
+   -HttpListeners <PSApplicationGatewayHttpListener[]> [-UrlPathMaps <PSApplicationGatewayUrlPathMap[]>]
+
+   -RequestRoutingRules <PSApplicationGatewayRequestRoutingRule[]>
+
+   [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet[]>]
+
+   [-RedirectConfigurations <PSApplicationGatewayRedirectConfiguration[]>]
+
+   [-WebApplicationFirewallConfiguration <PSApplicationGatewayWebApplicationFirewallConfiguration>]
+
+   [-FirewallPolicyId <String>] [-AutoscaleConfiguration <PSApplicationGatewayAutoscaleConfiguration>]
+
+   [-EnableHttp2] [-EnableFIPS] [-ForceFirewallPolicyAssociation] [-Zone <String[]>] [-Tag <Hashtable>] [-Force]
+
+   [-AsJob] [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>]
+
+   [-PrivateLinkConfiguration <PSApplicationGatewayPrivateLinkConfiguration[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
+
+   -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
+
+   -GatewayIPConfigurations <PSApplicationGatewayIPConfiguration[]>
+
+   [-SslCertificates <PSApplicationGatewaySslCertificate[]>]
+
+   [-AuthenticationCertificates <PSApplicationGatewayAuthenticationCertificate[]>]
+
+   [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>]
+
+   [-FrontendIPConfigurations <PSApplicationGatewayFrontendIPConfiguration[]>]
+
+   -FrontendPorts <PSApplicationGatewayFrontendPort[]> [-Probes <PSApplicationGatewayProbe[]>]
+
+   -BackendAddressPools <PSApplicationGatewayBackendAddressPool[]>
+
+   -BackendHttpSettingsCollection <PSApplicationGatewayBackendHttpSettings[]>
+
+   -HttpListeners <PSApplicationGatewayHttpListener[]> [-UrlPathMaps <PSApplicationGatewayUrlPathMap[]>]
+
+   -RequestRoutingRules <PSApplicationGatewayRequestRoutingRule[]>
+
+   [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet[]>]
+
+   [-RedirectConfigurations <PSApplicationGatewayRedirectConfiguration[]>]
+
+   [-WebApplicationFirewallConfiguration <PSApplicationGatewayWebApplicationFirewallConfiguration>]
+
+   [-FirewallPolicy <PSApplicationGatewayWebApplicationFirewallPolicy>]
+
+   [-AutoscaleConfiguration <PSApplicationGatewayAutoscaleConfiguration>] [-EnableHttp2] [-EnableFIPS]
+
+   [-ForceFirewallPolicyAssociation] [-Zone <String[]>] [-Tag <Hashtable>] [-Force] [-AsJob]
+
+   [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>]
+
+   [-PrivateLinkConfiguration <PSApplicationGatewayPrivateLinkConfiguration[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
+
+   -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
+
+   -GatewayIPConfigurations <PSApplicationGatewayIPConfiguration[]>
+
+   [-SslCertificates <PSApplicationGatewaySslCertificate[]>]
+
+   [-AuthenticationCertificates <PSApplicationGatewayAuthenticationCertificate[]>]
+
+   [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>]
+
+   [-FrontendIPConfigurations <PSApplicationGatewayFrontendIPConfiguration[]>]
+
+   -FrontendPorts <PSApplicationGatewayFrontendPort[]> [-Probes <PSApplicationGatewayProbe[]>]
+
+   -BackendAddressPools <PSApplicationGatewayBackendAddressPool[]>
+
+   -BackendHttpSettingsCollection <PSApplicationGatewayBackendHttpSettings[]>
+
+   -HttpListeners <PSApplicationGatewayHttpListener[]> [-UrlPathMaps <PSApplicationGatewayUrlPathMap[]>]
+
+   -RequestRoutingRules <PSApplicationGatewayRequestRoutingRule[]>
+
+   [-RewriteRuleSet <PSApplicationGatewayRewriteRuleSet[]>]
+
+   [-RedirectConfigurations <PSApplicationGatewayRedirectConfiguration[]>]
+
+   [-WebApplicationFirewallConfiguration <PSApplicationGatewayWebApplicationFirewallConfiguration>]
+
+   [-AutoscaleConfiguration <PSApplicationGatewayAutoscaleConfiguration>] [-EnableHttp2] [-EnableFIPS]
+
+   [-ForceFirewallPolicyAssociation] [-Zone <String[]>] [-Tag <Hashtable>] -Identity <PSManagedServiceIdentity>
+
+   [-Force] [-AsJob] [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>]
+
+   [-PrivateLinkConfiguration <PSApplicationGatewayPrivateLinkConfiguration[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an application gateway'
+  code: |-
+    PS C:\> $ResourceGroup = New-AzResourceGroup -Name "ResourceGroup01" -Location "West US" -Tag @{Name = "Department"; Value = "Marketing"} 
+    PS C:\> $Subnet = New-AzVirtualNetworkSubnetConfig -Name "Subnet01" -AddressPrefix 10.0.0.0/24
+    PS C:\> $VNet = New-AzVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01" -Location "West US" -AddressPrefix 10.0.0.0/16 -Subnet $Subnet
+    PS C:\> $VNet = Get-AzVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $VNet 
+    PS C:\> $GatewayIPconfig = New-AzApplicationGatewayIPConfiguration -Name "GatewayIp01" -Subnet $Subnet
+    PS C:\> $Pool = New-AzApplicationGatewayBackendAddressPool -Name "Pool01" -BackendIPAddresses 10.10.10.1, 10.10.10.2, 10.10.10.3
+    PS C:\> $PoolSetting = New-AzApplicationGatewayBackendHttpSettings -Name "PoolSetting01"  -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled"
+    PS C:\> $FrontEndPort = New-AzApplicationGatewayFrontendPort -Name "FrontEndPort01"  -Port 80
+    # Create a public IP address
+    PS C:\> $PublicIp = New-AzPublicIpAddress -ResourceGroupName "ResourceGroup01" -Name "PublicIpName01" -Location "West US" -AllocationMethod "Dynamic"
+    PS C:\> $FrontEndIpConfig = New-AzApplicationGatewayFrontendIPConfig -Name "FrontEndConfig01" -PublicIPAddress $PublicIp
+    PS C:\> $Listener = New-AzApplicationGatewayHttpListener -Name "ListenerName01"  -Protocol "Http" -FrontendIpConfiguration $FrontEndIpConfig -FrontendPort $FrontEndPort
+    PS C:\> $Rule = New-AzApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType basic -BackendHttpSettings $PoolSetting -HttpListener $Listener -BackendAddressPool $Pool
+    PS C:\> $Sku = New-AzApplicationGatewaySku -Name "Standard_Small" -Tier Standard -Capacity 2
+    PS C:\> $Gateway = New-AzApplicationGateway -Name "AppGateway01" -ResourceGroupName "ResourceGroup01" -Location "West US" -BackendAddressPools $Pool -BackendHttpSettingsCollection $PoolSetting -FrontendIpConfigurations $FrontEndIpConfig  -GatewayIpConfigurations $GatewayIpConfig -FrontendPorts $FrontEndPort -HttpListeners $Listener -RequestRoutingRules $Rule -Sku $Sku
+  description: |-
+    The following example creates an application gateway by first creating a resource group and a
+    virtual network, as well as the following:
+    - A back-end server pool
+    - Back-end server pool settings
+    - Front-end ports
+    - Front-end IP addresses
+    - A request routing rule
+    These four commands create a virtual network.
+    The first command creates a subnet configuration.
+    The second command creates a virtual network.
+    The third command verifies the subnet configuration and the fourth command verifies that the virtual network is created successfully.
+    The following commands create the application gateway.
+    The first command creates an IP configuration named GatewayIp01 for the subnet created previously.
+    The second command creates a back-end server pool named Pool01 with a list of back-end IP addresses and stores the pool in the $Pool variable.
+    The third command creates the settings for the back-end server pool and stores the settings in the $PoolSetting variable.
+    The forth command creates a front-end port on port 80, names it FrontEndPort01, and stores the port in the $FrontEndPort variable.
+    The fifth command creates a public IP address by using New-AzPublicIpAddress.
+    The sixth command creates a front-end IP configuration using $PublicIp, names it FrontEndPortConfig01, and stores it in the $FrontEndIpConfig variable.
+    The seventh command creates a listener using the previously created $FrontEndIpConfig $FrontEndPort.
+    The eighth command creates a rule for the listener.
+    The ninth command sets the SKU.
+    The tenth command creates the gateway using the objects set by the previous commands.
+  summary: ""
+- title: 'Example 2: Create an application gateway with UserAssigned Identity'
+  code: |-
+    PS C:\> $ResourceGroup = New-AzResourceGroup -Name "ResourceGroup01" -Location "West US" -Tag @{Name = "Department"; Value = "Marketing"} 
+    PS C:\> $Subnet = New-AzVirtualNetworkSubnetConfig -Name "Subnet01" -AddressPrefix 10.0.0.0/24
+    PS C:\> $VNet = New-AzVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01" -Location "West US" -AddressPrefix 10.0.0.0/16 -Subnet $Subnet
+    PS C:\> $VNet = Get-AzVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $Subnet = Get-AzVirtualNetworkSubnetConfig -Name $Subnet01 -VirtualNetwork $VNet 
+    PS C:\> $GatewayIPconfig = New-AzApplicationGatewayIPConfiguration -Name "GatewayIp01" -Subnet $Subnet
+    PS C:\> $Pool = New-AzApplicationGatewayBackendAddressPool -Name "Pool01" -BackendIPAddresses 10.10.10.1, 10.10.10.2, 10.10.10.3
+    PS C:\> $PoolSetting = New-AzApplicationGatewayBackendHttpSettings -Name "PoolSetting01"  -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled"
+    PS C:\> $FrontEndPort = New-AzApplicationGatewayFrontendPort -Name "FrontEndPort01"  -Port 80
+    # Create a public IP address
+    PS C:\> $PublicIp = New-AzPublicIpAddress -ResourceGroupName "ResourceGroup01" -Name "PublicIpName01" -Location "West US" -AllocationMethod "Dynamic"
+    PS C:\> $FrontEndIpConfig = New-AzApplicationGatewayFrontendIPConfig -Name "FrontEndConfig01" -PublicIPAddress $PublicIp
+    PS C:\> $Listener = New-AzApplicationGatewayHttpListener -Name "ListenerName01"  -Protocol "Http" -FrontendIpConfiguration $FrontEndIpConfig -FrontendPort $FrontEndPort
+    PS C:\> $Rule = New-AzApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType basic -BackendHttpSettings $PoolSetting -HttpListener $Listener -BackendAddressPool $Pool
+    PS C:\> $Sku = New-AzApplicationGatewaySku -Name "Standard_Small" -Tier Standard -Capacity 2
+    PS C:\> $Identity = New-AzUserAssignedIdentity -Name "Identity01" -ResourceGroupName "ResourceGroup01" -Location "West US"
+    PS C:\> $AppgwIdentity = New-AzApplicationGatewayIdentity -UserAssignedIdentity $Identity.Id
+    PS C:\> $Gateway = New-AzApplicationGateway -Name "AppGateway01" -ResourceGroupName "ResourceGroup01" -Location "West US" -Identity $AppgwIdentity -BackendAddressPools $Pool -BackendHttpSettingsCollection $PoolSetting -FrontendIpConfigurations $FrontEndIpConfig  -GatewayIpConfigurations $GatewayIpConfig -FrontendPorts $FrontEndPort -HttpListeners $Listener -RequestRoutingRules $Rule -Sku $Sku
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayAuthenticationCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AuthenticationCertificates
+  description: |+
+    Specifies authentication certificates for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayAutoscaleConfiguration" data-throw-if-not-resolved="False" />
+  name: AutoscaleConfiguration
+  description: |+
+    Autoscale Configuration
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BackendAddressPools
+  isRequired: true
+  description: |+
+    Specifies the list of back-end address pools for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BackendHttpSettingsCollection
+  isRequired: true
+  description: |+
+    Specifies the list of back-end HTTP settings for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayCustomError" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CustomErrorConfiguration
+  description: |+
+    Customer error of an application gateway
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableFIPS
+  description: |+
+    Whether FIPS is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableHttp2
+  description: |+
+    Whether HTTP2 is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayWebApplicationFirewallPolicy" data-throw-if-not-resolved="False" />
+  name: FirewallPolicy
+  description: |+
+    Firewall configuration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FirewallPolicyId
+  description: |+
+    FirewallPolicyId
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceFirewallPolicyAssociation
+  description: |+
+    Whether Force firewallPolicy association is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayFrontendIPConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FrontendIPConfigurations
+  description: |+
+    Specifies a list of front-end IP configurations for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayFrontendPort" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FrontendPorts
+  isRequired: true
+  description: |+
+    Specifies a list of front-end ports for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayIPConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GatewayIPConfigurations
+  isRequired: true
+  description: |+
+    Specifies a list of IP configurations for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpListeners
+  isRequired: true
+  description: |+
+    Specifies a list of HTTP listeners for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSManagedServiceIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Application Gateway Identity to be assigned to Application Gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the region in which to create the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayPrivateLinkConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrivateLinkConfiguration
+  description: |+
+    The list of privateLink Configuration
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayProbe" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Probes
+  description: |+
+    Specifies probes for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RedirectConfigurations
+  description: |+
+    The list of redirect configuration
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayRequestRoutingRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RequestRoutingRules
+  isRequired: true
+  description: |+
+    Specifies a list of request routing rules for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group in which to create the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayRewriteRuleSet" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RewriteRuleSet
+  description: |+
+    The list of RewriteRuleSet
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewaySku" data-throw-if-not-resolved="False" />
+  name: Sku
+  isRequired: true
+  description: |+
+    Specifies the stock keeping unit (SKU) of the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewaySslCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SslCertificates
+  description: |+
+    Specifies the list of Secure Sockets Layer (SSL) certificates for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewaySslPolicy" data-throw-if-not-resolved="False" />
+  name: SslPolicy
+  description: |+
+    Specifies an SSL policy for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayTrustedRootCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TrustedRootCertificate
+  description: |+
+    The list of trusted root certificates
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayUrlPathMap" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UrlPathMaps
+  description: |+
+    Specifies URL path maps for the application gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserAssignedIdentityId
+  description: |+
+    ResourceId of the user assigned identity to be assigned to Application Gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: UserAssignedIdentity
+  parameterValueGroup: ""
+- type: <xref href="PSApplicationGatewayWebApplicationFirewallConfiguration" data-throw-if-not-resolved="False" />
+  name: WebApplicationFirewallConfiguration
+  description: |+
+    Specifies a web application firewall (WAF) configuration. You can use the
+    Get-AzApplicationGatewayWebApplicationFirewallConfiguration cmdlet to get a WAF.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Zone
+  description: |+
+    A list of availability zones denoting where the application gateway needs to come from.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGateway
+name: New-AzApplicationGateway
+description: |-
+  The **New-AzApplicationGateway** cmdlet creates an Azure application gateway.
+  An application gateway requires the following:
+  - A resource group.
+  - A virtual network.
+  - A back-end server pool, containing the IP addresses of the back-end servers.
+  - Back-end server pool settings. Each pool has settings such as port, protocol and cookie-based affinity, that are applied to all servers within the pool.
+  - Front-end IP addresses, which are the IP addresses opened on the application gateway. A front-end IP address can be a public IP address or an internal IP address.
+  - Front-end ports, which are the public ports opened on the application gateway. Traffic that hits these ports is redirected to the back-end servers.
+  - A request routing rule that binds the listener and the back-end server pool. The rule defines which back-end server pool the traffic should be directed to when it hits a particular listener.
+  A listener has a front-end port, front-end IP address, protocol (HTTP or HTTPS) and Secure Sockets
+  Layer (SSL) certificate name (if configuring SSL offload).
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 1F5066C6-9756-47B4-886C-C52755809926
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgateway
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGateway.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGateway.md

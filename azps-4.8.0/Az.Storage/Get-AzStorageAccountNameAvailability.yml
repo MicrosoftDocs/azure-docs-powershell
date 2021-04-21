@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks the availability of a Storage account name.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Storage.Models.CheckNameAvailabilityResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Azure Storage Manager Cmdlets
+  href: ./index.yml
+syntaxes:
+- >-
+  Get-AzStorageAccountNameAvailability [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Check availability of a Storage account name'
+  code: |-
+    PS C:\>Get-AzStorageAccountNameAvailability -Name 'contosostorage03'
+  description: |-
+    This command checks the availability of the name ContosoStorage03.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the Storage account that this cmdlet checks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: StorageAccountName, AccountName
+  parameterValueGroup: ""
+uid: Az.Storage.Get-AzStorageAccountNameAvailability
+name: Get-AzStorageAccountNameAvailability
+description: |-
+  The **Get-AzStorageAccountNameAvailability** cmdlet checks whether the name of an Azure Storage account is valid and available to use.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: F6EA099A-D588-49AE-9D2C-865BC32685BA
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageaccountnameavailability
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageAccountNameAvailability.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageAccountNameAvailability.md

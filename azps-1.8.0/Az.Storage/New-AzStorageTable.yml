@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a storage table.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageTable" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageTable
+  href: ./Get-AzStorageTable.yml
+- text: Remove-AzStorageTable
+  href: ./Remove-AzStorageTable.yml
+syntaxes:
+- >-
+  New-AzStorageTable [-Name] <String> [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an azure storage table'
+  code: |-
+    PS C:\>New-AzStorageTable -Name "tableabc"
+  description: |-
+    This command creates a storage table with a name of tableabc.
+  summary: ""
+- title: 'Example 2: Create multiple azure storage tables'
+  code: |-
+    PS C:\>"table1 table2 table3".split() | New-AzStorageTable
+  description: |-
+    This command creates multiple tables.
+    It uses the **Split** method of the .NET **String** class and then passes the names on the pipeline.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies the storage context.
+    To create it, you can use the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the new table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: N, Table
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageTable
+name: New-AzStorageTable
+description: |-
+  The **New-AzStorageTable** cmdlet creates a storage table associated with the storage account in Azure.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: 3B4F32F3-51ED-4851-B38F-172658186C96
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstoragetable
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageTable.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageTable.md

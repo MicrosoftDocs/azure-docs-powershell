@@ -1,0 +1,335 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The operation to create or update the extension.
+module: Az.ConnectedMachine
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  EXTENSIONPARAMETER <IMachineExtensionUpdate>: Describes a Machine Extension Update.
+    - `[Tag <IUpdateResourceTags>]`: Resource tags
+      - `[(Any) <String>]`: This indicates any property can be added to this object.
+    - `[AutoUpgradeMinorVersion <Boolean?>]`: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+    - `[ForceUpdateTag <String>]`: How the extension handler should be forced to update even if the extension configuration has not changed.
+    - `[ProtectedSetting <IMachineExtensionUpdatePropertiesProtectedSettings>]`: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+    - `[Publisher <String>]`: The name of the extension handler publisher.
+    - `[Setting <IMachineExtensionUpdatePropertiesSettings>]`: Json formatted public settings for the extension.
+    - `[Type <String>]`: Specifies the type of the extension; an example is "CustomScriptExtension".
+    - `[TypeHandlerVersion <String>]`: Specifies the version of the script handler.
+
+  INPUTOBJECT <IConnectedMachineIdentity>: Identity Parameter
+    - `[ExtensionName <String>]`: The name of the machine extension.
+    - `[Id <String>]`: Resource identity path
+    - `[Name <String>]`: The name of the hybrid machine.
+    - `[ResourceGroupName <String>]`: The name of the resource group.
+    - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.Api20200802.IMachineExtensionUpdate" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IConnectedMachineIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.Api20200802.IMachineExtension" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzConnectedMachineExtension -MachineName <String> -Name <String> -ResourceGroupName <String>
+
+   [-SubscriptionId <String>] [-AutoUpgradeMinorVersion] [-ForceRerun <String>]
+
+   [-ProtectedSetting <IMachineExtensionUpdatePropertiesProtectedSettings>] [-Publisher <String>]
+
+   [-Setting <IMachineExtensionUpdatePropertiesSettings>] [-Tag <Hashtable>] [-Type <String>]
+
+   [-TypeHandlerVersion <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Update-AzConnectedMachineExtension -MachineName <String> -Name <String> -ResourceGroupName <String>
+
+   -ExtensionParameter <IMachineExtensionUpdate> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+
+   [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+- >-
+  Update-AzConnectedMachineExtension -InputObject <IConnectedMachineIdentity>
+
+   -ExtensionParameter <IMachineExtensionUpdate> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+
+   [-WhatIf] [<CommonParameters>]
+- >-
+  Update-AzConnectedMachineExtension -InputObject <IConnectedMachineIdentity> [-AutoUpgradeMinorVersion]
+
+   [-ForceRerun <String>] [-ProtectedSetting <IMachineExtensionUpdatePropertiesProtectedSettings>]
+
+   [-Publisher <String>] [-Setting <IMachineExtensionUpdatePropertiesSettings>] [-Tag <Hashtable>]
+
+   [-Type <String>] [-TypeHandlerVersion <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update an extension'
+  code: |-
+    PS C:\> $splat = @{
+                ResourceGroupName = "connectedMachines"
+                MachineName = "linux-eastus1_1"
+                Name = "customScript"
+                Settings = @{
+                    commandToExecute = "ls -l"
+                }
+            }
+    PS C:\> Update-AzConnectedMachineExtension @splat
+
+    Name         Location ProvisioningState
+    ----         -------- -----------------
+    customScript eastus   Succeeded
+  description: |-
+    Updates an extension on a specific machine.
+  summary: ""
+- title: 'Example 2: Update an extension with location specified via the pipeline'
+  code: |-
+    PS C:\> $extToUpdate = Get-AzConnectedMachineExtension -ResourceGroupName connectedMachines -MachineName linux-eastus1_1 -Name customScript
+    PS C:\> $extToUpdate | Update-AzConnectedMachineExtension -Settings @{
+                    commandToExecute = "ls -l"
+                }
+
+    Name         Location ProvisioningState
+    ----         -------- -----------------
+    customScript eastus   Succeeded
+  description: |-
+    Updates a specific extension passed in via the pipeline.
+    Here we are using the extension passed in via the pipeline to help us identify which extension we want to operate on and are specifying what we want to change via the normal parameters (like `-Settings`)
+  summary: ""
+- title: 'Example 3: Update an extension with extension parameters specified via the pipeline'
+  code: |-
+    PS C:\> $extToUpdate = Get-AzConnectedMachineExtension -ResourceGroupName connectedMachines -MachineName linux-eastus1_1 -Name customScript
+    PS C:\> # Update the settings on the object that will be used via the pipeline
+    PS C:\> $extToUpdate.Setting.commandToExecute = "ls -l"
+    PS C:\> $splat = @{
+                ResourceGroupName = "connectedMachines"
+                MachineName = "linux-eastus1_1"
+                Name = "customScript"
+            }
+    PS C:\> $extToUpdate | Update-AzConnectedMachineExtension @splat
+
+    Name         Location ProvisioningState
+    ----         -------- -----------------
+    customScript eastus   Succeeded
+  description: |-
+    Updates a specific extension passed in via the pipeline.
+    Here we are using the extension passed in via the pipeline to provide the changes we want to make on the extension.
+    The location of the extension is not retrieved via the pipeline but rather via the parameters specified normally (by the splat parameter).
+  summary: ""
+- title: 'Example 4: Using an extension object as both the location and parameters for updating'
+  code: |-
+    PS C:\> $extToUpdate = Get-AzConnectedMachineExtension -ResourceGroupName connectedMachines -MachineName linux-eastus1_1 -Name customScript
+    PS C:\> # Update the settings on the object that will be used via the pipeline
+    PS C:\> $extToUpdate.Setting.commandToExecute = "ls -l"
+    PS C:\> $extToUpdate | Update-AzConnectedMachineExtension -ExtensionParameter $extToUpdate
+
+    Name         Location ProvisioningState
+    ----         -------- -----------------
+    customScript eastus   Succeeded
+  description: |-
+    Updates a specific extension passed in via the pipeline.
+    Here we are using the extension passed in via the pipeline to help us identify which extension we want to operate on.
+    In addition to that, we are using the parameters of the extension object to specify what to update.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run the command as a job
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoUpgradeMinorVersion
+  description: |+
+    Indicates whether the extension should use a newer minor version if one is available at deployment time.
+    Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.Api20200802.IMachineExtensionUpdate" data-throw-if-not-resolved="False" />
+  name: ExtensionParameter
+  isRequired: true
+  description: |+
+    Describes a Machine Extension Update.
+    To construct, see NOTES section for EXTENSIONPARAMETER properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ForceRerun
+  description: |+
+    How the extension handler should be forced to update even if the extension configuration has not changed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IConnectedMachineIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MachineName
+  isRequired: true
+  description: |+
+    The name of the machine where the extension should be created or updated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the machine extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Run the command asynchronously
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.Api20200802.IMachineExtensionUpdatePropertiesProtectedSettings" data-throw-if-not-resolved="False" />
+  name: ProtectedSetting
+  description: |+
+    The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+
+  defaultValue: None
+  position: Named
+  aliases: ProtectedSettings
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Publisher
+  description: |+
+    The name of the extension handler publisher.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.Api20200802.IMachineExtensionUpdatePropertiesSettings" data-throw-if-not-resolved="False" />
+  name: Setting
+  description: |+
+    Json formatted public settings for the extension.
+
+  defaultValue: None
+  position: Named
+  aliases: Settings
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Subscription credentials which uniquely identify Microsoft Azure subscription.
+    The subscription ID forms part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Resource tags
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the type of the extension; an example is "CustomScriptExtension".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TypeHandlerVersion
+  description: |+
+    Specifies the version of the script handler.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ConnectedMachine.Update-AzConnectedMachineExtension
+name: Update-AzConnectedMachineExtension
+description: |-
+  The operation to create or update the extension.
+metadata:
+  external help file: ""
+  Module Name: Az.ConnectedMachine
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.connectedmachine/update-azconnectedmachineextension
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Update-AzConnectedMachineExtension.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Update-AzConnectedMachineExtension.md

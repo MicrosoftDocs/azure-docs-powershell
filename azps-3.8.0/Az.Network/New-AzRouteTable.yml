@@ -1,0 +1,187 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a route table.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoute" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRouteTable
+  href: ./Get-AzRouteTable.yml
+- text: New-AzRouteConfig
+  href: ./New-AzRouteConfig.yml
+- text: Remove-AzRouteTable
+  href: ./Remove-AzRouteTable.yml
+- text: Set-AzRouteTable
+  href: ./Set-AzRouteTable.yml
+syntaxes:
+- >-
+  New-AzRouteTable -ResourceGroupName <String> -Name <String> [-DisableBgpRoutePropagation] -Location <String>
+
+   [-Tag <Hashtable>] [-Route <PSRoute[]>] [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a route table that contains a route'
+  code: |-
+    PS C:\>$Route = New-AzRouteConfig -Name "Route07" -AddressPrefix 10.1.0.0/16 -NextHopType "VnetLocal"
+    PS C:\> New-AzRouteTable -Name "RouteTable01" -ResourceGroupName "ResourceGroup11" -Location "EASTUS" -Route $Route
+    Name              : routetable01
+    ResourceGroupName : ResourceGroup11
+    Location          : eastus
+    Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Microsoft.Networ
+                        k/routeTables/myroutetable
+    Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
+    ProvisioningState : Succeeded
+    Tags              :
+    Routes            : [
+                          {
+                            "Name": "route07",
+                            "Etag": "W/\"db5f4e12-3f34-465b-92dd-0ab3bf6fc274\"",
+                            "Id": "/subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Micro
+                        soft.Network/routeTables/routetable01/routes/route07",
+                            "AddressPrefix": "10.1.0.0/16",
+                            "NextHopType": "VnetLocal",
+                            "NextHopIpAddress": null,
+                            "ProvisioningState": "Succeeded"
+                          }
+                        ]
+    Subnets           : []
+  description: |-
+    The first command creates a route named Route07 by using the New-AzRouteConfig cmdlet, and
+    then stores it in the $Route variable. This route forwards packets to the local virtual network.
+    The second command creates a route table named RouteTable01, and adds the route stored in $Route to
+    the new table. The command specifies the resource group to which the table belongs and the location
+    for the table.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableBgpRoutePropagation
+  description: |+
+    Disable BGP Route auto propagation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that this cmdlet creates a route table even if a route table that has the same name already exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the Azure region in which this cmdlet creates a route table.
+    For more information, see [Azure Regions](http://azure.microsoft.com/en-us/regions/).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the route table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group in which this cmdlet creates a route table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoute" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Route
+  description: |+
+    Specifies an array of **Route** objects to associate with the route table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzRouteTable
+name: New-AzRouteTable
+description: |-
+  The **New-AzRouteTable** cmdlet creates an Azure route table.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 6A278F91-C078-4DD4-82D0-2E4FA549A089
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azroutetable
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzRouteTable.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzRouteTable.md

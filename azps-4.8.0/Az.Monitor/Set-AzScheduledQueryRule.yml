@@ -1,0 +1,256 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a Log Alert Rule
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleSource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleSchedule" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleAlertingAction" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleResource" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzScheduledQueryRule -Source <PSScheduledQueryRuleSource> [-Schedule <PSScheduledQueryRuleSchedule>]
+
+   -Action <PSScheduledQueryRuleAlertingAction> -Location <String> [-Description <String>] -Name <String>
+
+   -ResourceGroupName <String> [-Tag <Hashtable>] [-Enabled <Boolean>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzScheduledQueryRule -InputObject <PSScheduledQueryRuleResource> [-Source <PSScheduledQueryRuleSource>]
+
+   [-Schedule <PSScheduledQueryRuleSchedule>] [-Action <PSScheduledQueryRuleAlertingAction>] [-Location <String>]
+
+   [-Description <String>] [-Tag <Hashtable>] [-Enabled <Boolean>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzScheduledQueryRule -ResourceId <String> -Source <PSScheduledQueryRuleSource>
+
+   [-Schedule <PSScheduledQueryRuleSchedule>] -Action <PSScheduledQueryRuleAlertingAction> -Location <String>
+
+   [-Description <String>] [-Tag <Hashtable>] [-Enabled <Boolean>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set by rule name'
+  code: |-
+    PS C:\> Set-AzScheduledQueryRule -ResourceGroupName "MyResourceGroup" -Name "LogAlertRule1" -Enabled $true -Location "centralindia" -Action $alertingAction -Description "log alert description" -Schedule $schedule -Source $source
+
+    Description       : log alert description
+    Enabled           : true
+    LastUpdatedTime   : 19-Apr-19 12:45:04 PM
+    ProvisioningState : Succeeded
+    Source            : Microsoft.Azure.Management.Monitor.Models.Source
+    Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
+    Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
+    Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+    Name              : LogAlertRule1
+    Type              : microsoft.insights/scheduledqueryrules
+    Location          : centralindia
+    Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+  description: ""
+  summary: ""
+- title: 'Example 2: Set by Input Object'
+  code: |-
+    PS C:\> Set-AzScheduledQueryRule -InputObject $sqr -Description "changed description"
+
+    Description       : changed description
+    Enabled           : true
+    LastUpdatedTime   : 19-Apr-19 12:46:38 PM
+    ProvisioningState : Succeeded
+    Source            : Microsoft.Azure.Management.Monitor.Models.Source
+    Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
+    Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
+    Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+    Name              : LogAlertRule1
+    Type              : microsoft.insights/scheduledqueryrules
+    Location          : centralindia
+    Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+  description: ""
+  summary: ""
+- title: 'Example 3: Set by resource Id'
+  code: |-
+    PS C:\> Set-AzScheduledQueryRule -ResourceId "/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1" -Enabled $true -Location "centralindia" -Action $alertingAction -Description "change description again" -Schedule $schedule -Source $source
+
+    Description       : change description again
+    Enabled           : true
+    LastUpdatedTime   : 19-Apr-19 12:47:59 PM
+    ProvisioningState : Succeeded
+    Source            : Microsoft.Azure.Management.Monitor.Models.Source
+    Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
+    Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
+    Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+    Name              : LogAlertRule1
+    Type              : microsoft.insights/scheduledqueryrules
+    Location          : centralindia
+    Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleAlertingAction" data-throw-if-not-resolved="False" />
+  name: Action
+  isRequired: true
+  description: |+
+    The scheduled query rule Alerting Action
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The description for this alert
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    The azure alert state - valid values - $true, $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleResource" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    The Scheduled Query Rule resource
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location for this alert
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The alert name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The resource Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleSchedule" data-throw-if-not-resolved="False" />
+  name: Schedule
+  description: |+
+    The scheduled query rule schedule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleSource" data-throw-if-not-resolved="False" />
+  name: Source
+  isRequired: true
+  description: |+
+    The scheduled query rule source
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Resource tags
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Monitor.Set-AzScheduledQueryRule
+name: Set-AzScheduledQueryRule
+description: |-
+  Updates a Log Alert Rule by PUT semantics
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/set-azscheduledqueryrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzScheduledQueryRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzScheduledQueryRule.md

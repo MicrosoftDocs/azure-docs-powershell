@@ -1,0 +1,55 @@
+### YamlMime:PowershellModule
+children:
+- title: DataBoxEdge
+  cmdlets:
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeBandwidthSchedule
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeDevice
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeJob
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeOrder
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeRole
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeShare
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeStorageAccount
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeStorageAccountCredential
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeStorageContainer
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeTrigger
+  - Az.DataBoxEdge.Get-AzDataBoxEdgeUser
+  - Az.DataBoxEdge.Invoke-AzDataBoxEdgeDevice
+  - Az.DataBoxEdge.Invoke-AzDataBoxEdgeShare
+  - Az.DataBoxEdge.Invoke-AzDataBoxEdgeStorageContainer
+  - Az.DataBoxEdge.New-AzDataBoxEdgeBandwidthSchedule
+  - Az.DataBoxEdge.New-AzDataBoxEdgeDevice
+  - Az.DataBoxEdge.New-AzDataBoxEdgeOrder
+  - Az.DataBoxEdge.New-AzDataBoxEdgeRole
+  - Az.DataBoxEdge.New-AzDataBoxEdgeShare
+  - Az.DataBoxEdge.New-AzDataBoxEdgeStorageAccount
+  - Az.DataBoxEdge.New-AzDataBoxEdgeStorageAccountCredential
+  - Az.DataBoxEdge.New-AzDataBoxEdgeStorageContainer
+  - Az.DataBoxEdge.New-AzDataBoxEdgeTrigger
+  - Az.DataBoxEdge.New-AzDataBoxEdgeUser
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeBandwidthSchedule
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeDevice
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeOrder
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeRole
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeShare
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeStorageAccount
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeStorageAccountCredential
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeStorageContainer
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeTrigger
+  - Az.DataBoxEdge.Remove-AzDataBoxEdgeUser
+  - Az.DataBoxEdge.Set-AzDataBoxEdgeBandwidthSchedule
+  - Az.DataBoxEdge.Set-AzDataBoxEdgeRole
+  - Az.DataBoxEdge.Set-AzDataBoxEdgeShare
+  - Az.DataBoxEdge.Set-AzDataBoxEdgeStorageAccountCredential
+  - Az.DataBoxEdge.Set-AzDataBoxEdgeUser
+uid: Az.DataBoxEdge
+name: Az.DataBoxEdge
+description: |-
+  Module to create a device and perform operations on DataBoxEdge devices
+metadata:
+  Module Name: Az.DataBoxEdge
+  Module Guid: 3C11EF12-C79F-45FE-ACDF-A2C784D99C97
+  Download Help Link: ""
+  Help Version: ""
+  Locale: ""
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBoxEdge/DataBoxEdge/help/Az.DataBoxEdge.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBoxEdge/DataBoxEdge/help/Az.DataBoxEdge.md

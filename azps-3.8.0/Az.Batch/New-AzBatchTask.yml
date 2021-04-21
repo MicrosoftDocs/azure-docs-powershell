@@ -1,0 +1,354 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Batch task under a job.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchJob
+  href: ./Get-AzBatchJob.yml
+- text: Get-AzBatchTask
+  href: ./Get-AzBatchTask.yml
+- text: New-AzBatchTask
+  href: ./New-AzBatchTask.yml
+- text: Remove-AzBatchTask
+  href: ./Remove-AzBatchTask.yml
+- text: Stop-AzBatchTask
+  href: ./Stop-AzBatchTask.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/az.batch
+syntaxes:
+- >-
+  New-AzBatchTask -JobId <String> -Id <String> [-DisplayName <String>] -CommandLine <String>
+
+   [-ResourceFiles <PSResourceFile[]>] [-EnvironmentSettings <IDictionary>]
+
+   [-AuthenticationTokenSettings <PSAuthenticationTokenSettings>] [-UserIdentity <PSUserIdentity>]
+
+   [-AffinityInformation <PSAffinityInformation>] [-Constraints <PSTaskConstraints>]
+
+   [-MultiInstanceSettings <PSMultiInstanceSettings>] [-DependsOn <TaskDependencies>]
+
+   [-ApplicationPackageReferences <PSApplicationPackageReference[]>] [-OutputFile <PSOutputFile[]>]
+
+   [-ExitConditions <PSExitConditions>] [-ContainerSettings <PSTaskContainerSettings>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzBatchTask -JobId <String> [-Tasks <PSCloudTask[]>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzBatchTask [-Job <PSCloudJob>] [-Tasks <PSCloudTask[]>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzBatchTask [-Job <PSCloudJob>] -Id <String> [-DisplayName <String>] -CommandLine <String>
+
+   [-ResourceFiles <PSResourceFile[]>] [-EnvironmentSettings <IDictionary>]
+
+   [-AuthenticationTokenSettings <PSAuthenticationTokenSettings>] [-UserIdentity <PSUserIdentity>]
+
+   [-AffinityInformation <PSAffinityInformation>] [-Constraints <PSTaskConstraints>]
+
+   [-MultiInstanceSettings <PSMultiInstanceSettings>] [-DependsOn <TaskDependencies>]
+
+   [-ApplicationPackageReferences <PSApplicationPackageReference[]>] [-OutputFile <PSOutputFile[]>]
+
+   [-ExitConditions <PSExitConditions>] [-ContainerSettings <PSTaskContainerSettings>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Batch task'
+  code: |-
+    PS C:\>New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -BatchContext $Context
+  description: |-
+    This command creates a task that has the ID Task23 under the job that has the ID Job-000001.
+    The task runs the specified command.
+    Use the **Get-AzBatchAccountKey** cmdlet to assign a context to the $Context variable.
+  summary: ""
+- title: 'Example 2: Create a Batch task'
+  code: |-
+    PS C:\> $autoUser = New-Object Microsoft.Azure.Commands.Batch.Models.PSAutoUserSpecification -ArgumentList @("Task", "Admin")
+    PS C:\> $userIdentity = New-Object Microsoft.Azure.Commands.Batch.Models.PSUserIdentity $autoUser
+    PS C:\>Get-AzBatchJob -Id "Job-000001" -BatchContext $Context | New-AzBatchTask -Id "Task26" -CommandLine "cmd /c echo hello > newFile.txt" -UserIdentity $userIdentity -BatchContext $Context
+  description: |-
+    This command gets the Batch job that has the ID Job-000001 by using the **Get-AzBatchJob** cmdlet.
+    The command passes that job to the current cmdlet by using the pipeline operator.
+    The command creates a task that has the ID Task26 under that job.
+    The task runs the specified command by using elevated permissions.
+  summary: ""
+- title: 'Example 3: Add a collection of tasks to the specified job by using the pipeline'
+  code: |-
+    PS C:\>$Context = Get-AzBatchAccountKey -AccountName "ContosoBatchAccount"
+    PS C:\> $Task01 = New-Object Microsoft.Azure.Commands.Batch.Models.PSCloudTask("Task23", "cmd /c dir /s")
+    PS C:\> $Task02 = New-Object Microsoft.Azure.Commands.Batch.Models.PSCloudTask("Task24", "cmd /c dir /s")
+    PS C:\> Get-AzBatchJob -Id "Job-000001" -BatchContext $Context | New-AzBatchTask -Tasks @($Task01, $Task02) -BatchContext $Context
+  description: |-
+    The first command creates an object reference to the account keys for the batch account named ContosoBatchAccount by using **Get-AzBatchAccountKey**.
+    The command stores this object reference in the $Context variable.
+    The next two commands create **PSCloudTask** objects by using the New-Object cmdlet.
+    The commands store the tasks in the $Task01 and $Task02 variables.
+    The final command gets the Batch job that has the ID Job-000001 by using **Get-AzBatchJob**.
+    Then the command passes that job to the current cmdlet by using the pipeline operator.
+    The command adds a collection of tasks under that job.
+    The command uses the context stored in $Context.
+  summary: ""
+- title: 'Example 4: Add a collection of tasks to the specified job'
+  code: |-
+    PS C:\>$Context = Get-AzBatchAccountKey -AccountName "ContosoBatchAccount"
+    PS C:\> $Task01 = New-Object Microsoft.Azure.Commands.Batch.Models.PSCloudTask("Task23", "cmd /c dir /s")
+    PS C:\> $Task02 = New-Object Microsoft.Azure.Commands.Batch.Models.PSCloudTask("Task24", "cmd /c dir /s")
+    PS C:\> New-AzBatchTask -JobId "Job-000001" -Tasks @($Task01, $Task02) -BatchContext $Context
+  description: |-
+    The first command creates an object reference to the account keys for the batch account named ContosoBatchAccount by using **Get-AzBatchAccountKey**.
+    The command stores this object reference in the $Context variable.
+    The next two commands create **PSCloudTask** objects by using the New-Object cmdlet.
+    The commands store the tasks in the $Task01 and $Task02 variables.
+    The final command adds the tasks stored in $Task01 and $Task02 under the job that has the ID Job-000001.
+  summary: ""
+- title: 'Example 5: Add a task with output files'
+  code: |-
+    PS C:\>New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -BatchContext $Context
+    PS C:\>$blobContainerDestination = New-Object Microsoft.Azure.Commands.Batch.Models.PSOutputFileBlobContainerDestination "https://myaccount.blob.core.windows.net/sascontainer?sv=2015-04-05&st=2015-04-29T22%3A18%3A26Z&se=2015-04-30T02%3A23%3A26Z&sr=b&sp=rw&spr=https&sig=Z%2FRHIX5Xcg0Mq2rqI3OlWTjEg2tYkboXr1P9ZUXDtkk%3D"
+    PS C:\>$destination = New-Object Microsoft.Azure.Commands.Batch.Models.PSOutputFileDestination $blobContainerDestination
+    PS C:\>$uploadOptions = New-Object Microsoft.Azure.Commands.Batch.Models.PSOutputFileUploadOptions "TaskSuccess"
+    PS C:\>$outputFile = New-Object Microsoft.Azure.Commands.Batch.Models.PSOutputFile "*.txt", $blobContainerDestination, $uploadOptions
+
+    PS C:\>New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -OutputFile $outputFile -BatchContext $Context
+  description: ""
+  summary: ""
+- title: 'Example 6: Add a task with authentication token settings'
+  code: |-
+    PS C:\>$authSettings = New-Object Microsoft.Azure.Commands.Batch.Models.PSAuthenticationTokenSettings
+    PS C:\>$authSettings.Access = "Job"
+    PS C:\>New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -AuthenticationTokenSettings $authSettings -BatchContext $Context
+  description: ""
+  summary: ""
+- title: 'Example 7: Add a task which runs in a container'
+  code: |-
+    PS C:\>New-AzBatchTask -JobId "Job-000001" -Id "Task23" -CommandLine "cmd /c dir /s" -ContainerSettings New-Object Microsoft.Azure.Commands.Batch.Models.PSTaskContainerSettings "containerImageName"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSAffinityInformation" data-throw-if-not-resolved="False" />
+  name: AffinityInformation
+  description: |+
+    Specifies a locality hint that the Batch service uses to select a node on which to run the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSApplicationPackageReference" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ApplicationPackageReferences
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ApplicationPackageReference
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSAuthenticationTokenSettings" data-throw-if-not-resolved="False" />
+  name: AuthenticationTokenSettings
+  description: |+
+    The settings for an authentication token that the task can use to perform Batch service operations.
+    If this is set, the Batch service provides the task with an authentication token which can be used to 
+    authenticate Batch service operations without requiring an account access key. The token is provided via the 
+    AZ_BATCH_AUTHENTICATION_TOKEN environment variable. The operations that the task can carry out using the token 
+    depend on the settings. For example, a task can request job permissions in order to add other tasks to the job, 
+    or check the status of the job or of other tasks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CommandLine
+  isRequired: true
+  description: |+
+    Specifies the command line for the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSTaskConstraints" data-throw-if-not-resolved="False" />
+  name: Constraints
+  description: |+
+    Specifies the execution constraints that apply to this task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSTaskContainerSettings" data-throw-if-not-resolved="False" />
+  name: ContainerSettings
+  description: |+
+    The settings for the container under which the task runs.
+    If the pool that will run this task has containerConfiguration set, this must be set as well. If the pool that will run this task
+    doesn't have containerConfiguration set, this must not be set. When this is specified, all directories recursively below the 
+    AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables 
+    are mapped into the container, and the task command line is executed in the container.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Batch.TaskDependencies" data-throw-if-not-resolved="False" />
+  name: DependsOn
+  description: |+
+    Specifies that the task depends on other tasks.
+    The task will not be scheduled until all depended-on tasks have completed successfully.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies the display name of the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: EnvironmentSettings
+  description: |+
+    Specifies the environment settings, as key/value pairs, that this cmdlet adds to the task.
+    The key is the environment setting name.
+    The value is the environment setting.
+
+  defaultValue: None
+  position: Named
+  aliases: EnvironmentSetting
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSExitConditions" data-throw-if-not-resolved="False" />
+  name: ExitConditions
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  name: Job
+  description: |+
+    Specifies the job under which this cmdlet creates the task.
+    To obtain a **PSCloudJob** object, use the Get-AzBatchJob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the ID of the job under which this cmdlet creates the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSMultiInstanceSettings" data-throw-if-not-resolved="False" />
+  name: MultiInstanceSettings
+  description: |+
+    Specifies information about how to run a multi-instance task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSOutputFile" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OutputFile
+  description: |+
+    Gets or sets a list of files that the Batch service will upload from the compute node after running the command line.
+    For multi-instance tasks, the files will only be uploaded from the compute node on which the primary task is executed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSResourceFile" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourceFiles
+  description: |+
+    Specifies resource files, as key/value pairs, that the task requires.
+    The key is the resource file path.
+    The value is the resource file blob source.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceFile
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudTask" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Tasks
+  description: |+
+    Specifies the collection of tasks to be added.
+    Each task must have a unique ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSUserIdentity" data-throw-if-not-resolved="False" />
+  name: UserIdentity
+  description: |+
+    The user identity under which the task runs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.New-AzBatchTask
+name: New-AzBatchTask
+description: |-
+  The **New-AzBatchTask** cmdlet creates an Azure Batch task under the job specified by the *JobId* parameter or the *Job* parameter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 2B4BFDDA-9721-42E6-84E1-A209CB782954
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchtask
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchTask.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchTask.md

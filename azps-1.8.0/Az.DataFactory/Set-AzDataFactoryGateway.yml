@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the description for a gateway in Azure Data Factory.
+module: Az.DataFactory
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactoryGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzDataFactoryGateway
+  href: ./Get-AzDataFactoryGateway.yml
+- text: New-AzDataFactoryGateway
+  href: ./New-AzDataFactoryGateway.yml
+- text: Remove-AzDataFactoryGateway
+  href: ./Remove-AzDataFactoryGateway.yml
+syntaxes:
+- >-
+  Set-AzDataFactoryGateway [-DataFactoryName] <String> [-Name] <String> [-Description] <String>
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Set-AzDataFactoryGateway [-DataFactory] <PSDataFactory> [-Name] <String> [-Description] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the description for a gateway'
+  code: |-
+    PS C:\>Set-AzDataFactoryGateway -ResourceGroupName "ADF" -Name "ContosoGateway" -DataFactoryName "WikiADF" -Description "my gateway"
+    Name            : ContosoGateway
+    Description     : my gateway
+    Version         : 1.3.5338.1
+    Status          : Online
+    VersionStatus   : UpToDate
+    CreateTime      : 8/22/2014 1:31:09 AM
+    RegisterTime    : 8/22/2014 1:31:37 AM
+    LastConnectTime : 8/22/2014 1:41:41 AM
+    ExpiryTime      :
+  description: |-
+    This command sets the description for the gateway named ContosoGateway in the data factory named WikiADF.
+    The Description parameter specifies the new description.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  name: DataFactory
+  isRequired: true
+  description: |+
+    Specifies a **PSDataFactory** object.
+    This cmdlet sets the description for the gateway in the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet sets the description for the gateway in the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  isRequired: true
+  description: |+
+    Specifies a description for the gateway.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the gateway for which to set a description.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet sets the description for a gateway that belongs to the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataFactory.Set-AzDataFactoryGateway
+name: Set-AzDataFactoryGateway
+description: |-
+  The **Set-AzDataFactoryGateway** cmdlet sets the description for the specified gateway in Azure Data Factory.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
+  Module Name: Az.DataFactory
+  ms.assetid: 663D27A3-0B51-48F5-81D0-8DDBC5A3A33C
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/set-azdatafactorygateway
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryGateway.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryGateway.md

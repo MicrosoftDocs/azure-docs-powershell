@@ -1,0 +1,205 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a media service if the media service already exists, all its properties are updated with the input provided.
+module: Az.Media
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Media.Models.PSStorageAccount" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Media.Models.PSMediaService" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzMediaService
+  href: ./Get-AzMediaService.yml
+- text: Remove-AzMediaService
+  href: ./Remove-AzMediaService.yml
+- text: Set-AzMediaService
+  href: ./Set-AzMediaService.yml
+syntaxes:
+- >-
+  New-AzMediaService [-ResourceGroupName] <String> [-AccountName] <String> [-Location] <String>
+
+   [-StorageAccountId] <String> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  New-AzMediaService [-ResourceGroupName] <String> [-AccountName] <String> [-Location] <String>
+
+   [-StorageAccounts] <PSStorageAccount[]> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example1: Create a media service with the primary storage account only'
+  code: |-
+    PS C:\># Variables
+    ## Global
+    $ResourceGroupName = "ResourceGroup001"
+    $Location = "East US"
+
+    ## Storage
+    $StorageName = "Storage1"
+    $StorageType = "Standard_GRS"
+
+    ## Media Service
+    $Tags = @{"tag1" = "value1"; "tag2" = "value2"}
+    $MediaServiceName = "MediaService1"
+
+    # Resource Group
+    PS C:\> New-AzResourceGroup -Name $ResourceGroupName -Location $Location
+
+    # Storage
+    $StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName -Location $Location -Type $StorageType
+
+    # Media Service
+    PS C:\> New-AzMediaService -ResourceGroupName $ResourceGroupName -AccountName $MediaServiceName -Location $Location -StorageAccountId $StorageAccount.Id -Tag $Tags
+  description: |-
+    This example shows how to  create a media service with specifying primary storage account only.
+    This script uses several other cmdlets.
+  summary: ""
+- title: 'Example 2: Create a media service with multiple storage'
+  code: |-
+    PS C:\># Variables
+
+    ## Global
+    $ResourceGroupName = "ResourceGroup001"
+    $Location = "East US"
+
+    ## Storage
+    $StorageName1 = "storage1"
+    $StorageName2 = "storage2"
+    $StorageType = "Standard_GRS"
+
+    ## Media Service
+    $Tags = @{"tag1" = "value1"; "tag2" = "value2"}
+    $MediaServiceName = "MediaService1"
+
+    # Resource Group
+    PS C:\> New-AzResourceGroup -Name $ResourceGroupName -Location $Location
+
+    # Storage
+    $StorageAccount1 = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName1 -Location $Location -Type $StorageType
+
+
+    $StorageAccount2 = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName2 -Location $Location -Type $StorageType
+
+    # Media Service
+
+    ## Setup the storage configuration object.
+    PS C:\> $PrimaryStorageAccount = New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount1.Id -IsPrimary
+    PS C:\> $SecondaryStorageAccount = New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount2.Id
+    PS C:\> $StorageAccounts = @($PrimaryStorageAccount, $SecondaryStorageAccount)
+
+    ## Create a media service.New-AzMediaService -ResourceGroupName $ResourceGroupName -AccountName $MediaServiceName -Location $Location -StorageAccounts $StorageAccounts -Tag $Tags
+  description: |-
+    This example shows how to create a media service with multiple storage accounts.
+    This script uses several other cmdlets.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the media service that this cmdlet creates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the region that this cmdlet creates the media service in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that the media service is assigned to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountId
+  isRequired: true
+  description: |+
+    Specifies the storage account associated with the media service account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Media.Models.PSStorageAccount" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StorageAccounts
+  isRequired: true
+  description: |+
+    Specifies an array of storage accounts to associate with the media service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    The tags associated with the media service account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Media.New-AzMediaService
+name: New-AzMediaService
+description: |-
+  The **New-AzMediaService** cmdlet creates a media service.
+  If the media service already exists, this cmdlet update its properties.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
+  Module Name: Az.Media
+  ms.assetid: 5CEA7323-4CF7-42B2-BA94-BB3C8F73D2E9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.media/new-azmediaservice
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/New-AzMediaService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/New-AzMediaService.md

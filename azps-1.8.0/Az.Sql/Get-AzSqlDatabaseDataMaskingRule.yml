@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the data masking rules from a database.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataMasking.Model.DatabaseDataMaskingRuleModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlDatabaseDataMaskingPolicy
+  href: ./Get-AzSqlDatabaseDataMaskingPolicy.yml
+- text: New-AzSqlDatabaseDataMaskingRule
+  href: ./New-AzSqlDatabaseDataMaskingRule.yml
+- text: Remove-AzSqlDatabaseDataMaskingRule
+  href: ./Remove-AzSqlDatabaseDataMaskingRule.yml
+- text: Set-AzSqlDatabaseDataMaskingPolicy
+  href: ./Set-AzSqlDatabaseDataMaskingPolicy.yml
+- text: Set-AzSqlDatabaseDataMaskingRule
+  href: ./Set-AzSqlDatabaseDataMaskingRule.yml
+syntaxes:
+- >-
+  Get-AzSqlDatabaseDataMaskingRule [-SchemaName <String>] [-TableName <String>] [-ColumnName <String>]
+
+   [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all data masking rules from a database'
+  code: |-
+    PS C:\>Get-AzSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+    DatabaseName      : database01
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    SchemaName        : dbo
+    TableName         : table1
+    ColumnName        : column1
+    MaskingFunction   : Default
+    PrefixSize        :
+    SuffixSize        :
+    ReplacementString :
+    NumberFrom        :
+    NumberTo          :
+
+    DatabaseName      : database01
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    SchemaName        : dbo
+    TableName         : table2
+    ColumnName        : column2
+    MaskingFunction   : Default
+    PrefixSize        :
+    SuffixSize        :
+    ReplacementString :
+    NumberFrom        :
+    NumberTo          :
+  description: ""
+  summary: ""
+- title: 'Example 2: Get the data masking rule defined on schema "dbo", table "table1" and column "column1".'
+  code: |-
+    PS C:\>Get-AzSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SchemaName "dbo" -TableName  "table1" -ColumnName "column1"
+    DatabaseName      : database01
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    SchemaName        : dbo
+    TableName         : table1
+    ColumnName        : column1
+    MaskingFunction   : Default
+    PrefixSize        :
+    SuffixSize        :
+    ReplacementString :
+    NumberFrom        :
+    NumberTo          :
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ColumnName
+  description: |+
+    Specifies the name of the column targeted by the masking rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of the database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which the database is assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SchemaName
+  description: |+
+    Specifies the name of a schema.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TableName
+  description: |+
+    Specifies the name of an Azure SQL table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlDatabaseDataMaskingRule
+name: Get-AzSqlDatabaseDataMaskingRule
+description: |-
+  The **Get-AzSqlDatabaseDataMaskingRule** cmdlet gets either a specific data masking rule or all of the data masking rules for an Azure SQL database.
+  To use the cmdlet, use the *ResourceGroupName*, *ServerName*, and *DatabaseName* parameters to identify the database, and the *RuleId* parameter to specify which rule this cmdlet returns.
+  If you do not provide *RuleId*, all the data masking rules for that Azure SQL database are returned.
+  This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 848A6972-AB29-46FB-8E03-FF2ADB113A0E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabasedatamaskingrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseDataMaskingRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseDataMaskingRule.md

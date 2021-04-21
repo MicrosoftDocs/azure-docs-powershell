@@ -1,0 +1,231 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a peering configuration to an ExpressRoute cross connection.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="PSExpressRouteCrossConnection" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'ExpressRouteCrossConnection' accepts value of type 'PSExpressRouteCrossConnection' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCrossConnection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzExpressRouteCrossConnectionPeering
+  href: Get-AzExpressRouteCrossConnectionPeering.yml
+- text: Remove-AzExpressRouteCrossConnectionPeering
+  href: Remove-AzExpressRouteCrossConnectionPeering.yml
+- text: Get-AzExpressRouteCrossConnection
+  href: Get-AzExpressRouteCrossConnection.yml
+- text: Set-AzExpressRouteCrossConnection
+  href: Set-AzExpressRouteCrossConnection.yml
+syntaxes:
+- >-
+  Add-AzExpressRouteCrossConnectionPeering -Name <String>
+
+   -ExpressRouteCrossConnection <PSExpressRouteCrossConnection> [-Force] -PeeringType <String> -PeerASN <UInt32>
+
+   -PrimaryPeerAddressPrefix <String> -SecondaryPeerAddressPrefix <String> -VlanId <Int32> [-SharedKey <String>]
+
+   [-MicrosoftConfigAdvertisedPublicPrefix <String[]>] [-MicrosoftConfigCustomerAsn <Int32>]
+
+   [-MicrosoftConfigRoutingRegistryName <String>] [-PeerAddressType <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a peer to an existing ExpressRoute cross connection'
+  code: |-
+    $cc = Get-AzExpressRouteCrossConnection -Name $CrossConnectionName -ResourceGroupName $rg
+    $parameters = @{
+        Name = 'AzurePrivatePeering'
+        CrossConnection = $cc
+        PeeringType = 'AzurePrivatePeering'
+        PeerASN = 100
+        PrimaryPeerAddressPrefix = '10.6.1.0/30'
+        SecondaryPeerAddressPrefix = '10.6.2.0/30'
+        VlanId  = 200
+    }
+    Add-AzExpressRouteCrossConnectionPeering @parameters
+    Set-AzExpressRouteCrossConnection -ExpressRouteCrossConnection $cc
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCrossConnection" data-throw-if-not-resolved="False" />
+  name: ExpressRouteCrossConnection
+  isRequired: true
+  description: |+
+    The ExpressRoute cross connection being modified. This is Azure object returned by the
+    **Get-AzExpressRouteCrossConnection** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Do not ask for confirmation if you want to overwrite a resource
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MicrosoftConfigAdvertisedPublicPrefix
+  description: |+
+    For a PeeringType of MicrosoftPeering, you must provide a list of all prefixes you plan to
+    advertise over the BGP session. Only public IP address prefixes are accepted. You can send a comma
+    separated list if you plan to send a set of prefixes. These prefixes must be registered to you in
+    a Routing Registry Name (RIR / IRR).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MicrosoftConfigCustomerAsn
+  description: |+
+    If you are advertising prefixes that are not registered to the peering AS number, you can specify
+    the AS number to which they are registered.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MicrosoftConfigRoutingRegistryName
+  description: |+
+    The Routing Registry Name (RIR / IRR) to which the AS number and prefixes are registered.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the peering relationship to be added.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeerAddressType
+  description: |+
+    PeerAddressType
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: IPv4, IPv6
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: PeerASN
+  isRequired: true
+  description: |+
+    The AS number of your ExpressRoute cross connection. This must be a Public ASN when the PeeringType is
+    AzurePublicPeering.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeeringType
+  isRequired: true
+  description: |+
+    The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and
+    `MicrosoftPeering`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AzurePrivatePeering, AzurePublicPeering, MicrosoftPeering
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrimaryPeerAddressPrefix
+  isRequired: true
+  description: |+
+    This is the IP Address range for the primary routing path of this peering relationship. This must
+    be a /30 CIDR subnet. The first odd-numbered address in this subnet should be assigned to your
+    router interface. Azure will configure the next even-numbered address to the Azure router interface.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecondaryPeerAddressPrefix
+  isRequired: true
+  description: |+
+    This is the IP Address range for the secondary routing path of this peering relationship. This must
+    be a /30 CIDR subnet. The first odd-numbered address in this subnet should be assigned to your
+    router interface. Azure will configure the next even-numbered address to the Azure router interface.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SharedKey
+  description: |+
+    This is an optional MD5 hash used as a pre-shared key for the peering configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: VlanId
+  isRequired: true
+  description: |+
+    This is the Id number of the VLAN assigned for this peering.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.Add-AzExpressRouteCrossConnectionPeering
+name: Add-AzExpressRouteCrossConnectionPeering
+description: |-
+  The **Add-AzExpressRouteCrossConnectionPeering** cmdlet adds a peering configuration to an
+  ExpressRoute cross connection. Note that, after running
+  **Add-AzExpressRouteCrossConnectionPeering**, you must call the Set-AzExpressRouteCrossConnection
+  cmdlet to activate the configuration.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: C44AD23A-E575-418C-BE90-323B44D6D2E8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azexpressroutecrossconnectionpeering
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzExpressRouteCrossConnectionPeering.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzExpressRouteCrossConnectionPeering.md

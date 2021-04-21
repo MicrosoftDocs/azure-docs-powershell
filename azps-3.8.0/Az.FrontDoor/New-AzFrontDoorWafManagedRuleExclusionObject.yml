@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create managed rule exclusion object for WAF managed rule sets, groups, or rules.
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRuleExclusion" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoorWafManagedRuleOverrideObject
+  href: ./New-AzFrontDoorWafManagedRuleOverrideObject.yml
+- text: New-AzFrontDoorWafRuleGroupOverrideObject
+  href: ./New-AzFrontDoorWafRuleGroupOverrideObject.yml
+- text: New-AzFrontDoorWafManagedRuleObject
+  href: ./New-AzFrontDoorWafManagedRuleObject.yml
+syntaxes:
+- >-
+  New-AzFrontDoorWafManagedRuleExclusionObject -Variable <String> -Operator <String> [-Selector <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:> New-AzFrontDoorWafManagedRuleExclusionObject -Variable QueryStringArgNames -Operator Equals -Selector "ParameterName"
+
+    MatchVariable       SelectorMatchOperator Selector
+    -------------       --------------------- --------
+    QueryStringArgNames Equals                ParameterName
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Operator
+  isRequired: true
+  description: |+
+    Operator to use when matching the selector, EqualsAny means no selector (all match variables of the specified type)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Selector
+  description: |+
+    Selector pattern to match using the operator (if the operator is not EqualsAny)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Variable
+  isRequired: true
+  description: |+
+    Match variable. Possible values are RequestHeaderNames, RequestCookieNames, QueryStringArgNames, RequestBodyPostArgNames.
+    For example, QueryStringArgNames is an exclusion of GET parameters matching the selector with the given operator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorWafManagedRuleExclusionObject
+name: New-AzFrontDoorWafManagedRuleExclusionObject
+description: |-
+  Create managed rule exclusion object for WAF managed rule sets, groups, or rules.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorwafmanagedruleexclusionobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleExclusionObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleExclusionObject.md

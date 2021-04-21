@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get WAF policy
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoorWafPolicy
+  href: ./New-AzFrontDoorWafPolicy.yml
+- text: Update-AzFrontDoorWafPolicy
+  href: ./Update-AzFrontDoorWafPolicy.yml
+- text: Remove-AzFrontDoorWafPolicy
+  href: ./Remove-AzFrontDoorWafPolicy.yml
+syntaxes:
+- >-
+  Get-AzFrontDoorWafPolicy -ResourceGroupName <String> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzFrontDoorWafPolicy -Name $policyName -ResourceGroupName $resourceGroupName
+
+    Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----         ---------- ------------------ ----------------------------- -----------
+    {policyName} Prevention            Enabled                           403 https://www.bing.com/
+  description: |-
+    Get a WAF policy called $policyName in $resourceGroupName
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzFrontDoorWafPolicy -ResourceGroupName $resourceGroupName
+
+    Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----         ---------- ------------------ ----------------------------- -----------
+    {policyName} Prevention           Disabled
+    {policyName} Detection             Enabled                           403 https://www.bing.com/
+    {policyName} Detection             Enabled                           404
+  description: |-
+    Get all WAF policy in $resourceGroupName
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    FireWallPolicy name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.Get-AzFrontDoorWafPolicy
+name: Get-AzFrontDoorWafPolicy
+description: |-
+  The **Get-AzFrontDoorWafPolicy** cmdletGet gets WAF policy in a resource group under the current subscription
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/get-azfrontdoorwafpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorWafPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorWafPolicy.md

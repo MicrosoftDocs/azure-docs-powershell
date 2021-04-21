@@ -1,0 +1,223 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Batch tasks for a job.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudTask" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchJob
+  href: ./Get-AzBatchJob.yml
+- text: New-AzBatchTask
+  href: ./New-AzBatchTask.yml
+- text: Remove-AzBatchTask
+  href: ./Remove-AzBatchTask.yml
+- text: Stop-AzBatchTask
+  href: ./Stop-AzBatchTask.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+syntaxes:
+- >-
+  Get-AzBatchTask [-JobId] <String> [-Filter <String>] [-MaxCount <Int32>] [-Select <String>] [-Expand <String>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzBatchTask [-JobId] <String> [[-Id] <String>] [-Select <String>] [-Expand <String>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzBatchTask [[-Job] <PSCloudJob>] [-Filter <String>] [-MaxCount <Int32>] [-Select <String>]
+
+   [-Expand <String>] -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a task by ID'
+  code: |-
+    PS C:\>Get-AzBatchTask -JobId "Job01" -Id "Task03" -BatchContext $Context
+    AffinityInformation         :
+    CommandLine                 : cmd /c dir /s
+    ComputeNodeInformation      : Microsoft.Azure.Commands.Batch.Models.PSComputeNodeInformation
+    Constraints                 : Microsoft.Azure.Commands.Batch.Models.PSTaskConstraints
+    CreationTime                : 7/25/2015 11:24:52 PM
+    DisplayName                 :
+    EnvironmentSettings         :
+    ETag                        : 0x8D295483E08BD9D
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSTaskExecutionInformation
+    Id                          : Task03
+    LastModified                : 7/25/2015 11:24:52 PM
+    PreviousState               : Running
+    PreviousStateTransitionTime : 7/25/2015 11:24:59 PM
+    ResourceFiles               :
+    RunElevated                 : False
+    State                       : Completed
+    StateTransitionTime         : 7/25/2015 11:24:59 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobs/Job01/tasks/Task03
+  description: |-
+    This command gets the task with ID Task03 under job Job01.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+  summary: ""
+- title: 'Example 2: Get all completed tasks from a specified job'
+  code: |-
+    PS C:\>Get-AzBatchTask -JobId "Job02" -Filter "state eq 'completed'" -BatchContext $Context
+    AffinityInformation         :
+    CommandLine                 : cmd /c dir /s
+    ComputeNodeInformation      : Microsoft.Azure.Commands.Batch.Models.PSComputeNodeInformation
+    Constraints                 : Microsoft.Azure.Commands.Batch.Models.PSTaskConstraints
+    CreationTime                : 3/24/2015 10:21:51 PM
+    EnvironmentSettings         :
+    ETag                        : 0x8D295483E08BD9D
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSTaskExecutionInformation
+    Id                          : Task17
+    LastModified                : 3/24/2015 10:21:51 PM
+    PreviousState               : Running
+    PreviousStateTransitionTime : 3/24/2015 10:22:00 PM
+    ResourceFiles               :
+    RunElevated                 : False
+    State                       : Completed
+    StateTransitionTime         : 3/24/2015 10:22:00 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobs/Job02/tasks/Task17
+
+    AffinityInformation         :
+    CommandLine                 : cmd /c echo hello > newFile.txt
+    ComputeNodeInformation      : Microsoft.Azure.Commands.Batch.Models.PSComputeNodeInformation
+    Constraints                 : Microsoft.Azure.Commands.Batch.Models.PSTaskConstraints
+    CreationTime                : 3/24/2015 10:21:51 PM
+    EnvironmentSettings         :
+    ETag                        : 0x8D295483E08BD9D
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSTaskExecutionInformation
+    Id                          : Task27
+    LastModified                : 3/24/2015 10:23:35 PM
+    PreviousState               : Running
+    PreviousStateTransitionTime : 3/24/2015 10:23:37 PM
+    ResourceFiles               :
+    RunElevated                 : True
+    State                       : Completed
+    StateTransitionTime         : 3/24/2015 10:23:37 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobs/Job02/tasks/Task27
+  description: |-
+    This command gets the completed tasks from the job that has the ID Job02.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Expand
+  description: |+
+    Specifies an OData expand clause.
+    Specify a value for this parameter to get associated entities of the main entity to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Specifies an OData filter clause for tasks.
+    If you do not specify a filter, this cmdlet returns all tasks for the Batch account or job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies the ID of the task that this cmdlet gets.
+    You cannot specify wildcard characters.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  name: Job
+  description: |+
+    Specifies the job that contains tasks that this cmdlet gets.
+    To obtain a **PSCloudJob** object, use the Get-AzBatchJob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the ID of the job that contains the tasks that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxCount
+  description: |+
+    Specifies the maximum number of tasks to return.
+    If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+    The default value is 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Select
+  description: |+
+    Specifies an OData select clause.
+    Specify a value for this parameter to get specific properties rather than all object properties.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Get-AzBatchTask
+name: Get-AzBatchTask
+description: |-
+  The **Get-AzBatchTask** cmdlet gets Azure Batch tasks for a Batch job.
+  Specify a job by either the *JobId* parameter or the *Job* parameter.
+  To get a single task, specify the *Id* parameter.
+  You can specify the *Filter* parameter to get the tasks that match an Open Data Protocol (OData) filter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 4B5FE41A-090B-4859-B021-05CF0A8B7882
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchtask
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchTask.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchTask.md

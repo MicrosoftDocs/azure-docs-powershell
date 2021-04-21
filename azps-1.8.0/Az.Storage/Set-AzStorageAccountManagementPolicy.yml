@@ -1,0 +1,337 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates or modifies the management policy of an Azure Storage account.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzStorageAccountManagementPolicy [-ResourceGroupName] <String> [-StorageAccountName] <String>
+
+   -Rule <PSManagementPolicyRule[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzStorageAccountManagementPolicy [-ResourceGroupName] <String> [-StorageAccountName] <String>
+
+   -Policy <PSManagementPolicy> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzStorageAccountManagementPolicy -StorageAccount <PSStorageAccount> -Rule <PSManagementPolicyRule[]>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzStorageAccountManagementPolicy -StorageAccount <PSStorageAccount> -Policy <PSManagementPolicy>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzStorageAccountManagementPolicy [-StorageAccountResourceId] <String> -Rule <PSManagementPolicyRule[]>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzStorageAccountManagementPolicy [-StorageAccountResourceId] <String> -Policy <PSManagementPolicy>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create or update the management policy of a Storage account with ManagementPolicy rule objects.'
+  code: |-
+    PS C:\>$action1 = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -daysAfterModificationGreaterThan 100
+    PS C:\>$action1 = Add-AzStorageAccountManagementPolicyAction -InputObject $action1 -BaseBlobAction TierToArchive -daysAfterModificationGreaterThan 50
+    PS C:\>$action1 = Add-AzStorageAccountManagementPolicyAction -InputObject $action1 -BaseBlobAction TierToCool -daysAfterModificationGreaterThan 30
+    PS C:\>$action1 = Add-AzStorageAccountManagementPolicyAction -InputObject $action1 -SnapshotAction Delete -daysAfterCreationGreaterThan 100
+    PS C:\>$filter1 = New-AzStorageAccountManagementPolicyFilter -PrefixMatch ab,cd 
+    PS C:\>$rule1 = New-AzStorageAccountManagementPolicyRule -Name Test -Action $action1 -Filter $filter1
+
+    PS C:\>$action2 = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -daysAfterModificationGreaterThan 100
+    PS C:\>$filter2 = New-AzStorageAccountManagementPolicyFilter
+    PS C:\>$rule2 = New-AzStorageAccountManagementPolicyRule -Name Test2 -Action $action2 -Filter $filter2
+
+    PS C:\>Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Rule $rule1,$rule2
+
+
+    ResourceGroupName  : myresourcegroup
+    StorageAccountName : mystorageaccount
+    Id                 : /subscriptions/{subscription-id}/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/managementPolicies/default
+    Type               : Microsoft.Storage/storageAccounts/managementPolicies
+    LastModifiedTime   : 3/12/2019 10:29:29 AM
+    Rules              : [
+                             {
+                                 "Enabled":  true,
+                                 "Name":  "Test",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  {
+                                                                                                        "DaysAfterModificationGreaterThan":  30
+                                                                                                    },
+                                                                                     "TierToArchive":  {
+                                                                                                           "DaysAfterModificationGreaterThan":  50
+                                                                                                       },
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterModificationGreaterThan":  100
+                                                                                                }
+                                                                                 },
+                                                                    "Snapshot":  {
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterCreationGreaterThan":  100
+                                                                                                }
+                                                                                 }
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  [
+                                                                                        "prefix1",
+                                                                                        "prefix2"
+                                                                                    ],
+                                                                    "BlobTypes":  [
+                                                                                      "blockBlob"
+                                                                                  ]
+                                                                }
+                                                }
+                             },
+                             {
+                                 "Enabled":  true,
+                                 "Name":  "Test2",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  null,
+                                                                                     "TierToArchive":  null,
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterModificationGreaterThan":  100
+                                                                                                }
+                                                                                 },
+                                                                    "Snapshot":  null
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  null,
+                                                                    "BlobTypes":  [
+                                                                                      "blockBlob"
+                                                                                  ]
+                                                                }
+                                                }
+                             }
+                         ]
+  description: |-
+    This command first create 2 ManagementPolicy rule objects, then creates or updates the management policy of a Storage account with the 2 ManagementPolicy rule objects.
+  summary: ""
+- title: 'Example 2: Create or update the management policy of a Storage account with a Json format policy.'
+  code: |-
+    PS C:\>Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Policy (@{
+        Rules=(@{
+            Enabled="true";
+            Name="Test";
+            Definition=(@{
+                Actions=(@{
+                    BaseBlob=(@{
+                        TierToCool=30;
+                        TierToArchive=50;
+                        Delete=100;
+                    });
+                    Snapshot=(@{
+                        Delete=100
+                    });
+                });
+                Filters=(@{
+                    BlobTypes=@("blockBlob");
+                    PrefixMatch=@("prefix1","prefix2");
+                })
+            })
+        },
+        @{
+            Enabled="false";
+            Name="Test2";
+            Definition=(@{
+                Actions=(@{
+                    BaseBlob=(@{
+                        TierToCool=80;
+                    });
+                });
+                Filters=(@{
+                    BlobTypes=@("blockBlob");
+                })
+            })
+        })
+    })
+
+
+    ResourceGroupName  : myresourcegroup
+    StorageAccountName : mystorageaccount
+    Id                 : /subscriptions/{subscription-id}/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/managementPolicies/default
+    Type               : Microsoft.Storage/storageAccounts/managementPolicies
+    LastModifiedTime   : 3/12/2019 10:24:55 AM
+    Rules              : [
+                             {
+                                 "Enabled":  true,
+                                 "Name":  "Test",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  {
+                                                                                                        "DaysAfterModificationGreaterThan":  30
+                                                                                                    },
+                                                                                     "TierToArchive":  {
+                                                                                                           "DaysAfterModificationGreaterThan":  50
+                                                                                                       },
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterModificationGreaterThan":  100
+                                                                                                }
+                                                                                 },
+                                                                    "Snapshot":  {
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterCreationGreaterThan":  100
+                                                                                                }
+                                                                                 }
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  [
+                                                                                        "prefix1",
+                                                                                        "prefix2"
+                                                                                    ],
+                                                                    "BlobTypes":  [
+                                                                                      "blockBlob"
+                                                                                  ]
+                                                                }
+                                                }
+                             },
+                             {
+                                 "Enabled":  true,
+                                 "Name":  "Test2",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  {
+                                                                                                        "DaysAfterModificationGreaterThan":  80
+                                                                                                    },
+                                                                                     "TierToArchive":  null,
+                                                                                     "Delete":  null
+                                                                                 },
+                                                                    "Snapshot":  null
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  null,
+                                                                    "BlobTypes":  [
+                                                                                      "blockBlob"
+                                                                                  ]
+                                                                }
+                                                }
+                             }
+                         ]
+  description: |-
+    This command creates or updates the management policy of a Storage account with a json format policy.
+  summary: ""
+- title: 'Example 3: Get the management policy from a Storage account, then set it to another Storage account.'
+  code: |-
+    PS C:\>$outputPolicy = Get-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" | Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup2" -AccountName "mystorageaccount2"
+  description: |-
+    This command first gets the management policy from a Storage account, then set it to another Storage account.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Management Policy Object to Set
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ManagementPolicy
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Rule
+  isRequired: true
+  description: |+
+    The Management Policy rules. Get the object with New-AzStorageAccountManagementPolicyRule cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+  name: StorageAccount
+  isRequired: true
+  description: |+
+    Storage account object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  isRequired: true
+  description: |+
+    Storage Account Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountResourceId
+  isRequired: true
+  description: |+
+    Storage Account Resource Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Set-AzStorageAccountManagementPolicy
+name: Set-AzStorageAccountManagementPolicy
+description: |-
+  The **Set-AzStorageAccountManagementPolicy** cmdlet creates or modifies the management policy of an Azure Storage account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/Az.storage/set-Azstorageaccountmanagementpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageAccountManagementPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageAccountManagementPolicy.md

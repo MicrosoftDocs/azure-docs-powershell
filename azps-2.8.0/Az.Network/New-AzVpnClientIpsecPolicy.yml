@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This command allows the users to create the Vpn ipsec policy object specifying one or all values such as IpsecEncryption,IpsecIntegrity,IkeEncryption,IkeIntegrity,DhGroup,PfsGroup to set on the VPN gateway. This command let output object is used to set vpn ipsec policy for both new / existing gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzVpnClientIpsecPolicy [-SALifeTime <Int32>] [-SADataSize <Int32>] [-IpsecEncryption <String>]
+
+   [-IpsecIntegrity <String>] [-IkeEncryption <String>] [-IkeIntegrity <String>] [-DhGroup <String>]
+
+   [-PfsGroup <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Define vpn ipsec policy object:'
+  code: |-
+    PS C:\>$vpnclientipsecpolicy = New-AzVpnClientIpsecPolicy -IpsecEncryption AES256 -IpsecIntegrity SHA256 -SALifeTime 86472 -SADataSize 429497 -IkeEncryption AES256 -IkeIntegrity SHA256 -DhGroup DHGroup2 -PfsGroup None
+  description: |-
+    This cmdlet is used to create the vpn ipsec policy object using the passed one or all parameters' values which user can pass to param:VpnClientIpsecPolicy of PS command let: New-AzVirtualNetworkGateway (New VPN Gateway creation) / Set-AzVirtualNetworkGateway (existing VPN Gateway update) in ResourceGroup :
+  summary: ""
+- title: 'Create new virtual network gateway with setting vpn custom ipsec policy:'
+  code: |-
+    PS C:\> $vnetGateway = New-AzVirtualNetworkGateway -ResourceGroupName vnet-gateway -name myNGW -location $location -IpConfigurations $vnetIpConfig -GatewayType Vpn -VpnType RouteBased -GatewaySku VpnGw1 -VpnClientIpsecPolicy $vpnclientipsecpolicy
+  description: |-
+    This cmdlet returns virtual network gateway object after creation.
+  summary: ""
+- title: 'Set vpn custom ipsec policy on existing virtual network gateway:'
+  code: |-
+    PS C:\> $vnetGateway = Set-AzVirtualNetworkGateway -VirtualNetworkGateway $gateway -VpnClientIpsecPolicy $vpnclientipsecpolicy
+  description: |-
+    This cmdlet returns virtual network gateway object after setting vpn custom ipsec policy.
+  summary: ""
+- title: 'Get virtual network gateway to see if vpn custom policy is set correctly:'
+  code: |-
+    PS C:\> $gateway = Get-AzVirtualNetworkGateway -ResourceGroupName vnet-gateway -name myNGW
+  description: |-
+    This cmdlet returns virtual network gateway object.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DhGroup
+  description: |+
+    The VpnClient DH Groups used in IKE Phase 1 for initial SA
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: DHGroup24, ECP384, ECP256, DHGroup14, DHGroup2
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IkeEncryption
+  description: |+
+    The VpnClient IKE encryption algorithm (IKE Phase 2)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: GCMAES256, GCMAES128, AES256, AES128
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IkeIntegrity
+  description: |+
+    The VpnClient IKE integrity algorithm (IKE Phase 2)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SHA384, SHA256
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IpsecEncryption
+  description: |+
+    The VpnClient IPSec encryption algorithm (IKE Phase 1)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: GCMAES256, GCMAES128, AES256, AES128
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IpsecIntegrity
+  description: |+
+    The VpnClient IPSec integrity algorithm (IKE Phase 1)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: GCMAES256, GCMAES128, SHA256
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PfsGroup
+  description: |+
+    The VpnClient PFS Groups used in IKE Phase 2 for new child SA
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PFS24, PFSMM, ECP384, ECP256, PFS14, PFS2, None
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SADataSize
+  description: |+
+    The VpnClient IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SALifeTime
+  description: |+
+    The VpnClient IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzVpnClientIpsecPolicy
+name: New-AzVpnClientIpsecPolicy
+description: |-
+  This command allows the users to create the Vpn ipsec policy object specifying one or all values such as IpsecEncryption,IpsecIntegrity,IkeEncryption,IkeIntegrity,DhGroup,PfsGroup to set on the VPN gateway. This command let output object is used to set vpn ipsec policy for both new / existing gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvpnclientipsecpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVpnClientIpsecPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVpnClientIpsecPolicy.md

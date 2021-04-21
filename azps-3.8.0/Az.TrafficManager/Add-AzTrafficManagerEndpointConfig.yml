@@ -1,0 +1,233 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an endpoint to a local Traffic Manager profile object.
+module: Az.TrafficManager
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzTrafficManagerProfile
+  href: ./Get-AzTrafficManagerProfile.yml
+- text: New-AzTrafficManagerEndpoint
+  href: ./New-AzTrafficManagerEndpoint.yml
+- text: Remove-AzTrafficManagerEndpointConfig
+  href: ./Remove-AzTrafficManagerEndpointConfig.yml
+- text: Set-AzTrafficManagerProfile
+  href: ./Set-AzTrafficManagerProfile.yml
+syntaxes:
+- >-
+  Add-AzTrafficManagerEndpointConfig -EndpointName <String> -TrafficManagerProfile <TrafficManagerProfile>
+
+   -Type <String> [-TargetResourceId <String>] [-Target <String>] -EndpointStatus <String> [-Weight <UInt32>]
+
+   [-Priority <UInt32>] [-EndpointLocation <String>] [-MinChildEndpoints <UInt32>]
+
+   [-GeoMapping <System.Collections.Generic.List`1[System.String]>]
+
+   [-SubnetMapping <System.Collections.Generic.List`1[Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerIpAddressRange]>]
+
+   [-CustomHeader <System.Collections.Generic.List`1[Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerCustomHeader]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an endpoint to a profile'
+  code: |-
+    PS C:\>$TrafficManagerProfile = Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+    PS C:\> Add-AzTrafficManagerEndpointConfig -EndpointName "contoso" -EndpointStatus Enabled -Target "www.contoso.com" -TrafficManagerProfile $TrafficManagerProfile -Type ExternalEndpoints -EndpointLocation "North Europe" -Priority 1 -Weight 10
+    PS C:\> Set-AzTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
+  description: |-
+    The first command gets an Azure Traffic Manager profile by using the **Get-AzTrafficManagerProfile** cmdlet.
+    The command stores the local profile in the $TrafficManagerProfile variable.
+
+    The second command adds an endpoint named contoso to the profile stored in $TrafficManagerProfile.
+    The command includes configuration data for the endpoint.
+    This command changes only the local object.
+
+    The final command updates the Traffic Manager profile in Azure to match the local value in $TrafficManagerProfile.
+  summary: ""
+parameters:
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerCustomHeader" data-throw-if-not-resolved="False" /><span>]</span>
+  name: CustomHeader
+  description: |+
+    List of custom header name and value pairs for probe requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EndpointLocation
+  description: |+
+    Specifies the location of the endpoint to use in the Performance traffic-routing method.
+    This parameter is only applicable to endpoints of the ExternalEndpoints or the NestedEndpoints type.
+    You must specify this parameter when the Performance traffic-routing method is used.
+
+    Specify an Azure region name.
+    For a full list of Azure regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EndpointName
+  isRequired: true
+  description: |+
+    Specifies the name of the Traffic Manager endpoint that this cmdlet adds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EndpointStatus
+  isRequired: true
+  description: |+
+    Specifies the status of the endpoint.
+    Valid values are: 
+
+    - Enabled 
+    - Disabled 
+
+    If the status is Enabled, the endpoint is probed for endpoint health and is included in the traffic-routing method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: GeoMapping
+  description: |+
+    The list of regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager documentation for a [full list of accepted values](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-geographic-regions).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MinChildEndpoints
+  description: |+
+    The minimum number of endpoints that must be available in the child profile in order for the Nested Endpoint in the parent profile to be considered available.
+    Only applicable to endpoint of type 'NestedEndpoints'.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Priority
+  description: |+
+    Specifies the priority that Traffic Manager assigns to the endpoint.
+    This parameter is used only if the Traffic Manager profile is configured with the for Priority traffic-routing method.
+    Valid values are integers from 1 through 1000.
+    Lower values represent higher priority.
+
+    If you specify a priority, you must specify priorities on all endpoints in the profile, and no two endpoints can share the same priority value.
+    If you do not specify priorities, Traffic Manager assigns default priority values to the endpoints, starting with one (1), in the order the profile lists the endpoints.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerIpAddressRange" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SubnetMapping
+  description: |+
+    The list of address ranges or subnets mapped to this endpoint when using the 'Subnet' traffic routing method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Target
+  description: |+
+    Specifies the fully qualified DNS name of the endpoint.
+    Traffic Manager returns this value in DNS responses when it directs traffic to this endpoint.
+    Specify this parameter only for the ExternalEndpoints endpoint type.
+    For other endpoint types, specify the *TargetResourceId* parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TargetResourceId
+  description: |+
+    Specifies resource ID of the target.
+    Specify this parameter only for the AzureEndpoints and NestedEndpoints endpoint types.
+    For the ExternalEndpoints endpoint type, specify the *Target* parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+  name: TrafficManagerProfile
+  isRequired: true
+  description: |+
+    Specifies a local **TrafficManagerProfile** object.
+    This cmdlet modifies this local object.
+    To obtain a **TrafficManagerProfile** object, use the Get-AzTrafficManagerProfile cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type of endpoint that this cmdlet adds to the Azure Traffic Manager profile.
+    Valid values are: 
+
+    - AzureEndpoints
+    - ExternalEndpoints
+    - NestedEndpoints
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AzureEndpoints, ExternalEndpoints, NestedEndpoints
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Weight
+  description: |+
+    Specifies the weight that Traffic Manager assigns to the endpoint.
+    Valid values are integers from 1 through 1000.
+    The default value is one (1).
+    This parameter is used only if the Traffic Manager profile is configured with the Weighted traffic-routing method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.TrafficManager.Add-AzTrafficManagerEndpointConfig
+name: Add-AzTrafficManagerEndpointConfig
+description: |-
+  The **Add-AzTrafficManagerEndpointConfig** cmdlet adds an endpoint to a local Azure Traffic Manager profile object.
+  You can get a profile by using the New-AzTrafficManagerProfile or Get-AzTrafficManagerProfile cmdlets.
+
+  This cmdlet operates on the local profile object.
+  Commit your changes to the profile for Traffic Manager by using the Set-AzTrafficManagerProfile cmdlet.
+  To create an endpoint and commit the change in a single operation, use the New-AzTrafficManagerEndpoint cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
+  Module Name: Az.TrafficManager
+  ms.assetid: 25E3F297-1D91-4102-B4D3-1E7195A5D33D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/add-aztrafficmanagerendpointconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Add-AzTrafficManagerEndpointConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Add-AzTrafficManagerEndpointConfig.md

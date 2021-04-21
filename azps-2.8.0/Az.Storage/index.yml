@@ -1,0 +1,123 @@
+### YamlMime:PowershellModule
+children:
+- title: Storage
+  cmdlets:
+  - Az.Storage.Add-AzRmStorageContainerLegalHold
+  - Az.Storage.Add-AzStorageAccountManagementPolicyAction
+  - Az.Storage.Add-AzStorageAccountNetworkRule
+  - Az.Storage.Close-AzStorageFileHandle
+  - Az.Storage.Disable-AzStorageBlobDeleteRetentionPolicy
+  - Az.Storage.Disable-AzStorageDeleteRetentionPolicy
+  - Az.Storage.Disable-AzStorageStaticWebsite
+  - Az.Storage.Enable-AzStorageBlobDeleteRetentionPolicy
+  - Az.Storage.Enable-AzStorageDeleteRetentionPolicy
+  - Az.Storage.Enable-AzStorageStaticWebsite
+  - Az.Storage.Get-AzRmStorageContainer
+  - Az.Storage.Get-AzRmStorageContainerImmutabilityPolicy
+  - Az.Storage.Get-AzRmStorageShare
+  - Az.Storage.Get-AzStorageAccount
+  - Az.Storage.Get-AzStorageAccountKey
+  - Az.Storage.Get-AzStorageAccountManagementPolicy
+  - Az.Storage.Get-AzStorageAccountNameAvailability
+  - Az.Storage.Get-AzStorageAccountNetworkRuleSet
+  - Az.Storage.Get-AzStorageBlob
+  - Az.Storage.Get-AzStorageBlobContent
+  - Az.Storage.Get-AzStorageBlobCopyState
+  - Az.Storage.Get-AzStorageBlobServiceProperty
+  - Az.Storage.Get-AzStorageContainer
+  - Az.Storage.Get-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.Get-AzStorageCORSRule
+  - Az.Storage.Get-AzStorageFile
+  - Az.Storage.Get-AzStorageFileContent
+  - Az.Storage.Get-AzStorageFileCopyState
+  - Az.Storage.Get-AzStorageFileHandle
+  - Az.Storage.Get-AzStorageQueue
+  - Az.Storage.Get-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.Get-AzStorageServiceLoggingProperty
+  - Az.Storage.Get-AzStorageServiceMetricsProperty
+  - Az.Storage.Get-AzStorageServiceProperty
+  - Az.Storage.Get-AzStorageShare
+  - Az.Storage.Get-AzStorageShareStoredAccessPolicy
+  - Az.Storage.Get-AzStorageTable
+  - Az.Storage.Get-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Get-AzStorageUsage
+  - Az.Storage.Lock-AzRmStorageContainerImmutabilityPolicy
+  - Az.Storage.New-AzRmStorageContainer
+  - Az.Storage.New-AzRmStorageShare
+  - Az.Storage.New-AzStorageAccount
+  - Az.Storage.New-AzStorageAccountKey
+  - Az.Storage.New-AzStorageAccountManagementPolicyFilter
+  - Az.Storage.New-AzStorageAccountManagementPolicyRule
+  - Az.Storage.New-AzStorageAccountSASToken
+  - Az.Storage.New-AzStorageBlobSASToken
+  - Az.Storage.New-AzStorageContainer
+  - Az.Storage.New-AzStorageContainerSASToken
+  - Az.Storage.New-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.New-AzStorageContext
+  - Az.Storage.New-AzStorageDirectory
+  - Az.Storage.New-AzStorageFileSASToken
+  - Az.Storage.New-AzStorageQueue
+  - Az.Storage.New-AzStorageQueueSASToken
+  - Az.Storage.New-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.New-AzStorageShare
+  - Az.Storage.New-AzStorageShareSASToken
+  - Az.Storage.New-AzStorageShareStoredAccessPolicy
+  - Az.Storage.New-AzStorageTable
+  - Az.Storage.New-AzStorageTableSASToken
+  - Az.Storage.New-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Remove-AzRmStorageContainer
+  - Az.Storage.Remove-AzRmStorageContainerImmutabilityPolicy
+  - Az.Storage.Remove-AzRmStorageContainerLegalHold
+  - Az.Storage.Remove-AzRmStorageShare
+  - Az.Storage.Remove-AzStorageAccount
+  - Az.Storage.Remove-AzStorageAccountManagementPolicy
+  - Az.Storage.Remove-AzStorageAccountNetworkRule
+  - Az.Storage.Remove-AzStorageBlob
+  - Az.Storage.Remove-AzStorageContainer
+  - Az.Storage.Remove-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.Remove-AzStorageCORSRule
+  - Az.Storage.Remove-AzStorageDirectory
+  - Az.Storage.Remove-AzStorageFile
+  - Az.Storage.Remove-AzStorageQueue
+  - Az.Storage.Remove-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.Remove-AzStorageShare
+  - Az.Storage.Remove-AzStorageShareStoredAccessPolicy
+  - Az.Storage.Remove-AzStorageTable
+  - Az.Storage.Remove-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Set-AzCurrentStorageAccount
+  - Az.Storage.Set-AzRmStorageContainerImmutabilityPolicy
+  - Az.Storage.Set-AzStorageAccount
+  - Az.Storage.Set-AzStorageAccountManagementPolicy
+  - Az.Storage.Set-AzStorageBlobContent
+  - Az.Storage.Set-AzStorageContainerAcl
+  - Az.Storage.Set-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.Set-AzStorageCORSRule
+  - Az.Storage.Set-AzStorageFileContent
+  - Az.Storage.Set-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.Set-AzStorageServiceLoggingProperty
+  - Az.Storage.Set-AzStorageServiceMetricsProperty
+  - Az.Storage.Set-AzStorageShareQuota
+  - Az.Storage.Set-AzStorageShareStoredAccessPolicy
+  - Az.Storage.Set-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Start-AzStorageBlobCopy
+  - Az.Storage.Start-AzStorageBlobIncrementalCopy
+  - Az.Storage.Start-AzStorageFileCopy
+  - Az.Storage.Stop-AzStorageBlobCopy
+  - Az.Storage.Stop-AzStorageFileCopy
+  - Az.Storage.Update-AzRmStorageContainer
+  - Az.Storage.Update-AzRmStorageShare
+  - Az.Storage.Update-AzStorageAccountNetworkRuleSet
+  - Az.Storage.Update-AzStorageBlobServiceProperty
+  - Az.Storage.Update-AzStorageServiceProperty
+uid: Az.Storage
+name: Az.Storage
+description: |-
+  This topic displays help topics for the Azure Storage Management Cmdlets.
+metadata:
+  Module Name: Az.Storage
+  Module Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac5
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.storage
+  Help Version: 4.2.3.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Az.Storage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Az.Storage.md

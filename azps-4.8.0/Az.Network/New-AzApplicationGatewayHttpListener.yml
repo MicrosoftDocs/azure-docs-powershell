@@ -1,0 +1,231 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an HTTP listener for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayHttpListener
+  href: ./Add-AzApplicationGatewayHttpListener.yml
+- text: Get-AzApplicationGatewayHttpListener
+  href: ./Get-AzApplicationGatewayHttpListener.yml
+- text: Remove-AzApplicationGatewayHttpListener
+  href: ./Remove-AzApplicationGatewayHttpListener.yml
+- text: Set-AzApplicationGatewayHttpListener
+  href: ./Set-AzApplicationGatewayHttpListener.yml
+syntaxes:
+- >-
+  New-AzApplicationGatewayHttpListener -Name <String> [-FrontendIPConfigurationId <String>]
+
+   [-FrontendPortId <String>] [-SslCertificateId <String>] [-FirewallPolicyId <String>] [-HostName <String>]
+
+   [-HostNames <String[]>] [-RequireServerNameIndication <String>] -Protocol <String>
+
+   [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  New-AzApplicationGatewayHttpListener -Name <String>
+
+   [-FrontendIPConfiguration <PSApplicationGatewayFrontendIPConfiguration>]
+
+   [-FrontendPort <PSApplicationGatewayFrontendPort>]
+
+   [-FirewallPolicy <PSApplicationGatewayWebApplicationFirewallPolicy>]
+
+   [-SslCertificate <PSApplicationGatewaySslCertificate>] [-HostName <String>] [-HostNames <String[]>]
+
+   [-RequireServerNameIndication <String>] -Protocol <String>
+
+   [-CustomErrorConfiguration <PSApplicationGatewayCustomError[]>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an HTTP listener'
+  code: |-
+    PS C:\>$Listener = New-AzApplicationGatewayHttpListener -Name "Listener01" -Protocol "Http" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01
+  description: |-
+    This command creates an HTTP listener named Listener01 and stores the result in the variable named $Listener.
+  summary: ""
+- title: 'Example 2: Create an HTTP listener with SSL'
+  code: |-
+    PS C:\>$Listener = New-AzApplicationGatewayHttpListener -Name "Listener01" -Protocol "Https" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01 -SslCertificate $SSLCert01
+  description: |-
+    This command creates an HTTP listener that uses SSL offload and provides the SSL certificate in the $SSLCert01 variable.
+    The command stores the result in the variable named $Listener.
+  summary: ""
+- title: 'Example 3: Create an HTTP listener with firewall-policy'
+  code: |-
+    PS C:\>$Listener = New-AzApplicationGatewayHttpListener -Name "Listener01" -Protocol "Http" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01 -FirewallPolicy $firewallPolicy
+  description: |-
+    This command creates an HTTP listener named Listener01, FirewallPolicy as $firewallPolicy and stores the result in the variable named $Listener.
+  summary: ""
+- title: 'Example 4: Add a HTTPS listener with SSL and HostNames'
+  code: |-
+    PS C:\> $Listener = New-AzApplicationGatewayHttpListener -Name "Listener01" -Protocol "Https" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01 -SslCertificate $SSLCert01 -HostNames "*.contoso.com,www.microsoft.com"
+  description: |-
+    This command creates an HTTP listener that uses SSL offload and provides the SSL certificate in the $SSLCert01 variable along with two HostNames.
+    The command stores the result in the variable named $Listener.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayCustomError" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CustomErrorConfiguration
+  description: |+
+    Customer error of an application gateway
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallPolicy" data-throw-if-not-resolved="False" />
+  name: FirewallPolicy
+  description: |+
+    Specifies the object reference to a top-level firewall policy. 
+    The object reference can be created by using New-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet.
+    $firewallPolicy = New-AzApplicationGatewayFirewallPolicy -Name "wafPolicy1" -ResourceGroup "rgName"
+    A firewall policy created using the above commandlet can be referred at a path-rule level. 
+    he above command would create a default policy settings and managed rules.
+    Instead of the default values, users can specify PolicySettings, ManagedRules by using New-AzApplicationGatewayFirewallPolicySettings and New-AzApplicationGatewayFirewallPolicyManagedRules respectively.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FirewallPolicyId
+  description: |+
+    Specifies the ID of an existing top-level web application firewall resource.
+    Firewall policy IDs can be returned by using the Get-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet. 
+    After we have the ID you can use *FirewallPolicyId* parameter instead of *FirewallPolicy* parameter.
+    For instance:
+    -FirewallPolicyId  �/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/<firewallPolicyName>�
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration" data-throw-if-not-resolved="False" />
+  name: FrontendIPConfiguration
+  description: |+
+    Specifies front-end IP configuration object for the HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FrontendIPConfigurationId
+  description: |+
+    Specifies the ID of the front-end IP configuration for the HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort" data-throw-if-not-resolved="False" />
+  name: FrontendPort
+  description: |+
+    Specifies the front-end port for the HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FrontendPortId
+  description: |+
+    Specifies the ID of the front-end port object for the HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the host name of the application gateway HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostNames
+  description: |+
+    Host names
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the HTTP listener that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  isRequired: true
+  description: |+
+    Specifies the protocol that the HTTP listener uses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Http, Https
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RequireServerNameIndication
+  description: ""
+  defaultValue: "true"
+  position: Named
+  aliases: ""
+  parameterValueGroup: true, false
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate" data-throw-if-not-resolved="False" />
+  name: SslCertificate
+  description: |+
+    Specifies the SSL certificate object for the HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SslCertificateId
+  description: |+
+    Specifies the ID of the SSL certificate for the HTTP listener.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGatewayHttpListener
+name: New-AzApplicationGatewayHttpListener
+description: |-
+  The **New-AzApplicationGatewayHttpListener** cmdlet creates an HTTP listener for an Azure application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: AF8CC409-2EA7-4EC1-86C9-E7A773DE9201
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewayhttplistener
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayHttpListener.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayHttpListener.md

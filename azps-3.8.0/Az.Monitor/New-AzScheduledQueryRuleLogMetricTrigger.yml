@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an object of type Log Metric Trigger.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleLogMetricTrigger" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzScheduledQueryRuleLogMetricTrigger -ThresholdOperator <String> -Threshold <Double>
+
+   -MetricTriggerType <String> -MetricColumn <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $metricTrigger = New-AzScheduledQueryRuleLogMetricTrigger -ThresholdOperator "GreaterThan" -Threshold 5 -MetricTriggerType "Consecutive" -MetricColumn "Computer"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MetricColumn
+  isRequired: true
+  description: |+
+    Column on which metric value is being aggregated.
+    The input is not validated. It will first be validated when New-AzScheduledQueryRule is eventually called.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MetricTriggerType
+  isRequired: true
+  description: |+
+    The metric trigger type.
+    The input is not validated. It will first be validated when New-AzScheduledQueryRule is eventually called.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+  name: Threshold
+  isRequired: true
+  description: |+
+    The metric threshold value: Consecutive, Total.
+    The input is not validated. It will first be validated when New-AzScheduledQueryRule is eventually called.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ThresholdOperator
+  isRequired: true
+  description: |+
+    The metric threshold operator : GreaterThan, LessThan, Equal.
+    The input is not validated. It will first be validated when New-AzScheduledQueryRule is eventually called.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzScheduledQueryRuleLogMetricTrigger
+name: New-AzScheduledQueryRuleLogMetricTrigger
+description: |-
+  Creates an object of type Log Metric Trigger and is optional.
+  This is the trigger condition for metric query rule, to be used when you need to state metric measurement type of alert.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azscheduledqueryrulelogmetrictrigger
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzScheduledQueryRuleLogMetricTrigger.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzScheduledQueryRuleLogMetricTrigger.md

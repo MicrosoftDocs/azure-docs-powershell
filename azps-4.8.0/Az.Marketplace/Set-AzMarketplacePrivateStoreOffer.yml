@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates or creates offer for private store.
+module: Az.Marketplace
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Marketplace.Models.PrivateStore.PSPrivateStoreOffer" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzMarketplacePrivateStoreOffer -PrivateStoreId <String> -OfferId <String>
+
+   -SpecificPlanIdsLimitation <System.Collections.Generic.List`1[System.String]> [-ETag <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-AzMarketplacePrivateStoreOffer -privateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -offerId  publisherid.offerid -SpecificPlanIdsLimitation =@("PublisherEnterpriseLinux72", "PublisherEnterpriseLinux72-ARM", "PublisherEnterpriseLinux73", "PublisherEnterpriseLinux73-ARM ", "PublisherEnterpriseLinux73-ARM-pr")
+
+    UniqueOfferId             : publisherid.offerid
+    OfferDisplayName          :
+    PublisherDisplayName      :
+    ETag                      : "04009562-0000-0600-0000-5ecd2fb00000"
+    PrivateStoreId            : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
+    CreatedBy                 :
+    CreatedDate               : 01/01/0001 00:00:00
+    SpecificPlanIdsLimitation : {PublisherEnterpriseLinux72, PublisherEnterpriseLinux72-ARM, PublisherEnterpriseLinux73, PublisherEnterpriseLinux73-ARM, PublisherEnterpriseLinux73-ARM-pr}
+    Id                        : /providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
+                                publisherid.offerid
+    Name                      : publisherid.offerid
+    Type                      : Microsoft.Marketplace/privateStores/offers
+  description: |-
+    Creates offer with private + public plans for private store that was created under tenant scope.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-AzMarketplacePrivateStoreOffer -privateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -offerId  publisherid.offerid -SubscriptionId bc17bb69-1264-4f90-a9f6-0e51e29d5281 -SpecificPlanIdsLimitation =@("PublisherEnterpriseLinux72", "PublisherEnterpriseLinux72-ARM", "PublisherEnterpriseLinux73", "PublisherEnterpriseLinux73-ARM ", "PublisherEnterpriseLinux73-ARM-pr")
+
+    UniqueOfferId             : publisherid.offerid
+    OfferDisplayName          :
+    PublisherDisplayName      :
+    ETag                      : "04009562-0000-0600-0000-5ecd2fb00000"
+    PrivateStoreId            : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
+    CreatedBy                 :
+    CreatedDate               : 01/01/0001 00:00:00
+    SpecificPlanIdsLimitation : {PublisherEnterpriseLinux73-ARM-pr}
+    Id                        : /subscriptions/bc17bb69-1264-4f90-a9f6-0e51e29d5281/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
+                                publisherid.offerid
+    Name                      : publisherid.offerid
+    Type                      : Microsoft.Marketplace/privateStores/offers
+  description: |-
+    Creates offer with private plans only for private store that was created under subscription scope.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Set-AzMarketplacePrivateStoreOffer -privateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -offerId  publisherid.offerid -SpecificPlanIdsLimitation =@("PublisherEnterpriseLinux72", "PublisherEnterpriseLinux72-ARM", "PublisherEnterpriseLinux73") -ETag 04009562-0000-0600-0000-5ecd2fb00000
+
+    UniqueOfferId             : publisherid.offerid
+    OfferDisplayName          :
+    PublisherDisplayName      :
+    ETag                      : "02009562-0000-0600-0120-3ecd2fb00000"
+    PrivateStoreId            : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
+    CreatedBy                 :
+    CreatedDate               : 01/01/0001 00:00:00
+    SpecificPlanIdsLimitation : {PublisherEnterpriseLinux72, PublisherEnterpriseLinux72-ARM, PublisherEnterpriseLinux73}
+    Id                        : /providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
+                                publisherid.offerid
+    Name                      : publisherid.offerid
+    Type                      : Microsoft.Marketplace/privateStores/offers
+  description: |-
+    Updates offer with private + public plans for private store that was created under tenant scope. Etag is needed.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Set-AzMarketplacePrivateStoreOffer -privateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -offerId  publisherid.offerid -SubscriptionId bc17bb69-1264-4f90-a9f6-0e51e29d5281 -SpecificPlanIdsLimitation =@("PublisherEnterpriseLinux73-pr") -ETag 04009562-0000-0600-0000-5ecd2fb00000
+
+    UniqueOfferId             : publisherid.offerid
+    OfferDisplayName          :
+    PublisherDisplayName      :
+    ETag                      : "02009562-0000-0600-0120-3ecd2fb00000"
+    PrivateStoreId            : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
+    CreatedBy                 :
+    CreatedDate               : 01/01/0001 00:00:00
+    SpecificPlanIdsLimitation : {PublisherEnterpriseLinux73-pr}
+    Id                        : /subscriptions/bc17bb69-1264-4f90-a9f6-0e51e29d5281/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
+                                publisherid.offerid
+    Name                      : publisherid.offerid
+    Type                      : Microsoft.Marketplace/privateStores/offers
+  description: |-
+    Updates offer for private store with private plans only that was created under subscription scope. Etag is needed.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ETag
+  description: |+
+    Azure Marketplace privateStore offer's eTag for update
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OfferId
+  isRequired: true
+  description: |+
+    Required Azure Marketplace privateStore offer
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrivateStoreId
+  isRequired: true
+  description: |+
+    Required Azure Marketplace privateStore offers
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SpecificPlanIdsLimitation
+  isRequired: true
+  description: |+
+    Required Azure Marketplace privateStore offer's specific plan ids limitation
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Marketplace.Set-AzMarketplacePrivateStoreOffer
+name: Set-AzMarketplacePrivateStoreOffer
+description: |-
+  Updates or creates offer for private store that was created under tenant scope.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Marketplace.dll-Help.xml
+  Module Name: Az.Marketplace
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.marketplace/set-azmarketplaceprivatestoreoffer
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Marketplace/Marketplace/help/Set-AzMarketplacePrivateStoreOffer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Marketplace/Marketplace/help/Set-AzMarketplacePrivateStoreOffer.md

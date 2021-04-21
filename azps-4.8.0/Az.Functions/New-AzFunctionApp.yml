@@ -1,0 +1,328 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a function app.
+module: Az.Functions
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20190801.ISite" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzFunctionApp -Location <String> -Name <String> -ResourceGroupName <String> -Runtime <String>
+
+   -StorageAccountName <String> [-ApplicationInsightsKey <String>] [-ApplicationInsightsName <String>]
+
+   [-AppSetting <Hashtable>] [-DisableApplicationInsights] [-FunctionsVersion <String>] [-IdentityID <String[]>]
+
+   [-IdentityType <ManagedServiceIdentityType>] [-OSType <String>] [-PassThru] [-RuntimeVersion <String>]
+
+   [-SubscriptionId <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+
+   [-WhatIf] [<CommonParameters>]
+- >-
+  New-AzFunctionApp -Name <String> -PlanName <String> -ResourceGroupName <String> -Runtime <String>
+
+   -StorageAccountName <String> [-ApplicationInsightsKey <String>] [-ApplicationInsightsName <String>]
+
+   [-AppSetting <Hashtable>] [-DisableApplicationInsights] [-FunctionsVersion <String>] [-IdentityID <String[]>]
+
+   [-IdentityType <ManagedServiceIdentityType>] [-OSType <String>] [-PassThru] [-RuntimeVersion <String>]
+
+   [-SubscriptionId <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+
+   [-WhatIf] [<CommonParameters>]
+- >-
+  New-AzFunctionApp -DockerImageName <String> -Name <String> -PlanName <String> -ResourceGroupName <String>
+
+   -StorageAccountName <String> [-ApplicationInsightsKey <String>] [-ApplicationInsightsName <String>]
+
+   [-AppSetting <Hashtable>] [-DisableApplicationInsights] [-DockerRegistryCredential <PSCredential>]
+
+   [-IdentityID <String[]>] [-IdentityType <ManagedServiceIdentityType>] [-PassThru] [-SubscriptionId <String>]
+
+   [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a consumption PowerShell function app in Central US.'
+  code: |-
+    PS C:\> New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                              -ResourceGroupName MyResourceGroupName `
+                              -Location centralUS `
+                              -StorageAccount MyStorageAccountName `
+                              -Runtime PowerShell
+  description: |-
+    This command creates a consumption PowerShell function app in Central US.
+  summary: ""
+- title: 'Example 2: Create a PowerShell function app which will be hosted in a service plan.'
+  code: |-
+    PS C:\> New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                              -ResourceGroupName MyResourceGroupName `
+                              -PlanName MyPlanName `
+                              -StorageAccount MyStorageAccountName `
+                              -Runtime PowerShell
+  description: |-
+    This command creates a PowerShell function app which will be hosted in a service plan.
+  summary: ""
+- title: 'Example 3: Create a function app using a using a private ACR image.'
+  code: |-
+    PS C:\> New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                              -ResourceGroupName MyResourceGroupName `
+                              -PlanName MyPlanName `
+                              -StorageAccount MyStorageAccountName `
+                              -DockerImageName myacr.azurecr.io/myimage:tag
+  description: |-
+    This command creates a function app using a using a private ACR image.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApplicationInsightsKey
+  description: |+
+    Instrumentation key of App Insights to be added.
+
+  defaultValue: None
+  position: Named
+  aliases: AppInsightsKey
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApplicationInsightsName
+  description: |+
+    Name of the existing App Insights project to be added to the function app.
+
+  defaultValue: None
+  position: Named
+  aliases: AppInsightsName
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: AppSetting
+  description: |+
+    Function app settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableApplicationInsights
+  description: |+
+    Disable creating application insights resource during the function app creation.
+    No logs will be available.
+
+  defaultValue: None
+  position: Named
+  aliases: DisableAppInsights
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DockerImageName
+  isRequired: true
+  description: |+
+    Linux only.
+    Container image name from Docker Registry, e.g.
+    publisher/image-name:tag.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: DockerRegistryCredential
+  description: |+
+    The container registry user name and password.
+    Required for private registries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FunctionsVersion
+  description: |+
+    The Functions version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IdentityID
+  description: |+
+    Specifies the list of user identities associated with the function app.
+                The user identity references will be ARM resource ids in the form:
+                '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/identities/{identityName}'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Functions.Support.ManagedServiceIdentityType" data-throw-if-not-resolved="False" />
+  name: IdentityType
+  description: |+
+    Specifies the type of identity used for the function app.
+                The acceptable values for this parameter are:
+                - SystemAssigned
+                - UserAssigned
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location for the consumption plan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the function app.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Starts the operation and returns immediately, before the operation is completed.
+    In order to determine if the operation has successfully been completed, use some other mechanism.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OSType
+  description: |+
+    The OS to host the function app.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns true when the command succeeds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PlanName
+  isRequired: true
+  description: |+
+    The name of the service plan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Runtime
+  isRequired: true
+  description: |+
+    The function runtime.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuntimeVersion
+  description: |+
+    The function runtime.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  isRequired: true
+  description: |+
+    The name of the storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The Azure subscription ID.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Resource tags.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Functions.New-AzFunctionApp
+name: New-AzFunctionApp
+description: |-
+  Creates a function app.
+metadata:
+  external help file: ""
+  Module Name: Az.Functions
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.functions/new-azfunctionapp
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/New-AzFunctionApp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/New-AzFunctionApp.md

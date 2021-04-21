@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: Analysis Services
+  cmdlets:
+  - Az.AnalysisServices.Add-AzAnalysisServicesAccount
+  - Az.AnalysisServices.Export-AzAnalysisServicesInstanceLog
+  - Az.AnalysisServices.Get-AzAnalysisServicesServer
+  - Az.AnalysisServices.New-AzAnalysisServicesFirewallConfig
+  - Az.AnalysisServices.New-AzAnalysisServicesFirewallRule
+  - Az.AnalysisServices.New-AzAnalysisServicesServer
+  - Az.AnalysisServices.Remove-AzAnalysisServicesServer
+  - Az.AnalysisServices.Restart-AzAnalysisServicesInstance
+  - Az.AnalysisServices.Resume-AzAnalysisServicesServer
+  - Az.AnalysisServices.Set-AzAnalysisServicesServer
+  - Az.AnalysisServices.Suspend-AzAnalysisServicesServer
+  - Az.AnalysisServices.Sync-AzAnalysisServicesInstance
+  - Az.AnalysisServices.Test-AzAnalysisServicesServer
+uid: Az.AnalysisServices
+name: Az.AnalysisServices
+description: |-
+  This topic displays help topics for the Azure AnalysisServices cmdlets.
+metadata:
+  Module Name: Az.AnalysisServices
+  Module Guid: acace26c-1775-4100-85c0-20c4d71eaa21
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices
+  Help Version: 0.0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AnalysisServices/AnalysisServices/help/Az.AnalysisServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AnalysisServices/AnalysisServices/help/Az.AnalysisServices.md

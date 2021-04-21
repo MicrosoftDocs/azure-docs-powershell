@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: ConnectedMachine
+  cmdlets:
+  - Az.ConnectedMachine.Connect-AzConnectedMachine
+  - Az.ConnectedMachine.Get-AzConnectedMachine
+  - Az.ConnectedMachine.Get-AzConnectedMachineExtension
+  - Az.ConnectedMachine.New-AzConnectedMachineExtension
+  - Az.ConnectedMachine.Remove-AzConnectedMachine
+  - Az.ConnectedMachine.Remove-AzConnectedMachineExtension
+  - Az.ConnectedMachine.Set-AzConnectedMachineExtension
+  - Az.ConnectedMachine.Update-AzConnectedMachineExtension
+uid: Az.ConnectedMachine
+name: Az.ConnectedMachine
+description: |-
+  Microsoft Azure PowerShell: ConnectedMachine cmdlets
+metadata:
+  Module Name: Az.ConnectedMachine
+  Module Guid: 259a0542-8329-4b9e-8f72-dab0efc583e9
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.connectedmachine
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Az.ConnectedMachine.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Az.ConnectedMachine.md

@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an attestation.
+module: Az.Attestation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Attestation.Models.PSAttestation" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzAttestation [-Name] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzAttestation [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzAttestation [[-Location] <String>] [-DefaultProvider] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzAttestation -Name pshtest -ResourceGroupName psh-test-rg                                                                                                                                                                                                                                                       
+    Id                : subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/psh-test-rg/providers/Microsoft.Attestation/attestationProviders/pshtest
+    Location          : East US
+    ResourceGroupName : psh-test-rg
+    Name              : pshtest
+    Status            : Ready
+    TrustModel        : AAD
+    AttestUri         : https://pshtest.us.attest.azure.net
+    Tags              : {Production, Example}
+    TagsTable         :
+                        Name        Value
+                        ==========  =====
+                        Production  False
+                        Example     True
+  description: |-
+    Get Attestation Provider *pshtest* in Resource Group *psh-test-rg*.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzAttestation -DefaultProvider
+    Id                : /providers/Microsoft.Attestation/attestationProviders/sharedeus2
+    Location          : East US 2
+    ResourceGroupName :
+    Name              : sharedeus2
+    Status            : Ready
+    TrustModel        : AAD
+    AttestUri         : https://sharedeus2.eus2.attest.azure.net
+    Tags              :
+    TagsTable         :
+
+    Id                : /providers/Microsoft.Attestation/attestationProviders/sharedcus
+    Location          : Central US
+    ResourceGroupName :
+    Name              : sharedcus
+    Status            : Ready
+    TrustModel        : AAD
+    AttestUri         : https://sharedcus.cus.attest.azure.net
+    Tags              :
+    TagsTable         :
+
+    Id                : /providers/Microsoft.Attestation/attestationProviders/shareduks
+    Location          : UK South
+    ResourceGroupName :
+    Name              : shareduks
+    Status            : Ready
+    TrustModel        : AAD
+    AttestUri         : https://shareduks.uks.attest.azure.net
+    Tags              :
+    TagsTable         :
+  description: |-
+    Get all available Attestation Default Providers
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzAttestation -DefaultProvider -Location "East US 2"
+    Id                : /providers/Microsoft.Attestation/attestationProviders/sharedeus2
+    Location          : East US 2
+    ResourceGroupName :
+    Name              : sharedeus2
+    Status            : Ready
+    TrustModel        : AAD
+    AttestUri         : https://sharedeus2.eus2.attest.azure.net
+    Tags              :
+    TagsTable         :
+  description: |-
+    Get Attestation Default Provider from Location *East US 2*
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultProvider
+  isRequired: true
+  description: |+
+    Specifies this is the request to a default attestation provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the Location of the default attestation provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Attestation Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group associated with the attestation being queried.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the name of the ResourceID associated with the attestation being queried
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Attestation.Get-AzAttestation
+name: Get-AzAttestation
+description: |-
+  The Get-AzAttestation cmdlet gets information about the attestation in a subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Attestation.dll-Help.xml
+  Module Name: Az.Attestation
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.attestation/get-azattestation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Attestation/Attestation/help/Get-AzAttestation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Attestation/Attestation/help/Get-AzAttestation.md

@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets job summary statistics for a Batch account.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobStatistics" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchPoolStatistic
+  href: ./Get-AzBatchPoolStatistic.yml
+- text: Get-AzBatchPoolUsageMetrics
+  href: ./Get-AzBatchPoolUsageMetric.yml
+syntaxes:
+- >-
+  Get-AzBatchJobStatistic -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get summary statistics for all jobs'
+  code: |-
+    PS C:\>Get-AzBatchJobStatistic -BatchContext $Context
+    FailedTaskCount    : 330
+    KernelCpuTime      : 00:24:31.8440000
+    LastUpdateTime     : 5/16/2016 6:00:00 PM
+    ReadIOGiB          : 38.1271341182292
+    ReadIOps           : 26546054
+    StartTime          : 11/3/2015 9:47:14 PM
+    SucceededTaskCount : 766
+    TaskRetryCount     : 0
+    Url                : https://accountname.westus.batch.azure.com/lifetimejobstats
+    UserCpuTime        : 20:55:50.3200000
+    WaitTime           : 03:54:49.8530000
+    WallClockTime      : 20:55:50.3200000
+    WriteIOGiB         : 0.159623090177774
+    WriteIOps          : 146946
+  description: |-
+    The first command creates an object reference to the account keys for the batch account named ContosoBatchAccount by using **Get-AzBatchAccountKey**.
+    The command stores this object reference in the $Context variable.
+    The second command gets the summary statistics for all of the jobs.
+    The command uses the $Context value from the first command.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Batch.Get-AzBatchJobStatistic
+name: Get-AzBatchJobStatistic
+description: |-
+  The **Get-AzBatchJobStatistic** cmdlet gets lifetime summary statistics for all of the jobs in an Azure Batch account.
+  Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: E655684D-9601-4A0B-BB09-EFB787EB2B1B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchjobstatistic
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchJobStatistic.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchJobStatistic.md

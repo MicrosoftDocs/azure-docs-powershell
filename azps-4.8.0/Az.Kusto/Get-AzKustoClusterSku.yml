@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists eligible SKUs for Kusto resource provider.
+module: Az.Kusto
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20200614.IAzureResourceSku" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20200614.ISkuDescription" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzKustoClusterSku [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzKustoClusterSku -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Lists eligible SKUs'
+  code: |-
+    PS C:\> Get-AzKustoClusterSku
+
+    Location             Name                        ResourceType Tier
+    --------             ----                        ------------ ----
+    {eastus2}            D13_v2                      clusters     Standard
+    {eastus2}            D14_v2                      clusters     Standard
+    {eastus2}            L8                          clusters     Standard
+    {eastus2}            L16                         clusters     Standard
+    {eastus2}            D11_v2                      clusters     Standard
+    {eastus2}            D12_v2                      clusters     Standard
+    {eastus2}            L4                          clusters     Standard
+    {eastus2}            Standard_D13_v2             clusters     Standard
+    {eastus2}            Standard_D14_v2             clusters     Standard
+    {eastus2}            Standard_L8s                clusters     Standard
+    {eastus2}            Standard_L16s               clusters     Standard
+    {eastus2}            Standard_D11_v2             clusters     Standard
+    {eastus2}            Standard_D12_v2             clusters     Standard
+    {eastus2}            Standard_L4s                clusters     Standard
+    {eastus2}            Standard_DS13_v2+1TB_PS     clusters     Standard
+    {eastus2}            Standard_DS13_v2+2TB_PS     clusters     Standard
+    {eastus2}            Standard_DS14_v2+3TB_PS     clusters     Standard
+    {eastus2}            Standard_DS14_v2+4TB_PS     clusters     Standard
+    {eastus2}            Dev(No SLA)_Standard_D11_v2 clusters     Basic
+    {westcentralus}      D13_v2                      clusters     Standard
+    {westcentralus}      D14_v2                      clusters     Standard
+    {westcentralus}      D11_v2                      clusters     Standard
+    {westcentralus}      D12_v2                      clusters     Standard
+    {westcentralus}      Standard_D13_v2             clusters     Standard
+    {westcentralus}      Standard_D14_v2             clusters     Standard
+    {westcentralus}      Standard_D11_v2             clusters     Standard
+    {westcentralus}      Standard_D12_v2             clusters     Standard
+    {westcentralus}      Standard_DS13_v2+1TB_PS     clusters     Standard
+    {westcentralus}      Standard_DS13_v2+2TB_PS     clusters     Standard
+    {westcentralus}      Standard_DS14_v2+3TB_PS     clusters     Standard
+    {westcentralus}      Standard_DS14_v2+4TB_PS     clusters     Standard
+    ...
+  description: |-
+    The above command lists eligible SKUs.
+  summary: ""
+- title: 'Example 2: Lists eligible SKUs for specific cluster'
+  code: |-
+    PS C:\>  Get-AzKustoClusterSku -ResourceGroupName testrg -ClusterName testnewkustocluster
+
+    ResourceType
+    ------------
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    ...
+  description: |-
+    The above command lists eligible SKUs for specific cluster
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    The name of the Kusto cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group containing the Kusto cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    Gets subscription credentials which uniquely identify Microsoft Azure subscription.
+    The subscription ID forms part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Kusto.Get-AzKustoClusterSku
+name: Get-AzKustoClusterSku
+description: |-
+  Lists eligible SKUs for Kusto resource provider.
+metadata:
+  external help file: ""
+  Module Name: Az.Kusto
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.kusto/get-azkustoclustersku
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/help/Get-AzKustoClusterSku.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/help/Get-AzKustoClusterSku.md

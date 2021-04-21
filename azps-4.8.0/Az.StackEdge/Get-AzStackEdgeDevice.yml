@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the information on available Stack Edge devices.
+module: Az.StackEdge
+notes: ""
+syntaxes:
+- >-
+  Get-AzStackEdgeDevice [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzStackEdgeDevice -ResourceId <String> [-ExtendedInfo] [-NetworkSetting] [-Alert] [-UpdateSummary]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzStackEdgeDevice [-ResourceGroupName] <String> [-Name] <String> [-ExtendedInfo] [-NetworkSetting] [-Alert]
+
+   [-UpdateSummary] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-AzStackEdgeDevice
+    Name               ResourceGroupName  Model   Location
+    ----               -----------------  -----   --------
+    deviceNameOne      resourceGroupName1 Edge    eastus
+    deviceNameTwo      resourceGroupName2 Edge    westus
+    deviceNameThree    resourceGroupName3 Gateway eastus
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>$device = Get-AzStackEdgeDevice -ResourceGroupName resourceGroupName1 -DeviceName deviceNameOne -Alert -UpdateSummary -NetworkSetting -ExtendedInfo
+
+    PS C:\>$device.Alert
+
+    Title                            Severity AppearedDateTime      Recommendation
+    -----                            -------- ----------------      --------------
+    Lost heartbeat from your device. Critical 02-Jan-20 10:35:20 AM If your device is offline, then the device is not able to communicate with the Azure service. This could be due to one of the following reasons: <br/> &nbs�
+
+
+    PS C:\>$device.NetworkSetting
+
+    State    IPv4         IPv6                                 Subnet        Default Gateway Physical address DNS Servers
+    -----    ----         ----                                 ------        --------------- ---------------- -----------
+    Disabled 10.150.76.82 2404:f801:4800:1e:8168:dca6:b3b9:d70 255.255.252.0 10.150.76.1     00155D4E262B     10.50.50.50,10.50.10.50
+
+    PS C:\>$device.UpdateSummary
+
+    DeviceName        Current Version Friendly name      Last Software Scan Last Software Update Pending Updates Pending Update Titles
+    ----------        --------------- -------------      ------------------ -------------------- --------------- ---------------------
+    deviceNameOne     2.0.998.537     Data Box Edge Mock                                         0
+
+    PS C:\>$device.ExtendedInfo
+
+    ResourceGroupName   DeviceName        EncryptedCIK Thumbprint     ResourceKey        EncryptedCIK
+    -----------------   ----------        -----------------------     -----------        ------------
+    resourceGroupName1  deviceNameOne     EncryptedCIKThumbpring      411182691329779166 EncryptedCIK
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Alert
+  description: |+
+    Fetch the alerts on the Stack edge/gateway device
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExtendedInfo
+  description: |+
+    Gets additional information for the specified Stack Edge/Stack Gateway device
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DeviceName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NetworkSetting
+  description: |+
+    Gets the network settings of the specified Stack Edge/Stack Gateway device
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Azure ResourceId
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpdateSummary
+  description: |+
+    Gets information about the availability of updates based on the last scan of the device. It also gets information about any ongoing download or install jobs on the device.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.StackEdge.Get-AzStackEdgeDevice
+name: Get-AzStackEdgeDevice
+description: |-
+  The **Get-AzStackEdgeDevice** cmdlet gets the information about the available Stack Edge Devices. You can specify the Name of the device along with the Resource Group Name to get the information on a specific device.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.StackEdge.dll-Help.xml
+  Module Name: Az.StackEdge
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.stackedge/get-azstackedgedevice
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackEdge/StackEdge/help/Get-AzStackEdgeDevice.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackEdge/StackEdge/help/Get-AzStackEdgeDevice.md

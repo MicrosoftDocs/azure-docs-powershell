@@ -1,0 +1,190 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a SQL managed instance's Key Vault keys.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+  description: |-
+    System.String
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.TransparentDataEncryption.Model.AzureRmSqlManagedInstanceKeyVaultKeyModel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSqlInstanceKeyVaultKey [[-KeyId] <String>] [-ResourceGroupName] <String> [-InstanceName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Get-AzSqlInstanceKeyVaultKey [[-KeyId] <String>] [-Instance] <AzureSqlManagedInstanceModel>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Get-AzSqlInstanceKeyVaultKey [[-KeyId] <String>] [-InstanceResourceId] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all Key Vault keys'
+  code: |-
+    PS C:\> Get-AzSqlInstanceKeyVaultKey -ResourceGroupName 'ContosoResourceGroup' -InstanceName 'ContosoManagedInstanceName'
+
+    ResourceGroupName      : ContosoResourceGroup
+    ManagedInstanceName    : ContosoManagedInstanceName
+    KeyId                  : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ManagedInstanceKeyName : contoso_contosokey_01234567890123456789012345678901
+    CreationDate           : 9/1/2018 12:11:49 AM
+    Thumbprint             : 6AB10000F99E1B6A22222F39E3F11CB5DC5A55A1
+    Type                   : AzureKeyVault
+  description: |-
+    This command gets all the Key Vault keys on a SQL managed instance.
+  summary: ""
+- title: 'Example 2: Get a specific Key Vault key'
+  code: |-
+    PS C:\> Get-AzSqlInstanceKeyVaultKey -ResourceGroupName 'ContosoResourceGroup' -InstanceName 'ContosoManagedInstanceName' -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+
+    ResourceGroupName      : ContosoResourceGroup
+    ManagedInstanceName    : ContosoManagedInstanceName
+    KeyId                  : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ManagedInstanceKeyName : contoso_contosokey_01234567890123456789012345678901
+    CreationDate           : 9/1/2018 12:11:49 AM
+    Thumbprint             : 6AB10000F99E1B6A22222F39E3F11CB5DC5A55A1
+    Type                   : AzureKeyVault
+  description: |-
+    This command gets the Key Vault key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'.
+  summary: ""
+- title: 'Example 3: Using instance object'
+  code: |-
+    PS C:\> $managedInstance = Get-AzSqlInstance -Name 'ContosoManagedInstanceName' -ResourceGroupName 'ContosoResourceGroup'
+    PS C:\> Get-AzSqlInstanceKeyVaultKey -ManagedInstance $managedInstance -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+
+    ResourceGroupName      : ContosoResourceGroup
+    ManagedInstanceName    : ContosoManagedInstanceName
+    KeyId                  : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ManagedInstanceKeyName : contoso_contosokey_01234567890123456789012345678901
+    CreationDate           : 9/1/2018 12:11:49 AM
+    Thumbprint             : 6AB10000F99E1B6A22222F39E3F11CB5DC5A55A1
+    Type                   : AzureKeyVault
+  description: |-
+    This command gets the Key Vault key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'.
+  summary: ""
+- title: 'Example 4: Using instance resource id'
+  code: |-
+    PS C:\> $managedInstance = Get-AzSqlInstance -Name 'ContosoManagedInstanceName' -ResourceGroupName 'ContosoResourceGroup'
+    PS C:\> Get-AzSqlInstanceKeyVaultKey -InstanceResourceId $managedInstance.ResourceId -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+
+    ResourceGroupName      : ContosoResourceGroup
+    ManagedInstanceName    : ContosoManagedInstanceName
+    KeyId                  : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ManagedInstanceKeyName : contoso_contosokey_01234567890123456789012345678901
+    CreationDate           : 9/1/2018 12:11:49 AM
+    Thumbprint             : 6AB10000F99E1B6A22222F39E3F11CB5DC5A55A1
+    Type                   : AzureKeyVault
+  description: |-
+    This command gets the Key Vault key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'.
+  summary: ""
+- title: 'Example 5: Using piping'
+  code: |-
+    PS C:\> $managedInstance = Get-AzSqlInstance -Name 'ContosoManagedInstanceName' -ResourceGroupName 'ContosoResourceGroup'
+    PS C:\> $managedInstance | Get-AzSqlInstanceKeyVaultKey -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+
+    ResourceGroupName      : ContosoResourceGroup
+    ManagedInstanceName    : ContosoManagedInstanceName
+    KeyId                  : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ManagedInstanceKeyName : contoso_contosokey_01234567890123456789012345678901
+    CreationDate           : 9/1/2018 12:11:49 AM
+    Thumbprint             : 6AB10000F99E1B6A22222F39E3F11CB5DC5A55A1
+    Type                   : AzureKeyVault
+  description: |-
+    This command gets the Key Vault key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+  name: Instance
+  isRequired: true
+  description: |+
+    The instance input object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: InputObject
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InstanceName
+  isRequired: true
+  description: |+
+    The instance name
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InstanceResourceId
+  isRequired: true
+  description: |+
+    The instance resource id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ResourceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyId
+  description: |+
+    AzureKeyVault key id
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The Resource Group Name
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlInstanceKeyVaultKey
+name: Get-AzSqlInstanceKeyVaultKey
+description: |-
+  The Get-AzSqlInstanceKeyVaultKey cmdlet gets information about the Key Vault keys on a SQL managed instance. You can view all keys on a managed instance or view a specific key by providing the KeyId.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/Az.sql/Get-AzSqlInstanceKeyVaultKey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlInstanceKeyVaultKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlInstanceKeyVaultKey.md

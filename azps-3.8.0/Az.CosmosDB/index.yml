@@ -1,0 +1,100 @@
+### YamlMime:PowershellModule
+children:
+- title: Cosmos DB
+  cmdlets:
+  - Az.CosmosDB.Get-AzCosmosDBAccount
+  - Az.CosmosDB.Get-AzCosmosDBAccountKey
+  - Az.CosmosDB.Get-AzCosmosDBCassandraKeyspace
+  - Az.CosmosDB.Get-AzCosmosDBCassandraKeyspaceThroughput
+  - Az.CosmosDB.Get-AzCosmosDBCassandraTable
+  - Az.CosmosDB.Get-AzCosmosDBCassandraTableThroughput
+  - Az.CosmosDB.Get-AzCosmosDBGremlinDatabase
+  - Az.CosmosDB.Get-AzCosmosDBGremlinDatabaseThroughput
+  - Az.CosmosDB.Get-AzCosmosDBGremlinGraph
+  - Az.CosmosDB.Get-AzCosmosDBGremlinGraphThroughput
+  - Az.CosmosDB.Get-AzCosmosDBMongoDBCollection
+  - Az.CosmosDB.Get-AzCosmosDBMongoDBCollectionThroughput
+  - Az.CosmosDB.Get-AzCosmosDBMongoDBDatabase
+  - Az.CosmosDB.Get-AzCosmosDBMongoDBDatabaseThroughput
+  - Az.CosmosDB.Get-AzCosmosDBSqlContainer
+  - Az.CosmosDB.Get-AzCosmosDBSqlContainerThroughput
+  - Az.CosmosDB.Get-AzCosmosDBSqlDatabase
+  - Az.CosmosDB.Get-AzCosmosDBSqlDatabaseThroughput
+  - Az.CosmosDB.Get-AzCosmosDBSqlStoredProcedure
+  - Az.CosmosDB.Get-AzCosmosDBSqlTrigger
+  - Az.CosmosDB.Get-AzCosmosDBSqlUserDefinedFunction
+  - Az.CosmosDB.Get-AzCosmosDBTable
+  - Az.CosmosDB.Get-AzCosmosDBTableThroughput
+  - Az.CosmosDB.New-AzCosmosDBAccount
+  - Az.CosmosDB.New-AzCosmosDBAccountKey
+  - Az.CosmosDB.New-AzCosmosDBCassandraClusterKey
+  - Az.CosmosDB.New-AzCosmosDBCassandraColumn
+  - Az.CosmosDB.New-AzCosmosDBCassandraSchema
+  - Az.CosmosDB.New-AzCosmosDBGremlinCompositePath
+  - Az.CosmosDB.New-AzCosmosDBGremlinConflictResolutionPolicy
+  - Az.CosmosDB.New-AzCosmosDBGremlinIncludedPath
+  - Az.CosmosDB.New-AzCosmosDBGremlinIncludedPathIndex
+  - Az.CosmosDB.New-AzCosmosDBGremlinIndexingPolicy
+  - Az.CosmosDB.New-AzCosmosDBGremlinSpatialSpec
+  - Az.CosmosDB.New-AzCosmosDBGremlinUniqueKey
+  - Az.CosmosDB.New-AzCosmosDBGremlinUniqueKeyPolicy
+  - Az.CosmosDB.New-AzCosmosDBLocationObject
+  - Az.CosmosDB.New-AzCosmosDBMongoDBIndex
+  - Az.CosmosDB.New-AzCosmosDBSqlCompositePath
+  - Az.CosmosDB.New-AzCosmosDBSqlConflictResolutionPolicy
+  - Az.CosmosDB.New-AzCosmosDBSqlIncludedPath
+  - Az.CosmosDB.New-AzCosmosDBSqlIncludedPathIndex
+  - Az.CosmosDB.New-AzCosmosDBSqlIndexingPolicy
+  - Az.CosmosDB.New-AzCosmosDBSqlSpatialSpec
+  - Az.CosmosDB.New-AzCosmosDBSqlUniqueKey
+  - Az.CosmosDB.New-AzCosmosDBSqlUniqueKeyPolicy
+  - Az.CosmosDB.New-AzCosmosDBVirtualNetworkRule
+  - Az.CosmosDB.Remove-AzCosmosDBAccount
+  - Az.CosmosDB.Remove-AzCosmosDBCassandraKeyspace
+  - Az.CosmosDB.Remove-AzCosmosDBCassandraTable
+  - Az.CosmosDB.Remove-AzCosmosDBGremlinDatabase
+  - Az.CosmosDB.Remove-AzCosmosDBGremlinGraph
+  - Az.CosmosDB.Remove-AzCosmosDBMongoDBCollection
+  - Az.CosmosDB.Remove-AzCosmosDBMongoDBDatabase
+  - Az.CosmosDB.Remove-AzCosmosDBSqlContainer
+  - Az.CosmosDB.Remove-AzCosmosDBSqlDatabase
+  - Az.CosmosDB.Remove-AzCosmosDBSqlStoredProcedure
+  - Az.CosmosDB.Remove-AzCosmosDBSqlTrigger
+  - Az.CosmosDB.Remove-AzCosmosDBSqlUserDefinedFunction
+  - Az.CosmosDB.Remove-AzCosmosDBTable
+  - Az.CosmosDB.Set-AzCosmosDBCassandraKeyspace
+  - Az.CosmosDB.Set-AzCosmosDBCassandraTable
+  - Az.CosmosDB.Set-AzCosmosDBGremlinDatabase
+  - Az.CosmosDB.Set-AzCosmosDBGremlinGraph
+  - Az.CosmosDB.Set-AzCosmosDBMongoDBCollection
+  - Az.CosmosDB.Set-AzCosmosDBMongoDBDatabase
+  - Az.CosmosDB.Set-AzCosmosDBSqlContainer
+  - Az.CosmosDB.Set-AzCosmosDBSqlDatabase
+  - Az.CosmosDB.Set-AzCosmosDBSqlStoredProcedure
+  - Az.CosmosDB.Set-AzCosmosDBSqlTrigger
+  - Az.CosmosDB.Set-AzCosmosDBSqlUserDefinedFunction
+  - Az.CosmosDB.Set-AzCosmosDBTable
+  - Az.CosmosDB.Update-AzCosmosDBAccount
+  - Az.CosmosDB.Update-AzCosmosDBAccountFailoverPriority
+  - Az.CosmosDB.Update-AzCosmosDBAccountRegion
+  - Az.CosmosDB.Update-AzCosmosDBCassandraKeyspaceThroughput
+  - Az.CosmosDB.Update-AzCosmosDBCassandraTableThroughput
+  - Az.CosmosDB.Update-AzCosmosDBGremlinDatabaseThroughput
+  - Az.CosmosDB.Update-AzCosmosDBGremlinGraphThroughput
+  - Az.CosmosDB.Update-AzCosmosDBMongoDBCollectionThroughput
+  - Az.CosmosDB.Update-AzCosmosDBMongoDBDatabaseThroughput
+  - Az.CosmosDB.Update-AzCosmosDBSqlContainerThroughput
+  - Az.CosmosDB.Update-AzCosmosDBSqlDatabaseThroughput
+  - Az.CosmosDB.Update-AzCosmosDBTableThroughput
+uid: Az.CosmosDB
+name: Az.CosmosDB
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure CosmosDB in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.CosmosDB namespace.
+metadata:
+  Module Name: Az.CosmosDB
+  Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
+  Download Help Link: '{{ https://docs.microsoft.com/en-us/powershell/module/az.cosmosdb }}'
+  Help Version: '{{ 1.0.0 }}'
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CosmosDB/CosmosDB/help/Az.CosmosDB.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CosmosDB/CosmosDB/help/Az.CosmosDB.md

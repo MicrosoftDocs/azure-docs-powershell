@@ -1,0 +1,30 @@
+### YamlMime:PowershellModule
+children:
+- title: Virtual Machines
+  cmdlets:
+  - Az.VMWare.Get-AzVMWareAuthorization
+  - Az.VMWare.Get-AzVMWareCluster
+  - Az.VMWare.Get-AzVMWarePrivateCloud
+  - Az.VMWare.Get-AzVMWarePrivateCloudAdminCredentials
+  - Az.VMWare.New-AzVMWareAuthorization
+  - Az.VMWare.New-AzVMWareCluster
+  - Az.VMWare.New-AzVMWarePrivateCloud
+  - Az.VMWare.Remove-AzVMWareAuthorization
+  - Az.VMWare.Remove-AzVMWareCluster
+  - Az.VMWare.Remove-AzVMWarePrivateCloud
+  - Az.VMWare.Test-AzVMWareLocationQuotaAvailability
+  - Az.VMWare.Test-AzVMWareLocationTrialAvailability
+  - Az.VMWare.Update-AzVMWareCluster
+  - Az.VMWare.Update-AzVMWarePrivateCloud
+uid: Az.VMWare
+name: Az.VMWare
+description: |-
+  Microsoft Azure PowerShell: VMWare cmdlets
+metadata:
+  Module Name: Az.VMWare
+  Module Guid: 78d2fac8-ec90-47ad-b8aa-a27106b158f5
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.vmware
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/VMWare/help/Az.VMWare.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/VMWare/help/Az.VMWare.md

@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates a logic app definition.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzLogicApp
+  href: ./Get-AzLogicApp.yml
+- text: New-AzLogicApp
+  href: ./New-AzLogicApp.yml
+- text: Remove-AzLogicApp
+  href: ./Remove-AzLogicApp.yml
+- text: Set-AzLogicApp
+  href: ./Set-AzLogicApp.yml
+- text: Start-AzLogicApp
+  href: ./Start-AzLogicApp.yml
+syntaxes:
+- >-
+  Test-AzLogicApp -ResourceGroupName <String> -Name <String> -Location <String> [-State <String>]
+
+   [-Definition <Object>] [-IntegrationAccountId <String>] [-Parameters <Object>] [-ParameterFilePath <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Test-AzLogicApp -ResourceGroupName <String> -Name <String> -Location <String> [-State <String>]
+
+   [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
+
+   [-ParameterFilePath <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Validate a logic app by using file paths'
+  code: |-
+    PS C:\>Test-AzLogicApp -ResourceGroupName "ResourceGroup11" -Name "LogicApp01" -Location "westus" -State "Enabled" -DefinitionFilePath "d:\workflows\Definition.json" -ParameterFilePath "d:\workflows\Parameters.json"
+  description: |-
+    This command validates a logic app named LogicApp01 in the specified resource group.
+    The command specifies definition and parameter file paths.
+  summary: ""
+- title: 'Example 2: Validate a logic app by using objects'
+  code: |-
+    PS C:\>Test-AzLogicApp -ResourceGroupName "ResourceGroup11" -Name "LogicApp01" -Location "westus" -State "Enabled" -Definition [IO.File]::ReadAllText("d:\Workflows\Definition.json") -Parameters @{name1="value1", name2="value2"}
+  description: |-
+    This command validates a logic app named LogicApp01 in the specified resource group.
+    The command specifies definition and parameter objects.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  name: Definition
+  description: |+
+    Specifies the definition of a logic app as an object or a string in JavaScript Object Notation (JSON) format.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefinitionFilePath
+  description: |+
+    Specifies the definition of your logic app as the path of a definition file in JSON format.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IntegrationAccountId
+  description: |+
+    Specifies an integration account ID for the logic app.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the location of the logic app.
+    Enter an Azure data center location, such as West US or Southeast Asia.
+    You can place a logic app in any location.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the logic app.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParameterFilePath
+  description: |+
+    Specifies the path of a JSON formatted parameter file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  name: Parameters
+  description: |+
+    Specifies a parameters collection object of the logic app.
+    Specify a hash table, Dictionary\<string\>, or Dictionary\<string, WorkflowParameter\>.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Specifies a state of the logic app.
+    The acceptable values for this parameter are: Enabled and Disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+uid: Az.LogicApp.Test-AzLogicApp
+name: Test-AzLogicApp
+description: |-
+  The **Test-AzLogicApp** cmdlet validates a logic app definition in a resource group.
+  Specify the logic app name, resource group name, location, state, integration account ID, or parameters.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: 929F4593-2A71-49B9-87F8-F24FA9F6E314
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/test-azlogicapp
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Test-AzLogicApp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Test-AzLogicApp.md

@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets tenants that are authorized for the current user.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureTenant" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzTenant [[-TenantId] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Getting all tenants'
+  code: |-
+    PS C:\> Connect-AzAccount
+    PS C:\> Get-AzTenant
+
+    Id                                   Name        Category Domains
+    --                                   ----------- -------- -------
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Microsoft   Home     {test0.com, test1.com, test2.microsoft.com, test3.microsoft.com...}
+    yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy Testhost    Home     testhost.onmicrosoft.com
+  description: |-
+    This example shows how to get all of the authorized tenants of an Azure account.
+  summary: ""
+- title: 'Example 2: Getting a specific tenant'
+  code: |-
+    PS C:\> Connect-AzAccount
+    PS C:\> Get-AzTenant -TenantId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+    Id                                   Name        Category Domains
+    --                                   ----------- -------- -------
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Microsoft   Home     {test0.com, test1.com, test2.microsoft.com, test3.microsoft.com...}
+  description: |-
+    This example shows how to get a specific authorized tenant of an Azure account.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, tenant and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TenantId
+  description: |+
+    Specifies the ID of the tenant that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Domain, Tenant
+  parameterValueGroup: ""
+uid: Az.Accounts.Get-AzTenant
+name: Get-AzTenant
+description: |-
+  The Get-AzTenant cmdlet gets tenants authorized for the current user.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/get-aztenant
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Get-AzTenant.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Get-AzTenant.md

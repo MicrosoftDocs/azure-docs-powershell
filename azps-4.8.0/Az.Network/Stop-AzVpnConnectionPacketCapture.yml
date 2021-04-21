@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops Packet Capture Operation on a Vpn connection
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnConnection" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnPacketCaptureResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-AzVpnConnectionPacketCapture
+  href: ./Start-AzVpnConnectionPacketCapture.yml
+syntaxes:
+- >-
+  Stop-AzVpnConnectionPacketCapture -ResourceGroupName <String> -ParentResourceName <String> -Name <String>
+
+   [-LinkConnectionName <String>] -SasUrl <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Stop-AzVpnConnectionPacketCapture -InputObject <PSVpnConnection> [-LinkConnectionName <String>]
+
+   -SasUrl <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Stop-AzVpnConnectionPacketCapture -ResourceId <String> [-LinkConnectionName <String>] -SasUrl <String> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $rgname = "testRg"
+     $storeName = "teststorage"
+     $containerName = "packetcaptureresults"
+     $key = Get-AzStorageAccountKey -ResourceGroupName $rgname -Name $storeName
+     $context = New-AzStorageContext -StorageAccountName $storeName -StorageAccountKey $key[0].Value
+     New-AzStorageContainer -Name $containerName -Context $context
+     $container = Get-AzStorageContainer -Name $containerName -Context $context
+     $now=get-date
+     $sasurl = New-AzureStorageContainerSASToken -Name $containerName -Context $context -Permission "rwd" -StartTime $now.AddHours(-1) -ExpiryTime $now.AddDays(1) -FullUri
+    PS C:\> Stop-AzVpnConnectionPacketCapture -ResourceGroupName $rgname -Name "testconn" -ParentResourceName "VpnGw1" -LinkConnectionName "SiteLink1,SiteLink2" -SasUrl $sasurl
+    Code              : Succeeded
+    EndTime           : 10/1/2019 12:54:51 AM
+    StartTime         : 10/1/2019 12:53:40 AM
+    ResultsText       :
+    LinkConnectionName: SiteLink1,SiteLink2
+    ResourceGroupName : testRg
+    Location          : centraluseuap
+    ResourceGuid      : ac70028f-5b88-4ad4-93d3-0b9a9172c382
+    Type              :
+    Tag               :
+    TagsTable         :
+    Name              : testconn
+    Etag              :
+    Id                :
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> $rgname = "testRg"
+     $storeName = "teststorage"
+     $containerName = "packetcaptureresults"
+     $key = Get-AzStorageAccountKey -ResourceGroupName $rgname -Name $storeName
+     $context = New-AzStorageContext -StorageAccountName $storeName -StorageAccountKey $key[0].Value
+     $container = Get-AzStorageContainer -Name $containerName -Context $context
+     $now=get-date
+     $sasurl = New-AzureStorageContainerSASToken -Name $containerName -Context $context -Permission "rwd" -StartTime $now.AddHours(-1) -ExpiryTime $now.AddDays(1) -FullUri
+     $conn = Get-AzVpnConnection -name "testconn" -ResourceGroupName $rgname
+    PS C:\> Stop-AzVpnConnectionPacketCapture -InputObject $conn -SasUrl $sasurl -LinkConnectionName "SiteLink1,SiteLink2"
+    Code              : Succeeded
+    EndTime           : 10/1/2019 12:54:51 AM
+    StartTime         : 10/1/2019 12:53:40 AM
+    ResultsText       :
+    LinkConnectionName: SiteLink1,SiteLink2
+    ResourceGroupName : testRg
+    Location          : centraluseuap
+    ResourceGuid      : ac70028f-5b88-4ad4-93d3-0b9a9172c382
+    Type              :
+    Tag               :
+    TagsTable         :
+    Name              : testconn
+    Etag              :
+    Id                :
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnConnection" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    The Vpn connection object where packet capture to be started.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: VpnConnection
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LinkConnectionName
+  description: |+
+    The names of the SiteLinkConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The Vpn connection name where packet capture is to be started.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceName, ConnectionName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceName
+  isRequired: true
+  description: |+
+    The parent resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ParentVpnGatewayName, VpnGatewayName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The Azure resource ID of the VpnConnection where packet capture to be started.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SasUrl
+  isRequired: true
+  description: |+
+    SAS Url for stop packet capture on Vpn.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.Stop-AzVpnConnectionPacketCapture
+name: Stop-AzVpnConnectionPacketCapture
+description: |-
+  Stops Packet Capture Operation on a Vpn connection and will upload the result on given SasUrl of storage container.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/stop-azvpnconnectionpacketcapture
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Stop-AzVpnConnectionPacketCapture.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Stop-AzVpnConnectionPacketCapture.md

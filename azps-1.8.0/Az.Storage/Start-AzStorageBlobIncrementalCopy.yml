@@ -1,0 +1,269 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Start an Incremental copy operation from a Page blob snapshot to the specified destination Page blob.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageBlob" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Start-AzStorageBlobIncrementalCopy -CloudBlobContainer <CloudBlobContainer> -SrcBlob <String>
+
+   -SrcBlobSnapshotTime <DateTimeOffset> -DestContainer <String> [-DestBlob <String>]
+
+   [-Context <IStorageContext>] [-DestContext <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageBlobIncrementalCopy -CloudBlob <CloudPageBlob> -DestContainer <String> [-DestBlob <String>]
+
+   [-Context <IStorageContext>] [-DestContext <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageBlobIncrementalCopy -CloudBlob <CloudPageBlob> -DestCloudBlob <CloudPageBlob>
+
+   [-Context <IStorageContext>] [-DestContext <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageBlobIncrementalCopy -SrcBlob <String> -SrcContainer <String>
+
+   -SrcBlobSnapshotTime <DateTimeOffset> -DestContainer <String> [-DestBlob <String>]
+
+   [-Context <IStorageContext>] [-DestContext <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageBlobIncrementalCopy -AbsoluteUri <String> -DestContainer <String> -DestBlob <String>
+
+   [-Context <IStorageContext>] [-DestContext <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start Incremental Copy Operation by blob name and snapshot time'
+  code: |-
+    PS C:\>Start-AzStorageBlobIncrementalCopy -SrcContainer container1 -SrcBlob blob1 -SrcBlobSnapshotTime "04/07/2017 09:55:36.1190229 AM +00:00" -DestContainer container2 -DestBlob blob2
+  description: |-
+    This command start Incremental Copy Operation by blob name and snapshot time
+  summary: ""
+- title: 'Example 2: Start Incremental copy operation using source uri'
+  code: |-
+    PS C:\>Start-AzStorageBlobIncrementalCopy -AbsoluteUri "http://www.somesite.com/somefile?snapshot=2017-04-07T10:05:40.2126635Z" -DestContainer container -DestBlob blob -DestContext $context
+  description: |-
+    This command start Incremental Copy Operation using source uri
+  summary: ""
+- title: 'Example 3:  Start Incremental copy operation using container pipeline from GetAzureStorageContainer'
+  code: |-
+    PS C:\>Get-AzStorageContainer -Container container1 | Start-AzStorageBlobIncrementalCopy -SrcBlob blob  -SrcBlobSnapshotTime "04/07/2017 09:55:36.1190229 AM +00:00" -DestContainer container2
+  description: |-
+    This command start Incremental Copy Operation using container pipeline from GetAzureStorageContainer
+  summary: ""
+- title: 'Example 4:  start Incremental copy operation from CloudPageBlob object to destination blob with blob name'
+  code: |-
+    PS C:\>$srcBlobSnapshot = Get-AzStorageBlob -Container container1 -prefix blob1| ?{$_.ICloudBlob.IsSnapshot})[0]
+    PS C:\>Start-AzStorageBlobIncrementalCopy -CloudBlob $srcBlobSnapshot.ICloudBlob -DestContainer container2 -DestBlob blob2
+  description: |-
+    This command start Incremental Copy Operation from CloudPageBlob object to destination blob with blob name
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AbsoluteUri
+  isRequired: true
+  description: |+
+    Absolute Uri to the source. Be noted that the credential should be provided in the Uri, if the source requires any.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SrcUri, SourceUri
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ClientTimeoutPerRequest
+  description: |+
+    The client side maximum execution time for each request in seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob" data-throw-if-not-resolved="False" />
+  name: CloudBlob
+  isRequired: true
+  description: |+
+    CloudBlob object from Azure Storage Client library. You can create it or use Get-AzStorageBlob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SrcICloudBlob, SrcCloudBlob, ICloudBlob, SourceICloudBlob, SourceCloudBlob
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  name: CloudBlobContainer
+  isRequired: true
+  description: |+
+    CloudBlobContainer object from Azure Storage Client library. You can create it or use Get-AzStorageContainer cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SourceCloudBlobContainer
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ConcurrentTaskCount
+  description: |+
+    The total amount of concurrent async tasks.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Source Azure Storage Context. You can create it by New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SrcContext, SourceContext
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DestBlob
+  isRequired: true
+  description: |+
+    Destination blob name
+
+  defaultValue: None
+  position: Named
+  aliases: DestinationBlob
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob" data-throw-if-not-resolved="False" />
+  name: DestCloudBlob
+  isRequired: true
+  description: |+
+    Destination CloudBlob object
+
+  defaultValue: None
+  position: Named
+  aliases: DestICloudBlob, DestinationCloudBlob, DestinationICloudBlob
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DestContainer
+  isRequired: true
+  description: |+
+    Destination container name
+
+  defaultValue: None
+  position: Named
+  aliases: DestinationContainer
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: DestContext
+  description: |+
+    Destination Azure Storage Context. You can create it by New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: DestinationContext
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ServerTimeoutPerRequest
+  description: |+
+    The server time out for each request in seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SrcBlob
+  isRequired: true
+  description: |+
+    Source page blob name.
+
+  defaultValue: None
+  position: Named
+  aliases: SourceBlob
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SrcBlobSnapshotTime
+  isRequired: true
+  description: |+
+    Source page blob snapshot time.
+
+  defaultValue: None
+  position: Named
+  aliases: SourceBlobSnapshotTime
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SrcContainer
+  isRequired: true
+  description: |+
+    Source Container name
+
+  defaultValue: None
+  position: Named
+  aliases: SourceContainer
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Start-AzStorageBlobIncrementalCopy
+name: Start-AzStorageBlobIncrementalCopy
+description: |-
+  Start an Incremental copy operation from a Page blob snapshot to the specified destination Page blob.
+  See more details of the feature in https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/incremental-copy-blob.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/start-azstorageblobincrementalcopy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Start-AzStorageBlobIncrementalCopy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Start-AzStorageBlobIncrementalCopy.md

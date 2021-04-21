@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the SSL policy of an application gateway.
+module: Az.Network
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApplicationGatewaySslPolicy
+  href: ./Get-AzApplicationGatewaySslPolicy.yml
+- text: New-AzApplicationGatewaySslPolicy
+  href: ./New-AzApplicationGatewaySslPolicy.yml
+syntaxes:
+- >-
+  Set-AzApplicationGatewaySslPolicy -ApplicationGateway <PSApplicationGateway> [-DisabledSslProtocols <String[]>]
+
+   [-PolicyType <String>] [-PolicyName <String>] [-CipherSuite <String[]>] [-MinProtocolVersion <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: |-
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $AppGw = Set-AzApplicationGatewaySslPolicy -ApplicationGateway $getgw -PolicyType Predefined -PolicyName AppGwSslPolicy20170401
+  description: |-
+    The first command gets the application gateway named ApplicationGateway01 and stores it in the $AppGw variable.
+    This second command modifies the ssl policy to a policy type Predefined and policy name AppGwSslPolicy20170401.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies the application gateway of the SSL policy that this cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CipherSuite
+  description: |+
+    Ssl cipher suites to be enabled in the specified order to application gateway
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisabledSslProtocols
+  description: |+
+    Specifies which protocols are disabled.
+    The acceptable values for this parameter are:
+    - TLSv1_0 
+    - TLSv1_1 
+    - TLSv1_2
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: TLSv1_0, TLSv1_1, TLSv1_2
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MinProtocolVersion
+  description: |+
+    Minimum version of Ssl protocol to be supported on application gateway
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: TLSv1_0, TLSv1_1, TLSv1_2
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Name of Ssl predefined policy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PolicyType
+  description: |+
+    Type of Ssl Policy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Predefined, Custom
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzApplicationGatewaySslPolicy
+name: Set-AzApplicationGatewaySslPolicy
+description: |-
+  The **Set-AzApplicationGatewaySslPolicy** cmdlet modifies the SSL policy of an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 30A34CA8-AC07-4327-B7B9-19F001DA996A
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaysslpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewaySslPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewaySslPolicy.md

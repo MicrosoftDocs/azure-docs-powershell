@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Data Lake Analytics catalog item or types of items.
+module: Az.DataLakeAnalytics
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.CatalogItem" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Test-AzDataLakeAnalyticsCatalogItem
+  href: ./Test-AzDataLakeAnalyticsCatalogItem.yml
+syntaxes:
+- >-
+  Get-AzDataLakeAnalyticsCatalogItem [-Account] <String> [-ItemType] <CatalogItemType>
+
+   [[-Path] <CatalogPathInstance>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a specified database'
+  code: |-
+    PS C:\>Get-AzDataLakeAnalyticsCatalogItem -Account "contosoadla" -ItemType Database -Path "databaseName"
+  description: |-
+    This command gets the specified database.
+  summary: ""
+- title: 'Example 2: Get tables in a specified database and schema'
+  code: |-
+    PS C:\>Get-AzDataLakeAnalyticsDataSource -AccountName "contosoadla" -ItemType Table -Path "databaseName.schemaName"
+  description: |-
+    This command gets a list of tables in the specified database.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    Specifies the Data Lake Analytics account name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType" data-throw-if-not-resolved="False" />
+  name: ItemType
+  isRequired: true
+  description: |+
+    Specifies the catalog item type of the item(s) being fetched or listed.
+    The acceptable values for this parameter are:
+    - Database
+    - Schema
+    - Assembly
+    - Table
+    - TableValuedFunction
+    - TableStatistics
+    - ExternalDataSource
+    - View
+    - Procedure
+    - Secret
+    - Credential
+    - Types
+    - TablePartition
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Database, Schema, Assembly, Table, TablePartition, TableValuedFunction, TableStatistics, ExternalDataSource, View, Procedure, Secret, Credential, Types, Package
+- type: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the multi-part path to the item to retrieve, or to the parent item of the items to list.
+    The parts of the path should be separated by a period (.).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsCatalogItem
+name: Get-AzDataLakeAnalyticsCatalogItem
+description: |-
+  The **Get-AzDataLakeAnalyticsCatalogItem** gets a specified Azure Data Lake Analytics catalog item, or gets catalog items of a specified type.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: A6899341-1E5E-4F8B-8D5D-5923B1223628
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticscatalogitem
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsCatalogItem.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsCatalogItem.md

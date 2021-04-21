@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: Media Services
+  cmdlets:
+  - Az.Media.Get-AzMediaService
+  - Az.Media.Get-AzMediaServiceKey
+  - Az.Media.Get-AzMediaServiceNameAvailability
+  - Az.Media.New-AzMediaService
+  - Az.Media.New-AzMediaServiceStorageConfig
+  - Az.Media.Remove-AzMediaService
+  - Az.Media.Set-AzMediaService
+  - Az.Media.Set-AzMediaServiceKey
+  - Az.Media.Sync-AzMediaServiceStorageKey
+uid: Az.Media
+name: Az.Media
+description: |-
+  This topic displays help topics for the Media Service web service feature in Azure App Service cmdlets.
+metadata:
+  Module Name: Az.Media
+  Module Guid: c66edca6-2e57-4550-905e-f5cc104de25e
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.media
+  Help Version: 0.9.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Az.Media.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Az.Media.md

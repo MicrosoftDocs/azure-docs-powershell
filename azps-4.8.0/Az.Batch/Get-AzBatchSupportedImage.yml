@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Batch supported images for a Batch account.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSImageInformation" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+syntaxes:
+- >-
+  Get-AzBatchSupportedImage [-Filter <String>] [-MaxCount <Int32>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all available supported images'
+  code: |-
+    PS C:\>$Context = Get-AzBatchAccountKey -AccountName "ContosoBatchAccount"
+    PS C:\> Get-AzBatchSupportedImage -BatchContext $Context
+    BatchSupportEndOfLife :
+    Capabilities          :
+    ImageReference        : canonical:ubuntuserver:16.04-lts:latest
+    NodeAgentSkuId        : batch.node.ubuntu 16.04
+    OSType                : Linux
+    VerificationType      : Verified
+
+    BatchSupportEndOfLife :
+    Capabilities          :
+    ImageReference        : canonical:ubuntuserver:18.04-lts:latest
+    NodeAgentSkuId        : batch.node.ubuntu 18.04
+    OSType                : Linux
+    VerificationType      : Verified
+
+    BatchSupportEndOfLife :
+    Capabilities          :
+    ImageReference        : credativ:debian:8:latest
+    NodeAgentSkuId        : batch.node.debian 8
+    OSType                : Linux
+    VerificationType      : Verified
+
+    BatchSupportEndOfLife :
+    Capabilities          :
+    ImageReference        : microsoftwindowsserver:windowsserver:2016-datacenter:latest
+    NodeAgentSkuId        : batch.node.windows amd64
+    OSType                : Windows
+    VerificationType      : Verified
+
+    ...
+  description: |-
+    The first command gets a Batch account context that contains access keys for your subscription by using **Get-AzBatchAccountKey**.
+    The command stores the context in the $Context variable to use in the next command.
+    The second command gets all available supported images for that Batch account.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    The BatchAccountContext instance to use when interacting with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.
+    To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated.
+    When using shared key authentication, the primary access key is used by default.
+    To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Specifies an OData filter clause for supported images.
+    If you do not specify a filter, this cmdlet returns all images the Batch account supports.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxCount
+  description: |+
+    Specifies the maximum number of supported images to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Get-AzBatchSupportedImage
+name: Get-AzBatchSupportedImage
+description: |-
+  The **Get-AzBatchSupportedImage** cmdlet gets supported virtual machine images that are available in an Azure Batch account.
+  Specify the account by using the *BatchContext* parameter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchsupportedimage.md
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchSupportedImage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchSupportedImage.md

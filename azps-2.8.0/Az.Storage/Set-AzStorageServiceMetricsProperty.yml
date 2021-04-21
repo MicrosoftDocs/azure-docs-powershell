@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies metrics properties for the Azure Storage service.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Storage.Shared.Protocol.MetricsProperties" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageServiceMetricsProperty
+  href: ./Get-AzStorageServiceMetricsProperty.yml
+- text: New-AzStorageContext
+  href: ./New-AzStorageContext.yml
+syntaxes:
+- >-
+  Set-AzStorageServiceMetricsProperty [-ServiceType] <StorageServiceType> [-MetricsType] <ServiceMetricsType>
+
+   [-Version <Double>] [-RetentionDays <Int32>] [-MetricsLevel <MetricsLevel>] [-PassThru]
+
+   [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify metrics properties for the Blob service'
+  code: |-
+    C:\PS>Set-AzStorageServiceMetricsProperty -ServiceType Blob -MetricsType Hour -MetricsLevel Service -PassThru -RetentionDays 10 -Version 1.0
+  description: |-
+    This command modifies version 1.0 metrics for blob storage to a level of Service.
+    Azure Storage service metrics retains entries for 10 days.
+    Because this command specifies the *PassThru* parameter, the command displays the modified metrics properties.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure storage context.
+    To obtain a storage context, use the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Storage.Shared.Protocol.MetricsLevel" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MetricsLevel
+  description: |+
+    Specifies the metrics level that Azure Storage uses for the service.
+    The acceptable values for this parameter are:
+    - None
+    - Service
+    - ServiceAndApi
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Service, ServiceAndApi
+- type: <xref href="Microsoft.WindowsAzure.Commands.Storage.Common.ServiceMetricsType" data-throw-if-not-resolved="False" />
+  name: MetricsType
+  isRequired: true
+  description: |+
+    Specifies a metrics type.
+    This cmdlet sets the Azure Storage service metrics type to the value that this parameter specifies.
+    The acceptable values for this parameter are: Hour and Minute.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Hour, Minute
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Indicates that this cmdlets returns the updated metrics properties.
+    If you do not specify this parameter, this cmdlet does not return a value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: RetentionDays
+  description: |+
+    Specifies the number of days that the Azure Storage service retains metrics information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Commands.Storage.Common.StorageServiceType" data-throw-if-not-resolved="False" />
+  name: ServiceType
+  isRequired: true
+  description: |+
+    Specifies the storage service type.
+    This cmdlet modifies the metrics properties for the service type that this parameter specifies.
+    The acceptable values for this parameter are:
+    - Blob 
+    - Table
+    - Queue
+    - File
+    The value of File is not currently supported.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: Blob, Table, Queue, File
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Double" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Version
+  description: |+
+    Specifies the version of the Azure Storage metrics.
+    The default value is 1.0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.Set-AzStorageServiceMetricsProperty
+name: Set-AzStorageServiceMetricsProperty
+description: |-
+  The **Set-AzStorageServiceMetricsProperty** cmdlet modifies metrics properties for the Azure Storage service.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: 5878FAD4-A4BB-4DBF-A1F2-221FD34F0308
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/set-azstorageservicemetricsproperty
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageServiceMetricsProperty.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageServiceMetricsProperty.md

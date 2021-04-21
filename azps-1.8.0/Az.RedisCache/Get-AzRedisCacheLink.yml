@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get geo replication link for Redis Cache.
+module: Az.RedisCache
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSRedisLinkedServer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzRedisCacheLink
+  href: ./New-AzRedisCacheLink.yml
+- text: Remove-AzRedisCacheLink
+  href: ./Remove-AzRedisCacheLink.yml
+- text: Get-AzRedisCache
+  href: ./Get-AzRedisCache.yml
+- text: New-AzRedisCache
+  href: ./New-AzRedisCache.yml
+- text: Remove-AzRedisCache
+  href: ./Remove-AzRedisCache.yml
+- text: Set-AzRedisCache
+  href: ./Set-AzRedisCache.yml
+syntaxes:
+- Get-AzRedisCacheLink -Name <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzRedisCacheLink -PrimaryServerName <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzRedisCacheLink -PrimaryServerName <String> -SecondaryServerName <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzRedisCacheLink -SecondaryServerName <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get using parameter set AllLinksForCache'
+  code: |-
+    PS C:\>Get-AzRedisCacheLink -Name "mycache1"
+
+            PrimaryServerName   : mycache1
+            SecondaryServerName : mycache2
+            ProvisioningState   : Succeeded
+  description: |-
+    This command gets all geo-replication links for Redis Cache named mycache1.
+  summary: ""
+- title: 'Example 2: Get using parameter set AllLinksForPrimaryCache'
+  code: |-
+    PS C:\>Get-AzRedisCacheLink -PrimaryServerName "mycache1"
+
+            PrimaryServerName   : mycache1
+            SecondaryServerName : mycache2
+            ProvisioningState   : Succeeded
+  description: |-
+    This command gets geo-replication links where Redis Cache named mycache1 is primary.
+  summary: ""
+- title: 'Example 3: Get using parameter set AllLinksForSecondaryCache'
+  code: |-
+    PS C:\>Get-AzRedisCacheLink -SecondaryServerName "mycache2"
+
+            PrimaryServerName   : mycache1
+            SecondaryServerName : mycache2
+            ProvisioningState   : Succeeded
+  description: |-
+    This command gets geo-replication links where Redis Cache named mycache2 is secondary.
+  summary: ""
+- title: 'Example 4: Get using parameter set SingleLink'
+  code: |-
+    PS C:\>Get-AzRedisCacheLink -PrimaryServerName "mycache1" -SecondaryServerName "mycache2"
+
+            PrimaryServerName   : mycache1
+            SecondaryServerName : mycache2
+            ProvisioningState   : Succeeded
+  description: |-
+    This command gets a single geo-replication links where Redis Cache named mycache1 is primary and Redis Cache named mycache2 is secondary.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of redis cache.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrimaryServerName
+  isRequired: true
+  description: |+
+    Name of primary redis cache in link.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecondaryServerName
+  isRequired: true
+  description: |+
+    Name of secondary redis cache in link.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RedisCache.Get-AzRedisCacheLink
+name: Get-AzRedisCacheLink
+description: |-
+  There are four different ways to get geo-replication link detail. Either provide parameter Name or PrimaryServerName and/or SecondaryServerName. Name is given then all link where cache exists will be returned. If only PrimaryServerName is given then all links where cache is primary will be returned. If only SecondaryServerName is given then all links where cache is secondary will be returned. If PrimaryServerName and SecondaryServerName both are given then specific link with correct role will be returned.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
+  Module Name: Az.RedisCache
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/get-azrediscachelink
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/Get-AzRedisCacheLink.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/Get-AzRedisCacheLink.md

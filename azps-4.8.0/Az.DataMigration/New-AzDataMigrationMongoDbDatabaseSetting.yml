@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates database setting for migration for the mongoDb migration
+module: Az.DataMigration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataMigration.Models.MongoDbDatabaseSetting" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- New-AzDataMigrationMongoDbDatabaseSetting  -Name <Name> [-RU <RU>] -CollectionSetting <Collections>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzDataMigrationMongoDbDatabaseSetting  -Name mycollection -RU 1000 -CollectionSetting @($coll1, $coll2)
+
+    Name Setting
+    ---- -------
+    test Microsoft.Azure.Management.DataMigration.Models.MongoDbDatabaseSettings
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Collections.Generic.KeyValuePair<string, MongoDbCollectionSettings>" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Collections
+  description: |+
+    The array of MongoDb collection setting objects returned by New-AzureRmDmsMongoDbDatabaseSetting call.
+
+  defaultValue: None
+  position: Named
+  aliases: colls
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the database
+
+  defaultValue: None
+  position: Named
+  aliases: DatabaseName
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TargetRequestUnit
+  description: |+
+    The dedicated database level request unit value. If not set, that collection uses shared database RU.
+
+  defaultValue: None
+  position: Named
+  aliases: RU
+  parameterValueGroup: ""
+uid: Az.DataMigration.New-AzDataMigrationMongoDbDatabaseSetting
+name: New-AzDataMigrationMongoDbDatabaseSetting
+description: |-
+  The New-AzDataMigrationMongoDbDatabaseSetting  cmdlet creates the migration setting object that specifies the throughput and delete behavior.
+  The output is a key value pair with name of collection and value of the setting, which can be used in invoking the migration task.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  Module Name: Az.DataMigration
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datamigration/new-azdatamigrationmongodbdatabasesetting
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationMongoDbDatabaseSetting.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationMongoDbDatabaseSetting.md

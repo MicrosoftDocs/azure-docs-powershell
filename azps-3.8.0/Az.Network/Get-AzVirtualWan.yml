@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Virtual WAN or all Virtual WANs in a resource group or subscription.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualWan" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzVirtualWan
+  href: ./New-AzVirtualWan.yml
+- text: Remove-AzVirtualWan
+  href: ./Remove-AzVirtualWan.yml
+- text: Update-AzVirtualWan
+  href: ./Update-AzVirtualWan.yml
+syntaxes:
+- Get-AzVirtualWan [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzVirtualWan [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzResourceGroup -Location "West US" -Name "testRG" 
+    PS C:\> New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US" -AllowBranchToBranchTraffic $true
+    PS C:\> Get-AzVirtualWan -Name "myVirtualWAN" -ResourceGroupName "testRG"
+
+    Name                       : myVirtualWAN
+    Id                         : /subscriptions/{SubscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    AllowVnetToVnetTraffic     : False
+    AllowBranchToBranchTraffic : True
+    Location                   : West US
+    Type                       : Microsoft.Network/virtualWans
+    ProvisioningState          : Succeeded
+  description: |-
+    This command gets the Virtual WAN named myVirtualWAN in the resource group testRG.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzVirtualWan -Name test*
+
+    Name                       : test1
+    Id                         : /subscriptions/{SubscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualWans/test1
+    AllowVnetToVnetTraffic     : False
+    AllowBranchToBranchTraffic : True
+    Location                   : West US
+    Type                       : Microsoft.Network/virtualWans
+    ProvisioningState          : Succeeded
+
+    Name                       : test2
+    Id                         : /subscriptions/{SubscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualWans/test2
+    AllowVnetToVnetTraffic     : False
+    AllowBranchToBranchTraffic : True
+    Location                   : West US
+    Type                       : Microsoft.Network/virtualWans
+    ProvisioningState          : Succeeded
+  description: |-
+    This command gets all Virtual WANs starting with "test".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The resource name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzVirtualWan
+name: Get-AzVirtualWan
+description: |-
+  Gets a Virtual WAN or all Virtual WANs in a resource group or subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvirtualwan
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVirtualWan.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVirtualWan.md

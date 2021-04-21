@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get or list hosts.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSHost" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzHost [-ResourceGroupName] <String> [-HostGroupName] <String> [[-Name] <String>] [-InstanceView]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzHost [-ResourceId] <String> [-InstanceView] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzHost -ResourceGroupName $resourceGroupName -HostGroupName $hostGroupName -Name $hostName
+
+    ResourceGroupName    : myrg01
+    PlatformFaultDomain  : 1
+    AutoReplaceOnFailure : True
+    HostId               : 00000000-0000-0000-0000-000000000000
+    VirtualMachines[0]   : 
+      Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/virtualMachines/myvm01
+    VirtualMachines[1]   : 
+      Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/virtualMachines/myvm02
+    ProvisioningTime     : 7/27/2019 3:22:59 AM
+    ProvisioningState    : Succeeded
+    Sku                  : 
+      Name               : ESv3-Type1
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01/hosts/myhost01
+    Name                 : myhost01
+    Location             : eastus
+    Tags                 : {"key1":"val2"}
+  description: |-
+    This command returns a host.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzHost -ResourceGroupName $resourceGroupName -HostGroupName $hostGroupName -Name $hostName -InstanceView
+
+    ResourceGroupName      : myrg01
+    PlatformFaultDomain    : 0
+    AutoReplaceOnFailure   : True
+    HostId                 : 00000000-0000-0000-0000-000000000000
+    ProvisioningTime       : 8/19/2019 9:13:19 PM
+    ProvisioningState      : Succeeded
+    InstanceView           : 
+      AssetId              : 00000000-0000-0000-0000-000000000000
+      AvailableCapacity    : 
+        AllocatableVMs[0]  : 
+          VmSize           : Standard_E2s_v3
+          Count            : 28
+        AllocatableVMs[1]  : 
+          VmSize           : Standard_E4-2s_v3
+          Count            : 14
+        AllocatableVMs[2]  : 
+          VmSize           : Standard_E4s_v3
+          Count            : 14
+      Statuses[0]          : 
+        Code               : ProvisioningState/succeeded
+        Level              : Info
+        DisplayStatus      : Provisioning succeeded
+        Time               : 8/19/2019 9:13:19 PM
+      Statuses[1]          : 
+        Code               : HealthState/available
+        Level              : Info
+        DisplayStatus      : Host available
+    Sku                    : 
+      Name                 : ESv3-Type1
+    Id                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01/hosts/myhost01
+    Name                   : crptestps2264host
+    Location               : eastus
+    Tags                   : {"key1":"val2"}
+  description: |-
+    This command returns the instance view of a host.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzHost -ResourceGroupName $resourceGroupName -HostGroupName $hostGroupName
+
+    ResourceGroupName       Name Location           Tags        Sku FD
+    -----------------       ---- --------           ----        --- --
+    myrg01              myhost01   eastus {[key1, val2]} ESv3-Type1  0
+    myrg01              myhost02   eastus {[key1, val2]} ESv3-Type1  1
+  description: |-
+    This command returns all hosts in the given host group.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostGroupName
+  isRequired: true
+  description: |+
+    The name of the host group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InstanceView
+  description: |+
+    Indicates that this cmdlet gets only the instance view of the host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: HostName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The ID of the resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.Get-AzHost
+name: Get-AzHost
+description: |-
+  This cmdlet will get a host in a host group.
+  This cmdlet also lists all hosts in a host group if a host name is not given.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azhost
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzHost.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzHost.md

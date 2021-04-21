@@ -1,0 +1,40 @@
+### YamlMime:PowershellModule
+children:
+- title: Deployment Manager
+  cmdlets:
+  - Az.DeploymentManager.Get-AzDeploymentManagerArtifactSource
+  - Az.DeploymentManager.Get-AzDeploymentManagerRollout
+  - Az.DeploymentManager.Get-AzDeploymentManagerService
+  - Az.DeploymentManager.Get-AzDeploymentManagerServiceTopology
+  - Az.DeploymentManager.Get-AzDeploymentManagerServiceUnit
+  - Az.DeploymentManager.Get-AzDeploymentManagerStep
+  - Az.DeploymentManager.New-AzDeploymentManagerArtifactSource
+  - Az.DeploymentManager.New-AzDeploymentManagerService
+  - Az.DeploymentManager.New-AzDeploymentManagerServiceTopology
+  - Az.DeploymentManager.New-AzDeploymentManagerServiceUnit
+  - Az.DeploymentManager.New-AzDeploymentManagerStep
+  - Az.DeploymentManager.Remove-AzDeploymentManagerArtifactSource
+  - Az.DeploymentManager.Remove-AzDeploymentManagerRollout
+  - Az.DeploymentManager.Remove-AzDeploymentManagerService
+  - Az.DeploymentManager.Remove-AzDeploymentManagerServiceTopology
+  - Az.DeploymentManager.Remove-AzDeploymentManagerServiceUnit
+  - Az.DeploymentManager.Remove-AzDeploymentManagerStep
+  - Az.DeploymentManager.Restart-AzDeploymentManagerRollout
+  - Az.DeploymentManager.Set-AzDeploymentManagerArtifactSource
+  - Az.DeploymentManager.Set-AzDeploymentManagerService
+  - Az.DeploymentManager.Set-AzDeploymentManagerServiceTopology
+  - Az.DeploymentManager.Set-AzDeploymentManagerServiceUnit
+  - Az.DeploymentManager.Set-AzDeploymentManagerStep
+  - Az.DeploymentManager.Stop-AzDeploymentManagerRollout
+uid: Az.DeploymentManager
+name: Az.DeploymentManager
+description: |-
+  Cmdlets to interact with the Azure Deployment Manager service.
+metadata:
+  Module Name: Az.DeploymentManager
+  Module Guid: F022ED20-7D3B-4BF4-88AF-F97CC50484DA
+  Download Help Link: '{{ Update Download Link }}'
+  Help Version: 0.9.0
+  Locale: '{{ Update Locale }}'
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DeploymentManager/DeploymentManager/help/Az.DeploymentManager.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DeploymentManager/DeploymentManager/help/Az.DeploymentManager.md

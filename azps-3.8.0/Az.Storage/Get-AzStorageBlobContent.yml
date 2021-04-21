@@ -1,0 +1,241 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Downloads a storage blob.
+module: Az.Storage
+notes: |-
+  * If the blob name is invalid for local computer, this cmdlet autoresolves it, if it is possible.
+inputs:
+- name: <xref href="Microsoft.Azure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageBlob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzStorageBlobContent
+  href: ./Set-AzStorageBlobContent.yml
+- text: Get-AzStorageBlob
+  href: ./Get-AzStorageBlob.yml
+- text: Remove-AzStorageBlob
+  href: ./Remove-AzStorageBlob.yml
+syntaxes:
+- >-
+  Get-AzStorageBlobContent [-Blob] <String> [-Container] <String> [-Destination <String>] [-CheckMd5] [-Force]
+
+   [-AsJob] [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Get-AzStorageBlobContent -CloudBlob <CloudBlob> [-Destination <String>] [-CheckMd5] [-Force] [-AsJob]
+
+   [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Get-AzStorageBlobContent -CloudBlobContainer <CloudBlobContainer> [-Blob] <String> [-Destination <String>]
+
+   [-CheckMd5] [-Force] [-AsJob] [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Download blob content by name'
+  code: |-
+    PS C:\>Get-AzStorageBlobContent -Container "ContainerName" -Blob "Blob" -Destination "C:\test\"
+  description: |-
+    This command downloads a blob by name.
+  summary: ""
+- title: 'Example 2: Download blob content using the pipeline'
+  code: |-
+    PS C:\>Get-AzStorageBlob -Container containername -Blob blobname | Get-AzStorageBlobContent
+  description: |-
+    This command uses the pipeline to find and download blob content.
+  summary: ""
+- title: 'Example 3: Download blob content using the pipeline and a wildcard character'
+  code: |-
+    PS C:\>Get-AzStorageContainer container* | Get-AzStorageBlobContent -Blob "cbox.exe" -Destination "C:\test"
+  description: |-
+    This example uses the asterisk wildcard character and the pipeline to find and download blob content.
+  summary: ""
+- title: 'Example 4: Get a blob object and save it in a variable, then download blob content with the blob object'
+  code: |-
+    PS C:\>$blob = Get-AzStorageBlob -Container containername -Blob blobname 
+    PS C:\>Get-AzStorageBlobContent -CloudBlob $blob.ICloudBlob -Destination "C:\test"
+  description: |-
+    This example first get a blob object and save it in a variable, then download blob content with the blob object.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Blob
+  isRequired: true
+  description: |+
+    Specifies the name of the blob to be downloaded.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckMd5
+  description: |+
+    Specifies whether to check the Md5 sum for the downloaded file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ClientTimeoutPerRequest
+  description: |+
+    Specifies the client-side time-out interval, in seconds, for one service request.
+    If the previous call fails in the specified interval, this cmdlet retries the request.
+    If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ClientTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  name: CloudBlob
+  isRequired: true
+  description: |+
+    Specifies a cloud blob.
+    To obtain a **CloudBlob** object, use the Get-AzStorageBlob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ICloudBlob
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  name: CloudBlobContainer
+  isRequired: true
+  description: |+
+    Specifies a **CloudBlobContainer** object from the Azure storage client library.
+    You can create it or use the Get-AzStorageContainer cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ConcurrentTaskCount
+  description: |+
+    Specifies the maximum concurrent network calls.
+    You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+    The specified value is an absolute count and is not multiplied by the core count.
+    This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Container
+  isRequired: true
+  description: |+
+    Specifies the name of container that has the blob you want to download.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies the Azure storage account from which you want to download blob content.
+    You can use the New-AzStorageContext cmdlet to create a storage context.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Destination
+  description: |+
+    Specifies the location to store the downloaded file.
+
+  defaultValue: None
+  position: Named
+  aliases: Path
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overwrites an existing file without confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ServerTimeoutPerRequest
+  description: |+
+    Specifies the service side time-out interval, in seconds, for a request.
+    If the specified interval elapses before the service processes the request, the storage service returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ServerTimeoutPerRequestInSeconds
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Get-AzStorageBlobContent
+name: Get-AzStorageBlobContent
+description: |-
+  The **Get-AzStorageBlobContent** cmdlet downloads the specified storage blob.
+  If the blob name is not valid for the local computer, this cmdlet automatically resolves it if it is possible.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: C091D654-E113-4AE0-A6C8-24630D1294A4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageblobcontent
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageBlobContent.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageBlobContent.md

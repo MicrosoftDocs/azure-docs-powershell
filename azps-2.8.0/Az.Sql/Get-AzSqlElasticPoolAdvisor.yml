@@ -1,0 +1,275 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more Advisors for an Azure SQL Elastic Pool.
+module: Az.Sql
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, sql, elasticpool, mssql, advisor
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Advisor.Model.AzureSqlElasticPoolAdvisorModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlServerAdvisor
+  href: ./Get-AzSqlServerAdvisor.yml
+- text: Get-AzSqlDatabaseAdvisor
+  href: ./Get-AzSqlDatabaseAdvisor.yml
+- text: Get-AzSqlElasticPoolRecommendedAction
+  href: ./Get-AzSqlElasticPoolRecommendedAction.yml
+- text: Set-AzSqlElasticPoolAdvisorAutoExecuteStatus
+  href: ./Set-AzSqlElasticPoolAdvisorAutoExecuteStatus.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Get-AzSqlElasticPoolAdvisor [-AdvisorName <String>] [-ExpandRecommendedActions] -ServerName <String>
+
+   -ElasticPoolName <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: List all the advisors for the specified elastic pool'
+  code: |-
+    PS C:\>Get-AzSqlElasticPoolAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ElasticPoolName "WIRunnerPool"
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : CreateIndex
+    AdvisorStatus                  : GA
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Database
+    LastChecked                    : 8/1/2016 2:36:47 PM
+    RecommendationsStatus          : Ok
+    RecommendedActions             : {}
+
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : DropIndex
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Database
+    LastChecked                    : 7/31/2016 8:41:19 PM
+    RecommendationsStatus          : Ok
+    RecommendedActions             : {}
+
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : DbParameterization
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Default
+    LastChecked                    : 7/31/2016 2:46:58 PM
+    RecommendationsStatus          : NoDbParameterizationIssue
+    RecommendedActions             : {}
+
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : SchemaIssue
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Default
+    LastChecked                    : 8/1/2016 3:01:41 PM
+    RecommendationsStatus          : SchemaIsConsistent
+    RecommendedActions             : {}
+  description: |-
+    The command gets lists all the advisors for the elastic pool named WIRunnerPool.
+  summary: ""
+- title: 'Example 2: Get a single advisor for the specified elastic pool'
+  code: |-
+    PS C:\>Get-AzSqlElasticPoolAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ElasticPoolName "WIRunnerPool" -AdvisorName "CreateIndex"
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : CreateIndex
+    AdvisorStatus                  : GA
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Database
+    LastChecked                    : 8/1/2016 2:36:47 PM
+    RecommendationsStatus          : Ok
+    RecommendedActions             : {}
+  description: |-
+    This command gets the Advisor named CreateIndex for the elastic pool named WIRunnerPool.
+  summary: ""
+- title: 'Example 3: List all the advisors with their recommended actions included in the response'
+  code: |-
+    PS C:\>Get-AzSqlElasticPoolAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ElasticPoolName "WIRunnerPool" -ExpandRecommendedActions
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : CreateIndex
+    AdvisorStatus                  : GA
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Database
+    LastChecked                    : 8/1/2016 2:36:47 PM
+    RecommendationsStatus          : Ok
+    RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
+                                     IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
+                                     IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
+                                     IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...} 
+
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : DropIndex
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Database
+    LastChecked                    : 7/31/2016 8:41:19 PM
+    RecommendationsStatus          : Ok
+    RecommendedActions             : {IR_[test_schema]_[test_table_0.0288891]_38724E1DCF2178318957, 
+                                     IR_[test_schema]_[test_table_0.140264]_38724E1DCF2178318957, 
+                                     IR_[test_schema]_[test_table_0.412191]_38724E1DCF2178318957, 
+                                     IR_[test_schema]_[test_table_0.442075]_38724E1DCF2178318957...} 
+
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : DbParameterization
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Default
+    LastChecked                    : 7/31/2016 2:46:58 PM
+    RecommendationsStatus          : NoDbParameterizationIssue
+    RecommendedActions             : {}
+
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : SchemaIssue
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Default
+    LastChecked                    : 8/1/2016 3:04:26 PM
+    RecommendationsStatus          : SchemaIsConsistent
+    RecommendedActions             : {}
+  description: |-
+    This command gets all the advisors for the elastic pool with their recommended actions included in the response.
+  summary: ""
+- title: 'Example 4: Get a single advisor with its recommended actions included in the response'
+  code: |-
+    PS C:\>Get-AzSqlElasticPoolAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ElasticPoolName "WIRunnerPool" -AdvisorName "CreateIndex" -ExpandRecommendedActions
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : CreateIndex
+    AdvisorStatus                  : GA
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Database
+    LastChecked                    : 8/1/2016 2:36:47 PM
+    RecommendationsStatus          : Ok
+    RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
+                                     IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
+                                     IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
+                                     IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...}
+  description: |-
+    This command gets advisor named CreateIndex from the server named wi-runner-australia-east with its recommended actions included in the response.
+  summary: ""
+- title: 'Example 5: List all the advisors for the specified elastic pool using filtering'
+  code: |-
+    PS C:\>Get-AzSqlElasticPoolAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ElasticPoolName "WIRunnerPool" -AdvisorName d*
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : DropIndex
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Database
+    LastChecked                    : 7/31/2016 8:41:19 PM
+    RecommendationsStatus          : Ok
+    RecommendedActions             : {}
+
+    ElasticPoolName                : WIRunnerPool
+    ResourceGroupName              : WIRunnersProd
+    ServerName                     : wi-runner-australia-east
+    AdvisorName                    : DbParameterization
+    AdvisorStatus                  : PublicPreview
+    AutoExecuteStatus              : Disabled
+    AutoExecuteStatusInheritedFrom : Default
+    LastChecked                    : 7/31/2016 2:46:58 PM
+    RecommendationsStatus          : NoDbParameterizationIssue
+    RecommendedActions             : {}
+  description: |-
+    The command gets lists all the advisors for the elastic pool named WIRunnerPool that start with the letter "d".
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AdvisorName
+  description: |+
+    Specifies the name of the Advisor that this cmdlet gets.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ElasticPoolName
+  isRequired: true
+  description: |+
+    Specifies the name of the elastic pool for which this cmdlet requests the Advisor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExpandRecommendedActions
+  description: |+
+    Indicates that the cmdlet includes the recommended actions of the Advisor in the response.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group of the server that contains this elastic pool.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server the elastic pool is in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlElasticPoolAdvisor
+name: Get-AzSqlElasticPoolAdvisor
+description: |-
+  The **Get-AzSqlElasticPoolAdvisor** cmdlet gets one or more Azure SQL Elastic Pool Advisors for an Azure SQL Elastic Pool.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: BC8C0D59-662F-47D2-8619-9F69D78B171D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlelasticpooladvisor
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlElasticPoolAdvisor.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlElasticPoolAdvisor.md

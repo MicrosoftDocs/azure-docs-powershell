@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the catalog of available reservations
+module: Az.Reservations
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Reservations.Models.PSCatalog" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzReservationCatalog [-SubscriptionId <Guid>] -ReservedResourceType <String> [-Location <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzReservationCatalog -ReservedResourceType VirtualMachines -Location westus
+  description: |-
+    Get the VirtualMachines catalog in westus for the default subscription
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzReservationCatalog -SubscriptionId "1111aaaa-b1b2-c0c2-d0d2-00000fffff" -ReservedResourceType SuseLinux
+  description: |-
+    Get the SuseLinux catalog for the specified subscription
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the location of the reserved resources in the catalog
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReservedResourceType
+  isRequired: true
+  description: |+
+    Specifies the type of the reserved resources in the catalog
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Id of the subscription
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Reservations.Get-AzReservationCatalog
+name: Get-AzReservationCatalog
+description: |-
+  Get the regions and skus that are available for Reserved Instance purchase for the specified Azure subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Reservations.dll-Help.xml
+  Module Name: Az.Reservations
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.reservations/get-azreservationcatalog
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Reservations/Reservations/help/Get-AzReservationCatalog.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Reservations/Reservations/help/Get-AzReservationCatalog.md

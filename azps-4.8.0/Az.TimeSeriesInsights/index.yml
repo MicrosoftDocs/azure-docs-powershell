@@ -1,0 +1,32 @@
+### YamlMime:PowershellModule
+children:
+- title: Time Series Insights
+  cmdlets:
+  - Az.TimeSeriesInsights.Get-AzTimeSeriesInsightsAccessPolicy
+  - Az.TimeSeriesInsights.Get-AzTimeSeriesInsightsEnvironment
+  - Az.TimeSeriesInsights.Get-AzTimeSeriesInsightsEventSource
+  - Az.TimeSeriesInsights.Get-AzTimeSeriesInsightsReferenceDataSet
+  - Az.TimeSeriesInsights.New-AzTimeSeriesInsightsAccessPolicy
+  - Az.TimeSeriesInsights.New-AzTimeSeriesInsightsEnvironment
+  - Az.TimeSeriesInsights.New-AzTimeSeriesInsightsEventSource
+  - Az.TimeSeriesInsights.New-AzTimeSeriesInsightsReferenceDataSet
+  - Az.TimeSeriesInsights.Remove-AzTimeSeriesInsightsAccessPolicy
+  - Az.TimeSeriesInsights.Remove-AzTimeSeriesInsightsEnvironment
+  - Az.TimeSeriesInsights.Remove-AzTimeSeriesInsightsEventSource
+  - Az.TimeSeriesInsights.Remove-AzTimeSeriesInsightsReferenceDataSet
+  - Az.TimeSeriesInsights.Update-AzTimeSeriesInsightsAccessPolicy
+  - Az.TimeSeriesInsights.Update-AzTimeSeriesInsightsEnvironment
+  - Az.TimeSeriesInsights.Update-AzTimeSeriesInsightsEventSource
+  - Az.TimeSeriesInsights.Update-AzTimeSeriesInsightsReferenceDataSet
+uid: Az.TimeSeriesInsights
+name: Az.TimeSeriesInsights
+description: |-
+  Microsoft Azure PowerShell: TimeSeriesInsights cmdlets
+metadata:
+  Module Name: Az.TimeSeriesInsights
+  Module Guid: c3da39a4-7b6f-4973-be69-542c2174633a
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.timeseriesinsights
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TimeSeriesInsights/help/Az.TimeSeriesInsights.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TimeSeriesInsights/help/Az.TimeSeriesInsights.md

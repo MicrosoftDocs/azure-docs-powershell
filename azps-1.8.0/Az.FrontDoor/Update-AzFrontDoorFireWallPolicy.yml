@@ -1,0 +1,231 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Update WAF policy
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoorFireWallPolicy
+  href: ./New-AzFrontDoorFireWallPolicy.yml
+- text: Get-AzFrontDoorFireWallPolicy
+  href: ./Get-AzFrontDoorFireWallPolicy.yml
+- text: New-AzFrontDoorManagedRuleObject
+  href: ./New-AzFrontDoorManagedRuleObject.yml
+- text: New-AzFrontDoorCustomRuleObject
+  href: ./New-AzFrontDoorManagedRuleObject.yml
+syntaxes:
+- >-
+  Update-AzFrontDoorFireWallPolicy -ResourceGroupName <String> -Name <String> [-EnabledState <PSEnabledState>]
+
+   [-Mode <PSMode>] [-Customrule <PSCustomRule[]>] [-ManagedRule <PSManagedRule[]>] [-RedirectUrl <String>]
+
+   [-CustomBlockResponseStatusCode <Int32>] [-CustomBlockResponseBody <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzFrontDoorFireWallPolicy -InputObject <PSPolicy> [-EnabledState <PSEnabledState>] [-Mode <PSMode>]
+
+   [-Customrule <PSCustomRule[]>] [-ManagedRule <PSManagedRule[]>] [-RedirectUrl <String>]
+
+   [-CustomBlockResponseStatusCode <Int32>] [-CustomBlockResponseBody <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzFrontDoorFireWallPolicy -ResourceId <String> [-EnabledState <PSEnabledState>] [-Mode <PSMode>]
+
+   [-Customrule <PSCustomRule[]>] [-ManagedRule <PSManagedRule[]>] [-RedirectUrl <String>]
+
+   [-CustomBlockResponseStatusCode <Int32>] [-CustomBlockResponseBody <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Update-AzFrontDoorFireWallPolicy -Name $policyName -ResourceGroupName $resourceGroupName -CustomBlockResponseStatusCode 403
+
+    Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----         ---------- ------------------ ----------------------------- -----------
+    {policyName} Prevention            Enabled                           403 https://www.bing.com/
+  description: |-
+    Update an existing WAF policy custom status code.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Update-AzFrontDoorFireWallPolicy -Name $policyName -ResourceGroupName $resourceGroupName -Mode Detection
+
+    Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----         ---------- ------------------ ----------------------------- -----------
+    {policyName} Detection            Enabled                           403 https://www.bing.com/
+  description: |-
+    Update an existing WAF policy mode.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Update-AzFrontDoorFireWallPolicy -Name $policyName -ResourceGroupName $resourceGroupName -Mode Detection -EnabledState Disabled
+
+    Name          PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----          ---------- ------------------ ----------------------------- -----------
+    {policyName}  Detection           Disabled                           403 https://www.bing.com/
+  description: |-
+    Update an existing WAF policy enabled state and mode.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-AzFrontDoorFireWallPolicy -ResourceGroupName $resourceGroupName | Update-AzFrontDoorFireWallPolicy -Mode Detection -EnabledState Disabled
+  description: |-
+    Update all WAF policies in $resourceGroupName
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomBlockResponseBody
+  description: |+
+    Custom Response Body
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: CustomBlockResponseStatusCode
+  description: |+
+    Custom Response Status Code
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Customrule
+  description: |+
+    Custom rules inside the policy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: EnabledState
+  description: |+
+    Whether the policy is in enabled state or disabled state.
+    Possible values include: 'Disabled', 'Enabled'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    The FireWallPolicy object to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ManagedRule
+  description: |+
+    Managed rules inside the policy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSMode" data-throw-if-not-resolved="False" />
+  name: Mode
+  description: |+
+    Describes if it is in detection mode  or prevention mode at policy level.
+    Possible values include:'Prevention', 'Detection'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Prevention, Detection
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the FireWallPolicy to update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RedirectUrl
+  description: |+
+    Redirect URL
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group to which the FireWallPolicy belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Resource Id of the FireWallPolicy to update
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.FrontDoor.Update-AzFrontDoorFireWallPolicy
+name: Update-AzFrontDoorFireWallPolicy
+description: |-
+  The **Update-AzFrontDoorFireWallPolicy** cmdlet updates an existing WAF policy. If input parameters are not provided, old parameters from the existing WAF policy will be used.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/update-azfrontdoorfirewallpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Update-AzFrontDoorFireWallPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Update-AzFrontDoorFireWallPolicy.md

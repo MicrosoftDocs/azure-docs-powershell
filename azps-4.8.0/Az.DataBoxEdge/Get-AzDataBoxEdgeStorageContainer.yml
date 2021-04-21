@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the containers for an Edge Storage account on a device.
+module: Az.DataBoxEdge
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.Models.PSDataBoxEdgeStorageAccount" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.Models.PSDataBoxEdgeStorageContainer" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzDataBoxEdgeStorageContainer [-ResourceGroupName] <String> [-DeviceName] <String>
+
+   [-EdgeStorageAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataBoxEdgeStorageContainer [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzDataBoxEdgeStorageContainer [-ResourceGroupName] <String> [-DeviceName] <String>
+
+   [-EdgeStorageAccountName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzDataBoxEdgeStorageContainer [[-Name] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   -EdgeStorageAccountObject <PSDataBoxEdgeStorageAccount> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>  Get-AzDataBoxEdgeStorageContainer -ResourceGroupName resourceGroupName -DeviceName db-edge -EdgeStorageAccountName edgestorageaccount1 -Name container1
+    Name       DataFormat Status EdgeStorageAccountName DeviceName ResourceGroupName
+    ----       ---------- ------ ---------------------- ---------- -----------------
+    container1 BlockBlob  Ok     edgestorageaccount1    db-edge    resourceGroupName
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>  Get-AzDataBoxEdgeStorageContainer -ResourceGroupName resourceGroupName -DeviceName db-edge -EdgeStorageAccountName edgestorageaccount1
+    Name       DataFormat Status EdgeStorageAccountName DeviceName ResourceGroupName
+    ----       ---------- ------ ---------------------- ---------- -----------------
+    container1 BlockBlob  Ok     edgestorageaccount1    db-edge    resourceGroupName
+    container2 BlockBlob  Ok     edgestorageaccount1    db-edge    resourceGroupName
+  description: ""
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>  Get-AzDataBoxEdgeDevice -ResourceGroupName resourceGroupName -DeviceName db-edge | Get-AzDataBoxEdgeStorageAccount | Get-AzDataBoxEdgeStorageContainer
+    Name       DataFormat Status EdgeStorageAccountName DeviceName ResourceGroupName
+    ----       ---------- ------ ---------------------- ---------- -----------------
+    container1 BlockBlob  Ok     edgestorageaccount1    db-edge    resourceGroupName
+    container2 BlockBlob  Ok     edgestorageaccount1    db-edge    resourceGroupName
+    container4 BlockBlob  Ok     edgestorageaccount2    db-edge    resourceGroupName
+    container5 BlockBlob  Ok     edgestorageaccount2    db-edge    resourceGroupName
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeviceName
+  isRequired: true
+  description: |+
+    Device Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EdgeStorageAccountName
+  isRequired: true
+  description: |+
+    Provide existing EdgeStorageAccount's Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.Models.PSDataBoxEdgeStorageAccount" data-throw-if-not-resolved="False" />
+  name: EdgeStorageAccountObject
+  isRequired: true
+  description: |+
+    Provide existing EdgeStorageAccount Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the EdgeStorageContainer
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: EdgeStorageContainerName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Azure ResourceId
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataBoxEdge.Get-AzDataBoxEdgeStorageContainer
+name: Get-AzDataBoxEdgeStorageContainer
+description: |-
+  The **Get-AzDataBoxEdgeStorageContainer** cmdlet gets the storage container for an Edge Storage account on a Data Box Edge device. You can specify the name as a parameter in the cmdlet to fetch the details of a specific storage container.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll-Help.xml
+  Module Name: Az.DataBoxEdge
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.databoxedge/get-azdataboxedgestoragecontainer
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBoxEdge/DataBoxEdge/help/Get-AzDataBoxEdgeStorageContainer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBoxEdge/DataBoxEdge/help/Get-AzDataBoxEdgeStorageContainer.md

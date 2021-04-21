@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks whether a media service name is available.
+  Media service names are globally unique.
+module: Az.Media
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Media.Models.PSCheckNameAvailabilityOutput" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzMediaService
+  href: ./Get-AzMediaService.yml
+- text: New-AzMediaService
+  href: ./New-AzMediaService.yml
+- text: Remove-AzMediaService
+  href: ./Remove-AzMediaService.yml
+- text: Set-AzMediaService
+  href: ./Set-AzMediaService.yml
+syntaxes:
+- >-
+  Get-AzMediaServiceNameAvailability [-DefaultProfile <IAzureContextContainer>] [-AccountName] <String>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Check whether a Media Service name is available'
+  code: |-
+    PS C:\>Get-AzMediaServiceNameAvailability -AccountName "MediaService1"
+  description: |-
+    This command checks if the name MediaService1 is available.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the media service that this cmdlet gets.
+
+  defaultValue: None
+  position: "0"
+  aliases: Name, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Media.Get-AzMediaServiceNameAvailability
+name: Get-AzMediaServiceNameAvailability
+description: |-
+  The **Get-AzMediaServiceNameAvailability** cmdlet checks whether a media service name is available.
+  Media service names are globally unique.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
+  Module Name: Az.Media
+  ms.assetid: 23C6C9D3-A745-46C8-AB2C-B874223FBFFF
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.media/get-azmediaservicenameavailability
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Get-AzMediaServiceNameAvailability.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Get-AzMediaServiceNameAvailability.md

@@ -1,0 +1,33 @@
+### YamlMime:PowershellModule
+children:
+- title: DNS
+  cmdlets:
+  - Az.PrivateDns.Add-AzPrivateDnsRecordConfig
+  - Az.PrivateDns.Get-AzPrivateDnsRecordSet
+  - Az.PrivateDns.Get-AzPrivateDnsZone
+  - Az.PrivateDns.New-AzPrivateDnsRecordConfig
+  - Az.PrivateDns.New-AzPrivateDnsRecordSet
+  - Az.PrivateDns.New-AzPrivateDnsZone
+  - Az.PrivateDns.Remove-AzPrivateDnsRecordConfig
+  - Az.PrivateDns.Remove-AzPrivateDnsRecordSet
+  - Az.PrivateDns.Remove-AzPrivateDnsZone
+  - Az.PrivateDns.Set-AzPrivateDnsRecordSet
+  - Az.PrivateDns.Set-AzPrivateDnsZone
+- title: Virtual Network
+  cmdlets:
+  - Az.PrivateDns.Get-AzPrivateDnsVirtualNetworkLink
+  - Az.PrivateDns.New-AzPrivateDnsVirtualNetworkLink
+  - Az.PrivateDns.Remove-AzPrivateDnsVirtualNetworkLink
+  - Az.PrivateDns.Set-AzPrivateDnsVirtualNetworkLink
+uid: Az.PrivateDns
+name: Az.PrivateDns
+description: |-
+  This topic displays help topics for the Azure private DNS Cmdlets.
+metadata:
+  Module Name: Az.PrivateDns
+  Module Guid: f9850afe-b631-4369-ab61-eca7023f2f53
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.privatedns
+  Help Version: 1.0.0
+  Locale: ""
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Az.PrivateDNS.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Az.PrivateDNS.md

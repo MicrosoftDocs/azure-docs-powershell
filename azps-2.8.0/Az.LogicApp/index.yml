@@ -1,0 +1,67 @@
+### YamlMime:PowershellModule
+children:
+- title: Logic Apps
+  cmdlets:
+  - Az.LogicApp.Get-AzIntegrationAccount
+  - Az.LogicApp.Get-AzIntegrationAccountAgreement
+  - Az.LogicApp.Get-AzIntegrationAccountAssembly
+  - Az.LogicApp.Get-AzIntegrationAccountBatchConfiguration
+  - Az.LogicApp.Get-AzIntegrationAccountCallbackUrl
+  - Az.LogicApp.Get-AzIntegrationAccountCertificate
+  - Az.LogicApp.Get-AzIntegrationAccountGeneratedIcn
+  - Az.LogicApp.Get-AzIntegrationAccountMap
+  - Az.LogicApp.Get-AzIntegrationAccountPartner
+  - Az.LogicApp.Get-AzIntegrationAccountReceivedIcn
+  - Az.LogicApp.Get-AzIntegrationAccountSchema
+  - Az.LogicApp.Get-AzLogicApp
+  - Az.LogicApp.Get-AzLogicAppRunAction
+  - Az.LogicApp.Get-AzLogicAppRunHistory
+  - Az.LogicApp.Get-AzLogicAppTrigger
+  - Az.LogicApp.Get-AzLogicAppTriggerCallbackUrl
+  - Az.LogicApp.Get-AzLogicAppTriggerHistory
+  - Az.LogicApp.Get-AzLogicAppUpgradedDefinition
+  - Az.LogicApp.New-AzIntegrationAccount
+  - Az.LogicApp.New-AzIntegrationAccountAgreement
+  - Az.LogicApp.New-AzIntegrationAccountAssembly
+  - Az.LogicApp.New-AzIntegrationAccountBatchConfiguration
+  - Az.LogicApp.New-AzIntegrationAccountCertificate
+  - Az.LogicApp.New-AzIntegrationAccountMap
+  - Az.LogicApp.New-AzIntegrationAccountPartner
+  - Az.LogicApp.New-AzIntegrationAccountSchema
+  - Az.LogicApp.New-AzLogicApp
+  - Az.LogicApp.Remove-AzIntegrationAccount
+  - Az.LogicApp.Remove-AzIntegrationAccountAgreement
+  - Az.LogicApp.Remove-AzIntegrationAccountAssembly
+  - Az.LogicApp.Remove-AzIntegrationAccountBatchConfiguration
+  - Az.LogicApp.Remove-AzIntegrationAccountCertificate
+  - Az.LogicApp.Remove-AzIntegrationAccountMap
+  - Az.LogicApp.Remove-AzIntegrationAccountPartner
+  - Az.LogicApp.Remove-AzIntegrationAccountReceivedIcn
+  - Az.LogicApp.Remove-AzIntegrationAccountSchema
+  - Az.LogicApp.Remove-AzLogicApp
+  - Az.LogicApp.Set-AzIntegrationAccount
+  - Az.LogicApp.Set-AzIntegrationAccountAgreement
+  - Az.LogicApp.Set-AzIntegrationAccountAssembly
+  - Az.LogicApp.Set-AzIntegrationAccountBatchConfiguration
+  - Az.LogicApp.Set-AzIntegrationAccountCertificate
+  - Az.LogicApp.Set-AzIntegrationAccountGeneratedIcn
+  - Az.LogicApp.Set-AzIntegrationAccountMap
+  - Az.LogicApp.Set-AzIntegrationAccountPartner
+  - Az.LogicApp.Set-AzIntegrationAccountReceivedIcn
+  - Az.LogicApp.Set-AzIntegrationAccountSchema
+  - Az.LogicApp.Set-AzLogicApp
+  - Az.LogicApp.Start-AzLogicApp
+  - Az.LogicApp.Stop-AzLogicAppRun
+  - Az.LogicApp.Test-AzLogicApp
+uid: Az.LogicApp
+name: Az.LogicApp
+description: |-
+  This topic displays help topics for the Logic Apps cmdlets.
+metadata:
+  Module Name: Az.LogicApp
+  Module Guid: 8a7d44bb-e747-4265-8f22-b3937961d709
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.logicapp
+  Help Version: 4.0.3.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Az.LogicApp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Az.LogicApp.md

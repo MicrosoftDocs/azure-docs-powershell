@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets custom error(s) from a http listener of an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayCustomError" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayHttpListenerCustomError
+  href: ./Add-AzApplicationGatewayHttpListenerCustomError.yml
+- text: Remove-AzApplicationGatewayHttpListenerCustomError
+  href: ./Remove-AzApplicationGatewayHttpListenerCustomError.yml
+- text: Set-AzApplicationGatewayHttpListenerCustomError
+  href: ./Set-AzApplicationGatewayHttpListenerCustomError.yml
+syntaxes:
+- >-
+  Get-AzApplicationGatewayHttpListenerCustomError [-StatusCode <String>]
+
+   -HttpListener <PSApplicationGatewayHttpListener> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Gets a custom error in a http listener'
+  code: |-
+    PS C:\> $ce = Get-AzApplicationGatewayCustomError -HttpListener $listener01 -StatusCode HttpStatus502
+  description: |-
+    This command gets and returns the custom error of http status code 502 from the http listener $listener01.
+  summary: ""
+- title: 'Example 2: Gets the list of all custom errors in a http listener'
+  code: |-
+    PS C:\> $ces = Get-AzApplicationGatewayCustomError -HttpListener $listener01
+  description: |-
+    This command gets and returns the list of all custom errors from the http listener $listener01.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+  name: HttpListener
+  isRequired: true
+  description: |+
+    The Application Gateway Http Listener
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StatusCode
+  description: |+
+    Status code of the application gateway customer error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzApplicationGatewayHttpListenerCustomError
+name: Get-AzApplicationGatewayHttpListenerCustomError
+description: |-
+  The **Get-AzApplicationGatewayCustomError** cmdlet gets custom error(s) from a http listener of an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azapplicationgatewayhttplistenercustomerror
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzApplicationGatewayHttpListenerCustomError.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzApplicationGatewayHttpListenerCustomError.md

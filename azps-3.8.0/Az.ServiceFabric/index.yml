@@ -1,0 +1,44 @@
+### YamlMime:PowershellModule
+children:
+- title: Service Fabric
+  cmdlets:
+  - Az.ServiceFabric.Add-AzServiceFabricClientCertificate
+  - Az.ServiceFabric.Add-AzServiceFabricClusterCertificate
+  - Az.ServiceFabric.Add-AzServiceFabricNode
+  - Az.ServiceFabric.Add-AzServiceFabricNodeType
+  - Az.ServiceFabric.Get-AzServiceFabricApplication
+  - Az.ServiceFabric.Get-AzServiceFabricApplicationType
+  - Az.ServiceFabric.Get-AzServiceFabricApplicationTypeVersion
+  - Az.ServiceFabric.Get-AzServiceFabricCluster
+  - Az.ServiceFabric.Get-AzServiceFabricService
+  - Az.ServiceFabric.New-AzServiceFabricApplication
+  - Az.ServiceFabric.New-AzServiceFabricApplicationType
+  - Az.ServiceFabric.New-AzServiceFabricApplicationTypeVersion
+  - Az.ServiceFabric.New-AzServiceFabricCluster
+  - Az.ServiceFabric.New-AzServiceFabricService
+  - Az.ServiceFabric.Remove-AzServiceFabricApplication
+  - Az.ServiceFabric.Remove-AzServiceFabricApplicationType
+  - Az.ServiceFabric.Remove-AzServiceFabricApplicationTypeVersion
+  - Az.ServiceFabric.Remove-AzServiceFabricClientCertificate
+  - Az.ServiceFabric.Remove-AzServiceFabricClusterCertificate
+  - Az.ServiceFabric.Remove-AzServiceFabricNode
+  - Az.ServiceFabric.Remove-AzServiceFabricNodeType
+  - Az.ServiceFabric.Remove-AzServiceFabricService
+  - Az.ServiceFabric.Remove-AzServiceFabricSetting
+  - Az.ServiceFabric.Set-AzServiceFabricSetting
+  - Az.ServiceFabric.Set-AzServiceFabricUpgradeType
+  - Az.ServiceFabric.Update-AzServiceFabricApplication
+  - Az.ServiceFabric.Update-AzServiceFabricDurability
+  - Az.ServiceFabric.Update-AzServiceFabricReliability
+uid: Az.ServiceFabric
+name: Az.ServiceFabric
+description: |-
+  Azure Service Fabric Module that you can use to automate the end-2-end operations like creating a secure cluster, rolling over cluster certificates, adding or removed nodes from the cluster, etc. The complete list of all operations are listed below.
+metadata:
+  Module Name: Az.ServiceFabric
+  Module Guid: 60f3ba88-443f-46ff-88a3-318cfd11c1da
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.servicefabric
+  Help Version: 0.3.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Az.ServiceFabric.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Az.ServiceFabric.md

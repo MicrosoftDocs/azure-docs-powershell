@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets subscriptions.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscription" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApiManagementSubscription
+  href: ./New-AzApiManagementSubscription.yml
+- text: Remove-AzApiManagementSubscription
+  href: ./Remove-AzApiManagementSubscription.yml
+- text: Set-AzApiManagementSubscription
+  href: ./Set-AzApiManagementSubscription.yml
+syntaxes:
+- >-
+  Get-AzApiManagementSubscription -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzApiManagementSubscription -Context <PsApiManagementContext> [-SubscriptionId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementSubscription -Context <PsApiManagementContext> -UserId <String> -ProductId <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementSubscription -Context <PsApiManagementContext> [-UserId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementSubscription -Context <PsApiManagementContext> [-ProductId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApiManagementSubscription -Context <PsApiManagementContext> -Scope <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all subscriptions'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-East-US" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementSubscription -Context $apimContext
+  description: |-
+    This command gets all subscriptions.
+  summary: ""
+- title: 'Example 2: Get a subscription with a specified ID'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-East-US" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789"
+  description: |-
+    This command gets a subscription by ID.
+  summary: ""
+- title: 'Example 3: Get all subscriptions for a user'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-East-US" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementSubscription -Context $apimContext -UserId "777"
+  description: |-
+    This command gets a user's subscriptions.
+  summary: ""
+- title: 'Example 4: Get all subscriptions for a product'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-East-US" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementSubscription -Context $apimContext -ProductId "999"
+  description: |-
+    This command gets all subscriptions for the product.
+  summary: ""
+- title: 'Example 5: Get all subscriptions for a Scope'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-East-US" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementSubscription -Context $apimContext -Scope "/apis"
+
+    SubscriptionId    : allApScope
+    UserId            :
+    OwnerId           :
+    ProductId         :
+    Scope             : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apis
+    Name              : All Api Scope
+    State             : Active
+    CreatedDate       : 6/18/2019 5:53:49 PM
+    StartDate         :
+    ExpirationDate    :
+    EndDate           :
+    NotificationDate  :
+    PrimaryKey        : 5e48532634114fe999a6979ce0d63a64
+    SecondaryKey      : 0a8efaf85a664aa0a412241015c7c8f6
+    StateComment      :
+    AllowTracing      : False
+    Id                : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/subscriptions/allApScope
+    ResourceGroupName : Api-Default-East-US
+    ServiceName       : contoso
+  description: |-
+    This command gets all subscriptions which are configured for global api scope
+  summary: ""
+- title: 'Example 6: Get all subscriptions for a product and user scope'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-East-US" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementSubscription -Context $apimContext -ProductId 59b872f28a82740f547e6270 -UserId 1
+
+    SubscriptionId    : 59b872f38a82741750c8da56
+    UserId            : 1
+    OwnerId           : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/users/1
+    ProductId         : 59b872f28a82740f547e6270
+    Scope             : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/products/59b872f28a82740f547e6270
+    Name              :
+    State             : Active
+    CreatedDate       : 9/12/2017 11:51:15 PM
+    StartDate         : 9/12/2017 12:00:00 AM
+    ExpirationDate    :
+    EndDate           :
+    NotificationDate  :
+    PrimaryKey        : 7e64ef904b194706835febf87f729bb0
+    SecondaryKey      : 0354fccef73e43feb82e5c5da17674d5
+    StateComment      :
+    AllowTracing      : True
+    Id                : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/subscriptions/59b872f38a82741750c8da56
+    ResourceGroupName : Api-Default-East-US
+    ServiceName       : contoso
+  description: |-
+    This command gets all subscriptions which are configured for global api scope
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Specifies a **PsApiManagementContext** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProductId
+  isRequired: true
+  description: |+
+    Specifies a product identifier.
+    If specified, this cmdlet finds all subscriptions by the product identifier.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Scope
+  isRequired: true
+  description: |+
+    Scope identifier. The Scope of the Subscription, whether it is Api Scope /apis/{apiId} or Product Scope /products/{productId} or Global API Scope /apis or Global scope /.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Specifies a subscription identifier.
+    If specified, this cmdlet finds subscription by the identifier.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UserId
+  isRequired: true
+  description: |+
+    Specifies a user identifier.
+    If specified, this cmdlet finds all subscriptions by the user identifier.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagementSubscription
+name: Get-AzApiManagementSubscription
+description: |-
+  The **Get-AzApiManagementSubscription** cmdlet gets a specified subscription, or all subscriptions, if no subscription is specified.
+  Keys will not be included into result details. To get keys, use **Get-AzApiManagementSubscriptionKey**.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  ms.assetid: 227EF8A2-E04A-4F6B-B66E-E77F1276A7E4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementsubscription
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementSubscription.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementSubscription.md

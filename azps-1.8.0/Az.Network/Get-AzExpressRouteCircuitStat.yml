@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets usage statistics of an ExpressRoute circuit.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitStats" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzExpressRouteCircuitARPTable
+  href: Get-AzExpressRouteCircuitARPTable.yml
+- text: Get-AzExpressRouteCircuitRouteTable
+  href: Get-AzExpressRouteCircuitRouteTable.yml
+- text: Get-AzExpressRouteCircuitRouteTableSummary
+  href: Get-AzExpressRouteCircuitRouteTableSummary.yml
+syntaxes:
+- >-
+  Get-AzExpressRouteCircuitStat -ResourceGroupName <String> -ExpressRouteCircuitName <String>
+
+   [-PeeringType <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display the traffic statistics for an ExpressRoute peer'
+  code: |-
+    Get-AzExpressRouteCircuitStat -ResourceGroupName $RG -ExpressRouteCircuitName $CircuitName -PeeringType 'AzurePrivatePeering'
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExpressRouteCircuitName
+  isRequired: true
+  description: |+
+    The name of the ExpressRoute circuit being examined.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Name, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeeringType
+  description: |+
+    The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and
+    `MicrosoftPeering`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AzurePrivatePeering, AzurePublicPeering, MicrosoftPeering
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group containing the ExpressRoute circuit.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzExpressRouteCircuitStat
+name: Get-AzExpressRouteCircuitStat
+description: |-
+  The **Get-AzExpressRouteCircuitStat** cmdlet retrieves traffic statistics for an ExpressRoute
+  circuit. The statistics include the number of bytes sent and received over both the primary and
+  secondary routes.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: CFE184E2-6DEF-4E92-A9C3-E82F29BB4FB8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuitstat
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitStat.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitStat.md

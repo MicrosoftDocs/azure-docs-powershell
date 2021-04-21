@@ -1,0 +1,32 @@
+### YamlMime:PowershellModule
+children:
+- title: SpringCloud
+  cmdlets:
+  - Az.SpringCloud.Deploy-AzSpringCloudApp
+  - Az.SpringCloud.Get-AzSpringCloud
+  - Az.SpringCloud.Get-AzSpringCloudApp
+  - Az.SpringCloud.Get-AzSpringCloudAppDeployment
+  - Az.SpringCloud.New-AzSpringCloud
+  - Az.SpringCloud.New-AzSpringCloudApp
+  - Az.SpringCloud.New-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Remove-AzSpringCloud
+  - Az.SpringCloud.Remove-AzSpringCloudApp
+  - Az.SpringCloud.Remove-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Restart-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Start-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Stop-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Update-AzSpringCloud
+  - Az.SpringCloud.Update-AzSpringCloudApp
+  - Az.SpringCloud.Update-AzSpringCloudAppDeployment
+uid: Az.SpringCloud
+name: Az.SpringCloud
+description: |-
+  Microsoft Azure PowerShell: SpringCloud cmdlets
+metadata:
+  Module Name: Az.SpringCloud
+  Module Guid: 697e18d3-95de-4211-86a1-ec7c4e163874
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.springcloud
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SpringCloud/help/Az.SpringCloud.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SpringCloud/help/Az.SpringCloud.md

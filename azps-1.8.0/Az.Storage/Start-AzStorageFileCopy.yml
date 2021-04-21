@@ -1,0 +1,354 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts to copy a source file.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.WindowsAzure.Storage.File.CloudFile" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageBlob
+  href: ./Get-AzStorageBlob.yml
+- text: Get-AzStorageContainer
+  href: ./Get-AzStorageContainer.yml
+- text: Get-AzStorageFile
+  href: ./Get-AzStorageFile.yml
+- text: Get-AzStorageShare
+  href: ./Get-AzStorageShare.yml
+- text: Get-AzStorageFileCopyState
+  href: ./Get-AzStorageFileCopyState.yml
+- text: Stop-AzStorageFileCopy
+  href: ./Stop-AzStorageFileCopy.yml
+syntaxes:
+- >-
+  Start-AzStorageFileCopy -SrcBlobName <String> -SrcContainerName <String> -DestShareName <String>
+
+   -DestFilePath <String> [-Context <IStorageContext>] [-DestContext <IStorageContext>] [-Force]
+
+   [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -SrcBlobName <String> -SrcContainer <CloudBlobContainer> -DestShareName <String>
+
+   -DestFilePath <String> [-DestContext <IStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -SrcBlob <CloudBlob> -DestShareName <String> -DestFilePath <String>
+
+   [-DestContext <IStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -SrcBlob <CloudBlob> -DestFile <CloudFile> [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -SrcFilePath <String> -SrcShareName <String> -DestShareName <String>
+
+   -DestFilePath <String> [-Context <IStorageContext>] [-DestContext <IStorageContext>] [-Force]
+
+   [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -SrcFilePath <String> -SrcShare <CloudFileShare> -DestShareName <String>
+
+   -DestFilePath <String> [-DestContext <IStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -SrcFile <CloudFile> -DestShareName <String> -DestFilePath <String>
+
+   [-DestContext <IStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -SrcFile <CloudFile> -DestFile <CloudFile> [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -AbsoluteUri <String> -DestShareName <String> -DestFilePath <String>
+
+   [-DestContext <IStorageContext>] [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-AzStorageFileCopy -AbsoluteUri <String> -DestFile <CloudFile> [-Force] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start copy operation from file to file by using share name and file name'
+  code: |-
+    PS C:\>Start-AzStorageFileCopy -SrcShareName "ContosoShare01" -SrcFilePath "FilePath01" -DestShareName "ContosoShare02" -DestFilePath "FilePath02"
+  description: |-
+    This command starts a copy operation from file to file.
+    The command specifies share name and file name
+  summary: ""
+- title: 'Example 2: Start copy operation from blob to file by using container name and blob name'
+  code: |-
+    PS C:\>Start-AzStorageFileCopy -SrcContainerName "ContosoContainer01" -SrcBlobName "ContosoBlob01" -DestShareName "ContosoShare" -DestFilePath "FilePath02"
+  description: |-
+    This command starts a copy operation from blob to file.
+    The command specifies container name and blob name
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AbsoluteUri
+  isRequired: true
+  description: |+
+    Specifies the URI of the source file.
+    If the source location requires a credential, you must provide one.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ClientTimeoutPerRequest
+  description: |+
+    Specifies the client-side time-out interval, in seconds, for one service request.
+    If the previous call fails in the specified interval, this cmdlet retries the request.
+    If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ConcurrentTaskCount
+  description: |+
+    Specifies the maximum concurrent network calls.
+    You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+    The specified value is an absolute count and is not multiplied by the core count.
+    This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure Storage context.
+    To obtain a context, use the New-AzStorageContext cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SrcContext
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: DestContext
+  description: |+
+    Specifies the Azure Storage context of the destination.
+    To obtain a context, use **New-AzStorageContext**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.File.CloudFile" data-throw-if-not-resolved="False" />
+  name: DestFile
+  isRequired: true
+  description: |+
+    Specifies a **CloudFile** object.
+    You can create a cloud file or obtain one by using the Get-AzStorageFile cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DestFilePath
+  isRequired: true
+  description: |+
+    Specifies the path of the destination file relative to the destination share.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DestShareName
+  isRequired: true
+  description: |+
+    Specifies the name of the destination share.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ServerTimeoutPerRequest
+  description: |+
+    Specifies the length of the time-out period for the server part of a request.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudBlob" data-throw-if-not-resolved="False" />
+  name: SrcBlob
+  isRequired: true
+  description: |+
+    Specifies a **CloudBlob** object.
+    You can create a cloud blob or obtain one by using the Get-AzStorageBlob cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ICloudBlob
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SrcBlobName
+  isRequired: true
+  description: |+
+    Specifies the name of the source blob.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer" data-throw-if-not-resolved="False" />
+  name: SrcContainer
+  isRequired: true
+  description: |+
+    Specifies a cloud blob container object.
+    You can create cloud blob container object or use the Get-AzStorageContainer cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SrcContainerName
+  isRequired: true
+  description: |+
+    Specifies the name of the source container.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.File.CloudFile" data-throw-if-not-resolved="False" />
+  name: SrcFile
+  isRequired: true
+  description: |+
+    Specifies a **CloudFile** object.
+    You can create a cloud file or obtain one by using **Get-AzStorageFile**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SrcFilePath
+  isRequired: true
+  description: |+
+    Specifies the path of the source file relative to the source directory or source share.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.WindowsAzure.Storage.File.CloudFileShare" data-throw-if-not-resolved="False" />
+  name: SrcShare
+  isRequired: true
+  description: |+
+    Specifies a cloud file share object.
+    You can create a cloud file share or obtain one by using the Get-AzStorageShare cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SrcShareName
+  isRequired: true
+  description: |+
+    Specifies the name of the source share.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Start-AzStorageFileCopy
+name: Start-AzStorageFileCopy
+description: |-
+  The **Start-AzStorageFileCopy** cmdlet starts to copy a source file to a destination file.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: A96A1A67-6C9C-499F-9935-B90F7ACEB50E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/start-azstoragefilecopy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Start-AzStorageFileCopy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Start-AzStorageFileCopy.md

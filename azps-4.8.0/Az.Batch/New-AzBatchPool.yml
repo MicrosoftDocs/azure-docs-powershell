@@ -1,0 +1,401 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a pool in the Batch service.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchPool
+  href: ./Get-AzBatchPool.yml
+- text: Remove-AzBatchPool
+  href: ./Remove-AzBatchPool.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+syntaxes:
+- >-
+  New-AzBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>] [-ResizeTimeout <TimeSpan>]
+
+   [-TargetDedicatedComputeNodes <Int32>] [-TargetLowPriorityComputeNodes <Int32>]
+
+   [-MaxTasksPerComputeNode <Int32>] [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
+
+   [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
+
+   [-CertificateReferences <PSCertificateReference[]>]
+
+   [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
+
+   [-ApplicationLicenses <System.Collections.Generic.List`1[System.String]>]
+
+   [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
+
+   [-MountConfiguration <PSMountConfiguration[]>] [-UserAccount <PSUserAccount[]>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>] [-ResizeTimeout <TimeSpan>]
+
+   [-TargetDedicatedComputeNodes <Int32>] [-TargetLowPriorityComputeNodes <Int32>]
+
+   [-MaxTasksPerComputeNode <Int32>] [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
+
+   [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
+
+   [-CertificateReferences <PSCertificateReference[]>]
+
+   [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
+
+   [-ApplicationLicenses <System.Collections.Generic.List`1[System.String]>]
+
+   [-VirtualMachineConfiguration <PSVirtualMachineConfiguration>]
+
+   [-NetworkConfiguration <PSNetworkConfiguration>] [-MountConfiguration <PSMountConfiguration[]>]
+
+   [-UserAccount <PSUserAccount[]>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
+
+   [-AutoScaleEvaluationInterval <TimeSpan>] [-AutoScaleFormula <String>] [-MaxTasksPerComputeNode <Int32>]
+
+   [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
+
+   [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
+
+   [-CertificateReferences <PSCertificateReference[]>]
+
+   [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
+
+   [-ApplicationLicenses <System.Collections.Generic.List`1[System.String]>]
+
+   [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
+
+   [-MountConfiguration <PSMountConfiguration[]>] [-UserAccount <PSUserAccount[]>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
+
+   [-AutoScaleEvaluationInterval <TimeSpan>] [-AutoScaleFormula <String>] [-MaxTasksPerComputeNode <Int32>]
+
+   [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
+
+   [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
+
+   [-CertificateReferences <PSCertificateReference[]>]
+
+   [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
+
+   [-ApplicationLicenses <System.Collections.Generic.List`1[System.String]>]
+
+   [-VirtualMachineConfiguration <PSVirtualMachineConfiguration>]
+
+   [-NetworkConfiguration <PSNetworkConfiguration>] [-MountConfiguration <PSMountConfiguration[]>]
+
+   [-UserAccount <PSUserAccount[]>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new pool using the TargetDedicated parameter set using CloudServiceConfiguration'
+  code: |-
+    PS C:\>$configuration = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSCloudServiceConfiguration" -ArgumentList @(4,"*")
+    PS C:\>New-AzBatchPool -Id "MyPool" -VirtualMachineSize "STANDARD_D1_V2" -CloudServiceConfiguration $configuration  -TargetDedicatedComputeNodes 3 -BatchContext $Context
+  description: |-
+    The pool is configured to use STANDARD_D1_V2 virtual machines with operating system version of family four.
+  summary: ""
+- title: 'Example 2: Create a new pool using the TargetDedicated parameter set using VirtualMachineConfiguration'
+  code: |-
+    PS C:\>$imageReference = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSImageReference" -ArgumentList @("WindowsServer", "MicrosoftWindowsServer", "2016-Datacenter", "*")
+    PS C:\>$configuration = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSVirtualMachineConfiguration" -ArgumentList @($imageReference, "batch.node.windows amd64")
+    PS C:\>New-AzBatchPool -Id "MyPool" -VirtualMachineSize "STANDARD_D1_V2" -VirtualMachineConfiguration $configuration -TargetDedicatedComputeNodes 3 -BatchContext $Context
+  description: |-
+    This command creates a new pool with ID MyPool using the TargetDedicated parameter set.
+    The target allocation is three compute nodes.
+    The pool is configured to use STANDARD_D1_V2 virtual machines with the Windows-2016-Datacenter operating system image.
+  summary: ""
+- title: 'Example 3: Create a new pool using the AutoScale parameter set'
+  code: |-
+    PS C:\>$imageReference = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSImageReference" -ArgumentList @("WindowsServer", "MicrosoftWindowsServer", "2016-Datacenter", "*")
+    PS C:\>$configuration = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSVirtualMachineConfiguration" -ArgumentList @($imageReference, "batch.node.windows amd64")
+    PS C:\>New-AzBatchPool -Id "AutoScalePool" -VirtualMachineSize "STANDARD_D1_V2" -VirtualMachineConfiguration $configuration -AutoScaleFormula '$TargetDedicated=2;' -BatchContext $Context
+  description: |-
+    This command creates a new pool with ID AutoScalePool using the AutoScale parameter set.
+    The pool is configured to use STANDARD_D1_V2 virtual machines with the Windows-2016-Datacenter operating system image, and the target number of compute nodes are determined by the Autoscale formula.
+  summary: ""
+- title: 'Example 4: Create a pool with nodes in a subnet'
+  code: |-
+    PS C:\>$imageReference = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSImageReference" -ArgumentList @("WindowsServer", "MicrosoftWindowsServer", "2016-Datacenter", "*")
+    PS C:\>$configuration = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSVirtualMachineConfiguration" -ArgumentList @($imageReference, "batch.node.windows amd64")
+    PS C:\>$networkConfig = New-Object Microsoft.Azure.Commands.Batch.Models.PSNetworkConfiguration
+    PS C:\>$networkConfig.SubnetId = "/subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}"
+    PS C:\>New-AzBatchPool -Id "AutoScalePool" -VirtualMachineSize "STANDARD_D1_V2" -VirtualMachineConfiguration $configuration -TargetDedicatedComputeNodes 3 -NetworkConfiguration $networkConfig -BatchContext $Context
+  description: ""
+  summary: ""
+- title: 'Example 5: Create a pool with custom user accounts'
+  code: |-
+    PS C:\>$imageReference = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSImageReference" -ArgumentList @("WindowsServer", "MicrosoftWindowsServer", "2016-Datacenter", "*")
+    PS C:\>$configuration = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSVirtualMachineConfiguration" -ArgumentList @($imageReference, "batch.node.windows amd64")
+    PS C:\>$userAccount = New-Object Microsoft.Azure.Commands.Batch.Models.PSUserAccount -ArgumentList @("myaccount", "mypassword")
+    PS C:\>New-AzBatchPool -Id "AutoScalePool" -VirtualMachineSize "STANDARD_D1_V2" -VirtualMachineConfiguration $configuration -TargetDedicatedComputeNodes 3 -UserAccount $userAccount
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ApplicationLicenses
+  description: |+
+    The list of application licenses the Batch service will make available on each compute node in the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ApplicationLicense
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSApplicationPackageReference" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ApplicationPackageReferences
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ApplicationPackageReference
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan" data-throw-if-not-resolved="False" /><span>]</span>
+  name: AutoScaleEvaluationInterval
+  description: |+
+    Specifies the amount of time, in minutes, that elapses before the pool size is automatically adjusted according to the AutoScale formula.
+    The default value is 15 minutes, and the minimum value is 5 minutes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutoScaleFormula
+  description: |+
+    Specifies the formula for automatically scaling the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCertificateReference" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CertificateReferences
+  description: |+
+    Specifies certificates associated with the pool.
+    The Batch service installs the referenced certificates on each compute node of the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: CertificateReference
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudServiceConfiguration" data-throw-if-not-resolved="False" />
+  name: CloudServiceConfiguration
+  description: |+
+    Specifies configuration settings for a pool based on the Azure cloud service platform.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies the display name of the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of the pool to create.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InterComputeNodeCommunicationEnabled
+  description: |+
+    Indicates that this cmdlet sets up the pool for direct communication between dedicated compute nodes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxTasksPerComputeNode
+  description: |+
+    Specifies the maximum number of tasks that can run on a single compute node.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Specifies the metadata, as key/value pairs, to add to the new pool.
+    The key is the metadata name.
+    The value is the metadata value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSMountConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MountConfiguration
+  description: |+
+    A list of file systems to mount on each node in the pool. This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSNetworkConfiguration" data-throw-if-not-resolved="False" />
+  name: NetworkConfiguration
+  description: |+
+    The network configuration for the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ResizeTimeout
+  description: |+
+    Specifies the time-out for allocating compute nodes to the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSStartTask" data-throw-if-not-resolved="False" />
+  name: StartTask
+  description: |+
+    Specifies the start task specification for the pool.
+    The start task is run when a compute node joins the pool, or when the compute node is rebooted or reimaged.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: TargetDedicatedComputeNodes
+  description: |+
+    Specifies the target number of dedicated compute nodes to allocate to the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: TargetDedicated
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: TargetLowPriorityComputeNodes
+  description: |+
+    Specifies the target number of low-priority compute nodes to allocate to the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSTaskSchedulingPolicy" data-throw-if-not-resolved="False" />
+  name: TaskSchedulingPolicy
+  description: |+
+    Specifies the task scheduling policy, such as the ComputeNodeFillType.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSUserAccount" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserAccount
+  description: |+
+    The list of user accounts to be created on each node in the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSVirtualMachineConfiguration" data-throw-if-not-resolved="False" />
+  name: VirtualMachineConfiguration
+  description: |+
+    Specifies configuration settings for a pool on the virtual machines infrastructure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualMachineSize
+  isRequired: true
+  description: |+
+    Specifies the size of the virtual machines in the pool.
+    For more information about virtual machine sizes, see Sizes for virtual machines [Sizes for virtual machines](/virtual-machines/sizes) in the Microsoft Azure site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Batch.New-AzBatchPool
+name: New-AzBatchPool
+description: |-
+  The **New-AzBatchPool** cmdlet creates a pool in the Azure Batch service under the account specified by the *BatchContext* parameter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: C71C486E-34EB-42B5-B38A-D85B7DAA2F74
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchpool
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchPool.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchPool.md

@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts to resize a pool.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccountKeys
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchPool
+  href: ./Get-AzBatchPool.yml
+- text: Stop-AzBatchPoolResize
+  href: ./Stop-AzBatchPoolResize.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/az.batch
+syntaxes:
+- >-
+  Start-AzBatchPoolResize [-Id] <String> [-TargetDedicatedComputeNodes <Int32>]
+
+   [-TargetLowPriorityComputeNodes <Int32>] [-ResizeTimeout <TimeSpan>]
+
+   [-ComputeNodeDeallocationOption <ComputeNodeDeallocationOption>] -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Resize a pool to 12 nodes'
+  code: |-
+    PS C:\>Start-AzBatchPoolResize -Id "ContosoPool06" -TargetDedicatedComputeNodes 12 -BatchContext $Context
+  description: |-
+    This command starts a resize operation on the pool that has the ID ContosoPool06.
+    The target for the operation is 12 dedicated compute nodes.
+    Use the Get-AzBatchAccountKeys cmdlet to assign a context to the $Context variable.
+  summary: ""
+- title: 'Example 2: Resize a pool using a deallocation option'
+  code: |-
+    PS C:\>Get-AzBatchPool -Id "ContosoPool06" -BatchContext $Context | Start-AzBatchPoolResize -TargetDedicatedComputeNodes 5 -ResizeTimeout ([TimeSpan]::FromHours(1)) -ComputeNodeDeallocationOption ([Microsoft.Azure.Batch.Common.ComputeNodeDeallocationOption]::Terminate) -BatchContext $Context
+  description: |-
+    This cmdlet resizes a pool to five dedicated compute nodes.
+    The command gets the pool that has the ID ContosoPool06 by using the Get-AzBatchPool cmdlet.
+    The command passes that pool object to the current cmdlet by using the pipeline operator.
+    The command starts a resize operation on the pool.
+    The target is five dedicated compute nodes.
+    The command specifies time-out period of one hour.
+    The command specifies a deallocation option of Terminate.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Batch.Common.ComputeNodeDeallocationOption" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ComputeNodeDeallocationOption
+  description: |+
+    Specifies a deallocation option for the resizing operation that this cmdlet starts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Requeue, Terminate, TaskCompletion, RetainedData
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of the pool that this cmdlet resizes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ResizeTimeout
+  description: |+
+    Specifies a time-out period for the resizing operation.
+    If the pool does not reach the target size by this time, the resize operation stops.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: TargetDedicatedComputeNodes
+  description: |+
+    The number of target dedicated compute nodes.
+
+  defaultValue: None
+  position: Named
+  aliases: TargetDedicated
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: TargetLowPriorityComputeNodes
+  description: |+
+    The number of target low-priority compute nodes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Start-AzBatchPoolResize
+name: Start-AzBatchPoolResize
+description: |-
+  The **Start-AzBatchPoolResize** cmdlet starts an Azure Batch resize operation on a pool.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 82DC8DC4-D8EC-4847-A54C-B779256FD590
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/start-azbatchpoolresize
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Start-AzBatchPoolResize.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Start-AzBatchPoolResize.md

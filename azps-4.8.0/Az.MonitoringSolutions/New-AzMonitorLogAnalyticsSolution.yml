@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a log analytics solution.
+module: Az.MonitoringSolutions
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MonitoringSolutions.Models.Api20151101Preview.ISolution" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzOperationalInsightsWorkspace
+  href: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightsworkspace
+syntaxes:
+- >-
+  New-AzMonitorLogAnalyticsSolution -ResourceGroupName <String> -Location <String> -Type <String>
+
+   -WorkspaceResourceId <String> [-SubscriptionId <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
+
+   [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a monitor log analytics solution for the log analytics workspace'
+  code: |-
+    PS C:\> $workspace = Get-AzOperationalInsightsWorkspace -ResourceGroupName azureps-manual-test -Name monitoringworkspace-2vob7n
+    PS C:\> New-AzMonitorLogAnalyticsSolution -Type Containers -ResourceGroupName azureps-manual-test -Location $workspace.Location -WorkspaceResourceId $workspace.ResourceId
+
+    Name                                   Type                                     Location
+    ----                                   ----                                     --------
+    Containers(monitoringworkspace-2vob7n) Microsoft.OperationsManagement/solutions East US
+  description: |-
+    This command creates a monitor log analytics solution for the log analytics workspace.
+
+    Commonly used types are:
+
+    | Type | Description |
+    | :-----| :----- |
+    | SecurityCenterFree |  Azure Security Center - Free Edition |
+    | Security | Azure Security Center |
+    | Updates | Update Management |
+    | ContainerInsights | Azure Monitor for Containers |
+    | ServiceMap | Service Map |
+    | AzureActivity | Activity log analytics |
+    | ChangeTracking | Change tracking and inventory |
+    | VMInsights | Azure Monitor for VMs |
+    | SecurityInsights | Azure Sentinel |
+    | NetworkMonitoring | Network Performance Monitor |
+    | SQLVulnerabilityAssessment | SQL Vulnerability Assessment |
+    | SQLAdvancedThreatProtection | SQL Advanced Threat Protection |
+    | AntiMalware | Antimalware Assessment |
+    | AzureAutomation |	Automation Hybrid Worker |
+    | LogicAppsManagement | Logic Apps Management |
+    | SQLDataClassification | SQL Data Discovery & Classification |
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Resource location.
+    Must be the same as the log analytic workspace.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group to get.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Gets subscription credentials which uniquely identify Microsoft Azure subscription.
+    The subscription ID forms part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Resource tags
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Type of the solution to be created.
+    For example "Container".
+
+  defaultValue: None
+  position: Named
+  aliases: SolutionType
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WorkspaceResourceId
+  isRequired: true
+  description: |+
+    The Azure resource ID for the workspace where the solution will be deployed/enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.MonitoringSolutions.New-AzMonitorLogAnalyticsSolution
+name: New-AzMonitorLogAnalyticsSolution
+description: |-
+  Creates a log analytics solution.
+metadata:
+  external help file: ""
+  Module Name: Az.MonitoringSolutions
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitoringsolutions/new-azmonitorloganalyticssolution
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MonitoringSolutions/help/New-AzMonitorLogAnalyticsSolution.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MonitoringSolutions/help/New-AzMonitorLogAnalyticsSolution.md

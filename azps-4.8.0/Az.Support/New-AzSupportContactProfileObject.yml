@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a support contact profile object.
+module: Az.Support
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Support.Models.PSContactProfile" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzSupportContactProfileObject -FirstName <String> -LastName <String>
+
+   -PreferredContactMethod <ContactMethod> -PrimaryEmailAddress <String> [-AdditionalEmailAddress <String[]>]
+
+   [-PhoneNumber <String>] -PreferredTimeZone <String> -Country <String> -PreferredSupportLanguage <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a contact object'
+  code: |-
+    PS C:\> New-AzSupportContactProfileObject -FirstName "First" -LastName "Last" -PreferredContactMethod "Email" -PrimaryEmailAddress "user@contoso.com" -PreferredTimeZone "Pacific Standard Time" -PreferredSupportLanguage "en-US" -Country "USA"             
+
+    FirstName LastName PreferredContactMethod PrimaryEmailAddress  PhoneNumber PreferredTimeZone     Country PreferredSupportLanguage
+    --------- -------- ---------------------- -------------------  ----------- -----------------     ------- ------------------------
+    First     Last     Email                  user@contoso.com                 Pacific Standard Time USA     en-US
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalEmailAddress
+  description: |+
+    Email addresses listed here will be copied on any correspondence about the support ticket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Country
+  isRequired: true
+  description: |+
+    Customer country.
+    This must be a valid ISO Alpha-3 country code (ISO 3166).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FirstName
+  isRequired: true
+  description: |+
+    Customer first name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LastName
+  isRequired: true
+  description: |+
+    Customer last name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  description: |+
+    Customer phone number.
+    This is required if preferred contact method is phone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.ContactMethod" data-throw-if-not-resolved="False" />
+  name: PreferredContactMethod
+  isRequired: true
+  description: |+
+    Preferred contact method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Email, Phone
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PreferredSupportLanguage
+  isRequired: true
+  description: |+
+    Customer preferred support language.
+    This must be a valid language-contry code for one of the supported languages listed here https://azure.microsoft.com/support/faq/.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PreferredTimeZone
+  isRequired: true
+  description: |+
+    Customer preferred time zone.
+    This must be a valid System.TimeZoneInfo.Id value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrimaryEmailAddress
+  isRequired: true
+  description: |+
+    Customer primary email address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Support.New-AzSupportContactProfileObject
+name: New-AzSupportContactProfileObject
+description: |-
+  This is a helper cmdlet that you can use to create a support contact profile object when creating or updating a support ticket. You must specify the following parameters which are mandatory for creating a support ticket: 
+
+  	• FirstName
+  	• LastName
+  	• PrimaryEmailAddress
+  	• PreferredContactMethod
+  	• Country
+      • PreferredSupportLanguage
+  	• PreferredTimeZone
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
+  Module Name: Az.Support
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.support/new-azsupportcontactprofileobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/New-AzSupportContactProfileObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/New-AzSupportContactProfileObject.md

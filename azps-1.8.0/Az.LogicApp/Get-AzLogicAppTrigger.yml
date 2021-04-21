@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the triggers of a logic app.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.WorkflowTrigger" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzLogicAppTriggerHistory
+  href: ./Get-AzLogicAppTriggerHistory.yml
+- text: Start-AzLogicApp
+  href: ./Start-AzLogicApp.yml
+syntaxes:
+- >-
+  Get-AzLogicAppTrigger -ResourceGroupName <String> -Name <String> [-TriggerName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a trigger of a logic app'
+  code: |-
+    PS C:\>Get-AzLogicAppTrigger -ResourceGroupName "ResourceGroup11" -Name "LogicApp05" -TriggerName "Trigger01"
+    ChangedTime         : 1/14/2016 11:45:07 AM
+    CreatedTime         : 1/13/2016 2:42:26 PM
+    LastExecutionTime   : 1/14/2016 11:45:07 AM
+    Name                : Trigger01
+    NextExecutionTime   : 1/14/2016 12:45:07 PM
+    RecurrenceFrequency : Minute
+    RecurrenceInterval  : 60
+    Status              : Waiting
+    Type                : Microsoft.Logic/workflows/triggers
+    LogicAppName        : LogicApp05
+    LogicAppVersion     : 08587489107406290826
+  description: |-
+    This command gets the trigger named Trigger01 from the logic app named LogicApp05.
+  summary: ""
+- title: 'Example 2: Get all triggers of a logic app'
+  code: |-
+    PS C:\>Get-AzLogicAppTrigger -ResourceGroupName "ResourceGroup11" -Name "LogicApp07"
+    ChangedTime         : 1/14/2016 11:45:07 AM
+    CreatedTime         : 1/13/2016 2:42:26 PM
+    LastExecutionTime   : 1/14/2016 11:45:07 AM
+    Name                : Trigger02
+    NextExecutionTime   : 1/14/2016 12:45:07 PM
+    RecurrenceFrequency : Minute
+    RecurrenceInterval  : 60
+    Status              : Waiting
+    Type                : Microsoft.Logic/workflows/triggers
+    LogicAppName        : LogicApp07
+    LogicAppVersion     : 08587489107406290826
+  description: |-
+    This command gets the triggers of the logic app named LogicApp07.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the logic app from which this cmdlet gets a trigger.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group in which this cmdlet gets a trigger.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TriggerName
+  description: |+
+    Specifies the name of the trigger that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.LogicApp.Get-AzLogicAppTrigger
+name: Get-AzLogicAppTrigger
+description: |-
+  The **Get-AzLogicAppTrigger** cmdlet gets triggers from a logic app.
+  This cmdlet returns a **WorkflowTrigger** object.
+  Specify the workflow, resource group, and trigger.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: 5307F1F1-E84C-4949-A557-99EF0012C3DF
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azlogicapptrigger
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzLogicAppTrigger.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzLogicAppTrigger.md

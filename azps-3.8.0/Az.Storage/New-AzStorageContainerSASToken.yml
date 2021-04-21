@@ -1,0 +1,197 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates an SAS token for an Azure storage container.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzStorageBlobSASToken
+  href: ./New-AzStorageBlobSASToken.yml
+syntaxes:
+- >-
+  New-AzStorageContainerSASToken [-Name] <String> -Policy <String> [-Protocol <SharedAccessProtocol>]
+
+   [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
+
+   [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzStorageContainerSASToken [-Name] <String> [-Permission <String>] [-Protocol <SharedAccessProtocol>]
+
+   [-IPAddressOrRange <String>] [-StartTime <DateTime>] [-ExpiryTime <DateTime>] [-FullUri]
+
+   [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Generate a container SAS token with full container permission'
+  code: |-
+    PS C:\>New-AzStorageContainerSASToken -Name "Test" -Permission rwdl
+  description: |-
+    This example generates a container SAS token with full container permission.
+  summary: ""
+- title: 'Example 2: Generate multiple container SAS token by pipeline'
+  code: |-
+    PS C:\>Get-AzStorageContainer -Container test* | New-AzStorageContainerSASToken -Permission rwdl
+  description: |-
+    This example generates multiple container SAS tokens by using the pipeline.
+  summary: ""
+- title: 'Example 3: Generate container SAS token with shared access policy'
+  code: |-
+    PS C:\>New-AzStorageContainerSASToken -Name "Test" -Policy "PolicyName"
+  description: |-
+    This example generates a container SAS token with shared access policy.
+  summary: ""
+- title: 'Example 3: Generate a User Identity container SAS token with storage context based on OAuth authentication'
+  code: |-
+    PS C:\> $ctx = New-AzStorageContext -StorageAccountName $accountName -UseConnectedAccount
+    PS C:\> $StartTime = Get-Date
+    PS C:\> $EndTime = $startTime.AddDays(6)
+    PS C:\> New-AzStorageContainerSASToken -Name "ContainerName" -Permission rwd -StartTime $StartTime -ExpiryTime $EndTime -context $ctx
+  description: |-
+    This example generates a User Identity container SAS token with storage context based on OAuth authentication
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure storage context.
+    You can create it by using the New-AzStorageContext cmdlet.
+    When the storage context is based on OAuth authentication, will generates a User Identity container SAS token.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ExpiryTime
+  description: |+
+    Specifies the time at which the shared access signature becomes invalid.
+    If the user sets the start time but not the expiry time, the expiry time is set to the start time plus one hour.
+    If neither the start time nor the expiry time is specified, the expiry time is set to the current time plus one hour.
+    When the storage context is based on OAuth authentication, the expire time must be in 7 days from current time, and must not be earlier than current time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FullUri
+  description: |+
+    Indicates that this cmdlet return the full blob URI and the shared access signature token.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IPAddressOrRange
+  description: |+
+    Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+    The range is inclusive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an Azure storage container name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: N, Container
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Specifies permissions for a storage container.
+    It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies an Azure Stored Access Policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Storage.SharedAccessProtocol" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Protocol
+  description: |+
+    Specifies the protocol permitted for a request.
+    The acceptable values for this parameter are:
+    * HttpsOnly
+    * HttpsOrHttp
+    The default value is HttpsOrHttp.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: HttpsOnly, HttpsOrHttp
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies the time at which the shared access signature becomes valid.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageContainerSASToken
+name: New-AzStorageContainerSASToken
+description: |-
+  The **New-AzStorageContainerSASToken** cmdlet generates a Shared Access Signature (SAS) token for an Azure storage container.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: 6FF04E82-4921-4F7B-83D0-6997316BC5FD
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstoragecontainersastoken
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageContainerSASToken.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageContainerSASToken.md

@@ -1,0 +1,285 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates an IP configuration for a network interface.
+module: Az.Network
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSInboundNatRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzNetworkInterfaceIpConfig
+  href: ./Add-AzNetworkInterfaceIpConfig.yml
+- text: Get-AzNetworkInterfaceIpConfig
+  href: ./Get-AzNetworkInterfaceIpConfig.yml
+- text: New-AzNetworkInterfaceIpConfig
+  href: ./New-AzNetworkInterfaceIpConfig.yml
+- text: Remove-AzNetworkInterfaceIpConfig
+  href: ./Remove-AzNetworkInterfaceIpConfig.yml
+syntaxes:
+- >-
+  Set-AzNetworkInterfaceIpConfig -Name <String> -NetworkInterface <PSNetworkInterface>
+
+   [-PrivateIpAddressVersion <String>] [-PrivateIpAddress <String>] [-Primary] [-Subnet <PSSubnet>]
+
+   [-PublicIpAddress <PSPublicIpAddress>] [-LoadBalancerBackendAddressPool <PSBackendAddressPool[]>]
+
+   [-LoadBalancerInboundNatRule <PSInboundNatRule[]>]
+
+   [-ApplicationGatewayBackendAddressPool <PSApplicationGatewayBackendAddressPool[]>]
+
+   [-ApplicationSecurityGroup <PSApplicationSecurityGroup[]>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Set-AzNetworkInterfaceIpConfig -Name <String> -NetworkInterface <PSNetworkInterface>
+
+   [-PrivateIpAddressVersion <String>] [-PrivateIpAddress <String>] [-Primary] [-SubnetId <String>]
+
+   [-PublicIpAddressId <String>] [-LoadBalancerBackendAddressPoolId <String[]>]
+
+   [-LoadBalancerInboundNatRuleId <String[]>] [-ApplicationGatewayBackendAddressPoolId <String[]>]
+
+   [-ApplicationSecurityGroupId <String[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: '1: Changing the IP address of an IP configuration'
+  code: |-
+    $vnet = Get-AzVirtualNetwork -Name myvnet -ResourceGroupName myrg
+    $subnet = Get-AzVirtualNetworkSubnetConfig -Name mysubnet -VirtualNetwork $vnet
+
+    $nic = Get-AzNetworkInterface -Name nic1 -ResourceGroupName myrg
+
+    $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress 10.0.0.11 -Subnet $subnet
+        -Primary
+
+    $nic | Set-AzNetworkInterface
+  description: |-
+    The first two commands get a virtual network called myvnet and a subnet called mysubnet and store it in the
+        variables $vnet and $subnet respectively. The third command gets the network interface nic1 associated with the IP
+        configuration that needs to be updated. The third command sets the private IP address of the primary IP
+        configuration ipconfig1 to 10.0.0.11. Finally, the last command updates the network interface ensuring the changes
+        have been made successfully.
+  summary: ""
+- title: '2: Associating an IP configuration with an application security group'
+  code: |-
+    $vnet = Get-AzVirtualNetwork -Name myvnet -ResourceGroupName myrg
+    $subnet = Get-AzVirtualNetworkSubnetConfig -Name mysubnet -VirtualNetwork $vnet
+    $asg = Get-ApplicationSecurityGroup -Name myasg -ResourceGroupName myrg
+
+    $nic = Get-AzNetworkInterface -Name nic1 -ResourceGroupName myrg
+
+    $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress 10.0.0.11 -Subnet $subnet -ApplicationSecurityGroup $asg
+        -Primary
+
+    $nic | Set-AzNetworkInterface
+  description: |-
+    In this example, the variable $asg contains a reference to an application security group.
+        The fourth command gets the network interface nic1 associated with the IP
+        configuration that needs to be updated. The Set-AzNetworkInterfaceIpConfig sets the private IP address of the primary IP
+        configuration ipconfig1 to 10.0.0.11 and creates an association with the retrieved application security group.
+        Finally, the last command updates the network interface ensuring the changes
+        have been made successfully.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ApplicationGatewayBackendAddressPool
+  description: |+
+    Specifies a collection of application gateway backend address pool references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ApplicationGatewayBackendAddressPoolId
+  description: |+
+    Specifies a collection of application gateway backend address pool references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ApplicationSecurityGroup
+  description: |+
+    Specifies a collection of application security group references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ApplicationSecurityGroupId
+  description: |+
+    Specifies a collection of application security group references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LoadBalancerBackendAddressPool
+  description: |+
+    Specifies a collection of load balancer backend address pool references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LoadBalancerBackendAddressPoolId
+  description: |+
+    Specifies a collection of load balancer backend address pool references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSInboundNatRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LoadBalancerInboundNatRule
+  description: |+
+    Specifies a collection of load balancer inbound network address translation (NAT) rule references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LoadBalancerInboundNatRuleId
+  description: |+
+    Specifies a collection of load balancer inbound NAT rule references to which this network interface IP configuration belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the network IP configuration for which this cmdlet sets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterface" data-throw-if-not-resolved="False" />
+  name: NetworkInterface
+  isRequired: true
+  description: |+
+    Specifies a **NetworkInterface** object.
+    This cmdlet adds a network interface IP configuration to the object that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Primary
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrivateIpAddress
+  description: |+
+    Specifies the static IP address of the network interface IP configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrivateIpAddressVersion
+  description: |+
+    Specifies the IP address version of a network interface IP configuration.
+    The acceptable values for this parameter are:
+    - IPv4
+    - IPv6
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: IPv4, IPv6
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+  name: PublicIpAddress
+  description: |+
+    Specifies a **PublicIPAddress** object.
+    This cmdlet creates a reference to a public IP Address to associate with this network interface IP configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PublicIpAddressId
+  description: |+
+    This cmdlet creates a reference to a public IP Address to associate with this network interface IP configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSSubnet" data-throw-if-not-resolved="False" />
+  name: Subnet
+  description: |+
+    Specifies a **Subnet** object.
+    This cmdlet creates a reference to a subnet in which this network interface IP configuration is created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubnetId
+  description: |+
+    This cmdlet creates a reference to a subnet in which this network interface IP configuration is created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzNetworkInterfaceIpConfig
+name: Set-AzNetworkInterfaceIpConfig
+description: |-
+  The **Set-AzNetworkInterfaceIpConfig** cmdlet updates an IP configuration for a network interface.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 13EF1028-43DE-424D-8185-EC45B5CEF2C1
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-aznetworkinterfaceipconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkInterfaceIpConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkInterfaceIpConfig.md

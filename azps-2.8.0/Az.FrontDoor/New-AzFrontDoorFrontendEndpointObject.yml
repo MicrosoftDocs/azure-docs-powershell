@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a PSFrontendEndpoint Object for Front Door creation
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontendEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoor
+  href: ./New-AzFrontDoor.yml
+- text: Set-AzFrontDoor
+  href: ./Set-AzFrontDoor.yml
+syntaxes:
+- >-
+  New-AzFrontDoorFrontendEndpointObject -Name <String> -HostName <String>
+
+   [-SessionAffinityEnabledState <PSEnabledState>] [-SessionAffinityTtlInSeconds <Int32>]
+
+   [-WebApplicationFirewallPolicyLink <String>] [-CertificateSource <String>] [-ProtocolType <String>]
+
+   [-Vault <String>] [-SecretName <String>] [-SecretVersion <String>] [-CertificateType <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzFrontDoorFrontendEndpointObject -Name "frontendendpoint1" -HostName $hostName
+
+
+    HostName                         : frontdoor5.azurefd.net
+    SessionAffinityEnabledState      : Disabled
+    SessionAffinityTtlSeconds        : 0
+    WebApplicationFirewallPolicyLink :
+    Backends                         :
+    CustomHttpsProvisioningState     :
+    CustomHttpsProvisioningSubstate  :
+    CertificateSource                : AzureKeyVault
+    ProtocolType                     : ServerNameIndication
+    Vault                            :
+    SecretName                       :
+    SecretVersion                    :
+    CertificateType                  : Shared
+    ResourceState                    :
+    Id                               :
+    Name                             : frontendendpoint1
+    Type                             :
+  description: |-
+    Create a PSFrontendEndpoint Object for Front Door creation
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateSource
+  description: |+
+    The source of the SSL certificate
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateType
+  description: |+
+    the type of the certificate used for secure connections to a frontendEndpoint
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostName
+  isRequired: true
+  description: |+
+    The host name of the frontendEndpoint.
+    Must be a domain name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Frontend endpoint name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProtocolType
+  description: |+
+    The TLS extension protocol that is used for secure delivery
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecretName
+  description: |+
+    The name of the Key Vault secret representing the full certificate PFX
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecretVersion
+  description: |+
+    The version of the Key Vault secret representing the full certificate PFX
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: SessionAffinityEnabledState
+  description: |+
+    Whether to allow session affinity on this host.
+    Default value is Disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SessionAffinityTtlInSeconds
+  description: |+
+    The TTL to use in seconds for session affinity, if applicable. 
+    Default value is 0
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Vault
+  description: |+
+    The Key Vault containing the SSL certificate
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WebApplicationFirewallPolicyLink
+  description: |+
+    The resource id of Web Application Firewall policy for each host (if applicable)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorFrontendEndpointObject
+name: New-AzFrontDoorFrontendEndpointObject
+description: |-
+  Create a PSFrontendEndpoint Object for Front Door creation
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorfrontendendpointobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorFrontendEndpointObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorFrontendEndpointObject.md

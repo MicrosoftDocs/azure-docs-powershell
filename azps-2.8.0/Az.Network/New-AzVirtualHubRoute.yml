@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Azure Virtual Hub Route object.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHubRoute" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzVirtualHubRouteTable
+  href: ./New-AzVirtualHubRouteTable.yml
+syntaxes:
+- >-
+  New-AzVirtualHubRoute -AddressPrefix <String[]> -NextHopIpAddress <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $route1 = New-AzVirtualHubRoute -AddressPrefix @("10.0.0.0/16", "11.0.0.0/16") -NextHopIpAddress "12.0.0.5"
+
+    AddressPrefixes            NextHopIpAddress
+    ---------------            ----------------
+    {10.0.0.0/16, 11.0.0.0/16} 12.0.0.5
+  description: |-
+    The above will create a virtual hub route object that can be included in the virtual hub route table.
+
+    The virtual hub route is an in-memory object that can be used to create a VirtualHubRouteTable object.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressPrefix
+  isRequired: true
+  description: |+
+    List of Address Prefixes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NextHopIpAddress
+  isRequired: true
+  description: |+
+    The Next Hop IpAddress.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzVirtualHubRoute
+name: New-AzVirtualHubRoute
+description: |-
+  Creates an Azure Virtual Hub Route object.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvirtualhubroute
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVirtualHubRoute.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVirtualHubRoute.md

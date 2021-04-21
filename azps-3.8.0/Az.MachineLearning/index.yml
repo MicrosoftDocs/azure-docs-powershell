@@ -1,0 +1,31 @@
+### YamlMime:PowershellModule
+children:
+- title: Machine Learning
+  cmdlets:
+  - Az.MachineLearning.Add-AzMlWebServiceRegionalProperty
+  - Az.MachineLearning.Export-AzMlWebService
+  - Az.MachineLearning.Get-AzMlCommitmentAssociation
+  - Az.MachineLearning.Get-AzMlCommitmentPlan
+  - Az.MachineLearning.Get-AzMlCommitmentPlanUsageHistory
+  - Az.MachineLearning.Get-AzMlWebService
+  - Az.MachineLearning.Get-AzMlWebServiceKey
+  - Az.MachineLearning.Import-AzMlWebService
+  - Az.MachineLearning.Move-AzMlCommitmentAssociation
+  - Az.MachineLearning.New-AzMlCommitmentPlan
+  - Az.MachineLearning.New-AzMlWebService
+  - Az.MachineLearning.Remove-AzMlCommitmentPlan
+  - Az.MachineLearning.Remove-AzMlWebService
+  - Az.MachineLearning.Update-AzMlCommitmentPlan
+  - Az.MachineLearning.Update-AzMlWebService
+uid: Az.MachineLearning
+name: Az.MachineLearning
+description: |-
+  Machine Learning Web Services cmdlets for Azure Resource Manager
+metadata:
+  Module Name: Az.MachineLearning
+  Module Guid: bb030259-49f9-46ef-806f-2a3f5a2e018e
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.machinelearning
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MachineLearning/MachineLearning/help/Az.MachineLearning.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MachineLearning/MachineLearning/help/Az.MachineLearning.md

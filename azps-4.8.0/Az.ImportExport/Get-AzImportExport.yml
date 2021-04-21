@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about an existing job.
+module: Az.ImportExport
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IImportExportIdentity>: Identity Parameter
+    - `[Id <String>]`: Resource identity path
+    - `[JobName <String>]`: The name of the import/export job.
+    - `[LocationName <String>]`: The name of the location. For example, West US or westus.
+    - `[ResourceGroupName <String>]`: The resource group name uniquely identifies the resource group within the user subscription.
+    - `[SubscriptionId <String>]`: The subscription ID for the Azure user.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IJobResponse" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzImportExport [-SubscriptionId <String[]>] [-Filter <String>] [-Top <Int32>] [-AcceptLanguage <String>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzImportExport -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-AcceptLanguage <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzImportExport -InputObject <IImportExportIdentity> [-AcceptLanguage <String>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzImportExport -ResourceGroupName <String> [-SubscriptionId <String[]>] [-Filter <String>] [-Top <Int32>]
+
+   [-AcceptLanguage <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get ImportExport job with default context'
+  code: |-
+    PS C:\> Get-AzImportExport
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+  description: |-
+    This cmdlet gets ImportExport job with default context.
+  summary: ""
+- title: 'Example 2: Get ImportExport job by resource group and job name'
+  code: |-
+    PS C:\> Get-AzImportExport -Name test-job -ResourceGroupName ImportTestRG
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+  description: |-
+    This cmdlet gets ImportExport job by resource group and job name.
+  summary: ""
+- title: 'Example 3: Lists all the ImportExport jobs in specified resource group'
+  code: |-
+    PS C:\> Get-AzImportExport -ResourceGroupName ImportTestRG
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+  description: |-
+    This cmdlet lists all the ImportExport jobs in specified resource group.
+  summary: ""
+- title: 'Example 4: Get ImportExport job by identity'
+  code: |-
+    PS C:\> $Id = "/subscriptions/<SubscriptionId>/resourceGroups/ImportTestRG/providers/Microsoft.ImportExport/jobs/test-job"
+    PS C:\> Get-AzImportExport -InputObject $Id
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+  description: |-
+    This cmdlet lists gets ImportExport job by identity.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AcceptLanguage
+  description: |+
+    Specifies the preferred language for the response.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Can be used to restrict the results to certain conditions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the import/export job.
+
+  defaultValue: None
+  position: Named
+  aliases: JobName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name uniquely identifies the resource group within the user subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The subscription ID for the Azure user.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Top
+  description: |+
+    An integer value that specifies how many jobs at most should be returned.
+    The value cannot exceed 100.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ImportExport.Get-AzImportExport
+name: Get-AzImportExport
+description: |-
+  Gets information about an existing job.
+metadata:
+  external help file: ""
+  Module Name: Az.ImportExport
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.importexport/get-azimportexport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/Get-AzImportExport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/Get-AzImportExport.md

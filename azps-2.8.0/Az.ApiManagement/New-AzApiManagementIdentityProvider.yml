@@ -1,0 +1,213 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Identity Provider configuration.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProvider" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApiManagementIdentityProvider
+  href: ./Get-AzApiManagementIdentityProvider.yml
+- text: Remove-AzApiManagementIdentityProvider
+  href: ./Remove-AzApiManagementIdentityProvider.yml
+- text: Set-AzApiManagementIdentityProvider
+  href: ./Set-AzApiManagementIdentityProvider.yml
+syntaxes:
+- >-
+  New-AzApiManagementIdentityProvider -Context <PsApiManagementContext>
+
+   -Type <PsApiManagementIdentityProviderType> -ClientId <String> -ClientSecret <String>
+
+   [-AllowedTenants <String[]>] [-Authority <String>] [-SignupPolicyName <String>] [-SigninPolicyName <String>]
+
+   [-ProfileEditingPolicyName <String>] [-PasswordResetPolicyName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configures Facebook as an identity Provider for Developer Portal Logins'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>New-AzApiManagementIdentityProvider -Context $apimContext -Type 'Facebook' -ClientId 'sdfsfwerwerw' -ClientSecret 'sdgsdfgfst43tewfewrf'
+  description: |-
+    This command configures Facebook Identity as a accepted Identity Provider on the Developer Portal of the ApiManagement service.
+    This takes as input the ClientId and ClientSecret of the Facebook app.
+  summary: ""
+- title: 'Example 2: Configures adB2C as an identity Provider for Developer Portal Logins'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>New-AzApiManagementIdentityProvider -Context $context -Type AadB2C -ClientId 6b1fc750-9e68-450c-97d2-ba6acd0fbc20 -ClientSecret "foobar" -AllowedTenants 'samirtestbc.onmicrosoft.com' -SignupPolicyName B2C_1_signup-policy
+
+    Type                     : AadB2C
+    ClientId                 : 6b1fc750-9e68-450c-97d2-ba6acd0fbc20
+    ClientSecret             : foobar
+    AllowedTenants           : {samirtestbc.onmicrosoft.com}
+    Authority                : login.microsoftonline.com
+    SignupPolicyName         : B2C_1_signup-policy
+    SigninPolicyName         :
+    ProfileEditingPolicyName :
+    PasswordResetPolicyName  :
+    Id                       : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/identityProviders/AadB2C
+    ResourceGroupName        : Api-Default-WestUS
+    ServiceName              : contoso
+  description: |-
+    This command configures Facebook Identity as a accepted Identity Provider on the Developer Portal of the ApiManagement service.
+    This takes as input the ClientId and ClientSecret of the Facebook app.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AllowedTenants
+  description: |+
+    List of allowed Azure Active Directory Tenants
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Authority
+  description: |+
+    OpenID Connect discovery endpoint hostname for AAD or AAD B2C. This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClientId
+  isRequired: true
+  description: |+
+    Client Id of the Application in the external Identity Provider.
+    It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClientSecret
+  isRequired: true
+  description: |+
+    Client secret of the Application in external Identity Provider, used to authenticate login request.
+    For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Instance of PsApiManagementContext.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PasswordResetPolicyName
+  description: |+
+    Password Reset Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProfileEditingPolicyName
+  description: |+
+    Profile Editing Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SigninPolicyName
+  description: |+
+    Signin Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SignupPolicyName
+  description: |+
+    Signup Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Identifier of a Identity Provider.
+    If specified will try to find identity provider configuration by the identifier.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Facebook, Google, Microsoft, Twitter, Aad, AadB2C
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ApiManagement.New-AzApiManagementIdentityProvider
+name: New-AzApiManagementIdentityProvider
+description: |-
+  Creates a new Identity Provider configuration.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementidentityprovider
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementIdentityProvider.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementIdentityProvider.md

@@ -1,0 +1,237 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more recommended actions for an Azure SQL Elastic Pool Advisor.
+module: Az.Sql
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, sql, elasticpool, mssql, advisor, recommendedaction
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.RecommendedAction.Model.AzureSqlElasticPoolRecommendedActionModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlDatabaseRecommendedAction
+  href: ./Get-AzSqlDatabaseRecommendedAction.yml
+- text: Get-AzSqlElasticPoolAdvisor
+  href: ./Get-AzSqlElasticPoolAdvisor.yml
+- text: Get-AzSqlServerRecommendedAction
+  href: ./Get-AzSqlServerRecommendedAction.yml
+- text: Set-AzSqlElasticPoolRecommendedActionState
+  href: ./Set-AzSqlElasticPoolRecommendedActionState.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Get-AzSqlElasticPoolRecommendedAction [-RecommendedActionName <String>] -ServerName <String>
+
+   -ElasticPoolName <String> -AdvisorName <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all recommended actions for an Advisor'
+  code: |-
+    PS C:\>Get-AzSqlElasticPoolRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ElasticPoolName "WIRunnerPool" -AdvisorName "CreateIndex"
+    ElasticPoolName            : WIRunnerPool
+    ResourceGroupName          : WIRunnersProd
+    ServerName                 : wi-runner-australia-east
+    AdvisorName                : CreateIndex
+    RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
+    Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
+                                 NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+    ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
+    EstimatedImpact            : {ActionDuration, SpaceChange}
+    ExecuteActionDuration      : PT1M
+    ExecuteActionInitiatedBy   : User
+    ExecuteActionInitiatedTime : 4/21/2016 3:24:47 PM
+    ExecuteActionStartTime     : 4/21/2016 3:24:47 PM
+    ImplementationDetails      : Microsoft.Azure.Management.Sql.Models.RecommendedActionImplementationInfo
+    IsArchivedAction           : False
+    IsExecutableAction         : True
+    IsRevertableAction         : True
+    LastRefresh                : 4/21/2016 3:24:47 PM
+    LinkedObjects              : {}
+    ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
+    RecommendationReason       : 
+    RevertActionDuration       : 
+    RevertActionInitiatedBy    : 
+    RevertActionInitiatedTime  : 
+    RevertActionStartTime      : 
+    Score                      : 2
+    State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
+    TimeSeries                 : {}
+    ValidSince                 : 4/21/2016 3:24:47 PM
+
+    ElasticPoolName            : WIRunnerPool
+    ResourceGroupName          : WIRunnersProd
+    ServerName                 : wi-runner-australia-east
+    AdvisorName                : CreateIndex
+    RecommendedActionName      : IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893
+    Details                    : {[indexName, nci_wi_test_table_0.236046_6C7AE8CC9C87E7FD5893], [indexType, NONCLUSTERED], 
+                                 [schema, [test_schema]], [table, [test_table_0.236046]]...} 
+    ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
+    EstimatedImpact            : {ActionDuration, SpaceChange}
+    ExecuteActionDuration      : PT1M
+    ExecuteActionInitiatedBy   : User
+    ExecuteActionInitiatedTime : 4/21/2016 3:24:47 PM
+    ExecuteActionStartTime     : 4/21/2016 3:24:47 PM
+    ImplementationDetails      : Microsoft.Azure.Management.Sql.Models.RecommendedActionImplementationInfo
+    IsArchivedAction           : False
+    IsExecutableAction         : True
+    IsRevertableAction         : True
+    LastRefresh                : 4/21/2016 3:24:47 PM
+    LinkedObjects              : {}
+    ObservedImpact             : {SpaceChange}
+    RecommendationReason       : 
+    RevertActionDuration       : 
+    RevertActionInitiatedBy    : 
+    RevertActionInitiatedTime  : 
+    RevertActionStartTime      : 
+    Score                      : 3
+    State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
+    TimeSeries                 : {}
+    ValidSince                 : 4/21/2016 3:24:47 PM
+
+    ElasticPoolName            : WIRunnerPool
+    ResourceGroupName          : WIRunnersProd
+    ServerName                 : wi-runner-australia-east
+    AdvisorName                : CreateIndex
+    RecommendedActionName      : IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893
+    Details                    : {[indexName, nci_wi_test_table_0.239359_6C7AE8CC9C87E7FD5893], [indexType, NONCLUSTERED], 
+                                 [schema, [test_schema]], [table, [test_table_0.239359]]...} 
+    ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
+    EstimatedImpact            : {ActionDuration, SpaceChange}
+    ExecuteActionDuration      : PT1M
+    ExecuteActionInitiatedBy   : User
+    ExecuteActionInitiatedTime : 4/21/2016 3:24:47 PM
+    ExecuteActionStartTime     : 4/21/2016 3:24:47 PM
+    ImplementationDetails      : Microsoft.Azure.Management.Sql.Models.RecommendedActionImplementationInfo
+    IsArchivedAction           : False
+    IsExecutableAction         : True
+    IsRevertableAction         : True
+    LastRefresh                : 4/21/2016 3:24:47 PM
+    LinkedObjects              : {}
+    ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
+    RecommendationReason       : 
+    RevertActionDuration       : PT10S
+    RevertActionInitiatedBy    : System
+    RevertActionInitiatedTime  : 4/21/2016 3:24:47 PM
+    RevertActionStartTime      : 4/21/2016 3:24:47 PM
+    Score                      : 3
+    State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
+    TimeSeries                 : {}
+    ValidSince                 : 4/21/2016 3:24:47 PM
+  description: |-
+    This command gets a list of all recommended actions of the Advisor named CreateIndex available for the elastic pool named WIRunnerPool.
+  summary: ""
+- title: 'Example 2: Get a single recommended action for an Advisor'
+  code: |-
+    PS C:\>Get-AzSqlElasticPoolRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ElasticPoolName "WIRunnerPool" -AdvisorName "CreateIndex" -RecommendedActionName "IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893"
+    ElasticPoolName            : WIRunnerPool
+    ResourceGroupName          : WIRunnersProd
+    ServerName                 : wi-runner-australia-east
+    AdvisorName                : CreateIndex
+    RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
+    Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
+                                 NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+    ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
+    EstimatedImpact            : {ActionDuration, SpaceChange}
+    ExecuteActionDuration      : PT1M
+    ExecuteActionInitiatedBy   : User
+    ExecuteActionInitiatedTime : 4/21/2016 3:24:47 PM
+    ExecuteActionStartTime     : 4/21/2016 3:24:47 PM
+    ImplementationDetails      : Microsoft.Azure.Management.Sql.Models.RecommendedActionImplementationInfo
+    IsArchivedAction           : False
+    IsExecutableAction         : True
+    IsRevertableAction         : True
+    LastRefresh                : 4/21/2016 3:24:47 PM
+    LinkedObjects              : {}
+    ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
+    RecommendationReason       : 
+    RevertActionDuration       : 
+    RevertActionInitiatedBy    : 
+    RevertActionInitiatedTime  : 
+    RevertActionStartTime      : 
+    Score                      : 2
+    State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
+    TimeSeries                 : {}
+    ValidSince                 : 4/21/2016 3:24:47 PM
+  description: |-
+    This command gets the recommended action named IR_\[test_schema\]_\[test_table_0.0361551\]_6C7AE8CC9C87E7FD5893 from the Advisor named CreateIndex.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AdvisorName
+  isRequired: true
+  description: |+
+    Specifies the name of the advisor for which this cmdlet requests recommended actions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ElasticPoolName
+  isRequired: true
+  description: |+
+    Specifies the name of the elastic pool for which this cmdlet requests recommended actions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecommendedActionName
+  description: |+
+    Specifies the name of the recommended action that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group of the server that contains this elastic pool.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server the elastic pool is in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlElasticPoolRecommendedAction
+name: Get-AzSqlElasticPoolRecommendedAction
+description: |-
+  The **Get-AzSqlElasticPoolRecommendedAction** cmdlet gets one or more recommended actions for an Azure SQL Elastic Pool Advisor.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 3FC9E586-3962-437E-B89F-BB4EA1FBF403
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlelasticpoolrecommendedaction
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlElasticPoolRecommendedAction.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlElasticPoolRecommendedAction.md

@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a webhook for an Automation runbook.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Webhook" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationWebhook
+  href: ./Get-AzAutomationWebhook.yml
+- text: New-AzAutomationWebhook
+  href: ./New-AzAutomationWebhook.yml
+- text: Remove-AzAutomationWebhook
+  href: ./Remove-AzAutomationWebhook.yml
+syntaxes:
+- >-
+  Set-AzAutomationWebhook [-Name] <String> [-IsEnabled] <Boolean> [[-Parameters] <IDictionary>] [-RunOn <String>]
+
+   [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a webhook'
+  code: |-
+    PS C:\>Set-AzAutomationWebhook -Name "Webhook01" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -IsEnabled $False
+  description: |-
+    This command disables a webhook named Webhook01 in the Automation account named AutomationAccount01.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Set-AzAutomationWebhook -Name "Webhook01" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -RunOn 'Windows'
+  description: |-
+    This command sets the run on value for the webhook and forces the runbook to be run on a Hybrid Worker group called Windows.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Set-AzAutomationWebhook -Name "Webhook01" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -RunOn $null
+  description: |-
+    This command updates the run on value for the webhook and forces the runbook to be run on an Azure runbook worker.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of an Automation account in which this cmdlet modifies a webhook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: IsEnabled
+  isRequired: true
+  description: |+
+    Specifies whether the webhook is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name of the webhook that this cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+  name: Parameters
+  description: |+
+    Specifies a dictionary of key/value pairs.
+    The keys are the runbook parameter names.
+    The values are the runbook parameter values.
+    When the runbook starts in response to a webhook, these parameters are passed to the runbook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for which this cmdlet modifies a webhook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunOn
+  description: |+
+    Optional name of the hybrid agent which should execute the runbook
+
+  defaultValue: None
+  position: Named
+  aliases: HybridWorker
+  parameterValueGroup: ""
+uid: Az.Automation.Set-AzAutomationWebhook
+name: Set-AzAutomationWebhook
+description: |-
+  The **Set-AzAutomationWebhook** cmdlet modifies a webhook for an Azure Automation runbook.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 9EA7F710-36FB-435C-BF28-1015E5D3155F
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationwebhook
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationWebhook.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationWebhook.md

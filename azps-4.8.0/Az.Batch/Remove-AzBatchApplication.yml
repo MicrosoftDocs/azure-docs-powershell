@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an application from a Batch account.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchApplication
+  href: ./Get-AzBatchApplication.yml
+- text: Get-AzBatchApplicationPackage
+  href: ./Get-AzBatchApplicationPackage.yml
+- text: New-AzBatchApplication
+  href: ./New-AzBatchApplication.yml
+- text: New-AzBatchApplicationPackage
+  href: ./New-AzBatchApplicationPackage.yml
+- text: Remove-AzBatchApplicationPackage
+  href: ./Remove-AzBatchApplicationPackage.yml
+- text: Set-AzBatchApplication
+  href: ./Set-AzBatchApplication.yml
+syntaxes:
+- >-
+  Remove-AzBatchApplication [-AccountName] <String> [-ResourceGroupName] <String> [-ApplicationName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Delete an application from a Batch account'
+  code: |-
+    PS C:\>Remove-AzBatchApplication -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup" -ApplicationName "Litware"
+  description: |-
+    This command deletes the Litware application from the ContosoBatch account.
+    The command fails if the application contains any packages.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Batch account from which this cmdlet removes an application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApplicationName
+  isRequired: true
+  description: |+
+    Specifies the name of the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ApplicationId
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the Batch account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Remove-AzBatchApplication
+name: Remove-AzBatchApplication
+description: |-
+  The **Remove-AzBatchApplication** cmdlet deletes an application from an Azure Batch account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 2CED21D6-4BEF-423B-A04A-5B812CEB975D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/remove-azbatchapplication
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Remove-AzBatchApplication.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Remove-AzBatchApplication.md

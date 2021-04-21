@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a cache(s).
+module: Az.HPCCache
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HPCCache.Models.PSHPCCache" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzHpcCache [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzHPCCache -ResourceGroupName rgtest -CacheName cachetest
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzHPCCache -ResourceGroupName rgtest
+  description: ""
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzHPCCache
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of specific cache.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: CacheName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Name of resource group under which you want to list cache(s).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HPCCache.Get-AzHpcCache
+name: Get-AzHpcCache
+description: |-
+  The **Get-AzHpcCache** cmdlet gets a single cache, cache(s) in a specific resource group, or subscription wide list of caches.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HPCCache.dll-Help.xml
+  Module Name: Az.HPCCache
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hpccache/get-azhpccache
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HPCCache/HPCCache/help/Get-AzHpcCache.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HPCCache/HPCCache/help/Get-AzHpcCache.md

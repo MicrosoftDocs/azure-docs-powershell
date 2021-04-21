@@ -1,0 +1,32 @@
+### YamlMime:PowershellModule
+children:
+- title: Blockchain Service
+  cmdlets:
+  - Az.Blockchain.Get-AzBlockchainConsortium
+  - Az.Blockchain.Get-AzBlockchainMember
+  - Az.Blockchain.Get-AzBlockchainMemberApiKey
+  - Az.Blockchain.Get-AzBlockchainMemberConsortiumMember
+  - Az.Blockchain.Get-AzBlockchainSku
+  - Az.Blockchain.Get-AzBlockchainTransactionNode
+  - Az.Blockchain.Get-AzBlockchainTransactionNodeApiKey
+  - Az.Blockchain.New-AzBlockchainMember
+  - Az.Blockchain.New-AzBlockchainMemberApiKey
+  - Az.Blockchain.New-AzBlockchainTransactionNode
+  - Az.Blockchain.New-AzBlockchainTransactionNodeApiKey
+  - Az.Blockchain.Remove-AzBlockchainMember
+  - Az.Blockchain.Remove-AzBlockchainTransactionNode
+  - Az.Blockchain.Test-AzBlockchainLocationNameAvailability
+  - Az.Blockchain.Update-AzBlockchainMember
+  - Az.Blockchain.Update-AzBlockchainTransactionNode
+uid: Az.Blockchain
+name: Az.Blockchain
+description: |-
+  Microsoft Azure PowerShell: Blockchain cmdlets
+metadata:
+  Module Name: Az.Blockchain
+  Module Guid: ae1a09bf-916c-480c-a1bb-bace1453a91e
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.blockchain
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blockchain/help/Az.Blockchain.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blockchain/help/Az.Blockchain.md

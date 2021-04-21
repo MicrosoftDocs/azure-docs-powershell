@@ -1,0 +1,310 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Azure SQL Database Sync Member.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataSync.Model.AzureSqlSyncMemberModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlSyncMember
+  href: ./Get-AzSqlSyncMember.yml
+- text: Update-AzSqlSyncMember
+  href: ./Update-AzSqlSyncMember.yml
+- text: Remove-AzSqlSyncMember
+  href: ./Remove-AzSqlSyncMember.yml
+syntaxes:
+- >-
+  New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -MemberServerName <String>
+
+   -MemberDatabaseName <String> -MemberDatabaseCredential <PSCredential> [-SyncDirection <String>]
+
+   [-UsePrivateLinkConnection] [-SyncMemberAzureDatabaseResourceId <String>] [-SyncGroupName] <String>
+
+   [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -SyncAgentResourceGroupName <String>
+
+   -SyncAgentServerName <String> -SyncAgentName <String> -SqlServerDatabaseId <String> [-SyncDirection <String>]
+
+   [-UsePrivateLinkConnection] [-SyncMemberAzureDatabaseResourceId <String>] [-SyncGroupName] <String>
+
+   [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -SqlServerDatabaseId <String>
+
+   -SyncAgentResourceID <String> [-SyncDirection <String>] [-UsePrivateLinkConnection]
+
+   [-SyncMemberAzureDatabaseResourceId <String>] [-SyncGroupName] <String> [-ServerName] <String>
+
+   [-DatabaseName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a sync member for an Azure SQL database.'
+  code: |-
+    PS C:\> $credential = Get-Credential
+    PS C:\> New-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" -SyncDirection "OneWayMemberToHub"
+    -MemberDatabaseType "AzureSqlDatabase" -MemberServerName "memberServer01.full.dns.name" -MemberDatabaseName "memberDatabase01" -MemberDatabaseCredential $credential | Format-List
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncMemberName              : SyncMember01
+    SyncDirection               : OneWayMemberToHub
+    MemberDatabaseType:         : AzureSqlDatabase
+    SyncAgentId                 : 
+    SqlServerDatabaseId         : 
+    MemberServerName            : memberServer01.full.dns.name
+    MemberDatabaseName          : memberDatabase01
+    MemberDatabaseUserName      : myAccount
+    MemberDatabasePassword      : 
+    SyncState                   : UnProvisioned
+  description: |-
+    This command creates a sync member for an Azure SQL database.
+  summary: ""
+- title: 'Example 2: Create a sync member for an on-premises SQL Server database'
+  code: |-
+    PS C:\> $credential = Get-Credential
+    PS C:\> New-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" -SyncDirection "OneWayMemberToHub"
+    -MemberDatabaseType "SqlServerDatabase" -SqlServerDatabaseId "dbId" -syncAgentResourceGroupName "syncAgentResourceGroupName" -syncAgentServerName "syncAgentServerName" 
+    -syncAgentDatabaseName "syncAgentDatabaseName" -syncAgentName "agentName" | Format-List
+    ResourceId                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncMemberName              : SyncMember01
+    SyncDirection               : OneWayMemberToHub
+    MemberDatabaseType:         : AzureSqlDatabase
+    SyncAgentId                 : /subscriptions/{subscriptionId}/resourceGroups/{syncAgentResourceGroupName}/servers/{syncAgentServerName}/syncAgents/{syncAgentId}
+    SqlServerDatabaseId         : dbId
+    MemberServerName            : 
+    MemberDatabaseName          : 
+    MemberDatabaseUserName      : myAccount
+    MemberDatabasePassword      : 
+    SyncState                   : UnProvisioned
+  description: |-
+    This command creates a sync member for an on-premises SQL database.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: MemberDatabaseCredential
+  isRequired: true
+  description: |+
+    The credential (username and password) of the Azure SQL Database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MemberDatabaseName
+  isRequired: true
+  description: |+
+    The Azure SQL Database name of the member database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MemberDatabaseType
+  isRequired: true
+  description: |+
+    The database type of the member database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: SqlServerDatabase, AzureSqlDatabase
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MemberServerName
+  isRequired: true
+  description: |+
+    The Azure SQL Server Name of the member database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The sync member name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SyncMemberName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SqlServerDatabaseId
+  isRequired: true
+  description: |+
+    The id of the SQL server database which is connected by the sync agent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncAgentName
+  isRequired: true
+  description: |+
+    The name of the sync agent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncAgentResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group where the sync agent is under.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncAgentResourceID
+  isRequired: true
+  description: |+
+    The resource ID of the sync agent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncAgentServerName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Server where the sync agent is under.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncDirection
+  description: |+
+    The sync direction of this sync member.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Bidirectional, OneWayMemberToHub, OneWayHubToMember
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncGroupName
+  isRequired: true
+  description: |+
+    The sync group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncMemberAzureDatabaseResourceId
+  description: |+
+    The resource ID for the sync member database, used if UsePrivateLinkConnection is set to true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UsePrivateLinkConnection
+  description: |+
+    Use a private link connection when connecting to this sync member.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.New-AzSqlSyncMember
+name: New-AzSqlSyncMember
+description: |-
+  The **New-AzSqlSyncMember** cmdlet creates an Azure SQL Database Sync Member.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-azsqlsyncmember
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncMember.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncMember.md

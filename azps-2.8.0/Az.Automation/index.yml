@@ -1,0 +1,104 @@
+### YamlMime:PowershellModule
+children:
+- title: Automation
+  cmdlets:
+  - Az.Automation.Export-AzAutomationDscConfiguration
+  - Az.Automation.Export-AzAutomationDscNodeReportContent
+  - Az.Automation.Export-AzAutomationRunbook
+  - Az.Automation.Get-AzAutomationAccount
+  - Az.Automation.Get-AzAutomationCertificate
+  - Az.Automation.Get-AzAutomationConnection
+  - Az.Automation.Get-AzAutomationCredential
+  - Az.Automation.Get-AzAutomationDscCompilationJob
+  - Az.Automation.Get-AzAutomationDscCompilationJobOutput
+  - Az.Automation.Get-AzAutomationDscConfiguration
+  - Az.Automation.Get-AzAutomationDscNode
+  - Az.Automation.Get-AzAutomationDscNodeConfiguration
+  - Az.Automation.Get-AzAutomationDscNodeConfigurationDeployment
+  - Az.Automation.Get-AzAutomationDscNodeConfigurationDeploymentSchedule
+  - Az.Automation.Get-AzAutomationDscNodeReport
+  - Az.Automation.Get-AzAutomationDscOnboardingMetaconfig
+  - Az.Automation.Get-AzAutomationHybridWorkerGroup
+  - Az.Automation.Get-AzAutomationJob
+  - Az.Automation.Get-AzAutomationJobOutput
+  - Az.Automation.Get-AzAutomationJobOutputRecord
+  - Az.Automation.Get-AzAutomationModule
+  - Az.Automation.Get-AzAutomationRegistrationInfo
+  - Az.Automation.Get-AzAutomationRunbook
+  - Az.Automation.Get-AzAutomationSchedule
+  - Az.Automation.Get-AzAutomationScheduledRunbook
+  - Az.Automation.Get-AzAutomationSoftwareUpdateConfiguration
+  - Az.Automation.Get-AzAutomationSoftwareUpdateMachineRun
+  - Az.Automation.Get-AzAutomationSoftwareUpdateRun
+  - Az.Automation.Get-AzAutomationSourceControl
+  - Az.Automation.Get-AzAutomationSourceControlSyncJob
+  - Az.Automation.Get-AzAutomationSourceControlSyncJobOutput
+  - Az.Automation.Get-AzAutomationVariable
+  - Az.Automation.Get-AzAutomationWebhook
+  - Az.Automation.Import-AzAutomationDscConfiguration
+  - Az.Automation.Import-AzAutomationDscNodeConfiguration
+  - Az.Automation.Import-AzAutomationRunbook
+  - Az.Automation.New-AzAutomationAccount
+  - Az.Automation.New-AzAutomationCertificate
+  - Az.Automation.New-AzAutomationConnection
+  - Az.Automation.New-AzAutomationCredential
+  - Az.Automation.New-AzAutomationKey
+  - Az.Automation.New-AzAutomationModule
+  - Az.Automation.New-AzAutomationRunbook
+  - Az.Automation.New-AzAutomationSchedule
+  - Az.Automation.New-AzAutomationSoftwareUpdateConfiguration
+  - Az.Automation.New-AzAutomationSourceControl
+  - Az.Automation.New-AzAutomationUpdateManagementAzureQuery
+  - Az.Automation.New-AzAutomationVariable
+  - Az.Automation.New-AzAutomationWebhook
+  - Az.Automation.Publish-AzAutomationRunbook
+  - Az.Automation.Register-AzAutomationDscNode
+  - Az.Automation.Register-AzAutomationScheduledRunbook
+  - Az.Automation.Remove-AzAutomationAccount
+  - Az.Automation.Remove-AzAutomationCertificate
+  - Az.Automation.Remove-AzAutomationConnection
+  - Az.Automation.Remove-AzAutomationConnectionType
+  - Az.Automation.Remove-AzAutomationCredential
+  - Az.Automation.Remove-AzAutomationDscConfiguration
+  - Az.Automation.Remove-AzAutomationDscNodeConfiguration
+  - Az.Automation.Remove-AzAutomationHybridWorkerGroup
+  - Az.Automation.Remove-AzAutomationModule
+  - Az.Automation.Remove-AzAutomationRunbook
+  - Az.Automation.Remove-AzAutomationSchedule
+  - Az.Automation.Remove-AzAutomationSoftwareUpdateConfiguration
+  - Az.Automation.Remove-AzAutomationSourceControl
+  - Az.Automation.Remove-AzAutomationVariable
+  - Az.Automation.Remove-AzAutomationWebhook
+  - Az.Automation.Resume-AzAutomationJob
+  - Az.Automation.Set-AzAutomationAccount
+  - Az.Automation.Set-AzAutomationCertificate
+  - Az.Automation.Set-AzAutomationConnectionFieldValue
+  - Az.Automation.Set-AzAutomationCredential
+  - Az.Automation.Set-AzAutomationDscNode
+  - Az.Automation.Set-AzAutomationModule
+  - Az.Automation.Set-AzAutomationRunbook
+  - Az.Automation.Set-AzAutomationSchedule
+  - Az.Automation.Set-AzAutomationVariable
+  - Az.Automation.Set-AzAutomationWebhook
+  - Az.Automation.Start-AzAutomationDscCompilationJob
+  - Az.Automation.Start-AzAutomationDscNodeConfigurationDeployment
+  - Az.Automation.Start-AzAutomationRunbook
+  - Az.Automation.Start-AzAutomationSourceControlSyncJob
+  - Az.Automation.Stop-AzAutomationDscNodeConfigurationDeployment
+  - Az.Automation.Stop-AzAutomationJob
+  - Az.Automation.Suspend-AzAutomationJob
+  - Az.Automation.Unregister-AzAutomationDscNode
+  - Az.Automation.Unregister-AzAutomationScheduledRunbook
+  - Az.Automation.Update-AzAutomationSourceControl
+uid: Az.Automation
+name: Az.Automation
+description: |-
+  This topic displays help topics for the Azure Automation Cmdlets.
+metadata:
+  Module Name: Az.Automation
+  Module Guid: bcea1c70-a32b-48c3-a05c-323e1c02f4d3
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.automation
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Az.Automation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Az.Automation.md

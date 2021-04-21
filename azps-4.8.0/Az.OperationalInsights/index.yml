@@ -1,0 +1,67 @@
+### YamlMime:PowershellModule
+children:
+- title: Operational Insights
+  cmdlets:
+  - Az.OperationalInsights.Disable-AzOperationalInsightsIISLogCollection
+  - Az.OperationalInsights.Disable-AzOperationalInsightsLinuxCustomLogCollection
+  - Az.OperationalInsights.Disable-AzOperationalInsightsLinuxPerformanceCollection
+  - Az.OperationalInsights.Disable-AzOperationalInsightsLinuxSyslogCollection
+  - Az.OperationalInsights.Enable-AzOperationalInsightsIISLogCollection
+  - Az.OperationalInsights.Enable-AzOperationalInsightsLinuxCustomLogCollection
+  - Az.OperationalInsights.Enable-AzOperationalInsightsLinuxPerformanceCollection
+  - Az.OperationalInsights.Enable-AzOperationalInsightsLinuxSyslogCollection
+  - Az.OperationalInsights.Get-AzOperationalInsightsCluster
+  - Az.OperationalInsights.Get-AzOperationalInsightsDataSource
+  - Az.OperationalInsights.Get-AzOperationalInsightsDeletedWorkspace
+  - Az.OperationalInsights.Get-AzOperationalInsightsIntelligencePack
+  - Az.OperationalInsights.Get-AzOperationalInsightsLinkedService
+  - Az.OperationalInsights.Get-AzOperationalInsightsLinkedStorageAccount
+  - Az.OperationalInsights.Get-AzOperationalInsightsSavedSearch
+  - Az.OperationalInsights.Get-AzOperationalInsightsSchema
+  - Az.OperationalInsights.Get-AzOperationalInsightsStorageInsight
+  - Az.OperationalInsights.Get-AzOperationalInsightsWorkspace
+  - Az.OperationalInsights.Get-AzOperationalInsightsWorkspaceManagementGroup
+  - Az.OperationalInsights.Get-AzOperationalInsightsWorkspaceSharedKey
+  - Az.OperationalInsights.Get-AzOperationalInsightsWorkspaceUsage
+  - Az.OperationalInsights.Invoke-AzOperationalInsightsQuery
+  - Az.OperationalInsights.New-AzOperationalInsightsApplicationInsightsDataSource
+  - Az.OperationalInsights.New-AzOperationalInsightsAzureActivityLogDataSource
+  - Az.OperationalInsights.New-AzOperationalInsightsCluster
+  - Az.OperationalInsights.New-AzOperationalInsightsComputerGroup
+  - Az.OperationalInsights.New-AzOperationalInsightsCustomLogDataSource
+  - Az.OperationalInsights.New-AzOperationalInsightsLinkedStorageAccount
+  - Az.OperationalInsights.New-AzOperationalInsightsLinuxPerformanceObjectDataSource
+  - Az.OperationalInsights.New-AzOperationalInsightsLinuxSyslogDataSource
+  - Az.OperationalInsights.New-AzOperationalInsightsSavedSearch
+  - Az.OperationalInsights.New-AzOperationalInsightsStorageInsight
+  - Az.OperationalInsights.New-AzOperationalInsightsWindowsEventDataSource
+  - Az.OperationalInsights.New-AzOperationalInsightsWindowsPerformanceCounterDataSource
+  - Az.OperationalInsights.New-AzOperationalInsightsWorkspace
+  - Az.OperationalInsights.Remove-AzOperationalInsightsCluster
+  - Az.OperationalInsights.Remove-AzOperationalInsightsDataSource
+  - Az.OperationalInsights.Remove-AzOperationalInsightsLinkedService
+  - Az.OperationalInsights.Remove-AzOperationalInsightsLinkedStorageAccount
+  - Az.OperationalInsights.Remove-AzOperationalInsightsSavedSearch
+  - Az.OperationalInsights.Remove-AzOperationalInsightsStorageInsight
+  - Az.OperationalInsights.Remove-AzOperationalInsightsWorkspace
+  - Az.OperationalInsights.Restore-AzOperationalInsightsWorkspace
+  - Az.OperationalInsights.Set-AzOperationalInsightsDataSource
+  - Az.OperationalInsights.Set-AzOperationalInsightsIntelligencePack
+  - Az.OperationalInsights.Set-AzOperationalInsightsLinkedService
+  - Az.OperationalInsights.Set-AzOperationalInsightsLinkedStorageAccount
+  - Az.OperationalInsights.Set-AzOperationalInsightsSavedSearch
+  - Az.OperationalInsights.Set-AzOperationalInsightsStorageInsight
+  - Az.OperationalInsights.Set-AzOperationalInsightsWorkspace
+  - Az.OperationalInsights.Update-AzOperationalInsightsCluster
+uid: Az.OperationalInsights
+name: Az.OperationalInsights
+description: |-
+  This topic displays help topics for the Azure Operational Insights Cmdlets.
+metadata:
+  Module Name: Az.OperationalInsights
+  Module Guid: e827799a-7abf-4538-a61f-94dc52a48bd4
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights
+  Help Version: 4.3.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/Az.OperationalInsights.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/Az.OperationalInsights.md

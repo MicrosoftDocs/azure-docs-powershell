@@ -1,0 +1,275 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates support ticket.
+module: Az.Support
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Support.Models.PSSupportTicket" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Support.Models.PSSupportTicket" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzSupportTicket -Name <String> [-Severity <Severity>] [-Status <Status>] [-CustomerFirstName <String>]
+
+   [-CustomerLastName <String>] [-PreferredContactMethod <ContactMethod>] [-CustomerPrimaryEmailAddress <String>]
+
+   [-AdditionalEmailAddress <String[]>] [-CustomerPhoneNumber <String>] [-CustomerPreferredTimeZone <String>]
+
+   [-CustomerCountry <String>] [-CustomerPreferredSupportLanguage <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzSupportTicket -Name <String> [-Severity <Severity>] [-Status <Status>] -CustomerContactDetail <PSContactProfile>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzSupportTicket -InputObject <PSSupportTicket> [-Severity <Severity>] [-Status <Status>] [-CustomerFirstName <String>]
+
+   [-CustomerLastName <String>] [-PreferredContactMethod <ContactMethod>] [-CustomerPrimaryEmailAddress <String>]
+
+   [-AdditionalEmailAddress <String[]>] [-CustomerPhoneNumber <String>] [-CustomerPreferredTimeZone <String>]
+
+   [-CustomerCountry <String>] [-CustomerPreferredSupportLanguage <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzSupportTicket -InputObject <PSSupportTicket> [-Severity <Severity>] [-Status <Status>]
+
+   -CustomerContactDetail <PSContactProfile> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Update severity of support ticket.'
+  code: |-
+    PS C:\> Update-AzSupportTicket -Name "test1" -Severity "moderate"
+
+    Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate
+    ----  -----                        --------------- -------- ------------------            ------ -----------
+    test1 test title1                  150010521000317 Moderate Virtual Machine running Linux Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 2: Update status of support ticket.'
+  code: |-
+    PS C:\> Update-AzSupportTicket -Name "test1" -Status "Closed"
+
+    Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate
+    ----  -----                        --------------- -------- ------------------            ------ -----------
+    test1 test title1                  150010521000317 Moderate Virtual Machine running Linux Closed   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 3: Update contact details of support ticket by specify contact object.'
+  code: |-
+    PS C:\> $contactDetail = new-object Microsoft.Azure.Commands.Support.Models.PSContactProfile
+    PS C:\> $contactDetail.FirstName = "first name updated"
+    PS C:\> $contactDetail.LastName = "last name updated"
+    PS C:\> Update-AzSupportTicket -Name "test1" -CustomerContactDetail $contactDetail 
+
+    Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate
+    ----  -----                        --------------- -------- ------------------            ------ -----------
+    test1 test title1                  150010521000317 Moderate Virtual Machine running Linux Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 4: Update severity of support ticket by piping support ticket object.'
+  code: |-
+    PS C:\> Get-AzSupportTicket -Name "test1" | Update-AzSupportTicket -Severity "moderate"
+
+    Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate
+    ----  -----                        --------------- -------- ------------------            ------ -----------
+    test1 test title1                  150010521000317 Moderate Virtual Machine running Linux Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 5: Update contact details of support ticket by specifying individual contact parameters.'
+  code: |-
+    PS C:\> Update-AzSupportTicket -Name "test1" -CustomerFirstName "first name updated" -CustomerLastName "last name updated" -AdditionalEmailAddress @("user2@contoso.com") 
+
+    Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate
+    ----  -----                        --------------- -------- ------------------            ------ -----------
+    test1 test title1                  150010521000317 Moderate Virtual Machine running Linux Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 6: Update status of support ticket by piping support ticket object.'
+  code: |-
+    PS C:\> Get-AzSupportTicket -Name "test1" | Update-AzSupportTicket -Status "Closed"
+
+    Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate
+    ----  -----                        --------------- -------- ------------------            ------ -----------
+    test1 test title1                  150010521000317 Moderate Virtual Machine running Linux Closed   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalEmailAddress
+  description: |+
+    Additional email addresses.
+    Email addresses listed here will be copied on any correspondence about the support ticket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.PSContactProfile" data-throw-if-not-resolved="False" />
+  name: CustomerContactDetail
+  isRequired: true
+  description: |+
+    Update Contact details on SupportTicket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerCountry
+  description: |+
+    Customer country.
+    This must be a valid ISO Alpha-3 country code (ISO 3166).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerFirstName
+  description: |+
+    Customer first name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerLastName
+  description: |+
+    Customer last name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPhoneNumber
+  description: |+
+    Customer phone number.
+    This is required if preferred contact method is phone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPreferredSupportLanguage
+  description: |+
+    Customer preferred support language.
+    This must be a valid language-contry code for one of the supported languages listed here https://azure.microsoft.com/support/faq/.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPreferredTimeZone
+  description: |+
+    Customer preferred time zone.
+    This must be a valid System.TimeZoneInfo.Id value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPrimaryEmailAddress
+  description: |+
+    Customer primary email address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.PSSupportTicket" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    SupportTicket resource object that this cmdlet updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of SupportTicket resource that this cmdlet updates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.ContactMethod" data-throw-if-not-resolved="False" />
+  name: PreferredContactMethod
+  description: |+
+    Preferred contact method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Email, Phone
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.Severity" data-throw-if-not-resolved="False" />
+  name: Severity
+  description: |+
+    Update Severity of SupportTicket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Minimal, Moderate, Critical, HighestCriticalImpact
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.Status" data-throw-if-not-resolved="False" />
+  name: Status
+  description: |+
+    Update Status of SupportTicket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Open, Closed
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Support.Update-AzSupportTicket
+name: Update-AzSupportTicket
+description: |-
+  Use this cmdlet to update a support ticket's severity level, status or customer contact details. Note that updating a support ticket's severity level or status is not allowed when the ticket is assigned to a support engineer. If you wish to update the severity level or status after ticket assignment, contact the support engineer by sending a communication on the ticket.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
+  Module Name: Az.Support
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.support/update-azsupportticket
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/Update-AzSupportTicket.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/Update-AzSupportTicket.md

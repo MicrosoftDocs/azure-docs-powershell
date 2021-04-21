@@ -1,0 +1,173 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a SQL managed instance's operations.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceOperation.Model.AzureSqlManagedInstanceOperationModel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSqlInstanceOperation [-Name <Guid>] -ManagedInstanceName <String> -ResourceGroupName <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSqlInstanceOperation [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzSqlInstanceOperation -ManagedInstanceName <String> -ResourceGroupName <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: "Example 1: Get all instance's operations"
+  code: |-
+    PS C:\> Get-AzSqlInstanceOperation -ResourceGroupName ps3753 -ManagedInstanceName ps3698
+
+    Id                      : /subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/5870c6d8-6703-4b27-8ae4-687b4ca7caea
+    ResourceGroupName       : ps3753
+    ManagedInstanceName     : ps3698
+    Name                    : 5870c6d8-6703-4b27-8ae4-687b4ca7caea
+    Operation               : UpsertManagedServer
+    OperationFriendlyName   : UPDATE MANAGED SERVER
+    PercentComplete         : 100
+    StartTime               : 3/16/2020 8:11:13 AM
+    State                   : Succeeded
+    ErrorCode               :
+    ErrorDescription        :
+    ErrorSeverity           :
+    IsUserError             :
+    EstimatedCompletionTime :
+    Description             :
+    IsCancellable           : False
+
+    Id                      : /subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/79f2c91b-0080-4c14-b9b4-d9991c6e82dd
+    ResourceGroupName       : ps3753
+    ManagedInstanceName     : ps3698
+    Name                    : 79f2c91b-0080-4c14-b9b4-d9991c6e82dd
+    Operation               : UpsertManagedServer
+    OperationFriendlyName   : UPDATE MANAGED SERVER
+    PercentComplete         : 100
+    StartTime               : 3/16/2020 8:19:53 AM
+    State                   : Cancelled
+    ErrorCode               :
+    ErrorDescription        :
+    ErrorSeverity           :
+    IsUserError             :
+    EstimatedCompletionTime :
+    Description             :
+    IsCancellable           : False
+  description: |-
+    This command gets all operations a SQL managed instance.
+  summary: ""
+- title: 'Example 2: Get a specific operation'
+  code: |-
+    PS C:\> Get-AzSqlInstanceOperation -ResourceGroupName ps3753 -ManagedInstanceName ps3698 -Name 5870c6d8-6703-4b27-8ae4-687b4ca7caea
+
+    Id                      : /subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/5870c6d8-6703-4b27-8ae4-687b4ca7caea
+    ResourceGroupName       : ps3753
+    ManagedInstanceName     : ps3698
+    Name                    : 5870c6d8-6703-4b27-8ae4-687b4ca7caea
+    Operation               : UpsertManagedServer
+    OperationFriendlyName   : UPDATE MANAGED SERVER
+    PercentComplete         : 100
+    StartTime               : 3/16/2020 8:11:13 AM
+    State                   : Succeeded
+    ErrorCode               :
+    ErrorDescription        :
+    ErrorSeverity           :
+    IsUserError             :
+    EstimatedCompletionTime :
+    Description             :
+    IsCancellable           : False
+  description: |-
+    This command gets operation with name '5870c6d8-6703-4b27-8ae4-687b4ca7caea' on a SQL managed instance.
+  summary: ""
+- title: 'Example 3: Using operation resource id'
+  code: |-
+    PS C:\> $managedInstanceOperation = Get-AzSqlInstanceOperation -ResourceGroupName ps3753 -ManagedInstanceName ps3698 -Name 5870c6d8-6703-4b27-8ae4-687b4ca7caea
+    PS C:\> Get-AzSqlInstanceOperation -ResourceId $managedInstanceOperation.Id
+
+    Id                      : /subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/5870c6d8-6703-4b27-8ae4-687b4ca7caea
+    ResourceGroupName       : ps3753
+    ManagedInstanceName     : ps3698
+    Name                    : 5870c6d8-6703-4b27-8ae4-687b4ca7caea
+    Operation               : UpsertManagedServer
+    OperationFriendlyName   : UPDATE MANAGED SERVER
+    PercentComplete         : 100
+    StartTime               : 3/16/2020 8:11:13 AM
+    State                   : Succeeded
+    ErrorCode               :
+    ErrorDescription        :
+    ErrorSeverity           :
+    IsUserError             :
+    EstimatedCompletionTime :
+    Description             :
+    IsCancellable           : False
+  description: |-
+    This command gets operation with id '/subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/5870c6d8-6703-4b27-8ae4-687b4ca7caea'.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ManagedInstanceName
+  isRequired: true
+  description: |+
+    The name of the instance.
+
+  defaultValue: None
+  position: Named
+  aliases: InstanceName
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the operation.
+
+  defaultValue: None
+  position: Named
+  aliases: OperationName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The managed instance operation resource identifier.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlInstanceOperation
+name: Get-AzSqlInstanceOperation
+description: |-
+  The Get-AzSqlInstanceOperation cmdlet gets information about the operations on a SQL managed instance. You can view all operations on a managed instance or view a specific operation by providing the operation name.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlinstanceoperation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlInstanceOperation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlInstanceOperation.md

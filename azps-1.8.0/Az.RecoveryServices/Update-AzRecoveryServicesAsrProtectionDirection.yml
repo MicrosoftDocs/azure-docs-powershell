@@ -1,0 +1,357 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the replication direction for the specified replication protected item or recovery plan. Used to re-protect/reverse replicate a failed over replicated item or recovery plan.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection -ReplicationProtectedItem <ASRReplicationProtectedItem>
+
+   -Direction <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection [-AzureToVMware] [-Account <ASRRunAsAccount>]
+
+   -DataStore <ASRDataStore> [-MasterTarget <ASRMasterTargetServer>] -ProcessServer <ASRProcessServer>
+
+   -ProtectionContainerMapping <ASRProtectionContainerMapping>
+
+   -ReplicationProtectedItem <ASRReplicationProtectedItem> -Direction <String>
+
+   -RetentionVolume <ASRRetentionVolume> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection [-VMwareToAzure] -Account <ASRRunAsAccount>
+
+   [-MasterTarget <ASRMasterTargetServer>] -ProcessServer <ASRProcessServer>
+
+   -ProtectionContainerMapping <ASRProtectionContainerMapping> [-LogStorageAccountId <String>]
+
+   [-RecoveryAzureStorageAccountId <String>] -ReplicationProtectedItem <ASRReplicationProtectedItem>
+
+   -Direction <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection [-HyperVToAzure] [-LogStorageAccountId <String>]
+
+   [-RecoveryAzureStorageAccountId <String>] -ReplicationProtectedItem <ASRReplicationProtectedItem>
+
+   -Direction <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection [-VmmToVmm]
+
+   -ReplicationProtectedItem <ASRReplicationProtectedItem> -Direction <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection [-AzureToAzure]
+
+   -ProtectionContainerMapping <ASRProtectionContainerMapping> -LogStorageAccountId <String>
+
+   [-RecoveryAzureStorageAccountId <String>] -ReplicationProtectedItem <ASRReplicationProtectedItem>
+
+   [-RecoveryResourceGroupId <String>] [-RecoveryCloudServiceId <String>] [-RecoveryAvailabilitySetId <String>]
+
+   [-RecoveryBootDiagStorageAccountId <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection [-AzureToAzure]
+
+   -ProtectionContainerMapping <ASRProtectionContainerMapping>
+
+   -AzureToAzureDiskReplicationConfiguration <ASRAzuretoAzureDiskReplicationConfig[]>
+
+   -ReplicationProtectedItem <ASRReplicationProtectedItem> [-RecoveryResourceGroupId <String>]
+
+   [-RecoveryCloudServiceId <String>] [-RecoveryAvailabilitySetId <String>]
+
+   [-RecoveryBootDiagStorageAccountId <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection -RecoveryPlan <ASRRecoveryPlan> -Direction <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzRecoveryServicesAsrProtectionDirection -Direction <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $currentJob = Update-AzRecoveryServicesAsrProtectionDirection -RecoveryPlan $RP -Direction PrimaryToRecovery
+  description: |-
+    Start the update direction operation for the specified recovery plan and returns the ASR job object used to track the operation.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> $currentJob = Update-AzRecoveryServicesAsrProtectionDirection -AzToAzure -ProtectionContainerMapping $B2ApcmMapping -LogStorageAccountId $cacheStorageId `
+     -ReplicationProtectedItem $rpi
+  description: |-
+    Start the update direction operation for the specified replication protected item in target azure region defined by protection container mapping and using cache storage (in same region as VM).
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> $currentJob = Update-AzRecoveryServicesAsrProtectionDirection -AzToAzure -ProtectionContainerMapping $B2ApcmMapping `
+     -AzToAzureDiskReplicationConfiguration $disk1,$disk2 -ReplicationProtectedItem  $rpi
+  description: |-
+    Start the update direction operation for the specified replication protected item in target azure region defined by protection container mapping and provided disk replication configuration.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRunAsAccount" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    The run as account to be used to push install the Mobility service if needed. Must be one from the list of run as accounts in the ASR fabric.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AzureToAzure
+  isRequired: true
+  description: |+
+    {{Fill AzureToAzure Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRAzuretoAzureDiskReplicationConfig" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AzureToAzureDiskReplicationConfiguration
+  isRequired: true
+  description: |+
+    {{Fill AzureToAzureDiskReplicationConfiguration Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AzureToVMware
+  isRequired: true
+  description: |+
+    {{Fill AzureToVMware Description}}
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRDataStore" data-throw-if-not-resolved="False" />
+  name: DataStore
+  isRequired: true
+  description: |+
+    The VMware datastore to be used for the vmdisk's.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Direction
+  isRequired: true
+  description: |+
+    Specifies the direction to be used for the update operation post a failover.
+    The acceptable values for this parameter are:
+
+    - PrimaryToRecovery
+    - RecoveryToPrimary
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PrimaryToRecovery, RecoveryToPrimary
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HyperVToAzure
+  isRequired: true
+  description: |+
+    Reprotect a Hyper-V virtual machine after failback.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LogStorageAccountId
+  isRequired: true
+  description: |+
+    Specifies the storage account ID to store the replication log of VMs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRMasterTargetServer" data-throw-if-not-resolved="False" />
+  name: MasterTarget
+  description: |+
+    Master Target Server Details.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProcessServer" data-throw-if-not-resolved="False" />
+  name: ProcessServer
+  isRequired: true
+  description: |+
+    Process Server to be used for replication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainerMapping" data-throw-if-not-resolved="False" />
+  name: ProtectionContainerMapping
+  isRequired: true
+  description: |+
+    Protection containerMapping to be used for replication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryAvailabilitySetId
+  description: |+
+    The availability set that the virtual machine should be created in upon failover
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryAzureStorageAccountId
+  description: |+
+    Specifies the ID of the Azure storage account to replicate to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryBootDiagStorageAccountId
+  description: |+
+    Specifies the storage account for boot diagnostics for recovery azure VM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryCloudServiceId
+  description: |+
+    The resource ID of the recovery cloud service to failover this virtual machine to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+  name: RecoveryPlan
+  isRequired: true
+  description: |+
+    Specifies an ASR recovery plan object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryResourceGroupId
+  description: |+
+    Recovery resourceGroup id for protected Vm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+  name: ReplicationProtectedItem
+  isRequired: true
+  description: |+
+    Specifies an ASR replication protected item.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRetentionVolume" data-throw-if-not-resolved="False" />
+  name: RetentionVolume
+  isRequired: true
+  description: |+
+    Retention Volume on the master target server to be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VmmToVmm
+  isRequired: true
+  description: |+
+    Update replication direction for a failed over Hyper-V virtual machine that is protected between two VMM managed Hyper-V sites.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VMwareToAzure
+  isRequired: true
+  description: |+
+    Update replication direction from VMware to Azure.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Update-AzRecoveryServicesAsrProtectionDirection
+name: Update-AzRecoveryServicesAsrProtectionDirection
+description: |-
+  The **Update-AzRecoveryServicesAsrProtectionDirection** cmdlet updates the replication direction for the specified Azure Site Recovery object after the completion of a commit failover operation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/update-azrecoveryservicesasrprotectiondirection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesAsrProtectionDirection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesAsrProtectionDirection.md

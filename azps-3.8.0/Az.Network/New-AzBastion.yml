@@ -1,0 +1,307 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a bastion resource.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSBastion" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBastion
+  href: ./Get-AzBastion.yml
+- text: Remove-AzBastion
+  href: ./Remove-AzBastion.yml
+syntaxes:
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddress <PSPublicIpAddress>
+
+   -VirtualNetwork <PSVirtualNetwork> [-AsJob] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddress <PSPublicIpAddress>
+
+   -VirtualNetworkRgName <String> -VirtualNetworkName <String> [-AsJob] [-Tag <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddress <PSPublicIpAddress>
+
+   -VirtualNetworkId <String> [-AsJob] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressId <String>
+
+   -VirtualNetwork <PSVirtualNetwork> [-AsJob] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressId <String>
+
+   -VirtualNetworkRgName <String> -VirtualNetworkName <String> [-AsJob] [-Tag <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressId <String> -VirtualNetworkId <String>
+
+   [-AsJob] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressRgName <String>
+
+   -PublicIpAddressName <String> -VirtualNetwork <PSVirtualNetwork> [-AsJob] [-Tag <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressRgName <String>
+
+   -PublicIpAddressName <String> -VirtualNetworkRgName <String> -VirtualNetworkName <String> [-AsJob]
+
+   [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressRgName <String>
+
+   -PublicIpAddressName <String> -VirtualNetworkId <String> [-AsJob] [-Tag <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $subnetName = "AzureBastionSubnet"
+    $subnet = New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix 10.0.0.0/24
+    $vnet = New-AzVirtualNetwork -Name "TestVnet" -ResourceGroupName "BastionPowershellTest" -Location "westeurope" -AddressPrefix 10.0.0.0/16 -Subnet $subnet
+    $publicip = New-AzPublicIpAddress -ResourceGroupName "BastionPowershellTest" -name "Test-Ip" -location "westeurope" -AllocationMethod Dynamic -Sku Standard
+    $bastion = New-AzBastion -ResourceGroupName "BastionPowershellTest" â€“Name "test-Bastion2" -PublicIpAddress $publicip -VirtualNetwork $vnet
+
+    IpConfigurations     : {IpConf}
+    DnsName              : bst-a9ca868f-ddab-4a50-9f45-a443ea8a0187.bastion.azure.com
+    ProvisioningState    : Succeeded
+    IpConfigurationsText : [
+                             {
+                               "Subnet": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/virtualNetworks/TestVnet/subnets/AzureBastionSubnet"
+                               },
+                               "PublicIpAddress": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/publicIPAddresses/Test-Ip"
+                               },
+                               "ProvisioningState": "Succeeded",
+                               "PrivateIpAllocationMethod": "Dynamic",
+                               "Name": "IpConf",
+                               "Etag": "W/\"ed810ccd-b3f6-4e22-891e-b0ed0a26d6dd\"",
+                               "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/test-Bastion2/bastionHostIpConfigurations/IpConf"
+                             }
+                           ]
+    ResourceGroupName    : BastionPowershellTest
+    Location             : westeurope
+    ResourceGuid         :
+    Type                 : Microsoft.Network/bastionHosts
+    Tag                  :
+    TagsTable            :
+    Name                 : test-Bastion2
+    Etag                 : W/"ed810ccd-b3f6-4e22-891e-b0ed0a26d6dd"
+    Id                   : /subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/test-Bastion2
+
+    This example creates a bastion attached to virtual network "vnet" in the same resource group as the bastion.
+    There must be a subnet with name AzureBastionSubnet in this vnet.
+    The Ip Address must be created with Sku Standard.
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName "BastionPowershellTest" -Name "testVnet2"
+    Add-AzVirtualNetworkSubnetConfig -Name "AzureBastionSubnet" -VirtualNetwork $vnet -AddressPrefix "10.0.0.0/24"
+    $vnet| Set-AzVirtualNetwork
+    New-AzBastion -ResourceGroupName "BastionPowershellTest" -Name "testBastion2" -PublicIpAddressRgName "BastionPowershellTest" -PublicIpAddressName "testIp2" -VirtualNetworkRgName "BastionPowershellTest" -VirtualNetworkName "testVnet2"
+
+    IpConfigurations     : {IpConf}
+    DnsName              : bst-53757658-c4fd-4908-b1a7-0849e555d489.bastion.azure.com
+    ProvisioningState    : Succeeded
+    IpConfigurationsText : [
+                             {
+                               "Name": "IpConf",
+                               "Etag": "W/\"7460e5f6-ad41-438b-a595-a63346ed8f16\"",
+                               "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/testBastion2/bastionHostIpConfigurations/IpConf",
+                               "Subnet": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/virtualNetworks/testVnet2/subnets/AzureBastionSubnet"
+                               },
+                               "PublicIpAddress": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/publicIPAddresses/testIp2"
+                               },
+                               "ProvisioningState": "Succeeded",
+                               "PrivateIpAllocationMethod": "Dynamic"
+                             }
+                           ]
+    ResourceGroupName    : BastionPowershellTest
+    Location             : westeurope
+    ResourceGuid         :
+    Type                 : Microsoft.Network/bastionHosts
+    Tag                  :
+    TagsTable            :
+    Name                 : testBastion2
+    Etag                 : W/"7460e5f6-ad41-438b-a595-a63346ed8f16"
+    Id                   : /subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/testBastion2
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The bastion resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceName, BastionName
+  parameterValueGroup: ""
+- type: <xref href="PSPublicIpAddress" data-throw-if-not-resolved="False" />
+  name: PublicIpAddress
+  isRequired: true
+  description: |+
+    The public IP address object for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: PublicIpAddressObject
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PublicIpAddressId
+  isRequired: true
+  description: |+
+    The public Ip address Azure resource Id for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: PublicIpAddressResourceId
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PublicIpAddressName
+  isRequired: true
+  description: |+
+    The public Ip address resource name for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PublicIpAddressRgName
+  isRequired: true
+  description: |+
+    The public Ip address resource group name for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: PublicIpAddressResourceGroupName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name where you need to create bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    A hashtable which represents resource tags.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSVirtualNetwork" data-throw-if-not-resolved="False" />
+  name: VirtualNetwork
+  isRequired: true
+  description: |+
+    The virtual network object for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: VirtualNetworkObject
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkId
+  isRequired: true
+  description: |+
+    The virtual network Azure resource Id for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: VirtualNetworkResourceId
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkName
+  isRequired: true
+  description: |+
+    The virtual network resource name for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkRgName
+  isRequired: true
+  description: |+
+    The virtual network resource group name for bastion.
+
+  defaultValue: None
+  position: Named
+  aliases: VirtualNetworkResourceGroupName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzBastion
+name: New-AzBastion
+description: |-
+  Creates a bastion resource.This will need a Public Ip Address and a VirtualNetwork. There must be a subnet with name AzureBastionSubnet in this VirtualNetwork.The Pubic Ip Address must be created with Sku Standard.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azbastion
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzBastion.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzBastion.md

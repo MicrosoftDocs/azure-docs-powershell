@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create managed rule override object
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSAzureManagedRuleOverride" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoorWafRuleGroupOverrideObject
+  href: ./New-AzFrontDoorWafRuleGroupOverrideObject.yml
+syntaxes:
+- >-
+  New-AzFrontDoorWafManagedRuleOverrideObject -RuleId <String> [-Action <String>] [-Disabled]
+
+   [-Exclusion <PSManagedRuleExclusion[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzFrontDoorWafManagedRuleOverrideObject -RuleId "942250" -Action Log
+
+    RuleId EnabledState Action
+    ------ ------------ ------
+    942250      Enabled    Log
+  description: ""
+  summary: |+
+    Create a managed rule override object for rule 942250 (which is in SQLI group).
+
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Action
+  description: |+
+    Override Action
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    Disabled state
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRuleExclusion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Exclusion
+  description: |+
+    Exclusion
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuleId
+  isRequired: true
+  description: |+
+    Rule ID
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorWafManagedRuleOverrideObject
+name: New-AzFrontDoorWafManagedRuleOverrideObject
+description: |-
+  Create PSAzureManagedRuleOverride Object for managed WAF rule group override object creation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorwafmanagedruleoverrideobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleOverrideObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleOverrideObject.md

@@ -1,0 +1,33 @@
+### YamlMime:PowershellModule
+children:
+- title: Monitor
+  cmdlets:
+  - Az.ApplicationInsights.Get-AzApplicationInsights
+  - Az.ApplicationInsights.Get-AzApplicationInsightsApiKey
+  - Az.ApplicationInsights.Get-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.Get-AzApplicationInsightsLinkedStorageAccount
+  - Az.ApplicationInsights.New-AzApplicationInsights
+  - Az.ApplicationInsights.New-AzApplicationInsightsApiKey
+  - Az.ApplicationInsights.New-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.New-AzApplicationInsightsLinkedStorageAccount
+  - Az.ApplicationInsights.Remove-AzApplicationInsights
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsApiKey
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsLinkedStorageAccount
+  - Az.ApplicationInsights.Set-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.Set-AzApplicationInsightsDailyCap
+  - Az.ApplicationInsights.Set-AzApplicationInsightsPricingPlan
+  - Az.ApplicationInsights.Update-AzApplicationInsights
+  - Az.ApplicationInsights.Update-AzApplicationInsightsLinkedStorageAccount
+uid: Az.ApplicationInsights
+name: Az.ApplicationInsights
+description: |-
+  Creates and manages application insights in Azure Resource Manager.
+metadata:
+  Module Name: Az.ApplicationInsights
+  Module Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac6
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.applicationinsights
+  Help Version: 0.1.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApplicationInsights/ApplicationInsights/help/Az.ApplicationInsights.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApplicationInsights/ApplicationInsights/help/Az.ApplicationInsights.md

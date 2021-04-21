@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Filters active directory groups.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzADUser
+  href: ./Get-AzADUser.yml
+- text: Get-AzADServicePrincipal
+  href: ./Get-AzADServicePrincipal.yml
+- text: Get-AzADGroupMember
+  href: ./Get-AzADGroupMember.yml
+syntaxes:
+- >-
+  Get-AzADGroup [-ObjectId <Guid>] [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADGroup -DisplayNameStartsWith <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADGroup -DisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADGroup -ObjectId <Guid> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount] [-Skip <UInt64>]
+
+   [-First <UInt64>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all AD groups'
+  code: |-
+    PS C:\> Get-AzADGroup
+  description: |-
+    Lists all AD groups in a tenant.
+  summary: ""
+- title: 'Example 2: List all AD groups using paging'
+  code: |-
+    PS C:\> Get-AzADGroup -First 100
+  description: |-
+    Lists the first 100 AD groups in a tenant.
+  summary: ""
+- title: 'Example 3: Get AD group by object id'
+  code: |-
+    PS C:\> Get-AzADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
+  description: |-
+    Gets an AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+  summary: ""
+- title: 'Example 4: List groups by search string'
+  code: |-
+    PS C:\> Get-AzADGroup -SearchString Joe
+  description: |-
+    Lists all AD groups whose display name begins with 'Joe'.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    The display name of the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayNameStartsWith
+  isRequired: true
+  description: |+
+    Used to find groups that begin with the provided string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SearchString
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The maximum number of objects to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeTotalCount
+  description: |+
+    Reports the number of objects in the data set. Currently, this parameter does nothing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  isRequired: true
+  description: |+
+    Object id of the group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    Ignores the first N objects and then gets the remaining objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzADGroup
+name: Get-AzADGroup
+description: |-
+  Filters active directory groups.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 85DDA491-7A7D-4217-B0E3-72CDC3787889
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azadgroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADGroup.md

@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get billing periods of the subscription.
+module: Az.Billing
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Billing.Models.PSBillingPeriod" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzBillingPeriod [-MaxCount <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzBillingPeriod -Name <System.Collections.Generic.List`1[System.String]>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzBillingPeriod
+  description: |-
+    Get all available billing periods of the subscription.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzBillingPeriod -Name 201704-1
+  description: |-
+    Get the billing period of the subscription with the specified name.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzBillingPeriod -MaxCount 2
+  description: |-
+    Get at most 2 billing periods of the subscription.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxCount
+  description: |+
+    Determine the maximum number of records to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Name of a specific billing period to get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Billing.Get-AzBillingPeriod
+name: Get-AzBillingPeriod
+description: |-
+  The **Get-AzBillingPeriod** cmdlet gets billing periods of the subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
+  Module Name: Az.Billing
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.billing/get-azbillingperiod
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Billing/Billing/help/Get-AzBillingPeriod.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Billing/Billing/help/Get-AzBillingPeriod.md

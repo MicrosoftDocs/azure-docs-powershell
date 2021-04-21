@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about Data Factory.
+module: Az.DataFactory
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzDataFactoryV2 [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataFactoryV2 [-ResourceGroupName] <String> [[-Name] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all data factories'
+  code: |-
+    PS C:\> Get-AzDataFactoryV2 -ResourceGroupName "ADF"
+
+        DataFactoryName   : WikiADF
+        DataFactoryId     : /subscriptions/3e8e61b5-9a7d-4952-bfae-545ab997b9ea/resourceGroups/adf/providers/Microsoft.DataFactory/factories/wikiadf
+        ResourceGroupName : ADF
+        Location          : EastUS
+        Tags              : {}
+        Identity          : Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
+        ProvisioningState : Succeeded
+
+        DataFactoryName   : WikiADF2
+        DataFactoryId     : /subscriptions/3e8e61b5-9a7d-4952-bfae-545ab997b9ea/resourceGroups/adf/providers/Microsoft.DataFactory/factories/wikiadf2
+        ResourceGroupName : ADF
+        Location          : EastUS
+        Tags              : {}
+        Identity          :
+        ProvisioningState : Succeeded
+  description: |-
+    Displays information about all data factories in the Azure subscription.
+  summary: ""
+- title: 'Example 2: Get a specific data factory'
+  code: |-
+    PS C:\> $DataFactory = Get-AzDataFactoryV2 -ResourceGroupName "ADF" -Name "WikiADF"
+
+        DataFactoryName   : WikiADF
+        DataFactoryId     : /subscriptions/3e8e61b5-9a7d-4952-bfae-545ab997b9ea/resourceGroups/adf/providers/Microsoft.DataF
+                            actory/factories/wikiadf
+        ResourceGroupName : ADF
+        Location          : EastUS
+        Tags              : {}
+        Identity          : Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
+        ProvisioningState : Succeeded
+  description: |-
+    This command displays information about the data factory named WikiADF in the subscription for the resource group named ADF, and then stores it in the $DataFactory variable.
+    Specify the DataFactory parameter in subsequent cmdlets to use the data factory stored in $DataFactory.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the data factory about which to get information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DataFactoryName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet gets information about data factories that belong to the group this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataFactory.Get-AzDataFactoryV2
+name: Get-AzDataFactoryV2
+description: |-
+  The Get-AzDataFactoryV2 cmdlet gets information about data factories in an Azure resource group.
+  If you specify the name of a data factory, this cmdlet gets information about that data factory.
+  If you do not specify a name, this cmdlet gets information about all of the data factories in an Azure resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  Module Name: Az.DataFactory
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/get-azdatafactoryv2
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2.md

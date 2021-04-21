@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an ExpressRoute circuit peering configuration.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPeering" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzExpressRouteCircuitPeeringConfig
+  href: Add-AzExpressRouteCircuitPeeringConfig.yml
+- text: New-AzExpressRouteCircuitPeeringConfig
+  href: New-AzExpressRouteCircuitPeeringConfig.yml
+- text: Remove-AzExpressRouteCircuitPeeringConfig
+  href: Remove-AzExpressRouteCircuitPeeringConfig.yml
+- text: Set-AzExpressRouteCircuit
+  href: Set-AzExpressRouteCircuit.yml
+syntaxes:
+- >-
+  Get-AzExpressRouteCircuitPeeringConfig [-Name <String>] -ExpressRouteCircuit <PSExpressRouteCircuit>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display the peering configuration for an ExpressRoute circuit'
+  code: |-
+    $ckt = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $RG
+    Get-AzExpressRouteCircuitPeeringConfig -Name "AzurePrivatePeering" -ExpressRouteCircuit $ckt
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  name: ExpressRouteCircuit
+  isRequired: true
+  description: |+
+    The ExpressRoute circuit object containing the peering configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the peering configuration to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzExpressRouteCircuitPeeringConfig
+name: Get-AzExpressRouteCircuitPeeringConfig
+description: |-
+  The **Get-AzExpressRouteCircuitPeeringConfig** cmdlet retrieves the configuration of a peering
+  relationship for an ExpressRoute circuit.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 47C45467-F368-4993-937E-E7E975F400B5
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuitpeeringconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitPeeringConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitPeeringConfig.md

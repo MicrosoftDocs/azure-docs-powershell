@@ -1,0 +1,173 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Management Group
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSManagementGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzManagementGroup
+  href: ./Remove-AzManagementGroup.yml
+- text: Update-AzManagementGroup
+  href: ./Update-AzManagementGroup.yml
+- text: Get-AzManagementGroup
+  href: ./Get-AzManagementGroup.yml
+syntaxes:
+- >-
+  New-AzManagementGroup [-GroupName] <String> [-DisplayName <String>] [-ParentId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzManagementGroup [-GroupName] <String> [-DisplayName <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   -ParentObject <PSManagementGroup> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Management Group'
+  code: |-
+    PS C:\> New-AzManagementGroup -GroupName "TestGroup"
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    DisplayName       : TestGroup
+    UpdatedTime       : 2/1/2018 11:06:27 AM
+    UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentId          : /providers/Microsoft.Management/managementGroups/14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentName        : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentDisplayName : 14307de0-5e6f-46cf-b2ba-64a062964d30
+  description: |-
+    Creation of a new group with `DisplayName` and `ParentId` set to `null`. The `DisplayName` will be same as the `GroupName` and the parent of the group will be the tenant.
+  summary: ""
+- title: 'Example 2: Create a Management Group with a display name'
+  code: |-
+    PS C:\> New-AzManagementGroup -GroupName "TestGroup" -DisplayName "TestGroupDisplayName"
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    DisplayName       : TestGroup
+    UpdatedTime       : 2/1/2018 11:06:27 AM
+    UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentId          : /providers/Microsoft.Management/managementGroups/14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentName        : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentDisplayName : 14307de0-5e6f-46cf-b2ba-64a062964d30
+  description: |-
+    In this case, the parent of the group will be the tenant and the `DisplayName` will be set to the value given.
+  summary: ""
+- title: 'Example 3: Create a Management Group with a parent and a display name'
+  code: |-
+    PS C:\> New-AzManagementGroup -GroupName "TestGroup" -DisplayName "TestGroupDisplayName" -ParentId "/providers/Microsoft.Management/managementGroups/TestGroupParent"
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    DisplayName       : TestGroupDisplayName
+    UpdatedTime       : 2/1/2018 11:16:12 AM
+    UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+    ParentName        : TestGroupParent
+    ParentDisplayName : TestGroupParent
+  description: ""
+  summary: ""
+- title: 'Example 4: Create a Management Group with a parent (using a parent object)'
+  code: |-
+    PS C:\> $parentObject = Get-AzManagementGroup -GroupName "TestGroupParent"
+    PS C:\> New-AzManagementGroup -GroupName "TestGroup" -ParentObject $parentObject
+
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type              : /providers/Microsoft.Management/managementGroups
+    Name              : TestGroup
+    TenantId          : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    DisplayName       : TestGroupDisplayName
+    UpdatedTime       : 2/1/2018 11:16:12 AM
+    UpdatedBy         : 14307de0-5e6f-46cf-b2ba-64a062964d30
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroupParent
+    ParentName        : TestGroupParent
+    ParentDisplayName : TestGroupParent
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Display Name of the management group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  isRequired: true
+  description: |+
+    Management Group Id
+
+  defaultValue: None
+  position: "0"
+  aliases: GroupId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentId
+  description: |+
+    Parent Id of the management group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSManagementGroup" data-throw-if-not-resolved="False" />
+  name: ParentObject
+  isRequired: true
+  description: |+
+    Parent Object
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Resources.New-AzManagementGroup
+name: New-AzManagementGroup
+description: |-
+  The **New-AzManagementGroup** cmdlet creates a management group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azmanagementgroup/
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzManagementGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzManagementGroup.md

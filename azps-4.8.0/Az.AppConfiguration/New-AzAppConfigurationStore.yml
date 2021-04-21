@@ -1,0 +1,205 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a configuration store with the specified parameters.
+module: Az.AppConfiguration
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppConfiguration.Models.Api20200601.IConfigurationStore" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzUserAssignedIdentity
+  href: https://docs.microsoft.com/en-us/powershell/module/az.managedserviceidentity/new-azuserassignedidentity?view=azps-4.4.0
+syntaxes:
+- >-
+  New-AzAppConfigurationStore -Name <String> -ResourceGroupName <String> -Location <String> -Sku <String>
+
+   [-SubscriptionId <String>] [-IdentityType <IdentityType>] [-Tag <Hashtable>]
+
+   [-UserAssignedIdentity <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an app configuration store'
+  code: |-
+    PS C:\> New-AzAppConfigurationStore -Name appconfig-test03 -ResourceGroupName azpwsh-manual-test -Location eastus -Sku free
+
+    Location Name             Type
+    -------- ----             ----
+    eastus   appconfig-test03 Microsoft.AppConfiguration/configurationStores
+  description: |-
+    This command creates an app configuration store.
+  summary: ""
+- title: 'Example 2: Create an app configuration with the IdentityType set to "UserAssigned"'
+  code: |-
+    PS C:\> $assignedIdentity = New-AzUserAssignedIdentity -ResourceGroupName azpwsh-manual-test -Name assignedIdentity
+    PS C:\> New-AzAppConfigurationStore -Name appconfig-test10 -ResourceGroupName azpwsh-manual-test -Location eastus -Sku standard -IdentityType "UserAssigned" -UserAssignedIdentity $assignedIdentity.Id
+
+    Location Name             Type
+    -------- ----             ----
+    eastus   appconfig-test03 Microsoft.AppConfiguration/configurationStores
+  description: |-
+    This command creates an app configuration and assign a user-assigned managed identity to it.
+    See the example of `Update-AzAppConfigurationStore` for the following steps to enable CMK (cusomer managed key).
+  summary: ""
+- title: 'Example 3: Create an app configuration with the IdentityType set to "SystemAssigned"'
+  code: |-
+    PS C:\> New-AzAppConfigurationStore -Name appconfig-test11 -ResourceGroupName azpwsh-manual-test -Location eastus -Sku standard -IdentityType "SystemAssigned"
+
+    Location Name             Type
+    -------- ----             ----
+    eastus   appconfig-test11 Microsoft.AppConfiguration/configurationStores
+  description: |-
+    This command creates an app configuration and enables the system-assigned managed identity associated with the resource.
+    See the example of `Update-AzAppConfigurationStore` for the following steps to enable CMK (cusomer managed key).
+  summary: ""
+- title: 'Example 4: Create an app configuration with the IdentityType set to "SystemAssigned, UserAssigned"'
+  code: |-
+    PS C:\> $assignedIdentity = New-AzUserAssignedIdentity -ResourceGroupName azpwsh-manual-test -Name assignedIdentity
+    PS C:\> New-AzAppConfigurationStore -Name appconfig-test10 -ResourceGroupName azpwsh-manual-test -Location eastus -Sku standard -IdentityType "SystemAssigned, UserAssigned" -UserAssignedIdentity $assignedIdentity.Id
+
+    Location Name             Type
+    -------- ----             ----
+    eastus   appconfig-test10 Microsoft.AppConfiguration/configurationStores
+  description: |-
+    You can enable system-assigned managed identity and give user-assigned identities at the same time.
+    See the example of `Update-AzAppConfigurationStore` for the following steps to enable CMK (cusomer managed key).
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run the command as a job
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppConfiguration.Support.IdentityType" data-throw-if-not-resolved="False" />
+  name: IdentityType
+  description: |+
+    The type of managed identity used.
+    The type 'SystemAssignedAndUserAssigned' includes both an implicitly created identity and a set of user-assigned identities.
+    The type 'None' will remove any identities.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location of the resource.
+    This cannot be changed after the resource is created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the configuration store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Run the command asynchronously
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group to which the container registry belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Sku
+  isRequired: true
+  description: |+
+    The SKU name of the configuration store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The Microsoft Azure subscription ID.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    The tags of the resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserAssignedIdentity
+  description: |+
+    The list of user-assigned identities associated with the resource.
+    The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.AppConfiguration.New-AzAppConfigurationStore
+name: New-AzAppConfigurationStore
+description: |-
+  Creates a configuration store with the specified parameters.
+metadata:
+  external help file: ""
+  Module Name: Az.AppConfiguration
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.appconfiguration/new-azappconfigurationstore
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AppConfiguration/help/New-AzAppConfigurationStore.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AppConfiguration/help/New-AzAppConfigurationStore.md

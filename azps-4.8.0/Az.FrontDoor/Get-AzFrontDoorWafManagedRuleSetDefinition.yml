@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get WAF managed rule set definitions
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRuleSetDefinition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoorWafManagedRuleObject
+  href: ./New-AzFrontDoorWafManagedRuleObject.yml
+- text: New-AzFrontDoorWafManagedRuleOverrideObject
+  href: ./New-AzFrontDoorWafManagedRuleOverrideObject.yml
+- text: New-AzFrontDoorWafRuleGroupOverrideObject
+  href: ./New-AzFrontDoorWafRuleGroupOverrideObject.yml
+syntaxes:
+- Get-AzFrontDoorWafManagedRuleSetDefinition [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:> Get-AzFrontDoorWafManagedRuleSetDefinition
+
+    ProvisioningState RuleSetType                 RuleSetVersion RuleGroups
+    ----------------- -----------                 -------------- ----------
+    Succeeded         DefaultRuleSet              1.0            {PROTOCOL-ATTACK, LFI, RFI, RCE...}
+    Succeeded         Microsoft_BotManagerRuleSet 1.0            {BadBots, GoodBots, UnknownBots}
+    Succeeded         DefaultRuleSet              preview-0.1    {LFI, RFI, RCE, PHP...}
+    Succeeded         BotProtection               preview-0.1    {KnownBadBots}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.FrontDoor.Get-AzFrontDoorWafManagedRuleSetDefinition
+name: Get-AzFrontDoorWafManagedRuleSetDefinition
+description: |-
+  Gets the list of WAF managed rule set definitions to use as reference
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/get-azfrontdoorwafmanagedrulesetdefinition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorWafManagedRuleSetDefinition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorWafManagedRuleSetDefinition.md

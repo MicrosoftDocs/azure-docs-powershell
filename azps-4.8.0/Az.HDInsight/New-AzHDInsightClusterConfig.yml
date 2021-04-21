@@ -1,0 +1,361 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a non-persisted cluster configuration object that describes an Azure HDInsight cluster configuration.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzHDInsightStorage
+  href: ./Add-AzHDInsightStorage.yml
+syntaxes:
+- >-
+  New-AzHDInsightClusterConfig [-DefaultStorageAccountName <String>] [-DefaultStorageAccountKey <String>]
+
+   [-DefaultStorageAccountType <StorageType>] [-OozieMetastore <AzureHDInsightMetastore>]
+
+   [-HiveMetastore <AzureHDInsightMetastore>] [-HeadNodeSize <String>] [-WorkerNodeSize <String>]
+
+   [-EdgeNodeSize <String>] [-ZookeeperNodeSize <String>] [-ClusterType <String>] [-ClusterTier <Tier>]
+
+   [-ObjectId <Guid>] [-ApplicationId <Guid>] [-CertificateFileContents <Byte[]>] [-CertificateFilePath <String>]
+
+   [-CertificatePassword <String>] [-AadTenantId <Guid>] [-MinSupportedTlsVersion <String>]
+
+   [-AssignedIdentity <String>] [-EncryptionAlgorithm <String>] [-EncryptionKeyName <String>]
+
+   [-EncryptionKeyVersion <String>] [-EncryptionVaultUri <String>] [-PublicNetworkAccessType <String>]
+
+   [-OutboundPublicNetworkAccessType <String>] [-EncryptionInTransit <Boolean>] [-EncryptionAtHost <Boolean>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a cluster configuration object'
+  code: |-
+    PS C:\># Primary storage account info
+    PS C:\> $storageAccountResourceGroupName = "Group"
+    PS C:\> $storageAccountName = "yourstorageacct001"
+    PS C:\> $storageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+
+
+    PS C:\> $storageContainer = "container002"
+
+    # Cluster configuration info
+    PS C:\> $location = "East US 2"
+    PS C:\> $clusterResourceGroupName = "Group"
+    PS C:\> $clusterName = "your-hadoop-002"
+    PS C:\> $clusterCreds = Get-Credential
+
+    # If the cluster's resource group doesn't exist yet, run:
+    #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+    # Create the cluster
+    PS C:\> New-AzHDInsightClusterConfig `
+                | Add-AzHDInsightStorage `
+                    -StorageAccountName "$secondStorageAccountName.blob.core.contoso.net" `
+                    -StorageAccountKey $key2 `
+                | New-AzHDInsightCluster `
+                    -ClusterType Hadoop `
+                    -OSType Windows `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location `
+                    -DefaultStorageAccountName "$storageAccountName.blob.core.contoso.net" `
+                    -DefaultStorageAccountKey $storageAccountKey `
+                    -DefaultStorageContainer $storageContainer
+  description: |-
+    This command creates a cluster configuration object.
+  summary: ""
+parameters:
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: AadTenantId
+  description: |+
+    Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  description: |+
+    Gets or sets the Service Principal Application Id for accessing Azure Data Lake.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AssignedIdentity
+  description: |+
+    Gets or sets the assigned identity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CertificateFileContents
+  description: |+
+    Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateFilePath
+  description: |+
+    Specifies the file path to the certificate that will be used to authenticate as the Service Principal.
+    The cluster will use this when accessing Azure Data Lake Store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificatePassword
+  description: |+
+    Specifies the password for the certificate that will be used to authenticate as the Service Principal.
+    The cluster will use this when accessing Azure Data Lake Store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.HDInsight.Models.Tier" data-throw-if-not-resolved="False" />
+  name: ClusterTier
+  description: |+
+    Specifies the HDInsight cluster tier.
+    The acceptable values for this parameter are:
+    - Standard
+    - Premium
+    The default value is Standard.
+    The Premium tier can only be used with Linux clusters, and it enables the use of some new features.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Standard, Premium
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterType
+  description: |+
+    Specifies the type of cluster to create.
+    The acceptable values for this parameter are:
+    - Hadoop
+    - HBase
+    - Storm
+    - Spark
+    - INTERACTIVEHIVE
+    - Kafka
+    - RServer
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultStorageAccountKey
+  description: |+
+    Specifies the account key for the default Azure Storage account that the HDInsight cluster will use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultStorageAccountName
+  description: |+
+    Specifies the name of the default storage account that the HDInsight cluster will use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.Management.StorageType" data-throw-if-not-resolved="False" />
+  name: DefaultStorageAccountType
+  description: |+
+    Specifies the type of the default storage account that the HDInsight cluster will use. Possible values are AzureStorage and AzureDataLakeStore.
+
+  defaultValue: AzureStorage
+  position: Named
+  aliases: ""
+  parameterValueGroup: AzureStorage, AzureDataLakeStore
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EdgeNodeSize
+  description: |+
+    Specifies the size of the virtual machine for the edge node. Use Get-AzVMSize for acceptable VM sizes, and see HDInsight's pricing page. This parameter is valid only for RServer clusters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EncryptionAlgorithm
+  description: |+
+    Gets or sets the encryption algorithm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: RSA-OAEP, RSA-OAEP-256, RSA1_5
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EncryptionAtHost
+  description: |+
+    Gets or sets the flag which indicates whether enable encryption at host or not.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EncryptionInTransit
+  description: |+
+    Gets or sets the flag which indicates whether enable encryption in transit or not.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EncryptionKeyName
+  description: |+
+    Gets or sets the encryption key name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EncryptionKeyVersion
+  description: |+
+    Gets or sets the encryption key version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EncryptionVaultUri
+  description: |+
+    Gets or sets the encryption vault uri.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HeadNodeSize
+  description: |+
+    Specifies the size of the virtual machine for the Head node.
+    Use Get-AzVMSize for acceptable VM sizes, and see HDInsight's pricing page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightMetastore" data-throw-if-not-resolved="False" />
+  name: HiveMetastore
+  description: |+
+    Specifies the metastore to store Hive metadata.
+    You can alternatively use the Add-AzHDInsightMetastore cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MinSupportedTlsVersion
+  description: |+
+    Gets or sets the minimal supported TLS version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  description: |+
+    Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
+    The cluster will use this when accessing Azure Data Lake Store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightMetastore" data-throw-if-not-resolved="False" />
+  name: OozieMetastore
+  description: |+
+    Specifies the metastore to store Oozie metadata.
+    You can alternatively use the **Add-AzHDInsightMetastore** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OutboundPublicNetworkAccessType
+  description: |+
+    Gets or sets the outbound access type to the public network.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PublicLoadBalancer, UDR
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PublicNetworkAccessType
+  description: |+
+    Gets or sets the public network access type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: InboundAndOutbound, OutboundOnly
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WorkerNodeSize
+  description: |+
+    Specifies the size of the virtual machine for the Worker node.
+    Use Get-AzVMSize for acceptable VM sizes, and see HDInsight's pricing page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ZookeeperNodeSize
+  description: |+
+    Specifies the size of the virtual machine for the Zookeeper node.
+    Use Get-AzVMSize for acceptable VM sizes, and see HDInsight's pricing page.
+    This parameter is valid only for HBase or Storm clusters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.New-AzHDInsightClusterConfig
+name: New-AzHDInsightClusterConfig
+description: |-
+  The **New-AzHDInsightClusterConfig** cmdlet creates a non-persisted object that describes an Azure HDInsight cluster configuration.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 2C06626F-E5A9-48C2-AEA2-B448AD254C2E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/new-azhdinsightclusterconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightClusterConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightClusterConfig.md

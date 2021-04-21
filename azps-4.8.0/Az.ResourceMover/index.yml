@@ -1,0 +1,28 @@
+### YamlMime:PowershellModule
+children:
+- title: ResourceMover
+  cmdlets:
+  - Az.ResourceMover.Add-AzResourceMoverMoveResource
+  - Az.ResourceMover.Get-AzResourceMoverMoveCollection
+  - Az.ResourceMover.Get-AzResourceMoverMoveResource
+  - Az.ResourceMover.Get-AzResourceMoverUnresolvedDependency
+  - Az.ResourceMover.Invoke-AzResourceMoverCommit
+  - Az.ResourceMover.Invoke-AzResourceMoverDiscard
+  - Az.ResourceMover.Invoke-AzResourceMoverInitiateMove
+  - Az.ResourceMover.Invoke-AzResourceMoverPrepare
+  - Az.ResourceMover.New-AzResourceMoverMoveCollection
+  - Az.ResourceMover.Remove-AzResourceMoverMoveCollection
+  - Az.ResourceMover.Remove-AzResourceMoverMoveResource
+  - Az.ResourceMover.Resolve-AzResourceMoverMoveCollectionDependency
+uid: Az.ResourceMover
+name: Az.ResourceMover
+description: |-
+  Microsoft Azure PowerShell: ResourceMover cmdlets
+metadata:
+  Module Name: Az.ResourceMover
+  Module Guid: 97d87543-8eef-4574-a70d-7317ec4abe54
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.resourcemover
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceMover/help/Az.ResourceMover.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceMover/help/Az.ResourceMover.md

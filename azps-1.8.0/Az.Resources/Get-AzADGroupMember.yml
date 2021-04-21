@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists members of an AD group in the current tenant.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzADUser
+  href: ./Get-AzADUser.yml
+- text: Get-AzADServicePrincipal
+  href: ./Get-AzADServicePrincipal.yml
+syntaxes:
+- >-
+  Get-AzADGroupMember [-GroupObjectId <String>] [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADGroupMember -GroupDisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADGroupMember -GroupObject <PSADGroup> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+examples:
+- title: Example 1 - List members by AD group object id
+  code: |-
+    PS C:\> Get-AzADGroupMember -GroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
+  description: |-
+    Lists members of the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+  summary: ""
+- title: Example 2 - List members by AD group object id using paging
+  code: |-
+    PS C:\> Get-AzADGroupMember -GroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE -First 100
+  description: |-
+    Lists the first 100 members of the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+  summary: ""
+- title: Example 3 - List members by piping
+  code: |-
+    PS C:\> Get-AzADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE | Get-AzADGroupMember
+  description: |-
+    Gets the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' and pipes it to the Get-AzADGroupMember cmdlet to list all members in that group.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The maximum number of objects to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GroupDisplayName
+  isRequired: true
+  description: |+
+    The display name of the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+  name: GroupObject
+  isRequired: true
+  description: |+
+    The group object that you are listing members from.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GroupObjectId
+  description: |+
+    Object Id of the group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id, ObjectId
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeTotalCount
+  description: |+
+    Reports the number of objects in the data set. Currently, this parameter does nothing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    Ignores the first N objects and then gets the remaining objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzADGroupMember
+name: Get-AzADGroupMember
+description: |-
+  Lists members of an AD group in the current tenant.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 52C5CD8B-2489-4FE6-9F33-B3350531CD8E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azadgroupmember
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADGroupMember.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADGroupMember.md

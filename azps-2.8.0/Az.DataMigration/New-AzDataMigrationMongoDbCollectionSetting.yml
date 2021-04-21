@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates collection setting for migration according for the mongoDb migration
+module: Az.DataMigration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataMigration.Models.MongoDbCollectionSetting>" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- New-AzDataMigrationMongoDbCollectionSetting -Name <Name> [-TargetRequestUnit <TargetRequestUnit>] [-CanDelete] [-ShardKey <ShardKey>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $x = New-AzDataMigrationMongoDbCollectionSetting -Name myCollection -TargetRequestUnit 1000 -CanDelete -ShardKey "_id:-1,age:1,name"
+    PS C:\> $x
+
+    Name         Setting
+    ----         -------
+    myCollection Microsoft.Azure.Management.DataMigration.Models.MongoDbCollectionSettings
+
+    PS C:\> $x.Setting
+
+    CanDelete ShardKey                                                               TargetRUs
+    --------- --------                                                               ---------
+         True Microsoft.Azure.Management.DataMigration.Models.MongoDbShardKeySetting      1000
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: CanDelete
+  description: |+
+    Whether the target data is supposed to be deleted, if the switch is set, it will be cleaned up at migration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the collection
+
+  defaultValue: None
+  position: Named
+  aliases: CollectionName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ShardKey
+  description: |+
+    The comma separated list of the shard keys. For mongoDb target,
+    you can specify shard key order of "ShardKeyName:Order",
+    where order is 1, -1 or empty for hashed, for example "_id,email:-1".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TargetRequestUnit
+  description: |+
+    The dedicated collection request unit value. If not set, that collection uses shared database RU.
+
+  defaultValue: None
+  position: Named
+  aliases: RU
+  parameterValueGroup: ""
+uid: Az.DataMigration.New-AzDataMigrationMongoDbCollectionSetting
+name: New-AzDataMigrationMongoDbCollectionSetting
+description: |-
+  The New-AzDataMigrationMongoDbCollectionSetting cmdlet creates the migration setting object that specifies the throughput and delete behavior.
+  The output the cmdlet is key value pair with name of the collection, and value of the setting. The output is used in assembling
+  the database level settings for migration.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  Module Name: Az.DataMigration
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datamigration/New-AzDataMigrationMongoDbCollectionSetting
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationMongoDbCollectionSetting.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationMongoDbCollectionSetting.md

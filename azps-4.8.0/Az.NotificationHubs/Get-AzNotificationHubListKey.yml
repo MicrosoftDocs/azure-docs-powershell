@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the primary and secondary connection strings associated with a notification hub authorization rule.
+module: Az.NotificationHubs
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.NotificationHubs.Models.ResourceListKeys" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzNotificationHubAuthorizationRule
+  href: ./Get-AzNotificationHubAuthorizationRule.yml
+syntaxes:
+- >-
+  Get-AzNotificationHubListKey [-ResourceGroup] <String> [-Namespace] <String> [-NotificationHub] <String>
+
+   [-AuthorizationRule] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the primary and secondary connection strings for an authorization rule'
+  code: |-
+    PS C:\>Get-AzNotificationHubListKey -Namespace "ContosoNamespace" -NotificationHub "ContosoInternalHub" -ResourceGroup "ContosoNotificationsGroup" -AuthorizationRule "ListenRule"
+  description: |-
+    This command gets the primary and secondary connection strings for the authorization rule ListenRule, a rule assigned to the ContosoInternalHub notification hub.
+    The command must include the hub namespace and resource group.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AuthorizationRule
+  isRequired: true
+  description: |+
+    Specifies the name of a Shared Access Signature (SAS) authentication rule.
+    These rules determine the type of access that users have to the notification hub.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  isRequired: true
+  description: |+
+    Specifies the namespace to which the notification hub is assigned.
+    Namespaces provide a way to group and categorize notification hubs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NotificationHub
+  isRequired: true
+  description: |+
+    Specifies the notification hub that this cmdlet assigns an authorization rule to.
+    Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroup
+  isRequired: true
+  description: |+
+    Specifies the resource group to which the notification hub is assigned.
+    Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.NotificationHubs.Get-AzNotificationHubListKey
+name: Get-AzNotificationHubListKey
+description: |-
+  The **Get-AzNotificationHubListKey** cmdlet returns the primary and secondary connection strings of a notification hub Shared Access Signature (SAS) authorization rule.
+  Authorization rules manage user rights to the hub.
+  Each rule includes a primary and a secondary connection string.
+  These connection strings (URIs) perform the following:
+  - Point users to a resource.
+  - Include a token containing query parameters.
+  One of these parameters, the signature, is used to authenticate the user and provide the specified level of access.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
+  Module Name: Az.NotificationHubs
+  ms.assetid: 326C87EB-EC3B-4B04-B593-EAC56FFA854A
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/get-aznotificationhublistkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubListKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubListKey.md

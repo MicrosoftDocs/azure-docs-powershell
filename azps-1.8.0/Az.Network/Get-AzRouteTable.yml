@@ -1,0 +1,162 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets route tables.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzRouteTable
+  href: ./New-AzRouteTable.yml
+- text: Remove-AzRouteTable
+  href: ./Remove-AzRouteTable.yml
+- text: Set-AzRouteTable
+  href: ./Set-AzRouteTable.yml
+syntaxes:
+- >-
+  Get-AzRouteTable [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzRouteTable -ResourceGroupName <String> -Name <String> -ExpandResource <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a route table'
+  code: |-
+    PS C:\> Get-AzRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01"
+
+    Name              : routetable01
+    ResourceGroupName : ResourceGroup11
+    Location          : eastus
+    Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Microsoft.Networ
+                        k/routeTables/routetable01
+    Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
+    ProvisioningState : Succeeded
+    Tags              : 
+    Routes            : [
+                          {
+                            "Name": "route07",
+                            "Etag": "W/\"db5f4e12-3f34-465b-92dd-0ab3bf6fc274\"",
+                            "Id": "/subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Micro
+                        soft.Network/routeTables/routetable01/routes/route07",
+                            "AddressPrefix": "10.1.0.0/16",
+                            "NextHopType": "VnetLocal",
+                            "NextHopIpAddress": null, 
+                            "ProvisioningState": "Succeeded"
+                          }
+                        ] 
+    Subnets           : []
+  description: |-
+    This command gets the route table named RouteTable01 in the resource group named ResourceGroup11.
+  summary: ""
+- title: 'Example 2: List route tables using filtering'
+  code: |-
+    PS C:\> Get-AzRouteTable -Name RouteTable*
+
+    Name              : routetable01
+    ResourceGroupName : ResourceGroup11
+    Location          : eastus
+    Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Microsoft.Networ
+                        k/routeTables/routetable01
+    Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
+    ProvisioningState : Succeeded
+    Tags              : 
+    Routes            : [
+                          {
+                            "Name": "route07",
+                            "Etag": "W/\"db5f4e12-3f34-465b-92dd-0ab3bf6fc274\"",
+                            "Id": "/subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Micro
+                        soft.Network/routeTables/routetable01/routes/route07",
+                            "AddressPrefix": "10.1.0.0/16",
+                            "NextHopType": "VnetLocal",
+                            "NextHopIpAddress": null, 
+                            "ProvisioningState": "Succeeded"
+                          }
+                        ] 
+    Subnets           : []
+
+    Name              : routetable02
+    ResourceGroupName : ResourceGroup11
+    Location          : eastus
+    Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Microsoft.Networ
+                        k/routeTables/routetable02
+    Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
+    ProvisioningState : Succeeded
+    Tags              : 
+    Routes            : [
+                          {
+                            "Name": "route07",
+                            "Etag": "W/\"db5f4e12-3f34-465b-92dd-0ab3bf6fc274\"",
+                            "Id": "/subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Micro
+                        soft.Network/routeTables/routetable02/routes/route07",
+                            "AddressPrefix": "10.1.0.0/16",
+                            "NextHopType": "VnetLocal",
+                            "NextHopIpAddress": null, 
+                            "ProvisioningState": "Succeeded"
+                          }
+                        ] 
+    Subnets           : []
+  description: |-
+    This command gets all route tables whose name starts with "RouteTable"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExpandResource
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the route table that this cmdlet gets.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the route tables that this cmdlet gets.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzRouteTable
+name: Get-AzRouteTable
+description: |-
+  The **Get-AzRouteTable** cmdlet gets Azure route tables.
+  You can get a single route table, or get all the route tables in a resource group or in your subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 4F487FCA-930D-4D56-8D28-7693312E1A01
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azroutetable
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzRouteTable.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzRouteTable.md

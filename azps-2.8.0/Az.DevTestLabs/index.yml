@@ -1,0 +1,26 @@
+### YamlMime:PowershellModule
+children:
+- title: DevTest Labs
+  cmdlets:
+  - Az.DevTestLabs.Get-AzDtlAllowedVMSizesPolicy
+  - Az.DevTestLabs.Get-AzDtlAutoShutdownPolicy
+  - Az.DevTestLabs.Get-AzDtlAutoStartPolicy
+  - Az.DevTestLabs.Get-AzDtlVMsPerLabPolicy
+  - Az.DevTestLabs.Get-AzDtlVMsPerUserPolicy
+  - Az.DevTestLabs.Set-AzDtlAllowedVMSizesPolicy
+  - Az.DevTestLabs.Set-AzDtlAutoShutdownPolicy
+  - Az.DevTestLabs.Set-AzDtlAutoStartPolicy
+  - Az.DevTestLabs.Set-AzDtlVMsPerLabPolicy
+  - Az.DevTestLabs.Set-AzDtlVMsPerUserPolicy
+uid: Az.DevTestLabs
+name: Az.DevTestLabs
+description: |-
+  This topic displays help topics for the DevTest Labs feature in Azure App Service cmdlets.
+metadata:
+  Module Name: Az.DevTestLabs
+  Module Guid: be2ca175-bfb9-4601-b01c-4de13eb2105c
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.devtestlabs
+  Help Version: 4.0.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DevTestLabs/DevTestLabs/help/Az.DevTestLabs.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DevTestLabs/DevTestLabs/help/Az.DevTestLabs.md

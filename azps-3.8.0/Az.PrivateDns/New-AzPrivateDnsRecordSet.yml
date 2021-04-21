@@ -1,0 +1,401 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a record set in a Private DNS zone.
+module: Az.PrivateDns
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsZone" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordSet" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzPrivateDnsRecordSet -ResourceGroupName <String> -ZoneName <String> -Name <String>
+
+   -RecordType <RecordType> -Ttl <UInt32> [-Metadata <Hashtable>] [-PrivateDnsRecord <PSPrivateDnsRecordBase[]>]
+
+   [-Overwrite] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzPrivateDnsRecordSet -Zone <PSPrivateDnsZone> -Name <String> -RecordType <RecordType> -Ttl <UInt32>
+
+   [-Metadata <Hashtable>] [-PrivateDnsRecord <PSPrivateDnsRecordBase[]>] [-Overwrite]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzPrivateDnsRecordSet -ParentResourceId <String> -Name <String> -RecordType <RecordType> -Ttl <UInt32>
+
+   [-Metadata <Hashtable>] [-PrivateDnsRecord <PSPrivateDnsRecordBase[]>] [-Overwrite]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a RecordSet of type A'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -IPv4Address 1.2.3.4
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    # When creating a RecordSet containing a single record, the above sequence can also be condensed into a single line:
+
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords (New-AzPrivateDnsRecordConfig -IPv4Address 1.2.3.4)
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.Netwo
+                        rk/privateDnsZones/myzone.com/A/www
+    Name              : www
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4}
+    Metadata          :
+    IsAutoRegistered  :
+
+
+    # To create a record set containing multiple records, use New-AzPrivateDnsRecordConfig to add each record to the $Records array,
+    # then call New-AzPrivateDnsRecordSet, as follows:
+
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -IPv4Address 1.2.3.4
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -IPv4Address 5.6.7.8
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.Netwo
+                        rk/privateDnsZones/myzone.com/A/www
+    Name              : www
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4, 5.6.7.8}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This example creates a RecordSet named www in the private zone myzone.com. The record set is of type A and has a TTL of 1 hour (3600 seconds). It contains a single Private DNS record.
+  summary: ""
+- title: 'Example 2: Create a RecordSet of type AAAA'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Ipv6Address 2001:db8::1
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType AAAA -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/AAAA/www
+    Name              : www
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : AAAA
+    Records           : {2001:db8::1}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This example creates a RecordSet named www in the private zone myzone.com. The record set is of type AAAA and has a TTL of 1 hour (3600 seconds). It contains a single Private DNS record. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 3: Create a RecordSet of type CNAME'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Cname www.contoso.com
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType CNAME -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/CNAME/www
+    Name              : www
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : CNAME
+    Records           : {www.contoso.com}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This example creates a RecordSet named www in the private zone myzone.com. The record set is of type CNAME and has a TTL of 1 hour (3600 seconds). It contains a single Private DNS record. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 4: Create a RecordSet of type MX'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Exchange "mail.microsoft.com" -Preference 5
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType MX -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/MX/www
+    Name              : www
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : MX
+    Records           : {[5,mail.microsoft.com]}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command creates a RecordSet named www in the private zone myzone.com. The record set is of type MX and has a TTL of 1 hour (3600 seconds). It contains a single Private DNS record. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 5: Create a RecordSet of type PTR'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Ptrdname www.contoso.com
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "4" -RecordType PTR -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "3.2.1.in-addr.arpa" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/3.2.1.in-addr.arpa/PTR/4
+    Name              : 4
+    ZoneName          : 3.2.1.in-addr.arpa
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : PTR
+    Records           : {www.contoso.com}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command creates a RecordSet named 4 in the private zone 3.2.1.in-addr.arpa. The record set is of type PTR and has a TTL of 1 hour (3600 seconds). It contains a single Private DNS record. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 6: Create a RecordSet of type SRV'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Priority 0 -Weight 5 -Port 8080 -Target sipservice.contoso.com
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "_sip._tcp" -RecordType SRV -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/SRV/_sip._tcp
+    Name              : _sip._tcp
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : SRV
+    Records           : {[0,5,8080,sipservice.contoso.com]}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command creates a RecordSet named _sip._tcp in the private zone myzone.com. The record set is of type SRV and has a TTL of 1 hour (3600 seconds). It contains a single Private DNS record, pointing to the IP address 2001.2.3.4. The service (sip) and the protocol (tcp) are specified as part of the record set name, not as part of the record data. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 7: Create a RecordSet of type TXT'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Value "This is a TXT Record"
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "text" -RecordType TXT -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/TXT/text
+    Name              : text
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : TXT
+    Records           : {This is a TXT Record}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command creates a RecordSet named text in the private zone myzone.com. The record set is of type TXT and has a TTL of 1 hour (3600 seconds). It contains a single Private DNS record. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 8:  Create a RecordSet at the zone apex'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Ipv4Address 1.2.3.4
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "@" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/A/@
+    Name              : @
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command creates a RecordSet at the apex (or root) of the private zone myzone.com. To do this, the record set name is specified as "@" (including the double-quotes). You cannot create CNAME records at the apex of a zone. This is a constraint of the DNS standards; it is not a limitation of Azure Private DNS. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 9:  Create a wildcard Record Set'
+  code: |-
+    PS C:\> $Records = @()
+    PS C:\> $Records += New-AzPrivateDnsRecordConfig -Ipv4Address 1.2.3.4
+    PS C:\> $RecordSet = New-AzPrivateDnsRecordSet -Name "*" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords $Records
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/A/@
+    Name              : *
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command creates a RecordSet named * in the private zone myzone.com. This is a wildcard record set. To create a RecordSet using only one line of pn_PowerShell_short, or to create a record set with multiple records, see Example 1.
+  summary: ""
+- title: 'Example 10:  Create an empty Record Set'
+  code: |-
+    PS C:\>$RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords @()
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/A/@
+    Name              : *
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    This command creates a RecordSet named * in the private zone myzone.com. The record set is of type A and has a TTL of 1 hour (3600 seconds). This is an empty record set, which acts as a placeholder to which you can later add records.
+  summary: ""
+- title: 'Example 11:  Create a record set and suppress all confirmation'
+  code: |-
+    PS C:\>$RecordSet = New-AzPrivateDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -PrivateDnsRecords (New-AzDnsRecordConfig -Ipv4Address 1.2.3.4) -Confirm:$False -Overwrite
+  description: |-
+    This command creates a RecordSet. The Overwrite parameter ensures that this record set overwrites any pre-existing record set with the same name and type (existing records in that record set are lost). The Confirm parameter with a value of $False suppresses the confirmation prompt.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    A hash table which represents resource tags.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the records in this record set (relative to the name of the zone and without a terminating dot).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Overwrite
+  description: |+
+    Do not fail if the record set already exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceId
+  isRequired: true
+  description: |+
+    Private DNS Zone ResourceID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrivateDnsRecord
+  description: |+
+    The private dns records that are part of this record set.
+
+  defaultValue: None
+  position: Named
+  aliases: PrivateDnsRecords
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.PrivateDns.Models.RecordType" data-throw-if-not-resolved="False" />
+  name: RecordType
+  isRequired: true
+  description: |+
+    The type of Private DNS records in this record set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: A, AAAA, CNAME, MX, PTR, SOA, SRV, TXT
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group to which the zone belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: Ttl
+  isRequired: true
+  description: |+
+    The TTL value of all the records in this record set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsZone" data-throw-if-not-resolved="False" />
+  name: Zone
+  isRequired: true
+  description: |+
+    The PrivateDnsZone object representing the zone in which to create the record set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ZoneName
+  isRequired: true
+  description: |+
+    The zone in which to create the record set (without a terminating dot).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.PrivateDns.New-AzPrivateDnsRecordSet
+name: New-AzPrivateDnsRecordSet
+description: |-
+  The New-AzPrivateDnsRecordSet cmdlet creates a new Private Domain Name System (DNS) record set with the specified name and type in the specified private zone. A RecordSet object is a set of Private DNS records with the same name and type. Note that the name is relative to the private zone and not the fully qualified name. The PrivateDnsRecord parameter specifies the records in the record set. This parameter takes an array of Private DNS records, constructed using New-AzPrivateDnsRecordConfig. You can use the pipeline operator to pass a PSPrivateDnsZone object to this cmdlet, or you can pass a PSPrivateDnsZone object as the Zone parameter, or you can specify the zone by its ResourceId, or alternatively you can specify the zone by name. You can use the Confirm parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation. If a matching RecordSet already exists (same name and record type), you must specify the Overwrite parameter, otherwise the cmdlet will not create a new RecordSet .
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
+  Module Name: Az.PrivateDns
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.privatedns/new-azprivatednsrecordset
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/New-AzPrivateDnsRecordSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/New-AzPrivateDnsRecordSet.md

@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a public IP address.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzPublicIpAddress
+  href: ./New-AzPublicIpAddress.yml
+- text: Remove-AzPublicIpAddress
+  href: ./Remove-AzPublicIpAddress.yml
+- text: Set-AzPublicIpAddress
+  href: ./Set-AzPublicIpAddress.yml
+syntaxes:
+- >-
+  Get-AzPublicIpAddress [-Name <String>] [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzPublicIpAddress -Name <String> -ResourceGroupName <String> -ExpandResource <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPublicIpAddress [-Name <String>] -ResourceGroupName <String> [-VirtualMachineScaleSetName <String>]
+
+   [-VirtualMachineIndex <String>] [-NetworkInterfaceName <String>] [-IpConfigurationName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPublicIpAddress -Name <String> -ResourceGroupName <String> -VirtualMachineScaleSetName <String>
+
+   -VirtualMachineIndex <String> -NetworkInterfaceName <String> -IpConfigurationName <String>
+
+   -ExpandResource <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a public IP resource'
+  code: |-
+    Get-AzPublicIpAddress -Name myPublicIp1 -ResourceGroupName myRg
+
+    Name                     : myPublicIp1
+    ResourceGroupName        : myRg
+    Location                 : westus2
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRg/providers/Microsoft
+                               .Network/publicIPAddresses/myPublicIp1
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    PublicIpAllocationMethod : Dynamic
+    IpAddress                : Not Assigned
+    PublicIpAddressVersion   : IPv4
+    IdleTimeoutInMinutes     : 4
+    IpConfiguration          : {
+                                 "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRg/providers/
+                               Microsoft.Network/networkInterfaces/ps-azure-env407/ipConfigurations/ipconfig1"
+                               }
+    DnsSettings              : null
+    Zones                    : {}
+    Sku                      : {
+                                 "Name": "Basic"
+                               }
+    IpTags                   : []
+  description: |-
+    This command gets a public IP address resource with name myPublicIp in the resource group myRg.
+  summary: ""
+- title: 'Example 2: Get public IP resources using filtering'
+  code: |-
+    Get-AzPublicIpAddress -Name myPublicIp*
+
+    Name                     : myPublicIp1
+    ResourceGroupName        : myRg
+    Location                 : westus2
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRg/providers/Microsoft
+                               .Network/publicIPAddresses/myPublicIp1
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    PublicIpAllocationMethod : Dynamic
+    IpAddress                : Not Assigned
+    PublicIpAddressVersion   : IPv4
+    IdleTimeoutInMinutes     : 4
+    IpConfiguration          : {
+                                 "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRg/providers/
+                               Microsoft.Network/networkInterfaces/ps-azure-env407/ipConfigurations/ipconfig1"
+                               }
+    DnsSettings              : null
+    Zones                    : {}
+    Sku                      : {
+                                 "Name": "Basic"
+                               }
+    IpTags                   : []
+  description: |-
+    This command gets all public IP address resources whose name starts with myPublicIp.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExpandResource
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IpConfigurationName
+  isRequired: true
+  description: |+
+    Network Interface IP Configuration Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the public IP address that this cmdlet gets.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NetworkInterfaceName
+  isRequired: true
+  description: |+
+    Virtual Machine Network Interface Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the public IP address that this cmdlet gets.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualMachineIndex
+  isRequired: true
+  description: |+
+    Virtual Machine Index.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualMachineScaleSetName
+  isRequired: true
+  description: |+
+    Virtual Machine Scale Set Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzPublicIpAddress
+name: Get-AzPublicIpAddress
+description: |-
+  The **Get-AzPublicIPAddress** cmdlet gets one or more public IP addresses in a resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 0CD03BF8-8DB6-44BC-91F0-D863949DBD17
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azpublicipaddress
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzPublicIpAddress.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzPublicIpAddress.md

@@ -1,0 +1,360 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Query a snapshot of the most recent connection states.
+module: Az.Network
+notes: |-
+  Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher, connection monitor
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSConnectionMonitorResult" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSConnectionMonitorQueryResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzNetworkWatcher
+  href: ./New-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcher
+  href: ./Get-AzNetworkWatcher.yml
+- text: Remove-AzNetworkWatcher
+  href: ./Remove-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcherNextHop
+  href: ./Get-AzNetworkWatcherNextHop.yml
+- text: Get-AzNetworkWatcherSecurityGroupView
+  href: ./Get-AzNetworkWatcherSecurityGroupView.yml
+- text: Get-AzNetworkWatcherTopology
+  href: ./Get-AzNetworkWatcherTopology.yml
+- text: Get-AzNetworkWatcherTroubleshootingResult
+  href: ./Get-AzNetworkWatcherTroubleshootingResult.yml
+- text: New-AzNetworkWatcherPacketCapture
+  href: ./New-AzNetworkWatcherPacketCapture.yml
+- text: New-AzPacketCaptureFilterConfig
+  href: ./New-AzPacketCaptureFilterConfig.yml
+- text: Get-AzNetworkWatcherPacketCapture
+  href: ./Get-AzNetworkWatcherPacketCapture.yml
+- text: Remove-AzNetworkWatcherPacketCapture
+  href: ./Remove-AzNetworkWatcherPacketCapture.yml
+- text: Stop-AzNetworkWatcherPacketCapture
+  href: ./Stop-AzNetworkWatcherPacketCapture.yml
+- text: Get-AzNetworkWatcherConnectionMonitor
+  href: ./Get-AzNetworkWatcherConnectionMonitor.yml
+- text: Get-AzNetworkWatcherConnectionMonitorReport
+  href: ./Get-AzNetworkWatcherConnectionMonitorReport.yml
+- text: Remove-AzNetworkWatcherConnectionMonitor
+  href: ./Remove-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConnectionMonitor
+  href: ./Set-AzNetworkWatcherConnectionMonitor.yml
+- text: Stop-AzNetworkWatcherConnectionMonitor
+  href: ./Stop-AzNetworkWatcherConnectionMonitor.yml
+- text: New-AzNetworkWatcherConnectionMonitor
+  href: ./New-AzNetworkWatcherConnectionMonitor.yml
+- text: New-AzNetworkWatcherProtocolConfiguration
+  href: ./New-AzNetworkWatcherProtocolConfiguration.yml
+- text: Test-AzNetworkWatcherIPFlow
+  href: ./Test-AzNetworkWatcherIPFlow.yml
+- text: Test-AzNetworkWatcherConnectivity
+  href: ./Test-AzNetworkWatcherConnectivity.yml
+- text: Start-AzNetworkWatcherResourceTroubleshooting
+  href: ./Start-AzNetworkWatcherResourceTroubleshooting.yml
+- text: Start-AzNetworkWatcherConnectionMonitor
+  href: ./Start-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConfigFlowLog
+  href: ./Set-AzNetworkWatcherConfigFlowLog.yml
+- text: Get-AzNetworkWatcherReachabilityReport
+  href: ./Get-AzNetworkWatcherReachabilityReport.yml
+- text: Get-AzNetworkWatcherReachabilityProvidersList
+  href: ./Get-AzNetworkWatcherReachabilityProvidersList.yml
+- text: Get-AzNetworkWatcherFlowLogStatus
+  href: ./Get-AzNetworkWatcherFlowLogStatus.yml
+syntaxes:
+- >-
+  Get-AzNetworkWatcherConnectionMonitorReport -NetworkWatcherName <String> -ResourceGroupName <String>
+
+   -Name <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkWatcherConnectionMonitorReport -NetworkWatcher <PSNetworkWatcher> -Name <String> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkWatcherConnectionMonitorReport -Location <String> -Name <String> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkWatcherConnectionMonitorReport -ResourceId <String> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkWatcherConnectionMonitorReport -InputObject <PSConnectionMonitorResult> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the most recent connection snapshot of the connection monitor by name in the specified location'
+  code: |-
+    PS C:\> Get-AzNetworkWatcherConnectionMonitorReport -Location centraluseuap -Name cm
+
+
+    States : [
+               {
+                 "ConnectionState": "Reachable",
+                 "StartTime": "2018-01-12T01:18:20Z",
+                 "EvaluationState": "Completed",
+                 "Hops": [
+                   {
+                     "Type": "Source",
+                     "Id": "1530e0f2-c9b7-4bc0-a205-cf7332cd8983",
+                     "Address": "10.1.1.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/appNic0/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "b19b74b1-423d-4f0b-99cd-bcaed4d0b8a2"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualAppliance",
+                     "Id": "b19b74b1-423d-4f0b-99cd-bcaed4d0b8a2",
+                     "Address": "10.1.2.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/fwNic/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "80e46c56-2cf9-4106-8602-608a74832d41"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualAppliance",
+                     "Id": "80e46c56-2cf9-4106-8602-608a74832d41",
+                     "Address": "10.1.3.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/auNic/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "e17cf884-69db-43b8-9cd5-f920770a0dbe"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualNetwork",
+                     "Id": "e17cf884-69db-43b8-9cd5-f920770a0dbe",
+                     "Address": "10.1.4.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/dbNic0/ipConfigurations/ipconfig1",
+                     "NextHopIds": [],
+                     "Issues": []
+                   }
+                 ]
+               },
+               {
+                 "ConnectionState": "Unreachable",
+                 "StartTime": "2018-01-12T01:14:11Z",
+                 "EvaluationState": "Completed",
+                 "Hops": [
+                   {
+                     "Type": "Source",
+                     "Id": "b6251ff8-3d07-4fdf-98f8-04b168e1cf90",
+                     "Address": "10.1.1.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/appNic0/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "de6d463b-47fb-4beb-afc4-d77782755313"
+                     ],
+                     "Issues": [
+                       {
+                         "Origin": "Local",
+                         "Severity": "Error",
+                         "Type": "NetworkError",
+                         "Context": []
+                       }
+                     ]
+                   },
+                   {
+                     "Type": "VirtualAppliance",
+                     "Id": "de6d463b-47fb-4beb-afc4-d77782755313",
+                     "Address": "10.1.2.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/fwNic/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "0cbadb7e-cd99-4fa9-a832-eb4e0d112293"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualAppliance",
+                     "Id": "0cbadb7e-cd99-4fa9-a832-eb4e0d112293",
+                     "Address": "10.1.3.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/auNic/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "538005d1-994a-4350-9866-6985385beecf"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualNetwork",
+                     "Id": "538005d1-994a-4350-9866-6985385beecf",
+                     "Address": "10.1.4.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/dbNic0/ipConfigurations/ipconfig1",
+                     "NextHopIds": [],
+                     "Issues": []
+                   }
+                 ]
+               },
+               {
+                 "ConnectionState": "Reachable",
+                 "StartTime": "2018-01-11T23:54:05Z",
+                 "EvaluationState": "Completed",
+                 "Hops": [
+                   {
+                     "Type": "Source",
+                     "Id": "3dbec7e8-a37f-4acd-bc5f-86918fffba0e",
+                     "Address": "10.1.1.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/appNic0/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "1a87cf61-1be6-4add-bba7-f84afbcf3726"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualAppliance",
+                     "Id": "1a87cf61-1be6-4add-bba7-f84afbcf3726",
+                     "Address": "10.1.2.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/fwNic/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "070c0740-308e-43ba-b72f-5d8d5a6537ec"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualAppliance",
+                     "Id": "070c0740-308e-43ba-b72f-5d8d5a6537ec",
+                     "Address": "10.1.3.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/auNic/ipConfigurations/ipconfig1",
+                     "NextHopIds": [
+                       "760182e1-c88d-4cfc-a711-65e7e622a67a"
+                     ],
+                     "Issues": []
+                   },
+                   {
+                     "Type": "VirtualNetwork",
+                     "Id": "760182e1-c88d-4cfc-a711-65e7e622a67a",
+                     "Address": "10.1.4.4",
+                     "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/VarunRgCentralUSEUAP
+             /providers/Microsoft.Network/networkInterfaces/dbNic0/ipConfigurations/ipconfig1",
+                     "NextHopIds": [],
+                     "Issues": []
+                   }
+                 ]
+               }
+             ]
+  description: |-
+    In this example we query the most recent connection states of the specified connection monitor.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSConnectionMonitorResult" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Connection monitor object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Location of the network watcher.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The connection monitor name.
+
+  defaultValue: None
+  position: Named
+  aliases: ConnectionMonitorName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+  name: NetworkWatcher
+  isRequired: true
+  description: |+
+    The network watcher resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NetworkWatcherName
+  isRequired: true
+  description: |+
+    The name of network watcher.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the network watcher resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Resource ID of the connection monitor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzNetworkWatcherConnectionMonitorReport
+name: Get-AzNetworkWatcherConnectionMonitorReport
+description: |-
+  The Get-AzNetworkWatcherConnectionMonitorReport cmdlet returns the report on the most recent connection states.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatcherconnectionmonitorreport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherConnectionMonitorReport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherConnectionMonitorReport.md

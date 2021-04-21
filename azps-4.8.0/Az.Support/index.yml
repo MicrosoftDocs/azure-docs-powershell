@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: Support
+  cmdlets:
+  - Az.Support.Get-AzSupportProblemClassification
+  - Az.Support.Get-AzSupportService
+  - Az.Support.Get-AzSupportTicket
+  - Az.Support.Get-AzSupportTicketCommunication
+  - Az.Support.New-AzSupportContactProfileObject
+  - Az.Support.New-AzSupportTicket
+  - Az.Support.New-AzSupportTicketCommunication
+  - Az.Support.Update-AzSupportTicket
+uid: Az.Support
+name: Az.Support
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for creating and managing Azure support tickets in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.Support namespace
+metadata:
+  Module Name: Az.Support
+  Module Guid: 22d73af7-38c2-4bf6-b56f-4dc9db05d97a
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.support
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/Az.Support.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/Az.Support.md

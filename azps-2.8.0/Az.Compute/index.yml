@@ -1,0 +1,223 @@
+### YamlMime:PowershellModule
+children:
+- title: Container Service
+  cmdlets:
+  - Az.Compute.Add-AzContainerServiceAgentPoolProfile
+  - Az.Compute.Get-AzContainerService
+  - Az.Compute.New-AzContainerService
+  - Az.Compute.New-AzContainerServiceConfig
+  - Az.Compute.Remove-AzContainerService
+  - Az.Compute.Remove-AzContainerServiceAgentPoolProfile
+  - Az.Compute.Update-AzContainerService
+- title: Virtual Machines
+  cmdlets:
+  - Az.Compute.Add-AzVMAdditionalUnattendContent
+  - Az.Compute.Add-AzVMNetworkInterface
+  - Az.Compute.Add-AzVMSecret
+  - Az.Compute.Add-AzVMSshPublicKey
+  - Az.Compute.Export-AzLogAnalyticRequestRateByInterval
+  - Az.Compute.Export-AzLogAnalyticThrottledRequest
+  - Az.Compute.Get-AzAvailabilitySet
+  - Az.Compute.Get-AzComputeResourceSku
+  - Az.Compute.Get-AzHost
+  - Az.Compute.Get-AzHostGroup
+  - Az.Compute.Get-AzProximityPlacementGroup
+  - Az.Compute.Get-AzRemoteDesktopFile
+  - Az.Compute.Get-AzVM
+  - Az.Compute.Get-AzVMBootDiagnosticsData
+  - Az.Compute.Get-AzVMRunCommandDocument
+  - Az.Compute.Get-AzVMSize
+  - Az.Compute.Get-AzVMUsage
+  - Az.Compute.Invoke-AzVMReimage
+  - Az.Compute.Invoke-AzVMRunCommand
+  - Az.Compute.New-AzAvailabilitySet
+  - Az.Compute.New-AzHost
+  - Az.Compute.New-AzHostGroup
+  - Az.Compute.New-AzProximityPlacementGroup
+  - Az.Compute.New-AzVM
+  - Az.Compute.New-AzVMConfig
+  - Az.Compute.New-AzVMSqlServerAutoBackupConfig
+  - Az.Compute.New-AzVMSqlServerAutoPatchingConfig
+  - Az.Compute.New-AzVMSqlServerKeyVaultCredentialConfig
+  - Az.Compute.Publish-AzVMDscConfiguration
+  - Az.Compute.Remove-AzAvailabilitySet
+  - Az.Compute.Remove-AzHost
+  - Az.Compute.Remove-AzHostGroup
+  - Az.Compute.Remove-AzProximityPlacementGroup
+  - Az.Compute.Remove-AzVM
+  - Az.Compute.Remove-AzVMBackup
+  - Az.Compute.Remove-AzVMNetworkInterface
+  - Az.Compute.Remove-AzVMSecret
+  - Az.Compute.Restart-AzVM
+  - Az.Compute.Set-AzVM
+  - Az.Compute.Set-AzVMBootDiagnostic
+  - Az.Compute.Set-AzVMOperatingSystem
+  - Az.Compute.Set-AzVMPlan
+  - Az.Compute.Start-AzVM
+  - Az.Compute.Stop-AzVM
+  - Az.Compute.Update-AzAvailabilitySet
+  - Az.Compute.Update-AzVM
+- title: VM Disks
+  cmdlets:
+  - Az.Compute.Add-AzVMDataDisk
+  - Az.Compute.ConvertTo-AzVMManagedDisk
+  - Az.Compute.Disable-AzVMDiskEncryption
+  - Az.Compute.Get-AzDisk
+  - Az.Compute.Get-AzVMDiskEncryptionStatus
+  - Az.Compute.Grant-AzDiskAccess
+  - Az.Compute.New-AzDisk
+  - Az.Compute.New-AzDiskConfig
+  - Az.Compute.New-AzDiskUpdateConfig
+  - Az.Compute.New-AzVMDataDisk
+  - Az.Compute.Remove-AzDisk
+  - Az.Compute.Remove-AzVMDataDisk
+  - Az.Compute.Remove-AzVMDiskEncryptionExtension
+  - Az.Compute.Revoke-AzDiskAccess
+  - Az.Compute.Set-AzDiskDiskEncryptionKey
+  - Az.Compute.Set-AzDiskKeyEncryptionKey
+  - Az.Compute.Set-AzDiskUpdateDiskEncryptionKey
+  - Az.Compute.Set-AzDiskUpdateKeyEncryptionKey
+  - Az.Compute.Set-AzVMDataDisk
+  - Az.Compute.Set-AzVMDiskEncryptionExtension
+  - Az.Compute.Set-AzVMOSDisk
+  - Az.Compute.Update-AzDisk
+- title: VM Extensions
+  cmdlets:
+  - Az.Compute.Get-AzVMAccessExtension
+  - Az.Compute.Get-AzVMADDomainExtension
+  - Az.Compute.Get-AzVMAEMExtension
+  - Az.Compute.Get-AzVMChefExtension
+  - Az.Compute.Get-AzVMCustomScriptExtension
+  - Az.Compute.Get-AzVMDiagnosticsExtension
+  - Az.Compute.Get-AzVMDscExtension
+  - Az.Compute.Get-AzVMDscExtensionStatus
+  - Az.Compute.Get-AzVMExtension
+  - Az.Compute.Get-AzVMSqlServerExtension
+  - Az.Compute.Remove-AzVMAccessExtension
+  - Az.Compute.Remove-AzVMAEMExtension
+  - Az.Compute.Remove-AzVMChefExtension
+  - Az.Compute.Remove-AzVMCustomScriptExtension
+  - Az.Compute.Remove-AzVMDiagnosticsExtension
+  - Az.Compute.Remove-AzVMDscExtension
+  - Az.Compute.Remove-AzVMExtension
+  - Az.Compute.Remove-AzVMSqlServerExtension
+  - Az.Compute.Set-AzVMAccessExtension
+  - Az.Compute.Set-AzVMADDomainExtension
+  - Az.Compute.Set-AzVMAEMExtension
+  - Az.Compute.Set-AzVMBackupExtension
+  - Az.Compute.Set-AzVMBginfoExtension
+  - Az.Compute.Set-AzVMChefExtension
+  - Az.Compute.Set-AzVMCustomScriptExtension
+  - Az.Compute.Set-AzVMDiagnosticsExtension
+  - Az.Compute.Set-AzVMDscExtension
+  - Az.Compute.Set-AzVMExtension
+  - Az.Compute.Set-AzVMSqlServerExtension
+  - Az.Compute.Test-AzVMAEMExtension
+- title: VM Images
+  cmdlets:
+  - Az.Compute.Add-AzImageDataDisk
+  - Az.Compute.Get-AzGallery
+  - Az.Compute.Get-AzGalleryImageDefinition
+  - Az.Compute.Get-AzGalleryImageVersion
+  - Az.Compute.Get-AzImage
+  - Az.Compute.Get-AzVMExtensionImage
+  - Az.Compute.Get-AzVMExtensionImageType
+  - Az.Compute.Get-AzVMImage
+  - Az.Compute.Get-AzVMImageOffer
+  - Az.Compute.Get-AzVMImagePublisher
+  - Az.Compute.Get-AzVMImageSku
+  - Az.Compute.New-AzGallery
+  - Az.Compute.New-AzGalleryImageDefinition
+  - Az.Compute.New-AzGalleryImageVersion
+  - Az.Compute.New-AzImage
+  - Az.Compute.New-AzImageConfig
+  - Az.Compute.Remove-AzGallery
+  - Az.Compute.Remove-AzGalleryImageDefinition
+  - Az.Compute.Remove-AzGalleryImageVersion
+  - Az.Compute.Remove-AzImage
+  - Az.Compute.Remove-AzImageDataDisk
+  - Az.Compute.Save-AzVMImage
+  - Az.Compute.Set-AzDiskImageReference
+  - Az.Compute.Set-AzImageOsDisk
+  - Az.Compute.Set-AzVMSourceImage
+  - Az.Compute.Update-AzGallery
+  - Az.Compute.Update-AzGalleryImageDefinition
+  - Az.Compute.Update-AzGalleryImageVersion
+  - Az.Compute.Update-AzImage
+- title: VM Scale Sets
+  cmdlets:
+  - Az.Compute.Add-AzVmssAdditionalUnattendContent
+  - Az.Compute.Add-AzVmssDataDisk
+  - Az.Compute.Add-AzVmssDiagnosticsExtension
+  - Az.Compute.Add-AzVmssExtension
+  - Az.Compute.Add-AzVmssNetworkInterfaceConfiguration
+  - Az.Compute.Add-AzVmssSecret
+  - Az.Compute.Add-AzVmssSshPublicKey
+  - Az.Compute.Add-AzVmssVMDataDisk
+  - Az.Compute.Add-AzVmssWinRMListener
+  - Az.Compute.Disable-AzVmssDiskEncryption
+  - Az.Compute.Get-AzVmss
+  - Az.Compute.Get-AzVmssDiskEncryption
+  - Az.Compute.Get-AzVmssRollingUpgrade
+  - Az.Compute.Get-AzVmssSku
+  - Az.Compute.Get-AzVmssVM
+  - Az.Compute.Get-AzVmssVMDiskEncryption
+  - Az.Compute.Invoke-AzVmssVMRunCommand
+  - Az.Compute.New-AzVmss
+  - Az.Compute.New-AzVmssConfig
+  - Az.Compute.New-AzVmssIpConfig
+  - Az.Compute.New-AzVmssIpTagConfig
+  - Az.Compute.New-AzVmssVaultCertificateConfig
+  - Az.Compute.Remove-AzVmss
+  - Az.Compute.Remove-AzVmssDataDisk
+  - Az.Compute.Remove-AzVmssDiagnosticsExtension
+  - Az.Compute.Remove-AzVmssExtension
+  - Az.Compute.Remove-AzVmssNetworkInterfaceConfiguration
+  - Az.Compute.Remove-AzVmssVMDataDisk
+  - Az.Compute.Repair-AzVmssServiceFabricUpdateDomain
+  - Az.Compute.Restart-AzVmss
+  - Az.Compute.Set-AzVmss
+  - Az.Compute.Set-AzVmssBootDiagnostic
+  - Az.Compute.Set-AzVmssDiskEncryptionExtension
+  - Az.Compute.Set-AzVmssOsProfile
+  - Az.Compute.Set-AzVmssRollingUpgradePolicy
+  - Az.Compute.Set-AzVmssStorageProfile
+  - Az.Compute.Set-AzVmssVM
+  - Az.Compute.Start-AzVmss
+  - Az.Compute.Start-AzVmssRollingOSUpgrade
+  - Az.Compute.Stop-AzVmss
+  - Az.Compute.Stop-AzVmssRollingUpgrade
+  - Az.Compute.Update-AzVmss
+  - Az.Compute.Update-AzVmssInstance
+  - Az.Compute.Update-AzVmssVM
+- title: VM Snapshots
+  cmdlets:
+  - Az.Compute.Get-AzSnapshot
+  - Az.Compute.Grant-AzSnapshotAccess
+  - Az.Compute.New-AzSnapshot
+  - Az.Compute.New-AzSnapshotConfig
+  - Az.Compute.New-AzSnapshotUpdateConfig
+  - Az.Compute.Remove-AzSnapshot
+  - Az.Compute.Revoke-AzSnapshotAccess
+  - Az.Compute.Set-AzSnapshotDiskEncryptionKey
+  - Az.Compute.Set-AzSnapshotImageReference
+  - Az.Compute.Set-AzSnapshotKeyEncryptionKey
+  - Az.Compute.Set-AzSnapshotUpdateDiskEncryptionKey
+  - Az.Compute.Set-AzSnapshotUpdateKeyEncryptionKey
+  - Az.Compute.Update-AzSnapshot
+- title: VM VHDs
+  cmdlets:
+  - Az.Compute.Add-AzVhd
+  - Az.Compute.Save-AzVhd
+uid: Az.Compute
+name: Az.Compute
+description: |-
+  This topic displays the help topics for the Azure Compute Cmdlets.
+metadata:
+  Module Name: Az.Compute
+  Module Guid: 0a83c907-1ffb-4d87-a492-c65ac7d7ed37
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.compute
+  Help Version: 3.5.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Az.Compute.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Az.Compute.md

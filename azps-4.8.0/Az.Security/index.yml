@@ -1,0 +1,77 @@
+### YamlMime:PowershellModule
+children:
+- title: Security
+  cmdlets:
+  - Az.Security.Add-AzSecurityAdaptiveNetworkHardening
+  - Az.Security.Disable-AzIotSecurityAnalyticsAggregatedAlert
+  - Az.Security.DIsable-AzSecurityAdvancedThreatProtection
+  - Az.Security.Enable-AzSecurityAdvancedThreatProtection
+  - Az.Security.Get-AzAllowedConnection
+  - Az.Security.Get-AzDeviceSecurityGroup
+  - Az.Security.Get-AzDiscoveredSecuritySolution
+  - Az.Security.Get-AzExternalSecuritySolution
+  - Az.Security.Get-AzIotSecurityAnalytics
+  - Az.Security.Get-AzIotSecurityAnalyticsAggregatedAlert
+  - Az.Security.Get-AzIotSecurityAnalyticsAggregatedRecommendation
+  - Az.Security.Get-AzIotSecuritySolution
+  - Az.Security.Get-AzJitNetworkAccessPolicy
+  - Az.Security.Get-AzRegulatoryComplainceAssessment
+  - Az.Security.Get-AzRegulatoryComplianceControl
+  - Az.Security.Get-AzRegulatoryComplianceStandard
+  - Az.Security.Get-AzSecurityAdaptiveApplicationControl
+  - Az.Security.Get-AzSecurityAdaptiveApplicationControlGroup
+  - Az.Security.Get-AzSecurityAdaptiveNetworkHardening
+  - Az.Security.Get-AzSecurityAdvancedThreatProtection
+  - Az.Security.Get-AzSecurityAlert
+  - Az.Security.Get-AzSecurityAssessment
+  - Az.Security.Get-AzSecurityAssessmentMetadata
+  - Az.Security.Get-AzSecurityAutoProvisioningSetting
+  - Az.Security.Get-AzSecurityCompliance
+  - Az.Security.Get-AzSecurityContact
+  - Az.Security.Get-AzSecurityLocation
+  - Az.Security.Get-AzSecurityPricing
+  - Az.Security.Get-AzSecuritySetting
+  - Az.Security.Get-AzSecuritySubAssessment
+  - Az.Security.Get-AzSecurityTask
+  - Az.Security.Get-AzSecurityTopology
+  - Az.Security.Get-AzSecurityWorkspaceSetting
+  - Az.Security.Get-AzSqlInformationProtectionPolicy
+  - Az.Security.New-AzDeviceSecurityGroupAllowlistCustomAlertRuleObject
+  - Az.Security.New-AzDeviceSecurityGroupDenylistCustomAlertRuleObject
+  - Az.Security.New-AzDeviceSecurityGroupThresholdCustomAlertRuleObject
+  - Az.Security.New-AzDeviceSecurityGroupTimeWindowRuleObject
+  - Az.Security.New-AzIotSecuritySolutionRecommendationConfigurationObject
+  - Az.Security.New-AzIotSecuritySolutionUserDefinedResourcesObject
+  - Az.Security.Remove-AzDeviceSecurityGroup
+  - Az.Security.Remove-AzIotSecuritySolution
+  - Az.Security.Remove-AzJitNetworkAccessPolicy
+  - Az.Security.Remove-AzSecurityAssessment
+  - Az.Security.Remove-AzSecurityAssessmentMetadata
+  - Az.Security.Remove-AzSecurityContact
+  - Az.Security.Remove-AzSecurityWorkspaceSetting
+  - Az.Security.Set-AzDeviceSecurityGroup
+  - Az.Security.Set-AzIotSecuritySolution
+  - Az.Security.Set-AzJitNetworkAccessPolicy
+  - Az.Security.Set-AzSecurityAlert
+  - Az.Security.Set-AzSecurityAssessment
+  - Az.Security.Set-AzSecurityAssessmentMetadata
+  - Az.Security.Set-AzSecurityAutoProvisioningSetting
+  - Az.Security.Set-AzSecurityContact
+  - Az.Security.Set-AzSecurityPricing
+  - Az.Security.Set-AzSecuritySetting
+  - Az.Security.Set-AzSecurityWorkspaceSetting
+  - Az.Security.Set-AzSqlInformationProtectionPolicy
+  - Az.Security.Start-AzJitNetworkAccessPolicy
+  - Az.Security.Update-AzIotSecuritySolution
+uid: Az.Security
+name: Az.Security
+description: |-
+  Azure Security Center gives you control over the security of your Azure subscriptions and other machines that you connected to it outside of Azure.
+metadata:
+  Module Name: Az.Security
+  Module Guid: 5e312bb4-9d3a-4c88-94c3-8e5bbb2e3da4
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.security
+  Help Version: 0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Az.Security.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Az.Security.md

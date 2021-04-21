@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists the Skus of the resource type.
+module: Az.Blockchain
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Blockchain.Models.Api20180601Preview.IResourceTypeSku" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzBlockchainSku [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List SKU for a subscription'
+  code: |-
+    PS C:\> Get-AzBlockchainSku -SubscriptionId c9cbd920-c00c-427c-852b-8aaf38badaeb
+  description: |-
+    This command lists SKU for a subscription.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    Gets the subscription Id which uniquely identifies the Microsoft Azure subscription.
+    The subscription ID is part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Blockchain.Get-AzBlockchainSku
+name: Get-AzBlockchainSku
+description: |-
+  Lists the Skus of the resource type.
+metadata:
+  external help file: ""
+  Module Name: Az.Blockchain
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.blockchain/get-azblockchainsku
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blockchain/help/Get-AzBlockchainSku.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blockchain/help/Get-AzBlockchainSku.md

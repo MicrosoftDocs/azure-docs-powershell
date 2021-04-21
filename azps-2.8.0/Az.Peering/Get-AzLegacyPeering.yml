@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Used to Convert Legacy Peering resources to Azure Resource Management (ARM) Resources.
+module: Az.Peering
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSPeering" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzLegacyPeering [-PeeringLocation] <String> [-Kind] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:> Get-AzLegacyPeering -PeeringLocation "Seattle" -Kind Direct
+
+    Name                       :
+    Sku                        : Basic_Direct_Free
+    Kind                       : Direct
+    PeeringLocation            : Seattle
+    UseForPeeringService       : False
+    PeerAsn.Id                 :
+    Connection                 : ------------------------
+    PeeringDBFacilityId        : 71
+    SessionPrefixIPv4          : 173.205.50.236/30
+    PeerSessionIPv4Address     : 173.205.50.237
+    MicrosoftIPv4Address       : 173.205.50.238
+    SessionStateV4             : Established
+    MaxPrefixesAdvertisedV4    : 20000
+    SessionPrefixIPv6          : 2001:668:0:3:ffff:0:adcd:32ec/126
+    PeerSessionIPv6Address     : 2001:668:0:3:ffff:0:adcd:32ed
+    MicrosoftIPv6Address       : 2001:668:0:3:ffff:0:adcd:32ee
+    SessionStateV6             : Established
+    MaxPrefixesAdvertisedV6    : 2000
+    ConnectionState            : Active
+    BandwidthInMbps            : 0
+    ProvisionedBandwidthInMbps : 20000
+    ProvisioningState          : Succeeded
+  description: |-
+    Gets the legacy peering for Seattle
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Kind
+  isRequired: true
+  description: |+
+    Shows all Peering resource by Kind.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeeringLocation
+  isRequired: true
+  description: |+
+    Shows all Peering resource by Kind.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Peering.Get-AzLegacyPeering
+name: Get-AzLegacyPeering
+description: |-
+  The command is used to view legacy Peering resources which all you to convert them to Azure Resource Management (ARM) Resources.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
+  Module Name: Az.Peering
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.peering/get-azlegacypeering
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Get-AzLegacyPeering.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Get-AzLegacyPeering.md

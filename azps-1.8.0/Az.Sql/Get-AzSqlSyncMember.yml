@@ -1,0 +1,196 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about Azure SQL Database Sync Members.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataSync.Model.AzureSqlSyncMemberModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzSqlSyncMember
+  href: ./New-AzSqlSyncMember.yml
+- text: Update-AzSqlSyncMember
+  href: ./Update-AzSqlSyncMember.yml
+- text: Remove-AzSqlSyncMember
+  href: ./Remove-AzSqlSyncMember.yml
+syntaxes:
+- >-
+  Get-AzSqlSyncMember [-Name <String>] [-SyncGroupName] <String> [-ServerName] <String> [-DatabaseName] <String>
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all instances of Azure SQL Sync Member assigned to a sync group'
+  code: |-
+    PS C:\> Get-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" | Format-List
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncMemberName              : SyncMember01
+    SyncDirection               : OneWayMemberToHub
+    MemberDatabaseType:         : AzureSqlDatabase
+    SyncAgentId                 : 
+    SqlServerDatabaseId         : 
+    MemberServerName            : memberServer01.full.dns.name
+    MemberDatabaseName          : memberDatabase01
+    MemberDatabaseUserName      : myAccount
+    MemberDatabasePassword      : 
+    SyncState                   : Good 
+
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember02}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncMemberName              : SyncMember02
+    SyncDirection               : OneWayMemberToHub
+    MemberDatabaseType:         : AzureSqlDatabase
+    SyncAgentId                 : 
+    SqlServerDatabaseId         : 
+    MemberServerName            : memberServer01.full.dns.name
+    MemberDatabaseName          : memberDatabase01
+    MemberDatabaseUserName      : myAccount
+    MemberDatabasePassword      :  
+    SyncState                   : Good
+  description: |-
+    This command gets information about all the Azure SQL Database Sync Member assigned to the sync group SyncGroup01.
+  summary: ""
+- title: 'Example 2: Get information about an Azure SQL Database Sync Member'
+  code: |-
+    PS C:\> Get-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" | Format-List
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncMemberName              : SyncMember01
+    SyncDirection               : OneWayMemberToHub
+    MemberDatabaseType:         : AzureSqlDatabase
+    SyncAgentId                 : 
+    SqlServerDatabaseId         : 
+    MemberServerName            : memberServer01.full.dns.name
+    MemberDatabaseName          : memberDatabase01
+    MemberDatabaseUserName      : myAccount
+    MemberDatabasePassword      : 
+    SyncState                   : Good
+  description: |-
+    This command gets information about the Azure SQL Database Sync Member with name "SyncMember01"
+  summary: ""
+- title: 'Example 3: Get all instances of Azure SQL Sync Member assigned to a sync group using filtering'
+  code: |-
+    PS C:\> Get-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember*" | Format-List
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncMemberName              : SyncMember01
+    SyncDirection               : OneWayMemberToHub
+    MemberDatabaseType:         : AzureSqlDatabase
+    SyncAgentId                 : 
+    SqlServerDatabaseId         : 
+    MemberServerName            : memberServer01.full.dns.name
+    MemberDatabaseName          : memberDatabase01
+    MemberDatabaseUserName      : myAccount
+    MemberDatabasePassword      : 
+    SyncState                   : Good 
+
+    ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember02}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncMemberName              : SyncMember02
+    SyncDirection               : OneWayMemberToHub
+    MemberDatabaseType:         : AzureSqlDatabase
+    SyncAgentId                 : 
+    SqlServerDatabaseId         : 
+    MemberServerName            : memberServer01.full.dns.name
+    MemberDatabaseName          : memberDatabase01
+    MemberDatabaseUserName      : myAccount
+    MemberDatabasePassword      :  
+    SyncState                   : Good
+  description: |-
+    This command gets information about all the Azure SQL Database Sync Member assigned to the sync group SyncGroup01 that start with "SyncMember".
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The sync member name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: SyncMemberName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SyncGroupName
+  isRequired: true
+  description: |+
+    The sync group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlSyncMember
+name: Get-AzSqlSyncMember
+description: |-
+  The **Get-AzSqlSyncMember** cmdlet returns information about one or more Azure SQL Database Sync Members.
+  Specify the name of a sync member to see information for only that sync member.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlsyncmember
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlSyncMember.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlSyncMember.md

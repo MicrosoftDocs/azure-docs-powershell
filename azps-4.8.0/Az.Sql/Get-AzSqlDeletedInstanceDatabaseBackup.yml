@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a deleted database that you can restore.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabaseBackup.Model.AzureSqlDeletedManagedDatabaseBackupModel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSqlDeletedInstanceDatabaseBackup [-ResourceGroupName] <String> [-InstanceName] <String>
+
+   [-DatabaseName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSqlDeletedInstanceDatabaseBackup [-ResourceGroupName] <String> [-InstanceName] <String>
+
+   -DatabaseName <String> [-DeletionDate] <DateTime> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all deleted database backups on a server'
+  code: |-
+    PS C:\>Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName "ContosoResourceGroup" -InstanceName "ContosoServer"
+    DeletionDate         : 2019-03-03 12:00:17 AM
+    ResourceGroupName    : ContosoResourceGroup
+    ManagedInstanceName  : ContosoServer
+    Name                 : DB1
+    CreationDate         : 2019-03-02 11:00:51 PM
+    EarliestRestorePoint : 2019-03-02 11:05:30 PM
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoResourceGroup/providers/Microsoft.
+                           Sql/managedInstances/ContosoServer/restorableDroppedDatabases/DB1,13196044
+                           8170400000
+
+    DeletionDate         : 2019-03-02 11:00:16 PM
+    ResourceGroupName    : ContosoResourceGroup
+    ManagedInstanceName  : ContosoServer
+    Name                 : DB1
+    CreationDate         : 2019-03-02 10:00:51 PM
+    EarliestRestorePoint : 2019-03-02 10:05:29 PM
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoResourceGroup/providers/Microsoft.
+                           Sql/managedInstances/ContosoServer/restorableDroppedDatabases/DB1,13196041
+                           2168670000
+
+    DeletionDate         : 2019-03-04 04:00:08 AM
+    ResourceGroupName    : ContosoResourceGroup
+    ManagedInstanceName  : ContosoServer
+    Name                 : DB3
+    CreationDate         : 2019-03-04 03:00:31 AM
+    EarliestRestorePoint : 2019-03-04 03:05:23 AM
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoResourceGroup/providers/Microsoft.
+                           Sql/managedInstances/ContosoServer/restorableDroppedDatabases/DB3,13196145
+                           6082100000
+  description: |-
+    This command gets all deleted database backups on a server.
+  summary: ""
+- title: 'Example 2: Get a specified deleted database backup'
+  code: |-
+    PS C:\>Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName "ContosoResourceGroup" -InstanceName "ContosoServer" -DatabaseName "DB1"
+    DeletionDate         : 2019-03-03 12:00:17 AM
+    ResourceGroupName    : ContosoResourceGroup
+    ManagedInstanceName  : ContosoServer
+    Name                 : DB1
+    CreationDate         : 2019-03-02 11:00:51 PM
+    EarliestRestorePoint : 2019-03-02 11:05:30 PM
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoResourceGroup/providers/Microsoft.
+                           Sql/managedInstances/ContosoServer/restorableDroppedDatabases/DB1,13196044
+                           8170400000
+
+    DeletionDate         : 2019-03-02 11:00:16 PM
+    ResourceGroupName    : ContosoResourceGroup
+    ManagedInstanceName  : ContosoServer
+    Name                 : DB1
+    CreationDate         : 2019-03-02 10:00:51 PM
+    EarliestRestorePoint : 2019-03-02 10:05:29 PM
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoResourceGroup/providers/Microsoft.
+                           Sql/managedInstances/ContosoServer/restorableDroppedDatabases/DB1,13196041
+                           2168670000
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Instance Database to retrieve backups for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: DeletionDate
+  isRequired: true
+  description: |+
+    The deletion date of the Azure SQL Instance Database to retrieve backups for, with millisecond precision (e.g. 2016-02-23T00:21:22.847Z)
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InstanceName
+  isRequired: true
+  description: |+
+    The name of the Azure SQL Managed Instance the database is in.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlDeletedInstanceDatabaseBackup
+name: Get-AzSqlDeletedInstanceDatabaseBackup
+description: |-
+  The **Get-AzSqlDeletedInstanceDatabaseBackup** cmdlet gets a specified deleted SQL Instance database backup that you can restore, or all deleted backups that you can restore.
+  This cmdlet is also supported by the SQL Instance Stretch Database service on Azure.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldeletedinstancedatabasebackup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDeletedInstanceDatabaseBackup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDeletedInstanceDatabaseBackup.md

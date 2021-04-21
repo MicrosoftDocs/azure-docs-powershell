@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the run history of a logic app.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.WorkflowRun" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzLogicAppRunAction
+  href: ./Get-AzLogicAppRunAction.yml
+- text: Start-AzLogicApp
+  href: ./Start-AzLogicApp.yml
+- text: Stop-AzLogicAppRun
+  href: ./Stop-AzLogicAppRun.yml
+syntaxes:
+- >-
+  Get-AzLogicAppRunHistory -ResourceGroupName <String> -Name <String> [-RunName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the run history of a logic app'
+  code: |-
+    PS C:\>Get-AzLogicAppActionRunHistory -ResourceGroupName "Resourcegroup11" -Name "LogicApp03"
+    CorrelationId    : 55830326-9042-404d-a4c3-fab198106a57
+    EndTime          : 1/13/2016 2:46:55 PM
+    Error            : {code, message}
+    Name             : 08587489104702792076
+    Outputs          : {}
+    StartTime        : 1/13/2016 2:46:55 PM
+    Status           : Failed
+    TriggerName      : 
+    LogicAppName     : LogicApp03
+    LogicAppVersion  : 08587489107859952540
+
+    CorrelationId    : d3ddc917-9aaa-47b3-8814-c621c2ae530b
+    EndTime          : 1/13/2016 2:42:56 PM
+    Error            : {code, message}
+    Name             : 08587489107100664541
+    Outputs          : {}
+    StartTime        : 1/13/2016 2:42:55 PM
+    Status           : Failed
+    TriggerName      : httpTrigger
+    LogicAppName     : LogicApp03
+    LogicAppVersion  : 08587489107859952120
+  description: |-
+    This command gets the run history of a logic app named LogicApp03.
+  summary: ""
+- title: 'Example 2: Get a logic app run'
+  code: |-
+    PS C:\>Get-AzLogicAppActionRunHistory -ResourceGroupName "Resourcegroup11" -Name "LogicApp03" -RunName "08587489104702792076"
+    CorrelationId    : 55830326-9042-404d-a4c3-fab198106a57
+    EndTime          : 1/13/2016 2:46:55 PM
+    Error            : {code, message}
+    Name             : 08587489104702792076
+    Outputs          : {}
+    StartTime        : 1/13/2016 2:46:55 PM
+    Status           : Failed
+    TriggerName      : 
+    LogicAppName     : LogicApp03
+    LogicAppVersion  : 08587489107859952120
+  description: |-
+    This command gets a specific logic app run for the logic app named LogicApp03.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the logic app for which this cmdlet gets run history.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group that contains the logic app.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RunName
+  description: |+
+    Specifies the run name of a logic app.
+    This cmdlet gets the workflow run that this cmdlet specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.LogicApp.Get-AzLogicAppRunHistory
+name: Get-AzLogicAppRunHistory
+description: |-
+  The **Get-AzLogicAppRunHistory** cmdlet gets the run history of a logic app.
+  This cmdlet returns a collection of **WorkflowRun** objects.
+  Specify the logic app and resource group.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: F271BCB1-6D43-48E5-BB51-00288F57BFFB
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azlogicapprunhistory
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzLogicAppRunHistory.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzLogicAppRunHistory.md

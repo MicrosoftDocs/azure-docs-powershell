@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a CustomIpPrefix resource
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSCustomIpPrefix" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzCustomIpPrefix
+  href: ./New-AzCustomIpPrefix.yml
+- text: Remove-AzCustomIpPrefix
+  href: ./Remove-AzCustomIpPrefix.yml
+- text: Update-AzCustomIpPrefix
+  href: ./Update-AzCustomIpPrefix.yml
+syntaxes:
+- >-
+  Get-AzCustomIpPrefix [-Name <String>] [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzCustomIpPrefix -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzPublicIpPrefix -ResourceGroupName myRg -Name myCustomIpPrefix
+
+    Name                 : myCustomIpPrefix
+    ResourceGroupName    : myRg
+    Location             : westus
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/byoip-test-rg/providers/Micro
+                           soft.Network/customIPPrefixes/testCustomIpPrefix
+    Etag                 : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid         : 00000000-0000-0000-0000-000000000000
+    ProvisioningState    : Succeeded
+    Tags                 :
+    Cidr                 : 111.111.111.111/24
+    CommissionedState    : Provisioning
+    PublicIpPrefixes     : []
+    Zones                : {}
+  description: |-
+    This command gets a CustomIpPrefix resource named myCustomIpPrefix in resource group myRg
+  summary: ""
+parameters:
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The resource name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The resource id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzCustomIpPrefix
+name: Get-AzCustomIpPrefix
+description: |-
+  The **Get-AzCustomIpPrefix** cmdlet gets one or more CustomIpPrefixes given the set of input parameters
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azcustomipprefix
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzCustomIpPrefix.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzCustomIpPrefix.md

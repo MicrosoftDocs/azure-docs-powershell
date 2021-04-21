@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a ManagementPolicy rule object, which can be used in Set-AzStorageAccountManagementPolicy.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyRule" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzStorageAccountManagementPolicyRule [-Name] <String> [-Disabled] -Action <PSManagementPolicyActionGroup>
+
+   [-Filter <PSManagementPolicyRuleFilter>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Creates a ManagementPolicy rule object, then set to a Storage Account'
+  code: |-
+    PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -daysAfterModificationGreaterThan 100
+    PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction TierToArchive -daysAfterModificationGreaterThan 50  -InputObject $action
+    PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction TierToCool -daysAfterModificationGreaterThan 30 -InputObject $action
+    PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -SnapshotAction Delete -daysAfterCreationGreaterThan 100 -InputObject $action
+
+    PS C:\>$filter = New-AzStorageAccountManagementPolicyFilter -PrefixMatch blobprefix1,blobprefix2
+
+    PS C:\>$rule = New-AzStorageAccountManagementPolicyRule -Name rule1 -Action $action -Filter $filter
+    PS C:\>$rule
+
+    Enabled    : True
+    Name       : rule1
+    Definition : {
+                     "Actions":  {
+                                     "BaseBlob":  {
+                                                      "TierToCool":  {
+                                                                         "DaysAfterModificationGreaterThan":  30
+                                                                     },
+                                                      "TierToArchive":  {
+                                                                            "DaysAfterModificationGreaterThan":  50
+                                                                        },
+                                                      "Delete":  {
+                                                                     "DaysAfterModificationGreaterThan":  100
+                                                                 }
+                                                  },
+                                     "Snapshot":  {
+                                                      "Delete":  {
+                                                                     "DaysAfterCreationGreaterThan":  100
+                                                                 }
+                                                  }
+                                 },
+                     "Filters":  {
+                                     "PrefixMatch":  [
+                                                         "blobprefix1",
+                                                         "blobprefix2"
+                                                     ],
+                                     "BlobTypes":  [
+                                                       "blockBlob"
+                                                   ]
+                                 }
+                 }
+
+    PS C:\>$policy = Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Rule $rule
+  description: |-
+    This command create a ManagementPolicy rule object, with a ManagementPolicy action group object contains 4 actions, a ManagementPolicy rule filter object, then set the rule to a Storage Account.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyActionGroup" data-throw-if-not-resolved="False" />
+  name: Action
+  isRequired: true
+  description: |+
+    An object that defines the action set.
+    Get the Object with cmdlet Add-AzureStorageAccountManagementPolicyAction
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    The rule is disabled if set it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyRuleFilter" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    An object that defines the filter set.
+    Get the Object with cmdlet New-AzureStorageAccountManagementPolicyFilter
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    A rule name can contain any combination of alpha numeric characters.
+    Rule name is case-sensitive.
+    It must be unique within a policy.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageAccountManagementPolicyRule
+name: New-AzStorageAccountManagementPolicyRule
+description: |-
+  The **New-AzStorageAccountManagementPolicyRule** cmdlet creates a ManagementPolicy rule object, which can be used in Set-AzStorageAccountManagementPolicy.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/Az.storage/new-Azstorageaccountmanagementpolicyrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyRule.md

@@ -1,0 +1,152 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the logs of a container instance in a container group.
+module: Az.ContainerInstance
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzContainerInstanceLog [-ResourceGroupName] <String> -ContainerGroupName <String> [-Name <String>]
+
+   [-Tail <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzContainerInstanceLog -InputContainerGroup <PSContainerGroup> [-Name <String>] [-Tail <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzContainerInstanceLog -ResourceId <String> [-Name <String>] [-Tail <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the tail log of a container instance'
+  code: |-
+    PS C:\> Get-AzContainerInstanceLog -ResourceGroupName demo -ContainerGroupName mycontainer -Name container1
+
+    Log line 1.
+    Log line 2.
+    Log line 3.
+    Log line 4.
+  description: |-
+    Get the log from `container1` in container group `mycontainer`. By default, it will return up to 4MB log content.
+  summary: ""
+- title: 'Example 2: Get the tail log of a container instance that has the same name as the container group'
+  code: |-
+    PS C:\> Get-AzContainerInstanceLog -ResourceGroupName demo -ContainerGroupName mycontainer
+
+    Log line 1.
+    Log line 2.
+    Log line 3.
+    Log line 4.
+  description: |-
+    Get the log from `mycontainer` in container group `mycontainer`. By default, it will return up to 4MB log content.
+  summary: ""
+- title: 'Example 3: Get the tail 2 lines of log of a container instance'
+  code: |-
+    PS C:\> Get-AzContainerInstanceLog -ResourceGroupName demo -ContainerGroupName mycontainer -Name container1 -Tail 2
+
+    Log line 3.
+    Log line 4.
+  description: |-
+    Get the tail 2 lines of log from `container1` in container group `mycontainer`.
+  summary: ""
+- title: 'Example 4: Get the tail log of a container instance in a piped in container group'
+  code: |-
+    PS C:\> Get-AzContainerGroup -ResourceGroupName demo -Name mycontainer | Get-AzContainerInstanceLog
+
+    Log line 1.
+    Log line 2.
+    Log line 3.
+    Log line 4.
+  description: |-
+    Get the log from `mycontainer` in piped in container group `mycontainer`. By default, it will return up to 4MB log content.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContainerGroupName
+  isRequired: true
+  description: |+
+    The container group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup" data-throw-if-not-resolved="False" />
+  name: InputContainerGroup
+  isRequired: true
+  description: |+
+    The input container group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The container instance name in the container group.
+    Default: the same as the container group name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The resource id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Tail
+  description: |+
+    The number of lines to tail the log.
+    If not specify, the cmdlet will return up to 4MB tailed log
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ContainerInstance.Get-AzContainerInstanceLog
+name: Get-AzContainerInstanceLog
+description: |-
+  The **Get-AzContainerInstanceLog** cmdlet gets the logs of a container in a container group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.dll-Help.xml
+  Module Name: Az.ContainerInstance
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.containerinstance/get-azcontainerinstancelog
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerInstance/ContainerInstance/help/Get-AzContainerInstanceLog.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerInstance/ContainerInstance/help/Get-AzContainerInstanceLog.md

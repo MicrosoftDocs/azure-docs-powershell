@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a schedule entry.
+module: Az.RedisCache
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRedisCachePatchSchedule
+  href: ./Get-AzRedisCachePatchSchedule.yml
+- text: New-AzRedisCachePatchSchedule
+  href: ./New-AzRedisCachePatchSchedule.yml
+- text: Remove-AzRedisCachePatchSchedule
+  href: ./Remove-AzRedisCachePatchSchedule.yml
+syntaxes:
+- >-
+  New-AzRedisCacheScheduleEntry -DayOfWeek <String> -StartHourUtc <Int32> [-MaintenanceWindow <TimeSpan>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a schedule entry for weekends'
+  code: |-
+    PS C:\>New-AzRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00"
+  description: |-
+    This command creates a **PSScheduleEntry** object that represents a weekend schedule that has the specified start time and window.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DayOfWeek
+  isRequired: true
+  description: |+
+    Specifies the day of the week for the schedule entry.
+    The acceptable values for this parameter are:
+    - Everyday 
+    - Weekend 
+    - Monday 
+    - Tuesday 
+    - Wednesday 
+    - Thursday 
+    - Friday 
+    - Saturday 
+    - Sunday
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Everyday, Weekend, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaintenanceWindow
+  description: |+
+    Specifies the amount of time window allowed for updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: StartHourUtc
+  isRequired: true
+  description: |+
+    Specifies an hour of the day when the schedule starts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RedisCache.New-AzRedisCacheScheduleEntry
+name: New-AzRedisCacheScheduleEntry
+description: |-
+  The **New-AzRedisCacheScheduleEntry** cmdlet creates a **PSScheduleEntry** object.
+  Azure Redis Cache patch schedule cmdlets, such as the New-AzRedisCachePatchSchedule cmdlet, require schedule entry objects.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
+  Module Name: Az.RedisCache
+  ms.assetid: ACB53C23-99E0-4A0A-A44E-0D3FDB12450B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/new-azrediscachescheduleentry
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/New-AzRedisCacheScheduleEntry.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/New-AzRedisCacheScheduleEntry.md

@@ -1,0 +1,46 @@
+### YamlMime:PowershellModule
+children:
+- title: Accounts
+  cmdlets:
+  - Az.Accounts.Add-AzEnvironment
+  - Az.Accounts.Clear-AzContext
+  - Az.Accounts.Clear-AzDefault
+  - Az.Accounts.Connect-AzAccount
+  - Az.Accounts.Disable-AzContextAutosave
+  - Az.Accounts.Disable-AzDataCollection
+  - Az.Accounts.Disable-AzureRmAlias
+  - Az.Accounts.Disconnect-AzAccount
+  - Az.Accounts.Enable-AzContextAutosave
+  - Az.Accounts.Enable-AzDataCollection
+  - Az.Accounts.Enable-AzureRmAlias
+  - Az.Accounts.Get-AzContext
+  - Az.Accounts.Get-AzContextAutosaveSetting
+  - Az.Accounts.Get-AzDefault
+  - Az.Accounts.Get-AzEnvironment
+  - Az.Accounts.Get-AzSubscription
+  - Az.Accounts.Get-AzTenant
+  - Az.Accounts.Import-AzContext
+  - Az.Accounts.Register-AzModule
+  - Az.Accounts.Remove-AzContext
+  - Az.Accounts.Remove-AzEnvironment
+  - Az.Accounts.Rename-AzContext
+  - Az.Accounts.Resolve-AzError
+  - Az.Accounts.Save-AzContext
+  - Az.Accounts.Select-AzContext
+  - Az.Accounts.Send-Feedback
+  - Az.Accounts.Set-AzContext
+  - Az.Accounts.Set-AzDefault
+  - Az.Accounts.Set-AzEnvironment
+  - Az.Accounts.Uninstall-AzureRm
+uid: Az.Accounts
+name: Az.Accounts
+description: |-
+  Manages credentials and common configuration for all Azure modules.
+metadata:
+  Module Name: Az.Accounts
+  Module Guid: 342714fc-4009-4863-8afb-a9067e3db04b
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.accounts
+  Help Version: 4.6.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Az.Accounts.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Az.Accounts.md

@@ -1,0 +1,38 @@
+### YamlMime:PowershellModule
+children:
+- title: Peer Asn
+  cmdlets:
+  - Az.Peering.Get-AzPeerAsn
+  - Az.Peering.New-AzPeerAsn
+  - Az.Peering.Remove-AzPeerAsn
+  - Az.Peering.Set-AzPeerAsn
+- title: Peering
+  cmdlets:
+  - Az.Peering.Get-AzLegacyPeering
+  - Az.Peering.Get-AzPeering
+  - Az.Peering.Get-AzPeeringLocation
+  - Az.Peering.Get-AzPeeringService
+  - Az.Peering.Get-AzPeeringServiceLocation
+  - Az.Peering.Get-AzPeeringServicePrefix
+  - Az.Peering.Get-AzPeeringServiceProvider
+  - Az.Peering.New-AzPeering
+  - Az.Peering.New-AzPeeringDirectConnectionObject
+  - Az.Peering.New-AzPeeringExchangeConnectionObject
+  - Az.Peering.New-AzPeeringService
+  - Az.Peering.New-AzPeeringServicePrefix
+  - Az.Peering.Remove-AzPeeringServicePrefix
+  - Az.Peering.Set-AzPeeringDirectConnectionObject
+  - Az.Peering.Set-AzPeeringExchangeConnectionObject
+  - Az.Peering.Update-AzPeering
+uid: Az.Peering
+name: Az.Peering
+description: |-
+  Microsoft Peering Service allows customers and Microsoft to connect to Azure and represent their network resources as ARM objects.
+metadata:
+  Module Name: Az.Peering
+  Module Guid: 6c848b97-4dd4-49ef-b385-43c64905d25a
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.peering.md
+  Help Version: 0.1.0
+  Locale: e-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Az.Peering.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Az.Peering.md

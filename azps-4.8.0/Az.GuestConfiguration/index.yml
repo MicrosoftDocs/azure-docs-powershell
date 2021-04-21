@@ -1,0 +1,18 @@
+### YamlMime:PowershellModule
+children:
+- title: Virtual Machines
+  cmdlets:
+  - Az.GuestConfiguration.Get-AzVMGuestPolicyStatus
+  - Az.GuestConfiguration.Get-AzVMGuestPolicyStatusHistory
+uid: Az.GuestConfiguration
+name: Az.GuestConfiguration
+description: |-
+  Module with cmdlets that will enable users to understand the compliance state of their virtual machines in Azure, based on the results of Azure Policy.
+metadata:
+  Module Name: Az.GuestConfiguration
+  Module Guid: 91832aaa-dc11-4583-8239-adb7df531604
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.guestconfiguration
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/GuestConfiguration/GuestConfiguration/help/Az.GuestConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/GuestConfiguration/GuestConfiguration/help/Az.GuestConfiguration.md

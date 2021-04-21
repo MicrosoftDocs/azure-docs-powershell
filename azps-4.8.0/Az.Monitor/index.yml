@@ -1,0 +1,75 @@
+### YamlMime:PowershellModule
+children:
+- title: Monitor
+  cmdlets:
+  - Az.Monitor.Add-AzAutoscaleSetting
+  - Az.Monitor.Add-AzLogProfile
+  - Az.Monitor.Add-AzMetricAlertRule
+  - Az.Monitor.Add-AzMetricAlertRuleV2
+  - Az.Monitor.Add-AzWebtestAlertRule
+  - Az.Monitor.Disable-AzActivityLogAlert
+  - Az.Monitor.Enable-AzActivityLogAlert
+  - Az.Monitor.Get-AzActionGroup
+  - Az.Monitor.Get-AzActivityLog
+  - Az.Monitor.Get-AzActivityLogAlert
+  - Az.Monitor.Get-AzAlertHistory
+  - Az.Monitor.Get-AzAlertRule
+  - Az.Monitor.Get-AzAutoscaleHistory
+  - Az.Monitor.Get-AzAutoscaleSetting
+  - Az.Monitor.Get-AzDiagnosticSetting
+  - Az.Monitor.Get-AzInsightsPrivateLinkScope
+  - Az.Monitor.Get-AzInsightsPrivateLinkScopedResource
+  - Az.Monitor.Get-AzLogProfile
+  - Az.Monitor.Get-AzMetric
+  - Az.Monitor.Get-AzMetricAlertRuleV2
+  - Az.Monitor.Get-AzMetricDefinition
+  - Az.Monitor.Get-AzScheduledQueryRule
+  - Az.Monitor.New-AzActionGroup
+  - Az.Monitor.New-AzActionGroupReceiver
+  - Az.Monitor.New-AzActivityLogAlertCondition
+  - Az.Monitor.New-AzAlertRuleEmail
+  - Az.Monitor.New-AzAlertRuleWebhook
+  - Az.Monitor.New-AzAutoscaleNotification
+  - Az.Monitor.New-AzAutoscaleProfile
+  - Az.Monitor.New-AzAutoscaleRule
+  - Az.Monitor.New-AzAutoscaleWebhook
+  - Az.Monitor.New-AzInsightsPrivateLinkScope
+  - Az.Monitor.New-AzInsightsPrivateLinkScopedResource
+  - Az.Monitor.New-AzMetricAlertRuleV2Criteria
+  - Az.Monitor.New-AzMetricAlertRuleV2DimensionSelection
+  - Az.Monitor.New-AzMetricFilter
+  - Az.Monitor.New-AzScheduledQueryRule
+  - Az.Monitor.New-AzScheduledQueryRuleAlertingAction
+  - Az.Monitor.New-AzScheduledQueryRuleAznsActionGroup
+  - Az.Monitor.New-AzScheduledQueryRuleLogMetricTrigger
+  - Az.Monitor.New-AzScheduledQueryRuleSchedule
+  - Az.Monitor.New-AzScheduledQueryRuleSource
+  - Az.Monitor.New-AzScheduledQueryRuleTriggerCondition
+  - Az.Monitor.Remove-AzActionGroup
+  - Az.Monitor.Remove-AzActivityLogAlert
+  - Az.Monitor.Remove-AzAlertRule
+  - Az.Monitor.Remove-AzAutoscaleSetting
+  - Az.Monitor.Remove-AzDiagnosticSetting
+  - Az.Monitor.Remove-AzInsightsPrivateLinkScope
+  - Az.Monitor.Remove-AzInsightsPrivateLinkScopedResource
+  - Az.Monitor.Remove-AzLogProfile
+  - Az.Monitor.Remove-AzMetricAlertRuleV2
+  - Az.Monitor.Remove-AzScheduledQueryRule
+  - Az.Monitor.Set-AzActionGroup
+  - Az.Monitor.Set-AzActivityLogAlert
+  - Az.Monitor.Set-AzDiagnosticSetting
+  - Az.Monitor.Set-AzScheduledQueryRule
+  - Az.Monitor.Update-AzInsightsPrivateLinkScope
+  - Az.Monitor.Update-AzScheduledQueryRule
+uid: Az.Monitor
+name: Az.Monitor
+description: |-
+  This topic displays help topics for the Azure Insights Cmdlets.
+metadata:
+  Module Name: Az.Monitor
+  Module Guid: 698c387c-bd6b-41c6-82ce-721f1ef39548
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.monitor
+  Help Version: 4.0.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Az.Monitor.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Az.Monitor.md

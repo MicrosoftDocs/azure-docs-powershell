@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: Databricks
+  cmdlets:
+  - Az.Databricks.Get-AzDatabricksVNetPeering
+  - Az.Databricks.Get-AzDatabricksWorkspace
+  - Az.Databricks.New-AzDatabricksVNetPeering
+  - Az.Databricks.New-AzDatabricksWorkspace
+  - Az.Databricks.Remove-AzDatabricksVNetPeering
+  - Az.Databricks.Remove-AzDatabricksWorkspace
+  - Az.Databricks.Update-AzDatabricksVNetPeering
+  - Az.Databricks.Update-AzDatabricksWorkspace
+uid: Az.Databricks
+name: Az.Databricks
+description: |-
+  Microsoft Azure PowerShell: Databricks cmdlets
+metadata:
+  Module Name: Az.Databricks
+  Module Guid: fd603f36-03d8-47f4-9f7c-c13a78761936
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.databricks
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Databricks/help/Az.Databricks.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Databricks/help/Az.Databricks.md

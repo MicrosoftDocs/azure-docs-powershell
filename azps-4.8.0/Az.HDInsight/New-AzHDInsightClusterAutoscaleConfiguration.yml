@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a non-persisted object that describes the autoscale configuration of an Azure HDInsight cluster.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightAutoscale" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzHDInsightClusterAutoscaleConfiguration
+  href: ./Set-AzHDInsightClusterAutoscaleConfiguration.yml
+- text: Get-AzHDInsightClusterAutoscaleConfiguration
+  href: ./Get-AzHDInsightClusterAutoscaleConfiguration.yml
+- text: Remove-AzHDInsightClusterAutoscaleConfiguration
+  href: ./Remove-AzHDInsightClusterAutoscaleConfiguration.yml
+syntaxes:
+- >-
+  New-AzHDInsightClusterAutoscaleConfiguration -MinWorkerNodeCount <Int32> -MaxWorkerNodeCount <Int32>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzHDInsightClusterAutoscaleConfiguration -TimeZone <String>
+
+   -Condition <System.Collections.Generic.List`1[Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightAutoscaleCondition]>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an object which describes Load-based autoscale configuration'
+  code: |-
+    PS C:\> New-AzHDInsightClusterAutoscaleConfiguration -MinWorkerNodeCount 3 -MaxWorkerNodeCount 5
+  description: |-
+    This command creates an object which describes Load-based autoscale configuration.
+  summary: ""
+- title: 'Example 2: Create an object which describes Schedule-based autoscale configuration'
+  code: |-
+    # Create an autoscale condition firstly
+    PS C:\> $condition=New-AzHDInsightClusterAutoscaleScheduleCondition -Day Monday -Time 09:00 -WorkerNodeCount 5
+    PS C:\> New-AzHDInsightClusterAutoscaleConfiguration -TimeZone ([System.TimeZoneInfo]::Local).Id `
+            -Condition $condition
+  description: |-
+    This command creates an object which describes Schedule-based autoscale configuration.
+  summary: ""
+parameters:
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightAutoscaleCondition" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Condition
+  isRequired: true
+  description: |+
+    Gets or sets the condition of schedule-based autoscale.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxWorkerNodeCount
+  isRequired: true
+  description: |+
+    Gets or sets the maximal workernode count of load-based autoscale.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MinWorkerNodeCount
+  isRequired: true
+  description: |+
+    Gets or sets the minimal workernode count of load-based autoscale.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TimeZone
+  isRequired: true
+  description: |+
+    Gets or sets the time zone of schedule-based autoscale.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.New-AzHDInsightClusterAutoscaleConfiguration
+name: New-AzHDInsightClusterAutoscaleConfiguration
+description: |-
+  The cmdlet **New-AzHDInsightClusterAutoscaleConfiguration** creates a non-persisted object that describes the autoscale configuration of an Azure HDInsight cluster.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 86276DF3-95E2-405F-BA46-F188B7AE3B9B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/new-azhdinsightclusterautoscaleconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightClusterAutoscaleConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightClusterAutoscaleConfiguration.md

@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Filters active directory users.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ActiveDirectory.PSADUser" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzADUser
+  href: ./New-AzADUser.yml
+- text: Update-AzADUser
+  href: ./Update-AzADUser.yml
+- text: Remove-AzADUser
+  href: ./Remove-AzADUser.yml
+syntaxes:
+- >-
+  Get-AzADUser [-UserPrincipalName <String>] [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADUser -StartsWith <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADUser -DisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADUser -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADUser -UserPrincipalName <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
+
+   [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+- >-
+  Get-AzADUser -Mail <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount] [-Skip <UInt64>]
+
+   [-First <UInt64>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all users'
+  code: |-
+    PS C:\> Get-AzADUser
+  description: |-
+    Lists all AD users in a tenant.
+  summary: ""
+- title: 'Example 2: List all users using paging'
+  code: |-
+    PS C:\> Get-AzADUser -First 100
+  description: |-
+    Lists the first 100 AD users in a tenant.
+  summary: ""
+- title: 'Example 3: Get AD user by user principal name'
+  code: |-
+    PS C:\> Get-AzADUser -UserPrincipalName foo@domain.com
+  description: |-
+    Gets the AD user with user principal name "foo@domain.com".
+  summary: ""
+- title: 'Example 4: List by search string'
+  code: |-
+    PS C:\> Get-AzADUser -SearchString Joe
+  description: |-
+    Lists all AD users whose display name starts with "Joe".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    The display name of the user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The maximum number of objects to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeTotalCount
+  description: |+
+    Reports the number of objects in the data set. Currently, this parameter does nothing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Mail
+  isRequired: true
+  description: |+
+    The user mail.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  isRequired: true
+  description: |+
+    Object id of the user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    Ignores the first N objects and then gets the remaining objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StartsWith
+  isRequired: true
+  description: |+
+    Used to find users that begin with the provided string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SearchString
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UserPrincipalName
+  isRequired: true
+  description: |+
+    UPN of the user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: UPN
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzADUser
+name: Get-AzADUser
+description: |-
+  Filters active directory users.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: BF254F2F-F658-45CC-8AC8-53FF96CFCAAD
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azaduser
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADUser.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADUser.md

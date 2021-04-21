@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the auditing settings of an Azure SQL server.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Sql.Server.Model.AzureSqlServerModel" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Auditing.Model.ServerAuditModel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSqlServerAudit [-ResourceGroupName] <String> [-ServerName] <String> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSqlServerAudit -ServerObject <AzureSqlServerModel> [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the auditing settings of an Azure SQL server'
+  code: |-
+    PS C:\>Get-AzSqlServerAudit -ResourceGroupName "resourcegroup01" -ServerName "server01"
+    ServerName                          : server01
+    ResourceGroupName                   : resourcegroup01
+    AuditActionGroup                    : {SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP,
+                                           BATCH_COMPLETED_GROUP, ...}
+    PredicateExpression                 : statement <> 'select 1'
+    BlobStorageTargetState              : Enabled
+    StorageAccountResourceId            : /subscriptions/7fe3301d-31d3-4668-af5e-211a890ba6e3/resourceGroups/resourcegroup01/providers/Microsoft.Storage/storageAccounts/mystorage
+    StorageKeyType                      : Primary
+    RetentionInDays                     : 0
+    EventHubTargetState                 : Enabled
+    EventHubName                        : eventHubName
+    EventHubAuthorizationRuleResourceId : EventHubAuthorizationRuleResourceId
+    LogAnalyticsTargetState             : Enabled
+    WorkspaceResourceId                 : "/subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2"
+  description: ""
+  summary: ""
+- title: 'Example 2: Get, through pipeline, the auditing settings of an Azure SQL server'
+  code: |-
+    PS C:\> Get-AzSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "Server01" | Get-AzSqlServerAudit
+    ServerName                          : server01
+    ResourceGroupName                   : resourcegroup01
+    AuditActionGroup                    : {SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP,
+                                           BATCH_COMPLETED_GROUP, ...}
+    PredicateExpression                 : statement <> 'select 1'
+    BlobStorageTargetState              : Enabled
+    StorageAccountResourceId            : /subscriptions/7fe3301d-31d3-4668-af5e-211a890ba6e3/resourceGroups/resourcegroup01/providers/Microsoft.Storage/storageAccounts/mystorage
+    StorageKeyType                      : Primary
+    RetentionInDays                     : 0
+    EventHubTargetState                 : Enabled
+    EventHubName                        : eventHubName
+    EventHubAuthorizationRuleResourceId : EventHubAuthorizationRuleResourceId
+    LogAnalyticsTargetState             : Enabled
+    WorkspaceResourceId                 : "/subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2"
+  description: ""
+  summary: ""
+- title: 'Example 3: Get the auditing settings of an Azure SQL server'
+  code: |-
+    PS C:\>Get-AzSqlServerAudit -ResourceGroupName "resourcegroup01" -ServerName "server01"
+    ServerName                          : server01
+    ResourceGroupName                   : resourcegroup01
+    AuditActionGroup                    : {SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP,
+                                           BATCH_COMPLETED_GROUP, ...}
+    PredicateExpression                 : statement <> 'select 1'
+    BlobStorageTargetState              : Enabled
+    StorageAccountResourceId            : /subscriptions/7fe3301d-31d3-4668-af5e-211a890ba6e3/resourceGroups/resourcegroup01/providers/Microsoft.Storage/storageAccounts/mystorage
+    StorageKeyType                      : Primary
+    RetentionInDays                     : 0
+    EventHubTargetState                 : Enabled
+    EventHubName                        : eventHubName
+    EventHubAuthorizationRuleResourceId : EventHubAuthorizationRuleResourceId
+    LogAnalyticsTargetState             : Disabled
+    WorkspaceResourceId                 :
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    SQL server name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.Server.Model.AzureSqlServerModel" data-throw-if-not-resolved="False" />
+  name: ServerObject
+  isRequired: true
+  description: |+
+    The server object to manage its audit policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlServerAudit
+name: Get-AzSqlServerAudit
+description: |-
+  The **Get-AzSqlServerAudit** cmdlet gets the auditing settings of an Azure SQL server.
+  Specify the *ResourceGroupName* and *ServerName* parameters to identify the server.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 14814BF3-51AF-4E51-A8A6-661825BD88D1
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/Get-AzSqlServerAudit
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAudit.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAudit.md

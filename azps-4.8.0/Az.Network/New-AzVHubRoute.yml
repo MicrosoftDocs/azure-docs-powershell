@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a VHubRoute object which can be passed as parameter to the New-AzVHubRouteTable command.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVHubRoute" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVHubRouteTable
+  href: ./Get-AzVHubRouteTable.yml
+- text: New-AzVHubRouteTable
+  href: ./New-AzVHubRouteTable.yml
+- text: Remove-AzVHubRouteTable
+  href: ./Remove-AzVHubRouteTable.yml
+- text: Update-AzVHubRouteTable
+  href: ./Update-AzVHubRouteTable.yml
+syntaxes:
+- New-AzVHubRoute -Name <String> -Destination <String[]> -DestinationType <String> -NextHop <String> -NextHopType <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $rgName = "testRg"
+    PS C:\> $firewallName = "testFirewall"
+    PS C:\> $firewall = Get-AzFirewall -Name $firewallName -ResourceGroupName $rgName
+    PS C:\> New-AzVHubRoute -Name "private-traffic" -Destination @("10.30.0.0/16", "10.40.0.0/16") -DestinationType "CIDR" -NextHop $firewall.Id -NextHopType "ResourceId"
+
+    Name            : private-traffic
+    DestinationType : CIDR
+    Destinations    : {10.30.0.0/16, 10.40.0.0/16}
+    NextHopType     : ResourceId
+    NextHop         : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/azureFirewalls/testFirewall
+  description: |-
+    The above command will create a VHubRoute object with nextHop as the specified Firewall which can then be added to a VHubRouteTable resource.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> $rgName = "testRg"
+    PS C:\> $hubName = "testHub"
+    PS C:\> $hubVnetConnName = "testHubVnetConn"
+    PS C:\> $hubVnetConnection = Get-AzVirtualHubVnetConnection -Name $hubVnetConnName -ParentResourceName $hubName -ResourceGroupName $rgName
+    PS C:\> New-AzVHubRoute -Name "nva-traffic" -Destination @("10.20.0.0/16", "10.50.0.0/16") -DestinationType "CIDR" -NextHop $hubVnetConnection.Id -NextHopType "ResourceId"
+
+    Name            : private-traffic
+    DestinationType : CIDR
+    Destinations    : {10.30.0.0/16, 10.40.0.0/16}
+    NextHopType     : ResourceId
+    NextHop         : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubVirtualNetworkConnections/testHubVnetConn
+  description: |-
+    The above command will create a VHubRoute object with nextHop as the specified hubVnetConnection which can then be added to a VHubRouteTable resource.
+  summary: ""
+parameters:
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Destination
+  isRequired: true
+  description: |+
+    List of Destinations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationType
+  isRequired: true
+  description: |+
+    Type of Destinations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The route name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NextHop
+  isRequired: true
+  description: |+
+    The next hop.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NextHopType
+  isRequired: true
+  description: |+
+    The Next Hop type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzVHubRoute
+name: New-AzVHubRoute
+description: |-
+  Creates a VHubRoute object.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvhubroute
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVHubRoute.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVHubRoute.md

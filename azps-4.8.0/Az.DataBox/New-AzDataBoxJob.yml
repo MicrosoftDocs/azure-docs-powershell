@@ -1,0 +1,251 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new databox job using the specified parameters
+module: Az.DataBox
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.PSDataBoxJob" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzDataBoxJob -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   -Location <String> [-AddressType <AddressType>] [-CompanyName <String>] -StreetAddress1 <String>
+
+   [-StreetAddress2 <String>] [-StreetAddress3 <String>] -PostalCode <String> -City <String>
+
+   -StateOrProvinceCode <String> -CountryCode <String> -EmailId <String[]> -PhoneNumber <String>
+
+   -ContactName <String> -StorageAccountResourceId <String[]> -DataBoxType <String>
+
+   [-ExpectedDataSizeInTeraBytes <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $s1 = <Storage Account Resource Id>
+    PS C:\> New-AzDataBoxJob -Location 'WestUS' -StreetAddress1 '16 TOWNSEND ST' -PostalCode 94107 -City 'San Francisco' -StateOrProvinceCode 'CA' -CountryCode 'US' -EmailId 'abc@outlook.com' -PhoneNumber 1234567891 -ContactName 'John' -StorageAccount $s1 -DataBoxType DataBox -ResourceGroupName TestRg -Name OrderTest
+
+    jobResource.Name jobResource.Sku.Name jobResource.Status jobResource.StartTime jobResource.Location ResourceGroup
+    ---------------- -------------------- ------------------ --------------------- -------------------- -------------
+    OrderTest       DataBox              DeviceOrdered      05-07-2019 05:25:30   westus               TestRg
+  description: |-
+    The cmdlet takes all the required parameters and some optional parameters to create the databox job.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Management.DataBox.Models.AddressType" data-throw-if-not-resolved="False" />
+  name: AddressType
+  description: |+
+    Type of Address. Available values : AddressType.None (default), AddressType.Residential, AddressType.Commercial
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Residential, Commercial
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: City
+  isRequired: true
+  description: |+
+    Name of the City. Ex : San Francisco
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CompanyName
+  description: |+
+    Name of the company
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContactName
+  isRequired: true
+  description: |+
+    Contact Name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CountryCode
+  isRequired: true
+  description: |+
+    Country Code. Ex: US
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataBoxType
+  isRequired: true
+  description: |+
+    Sku type of Databox.  Available values : DataBoxDisk, Databox, DataBoxHeavy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: DataBoxDisk, Databox, DataBoxHeavy
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EmailId
+  isRequired: true
+  description: |+
+    List of EmailIds can be provided. Atleast one is mandatory
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ExpectedDataSizeInTeraBytes
+  description: |+
+    For DataBoxDisk order, specifying the expected data in terabytes is mandatory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Location of the subscription
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the databox job to be created
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  isRequired: true
+  description: |+
+    Contact Number 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PostalCode
+  isRequired: true
+  description: |+
+    Postal Code
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name under which the databox job has to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StateOrProvinceCode
+  isRequired: true
+  description: |+
+    Input the state or province code. Like CA - California; FL - Florida; NY - New York
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StorageAccountResourceId
+  isRequired: true
+  description: |+
+    List of Resource Ids of Storage Accounts. Atleast one is mandatory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StreetAddress1
+  isRequired: true
+  description: |+
+    Street Address
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StreetAddress2
+  description: |+
+    Additional Street Address
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StreetAddress3
+  description: |+
+    Additional Street Address
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DataBox.New-AzDataBoxJob
+name: New-AzDataBoxJob
+description: |-
+  The **New-AzDataBoxJob** cmdlet is used to create a new databox job by specifying the details required for the creation of the job.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBox.dll-Help.xml
+  Module Name: Az.DataBox
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.databox/new-azdataboxjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBox/DataBox/help/New-AzDataBoxJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBox/DataBox/help/New-AzDataBoxJob.md

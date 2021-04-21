@@ -1,0 +1,23 @@
+### YamlMime:PowershellModule
+children:
+- title: Aks
+  cmdlets:
+  - Az.Aks.Get-AzAks
+  - Az.Aks.Import-AzAksCredential
+  - Az.Aks.New-AzAks
+  - Az.Aks.Remove-AzAks
+  - Az.Aks.Set-AzAks
+  - Az.Aks.Start-AzAksDashboard
+  - Az.Aks.Stop-AzAksDashboard
+uid: Az.Aks
+name: Az.Aks
+description: |-
+  Commands to interact with Azure managed Kubernetes clusters.
+metadata:
+  Module Name: Az.Aks
+  Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.aks
+  Help Version: 0.0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Aks/Aks/help/Az.Aks.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Aks/Aks/help/Az.Aks.md

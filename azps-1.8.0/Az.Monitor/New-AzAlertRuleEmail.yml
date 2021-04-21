@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an email action for an alert rule.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.RuleEmailAction" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzMetricAlertRule
+  href: ./Add-AzMetricAlertRule.yml
+- text: Add-AzWebtestAlertRule
+  href: ./Add-AzWebtestAlertRule.yml
+- text: New-AzAlertRuleWebhook
+  href: ./New-AzAlertRuleWebhook.yml
+syntaxes:
+- >-
+  New-AzAlertRuleEmail [[-CustomEmail] <String[]>] [-SendToServiceOwner]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an alert rule email action for service owners'
+  code: |-
+    PS C:\>New-AzAlertRuleEmail -SendToServiceOwners
+  description: |-
+    This command creates an alert rule email action to send for its service owners when an alert rule is fired.
+  summary: ""
+- title: 'Example 2: Create an alert rule email action for non-service owners'
+  code: |-
+    PS C:\>New-AzAlertRuleEmail -CustomEmails pattif@contoso.com,davidchew@contoso.net
+  description: |-
+    This command creates an alert rule email action for the specified email addresses, but not for the service owners.
+  summary: ""
+- title: 'Example 3: Create an alert rule email action for service owners and non-service owners'
+  code: |-
+    PS C:\>New-AzAlertRuleEmail -CustomEmails pattif@contoso.net -SendToServiceOwners
+  description: |-
+    This command creates an alert rule email action for the specified address and for its service owners.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CustomEmail
+  description: |+
+    Specifies a list of comma-separated e-mail addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SendToServiceOwner
+  description: |+
+    Indicates that this operation sends an e-mail to the service owners when the rule fires.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzAlertRuleEmail
+name: New-AzAlertRuleEmail
+description: |-
+  The **New-AzAlertRuleEmail** cmdlet creates an e-mail action for an alert rule.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: B1000C10-265E-4465-B167-F1251470BE3E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azalertruleemail
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md

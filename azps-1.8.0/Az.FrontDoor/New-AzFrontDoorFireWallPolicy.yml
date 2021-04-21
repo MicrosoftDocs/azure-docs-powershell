@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create WAF policy
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzFrontDoorFireWallPolicy
+  href: ./Get-AzFrontDoorFireWallPolicy.yml
+- text: Remove-AzFrontDoorFireWallPolicy
+  href: ./Remove-AzFrontDoorFireWallPolicy.yml
+- text: Update-AzFrontDoorFireWallPolicy
+  href: ./Update-AzFrontDoorFireWallPolicy.yml
+- text: New-AzFrontDoorManagedRuleObject
+  href: ./New-AzFrontDoorManagedRuleObject.yml
+- text: New-AzFrontDoorCustomRuleObject
+  href: ./New-AzFrontDoorManagedRuleObject.yml
+syntaxes:
+- >-
+  New-AzFrontDoorFireWallPolicy -ResourceGroupName <String> -Name <String> [-EnabledState <PSEnabledState>]
+
+   [-Mode <PSMode>] [-Customrule <PSCustomRule[]>] [-ManagedRule <PSManagedRule[]>] [-RedirectUrl <String>]
+
+   [-CustomBlockResponseStatusCode <Int32>] [-CustomBlockResponseBody <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create WAF policy'
+  code: |-
+    PS C:\> New-AzFrontDoorFireWallPolicy -Name $policyName -ResourceGroupName $resourceGroupName -Customrule $customRule1,$customRule2 -ManagedRule $managedRule1 -EnabledState Enabled -Mode Prevention -RedirectUrl "https://www.bing.com/" -CustomBlockResponseStatusCode 405 -CustomBlockResponseBody "<html><head><title>You are blocked!</title></head><body></body></html>"
+
+    Name         PolicyMode PolicyEnabledState RedirectUrl
+    ----         ---------- ------------------ -----------
+    {policyName} Prevention            Enabled https://www.bing.com/
+  description: |-
+    Create WAF policy
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomBlockResponseBody
+  description: |+
+    Custom Response Body
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: CustomBlockResponseStatusCode
+  description: |+
+    Custom Response Status Code
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Customrule
+  description: |+
+    Custom rules inside the policy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: EnabledState
+  description: |+
+    Whether the policy is in enabled state or disabled state.
+    Possible values include: 'Disabled', 'Enabled'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ManagedRule
+  description: |+
+    Managed rules inside the policy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSMode" data-throw-if-not-resolved="False" />
+  name: Mode
+  description: |+
+    Describes if it is in detection mode  or prevention mode at policy level.
+    Possible values include:'Prevention', 'Detection'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Prevention, Detection
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    WebApplicationFireWallPolicy name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RedirectUrl
+  description: |+
+    Redirect URL
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorFireWallPolicy
+name: New-AzFrontDoorFireWallPolicy
+description: |-
+  The **New-AzFrontDoorFireWallPolicy** cmdlet creates a new Azure WAF policy in the specified resource group under current subscription
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorfirewallpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorFireWallPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorFireWallPolicy.md

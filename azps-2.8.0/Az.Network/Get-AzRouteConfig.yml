@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets routes from a route table.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoute" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzRouteConfig
+  href: ./Add-AzRouteConfig.yml
+- text: Get-AzRouteTable
+  href: ./Get-AzRouteTable.yml
+- text: New-AzRouteConfig
+  href: ./New-AzRouteConfig.yml
+- text: Remove-AzRouteConfig
+  href: ./Remove-AzRouteConfig.yml
+- text: Set-AzRouteConfig
+  href: ./Set-AzRouteConfig.yml
+syntaxes:
+- >-
+  Get-AzRouteConfig -RouteTable <PSRouteTable> [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a route table'
+  code: |-
+    PS C:\>Get-AzRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Get-AzRouteConfig -Name "Route07"
+    Name              : route07
+    Id                : 
+    Etag              : 
+    ProvisioningState : 
+    AddressPrefix     : 10.1.0.0/16
+    NextHopType       : VnetLocal
+    NextHopIpAddress  :
+  description: |-
+    This command gets the route table named RouteTable01 by using the **Get-AzRouteTable** cmdlet.
+    The command passes that table to the current cmdlet by using the pipeline operator.
+    The current cmdlet gets the route named Route07 in the route table named RouteTable01.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the route that this cmdlet gets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+  name: RouteTable
+  isRequired: true
+  description: |+
+    Specifies the route table from which this cmdlet gets routes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzRouteConfig
+name: Get-AzRouteConfig
+description: |-
+  The **Get-AzRouteConfig** cmdlet gets routes from an Azure route table.
+  You can specify a route by name.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: DBD40431-DD7A-42CB-83AA-568B1065A468
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azrouteconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzRouteConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzRouteConfig.md

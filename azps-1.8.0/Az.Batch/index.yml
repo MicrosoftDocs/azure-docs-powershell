@@ -1,0 +1,87 @@
+### YamlMime:PowershellModule
+children:
+- title: Batch
+  cmdlets:
+  - Az.Batch.Disable-AzBatchAutoScale
+  - Az.Batch.Disable-AzBatchComputeNodeScheduling
+  - Az.Batch.Disable-AzBatchJob
+  - Az.Batch.Disable-AzBatchJobSchedule
+  - Az.Batch.Enable-AzBatchAutoScale
+  - Az.Batch.Enable-AzBatchComputeNodeScheduling
+  - Az.Batch.Enable-AzBatchJob
+  - Az.Batch.Enable-AzBatchJobSchedule
+  - Az.Batch.Enable-AzBatchTask
+  - Az.Batch.Get-AzBatchAccount
+  - Az.Batch.Get-AzBatchAccountKey
+  - Az.Batch.Get-AzBatchApplication
+  - Az.Batch.Get-AzBatchApplicationPackage
+  - Az.Batch.Get-AzBatchCertificate
+  - Az.Batch.Get-AzBatchComputeNode
+  - Az.Batch.Get-AzBatchJob
+  - Az.Batch.Get-AzBatchJobPreparationAndReleaseTaskStatus
+  - Az.Batch.Get-AzBatchJobSchedule
+  - Az.Batch.Get-AzBatchJobStatistic
+  - Az.Batch.Get-AzBatchLocationQuota
+  - Az.Batch.Get-AzBatchNodeAgentSku
+  - Az.Batch.Get-AzBatchNodeFile
+  - Az.Batch.Get-AzBatchNodeFileContent
+  - Az.Batch.Get-AzBatchPool
+  - Az.Batch.Get-AzBatchPoolNodeCount
+  - Az.Batch.Get-AzBatchPoolStatistic
+  - Az.Batch.Get-AzBatchPoolUsageMetric
+  - Az.Batch.Get-AzBatchRemoteDesktopProtocolFile
+  - Az.Batch.Get-AzBatchRemoteLoginSetting
+  - Az.Batch.Get-AzBatchSubtask
+  - Az.Batch.Get-AzBatchTask
+  - Az.Batch.Get-AzBatchTaskCount
+  - Az.Batch.New-AzBatchAccount
+  - Az.Batch.New-AzBatchAccountKey
+  - Az.Batch.New-AzBatchApplication
+  - Az.Batch.New-AzBatchApplicationPackage
+  - Az.Batch.New-AzBatchCertificate
+  - Az.Batch.New-AzBatchComputeNodeUser
+  - Az.Batch.New-AzBatchJob
+  - Az.Batch.New-AzBatchJobSchedule
+  - Az.Batch.New-AzBatchPool
+  - Az.Batch.New-AzBatchTask
+  - Az.Batch.Remove-AzBatchAccount
+  - Az.Batch.Remove-AzBatchApplication
+  - Az.Batch.Remove-AzBatchApplicationPackage
+  - Az.Batch.Remove-AzBatchCertificate
+  - Az.Batch.Remove-AzBatchComputeNode
+  - Az.Batch.Remove-AzBatchComputeNodeUser
+  - Az.Batch.Remove-AzBatchJob
+  - Az.Batch.Remove-AzBatchJobSchedule
+  - Az.Batch.Remove-AzBatchNodeFile
+  - Az.Batch.Remove-AzBatchPool
+  - Az.Batch.Remove-AzBatchTask
+  - Az.Batch.Reset-AzBatchComputeNode
+  - Az.Batch.Restart-AzBatchComputeNode
+  - Az.Batch.Set-AzBatchAccount
+  - Az.Batch.Set-AzBatchApplication
+  - Az.Batch.Set-AzBatchComputeNodeUser
+  - Az.Batch.Set-AzBatchJob
+  - Az.Batch.Set-AzBatchJobSchedule
+  - Az.Batch.Set-AzBatchPool
+  - Az.Batch.Set-AzBatchPoolOSVersion
+  - Az.Batch.Set-AzBatchTask
+  - Az.Batch.Start-AzBatchComputeNodeServiceLogUpload
+  - Az.Batch.Start-AzBatchPoolResize
+  - Az.Batch.Stop-AzBatchCertificateDeletion
+  - Az.Batch.Stop-AzBatchJob
+  - Az.Batch.Stop-AzBatchJobSchedule
+  - Az.Batch.Stop-AzBatchPoolResize
+  - Az.Batch.Stop-AzBatchTask
+  - Az.Batch.Test-AzBatchAutoScale
+uid: Az.Batch
+name: Az.Batch
+description: |-
+  The Azure Batch cmdlets in the Azure module enable you to manage Microsoft Azure Batch services in Azure PowerShell.
+metadata:
+  Module Name: Az.Batch
+  Module Guid: a8f00f40-1c1a-49b5-9db3-24076b75c3cf
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.batch
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Az.Batch.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Az.Batch.md

@@ -1,0 +1,96 @@
+### YamlMime:PowershellModule
+children:
+- title: Synapse Analytics
+  cmdlets:
+  - Az.Synapse.Add-AzSynapseTriggerSubscription
+  - Az.Synapse.Export-AzSynapseNotebook
+  - Az.Synapse.Get-AzSynapseActivityRun
+  - Az.Synapse.Get-AzSynapseDataFlow
+  - Az.Synapse.Get-AzSynapseDataset
+  - Az.Synapse.Get-AzSynapseFirewallRule
+  - Az.Synapse.Get-AzSynapseIntegrationRuntime
+  - Az.Synapse.Get-AzSynapseIntegrationRuntimeKey
+  - Az.Synapse.Get-AzSynapseIntegrationRuntimeMetric
+  - Az.Synapse.Get-AzSynapseIntegrationRuntimeNode
+  - Az.Synapse.Get-AzSynapseLinkedService
+  - Az.Synapse.Get-AzSynapseNotebook
+  - Az.Synapse.Get-AzSynapsePipeline
+  - Az.Synapse.Get-AzSynapsePipelineRun
+  - Az.Synapse.Get-AzSynapseRoleAssignment
+  - Az.Synapse.Get-AzSynapseRoleDefinition
+  - Az.Synapse.Get-AzSynapseSparkJob
+  - Az.Synapse.Get-AzSynapseSparkPool
+  - Az.Synapse.Get-AzSynapseSparkSession
+  - Az.Synapse.Get-AzSynapseSparkStatement
+  - Az.Synapse.Get-AzSynapseSqlDatabase
+  - Az.Synapse.Get-AzSynapseSqlPool
+  - Az.Synapse.Get-AzSynapseTrigger
+  - Az.Synapse.Get-AzSynapseTriggerRun
+  - Az.Synapse.Get-AzSynapseTriggerSubscriptionStatus
+  - Az.Synapse.Get-AzSynapseWorkspace
+  - Az.Synapse.Invoke-AzSynapseIntegrationRuntimeUpgrade
+  - Az.Synapse.Invoke-AzSynapsePipeline
+  - Az.Synapse.Invoke-AzSynapseSparkStatement
+  - Az.Synapse.New-AzSynapseFirewallRule
+  - Az.Synapse.New-AzSynapseIntegrationRuntimeKey
+  - Az.Synapse.New-AzSynapseRoleAssignment
+  - Az.Synapse.New-AzSynapseSparkPool
+  - Az.Synapse.New-AzSynapseSqlDatabase
+  - Az.Synapse.New-AzSynapseSqlPool
+  - Az.Synapse.New-AzSynapseWorkspace
+  - Az.Synapse.Remove-AzSynapseDataFlow
+  - Az.Synapse.Remove-AzSynapseDataset
+  - Az.Synapse.Remove-AzSynapseFirewallRule
+  - Az.Synapse.Remove-AzSynapseIntegrationRuntime
+  - Az.Synapse.Remove-AzSynapseIntegrationRuntimeNode
+  - Az.Synapse.Remove-AzSynapseLinkedService
+  - Az.Synapse.Remove-AzSynapseNotebook
+  - Az.Synapse.Remove-AzSynapsePipeline
+  - Az.Synapse.Remove-AzSynapseRoleAssignment
+  - Az.Synapse.Remove-AzSynapseSparkPool
+  - Az.Synapse.Remove-AzSynapseSqlDatabase
+  - Az.Synapse.Remove-AzSynapseSqlPool
+  - Az.Synapse.Remove-AzSynapseTrigger
+  - Az.Synapse.Remove-AzSynapseTriggerSubscription
+  - Az.Synapse.Remove-AzSynapseWorkspace
+  - Az.Synapse.Reset-AzSynapseSparkSessionTimeout
+  - Az.Synapse.Set-AzSynapseDataFlow
+  - Az.Synapse.Set-AzSynapseDataset
+  - Az.Synapse.Set-AzSynapseIntegrationRuntime
+  - Az.Synapse.Set-AzSynapseLinkedService
+  - Az.Synapse.Set-AzSynapseNotebook
+  - Az.Synapse.Set-AzSynapsePipeline
+  - Az.Synapse.Set-AzSynapseTrigger
+  - Az.Synapse.Start-AzSynapseSparkSession
+  - Az.Synapse.Start-AzSynapseTrigger
+  - Az.Synapse.Stop-AzSynapsePipelineRun
+  - Az.Synapse.Stop-AzSynapseSparkJob
+  - Az.Synapse.Stop-AzSynapseSparkSession
+  - Az.Synapse.Stop-AzSynapseSparkStatement
+  - Az.Synapse.Stop-AzSynapseTrigger
+  - Az.Synapse.Submit-AzSynapseSparkJob
+  - Az.Synapse.Sync-AzSynapseIntegrationRuntimeCredential
+  - Az.Synapse.Test-AzSynapseSparkPool
+  - Az.Synapse.Test-AzSynapseSqlDatabase
+  - Az.Synapse.Test-AzSynapseSqlPool
+  - Az.Synapse.Test-AzSynapseWorkspace
+  - Az.Synapse.Update-AzSynapseFirewallRule
+  - Az.Synapse.Update-AzSynapseIntegrationRuntime
+  - Az.Synapse.Update-AzSynapseIntegrationRuntimeNode
+  - Az.Synapse.Update-AzSynapseSparkPool
+  - Az.Synapse.Update-AzSynapseSqlDatabase
+  - Az.Synapse.Update-AzSynapseSqlPool
+  - Az.Synapse.Update-AzSynapseWorkspace
+  - Az.Synapse.Wait-AzSynapseSparkJob
+uid: Az.Synapse
+name: Az.Synapse
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure Synapse Analytics.
+metadata:
+  Module Name: Az.Synapse
+  Module Guid: 89eceb4f-9916-4ec5-8499-d5cca97a9cae
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.synapse
+  Help Version: 0.0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Synapse/Synapse/help/Az.Synapse.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Synapse/Synapse/help/Az.Synapse.md

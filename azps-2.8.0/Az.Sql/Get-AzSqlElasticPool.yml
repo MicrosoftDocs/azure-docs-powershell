@@ -1,0 +1,225 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets elastic pools and their property values in an Azure SQL Database.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ElasticPool.Model.AzureSqlElasticPoolModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzSqlElasticPool
+  href: ./New-AzSqlElasticPool.yml
+- text: Remove-AzSqlElasticPool
+  href: ./Remove-AzSqlElasticPool.yml
+- text: Set-AzSqlElasticPool
+  href: ./Set-AzSqlElasticPool.yml
+syntaxes:
+- >-
+  Get-AzSqlElasticPool [[-ElasticPoolName] <String>] [-ServerName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all elastic pools'
+  code: |-
+    PS C:\>Get-AzSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+    ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    ElasticPoolName   : elasticpool01
+    Location          : Central US
+    CreationDate      : 8/26/2015 10:00:17 PM
+    State             : Ready
+    Edition           : Standard
+    Dtu               : 400
+    DatabaseDtuMax    : 100
+    DatabaseDtuMin    : 10
+    StorageMB         : 409600
+    Tags              : 
+
+    ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool02
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    ElasticPoolName   : elasticpool02
+    Location          : Central US
+    CreationDate      : 8/26/2015 11:00:17 PM
+    State             : Ready
+    Edition           : Standard
+    Dtu               : 400
+    DatabaseDtuMax    : 100
+    DatabaseDtuMin    : 10
+    StorageMB         : 409600
+    Tags              :
+  description: |-
+    This command gets all of the elastic pools on the server named Server01.
+  summary: ""
+- title: 'Example 2: Get a specific elastic pool'
+  code: |-
+    PS C:\>Get-AzSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool27"
+    ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    ElasticPoolName   : elasticpool01
+    Location          : Central US
+    CreationDate      : 8/26/2015 10:00:17 PM
+    State             : Ready
+    Edition           : Standard
+    Dtu               : 400
+    DatabaseDtuMax    : 100
+    DatabaseDtuMin    : 10
+    StorageMB         : 409600
+    Tags              :
+  description: |-
+    This command gets the elastic pool named ElasticPool0127 on the server named Server01.
+  summary: ""
+- title: 'Example 3: Get metrics for a Azure SQL Elastic Database Pool'
+  code: |-
+    PS C:\>Get-AzSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" | Get-AzMetric -TimeGrain 0:5:0 -MetricName storage_percent
+    DimensionName  : 
+    DimensionValue : 
+    Name           : cpu_percent
+    EndTime        : 8/27/2015 5:22:25 PM
+    MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+    Properties     : {}
+    ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    StartTime      : 8/27/2015 4:20:00 PM
+    TimeGrain      : 00:05:00
+    Unit           : Percent
+
+    DimensionName  : 
+    DimensionValue : 
+    Name           : physical_data_read_percent
+    EndTime        : 8/27/2015 5:22:25 PM
+    MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+    Properties     : {}
+    ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    StartTime      : 8/27/2015 4:20:00 PM
+    TimeGrain      : 00:05:00
+    Unit           : Percent
+
+    DimensionName  : 
+    DimensionValue : 
+    Name           : log_write_percent
+    EndTime        : 8/27/2015 5:22:25 PM
+    MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+    Properties     : {}
+    ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    StartTime      : 8/27/2015 4:20:00 PM
+    TimeGrain      : 00:05:00
+    Unit           : Percent
+
+    DimensionName  : 
+    DimensionValue : 
+    Name           : dtu_consumption_percent
+    EndTime        : 8/27/2015 5:22:25 PM
+    MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+    Properties     : {}
+    ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    StartTime      : 8/27/2015 4:20:00 PM
+    TimeGrain      : 00:05:00
+    Unit           : Percent
+
+    DimensionName  : 
+    DimensionValue : 
+    Name           : storage_percent
+    EndTime        : 8/27/2015 5:22:25 PM
+    MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+    Properties     : {}
+    ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    StartTime      : 8/27/2015 4:20:00 PM
+    TimeGrain      : 00:05:00
+    Unit           : Percent
+  description: |-
+    This command returns metrics for an Azure SQL elastic database pool named ElasticPool01.
+  summary: ""
+- title: 'Example 4: Get all elastic pools using filtering -ElasticPoolName "ElasticPool*"'
+  code: |-
+    PS C:\>Get-AzSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+    ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    ElasticPoolName   : elasticpool01
+    Location          : Central US
+    CreationDate      : 8/26/2015 10:00:17 PM
+    State             : Ready
+    Edition           : Standard
+    Dtu               : 400
+    DatabaseDtuMax    : 100
+    DatabaseDtuMin    : 10
+    StorageMB         : 409600
+    Tags              : 
+
+    ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool02
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    ElasticPoolName   : elasticpool02
+    Location          : Central US
+    CreationDate      : 8/26/2015 11:00:17 PM
+    State             : Ready
+    Edition           : Standard
+    Dtu               : 400
+    DatabaseDtuMax    : 100
+    DatabaseDtuMin    : 10
+    StorageMB         : 409600
+    Tags              :
+  description: |-
+    This command gets all of the elastic pools on the server named Server01 that start with "ElasticPool".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ElasticPoolName
+  description: |+
+    Specifies the name of the elastic pool that this cmdlet gets.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "2"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the elastic pool that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server that contains the elastic pool that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlElasticPool
+name: Get-AzSqlElasticPool
+description: |-
+  The **Get-AzSqlElasticPool** cmdlet gets elastic pools and their property values.
+  Specify the name of an existing elastic pool to see the property values for only that pool.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 350E19F6-5B1C-4D3F-B4CD-7225CDC984C4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlelasticpool
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlElasticPool.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlElasticPool.md

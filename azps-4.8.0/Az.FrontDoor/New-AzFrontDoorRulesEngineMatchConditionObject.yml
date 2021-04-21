@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a PSRulesEngineMatchCondition object for creating a rules engine rule.
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineMatchCondition" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzFrontDoorRulesEngineMatchConditionObject -MatchVariable <PSRulesEngineMatchVariable>
+
+   -MatchValue <String[]> [-Selector <String>] [-Operator <PSRulesEngineOperator>] [-NegateCondition <Boolean>]
+
+   [-Transform <PSTransform[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzFrontDoorRulesEngineMatchConditionObject -MatchVariable RequestHeader -Operator Equal -MatchValue allowoverride -Transform "LowerCase", "UpperCase"-Selector Rules-Engine-Route-Forward -NegateCondition $false
+
+    RulesEngineMatchVariable : RequestHeader
+    RulesEngineMatchValue    : {allowoverride}
+    Selector                 : Rules-Engine-Route-Forward
+    RulesEngineOperator      : Equal
+    NegateCondition          : False
+    Transform                : {Lowercase, Uppercase}
+  description: |-
+    Greate a new PSRulesEngineMatchCondition object.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MatchValue
+  isRequired: true
+  description: |+
+    Match values to match against.
+    The operator will apply to each value in here with OR semantics.
+    If any of them match the variable with the given operator this match condition is considered a match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineMatchVariable" data-throw-if-not-resolved="False" />
+  name: MatchVariable
+  isRequired: true
+  description: |+
+    Match Variable.
+    Possible values are IsMobile, RemoteAddr, RequestMethod, QueryString, PostArg, RequestUri, RequestPath, RequestFileName, RequestfilenameExtension, RequestHeader, RequestBody, RequestScheme
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: IsMobile, RemoteAddr, RequestMethod, QueryString, PostArgs, RequestUri, RequestPath, RequestFilename, RequestFilenameExtension, RequestHeader, RequestBody, RequestScheme
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: NegateCondition
+  description: |+
+    Describes if this is negate condition or not
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineOperator" data-throw-if-not-resolved="False" />
+  name: Operator
+  description: |+
+    Describes operator to apply to the match condition.
+    Possible values are Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Selector
+  description: |+
+    Name of selector in RequestHeader or RequestBody to be matched
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSTransform" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Transform
+  description: |+
+    List of what transforms are applied before matching. Possible individual transform values are Lowercase, Uppercase, Trim, UrlDecode, UrlEncode, RemoveNulls.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Lowercase, Uppercase, Trim, UrlDecode, UrlEncode, RemoveNulls
+uid: Az.FrontDoor.New-AzFrontDoorRulesEngineMatchConditionObject
+name: New-AzFrontDoorRulesEngineMatchConditionObject
+description: |-
+  Create a PSRulesEngineMatchCondition object for creating a rules engine rule.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorrulesenginematchconditionobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineMatchConditionObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineMatchConditionObject.md

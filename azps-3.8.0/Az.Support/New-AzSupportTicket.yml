@@ -1,0 +1,528 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a support ticket.
+module: Az.Support
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Support.Models.PSSupportTicket" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzSupportTicket -Name <String> -Title <String> -Description <String> -ProblemClassificationId <String>
+
+   -Severity <Severity> -CustomerFirstName <String> -CustomerLastName <String>
+
+   -PreferredContactMethod <ContactMethod> -CustomerPrimaryEmailAddress <String>
+
+   [-AdditionalEmailAddress <String[]>] [-CustomerPhoneNumber <String>] -CustomerPreferredTimeZone <String>
+
+   -CustomerCountry <String> -CustomerPreferredSupportLanguage <String> [-ProblemStartTime <DateTime>]
+
+   [-CSPHomeTenantId <String>] [-Require24X7Response] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSupportTicket -Name <String> -Title <String> -Description <String> -ProblemClassificationId <String>
+
+   -Severity <Severity> -CustomerContactDetail <PSContactProfile> [-ProblemStartTime <DateTime>]
+
+   [-CSPHomeTenantId <String>] [-Require24X7Response] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSupportTicket -Name <String> -Title <String> -Description <String> -ProblemClassificationId <String>
+
+   -Severity <Severity> -CustomerContactDetail <PSContactProfile> [-ProblemStartTime <DateTime>]
+
+   -TechnicalTicketResourceId <String> [-CSPHomeTenantId <String>] [-Require24X7Response] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSupportTicket -Name <String> -Title <String> -Description <String> -ProblemClassificationId <String>
+
+   -Severity <Severity> -CustomerContactDetail <PSContactProfile> [-ProblemStartTime <DateTime>]
+
+   -QuotaTicketDetail <PSQuotaTicketDetail> [-CSPHomeTenantId <String>] [-Require24X7Response] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSupportTicket -Name <String> -Title <String> -Description <String> -ProblemClassificationId <String>
+
+   -Severity <Severity> -CustomerFirstName <String> -CustomerLastName <String>
+
+   -PreferredContactMethod <ContactMethod> -CustomerPrimaryEmailAddress <String>
+
+   [-AdditionalEmailAddress <String[]>] [-CustomerPhoneNumber <String>] -CustomerPreferredTimeZone <String>
+
+   -CustomerCountry <String> -CustomerPreferredSupportLanguage <String> [-ProblemStartTime <DateTime>]
+
+   -TechnicalTicketResourceId <String> [-CSPHomeTenantId <String>] [-Require24X7Response] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzSupportTicket -Name <String> -Title <String> -Description <String> -ProblemClassificationId <String>
+
+   -Severity <Severity> -CustomerFirstName <String> -CustomerLastName <String>
+
+   -PreferredContactMethod <ContactMethod> -CustomerPrimaryEmailAddress <String>
+
+   [-AdditionalEmailAddress <String[]>] [-CustomerPhoneNumber <String>] -CustomerPreferredTimeZone <String>
+
+   -CustomerCountry <String> -CustomerPreferredSupportLanguage <String> [-ProblemStartTime <DateTime>]
+
+   -QuotaTicketDetail <PSQuotaTicketDetail> [-CSPHomeTenantId <String>] [-Require24X7Response] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Billing or Subscription Management support ticket. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Billing or Subscription Management problem classification for which you want to request support'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{billing_service_guid}/problemClassifications/{problemClassification_guid}" -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName Status CreatedDate
+    ----  ----- --------------- -------- ------------------ ------ -----------
+    test1 Test  150010521000317 Minimal  Billing            Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 2: Create a technical support ticket for Virtual Machine for Windows resource. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Virtual Machine for Windows problem classification for which you want to request support'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{vm_windows_service_guid}/problemClassifications/{problemClassification_guid}" -TechnicalTicketResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM" -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName              Status CreatedDate
+    ----  ----- --------------- -------- ------------------              ------ -----------
+    test1 Test  150010521000317 Minimal  Virtual Machine running Windows Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 3: Create a quota support ticket to increase quota for Virtual Machine Cores for a specific VM family. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Compute VM Cores problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{cores_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"VMFamily`":`"Dv2 Series`",`"NewLimit`":350}"}, @{Region = "eastus"; Payload = "{`"VMFamily`":`"Dv2 Series`",`"NewLimit`":516}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 4: Create a quota support ticket to increase quota for Low-priority cores for a Batch account. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Batch problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{batch_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "Account" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"AccountName`":`"test`",`"NewLimit`":200,`"Type`":`"LowPriority`"}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 5: Create a quota support ticket to increase VM cores quota for a specific VM Family for a Batch account. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Batch problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{batch_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "Account" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"AccountName`":`"test`",`"VMFamily`":`"standardA0_A7Family`",`"NewLimit`":200,`"Type`":`"Dedicated`"}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 6: Create a quota support ticket to increase Pools quota for a Batch account. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Batch problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{batch_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "Account" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"AccountName`":`"test`",`"NewLimit`":120,`"Type`":`"Pools`"}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 7: Create a quota support ticket to increase active Jobs and job schedules quota for a Batch account. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Batch problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{batch_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "Account" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"AccountName`":`"test`",`"NewLimit`":120,`"Type`":`"Jobs`"}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 8: Create a quota support ticket to increase number of Batch accounts for a subscription. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Batch problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{batch_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "Subscription" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"NewLimit`":120,`"Type`":`"Account`"}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 9: Create a quota support ticket to increase quota for DTUs for SQL Database. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota SQL Database problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{sql_database_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "DTUs" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"ServerName`":`"testserver`",`"NewLimit`":54000}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 10: Create a quota support ticket to increase quota for Servers for SQL Database. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota SQL Database problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{sql_database_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "Servers" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"NewLimit`":200}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 11: Create a quota support ticket to increase quota for DTUs for SQL Data Warehouse. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota SQL Date Warehouse problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{sql_datawarehouse_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "DTUs" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"ServerName`":`"testserver`",`"NewLimit`":54000}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 12: Create a quota support ticket to increase quota for Servers for SQL Data Warehouse. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota SQL Data Warehouse problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{sql_datawarehouse_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "Servers" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"NewLimit`":200}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 13: Create a quota support ticket to increase quota for Low-priority cores for Machine Learning service. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Machine Learning service problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{machine_learning_service_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "BatchAml" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"NewLimit`":200,`"Type`":`"LowPriority`" }"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 14: Create a quota support ticket to increase VM cores quota for a specific VM Family for Machine Learning service. Use Get-AzSupportService and Get-AzSupportProblemClassification to retrieve correct GUIDs for Quota Machine Learning service problem classification.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{machine_learning_service_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequestSubType = "BatchAml" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"VMFamily`":`"standardDFamily`",`"NewLimit`":200,`"Type`":`"Dedicated`" }"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "user@contoso.com"}
+
+    Name  Title SupportTicketId Severity ServiceDisplayName                       Status CreatedDate
+    ----  ----- --------------- -------- ------------------                       ------ -----------
+    test1 Test  150010521000317 Minimal  Service and subscription limits (quotas) Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 15: Create a support ticket by specifying individual customer contact parameters instead of CustomerContactDetail object.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{billing_service_guid}/problemClassifications/{problemClassification_guid}" -CustomerFirstName "first" -CustomerLastName "last" -CustomerPreferredTimeZone "pacific standard time" -CustomerPreferredSupportLanguage "en-us" -CustomerCountry = "USA" -PreferredContactMethod "Email" -CustomerPrimaryEmailAddress "user@contoso.com"
+
+    Name  Title SupportTicketId Severity ServiceDisplayName Status CreatedDate
+    ----  ----- --------------- -------- ------------------ ------ -----------
+    test1 Test  150010521000317 Minimal  Billing            Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: 'Example 16: Create a support ticket with request for 24 x 7 response from Azure.'
+  code: |-
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "critical" -ProblemClassificationId "/providers/Microsoft.Support/services/{billing_service_guid}/problemClassifications/{problemClassification_guid}" -CustomerFirstName "first" -CustomerLastName "last" -CustomerPreferredTimeZone "pacific standard time" -CustomerPreferredSupportLanguage "en-us" -CustomerCountry = "USA" -PreferredContactMethod "Email" -CustomerPrimaryEmailAddress "user@contoso.com" -Require24X7Response 
+
+    Name  Title SupportTicketId Severity ServiceDisplayName Status CreatedDate
+    ----  ----- --------------- -------- ------------------ ------ -----------
+    test1 Test  150010521000317 Critical  Billing            Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+- title: "Example 17: Create a support ticket on behalf of your customer if you are a Cloud Solution Provider (CSP). CSP should first login into their tenant, and then login into customer's tenant as shown in the example below. They must then use -CSPHomeTenantId parameter to specify their home tenant id at the time of creating a support ticket."
+  code: |-
+    PS C:\> Login-AzAccount
+
+    PS C:\> Login-AzAccount -TenantId {customer_tenant_id}
+
+    PS C:\> New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{billing_service_guid}/problemClassifications/{problemClassification_guid}" -CustomerFirstName "first" -CustomerLastName "last" -CustomerPreferredTimeZone "pacific standard time" -CustomerPreferredSupportLanguage "en-us" -CustomerCountry = "USA" -PreferredContactMethod "Email" -CustomerPrimaryEmailAddress "user@contoso.com" -CSPHomeTenantId {csp_home_tenant_id} 
+
+    Name  Title SupportTicketId Severity ServiceDisplayName Status CreatedDate
+    ----  ----- --------------- -------- ------------------ ------ -----------
+    test1 Test  150010521000317 Minimal  Billing            Open   2/5/2020 1:33:53 AM
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalEmailAddress
+  description: |+
+    Additional email addresses.
+    Email addresses listed here will be copied on any correspondence about the support ticket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CSPHomeTenantId
+  description: |+
+    This is the home tenant id of the Cloud Solution Provider user trying to create a support ticket for their customer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.PSContactProfile" data-throw-if-not-resolved="False" />
+  name: CustomerContactDetail
+  isRequired: true
+  description: |+
+    Customer contact details associated with SupportTicket resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerCountry
+  isRequired: true
+  description: |+
+    Customer country.
+    This must be a valid ISO Alpha-3 country code (ISO 3166).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerFirstName
+  isRequired: true
+  description: |+
+    Customer first name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerLastName
+  isRequired: true
+  description: |+
+    Customer last name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPhoneNumber
+  description: |+
+    Customer phone number.
+    This is required if preferred contact method is phone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPreferredSupportLanguage
+  isRequired: true
+  description: |+
+    Peferred language of the custom.
+    This must be a valid language-contry code for one of the supported languages listed here https://azure.microsoft.com/en-us/support/faq/.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPreferredTimeZone
+  isRequired: true
+  description: |+
+    Customer preferred time zone.
+    This must be a valid System.TimeZoneInfo.Id value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomerPrimaryEmailAddress
+  isRequired: true
+  description: |+
+    Customer primary email address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  isRequired: true
+  description: |+
+    Detailed description of the question or issue.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of support ticket that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.ContactMethod" data-throw-if-not-resolved="False" />
+  name: PreferredContactMethod
+  isRequired: true
+  description: |+
+    Preferred contact method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Email, Phone
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProblemClassificationId
+  isRequired: true
+  description: |+
+    Each Azure service has its own set of issue category called problem classification that corresponds to the type of problem you're experiencing.
+    This parameter is the ARM resource id of ProblemClassification resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: ProblemStartTime
+  description: |+
+    Date and time when the problem started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.PSQuotaTicketDetail" data-throw-if-not-resolved="False" />
+  name: QuotaTicketDetail
+  isRequired: true
+  description: |+
+    Additional details for a Quota support ticket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Require24X7Response
+  description: |+
+    Indicates if this support ticket requires a 24x7 response from Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Support.Models.Severity" data-throw-if-not-resolved="False" />
+  name: Severity
+  isRequired: true
+  description: |+
+    Severity of the support ticket.
+    This indicates the urgency of the case, which in turn determines the response time according to the service level agreement of the technical support plan you have with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Minimal, Moderate, Critical, HighestCriticalImpact
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TechnicalTicketResourceId
+  isRequired: true
+  description: |+
+    This is the resource id of the Azure service resource (For example: A virtual machine resource or an HDInsight resource) for which the support ticket is created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    Title of support ticket.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Support.New-AzSupportTicket
+name: New-AzSupportTicket
+description: |-
+  This cmdlet can be used to create a support ticket for Billing, Subscription Management, Quota or Technical issues. Use Get-AzSupportService and Get-AzSupportProblemClassification cmdlets to identify the Azure service and it's corresponding problem classifications respectively for which you want to request support. You must specify the following parameters: 
+
+  	• Title
+  	• Description
+  	• Severity level
+  	• ProblemClassificationId
+  	• CustomerContactDetail (or individual customer contact parameters)
+
+  You can use New-AzSupportContactProfileObject helper cmdlet to create CustomerContactDetail object.
+
+  Cloud Solution Providers can create a support ticket for their customer's subscriptions by logging into their customer's tenant and specifying their home tenant id using *CSPHomeTenantId* parameter.
+
+  __For technical tickets:__
+
+  To specify the resource name, specify the ARM resource ID of the resource by using *TechnicalTicketResourceId* parameter. See an example below. 
+
+  __For quota tickets:__
+
+  To request for quota increase for **Compute VM Cores**, **Batch**, **SQL Database** and **SQL Data Warehouse**, provide additional details under *QuotaTicketDetail* object. QuotaTicketDetail object consists of 3 properties as described below. For detailed documentation, please [click here.](https://aka.ms/supportrpquotarequestpayload)
+
+  	• QuotaChangeRequestSubType
+
+          This is required for certain quota types when there is a sub type that you are requesting quota increase for. Example: Batch, SQL Database and SQL Data Warehouse have a sub type.
+
+  	• QuotaChangeRequestVersion
+
+          This is required and indicates the version of the quota change request payload.
+
+  	• QuotaChangeRequests
+
+          This is required and is a list of PSQuotaChangeRequest objects. PSQuotaChangeRequest object has 2 required properties.
+
+  	    ○ Region
+
+              This is the Azure location or region for which you are requesting quota increase. This is the Location property of Get-AzLocation cmdlet.
+  		
+          ○ Payload
+
+              This is where you specify the new limits for the selected quota type.
+
+
+  For detailed documentation on how to construct Payload for various quota types, please [click here](https://aka.ms/supportrpquotarequestpayload)
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
+  Module Name: Az.Support
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.support/new-azsupportticket
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/New-AzSupportTicket.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Support/Support/help/New-AzSupportTicket.md

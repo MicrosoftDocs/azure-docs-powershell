@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets service objectives for an Azure SQL Database server.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ServiceObjective.Model.AzureSqlServerServiceObjectiveModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Get-AzSqlServerServiceObjective [[-ServiceObjectiveName] <String>] -Location <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Get-AzSqlServerServiceObjective [[-ServiceObjectiveName] <String>] [-ResourceGroupName] <String>
+
+   [-ServerName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get service objectives'
+  code: |-
+    PS C:\>Get-AzSqlServerServiceObjective -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+    serviceObjectiveName SkuName       Edition          Family Capacity CapacityUnit Enabled
+    -------------------- -------       -------          ------ -------- ------------ -------
+    System               System        System                  0        DTU          False
+    Free                 Free          Free                    5        DTU          True
+    Basic                Basic         Basic                   5        DTU          True
+    S0                   Standard      Standard                10       DTU          True
+    S1                   Standard      Standard                20       DTU          True
+    P1                   Premium       Premium                 125      DTU          True
+    P2                   Premium       Premium                 250      DTU          True
+    DW100c               DataWarehouse DataWarehouse           900      DTU          False
+    GP_Gen4_1            GP_Gen4       GeneralPurpose   Gen4   1        VCores       True
+    GP_Gen5_2            GP_Gen5       GeneralPurpose   Gen5   2        VCores       True
+    BC_Gen4_1            BC_Gen4       BusinessCritical Gen4   1        VCores       True
+    BC_Gen5_4            BC_Gen5       BusinessCritical Gen5   4        VCores       True
+  description: |-
+    This command gets the service objectives for the server named Server01.
+  summary: ""
+- title: 'Example 2: Get service objectives using filtering'
+  code: |-
+    PS C:\>Get-AzSqlServerServiceObjective -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ServiceObjectiveName "P*"
+    ServiceObjectiveName SkuName       Edition          Family Capacity CapacityUnit Enabled
+    -------------------- -------       -------          ------ -------- ------------ -------
+    P1                   Premium       Premium                 125      DTU          True
+    P2                   Premium       Premium                 250      DTU          True
+  description: |-
+    This command gets the service objectives for the server named Server01 that start with "System".
+  summary: ""
+- title: 'Example 3: Get service objectives for a location'
+  code: |-
+    PS C:\>Get-AzSqlServerServiceObjective -Location "west us"
+    serviceObjectiveName SkuName       Edition          Family Capacity CapacityUnit Enabled
+    -------------------- -------       -------          ------ -------- ------------ -------
+    System               System        System                  0        DTU          False
+    Free                 Free          Free                    5        DTU          True
+    Basic                Basic         Basic                   5        DTU          True
+    S0                   Standard      Standard                10       DTU          True
+    S1                   Standard      Standard                20       DTU          True
+    P1                   Premium       Premium                 125      DTU          True
+    P2                   Premium       Premium                 250      DTU          True
+    DW100c               DataWarehouse DataWarehouse           900      DTU          False
+    GP_Gen4_1            GP_Gen4       GeneralPurpose   Gen4   1        VCores       True
+    GP_Gen5_2            GP_Gen5       GeneralPurpose   Gen5   2        VCores       True
+    BC_Gen4_1            BC_Gen4       BusinessCritical Gen4   1        VCores       True
+    BC_Gen5_4            BC_Gen5       BusinessCritical Gen5   4        VCores       True
+  description: |-
+    This command gets the service objectives for a specified Azure region.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The name of the Location for which to get the service objectives.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+    This cmdlet gets service objectives for a SQL Database server assigned to this resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of a SQL Database SQL Database server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServiceObjectiveName
+  description: |+
+    Specifies the name of a service objective for an Azure SQL Database server.
+    The acceptable values for this parameter are: Basic, S0, S1, S2, P1, P2, and P3.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlServerServiceObjective
+name: Get-AzSqlServerServiceObjective
+description: |-
+  The **Get-AzSqlServerServiceObjective** cmdlet gets the available service objectives for an Azure SQL Database server.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: AC2D64B9-5BCD-45D3-8650-538633F5BBBC
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlserverserviceobjective
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerServiceObjective.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerServiceObjective.md

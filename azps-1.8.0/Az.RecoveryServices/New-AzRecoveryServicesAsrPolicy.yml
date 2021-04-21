@@ -1,0 +1,363 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Azure Site Recovery replication policy.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRecoveryServicesAsrPolicy
+  href: ./Get-AzRecoveryServicesAsrPolicy.yml
+- text: Remove-AzRecoveryServicesAsrPolicy
+  href: ./Remove-AzRecoveryServicesAsrPolicy.yml
+syntaxes:
+- >-
+  New-AzRecoveryServicesAsrPolicy [-HyperVToAzure] -Name <String> -ReplicationProvider <String>
+
+   -ReplicationFrequencyInSeconds <String> [-NumberOfRecoveryPointsToRetain <Int32>]
+
+   [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-ReplicationStartTime <TimeSpan>]
+
+   [-RecoveryAzureStorageAccountId <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzRecoveryServicesAsrPolicy [-VMwareToAzure] -Name <String> -RecoveryPointRetentionInHours <Int32>
+
+   [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-MultiVmSyncStatus <String>]
+
+   -RPOWarningThresholdInMinutes <Int32> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzRecoveryServicesAsrPolicy [-AzureToVMware] -Name <String> -RecoveryPointRetentionInHours <Int32>
+
+   [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-MultiVmSyncStatus <String>]
+
+   -RPOWarningThresholdInMinutes <Int32> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzRecoveryServicesAsrPolicy [-AzureToAzure] -Name <String> -RecoveryPointRetentionInHours <Int32>
+
+   [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-MultiVmSyncStatus <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzRecoveryServicesAsrPolicy [-VmmToVmm] -Name <String> -ReplicationProvider <String>
+
+   [-ReplicationMethod <String>] -ReplicationFrequencyInSeconds <String>
+
+   [-NumberOfRecoveryPointsToRetain <Int32>] [-ApplicationConsistentSnapshotFrequencyInHours <Int32>]
+
+   [-Compression <String>] -ReplicationPort <UInt16> [-Authentication <String>]
+
+   [-ReplicationStartTime <TimeSpan>] [-ReplicaDeletion <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzRecoveryServicesAsrPolicy -Name "abc" -ReplicationProvider HyperVReplicaAzure -ReplicationFrequencyInSeconds 30 -NumberOfRecoveryPointsToRetain 10
+  description: |-
+    Starts the replication policy creation operation using the specified parameters and returns the ASR job used to track the operation.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> New-AzRecoveryServicesAsrPolicy -Name "abc122" -ReplicationProvider HyperVReplica2012R2 -ReplicationFrequencyInSeconds 300 -ReplicationPort 211
+
+    Name             : 1c609a5b-324e-461c-866f-ad58f944df25
+    ID               : /Subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/xxxxxxxxxxxx/providers/Microsoft.RecoveryServices/vaults/xxxxxxxxxxxx/replicationJobs/1c609a5b-324e-461c-866f-ad58f944df25
+    Type             :
+    JobType          : AddProtectionProfile
+    DisplayName      : Create replication policy
+    ClientRequestId  : b10c83ee-fee2-42d4-ad1d-dfc3e166faab ActivityId: 67e8453c-fae0-465f-801c-dfa2e6e6ee23
+    State            : Succeeded
+    StateDescription : Completed
+    StartTime        : 8/29/2017 10:18:10 AM
+    EndTime          : 8/29/2017 10:18:11 AM
+    TargetObjectId   : bb8e8c57-221d-5668-9d82-b15a3e19a6a3
+    TargetObjectType : ProtectionProfile
+    TargetObjectName : abc122
+    AllowedActions   :
+    Tasks            : {Prerequisites check for creating the replication policy, Creating the replication policy}
+    Errors           : {}
+  description: |-
+    Starts the replication policy creation operation using the specified parameters and returns the ASR job used to track the operation.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> New-AzRecoveryServicesAsrPolicy -Name $policyName1 -ReplicationProvider InMageAzureV2 -RecoveryPoints 40  -RPOWarningThresholdInMinutes 5 -ApplicationConsistentSnapshotFrequencyInMinutes 15
+    Name             : ed69e451-878b-4f19-9c0f-73184be05eaf
+    ID               : /Subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/xxxxxxxxxxxx/providers/Microsoft.RecoveryServices/vaults/xxxxxxxxxxxx/replicationJobs/ed69e451-878b-4f19-9c0f-73184be05eaf
+    Type             :
+    JobType          :
+    DisplayName      :
+    ClientRequestId  : d8922fa2-303c-4eb4-b556-e07969ea6fba ActivityId: 9e946cdf-2351-44c2-9aef-70ef2eab29b4
+    State            : NotStarted
+    StateDescription : NotStarted
+    StartTime        :
+    EndTime          :
+    TargetObjectId   :
+    TargetObjectType :
+    TargetObjectName :
+    AllowedActions   :
+    Tasks            : {}
+    Errors           : {}
+  description: ""
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\>  $Job = New-AzRecoveryServicesAsrPolicy -Name $TestPolicy1 -AzToAzure -RecoveryPointRetentionInHours 10  -ApplicationConsistentSnapshotFrequencyInHours 5 
+    PS C:\>  Get-AsrJob -name $Job.id
+  description: |-
+    Starts the replication policy creation operation using the specified parameters and returns the ASR job used to track the operation.
+  summary: ""
+parameters:
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ApplicationConsistentSnapshotFrequencyInHours
+  description: |+
+    Specifies the frequency(in hours) at which to create application consistent recovery points.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Authentication
+  description: |+
+    Specifies the type of authentication used.
+    Valid values are:
+
+    - Certificate
+    -  Kerberos
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Certificate, Kerberos
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AzureToAzure
+  isRequired: true
+  description: |+
+    {{Fill AzureToAzure Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AzureToVMware
+  isRequired: true
+  description: |+
+    {{Fill AzureToVMware Description}}
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Compression
+  description: |+
+    Specifies if compression should be enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enable, Disable
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HyperVToAzure
+  description: |+
+    Switch parameter to specify policy is to be used to replicate Hyper-V virtual machines to Azure
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MultiVmSyncStatus
+  description: |+
+    Specifies multiVm sync status for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enable, Disable
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the ASR replication policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: NumberOfRecoveryPointsToRetain
+  description: |+
+    Specifies the number recovery points to retain.
+
+  defaultValue: None
+  position: Named
+  aliases: RecoveryPoints
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecoveryAzureStorageAccountId
+  description: |+
+    Specifies the ID of the Azure storage account to replicate to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: RecoveryPointRetentionInHours
+  isRequired: true
+  description: |+
+    Retain the recovery points for given time in hours.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReplicaDeletion
+  description: |+
+    Specifies if the replica virtual machine should be deleted on disabling replication from a VMM managed site to another.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Required, NotRequired
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReplicationFrequencyInSeconds
+  isRequired: true
+  description: |+
+    Specifies the replication frequency interval in seconds.
+    Valid values are:
+
+    - 30
+    - 300
+    - 900
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: 30, 300, 900
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReplicationMethod
+  description: |+
+    Specifies the replication method.
+    Valid values are:
+
+    - Online
+    - Offline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Online, Offline
+- type: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+  name: ReplicationPort
+  isRequired: true
+  description: |+
+    Specifies the port used for replication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReplicationProvider
+  isRequired: true
+  description: |+
+    Specifies the replication provider for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: HyperVReplica2012R2, HyperVReplica2012, HyperVReplicaAzure
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ReplicationStartTime
+  description: |+
+    Specifies the replication start time.
+    It must be no later than 24-hours from the start of the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: RPOWarningThresholdInMinutes
+  isRequired: true
+  description: |+
+    The RPO threshold value in minutes to warn on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VmmToVmm
+  description: |+
+    Switch parameter to specify policy is to be used to replicate between Hyper-V sites managed by a VMM server.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VMwareToAzure
+  isRequired: true
+  description: |+
+    Switch parameter specifying that the replication policy being created will be used to replicate VMware virtual machines and/or Physical servers to Azure.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.New-AzRecoveryServicesAsrPolicy
+name: New-AzRecoveryServicesAsrPolicy
+description: |-
+  The **New-AzRecoveryServicesAsrPolicy** cmdlet creates an Azure Site Recovery replication policy.
+  The replication policy is used to specify replication settings such as the replication frequency and number of recovery points.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/new-azrecoveryservicesasrpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesAsrPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesAsrPolicy.md

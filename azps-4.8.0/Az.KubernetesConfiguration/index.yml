@@ -1,0 +1,19 @@
+### YamlMime:PowershellModule
+children:
+- title: Kubernetes Configuration
+  cmdlets:
+  - Az.KubernetesConfiguration.Get-AzKubernetesConfiguration
+  - Az.KubernetesConfiguration.New-AzKubernetesConfiguration
+  - Az.KubernetesConfiguration.Remove-AzKubernetesConfiguration
+uid: Az.KubernetesConfiguration
+name: Az.KubernetesConfiguration
+description: |-
+  Microsoft Azure PowerShell: KubernetesConfiguration cmdlets
+metadata:
+  Module Name: Az.KubernetesConfiguration
+  Module Guid: 5a3ae8d3-8682-4ae7-8ec2-d41c0383da2b
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.kubernetesconfiguration
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KubernetesConfiguration/help/Az.KubernetesConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KubernetesConfiguration/help/Az.KubernetesConfiguration.md

@@ -1,0 +1,147 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get details about a blockchain member.
+module: Az.Blockchain
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IBlockchainIdentity>: Identity Parameter
+    - `[BlockchainMemberName <String>]`: Blockchain member name.
+    - `[Id <String>]`: Resource identity path
+    - `[Location <String>]`: Location name.
+    - `[OperationId <String>]`: Operation Id.
+    - `[ResourceGroupName <String>]`: The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+    - `[SubscriptionId <String>]`: Gets the subscription Id which uniquely identifies the Microsoft Azure subscription. The subscription ID is part of the URI for every service call.
+    - `[TransactionNodeName <String>]`: Transaction node name.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Blockchain.Models.IBlockchainIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Blockchain.Models.Api20180601Preview.IBlockchainMember" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzBlockchainMember [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzBlockchainMember -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- Get-AzBlockchainMember -InputObject <IBlockchainIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzBlockchainMember -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: List blockchain members'
+  code: |-
+    PS C:\> Get-AzBlockchainMember 
+
+    Location Name               Type
+    -------- ----               ----
+    eastus   blockchainmember01 Microsoft.Blockchain/blockchainMembers
+    eastus   myblockchain       Microsoft.Blockchain/blockchainMembers
+    eastus   myblockchaine0f3ol Microsoft.Blockchain/blockchainMembers
+    eastus   myblockchainuvbqdl Microsoft.Blockchain/blockchainMembers
+  description: |-
+    This command lists blockchain members under a subscription.
+  summary: ""
+- title: 'Example 2: List blockchain members'
+  code: |-
+    PS C:\> Get-AzBlockchainMember -ResourceGroupName testgroup
+
+    Location Name       Type
+    -------- ----       ----
+    eastus   dolauli001 Microsoft.Blockchain/blockchainMembers
+    eastus   dolauli002 Microsoft.Blockchain/blockchainMembers
+  description: |-
+    This command lists blockchain members under a resource group.
+  summary: ""
+- title: 'Example 3: Get a blockchain member'
+  code: |-
+    PS C:\> Get-AzBlockchainMember -Name dolauli001 -ResourceGroupName testgroup
+
+    Location Name       Type
+    -------- ----       ----
+    eastus   dolauli001 Microsoft.Blockchain/blockchainMembers
+  description: |-
+    This command gets a blockchain member under a resource group.
+  summary: ""
+- title: 'Example 4: Get a blockchain member'
+  code: |-
+    PS C:\> $member = Get-AzBlockchainMember -ResourceGroupName blockchain-rg -Name myblockchaine0f3ol
+    PS C:\> Get-AzBlockchainMember -InputObject $membe 
+
+    Location Name               Type
+    -------- ----               ----
+    eastus   myblockchaine0f3ol Microsoft.Blockchain/blockchainMembers
+  description: |-
+    This command gets a blockchain member under a resource group.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Blockchain.Models.IBlockchainIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Blockchain member name.
+
+  defaultValue: None
+  position: Named
+  aliases: BlockchainMemberName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group that contains the resource.
+    You can obtain this value from the Azure Resource Manager API or the portal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    Gets the subscription Id which uniquely identifies the Microsoft Azure subscription.
+    The subscription ID is part of the URI for every service call.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Blockchain.Get-AzBlockchainMember
+name: Get-AzBlockchainMember
+description: |-
+  Get details about a blockchain member.
+metadata:
+  external help file: ""
+  Module Name: Az.Blockchain
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.blockchain/get-azblockchainmember
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blockchain/help/Get-AzBlockchainMember.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blockchain/help/Get-AzBlockchainMember.md

@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets available virtual machine sizes.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineSize" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVM
+  href: ./Get-AzVM.yml
+syntaxes:
+- Get-AzVMSize [-Location] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzVMSize [-ResourceGroupName] <String> [-AvailabilitySetName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzVMSize [-ResourceGroupName] <String> [-VMName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get virtual machine sizes for a location'
+  code: |-
+    PS C:\> Get-AzVMSize -Location "Central US"
+  description: |-
+    This command gets the available sizes for virtual machines in the specified location.
+  summary: ""
+- title: 'Example 2: Get sizes for an availability set'
+  code: |-
+    PS C:\> Get-AzVMSize -ResourceGroupName "ResourceGroup03" -AvailabilitySetName "AvailabilitySet17"
+  description: |-
+    This command gets available sizes for virtual machines that you can deploy in the availability set named AvailabilitySet17.
+  summary: ""
+- title: 'Example 3: Get sizes for an existing virtual machine'
+  code: |-
+    PS C:\> Get-AzVMSize -ResourceGroupName "ResourceGroup03" -VMName "VirtualMachine12"
+  description: |-
+    This command gets available sizes for the existing virtual machine named VirtualMachine12.
+    You can resize this virtual machine to the sizes that this command gets.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AvailabilitySetName
+  isRequired: true
+  description: |+
+    Specifies the name of the Availability Set for which this cmdlet gets the available virtual machine sizes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the location for which this cmdlet gets the available virtual machine sizes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group of the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine that this cmdlet gets the available virtual machine sizes for resizing.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.Get-AzVMSize
+name: Get-AzVMSize
+description: |-
+  The **Get-AzVMSize** cmdlet gets available virtual machine sizes.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: B7A675D3-EF79-4EE2-9330-D4C690739006
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmsize
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzVMSize.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzVMSize.md

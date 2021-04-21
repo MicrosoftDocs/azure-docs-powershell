@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an IPSec Policy.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzIpsecPolicy [-SALifeTimeSeconds <Int32>] [-SADataSizeKilobytes <Int32>] -IpsecEncryption <String>
+
+   -IpsecIntegrity <String> -IkeEncryption <String> -IkeIntegrity <String> -DhGroup <String> -PfsGroup <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $ipsecPolicy = New-AzIpsecPolicy -SALifeTimeSeconds 1000 -SADataSizeKilobytes 2000 -IpsecEncryption "GCMAES256" -IpsecIntegrity "GCMAES256" -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -PfsGroup "PFS2048"
+    PS C:\> New-AzVirtualNetworkGatewayConnection -ResourceGroupName $rgname -name $vnetConnectionName -location $location -VirtualNetworkGateway1 $vnetGateway -LocalNetworkGateway2 $localnetGateway -ConnectionType IPsec -RoutingWeight 3 -SharedKey $sharedKey -UsePolicyBasedTrafficSelectors $true -IpsecPolicies $ipsecPolicy
+  description: |-
+    Creating an IPSec policy to be used for a new virtual network gateway connection.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DhGroup
+  isRequired: true
+  description: |+
+    The DH Groups used in IKE Phase 1 for initial SA
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, DHGroup1, DHGroup14, DHGroup2, DHGroup2048, DHGroup24, ECP256, ECP384
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IkeEncryption
+  isRequired: true
+  description: |+
+    The IKE encryption algorithm (IKE Phase 1)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IkeIntegrity
+  isRequired: true
+  description: |+
+    The IKE integrity algorithm (IKE Phase 1)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: MD5, SHA1, SHA256, SHA384
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IpsecEncryption
+  isRequired: true
+  description: |+
+    The IPSec encryption algorithm (IKE Phase 2)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES192, GCMAES256
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IpsecIntegrity
+  isRequired: true
+  description: |+
+    The IPSec integrity algorithm (IKE Phase 2)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: MD5, SHA1, SHA256, GCMAES128, GCMAES192, GCMAES256
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PfsGroup
+  isRequired: true
+  description: |+
+    The DH Groups used in IKE Phase 2 for new child SA
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PFS1, PFS2, PFS2048, PFS24, ECP256, ECP384
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SADataSizeKilobytes
+  description: |+
+    The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SALifeTimeSeconds
+  description: |+
+    The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzIpsecPolicy
+name: New-AzIpsecPolicy
+description: |-
+  The New-AzIpsecPolicy cmdlet creates an IPSec policy proposal to be used in a virtual network gateway connection.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azipsecpolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzIpsecPolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzIpsecPolicy.md

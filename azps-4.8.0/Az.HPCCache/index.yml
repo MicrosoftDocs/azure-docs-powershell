@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: HPCCache
+  cmdlets:
+  - Az.HPCCache.Get-AzHpcCache
+  - Az.HPCCache.Get-AzHpcCacheSku
+  - Az.HPCCache.Get-AzHpcCacheStorageTarget
+  - Az.HPCCache.Get-AzHpcCacheUsageModel
+  - Az.HPCCache.New-AzHpcCache
+  - Az.HPCCache.New-AzHpcCacheStorageTarget
+  - Az.HPCCache.Remove-AzHpcCache
+  - Az.HPCCache.Remove-AzHpcCacheStorageTarget
+  - Az.HPCCache.Set-AzHpcCache
+  - Az.HPCCache.Set-AzHpcCacheStorageTarget
+  - Az.HPCCache.Start-AzHpcCache
+  - Az.HPCCache.Stop-AzHpcCache
+  - Az.HPCCache.Update-AzHpcCache
+uid: Az.HPCCache
+name: Az.HPCCache
+description: |-
+  HPC Cache
+metadata:
+  Module Name: Az.HPCCache
+  Module Guid: 6470f56b-378e-48f4-b60f-954c01bf1822
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.hpccache
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HPCCache/HPCCache/help/Az.HPCCache.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HPCCache/HPCCache/help/Az.HPCCache.md

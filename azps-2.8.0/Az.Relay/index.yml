@@ -1,0 +1,36 @@
+### YamlMime:PowershellModule
+children:
+- title: Relay
+  cmdlets:
+  - Az.Relay.Get-AzRelayAuthorizationRule
+  - Az.Relay.Get-AzRelayHybridConnection
+  - Az.Relay.Get-AzRelayKey
+  - Az.Relay.Get-AzRelayNamespace
+  - Az.Relay.Get-AzRelayOperation
+  - Az.Relay.Get-AzWcfRelay
+  - Az.Relay.New-AzRelayAuthorizationRule
+  - Az.Relay.New-AzRelayHybridConnection
+  - Az.Relay.New-AzRelayKey
+  - Az.Relay.New-AzRelayNamespace
+  - Az.Relay.New-AzWcfRelay
+  - Az.Relay.Remove-AzRelayAuthorizationRule
+  - Az.Relay.Remove-AzRelayHybridConnection
+  - Az.Relay.Remove-AzRelayNamespace
+  - Az.Relay.Remove-AzWcfRelay
+  - Az.Relay.Set-AzRelayAuthorizationRule
+  - Az.Relay.Set-AzRelayHybridConnection
+  - Az.Relay.Set-AzRelayNamespace
+  - Az.Relay.Set-AzWcfRelay
+  - Az.Relay.Test-AzRelayName
+uid: Az.Relay
+name: Az.Relay
+description: |-
+  List of the cmdlets for Azure Relay
+metadata:
+  Module Name: Az.Relay
+  Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.relay
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Relay/Relay/help/Az.Relay.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Relay/Relay/help/Az.Relay.md

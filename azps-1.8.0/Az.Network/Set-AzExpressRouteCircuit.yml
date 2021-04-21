@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an ExpressRoute circuit.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzExpressRouteCircuit
+  href: ./Get-AzExpressRouteCircuit.yml
+- text: Move-AzExpressRouteCircuit
+  href: ./Move-AzExpressRouteCircuit.yml
+- text: New-AzExpressRouteCircuit
+  href: ./New-AzExpressRouteCircuit.yml
+- text: Remove-AzExpressRouteCircuit
+  href: ./Remove-AzExpressRouteCircuit.yml
+syntaxes:
+- >-
+  Set-AzExpressRouteCircuit -ExpressRouteCircuit <PSExpressRouteCircuit> [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the ServiceKey of an ExpressRoute circuit'
+  code: |-
+    $ckt = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg
+    $ckt.ServiceKey = '64ce99dd-ee70-4e74-b6b8-91c6307433a0'
+    Set-AzExpressRouteCircuit -ExpressRouteCircuit $ckt
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  name: ExpressRouteCircuit
+  isRequired: true
+  description: |+
+    Specifies the **ExpressRouteCircuit** object that this cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzExpressRouteCircuit
+name: Set-AzExpressRouteCircuit
+description: |-
+  The **Set-AzExpressRouteCircuit** cmdlet saves the modified ExpressRoute circuit to Azure.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 2A3B7343-9AA0-4505-AEDE-31C0C5B98694
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azexpressroutecircuit
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzExpressRouteCircuit.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzExpressRouteCircuit.md

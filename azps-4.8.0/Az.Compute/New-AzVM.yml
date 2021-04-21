@@ -1,0 +1,578 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a virtual machine.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSAzureOperationResponse" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVM
+  href: ./Get-AzVM.yml
+- text: Remove-AzVM
+  href: ./Remove-AzVM.yml
+- text: Restart-AzVM
+  href: ./Restart-AzVM.yml
+- text: Start-AzVM
+  href: ./Start-AzVM.yml
+- text: Stop-AzVM
+  href: ./Stop-AzVM.yml
+- text: Update-AzVM
+  href: ./Update-AzVM.yml
+- text: Add-AzVMDataDisk
+  href: ./Add-AzVMDataDisk.yml
+- text: Add-AzVMNetworkInterface
+  href: ./Add-AzVMNetworkInterface.yml
+- text: New-AzVMConfig
+  href: ./New-AzVMConfig.yml
+- text: Set-AzVMOperatingSystem
+  href: ./Set-AzVMOperatingSystem.yml
+- text: Set-AzVMSourceImage
+  href: ./Set-AzVMSourceImage.yml
+- text: Set-AzVMOSDisk
+  href: ./Set-AzVMOSDisk.yml
+syntaxes:
+- >-
+  New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] [[-Zone] <String[]>] -Name <String>
+
+   -Credential <PSCredential> [-VirtualNetworkName <String>] [-AddressPrefix <String>] [-SubnetName <String>]
+
+   [-SubnetAddressPrefix <String>] [-PublicIpAddressName <String>] [-DomainNameLabel <String>]
+
+   [-AllocationMethod <String>] [-SecurityGroupName <String>] [-OpenPorts <Int32[]>] [-Image <String>]
+
+   [-Size <String>] [-AvailabilitySetName <String>] [-SystemAssignedIdentity] [-UserAssignedIdentity <String>]
+
+   [-AsJob] [-DataDiskSizeInGb <Int32[]>] [-EnableUltraSSD] [-ProximityPlacementGroupId <String>]
+
+   [-HostId <String>] [-Priority <String>] [-EvictionPolicy <String>] [-MaxPrice <Double>] [-EncryptionAtHost]
+
+   [-HostGroupId <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzVM [-ResourceGroupName] <String> [-Location] <String> [-VM] <PSVirtualMachine> [[-Zone] <String[]>]
+
+   [-DisableBginfoExtension] [-Tag <Hashtable>] [-LicenseType <String>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] -Name <String> [-VirtualNetworkName <String>]
+
+   [-AddressPrefix <String>] [-SubnetName <String>] [-SubnetAddressPrefix <String>]
+
+   [-PublicIpAddressName <String>] [-DomainNameLabel <String>] [-AllocationMethod <String>]
+
+   [-SecurityGroupName <String>] [-OpenPorts <Int32[]>] -DiskFile <String> [-Linux] [-Size <String>]
+
+   [-AvailabilitySetName <String>] [-SystemAssignedIdentity] [-UserAssignedIdentity <String>] [-AsJob]
+
+   [-DataDiskSizeInGb <Int32[]>] [-EnableUltraSSD] [-ProximityPlacementGroupId <String>] [-HostId <String>]
+
+   [-Priority <String>] [-EvictionPolicy <String>] [-MaxPrice <Double>] [-EncryptionAtHost]
+
+   [-HostGroupId <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a virtual machine'
+  code: |-
+    PS C:\> New-AzVM -Name MyVm -Credential (Get-Credential)
+
+    VERBOSE: Use 'mstsc /v:myvm-222222.eastus.cloudapp.azure.com' to connect to the VM.
+
+    ResourceGroupName        : MyVm
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyVm/provi
+    ders/Microsoft.Compute/virtualMachines/MyVm
+    VmId                     : 11111111-1111-1111-1111-111111111111
+    Name                     : MyVm
+    Type                     : Microsoft.Compute/virtualMachines
+    Location                 : eastus
+    Tags                     : {}
+    HardwareProfile          : {VmSize}
+    NetworkProfile           : {NetworkInterfaces}
+    OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+    ProvisioningState        : Succeeded
+    StorageProfile           : {ImageReference, OsDisk, DataDisks}
+    FullyQualifiedDomainName : myvm-222222.eastus.cloudapp.azure.com
+  description: |-
+    This example script shows how to create a virtual machine.
+    The script will ask a user name and password for the VM.
+    This script uses several other cmdlets.
+  summary: ""
+- title: 'Example 2: Create a virtual machine from a custom user image'
+  code: |-
+    PS C:\> ## VM Account
+    # Credentials for Local Admin account you created in the sysprepped (generalized) vhd image
+    $VMLocalAdminUser = "LocalAdminUser"
+    $VMLocalAdminSecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
+    ## Azure Account
+    $LocationName = "westus"
+    $ResourceGroupName = "MyResourceGroup"
+    # This a Premium_LRS storage account.
+    # It is required in order to run a client VM with efficiency and high performance.
+    $StorageAccount = "Mydisk"
+
+    ## VM
+    $OSDiskName = "MyClient"
+    $ComputerName = "MyClientVM"
+    $OSDiskUri = "https://Mydisk.blob.core.windows.net/disks/MyOSDisk.vhd"
+    $SourceImageUri = "https://Mydisk.blob.core.windows.net/vhds/MyOSImage.vhd"
+    $VMName = "MyVM"
+    # Modern hardware environment with fast disk, high IOPs performance.
+    # Required to run a client VM with efficiency and performance
+    $VMSize = "Standard_DS3"
+    $OSDiskCaching = "ReadWrite"
+    $OSCreateOption = "FromImage"
+
+    ## Networking
+    $DNSNameLabel = "mydnsname" # mydnsname.westus.cloudapp.azure.com
+    $NetworkName = "MyNet"
+    $NICName = "MyNIC"
+    $PublicIPAddressName = "MyPIP"
+    $SubnetName = "MySubnet"
+    $SubnetAddressPrefix = "10.0.0.0/24"
+    $VnetAddressPrefix = "10.0.0.0/16"
+
+    $SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
+    $Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
+    $PIP = New-AzPublicIpAddress -Name $PublicIPAddressName -DomainNameLabel $DNSNameLabel -ResourceGroupName $ResourceGroupName -Location $LocationName -AllocationMethod Dynamic
+    $NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id -PublicIpAddressId $PIP.Id
+
+    $Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+
+    $VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
+    $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
+    $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
+    $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -SourceImageUri $SourceImageUri -Caching $OSDiskCaching -CreateOption $OSCreateOption -Windows
+
+    New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+  description: |-
+    This example takes an existing sys-prepped, generalized custom operating system image and attaches a data disk to it, provisions a new network, deploys the VHD, and runs it.
+    This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
+    This script assumes that you are already logged into your Azure account.
+    You can confirm your login status by using the **Get-AzSubscription** cmdlet.
+  summary: ""
+- title: 'Example 3: Create a VM from a marketplace image without a Public IP'
+  code: |-
+    $VMLocalAdminUser = "LocalAdminUser"
+    $VMLocalAdminSecurePassword = ConvertTo-SecureString <password> -AsPlainText -Force
+    $LocationName = "westus"
+    $ResourceGroupName = "MyResourceGroup"
+    $ComputerName = "MyVM"
+    $VMName = "MyVM"
+    $VMSize = "Standard_DS3"
+
+    $NetworkName = "MyNet"
+    $NICName = "MyNIC"
+    $SubnetName = "MySubnet"
+    $SubnetAddressPrefix = "10.0.0.0/24"
+    $VnetAddressPrefix = "10.0.0.0/16"
+
+    $SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
+    $Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
+    $NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id
+
+    $Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+
+    $VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
+    $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
+    $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
+    $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'WindowsServer' -Skus '2012-R2-Datacenter' -Version latest
+
+    New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+  description: |-
+    This example provisions a new network and deploys a Windows VM from the Marketplace without creating a public IP address or Network Security Group.
+    This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AddressPrefix
+  description: |+
+    The address prefix for the virtual network which will be created for the VM.
+
+  defaultValue: 192.168.0.0/16
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AllocationMethod
+  description: |+
+    The IP allocation method for the public IP which will be created for the VM.
+
+  defaultValue: Static
+  position: Named
+  aliases: ""
+  parameterValueGroup: Static, Dynamic
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background and return a Job to track progress.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AvailabilitySetName
+  description: |+
+    Specifies a name for the availability set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: |+
+    The administrator credentials for the VM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DataDiskSizeInGb
+  description: |+
+    Specifies the sizes of data disks in GB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableBginfoExtension
+  description: |+
+    Indicates that this cmdlet does not install the **BG Info** extension on the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DiskFile
+  isRequired: true
+  description: |+
+    The local path to the virtual hard disk file to be uploaded to the cloud and for creating the VM, and it must have '.vhd' as its suffix.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DomainNameLabel
+  description: |+
+    The subdomain label for the fully-qualified domain name (FQDN) of the VM.  This will take the form `{domainNameLabel}.{location}.cloudapp.azure.com`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableUltraSSD
+  description: |+
+    Use UltraSSD disks for the vm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EncryptionAtHost
+  description: |+
+    EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. 
+    This will enable the encryption for all the disks including Resource/Temp disk at host itself. 
+    Default: The Encryption at host will be disabled unless this property is set to true for the resource.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EvictionPolicy
+  description: |+
+    The eviction policy for the Azure Spot virtual machine.  Supported values are 'Deallocate' and 'Delete'.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostGroupId
+  description: |+
+    Specifies the dedicated host group the virtual machine will reside in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostId
+  description: |+
+    The Id of Host
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Image
+  description: |+
+    The friendly image name upon which the VM will be built.  These include: Win2016Datacenter, Win2012R2Datacenter, Win2012Datacenter, Win2008R2SP1, UbuntuLTS, CentOS, CoreOS, Debian, openSUSE-Leap, RHEL, SLES.
+
+  defaultValue: Win2016Datacenter
+  position: Named
+  aliases: ImageName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LicenseType
+  description: |+
+    Specifies a license type, which indicates that the image or disk for the virtual machine was licensed on-premises.
+    This value is used only for images that contain the Windows Server operating system.
+    The acceptable values for this parameter are:
+    - Windows_Client
+    - Windows_Server
+    This value cannot be updated.
+    If you specify this parameter for an update, the value must match the initial value for the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Linux
+  description: |+
+    Indicates whether the disk file is for Linux VM, if specified; or Windows, if not specified by default.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies a location for the virtual machine.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+  name: MaxPrice
+  description: |+
+    The max price of the billing of a low priority virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the VM resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OpenPorts
+  description: |+
+    A list of ports to open on the network security group (NSG) for the created VM.  The default value depends on the type of image chosen (i.e., Windows: 3389, 5985 and Linux: 22).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    The priority for the virtual machine.  Only supported values are 'Regular', 'Spot' and 'Low'.
+    'Regular' is for regular virtual machine.
+    'Spot' is for spot virtual machine.
+    'Low' is also for spot virtual machine but is replaced by 'Spot'. Please use 'Spot' instead of 'Low'.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProximityPlacementGroupId
+  description: |+
+    The resource id of the Proximity Placement Group to use with this virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ProximityPlacementGroup
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PublicIpAddressName
+  description: |+
+    The name of a new (or existing) public IP address for the created VM to use.  If not specified, a name will be generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecurityGroupName
+  description: |+
+    The name of a new (or existing) network security group (NSG) for the created VM to use.  If not specified, a name will be generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Size
+  description: |+
+    The Virtual Machine Size.  The Default Value is: Standard_DS1_v2.
+
+  defaultValue: Standard_DS1_v2
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubnetAddressPrefix
+  description: |+
+    The address prefix for the subnet which will be created for the VM.
+
+  defaultValue: 192.168.1.0/24
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubnetName
+  description: |+
+    The name of a new (or existing) subnet for the created VM to use.  If not specified, a name will be generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SystemAssignedIdentity
+  description: |+
+    If the parameter is present then the VM is assigned a managed system identity that is auto generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Specifies that resources and resource groups can be tagged with a set of name-value pairs.
+    Adding tags to resources enables you to group resources together across resource groups and to create your own views.
+    Each resource or resource group can have a maximum of 15 tags.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UserAssignedIdentity
+  description: |+
+    The name of a managed service identity that should be assigned to the VM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkName
+  description: |+
+    The name of a new (or existing) virtual network for the created VM to use.  If not specified, a name will be generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies a local virtual machine to create.
+    To obtain a virtual machine object, use the New-AzVMConfig cmdlet.
+    Other cmdlets can be used to configure the virtual machine, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, and Add-AzVMNetworkInterface.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: VMProfile
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Zone
+  description: |+
+    Specifies the zone list of the virtual machine.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.New-AzVM
+name: New-AzVM
+description: |-
+  The **New-AzVM** cmdlet creates a virtual machine in Azure.
+  This cmdlet takes a virtual machine object as input.
+  Use the New-AzVMConfig cmdlet to create a virtual machine object.
+  Other cmdlets can be used to configure the virtual machine, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, Add-AzVMNetworkInterface, and Set-AzVMOSDisk.
+  The `SimpleParameterSet` provides a convenient method to create a VM by making common VM creation arguments optional.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvm
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzVM.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzVM.md

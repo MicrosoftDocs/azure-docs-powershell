@@ -1,0 +1,256 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a virtual network gateway connection.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSTrafficSelectorPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVirtualNetworkGatewayConnection
+  href: ./Get-AzVirtualNetworkGatewayConnection.yml
+- text: New-AzVirtualNetworkGatewayConnection
+  href: ./New-AzVirtualNetworkGatewayConnection.yml
+- text: Remove-AzVirtualNetworkGatewayConnection
+  href: ./Remove-AzVirtualNetworkGatewayConnection.yml
+syntaxes:
+- >-
+  Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection <PSVirtualNetworkGatewayConnection>
+
+  <<<<<<< HEAD
+
+   [-EnableBgp <Boolean>] [-DpdTimeoutInSeconds <Int32>] [-UsePolicyBasedTrafficSelectors <Boolean>] [-UseLocalAzureIpAddress <Boolean>]
+
+   [-IpsecPolicies <PSIpsecPolicy[]>] [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>] [-Force] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection <PSVirtualNetworkGatewayConnection>
+
+  <<<<<<< HEAD
+
+   [-EnableBgp <Boolean>] [-DpdTimeoutInSeconds <Int32>] [-UsePolicyBasedTrafficSelectors <Boolean>] [-UseLocalAzureIpAddress <Boolean>]
+
+   [-IpsecPolicies <PSIpsecPolicy[]>] [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>] -Tag <Hashtable>
+
+   [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1:'
+  code: |-
+    $conn = Get-AzVirtualNetworkGatewayConnection -Name 1 -ResourceGroupName myRG
+    Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $conn
+
+    Confirm
+    Are you sure you want to overwrite resource '1'
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+
+    Name                    : 1
+    ResourceGroupName       : myRG
+    Location                : westus
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Mi
+                              crosoft.Network/connections/1
+    Etag                    : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid            : 00000000-0000-0000-0000-000000000000
+    ProvisioningState       : Succeeded
+    Tags                    :
+    AuthorizationKey        :
+    VirtualNetworkGateway1  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                              icrosoft.Network/virtualNetworkGateways/myGateway"
+    VirtualNetworkGateway2  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/S2SVnetConn/providers/Mic
+                              rosoft.Network/virtualNetworkGateways/S2SConnGW"
+    LocalNetworkGateway2    :
+    Peer                    :
+    RoutingWeight           : 0
+    SharedKey               :
+    ConnectionStatus        : Connected
+    EgressBytesTransferred  : 91334484
+    IngressBytesTransferred : 100386089
+    TunnelConnectionStatus  : []
+  description: ""
+  summary: ""
+- title: 'Example 2: Add/Update tags to an existing VirtualNetworkGatewayConnection'
+  code: |-
+    $conn = Get-AzVirtualNetworkGatewayConnection -Name 1 -ResourceGroupName myRG
+    Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $conn -Tag @{ testtagKey="SomeTagKey"; testtagValue="SomeKeyValue" }
+
+    Confirm
+    Are you sure you want to overwrite resource '1'
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+
+    Name                    : 1
+    ResourceGroupName       : myRG
+    Location                : westus
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Mi
+                              crosoft.Network/connections/1
+    Etag                    : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid            : 00000000-0000-0000-0000-000000000000
+    ProvisioningState       : Succeeded
+    Tags                    :
+                              Name          Value
+                              ============  ============
+                              testtagValue  SomeKeyValue
+                              testtagKey    SomeTagKey
+    AuthorizationKey        :
+    VirtualNetworkGateway1  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                              icrosoft.Network/virtualNetworkGateways/myGateway"
+    VirtualNetworkGateway2  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/S2SVnetConn/providers/Mic
+                              rosoft.Network/virtualNetworkGateways/S2SConnGW"
+    LocalNetworkGateway2    :
+    Peer                    :
+    RoutingWeight           : 0
+    SharedKey               :
+    ConnectionStatus        : Connected
+    EgressBytesTransferred  : 91334484
+    IngressBytesTransferred : 100386089
+    TunnelConnectionStatus  : []
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: DpdTimeoutInSeconds
+  description: |+
+    Dead Peer Detection Timeout of the connection in seconds
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EnableBgp
+  description: |+
+    Whether to use a BGP session over a S2S VPN tunnel
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IpsecPolicies
+  description: |+
+    A list of IPSec policies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  isRequired: true
+  description: |+
+    A hashtable which represents resource tags.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSTrafficSelectorPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TrafficSelectorPolicy
+  description: |+
+    A list of Traffic Selector policies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: UseLocalAzureIpAddress
+  description: |+
+    Whether to use PrivateIP for a S2S connection
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: UsePolicyBasedTrafficSelectors
+  description: |+
+    Whether to use policy-based traffic selectors for a S2S connection
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkGatewayConnection
+  isRequired: true
+  description: |+
+    Specifies the PSVirtualNetworkGatewayConnection object that this cmdlet uses to modify the virtual network gateway connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzVirtualNetworkGatewayConnection
+name: Set-AzVirtualNetworkGatewayConnection
+description: |-
+  The **Set-AzVirtualNetworkGatewayConnection** cmdlet configures a virtual network gateway connection.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: D7065B04-1A01-4BB4-A519-1DA9002CDE02
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworkgatewayconnection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzVirtualNetworkGatewayConnection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzVirtualNetworkGatewayConnection.md

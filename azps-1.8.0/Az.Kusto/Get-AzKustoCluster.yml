@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  List all Kusto clusters in a resource group or get a specific Kusto cluster.
+module: Az.Kusto
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Kusto.Models.PSKustoCluster" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzKustoCluster -ResourceGroupName <String> [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzKustoCluster -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1 - List all Kusto clusters in a resource group
+  code: |-
+    PS C:\> Get-AzKustoCluster -ResourceGroupName testrg
+  description: |-
+    The above command lists all Kusto clusters in the resource group "testrg".
+  summary: |+
+    Type              : Microsoft.Kusto/Clusters
+    Id                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster1
+    ResourceGroup     : testrg
+    Name              : mykustocluster1
+    Location          : Central US
+    Capacity          : 3
+    Sku               : D13_v2
+    ProvisioningState : Succeeded
+    State             : Running
+    Tag               : {}
+    Uri               : `https://mykustocluster1.centralus.kusto.windows.net`
+    DataIngestionUri  : `https://ingest-mykustocluster1.centralus.kusto.windows.net`
+
+    Type              : Microsoft.Kusto/Clusters
+    Id                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster2
+    ResourceGroup     : testrg
+    Name              : mykustocluster2
+    Location          : Central US
+    Capacity          : 5
+    Sku               : D13_v2
+    ProvisioningState : Succeeded
+    State             : Running
+    Tag               : {}
+    Uri               : `https://mykustocluster2.centralus.kusto.windows.net`
+    DataIngestionUri  : `https://ingest-mykustocluster2.centralus.kusto.windows.net`
+
+
+- title: Example 2 - Get a specific Kusto cluster by name
+  code: |-
+    PS C:\> Get-AzKustoCluster -ResourceGroupName testrg -Name mykustocluster
+
+    Type              : Microsoft.Kusto/Clusters
+    Id                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster
+    ResourceGroup     : testrg
+    Name              : mykustocluster
+    Location          : Central US
+    Capacity          : 5
+    Sku               : D13_v2
+    ProvisioningState : Succeeded
+    State             : Running
+    Tag               : {}
+    Uri               : https://mykustocluster.centralus.kusto.windows.net
+    DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
+  description: |-
+    The above command returns the Kusto cluster named "mykustocluster" in the resource group "testrg".
+  summary: ""
+- title: Example 3 - Get a specific Kusto cluster by resource id
+  code: |-
+    PS C:\> Get-AzKustoCluster -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mykustocluster
+    Type              : Microsoft.Kusto/Clusters
+    Id                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster
+    ResourceGroup     : testrg
+    Name              : mykustocluster
+    Location          : Central US
+    Capacity          : 5
+    Sku               : D13_v2
+    ProvisioningState : Succeeded
+    State             : Running
+    Tag               : {}
+    Uri               : https://mykustocluster.centralus.kusto.windows.net
+    DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
+  description: |-
+    The above command returns the Kusto cluster named "mykustocluster" in the resource group "testrg".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of a specific cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Name of resource group under which the user wants to retrieve the cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Kusto cluster ResourceID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Kusto.Get-AzKustoCluster
+name: Get-AzKustoCluster
+description: |-
+  List all Kusto clusters in a resource group or get a specific Kusto cluster.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Kusto.dll-Help.xml
+  Module Name: Az.Kusto
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.kusto/get-azkustocluster
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md

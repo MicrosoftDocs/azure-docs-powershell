@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the policy for a certificate in a key vault.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzKeyVaultCertificatePolicy
+  href: ./New-AzKeyVaultCertificatePolicy.yml
+- text: Set-AzKeyVaultCertificatePolicy
+  href: ./Set-AzKeyVaultCertificatePolicy.yml
+syntaxes:
+- >-
+  Get-AzKeyVaultCertificatePolicy [-VaultName] <String> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzKeyVaultCertificatePolicy [-InputObject] <PSKeyVaultCertificateIdentityItem>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a certificate policy'
+  code: |-
+    PS C:\ >Get-AzKeyVaultCertificatePolicy -VaultName "ContosoKV01" -Name "TestCert01"
+
+    SecretContentType               : application/x-pkcs12
+    Kty                             : RSA
+    KeySize                         : 2048
+    Exportable                      : True
+    ReuseKeyOnRenewal               : True
+    SubjectName                     : CN=contoso.com
+    DnsNames                        : 
+    Ekus                            : {1.3.6.1.5.5.7.3.1, 1.3.6.1.5.5.7.3.2}
+    ValidityInMonths                : 6
+    IssuerName                      : Self
+    CertificateType                 :
+    RenewAtNumberOfDaysBeforeExpiry : 
+    RenewAtPercentageLifetime       : 80
+    EmailAtNumberOfDaysBeforeExpiry :
+    EmailAtPercentageLifetime       :
+    Enabled                         : True
+    Created                         : 2/8/2016 11:10:29 PM
+    Updated                         : 2/8/2016 11:10:29 PM
+  description: |-
+    This command gets the certificate policy for TestCert01 certificate in the ContosoKV01 key vault.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Certificate Object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a certificate.
+
+  defaultValue: None
+  position: "1"
+  aliases: CertificateName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Specifies the name of a key vault.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.KeyVault.Get-AzKeyVaultCertificatePolicy
+name: Get-AzKeyVaultCertificatePolicy
+description: |-
+  The **Get-AzKeyVaultCertificatePolicy** cmdlet gets the policy for a certificate in a key vault in Azure Key Vault.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  ms.assetid: 0729687C-3104-4136-A80D-16BAEBD6B76C
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/get-azkeyvaultcertificatepolicy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificatePolicy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificatePolicy.md

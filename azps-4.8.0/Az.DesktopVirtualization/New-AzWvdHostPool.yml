@@ -1,0 +1,328 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create or update a host pool.
+module: Az.DesktopVirtualization
+notes: |-
+  ALIASES
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20191210Preview.IHostPool" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzWvdHostPool -HostPoolType <HostPoolType> -LoadBalancerType <LoadBalancerType> -Location <String>
+
+   -Name <String> -PreferredAppGroupType <PreferredAppGroupType> -ResourceGroupName <String>
+
+   [-SubscriptionId <String>] [-CustomRdpProperty <String>] [-Description <String>] [-ExpirationTime <DateTime>]
+
+   [-FriendlyName <String>] [-MaxSessionLimit <Int32>]
+
+   [-PersonalDesktopAssignmentType <PersonalDesktopAssignmentType>] [-RegistrationInfoToken <String>]
+
+   [-RegistrationTokenOperation <RegistrationTokenOperation>] [-Ring <Int32>] [-SsoContext <String>]
+
+   [-Tag <Hashtable>] [-ValidationEnvironment] [-VMTemplate <String>] [-DefaultProfile <PSObject>] [-Confirm]
+
+   [-WhatIf] [<CommonParameters>]
+- >-
+  New-AzWvdHostPool -HostPoolType <HostPoolType> -LoadBalancerType <LoadBalancerType> -Location <String>
+
+   -Name <String> -PreferredAppGroupType <PreferredAppGroupType> -ResourceGroupName <String>
+
+   [-DesktopAppGroupName <String>] [-SubscriptionId <String>] [-WorkspaceName <String>]
+
+   [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Windows Virtual Desktop HostPool by name'
+  code: |-
+    PS C:\> New-AzWvdHostPool -ResourceGroupName ResourceGroupName `
+                                -Name HostPoolName `
+                                -Location 'eastus' `
+                                -HostPoolType 'Pooled' `
+                                -LoadBalancerType 'DepthFirst' `
+                                -RegistrationTokenOperation 'Update' `
+                                -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+                                -Description 'Description' `
+                                -FriendlyName 'Friendly Name' `
+                                -MaxSessionLimit 5 `
+                                -VMTemplate $null `
+                                -SsoContext $null `
+                                -CustomRdpProperty $null `
+                                -Ring $null `
+                                -ValidationEnvironment:$false
+
+    Location   Name                 Type
+    --------   ----                 ----
+    eastus     HostPoolName Microsoft.DesktopVirtualization/hostpools
+  description: |-
+    This command creates a Windows Virtual Desktop HostPool in a Resource Group.
+  summary: ""
+- title: 'Example 1: Create a Windows Virtual Desktop HostPool by name'
+  code: |-
+    PS C:\> New-AzWvdHostPool -ResourceGroupName ResourceGroupName `
+                                -Name HostPoolName `
+                                -Location 'eastus' `
+                                -HostPoolType 'Personal' `
+                                -LoadBalancerType 'Persistent' `
+                                -RegistrationTokenOperation 'Update' `
+                                -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+                                -Description 'Description' `
+                                -FriendlyName 'Friendly Name' `
+                                -MaxSessionLimit 5 `
+                                -VMTemplate $null `
+                                -SsoContext $null `
+                                -CustomRdpProperty $null `
+                                -Ring $null `
+                                -ValidationEnvironment:$false
+
+    Location   Name                 Type
+    --------   ----                 ----
+    eastus     HostPoolName Microsoft.DesktopVirtualization/hostpools
+  description: |-
+    This command creates a Windows Virtual Desktop HostPool in a Resource Group.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomRdpProperty
+  description: |+
+    Custom rdp property of HostPool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Description of HostPool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DesktopAppGroupName
+  description: |+
+    Desktop App Group Name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: ExpirationTime
+  description: |+
+    Expiration time of registration token.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  description: |+
+    Friendly name of HostPool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.HostPoolType" data-throw-if-not-resolved="False" />
+  name: HostPoolType
+  isRequired: true
+  description: |+
+    HostPool type for desktop.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.LoadBalancerType" data-throw-if-not-resolved="False" />
+  name: LoadBalancerType
+  isRequired: true
+  description: |+
+    The type of the load balancer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The geo-location where the resource lives
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxSessionLimit
+  description: |+
+    The max session limit of HostPool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the host pool within the specified resource group
+
+  defaultValue: None
+  position: Named
+  aliases: HostPoolName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.PersonalDesktopAssignmentType" data-throw-if-not-resolved="False" />
+  name: PersonalDesktopAssignmentType
+  description: |+
+    PersonalDesktopAssignment type for HostPool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.PreferredAppGroupType" data-throw-if-not-resolved="False" />
+  name: PreferredAppGroupType
+  isRequired: true
+  description: |+
+    The type of preferred application group type, default to Desktop Application Group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RegistrationInfoToken
+  description: |+
+    The registration token base64 encoded string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.RegistrationTokenOperation" data-throw-if-not-resolved="False" />
+  name: RegistrationTokenOperation
+  description: |+
+    The type of resetting the token.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Ring
+  description: |+
+    The ring number of HostPool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SsoContext
+  description: |+
+    Path to keyvault containing ssoContext secret.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The ID of the target subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Resource tags.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidationEnvironment
+  description: |+
+    Is validation environment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VMTemplate
+  description: |+
+    VM template for sessionhosts configuration within hostpool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WorkspaceName
+  description: |+
+    Workspace Name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DesktopVirtualization.New-AzWvdHostPool
+name: New-AzWvdHostPool
+description: |-
+  Create or update a host pool.
+metadata:
+  external help file: ""
+  Module Name: Az.DesktopVirtualization
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization/new-azwvdhostpool
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/New-AzWvdHostPool.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/New-AzWvdHostPool.md

@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an existing VpnServerConfiguration for point to site connectivity.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzVpnServerConfiguration [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzVpnServerConfiguration [-ResourceGroupName <String>] [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzVpnServerConfiguration -ResourceGroupName P2SCortexGATesting -Name test1config
+
+    ResourceGroupName            : P2SCortexGATesting
+    Name                         : test1config
+    Id                           : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/vpnServerConfigurations/test1config
+    Location                     : westus
+    VpnProtocols                 : {IkeV2, OpenVPN}
+    VpnAuthenticationTypes       : {Certificate}
+    VpnClientRootCertificates    :
+    VpnClientRevokedCertificates : [
+                                     {
+                                       "Name": "cert2",
+                                       "Thumbprint": "83FFBFC8848B5A5836C94D0112367E16148A286F"
+                                     }
+                                   ]
+    RadiusServerAddress          :
+    RadiusServerRootCertificates : []
+    RadiusClientRootCertificates : []
+    VpnClientIpsecPolicies       : []
+    AadAuthenticationParameters  : null
+    P2sVpnGateways               : []
+    Type                         : Microsoft.Network/vpnServerConfigurations
+    ProvisioningState            : Succeeded
+  description: |-
+    The above command will get the existing VpnServerConfiguration.
+  summary: ""
+parameters:
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceName, VpnServerConfigurationName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzVpnServerConfiguration
+name: Get-AzVpnServerConfiguration
+description: |-
+  The **Get-AzVpnServerConfiguration** cmdlet returns the existing VpnServerConfiguration for Point to site connectivity.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvpnserverconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnServerConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnServerConfiguration.md

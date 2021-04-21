@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: SignalR
+  cmdlets:
+  - Az.SignalR.Get-AzSignalR
+  - Az.SignalR.Get-AzSignalRKey
+  - Az.SignalR.Get-AzSignalRUsage
+  - Az.SignalR.New-AzSignalR
+  - Az.SignalR.New-AzSignalRKey
+  - Az.SignalR.Remove-AzSignalR
+  - Az.SignalR.Restart-AzSignalR
+  - Az.SignalR.Test-AzSignalRName
+  - Az.SignalR.Update-AzSignalR
+uid: Az.SignalR
+name: Az.SignalR
+description: |-
+  Cmdlets to interact with the Azure SignalR service.
+metadata:
+  Module Name: Az.SignalR
+  Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
+  Download Help Link: '{{Please enter FwLink manually}}'
+  Help Version: 0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SignalR/SignalR/help/Az.SignalR.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SignalR/SignalR/help/Az.SignalR.md

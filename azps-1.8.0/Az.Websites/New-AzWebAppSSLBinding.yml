@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an SSL certificate binding for an Azure Web App.
+module: Az.Websites
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.WebSites.Models.HostNameSslState" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzWebAppSSLBinding
+  href: ./Get-AzWebAppSSLBinding.yml
+- text: Remove-AzWebAppSSLBinding
+  href: ./Remove-AzWebAppSSLBinding.yml
+- text: Get-AzWebAppSlot
+  href: ./Get-AzWebAppSlot.yml
+- text: Get-AzWebApp
+  href: ./Get-AzWebApp.yml
+syntaxes:
+- >-
+  New-AzWebAppSSLBinding [-ResourceGroupName] <String> [-WebAppName] <String> [[-Slot] <String>] [-Name] <String>
+
+   [[-SslState] <SslState>] [-CertificateFilePath] <String> [-CertificatePassword] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzWebAppSSLBinding [-ResourceGroupName] <String> [-WebAppName] <String> [[-Slot] <String>] [-Name] <String>
+
+   [[-SslState] <SslState>] [-Thumbprint] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  New-AzWebAppSSLBinding [-WebApp] <PSSite> [-Name] <String> [[-SslState] <SslState>]
+
+   [-CertificateFilePath] <String> [-CertificatePassword] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  New-AzWebAppSSLBinding [-WebApp] <PSSite> [-Name] <String> [[-SslState] <SslState>] [-Thumbprint] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Bind a certificate to a Web App'
+  code: |-
+    PS C:\>New-AzWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" -Name "www.contoso.com"
+  description: |-
+    This command binds an existing Azure certificate (a certificate with the Thumbprint E3A38EBA60CAA1C162785A2E1C44A15AD450199C3) to the web app named ContosoWebApp.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateFilePath
+  isRequired: true
+  description: |+
+    Specifies the file path for the certificate to be uploaded.
+    The *CertificateFilePath* parameter is only required if the certificate has not yet been uploaded to Azure.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificatePassword
+  isRequired: true
+  description: |+
+    Specifies the decryption password for the certificate.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the Web App.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that the certificate is assigned to.
+    You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in the same command.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Slot
+  description: |+
+    Specifies the name of the Web App deployment slot.
+    You can use the Get-AzWebAppSlot cmdlet to get a slot.
+    Deployment slots provide a way for you to stage and validate web apps without those apps being accessible over the Internet.
+    Typically you will deploy your changes to a staging site, validate those changes, and then deploy to the production (Internet-accessible) site.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.WebSites.Models.SslState" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SslState
+  description: |+
+    Specifies whether the certificate is enabled.
+    Set the *SSLState* parameter to 1 to enable the certificate, or set *SSLState* to 0 to disable the certificate.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: Disabled, SniEnabled, IpBasedEnabled
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the unique identifier for the certificate.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  name: WebApp
+  isRequired: true
+  description: |+
+    Specifies a Web App.
+    To get a Web App, use the Get-AzWebApp cmdlet.
+    You cannot use the *WebApp* parameter in the same command as the *ResourceGroupName* parameter and/or the *WebAppName*.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WebAppName
+  isRequired: true
+  description: |+
+    Specifies the name of the Web App for which the new SSL binding is being created.
+    You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Websites.New-AzWebAppSSLBinding
+name: New-AzWebAppSSLBinding
+description: |-
+  The **New-AzWebAppSSLBinding** cmdlet creates a Secure Socket Layer (SSL) certificate binding for an Azure Web App.
+  The cmdlet creates an SSL binding in two ways: 
+  - You can bind a Web App to an existing certificate.
+  - You can upload a new certificate and then bind the Web App to this new certificate.
+  Regardless of which approach you use, the certificate and the Web App must be associated with the same Azure resource group.
+  If you have a Web App in Resource Group A and you want to bind that Web App to a certificate in Resource Group B, the only way to do that is to upload a copy of the certificate to Resource Group A.
+  If you upload a new certificate, keep in mind the following requirements for an Azure SSL certificate: 
+  - The certificate must contain a private key. 
+  - The certificate must use the Personal Information Exchange (PFX) format. 
+  - The certificate's subject name must match the domain used to access the Web App. 
+  - The certificate must use a minimum of 2048-bit encryption.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  Module Name: Az.Websites
+  ms.assetid: 910239BE-9E48-4DC5-85EA-CC6D466FE62F
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/new-azwebappsslbinding
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/New-AzWebAppSSLBinding.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/New-AzWebAppSSLBinding.md

@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the details of the specified ASR job or the list of recent ASR jobs in the Recovery Services vault.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Restart-AzRecoveryServicesAsrJob
+  href: ./Restart-AzRecoveryServicesAsrJob.yml
+- text: Resume-AzRecoveryServicesAsrJob
+  href: ./Resume-AzRecoveryServicesAsrJob.yml
+- text: Stop-AzRecoveryServicesAsrJob
+  href: ./Stop-AzRecoveryServicesAsrJob.yml
+syntaxes:
+- >-
+  Get-AzRecoveryServicesAsrJob [-StartTime <DateTime>] [-EndTime <DateTime>] [-TargetObjectId <String>]
+
+   [-State <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzRecoveryServicesAsrJob -Name <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Get-AzRecoveryServicesAsrJob -Job <ASRJob> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $jobs = Get-AzRecoveryServicesAsrJob -TargetObjectId $ASRObjectId
+  description: |-
+    Returns all the jobs on a particular ASR object(reference the ASR object such as replicated item or recovery plan by its ID.)
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EndTime
+  description: |+
+    Specifies the end time for the jobs.
+    This cmdlet gets all jobs that started before the specified time.
+    To obtain a **DateTime** object for this parameter, use the Get-Date cmdlet.
+    For more information, type `Get-Help Get-Date`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+  name: Job
+  isRequired: true
+  description: |+
+    Specifies the ASR job object to get updated details for.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specify the ASR job by name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies the start time for the jobs.
+    This cmdlet gets all jobs that started after the specified time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Specifies the state for a ASR job.
+    This cmdlet gets all jobs that match the specified state.
+    The acceptable values for this parameter are:
+
+    - NotStarted
+    - InProgress
+    - Succeeded
+    - Other
+    - Failed
+    - Cancelled
+    - Suspended
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotStarted, InProgress, Succeeded, Other, Failed, Cancelled, Suspended
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TargetObjectId
+  description: |+
+    Specifies the ID of the object. Used to search for jobs on the specified object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Get-AzRecoveryServicesAsrJob
+name: Get-AzRecoveryServicesAsrJob
+description: |-
+  The **Get-AzRecoveryServicesAsrJob** cmdlet gets Azure Site Recovery jobs.
+  You can use this cmdlet to view the ASR jobs in the Recovery Services vault.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/get-azrecoveryservicesasrjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrJob.md

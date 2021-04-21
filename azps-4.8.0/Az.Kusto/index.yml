@@ -1,0 +1,55 @@
+### YamlMime:PowershellModule
+children:
+- title: Kusto
+  cmdlets:
+  - Az.Kusto.Add-AzKustoClusterLanguageExtension
+  - Az.Kusto.Add-AzKustoDatabasePrincipal
+  - Az.Kusto.Get-AzKustoAttachedDatabaseConfiguration
+  - Az.Kusto.Get-AzKustoCluster
+  - Az.Kusto.Get-AzKustoClusterFollowerDatabase
+  - Az.Kusto.Get-AzKustoClusterLanguageExtension
+  - Az.Kusto.Get-AzKustoClusterPrincipalAssignment
+  - Az.Kusto.Get-AzKustoClusterSku
+  - Az.Kusto.Get-AzKustoDatabase
+  - Az.Kusto.Get-AzKustoDatabasePrincipal
+  - Az.Kusto.Get-AzKustoDatabasePrincipalAssignment
+  - Az.Kusto.Get-AzKustoDataConnection
+  - Az.Kusto.Invoke-AzKustoDataConnectionValidation
+  - Az.Kusto.Invoke-AzKustoDetachClusterFollowerDatabase
+  - Az.Kusto.Invoke-AzKustoDiagnoseClusterVirtualNetwork
+  - Az.Kusto.New-AzKustoAttachedDatabaseConfiguration
+  - Az.Kusto.New-AzKustoCluster
+  - Az.Kusto.New-AzKustoClusterPrincipalAssignment
+  - Az.Kusto.New-AzKustoDatabase
+  - Az.Kusto.New-AzKustoDatabasePrincipalAssignment
+  - Az.Kusto.New-AzKustoDataConnection
+  - Az.Kusto.Remove-AzKustoAttachedDatabaseConfiguration
+  - Az.Kusto.Remove-AzKustoCluster
+  - Az.Kusto.Remove-AzKustoClusterLanguageExtension
+  - Az.Kusto.Remove-AzKustoClusterPrincipalAssignment
+  - Az.Kusto.Remove-AzKustoDatabase
+  - Az.Kusto.Remove-AzKustoDatabasePrincipal
+  - Az.Kusto.Remove-AzKustoDatabasePrincipalAssignment
+  - Az.Kusto.Remove-AzKustoDataConnection
+  - Az.Kusto.Start-AzKustoCluster
+  - Az.Kusto.Stop-AzKustoCluster
+  - Az.Kusto.Test-AzKustoClusterNameAvailability
+  - Az.Kusto.Test-AzKustoClusterPrincipalAssignmentNameAvailability
+  - Az.Kusto.Test-AzKustoDatabaseNameAvailability
+  - Az.Kusto.Test-AzKustoDatabasePrincipalAssignmentNameAvailability
+  - Az.Kusto.Test-AzKustoDataConnectionNameAvailability
+  - Az.Kusto.Update-AzKustoCluster
+  - Az.Kusto.Update-AzKustoDatabase
+  - Az.Kusto.Update-AzKustoDataConnection
+uid: Az.Kusto
+name: Az.Kusto
+description: |-
+  Microsoft Azure PowerShell: Kusto cmdlets
+metadata:
+  Module Name: Az.Kusto
+  Module Guid: 18c61846-f6f0-425e-ba4b-5cf903e2bdd8
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.kusto
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/help/Az.Kusto.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/help/Az.Kusto.md

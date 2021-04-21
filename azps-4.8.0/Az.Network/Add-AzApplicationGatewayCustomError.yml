@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a custom error to an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayCustomError" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApplicationGatewayCustomError
+  href: ./Get-AzApplicationGatewayCustomError.yml
+- text: New-AzApplicationGatewayCustomError
+  href: ./New-AzApplicationGatewayCustomError.yml
+- text: Remove-AzApplicationGatewayCustomError
+  href: ./Remove-AzApplicationGatewayCustomError.yml
+- text: Set-AzApplicationGatewayCustomError
+  href: ./Set-AzApplicationGatewayCustomError.yml
+syntaxes:
+- >-
+  Add-AzApplicationGatewayCustomError -ApplicationGateway <PSApplicationGateway> -StatusCode <String>
+
+   -CustomErrorPageUrl <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Adds custom error to application gateway level'
+  code: |-
+    PS C:\> $resourceGroupName = "resourceGroupName"
+    PS C:\> $AppGWName = "applicationGatewayName"
+    PS C:\> $AppGw = Get-AzApplicationGateway -Name $AppGWName -ResourceGroup $resourceGroupName
+    PS C:\> $customError502Url = "https://mycustomerrorpages.blob.core.windows.net/errorpages/502.htm"
+    PS C:\> $updatedgateway = Add-AzApplicationGatewayCustomError -ApplicationGateway $AppGw -StatusCode HttpStatus502 -CustomErrorPageUrl $customError502Url
+    PS C:\> Set-AzApplicationGateway -ApplicationGateway $AppGw
+  description: |-
+    This command adds a custom error of http status code 502 to the application gateway $appgw, and return the updated gateway.
+  summary: ""
+- title: 'Example 2: Adds custom error to application gateway listener level'
+  code: |-
+    $resourceGroupName = "resourceGroupName"
+     $AppGWName = "applicationGatewayName"
+     $customError502Url = "https://mycustomerrorpages.blob.core.windows.net/errorpages/502.htm"
+     $listenerName = "listenerName"
+     $AppGw = Get-AzApplicationGateway -Name $AppGWName -ResourceGroupName $resourceGroupName
+     $listener = Get-AzApplicationGatewayHttpListener -ApplicationGateway $AppGW -Name $listenerName
+     $updatedListener = Add-AzApplicationGatewayHttpListenerCustomError -HttpListener $listener -StatusCode HttpStatus502 -CustomErrorPageUrl $customError502Url 
+     Set-AzApplicationGateway -ApplicationGateway $AppGw
+  description: |-
+    This command adds a custom error of http status code 502 to the application gateway $appgw at the listener level, and return the updated gateway.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    The Application Gateway
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomErrorPageUrl
+  isRequired: true
+  description: |+
+    Error page URL of the application gateway customer error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StatusCode
+  isRequired: true
+  description: |+
+    Status code of the application gateway customer error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Add-AzApplicationGatewayCustomError
+name: Add-AzApplicationGatewayCustomError
+description: |-
+  The **Add-AzApplicationGatewayCustomError** cmdlet adds a custom error to an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewaycustomerror
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzApplicationGatewayCustomError.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzApplicationGatewayCustomError.md

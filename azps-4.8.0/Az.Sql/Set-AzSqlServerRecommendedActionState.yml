@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the state of an Azure SQL Server recommended action.
+module: Az.Sql
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, sql, server, mssql, advisor, recommendedaction
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Sql.RecommendedAction.Cmdlet.RecommendedActionState" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.RecommendedAction.Model.AzureSqlServerRecommendedActionModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlServerAdvisor
+  href: ./Get-AzSqlServerAdvisor.yml
+- text: Get-AzSqlServerRecommendedAction
+  href: ./Get-AzSqlServerRecommendedAction.yml
+- text: Set-AzSqlDatabaseRecommendedActionState
+  href: ./Set-AzSqlDatabaseRecommendedActionState.yml
+- text: Set-AzSqlElasticPoolRecommendedActionState
+  href: ./Set-AzSqlElasticPoolRecommendedActionState.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Set-AzSqlServerRecommendedActionState -RecommendedActionName <String> -State <RecommendedActionState>
+
+   -ServerName <String> -AdvisorName <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example1: Update the state of the specified recommended action to Pending'
+  code: |-
+    PS C:\>Set-AzSqlServerRecommendedActionState -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex" -RecommendedActionName "IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893" -State Pending
+    ResourceGroupName          : WIRunnersProd
+    ServerName                 : wi-runner-australia-east
+    AdvisorName                : CreateIndex
+    RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
+    Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
+                                 NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+    ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
+    EstimatedImpact            : {ActionDuration, SpaceChange}
+    ExecuteActionDuration      : PT1M
+    ExecuteActionInitiatedBy   : User
+    ExecuteActionInitiatedTime : 4/21/2016 3:24:47 PM
+    ExecuteActionStartTime     : 4/21/2016 3:24:47 PM
+    ImplementationDetails      : Microsoft.Azure.Management.Sql.Models.RecommendedActionImplementationInfo
+    IsArchivedAction           : False
+    IsExecutableAction         : True
+    IsRevertableAction         : True
+    LastRefresh                : 4/21/2016 3:24:47 PM
+    LinkedObjects              : {}
+    ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
+    RecommendationReason       : 
+    RevertActionDuration       : 
+    RevertActionInitiatedBy    : 
+    RevertActionInitiatedTime  : 
+    RevertActionStartTime      : 
+    Score                      : 2
+    State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
+    TimeSeries                 : {}
+    ValidSince                 : 4/21/2016 3:24:47 PM
+  description: |-
+    Updates state of server recommended action named "IR_\[test_schema\]_\[test_table_0.0361551\]_6C7AE8CC9C87E7FD5893" to "Pending"
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AdvisorName
+  isRequired: true
+  description: |+
+    Specifies the name of the advisor that contains the recommended action.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecommendedActionName
+  isRequired: true
+  description: |+
+    Specifies the name of the recommended action for which this cmdlet updates the state.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group of the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.RecommendedAction.Cmdlet.RecommendedActionState" data-throw-if-not-resolved="False" />
+  name: State
+  isRequired: true
+  description: |+
+    Specifies the new value to which this cmdlet updates the recommended action state.
+    The acceptable values for this parameter are:
+    - Active
+    - Pending
+    - PendingRevert
+    - RevertCancelled
+    - Ignored
+    - Resolved
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Active, Pending, PendingRevert, RevertCancelled, Ignored, Resolved
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.Set-AzSqlServerRecommendedActionState
+name: Set-AzSqlServerRecommendedActionState
+description: |-
+  The **Set-AzSqlServerRecommendedActionState** cmdlet updates state of an Azure SQL Server recommended action.
+  This cmdlet applies, reverts, or discards the recommended action based on the new state.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 26EC220C-5123-4CEF-8CC6-5FFD08F33481
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqlserverrecommendedactionstate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlServerRecommendedActionState.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlServerRecommendedActionState.md

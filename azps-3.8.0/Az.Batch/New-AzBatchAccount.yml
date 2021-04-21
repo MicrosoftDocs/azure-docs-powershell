@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Batch account.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Batch.Models.PoolAllocationMode, Microsoft.Azure.Management.Batch, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchAccount
+  href: ./Get-AzBatchAccount.yml
+- text: Remove-AzBatchAccount
+  href: ./Remove-AzBatchAccount.yml
+- text: Set-AzBatchAccount
+  href: ./Set-AzBatchAccount.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/az.batch
+syntaxes:
+- >-
+  New-AzBatchAccount [-AccountName] <String> [-Location] <String> [-ResourceGroupName] <String>
+
+   [[-AutoStorageAccountId] <String>] [-PoolAllocationMode <PoolAllocationMode>] [-KeyVaultId <String>]
+
+   [-KeyVaultUrl <String>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Batch account'
+  code: |-
+    PS C:\>New-AzBatchAccount -AccountName "pfuller" -ResourceGroupName "ResourceGroup03" -Location "WestUS"
+    AccountName                  : pfuller
+    Location                     : westus
+    ResourceGroupName            : ResourceGroup03
+    DedicatedCoreQuota           : 20
+    LowPriorityCoreQuota         : 20
+    PoolQuota                    : 20
+    ActiveJobAndJobScheduleQuota : 20
+    Tags                         :
+    TaskTenantUrl                : https://cmdletexample.westus.batch.azure.com
+  description: |-
+    This command creates a Batch account named pfuller using the ResourceGroup03 resource group in the West US location.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Batch account that this cmdlet creates.
+    Batch account names must be between 3 and 24 characters long and contain only numbers and lowercase letters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutoStorageAccountId
+  description: |+
+    Specifies the resource ID of the storage account to be used for auto storage.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVaultId
+  description: |+
+    The resource ID of the Azure key vault associated with the Batch account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVaultUrl
+  description: |+
+    The URL of the Azure key vault associated with the Batch account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the region where this cmdlet creates the account.
+    For more information, see [Azure Regions](https://azure.microsoft.com/en-us/regions).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Batch.Models.PoolAllocationMode" data-throw-if-not-resolved="False" /><span>]</span>
+  name: PoolAllocationMode
+  description: |+
+    The allocation mode for creating pools in the Batch account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: BatchService, UserSubscription
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group in which this cmdlet creates the account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Tags
+  parameterValueGroup: ""
+uid: Az.Batch.New-AzBatchAccount
+name: New-AzBatchAccount
+description: |-
+  The **New-AzBatchAccount** cmdlet creates an Azure Batch account for the specified resource group and location.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 82C7B128-8818-4390-B1A5-CB40AC9D53CA
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/new-azbatchaccount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchAccount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/New-AzBatchAccount.md

@@ -1,0 +1,186 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Batch job schedules.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJobSchedule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AzBatchJobSchedule
+  href: ./Disable-AzBatchJobSchedule.yml
+- text: Enable-AzBatchJobSchedule
+  href: ./Enable-AzBatchJobSchedule.yml
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: New-AzBatchJobSchedule
+  href: ./New-AzBatchJobSchedule.yml
+- text: Remove-AzBatchJobSchedule
+  href: ./Remove-AzBatchJobSchedule.yml
+- text: Stop-AzBatchJobSchedule
+  href: ./Stop-AzBatchJobSchedule.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+syntaxes:
+- >-
+  Get-AzBatchJobSchedule [-Filter <String>] [-MaxCount <Int32>] [-Select <String>] [-Expand <String>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzBatchJobSchedule [[-Id] <String>] [-Select <String>] [-Expand <String>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a job schedule by specifying an ID'
+  code: |-
+    PS C:\>Get-AzBatchJobSchedule -Id "JobSchedule23" -BatchContext $Context
+    CreationTime                : 7/25/2015 9:15:43 PM
+    DisplayName                 :
+    ETag                        : 0x8D2953633427FCA
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSJobScheduleExecutionInformation
+    Id                          : JobSchedule23
+    JobSpecification            : Microsoft.Azure.Commands.Batch.Models.PSJobSpecification
+    LastModified                : 7/25/2015 9:15:43 PM
+    Metadata                    :
+    PreviousState               : Invalid
+    PreviousStateTransitionTime :
+    Schedule                    :
+    State                       : Active
+    StateTransitionTime         : 7/25/2015 9:15:43 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobschedules/JobSchedule23
+  description: |-
+    This command gets the job schedule that has the ID JobSchedule23.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+  summary: ""
+- title: 'Example 2: Get job schedules by using a filter'
+  code: |-
+    PS C:\>Get-AzBatchJobSchedule -Filter "startswith(id,'Job')" -BatchContext $Context
+    CreationTime                : 7/25/2015 9:15:43 PM
+    DisplayName                 :
+    ETag                        : 0x8D2953633427FCA
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSJobScheduleExecutionInformation
+    Id                          : JobSchedule23
+    JobSpecification            : Microsoft.Azure.Commands.Batch.Models.PSJobSpecification
+    LastModified                : 7/25/2015 9:15:43 PM
+    Metadata                    :
+    PreviousState               : Invalid
+    PreviousStateTransitionTime :
+    Schedule                    :
+    State                       : Active
+    StateTransitionTime         : 7/25/2015 9:15:43 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobschedules/JobSchedule23
+
+    CreationTime                : 7/26/2015 5:39:33 PM
+    DisplayName                 :
+    ETag                        : 0x8D295E12B1084B4
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSJobScheduleExecutionInformation
+    Id                          : JobSchedule26
+    JobSpecification            : Microsoft.Azure.Commands.Batch.Models.PSJobSpecification
+    LastModified                : 7/26/2015 5:39:33 PM
+    Metadata                    :
+    PreviousState               : Invalid
+    PreviousStateTransitionTime :
+    Schedule                    :
+    State                       : Active
+    StateTransitionTime         : 7/26/2015 5:39:33 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobschedules/JobSchedule26
+  description: |-
+    This command gets all job schedules that have IDs that start with Job by specifying the *Filter* parameter.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Expand
+  description: |+
+    Specifies an Open Data Protocol (OData) expand clause.
+    Specify a value for this parameter to get associated entities of the main entity that you get.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Specifies an OData filter clause.
+    This cmdlet returns job schedules that match the filter that this parameter specifies.
+    If you do not specify a filter, this cmdlet returns all job schedules for the Batch context.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies the ID of the job schedule that this cmdlet gets.
+    You cannot specify wildcard characters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxCount
+  description: |+
+    Specifies the maximum number of job schedules to return.
+    If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+    The default value is 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Select
+  description: |+
+    Specifies an OData select clause.
+    Specify a value for this parameter to get specific properties rather than all object properties.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Get-AzBatchJobSchedule
+name: Get-AzBatchJobSchedule
+description: |-
+  The **Get-AzBatchJobSchedule** cmdlet gets Azure Batch job schedules for the Batch account specified by the *BatchContext* parameter.
+  Specify an ID to get a single job schedule.
+  Specify the *Filter* parameter to get the job schedules that match an Open Data Protocol (OData) filter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 8BAA6D8C-1530-4CC4-8AE5-A2CE6B1192CA
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchjobschedule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchJobSchedule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchJobSchedule.md

@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the defaults set by the user in the current context.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSResourceGroup" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AzDefault [-ResourceGroup] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzDefault
+
+    Id         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup
+    Name       : myResourceGroup
+    Properties : Microsoft.Azure.Management.Internal.Resources.Models.ResourceGroupProperties
+    Location   : eastus
+    ManagedBy  :
+    Tags       :
+  description: |-
+    This command returns the current defaults if there are defaults set, or returns nothing if no default is set.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzDefault -ResourceGroup
+
+    Id         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup
+    Name       : myResourceGroup
+    Properties : Microsoft.Azure.Management.Internal.Resources.Models.ResourceGroupProperties
+    Location   : eastus
+    ManagedBy  :
+    Tags       :
+  description: |-
+    This command returns the current default Resource Group if there is a default set, or returns nothing if no default is set.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResourceGroup
+  description: |+
+    Display Default Resource Group
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Accounts.Get-AzDefault
+name: Get-AzDefault
+description: |-
+  The Get-AzDefault cmdlet gets the Resource Group that the 
+  user has set as default in the current context.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/get-azdefault
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Get-AzDefault.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Get-AzDefault.md

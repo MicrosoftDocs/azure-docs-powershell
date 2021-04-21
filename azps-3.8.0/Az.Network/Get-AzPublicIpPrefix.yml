@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a public IP prefix
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpPrefix" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzPublicIpPrefix
+  href: ./New-AzPublicIpPrefix.yml
+- text: Remove-AzPublicIpPrefix
+  href: ./Remove-AzPublicIpPrefix.yml
+- text: Set-AzPublicIpPrefix
+  href: ./Set-AzPublicIpPrefix.yml
+syntaxes:
+- >-
+  Get-AzPublicIpPrefix [-Name <String>] [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzPublicIpPrefix -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzPublicIpPrefix -ResourceGroupName myRg -Name myPublicIpPrefix1
+
+    Name                   : myPublicIpPrefix1
+    ResourceGroupName      : myRg
+    Location               : westus
+    Id                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRg/providers/Mic
+                             rosoft.Network/publicIPPrefixes/myPublicIpPrefix1
+    Etag                   : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid           : 00000000-0000-0000-0000-000000000000
+    ProvisioningState      : Succeeded
+    Tags                   :
+    PublicIpAddressVersion : IPv4
+    PrefixLength           : 28
+    IPPrefix               : xx.xx.xx.xx/xx
+    IdleTimeoutInMinutes   :
+    Zones                  : {}
+    Sku                    : {
+                               "Name": "Standard"
+                             }
+    IpTags                 : []
+    PublicIpAddresses      : []
+  description: |-
+    This command gets a public IP prefix resource with myPublicIpPrefix1 in resource group myRg
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzPublicIpPrefix -Name myPublicIpPrefix*
+
+    Name                   : myPublicIpPrefix1
+    ResourceGroupName      : myRg
+    Location               : westus
+    Id                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRg/providers/Mic
+                             rosoft.Network/publicIPPrefixes/myPublicIpPrefix1
+    Etag                   : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid           : 00000000-0000-0000-0000-000000000000
+    ProvisioningState      : Succeeded
+    Tags                   :
+    PublicIpAddressVersion : IPv4
+    PrefixLength           : 28
+    IPPrefix               : xx.xx.xx.xx/xx
+    IdleTimeoutInMinutes   :
+    Zones                  : {}
+    Sku                    : {
+                               "Name": "Standard"
+                             }
+    IpTags                 : []
+    PublicIpAddresses      : []
+  description: |-
+    This command gets all public IP prefix resources that start with myPublicIpPrefix.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The resource name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The resource Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzPublicIpPrefix
+name: Get-AzPublicIpPrefix
+description: |-
+  The **Get-AzPublicIpPrefix** cmdlet gets one or more public IP prefixes in a resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azpublicipprefix
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzPublicIpPrefix.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzPublicIpPrefix.md

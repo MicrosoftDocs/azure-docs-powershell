@@ -1,0 +1,75 @@
+### YamlMime:PowershellModule
+children:
+- title: Key Vault
+  cmdlets:
+  - Az.KeyVault.Add-AzKeyVaultCertificate
+  - Az.KeyVault.Add-AzKeyVaultCertificateContact
+  - Az.KeyVault.Add-AzKeyVaultKey
+  - Az.KeyVault.Add-AzKeyVaultManagedStorageAccount
+  - Az.KeyVault.Add-AzKeyVaultNetworkRule
+  - Az.KeyVault.Backup-AzKeyVaultCertificate
+  - Az.KeyVault.Backup-AzKeyVaultKey
+  - Az.KeyVault.Backup-AzKeyVaultManagedStorageAccount
+  - Az.KeyVault.Backup-AzKeyVaultSecret
+  - Az.KeyVault.Get-AzKeyVault
+  - Az.KeyVault.Get-AzKeyVaultCertificate
+  - Az.KeyVault.Get-AzKeyVaultCertificateContact
+  - Az.KeyVault.Get-AzKeyVaultCertificateIssuer
+  - Az.KeyVault.Get-AzKeyVaultCertificateOperation
+  - Az.KeyVault.Get-AzKeyVaultCertificatePolicy
+  - Az.KeyVault.Get-AzKeyVaultKey
+  - Az.KeyVault.Get-AzKeyVaultManagedStorageAccount
+  - Az.KeyVault.Get-AzKeyVaultManagedStorageSasDefinition
+  - Az.KeyVault.Get-AzKeyVaultSecret
+  - Az.KeyVault.Import-AzKeyVaultCertificate
+  - Az.KeyVault.New-AzKeyVault
+  - Az.KeyVault.New-AzKeyVaultCertificateAdministratorDetail
+  - Az.KeyVault.New-AzKeyVaultCertificateOrganizationDetail
+  - Az.KeyVault.New-AzKeyVaultCertificatePolicy
+  - Az.KeyVault.New-AzKeyVaultNetworkRuleSetObject
+  - Az.KeyVault.Remove-AzKeyVault
+  - Az.KeyVault.Remove-AzKeyVaultAccessPolicy
+  - Az.KeyVault.Remove-AzKeyVaultCertificate
+  - Az.KeyVault.Remove-AzKeyVaultCertificateContact
+  - Az.KeyVault.Remove-AzKeyVaultCertificateIssuer
+  - Az.KeyVault.Remove-AzKeyVaultCertificateOperation
+  - Az.KeyVault.Remove-AzKeyVaultKey
+  - Az.KeyVault.Remove-AzKeyVaultManagedStorageAccount
+  - Az.KeyVault.Remove-AzKeyVaultManagedStorageSasDefinition
+  - Az.KeyVault.Remove-AzKeyVaultNetworkRule
+  - Az.KeyVault.Remove-AzKeyVaultSecret
+  - Az.KeyVault.Restore-AzKeyVaultCertificate
+  - Az.KeyVault.Restore-AzKeyVaultKey
+  - Az.KeyVault.Restore-AzKeyVaultManagedStorageAccount
+  - Az.KeyVault.Restore-AzKeyVaultSecret
+  - Az.KeyVault.Set-AzKeyVaultAccessPolicy
+  - Az.KeyVault.Set-AzKeyVaultCertificateIssuer
+  - Az.KeyVault.Set-AzKeyVaultCertificatePolicy
+  - Az.KeyVault.Set-AzKeyVaultManagedStorageSasDefinition
+  - Az.KeyVault.Set-AzKeyVaultSecret
+  - Az.KeyVault.Stop-AzKeyVaultCertificateOperation
+  - Az.KeyVault.Undo-AzKeyVaultCertificateRemoval
+  - Az.KeyVault.Undo-AzKeyVaultKeyRemoval
+  - Az.KeyVault.Undo-AzKeyVaultManagedStorageAccountRemoval
+  - Az.KeyVault.Undo-AzKeyVaultManagedStorageSasDefinitionRemoval
+  - Az.KeyVault.Undo-AzKeyVaultRemoval
+  - Az.KeyVault.Undo-AzKeyVaultSecretRemoval
+  - Az.KeyVault.Update-AzKeyVault
+  - Az.KeyVault.Update-AzKeyVaultCertificate
+  - Az.KeyVault.Update-AzKeyVaultKey
+  - Az.KeyVault.Update-AzKeyVaultManagedStorageAccount
+  - Az.KeyVault.Update-AzKeyVaultManagedStorageAccountKey
+  - Az.KeyVault.Update-AzKeyVaultNetworkRuleSet
+  - Az.KeyVault.Update-AzKeyVaultSecret
+uid: Az.KeyVault
+name: Az.KeyVault
+description: |-
+  This topic displays help topics for the Azure Key Vault Cmdlets.
+metadata:
+  Module Name: Az.KeyVault
+  Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.keyvault
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Az.KeyVault.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Az.KeyVault.md

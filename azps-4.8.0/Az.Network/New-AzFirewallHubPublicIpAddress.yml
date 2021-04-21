@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Public Ip assoicated to the firewall on virtual hub
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallHubPublicIpAddresses" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzFirewallHubPublicIpAddress [-Count <Int32>] [-Addresses <PSAzureFirewallPublicIpAddress[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzFirewallHubPublicIpAddress -Count 2
+  description: |-
+    This will create 2 public ips on the firewall attached to the virtual hub. This will create the ip address in the backend.We cannot provide the ipaddresses explicitly for a new firewall.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> $publicIp1 = New-AzFirewallPublicIpAddress -Address 10.2.3.4
+    PS C:\> $publicIp2 = New-AzFirewallPublicIpAddress -Address 20.56.37.46
+    PS C:\> New-AzFirewallHubPublicIpAddress -Count 3 -Addresses $publicIp1, $publicIp2
+  description: |-
+    This will create 1 new public ip on the firewall by retain $publicIp1, $publicIp2 which are already exist on the firewall.
+  summary: ""
+parameters:
+- type: <xref href="PSAzureFirewallPublicIpAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Addresses
+  description: |+
+    The Public IP Addresses of the Firewall attached to a hub
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Count
+  description: |+
+    The count of public Ip addresses
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.Network.New-AzFirewallHubPublicIpAddress
+name: New-AzFirewallHubPublicIpAddress
+description: |-
+  Public Ip assoicated to the firewall on virtual hub
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azfirewallhubpublicipaddress
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzFirewallHubPublicIpAddress.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzFirewallHubPublicIpAddress.md

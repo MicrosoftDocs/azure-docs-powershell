@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a virtual network subnet configuration.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSServiceEndpointPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSDelegation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSSubnet" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzVirtualNetworkSubnetConfig
+  href: ./Add-AzVirtualNetworkSubnetConfig.yml
+- text: Get-AzVirtualNetworkSubnetConfig
+  href: ./Get-AzVirtualNetworkSubnetConfig.yml
+- text: Remove-AzVirtualNetworkSubnetConfig
+  href: ./Remove-AzVirtualNetworkSubnetConfig.yml
+- text: Set-AzVirtualNetworkSubnetConfig
+  href: ./Set-AzVirtualNetworkSubnetConfig.yml
+syntaxes:
+- >-
+  New-AzVirtualNetworkSubnetConfig -Name <String> -AddressPrefix <String[]>
+
+   [-NetworkSecurityGroup <PSNetworkSecurityGroup>] [-RouteTable <PSRouteTable>] [-ServiceEndpoint <String[]>]
+
+   [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>] [-Delegation <PSDelegation[]>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzVirtualNetworkSubnetConfig -Name <String> -AddressPrefix <String[]> [-NetworkSecurityGroupId <String>]
+
+   [-RouteTableId <String>] [-ServiceEndpoint <String[]>] [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>]
+
+   [-Delegation <PSDelegation[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: '1:  Create a virtual network with two subnets and a network security group'
+  code: "New-AzResourceGroup -Name TestResourceGroup -Location centralus\r\n\r\n$rdpRule = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description \"Allow RDP\" `\r\n   -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 `\r\n   -SourceAddressPrefix Internet -SourcePortRange * `\r\n   -DestinationAddressPrefix * -DestinationPortRange 3389 \r\n    \r\n$networkSecurityGroup = New-AzNetworkSecurityGroup -ResourceGroupName TestResourceGroup `\r\n  -Location centralus -Name \"NSG-FrontEnd\" -SecurityRules $rdpRule\r\n\r\n$frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet `\r\n    -AddressPrefix \"10.0.1.0/24\" -NetworkSecurityGroup $networkSecurityGroup\r\n\r\n$backendSubnet = New-AzVirtualNetworkSubnetConfig -Name backendSubnet `\r\n    -AddressPrefix \"10.0.2.0/24\" -NetworkSecurityGroup $networkSecurityGroup\r\n\r\nNew-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup `\r\n    -Location centralus -AddressPrefix \"10.0.0.0/16\" -Subnet $frontendSubnet,$backendSubnet"
+  description: |-
+    This example creates two new subnet configurations using the 
+        New-AzVirtualSubnetConfig cmdlet, and then uses them to create a virtual network. 
+        The New-AzVirtualSubnetConfig template only creates an in-memory representation of 
+        the subnet. In this example, the frontendSubnet has CIDR 10.0.1.0/24 and references a 
+        network security group that allows RDP access. The backendSubnet has CIDR 10.0.2.0/24 and 
+        references the same network security group.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressPrefix
+  isRequired: true
+  description: |+
+    Specifies a range of IP addresses for a subnet configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSDelegation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Delegation
+  description: |+
+    List of services that have permission to perform operations on this subnet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the subnet configuration to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  name: NetworkSecurityGroup
+  description: |+
+    Specifies a NetworkSecurityGroup object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NetworkSecurityGroupId
+  description: |+
+    Specifies the ID of a network security group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+  name: RouteTable
+  description: |+
+    Specifies the route table associated with the subnet configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RouteTableId
+  description: |+
+    Specifies the ID of the route table associated with the subnet configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServiceEndpoint
+  description: |+
+    Service Endpoint Value
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSServiceEndpointPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServiceEndpointPolicy
+  description: |+
+    Service Endpoint Policies
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzVirtualNetworkSubnetConfig
+name: New-AzVirtualNetworkSubnetConfig
+description: |-
+  **The New-AzVirtualNetworkSubnetConfig** cmdlet creates a virtual network subnet configuration.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 901FD38B-67FA-40D5-8D23-51E5544C25D8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvirtualnetworksubnetconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVirtualNetworkSubnetConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVirtualNetworkSubnetConfig.md

@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables Azure PowerShell to collect data to improve the user experience with the Azure PowerShell
+  cmdlets. Executing this cmdlet opts in to data collection for the current user on the current
+  machine. Data is collected by default unless you explicitly opt out.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AzDataCollection
+  href: ./Disable-AzDataCollection.yml
+syntaxes:
+- Enable-AzDataCollection [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enabling data collection for the current user'
+  code: |-
+    Enable-AzDataCollection
+  description: ""
+  summary: |+
+    The following example shows how to enable data collection for the current user.
+
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Accounts.Enable-AzDataCollection
+name: Enable-AzDataCollection
+description: |-
+  The `Enable-AzDataCollection` cmdlet is used to opt in to data collection. Azure PowerShell
+  automatically collects telemetry data by default. Microsoft aggregates collected data to identify
+  patterns of usage, to identify common issues, and to improve the experience of Azure PowerShell.
+  Microsoft Azure PowerShell doesn't collect any private or personal data. To disable data collection,
+  you must explicitly opt out by executing `Disable-AzDataCollection`.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/enable-azdatacollection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Enable-AzDataCollection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Enable-AzDataCollection.md

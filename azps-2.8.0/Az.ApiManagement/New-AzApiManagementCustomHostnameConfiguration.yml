@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an instance of `PsApiManagementCustomHostNameConfiguration`.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementCertificateInformation" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementCustomHostNameConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApiManagement
+  href: ./New-AzApiManagement.yml
+- text: Set-AzApiManagement
+  href: ./Set-AzApiManagement.yml
+syntaxes:
+- >-
+  New-AzApiManagementCustomHostnameConfiguration -Hostname <String> -HostnameType <PsApiManagementHostnameType>
+
+   -HostNameCertificateInformation <PsApiManagementCertificateInformation> [-DefaultSslBinding]
+
+   [-NegotiateClientCertificate] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzApiManagementCustomHostnameConfiguration -Hostname <String> -HostnameType <PsApiManagementHostnameType>
+
+   -PfxPath <String> [-PfxPassword <SecureString>] [-DefaultSslBinding] [-NegotiateClientCertificate]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzApiManagementCustomHostnameConfiguration -Hostname <String> -HostnameType <PsApiManagementHostnameType>
+
+   -KeyVaultId <String> [-DefaultSslBinding] [-NegotiateClientCertificate]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create and initialize an instance of PsApiManagementCustomHostNameConfiguration using an Ssl Certificate from file'
+  code: |-
+    PS C:\>$portal = New-AzApiManagementCustomHostnameConfiguration -Hostname "portal.contoso.com" -HostnameType Portal -PfxPath "C:\contoso\certificates\apimanagement.pfx" -PfxPassword "1111" -DefaultSslBinding
+    PS C:\>$customConfig = @($portal)
+    PS C:\>New-AzApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization Contoso -AdminEmail admin@contoso.com -CustomHostnameConfiguration $customConfig
+  description: |-
+    This command creates and initializes an instance of **PsApiManagementCustomHostNameConfiguration** for Portal. Then it creates a new ApiManagement service with custom hostname configuration.
+  summary: ""
+- title: 'Example 2: Create and initialize an instance of PsApiManagementCustomHostNameConfiguration using an Secret from KeyVault Resource'
+  code: |-
+    PS C:\>$portal = New-AzApiManagementCustomHostnameConfiguration -Hostname "portal.contoso.com" -HostnameType Portal -KeyVaultId "https://apim-test-keyvault.vault.azure.net/secrets/api-portal-custom-ssl.pfx"
+
+    PS C:\>$customConfig = @($portal)
+    PS C:\>New-AzApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization Contoso -AdminEmail admin@contoso.com -CustomHostnameConfiguration $customConfig -AssignIdentity
+  description: |-
+    This command creates and initializes an instance of **PsApiManagementCustomHostNameConfiguration**.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultSslBinding
+  description: |+
+    Determines whether the value is a secret and should be encrypted or not.
+    This parameter is optional.
+    Default Value is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Hostname
+  isRequired: true
+  description: |+
+    Custom Hostname
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementCertificateInformation" data-throw-if-not-resolved="False" />
+  name: HostNameCertificateInformation
+  isRequired: true
+  description: |+
+    Existing Certificate Configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameType" data-throw-if-not-resolved="False" />
+  name: HostnameType
+  isRequired: true
+  description: |+
+    Hostname Type
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Proxy, Portal, Management, Scm, DeveloperPortal
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVaultId
+  isRequired: true
+  description: |+
+    KeyVaultId to the secret storing the Custom SSL Certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NegotiateClientCertificate
+  description: |+
+    Determines whether the value is a secret and should be encrypted or not.
+    This parameter is optional.
+    Default Value is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: PfxPassword
+  description: |+
+    Password for the .pfx certificate file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PfxPath
+  isRequired: true
+  description: |+
+    Path to a .pfx certificate file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.New-AzApiManagementCustomHostnameConfiguration
+name: New-AzApiManagementCustomHostnameConfiguration
+description: |-
+  The **New-AzApiManagementCustomHostnameConfiguration** cmdlet is a helper command that creates an instance of **PsApiManagementCustomHostNameConfiguration**.
+  This command is used with the New-AzApiManagement and Set-AzApiManagement cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementcustomhostnameconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementCustomHostnameConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementCustomHostnameConfiguration.md

@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Autoscale email notification.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.WebhookNotification" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.AutoscaleNotification" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzAutoscaleWebhook
+  href: ./New-AzAutoscaleWebhook.yml
+syntaxes:
+- >-
+  New-AzAutoscaleNotification [[-Webhook] <WebhookNotification[]>] [[-CustomEmail] <String[]>]
+
+   [-SendEmailToSubscriptionAdministrator] [-SendEmailToSubscriptionCoAdministrator]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an Autoscale email notification'
+  code: |-
+    PS C:\>New-AzAutoscaleNotification -CustomEmails "pattif@contoso.com, davidchew@contoso.net"
+  description: |-
+    This command creates an Autosacale email notification for two specified addresses.
+  summary: ""
+- title: 'Example 2: Create an Autoscale email notification for the subscription administrator'
+  code: |-
+    PS C:\>New-AzAutoscaleNotification -SendEmailToSubscriptionAdministrator
+  description: |-
+    This command creates an Autosacale email notification for the subscription administrator.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CustomEmail
+  description: |+
+    Specifies a comma-separated list of email addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SendEmailToSubscriptionAdministrator
+  description: |+
+    Indicates that this operation sends an email notification to the subscription administrator.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SendEmailToSubscriptionCoAdministrator
+  description: |+
+    Indicates that this operation sends an email notification to the subscription co-administrators.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.WebhookNotification" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Webhook
+  description: |+
+    Specifies a comma-separated list of Autoscale webhooks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.New-AzAutoscaleNotification
+name: New-AzAutoscaleNotification
+description: |-
+  The **New-AzAutoscaleNotification** cmdlet creates an email notification for Autoscale.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: B5B5F494-D912-40D0-99E2-A62FAACA3EC9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/new-azautoscalenotification
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAutoscaleNotification.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAutoscaleNotification.md

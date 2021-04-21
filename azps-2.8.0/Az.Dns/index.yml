@@ -1,0 +1,27 @@
+### YamlMime:PowershellModule
+children:
+- title: DNS
+  cmdlets:
+  - Az.Dns.Add-AzDnsRecordConfig
+  - Az.Dns.Get-AzDnsRecordSet
+  - Az.Dns.Get-AzDnsZone
+  - Az.Dns.New-AzDnsRecordConfig
+  - Az.Dns.New-AzDnsRecordSet
+  - Az.Dns.New-AzDnsZone
+  - Az.Dns.Remove-AzDnsRecordConfig
+  - Az.Dns.Remove-AzDnsRecordSet
+  - Az.Dns.Remove-AzDnsZone
+  - Az.Dns.Set-AzDnsRecordSet
+  - Az.Dns.Set-AzDnsZone
+uid: Az.Dns
+name: Az.Dns
+description: |-
+  This topic displays help topics for the Azure DNS Cmdlets.
+metadata:
+  Module Name: Az.Dns
+  Module Guid: 5e5ed8bc-27bf-4380-9de1-4b22ba0920b2
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.dns
+  Help Version: 4.1.2.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Dns/Dns/help/Az.DNS.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Dns/Dns/help/Az.DNS.md

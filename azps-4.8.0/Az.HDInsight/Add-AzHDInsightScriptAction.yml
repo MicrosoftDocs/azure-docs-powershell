@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a script action to a cluster configuration object.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzHDInsightClusterConfig
+  href: ./New-AzHDInsightClusterConfig.yml
+syntaxes:
+- >-
+  Add-AzHDInsightScriptAction [-Config] <AzureHDInsightConfig> [-NodeType] <ClusterNodeType> [-Uri] <Uri>
+
+   [-Name] <String> [[-Parameters] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a script action to the cluster configuration object'
+  code: |-
+    PS C:\># Primary storage account info
+    PS C:\> $storageAccountResourceGroupName = "Group"
+    PS C:\> $storageAccountName = "yourstorageacct001"
+    PS C:\> $storageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+
+
+    PS C:\> $storageContainer = "container001"
+
+    # Script action info
+    PS C:\> $scriptActionName = "<script action name>"
+    PS C:\> $scriptActionURI = "<script action URI>"
+    PS C:\> $scriptActionParameters = "<script action parameters>" 
+
+    # Cluster configuration info
+    PS C:\> $location = "East US 2"
+    PS C:\> $clusterResourceGroupName = "Group"
+    PS C:\> $clusterName = "your-hadoop-001"
+    PS C:\> $clusterCreds = Get-Credential
+
+    # If the cluster's resource group doesn't exist yet, run:
+    #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+    # Create the cluster
+    PS C:\> New-AzHDInsightClusterConfig  `
+                | Add-AzHDInsightScriptAction `
+                    -Name $scriptActionName `
+                    -Uri $scriptActionURI `
+                    -Parameters $scriptActionParameters `
+                    -NodeType Worker `
+                | Add-AzHDInsightScriptAction `
+                    -Name $scriptActionName `
+                    -Uri $scriptActionURI `
+                    -Parameters $scriptActionParameters `
+                    -NodeType Head `
+                | New-AzHDInsightCluster `
+                    -ClusterType Hadoop `
+                    -OSType Windows `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location `
+                    -DefaultStorageAccountName "$storageAccountName.blob.core.contoso.net" `
+                    -DefaultStorageAccountKey $storageAccountKey `
+                    -DefaultStorageContainer $storageContainer
+  description: |-
+    This command adds a script action for the Head and Worker nodes of the your-hadoop-001 cluster, to be run at the end of cluster creation.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+  name: Config
+  isRequired: true
+  description: |+
+    Specifies the HDInsight cluster configuration object that this cmdlet modifies.
+    This object is created by the **New-AzHDInsightClusterConfig** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the script action.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType" data-throw-if-not-resolved="False" />
+  name: NodeType
+  isRequired: true
+  description: |+
+    Specifies the node type on which to run the script action.
+    The acceptable values for this parameter are:
+    - HeadNode
+    - WorkerNode
+    - ZookeeperNode
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: HeadNode, WorkerNode, ZookeeperNode, EdgeNode
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Parameters
+  description: |+
+    Specifies the parameters for the script action.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: Uri
+  isRequired: true
+  description: |+
+    Specifies the public URI for the script action (a PowerShell or Bash script).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Add-AzHDInsightScriptAction
+name: Add-AzHDInsightScriptAction
+description: |-
+  The **Add-AzHDInsightScriptAction** cmdlet adds script actions to the HDInsight configuration object created by the New-AzHDInsightClusterConfig cmdlet.
+  Script actions provide functionality that is used to install additional software or to change the configuration of applications that run on a Hadoop cluster by using Windows PowerShell or Bash scripts (for Windows or Linux clusters, respectively).
+  A script action runs on the cluster nodes when HDInsight clusters are deployed, and they run after nodes in the cluster complete HDInsight configuration.
+  The script action runs under system administrator account privileges and provides full access rights to the cluster nodes.
+  You can provide each cluster with a list of script actions to run in a specified sequence.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 8F0634BD-D817-4365-B6D1-924DC36AE4C9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/add-azhdinsightscriptaction
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Add-AzHDInsightScriptAction.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Add-AzHDInsightScriptAction.md

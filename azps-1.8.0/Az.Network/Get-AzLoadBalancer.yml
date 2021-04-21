@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a load balancer.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzLoadBalancer
+  href: ./New-AzLoadBalancer.yml
+- text: Remove-AzLoadBalancer
+  href: ./Remove-AzLoadBalancer.yml
+- text: Set-AzLoadBalancer
+  href: ./Set-AzLoadBalancer.yml
+syntaxes:
+- >-
+  Get-AzLoadBalancer [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzLoadBalancer -ResourceGroupName <String> -Name <String> -ExpandResource <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a load balancer'
+  code: |-
+    PS C:\> Get-AzLoadBalancer -Name "MyLoadBalancer1" -ResourceGroupName "MyResourceGroup"
+
+    Name                     : MyLoadBalancer1
+    ResourceGroupName        : MyResourceGroup
+    Location                 : australiaeast
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/M
+                               icrosoft.Network/loadBalancers/MyLoadBalancer1
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    FrontendIpConfigurations : []
+    BackendAddressPools      : []
+    LoadBalancingRules       : []
+    Probes                   : []
+    InboundNatRules          : []
+    InboundNatPools          : []
+    Sku                      : {
+                                 "Name": "Basic"
+                               }
+  description: |-
+    This command gets the load balancer named MyLoadBalancer.
+    A load balancer must exist before you can run this cmdlet.
+  summary: ""
+- title: 'Example 2: List load balancers using filtering'
+  code: |-
+    PS C:\> Get-AzLoadBalancer -Name MyLoadBalancer*
+
+    Name                     : MyLoadBalancer1
+    ResourceGroupName        : MyResourceGroup
+    Location                 : australiaeast
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/M
+                               icrosoft.Network/loadBalancers/MyLoadBalancer1
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    FrontendIpConfigurations : []
+    BackendAddressPools      : []
+    LoadBalancingRules       : []
+    Probes                   : []
+    InboundNatRules          : []
+    InboundNatPools          : []
+    Sku                      : {
+                                 "Name": "Basic"
+                               }
+
+    Name                     : MyLoadBalancer2
+    ResourceGroupName        : MyResourceGroup
+    Location                 : australiaeast
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/M
+                               icrosoft.Network/loadBalancers/MyLoadBalancer2
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    FrontendIpConfigurations : []
+    BackendAddressPools      : []
+    LoadBalancingRules       : []
+    Probes                   : []
+    InboundNatRules          : []
+    InboundNatPools          : []
+    Sku                      : {
+                                 "Name": "Basic"
+                               }
+  description: |-
+    This command gets all load balancers with a name that starts with "MyLoadBalancer"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExpandResource
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: ""
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: ""
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzLoadBalancer
+name: Get-AzLoadBalancer
+description: |-
+  The **Get-AzLoadBalancer** cmdlet gets one or more Azure load balancers that are contained in a resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 78F356F6-A621-4C27-B9CC-D103E74B3A33
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azloadbalancer
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzLoadBalancer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzLoadBalancer.md

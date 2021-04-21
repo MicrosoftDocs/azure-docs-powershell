@@ -1,0 +1,200 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a new Azure Front Door load balancer
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontDoor" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzFrontDoor
+  href: ./Get-AzFrontDoor.yml
+- text: Set-AzFrontDoor
+  href: ./Set-AzFrontDoor.yml
+- text: Remove-AzFrontDoor
+  href: ./Remove-AzFrontDoor.yml
+- text: New-AzFrontDoorRoutingRuleObject
+  href: ./New-AzFrontDoorRoutingRuleObject.yml
+- text: New-AzFrontDoorHealthProbeSettingObject
+  href: ./New-AzFrontDoorHealthProbeSettingObject.yml
+- text: New-AzFrontDoorLoadBalancingSettingObject
+  href: ./New-AzFrontDoorLoadBalancingSettingObject.yml
+- text: New-AzFrontDoorFrontendEndpointObject
+  href: ./New-AzFrontDoorFrontendEndpointObject.yml
+- text: New-AzFrontDoorBackendPoolObject
+  href: ./New-AzFrontDoorBackendPoolObject.yml
+syntaxes:
+- >-
+  New-AzFrontDoor -ResourceGroupName <String> -Name <String> -RoutingRule <PSRoutingRule[]>
+
+   -BackendPool <PSBackendPool[]> -FrontendEndpoint <PSFrontendEndpoint[]>
+
+   -LoadBalancingSetting <PSLoadBalancingSetting[]> -HealthProbeSetting <PSHealthProbeSetting[]>
+
+   [-Tag <Hashtable>] [-EnabledState <PSEnabledState>] [-DisableCertificateNameCheck]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Front Door based on given parameters.'
+  code: |-
+    PS C:\> New-AzFrontDoor -Name "frontDoor1" -ResourceGroupName "rg1" -RoutingRule $routingrule1 -BackendPool $backendpool1 -FrontendEndpoint $frontendEndpoint1 -LoadBalancingSetting $loadBalancingSetting1 -HealthProbeSetting $healthProbeSetting1
+
+    FriendlyName                : frontdoor1
+    RoutingRules                : {routingrule1}
+    BackendPools                : {backendpool1}
+    EnforceCertificateNameCheck : Enabled
+    HealthProbeSettings         : {healthProbeSetting1}
+    LoadBalancingSettings       : {loadbalancingsetting1}
+    FrontendEndpoints           : {frontendendpoint1}
+    EnabledState                : Enabled
+    ResourceState               : Enabled
+    ProvisioningState           : Succeeded
+    Cname                       :
+    Tags                        : {tag1, tag2}
+    Id                          : /subscriptions/{guid}/resourcegroups/rg1/providers/Microsoft.Network/frontdoors/frontdoor1
+    Name                        : frontdoor1
+    Type                        : Microsoft.Network/frontdoors
+  description: |-
+    Create a Front Door based on given parameters.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSBackendPool" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BackendPool
+  isRequired: true
+  description: |+
+    Backendpools available to routing rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableCertificateNameCheck
+  description: |+
+    Whether to disable certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: EnabledState
+  description: |+
+    EnabledState of the Front Door load balancer.
+    Default value is Enabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontendEndpoint" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FrontendEndpoint
+  isRequired: true
+  description: |+
+    Frontend endpoints available to routing rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSHealthProbeSetting" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HealthProbeSetting
+  isRequired: true
+  description: |+
+    Health probe settings associated with this Front Door instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSLoadBalancingSetting" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LoadBalancingSetting
+  isRequired: true
+  description: |+
+    Load balancing settings associated with this Front Door instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Front Door name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name that the Front Door will be created in.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRoutingRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RoutingRule
+  isRequired: true
+  description: |+
+    Routing rules associated with this FrontDoor
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    The tags associate with the FrontDoor.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoor
+name: New-AzFrontDoor
+description: |-
+  The **New-AzFrontDoor** cmdlet creates a new Azure Front Door load balancer in the specified resource group under current subscription
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoor
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoor.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoor.md

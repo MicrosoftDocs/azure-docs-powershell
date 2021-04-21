@@ -1,0 +1,55 @@
+### YamlMime:PowershellModule
+children:
+- title: Stack Edge
+  cmdlets:
+  - Az.StackEdge.Get-AzStackEdgeBandwidthSchedule
+  - Az.StackEdge.Get-AzStackEdgeDevice
+  - Az.StackEdge.Get-AzStackEdgeJob
+  - Az.StackEdge.Get-AzStackEdgeOrder
+  - Az.StackEdge.Get-AzStackEdgeRole
+  - Az.StackEdge.Get-AzStackEdgeShare
+  - Az.StackEdge.Get-AzStackEdgeStorageAccount
+  - Az.StackEdge.Get-AzStackEdgeStorageAccountCredential
+  - Az.StackEdge.Get-AzStackEdgeStorageContainer
+  - Az.StackEdge.Get-AzStackEdgeTrigger
+  - Az.StackEdge.Get-AzStackEdgeUser
+  - Az.StackEdge.Invoke-AzStackEdgeDevice
+  - Az.StackEdge.Invoke-AzStackEdgeShare
+  - Az.StackEdge.Invoke-AzStackEdgeStorageContainer
+  - Az.StackEdge.New-AzStackEdgeBandwidthSchedule
+  - Az.StackEdge.New-AzStackEdgeDevice
+  - Az.StackEdge.New-AzStackEdgeOrder
+  - Az.StackEdge.New-AzStackEdgeRole
+  - Az.StackEdge.New-AzStackEdgeShare
+  - Az.StackEdge.New-AzStackEdgeStorageAccount
+  - Az.StackEdge.New-AzStackEdgeStorageAccountCredential
+  - Az.StackEdge.New-AzStackEdgeStorageContainer
+  - Az.StackEdge.New-AzStackEdgeTrigger
+  - Az.StackEdge.New-AzStackEdgeUser
+  - Az.StackEdge.Remove-AzStackEdgeBandwidthSchedule
+  - Az.StackEdge.Remove-AzStackEdgeDevice
+  - Az.StackEdge.Remove-AzStackEdgeOrder
+  - Az.StackEdge.Remove-AzStackEdgeRole
+  - Az.StackEdge.Remove-AzStackEdgeShare
+  - Az.StackEdge.Remove-AzStackEdgeStorageAccount
+  - Az.StackEdge.Remove-AzStackEdgeStorageAccountCredential
+  - Az.StackEdge.Remove-AzStackEdgeStorageContainer
+  - Az.StackEdge.Remove-AzStackEdgeTrigger
+  - Az.StackEdge.Remove-AzStackEdgeUser
+  - Az.StackEdge.Set-AzStackEdgeBandwidthSchedule
+  - Az.StackEdge.Set-AzStackEdgeRole
+  - Az.StackEdge.Set-AzStackEdgeShare
+  - Az.StackEdge.Set-AzStackEdgeStorageAccountCredential
+  - Az.StackEdge.Set-AzStackEdgeUser
+uid: Az.StackEdge
+name: Az.StackEdge
+description: |-
+  Module to create a device and perform operations on StackEdge devices
+metadata:
+  Module Name: Az.StackEdge
+  Module Guid: 3C11EF12-C79F-45FE-ACDF-A2C784D99C97
+  Download Help Link: ""
+  Help Version: ""
+  Locale: ""
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackEdge/StackEdge/help/Az.StackEdge.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StackEdge/StackEdge/help/Az.StackEdge.md

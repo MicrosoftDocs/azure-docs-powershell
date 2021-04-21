@@ -1,0 +1,382 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates specific properties of a job.
+  You can call this operation to notify the Import/Export service that the hard drives comprising the import or export job have been shipped to the Microsoft data center.
+  It can also be used to cancel an existing job.
+module: Az.ImportExport
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  DRIVELIST <IDriveStatus[]>: List of drives that comprise the job.
+    - `[BitLockerKey <String>]`: The BitLocker key used to encrypt the drive.
+    - `[BytesSucceeded <Int64?>]`: Bytes successfully transferred for the drive.
+    - `[CopyStatus <String>]`: Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+    - `[DriveHeaderHash <String>]`: The drive header hash value.
+    - `[DriveId <String>]`: The drive's hardware serial number, without spaces.
+    - `[ErrorLogUri <String>]`: A URI that points to the blob containing the error log for the data transfer operation.
+    - `[ManifestFile <String>]`: The relative path of the manifest file on the drive. 
+    - `[ManifestHash <String>]`: The Base16-encoded MD5 hash of the manifest file on the drive.
+    - `[ManifestUri <String>]`: A URI that points to the blob containing the drive manifest file. 
+    - `[PercentComplete <Int32?>]`: Percentage completed for the drive. 
+    - `[State <DriveState?>]`: The drive's current state. 
+    - `[VerboseLogUri <String>]`: A URI that points to the blob containing the verbose log for the data transfer operation. 
+
+  INPUTOBJECT <IImportExportIdentity>: Identity Parameter
+    - `[Id <String>]`: Resource identity path
+    - `[JobName <String>]`: The name of the import/export job.
+    - `[LocationName <String>]`: The name of the location. For example, West US or westus.
+    - `[ResourceGroupName <String>]`: The resource group name uniquely identifies the resource group within the user subscription.
+    - `[SubscriptionId <String>]`: The subscription ID for the Azure user.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IJobResponse" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzImportExport -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+
+   [-AcceptLanguage <String>] [-BackupDriveManifest] [-CancelRequested] [-DeliveryPackageCarrierName <String>]
+
+   [-DeliveryPackageDriveCount <Int32>] [-DeliveryPackageShipDate <String>]
+
+   [-DeliveryPackageTrackingNumber <String>] [-DriveList <IDriveStatus[]>] [-LogLevel <String>]
+
+   [-ReturnAddressCity <String>] [-ReturnAddressCountryOrRegion <String>] [-ReturnAddressEmail <String>]
+
+   [-ReturnAddressPhone <String>] [-ReturnAddressPostalCode <String>] [-ReturnAddressRecipientName <String>]
+
+   [-ReturnAddressStateOrProvince <String>] [-ReturnAddressStreetAddress1 <String>]
+
+   [-ReturnAddressStreetAddress2 <String>] [-ReturnShippingCarrierAccountNumber <String>]
+
+   [-ReturnShippingCarrierName <String>] [-State <String>] [-Tag <IUpdateJobParametersTags>]
+
+   [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+- >-
+  Update-AzImportExport -InputObject <IImportExportIdentity> [-AcceptLanguage <String>] [-BackupDriveManifest]
+
+   [-CancelRequested] [-DeliveryPackageCarrierName <String>] [-DeliveryPackageDriveCount <Int32>]
+
+   [-DeliveryPackageShipDate <String>] [-DeliveryPackageTrackingNumber <String>] [-DriveList <IDriveStatus[]>]
+
+   [-LogLevel <String>] [-ReturnAddressCity <String>] [-ReturnAddressCountryOrRegion <String>]
+
+   [-ReturnAddressEmail <String>] [-ReturnAddressPhone <String>] [-ReturnAddressPostalCode <String>]
+
+   [-ReturnAddressRecipientName <String>] [-ReturnAddressStateOrProvince <String>]
+
+   [-ReturnAddressStreetAddress1 <String>] [-ReturnAddressStreetAddress2 <String>]
+
+   [-ReturnShippingCarrierAccountNumber <String>] [-ReturnShippingCarrierName <String>] [-State <String>]
+
+   [-Tag <IUpdateJobParametersTags>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update ImportExport job by resource group and server name'
+  code: |-
+    PS C:\> Update-AzImportExport -Name test-job -ResourceGroupName ImportTestRG -DeliveryPackageCarrierName pwsh -DeliveryPackageTrackingNumber pwsh20200000
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+  description: |-
+    This cmdlet updates ImportExport job by resource group and server name.
+  summary: ""
+- title: 'Example 2: Update ImportExport job by identity.'
+  code: |-
+    PS C:\> Get-AzImportExport -Name test-job -ResourceGroupName ImportTestRG | Update-AzImportExport -CancelRequested
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+  description: |-
+    This cmdlet updates ImportExport job by identity.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AcceptLanguage
+  description: |+
+    Specifies the preferred language for the response.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BackupDriveManifest
+  description: |+
+    Indicates whether the manifest files on the drives should be copied to block blobs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CancelRequested
+  description: |+
+    If specified, the value must be true.
+    The service will attempt to cancel the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageCarrierName
+  description: |+
+    The name of the carrier that is used to ship the import or export drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageDriveCount
+  description: |+
+    The number of drives included in the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageShipDate
+  description: |+
+    The date when the package is shipped.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DeliveryPackageTrackingNumber
+  description: |+
+    The tracking number of the package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IDriveStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriveList
+  description: |+
+    List of drives that comprise the job.
+    To construct, see NOTES section for DRIVELIST properties and create a hash table.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Indicates whether error logging or verbose logging is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the import/export job.
+
+  defaultValue: None
+  position: Named
+  aliases: JobName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name uniquely identifies the resource group within the user subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressCity
+  description: |+
+    The city name to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressCountryOrRegion
+  description: |+
+    The country or region to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressEmail
+  description: |+
+    Email address of the recipient of the returned drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressPhone
+  description: |+
+    Phone number of the recipient of the returned drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressPostalCode
+  description: |+
+    The postal code to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressRecipientName
+  description: |+
+    The name of the recipient who will receive the hard drives when they are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressStateOrProvince
+  description: |+
+    The state or province to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressStreetAddress1
+  description: |+
+    The first line of the street address to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnAddressStreetAddress2
+  description: |+
+    The second line of the street address to use when returning the drives.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnShippingCarrierAccountNumber
+  description: |+
+    The customer's account number with the carrier.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ReturnShippingCarrierName
+  description: |+
+    The carrier's name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    If specified, the value must be Shipping, which tells the Import/Export service that the package for the job has been shipped.
+    The ReturnAddress and DeliveryPackage properties must have been set either in this request or in a previous request, otherwise the request will fail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The subscription ID for the Azure user.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api20161101.IUpdateJobParametersTags" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Specifies the tags that will be assigned to the job
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ImportExport.Update-AzImportExport
+name: Update-AzImportExport
+description: |-
+  Updates specific properties of a job.
+  You can call this operation to notify the Import/Export service that the hard drives comprising the import or export job have been shipped to the Microsoft data center.
+  It can also be used to cancel an existing job.
+metadata:
+  external help file: ""
+  Module Name: Az.ImportExport
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.importexport/update-azimportexport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/Update-AzImportExport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ImportExport/help/Update-AzImportExport.md

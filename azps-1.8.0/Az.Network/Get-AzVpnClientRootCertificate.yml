@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about VPN root certificates.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzVpnClientRootCertificate
+  href: ./Add-AzVpnClientRootCertificate.yml
+- text: New-AzVpnClientRootCertificate
+  href: ./New-AzVpnClientRootCertificate.yml
+- text: Remove-AzVpnClientRootCertificate
+  href: ./Remove-AzVpnClientRootCertificate.yml
+syntaxes:
+- >-
+  Get-AzVpnClientRootCertificate [-VpnClientRootCertificateName <String>] -VirtualNetworkGatewayName <String>
+
+   -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about all root certificates'
+  code: |-
+    PS C:\>Get-AzVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup"
+  description: |-
+    This command gets information about all the root certificates assigned to a virtual network gateway named ContosoVirtualNetwork.
+  summary: ""
+- title: 'Example 2: Get information about specific root certificates'
+  code: |-
+    PS C:\>Get-AzVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup" -VpnClientRootCertificateName "ContosoRootClientCertificate"
+  description: |-
+    This command is a variation of the command shown in Example 1.
+    In this case, however, the *VpnClientRootCertificateName* parameter is included in order to limit the returned data to a specific root certificate: ContosoRootClientCertificate.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that the virtual network gateway is assigned to.
+    Resource groups categorize items to help simplify inventory management and general Azure administration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualNetworkGatewayName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual network gateway where the root certificate is assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VpnClientRootCertificateName
+  description: |+
+    Specifies the name of the client root certificate that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzVpnClientRootCertificate
+name: Get-AzVpnClientRootCertificate
+description: |-
+  The **Get-AzVpnClientRootCertificate** cmdlet returns information about the root certificates assigned to a virtual network gateway.
+  Root certificates are X.509 certificates that identify your Root Certification Authority: all other certificates used on the gateway trust the root certificate.
+  By default, **Get-AzVpnClientRootCertificate** returns information about all the root certificates assigned to a gateway.
+  (Gateways can have more than one root certificate.) However, by including the **VpnClientRootCertificateName** parameter you can limit the returned data to a specific certificate.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 16754F70-9619-4F68-86E9-5C8B27812707
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvpnclientrootcertificate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientRootCertificate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientRootCertificate.md

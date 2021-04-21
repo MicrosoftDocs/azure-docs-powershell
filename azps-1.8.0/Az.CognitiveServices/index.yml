@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: Cognitive Services
+  cmdlets:
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccount
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountKey
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountSku
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountType
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountUsage
+  - Az.CognitiveServices.New-AzCognitiveServicesAccount
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountKey
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccount
+  - Az.CognitiveServices.Set-AzCognitiveServicesAccount
+uid: Az.CognitiveServices
+name: Az.CognitiveServices
+description: |-
+  This topic displays help topics for the Azure Cognitive Services cmdlets.
+metadata:
+  Module Name: Az.CognitiveServices
+  Module Guid: 66c566b4-950c-4a2b-9f3b-199d92f0df1a
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.cognitiveservices
+  Help Version: 0.9.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CognitiveServices/CognitiveServices/help/Az.CognitiveServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CognitiveServices/CognitiveServices/help/Az.CognitiveServices.md

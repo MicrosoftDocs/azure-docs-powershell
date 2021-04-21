@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get firewall rules set on Redis Cache.
+module: Az.RedisCache
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSRedisFirewallRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzRedisCacheFirewallRule
+  href: ./New-AzRedisCacheFirewallRule.yml
+- text: Remove-AzRedisCacheFirewallRule
+  href: ./Remove-AzRedisCacheFirewallRule.yml
+- text: Get-AzRedisCache
+  href: ./Get-AzRedisCache.yml
+- text: New-AzRedisCache
+  href: ./New-AzRedisCache.yml
+- text: Remove-AzRedisCache
+  href: ./Remove-AzRedisCache.yml
+- text: Set-AzRedisCache
+  href: ./Set-AzRedisCache.yml
+syntaxes:
+- >-
+  Get-AzRedisCacheFirewallRule [-ResourceGroupName <String>] -Name <String> [-RuleName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a single firewall rule'
+  code: |-
+    PS C:\>Get-AzRedisCacheFirewallRule -Name "mycache" -RuleName "ruleone"
+
+            ResourceGroupName : myGroup
+            Name              : mycache
+            FirewallRuleId    : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/myGroup/providers/Microsoft.Cache/Redis/mycache/firewallRules/ruleone
+            RuleName          : ruleone
+            Type              : Microsoft.Cache/Redis/firewallRules
+            StartIP           : 10.0.0.1
+            EndIP             : 10.0.0.32
+  description: |-
+    This command gets firewall rule named ruleone from Redis Cache named mycache.
+  summary: ""
+- title: 'Example 2: Get all firewall rules'
+  code: |-
+    PS C:\>Get-AzRedisCacheFirewallRule -Name "mycache"
+
+            ResourceGroupName : myGroup
+            Name              : mycache
+            FirewallRuleId    : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/myGroup/providers/Microsoft.Cache/Redis/mycache/firewallRules/ruleone
+            RuleName          : ruleone
+            Type              : Microsoft.Cache/Redis/firewallRules
+            StartIP           : 10.0.0.1
+            EndIP             : 10.0.0.32
+
+            ResourceGroupName : myGroup
+            Name              : mycache
+            FirewallRuleId    : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/myGroup/providers/Microsoft.Cache/Redis/mycache/firewallRules/ruletwo
+            RuleName          : ruletwo
+            Type              : Microsoft.Cache/Redis/firewallRules
+            StartIP           : 10.0.0.33
+            EndIP             : 10.0.0.64
+  description: |-
+    This command gets all firewall rules from Redis Cache named mycache.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of redis cache.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Name of resource group in which cache exists.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RuleName
+  description: |+
+    Name of firewall rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RedisCache.Get-AzRedisCacheFirewallRule
+name: Get-AzRedisCacheFirewallRule
+description: |-
+  If **RuleName** parameter if provided, **Get-AzRedisCacheFirewallRule** cmdlet gets detail about the specified firewall rule on Azure Redis Cache. If only **Name** is specified this operation gets all firewall rules available on that Redis Cache.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
+  Module Name: Az.RedisCache
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.rediscache/get-azrediscachefirewallrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/Get-AzRedisCacheFirewallRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisCache/RedisCache/help/Get-AzRedisCacheFirewallRule.md

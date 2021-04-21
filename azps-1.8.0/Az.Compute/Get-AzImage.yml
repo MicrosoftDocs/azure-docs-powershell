@@ -1,0 +1,193 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the properties of an image.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSImage" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzImage [[-ResourceGroupName] <String>] [[-ImageName] <String>] [[-Expand] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzImage -ResourceGroupName 'ResourceGroup01' -ImageName 'Image01'
+
+    ResourceGroupName    : ResourceGroup01
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/prov
+                           iders/Microsoft.Compute/images/Image01
+    Name                 : Image01
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+  description: |-
+    This command gets the properties of the image named 'Image01' in the resource group 'ResourceGroup01'.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzImage -ResourceGroupName 'ResourceGroup01'
+
+    ResourceGroupName    : ResourceGroup01
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/prov
+                           iders/Microsoft.Compute/images/Image01
+    Name                 : Image01
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+
+    ResourceGroupName    : ResourceGroup01
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/prov
+                           iders/Microsoft.Compute/images/Image02
+    Name                 : Image02
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+  description: |-
+    This command gets the properties of all images in the resource group 'ResourceGroup01'.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzImage
+
+    ResourceGroupName    : ResourceGroup01
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/prov
+                           iders/Microsoft.Compute/images/Image01
+    Name                 : Image01
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+
+    ResourceGroupName    : ResourceGroup01
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/prov
+                           iders/Microsoft.Compute/images/Image02
+    Name                 : Image02
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+
+    ResourceGroupName    : ResourceGroup02
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup02/prov
+                           iders/Microsoft.Compute/images/Image03
+    Name                 : Image03
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+  description: |-
+    This command gets the properties of all images under the subscription.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-AzImage -Name "Image*"
+
+    ResourceGroupName    : ResourceGroup01
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/prov
+                           iders/Microsoft.Compute/images/Image01
+    Name                 : Image01
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+
+    ResourceGroupName    : ResourceGroup01
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/prov
+                           iders/Microsoft.Compute/images/Image02
+    Name                 : Image02
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+
+    ResourceGroupName    : ResourceGroup02
+    SourceVirtualMachine : Microsoft.Azure.Management.Compute.Models.SubResource
+    StorageProfile       : Microsoft.Azure.Management.Compute.Models.ImageStorageProfile
+    ProvisioningState    : Succeeded
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup02/prov
+                           iders/Microsoft.Compute/images/Image03
+    Name                 : Image03
+    Type                 : Microsoft.Compute/images
+    Location             : eastus2
+    Tags                 : {}
+  description: |-
+    This command gets the properties of all images under the subscription that start with "Image".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Expand
+  description: |+
+    Specifies the expand expression query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageName
+  description: |+
+    Specifies the name of an image.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.Get-AzImage
+name: Get-AzImage
+description: |-
+  The **Get-AzImage** cmdlet gets the properties of an image.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azimage
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzImage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzImage.md

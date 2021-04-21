@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the Storage resource usage of the current subscription.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSUsage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Azure Storage Manager Cmdlets
+  href: ./index.yml
+syntaxes:
+- Get-AzStorageUsage -Location <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the storage resources usage of specified location'
+  code: |-
+    PS C:\>Get-AzStorageUsage -Location 'West US'
+
+    LocalizedName : Storage Accounts
+    Name          : StorageAccounts
+    Unit          : Count
+    CurrentValue  : 18
+    Limit         : 250
+  description: |-
+    This command gets the Storage resources usage of the specified location under the current subscription.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Indicate to get Storage resources usage on the specified location.
+    If not specified, will get Storage resources usage on all locations under the subscription.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.Get-AzStorageUsage
+name: Get-AzStorageUsage
+description: |-
+  The **Get-AzStorageUsage** cmdlet gets the resource usage for Azure Storage for the current subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: 11AAA319-DDBB-4156-9BE7-4DE8B80A904C
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageusage
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageUsage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageUsage.md

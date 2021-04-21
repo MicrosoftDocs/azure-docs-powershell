@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables an activity log alert and sets its tags.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzActivityLogAlert
+  href: ./Set-AzActivityLogAlert.yml
+- text: Get-AzActivityLogAlert
+  href: ./Get-AzActivityLogAlert.yml
+- text: Remove-AzActivityLogAlert
+  href: ./Remove-AzActivityLogAlert.yml
+- text: New-AzActionGroup
+  href: ./New-AzActionGroup.yml
+- text: Enable-AzActivityLogAlert
+  href: ./Enable-AzActivityLogAlert.yml
+syntaxes:
+- >-
+  Disable-AzActivityLogAlert -Name <String> -ResourceGroupName <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Disable-AzActivityLogAlert -InputObject <PSActivityLogAlertResource> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Disable-AzActivityLogAlert -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable an activity log alert'
+  code: |-
+    PS C:\>Disable-AzActivityLogAlert -Name "alert1" -ResourceGroupName "Default-ActivityLogsAlerts"
+  description: |-
+    This command disables the activity log alert called alert1 in the resource group Default-ActivityLogsAlerts.
+    This command changes the tags property of the activity log alert called alert1 and disables it.
+  summary: ""
+- title: 'Example 2: Disable an activity log alert using a PSActivityLogAlertResource object as input'
+  code: |-
+    PS C:\>$obj = Get-AzActivityLogAlert -ResourceGroup "Default-activityLogAlerts" -Name "alert1"
+    PS C:\>Disable-AzActivityLogAlert -InputObject $obj
+  description: |-
+    This command disables an activity log alert called alert1. For this it uses a PSActivityLogAlertResource object as input argument.
+  summary: ""
+- title: 'Example 3: Disable the ActivityLogAlert using the ResourceId parameter'
+  code: |-
+    PS C:\>Get-AzResource -ResourceGroupName "myResourceGroup" -Name "myLogAlert" | Disable-AzActivityLogAlert
+  description: |-
+    This command disables the ActivityLogAlert using the ResourceId parameter from the pipe.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Sets the InputObject tags property of the call to extract the required name, resource group name, and the optional tag properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the activity log alert.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group where the alert resource is going to exist.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Sets the ResourceId tags property of the call to extract the required name, resource group name properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Monitor.Disable-AzActivityLogAlert
+name: Disable-AzActivityLogAlert
+description: |-
+  The **Disable-AzActivityLogAlert** cmdlet disables and activity log alert and allows setting its tags.
+  This cmdlet implements the ShouldProcess pattern, i.e. it might request confirmation from the user before actually patching the resource.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: B5F2388E-0136-4F8A-8577-67CE2A45671E
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/disable-azactivitylogalert
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Disable-AzActivityLogAlert.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Disable-AzActivityLogAlert.md

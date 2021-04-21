@@ -1,0 +1,245 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Azure Storage context.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageBlob
+  href: ./Get-AzStorageBlob.yml
+- text: New-AzStorageContainerSASToken
+  href: ./New-AzStorageContainerSASToken.yml
+syntaxes:
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> [-UseConnectedAccount] [-Protocol <String>]
+
+   [-Endpoint <String>] [<CommonParameters>]
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> [-StorageAccountKey] <String> [-Protocol <String>]
+
+   [-Endpoint <String>] [<CommonParameters>]
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> [-StorageAccountKey] <String> [-Protocol <String>]
+
+   -Environment <String> [<CommonParameters>]
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] [-Endpoint <String>]
+
+   [<CommonParameters>]
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] -Environment <String>
+
+   [<CommonParameters>]
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> -SasToken <String> [-Protocol <String>]
+
+   [-Endpoint <String>] [<CommonParameters>]
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> -SasToken <String> -Environment <String>
+
+   [<CommonParameters>]
+- >-
+  New-AzStorageContext [-StorageAccountName] <String> [-UseConnectedAccount] [-Protocol <String>]
+
+   -Environment <String> [<CommonParameters>]
+- New-AzStorageContext -ConnectionString <String> [<CommonParameters>]
+- New-AzStorageContext [-Local] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a context by specifying a storage account name and key'
+  code: |-
+    PS C:\>New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >"
+  description: |-
+    This command creates a context for the account named ContosoGeneral that uses the specified key.
+  summary: ""
+- title: 'Example 2: Create a context by specifying a connection string'
+  code: |-
+    PS C:\>New-AzStorageContext -ConnectionString "DefaultEndpointsProtocol=https;AccountName=ContosoGeneral;AccountKey=< Storage Key for ContosoGeneral ends with == >;"
+  description: |-
+    This command creates a context based on the specified connection string for the account ContosoGeneral.
+  summary: ""
+- title: 'Example 3: Create a context for an anonymous storage account'
+  code: |-
+    PS C:\>New-AzStorageContext -StorageAccountName "ContosoGeneral" -Anonymous -Protocol "http"
+  description: |-
+    This command creates a context for anonymous use for the account named ContosoGeneral.
+    The command specifies HTTP as a connection protocol.
+  summary: ""
+- title: 'Example 4: Create a context by using the local development storage account'
+  code: |-
+    PS C:\>New-AzStorageContext -Local
+  description: |-
+    This command creates a context by using the local development storage account.
+    The command specifies the *Local* parameter.
+  summary: ""
+- title: 'Example 5: Get the container for the local developer storage account'
+  code: |-
+    PS C:\>New-AzStorageContext -Local | Get-AzStorageContainer
+  description: |-
+    This command creates a context by using the local development storage account, and then passes the new context to the **Get-AzStorageContainer** cmdlet by using the pipeline operator.
+    The command gets the Azure Storage container for the local developer storage account.
+  summary: ""
+- title: 'Example 6: Get multiple containers'
+  code: |-
+    PS C:\>$Context01 = New-AzStorageContext -Local 
+    PS C:\> $Context02 = New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >"
+    PS C:\> ($Context01, $Context02) | Get-AzStorageContainer
+  description: |-
+    The first command creates a context by using the local development storage account, and then stores that context in the $Context01 variable.
+    The second command creates a context for the account named ContosoGeneral that uses the specified key, and then stores that context in the $Context02 variable.
+    The final command gets the containers for the contexts stored in $Context01 and $Context02 by using **Get-AzStorageContainer**.
+  summary: ""
+- title: 'Example 7: Create a context with an endpoint'
+  code: |-
+    PS C:\>New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >" -Endpoint "contosoaccount.core.windows.net"
+  description: |-
+    This command creates an Azure Storage context that has the specified storage endpoint.
+    The command creates the context for the account named ContosoGeneral that uses the specified key.
+  summary: ""
+- title: 'Example 8: Create a context with a specified environment'
+  code: |-
+    PS C:\>New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >" -Environment "AzureChinaCloud"
+  description: |-
+    This command creates an Azure storage context that has the specified Azure environment.
+    The command creates the context for the account named ContosoGeneral that uses the specified key.
+  summary: ""
+- title: 'Example 9: Create a context by using an SAS token'
+  code: |-
+    PS C:\>$SasToken = New-AzStorageContainerSASToken -Name "ContosoMain" -Permission "rad"
+    PS C:\> $Context = New-AzStorageContext -StorageAccountName "ContosoGeneral" -SasToken $SasToken
+    PS C:\> $Context | Get-AzStorageBlob -Container "ContosoMain"
+  description: |-
+    The first command generates an SAS token by using the **New-AzStorageContainerSASToken** cmdlet for the container named ContosoMain, and then stores that token in the $SasToken variable.
+    That token is for read, add, update, and delete permissions.
+    The second command creates a context for the account named ContosoGeneral that uses the SAS token stored in $SasToken, and then stores that context in the $Context variable.
+    The final command lists all the blobs associated with the container named ContosoMain by using the context stored in $Context.
+  summary: ""
+- title: 'Example 10: Create a context by using the OAuth Authentication'
+  code: |-
+    PS C:\>Connect-AzAccount
+    PS C:\> $Context = New-AzStorageContext -StorageAccountName "myaccountname" -UseConnectedAccount
+  description: |-
+    This command creates a context by using the OAuth (Azure AD)  Authentication.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Anonymous
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet creates an Azure Storage context for anonymous logon.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ConnectionString
+  isRequired: true
+  description: |+
+    Specifies a connection string for the Azure Storage context.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Endpoint
+  description: |+
+    Specifies the endpoint for the Azure Storage context.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Environment
+  isRequired: true
+  description: |+
+    Specifies the Azure environment.
+    The acceptable values for this parameter are: AzureCloud and AzureChinaCloud.
+    For more information, type `Get-Help Get-AzEnvironment`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Name, EnvironmentName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet creates a context by using the local development storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Transfer Protocol (https/http).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Http, Https
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SasToken
+  isRequired: true
+  description: |+
+    Specifies a Shared Access Signature (SAS) token for the context.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountKey
+  isRequired: true
+  description: |+
+    Specifies an Azure Storage account key.
+    This cmdlet creates a context for the key that this parameter specifies.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  isRequired: true
+  description: |+
+    Specifies an Azure Storage account name.
+    This cmdlet creates a context for the account that this parameter specifies.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseConnectedAccount
+  description: |+
+    Indicates that this cmdlet creates an Azure Storage context with OAuth (Azure AD) Authentication.
+    The cmdlet will use OAuth Authentication by default, when other authentication not specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageContext
+name: New-AzStorageContext
+description: |-
+  The **New-AzStorageContext** cmdlet creates an Azure Storage context.
+  The default Authentication of a Storage Context is OAuth (Azure AD), if only input Storage account name.
+  See details of authentication of the Storage Service in https://docs.microsoft.com/en-us/rest/api/storageservices/authorization-for-the-azure-storage-services.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: 383402B2-6B7C-41AB-AFF9-36C86156B0A9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstoragecontext
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageContext.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageContext.md

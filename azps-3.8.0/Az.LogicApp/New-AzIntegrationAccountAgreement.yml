@@ -1,0 +1,236 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an integration account agreement.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccountAgreement" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzIntegrationAccountAgreement
+  href: ./Get-AzIntegrationAccountAgreement.yml
+- text: Remove-AzIntegrationAccountAgreement
+  href: ./Remove-AzIntegrationAccountAgreement.yml
+- text: Set-AzIntegrationAccountAgreement
+  href: ./Set-AzIntegrationAccountAgreement.yml
+syntaxes:
+- >-
+  New-AzIntegrationAccountAgreement -ResourceGroupName <String> -Name <String> -AgreementName <String>
+
+   -AgreementType <String> -GuestPartner <String> -HostPartner <String> -GuestIdentityQualifier <String>
+
+   -GuestIdentityQualifierValue <String> -HostIdentityQualifier <String> -HostIdentityQualifierValue <String>
+
+   [-AgreementContent <String>] [-AgreementContentFilePath <String>] [-Metadata <Object>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a integration account agreement'
+  code: |-
+    PS C:\>New-AzIntegrationAccountAgreement -Name "IntegrationAccount31"-ResourceGroupName "ResourceGroup11" -AgreementName "IntegrationAccountAgreement06" -AgreementType "X12" -GuestPartner "GuestPartner" -HostPartner "HostPartner" -GuestIdentityQualifier "BB" -HostIdentityQualifier "AA" -AgreementContentFilePath "C:\temp\AgreementContent.json"
+    Id                     : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/agreements/IntegrationAccountAgreement06
+    Name                   : IntegrationAccountAgreement06
+    Type                   : Microsoft.Logic/integrationAccounts/agreements
+    CreatedTime            : 3/26/2016 6:43:52 PM
+    ChangedTime            : 3/26/2016 6:43:52 PM
+    AgreementType          : X12
+    HostPartner            : HostPartner
+    GuestPartner           : GuestPartner
+    HostIdentityQualifier  : AA
+    HostIdentityValue      : AA
+    GuestIdentityQualifier : BB
+    GuestIdentityValue     : BB
+    Content                : {"AS2":null,"X12":{"ReceiveAgreement":{"SenderBusinessIdentity":{"Qualifier":"AA","Value":"AA"},"ReceiverBusinessIdentity":{"Qualifier":"ZZ","Valu
+                             e":"ZZ"},"ProtocolSettings":{"ValidationSettings":{"ValidateCharacterSet":true,"CheckDuplicateInterchangeControlNumber":false,"InterchangeControlN
+
+                             . . .
+  description: |-
+    This command creates an integration account agreement in the specified Azure resource group.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AgreementContent
+  description: |+
+    Specifies agreement content, in JavaScript Object Notation (JSON) format, for the agreement.
+    Specify either this parameter or the *AgreementContentFilePath* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AgreementContentFilePath
+  description: |+
+    Specifies the file path of agreement content for the agreement.
+    Specify either this parameter or the *AgreementContent* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AgreementName
+  isRequired: true
+  description: |+
+    Specifies a name for the integration account agreement.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AgreementType
+  isRequired: true
+  description: |+
+    Specifies the integration account agreement type. 
+    The acceptable values for this parameter are:
+    - X12 
+    - AS2
+    - Edifact
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: X12, AS2, Edifact
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GuestIdentityQualifier
+  isRequired: true
+  description: |+
+    Specifies a name business identity qualifier for the guest partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GuestIdentityQualifierValue
+  isRequired: true
+  description: |+
+    The integration account agreement guest identity qualifier value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: GuestPartner
+  isRequired: true
+  description: |+
+    Specifies the name of the guest partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostIdentityQualifier
+  isRequired: true
+  description: |+
+    Specifies a name business identity qualifier for the host partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostIdentityQualifierValue
+  isRequired: true
+  description: |+
+    The integration account agreement host identity qualifier value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HostPartner
+  isRequired: true
+  description: |+
+    Specifies the name of the host partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Specifies a metadata object for the agreement.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the integration account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IntegrationAccountName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.LogicApp.New-AzIntegrationAccountAgreement
+name: New-AzIntegrationAccountAgreement
+description: |-
+  The **New-AzIntegrationAccountAgreement** cmdlet creates an integration account agreement.
+  This cmdlet returns an object that represents the integration account agreement.
+  Specify the integration account name, resource group name, agreement name, type, partner name, partner qualifiers, and agreement content.
+  Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: B8998AAA-05FC-4029-A284-B64E23326B22
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/new-azintegrationaccountagreement
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/New-AzIntegrationAccountAgreement.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/New-AzIntegrationAccountAgreement.md

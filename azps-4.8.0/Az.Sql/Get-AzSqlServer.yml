@@ -1,0 +1,188 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about SQL Database servers.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Server.Model.AzureSqlServerModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzSqlServer
+  href: ./New-AzSqlServer.yml
+- text: Remove-AzSqlServer
+  href: ./Remove-AzSqlServer.yml
+- text: Set-AzSqlServer
+  href: ./Set-AzSqlServer.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Get-AzSqlServer [[-ResourceGroupName] <String>] [[-ServerName] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all instances of SQL Server assigned to a resource group'
+  code: |-
+    PS C:\>Get-AzSqlServer -ResourceGroupName "ResourceGroup01"
+    ResourceGroupName        : resourcegroup01
+    ServerName               : server01
+    Location                 : Central US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server01.database.windows.net
+
+    ResourceGroupName        : resourcegroup01
+    ServerName               : server02
+    Location                 : West US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server02.database.windows.net
+  description: |-
+    This command gets information about all the Azure SQL Database servers assigned to the resource group ResourceGroup01.
+  summary: ""
+- title: 'Example 2: Get information about an Azure SQL Database server'
+  code: |-
+    PS C:\>Get-AzSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+    ResourceGroupName        : resourcegroup01
+    ServerName               : server01
+    Location                 : Central US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server01.database.windows.net
+  description: |-
+    This command gets information about the Azure SQL Database server named Server01.
+  summary: ""
+- title: 'Example 3: Get all instances of SQL Server in the subscription'
+  code: |-
+    PS C:\>Get-AzResourceGroup | Get-AzSqlServer
+    ResourceGroupName        : resourcegroup01
+    ServerName               : server01
+    Location                 : Central US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server01.database.windows.net
+
+    ResourceGroupName        : resourcegroup01
+    ServerName               : server02
+    Location                 : West US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server02.database.windows.net
+
+    ResourceGroupName        : resourcegroup02
+    ServerName               : server03
+    Location                 : East US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server03.database.windows.net
+  description: |-
+    This command gets information about all the Azure SQL Database servers in the current subscription.
+  summary: ""
+- title: 'Example 4: Get all instances of SQL Server assigned to a resource group using filtering'
+  code: |-
+    PS C:\>Get-AzSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "server*"
+    ResourceGroupName        : resourcegroup01
+    ServerName               : server01
+    Location                 : Central US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server01.database.windows.net
+
+    ResourceGroupName        : resourcegroup01
+    ServerName               : server02
+    Location                 : West US
+    SqlAdministratorLogin    : adminLogin
+    SqlAdministratorPassword :
+    ServerVersion            : 12.0
+    Tags                     :
+    Identity                 :
+    FullyQualifiedDomainName : server02.database.windows.net
+  description: |-
+    This command gets information about all the Azure SQL Database servers assigned to the resource group ResourceGroup01 that start with "server".
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group to which servers are assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  description: |+
+    Specifies the name of the server that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlServer
+name: Get-AzSqlServer
+description: |-
+  The **Get-AzSqlServer** cmdlet returns information about one or more Azure SQL Database servers.
+  Specify the name of a server to see information for only that server.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: C39ACCAC-2BFF-48D0-95EA-D5B402D74D46
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlserver
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServer.md

@@ -1,0 +1,376 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an Azure Web App.
+module: Az.Websites
+notes: ""
+inputs:
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzWebApp
+  href: ./Get-AzWebApp.yml
+- text: New-AzWebApp
+  href: ./New-AzWebApp.yml
+- text: Remove-AzWebApp
+  href: ./Remove-AzWebApp.yml
+- text: Restart-AzWebApp
+  href: ./Restart-AzWebApp.yml
+- text: Start-AzWebApp
+  href: ./Start-AzWebApp.yml
+- text: Stop-AzWebApp
+  href: ./Stop-AzWebApp.yml
+syntaxes:
+- >-
+  Set-AzWebApp [[-AppServicePlan] <String>] [[-DefaultDocuments] <String[]>] [[-NetFrameworkVersion] <String>]
+
+   [[-PhpVersion] <String>] [[-RequestTracingEnabled] <Boolean>] [[-HttpLoggingEnabled] <Boolean>]
+
+   [[-DetailedErrorLoggingEnabled] <Boolean>] [[-AppSettings] <Hashtable>] [[-ConnectionStrings] <Hashtable>]
+
+   [[-HandlerMappings] <System.Collections.Generic.IList`1[Microsoft.Azure.Management.WebSites.Models.HandlerMapping]>]
+
+   [[-ManagedPipelineMode] <String>] [[-WebSocketsEnabled] <Boolean>] [[-Use32BitWorkerProcess] <Boolean>]
+
+   [[-AutoSwapSlotName] <String>] [-ContainerImageName <String>] [-ContainerRegistryUrl <String>]
+
+   [-ContainerRegistryUser <String>] [-ContainerRegistryPassword <SecureString>]
+
+   [-EnableContainerContinuousDeployment <Boolean>] [-HostNames <String[]>] [-NumberOfWorkers <Int32>] [-AsJob]
+
+   [-AssignIdentity <Boolean>] [-HttpsOnly <Boolean>] [-AzureStoragePath <WebAppAzureStoragePath[]>]
+
+   [-AlwaysOn <Boolean>] [-MinTlsVersion <String>] [-FtpsState <String>] [-ResourceGroupName] <String>
+
+   [-Name] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Set-AzWebApp [[-Use32BitWorkerProcess] <Boolean>] [[-AutoSwapSlotName] <String>] [-NumberOfWorkers <Int32>]
+
+   [-AsJob] [-WebApp] <PSSite> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-AzWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -AppServicePlan "ContosoPlan"
+  description: |-
+    This command changes the appservice plan associated with the Web App ContosoWebApp associated with the resource group Default-Web-WestUS. Use the link to learn more about changing the appservice plan and constraints associated with it.
+    https://docs.microsoft.com/en-us/azure/app-service/app-service-plan-manage#move-an-app-to-another-app-service-plan
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-AzWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -HttpLoggingEnabled $true
+  description: |-
+    This command sets HttpLoggingEnabled to true for Web App ContosoWebApp associated with the resource group Default-Web-WestUS
+  summary: ""
+parameters:
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: AlwaysOn
+  description: |+
+    Ensure web app gets loaded all the time, rather unloaded after been idle.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AppServicePlan
+  description: |+
+    App Service Plan Name
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: AppSettings
+  description: |+
+    App Settings HashTable. Existing App Settings will be replaced, removing any settings that are not provided.
+
+  defaultValue: None
+  position: "9"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: AssignIdentity
+  description: |+
+    Enable/disable MSI on an existing azure webapp or functionapp
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutoSwapSlotName
+  description: |+
+    Destination slot name for auto swap
+
+  defaultValue: None
+  position: "15"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.WebApps.Models.WebAppAzureStoragePath" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AzureStoragePath
+  description: |+
+    Azure Storage to mount inside a Web App for Container. Use New-AzureRmWebAppAzureStoragePath to create it
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: ConnectionStrings
+  description: |+
+    Connection Strings HashTable
+
+  defaultValue: None
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContainerImageName
+  description: |+
+    Container Image Name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: ContainerRegistryPassword
+  description: |+
+    Private Container Registry Password
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContainerRegistryUrl
+  description: |+
+    Private Container Registry Server Url
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContainerRegistryUser
+  description: |+
+    Private Container Registry Username
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DefaultDocuments
+  description: |+
+    Default Documents String Array
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: DetailedErrorLoggingEnabled
+  description: |+
+    Detailed Error Logging Enabled Boolean
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: EnableContainerContinuousDeployment
+  description: |+
+    Enables/Disables container continuous deployment webhook
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FtpsState
+  description: |+
+    Set the Ftps state value for an app. Allowed Values [AllAllowed | Disabled | FtpsOnly].
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.IList`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.WebSites.Models.HandlerMapping" data-throw-if-not-resolved="False" /><span>]</span>
+  name: HandlerMappings
+  description: |+
+    Handler Mappings IList
+
+  defaultValue: None
+  position: "11"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostNames
+  description: |+
+    WebApp HostNames String Array
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: HttpLoggingEnabled
+  description: |+
+    HttpLoggingEnabled Boolean
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: HttpsOnly
+  description: |+
+    Enable/disable redirecting all traffic to HTTPS on an existing azure webapp or functionapp
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ManagedPipelineMode
+  description: |+
+    Managed Pipeline Mode Name
+
+  defaultValue: None
+  position: "12"
+  aliases: ""
+  parameterValueGroup: Classic, Integrated
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MinTlsVersion
+  description: |+
+    The minimum version of TLS required for SSL requests. Allowed Values [1.0 | 1.1 | 1.2].
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    WebApp Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NetFrameworkVersion
+  description: |+
+    Net Framework Version
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: NumberOfWorkers
+  description: |+
+    The number of workers to be allocated
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PhpVersion
+  description: |+
+    Php Version
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: RequestTracingEnabled
+  description: |+
+    Request Tracing Enabled
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: Use32BitWorkerProcess
+  description: |+
+    Use 32-bit Worker Process Boolean
+
+  defaultValue: None
+  position: "14"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  name: WebApp
+  isRequired: true
+  description: |+
+    WebApp Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: WebSocketsEnabled
+  description: |+
+    WebSocketsEnabled Boolean
+
+  defaultValue: None
+  position: "13"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Websites.Set-AzWebApp
+name: Set-AzWebApp
+description: |-
+  The **Set-AzWebApp** cmdlet sets an Azure Web App.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  Module Name: Az.Websites
+  ms.assetid: 4166119F-D26A-45A1-B040-D7B2459833D6
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/set-azwebapp
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md

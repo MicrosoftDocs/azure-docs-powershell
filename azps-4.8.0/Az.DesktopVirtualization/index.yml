@@ -1,0 +1,47 @@
+### YamlMime:PowershellModule
+children:
+- title: DesktopVirtualization
+  cmdlets:
+  - Az.DesktopVirtualization.Disconnect-AzWvdUserSession
+  - Az.DesktopVirtualization.Get-AzWvdApplication
+  - Az.DesktopVirtualization.Get-AzWvdApplicationGroup
+  - Az.DesktopVirtualization.Get-AzWvdDesktop
+  - Az.DesktopVirtualization.Get-AzWvdHostPool
+  - Az.DesktopVirtualization.Get-AzWvdRegistrationInfo
+  - Az.DesktopVirtualization.Get-AzWvdSessionHost
+  - Az.DesktopVirtualization.Get-AzWvdStartMenuItem
+  - Az.DesktopVirtualization.Get-AzWvdUserSession
+  - Az.DesktopVirtualization.Get-AzWvdWorkspace
+  - Az.DesktopVirtualization.New-AzWvdApplication
+  - Az.DesktopVirtualization.New-AzWvdApplicationGroup
+  - Az.DesktopVirtualization.New-AzWvdHostPool
+  - Az.DesktopVirtualization.New-AzWvdRegistrationInfo
+  - Az.DesktopVirtualization.New-AzWvdWorkspace
+  - Az.DesktopVirtualization.Register-AzWvdApplicationGroup
+  - Az.DesktopVirtualization.Remove-AzWvdApplication
+  - Az.DesktopVirtualization.Remove-AzWvdApplicationGroup
+  - Az.DesktopVirtualization.Remove-AzWvdHostPool
+  - Az.DesktopVirtualization.Remove-AzWvdRegistrationInfo
+  - Az.DesktopVirtualization.Remove-AzWvdSessionHost
+  - Az.DesktopVirtualization.Remove-AzWvdUserSession
+  - Az.DesktopVirtualization.Remove-AzWvdWorkspace
+  - Az.DesktopVirtualization.Send-AzWvdUserSessionMessage
+  - Az.DesktopVirtualization.Unregister-AzWvdApplicationGroup
+  - Az.DesktopVirtualization.Update-AzWvdApplication
+  - Az.DesktopVirtualization.Update-AzWvdApplicationGroup
+  - Az.DesktopVirtualization.Update-AzWvdDesktop
+  - Az.DesktopVirtualization.Update-AzWvdHostPool
+  - Az.DesktopVirtualization.Update-AzWvdSessionHost
+  - Az.DesktopVirtualization.Update-AzWvdWorkspace
+uid: Az.DesktopVirtualization
+name: Az.DesktopVirtualization
+description: |-
+  Microsoft Azure PowerShell: DesktopVirtualization cmdlets
+metadata:
+  Module Name: Az.DesktopVirtualization
+  Module Guid: 4cbade8e-48e0-42f8-a847-7872d0006d54
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Az.DesktopVirtualization.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Az.DesktopVirtualization.md

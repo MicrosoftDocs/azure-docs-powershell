@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get a cluster by name in a private cloud
+module: Az.VMWare
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  INPUTOBJECT <IVMWareIdentity>: Identity Parameter
+    - `[AuthorizationName <String>]`: Name of the ExpressRoute Circuit Authorization in the private cloud
+    - `[ClusterName <String>]`: Name of the cluster in the private cloud
+    - `[HcxEnterpriseSiteName <String>]`: Name of the HCX Enterprise Site in the private cloud
+    - `[Id <String>]`: Resource identity path
+    - `[Location <String>]`: Azure region
+    - `[PrivateCloudName <String>]`: Name of the private cloud
+    - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+    - `[SubscriptionId <String>]`: The ID of the target subscription.
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMWare.Models.IVMWareIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMWare.Models.Api20200320.ICluster" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzVMWareCluster -PrivateCloudName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+
+   [-DefaultProfile <PSObject>] [<CommonParameters>]
+- >-
+  Get-AzVMWareCluster -Name <String> -PrivateCloudName <String> -ResourceGroupName <String>
+
+   [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+- Get-AzVMWareCluster -InputObject <IVMWareIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get cluster'
+  code: |-
+    PS C:\> Get-AzVMWareCluster -Name azps-test-cluster -PrivateCloudName azps-test-cloud -ResourceGroupName azps-test-group
+
+    Name              Type
+    ----              ----
+    azps-test-cluster Microsoft.AVS/privateClouds/clusters
+  description: |-
+    Get cluster
+  summary: ""
+- title: 'Example 2: List clusters'
+  code: |-
+    PS C:\> Get-AzVMWareCluster -PrivateCloudName azps-test-cloud -ResourceGroupName azps-test-group
+
+    Name              Type
+    ----              ----
+    azps-test-cluster Microsoft.AVS/privateClouds/clusters
+  description: |-
+    List clusters
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMWare.Models.IVMWareIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the cluster in the private cloud
+
+  defaultValue: None
+  position: Named
+  aliases: ClusterName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrivateCloudName
+  isRequired: true
+  description: |+
+    Name of the private cloud
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+    The name is case insensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    The ID of the target subscription.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.VMWare.Get-AzVMWareCluster
+name: Get-AzVMWareCluster
+description: |-
+  Get a cluster by name in a private cloud
+metadata:
+  external help file: ""
+  Module Name: Az.VMWare
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.vmware/get-azvmwarecluster
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/VMWare/help/Get-AzVMWareCluster.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/VMWare/help/Get-AzVMWareCluster.md

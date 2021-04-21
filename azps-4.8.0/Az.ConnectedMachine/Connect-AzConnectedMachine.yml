@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  API to register a new machine and thereby create a tracked resource in ARM
+module: Az.ConnectedMachine
+notes: |-
+  ALIASES
+syntaxes:
+- >-
+  Connect-AzConnectedMachine [-ResourceGroupName] <String> [-Location] <String> [[-SubscriptionId] <String>]
+
+   [[-Name] <String>] [[-DefaultProfile] <PSObject>] [[-PSSession] <PSSession[]>] [[-Tag] <Hashtable>]
+
+   [[-Proxy] <Uri>] [<CommonParameters>]
+examples:
+- title: "Example 1: Onboards the machine you're on as a connected machine"
+  code: |-
+    PS C:\> Connect-AzConnectedMachine -ResourceGroupName contoso-connected-machines -Name linux_eastus1_1 -Location eastus
+
+    < truncated output of installing the azcmagent >
+
+    time="2020-08-07T13:13:25-07:00" level=info msg="Onboarding Machine. It usually takes a few minutes to complete. Sometimes it may take longer depending on network and server load status."
+    time="2020-08-07T13:13:25-07:00" level=info msg="Check network connectivity to all endpoints..."
+    time="2020-08-07T13:13:29-07:00" level=info msg="All endpoints are available... continue onboarding"
+    time="2020-08-07T13:13:50-07:00" level=info msg="Successfully Onboarded Resource to Azure" VM Id=978ab182-6cf0-4de3-a58b-53c8d0a3235e
+
+    Name             Location OSName   Status     ProvisioningState
+    ----             -------- ------   ------     -----------------
+    linux_eastus1_1  eastus   linux    Connected  Succeeded
+  description: |-
+    Onboards the machine you're on as a connected machine.
+  summary: ""
+- title: 'Example 2: Onboards a remote machine as a connected device'
+  code: |-
+    PS C:\> $session = Connect-PSSession -ComputerName WINBOX
+    PS C:\> Connect-AzConnectedMachine -ResourceGroupName contoso-rg -Name win_eastus1_1 -Location eastus -PSSession $session
+
+    < truncated output of installing the azcmagent >
+
+    time="2020-08-07T13:13:25-07:00" level=info msg="Onboarding Machine. It usually takes a few minutes to complete. Sometimes it may take longer depending on network and server load status."
+    time="2020-08-07T13:13:25-07:00" level=info msg="Check network connectivity to all endpoints..."
+    time="2020-08-07T13:13:29-07:00" level=info msg="All endpoints are available... continue onboarding"
+    time="2020-08-07T13:13:50-07:00" level=info msg="Successfully Onboarded Resource to Azure" VM Id=978ab182-6cf0-4de3-a58b-53c8d0a3236a
+
+    Name           Location OSName   Status     ProvisioningState
+    ----           -------- ------   ------     -----------------
+    win_eastus1_1  eastus   windows  Connected  Succeeded
+  description: |-
+    Onboards a remote machine as a connected device using PowerShell remoting.
+    Note: only Windows as the target is supported at this time.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: "4"
+  aliases: AzureRMContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location for the created ConnectedMachine.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name that will be used for this machine.
+    The hostname is used by default.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: Proxy
+  description: |+
+    The URI for the proxy server to use
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.Runspaces.PSSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSSession
+  description: |+
+    When specified, the command that onboards machines to Azure will be run within each PSSession.
+    NOTE: This only works on Windows for now.
+
+  defaultValue: None
+  position: "5"
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group you want to add the machine to.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    The ID of the subscription you want to add the machine to.
+
+  defaultValue: (Get-AzContext).Subscription.Id
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Resource tags.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ConnectedMachine.Connect-AzConnectedMachine
+name: Connect-AzConnectedMachine
+description: |-
+  API to register a new machine and thereby create a tracked resource in ARM
+metadata:
+  external help file: ""
+  Module Name: Az.ConnectedMachine
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.connectedmachine/connect-azconnectedmachine
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Connect-AzConnectedMachine.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ConnectedMachine/help/Connect-AzConnectedMachine.md

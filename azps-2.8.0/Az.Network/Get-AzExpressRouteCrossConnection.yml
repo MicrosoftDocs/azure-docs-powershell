@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an Azure ExpressRoute cross connection from Azure.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCrossConnection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AzExpressRouteCrossConnection
+  href: Set-AzExpressRouteCrossConnection.yml
+syntaxes:
+- >-
+  Get-AzExpressRouteCrossConnection [-ResourceGroupName <String>] [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the ExpressRoute cross connection'
+  code: |-
+    Get-AzExpressRouteCrossConnection -Name $CrossConnectionName -ResourceGroupName $rg
+  description: ""
+  summary: ""
+- title: 'Example 2: List the ExpressRoute cross connections using a filter'
+  code: |-
+    Get-AzExpressRouteCrossConnection -Name test*
+  description: |-
+    This cmdlet will list all ExpressRoute cross connections that begin with "test"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the ExpressRoute cross connection.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    The name of the resource group that contains the ExpressRoute cross connection.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzExpressRouteCrossConnection
+name: Get-AzExpressRouteCrossConnection
+description: |-
+  The **Get-AzExpressRouteCrossConnection** cmdlet is used to retrieve an ExpressRoute cross connection object
+  from your subscription.
+  AzureRmExpressRouteCrossConnection
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 3efb6270-f908-4734-bdb1-6c7e4e4eb382
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecrossconnection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCrossConnection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCrossConnection.md

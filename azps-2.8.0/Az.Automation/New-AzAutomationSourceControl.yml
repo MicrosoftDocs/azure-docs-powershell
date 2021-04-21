@@ -1,0 +1,234 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an A Automation source control.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.SourceControl" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzAutomationSourceControl -Name <String> -RepoUrl <Uri> -SourceType <String> -AccessToken <SecureString>
+
+   -FolderPath <String> [-Branch <String>] [-Description <String>] [-EnableAutoSync] [-DoNotPublishRunbook]
+
+   [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> # VSTS Personal access token
+    PS C:\> $token = "vppmrabbs65axamofglyo66rjg6reddaa7xxgvaddd5555aaaaddxzbmma"
+    PS C:\> $accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force 
+    PS C:\> New-AzAutomationSourceControl -ResourceGroupName "rg1" `
+                                               -AutomationAccountName "devAccount" `
+                                               -Name  "VSTSNative" `
+                                               -RepoUrl "https://contoso.visualstudio.com/ContosoProduction/_versionControl" `
+                                               -SourceType "VsoTfvc" `
+                                               -FolderPath "/Runbooks" `
+                                               -AccessToken $accessToken
+
+    Name        SourceType Branch FolderPath AutoSync PublishRunbook RepoUrl
+    ----        ---------- ------ ---------- -------- -------------- -------
+    VSTSNative  VsoTfvc            /Runbooks True     True           https://contoso.visualstudio.com/ContosoProduc...
+  description: ""
+  summary: |+
+    Create a source control configuration to link my Azure Automation account with my VSTS TFVC project. TFVC projects do not have branches, and therefore, the Branch parameter is not specified.
+
+- title: Example 2
+  code: |-
+    PS C:\> # VSTS Personal access token
+    PS C:\> $token = "vppmrabbs65axamofglyo66rjg6reddaa7xxgvaddd5555aaaaddxzbmma"
+    PS C:\> $accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force 
+    PS C:\> New-AzAutomationSourceControl -ResourceGroupName "rg1" `
+                                               -AutomationAccountName "devAccount" `
+                                               -Name  "VSTSGit" `
+                                               -RepoUrl "https://contoso.visualstudio.com/_git/Finance" `
+                                               -SourceType "VsoGit" `
+                                               -Branch "Development" `
+                                               -FolderPath "/" `
+                                               -AccessToken $accessToken
+
+    Name    SourceType Branch      FolderPath AutoSync PublishRunbook RepoUrl
+    ----    ---------- ------      ---------- -------- -------------- -------
+    VSTSGit VsoGit     Development /          True     True           https://contoso.visualstudio.com/_git/Finan...
+  description: ""
+  summary: |+
+    Create a source control configuration to link my Azure Automation account with my VSTS Git project.
+
+
+- title: Example 3
+  code: |-
+    PS C:\> # GitHub access token
+    PS C:\> $token = "68b08011223aac8bdd3388913a44rrsaa84fdf"
+    PS C:\> $accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force 
+    PS C:\> New-AzAutomationSourceControl -ResourceGroupName "rg1" `
+                                               -AutomationAccountName "devAccount" `
+                                               -Name  "GitHub1" `
+                                               -RepoUrl "https://github.com/Contoso/TestSourceControl.git" `
+                                               -SourceType "GitHub" `
+                                               -Branch "master" `
+                                               -FolderPath "/Runbooks" `
+                                               -AccessToken $accessToken
+
+    Name    SourceType Branch FolderPath AutoSync PublishRunbook RepoUrl
+    ----    ---------- ------ ---------- -------- -------------- -------
+    GitHub1 GitHub     master /Runbooks  True     True           https://github.com/Contoso/TestSourceControl...
+  description: ""
+  summary: |+
+    Create a source control configuration to link my Azure Automation account with my GitHub project.
+
+
+parameters:
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: AccessToken
+  isRequired: true
+  description: |+
+    The source control access token.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    The automation account name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Branch
+  description: |+
+    The source control branch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The source control description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DoNotPublishRunbook
+  description: |+
+    The publishRunbook property of the source control.
+    If DoNotPublishRunbook is set, this means that user runbooks will be imported as 'Draft'.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAutoSync
+  description: |+
+    The autoSync property for the source control.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FolderPath
+  isRequired: true
+  description: |+
+    The source control folder path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The source control name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: RepoUrl
+  isRequired: true
+  description: |+
+    The source control repo url.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SourceType
+  isRequired: true
+  description: |+
+    The source control type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: GitHub, VsoGit, VsoTfvc
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Automation.New-AzAutomationSourceControl
+name: New-AzAutomationSourceControl
+description: |-
+  The New-AzAutomationSourceControl cmdlet creates a configuration to link my Azure Automation account with my VSTS TFVC, VSTS Git or GitHub.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationsourcecontrol
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationSourceControl.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationSourceControl.md

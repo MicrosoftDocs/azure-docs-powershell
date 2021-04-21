@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes endpoints and metadata for connecting to a given Azure instance.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureEnvironment" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzEnvironment
+  href: ./Add-AzEnvironment.yml
+- text: Get-AzEnvironment
+  href: ./Get-AzEnvironment.yml
+- text: Set-AzEnvironment
+  href: ./Set-AzEnvironment.yml
+syntaxes:
+- >-
+  Remove-AzEnvironment [-Name] <String> [-Scope <ContextModificationScope>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Creating and removing a test environment'
+  code: |-
+    PS C:\> Add-AzEnvironment -Name TestEnvironment `
+            -ActiveDirectoryEndpoint TestADEndpoint `
+            -ActiveDirectoryServiceEndpointResourceId TestADApplicationId `
+            -ResourceManagerEndpoint TestRMEndpoint `
+            -GalleryEndpoint TestGalleryEndpoint `
+            -GraphEndpoint TestGraphEndpoint
+
+    Name            Resource Manager Url ActiveDirectory Authority
+    ----            -------------------- -------------------------
+    TestEnvironment TestRMEndpoint       TestADEndpoint/
+
+    PS C:\> Remove-AzEnvironment -Name TestEnvironment
+
+    Name            Resource Manager Url ActiveDirectory Authority
+    ----            -------------------- -------------------------
+    TestEnvironment TestRMEndpoint       TestADEndpoint/
+  description: |-
+    This example shows how to create an environment using Add-AzEnvironment, and then how to delete the environment using Remove-AzEnvironment.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, tenant and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the environment to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Profile.Common.ContextModificationScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Process, CurrentUser
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Accounts.Remove-AzEnvironment
+name: Remove-AzEnvironment
+description: |-
+  The Remove-AzEnvironment cmdlet removes endpoints and metadata information for connecting to a given Azure instance.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/remove-azenvironment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Remove-AzEnvironment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Remove-AzEnvironment.md

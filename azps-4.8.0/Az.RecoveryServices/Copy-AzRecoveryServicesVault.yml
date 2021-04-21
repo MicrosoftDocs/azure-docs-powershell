@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Copies data from a vault in one region to a vault in another region.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Copy-AzRecoveryServicesVault [-Force] [-DefaultProfile <IAzureContextContainer>] [-SourceVault] <ARSVault>
+
+   [-TargetVault] <ARSVault> [-RetryOnlyFailed] [<CommonParameters>]
+examples:
+- title: 'Example 1: Copy data from vault1 to vault2'
+  code: |-
+    PS C:\> $sourceVault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName1" -Name "vault1"
+    PS C:\> $targetVault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName2" -Name "vault2"
+    PS C:\> Copy-AzRecoveryServicesVault -SourceVault $sourceVault -TargetVault $targetVault
+  description: |-
+    git 
+
+    The first two cmdlets fetch Recovery Services Vault - vault1 and vault2 respectively.
+    The second command triggers a complete data move from vault1 to vault2.
+  summary: ""
+- title: 'Example 2: Copy data from vault1 to vault2 with only failed items'
+  code: |-
+    PS C:\> $sourceVault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName1" -Name "vault1"
+    PS C:\> $targetVault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName2" -Name "vault2"
+    PS C:\> Copy-AzRecoveryServicesVault -SourceVault $sourceVault -TargetVault $targetVault -RetryOnlyFailed
+  description: |-
+    git 
+
+    The first two cmdlets fetch Recovery Services Vault - vault1 and vault2 respectively.
+    The second command triggers a partial data move from vault1 to vault2 with only those items which failed in previous move operations.
+  summary: ""
+parameters:
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the data move operation (prevents confirmation dialog) without asking confirmation for target vault storage redundancy type. This parameter is optional. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetryOnlyFailed
+  description: |+
+    Switch parameter to try data move only for containers in the source vault which are not yet moved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ARSVault" data-throw-if-not-resolved="False" />
+  name: SourceVault
+  isRequired: true
+  description: |+
+    The source vault object to be moved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ARSVault" data-throw-if-not-resolved="False" />
+  name: TargetVault
+  isRequired: true
+  description: |+
+    The target vault object where the data has to be moved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Copy-AzRecoveryServicesVault
+name: Copy-AzRecoveryServicesVault
+description: |-
+  The **Copy-AzRecoveryServicesVault** cmdlet copies data from a vault in one region to a vault in another region. Currently we only support vault level data move.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/copy-azrecoveryservicesvault
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Copy-AzRecoveryServicesVault.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Copy-AzRecoveryServicesVault.md

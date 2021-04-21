@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an integration account agreement.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccountAgreement" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzIntegrationAccountAgreement
+  href: ./New-AzIntegrationAccountAgreement.yml
+- text: Remove-AzIntegrationAccountAgreement
+  href: ./Remove-AzIntegrationAccountAgreement.yml
+- text: Set-AzIntegrationAccountAgreement
+  href: ./Set-AzIntegrationAccountAgreement.yml
+syntaxes:
+- >-
+  Get-AzIntegrationAccountAgreement [-ResourceGroupName <String>] [-Name <String>] [-AgreementName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an integration account agreement'
+  code: |-
+    PS C:\>Get-AzIntegrationAccountAgreement -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -AgreementName "IntegrationAccountAgreement06"
+    Id                     : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/TestIntegrationAccount/agreements/IntegrationAccount31
+    Name                   : IntegrationAccount31
+    Type                   : Microsoft.Logic/integrationAccounts/agreements
+    CreatedTime            : 3/24/2016 9:08:46 PM
+    ChangedTime            : 3/24/2016 9:08:59 PM
+    AgreementType          : AS2
+    HostPartner            : TestHost
+    GuestPartner           : TestGuest
+    HostIdentityQualifier  : XX
+    HostIdentityValue      : BB
+    GuestIdentityQualifier : ZZ
+    GuestIdentityValue     : AA
+    Content                : {"AS2":{"ReceiveAgreement":{"SenderBusinessIdentity":{"Qualifier":"AA","Value":"AA"},"ReceiverBusinessIdentity":{"Qualifier":"ZZ
+                             ","Value":"ZZ"},"ProtocolSettings":{"MessageConnectionSettings":{"IgnoreCertificateNameMismatch":true,"SupportHttpStatusCodeCont
+                             . . .
+  description: |-
+    This command gets an integration account agreement named IntegrationAccountAgreement06.
+  summary: ""
+- title: 'Example 2: Get integration account agreements by resource group name'
+  code: |-
+    PS C:\>Get-AzIntegrationAccountAgreement -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31"
+    Id                     : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/TestIntegrationAccount/agreements/IntegrationAccount31
+    Name                   : IntegrationAccount31
+    Type                   : Microsoft.Logic/integrationAccounts/agreements
+    CreatedTime            : 3/24/2016 9:08:46 PM
+    ChangedTime            : 3/24/2016 9:08:59 PM
+    AgreementType          : AS2
+    HostPartner            : TestHost
+    GuestPartner           : TestGuest
+    HostIdentityQualifier  : XX
+    HostIdentityValue      : BB
+    GuestIdentityQualifier : ZZ
+    GuestIdentityValue     : AA
+    Content                : {"AS2":{"ReceiveAgreement":{"SenderBusinessIdentity":{"Qualifier":"AA","Value":"AA"},"ReceiverBusinessIdentity":{"Qualifier":"ZZ
+                             ","Value":"ZZ"},"ProtocolSettings":{"MessageConnectionSettings":{"IgnoreCertificateNameMismatch":true,"SupportHttpStatusCodeCont
+                             . . .
+  description: |-
+    This command gets the integration account agreements by resource group name.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AgreementName
+  description: |+
+    Specifies the name of an integration account agreement.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of an integration account.
+
+  defaultValue: None
+  position: Named
+  aliases: IntegrationAccountName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.LogicApp.Get-AzIntegrationAccountAgreement
+name: Get-AzIntegrationAccountAgreement
+description: |-
+  The **Get-AzIntegrationAccountAgreement** cmdlet gets an integration account agreement from an Azure resource group.
+  Specify the integration account name, resource group name, and agreement name.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: 70C96DFC-F265-4792-AE62-DD224A4EE237
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azintegrationaccountagreement
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountAgreement.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountAgreement.md

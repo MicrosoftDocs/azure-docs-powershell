@@ -1,0 +1,188 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets or lists Storage file shares.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSShare" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzRmStorageShare [-ResourceGroupName] <String> [-StorageAccountName] <String> [-Name <String>]
+
+   [-GetShareUsage] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzRmStorageShare [-ResourceGroupName] <String> [-StorageAccountName] <String> [-IncludeDeleted]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzRmStorageShare -StorageAccount <PSStorageAccount> -Name <String> [-GetShareUsage]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzRmStorageShare -StorageAccount <PSStorageAccount> [-IncludeDeleted]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzRmStorageShare [-ResourceId] <String> [-Name <String>] [-GetShareUsage]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a Storage file share with Storage account name and share name'
+  code: |-
+    PS C:\>Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare"
+
+       ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocol AccessTier Deleted Version ShareUsageBytes
+    ----     -------- --------------- ---------- ------- ------- ---------------
+    myshare  5120
+  description: |-
+    This command gets a Storage file share with Storage account name and share name.
+  summary: ""
+- title: 'Example 2: List all Storage file shares of a Storage account'
+  code: |-
+    PS C:\>Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount"
+
+       ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocol AccessTier           Deleted Version ShareUsageBytes
+    ----     -------- --------------- ----------           ------- ------- ---------------
+    share1   5120                     TransactionOptimized
+    share2   5120                     TransactionOptimized
+  description: |-
+    This command lists all Storage file shares of a Storage account with Storage account name.
+  summary: ""
+- title: 'Example 3: Get a Storage blob container with Storage account object and container name.'
+  code: |-
+    Get-AzStorageAccount -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" | Get-AzRmStorageShare -Name "myshare"
+
+       ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocol AccessTier Deleted Version ShareUsageBytes
+    ----     -------- --------------- ---------- ------- ------- ---------------
+    myshare  5120
+  description: |-
+    This command gets a Storage blob container with Storage account object and container name.
+  summary: ""
+- title: 'Example 4: Get a Storage file share with the share usage in bytes'
+  code: |-
+    PS C:\>Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -GetShareUsage
+
+       ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocol AccessTier Deleted Version ShareUsageBytes
+    ----     -------- --------------- ---------- ------- ------- ---------------
+    myshare  5120                                                2097152
+  description: |-
+    This command gets a Storage file share with Storage account name and share name, and include the share usage in bytes.
+  summary: ""
+- title: 'Example 5: List all Storage file shares of a Storage account, include the deleted shares'
+  code: |-
+    PS C:\>Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -IncludeDeleted 
+
+       ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocol AccessTier           Deleted Version          ShareUsageBytes
+    ----     -------- --------------- ----------           ------- -------          ---------------
+    test     100                      TransactionOptimized                                         
+    share1   100                      TransactionOptimized True    01D61FD1FC5498B6
+  description: |-
+    This command lists all Storage file shares include the deleted shares of a Storage account with Storage account name.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GetShareUsage
+  description: |+
+    Specify this parameter to get the Share Usage in Bytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeDeleted
+  description: |+
+    Include deleted shares, by default list shares won't include deleted shares
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Share Name
+
+  defaultValue: None
+  position: Named
+  aliases: N, ShareName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Input a File Share Resource Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+  name: StorageAccount
+  isRequired: true
+  description: |+
+    Storage account object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  isRequired: true
+  description: |+
+    Storage Account Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: AccountName
+  parameterValueGroup: ""
+uid: Az.Storage.Get-AzRmStorageShare
+name: Get-AzRmStorageShare
+description: |-
+  The **Get-AzRmStorageShare** cmdlet gets or lists Storage file shares.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azrmstorageshare
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzRmStorageShare.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzRmStorageShare.md

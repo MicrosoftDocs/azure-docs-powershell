@@ -1,0 +1,47 @@
+### YamlMime:PowershellModule
+children:
+- title: Data Lake Analytics
+  cmdlets:
+  - Az.DataLakeAnalytics.Add-AzDataLakeAnalyticsDataSource
+  - Az.DataLakeAnalytics.Add-AzDataLakeAnalyticsFirewallRule
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsAccount
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsCatalogItem
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsCatalogItemAclEntry
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsComputePolicy
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsDataSource
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsFirewallRule
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJob
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJobPipeline
+  - Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJobRecurrence
+  - Az.DataLakeAnalytics.New-AzDataLakeAnalyticsAccount
+  - Az.DataLakeAnalytics.New-AzDataLakeAnalyticsCatalogCredential
+  - Az.DataLakeAnalytics.New-AzDataLakeAnalyticsComputePolicy
+  - Az.DataLakeAnalytics.Remove-AzDataLakeAnalyticsAccount
+  - Az.DataLakeAnalytics.Remove-AzDataLakeAnalyticsCatalogCredential
+  - Az.DataLakeAnalytics.Remove-AzDataLakeAnalyticsCatalogItemAclEntry
+  - Az.DataLakeAnalytics.Remove-AzDataLakeAnalyticsComputePolicy
+  - Az.DataLakeAnalytics.Remove-AzDataLakeAnalyticsDataSource
+  - Az.DataLakeAnalytics.Remove-AzDataLakeAnalyticsFirewallRule
+  - Az.DataLakeAnalytics.Set-AzDataLakeAnalyticsAccount
+  - Az.DataLakeAnalytics.Set-AzDataLakeAnalyticsCatalogCredential
+  - Az.DataLakeAnalytics.Set-AzDataLakeAnalyticsCatalogItemAclEntry
+  - Az.DataLakeAnalytics.Set-AzDataLakeAnalyticsDataSource
+  - Az.DataLakeAnalytics.Set-AzDataLakeAnalyticsFirewallRule
+  - Az.DataLakeAnalytics.Stop-AzDataLakeAnalyticsJob
+  - Az.DataLakeAnalytics.Submit-AzDataLakeAnalyticsJob
+  - Az.DataLakeAnalytics.Test-AzDataLakeAnalyticsAccount
+  - Az.DataLakeAnalytics.Test-AzDataLakeAnalyticsCatalogItem
+  - Az.DataLakeAnalytics.Update-AzDataLakeAnalyticsComputePolicy
+  - Az.DataLakeAnalytics.Wait-AzDataLakeAnalyticsJob
+uid: Az.DataLakeAnalytics
+name: Az.DataLakeAnalytics
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure Data Lake Analytics in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.DataLakeAnalytics namespace.
+metadata:
+  Module Name: Az.DataLakeAnalytics
+  Module Guid: eca73aa1-a68f-4ceb-9775-70759316a57b
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Az.DataLakeAnalytics.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Az.DataLakeAnalytics.md

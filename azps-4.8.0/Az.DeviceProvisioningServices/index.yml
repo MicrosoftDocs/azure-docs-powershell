@@ -1,0 +1,43 @@
+### YamlMime:PowershellModule
+children:
+- title: DPS
+  cmdlets:
+  - Az.DeviceProvisioningServices.Add-AzIoTDeviceProvisioningServiceAccessPolicy
+  - Az.DeviceProvisioningServices.Add-AzIoTDeviceProvisioningServiceCertificate
+  - Az.DeviceProvisioningServices.Add-AzIoTDeviceProvisioningServiceEnrollment
+  - Az.DeviceProvisioningServices.Add-AzIoTDeviceProvisioningServiceEnrollmentGroup
+  - Az.DeviceProvisioningServices.Add-AzIoTDeviceProvisioningServiceLinkedHub
+  - Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningService
+  - Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningServiceAccessPolicy
+  - Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningServiceCertificate
+  - Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningServiceEnrollment
+  - Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningServiceEnrollmentGroup
+  - Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningServiceLinkedHub
+  - Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningServiceRegistration
+  - Az.DeviceProvisioningServices.New-AzIoTDeviceProvisioningService
+  - Az.DeviceProvisioningServices.New-AzIoTDeviceProvisioningServiceCertificateVerificationCode
+  - Az.DeviceProvisioningServices.Remove-AzIoTDeviceProvisioningService
+  - Az.DeviceProvisioningServices.Remove-AzIoTDeviceProvisioningServiceAccessPolicy
+  - Az.DeviceProvisioningServices.Remove-AzIoTDeviceProvisioningServiceCertificate
+  - Az.DeviceProvisioningServices.Remove-AzIoTDeviceProvisioningServiceEnrollment
+  - Az.DeviceProvisioningServices.Remove-AzIoTDeviceProvisioningServiceEnrollmentGroup
+  - Az.DeviceProvisioningServices.Remove-AzIoTDeviceProvisioningServiceLinkedHub
+  - Az.DeviceProvisioningServices.Remove-AzIoTDeviceProvisioningServiceRegistration
+  - Az.DeviceProvisioningServices.Set-AzIoTDeviceProvisioningServiceCertificate
+  - Az.DeviceProvisioningServices.Set-AzIoTDeviceProvisioningServiceEnrollment
+  - Az.DeviceProvisioningServices.Set-AzIoTDeviceProvisioningServiceEnrollmentGroup
+  - Az.DeviceProvisioningServices.Update-AzIoTDeviceProvisioningService
+  - Az.DeviceProvisioningServices.Update-AzIoTDeviceProvisioningServiceAccessPolicy
+  - Az.DeviceProvisioningServices.Update-AzIoTDeviceProvisioningServiceLinkedHub
+uid: Az.DeviceProvisioningServices
+name: Az.DeviceProvisioningServices
+description: |-
+  Commands for Managing Azure IoT Hub Device Provisioning Service.
+metadata:
+  Module Name: Az.DeviceProvisioningServices
+  Module Guid: a9f5b86f-63be-4e7a-8e16-c8c7c36cae40
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.deviceprovisioningservices
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Az.DeviceProvisioningServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Az.DeviceProvisioningServices.md

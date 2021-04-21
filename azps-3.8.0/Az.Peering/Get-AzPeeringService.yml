@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get a list of peering service objects of a single object.
+module: Az.Peering
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSPeeringService" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzPeeringService [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzPeeringService [-ResourceGroupName] <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzPeeringService [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzPeeringService -ResourceGroupName $rgName
+
+    PeeringServiceLocation : Washington
+    PeeringServiceProvider : TestPeer1
+    ProvisioningState      : Succeeded
+    Location               : centralus
+    Tags                   : {}
+    Name                   : myPeeringService312
+    Id                     : /subscriptions/resourceGroups/Building40/providers/Microsoft.Peering/peeringServices/myPeeringService312
+    Type                   : Microsoft.Peering/peeringServices
+
+    PeeringServiceLocation : Washington
+    PeeringServiceProvider : TestPeer1
+    ProvisioningState      : Succeeded
+    Location               : centralus
+    Tags                   : {}
+    Name                   : myPeeringService3990
+    Id                     : /subscriptions/resourceGroups/Building40/providers/Microsoft.Peering/peeringServices/myPeeringService3990
+    Type                   : Microsoft.Peering/peeringServices
+  description: |-
+    Gets a peering service for a resource group
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzPeeringService -ResourceGroupName $rgName -Name $name
+
+    PeeringServiceLocation : Washington
+    PeeringServiceProvider : TestPeer1
+    ProvisioningState      : Succeeded
+    Location               : centralus
+    Tags                   : {}
+    Name                   : myPeeringService312
+    Id                     : /subscriptions/resourceGroups/Building40/providers/Microsoft.Peering/peeringServices/myPeeringService312
+    Type                   : Microsoft.Peering/peeringServices
+  description: |-
+    Gets a peering service for a resource group and name
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzPeeringService -ResourceId $rid
+
+    PeeringServiceLocation : Washington
+    PeeringServiceProvider : TestPeer1
+    ProvisioningState      : Succeeded
+    Location               : centralus
+    Tags                   : {}
+    Name                   : myPeeringService312
+    Id                     : /subscriptions/resourceGroups/Building40/providers/Microsoft.Peering/peeringServices/myPeeringService312
+    Type                   : Microsoft.Peering/peeringServices
+  description: |-
+    Gets a peering service by resource id
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The unique name of the PSPeering.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The create or use an existing resource group name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The resource id string name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Peering.Get-AzPeeringService
+name: Get-AzPeeringService
+description: |-
+  Gets peering services for a subscription
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
+  Module Name: Az.Peering
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.peering/get-azpeeringservice
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Get-AzPeeringService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Peering/Peering/help/Get-AzPeeringService.md

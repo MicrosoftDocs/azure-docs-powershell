@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Key Vault managed Storage SAS Definitions.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultManagedStorageAccountIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultManagedStorageSasDefinitionIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultManagedStorageSasDefinition" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultManagedStorageSasDefinition" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultManagedStorageSasDefinitionIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Azure PowerShell Key Vault cmdlets
+  href: /powershell/module/az.keyvault/
+syntaxes:
+- >-
+  Get-AzKeyVaultManagedStorageSasDefinition [-VaultName] <String> [-AccountName] <String> [[-Name] <String>]
+
+   [-InRemovedState] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzKeyVaultManagedStorageSasDefinition [-InputObject] <PSKeyVaultManagedStorageAccountIdentityItem>
+
+   [[-Name] <String>] [-InRemovedState] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all Key Vault managed Storage SAS Definitions'
+  code: |-
+    PS C:\> Get-AzKeyVaultManagedStorageSasDefinition -VaultName 'myvault' -AccountName 'mystorageaccount'
+
+    Id          : https://myvault.vault.azure.net:443/storage/mystorageaccount/sas/accountsas
+    Vault Name  : myvault
+    AccountName : mystorageaccount
+    Name        : accountsas
+    Enabled     : True
+    Created     : 5/24/2018 9:11:08 PM
+    Updated     : 5/24/2018 9:11:08 PM
+    Tags        :
+  description: |-
+    Lists all the SAS definitions associated with Key Vault managed Storage Account 'mystorageaccount' managed by vault 'myvault'
+  summary: ""
+- title: 'Example 2: Get a Key Vault managed Storage Account'
+  code: |-
+    PS C:\> Get-AzKeyVaultManagedStorageSasDefinition -VaultName 'myvault' -AccountName 'mystorageaccount' -Name 'accountsas'
+
+    Id          : https://myvault.vault.azure.net:443/storage/mystorageaccount/sas/accountsas
+    Secret Id   : https://myvault.vault.azure.net/secrets/mystorageaccount-accountsas
+    Vault Name  : myvault
+    AccountName : mystorageaccount
+    Name        : accountsas
+    Parameter   :
+    Enabled     : True
+    Created     : 5/24/2018 9:11:08 PM
+    Updated     : 5/24/2018 9:11:08 PM
+    Tags        :
+  description: |-
+    Gets the details of SAS Definition 'accountsas' associated with Key Vault managed Storage Account 'mystorageaccount' managed by vault 'myvault'.
+  summary: ""
+- title: 'Example 3: List all Key Vault managed Storage SAS Definitions using filtering'
+  code: |-
+    PS C:\> Get-AzKeyVaultManagedStorageSasDefinition -VaultName 'myvault' -AccountName 'mystorageaccount' -Name "account*"
+
+    Id          : https://myvault.vault.azure.net:443/storage/mystorageaccount/sas/accountsas1
+    Vault Name  : myvault
+    AccountName : mystorageaccount
+    Name        : accountsas1
+    Enabled     : True
+    Created     : 5/24/2018 9:11:08 PM
+    Updated     : 5/24/2018 9:11:08 PM
+    Tags        :
+
+    Id          : https://myvault.vault.azure.net:443/storage/mystorageaccount/sas/accountsas2
+    Vault Name  : myvault
+    AccountName : mystorageaccount
+    Name        : accountsas2
+    Enabled     : True
+    Created     : 5/24/2018 9:11:08 PM
+    Updated     : 5/24/2018 9:11:08 PM
+    Tags        :
+  description: |-
+    Lists all the SAS definitions associated with Key Vault managed Storage Account 'mystorageaccount' managed by vault 'myvault' that start with "account".
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    Vault name.
+    Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+
+  defaultValue: None
+  position: "1"
+  aliases: StorageAccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultManagedStorageAccountIdentityItem" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    ManagedStorageAccount object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InRemovedState
+  description: |+
+    Specifies whether to show the previously deleted storage sas definitions in the output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Storage sas definition name.
+    Cmdlet constructs the FQDN of a storage sas definition from vault name, currently selected environment, storage account name and sas definition name.
+
+  defaultValue: None
+  position: "2"
+  aliases: SasDefinitionName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Vault name.
+    Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.KeyVault.Get-AzKeyVaultManagedStorageSasDefinition
+name: Get-AzKeyVaultManagedStorageSasDefinition
+description: |-
+  Gets a Key Vault managed Storage SAS Definition if the name of the definition is specified. If the definition name is not specified, then all the SAS definitions associated with the specified Key Vault managed Storage Account in the vault are listed.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/get-azkeyvaultmanagedstoragesasdefinition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultManagedStorageSasDefinition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultManagedStorageSasDefinition.md

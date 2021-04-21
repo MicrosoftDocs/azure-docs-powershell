@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds the public keys for SSH for a virtual machine, when only creating the VM.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVM
+  href: ./Get-AzVM.yml
+- text: New-AzVMConfig
+  href: ./New-AzVMConfig.yml
+syntaxes:
+- >-
+  Add-AzVMSshPublicKey [-VM] <PSVirtualMachine> [[-KeyData] <String>] [[-Path] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a public key to a virtual machine'
+  code: |-
+    PS C:\> $VirtualMachine = Get-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07"
+    PS C:\> $VirtualMachine = Add-AzVMSshPublicKey -VM $VirtualMachine -KeyData "MIIDszCCApugAwIBAgIJALBV9YJCF/tAMA0GCSq12Ib3DQEB21QUAMEUxCzAJBgNV" -Path "/home/admin/.ssh/authorized_keys"
+  description: |-
+    The first command gets the virtual machine named VirtualMachine07 by using the **Get-AzVM** cmdlet.
+    The command stores the virtual machine in the $VirtualMachine variable.
+    The second command adds the public key to the location on VirtualMachine07 that the Path parameter specifies.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyData
+  description: |+
+    Specifies a base 64 encoding of a public key.
+    You can connect to a Linux virtual machine by using SSH or by using the key that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the full path of a file, on the virtual machine, where this cmdlet stores the SSH public key.
+    If the file already exists, this cmdlet appends the key to the file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine object that this cmdlet modifies.
+    To obtain a virtual machine object, use the [Get-AzVM](./Get-AzVM.yml) cmdlet.
+    You can use the [New-AzVMConfig](./New-AzVMConfig.yml) cmdlet to create a virtual machine object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMProfile
+  parameterValueGroup: ""
+uid: Az.Compute.Add-AzVMSshPublicKey
+name: Add-AzVMSshPublicKey
+description: |-
+  The **Add-AzVMSshPublicKey** cmdlet adds the public keys that you can use to connect to a Linux virtual machine over Secure Shell (SSH). This cannot be used after VM creation, if you try to use this after VM creation without Update-AzVM, there will be no error, if you use the command with Update-AzVM, the command will error.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: 3CE367B1-7685-4046-8E9C-CE680B5AE03F
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmsshpublickey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSshPublicKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSshPublicKey.md
