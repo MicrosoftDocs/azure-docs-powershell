@@ -2622,17 +2622,6 @@ items:
     - name: Set-AzHealthcareApisService
       uid: Az.HealthcareApis.Set-AzHealthcareApisService
   - name: IoT
-    href: Az.IotCentral/index.yml#iot
-    items:
-    - name: Get-AzIotCentralApp
-      uid: Az.IotCentral.Get-AzIotCentralApp
-    - name: New-AzIotCentralApp
-      uid: Az.IotCentral.New-AzIotCentralApp
-    - name: Remove-AzIotCentralApp
-      uid: Az.IotCentral.Remove-AzIotCentralApp
-    - name: Set-AzIotCentralApp
-      uid: Az.IotCentral.Set-AzIotCentralApp
-  - name: IoT
     href: Az.IotHub/index.yml#iot
     items:
     - name: Add-AzIotHubCertificate
@@ -2763,6 +2752,17 @@ items:
       uid: Az.IotHub.Update-AzIotHubDeviceTwin
     - name: Update-AzIotHubModuleTwin
       uid: Az.IotHub.Update-AzIotHubModuleTwin
+  - name: IoT
+    href: Az.IotCentral/index.yml#iot
+    items:
+    - name: Get-AzIotCentralApp
+      uid: Az.IotCentral.Get-AzIotCentralApp
+    - name: New-AzIotCentralApp
+      uid: Az.IotCentral.New-AzIotCentralApp
+    - name: Remove-AzIotCentralApp
+      uid: Az.IotCentral.Remove-AzIotCentralApp
+    - name: Set-AzIotCentralApp
+      uid: Az.IotCentral.Set-AzIotCentralApp
   - name: Key Vault
     href: Az.KeyVault/index.yml#key-vault
     items:
@@ -4852,37 +4852,6 @@ items:
     - name: Update-AzSignalR
       uid: Az.SignalR.Update-AzSignalR
   - name: SQL
-    href: Az.SqlVirtualMachine/index.yml#sql
-    items:
-    - name: Get-AzAvailabilityGroupListener
-      uid: Az.SqlVirtualMachine.Get-AzAvailabilityGroupListener
-    - name: Get-AzSqlVM
-      uid: Az.SqlVirtualMachine.Get-AzSqlVM
-    - name: Get-AzSqlVMGroup
-      uid: Az.SqlVirtualMachine.Get-AzSqlVMGroup
-    - name: New-AzAvailabilityGroupListener
-      uid: Az.SqlVirtualMachine.New-AzAvailabilityGroupListener
-    - name: New-AzSqlVM
-      uid: Az.SqlVirtualMachine.New-AzSqlVM
-    - name: New-AzSqlVMConfig
-      uid: Az.SqlVirtualMachine.New-AzSqlVMConfig
-    - name: New-AzSqlVMGroup
-      uid: Az.SqlVirtualMachine.New-AzSqlVMGroup
-    - name: Remove-AzAvailabilityGroupListener
-      uid: Az.SqlVirtualMachine.Remove-AzAvailabilityGroupListener
-    - name: Remove-AzSqlVM
-      uid: Az.SqlVirtualMachine.Remove-AzSqlVM
-    - name: Remove-AzSqlVMGroup
-      uid: Az.SqlVirtualMachine.Remove-AzSqlVMGroup
-    - name: Set-AzSqlVMConfigGroup
-      uid: Az.SqlVirtualMachine.Set-AzSqlVMConfigGroup
-    - name: Update-AzAvailabilityGroupListener
-      uid: Az.SqlVirtualMachine.Update-AzAvailabilityGroupListener
-    - name: Update-AzSqlVM
-      uid: Az.SqlVirtualMachine.Update-AzSqlVM
-    - name: Update-AzSqlVMGroup
-      uid: Az.SqlVirtualMachine.Update-AzSqlVMGroup
-  - name: SQL
     href: Az.Sql/index.yml#sql
     items:
     - name: Add-AzSqlDatabaseToFailoverGroup
@@ -5379,6 +5348,37 @@ items:
       uid: Az.Sql.Update-AzSqlSyncMember
     - name: Update-AzSqlSyncSchema
       uid: Az.Sql.Update-AzSqlSyncSchema
+  - name: SQL
+    href: Az.SqlVirtualMachine/index.yml#sql
+    items:
+    - name: Get-AzAvailabilityGroupListener
+      uid: Az.SqlVirtualMachine.Get-AzAvailabilityGroupListener
+    - name: Get-AzSqlVM
+      uid: Az.SqlVirtualMachine.Get-AzSqlVM
+    - name: Get-AzSqlVMGroup
+      uid: Az.SqlVirtualMachine.Get-AzSqlVMGroup
+    - name: New-AzAvailabilityGroupListener
+      uid: Az.SqlVirtualMachine.New-AzAvailabilityGroupListener
+    - name: New-AzSqlVM
+      uid: Az.SqlVirtualMachine.New-AzSqlVM
+    - name: New-AzSqlVMConfig
+      uid: Az.SqlVirtualMachine.New-AzSqlVMConfig
+    - name: New-AzSqlVMGroup
+      uid: Az.SqlVirtualMachine.New-AzSqlVMGroup
+    - name: Remove-AzAvailabilityGroupListener
+      uid: Az.SqlVirtualMachine.Remove-AzAvailabilityGroupListener
+    - name: Remove-AzSqlVM
+      uid: Az.SqlVirtualMachine.Remove-AzSqlVM
+    - name: Remove-AzSqlVMGroup
+      uid: Az.SqlVirtualMachine.Remove-AzSqlVMGroup
+    - name: Set-AzSqlVMConfigGroup
+      uid: Az.SqlVirtualMachine.Set-AzSqlVMConfigGroup
+    - name: Update-AzAvailabilityGroupListener
+      uid: Az.SqlVirtualMachine.Update-AzAvailabilityGroupListener
+    - name: Update-AzSqlVM
+      uid: Az.SqlVirtualMachine.Update-AzSqlVM
+    - name: Update-AzSqlVMGroup
+      uid: Az.SqlVirtualMachine.Update-AzSqlVMGroup
   - name: Stack Edge
     href: Az.StackEdge/index.yml#stack-edge
     items:
