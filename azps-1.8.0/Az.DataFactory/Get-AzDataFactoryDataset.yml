@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about datasets in Azure Data Factory.
+module: Az.DataFactory
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataset" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzDataFactoryDataset
+  href: ./New-AzDataFactoryDataset.yml
+- text: Remove-AzDataFactoryDataset
+  href: ./Remove-AzDataFactoryDataset.yml
+syntaxes:
+- >-
+  Get-AzDataFactoryDataset [-DataFactoryName] <String> [[-Name] <String>] [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataFactoryDataset [-DataFactory] <PSDataFactory> [[-Name] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about all datasets'
+  code: |-
+    PS C:\>Get-AzDataFactoryDataset -ResourceGroupName "ADF" -DataFactoryName "WikiADF" 
+    DatasetName       : DACuratedWikiData
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF
+    Availability      : Microsoft.DataFactories.Availability
+    Location          : 
+    Policy            : 
+    Structure         : {}
+
+    DatasetName       : DAWikipediaClickEvents
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF
+    Availability      : Microsoft.DataFactories.Availability
+    Location          : 
+    Policy            : 
+    Structure         : {}
+
+    DatasetName         : DAWikiAggregatedData
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF
+    Availability      : Microsoft.DataFactories.Availability
+    Location          : 
+    Policy            : 
+    Structure         : {}
+  description: |-
+    This command gets information about all datasets in the data factory named WikiADF.
+  summary: ""
+- title: 'Example 2: Get information about a specific dataset'
+  code: |-
+    PS C:\>Get-AzDataFactoryDataset -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "DAWikipediaClickEvents" 
+    DatasetName       : DAWikipediaClickEvents
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF
+    Availability      : Microsoft.DataFactories.Availability
+    Location          : Microsoft.DataFactories.AzureBlobLocation
+    Policy            : Microsoft.DataFactories.Policy
+    Structure         : {}
+  description: |-
+    This command gets information about the dataset named DAWikipediaClickEvents in the data factory named WikiADF.
+  summary: ""
+- title: 'Example 3: Get the location for a specific dataset'
+  code: |-
+    PS C:\>(Get-AzDataFactoryDataset -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "DAWikipediaClickEvents").Location
+    BlobPath          : wikidatagateway/wikisampledatain/
+    FilenamePrefix    : 
+    Format            : 
+    LinkedServiceName : LinkedServiceWikipediaClickEvents
+    PartitionBy       : {}
+  description: |-
+    This command gets information for the dataset named DAWikipediaClickEvents in the data factory named WikiADF, and then uses standard dot notation to view the **Location** associated with that dataset.
+    Alternatively, assign the output of the **Get-AzDataFactoryDataset** cmdlet to a variable, and then use dot notation to view the Location property associated with the dataset object stored in that variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  name: DataFactory
+  isRequired: true
+  description: |+
+    Specifies a **PSDataFactory** object.
+    This cmdlet gets datasets that belong to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet gets datasets that belong to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the dataset about which this cmdlet gets information.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet gets datasets that belong to the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataFactory.Get-AzDataFactoryDataset
+name: Get-AzDataFactoryDataset
+description: |-
+  The **Get-AzDataFactoryDataset** cmdlet gets information about datasets in Azure Data Factory.
+  If you specify the name of a dataset, this cmdlet gets information about that dataset.
+  If you do not specify a name, this cmdlet gets information about all the datasets in the data factory.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
+  Module Name: Az.DataFactory
+  ms.assetid: BB18EEF3-570A-4667-AF0E-FCEEE17B4905
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/get-azdatafactorydataset
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryDataset.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryDataset.md

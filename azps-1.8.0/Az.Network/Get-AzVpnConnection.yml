@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a vpn connection by name or lists all vpn connections connected to a VpnGateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnGateway" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnConnection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzVpnConnection
+  href: ./New-AzVpnConnection.yml
+- text: Remove-AzVpnConnection
+  href: ./Remove-AzVpnConnection.yml
+- text: Update-AzVpnConnection
+  href: ./Update-AzVpnConnection.yml
+syntaxes:
+- >-
+  Get-AzVpnConnection -ResourceGroupName <String> -ParentResourceName <String> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzVpnConnection -ParentObject <PSVpnGateway> [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzVpnConnection -ParentResourceId <String> [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzResourceGroup -Location "West US" -Name "testRG"
+    PS C:\> $virtualWan = New-AzVirtualWan -ResourceGroupName testRG -Name myVirtualWAN -Location "West US"
+    PS C:\> $virtualHub = New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.0.1/24"
+    PS C:\> New-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw" -VirtualHubId $virtualHub.Id -BGPPeeringWeight 10 -VpnGatewayScaleUnit 2
+    PS C:\> $vpnGateway = Get-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw"
+
+    PS C:\> $vpnSiteAddressSpaces = New-Object string[] 2
+    PS C:\> $vpnSiteAddressSpaces[0] = "192.168.2.0/24"
+    PS C:\> $vpnSiteAddressSpaces[1] = "192.168.3.0/24"
+
+    PS C:\> $vpnSite = New-AzVpnSite -ResourceGroupName "testRG" -Name "testVpnSite" -Location "West US" -VirtualWan $virtualWan -IpAddress "1.2.3.4" -AddressSpace $vpnSiteAddressSpaces -DeviceModel "SomeDevice" -DeviceVendor "SomeDeviceVendor" -LinkSpeedInMbps "10"
+
+    PS C:\> New-AzVpnConnection -ResourceGroupName $vpnGateway.ResourceGroupName -ParentResourceName $vpnGateway.Name -Name "testConnection" -VpnSite $vpnSite
+    PS C:\> Get-AzVpnConnection -ResourceGroupName $vpnGateway.ResourceGroupName -ParentResourceName $vpnGateway.Name -Name "testConnection"
+
+    RemoteVpnSite             : Microsoft.Azure.Commands.Network.Models.PSResourceId
+    SharedKey                 :
+    VpnConnectionProtocolType : IKEv2
+    ConnectionStatus          :
+    EgressBytesTransferred    : 0
+    IngressBytesTransferred   : 0
+    IpsecPolicies             : {}
+    ConnectionBandwidth       : 20
+    EnableBgp                 : False
+    ProvisioningState         : testConnection
+    Name                      : ps9709
+    Etag                      : W/"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    Id                        : /subscriptions/{subscriptionId}/resourceGroups/ps9361/providers/Microsoft.Network/vpnGateways/testvpngw/vpnConnections/testConnection
+  description: |-
+    The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure. 
+    A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
+
+    Once the gateway has been created, it is connected to the VpnSite using the New-AzVpnConnection command.
+
+    Then it gets the connection using the connection name.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzVpnConnection -ResourceGroupName ps9361 -ParentResourceName testvpngw -Name test*
+
+    RemoteVpnSite             : Microsoft.Azure.Commands.Network.Models.PSResourceId
+    SharedKey                 :
+    VpnConnectionProtocolType : IKEv2
+    ConnectionStatus          :
+    EgressBytesTransferred    : 0
+    IngressBytesTransferred   : 0
+    IpsecPolicies             : {}
+    ConnectionBandwidth       : 20
+    EnableBgp                 : False
+    ProvisioningState         : testConnection
+    Name                      : ps9709
+    Etag                      : W/"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    Id                        : /subscriptions/{subscriptionId}/resourceGroups/ps9361/providers/Microsoft.Network/vpnGateways/testvpngw/vpnConnections/testConnection1
+
+    RemoteVpnSite             : Microsoft.Azure.Commands.Network.Models.PSResourceId
+    SharedKey                 :
+    VpnConnectionProtocolType : IKEv2
+    ConnectionStatus          :
+    EgressBytesTransferred    : 0
+    IngressBytesTransferred   : 0
+    IpsecPolicies             : {}
+    ConnectionBandwidth       : 20
+    EnableBgp                 : False
+    ProvisioningState         : testConnection
+    Name                      : ps9709
+    Etag                      : W/"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    Id                        : /subscriptions/{subscriptionId}/resourceGroups/ps9361/providers/Microsoft.Network/vpnGateways/testvpngw/vpnConnections/testConnection2
+  description: |-
+    This cmdlet gets all connections that start with "test".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The resource name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ResourceName, VpnConnectionName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnGateway" data-throw-if-not-resolved="False" />
+  name: ParentObject
+  isRequired: true
+  description: |+
+    The parent VpnGateway for this connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ParentVpnGateway, VpnGateway
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceId
+  isRequired: true
+  description: |+
+    The resource id of the parent VpnGateway for this connection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ParentVpnGatewayId, VpnGatewayId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceName
+  isRequired: true
+  description: |+
+    The parent resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ParentVpnGatewayName, VpnGatewayName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzVpnConnection
+name: Get-AzVpnConnection
+description: |-
+  Gets a vpn connection by name or lists all vpn connections connected to a VpnGateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvpnconnection
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnConnection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnConnection.md

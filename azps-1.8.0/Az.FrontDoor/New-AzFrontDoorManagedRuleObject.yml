@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create ManagedRule Object for WAF policy creation
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSAzureManagedRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoorFireWallPolicy
+  href: ./New-AzFrontDoorFireWallPolicy.yml
+- text: Update-AzFrontDoorFireWallPolicy
+  href: ./Update-AzFrontDoorFireWallPolicy.yml
+- text: New-AzFrontDoorRuleGroupOverrideObject
+  href: ./New-AzFrontDoorRuleGroupOverrideObject.yml
+syntaxes:
+- >-
+  New-AzFrontDoorManagedRuleObject -Type <String> -Version <String>
+
+   [-RuleGroupOverride <PSAzureRuleGroupOverride[]>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $ruleOverride1 = New-AzFrontDoorManagedRuleOverrideObject -RuleId "942250" -Action Log -EnabledState Enabled
+    PS C:\> $ruleOverride2 = New-AzFrontDoorManagedRuleOverrideObject -RuleId "942251" -Action Log -EnabledState Enabled
+    PS C:\> $override1 = New-AzFrontDoorRuleGroupOverrideObject -RuleGroupName SQLI -ManagedRuleOverride $ruleOverride1,$ruleOverride2
+
+    PS C:\> $ruleOverride3 = New-AzFrontDoorManagedRuleOverrideObject -RuleId "941280" -Action Log -EnabledState Enabled
+    PS C:\> $override2 = New-AzFrontDoorRuleGroupOverrideObject -RuleGroupName XSS -ManagedRuleOverride $ruleOverride3
+
+    PS C:\> New-AzFrontDoorManagedRuleObject -Type DefaultRuleSet -Version "preview-0.1" -RuleGroupOverride $override1,$override2
+
+    RuleGroupOverrides RuleSetType    RuleSetVersion
+    ------------------ -----------    --------------
+    {SQLI, XSS}        DefaultRuleSet preview-0.1
+  description: |-
+    Create a ManagedRule Object
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSAzureRuleGroupOverride" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RuleGroupOverride
+  description: |+
+    List of azure managed provider override configuration
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Type of the ruleset
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Version
+  isRequired: true
+  description: |+
+    Version of the ruleset
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorManagedRuleObject
+name: New-AzFrontDoorManagedRuleObject
+description: |-
+  Create ManagedRule Object for WAF policy creation
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoormanagedruleobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorManagedRuleObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorManagedRuleObject.md

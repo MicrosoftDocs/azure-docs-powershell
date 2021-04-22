@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Streaming MapReduce job object.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightStreamingMapReduceJobDefinition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-AzHDInsightJob
+  href: ./Start-AzHDInsightJob.yml
+syntaxes:
+- >-
+  New-AzHDInsightStreamingMapReduceJobDefinition [-Arguments <String[]>] [-File <String>] [-Files <String[]>]
+
+   [-StatusFolder <String>] [-CommandEnvironment <Hashtable>] [-Defines <Hashtable>] -InputPath <String>
+
+   [-Mapper <String>] [-OutputPath <String>] [-Reducer <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Streaming MapReduce job definition'
+  code: |-
+    PS C:\># Cluster info
+    PS C:\>$clusterName = "your-hadoop-001"
+    PS C:\>$clusterCreds = Get-Credential
+
+    # Streaming MapReduce job details
+    PS C:\>$statusFolder = "tempStatusFolder/"
+    PS C:\>$query = "SHOW TABLES"
+
+    PS C:\>New-AzHDInsightStreamingMapReduceJobDefinition -StatusFolder $statusFolder `
+                -Query $query `
+            | Start-AzHDInsightJob `
+                -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds
+  description: |-
+    This command creates a Streaming MapReduce job definition.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Arguments
+  description: |+
+    Specifies an array of arguments for the job.
+    The arguments are passed as command-line arguments to each task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: CommandEnvironment
+  description: |+
+    Specifies an array of command-line environment variables to set when a job runs on worker nodes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Defines
+  description: |+
+    Specifies Hadoop configuration values to set for when the job runs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: File
+  description: |+
+    Specifies the path to a file that contains a query to run.
+    You can use this parameter instead of the *Query* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Files
+  description: |+
+    Specifies a collection of files that are associated with a Hive job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InputPath
+  isRequired: true
+  description: |+
+    Specifies the path to the input files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Mapper
+  description: |+
+    Specifies a Mapper file name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OutputPath
+  description: |+
+    Specifies the path for the job output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Reducer
+  description: |+
+    Specifies a Reducer file name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StatusFolder
+  description: |+
+    Specifies the location of the folder that contains standard outputs and error outputs for a job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.New-AzHDInsightStreamingMapReduceJobDefinition
+name: New-AzHDInsightStreamingMapReduceJobDefinition
+description: |-
+  The **New-AzHDInsightStreamingMapReduceJobDefinition** cmdlet defines a Streaming MapReduce job object for use with an Azure HDInsight cluster.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 17CB76E7-2F91-4EFE-9DA3-F083F02235E1
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/new-azhdinsightstreamingmapreducejobdefinition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightStreamingMapReduceJobDefinition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightStreamingMapReduceJobDefinition.md

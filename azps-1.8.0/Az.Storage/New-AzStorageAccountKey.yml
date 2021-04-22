@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Regenerates a storage key for an Azure Storage account.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Storage.Models.StorageAccountKey" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzStorageAccountKey
+  href: ./Get-AzStorageAccountKey.yml
+syntaxes:
+- >-
+  New-AzStorageAccountKey [-ResourceGroupName] <String> [-Name] <String> [-KeyName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Regenerate a storage key'
+  code: |-
+    PS C:\>New-AzStorageAccountKey -ResourceGroupName "MyResourceGroup" -Name "mystorageaccount" -KeyName "key1"
+  description: |-
+    This command regenerates a storage key for the specified Storage account.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyName
+  isRequired: true
+  description: |+
+    Specifies which key to regenerate.
+    The acceptable values for this parameter are:
+    - key1
+    - key2
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: key1, key2
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the Storage account for which to regenerate a storage key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: StorageAccountName, AccountName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the Storage account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.New-AzStorageAccountKey
+name: New-AzStorageAccountKey
+description: |-
+  The **New-AzStorageAccountKey** cmdlet regenerates a storage key for an Azure Storage account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: FDD2CE98-6C7E-4B95-BA5B-B03B6AC6EAEF
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstorageaccountkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageAccountKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageAccountKey.md

@@ -1,0 +1,297 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Azure express route circuit.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRoutePort" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Double" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPeering" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitAuthorization" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzExpressRouteCircuit
+  href: Get-AzExpressRouteCircuit.yml
+- text: Move-AzExpressRouteCircuit
+  href: Move-AzExpressRouteCircuit.yml
+- text: Remove-AzExpressRouteCircuit
+  href: Remove-AzExpressRouteCircuit.yml
+- text: Set-AzExpressRouteCircuit
+  href: Set-AzExpressRouteCircuit.yml
+syntaxes:
+- >-
+  New-AzExpressRouteCircuit -Name <String> -ResourceGroupName <String> -Location <String> [-SkuTier <String>]
+
+   [-SkuFamily <String>] -ServiceProviderName <String> -PeeringLocation <String> -BandwidthInMbps <Int32>
+
+   [-Peering <PSPeering[]>] [-Authorization <PSExpressRouteCircuitAuthorization[]>]
+
+   [-AllowClassicOperations <Boolean>] [-Tag <Hashtable>] [-Force] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzExpressRouteCircuit -Name <String> -ResourceGroupName <String> -Location <String> [-SkuTier <String>]
+
+   [-SkuFamily <String>] -ExpressRoutePort <PSExpressRoutePort> -BandwidthInGbps <Double>
+
+   [-Peering <PSPeering[]>] [-Authorization <PSExpressRouteCircuitAuthorization[]>]
+
+   [-AllowClassicOperations <Boolean>] [-Tag <Hashtable>] [-Force] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new ExpressRoute circuit'
+  code: |-
+    $parameters = @{
+        Name='ExpressRouteCircuit'
+        ResourceGroupName='ExpressRouteResourceGroup'
+        Location='West US'
+        SkuTier='Standard'
+        SkuFamily='MeteredData'
+        ServiceProviderName='Equinix'
+        PeeringLocation='Silicon Valley'
+        BandwidthInMbps=200
+    }
+    New-AzExpressRouteCircuit @parameters
+  description: ""
+  summary: ""
+- title: 'Example 2: Create a new ExpressRoute circuit on ExpressRoutePort'
+  code: |-
+    $parameters = @{
+        Name='ExpressRouteCircuit'
+        ResourceGroupName='ExpressRouteResourceGroup'
+        Location='West US'
+        SkuTier='Standard'
+        SkuFamily='MeteredData'
+        ExpressRoutePort=$PSExpressRoutePort
+        BandwidthInGbps=10.0
+    }
+    New-AzExpressRouteCircuit @parameters
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: AllowClassicOperations
+  description: |+
+    The use of this parameter allows you to use the classic Azure PowerShell cmdlets to manage the
+    circuit.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitAuthorization" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Authorization
+  description: |+
+    A list of circuit authorizations.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+  name: BandwidthInGbps
+  isRequired: true
+  description: |+
+    The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: BandwidthInMbps
+  isRequired: true
+  description: |+
+    The bandwidth of the circuit. This must be a value that is supported by the service provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRoutePort" data-throw-if-not-resolved="False" />
+  name: ExpressRoutePort
+  isRequired: true
+  description: |+
+    The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location of the circuit.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the ExpressRoute circuit being created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPeering" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Peering
+  description: |+
+    A list peer configurations.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeeringLocation
+  isRequired: true
+  description: |+
+    The name of the peering location supported by the service provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group that will contain the circuit.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServiceProviderName
+  isRequired: true
+  description: |+
+    The name of the circuit service provider. This must match a name listed by the
+    Get-AzExpressRouteServiceProvider cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SkuFamily
+  description: |+
+    SKU family determines the billing type. Possible values for this parameter are: `MeteredData` or
+    `UnlimitedData`. Note that you can change the billing type from MeteredData to UnlimitedData, but
+    you can't change the type from UnlimitedData to MeteredData.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: MeteredData, UnlimitedData
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SkuTier
+  description: |+
+    The tier of service for the circuit. Possible values for this parameter are: `Standard`, `Premium` or `Basic`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Standard, Premium, Basic
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzExpressRouteCircuit
+name: New-AzExpressRouteCircuit
+description: |-
+  The **New-AzExpressRouteCircuit** cmdlet creates an Azure express route circuit.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: E40CAF2F-ED57-4AC1-8B9A-E48042DD8F91
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azexpressroutecircuit
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzExpressRouteCircuit.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzExpressRouteCircuit.md

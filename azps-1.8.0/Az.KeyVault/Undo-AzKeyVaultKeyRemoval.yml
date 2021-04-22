@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Recovers a deleted key in a key vault into an active state.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzKeyVaultKey
+  href: ./Remove-AzKeyVaultKey.yml
+- text: Add-AzKeyVaultKey
+  href: ./Add-AzKeyVaultKey.yml
+- text: Get-AzKeyVaultKey
+  href: ./Get-AzKeyVaultKey.yml
+syntaxes:
+- >-
+  Undo-AzKeyVaultKeyRemoval [-VaultName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Undo-AzKeyVaultKeyRemoval [-InputObject] <PSDeletedKeyVaultKeyIdentityItem>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Undo-AzKeyVaultKeyRemoval -VaultName 'MyKeyVault' -Name 'MyKey'
+
+    Vault Name     : MyKeyVault
+    Name           : MyKey
+    Version        : 1af807cc331a49d0b52b7c75e1b2366e
+    Id             : https://mykeybault.vault.azure.net:443/keys/mykey/1af807cc331a49d0b52b7c75e1b2366e
+    Enabled        : True
+    Expires        :
+    Not Before     :
+    Created        : 5/24/2018 8:32:27 PM
+    Updated        : 5/24/2018 8:32:27 PM
+    Purge Disabled : False
+    Tags           :
+  description: |-
+    This command will recover the key 'MyKey' that was previously deleted, into an active and usable state.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Deleted key object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Key name.
+    Cmdlet constructs the FQDN of a key from vault name, currently selected environment and key name.
+
+  defaultValue: None
+  position: "1"
+  aliases: KeyName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Vault name.
+    Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.KeyVault.Undo-AzKeyVaultKeyRemoval
+name: Undo-AzKeyVaultKeyRemoval
+description: |-
+  The **Undo-AzKeyVaultKeyRemoval** cmdlet will recover a previously deleted key.
+  The recovered key will be active and can be used for all normal key operations.
+  Caller needs to have 'recover' permission in order to perform this operation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/undo-azkeyvaultkeyremoval
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultKeyRemoval.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultKeyRemoval.md

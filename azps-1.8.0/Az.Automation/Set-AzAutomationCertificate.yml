@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the configuration of an Automation certificate.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.CertificateInfo" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationCertificate
+  href: ./Get-AzAutomationCertificate.yml
+- text: New-AzAutomationCertificate
+  href: ./New-AzAutomationCertificate.yml
+- text: Remove-AzAutomationCertificate
+  href: ./Remove-AzAutomationCertificate.yml
+syntaxes:
+- >-
+  Set-AzAutomationCertificate [-Name] <String> [-Description <String>] [-Password <SecureString>]
+
+   [-Path <String>] [-Exportable <Boolean>] [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a certificate'
+  code: |-
+    PS C:\>$Password = ConvertTo-SecureString -String "Password" -AsPlainText -Force
+    PS C:\> Set-AzAutomationCertificate -AutomationAccountName "Contos17" -Name "ContosoCertificate" -Path "./cert.pfx" -Password $Password -ResourceGroupName "ResourceGroup01"
+  description: |-
+    The first command converts a plain text password to be a secure string by using the ConvertTo-SecureString cmdlet.
+    The command stores that object in the $Password variable.
+    The second command modifies a certificate named ContosoCertificate.
+    The command uses the password stored in $Password.
+    The command specifies the account name and the path of the file that it uploads.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account for which this cmdlet modifies a certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the certificate that this cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Exportable
+  description: |+
+    Specifies whether the certificate can be exported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the certificate that this cmdlet modifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password for the certificate file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path to a script file to upload.
+    The file can be a .cer file or a .pfx file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for which this cmdlet modifies a certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.Set-AzAutomationCertificate
+name: Set-AzAutomationCertificate
+description: |-
+  The **Set-AzAutomationCertificate** cmdlet modifies the configuration of a certificate in Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: F1A2861F-14EF-4F67-8452-31FD498528BB
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationcertificate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationCertificate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationCertificate.md

@@ -1,0 +1,65 @@
+### YamlMime:PowershellModule
+children:
+- title: App Service
+  cmdlets:
+  - Az.Websites.Edit-AzWebAppBackupConfiguration
+  - Az.Websites.Enter-AzWebAppContainerPSSession
+  - Az.Websites.Get-AzAppServicePlan
+  - Az.Websites.Get-AzAppServicePlanMetric
+  - Az.Websites.Get-AzDeletedWebApp
+  - Az.Websites.Get-AzWebApp
+  - Az.Websites.Get-AzWebAppBackup
+  - Az.Websites.Get-AzWebAppBackupConfiguration
+  - Az.Websites.Get-AzWebAppBackupList
+  - Az.Websites.Get-AzWebAppCertificate
+  - Az.Websites.Get-AzWebAppContainerContinuousDeploymentUrl
+  - Az.Websites.Get-AzWebAppMetric
+  - Az.Websites.Get-AzWebAppPublishingProfile
+  - Az.Websites.Get-AzWebAppSlot
+  - Az.Websites.Get-AzWebAppSlotConfigName
+  - Az.Websites.Get-AzWebAppSlotMetric
+  - Az.Websites.Get-AzWebAppSlotPublishingProfile
+  - Az.Websites.Get-AzWebAppSnapshot
+  - Az.Websites.Get-AzWebAppSSLBinding
+  - Az.Websites.New-AzAppServicePlan
+  - Az.Websites.New-AzWebApp
+  - Az.Websites.New-AzWebAppAzureStoragePath
+  - Az.Websites.New-AzWebAppBackup
+  - Az.Websites.New-AzWebAppContainerPSSession
+  - Az.Websites.New-AzWebAppDatabaseBackupSetting
+  - Az.Websites.New-AzWebAppSlot
+  - Az.Websites.New-AzWebAppSSLBinding
+  - Az.Websites.Publish-AzWebApp
+  - Az.Websites.Remove-AzAppServicePlan
+  - Az.Websites.Remove-AzWebApp
+  - Az.Websites.Remove-AzWebAppBackup
+  - Az.Websites.Remove-AzWebAppSlot
+  - Az.Websites.Remove-AzWebAppSSLBinding
+  - Az.Websites.Reset-AzWebAppPublishingProfile
+  - Az.Websites.Reset-AzWebAppSlotPublishingProfile
+  - Az.Websites.Restart-AzWebApp
+  - Az.Websites.Restart-AzWebAppSlot
+  - Az.Websites.Restore-AzDeletedWebApp
+  - Az.Websites.Restore-AzWebAppBackup
+  - Az.Websites.Restore-AzWebAppSnapshot
+  - Az.Websites.Set-AzAppServicePlan
+  - Az.Websites.Set-AzWebApp
+  - Az.Websites.Set-AzWebAppSlot
+  - Az.Websites.Set-AzWebAppSlotConfigName
+  - Az.Websites.Start-AzWebApp
+  - Az.Websites.Start-AzWebAppSlot
+  - Az.Websites.Stop-AzWebApp
+  - Az.Websites.Stop-AzWebAppSlot
+  - Az.Websites.Switch-AzWebAppSlot
+uid: Az.Websites
+name: Az.Websites
+description: |-
+  ARM (Azure Resource Manager) Web App and App Service Plan commands.
+metadata:
+  Module Name: Az.Websites
+  Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.websites
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Az.Websites.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Az.Websites.md

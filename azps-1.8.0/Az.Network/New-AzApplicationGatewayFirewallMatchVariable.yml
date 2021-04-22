@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a match variable for firewall condition.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallMatchVariable" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzApplicationGatewayFirewallMatchVariable -VariableName <String> [-Selector <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $variable = New-AzureRmApplicationGatewayFirewallMatchVariable -VariableName RequestHeaders -Selector Content-Length
+  description: |-
+    The command creates a new match variable with name of request headers and selector is Content-Length field. The new match variable is saved in $variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Selector
+  description: |+
+    Describes field of the matchVariable collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VariableName
+  isRequired: true
+  description: |+
+    Match Variable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: RemoteAddr, RequestMethod, QueryString, PostArgs, RequestUri, RequestHeaders, RequestBody, RequestCookies
+uid: Az.Network.New-AzApplicationGatewayFirewallMatchVariable
+name: New-AzApplicationGatewayFirewallMatchVariable
+description: |-
+  The **New-AzApplicationGatewayFirewallMatchVariable** creates a match variable for firewall condition.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewayfirewallmatchvariable
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayFirewallMatchVariable.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayFirewallMatchVariable.md

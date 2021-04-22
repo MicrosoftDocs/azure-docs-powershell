@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This command lists all sync groups within a given storage sync service.
+module: Az.StorageSync
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSSyncGroup" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzStorageSyncGroup [-ParentObject] <PSStorageSyncService> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzStorageSyncGroup [-ResourceGroupName] <String> [-StorageSyncServiceName] <String> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzStorageSyncGroup [-ParentResourceId] <String> [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzStorageSyncGroup New-AzStorageSyncCloudEndpoint -ResourceGroupName "myResourceGroup" -StorageSyncServiceName "myStorageSyncServiceName"
+  description: |-
+    This command gets all sync groups contained within the specified storage sync service. Specify -Name to return a specific one.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the SyncGroup.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SyncGroupName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService" data-throw-if-not-resolved="False" />
+  name: ParentObject
+  isRequired: true
+  description: |+
+    StorageSyncService Object, normally passed through the parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: StorageSyncService
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceId
+  isRequired: true
+  description: |+
+    StorageSyncService Object, normally passed through the parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: StorageSyncServiceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageSyncServiceName
+  isRequired: true
+  description: |+
+    Name of the StorageSyncService.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ParentName
+  parameterValueGroup: ""
+uid: Az.StorageSync.Get-AzStorageSyncGroup
+name: Get-AzStorageSyncGroup
+description: |-
+  This command lists all sync groups within a given storage sync service. It can be used to also list the attributes of each sync group.
+metadata:
+  external help file: Microsoft.Azure.Commands.StorageSync.dll-Help.xml
+  Module Name: Az.StorageSync
+  online version: https://docs.microsoft.com/en-us/powershell/module/Az.storagesync/get-Azstoragesyncgroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Get-AzStorageSyncGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Get-AzStorageSyncGroup.md

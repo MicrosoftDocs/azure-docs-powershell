@@ -1,0 +1,314 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a network interface.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzNetworkInterface
+  href: ./New-AzNetworkInterface.yml
+- text: Remove-AzNetworkInterface
+  href: ./Remove-AzNetworkInterface.yml
+- text: Set-AzNetworkInterface
+  href: ./Set-AzNetworkInterface.yml
+syntaxes:
+- >-
+  Get-AzNetworkInterface [-Name <String>] [-ResourceGroupName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkInterface -Name <String> -ResourceGroupName <String> -ExpandResource <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkInterface [-Name <String>] -ResourceGroupName <String> [-VirtualMachineScaleSetName <String>]
+
+   [-VirtualMachineIndex <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkInterface -Name <String> -ResourceGroupName <String> -VirtualMachineScaleSetName <String>
+
+   -VirtualMachineIndex <String> -ExpandResource <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzNetworkInterface -ResourceId <String> -ExpandResource <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzNetworkInterface -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all network interfaces'
+  code: |-
+    PS C:\> Get-AzNetworkInterface
+
+    Name                        : test1
+    ResourceGroupName           : ResourceGroup1
+    Location                    : eastus
+    Id                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/providers/Micros
+                                  oft.Network/networkInterfaces/test1
+    Etag                        : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid                : 00000000-0000-0000-0000-000000000000
+    ProvisioningState           : Succeeded
+    Tags                        :
+    VirtualMachine              : {
+                                    "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provide
+                                  rs/Microsoft.Compute/virtualMachines/test1"
+                                  }
+    IpConfigurations            : [
+                                    {
+                                      "Name": "test1",
+                                      "Etag": "W/\"00000000-0000-0000-0000-000000000000\"",
+                                      "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provi
+                                  ders/Microsoft.Network/networkInterfaces/test1/ipConfigurations/test1",
+                                      "PrivateIpAddress": "x.x.x.x",
+                                      "PrivateIpAllocationMethod": "Dynamic",
+                                      "Subnet": {
+                                        "Delegations": [],
+                                        "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/pro
+                                  viders/Microsoft.Network/virtualNetworks/test1/subnets/test1",
+                                        "ServiceAssociationLinks": []
+                                      },
+                                      "PublicIpAddress": {
+                                        "IpTags": [],
+                                        "Zones": [],
+                                        "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/pro
+                                  viders/Microsoft.Network/publicIPAddresses/test1"
+                                      },
+                                      "ProvisioningState": "Succeeded",
+                                      "PrivateIpAddressVersion": "IPv4",
+                                      "LoadBalancerBackendAddressPools": [],
+                                      "LoadBalancerInboundNatRules": [],
+                                      "Primary": true,
+                                      "ApplicationGatewayBackendAddressPools": [],
+                                      "ApplicationSecurityGroups": []
+                                    }
+                                  ]
+    DnsSettings                 : {
+                                    "DnsServers": [],
+                                    "AppliedDnsServers": []
+                                  }
+    EnableIPForwarding          : False
+    EnableAcceleratedNetworking : False
+    NetworkSecurityGroup        : {
+                                    "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provide
+                                  rs/Microsoft.Network/networkSecurityGroups/test1"
+                                  }
+    Primary                     : True
+    MacAddress                  :
+  description: |-
+    This command gets all network interfaces for the current subscription.
+  summary: ""
+- title: 'Example 2: Get all network interfaces with a specific provisioning state'
+  code: |-
+    PS C:\> Get-AzNetworkInterface -ResourceGroupName "ResourceGroup1" | Where-Object {$_.ProvisioningState -eq 'Succeeded'}
+
+    Name                        : test1
+    ResourceGroupName           : ResourceGroup1
+    Location                    : eastus
+    Id                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/providers/Micros
+                                  oft.Network/networkInterfaces/test1
+    Etag                        : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid                : 00000000-0000-0000-0000-000000000000
+    ProvisioningState           : Succeeded
+    Tags                        :
+    VirtualMachine              : {
+                                    "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provide
+                                  rs/Microsoft.Compute/virtualMachines/test1"
+                                  }
+    IpConfigurations            : [
+                                    {
+                                      "Name": "test1",
+                                      "Etag": "W/\"00000000-0000-0000-0000-000000000000\"",
+                                      "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provi
+                                  ders/Microsoft.Network/networkInterfaces/test1/ipConfigurations/test1",
+                                      "PrivateIpAddress": "x.x.x.x",
+                                      "PrivateIpAllocationMethod": "Dynamic",
+                                      "Subnet": {
+                                        "Delegations": [],
+                                        "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/pro
+                                  viders/Microsoft.Network/virtualNetworks/test1/subnets/test1",
+                                        "ServiceAssociationLinks": []
+                                      },
+                                      "PublicIpAddress": {
+                                        "IpTags": [],
+                                        "Zones": [],
+                                        "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/pro
+                                  viders/Microsoft.Network/publicIPAddresses/test1"
+                                      },
+                                      "ProvisioningState": "Succeeded",
+                                      "PrivateIpAddressVersion": "IPv4",
+                                      "LoadBalancerBackendAddressPools": [],
+                                      "LoadBalancerInboundNatRules": [],
+                                      "Primary": true,
+                                      "ApplicationGatewayBackendAddressPools": [],
+                                      "ApplicationSecurityGroups": []
+                                    }
+                                  ]
+    DnsSettings                 : {
+                                    "DnsServers": [],
+                                    "AppliedDnsServers": []
+                                  }
+    EnableIPForwarding          : False
+    EnableAcceleratedNetworking : False
+    NetworkSecurityGroup        : {
+                                    "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provide
+                                  rs/Microsoft.Network/networkSecurityGroups/test1"
+                                  }
+    Primary                     : True
+    MacAddress                  :
+  description: |-
+    This command gets all network interfaces in the resource group named ResourceGroup1 that has a provisioning state of succeeded.
+  summary: ""
+- title: 'Example 3: Get network interfaces using filtering'
+  code: |-
+    PS C:\> Get-AzNetworkInterface -Name test*
+
+    Name                        : test1
+    ResourceGroupName           : ResourceGroup1
+    Location                    : eastus
+    Id                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/providers/Micros
+                                  oft.Network/networkInterfaces/test1
+    Etag                        : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid                : 00000000-0000-0000-0000-000000000000
+    ProvisioningState           : Succeeded
+    Tags                        :
+    VirtualMachine              : {
+                                    "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provide
+                                  rs/Microsoft.Compute/virtualMachines/test1"
+                                  }
+    IpConfigurations            : [
+                                    {
+                                      "Name": "test1",
+                                      "Etag": "W/\"00000000-0000-0000-0000-000000000000\"",
+                                      "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provi
+                                  ders/Microsoft.Network/networkInterfaces/test1/ipConfigurations/test1",
+                                      "PrivateIpAddress": "x.x.x.x",
+                                      "PrivateIpAllocationMethod": "Dynamic",
+                                      "Subnet": {
+                                        "Delegations": [],
+                                        "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/pro
+                                  viders/Microsoft.Network/virtualNetworks/test1/subnets/test1",
+                                        "ServiceAssociationLinks": []
+                                      },
+                                      "PublicIpAddress": {
+                                        "IpTags": [],
+                                        "Zones": [],
+                                        "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/pro
+                                  viders/Microsoft.Network/publicIPAddresses/test1"
+                                      },
+                                      "ProvisioningState": "Succeeded",
+                                      "PrivateIpAddressVersion": "IPv4",
+                                      "LoadBalancerBackendAddressPools": [],
+                                      "LoadBalancerInboundNatRules": [],
+                                      "Primary": true,
+                                      "ApplicationGatewayBackendAddressPools": [],
+                                      "ApplicationSecurityGroups": []
+                                    }
+                                  ]
+    DnsSettings                 : {
+                                    "DnsServers": [],
+                                    "AppliedDnsServers": []
+                                  }
+    EnableIPForwarding          : False
+    EnableAcceleratedNetworking : False
+    NetworkSecurityGroup        : {
+                                    "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup1/provide
+                                  rs/Microsoft.Network/networkSecurityGroups/test1"
+                                  }
+    Primary                     : True
+    MacAddress                  :
+  description: |-
+    This command gets all network interfaces for the current subscription that start with "test".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExpandResource
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the network interface that this cmdlet gets.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group from which this cmdlet gets network interfaces.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The Azure resource manager id of the network interface.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualMachineIndex
+  isRequired: true
+  description: |+
+    Specifies the virtual machine index of the virtual machine scale set from which this cmdlet gets network interfaces.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VirtualMachineScaleSetName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine scale set from which this cmdlet gets network interfaces.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzNetworkInterface
+name: Get-AzNetworkInterface
+description: |-
+  The **Get-AzNetworkInterface** cmdlet gets an Azure network interface or a list of Azure network interfaces in a resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: E066BBFA-2E03-431D-85D1-99F230B6AC59
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkinterface
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkInterface.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkInterface.md

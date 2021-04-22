@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets authorization rules for a notification hub.
+module: Az.NotificationHubs
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NotificationHubs.Models.SharedAccessAuthorizationRuleAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzNotificationHubAuthorizationRule
+  href: ./Get-AzNotificationHubAuthorizationRule.yml
+- text: New-AzNotificationHubAuthorizationRule
+  href: ./New-AzNotificationHubAuthorizationRule.yml
+- text: Remove-AzNotificationHubAuthorizationRule
+  href: ./Remove-AzNotificationHubAuthorizationRule.yml
+syntaxes:
+- >-
+  Set-AzNotificationHubAuthorizationRule [-ResourceGroup] <String> [-Namespace] <String>
+
+   [-NotificationHub] <String> [-InputFile] <String> [-Force] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzNotificationHubAuthorizationRule [-ResourceGroup] <String> [-Namespace] <String>
+
+   [-NotificationHub] <String> [-SASRule] <SharedAccessAuthorizationRuleAttributes> [-Force]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify an authorization rule assigned to a notification hub'
+  code: |-
+    PS C:\>Set-AzNotificationHubAuthorizationRule -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationGroup" -NotificationHub "ContosoExternalHub" -InputFile "C:\Configuration\AuthorizationRules.json"
+  description: |-
+    This command modifies an authorization rule assigned to the notification hub named ContosoExternalHub.
+    You must specify the namespace where the hub is located as well as the resource group that the hub is assigned.
+    Information about the rule that is modified is not included in the command itself.
+    Instead, that information is found in the input file C:\Configuration\AuthorizationRules.json.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Do not ask for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InputFile
+  isRequired: true
+  description: |+
+    Specifies the path to a JSON file containing configuration information for the new rule.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  isRequired: true
+  description: |+
+    Specifies the namespace to which the notification hub is assigned.
+    Namespaces provide a way to group and categorize notification hubs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NotificationHub
+  isRequired: true
+  description: |+
+    Specifies the notification hub that this cmdlet assigns authorization rules to.
+    Notification hubs are used to send push notifications to multiple clients regardless of the used by those clients.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroup
+  isRequired: true
+  description: |+
+    Specifies the resource group to which the notification hub is assigned. 
+    Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.NotificationHubs.Models.SharedAccessAuthorizationRuleAttributes" data-throw-if-not-resolved="False" />
+  name: SASRule
+  isRequired: true
+  description: |+
+    Specifies the **SharedAccessAuthorizationRuleAttributes** object that contains configuration information for the authorization rules that are modified.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.NotificationHubs.Set-AzNotificationHubAuthorizationRule
+name: Set-AzNotificationHubAuthorizationRule
+description: |-
+  The **Set-AzNotificationHubAuthorizationRule** cmdlet modifies a Shared Access Signature (SAS) authorization rule assigned to a notification hub.
+  Authorization rules manage access to your notification hubs by the creation of links, as URIs, based on different permission levels.
+  Permission levels can be one of the following: 
+  - Listen
+  - Send
+  - Manage
+  Clients are directed to one of these URIs based on the appropriate permission level.
+  For example, a client given the Listen permission will be directed to the URI for that permission.
+  This cmdlet provides two ways to modify an authorization rule assigned to a notification hub.
+  For one, you can create an instance of the **SharedAccessAuthorizationRuleAttributes** object and then configure that object with the property values you want the rule to possess.
+  You can configure the object through the .NET Framework.
+  You can then copy those property values to your rule by using *SASRule* parameter.
+  Alternatively, you can create a JSON (JavaScript Object Notation) file containing the relevant configuration values and then apply those values through the *InputFile* parameter.
+  A JSON file is a text file that uses syntax similar to this:
+  {      "Name": "ContosoAuthorizationRule",  
+      "PrimaryKey": "WE4qH0398AyXjlekt56gg1gMR3NHoMs29KkUnnpUk01Y=",  
+      "Rights": \[  
+          "Listen",  
+          "Send"  
+      \]  
+  }
+  When used in conjunction with the New-AzNotificationHubAuthorizationRule cmdlet, the preceding JSON sample modifies an authorization rule named ContosoAuthorizationRule in order to give users Listen and Send rights to the hub.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
+  Module Name: Az.NotificationHubs
+  ms.assetid: BD311CEF-378B-463E-8998-CC3E9A5B3A7B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/set-aznotificationhubauthorizationrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHubAuthorizationRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHubAuthorizationRule.md

@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the status of Operations Management Suite (OMS) installation on the cluster.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightOMS" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzHDInsightOperationsManagementSuite [-Name] <String> [-ResourceGroupName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzHDInsightOMS -Name testcluster
+
+    ClusterMonitoringEnabled
+
+    {'ClusterMonitoringEnabled':'true', 'workspaceId':'1d364e89-bb71-4503-aa3d-a23535aea7bd'}
+  description: |-
+    Operations Management Suite (OMS) is enabled on the cluster because the ClusterMonitoringEnabled property is true. The OMS workspace id where the logs are flowing is 1d364e89-bb71-4503-aa3d-a23535aea7bd
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzHDInsightOMS -Name testcluster -ResourceGroupName testrg
+
+    ClusterMonitoringEnabled
+
+    {'ClusterMonitoringEnabled':'true', 'workspaceId':'1d364e89-bb71-4503-aa3d-a23535aea7bd'}
+  description: |-
+    Operations Management Suite (OMS) is enabled on the cluster because the ClusterMonitoringEnabled property is true. The OMS workspace id where the logs are flowing is 1d364e89-bb71-4503-aa3d-a23535aea7bd
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzHDInsightOMS -Name testcluster
+
+    ClusterMonitoringEnabled
+
+    {'ClusterMonitoringEnabled':'false'}
+  description: |-
+    Operations Management Suite (OMS) is disabled on the cluster because the ClusterMonitoringEnabled property is false.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-AzHDInsightOMS -Name testcluster -ResourceGroupName testrg
+
+    ClusterMonitoringEnabled
+
+    {'ClusterMonitoringEnabled':'false'}
+  description: |-
+    Operations Management Suite (OMS) is disabled on the cluster because the ClusterMonitoringEnabled property is false.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the cluster to get the status of Operations Management Suite(OMS).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ClusterName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    The resource group of the cluster.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Get-AzHDInsightOperationsManagementSuite
+name: Get-AzHDInsightOperationsManagementSuite
+description: |-
+  The **Get-AzHDInsightOperationsManagementSuite** cmdlet gets the status of OMS installation in an Azure HDInsight cluster. If OMS is enabled then it will also return the OMS workspace id.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/get-azhdinsightoperationsmanagementsuite
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Get-AzHDInsightOperationsManagementSuite.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Get-AzHDInsightOperationsManagementSuite.md

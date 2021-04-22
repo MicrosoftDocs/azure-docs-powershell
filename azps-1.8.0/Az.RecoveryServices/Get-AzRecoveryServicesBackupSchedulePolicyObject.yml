@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a base schedule policy object.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.SchedulePolicyBase" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzRecoveryServicesBackupProtectionPolicy
+  href: ./New-AzRecoveryServicesBackupProtectionPolicy.yml
+- text: Set-AzRecoveryServicesBackupProtectionPolicy
+  href: ./Set-AzRecoveryServicesBackupProtectionPolicy.yml
+syntaxes:
+- >-
+  Get-AzRecoveryServicesBackupSchedulePolicyObject [-WorkloadType] <WorkloadType>
+
+   [[-BackupManagementType] <BackupManagementType>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the schedule frequency to weekly'
+  code: |-
+    PS C:\>$RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType "AzureVM" 
+    PS C:\> $SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM" 
+    PS C:\> $SchPol.ScheduleRunFrequency = "Weekly"
+    PS C:\> New-AzRecoveryServicesBackupProtectionPolicy -Name "NewPolicy" -WorkloadType AzureVM -RetentionPolicy $RetPol -SchedulePolicy $SchPol
+  description: |-
+    The first command gets the retention policy object, and then stores it in the $RetPol variable.
+    The second command gets the schedule policy object, and then stores it in the $SchPol variable.
+    The third command changes the frequency for the schedule policy to weekly.
+    The last command creates a backup protection policy with the updated schedule.
+  summary: ""
+- title: 'Example 2: Set the backup time'
+  code: |-
+    PS C:\>$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM" 
+    PS C:\> $SchPol.ScheduleRunTimes.RemoveAll()
+    PS C:\> $DT = Get-Date
+    PS C:\> $SchPol.ScheduleRunTimes.Add($DT.ToUniversalTime())
+    PS C:\> New-AzRecoveryServicesBackupProtectionPolicy -Name "NewPolicy" -WorkloadType AzureVM -RetentionPolicy $RetPol -SchedulePolicy $SchPol
+  description: |-
+    The first command gets the schedule policy object, and then stores it in the $SchPol variable.
+    The second command removes all scheduled run times from $SchPol.
+    The third command gets the current date and time, and then stores it in the $DT variable.
+    The fourth command replaces the scheduled run times with the current time.
+    You can only backup AzureVM once per day, so to reset the backup time you must replace the original schedule.
+    The last command creates a backup protection policy using the new schedule.
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType" data-throw-if-not-resolved="False" /><span>]</span>
+  name: BackupManagementType
+  description: |+
+    Specifies the Backup management type.
+    The acceptable values for this parameter are:
+    - AzureVM 
+    - AzureSQLDatabase
+    - AzureStorage
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL, AzureStorage, AzureWorkload
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType" data-throw-if-not-resolved="False" />
+  name: WorkloadType
+  isRequired: true
+  description: |+
+    Specifies the workload type.
+    The acceptable values for this parameter are:
+    - AzureVM 
+    - AzureSQLDatabase
+    - AzureFiles
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: AzureVM, AzureSQLDatabase, AzureFiles, MSSQL
+uid: Az.RecoveryServices.Get-AzRecoveryServicesBackupSchedulePolicyObject
+name: Get-AzRecoveryServicesBackupSchedulePolicyObject
+description: |-
+  The **Get-AzRecoveryServicesBackupSchedulePolicyObject** cmdlet gets a base **AzureRMRecoveryServicesSchedulePolicyObject**.
+  This object is not persisted in the system.
+  It is temporary object that you can manipulate and use with the New-AzRecoveryServicesBackupProtectionPolicy cmdlet to create a new backup protection policy.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  ms.assetid: E247C6DF-B53D-487E-AAA2-551FCBFD77E7
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupschedulepolicyobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupSchedulePolicyObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupSchedulePolicyObject.md

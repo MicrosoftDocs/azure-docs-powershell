@@ -1,0 +1,200 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new IoT Central Application.
+module: Az.IotCentral
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralApp" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzIotCentralApp [-Subdomain] <String> [-DisplayName <String>] [-Template <String>] [-Sku <String>]
+
+   [-Location <String>] [-Tag <Hashtable>] [-AsJob] [-ResourceGroupName] <String> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1 Create simple IoT Central Application.
+  code: |-
+    PS C:\> New-AzIotCentralApp -ResourceGroupName "MyResourceGroupName" -Name "MyAppResourceName" -Subdomain "MyAppSubdomain"
+  description: |-
+    Example Output:
+
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroupName/providers/Microsoft
+                        .IoTCentral/IoTApps/MyAppResourceName
+    Name              : MyAppResourceName
+    Type              : Microsoft.IoTCentral/IoTApps
+    Location          : westus
+    Tag               : 
+    Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
+    ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    DisplayName       : MyAppResourceName
+    Subdomain         : MyAppSubdomain
+    Template          : iotc-default@1.0.0
+    SubscriptionId    : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ResourceGroupName : MyResourceGroupName
+
+    Create an IoT Central application in the standard pricing tier S1, in the region of the resource group.
+  summary: ""
+- title: Example 2 Create simple IoT Central Application.
+  code: |-
+    PS C:\> New-AzIotCentralApp -ResourceGroupName "MyResourceGroupName" -Name "MyAppResourceName" -Subdomain "MyAppSubdomain" -Sku "S1" -DisplayName "My Custom Display Name" -Template "iotc-default" -Location "westus"
+  description: |-
+    Example Output:
+
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroupName/providers/Microsoft
+                        .IoTCentral/IoTApps/MyAppResourceName
+    Name              : MyAppResourceName
+    Type              : Microsoft.IoTCentral/IoTApps
+    Location          : westus
+    Tag               : 
+    Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
+    ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    DisplayName       : My Custom Display Name
+    Subdomain         : MyAppSubdomain
+    Template          : iotc-default@1.0.0
+    SubscriptionId    : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ResourceGroupName : MyResourceGroupName
+
+    Create an IoT Central application with the standard pricing tier S1 in the 'westus' region, with a custom display name, based on the iotc-default template.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet as a job in the background.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Custom display name for the IoT Central application.
+    Default is resource name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Location of your IoT Central application.
+    Default is the location of target resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the Iot Central Application Resource.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Name of the Resource Group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Sku
+  description: |+
+    Pricing tier for IoT Central applications.
+    Default value is S1.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Subdomain
+  isRequired: true
+  description: |+
+    Subdomain for the IoT Central URL.
+    Each application must have a unique subdomain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Iot Central Application Resource Tags.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    IoT Central application template name.
+    Default is a custom application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.IotCentral.New-AzIotCentralApp
+name: New-AzIotCentralApp
+description: |-
+  Creates a new IoT Central Application with the provided properties and metadata. For an introduction to IoT Central, see https://docs.microsoft.com/en-us/azure/iot-central/.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.IotCentral.dll-Help.xml
+  Module Name: Az.IotCentral
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.iotcentral/new-aziotcentralapp
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/IotCentral/IotCentral/help/New-AzIotCentralApp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/IotCentral/IotCentral/help/New-AzIotCentralApp.md

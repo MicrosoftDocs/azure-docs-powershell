@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Publishes a runbook.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Runbook" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-AzAutomationRunbook
+  href: ./Export-AzAutomationRunbook.yml
+- text: Get-AzAutomationRunbook
+  href: ./Get-AzAutomationRunbook.yml
+- text: Import-AzAutomationRunbook
+  href: ./Import-AzAutomationRunbook.yml
+- text: New-AzAutomationRunbook
+  href: ./New-AzAutomationRunbook.yml
+- text: New-AzAutomationRunbook
+  href: ./New-AzAutomationRunbook.yml
+- text: Remove-AzAutomationRunbook
+  href: ./Remove-AzAutomationRunbook.yml
+- text: Set-AzAutomationRunbook
+  href: ./Set-AzAutomationRunbook.yml
+- text: Start-AzAutomationRunbook
+  href: ./Start-AzAutomationRunbook.yml
+syntaxes:
+- >-
+  Publish-AzAutomationRunbook [-Name] <String> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Publish a runbook'
+  code: |-
+    PS C:\>Publish-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ResourceGroupName "ResourceGroup01"
+  description: |-
+    This command publishes the runbook named Runbk01 in the Azure Automation account named Contoso17.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account in which this cmdlet publishes a runbook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the runbook that this cmdlet publishes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: RunbookName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group for which this cmdlet publishes a runbook.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.Publish-AzAutomationRunbook
+name: Publish-AzAutomationRunbook
+description: |-
+  The **Publish-AzAutomationRunbook** cmdlet publishes a runbook for use in the production environment of Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: E7F31B71-983A-4DB3-BB30-BDC5C0247E74
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/publish-azautomationrunbook
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Publish-AzAutomationRunbook.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Publish-AzAutomationRunbook.md

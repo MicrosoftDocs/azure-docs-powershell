@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a public IP address.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzPublicIpAddress
+  href: ./Get-AzPublicIpAddress.yml
+- text: New-AzPublicIpAddress
+  href: ./New-AzPublicIpAddress.yml
+- text: Remove-AzPublicIpAddress
+  href: ./Remove-AzPublicIpAddress.yml
+syntaxes:
+- >-
+  Set-AzPublicIpAddress -PublicIpAddress <PSPublicIpAddress> [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: '1: Change allocation method of a public IP address'
+  code: "PS C:\\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName\r\n\r\nPS C:\\> $publicIp.PublicIpAllocationMethod = \"Static\"\r\n    \r\nPS C:\\> Set-AzPublicIpAddress -PublicIpAddress $publicIp\r\n\r\nPS C:\\> Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName"
+  description: |-
+    First command gets the public IP address resource with name $publicIPName in the resource 
+        group $rgName.
+        Second command sets the allocation method of the public IP address object to "Static".
+        Set-AzPublicIPAddress command updates the public IP address resource with the 
+        updated object, and modifies the allocation method to 'Static'. A public IP address gets 
+        allocated immediately.
+  summary: ""
+- title: '2: Change DNS domain label of a public IP address'
+  code: "PS C:\\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName\r\n\r\nPS C:\\> $publicIp.DnsSettings.DomainNameLabel = \"newdnsprefix\"\r\n    \r\nPS C:\\> Set-AzPublicIpAddress -PublicIpAddress $publicIp\r\n\r\nPS C:\\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName"
+  description: |-
+    First command gets the public IP address resource with name $publicIPName in the resource 
+        group $rgName.
+        Second command sets the DomainNameLabel property to the required dns prefix.
+        Set-AzPublicIPAddress command updates the public IP address resource with the 
+        updated object. DomainNameLabel & Fqdn are modified as expected.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+  name: PublicIpAddress
+  isRequired: true
+  description: |+
+    Specifies a public IP address object representing the state to which the public IP address should be set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzPublicIpAddress
+name: Set-AzPublicIpAddress
+description: |-
+  The **Set-AzPublicIpAddress** cmdlet updates a public IP address.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: EC798838-1850-4E88-B17F-D2F00F2D4EE9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azpublicipaddress
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzPublicIpAddress.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzPublicIpAddress.md

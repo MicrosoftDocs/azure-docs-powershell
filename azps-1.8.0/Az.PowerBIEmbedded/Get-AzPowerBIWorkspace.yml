@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the workspaces in a Power BI workspace collection.
+module: Az.PowerBIEmbedded
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.PowerBIEmbedded.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzPowerBIWorkspaceCollection
+  href: ./Get-AzPowerBIWorkspaceCollection.yml
+syntaxes:
+- >-
+  Get-AzPowerBIWorkspace [-ResourceGroupName] <String> [-WorkspaceCollectionName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get workspaces of a workspace collection'
+  code: |-
+    PS C:\>Get-AzPowerBIWorkspace -ResourceGroupName "ResourceGroup17" -WorkspaceCollectionName "WCN11"
+  description: |-
+    This command gets the workspaces that belong to the workspace collection named WCN11 in the specified resource group.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which the workspace collection belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WorkspaceCollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of the workspace collection for which this cmdlet gets workspaces.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name, ResourceName
+  parameterValueGroup: ""
+uid: Az.PowerBIEmbedded.Get-AzPowerBIWorkspace
+name: Get-AzPowerBIWorkspace
+description: |-
+  The **Get-AzPowerBIWorkspace** cmdlet gets the workspaces in a Power BI workspace collection.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PowerBIEmbedded.dll-Help.xml
+  Module Name: Az.PowerBIEmbedded
+  ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/get-azpowerbiworkspace
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PowerBIEmbedded/PowerBIEmbedded/help/Get-AzPowerBIWorkspace.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PowerBIEmbedded/PowerBIEmbedded/help/Get-AzPowerBIWorkspace.md

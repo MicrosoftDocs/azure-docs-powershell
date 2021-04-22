@@ -1,0 +1,567 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the state of a VMSS.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVmss
+  href: ./Get-AzVmss.yml
+- text: New-AzVmss
+  href: ./New-AzVmss.yml
+- text: Remove-AzVmss
+  href: ./Remove-AzVmss.yml
+- text: Restart-AzVmss
+  href: ./Restart-AzVmss.yml
+- text: Set-AzVmss
+  href: ./Set-AzVmss.yml
+- text: Start-AzVmss
+  href: ./Start-AzVmss.yml
+- text: Stop-AzVmss
+  href: ./Stop-AzVmss.yml
+syntaxes:
+- >-
+  Update-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String>
+
+   [[-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>] [-BootDiagnosticsEnabled <Boolean>] [-Tag <Hashtable>]
+
+   [-UpgradePolicyMode <UpgradeMode>] [-DisablePasswordAuthentication <Boolean>]
+
+   [-ManagedDiskStorageAccountType <String>] [-AutomaticOSUpgrade <Boolean>] [-SkuTier <String>]
+
+   [-MaxUnhealthyUpgradedInstancePercent <Int32>] [-SinglePlacementGroup <Boolean>] [-PlanPublisher <String>]
+
+   [-BootDiagnosticsStorageUri <String>] [-Overprovision <Boolean>] [-DisableAutoRollback <Boolean>]
+
+   [-TimeZone <String>] [-PlanPromotionCode <String>] [-MaxBatchInstancePercent <Int32>] [-SkuCapacity <Int32>]
+
+   [-OsDiskWriteAccelerator <Boolean>] [-ImageReferenceOffer <String>] [-ImageReferenceSku <String>]
+
+   [-VhdContainer <String[]>] [-MaxUnhealthyInstancePercent <Int32>] [-ImageReferencePublisher <String>]
+
+   [-ProvisionVMAgent <Boolean>] [-SkuName <String>] [-ImageReferenceVersion <String>]
+
+   [-PauseTimeBetweenBatches <String>] [-ImageUri <String>] [-PlanName <String>] [-PlanProduct <String>]
+
+   [-ImageReferenceId <String>] [-EnableAutomaticUpdate <Boolean>] [-CustomData <String>] [-LicenseType <String>]
+
+   [-OsDiskCaching <CachingTypes>] [-UltraSSDEnabled <Boolean>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String>
+
+   [[-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>] [-BootDiagnosticsEnabled <Boolean>] [-Tag <Hashtable>]
+
+   [-UpgradePolicyMode <UpgradeMode>] [-DisablePasswordAuthentication <Boolean>]
+
+   -IdentityType <ResourceIdentityType> [-ManagedDiskStorageAccountType <String>] [-AutomaticOSUpgrade <Boolean>]
+
+   [-SkuTier <String>] [-MaxUnhealthyUpgradedInstancePercent <Int32>] [-SinglePlacementGroup <Boolean>]
+
+   [-PlanPublisher <String>] [-BootDiagnosticsStorageUri <String>] [-Overprovision <Boolean>]
+
+   [-DisableAutoRollback <Boolean>] [-TimeZone <String>] [-PlanPromotionCode <String>]
+
+   [-MaxBatchInstancePercent <Int32>] [-SkuCapacity <Int32>] [-OsDiskWriteAccelerator <Boolean>]
+
+   [-ImageReferenceOffer <String>] [-ImageReferenceSku <String>] [-VhdContainer <String[]>]
+
+   [-MaxUnhealthyInstancePercent <Int32>] [-ImageReferencePublisher <String>] [-ProvisionVMAgent <Boolean>]
+
+   [-SkuName <String>] [-ImageReferenceVersion <String>] [-PauseTimeBetweenBatches <String>] [-ImageUri <String>]
+
+   [-PlanName <String>] [-PlanProduct <String>] [-ImageReferenceId <String>] [-EnableAutomaticUpdate <Boolean>]
+
+   [-CustomData <String>] [-LicenseType <String>] [-OsDiskCaching <CachingTypes>] [-IdentityId <String[]>]
+
+   [-UltraSSDEnabled <Boolean>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the state of a VMSS to the state of a local VMSS object.'
+  code: |-
+    PS C:\> Update-AzVmss -ResourceGroupName "Group001" -Name "VMSS001" -VirtualMachineScaleSet $LocalVMSS
+  description: |-
+    This command updates the state of the VMSS named VMSS001 that belongs to the resource group named Group001 to the state of a local VMSS object, $LocalVMSS.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background and return a Job to track progress.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: AutomaticOSUpgrade
+  description: |+
+    Sets whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: BootDiagnosticsEnabled
+  description: |+
+    Whether boot diagnostics should be enabled on the virtual machine scale set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BootDiagnosticsStorageUri
+  description: |+
+    URI of the storage account to use for placing the console output and screenshot.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomData
+  description: |+
+    Specifies a base-64 encoded string of custom data.
+    This is decoded to a binary array that is saved as a file on the virtual machine.
+    The maximum length of the binary array is 65535 bytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: DisableAutoRollback
+  description: |+
+    Disable Auto Rollback for Auto OS Upgrade Policy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: DisablePasswordAuthentication
+  description: |+
+    Indicates that this cmdlet disables password authentication for Linux OS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: EnableAutomaticUpdate
+  description: |+
+    Indicates whether the Windows virtual machines in the VMSS are enabled for automatic updates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IdentityId
+  description: |+
+    Specifies the list of user identities associated with the virtual machine scale set.
+    The user identity references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/identities/{identityName}'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Compute.Models.ResourceIdentityType" data-throw-if-not-resolved="False" /><span>]</span>
+  name: IdentityType
+  isRequired: true
+  description: |+
+    Specifies the type of identity used for the virtual machine scale set.
+    The type 'SystemAssignedUserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+    The type 'None' will remove any identities from the virtual machine scale set.
+    The acceptable values for this parameter are:
+    - SystemAssigned
+    - UserAssigned
+    - SystemAssignedUserAssigned
+    - None
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SystemAssigned, UserAssigned, SystemAssignedUserAssigned, None
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageReferenceId
+  description: |+
+    Specifies the image reference ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageReferenceOffer
+  description: |+
+    Specifies the type of virtual machine image (VMImage) offer.
+    To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageReferencePublisher
+  description: |+
+    Specifies the name of a publisher of a VMImage.
+    To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageReferenceSku
+  description: |+
+    Specifies the VMImage SKU.
+    To obtain SKUs, use the Get-AzVMImageSku cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageReferenceVersion
+  description: |+
+    Specifies the version of the VMImage.
+    To use the latest version, specify a value of latest instead of a particular version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ImageUri
+  description: |+
+    Specifies the blob URI for the user image.
+    VMSS creates an operating system disk in the same container of the user image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LicenseType
+  description: |+
+    Specify the license type, which is for bringing your own license scenario.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ManagedDiskStorageAccountType
+  description: |+
+    Specifies the storage account type for managed disk.
+    The acceptable values for this parameter are:
+    - StandardLRS
+    - PremiumLRS
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxBatchInstancePercent
+  description: |+
+    The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch.
+    As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.
+    If the value is not specified, it is set to 20.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxUnhealthyInstancePercent
+  description: |+
+    The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts.
+    This constraint will be checked prior to starting any batch.
+    If the value is not specified, it is set to 20.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: MaxUnhealthyUpgradedInstancePercent
+  description: |+
+    The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state.
+    This check will happen after each batch is upgraded.
+    If this percentage is ever exceeded, the rolling update aborts.
+    If the value is not specified, it is set to 20.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Compute.Models.CachingTypes" data-throw-if-not-resolved="False" />
+  name: OsDiskCaching
+  description: |+
+    Specifies the caching mode of the operating system disk. 
+    The acceptable values for this parameter are:
+    - None
+    - ReadOnly
+    - ReadWrite
+    The default value is ReadWrite.
+    If you change the caching value, the cmdlet will restart the virtual machine.
+    This setting affects the consistency and performance of the disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, ReadOnly, ReadWrite
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: OsDiskWriteAccelerator
+  description: |+
+    Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: Overprovision
+  description: |+
+    Indicates whether the cmdlet overprovisions the VMSS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PauseTimeBetweenBatches
+  description: |+
+    The wait time between completing the update for all virtual machines in one batch and starting the next batch.
+    The time duration should be specified in ISO 8601 format.
+    The default value is 0 seconds (PT0S).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PlanName
+  description: |+
+    Specifies the plan name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PlanProduct
+  description: |+
+    Specifies the plan product.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PlanPromotionCode
+  description: |+
+    Specifies the plan promotion code.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PlanPublisher
+  description: |+
+    Specifies the plan publisher.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: ProvisionVMAgent
+  description: |+
+    Indicates whether virtual machine agent should be provisioned on the Windows virtual machines in the VMSS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group the VMSS belongs to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: SinglePlacementGroup
+  description: |+
+    Specifies the single placement group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: SkuCapacity
+  description: |+
+    Specifies the number of instances in the VMSS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SkuName
+  description: |+
+    Specifies the size of all the instances of VMSS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SkuTier
+  description: |+
+    Specifies the tier of VMSS.
+    The acceptable values for this parameter are:
+    - Standard
+    - Basic
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TimeZone
+  description: |+
+    Specifies the time zone for Windows OS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: UltraSSDEnabled
+  description: |+
+    The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the virtual machine scale set.
+    Managed disks with storage account type UltraSSD_LRS can be added to a VMSS only if this property is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Compute.Models.UpgradeMode" data-throw-if-not-resolved="False" />
+  name: UpgradePolicyMode
+  description: |+
+    Specified the mode of an upgrade to virtual machines in the scale set.
+    The acceptable values for this parameter are:
+    - Automatic
+    - Manual
+    - Rolling
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Automatic, Manual, Rolling
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VhdContainer
+  description: |+
+    Specifies the container URLs that are used to store operating system disks for the VMSS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+  name: VirtualMachineScaleSet
+  description: |+
+    Specifies a local VMSS object.
+    To obtain a VMSS object, use the Get-AzVmss cmdlet.
+    This virtual machine object contains the updated state for the VMSS.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VMScaleSetName
+  isRequired: true
+  description: |+
+    Specifies the name of the VMSS that this cmdlet creates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Compute.Update-AzVmss
+name: Update-AzVmss
+description: |-
+  The **Update-AzVmss** cmdlet updates the state of a Virtual Machine Scale Set (VMSS) to the state of a local VMSS object.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: 9EE192A5-4E3F-41ED-A539-8E0A5D5EA4C9
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/update-azvmss
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Update-AzVmss.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Update-AzVmss.md

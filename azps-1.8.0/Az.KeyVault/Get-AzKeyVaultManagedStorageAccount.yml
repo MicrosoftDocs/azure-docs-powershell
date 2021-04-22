@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Key Vault managed Azure Storage Accounts.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultManagedStorageAccountIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultManagedStorageAccount" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultManagedStorageAccountIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultManagedStorageAccount" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Azure PowerShell Key Vault cmdlets
+  href: /powershell/module/az.keyvault/
+syntaxes:
+- >-
+  Get-AzKeyVaultManagedStorageAccount [-VaultName] <String> [[-AccountName] <String>] [-InRemovedState]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzKeyVaultManagedStorageAccount [-InputObject] <PSKeyVault> [-InRemovedState]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzKeyVaultManagedStorageAccount [-ResourceId] <String> [-InRemovedState]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all Key Vault managed Storage Accounts'
+  code: |-
+    PS C:\> Get-AzKeyVaultManagedStorageAccount -VaultName 'myvault'
+
+    Id                  : https://myvault.vault.azure.net:443/storage/mystorageaccount
+    Vault Name          : myvault
+    AccountName         : mystorageaccount
+    Account Resource Id : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers/Microsoft.St
+                          orage/storageAccounts/mystorageaccount
+    Enabled             : True
+    Created             : 4/25/2018 1:50:32 AM
+    Updated             : 4/25/2018 1:50:32 AM
+    Tags                :
+  description: |-
+    Lists all the accounts whose keys are managed by vault 'myvault'
+  summary: ""
+- title: 'Example 2: Get a Key Vault managed Storage Account'
+  code: |-
+    PS C:\> Get-AzKeyVaultManagedStorageAccount -VaultName 'myvault' -Name 'mystorageaccount'
+
+    Id                  : https://myvault.vault.azure.net:443/storage/mystorageaccount
+    Vault Name          : myvault
+    AccountName         : mystorageaccount
+    Account Resource Id : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/maddie1/providers/Microsoft.St
+                          orage/storageAccounts/mystorageaccount
+    Active Key Name     : key2
+    Auto Regenerate Key : False
+    Regeneration Period : 90.00:00:00
+    Enabled             : True
+    Created             : 4/25/2018 1:50:32 AM
+    Updated             : 4/25/2018 1:50:32 AM
+    Tags                :
+  description: |-
+    Gets the details of Key Vault managed Storage Account of 'mystorageaccount' if its keys are managed by vault 'myvault'
+  summary: ""
+- title: 'Example 3: List all Key Vault managed Storage Accounts using filtering'
+  code: |-
+    PS C:\> Get-AzKeyVaultManagedStorageAccount -VaultName 'myvault' -Name "test*"
+
+    Id                  : https://myvault.vault.azure.net:443/storage/test1
+    Vault Name          : myvault
+    AccountName         : test1
+    Account Resource Id : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers/Microsoft.St
+                          orage/storageAccounts/test1
+    Enabled             : True
+    Created             : 4/25/2018 1:50:32 AM
+    Updated             : 4/25/2018 1:50:32 AM
+    Tags                :
+
+    Id                  : https://myvault.vault.azure.net:443/storage/test2
+    Vault Name          : myvault
+    AccountName         : test2
+    Account Resource Id : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers/Microsoft.St
+                          orage/storageAccounts/test2
+    Enabled             : True
+    Created             : 4/25/2018 1:50:32 AM
+    Updated             : 4/25/2018 1:50:32 AM
+    Tags                :
+  description: |-
+    Lists all the accounts whose keys are managed by vault 'myvault' that start with "test"
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  description: |+
+    Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed storage account name from vault name, currently selected environment and manged storage account name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "1"
+  aliases: StorageAccountName, Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Vault object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InRemovedState
+  description: |+
+    Specifies whether to show the previously deleted storage accounts in the output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Vault resource id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Vault name.
+    Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.KeyVault.Get-AzKeyVaultManagedStorageAccount
+name: Get-AzKeyVaultManagedStorageAccount
+description: |-
+  Gets a Key Vault managed Azure Storage Account if the name of the account is specified and the account keys are managed by the specified vault. If the account name is not specified, then all the accounts whose keys are managed by specified vault are listed.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/get-azkeyvaultmanagedstorageaccount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultManagedStorageAccount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultManagedStorageAccount.md

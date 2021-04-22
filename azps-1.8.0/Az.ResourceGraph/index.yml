@@ -1,0 +1,17 @@
+### YamlMime:PowershellModule
+children:
+- title: ResourceGraph
+  cmdlets:
+  - Az.ResourceGraph.Search-AzGraph
+uid: Az.ResourceGraph
+name: Az.ResourceGraph
+description: |-
+  This topic displays help for the Azure Resource Graph cmdlets.
+metadata:
+  Module Name: Az.ResourceGraph
+  Module Guid: a290eead-f293-4588-b61e-b465b237591e
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.resourcegraph
+  Help Version: 0.1.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceGraph/ResourceGraph/help/Az.ResourceGraph.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceGraph/ResourceGraph/help/Az.ResourceGraph.md

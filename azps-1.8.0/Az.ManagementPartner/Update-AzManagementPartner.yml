@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the Microsoft Partner Network(MPN) ID of the current authenticated user or service principal.
+module: Az.ManagementPartner
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ManagementPartner.PSManagementPartner" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzManagementPartner
+  href: ./Remove-AzManagementPartner.yml
+- text: New-AzManagementPartner
+  href: ./New-AzManagementPartner.yml
+- text: Get-AzManagementPartner
+  href: ./Get-AzManagementPartner.yml
+syntaxes:
+- >-
+  Update-AzManagementPartner [-PartnerId] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Update-AzManagementPartner -PartnerId 4977985
+    PartnerId   : 4977985
+    PartnerName : Test_Test_DPORTest
+    TenantId    : 1b1121dd-6900-412a-af73-e8d44f81e1c1
+    ObjectId    : aa67f786-0552-423e-8849-244ed12bf581
+    State       : Active
+  description: |-
+    Update the management partner to a new one
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PartnerId
+  isRequired: true
+  description: |+
+    The management partner id, it is a 6 digits number
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ManagementPartner.Update-AzManagementPartner
+name: Update-AzManagementPartner
+description: |-
+  Updates the Microsoft Partner Network(MPN) ID of the current authenticated user or service principal.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ManagementPartner.dll-Help.xml
+  Module Name: Az.ManagementPartner
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.managementpartner/update-azmanagementpartner
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ManagementPartner/ManagementPartner/help/Update-AzManagementPartner.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ManagementPartner/ManagementPartner/help/Update-AzManagementPartner.md

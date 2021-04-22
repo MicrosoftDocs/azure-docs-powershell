@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Triggers a webhook ping event.
+module: Az.ContainerRegistry
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryWebhook" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryEventInfo" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzContainerRegistryWebhook
+  href: New-AzContainerRegistryWebhook.yml
+- text: Get-AzContainerRegistryWebhook
+  href: Get-AzContainerRegistryWebhook.yml
+- text: Update-AzContainerRegistryWebhook
+  href: Update-AzContainerRegistryWebhook.yml
+- text: Remove-AzContainerRegistryWebhook
+  href: Remove-AzContainerRegistryWebhook.yml
+syntaxes:
+- >-
+  Test-AzContainerRegistryWebhook -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Test-AzContainerRegistryWebhook [-Name] <String> [-ResourceGroupName] <String> [-RegistryName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Test-AzContainerRegistryWebhook -Webhook <PSContainerRegistryWebhook>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Triggers a webhook ping event.'
+  code: |-
+    PS C:\> Test-AzContainerRegistryWebhook -ResourceGroupName "MyResourceGroup" -RegistryName "MyRegistry" -Name "webhook001"
+
+    Id
+    --
+    c5950af0-c8d0-4924-9873-1ba7da5cbf83
+  description: |-
+    Triggers a webhook ping event.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Webhook Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: WebhookName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RegistryName
+  isRequired: true
+  description: |+
+    Container Registry Name.
+
+  defaultValue: None
+  position: "2"
+  aliases: ContainerRegistryName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The container registry Webhook resource id
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryWebhook" data-throw-if-not-resolved="False" />
+  name: Webhook
+  isRequired: true
+  description: |+
+    Container Registry Object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ContainerRegistry.Test-AzContainerRegistryWebhook
+name: Test-AzContainerRegistryWebhook
+description: |-
+  The Test-AzContainerRegistryWebhook cmdlet triggers a webhook ping event.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
+  Module Name: Az.ContainerRegistry
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/test-azcontainerregistrywebhook
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/Test-AzContainerRegistryWebhook.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/Test-AzContainerRegistryWebhook.md

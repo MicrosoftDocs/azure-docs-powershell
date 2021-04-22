@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a subscription.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState, Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscription" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApiManagementSubscription
+  href: ./Get-AzApiManagementSubscription.yml
+- text: Remove-AzApiManagementSubscription
+  href: ./Remove-AzApiManagementSubscription.yml
+- text: Set-AzApiManagementSubscription
+  href: ./Set-AzApiManagementSubscription.yml
+syntaxes:
+- >-
+  New-AzApiManagementSubscription -Context <PsApiManagementContext> [-SubscriptionId <String>] -Name <String>
+
+   -UserId <String> -ProductId <String> [-PrimaryKey <String>] [-SecondaryKey <String>]
+
+   [-State <PsApiManagementSubscriptionState>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Subscribe a user to a product'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>New-AzApiManagementSubscription -Context $apimContext -UserId "777" -ProductId "999"
+  description: |-
+    This command subscribes an existing user to a product.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Specifies a **PsApiManagementContext** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the subscription name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PrimaryKey
+  description: |+
+    Specifies the subscription primary key.
+    If this parameter is not specified the key is generated automatically.
+    This parameter must be 1 to 300 characters long.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProductId
+  isRequired: true
+  description: |+
+    Specifies the ID of the product to which to subscribe.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SecondaryKey
+  description: |+
+    Specifies the subscription secondary key.
+    This parameter is generated automatically if it is not specified.
+    This parameter must be 1 to 300 characters long.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState" data-throw-if-not-resolved="False" /><span>]</span>
+  name: State
+  description: |+
+    Specifies the subscription state.
+    The default value is $Null.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Suspended, Active, Expired, Submitted, Rejected, Cancelled
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Specifies the subscription ID.
+    This parameter is generated if not specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UserId
+  isRequired: true
+  description: |+
+    Specifies the subscriber ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.New-AzApiManagementSubscription
+name: New-AzApiManagementSubscription
+description: |-
+  The **New-AzApiManagementSubscription** cmdlet creates a subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  ms.assetid: B85BF332-503D-41CB-A3B7-221B85B9BE30
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementsubscription
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementSubscription.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementSubscription.md

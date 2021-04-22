@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates an authentication certificate for an application gateway.
+module: Az.Network
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayAuthenticationCertificate
+  href: ./Add-AzApplicationGatewayAuthenticationCertificate.yml
+- text: Get-AzApplicationGatewayAuthenticationCertificate
+  href: ./Get-AzApplicationGatewayAuthenticationCertificate.yml
+- text: New-AzApplicationGatewayAuthenticationCertificate
+  href: ./New-AzApplicationGatewayAuthenticationCertificate.yml
+- text: Remove-AzApplicationGatewayAuthenticationCertificate
+  href: ./Remove-AzApplicationGatewayAuthenticationCertificate.yml
+syntaxes:
+- >-
+  Set-AzApplicationGatewayAuthenticationCertificate -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   -CertificateFile <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update an authentication certificate'
+  code: |-
+    PS C:\> $appgw = Get-AzApplicationGateway -ResourceGroupName "rg" -Name "appGwName"
+    PS C:\> $appgw = Set-AzApplicationGatewayAuthenticationCertificate -ApplicationGateway $appgw -Name "cert01" -CertificateFile "C:\cert2.cer"
+    PS C:\> $appgw = Set-AzApplicationGateway -ApplicationGateway $appgw
+  description: |-
+    The first command gets the application gateway named appGwName and stores the result in the $appgw variable.
+    The second command updates the authentication certificate named cert01 in the application gateway.
+    The third command updates the application gateway.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies the name of application gateway for which this cmdlet updates an authentication certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateFile
+  isRequired: true
+  description: |+
+    Specifies the path of the authentication certificate file with which this cmdlet updates the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the authentication certificate that this cmdlet updates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzApplicationGatewayAuthenticationCertificate
+name: Set-AzApplicationGatewayAuthenticationCertificate
+description: |-
+  The **Set-AzApplicationGatewayAuthenticationCertificate** cmdlet updates an authentication certificate for an Azure application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 0108A65B-E322-4783-AB6A-6AF1E1A58AC5
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewayauthenticationcertificate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayAuthenticationCertificate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayAuthenticationCertificate.md

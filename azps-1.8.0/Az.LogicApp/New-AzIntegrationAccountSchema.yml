@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an integration account schema.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccountSchema" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzIntegrationAccountSchema
+  href: ./Get-AzIntegrationAccountSchema.yml
+- text: Remove-AzIntegrationAccountSchema
+  href: ./Remove-AzIntegrationAccountSchema.yml
+- text: Set-AzIntegrationAccountSchema
+  href: ./Set-AzIntegrationAccountSchema.yml
+syntaxes:
+- >-
+  New-AzIntegrationAccountSchema -ResourceGroupName <String> -Name <String> -SchemaName <String>
+
+   [-SchemaFilePath <String>] [-SchemaDefinition <String>] [-SchemaType <String>] [-ContentType <String>]
+
+   [-Metadata <Object>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create the integration account schema'
+  code: |-
+    PS C:\>New-AzIntegrationAccountSchema -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -SchemaName "IntegrationAccountSchema1" -SchemaFilePath "c:\temp\schema1"
+    Id          : /subscriptions/<SusbcriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/schemas/IntegrationAccountSchema1
+    Name        : IntegrationAccountSchema1
+    Type        : Microsoft.Logic/integrationAccounts/schemas
+    CreatedTime : 3/26/2016 7:21:10 PM
+    ChangedTime : 3/26/2016 7:21:10 PM
+    SchemaType  : Xml
+    ContentLink : https://<baseurl>/integrationaccounts68a13b6b49f14995ba7c5f3aedcbd7ad/3839E_XML_INTEGRATIONACCOUNTSCHEMA2-5A6650B914454A2CAB16
+                  B4A8D3F9840D?sv=2014-02-14&sr=b&sig=<value>
+    ContentSize : 7901
+  description: |-
+    This command creates the integration account schema named IntegrationAccountSchema1 in the specified resource group.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContentType
+  description: |+
+    Specifies a content type for the integration account schema.
+    This cmdlet supports application/xml as a map content type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Specifies a metadata object for the schema.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an integration account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IntegrationAccountName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SchemaDefinition
+  description: |+
+    Specifies a definition object for integration account schema.
+    Specify either this parameter or the *SchemaFilePath* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SchemaFilePath
+  description: |+
+    Specifies the file path of a definition for the integration account schema.
+    Specify either this parameter or the *SchemaDefinition* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SchemaName
+  isRequired: true
+  description: |+
+    Specifies a name for the integration account schema.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SchemaType
+  description: |+
+    Specifies the type for the integration account schema.
+    This parameter supports Xml as the type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Xml
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.LogicApp.New-AzIntegrationAccountSchema
+name: New-AzIntegrationAccountSchema
+description: |-
+  The **New-AzIntegrationAccountSchema** cmdlet creates an integration account schema.
+  This cmdlet returns an object that represents the integration account schema.
+  Specify the integration account name, resource group name, schema name, and schema definition.
+  Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: 91FFBEE9-A488-49ED-8C6C-2DE891CE0749
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/new-azintegrationaccountschema
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/New-AzIntegrationAccountSchema.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/New-AzIntegrationAccountSchema.md

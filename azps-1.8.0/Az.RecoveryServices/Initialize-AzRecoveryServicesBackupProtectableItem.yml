@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This command triggers the discovery of any unprotected items of the given workload type in the given container. If the DB application is not auto-protected use this command to discover new DBs whenever they are added and proceed to protect them.
+module: Az.RecoveryServices
+notes: |-
+  ## RELATED LINKS
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase" data-throw-if-not-resolved="False" />
+  description: |-
+    System.String
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Initialize-AzRecoveryServicesBackupProtectableItem [-Container] <ContainerBase> [-WorkloadType] <WorkloadType>
+
+   [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Initialize-AzRecoveryServicesProtectableItem -Container $Container -WorkloadType “MSSQL”
+  description: |-
+    The cmdlet executes a discovery operation for new protectable items.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase" data-throw-if-not-resolved="False" />
+  name: Container
+  isRequired: true
+  description: |+
+    Container where the item resides
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultId
+  description: |+
+    ARM ID of the Recovery Services Vault.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType" data-throw-if-not-resolved="False" />
+  name: WorkloadType
+  isRequired: true
+  description: |+
+    Workload type of the resource (for example: AzureVM, WindowsServer, AzureFiles, MSSQL).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: AzureVM, AzureSQLDatabase, AzureFiles, MSSQL
+uid: Az.RecoveryServices.Initialize-AzRecoveryServicesBackupProtectableItem
+name: Initialize-AzRecoveryServicesBackupProtectableItem
+description: |-
+  the cmdlet enquires for specific workloads within a container. This triggers an operation which creates protectable items.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/initialize-azrecoveryservicesbackupprotectableitem
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Initialize-AzRecoveryServicesBackupProtectableItem.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Initialize-AzRecoveryServicesBackupProtectableItem.md

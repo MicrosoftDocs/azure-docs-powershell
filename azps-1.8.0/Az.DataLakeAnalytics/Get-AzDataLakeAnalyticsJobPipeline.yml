@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Data Lake Analytics Job pipeline or pipelines.
+module: Az.DataLakeAnalytics
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSJobPipelineInformation" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzDataLakeAnalyticsJobPipeline [-Account] <String> [-SubmittedAfter <DateTimeOffset>]
+
+   [-SubmittedBefore <DateTimeOffset>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDataLakeAnalyticsJobPipeline [-Account] <String> [-PipelineId] <Guid> [-SubmittedAfter <DateTimeOffset>]
+
+   [-SubmittedBefore <DateTimeOffset>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a specified pipeline'
+  code: |-
+    PS C:\>Get-AzDataLakeAnalyticsJobPipeline -Account "contosoadla" -PipelineId 83cb7ad2-3523-4b82-b909-d478b0d8aea3
+  description: |-
+    This command gets the specified pipeline with id '83cb7ad2-3523-4b82-b909-d478b0d8aea3' in account 'contosoadla'.
+  summary: ""
+- title: 'Example 2: Get a list of all pipelines in the account'
+  code: |-
+    PS C:\>Get-AzDataLakeAnalyticsJobPipeline -AccountName "contosoadla"
+  description: |-
+    This command gets a list of all pipelines in the account "contosoadla"
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    Name of the Data Lake Analytics account name under which want to retrieve the job pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: PipelineId
+  isRequired: true
+  description: |+
+    ID of the specific job pipeline to return information for.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SubmittedAfter
+  description: |+
+    An optional filter which returns job pipeline(s) only submitted after the specified time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SubmittedBefore
+  description: |+
+    An optional filter which returns job pipeline(s) only submitted before the specified time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJobPipeline
+name: Get-AzDataLakeAnalyticsJobPipeline
+description: |-
+  The **Get-AzDataLakeAnalyticsJobPipeline** gets a specified Azure Data Lake Analytics Job pipeline or a list of pipelines.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  Module Name: Az.DataLakeAnalytics
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsjobpipeline
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobPipeline.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobPipeline.md

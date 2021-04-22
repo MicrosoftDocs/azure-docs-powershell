@@ -1,0 +1,147 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the log output for a job from the storage account associated with a specified cluster.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzHDInsightHiveJobDefinition
+  href: ./New-AzHDInsightHiveJobDefinition.yml
+- text: Start-AzHDInsightJob
+  href: ./Start-AzHDInsightJob.yml
+syntaxes:
+- >-
+  Get-AzHDInsightJobOutput [-ClusterName] <String> [-JobId] <String> [[-DefaultContainer] <String>]
+
+   [[-DefaultStorageAccountName] <String>] [[-DefaultStorageAccountKey] <String>]
+
+   [-HttpCredential] <PSCredential> [-ResourceGroupName <String>] [-DisplayOutputType <JobDisplayOutputType>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the log output for a job'
+  code: |-
+    PS C:\># Cluster info
+    PS C:\> $clusterName = "your-hadoop-001"
+    PS C:\> $clusterCreds = Get-Credential
+
+    # Hive job details
+    PS C:\> $statusFolder = "<status folder>"
+    PS C:\> $query = "<query here>"
+
+    PS C:\> New-AzHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+                -Query $query `
+            | Start-AzHDInsightJob `
+                -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds `
+            | Get-AzHDInsightJobOutput `
+                -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds
+  description: |-
+    This command gets the log output from the cluster named your-hadoop-001.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultContainer
+  description: |+
+    Specifies the default container name.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultStorageAccountKey
+  description: |+
+    Specifies the default Storage account key.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefaultStorageAccountName
+  description: |+
+    Specifies the default Storage account name.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.Job.JobDisplayOutputType" data-throw-if-not-resolved="False" />
+  name: DisplayOutputType
+  description: |+
+    Specifies the job output type being requested.
+    The acceptable values for this parameter are:
+    - StandardOutput
+    - StandardError
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: StandardOutput, StandardError
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: HttpCredential
+  isRequired: true
+  description: |+
+    Specifies the cluster login (HTTP) credentials for the cluster.
+
+  defaultValue: None
+  position: "5"
+  aliases: ClusterCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the job ID of the job whose output will be fetched.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Get-AzHDInsightJobOutput
+name: Get-AzHDInsightJobOutput
+description: |-
+  The **Get-AzHDInsightJobOutput** cmdlet gets the log output for a job from the Storage account associated with an Azure HDInsight cluster.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 5871C962-27D7-4EC8-927E-D4CAE5F23C58
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/get-azhdinsightjoboutput
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Get-AzHDInsightJobOutput.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Get-AzHDInsightJobOutput.md

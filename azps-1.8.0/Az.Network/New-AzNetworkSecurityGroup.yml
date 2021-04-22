@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a network security group.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSSecurityRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzNetworkSecurityGroup
+  href: ./Get-AzNetworkSecurityGroup.yml
+- text: Remove-AzNetworkSecurityGroup
+  href: ./Remove-AzNetworkSecurityGroup.yml
+- text: Set-AzNetworkSecurityGroup
+  href: ./Set-AzNetworkSecurityGroup.yml
+syntaxes:
+- >-
+  New-AzNetworkSecurityGroup -Name <String> -ResourceGroupName <String> -Location <String>
+
+   [-SecurityRules <PSSecurityRule[]>] [-Tag <Hashtable>] [-Force] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '1: Create a new network security group'
+  code: |-
+    New-AzNetworkSecurityGroup -Name "nsg1" -ResourceGroupName "rg1"  -Location  "westus"
+  description: |-
+    This command creates a new Azure network security group named "nsg1" in resource group "rg1" in location "westus".
+  summary: ""
+- title: '2: Create a detailed network security group'
+  code: |-
+    $rule1 = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP"
+        -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix
+        Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
+
+    $rule2 = New-AzNetworkSecurityRuleConfig -Name web-rule -Description "Allow HTTP"
+        -Access Allow -Protocol Tcp -Direction Inbound -Priority 101 -SourceAddressPrefix
+        Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 80
+
+    $nsg = New-AzNetworkSecurityGroup -ResourceGroupName TestRG -Location westus -Name
+        "NSG-FrontEnd" -SecurityRules $rule1,$rule2
+  description: |-
+    Step:1 Create a security rule allowing access from the Internet to port 3389.
+    Step:2 Create a security rule allowing access from the Internet to port 80.
+    Step:3 Add the rules created above to a new NSG named NSG-FrontEnd.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the region for which to create a network security group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the network security group to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+    This cmdlet creates a network security group in the resource group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSSecurityRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SecurityRules
+  description: |+
+    Specifies a list of network security rule objects to create in a network security group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzNetworkSecurityGroup
+name: New-AzNetworkSecurityGroup
+description: |-
+  The **New-AzNetworkSecurityGroup** cmdlet creates an Azure network security group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: A420B3E7-2FE9-4D0B-803E-AC28E5F23C59
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-aznetworksecuritygroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkSecurityGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkSecurityGroup.md

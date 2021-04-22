@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the queue from the specified Service Bus namespace.
+module: Az.ServiceBus
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ServiceBus.Models.PSQueueAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-AzServiceBusQueue [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String> [-PassThru]
+
+   [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AzServiceBusQueue [-InputObject] <PSQueueAttributes> [-PassThru] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AzServiceBusQueue [-ResourceId] <String> [-PassThru] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-AzServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1
+  description: |-
+    Removes the Service Bus queue `SB-Queue_exampl1` from the namespace `SB-Example1`.
+  summary: ""
+- title: 'Example 2.1 - InputObject - Using variable:'
+  code: |-
+    PS C:\> $inputobject = Get-AzServiceBusQueue <params>
+    PS C:\> Remove-AzServiceBusQueue -InputObject $inputobject
+  description: |-
+    Removes the Service Bus queue provided in the $inputobject for -InputObject parameter
+  summary: ""
+- title: 'Example 2.1 - InputObject - Using Piping:'
+  code: |-
+    PS C:\>  Get-AzServiceBusQueue <params> | Remove-AzServiceBusQueue
+  description: ""
+  summary: ""
+- title: 'Example 3.1 - ResourceId - Using variable:'
+  code: |-
+    PS c:\> $resourceid = Get-AzServiceBusQueue <params>
+    PS C:\> Remove-AzServiceBusQueue -ResourceId $resourceid.Id
+  description: |-
+    Removes the Service Bus queue provided in the ARM id in $resourceid/string for -ResourceId parameter
+  summary: ""
+- title: 'Example 3.2 - ResourceId - passign as string:'
+  code: |-
+    PS C:\> Remove-AzServiceBusQueue -ResourceId "/subscriptions/xxxx-xxxxx-xxxxx-xxxxxx-xxxxxxx/resourceGroups/ResourceGroupName/providers/Microsoft.ServiceBus/namespaces/NamespaceName/queues/QueueName"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ServiceBus.Models.PSQueueAttributes" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Service Bus Queue Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Queue Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: QueueName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  isRequired: true
+  description: |+
+    Namespace Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: NamespaceName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Specifying this will return true if the command was successful.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ResourceGroup
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Service Bus Queue Resource Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ServiceBus.Remove-AzServiceBusQueue
+name: Remove-AzServiceBusQueue
+description: |-
+  The **Remove-AzServiceBusQueue** cmdlet removes the queue from the specified Service Bus namespace.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
+  Module Name: Az.ServiceBus
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/remove-azservicebusqueue
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceBus/ServiceBus/help/Remove-AzServiceBusQueue.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceBus/ServiceBus/help/Remove-AzServiceBusQueue.md

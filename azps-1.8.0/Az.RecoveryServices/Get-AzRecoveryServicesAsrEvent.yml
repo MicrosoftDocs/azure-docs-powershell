@@ -1,0 +1,173 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets details of Azure Site Recovery events in the vault.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASREvent" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzRecoveryServicesAsrEvent [-AffectedObjectFriendlyName <String>] [-Fabric <ASRFabric>]
+
+   [-Severity <String>] [-StartTime <DateTime>] [-EndTime <DateTime>] [-EventType <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzRecoveryServicesAsrEvent -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzRecoveryServicesAsrEvent -FabricId <String> [-AffectedObjectFriendlyName <String>] [-Severity <String>]
+
+   [-StartTime <DateTime>] [-EndTime <DateTime>] [-EventType <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzRecoveryServicesAsrEvent -Name <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzRecoveryServicesAsrEvent
+  description: |-
+    List of all events.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzRecoveryServicesAsrEvent -EventName "VmMonitoringEvent;9091897569816476200_84576304-bafc-4714-8ba6-197a5d09d84f"
+
+
+    AffectedObjectFriendlyName   : V2A-W2K12-400
+    Description                  : Virtual machine health is in Critical state.
+    EventCode                    : SRSVMHealthChanged
+    EventSpecificDetails         :
+    EventType                    : AgentHealth
+    FabricId                     : /Subscriptions/xxxxxxxxxxxxxxxxx/resourceGroups/xxxxxxxxxxxx/providers/Microsoft.RecoveryServices/vaults/xxxxxxxxxxxxxxxx/replicationFabrics/xxxxxxxxxxxx
+    HealthErrors                 : {}
+    Name                         : VmMonitoringEvent;9091897569816476200_84576304-bafc-4714-8ba6-197a5d09d84f
+    ProviderSpecificEventDetails : Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRInMageAzureV2EventDetails
+    Severity                     : Critical
+    TimeOfOccurence              : 8/17/2017 12:31:43 PM
+  description: |-
+    Get event by name.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzRecoveryServicesAsrEvent -AffectedObjectName xxxxxxxxxxxxx
+  description: |-
+    List of event for affected Object.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-AzRecoveryServicesAsrEvent -AffectedObjectName xxxxxxxxxxxx -StartTime "8/17/2017 12:31:40 PM" -EndTime "8/17/2017 12:31:44 PM" -Severity Critical -EventType VmHealth
+  description: |-
+    List of event between time start time and end time , severity critical and health type VmHealth.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AffectedObjectFriendlyName
+  description: |+
+    Specifies AffectedObject FriendlyName for the search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: EndTime
+  description: |+
+    Specifies the end time of the search window. Use this parameter to get only those events that have occurred before the specified time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EventType
+  description: |+
+    Filter events by the event type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: VmHealth, ServerHealth, AgentHealth
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric" data-throw-if-not-resolved="False" />
+  name: Fabric
+  description: |+
+    Filter events by the specified fabric.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FabricId
+  isRequired: true
+  description: |+
+    Specifies the fabricId to filter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies name of the event for search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifes the event ReourceId of event.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Severity
+  description: |+
+    Event severity to filter on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Critical, Warning, OK, Unknown
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: StartTime
+  description: |+
+    Specifies the start time of the search window. Use this parameter to get only those events that have occurred after the specified time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Get-AzRecoveryServicesAsrEvent
+name: Get-AzRecoveryServicesAsrEvent
+description: |-
+  The **Get-AzRecoveryServicesAsrEvent** gets the list of events in the vault based on the specified selection filters.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/get-azrecoveryservicesasrevent
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrEvent.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrEvent.md

@@ -1,0 +1,152 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of file shares.
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Storage.File.CloudFileShare" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzStorageShare
+  href: ./New-AzStorageShare.yml
+- text: Remove-AzStorageShare
+  href: ./Remove-AzStorageShare.yml
+syntaxes:
+- >-
+  Get-AzStorageShare [[-Prefix] <String>] [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>]
+
+   [-ClientTimeoutPerRequest <Int32>] [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzStorageShare [-Name] <String> [[-SnapshotTime] <DateTimeOffset>] [-Context <IStorageContext>]
+
+   [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a file share'
+  code: |-
+    PS C:\>Get-AzStorageShare -Name "ContosoShare06"
+  description: |-
+    This command gets the file share named ContosoShare06.
+  summary: ""
+- title: 'Example 2: Get all file shares that begin with a string'
+  code: |-
+    PS C:\>Get-AzStorageShare -Prefix "Contoso"
+  description: |-
+    This command gets all file shares that have names that begin with Contoso.
+  summary: ""
+- title: 'Example 3: Get all file shares in a specified context'
+  code: |-
+    PS C:\>$Context = New-AzStorageContext -Local
+    PS C:\> Get-AzStorageShare -Context $Context
+  description: |-
+    The first command uses the **New-AzStorageContext** cmdlet to create a context by using the *Local* parameter, and then stores that context object in the $Context variable.
+    The second command gets the file shares for the context object stored in $Context.
+  summary: ""
+- title: 'Example 4: Get a file share snapshot with specific share name and SnapshotTime'
+  code: |-
+    PS C:\>Get-AzStorageShare -Name "ContosoShare06" -SnapshotTime "6/16/2017 9:48:41 AM +00:00"
+  description: |-
+    This command gets a file share snapshot with specific share name and SnapshotTime.
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ClientTimeoutPerRequest
+  description: |+
+    Specifies the client-side time-out interval, in seconds, for one service request.
+    If the previous call fails in the specified interval, this cmdlet retries the request.
+    If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ConcurrentTaskCount
+  description: |+
+    Specifies the maximum concurrent network calls.
+    You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+    The specified value is an absolute count and is not multiplied by the core count.
+    This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+  name: Context
+  description: |+
+    Specifies an Azure Storage context.
+    To obtain a context, use the [New-AzStorageContext](./New-AzStorageContext.yml) cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the file share.
+    This cmdlet gets the file share that this parameter specifies, or nothing if you specify the name of a file share that does not exist.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Prefix
+  description: |+
+    Specifies the prefix for file shares.
+    This cmdlet gets file shares that match the prefix that this parameter specifies, or no file shares if no file shares match the specified prefix.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ServerTimeoutPerRequest
+  description: |+
+    Specifies the length of the time-out period for the server part of a request.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SnapshotTime
+  description: |+
+    SnapshotTime of the file share snapshot to be received.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Storage.Get-AzStorageShare
+name: Get-AzStorageShare
+description: |-
+  The **Get-AzStorageShare** cmdlet gets a list of file shares for a storage account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  Module Name: Az.Storage
+  ms.assetid: FD3A0013-4365-4E65-891C-5C50A9D5658C
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageshare
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageShare.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageShare.md

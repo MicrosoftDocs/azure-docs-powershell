@@ -1,0 +1,84 @@
+### YamlMime:PowershellModule
+children:
+- title: Data Factories
+  cmdlets:
+  - Az.DataFactory.Get-AzDataFactory
+  - Az.DataFactory.Get-AzDataFactoryActivityWindow
+  - Az.DataFactory.Get-AzDataFactoryDataset
+  - Az.DataFactory.Get-AzDataFactoryGateway
+  - Az.DataFactory.Get-AzDataFactoryGatewayAuthKey
+  - Az.DataFactory.Get-AzDataFactoryHub
+  - Az.DataFactory.Get-AzDataFactoryLinkedService
+  - Az.DataFactory.Get-AzDataFactoryPipeline
+  - Az.DataFactory.Get-AzDataFactoryRun
+  - Az.DataFactory.Get-AzDataFactorySlice
+  - Az.DataFactory.Get-AzDataFactoryV2
+  - Az.DataFactory.Get-AzDataFactoryV2ActivityRun
+  - Az.DataFactory.Get-AzDataFactoryV2Dataset
+  - Az.DataFactory.Get-AzDataFactoryV2IntegrationRuntime
+  - Az.DataFactory.Get-AzDataFactoryV2IntegrationRuntimeKey
+  - Az.DataFactory.Get-AzDataFactoryV2IntegrationRuntimeMetric
+  - Az.DataFactory.Get-AzDataFactoryV2IntegrationRuntimeNode
+  - Az.DataFactory.Get-AzDataFactoryV2LinkedService
+  - Az.DataFactory.Get-AzDataFactoryV2Pipeline
+  - Az.DataFactory.Get-AzDataFactoryV2PipelineRun
+  - Az.DataFactory.Get-AzDataFactoryV2Trigger
+  - Az.DataFactory.Get-AzDataFactoryV2TriggerRun
+  - Az.DataFactory.Invoke-AzDataFactoryV2IntegrationRuntimeUpgrade
+  - Az.DataFactory.Invoke-AzDataFactoryV2Pipeline
+  - Az.DataFactory.New-AzDataFactory
+  - Az.DataFactory.New-AzDataFactoryDataset
+  - Az.DataFactory.New-AzDataFactoryEncryptValue
+  - Az.DataFactory.New-AzDataFactoryGateway
+  - Az.DataFactory.New-AzDataFactoryGatewayAuthKey
+  - Az.DataFactory.New-AzDataFactoryHub
+  - Az.DataFactory.New-AzDataFactoryLinkedService
+  - Az.DataFactory.New-AzDataFactoryPipeline
+  - Az.DataFactory.New-AzDataFactoryV2IntegrationRuntimeKey
+  - Az.DataFactory.New-AzDataFactoryV2LinkedServiceEncryptedCredential
+  - Az.DataFactory.Remove-AzDataFactory
+  - Az.DataFactory.Remove-AzDataFactoryDataset
+  - Az.DataFactory.Remove-AzDataFactoryGateway
+  - Az.DataFactory.Remove-AzDataFactoryHub
+  - Az.DataFactory.Remove-AzDataFactoryLinkedService
+  - Az.DataFactory.Remove-AzDataFactoryPipeline
+  - Az.DataFactory.Remove-AzDataFactoryV2
+  - Az.DataFactory.Remove-AzDataFactoryV2Dataset
+  - Az.DataFactory.Remove-AzDataFactoryV2IntegrationRuntime
+  - Az.DataFactory.Remove-AzDataFactoryV2IntegrationRuntimeNode
+  - Az.DataFactory.Remove-AzDataFactoryV2LinkedService
+  - Az.DataFactory.Remove-AzDataFactoryV2Pipeline
+  - Az.DataFactory.Remove-AzDataFactoryV2Trigger
+  - Az.DataFactory.Resume-AzDataFactoryPipeline
+  - Az.DataFactory.Save-AzDataFactoryLog
+  - Az.DataFactory.Set-AzDataFactoryGateway
+  - Az.DataFactory.Set-AzDataFactoryPipelineActivePeriod
+  - Az.DataFactory.Set-AzDataFactorySliceStatus
+  - Az.DataFactory.Set-AzDataFactoryV2
+  - Az.DataFactory.Set-AzDataFactoryV2Dataset
+  - Az.DataFactory.Set-AzDataFactoryV2IntegrationRuntime
+  - Az.DataFactory.Set-AzDataFactoryV2LinkedService
+  - Az.DataFactory.Set-AzDataFactoryV2Pipeline
+  - Az.DataFactory.Set-AzDataFactoryV2Trigger
+  - Az.DataFactory.Start-AzDataFactoryV2IntegrationRuntime
+  - Az.DataFactory.Start-AzDataFactoryV2Trigger
+  - Az.DataFactory.Stop-AzDataFactoryV2IntegrationRuntime
+  - Az.DataFactory.Stop-AzDataFactoryV2PipelineRun
+  - Az.DataFactory.Stop-AzDataFactoryV2Trigger
+  - Az.DataFactory.Suspend-AzDataFactoryPipeline
+  - Az.DataFactory.Sync-AzDataFactoryV2IntegrationRuntimeCredential
+  - Az.DataFactory.Update-AzDataFactoryV2
+  - Az.DataFactory.Update-AzDataFactoryV2IntegrationRuntime
+  - Az.DataFactory.Update-AzDataFactoryV2IntegrationRuntimeNode
+uid: Az.DataFactory
+name: Az.DataFactory
+description: |-
+  Azure Data Factory V2 is the data integration platform that goes beyond Azure Data Factory V1's orchestration and batch-processing of time-series log data, with a general purpose app model supporting modern data warehousing patterns and scenarios, lift-and-shift SSIS, and data-driven SaaS applications. Compose and manage reliable and secure data integration workflows at scale. Use native ADF data connectors and Integration Runtimes to move and transform cloud and on-premises data that can be unstructured, semi-structured, and structured with Hadoop, Azure Data Lake, Spark, SQL Server, Cosmos DB and many other data platforms.
+metadata:
+  Module Name: Az.DataFactory
+  Module Guid: e3c0f6bc-fe96-41a0-88f4-5e490a91f05d
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.datafactory
+  Help Version: 0.5.3.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Az.DataFactory.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Az.DataFactory.md

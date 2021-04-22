@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queries the resources managed by Azure Resource Manager.
+module: Az.ResourceGraph
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Search-AzGraph [-Query] <String> [-Subscription <String[]>] [-First <Int32>] [-Skip <Int32>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Search-AzGraph "project id, name, type, location, tags" -First 3
+
+
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.Compute/virtualMachineScaleSets/nt
+    name       : nt
+    type       : microsoft.compute/virtualmachinescalesets
+    location   : eastus
+    tags       : @{resourceType=Service Fabric; clusterName=gov-art-int-nt-a}
+
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.EventGrid/topics/egtopic-1
+    name       : egtopic-1
+    type       : microsoft.eventgrid/topics
+    location   : westus2
+    tags       :
+  description: |-
+    Simple resources query requesting a subset of resource fields.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Search-AzGraph "project id, name, type, location | where type =~ 'Microsoft.Compute/virtualMachines' | summarize count() by location | top 3 by count_"
+
+    location      count_
+    --------      ------
+    eastus            66
+    westcentralus     32
+    westus            26
+  description: |-
+    A complex query on resources featuring field selection, filtering and summarizing.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The maximum number of objects to return. Allowed values: 1-5000.
+    Default value is 100.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Query
+  isRequired: true
+  description: |+
+    Resource Graph query.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    Ignores the first N objects and then gets the remaining objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Subscription
+  description: |+
+    Subscription(s) to run query against.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ResourceGraph.Search-AzGraph
+name: Search-AzGraph
+description: |-
+  Learn more about the query syntax here: https://aka.ms/resource-graph/learntoquery
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceGraph.dll-Help.xml
+  Module Name: Az.ResourceGraph
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resourcegraph/search-azgraph
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceGraph/ResourceGraph/help/Search-AzGraph.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ResourceGraph/ResourceGraph/help/Search-AzGraph.md

@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an entry in the ACL of a file or folder in Data Lake Store.
+module: Az.DataLakeStore
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-AzDataLakeStoreItemAclEntry
+  href: ./Remove-AzDataLakeStoreItemAclEntry.yml
+- text: Set-AzDataLakeStoreItemAclEntry
+  href: ./Set-AzDataLakeStoreItemAclEntry.yml
+syntaxes:
+- >-
+  Get-AzDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the ACL for a folder'
+  code: |-
+    PS C:\> Get-AzDataLakeStoreItemAclEntry -AccountName 'ContosoADL' -Path '/'
+  description: |-
+    This command gets the ACL for the root directory of the specified Data Lake Store account
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    Specifies the name of the Data Lake Store account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the Data Lake Store path of the item for which this cmdlet gets an ACE, starting with the root directory (/).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataLakeStore.Get-AzDataLakeStoreItemAclEntry
+name: Get-AzDataLakeStoreItemAclEntry
+description: |-
+  The **Get-AzDataLakeStoreItemAclEntry** cmdlet gets an entry (ACE) in the access control list (ACL) of a file or folder in Data Lake Store.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  Module Name: Az.DataLakeStore
+  ms.assetid: DFE8C373-2BBA-4A4E-B4B1-926373E68FC4
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/get-azdatalakestoreitemaclentry
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItemAclEntry.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItemAclEntry.md

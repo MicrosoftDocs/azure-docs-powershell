@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a pipeline in Data Factory.
+module: Az.DataFactory
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSPipeline" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzDataFactoryV2Pipeline [-Name] <String> [-DefinitionFile] <String> [-ResourceGroupName] <String>
+
+   [-DataFactoryName] <String> [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzDataFactoryV2Pipeline [-DefinitionFile] <String> [-ResourceId] <String> [-Force]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a pipeline'
+  code: |-
+    PS C:\> Set-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF" -File "C:\DPWikisample.json"
+
+        PipelineName      : DPWikisample
+        ResourceGroupName : ADF
+        DataFactoryName   : WikiADF11
+        Activities        : {MyCopyActivity_0_0, MyCopyActivity_1_0}
+        Parameters        : {[OutputBlobName, Microsoft.Azure.Management.DataFactory.Models.ParameterSpecification]}
+  description: |-
+    This command creates a pipeline named DPWikisample in the data factory named ADF.
+    The command bases the pipeline on information in the DPWikisample.json file.
+    This file includes information about activities such as Copy Activity and HDInsight Activity in the pipeline.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet creates a pipeline for the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DefinitionFile
+  isRequired: true
+  description: |+
+    The JSON file path.
+
+  defaultValue: None
+  position: "3"
+  aliases: File
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that this cmdlet replaces an existing pipeline without prompting you for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the pipeline to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: PipelineName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet creates a pipeline for the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The Azure resource ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DataFactory.Set-AzDataFactoryV2Pipeline
+name: Set-AzDataFactoryV2Pipeline
+description: |-
+  The Set-AzDataFactoryV2Pipeline cmdlet creates a pipeline in Azure Data Factory.
+  If you specify a name for a pipeline that already exists, the cmdlet prompts you for confirmation before it replaces the pipeline.
+  If you specify the Force parameter, the cmdlet replaces the existing pipeline without confirmation.
+  Perform these operations in the following order:
+          -- Create a data factory.
+          -- Create linked services.
+          -- Create datasets.
+          -- Create a pipeline.
+  If a pipeline with the same name already exists in the data factory, this cmdlet prompts you to confirm whether to overwrite the existing pipeline with the new pipeline.
+  If you confirm to overwrite the existing pipeline, the pipeline definition is also replaced.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  Module Name: Az.DataFactory
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/set-azdatafactoryv2pipeline
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryV2Pipeline.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryV2Pipeline.md

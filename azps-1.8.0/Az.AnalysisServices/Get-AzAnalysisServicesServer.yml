@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the details of an Analysis Services server.
+module: Az.AnalysisServices
+notes: |-
+  Alias: Get-AzAs
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.AnalysisServices.Models.AzureAnalysisServicesServer" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzAnalysisServicesServer [[-ResourceGroupName] <String>] [[-Name] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-AzAnalysisServicesServer -ResourceGroupName "ResourceGroup03"
+  description: |-
+    This command gets all Azure Analysis Services servers in the resource group named ResourceGroup03.
+  summary: ""
+- title: 'Example 2: Get a server'
+  code: |-
+    PS C:\>Get-AzAnalysisServicesServer -ResourceGroupName "ResourceGroup03" -Name "testserver"
+  description: |-
+    This command gets the Azure Analysis Services server named testserver in the resource group named ResourceGroup03.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the Analysis Services server
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Name of the Azure resource group to which the server belongs
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.AnalysisServices.Get-AzAnalysisServicesServer
+name: Get-AzAnalysisServicesServer
+description: |-
+  The Get-AzAnalysisServicesServer cmdlet gets the details of an Analysis Services server.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
+  Module Name: Az.AnalysisServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.analysisservices/get-azanalysisservicesserver
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AnalysisServices/AnalysisServices/help/Get-AzAnalysisServicesServer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AnalysisServices/AnalysisServices/help/Get-AzAnalysisServicesServer.md

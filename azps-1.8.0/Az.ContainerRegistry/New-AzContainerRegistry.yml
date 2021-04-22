@@ -1,0 +1,177 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a container registry.
+module: Az.ContainerRegistry
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistry" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzContainerRegistry
+  href: Get-AzContainerRegistry.yml
+- text: Update-AzContainerRegistry
+  href: Update-AzContainerRegistry.yml
+- text: Remove-AzContainerRegistry
+  href: Remove-AzContainerRegistry.yml
+syntaxes:
+- >-
+  New-AzContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-Sku] <String> [-Location <String>]
+
+   [-EnableAdminUser] [-Tag <Hashtable>] [-StorageAccountName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a container registry with a new storage account.'
+  code: |-
+    PS C:\>New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -Sku "Basic"
+
+       Container registry location: eastus
+
+    Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                      ngState    nabled     ame
+    -------------     ---        -----------               ------------               ---------- ---------- ---------------
+    myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
+  description: |-
+    This command creates a container registry with a new storage account in the resource group \`MyResourceGroup\`.
+  summary: ""
+- title: 'Example 2: Create a container registry with admin user enabled.'
+  code: |-
+    PS C:\>New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -Sku "Basic" -EnableAdminUser
+
+      Container registry location: eastus
+
+    Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                      ngState    nabled     ame
+    -------------     ---        -----------               ------------               ---------- ---------- ---------------
+    myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
+  description: |-
+    This command creates a container registry with admin user enabled.
+  summary: ""
+- title: 'Example 3: Create a container registry with an existing storage account.'
+  code: |-
+    PS C:\>New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry" -Sku "Basic" -StorageAccountName "mystorageaccount"
+
+      Container registry location: eastus
+
+    Registry Name     Sku        LoginServer               CreationDate               Provisioni AdminUserE StorageAccountN
+                                                                                      ngState    nabled     ame
+    -------------     ---        -----------               ------------               ---------- ---------- ---------------
+    myregistry        Premium    myregistry.azurecr.io     10/31/2017 6:49:31 PM      Succeeded  True
+  description: |-
+    This command creates a container registry with an existing storage account \`mystorageaccount\` in the same subscription.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAdminUser
+  description: |+
+    Enable admin user for the container registry.
+
+  defaultValue: "False"
+  position: Named
+  aliases: EnableAdmin
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Container Registry Location.
+    Default to the location of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Container Registry Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ContainerRegistryName, RegistryName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Sku
+  isRequired: true
+  description: |+
+    Container Registry SKU.
+    Allowed values: Basic.
+
+  defaultValue: None
+  position: "2"
+  aliases: ContainerRegistrySku, RegistrySku
+  parameterValueGroup: Classic, Basic, Premium, Standard
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageAccountName
+  description: |+
+    The name of an existing storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Container Registry Tags.Key-value pairs in the form of a hash table.
+    For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  position: Named
+  aliases: Tags
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ContainerRegistry.New-AzContainerRegistry
+name: New-AzContainerRegistry
+description: |-
+  The New-AzContainerRegistry cmdlet creates a container registry.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
+  Module Name: Az.ContainerRegistry
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.containerregistry/new-azcontainerregistry
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/New-AzContainerRegistry.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerRegistry/ContainerRegistry/help/New-AzContainerRegistry.md

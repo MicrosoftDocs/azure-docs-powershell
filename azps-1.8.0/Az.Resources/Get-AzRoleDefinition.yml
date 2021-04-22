@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists all Azure RBAC roles that are available for assignment.
+module: Az.Resources
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzRoleAssignment
+  href: ./New-AzRoleAssignment.yml
+- text: Get-AzRoleAssignment
+  href: ./Get-AzRoleAssignment.yml
+- text: New-AzRoleDefinition
+  href: ./New-AzRoleDefinition.yml
+- text: Remove-AzRoleDefinition
+  href: ./Remove-AzRoleDefinition.yml
+syntaxes:
+- >-
+  Get-AzRoleDefinition [[-Name] <String>] [-Scope <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzRoleDefinition -Id <Guid> [-Scope <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzRoleDefinition [-Scope <String>] [-Custom] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzRoleDefinition -Name Reader
+  description: |-
+    Get the Reader role definition
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzRoleDefinition
+  description: |-
+    Lists all RBAC role definitions
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Custom
+  isRequired: true
+  description: |+
+    If specified, only displays the custom created roles in the directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Role definition Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Role definition name.
+    For e.g.
+    Reader, Contributor, Virtual Machine Contributor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Role definition scope.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzRoleDefinition
+name: Get-AzRoleDefinition
+description: |-
+  Use the Get-AzRoleDefinition command with a particular role name to view its details.
+  To inspect individual operations that a role grants access to, review the Actions and NotActions properties of the role.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 7740AC3B-F643-4F8D-8DC5-ACBF59323BD8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azroledefinition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzRoleDefinition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzRoleDefinition.md

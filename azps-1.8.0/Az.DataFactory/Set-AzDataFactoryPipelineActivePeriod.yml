@@ -1,0 +1,187 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the active period for data slices.
+module: Az.DataFactory
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzDataFactoryPipeline
+  href: ./New-AzDataFactoryPipeline.yml
+- text: Set-AzDataFactorySliceStatus
+  href: ./Set-AzDataFactorySliceStatus.yml
+syntaxes:
+- >-
+  Set-AzDataFactoryPipelineActivePeriod [-PipelineName] <String> [-DataFactoryName] <String>
+
+   [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate]
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzDataFactoryPipelineActivePeriod [-PipelineName] <String> [-DataFactory] <PSDataFactory>
+
+   [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure the active period'
+  code: |-
+    PS C:\>Set-AzDataFactoryPipelineActivePeriod -ResourceGroupName "ADF" -PipelineName "DPWikisample" -DataFactoryName "WikiADF" -StartDateTime 2014-05-21T16:00:00Z -EndDateTime 2014-05-22T16:00:00Z
+    Confirm
+    Are you sure you want to set pipeline 'DPWikisample' active period from '05/21/2014 16:00:00' to
+    '05/22/2014 16:00:00'? 
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+    True
+  description: |-
+    This command configures the active period for the data slices that the pipeline named DPWikisample processes.
+    The command provides beginning and end points for the data slices as values.
+    The command returns a value of $True.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoResolve
+  description: |+
+    Indicates that this cmdlet uses auto resolve.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  name: DataFactory
+  isRequired: true
+  description: |+
+    Specifies a **PSDataFactory** object.
+    This cmdlet modifies the active period for a pipeline that belongs to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet modifies the active period for a pipeline that belongs to the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: EndDateTime
+  description: |+
+    Specifies the end of a time period as a **DateTime** object.
+    Data processing occurs or data slices are processed within this period.
+    For more information about **DateTime** objects, type `Get-Help Get-Date`.
+    *EndDateTime* must be specified in the ISO8601 format as in the following examples: 
+    2015-01-01Z 
+    2015-01-01T00:00:00Z 
+    2015-01-01T00:00:00.000Z (UTC) 
+    2015-01-01T00:00:00-08:00 (Pacific Standard Time)
+    The default time zone designator is UTC.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceRecalculate
+  description: |+
+    Indicates that this cmdlet uses force recalculate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PipelineName
+  isRequired: true
+  description: |+
+    Specifies the name of the pipeline.
+    This cmdlet sets the active period for the pipeline that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet modifies the active period for a pipeline that belongs to the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: StartDateTime
+  isRequired: true
+  description: |+
+    Specifies the start of a time period as a **DateTime** object.
+    Data processing occurs or data slices are processed within this period.
+    *StartDateTime* must be specified in the ISO8601 format.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DataFactory.Set-AzDataFactoryPipelineActivePeriod
+name: Set-AzDataFactoryPipelineActivePeriod
+description: |-
+  The **Set-AzDataFactoryPipelineActivePeriod** cmdlet configures the active period for the data slices that are processed by a pipeline in Azure Data Factory.
+  If you use the Set-AzDataFactorySliceStatus cmdlet to modify the status of slices for a dataset, make sure that the start time and end time for a slice are in the active period of the pipeline.
+  After you create a pipeline, you can specify the period in which data processing occurs.
+  Specifying the active period for a pipeline defines the time duration in which the data slices are processed based on the **Availability** properties that were defined for each Data Factory dataset.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
+  Module Name: Az.DataFactory
+  ms.assetid: D853A91F-95E7-4C36-AC0F-2C10DFCF68F8
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/set-azdatafactorypipelineactiveperiod
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryPipelineActivePeriod.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryPipelineActivePeriod.md

@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables HTTP access to the cluster.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.HDInsight.Models.HttpConnectivitySettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-AzHDInsightHttpServicesAccess
+  href: ./Grant-AzHDInsightHttpServicesAccess.yml
+syntaxes:
+- >-
+  Revoke-AzHDInsightHttpServicesAccess [-ClusterName] <String> [-ResourceGroupName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable HTTP access to a cluster'
+  code: |-
+    PS C:\>Revoke-AzHDInsightHttpServicesAccess `
+           -ClusterName "your-hadoop_001"
+  description: |-
+    This command revokes HTTP access to the cluster named your-hadoop_001.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.Revoke-AzHDInsightHttpServicesAccess
+name: Revoke-AzHDInsightHttpServicesAccess
+description: |-
+  The **Revoke-AzHDInsightHttpServicesAccess** cmdlet disables HTTP access to an Azure HDInsight cluster for ODBC, Ambari, Oozie and webHCatalog web services.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 670EAFC0-3F8D-4F3D-8B62-448F04378F8B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/revoke-azhdinsighthttpservicesaccess
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Revoke-AzHDInsightHttpServicesAccess.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/Revoke-AzHDInsightHttpServicesAccess.md

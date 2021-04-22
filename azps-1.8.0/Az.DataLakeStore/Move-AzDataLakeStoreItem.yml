@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves or renames a file or folder in Data Lake Store.
+module: Az.DataLakeStore
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzDataLakeStoreItem
+  href: ./Get-AzDataLakeStoreItem.yml
+- text: Export-AzDataLakeStoreItem
+  href: ./Export-AzDataLakeStoreItem.yml
+- text: Import-AzDataLakeStoreItem
+  href: ./Import-AzDataLakeStoreItem.yml
+- text: New-AzDataLakeStoreItem
+  href: ./New-AzDataLakeStoreItem.yml
+- text: Remove-AzDataLakeStoreItem
+  href: ./Remove-AzDataLakeStoreItem.yml
+- text: Test-AzDataLakeStoreItem
+  href: ./Test-AzDataLakeStoreItem.yml
+syntaxes:
+- >-
+  Move-AzDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInstance>
+
+   [-Destination] <DataLakeStorePathInstance> [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Move and rename an item'
+  code: |-
+    PS C:\>Move-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "/Original/Path/File.txt" -Destination "/New/Path/RenamedFile.txt"
+  description: |-
+    This command renames the item File.txt to RenamedFile.txt and moves it to a different folder.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    Specifies the name of the Data Lake Store account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+  name: Destination
+  isRequired: true
+  description: |+
+    Specifies the Data Lake Store path to which to move the item, starting with the root directory (/).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that this operation can overwrite the destination file if it already exists.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the Data Lake Store path of the item to move or rename, starting with the root directory (/).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DataLakeStore.Move-AzDataLakeStoreItem
+name: Move-AzDataLakeStoreItem
+description: |-
+  The **Move-AzDataLakeStoreItem** cmdlet moves or renames a file or folder in Data Lake Store.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  Module Name: Az.DataLakeStore
+  ms.assetid: 00CCA9B8-7C57-4FC0-9BD1-5FC16010E820
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore/move-azdatalakestoreitem
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Move-AzDataLakeStoreItem.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Move-AzDataLakeStoreItem.md

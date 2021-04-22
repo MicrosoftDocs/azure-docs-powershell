@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a service delegation.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSDelegation" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzDelegation
+  href: ./Add-AzDelegation.yml
+- text: Get-AzDelegation
+  href: ./Get-AzDelegation.yml
+- text: Remove-AzDelegation
+  href: ./Remove-AzDelegation.yml
+- text: Get-AzVirtualNetwork
+  href: ./Get-AzVirtualNetwork.yml
+- text: Get-AzVirtualNetworkSubnetConfig
+  href: ./Get-AzVirtualNetworkSubnetConfig.yml
+- text: Set-AzVirtualNetwork
+  href: ./Set-AzVirtualNetwork.yml
+syntaxes:
+- >-
+  New-AzDelegation -Name <String> -ServiceName <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $delegation = New-AzDelegation -Name "myDelegation" -ServiceName "Microsoft.Sql/servers"
+    PS C:\> $vnet = Get-AzVirtualNetwork -Name "myVNet" -ResourceGroupName "myResourceGroup"
+    PS C:\> $subnet = Get-AzVirtualNetworkSubnetConfig -Name "mySubnet" -VirtualNetwork $vnet
+    PS C:\> $subnet.Delegations.Add($delegation)
+    PS C:\> Set-AzVirtualNetwork $vnet
+  description: |-
+    The first cmdlet creates a delegation that can be added to a subnet, and stores it in the $delegation variable. The second and third cmdlets retrieve the subnet to be delegated. The fourth cmdlet adds the created delegation to the subnet of interest, and the final cmdlet sends the updated configuration to the server.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the delegation
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServiceName
+  isRequired: true
+  description: |+
+    The name of the service to which the subnet should be delegated
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.New-AzDelegation
+name: New-AzDelegation
+description: |-
+  The **New-AzDelegation** cmdlet creates a service delegation that can be added to a subnet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azdelegation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzDelegation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzDelegation.md

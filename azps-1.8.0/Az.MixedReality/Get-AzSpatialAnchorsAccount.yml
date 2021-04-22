@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get Spatial Anchors Account
+module: Az.MixedReality
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.MixedReality.SpatialAnchorsAccount.PSSpatialAnchorsAccount" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSpatialAnchorsAccount [-ResourceGroupName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSpatialAnchorsAccount -ResourceGroupName <String> -Name <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSpatialAnchorsAccount -ResourceId <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzSpatialAnchorsAccount -ResourceGroup rg1
+
+    ResourceGroupName   : rg1
+    AccountId           : 5f70bc31-a5da-4dd7-b5ec-ccdf806ff0ef
+    AccountEndpoint     : https://mrc-anchor-prod.trafficmanager.net/Accounts/5f70bc31-a5da-4dd7-b5ec-ccdf806ff0ef/
+    AccountDomain       : mixedreality.azure.com
+    Tags                : {}
+    Location            : eastus2
+    Id                  : /subscriptions/10438cf7-a794-4c7b-ad4c-5ddc1313ba7d/resourceGroups/rg1/providers/Microsoft.MixedReality/SpatialAnchorsAccounts/example
+    Name                : example
+    Type                : Microsoft.MixedReality/SpatialAnchorsAccounts
+
+    ResourceGroupName   : rg1
+    AccountId           : 2f7443d0-2c2b-4514-9b29-a78072a1556f
+    AccountEndpoint     : https://mrc-anchor-prod.trafficmanager.net/Accounts/2f7443d0-2c2b-4514-9b29-a78072a1556f/
+    AccountDomain       : mixedreality.azure.com
+    Tags                : {}
+    Location            : eastus2
+    Id                  : /subscriptions/10438cf7-a794-4c7b-ad4c-5ddc1313ba7d/resourceGroups/rg1/providers/Microsoft.MixedReality/SpatialAnchorsAccounts/demo
+    Name                : demo
+    Type                : Microsoft.MixedReality/SpatialAnchorsAccounts
+
+    ResourceGroupName   : rg1
+    AccountId           : ed3273ce-1eeb-42c7-b3b8-fb9896b9801c
+    AccountEndpoint     : https://mrc-anchor-prod.trafficmanager.net/Accounts/ed3273ce-1eeb-42c7-b3b8-fb9896b9801c/
+    AccountDomain       : mixedreality.azure.com
+    Tags                : {}
+    Location            : eastus2
+    Id                  : /subscriptions/10438cf7-a794-4c7b-ad4c-5ddc1313ba7d/resourceGroups/rg1/providers/Microsoft.MixedReality/SpatialAnchorsAccounts/foobar
+    Name                : foobar
+    Type                : Microsoft.MixedReality/SpatialAnchorsAccounts
+  description: |-
+    List all Spatial Anchors Account in Resource Group "rg1".
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzSpatialAnchorsAccount -ResourceGroup rg1 -Name example
+
+    ResourceGroupName   : rg1
+    AccountId           : 5f70bc31-a5da-4dd7-b5ec-ccdf806ff0ef
+    AccountEndpoint     : https://mrc-anchor-prod.trafficmanager.net/Accounts/5f70bc31-a5da-4dd7-b5ec-ccdf806ff0ef/
+    AccountDomain       : mrc-anchor-prod.trafficmanager.net
+    Tags                : {}
+    Location            : eastus2
+    Id                  : /subscriptions/10438cf7-a794-4c7b-ad4c-5ddc1313ba7d/resourceGroups/rg1/providers/Microsoft.MixedReality/SpatialAnchorsAccounts/example
+    Name                : example
+    Type                : Microsoft.MixedReality/SpatialAnchorsAccounts
+  description: |-
+    Get Spatial Anchors Account "example" in Resource Group "rg1".
+  summary: ""
+parameters:
+- type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Spatial Anchors Account Name.
+
+  defaultValue: None
+  position: Named
+  aliases: SpatialAnchorsAccountName, AccountName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: Named
+  aliases: ResourceGroup
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Resource ID of Spatial Anchors Account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+uid: Az.MixedReality.Get-AzSpatialAnchorsAccount
+name: Get-AzSpatialAnchorsAccount
+description: |-
+  Get or list Spatial Anchors Account(s) in certain Subscription and Resource Group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.MixedReality.dll-Help.xml
+  Module Name: Az.MixedReality
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.mixedreality/get-azspatialanchorsaccount
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MixedReality/MixedReality/help/Get-AzSpatialAnchorsAccount.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/MixedReality/MixedReality/help/Get-AzSpatialAnchorsAccount.md

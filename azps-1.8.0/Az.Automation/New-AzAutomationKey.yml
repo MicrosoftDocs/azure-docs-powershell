@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Regenerates registration keys for an Automation account.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.AgentRegistration" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzAutomationKey [-KeyType] <String> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Regenerate a key for an Automation account'
+  code: |-
+    PS C:\>New-AzAutomationKey -KeyType Primary -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
+  description: |-
+    This command regenerates the primary key for the Azure Automation account named AutomationAccount01 in the resource group named ResourceGroup01.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of an Automation account for which this cmdlet regenerates keys.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyType
+  isRequired: true
+  description: |+
+    Specifies the type of the agent registration key.
+    Valid values are: 
+    - Primary 
+    - Secondary
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: Primary, Secondary
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+    This cmdlet regenerates keys for an Automation account in the resource group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.New-AzAutomationKey
+name: New-AzAutomationKey
+description: |-
+  The **New-AzAutomationKey** cmdlet regenerates registration keys for an Azure Automation account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 055526FA-5DB7-4F1D-81B3-5D9753283FE2
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationKey.md

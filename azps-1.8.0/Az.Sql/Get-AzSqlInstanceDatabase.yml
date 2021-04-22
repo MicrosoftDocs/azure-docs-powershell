@@ -1,0 +1,210 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about Azure SQL Managed Instance database.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseModel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzSqlInstanceDatabase [[-Name] <String>] [-InstanceName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSqlInstanceDatabase [[-Name] <String>] [-InstanceResourceId] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzSqlInstanceDatabase [[-Name] <String>] [-InstanceObject] <AzureSqlManagedInstanceModel>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all databases on a instance'
+  code: |-
+    PS C:\>Get-AzSqlInstanceDatabase -InstanceName "managedInstance1" -ResourceGroupName "resourcegroup01"
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1/databases/managedDatabase1
+    Name                     : managedDatabase1
+    Tags                     :
+    Collation                : SQL_Latin1_General_CP1_CI_AS
+    Status                   : Online
+    CreationDate             : 4/27/2018 2:30:07 PM
+    EarliestRestorePoint     : 4/27/2018 2:40:47 PM
+    RestorePointInTime       :
+    DefaultSecondaryLocation : West US 2
+    CatalogCollation         :
+    CreateMode               :
+    StorageContainerUri      :
+    StorageContainerSasToken :
+    SourceDatabaseId         :
+    FailoverGroupId          :
+
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1/databases/managedDatabase2
+    Name                     : managedDatabase2
+    Tags                     :
+    Collation                : SQL_Latin1_General_CP1_CI_AS
+    Status                   : Online
+    CreationDate             : 4/23/2018 5:21:07 PM
+    EarliestRestorePoint     : 4/23/2018 5:31:47 PM
+    RestorePointInTime       :
+    DefaultSecondaryLocation : West US 2
+    CatalogCollation         :
+    CreateMode               :
+    StorageContainerUri      :
+    StorageContainerSasToken :
+    SourceDatabaseId         :
+    FailoverGroupId          :
+  description: |-
+    This command gets all databases on the instance named managedInstance1.
+  summary: ""
+- title: 'Example 2: Get a database by name on a Managed instance'
+  code: |-
+    PS C:\>Get-AzSqlInstanceDatabase -Name "managedDatabase1" -InstanceName "managedInstance1" -ResourceGroupName "ResourceGroup01"
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1/databases/managedDatabase1
+    Name                     : managedDatabase1
+    Tags                     :
+    Collation                : SQL_Latin1_General_CP1_CI_AS
+    Status                   : Online
+    CreationDate             : 4/27/2018 2:30:07 PM
+    EarliestRestorePoint     : 4/27/2018 2:40:47 PM
+    RestorePointInTime       :
+    DefaultSecondaryLocation : West US 2
+    CatalogCollation         :
+    CreateMode               :
+    StorageContainerUri      :
+    StorageContainerSasToken :
+    SourceDatabaseId         :
+    FailoverGroupId          :
+  description: |-
+    This command gets a database named managedDatabase1 from a instance named managedInstance1.
+  summary: ""
+- title: 'Example 3: Get all databases on a instance using filtering'
+  code: |-
+    PS C:\> Get-AzSqlInstanceDatabase -InstanceName "managedInstance1" -ResourceGroupName "resourcegroup01" -Name "managedDatabase*"
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1/databases/managedDatabase1
+    Name                     : managedDatabase1
+    Tags                     :
+    Collation                : SQL_Latin1_General_CP1_CI_AS
+    Status                   : Online
+    CreationDate             : 4/27/2018 2:30:07 PM
+    EarliestRestorePoint     : 4/27/2018 2:40:47 PM
+    RestorePointInTime       :
+    DefaultSecondaryLocation : West US 2
+    CatalogCollation         :
+    CreateMode               :
+    StorageContainerUri      :
+    StorageContainerSasToken :
+    SourceDatabaseId         :
+    FailoverGroupId          :
+
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1/databases/managedDatabase2
+    Name                     : managedDatabase2
+    Tags                     :
+    Collation                : SQL_Latin1_General_CP1_CI_AS
+    Status                   : Online
+    CreationDate             : 4/23/2018 5:21:07 PM
+    EarliestRestorePoint     : 4/23/2018 5:31:47 PM
+    RestorePointInTime       :
+    DefaultSecondaryLocation : West US 2
+    CatalogCollation         :
+    CreateMode               :
+    StorageContainerUri      :
+    StorageContainerSasToken :
+    SourceDatabaseId         :
+    FailoverGroupId          :
+  description: |-
+    This command gets all databases on the instance named managedInstance1 that start with "managedDatabase".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InstanceName
+  isRequired: true
+  description: |+
+    The instance name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+  name: InstanceObject
+  isRequired: true
+  description: |+
+    The instance object to use for getting instance database
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ParentObject
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InstanceResourceId
+  isRequired: true
+  description: |+
+    The resource id of instance object to get
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ParentResourceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the Azure SQL Instance Database to retrieve.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "0"
+  aliases: InstanceDatabaseName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The name of the resource group.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlInstanceDatabase
+name: Get-AzSqlInstanceDatabase
+description: |-
+  The **Get-AzSqlInstanceDatabase** cmdlet gets one or more Azure SQL databases from an Azure SQL Database Managed Instance.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqlinstancedatabase
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlInstanceDatabase.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlInstanceDatabase.md

@@ -1,0 +1,31 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  FOR INTERNAL USE ONLY - Provide RUntime Support for AutoRest Generated cmdlets
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Register-AzModule [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Register-AzModule
+  description: |-
+    Used Internally by AutoRest-generated cmdlets
+  summary: ""
+uid: Az.Accounts.Register-AzModule
+name: Register-AzModule
+description: |-
+  FOR INTERNAL USE ONLY - Provide RUntime Support for AutoRest Generated cmdlets
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/register-azmodule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Register-AzModule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Register-AzModule.md

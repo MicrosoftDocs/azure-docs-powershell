@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the outputs defined in a specified Stream Analytics job or output.
+module: Az.StreamAnalytics
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.StreamAnalytics.Models.PSOutput" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzStreamAnalyticsOutput
+  href: ./New-AzStreamAnalyticsOutput.yml
+- text: Remove-AzStreamAnalyticsOutput
+  href: ./Remove-AzStreamAnalyticsOutput.yml
+- text: Test-AzStreamAnalyticsOutput
+  href: ./Test-AzStreamAnalyticsOutput.yml
+syntaxes:
+- >-
+  Get-AzStreamAnalyticsOutput [-JobName] <String> [[-Name] <String>] [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'EXAMPLE 1: Get information about job outputs'
+  code: |-
+    PS C:\>Get-AzStreamAnalyticsOutput -ResourceGroupName "StreamAnalytics-Default-West-US" -JobName "StreamingJob"
+  description: |-
+    This command returns information about the outputs defined on the job StreamingJob.
+  summary: ""
+- title: 'EXAMPLE 2: Get information about a specific job output'
+  code: |-
+    PS C:\>Get-AzStreamAnalyticsOutput -ResourceGroupName "StreamAnalytics-Default-West-US" -JobName "StreamingJob" -Name "Output"
+  description: |-
+    This command returns information about the output named Output defined on the job StreamingJob.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobName
+  isRequired: true
+  description: |+
+    Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics output belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Azure Stream Analytics output to retrieve.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which the Azure Stream Analytics output belongs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.StreamAnalytics.Get-AzStreamAnalyticsOutput
+name: Get-AzStreamAnalyticsOutput
+description: |-
+  The **Get-AzStreamAnalyticsOutput** cmdlet lists all of the outputs that are defined in a specified Stream Analytics job or gets information about a specific output.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.dll-Help.xml
+  Module Name: Az.StreamAnalytics
+  ms.assetid: 04A6FD47-482C-4EA6-9375-D8B6FD1F2659
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics/get-azstreamanalyticsoutput
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StreamAnalytics/StreamAnalytics/help/Get-AzStreamAnalyticsOutput.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StreamAnalytics/StreamAnalytics/help/Get-AzStreamAnalyticsOutput.md

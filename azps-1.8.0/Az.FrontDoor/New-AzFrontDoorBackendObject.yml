@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Create a PSBackend object
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSBackend" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzFrontDoorBackendPoolObject
+  href: ./New-AzFrontDoorBackendPoolObject.yml
+syntaxes:
+- >-
+  New-AzFrontDoorBackendObject -Address <String> [-HttpPort <Int32>] [-HttpsPort <Int32>] [-Priority <Int32>]
+
+   [-Weight <Int32>] [-EnabledState <PSEnabledState>] [-BackendHostHeader <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>New-AzFrontDoorBackendObject -Address "contoso1.azurewebsites.net"
+
+
+    Address           : contoso1.azurewebsites.net
+    HttpPort          : 80
+    HttpsPort         : 443
+    Priority          : 1
+    Weight            : 50
+    BackendHostHeader :
+    EnabledState      : Enabled
+  description: |-
+    Create a PSBackend object for Front Door creation
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Address
+  isRequired: true
+  description: |+
+    Location of the backend (IP address or FQDN)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendHostHeader
+  description: |+
+    The value to use as the host header sent to the backend. 
+    Default value is the backend address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+  name: EnabledState
+  description: |+
+    Whether to enable use of this backend. 
+    Default value is Enabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: HttpPort
+  description: |+
+    The HTTP TCP port number.
+    Must be between 1 and 65535.
+    Default value is 80.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: HttpsPort
+  description: |+
+    The HTTPS TCP port number.
+    Must be between 1 and 65535.
+    Default value is 443
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Priority to use for load balancing.
+    Must be between 1 and 5.
+    Default value is 1
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Weight
+  description: |+
+    Weight of this endpoint for load balancing purposes.
+    Must be between 1 and 1000.
+    Default value is 50
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.New-AzFrontDoorBackendObject
+name: New-AzFrontDoorBackendObject
+description: |-
+  Create a PSBackend object for Front Door creation
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/new-azfrontdoorbackendobject
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendObject.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendObject.md

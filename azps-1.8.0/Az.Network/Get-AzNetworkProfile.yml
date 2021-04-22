@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an existing network profile top level resource
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkProfile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzNetworkProfile
+  href: ./New-AzNetworkProfile.yml
+- text: Remove-AzNetworkProfile
+  href: ./Remove-AzNetworkProfile.yml
+- text: Set-AzNetworkProfile
+  href: ./Set-AzNetworkProfile.yml
+syntaxes:
+- >-
+  Get-AzNetworkProfile [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzNetworkProfile -ResourceGroupName <String> -Name <String> -ExpandResource <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzNetworkProfile -ResourceId <String> -ExpandResource <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzNetworkProfile -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $networkProfile = Get-AzNetworkProfile -Name np1 -ResourceGroupName rg1
+
+    ProvisioningState                           : Succeeded
+    ContainerNetworkInterfaces                  : {}
+    ContainerNetworkInterfaceConfigurations     : {}
+    ContainerNetworkInterfacesText              : []
+    ContainerNetworkInterfaceConfigurationsText : []
+    ResourceGroupName                           : rg1
+    Location                                    : westus
+    ResourceGuid                                : 00000000-0000-0000-0000-000000000000
+    Type                                        : Microsoft.Network/networkProfiles
+    Tag                                         :
+    TagsTable                                   :
+    Name                                        : np1
+    Etag                                        : W/"00000000-0000-0000-0000-000000000000"
+    Id                                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1
+                                                  /providers/Microsoft.Network/networkProfiles/np1
+  description: |-
+    This retrieves the network profile np1 in resource group rg1
+  summary: ""
+- title: Example 2
+  code: |-
+    $networkProfile = Get-AzNetworkProfile -Name np*
+
+    ProvisioningState                           : Succeeded
+    ContainerNetworkInterfaces                  : {}
+    ContainerNetworkInterfaceConfigurations     : {}
+    ContainerNetworkInterfacesText              : []
+    ContainerNetworkInterfaceConfigurationsText : []
+    ResourceGroupName                           : rg1
+    Location                                    : westus
+    ResourceGuid                                : 00000000-0000-0000-0000-000000000000
+    Type                                        : Microsoft.Network/networkProfiles
+    Tag                                         :
+    TagsTable                                   :
+    Name                                        : np1
+    Etag                                        : W/"00000000-0000-0000-0000-000000000000"
+    Id                                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1
+                                                  /providers/Microsoft.Network/networkProfiles/np1
+
+    ProvisioningState                           : Succeeded
+    ContainerNetworkInterfaces                  : {}
+    ContainerNetworkInterfaceConfigurations     : {}
+    ContainerNetworkInterfacesText              : []
+    ContainerNetworkInterfaceConfigurationsText : []
+    ResourceGroupName                           : rg1
+    Location                                    : westus
+    ResourceGuid                                : 00000000-0000-0000-0000-000000000000
+    Type                                        : Microsoft.Network/networkProfiles
+    Tag                                         :
+    TagsTable                                   :
+    Name                                        : np2
+    Etag                                        : W/"00000000-0000-0000-0000-000000000000"
+    Id                                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1
+                                                  /providers/Microsoft.Network/networkProfiles/np2
+  description: |-
+    This retrieves the network profiles that start with "np"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExpandResource
+  isRequired: true
+  description: |+
+    The resource reference to be expanded.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the network profile.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name of the network profile.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    The Azure resource manager id of the network profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzNetworkProfile
+name: Get-AzNetworkProfile
+description: |-
+  The **Get-AzNetworkProfile** cmdlet retrieves an existing network profile top level resource
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkprofile
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkProfile.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkProfile.md

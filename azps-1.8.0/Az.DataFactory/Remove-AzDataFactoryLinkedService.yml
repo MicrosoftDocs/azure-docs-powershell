@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a linked service from Azure Data Factory.
+module: Az.DataFactory
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzDataFactoryLinkedService
+  href: ./Get-AzDataFactoryLinkedService.yml
+- text: New-AzDataFactoryLinkedService
+  href: ./New-AzDataFactoryLinkedService.yml
+syntaxes:
+- >-
+  Remove-AzDataFactoryLinkedService [-Force] [-DataFactoryName] <String> [-Name] <String>
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-AzDataFactoryLinkedService [-Force] [-DataFactory] <PSDataFactory> [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a linked service'
+  code: |-
+    PS C:\>Remove-AzDataFactoryLinkedService -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "LinkedServiceTest"
+    Confirm
+    Are you sure you want to remove linked service 'LinkedServiceTest' in data factory 'WikiADF'? 
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    True
+  description: |-
+    This command removes the linked service named LinkedServiceTest from the data factory named WikiADF.
+    This command returns a value of $True.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+  name: DataFactory
+  isRequired: true
+  description: |+
+    Specifies a **PSDataFactory** object.
+    This cmdlet removes a linked service from the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataFactoryName
+  isRequired: true
+  description: |+
+    Specifies the name of a data factory.
+    This cmdlet removes a linked service from the data factory that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that this cmdlet removes a linked service without prompting you for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the linked service to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: LinkedServiceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group.
+    This cmdlet removes a linked service from the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.DataFactory.Remove-AzDataFactoryLinkedService
+name: Remove-AzDataFactoryLinkedService
+description: |-
+  The **Remove-AzDataFactoryLinkedService** cmdlet removes a linked service from Azure Data Factory.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
+  Module Name: Az.DataFactory
+  ms.assetid: 9425D38D-5978-421F-A438-4463068C4628
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/remove-azdatafactorylinkedservice
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryLinkedService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryLinkedService.md

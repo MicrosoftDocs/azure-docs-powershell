@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Revision of an Existing API.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApiManagementApi
+  href: ./Get-AzApiManagementApi.yml
+- text: Remove-AzApiManagementApi
+  href: ./Remove-AzApiManagementApi.yml
+- text: Set-AzApiManagementApi
+  href: ./Set-AzApiManagementApi.yml
+syntaxes:
+- >-
+  New-AzApiManagementApiRevision -Context <PsApiManagementContext> -ApiId <String> -ApiRevision <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an API Revision for an API'
+  code: |-
+    PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>New-AzApiManagementApiRevision -Context $ApiMgmtContext  -ApiId 5adf6fbf0faadf3ad8558065 -ApiRevision 6
+
+
+    ApiId                         : 5adf6fbf0faadf3ad8558065;rev=6
+    Name                          : httpbin.org
+    Description                   : API Management facade for a very handy and free online HTTP tool.
+    ServiceUrl                    : https://httpbin.org/
+    Path                          : httpbin
+    ApiType                       : http
+    Protocols                     : {Http, Https}
+    AuthorizationServerId         : contoso-oauth
+    AuthorizationScope            : contoso-oauth
+    SubscriptionKeyHeaderName     : Ocp-Apim-Subscription-Key
+    SubscriptionKeyQueryParamName : subscription-key
+    ApiRevision                   : 6
+    ApiVersion                    : v1
+    IsCurrent                     : False
+    IsOnline                      : False
+    Id                            : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/apis/5adf6fbf0faadf3ad8558065;rev=6
+    ResourceGroupName             : Api-Default-WestUS
+    ServiceName                   : contoso
+  description: |-
+    This command creates an API Revision `2` of the `echo-api` API.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiId
+  isRequired: true
+  description: |+
+    Identifier for API whose Revision is to be created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiRevision
+  isRequired: true
+  description: |+
+    Revision Identifier of the Api.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Instance of PsApiManagementContext.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ApiManagement.New-AzApiManagementApiRevision
+name: New-AzApiManagementApiRevision
+description: |-
+  The **New-AzApiManagementApiRevision** cmdlet creates an API Revision for an existing an API in API Management context.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementapirevision
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementApiRevision.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementApiRevision.md

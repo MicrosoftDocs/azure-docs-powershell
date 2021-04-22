@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get one or more blueprint assignments.
+module: Az.Blueprint
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzBlueprintAssignment [[-SubscriptionId] <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzBlueprintAssignment [[-SubscriptionId] <String>] [-Name] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzBlueprintAssignment -SubscriptionId "00000000-1111-0000-1111-000000000000"
+
+    Name              : Assignment-PS-BlueprintDefinition
+    Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/Assignment-PS-BlueprintDefinition
+    Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+    LastModified      : 2019-01-08
+    LockMode          : AllResourcesReadOnly
+    ProvisioningState : Succeeded
+    Parameters        : {applytaganditsdefaultvalue_tagName, applytaganditsdefaultvalue_tagValue}
+    ResourceGroups    : ResourceGroup
+  description: |-
+    Get the blueprint assignments within the specified subscription.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzBlueprintAssignment -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myAssignmentName"
+  description: |-
+    Get the blueprint assignment with the given name within the specified subscription.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Blueprint assignment name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SubscriptionId
+  description: |+
+    Subscription Id the blueprint assignment is deployed to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Blueprint.Get-AzBlueprintAssignment
+name: Get-AzBlueprintAssignment
+description: |-
+  Get one or more blueprint assignments. Blueprint assignments exist at the subscription scope.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
+  Module Name: Az.Blueprint
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.blueprint/get-azblueprintassignment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blueprint/Blueprint/help/Get-AzBlueprintAssignment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blueprint/Blueprint/help/Get-AzBlueprintAssignment.md

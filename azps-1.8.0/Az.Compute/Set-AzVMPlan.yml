@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Marketplace plan information on a virtual machine.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVM
+  href: ./Get-AzVM.yml
+- text: Get-AzVMImagePublisher
+  href: ./Get-AzVMImagePublisher.yml
+- text: Get-AzVMImageSku
+  href: ./Get-AzVMImageSku.yml
+- text: New-AzVMConfig
+  href: ./New-AzVMConfig.yml
+syntaxes:
+- >-
+  Set-AzVMPlan [-VM] <PSVirtualMachine> [-Name] <String> [[-Product] <String>] [[-PromotionCode] <String>]
+
+   [[-Publisher] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the image from the Marketplace.
+    This is the same value that is returned by the Get-AzVMImageSku cmdlet.
+    For more information about how to find image information, see [Find and use Azure Marketplace VM images with Azure PowerShell](/azure/virtual-machines/windows/cli-ps-findimage) in the Microsoft Azure documentation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Product
+  description: |+
+    Specifies the product of the image from the Marketplace.
+    This is the same information as the **Offer** value of the **imageReference** element.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PromotionCode
+  description: |+
+    Specifies a promotion code.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Publisher
+  description: |+
+    Specifies the publisher of the image.
+    You can find this information by using the Get-AzVMImagePublisher cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine object for which to set a Marketplace plan.
+    You can use the Get-AzVM cmdlet to obtain a virtual machine object.
+    You can use the New-AzVMConfig cmdlet to create a virtual machine object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: VMProfile
+  parameterValueGroup: ""
+uid: Az.Compute.Set-AzVMPlan
+name: Set-AzVMPlan
+description: |-
+  The **Set-AzVMPlan** cmdlet sets the Azure Marketplace plan information for a virtual machine.
+  Before being able to deploy a Marketplace image through the command-line, programmatic access must be enabled or the virtual machine must be deployed by using the Azure portal.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: A1EA7D34-A8B4-4FA0-BD8C-3E846715AFBA
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmplan
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVMPlan.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Set-AzVMPlan.md

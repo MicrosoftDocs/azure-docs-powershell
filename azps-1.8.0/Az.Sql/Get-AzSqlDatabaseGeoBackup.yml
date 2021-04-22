@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a geo-redundant backup of a database.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseGeoBackupModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: 'Overview: Cloud business continuity and database disaster recovery with SQL Database'
+  href: https://go.microsoft.com/fwlink/?LinkId=746881
+- text: Recover an Azure SQL Database from an outage
+  href: https://go.microsoft.com/fwlink/?LinkId=746882
+- text: Restore-AzSqlDatabase
+  href: ./Restore-AzSqlDatabase.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Get-AzSqlDatabaseGeoBackup [-ServerName] <String> [[-DatabaseName] <String>] [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all geo-redundant backups on a server'
+  code: |-
+    PS C:\>Get-AzSqlDatabaseGeoBackup -ResourceGroupName "ContosoResourceGroup" -ServerName "ContosoServer"
+  description: |-
+    This command gets all available geo-redundant backups on a specified server.
+  summary: ""
+- title: 'Example 2: Get a specified geo-redundant backup'
+  code: |-
+    PS C:\>Get-AzSqlDatabaseGeoBackup -ResourceGroupName "ContosoResourceGroup" -ServerName "ContosoServer" -DatabaseName "ContosoDatabase"
+  description: |-
+    This command gets the database geo-redundant backup named ContosoDatabase.
+  summary: ""
+- title: 'Example 3: Get all geo-redundant backups on a server using filtering'
+  code: |-
+    PS C:\>Get-AzSqlDatabaseGeoBackup -ResourceGroupName "ContosoResourceGroup" -ServerName "ContosoServer" -DatabaseName "Contoso*"
+  description: |-
+    This command gets all available geo-redundant backups on a specified server that start with "Contoso".
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the name of the database to get.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which the SQL database server is assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server that hosts the backup to restore.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Sql.Get-AzSqlDatabaseGeoBackup
+name: Get-AzSqlDatabaseGeoBackup
+description: |-
+  The **Get-AzSqlDatabaseGeoBackup** cmdlet gets a specified geo-redundant backup of a SQL database or all available geo-redundant backups on a specified server.
+  A geo-redundant backup is a restorable resource using data files from a separate geographic location.
+  You can use Geo-Restore to restore a geo-redundant backup in the event of a regional outage to recover your database to a new region.
+  This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 256AA6F4-D856-4713-A0AC-0DA1A145AA5C
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabasegeobackup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseGeoBackup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseGeoBackup.md

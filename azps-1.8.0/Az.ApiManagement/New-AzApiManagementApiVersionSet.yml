@@ -1,0 +1,166 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an API Version Set.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementVersioningScheme" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiVersionSet" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApiManagementApiVersionSet
+  href: ./Get-AzApiManagementApiVersionSet.yml
+- text: Remove-AzApiManagementApiVersionSet
+  href: ./Remove-AzApiManagementApiVersionSet.yml
+- text: Set-AzApiManagementApiVersionSet
+  href: ./Set-AzApiManagementApiVersionSet.yml
+syntaxes:
+- >-
+  New-AzApiManagementApiVersionSet -Context <PsApiManagementContext> [-ApiVersionSetId <String>] -Name <String>
+
+   -Scheme <PsApiManagementVersioningScheme> [-HeaderName <String>] [-QueryName <String>] [-Description <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\> New-AzApiManagementApiVersionSet -Context $ApiMgmtContext  -Name "newversion" -Scheme Header -HeaderName "x-ms-version" -Description "version by xmsversion"
+
+    ApiVersionSetId   : ea9a87cd-a699-4a75-bf7d-909846b91268
+    Description       : version by xmsversion
+    VersionQueryName  :
+    VersionHeaderName : x-ms-version
+    DisplayName       : newversion
+    VersioningScheme  : Header
+    Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/ea9a87cd-a699-4a75-bf7d-909846b91268
+    ResourceGroupName : Api-Default-WestUS
+    ServiceName       : contoso
+  description: |-
+    This command creates an API Version Set which versioning scheme `Query` and Query parameter `api-version`.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiVersionSetId
+  description: |+
+    Identifier for new API Version Set.
+    This parameter is optional.
+    If not specified an identifier will be generated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Instance of PsApiManagementContext.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Description of the Api Version set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: HeaderName
+  description: |+
+    The Header value which will contain the versioning information.
+    If versioning Scheme HEADER is choosen, then this value must be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the ApiVersion Set.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: QueryName
+  description: |+
+    The Query value which will contain the versioning information.
+    If versioning Scheme Query is choosen, then this value must be specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementVersioningScheme" data-throw-if-not-resolved="False" />
+  name: Scheme
+  isRequired: true
+  description: |+
+    Versioning Scheme to select for the Api Versioning Set.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Segment, Query, Header
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ApiManagement.New-AzApiManagementApiVersionSet
+name: New-AzApiManagementApiVersionSet
+description: |-
+  The **New-AzApiManagementApiVersionSet** cmdlet creates an API Version set entity in the Azure API Management context.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementapiversionset
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementApiVersionSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementApiVersionSet.md

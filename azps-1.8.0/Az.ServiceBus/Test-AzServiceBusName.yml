@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks the Availability of the given NameSpace Name or Alias (DR Configuration Name)
+module: Az.ServiceBus
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ServiceBus.Models.PSCheckNameAvailabilityResultAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Test-AzServiceBusName [-ResourceGroupName] <String> [-Namespace] <String> [-AliasName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Test-AzServiceBusName [-Namespace] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Test-AzServiceBusName -Namespace MyNameSapceName
+  description: |-
+    Returns the status on availability of the namespace name 'MyNameSapceName' as True
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Test-AzServiceBusName -Namespace MyNameSapceName
+  description: |-
+    Returns the status on availability of the namespace name 'MyNameSapceName' as False with Reason
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Test-AzServiceBusName -ResourceGroupName MyResourceGroup -Namespace Test123 -AliasName myAliasName
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AliasName
+  isRequired: true
+  description: |+
+    DR Configuration Name - Alias Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  isRequired: true
+  description: |+
+    Servicebus Namespace Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: NamespaceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ResourceGroup
+  parameterValueGroup: ""
+uid: Az.ServiceBus.Test-AzServiceBusName
+name: Test-AzServiceBusName
+description: |-
+  The **Test-AzServiceBusName** Cmdlet Check Availability of the NameSpace Name or Alias (DR Configuration Name)
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
+  Module Name: Az.ServiceBus
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.servicebus/test-azservicebusname
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceBus/ServiceBus/help/Test-AzServiceBusName.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceBus/ServiceBus/help/Test-AzServiceBusName.md

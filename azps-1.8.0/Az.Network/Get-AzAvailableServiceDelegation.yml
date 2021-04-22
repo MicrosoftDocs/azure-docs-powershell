@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get available service delegations in the region.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAvailableDelegation" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzDelegation
+  href: ./Add-AzDelegation.yml
+- text: New-AzDelegation
+  href: ./New-AzDelegation.yml
+- text: Remove-AzDelegation
+  href: ./Remove-AzDelegation.yml
+- text: Get-AzDelegation
+  href: ./Get-AzDelegation.yml
+syntaxes:
+- >-
+  Get-AzAvailableServiceDelegation -Location <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: '1: Getting all available service delegations'
+  code: |-
+    PS C:\> Get-AzAvailableServiceDelegation -Location "westus"
+
+    Name        : Microsoft.Web.serverFarms
+    Id          : /subscriptions/subId/providers/Microsoft.Network/availableDelegations/Microsoft.Web.serverFarms
+    Type        : Microsoft.Network/availableDelegations
+    ServiceName : Microsoft.Web/serverFarms
+    Actions     : {Microsoft.Network/virtualNetworks/subnets/action}
+
+    Name        : Microsoft.Sql.servers
+    Id          : /subscriptions/subId/providers/Microsoft.Network/availableDelegations/Microsoft.Sql.servers
+    Type        : Microsoft.Network/availableDelegations
+    ServiceName : Microsoft.Sql/servers
+    Actions     : {}
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzAvailableServiceDelegation
+name: Get-AzAvailableServiceDelegation
+description: |-
+  The **Get-AzAvailableServiceDelegation** cmdlet allows you to retrieve all of the available service delegations for a subnet in the provided location. This cmdlet does *not* describe which delegations may co-exist on a single subnet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azavailableservicedelegation
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzAvailableServiceDelegation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzAvailableServiceDelegation.md

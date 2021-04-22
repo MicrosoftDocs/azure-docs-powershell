@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets alert rules.
+module: Az.Monitor
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzMetricAlertRule
+  href: ./Add-AzMetricAlertRule.yml
+- text: Add-AzWebtestAlertRule
+  href: ./Add-AzWebtestAlertRule.yml
+- text: Get-AzAlertHistory
+  href: ./Get-AzAlertHistory.yml
+- text: Remove-AzAlertRule
+  href: ./Remove-AzAlertRule.yml
+syntaxes:
+- >-
+  Get-AzAlertRule -ResourceGroupName <String> [-DetailedOutput] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzAlertRule -ResourceGroupName <String> -Name <String> [-DetailedOutput]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzAlertRule -ResourceGroupName <String> -TargetResourceId <String> [-DetailedOutput]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get alert rules for a resource group'
+  code: |-
+    PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS"
+  description: |-
+    This command gets all of the alert rules for the resource group named Default-Web-CentralUS.
+    The output does not contain details about the rules because the *DetailedOutput* parameter is not specified.
+  summary: ""
+- title: 'Example 2: Get an alert rule by name'
+  code: |-
+    PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8"
+  description: |-
+    This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.
+    Because the *DetailedOutput* parameter is not specified, the output contains only basic information about the alert rule.
+  summary: ""
+- title: 'Example 3: Get an alert rule by name with detailed output'
+  code: |-
+    PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" -DetailedOutput
+  description: |-
+    This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.
+    The *DetailedOutput* parameter is specified, so the output is detailed.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DetailedOutput
+  description: |+
+    Displays full details in the output.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the alert rule to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceGroup
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TargetResourceId
+  isRequired: true
+  description: |+
+    Specifies the ID of the target resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Monitor.Get-AzAlertRule
+name: Get-AzAlertRule
+description: |-
+  The **Get-AzAlertRule** cmdlet gets an alert rule by its name or URI, or all alert rules from a specified resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  Module Name: Az.Monitor
+  ms.assetid: A837077C-0A79-431C-93D2-799B2134EE69
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/get-azalertrule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md

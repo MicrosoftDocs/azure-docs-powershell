@@ -1,0 +1,37 @@
+### YamlMime:PowershellModule
+children:
+- title: Data Migration
+  cmdlets:
+  - Az.DataMigration.Get-AzDataMigrationProject
+  - Az.DataMigration.Get-AzDataMigrationService
+  - Az.DataMigration.Get-AzDataMigrationTask
+  - Az.DataMigration.Invoke-AzDataMigrationCommand
+  - Az.DataMigration.New-AzDataMigrationAzureActiveDirectoryApp
+  - Az.DataMigration.New-AzDataMigrationConnectionInfo
+  - Az.DataMigration.New-AzDataMigrationDatabaseInfo
+  - Az.DataMigration.New-AzDataMigrationFileShare
+  - Az.DataMigration.New-AzDataMigrationMongoDbCollectionSetting
+  - Az.DataMigration.New-AzDataMigrationMongoDbDatabaseSetting
+  - Az.DataMigration.New-AzDataMigrationProject
+  - Az.DataMigration.New-AzDataMigrationSelectedDBObject
+  - Az.DataMigration.New-AzDataMigrationService
+  - Az.DataMigration.New-AzDataMigrationSyncSelectedDBObject
+  - Az.DataMigration.New-AzDataMigrationTask
+  - Az.DataMigration.Remove-AzDataMigrationProject
+  - Az.DataMigration.Remove-AzDataMigrationService
+  - Az.DataMigration.Remove-AzDataMigrationTask
+  - Az.DataMigration.Start-AzDataMigrationService
+  - Az.DataMigration.Stop-AzDataMigrationService
+  - Az.DataMigration.Stop-AzDataMigrationTask
+uid: Az.DataMigration
+name: Az.DataMigration
+description: |-
+  {{Azure DataMigration Service Module}}
+metadata:
+  Module Name: Az.DataMigration
+  Module Guid: 150d9544-6348-4373-806f-10cd0b4de4cb
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.datamigration
+  Help Version: 0.1.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/Az.DataMigration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/Az.DataMigration.md

@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the details about the topic types supported by Azure Event Grid.
+module: Az.EventGrid
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.EventGrid.Models.PSTopicTypeInfoListInstance" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.EventGrid.Models.PSTopicTypeInfo" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzEventGridTopicType [[-Name] <String>] [-IncludeEventTypeData] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzEventGridTopicType
+  description: |-
+    Gets a list of the topic types.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzEventGridTopicType -Name "Microsoft.Storage.StorageAccounts"
+  description: |-
+    Gets information about the StorageAccounts topic type.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzEventGridTopicType -Name "Microsoft.Storage.StorageAccounts" -IncludeEventTypeData
+  description: |-
+    Gets information about the StorageAccounts topic type, including the event types supported by StorageAccounts.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeEventTypeData
+  description: |+
+    If specified, the response will include the event types supported by a topic type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    EventGrid Topic Type Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.EventGrid.Get-AzEventGridTopicType
+name: Get-AzEventGridTopicType
+description: |-
+  Gets the details of topic types supported by Azure Event Grid.
+  If a topic type name is specified, details about that topic type are returned.
+  If a topic type name is not specified, details about all topic types are returned.
+  If IncludeEventTypes is specified, information about event types supported by each topic type is included in the response.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll-Help.xml
+  Module Name: Az.EventGrid
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/get-azeventgridtopictype
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/Get-AzEventGridTopicType.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/Get-AzEventGridTopicType.md

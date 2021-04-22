@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a CDN custom domain.
+module: Az.Cdn
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Cdn.Models.CustomDomain.PSCustomDomain" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzCdnCustomDomain
+  href: ./New-AzCdnCustomDomain.yml
+- text: Remove-AzCdnCustomDomain
+  href: ./Remove-AzCdnCustomDomain.yml
+syntaxes:
+- >-
+  Get-AzCdnCustomDomain [-CustomDomainName <String>] -EndpointName <String> -ProfileName <String>
+
+   -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzCdnCustomDomain [-CustomDomainName <String>] -CdnEndpoint <PSEndpoint>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint" data-throw-if-not-resolved="False" />
+  name: CdnEndpoint
+  isRequired: true
+  description: |+
+    Specifies the CDN endpoint object of which the custom domain is a member.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CustomDomainName
+  description: |+
+    Specifies the name of the custom domain.
+    The name of the custom domain differs from the host name of the custom domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: EndpointName
+  isRequired: true
+  description: |+
+    Specifies the name of the endpoint to which the custom domain belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ProfileName
+  isRequired: true
+  description: |+
+    Specifies the name of the Profile to which the custom domain belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which the custom domain belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Cdn.Get-AzCdnCustomDomain
+name: Get-AzCdnCustomDomain
+description: |-
+  The **Get-AzCdnCustomDomain** cmdlet gets an Azure Content Delivery Network (CDN) custom domain and its related settings.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Cdn.dll-Help.xml
+  Module Name: Az.Cdn
+  ms.assetid: 53246003-D1E9-4863-94E9-8E0BF1272134
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.cdn/get-azcdncustomdomain
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Get-AzCdnCustomDomain.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Cdn/Cdn/help/Get-AzCdnCustomDomain.md

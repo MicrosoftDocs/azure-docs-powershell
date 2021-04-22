@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates an SSL certificate for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewaySslCertificate
+  href: ./Add-AzApplicationGatewaySslCertificate.yml
+- text: Get-AzApplicationGatewaySslCertificate
+  href: ./Get-AzApplicationGatewaySslCertificate.yml
+- text: New-AzApplicationGatewaySslCertificate
+  href: ./New-AzApplicationGatewaySslCertificate.yml
+- text: Remove-AzApplicationGatewaySslCertificate
+  href: ./Remove-AzApplicationGatewaySslCertificate.yml
+syntaxes:
+- >-
+  Set-AzApplicationGatewaySslCertificate -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   [-CertificateFile <String>] [-Password <SecureString>] [-KeyVaultSecretId <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update an existing SSL certificate on Application Gateway'
+  code: |-
+    PS C:\> $appGW = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $password = ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force
+    PS C:\> $cert = Set-AzApplicationGatewaySslCertificate -ApplicationGateway $AppGW -Name "Cert01" -CertificateFile "D:\cert01.pfx" -Password $password
+  description: |-
+    Update an existing SSL certificate for the application gateway named ApplicationGateway01.
+  summary: ""
+- title: 'Example 2: Update an existing SSL certificate using KeyVault Secret (version-less secretId) on Application Gateway'
+  code: |-
+    PS C:\> $secret = Get-AzKeyVaultSecret -VaultName "keyvault01" -Name "sslCert01"
+    PS C:\> $secretId = $secret.Id.Replace($secret.Version, "") # https://<keyvaultname>.vault.azure.net/secrets/
+    PS C:\> $cert = Set-AzApplicationGatewaySslCertificate -ApplicationGateway $AppGW -Name "Cert01" -KeyVaultSecretId $secretId
+  description: |-
+    Get the secret and update an existing SSL Certificate using `Set-AzApplicationGatewaySslCertificate`.
+  summary: ""
+- title: 'Example 3: Update an existing SSL certificate using KeyVault Secret on Application Gateway'
+  code: |-
+    PS C:\> $secret = Get-AzKeyVaultSecret -VaultName "keyvault01" -Name "sslCert01"
+    PS C:\> $secretId = $secret.Id # https://<keyvaultname>.vault.azure.net/secrets/<hash>
+    PS C:\> $cert = Set-AzApplicationGatewaySslCertificate -ApplicationGateway $AppGW -Name "Cert01" -KeyVaultSecretId $secretId
+  description: |-
+    Get the secret and update an existing SSL Certificate using `Set-AzApplicationGatewaySslCertificate`.
+    Note: If it is required that Application Gateway syncs the certificate with the KeyVault, please provide the version-less secretId.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    Specifies the application gateway with which the Secure Socket Layer (SSL) certificate is associated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateFile
+  description: |+
+    Specifies the path of the SSL certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVaultSecretId
+  description: |+
+    SecretId (uri) of the KeyVault Secret. Use this option when a specific version of secret needs to be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the SSL certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password of the SSL certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzApplicationGatewaySslCertificate
+name: Set-AzApplicationGatewaySslCertificate
+description: |-
+  The **Set-AzApplicationGatewaySslCertificate** cmdlet updates an SSL certificate for an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: D7C275E5-BC43-454B-BF1E-48D639C4B4F0
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaysslcertificate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewaySslCertificate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewaySslCertificate.md

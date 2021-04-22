@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops an Automation job.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationJob
+  href: ./Get-AzAutomationJob.yml
+- text: Get-AzAutomationJobOutput
+  href: ./Get-AzAutomationJobOutput.yml
+- text: Resume-AzAutomationJob
+  href: ./Resume-AzAutomationJob.yml
+- text: Suspend-AzAutomationJob
+  href: ./Suspend-AzAutomationJob.yml
+syntaxes:
+- >-
+  Stop-AzAutomationJob [-Id] <Guid> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop a job'
+  code: |-
+    PS C:\>Stop-AzAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01"
+  description: |-
+    This command stops the job that has the specified ID.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of an Automation account in which this cmdlet stops a job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of a job that this cmdlet stops.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: JobId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.Stop-AzAutomationJob
+name: Stop-AzAutomationJob
+description: |-
+  The **Stop-AzAutomationJob** cmdlet stops an Azure Automation job.
+  Specify a running Automation job.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: BE1A9247-9F8E-45EA-9590-684A5A5662AC
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/stop-azautomationjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Stop-AzAutomationJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Stop-AzAutomationJob.md

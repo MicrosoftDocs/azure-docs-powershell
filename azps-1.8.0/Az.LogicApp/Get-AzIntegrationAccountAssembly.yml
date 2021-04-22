@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an integration account assembly.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccount" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.LogicApp.Models.PSIntegrationAccountAssembly" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzIntegrationAccountAssembly -ResourceGroupName <String> -ParentName <String> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzIntegrationAccountAssembly -ParentObject <IntegrationAccount> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzIntegrationAccountAssembly -ParentResourceId <String> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an assembly by parameters'
+  code: |-
+    PS C:\> Get-AzIntegrationAccountAssembly -ResourceGroupName "sampleResourceGroup" -IntegrationAccountName "sampleIntegrationAccount" -AssemblyName "sampleAssembly"
+
+    Properties : Microsoft.Azure.Management.Logic.Models.AssemblyProperties
+    Id         : /subscriptions/{SubscriptionId}/resourceGroups/sampleResourceGroup/providers/Microsoft.Logic/integrationAccounts/sampleIntegrationAccount/assemblies/sampleAssembly
+    Name       : sampleAssembly
+    Type       : Microsoft.Logic/integrationAccounts/assemblies
+    Location   :
+    Tags       :
+  description: |-
+    Get an assembly named "sampleAssembly" located in the integration account "sampleIntegrationAccount" which is contained in the resource group "sampleResourceGroup".
+  summary: ""
+- title: 'Example 2: List all assemblies in an integration account by parameters'
+  code: |-
+    PS C:\> Get-AzIntegrationAccountAssembly -ResourceGroupName "sampleResourceGroup" -IntegrationAccountName "sampleIntegrationAccount"
+
+    Properties : Microsoft.Azure.Management.Logic.Models.AssemblyProperties
+    Id         : /subscriptions/{SubscriptionId}/resourceGroups/sampleResourceGroup/providers/Microsoft.Logic/integrationAccounts/sampleIntegrationAccount/assemblies/sampleAssembly
+    Name       : sampleAssembly
+    Type       : Microsoft.Logic/integrationAccounts/assemblies
+    Location   :
+    Tags       :
+
+    Properties : Microsoft.Azure.Management.Logic.Models.AssemblyProperties
+    Id         : /subscriptions/{SubscriptionId}/resourceGroups/sampleResourceGroup/providers/Microsoft.Logic/integrationAccounts/sampleIntegrationAccount/assemblies/sampleAssembly2
+    Name       : sampleAssembly2
+    Type       : Microsoft.Logic/integrationAccounts/assemblies
+    Location   :
+    Tags       :
+  description: |-
+    Get all assemblies located in the integration account "sampleIntegrationAccount" which is contained in the resource group "sampleResourceGroup".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The integration account assembly name.
+
+  defaultValue: None
+  position: Named
+  aliases: AssemblyName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentName
+  isRequired: true
+  description: |+
+    The integration account name.
+
+  defaultValue: None
+  position: Named
+  aliases: IntegrationAccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccount" data-throw-if-not-resolved="False" />
+  name: ParentObject
+  isRequired: true
+  description: |+
+    An integration account object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceId
+  isRequired: true
+  description: |+
+    The integration account resource id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.LogicApp.Get-AzIntegrationAccountAssembly
+name: Get-AzIntegrationAccountAssembly
+description: |-
+  The **Get-AzIntegrationAccountAssembly** cmdlet gets an assembly from an integration account.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azintegrationaccountassembly
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountAssembly.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountAssembly.md

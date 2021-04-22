@@ -1,0 +1,59 @@
+### YamlMime:PowershellModule
+children:
+- title: Data Lake Store
+  cmdlets:
+  - Az.DataLakeStore.Add-AzDataLakeStoreFirewallRule
+  - Az.DataLakeStore.Add-AzDataLakeStoreItemContent
+  - Az.DataLakeStore.Add-AzDataLakeStoreTrustedIdProvider
+  - Az.DataLakeStore.Add-AzDataLakeStoreVirtualNetworkRule
+  - Az.DataLakeStore.Enable-AzDataLakeStoreKeyVault
+  - Az.DataLakeStore.Export-AzDataLakeStoreChildItemProperty
+  - Az.DataLakeStore.Export-AzDataLakeStoreItem
+  - Az.DataLakeStore.Get-AzDataLakeStoreAccount
+  - Az.DataLakeStore.Get-AzDataLakeStoreChildItem
+  - Az.DataLakeStore.Get-AzDataLakeStoreChildItemSummary
+  - Az.DataLakeStore.Get-AzDataLakeStoreDeletedItem
+  - Az.DataLakeStore.Get-AzDataLakeStoreFirewallRule
+  - Az.DataLakeStore.Get-AzDataLakeStoreItem
+  - Az.DataLakeStore.Get-AzDataLakeStoreItemAclEntry
+  - Az.DataLakeStore.Get-AzDataLakeStoreItemContent
+  - Az.DataLakeStore.Get-AzDataLakeStoreItemOwner
+  - Az.DataLakeStore.Get-AzDataLakeStoreItemPermission
+  - Az.DataLakeStore.Get-AzDataLakeStoreTrustedIdProvider
+  - Az.DataLakeStore.Get-AzDataLakeStoreVirtualNetworkRule
+  - Az.DataLakeStore.Import-AzDataLakeStoreItem
+  - Az.DataLakeStore.Join-AzDataLakeStoreItem
+  - Az.DataLakeStore.Move-AzDataLakeStoreItem
+  - Az.DataLakeStore.New-AzDataLakeStoreAccount
+  - Az.DataLakeStore.New-AzDataLakeStoreItem
+  - Az.DataLakeStore.Remove-AzDataLakeStoreAccount
+  - Az.DataLakeStore.Remove-AzDataLakeStoreFirewallRule
+  - Az.DataLakeStore.Remove-AzDataLakeStoreItem
+  - Az.DataLakeStore.Remove-AzDataLakeStoreItemAcl
+  - Az.DataLakeStore.Remove-AzDataLakeStoreItemAclEntry
+  - Az.DataLakeStore.Remove-AzDataLakeStoreTrustedIdProvider
+  - Az.DataLakeStore.Remove-AzDataLakeStoreVirtualNetworkRule
+  - Az.DataLakeStore.Restore-AzDataLakeStoreDeletedItem
+  - Az.DataLakeStore.Set-AzDataLakeStoreAccount
+  - Az.DataLakeStore.Set-AzDataLakeStoreFirewallRule
+  - Az.DataLakeStore.Set-AzDataLakeStoreItemAcl
+  - Az.DataLakeStore.Set-AzDataLakeStoreItemAclEntry
+  - Az.DataLakeStore.Set-AzDataLakeStoreItemExpiry
+  - Az.DataLakeStore.Set-AzDataLakeStoreItemOwner
+  - Az.DataLakeStore.Set-AzDataLakeStoreItemPermission
+  - Az.DataLakeStore.Set-AzDataLakeStoreTrustedIdProvider
+  - Az.DataLakeStore.Set-AzDataLakeStoreVirtualNetworkRule
+  - Az.DataLakeStore.Test-AzDataLakeStoreAccount
+  - Az.DataLakeStore.Test-AzDataLakeStoreItem
+uid: Az.DataLakeStore
+name: Az.DataLakeStore
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure Data Lake Store in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.DataLakeStore namespace.
+metadata:
+  Module Name: Az.DataLakeStore
+  Module Guid: 90dfd814-abce-4e1f-99b6-fe16760c079a
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.datalakestore
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Az.DataLakeStore.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Az.DataLakeStore.md

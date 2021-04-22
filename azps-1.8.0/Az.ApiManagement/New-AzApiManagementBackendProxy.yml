@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Backend Proxy Object.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApiManagementBackend
+  href: ./Get-AzApiManagementBackend.yml
+- text: New-AzApiManagementBackend
+  href: ./New-AzApiManagementBackend.yml
+- text: New-AzApiManagementBackendCredential
+  href: ./New-AzApiManagementBackendCredential.yml
+- text: Set-AzApiManagementBackend
+  href: ./Set-AzApiManagementBackend.yml
+- text: Remove-AzApiManagementBackend
+  href: ./Remove-AzApiManagementBackend.yml
+syntaxes:
+- >-
+  New-AzApiManagementBackendProxy -Url <String> [-ProxyCredential <PSCredential>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Create a Backend Proxy In-Memory Object
+  code: |-
+    PS C:\>$secpassword = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
+    PS C:\>$proxyCreds = New-Object System.Management.Automation.PSCredential ("foo", $secpassword)
+    PS C:\>$credential = New-AzApiManagementBackendProxy -Url "http://12.168.1.1:8080" -ProxyCredential $proxyCreds
+
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+
+    PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Proxy $credential -Description "backend with proxy server"
+  description: |-
+    Creates a Backend Proxy Object and sets up Backend
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: ProxyCredential
+  description: |+
+    Credentials used to connect to Backend Proxy. This parameter is optional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Url of the Proxy server to be used when forwarding calls to Backend.
+    This parameter is required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.New-AzApiManagementBackendProxy
+name: New-AzApiManagementBackendProxy
+description: |-
+  Creates a new Backend Proxy Object which can be piped when creating a new Backend entity.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementbackendproxy
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md

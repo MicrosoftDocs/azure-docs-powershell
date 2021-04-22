@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Waits for a job to complete.
+module: Az.DataLakeAnalytics
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobInformation" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzDataLakeAnalyticsJob
+  href: ./Get-AzDataLakeAnalyticsJob.yml
+- text: Stop-AzDataLakeAnalyticsJob
+  href: ./Stop-AzDataLakeAnalyticsJob.yml
+- text: Submit-AzDataLakeAnalyticsJob
+  href: ./Submit-AzDataLakeAnalyticsJob.yml
+syntaxes:
+- >-
+  Wait-AzDataLakeAnalyticsJob [-Account] <String> [-JobId] <Guid> [[-WaitIntervalInSeconds] <Int32>]
+
+   [[-TimeoutInSeconds] <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Wait for a job to complete'
+  code: |-
+    PS C:\>Wait-AzDataLakeAnalyticsJob -Account "ContosoAdlAccount" -JobId "a0a78d72-3fa8-4564-9b18-6becb3fda48a"
+  description: |-
+    The following command waits for the job with the specified ID to complete.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    Specifies the Data Lake Analytics account name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: AccountName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the ID of the job for which to wait.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TimeoutInSeconds
+  description: |+
+    Specifies the number of seconds to wait before exiting the wait operation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: WaitIntervalInSeconds
+  description: |+
+    Specify the number of seconds that elapse between each check of the job state.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.DataLakeAnalytics.Wait-AzDataLakeAnalyticsJob
+name: Wait-AzDataLakeAnalyticsJob
+description: |-
+  The **Wait-AzDataLakeAnalyticsJob** cmdlet waits for an Azure Data Lake Analytics job to complete.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: CE7B54BC-C493-49CE-93BD-346ED0B966A1
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datalakeanalytics/wait-azdatalakeanalyticsjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Wait-AzDataLakeAnalyticsJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Wait-AzDataLakeAnalyticsJob.md

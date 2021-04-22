@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a module in Automation.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Module" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationModule
+  href: ./Get-AzAutomationModule.yml
+- text: New-AzAutomationModule
+  href: ./New-AzAutomationModule.yml
+- text: Remove-AzAutomationModule
+  href: ./Remove-AzAutomationModule.yml
+syntaxes:
+- >-
+  Set-AzAutomationModule [-Name] <String> [-ContentLinkUri <Uri>] [-ContentLinkVersion <String>]
+
+   [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a module'
+  code: |-
+    PS C:\>Set-AzAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLinkUri "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip" -ContentLinkVersion "1.1" -ResourceGroupName "ResourceGroup01"
+  description: |-
+    This command imports an updated version of an existing module named ContosoModule into the Automation account named Contoso17.  The module is stored in an Azure blob in a storage account named contosostorage and a container named modules.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account for which this cmdlet updates a module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  name: ContentLinkUri
+  description: |+
+    Specifies the URL of the .zip file that contains the new version of a module that this cmdlet imports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ContentLink
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ContentLinkVersion
+  description: |+
+    Specifies the version of the module to which this cmdlet updates Automation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the module that this cmdlet imports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group for which this cmdlet updates a module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.Set-AzAutomationModule
+name: Set-AzAutomationModule
+description: |-
+  The **Set-AzAutomationModule** cmdlet updates a module in Azure Automation.
+  This command accepts a compressed file that has a .zip file name extension.
+  The file contains a folder that includes a file that is one of the following types: 
+  - wps_2 module, which has a .psm1 or .dll file name extension 
+  - wps_2 module manifest, which has a .psd1 file name extension
+  The name of the .zip file, the name of the folder, and the name of the file in the folder must be the same.
+  Specify the .zip file as a URL that the Automation service can access.
+  If you import a wps_2 module into Automation by using this cmdlet or the New-AzAutomationModule cmdlet, the operation is asynchronous.
+  The command finishes whether the import succeeds or fails.
+  To check whether it succeeded, run the following command:
+  `PS C:\\\> $ModuleInstance = Get-AzAutomationModule -Name `ModuleName
+  Check the **ProvisioningState** property for a value of Succeeded.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: A06D36D7-3F72-4D21-8995-9DBBB9A9B880
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/set-azautomationmodule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationModule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Set-AzAutomationModule.md

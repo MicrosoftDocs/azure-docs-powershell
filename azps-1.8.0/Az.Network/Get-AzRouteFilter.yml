@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a route filter.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteFilter" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzRouteFilter
+  href: ./New-AzRouteFilter.yml
+- text: Remove-AzRouteFilter
+  href: ./Remove-AzRouteFilter.yml
+- text: Set-AzRouteFilter
+  href: ./Set-AzRouteFilter.yml
+- text: Add-AzRouteFilterRuleConfig
+  href: ./Add-AzRouteFilterRuleConfig.yml
+- text: Get-AzRouteFilterRuleConfig
+  href: ./Get-AzRouteFilterRuleConfig.yml
+- text: New-AzRouteFilterRuleConfig
+  href: ./New-AzRouteFilterRuleConfig.yml
+- text: Remove-AzRouteFilterRuleConfig
+  href: ./Remove-AzRouteFilterRuleConfig.yml
+- text: Set-AzRouteFilterRuleConfig
+  href: ./Set-AzRouteFilterRuleConfig.yml
+syntaxes:
+- >-
+  Get-AzRouteFilter [-Name <String>] [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzRouteFilter -Name <String> -ResourceGroupName <String> -ExpandResource <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzRouteFilter -Name "RouteFilter01" -ResourceGroupName "ResourceGroup01"
+
+    Name              : RouteFilter01
+    ResourceGroupName : ResourceGroup01
+    Location          : westus
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsof
+                        t.Network/routeFilters/RouteFilter01
+    Etag              : W/"00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    Tags              :
+    Rules             : []
+    Peerings          : []
+  description: |-
+    This command gets the route filter named RouteFilter01 that belongs to the resource group named ResourceGroup01.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzRouteFilter -Name "RouteFilter*"
+
+    Name              : RouteFilter01
+    ResourceGroupName : ResourceGroup01
+    Location          : westus
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsof
+                        t.Network/routeFilters/RouteFilter01
+    Etag              : W/"00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    Tags              :
+    Rules             : []
+    Peerings          : []
+
+    Name              : RouteFilter02
+    ResourceGroupName : ResourceGroup01
+    Location          : westus
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsof
+                        t.Network/routeFilters/RouteFilter02
+    Etag              : W/"00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    Tags              :
+    Rules             : []
+    Peerings          : []
+  description: |-
+    This command gets all route filters that start with "RouteFilter".
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExpandResource
+  isRequired: true
+  description: |+
+    The resource reference to be expanded.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The resource name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Get-AzRouteFilter
+name: Get-AzRouteFilter
+description: |-
+  The **Get-AzRouteFilter** cmdlet gets a route filter.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azroutefilter
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzRouteFilter.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzRouteFilter.md

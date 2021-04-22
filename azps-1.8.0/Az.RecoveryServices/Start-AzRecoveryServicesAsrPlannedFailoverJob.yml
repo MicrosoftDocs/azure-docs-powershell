@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a planned failover operation.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Start-AzRecoveryServicesAsrPlannedFailoverJob -ReplicationProtectedItem <ASRReplicationProtectedItem>
+
+   -Direction <String> [-Optimize <String>] [-CreateVmIfNotFound <String>]
+
+   [-ServicesProvider <ASRRecoveryServicesProvider>] [-DataEncryptionPrimaryCertFile <String>]
+
+   [-DataEncryptionSecondaryCertFile <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Start-AzRecoveryServicesAsrPlannedFailoverJob -RecoveryPlan <ASRRecoveryPlan> -Direction <String>
+
+   [-Optimize <String>] [-CreateVmIfNotFound <String>] [-DataEncryptionPrimaryCertFile <String>]
+
+   [-DataEncryptionSecondaryCertFile <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $currentJob = Start-AzRecoveryServicesAsrPlannedFailoverJob -RecoveryPlan $RP -Direction PrimaryToRecovery
+  description: |-
+    Starts the planned failover for the specified ASR recovery plan and returns the ASR job used to track the operation.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CreateVmIfNotFound
+  description: |+
+    Create the virtual machine if not found while failing back to the primary region (used in alternate location recovery.) The acceptable values for this parameter are:
+
+    - Yes
+    - No
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Yes, No
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataEncryptionPrimaryCertFile
+  description: |+
+    Specifies the primary certificate file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DataEncryptionSecondaryCertFile
+  description: |+
+    Specifies the secondary certificate file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Direction
+  isRequired: true
+  description: |+
+    Specifies the direction of the failover.
+    The acceptable values for this parameter are:
+
+    - PrimaryToRecovery
+    - RecoveryToPrimary
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PrimaryToRecovery, RecoveryToPrimary
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Optimize
+  description: |+
+    Specifies what to optimize for.
+    This parameter applies when failover is done from an Azure site to an on-premise site which requires substantial data synchronization.
+    Valid values are:
+
+    - ForDowntime
+    - ForSynchronization
+
+    When **ForDowntime** is specified, this indicates that data is synchronized before failover to minimize downtime.
+    Synchronization is performed without shutting down the virtual machine.
+    After synchronization is complete, the job is suspended.
+    Resume the job to do an additional synchronization operation that shuts down the virtual machine.
+
+    When **ForSynchronization** is specified, this indicates that data is synchronized during failover only so data synchronization is minimized.
+    With this setting enabled, the virtual machine is shut down immediately.
+    Synchronization starts after shutdown to complete the failover operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ForDownTime, ForSynchronization
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+  name: RecoveryPlan
+  isRequired: true
+  description: |+
+    Specifies the ASR Recovery plan object corresponding to the recovery plan to be failed over.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+  name: ReplicationProtectedItem
+  isRequired: true
+  description: |+
+    Specifies the ASR replication protected item object corresponding to the replication protected item to be failed over.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryServicesProvider" data-throw-if-not-resolved="False" />
+  name: ServicesProvider
+  description: |+
+    Identifies the host to on which to create the virtual machine while failing over to an alternate location by specifying the ASR services provider object corresponding to the ASR services provider running on the host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Start-AzRecoveryServicesAsrPlannedFailoverJob
+name: Start-AzRecoveryServicesAsrPlannedFailoverJob
+description: |-
+  The **Start-AzRecoveryServicesAsrPlannedFailoverJob** cmdlet starts a planned failover for an Azure Site Recovery replication protected item or recovery plan.
+  You can check whether the job succeeds by using the Get-AzRecoveryServicesAsrJob cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/start-azrecoveryservicesasrplannedfailoverjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Start-AzRecoveryServicesAsrPlannedFailoverJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Start-AzRecoveryServicesAsrPlannedFailoverJob.md

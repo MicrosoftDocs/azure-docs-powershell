@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a peering between two virtual networks.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzVirtualNetwork
+  href: ./Get-AzVirtualNetwork.yml
+- text: Get-AzVirtualNetworkPeering
+  href: ./Get-AzVirtualNetworkPeering.yml
+- text: Remove-AzVirtualNetworkPeering
+  href: ./Remove-AzVirtualNetworkPeering.yml
+- text: Set-AzVirtualNetworkPeering
+  href: ./Set-AzVirtualNetworkPeering.yml
+syntaxes:
+- >-
+  Add-AzVirtualNetworkPeering -Name <String> -VirtualNetwork <PSVirtualNetwork> -RemoteVirtualNetworkId <String>
+
+   [-BlockVirtualNetworkAccess] [-AllowForwardedTraffic] [-AllowGatewayTransit] [-UseRemoteGateways] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a peering between two virtual networks in the same region'
+  code: |-
+    # Variables for common values used throughout the script.
+    $rgName='myResourceGroup'
+    $location='eastus'
+
+    # Create a resource group.
+    New-AzResourceGroup -Name $rgName  -Location $location
+
+    # Create virtual network 1.
+    $vnet1 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet1' -AddressPrefix '10.0.0.0/16' -Location $location
+
+    # Create virtual network 2.
+    $vnet2 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet2' -AddressPrefix '10.1.0.0/16' -Location $location
+
+    # Peer VNet1 to VNet2.
+    Add-AzVirtualNetworkPeering -Name 'myVnet1ToMyVnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
+
+    # Peer VNet2 to VNet1.
+    Add-AzVirtualNetworkPeering -Name 'myVnet2ToMyVnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
+  description: |-
+    Note that a peering link must be created from vnet1 to vnet2 and vice versa in order for peering to work.
+  summary: ""
+- title: 'Example 2: Create a peering between two virtual networks in different regions'
+  code: |-
+    # Variables for common values used throughout the script.
+    $rgName='myResourceGroup'
+
+    # Create a resource group.
+    New-AzResourceGroup -Name $rgName  -Location westcentralus
+
+    # Create virtual network 1.
+    $vnet1 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet1' -AddressPrefix '10.0.0.0/16' -Location westcentralus
+
+    # Create virtual network 2.
+    $vnet2 = New-AzVirtualNetwork -ResourceGroupName $rgName -Name 'myVnet2' -AddressPrefix '10.1.0.0/16' -Location candacentral
+
+    # Peer VNet1 to VNet2.
+    Add-AzVirtualNetworkPeering -Name 'myVnet1ToMyVnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
+
+    # Peer VNet2 to VNet1.
+    Add-AzVirtualNetworkPeering -Name 'myVnet2ToMyVnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
+  description: |-
+    Here 'myVnet1' in US West Central is peered with 'myVnet2' in Canada Central.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowForwardedTraffic
+  description: |+
+    Indicates that this cmdlet allows the forwarded traffic from the virtual machines in the remote virtual network.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowGatewayTransit
+  description: |+
+    Flag to allow gatewayLinks be used in remote virtual network's link to this virtual network
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BlockVirtualNetworkAccess
+  description: |+
+    Indicates that this cmdlet blocks the virtual machines in the linked virtual network space to access all the virtual machines in local virtual network space.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual network peering.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RemoteVirtualNetworkId
+  isRequired: true
+  description: |+
+    Specifies the ID of the remote virtual network.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseRemoteGateways
+  description: |+
+    Indicates that this cmdlet allows remote gateways on this virtual network.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+  name: VirtualNetwork
+  isRequired: true
+  description: |+
+    Specifies the parent virtual network.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Add-AzVirtualNetworkPeering
+name: Add-AzVirtualNetworkPeering
+description: |-
+  The **Add-AzVirtualNetworkPeering** cmdlet creates a peering between two virtual networks.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 13901193-8C68-4969-ADCD-2E82EA714354
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azvirtualnetworkpeering
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzVirtualNetworkPeering.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzVirtualNetworkPeering.md

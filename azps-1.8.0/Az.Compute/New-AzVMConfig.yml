@@ -1,0 +1,185 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a configurable virtual machine object.
+module: Az.Compute
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Update-AzVM
+  href: ./Update-AzVM.yml
+- text: Set-AzVMOperatingSystem
+  href: ./Set-AzVMOperatingSystem.yml
+- text: Set-AzVMSourceImage
+  href: ./Set-AzVMSourceImage.yml
+- text: Get-AzAvailabilitySet
+  href: ./Get-AzAvailabilitySet.yml
+syntaxes:
+- >-
+  New-AzVMConfig [-VMName] <String> [-VMSize] <String> [[-AvailabilitySetId] <String>] [[-LicenseType] <String>]
+
+   [-Zone <String[]>] [-Tags <Hashtable>] [-EnableUltraSSD] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  New-AzVMConfig [-VMName] <String> [-VMSize] <String> [[-AvailabilitySetId] <String>] [[-LicenseType] <String>]
+
+   [-IdentityType] <ResourceIdentityType> [-IdentityId <String[]>] [-Zone <String[]>] [-Tags <Hashtable>]
+
+   [-EnableUltraSSD] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzVMConfig [-VMName] <String> [-VMSize] <String> [[-AvailabilitySetId] <String>] [[-LicenseType] <String>]
+
+   [-AssignIdentity] [-Zone <String[]>] [-Tags <Hashtable>] [-EnableUltraSSD]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a virtual machine object'
+  code: |-
+    PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
+    PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
+  description: |-
+    The first command gets the availability set named AvailablitySet03 in the resource group named ResourceGroup11, and then stores that object in the $AvailabilitySet variable.
+    The second command creates a virtual machine object, and then stores it in the $VirtualMachine variable.
+    The command assigns a name and size to the virtual machine.
+    The virtual machine belongs to the availability set stored in $AvailabilitySet.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AssignIdentity
+  isRequired: true
+  description: |+
+    Specify the system assigned identity for the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AvailabilitySetId
+  description: |+
+    Specifies the ID of an availability set.
+    To obtain an availability set object, use the Get-AzAvailabilitySet cmdlet.
+    The availability set object contains an ID property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableUltraSSD
+  description: |+
+    Enables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM.
+    Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine only if this property is enabled.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IdentityId
+  description: |+
+    Specifies the list of user identities associated with the virtual machine scale set.
+    The user identity references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/identities/{identityName}'
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Compute.Models.ResourceIdentityType" data-throw-if-not-resolved="False" /><span>]</span>
+  name: IdentityType
+  isRequired: true
+  description: |+
+    The identity of the virtual machine, if configured.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: SystemAssigned, UserAssigned, SystemAssignedUserAssigned, None
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LicenseType
+  description: |+
+    The license type, which is for bringing your own license scenario.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    The tags attached to the resource.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Tag
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies a name for the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ResourceName, Name
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VMSize
+  isRequired: true
+  description: |+
+    Specifies the size for the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Zone
+  description: |+
+    Specifies the availability zone list for the virtual machine. The allowed values depend on the capabilities of the region. Allowed values will normally be 1,2,3.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Compute.New-AzVMConfig
+name: New-AzVMConfig
+description: |-
+  The **New-AzVMConfig** cmdlet creates a configurable local virtual machine object for Azure.
+  Other cmdlets can be used to configure a virtual machine object, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, Add-AzVMNetworkInterface, and Set-AzVMOSDisk.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  ms.assetid: 1BECAC91-BB43-46EB-B2C9-C965C6FBC831
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzVMConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzVMConfig.md

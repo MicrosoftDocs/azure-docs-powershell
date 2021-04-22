@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates/Sets a record set in a Private DNS zone.
+module: Az.PrivateDns
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordSet" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordSet" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzPrivateDnsRecordSet -RecordSet <PSPrivateDnsRecordSet> [-Overwrite]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a record set'
+  code: |-
+    PS C:\> $RecordSet = Get-AzPrivateDnsRecordSet -ResourceGroupName MyResourceGroup -ZoneName myzone.com -Name www -RecordType A
+    PS C:\> Add-AzPrivateDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 172.16.0.0
+    PS C:\> Add-AzPrivateDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 172.31.255.255
+    PS C:\> Set-AzPrivateDnsRecordSet -RecordSet $RecordSet
+
+    # These cmdlets can also be piped:
+
+    PS C:\> Get-AzPrivateDnsRecordSet -ResourceGroupName MyResourceGroup -ZoneName myzone.com -Name www -RecordType A | Add-AzPrivateDnsRecordConfig -Ipv4Address 172.16.0.0 | Add-AzPrivateDnsRecordConfig -Ipv4Address 172.31.255.255 | Set-AzPrivateDnsRecordSet
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.Netwo
+                        rk/privateDnsZones/myzone.com/A/www
+    Name              : www
+    ZoneName          : myzone.com
+    ResourceGroupName : MyResourceGroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : A
+    Records           : {1.2.3.4, 172.16.0.0, 172.31.255.255}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    The first command uses the Get-AzPrivateDnsRecordSet cmdlet to get the specified record set, and then stores it in the $RecordSet variable. The second and third commands are off-line operations to add two A records to the record set. The final command uses the Set-AzPrivateDnsRecordSet cmdlet to commit the update.
+  summary: ""
+- title: 'Example 2: Update an SOA record'
+  code: |-
+    PS C:\> $RecordSet = Get-AzPrivateDnsRecordSet -Name "@" -RecordType SOA -Zone $Zone
+    PS C:\> $RecordSet.Records[0].Email = "admin.myzone.com"
+    PS C:\> Set-AzPrivateDnsRecordSet -RecordSet $RecordSet
+
+    Id                : /subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micros
+                        oft.Network/privateDnsZones/myzone.com/SOA/@
+    Name              : @
+    ZoneName          : myzone.com
+    ResourceGroupName : Myresourcegroup
+    Ttl               : 3600
+    Etag              : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    RecordType        : SOA
+    Records           : {[internal.cloudapp.net,admin.myzone.com,3600,300,2419200,300]}
+    Metadata          :
+    IsAutoRegistered  :
+  description: |-
+    The first command uses the Get-AzPrivateDnsRecordSet cmdlet to get the specified record set, and then stores it in the $RecordSet variable. The second command updates the specified SOA record in $RecordSet. The final command uses the Set-AzPrivateDnsRecordSet cmdlet to propagate the update in $RecordSet.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Overwrite
+  description: |+
+    Do not use the ETag field of the RecordSet parameter for optimistic concurrency checks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordSet" data-throw-if-not-resolved="False" />
+  name: RecordSet
+  isRequired: true
+  description: |+
+    The record set in which to add the record.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.PrivateDns.Set-AzPrivateDnsRecordSet
+name: Set-AzPrivateDnsRecordSet
+description: |-
+  The Set-AzPrivateDnsRecordSet cmdlet updates a record set in the Azure Private DNS service from a local RecordSet object. You can pass a RecordSet object as a parameter or by using the pipeline operator. You can use the Confirm parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation. The record set is not updated if it has been changed in Azure Private DNS since the local RecordSet object was retrieved. This provides protection for concurrent changes. You can suppress this behavior using the Overwrite parameter, which updates the record set regardless of concurrent changes.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
+  Module Name: Az.PrivateDns
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.privatedns/Set-AzPrivateDnsRecordSet
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Set-AzPrivateDnsRecordSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PrivateDns/PrivateDns/help/Set-AzPrivateDnsRecordSet.md

@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an ExpressRoute circuit peering configuration.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzExpressRouteCircuitPeeringConfig
+  href: Add-AzExpressRouteCircuitPeeringConfig.yml
+- text: Get-AzExpressRouteCircuit
+  href: Get-AzExpressRouteCircuit.yml
+- text: New-AzExpressRouteCircuitPeeringConfig
+  href: New-AzExpressRouteCircuitPeeringConfig.yml
+- text: Set-AzExpressRouteCircuit
+  href: Set-AzExpressRouteCircuit.yml
+syntaxes:
+- >-
+  Remove-AzExpressRouteCircuitPeeringConfig [-Name <String>] -ExpressRouteCircuit <PSExpressRouteCircuit>
+
+   [-PeerAddressType <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a peering configuration from an ExpressRoute circuit'
+  code: |-
+    $circuit = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg
+    Remove-AzExpressRouteCircuitPeeringConfig -Name 'AzurePrivatePeering' -ExpressRouteCircuit $circuit
+    Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  name: ExpressRouteCircuit
+  isRequired: true
+  description: |+
+    The ExpressRoute circuit containing the peering configuration to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the peering configuration to be removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PeerAddressType
+  description: |+
+    The Address family of the peering
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: IPv4, IPv6, All
+uid: Az.Network.Remove-AzExpressRouteCircuitPeeringConfig
+name: Remove-AzExpressRouteCircuitPeeringConfig
+description: |-
+  The **Remove-AzExpressRouteCircuitPeeringConfig** cmdlet removes an ExpressRoute circuit
+  peering configuration.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 462F3EF7-4C15-41F8-853D-CDCC8E67673D
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azexpressroutecircuitpeeringconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzExpressRouteCircuitPeeringConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzExpressRouteCircuitPeeringConfig.md

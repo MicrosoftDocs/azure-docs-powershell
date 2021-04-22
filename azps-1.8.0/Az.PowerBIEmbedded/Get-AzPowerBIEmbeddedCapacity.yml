@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the details of a PowerBI Embedded Capacity.
+module: Az.PowerBIEmbedded
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: 'New-AzPowerBIEmbeddedCapacity '
+  href: ./New-AzPowerBIEmbeddedCapacity.yml
+- text: 'Remove-AzPowerBIEmbeddedCapacity '
+  href: ./Remove-AzPowerBIEmbeddedCapacity.yml
+syntaxes:
+- >-
+  Get-AzPowerBIEmbeddedCapacity [-ResourceGroupName <String>] [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPowerBIEmbeddedCapacity -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get resource group capacities'
+  code: |-
+    PS C:\>Get-AzPowerBIEmbeddedCapacity -ResourceGroupName "testRG"
+    Type                   : Microsoft.PowerBIDedicated/capacities
+    Id                     : /subscriptions/78e47976-.../resourceGroups/testRG/providers/Microsoft.PowerBIDedicated/capacities/testcapacity
+    ResourceGroup          : testRG
+    Name                   : testcapacity
+    Location               : West Central US
+    State                  : Succeeded
+    Administrator          : {admin@microsoft.com}
+    Sku                    : A1
+    Tier                   : PBIE_Azure
+    Tag                    : {}
+
+    Type                   : Microsoft.PowerBIDedicated/capacities
+    Id                     : /subscriptions/78e47976-.../resourceGroups/testRG/providers/Microsoft.PowerBIDedicated/capacities/mycapacity
+    ResourceGroup          : testRG
+    Name                   : mycapacity
+    Location               : West Central US
+    State                  : Succeeded
+    Administrator          : {admin@microsoft.com}
+    Sku                    : A4
+    Tier                   : PBIE_Azure
+    Tag                    : {}
+  description: |-
+    This command gets all Azure PowerBI Embedded Capacity in the resource group named testRG
+  summary: ""
+- title: 'Example 2: Get a capacity'
+  code: |-
+    PS C:\>Get-AzPowerBIEmbeddedCapacity -ResourceGroupName "testRG" -Name "testcapacity"
+    Type                   : Microsoft.PowerBIDedicated/capacities
+    Id                     : /subscriptions/78e47976-.../resourceGroups/testRG/providers/Microsoft.PowerBIDedicated/capacities/testcapacity
+    ResourceGroup          : testRG
+    Name                   : testcapacity
+    Location               : West Central US
+    State                  : Succeeded
+    Administrator          : {admin@microsoft.com}
+    Sku                    : A1
+    Tier                   : PBIE_Azure
+    Tag                    : {}
+  description: |-
+    This command gets the Azure PowerBI Embedded Capacity named testcapacity in the resource group named testRG.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the PowerBI Embedded Capacity
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Name of the Azure resource group to which the capacity belongs
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Azure resource ID
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.PowerBIEmbedded.Get-AzPowerBIEmbeddedCapacity
+name: Get-AzPowerBIEmbeddedCapacity
+description: |-
+  The Get-AzPowerBIEmbeddedCapacity cmdlet gets the details of a PowerBI Embedded Capacity.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PowerBI.dll-Help.xml
+  Module Name: Az.PowerBIEmbedded
+  ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/get-azpowerbiembeddedcapacity
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PowerBIEmbedded/PowerBIEmbedded/help/Get-AzPowerBIEmbeddedCapacity.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PowerBIEmbedded/PowerBIEmbedded/help/Get-AzPowerBIEmbeddedCapacity.md

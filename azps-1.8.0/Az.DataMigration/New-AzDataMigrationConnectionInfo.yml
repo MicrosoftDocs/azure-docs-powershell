@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Connection Info object specifying the server type and name for connection.
+module: Az.DataMigration
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataMigration.Models.ConnectionInfo" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzDataMigrationConnectionInfo -ServerType <ServerTypeEnum> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzDmsConnInfo -ServerType SQL -DataSource mySourceServer -AuthType SqlAuthentication -TrustServerCertificate:$true
+  description: |-
+    The preceding example creates a new Connection Info object providing SQL as ServerType parameter.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.DataMigration.Models.ServerTypeEnum" data-throw-if-not-resolved="False" />
+  name: ServerType
+  isRequired: true
+  description: |+
+    Enum that describes server type to connect to. Currently supported values are SQL for SQL Server, Azure SQL Managed Instance, MongoDb, CosmosDb and Azure SQL Database. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SQL, MongoDb, SQLMI
+uid: Az.DataMigration.New-AzDataMigrationConnectionInfo
+name: New-AzDataMigrationConnectionInfo
+description: |-
+  The New-AzDataMigrationConnectionInfo cmdlet creates new a Connection Info object specifying the server type for connection.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  Module Name: Az.DataMigration
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.datamigration/New-AzDataMigrationConnectionInfo
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationConnectionInfo.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataMigration/DataMigration/help/New-AzDataMigrationConnectionInfo.md

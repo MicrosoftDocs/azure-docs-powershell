@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This command creates a new sync group within a specified storage sync service.
+module: Az.StorageSync
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSSyncGroup" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzStorageSyncGroup [-ParentObject] <PSStorageSyncService> -Name <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzStorageSyncGroup [-ResourceGroupName] <String> [-StorageSyncServiceName] <String> -Name <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  New-AzStorageSyncGroup [-ParentResourceId] <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzStorageSyncGroup -ResourceGroupName "myResourceGroup" -StorageSyncServiceName "myStorageSyncServiceName" -Name "mySyncGroupName"
+  description: |-
+    This command creates a new sync group within a specified storage sync service.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the SyncGroup.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SyncGroupName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService" data-throw-if-not-resolved="False" />
+  name: ParentObject
+  isRequired: true
+  description: |+
+    StorageSyncService Object, normally passed through the parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: StorageSyncService
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ParentResourceId
+  isRequired: true
+  description: |+
+    StorageSyncService Parent Resource Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: StorageSyncServiceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StorageSyncServiceName
+  isRequired: true
+  description: |+
+    Name of the StorageSyncService.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ParentName
+  parameterValueGroup: ""
+uid: Az.StorageSync.New-AzStorageSyncGroup
+name: New-AzStorageSyncGroup
+description: |-
+  This command creates a new sync group within a specified storage sync service. A sync group is used to describe a topology of locations, referred to as endpoints, that will sync any files stored within any one of the endpoints. A sync group contains cloud endpoints, which reference Azure file shares, and it also contains server endpoints which reference a specific local path on a registered server.
+metadata:
+  external help file: Microsoft.Azure.Commands.StorageSync.dll-Help.xml
+  Module Name: Az.StorageSync
+  online version: https://docs.microsoft.com/en-us/powershell/module/Az.storagesync/new-Azstoragesyncgroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/New-AzStorageSyncGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/New-AzStorageSyncGroup.md

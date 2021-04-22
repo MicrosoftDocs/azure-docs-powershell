@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get a front door frontend endpoint.
+module: Az.FrontDoor
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontendEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzFrontDoorFrontendEndpoint -ResourceGroupName <String> -FrontDoorName <String> [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzFrontDoorFrontendEndpoint [-Name <String>] -FrontDoorObject <PSFrontDoor>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzFrontDoorFrontendEndpoint -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all frontend endpoints in Front Door "frontdoor1" which is part of resource group "rg1".'
+  code: |-
+    PS C:\> Get-AzFrontDoorFrontendEndpoint -ResourceGroupName "rg1" -FrontDoorName "frontdoor1"
+
+
+    HostName                         : frontdoor1.azurefd.net
+    SessionAffinityEnabledState      : Disabled
+    SessionAffinityTtlSeconds        : 0
+    WebApplicationFirewallPolicyLink :
+    Backends                         :
+    CustomHttpsProvisioningState     : Disabled
+    CustomHttpsProvisioningSubstate  : None
+    CertificateSource                :
+    ProtocolType                     :
+    Vault                            :
+    SecretName                       :
+    SecretVersion                    :
+    CertificateType                  :
+    ResourceState                    : Enabled
+    Id                               : /subscriptions/{guid}/resourcegroups/resourcegroup1
+                                       /providers/Microsoft.Network/frontdoors/frontdoor1/frontendendpoints/frontdoor1-azurefd-net
+    Name                             : frontdoor1-azurefd-net
+    Type                             : Microsoft.Network/frontdoors/frontendendpoints
+
+    HostName                         : frontendpointname1.custom.xyz
+    SessionAffinityEnabledState      : Disabled
+    SessionAffinityTtlSeconds        : 0
+    WebApplicationFirewallPolicyLink :
+    Backends                         :
+    CustomHttpsProvisioningState     : Disabled
+    CustomHttpsProvisioningSubstate  : None
+    CertificateSource                :
+    ProtocolType                     :
+    Vault                            :
+    SecretName                       :
+    SecretVersion                    :
+    CertificateType                  :
+    ResourceState                    : Enabled
+    Id                               : /subscriptions/{guid}/resourcegroups/resourcegroup1
+                                       /providers/Microsoft.Network/frontdoors/frontdoor1/frontendendpoints/frontendpointname1-custom-xyz
+    Name                             : frontendpointname1-custom-xyz
+    Type                             : Microsoft.Network/frontdoors/frontendendpoints
+  description: |-
+    Get all frontend endpoints in Front Door "frontdoor1" which is part of resource group "rg1".
+  summary: ""
+- title: 'Example 2: Get frontend endpoint with name "frontdoor1-azurefd-net" in Front Door "frontdoor1" which is part of resource group "rg1"'
+  code: |-
+    PS C:\> Get-AzFrontDoorFrontendEndpoint -ResourceGroupName "rg1" -FrontDoorName "frontdoor1" -Name "frontdoor1-azurefd-net"
+
+
+    HostName                         : frontdoor1.azurefd.net
+    SessionAffinityEnabledState      : Disabled
+    SessionAffinityTtlSeconds        : 0
+    WebApplicationFirewallPolicyLink :
+    Backends                         :
+    CustomHttpsProvisioningState     : Disabled
+    CustomHttpsProvisioningSubstate  : None
+    CertificateSource                :
+    ProtocolType                     :
+    Vault                            :
+    SecretName                       :
+    SecretVersion                    :
+    CertificateType                  :
+    ResourceState                    : Enabled
+    Id                               : /subscriptions/{guid}/resourcegroups/resourcegroup1
+                                       /providers/Microsoft.Network/frontdoors/frontdoor1/frontendendpoints/frontdoor1-azurefd-net
+    Name                             : frontdoor1-azurefd-net
+    Type                             : Microsoft.Network/frontdoors/frontendendpoints
+  description: |-
+    Get frontend endpoint with name "frontdoor1-azurefd-net" in Front Door "frontdoor1" which is part of resource group "rg1"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FrontDoorName
+  isRequired: true
+  description: |+
+    Front Door name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontDoor" data-throw-if-not-resolved="False" />
+  name: FrontDoorObject
+  isRequired: true
+  description: |+
+    The FrontDoor object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Frontend endpoint name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Resource Id of the Front Door
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.FrontDoor.Get-AzFrontDoorFrontendEndpoint
+name: Get-AzFrontDoorFrontendEndpoint
+description: |-
+  The **Get-AzFrontDoorFrontendEndpoint** cmdlet gets all existing frontend endpoints in the current Front Door resource that matches provided information.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  Module Name: Az.FrontDoor
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/get-azfrontdoorfrontendendpoint
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorFrontendEndpoint.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorFrontendEndpoint.md

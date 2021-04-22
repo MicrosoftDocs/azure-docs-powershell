@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a back-end address pool for an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApplicationGatewayBackendAddressPool
+  href: ./Add-AzApplicationGatewayBackendAddressPool.yml
+- text: Get-AzApplicationGatewayBackendAddressPool
+  href: ./Get-AzApplicationGatewayBackendAddressPool.yml
+- text: Remove-AzApplicationGatewayBackendAddressPool
+  href: ./Remove-AzApplicationGatewayBackendAddressPool.yml
+- text: Set-AzApplicationGatewayBackendAddressPool
+  href: ./Set-AzApplicationGatewayBackendAddressPool.yml
+syntaxes:
+- >-
+  New-AzApplicationGatewayBackendAddressPool -Name <String> [-BackendIPAddresses <String[]>]
+
+   [-BackendFqdns <String[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a back-end address pool by using the FQDN of a back-end server'
+  code: |-
+    PS C:\>$Pool = New-AzApplicationGatewayBackendAddressPool -Name "Pool01" -BackendFqdns "contoso1.com", "contoso2.com"
+  description: |-
+    This command creates a back-end address pool named Pool01 by using the FQDNs of back-end servers, and stores it in the $Pool variable.
+  summary: ""
+- title: 'Example 2: Create a back-end address pool by using the IP address of a back-end server'
+  code: |-
+    PS C:\>$Pool = New-AzApplicationGatewayBackendAddressPool -Name "Pool02" -BackendFqdns "10.10.10.10", "10.10.10.11"
+  description: |-
+    This command creates a back-end address pool named Pool02 by using the IP addresses of back-end servers, and stores it in the $Pool variable.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BackendFqdns
+  description: |+
+    Specifies a list of back-end FQDNs that this cmdlet associates with the back-end server pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BackendIPAddresses
+  description: |+
+    Specifies a list of back-end IP addresses that this cmdlet associates with the back-end server pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the back-end server pool that this cmdlet creates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Network.New-AzApplicationGatewayBackendAddressPool
+name: New-AzApplicationGatewayBackendAddressPool
+description: |-
+  The **New-AzApplicationGatewayBackendAddressPool** cmdlet creates a back-end address pool for an Azure application gateway.
+  A back-end address can be specified as an IP address, a fully-qualified domain name (FQDN) or an IP configuration ID.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: C257E62F-1535-4626-A12B-F4572D00BB13
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewaybackendaddresspool
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayBackendAddressPool.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayBackendAddressPool.md

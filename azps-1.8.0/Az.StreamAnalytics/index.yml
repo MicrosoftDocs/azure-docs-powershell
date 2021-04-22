@@ -1,0 +1,37 @@
+### YamlMime:PowershellModule
+children:
+- title: Stream Analytics
+  cmdlets:
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsDefaultFunctionDefinition
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsQuota
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsTransformation
+  - Az.StreamAnalytics.New-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.New-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.New-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.New-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.New-AzStreamAnalyticsTransformation
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.Start-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Stop-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Test-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.Test-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.Test-AzStreamAnalyticsOutput
+uid: Az.StreamAnalytics
+name: Az.StreamAnalytics
+description: |-
+  This topic displays help topics for the Azure Stream Analytics Cmdlets.
+metadata:
+  Module Name: Az.StreamAnalytics
+  Module Guid: 59713673-194f-418a-b1f2-ac60db82edf9
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics
+  Help Version: 4.0.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StreamAnalytics/StreamAnalytics/help/Az.StreamAnalytics.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StreamAnalytics/StreamAnalytics/help/Az.StreamAnalytics.md

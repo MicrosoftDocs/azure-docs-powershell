@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Reboots the specified compute node.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSComputeNode" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzBatchComputeNode
+  href: ./Get-AzBatchComputeNode.yml
+- text: Reset-AzBatchComputeNode
+  href: ./Reset-AzBatchComputeNode.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/az.batch
+syntaxes:
+- >-
+  Restart-AzBatchComputeNode [-PoolId] <String> [-Id] <String> [[-RebootOption] <ComputeNodeRebootOption>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Restart-AzBatchComputeNode [[-ComputeNode] <PSComputeNode>] [[-RebootOption] <ComputeNodeRebootOption>]
+
+   -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restart a compute node'
+  code: |-
+    PS C:\>Restart-AzBatchComputeNode -PoolId "MyPool" -Id "tvm-3257026573_2-20150813t200938z" -BatchContext $Context
+  description: |-
+    This command reboots the compute node with the ID "tvm-3257026573_2-20150813t200938z" in the pool MyPool.
+  summary: ""
+- title: 'Example 2: Restart every compute node in a pool'
+  code: |-
+    PS C:\>Get-AzBatchComputeNode -PoolId "MyPool" -BatchContext $Context | Restart-AzBatchComputeNode -BatchContext $Context
+  description: |-
+    This command reboots every compute node in the pool MyPool.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSComputeNode" data-throw-if-not-resolved="False" />
+  name: ComputeNode
+  description: |+
+    Specifies the **PSComputeNode** object that represents the compute node to reboot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of the compute node to reboot.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PoolId
+  isRequired: true
+  description: |+
+    Specifies the ID of the pool that contains the compute node.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Batch.Common.ComputeNodeRebootOption" data-throw-if-not-resolved="False" /><span>]</span>
+  name: RebootOption
+  description: |+
+    Specifies when to reboot the node and what to do with currently running tasks.
+    The default is Requeue.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: Requeue, Terminate, TaskCompletion, RetainedData
+uid: Az.Batch.Restart-AzBatchComputeNode
+name: Restart-AzBatchComputeNode
+description: |-
+  The **Restart-AzBatchComputeNode** cmdlet reboots the specified compute node.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 029361F0-C4E9-4948-9EBA-BFBD1B029909
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/restart-azbatchcomputenode
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Restart-AzBatchComputeNode.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Restart-AzBatchComputeNode.md

@@ -1,0 +1,244 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a network security rule configuration for a network security group.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzNetworkSecurityRuleConfig
+  href: ./Add-AzNetworkSecurityRuleConfig.yml
+- text: Get-AzNetworkSecurityRuleConfig
+  href: ./Get-AzNetworkSecurityRuleConfig.yml
+- text: New-AzNetworkSecurityRuleConfig
+  href: ./New-AzNetworkSecurityRuleConfig.yml
+- text: Remove-AzNetworkSecurityRuleConfig
+  href: ./Remove-AzNetworkSecurityRuleConfig.yml
+syntaxes:
+- >-
+  Set-AzNetworkSecurityRuleConfig -Name <String> -NetworkSecurityGroup <PSNetworkSecurityGroup>
+
+   [-Description <String>] [-Protocol <String>] [-SourcePortRange <String[]>] [-DestinationPortRange <String[]>]
+
+   [-SourceAddressPrefix <String[]>] [-DestinationAddressPrefix <String[]>]
+
+   [-SourceApplicationSecurityGroup <PSApplicationSecurityGroup[]>]
+
+   [-DestinationApplicationSecurityGroup <PSApplicationSecurityGroup[]>] [-Access <String>] [-Priority <Int32>]
+
+   [-Direction <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Set-AzNetworkSecurityRuleConfig -Name <String> -NetworkSecurityGroup <PSNetworkSecurityGroup>
+
+   [-Description <String>] [-Protocol <String>] [-SourcePortRange <String[]>] [-DestinationPortRange <String[]>]
+
+   [-SourceAddressPrefix <String[]>] [-DestinationAddressPrefix <String[]>]
+
+   [-SourceApplicationSecurityGroupId <String[]>] [-DestinationApplicationSecurityGroupId <String[]>]
+
+   [-Access <String>] [-Priority <Int32>] [-Direction <String>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the access configuration in a network security rule'
+  code: |-
+    PS C:\>$nsg = Get-AzNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
+    PS C:\> $nsg | Get-AzNetworkSecurityRuleConfig -Name "rdp-rule"
+    PS C:\> Set-AzNetworkSecurityRuleConfig -Name "rdp-rule" -NetworkSecurityGroup $nsg -Access "Deny"
+  description: |-
+    The first command gets the network security group named NSG-FrontEnd, and then stores it in the variable $nsg.
+    The second command uses the pipeline operator to pass the security group in $nsg to Get-AzNetworkSecurityRuleConfig, which gets the security rule configuration named rdp-rule.
+    The third command changes the access configuration of rdp-rule to Deny.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Access
+  description: |+
+    Specifies whether network traffic is allowed or denied. 
+    The acceptable values for this parameter are: Allow and Deny.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Allow, Deny
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for a rule configuration.
+    The maximum size is 140 characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationAddressPrefix
+  description: |+
+    Specifies a destination address prefix.
+    The acceptable values for this parameter are:
+    - A Classless Interdomain Routing (CIDR) address 
+    - A destination IP address range 
+    - A wildcard character (*) to match any IP address
+    You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationApplicationSecurityGroup
+  description: |+
+    The application security group set as destination for the rule. It cannot be used with 'DestinationAddressPrefix' parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationApplicationSecurityGroupId
+  description: |+
+    The application security group set as destination for the rule. It cannot be used with 'DestinationAddressPrefix' parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationPortRange
+  description: |+
+    Specifies a destination port or range.
+    The acceptable values for this parameter are:
+    - An integer 
+    - A range of integers between 0 and 65535
+    - A wildcard character (*) to match any port
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Direction
+  description: |+
+    Specifies whether a rule is evaluated for incoming or outgoing traffic.
+    The acceptable values for this parameter are: Inbound and Outbound.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Inbound, Outbound
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the network security rule configuration that this cmdlet sets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  name: NetworkSecurityGroup
+  isRequired: true
+  description: |+
+    Specifies the **NetworkSecurityGroup** object that contains the network security rule configuration to set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Specifies the priority of a rule configuration.
+    The acceptable values for this parameter are:An integer between 100 and 4096.
+    The priority number must be unique for each rule in the collection.
+    The lower the priority number, the higher the priority of the rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the network protocol that a rule configuration applies to.
+    The acceptable values for this parameter are:
+     --Tcp
+    - Udp
+    - A wildcard character (*) to match both
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Tcp, Udp, *
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourceAddressPrefix
+  description: |+
+    Specifies a source address prefix.
+    The acceptable values for this parameter are:
+    - A CIDR
+    - A source IP range
+    - A wildcard character (*) to match any IP address
+    You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourceApplicationSecurityGroup
+  description: |+
+    The application security group set as source for the rule. It cannot be used with 'SourceAddressPrefix' parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourceApplicationSecurityGroupId
+  description: |+
+    The application security group set as source for the rule. It cannot be used with 'SourceAddressPrefix' parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourcePortRange
+  description: |+
+    Specifies the source port or range.
+    The acceptable values for this parameter are:
+    - An integer
+    - A range of integers between 0 and 65535
+    - A wildcard character (*) to match any port
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzNetworkSecurityRuleConfig
+name: Set-AzNetworkSecurityRuleConfig
+description: |-
+  The **Set-AzNetworkSecurityRuleConfig** cmdlet updates a network security rule configuration for a network security group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: 7EFFFF43-501E-4955-A4EE-2C09B8863B30
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-aznetworksecurityruleconfig
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md

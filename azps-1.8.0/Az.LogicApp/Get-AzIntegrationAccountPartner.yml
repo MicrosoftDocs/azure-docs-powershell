@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets integration account partners.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccountPartner" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzIntegrationAccountPartner
+  href: ./New-AzIntegrationAccountPartner.yml
+- text: Remove-AzIntegrationAccountPartner
+  href: ./Remove-AzIntegrationAccountPartner.yml
+- text: Set-AzIntegrationAccountPartner
+  href: ./Set-AzIntegrationAccountPartner.yml
+syntaxes:
+- >-
+  Get-AzIntegrationAccountPartner [-ResourceGroupName <String>] [-Name <String>] [-PartnerName <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an integration account partner'
+  code: |-
+    PS C:\>Get-AzIntegrationAccountPartner -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -PartnerName "IntegrationAccountPartner22"
+    Id                 : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/TestIntegrationAccount/partners/IntegrationAccountPartner31
+    Name               : IntegrationAccountPartner31
+    Type               : Microsoft.Logic/integrationAccounts/partners
+    PartnerType        : B2B
+    CreatedTime        : 3/24/2016 8:46:05 PM
+    ChangedTime        : 3/24/2016 8:47:47 PM
+    BusinessIdentities : {"Qualifier":"CC","Value":"FF"}
+    Metadata           :
+  description: |-
+    This command gets the integration account partner named IntegrationAccountPartner22.
+  summary: ""
+- title: 'Example 2: Get an integration account partners by using an integration account name'
+  code: |-
+    PS C:\>Get-AzIntegrationAccountPartner -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31"
+    Id                 : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/TestIntegrationAccount/partners/IntegrationAccountPartner31
+    Name               : IntegrationAccountPartner31
+    Type               : Microsoft.Logic/integrationAccounts/partners
+    PartnerType        : B2B
+    CreatedTime        : 3/24/2016 8:46:05 PM
+    ChangedTime        : 3/24/2016 8:47:47 PM
+    BusinessIdentities : {"Qualifier":"CC","Value":"FF"}
+    Metadata           :
+  description: |-
+    This command gets the integration account partners for the integration account named IntegrationAccount31.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of an integration account.
+
+  defaultValue: None
+  position: Named
+  aliases: IntegrationAccountName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PartnerName
+  description: |+
+    Specifies the name of the integration account partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.LogicApp.Get-AzIntegrationAccountPartner
+name: Get-AzIntegrationAccountPartner
+description: |-
+  The **Get-AzIntegrationAccountPartner** cmdlet gets integration account partners from a resource group.
+  Specify the integration account name, resource group name, and partner name.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: 6E84E26F-8150-41F8-8823-CEED05619A75
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azintegrationaccountpartner
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountPartner.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountPartner.md

@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a local network gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzLocalNetworkGateway
+  href: ./Get-AzLocalNetworkGateway.yml
+- text: New-AzLocalNetworkGateway
+  href: ./New-AzLocalNetworkGateway.yml
+- text: Remove-AzLocalNetworkGateway
+  href: ./Remove-AzLocalNetworkGateway.yml
+syntaxes:
+- >-
+  Set-AzLocalNetworkGateway -LocalNetworkGateway <PSLocalNetworkGateway> [-AddressPrefix <String[]>]
+
+   [-Asn <UInt32>] [-BgpPeeringAddress <String>] [-PeerWeight <Int32>] [-AsJob]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $lgw = Get-AzLocalNetworkGateway -Name myLocalGW -ResourceGroupName myRG
+    Set-AzLocalNetworkGateway -LocalNetworkGateway $lgw
+
+    Name                     : myLocalGW
+    ResourceGroupName        : TestRG1
+    Location                 : westus
+    Id                       : /subscriptions/81ab786c-56eb-4a4d-bb5f-f60329772466/resourceGroups/TestRG1/providers/Microso
+                               ft.Network/localNetworkGateways/myLocalGW
+    Etag                     : W/"d2de6968-315e-411d-a4b8-a8c335abe61b"
+    ResourceGuid             : 393acf8b-dbb8-4b08-a9ea-c714570710e1
+    ProvisioningState        : Succeeded
+    Tags                     :
+    GatewayIpAddress         : 1.2.3.4
+    LocalNetworkAddressSpace : {
+                                 "AddressPrefixes": []
+                               }
+    BgpSettings              : null
+  description: ""
+  summary: |+
+    Set configuration for an existing gateway
+
+
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressPrefix
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: Asn
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BgpPeeringAddress
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway" data-throw-if-not-resolved="False" />
+  name: LocalNetworkGateway
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: PeerWeight
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Set-AzLocalNetworkGateway
+name: Set-AzLocalNetworkGateway
+description: |-
+  The **Set-AzLocalNetworkGateway** cmdlet modifies a local network gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  ms.assetid: F8C1DF39-1DAF-4BDB-8B0E-1BC3B5E82185
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azlocalnetworkgateway
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzLocalNetworkGateway.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzLocalNetworkGateway.md

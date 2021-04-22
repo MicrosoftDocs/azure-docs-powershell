@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the API keys for an account.
+  These keys are the authentication mechanism used in subsequent calls to Azure Maps.
+module: Az.Maps
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Maps.Models.PSMapsAccount" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Maps.Models.PSMapsAccountKeys" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzMapsAccountKey [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzMapsAccountKey [-InputObject <PSMapsAccount>] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- Get-AzMapsAccountKey [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzMapsAccountKey -ResourceGroupName MyResourceGroup -Name MyAccount
+
+    PrimaryKey                                  SecondaryKey
+    ----------                                  ------------
+    ******************************************* *******************************************
+  description: |-
+    Returns the keys for the account named MyAccount in the resource group MyResourceGroup.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzMapsAccountKey -ResourceId /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/MyResourceGroup/providers/Microsoft.Maps/accounts/MyAccount
+
+    PrimaryKey                                  SecondaryKey
+    ----------                                  ------------
+    ******************************************* *******************************************
+  description: |-
+    Returns the keys for the specified Azure Maps Account.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Maps.Models.PSMapsAccount" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Maps Account piped from Get-AzMapsAccount.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Maps Account Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: MapsAccountName, AccountName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Maps Account ResourceId.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Maps.Get-AzMapsAccountKey
+name: Get-AzMapsAccountKey
+description: |-
+  The Get-AzMapsAccountKey cmdlet gets the API keys for a provisioned Azure Maps account.
+  An Azure Maps account has two API keys: Primary and Secondary.
+  The keys enable interaction with the Azure Maps account endpoint.
+  Use New-AzMapsAccountKey (New-AzMapsAccountKey.md)to regenerate a key.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Maps.dll-Help.xml
+  Module Name: Az.Maps
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.maps/get-azmapsaccountkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maps/Maps/help/Get-AzMapsAccountKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Maps/Maps/help/Get-AzMapsAccountKey.md

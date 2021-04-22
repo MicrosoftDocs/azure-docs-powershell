@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a Batch job.
+module: Az.Batch
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-AzBatchJob
+  href: ./Disable-AzBatchJob.yml
+- text: Enable-AzBatchJob
+  href: ./Enable-AzBatchJob.yml
+- text: Get-AzBatchJob
+  href: ./Get-AzBatchJob.yml
+- text: Get-AzBatchAccountKeys
+  href: ./Get-AzBatchAccountKey.yml
+- text: New-AzBatchJob
+  href: ./New-AzBatchJob.yml
+- text: Remove-AzBatchJob
+  href: ./Remove-AzBatchJob.yml
+- text: Stop-AzBatchJob
+  href: ./Stop-AzBatchJob.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/az.batch
+syntaxes:
+- >-
+  Set-AzBatchJob [-Job] <PSCloudJob> -BatchContext <BatchAccountContext>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a job'
+  code: |-
+    PS C:\>$Job = Get-AzBatchJob -Id "Job17" -BatchContext $Context
+    PS C:\> $Job.Priority = 1
+    PS C:\> Set-AzBatchJob -Job $Job -BatchContext $Context
+  description: |-
+    The first command gets a job by using **Get-AzBatchJob**, and then stores it in the $Job variable.
+    The second command modifies the priority specification on the $Job object.
+    The final command updates the Batch service to match the local object in $Job.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+  name: BatchContext
+  isRequired: true
+  description: |+
+    Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+    If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+  name: Job
+  isRequired: true
+  description: |+
+    Specifies a **PSCloudJob** to which this cmdlet updates the Batch service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Batch.Set-AzBatchJob
+name: Set-AzBatchJob
+description: |-
+  The **Set-AzBatchJob** cmdlet updates an Azure Batch job.
+  Use the Get-AzBatchJob cmdlet to get a **PSCloudJob** object.
+  Modify the properties of that object, and then use the current cmdlet to commit your changes to the Batch service.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  Module Name: Az.Batch
+  ms.assetid: 75483BC7-440A-437B-9EDE-D270D87CF3C5
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/set-azbatchjob
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Set-AzBatchJob.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Set-AzBatchJob.md

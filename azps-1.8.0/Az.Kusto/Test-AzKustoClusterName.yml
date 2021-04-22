@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Check if a given Kusto cluster name is available.
+module: Az.Kusto
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Kusto.Models.PSKustoClusterNameAvailability" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Test-AzKustoClusterName -Location <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1 - Check the availability of a Kusto cluster name which is in use
+  code: |-
+    PS C:\> Test-AzKustoClusterName -Location 'Central US' -Name mykustocluster
+
+    NameAvailable		Name      		   			Message
+    ------------- 			----     		  				-------
+    False 					mykustocluster 	    Name 'mykustocluster' with type Engine is already taken. Please specify a different name
+  description: |-
+    The above command returns whether or not a Kusto cluster named "mykustocluster" exists in the "Central US" region.
+  summary: ""
+- title: Example 2 - Check the availability of a Kusto cluster name which is not in use
+  code: |-
+    PS C:\> Test-AzKustoClusterName -Location 'Central US' -Name mykustocluster
+
+    NameAvailable 		Name         			    Message
+    ------------- 			----         				    -------
+     True 					mykustocluster
+  description: |-
+    The above command returns whether or not a Kusto cluster named "mykustocluster" exists in the "Central US" region.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location where to check.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of a specific cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Kusto.Test-AzKustoClusterName
+name: Test-AzKustoClusterName
+description: |-
+  Check if a given Kusto cluster name is available.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Kusto.dll-Help.xml
+  Module Name: Az.Kusto
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.kusto/test-azkustoclustername
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Test-AzKustoClusterName.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Test-AzKustoClusterName.md

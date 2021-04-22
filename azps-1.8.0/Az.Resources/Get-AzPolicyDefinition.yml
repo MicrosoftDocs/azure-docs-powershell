@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets policy definitions.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzPolicyDefinition
+  href: ./New-AzPolicyDefinition.yml
+- text: Remove-AzPolicyDefinition
+  href: ./Remove-AzPolicyDefinition.yml
+- text: Set-AzPolicyDefinition
+  href: ./Set-AzPolicyDefinition.yml
+syntaxes:
+- >-
+  Get-AzPolicyDefinition [-Name <String>] [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPolicyDefinition [-Name <String>] -ManagementGroupName <String> [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPolicyDefinition [-Name <String>] -SubscriptionId <Guid> [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPolicyDefinition -Id <String> [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzPolicyDefinition [-ManagementGroupName <String>] [-SubscriptionId <Guid>] [-Builtin]
+
+   [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzPolicyDefinition [-ManagementGroupName <String>] [-SubscriptionId <Guid>] [-Custom]
+
+   [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all policy definitions'
+  code: |-
+    PS C:\> Get-AzPolicyDefinition
+  description: |-
+    This command gets all the policy definitions.
+  summary: ""
+- title: 'Example 2: Get policy definition from current subscription by name'
+  code: |-
+    PS C:\> Get-AzPolicyDefinition -Name 'VMPolicyDefinition'
+  description: |-
+    This command gets the policy definition named VMPolicyDefinition from the current default subscription.
+  summary: ""
+- title: 'Example 3: Get policy definition from management group by name'
+  code: |-
+    PS C:\> Get-AzPolicyDefinition -Name 'VMPolicyDefinition' -ManagementGroupName 'Dept42'
+  description: |-
+    This command gets the policy definition named VMPolicyDefinition from the management group named Dept42.
+  summary: ""
+- title: 'Example 4: Get all built-in policy definitions from subscription'
+  code: |-
+    PS C:\> Get-AzPolicyDefinition -SubscriptionId '3bf44b72-c631-427a-b8c8-53e2595398ca' -Builtin
+  description: |-
+    This command gets all built-in policy definitions from the subscription with ID 3bf44b72-c631-427a-b8c8-53e2595398ca.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiVersion
+  description: |+
+    Specifies the version of the resource provider API to use.
+    If you do not specify a version, this cmdlet uses the latest available version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Builtin
+  isRequired: true
+  description: |+
+    Limits list of results to only built-in policy definitions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Custom
+  isRequired: true
+  description: |+
+    Limits list of results to only custom policy definitions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the fully qualified resource ID for the policy definition that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ResourceId
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ManagementGroupName
+  isRequired: true
+  description: |+
+    The name of the management group of the policy definition(s) to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the policy definition that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Pre
+  description: |+
+    Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SubscriptionId
+  isRequired: true
+  description: |+
+    The subscription ID of the policy definition(s) to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzPolicyDefinition
+name: Get-AzPolicyDefinition
+description: |-
+  The **Get-AzPolicyDefinition** cmdlet gets a collection of policy definitions or a specific policy definition identified by name or ID.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 6396AEC3-DFE6-45DA-BCF4-69C55C5D051B
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azpolicydefinition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzPolicyDefinition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzPolicyDefinition.md

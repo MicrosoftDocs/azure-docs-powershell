@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets functions in a Stream Analytics job.
+module: Az.StreamAnalytics
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.StreamAnalytics.Models.PSFunction" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzStreamAnalyticsFunction
+  href: ./New-AzStreamAnalyticsFunction.yml
+- text: Remove-AzStreamAnalyticsFunction
+  href: ./Remove-AzStreamAnalyticsFunction.yml
+- text: Test-AzStreamAnalyticsFunction
+  href: ./Test-AzStreamAnalyticsFunction.yml
+syntaxes:
+- >-
+  Get-AzStreamAnalyticsFunction [-JobName] <String> [[-Name] <String>] [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all Stream Analytics functions'
+  code: |-
+    PS C:\>Get-AzStreamAnalyticsFunction -ResourceGroupName "StreamAnalytics-Default-West-US" -JobName "StreamJob22"
+  description: |-
+    This command gets the functions defined on the job named StreamJob22.
+  summary: ""
+- title: 'Example 2: Get a specific Stream Analytics function'
+  code: |-
+    PS C:\>Get-AzStreamAnalyticsFunction -ResourceGroupName "StreamAnalytics-Default-West-US" -JobName "StreamJob22" -Name "ScoreTweet"
+  description: |-
+    This command gets information about the function named ScoreTweet defined on the job named StreamJob22.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: JobName
+  isRequired: true
+  description: |+
+    Specifies the name of the Stream Analytics job to which functions belong.
+    This cmdlet gets functions for the job that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Stream Analytics function that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group to which Stream Analytics functions belongs.
+    This cmdlet gets functions for the group that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.StreamAnalytics.Get-AzStreamAnalyticsFunction
+name: Get-AzStreamAnalyticsFunction
+description: |-
+  The **Get-AzStreamAnalyticsFunction** cmdlet gets a list of the functions that are defined in an Azure Stream Analytics job or information about a specific function.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.dll-Help.xml
+  Module Name: Az.StreamAnalytics
+  ms.assetid: 7F08A880-1FC5-4542-8AB8-927BB999A552
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.streamanalytics/get-azstreamanalyticsfunction
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StreamAnalytics/StreamAnalytics/help/Get-AzStreamAnalyticsFunction.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StreamAnalytics/StreamAnalytics/help/Get-AzStreamAnalyticsFunction.md

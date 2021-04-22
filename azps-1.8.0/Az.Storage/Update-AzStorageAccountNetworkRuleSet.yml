@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Update the NetworkRule property of a Storage account
+module: Az.Storage
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSIpRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSVirtualNetworkRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Update-AzStorageAccountNetworkRuleSet [-ResourceGroupName] <String> [-Name] <String>
+
+   [-Bypass <PSNetWorkRuleBypassEnum>] [-DefaultAction <PSNetWorkRuleDefaultActionEnum>] [-IPRule <PSIpRule[]>]
+
+   [-VirtualNetworkRule <PSVirtualNetworkRule[]>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update all properties of NetworkRule, input Rules with JSON'
+  code: |-
+    PS C:\> Update-AzStorageAccountNetworkRuleSet -ResourceGroupName "myResourceGroup" -AccountName "mystorageaccount" -Bypass Logging,Metrics -DefaultAction Allow -IpRule (@{IPAddressOrRange="10.0.0.0/24";Action="allow"},@{IPAddressOrRange="28.2.0.0/16";Action="allow"})
+        -VirtualNetworkRule (@{VirtualNetworkResourceId="/subscriptions/s1/resourceGroups/g1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1";Action="allow"},@{VirtualNetworkResourceId="/subscriptions/s1/resourceGroups/g1/providers/Microsoft.Network/virtualN
+        etworks/vnet2/subnets/subnet2";Action="allow"})
+  description: |-
+    This command update all properties of NetworkRule, input Rules with JSON.
+  summary: ""
+- title: 'Example 2: Update Bypass property of NetworkRule'
+  code: |-
+    PS C:\> Update-AzStorageAccountNetworkRuleSet -ResourceGroupName "myResourceGroup" -AccountName "mystorageaccount" -Bypass AzureServices,Metrics
+  description: |-
+    This command update Bypass property of NetworkRule (other properties won't change).
+  summary: ""
+- title: 'Example 3: Clean up rules of NetworkRule of a Storage account'
+  code: |-
+    PS C:\> Update-AzStorageAccountNetworkRuleSet -ResourceGroupName "myResourceGroup" -AccountName "mystorageaccount" -IpRule @() -VirtualNetworkRule @()
+  description: |-
+    This command clean up rules of NetworkRule of a Storage account (other properties not change).
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSNetWorkRuleBypassEnum" data-throw-if-not-resolved="False" />
+  name: Bypass
+  description: |+
+    The Bypass value to update to the NetworkRule property of a Storage account.
+    The allowed value are none or any combination of:
+    • Logging
+    • Metrics
+    • Azureservices
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Logging, Metrics, AzureServices
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSNetWorkRuleDefaultActionEnum" data-throw-if-not-resolved="False" />
+  name: DefaultAction
+  description: |+
+    The DefaultAction value to update to the NetworkRule property of a Storage account.
+    The allowed Options:
+    • Allow
+    • Deny
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Deny, Allow
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSIpRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPRule
+  description: |+
+    The Array of IpRule objects to update to the NetworkRule Property of a Storage account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the Storage account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: StorageAccountName, AccountName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group contains the Storage account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSVirtualNetworkRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VirtualNetworkRule
+  description: |+
+    The Array of VirtualNetworkRule objects to update to the NetworkRule Property of a Storage account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Storage.Update-AzStorageAccountNetworkRuleSet
+name: Update-AzStorageAccountNetworkRuleSet
+description: |-
+  The **Update-AzStorageAccountNetworkRuleSet** cmdlet updates the NetworkRule property of a Storage account
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  Module Name: Az.Storage
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/update-azstorageaccountnetworkruleset
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Update-AzStorageAccountNetworkRuleSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Update-AzStorageAccountNetworkRuleSet.md

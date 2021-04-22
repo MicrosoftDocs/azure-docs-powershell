@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a resource provider.
+module: Az.Resources
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceProvider" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Register-AzResourceProvider
+  href: ./Register-AzResourceProvider.yml
+- text: Unregister-AzResourceProvider
+  href: ./Unregister-AzResourceProvider.yml
+syntaxes:
+- >-
+  Get-AzResourceProvider [-Location <String>] [-ListAvailable] [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzResourceProvider -ProviderNamespace <String[]> [-Location <String>] [-ApiVersion <String>] [-Pre]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ApiVersion
+  description: |+
+    Specifies the API version that is supported by the resource Provider.
+    You can specify a different version than the default version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ListAvailable
+  description: |+
+    Indicates that this operation gets all available resource providers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the location of the resource provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Pre
+  description: |+
+    Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProviderNamespace
+  isRequired: true
+  description: |+
+    Specifies the namespace of the resource provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Resources.Get-AzResourceProvider
+name: Get-AzResourceProvider
+description: |-
+  The **Get-AzResourceProvider** cmdlet gets an Azure resource provider.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  Module Name: Az.Resources
+  ms.assetid: 6AB09621-488B-4A16-92D9-9C47EB87DA95
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourceprovider
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResourceProvider.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResourceProvider.md

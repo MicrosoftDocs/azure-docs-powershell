@@ -1,0 +1,162 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets reports sent from a DSC node to Automation.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" data-throw-if-not-resolved="False" /><span>]</span><span>]</span>
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.DscNode" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzAutomationDscNode
+  href: ./Get-AzAutomationDscNode.yml
+- text: Export-AzAutomationDscNodeReportContent
+  href: ./Export-AzAutomationDscNodeReportContent.yml
+syntaxes:
+- >-
+  Get-AzAutomationDscNodeReport -NodeId <Guid> [-StartTime <DateTimeOffset>] [-EndTime <DateTimeOffset>]
+
+   [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzAutomationDscNodeReport -NodeId <Guid> [-Latest] [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzAutomationDscNodeReport -NodeId <Guid> -Id <Guid> [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all reports for a DSC node'
+  code: |-
+    PS C:\>$Node = Get-AzAutomationDscNode -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -Name "Computer14"
+    PS C:\> Get-AzAutomationDscNodeReport -ResourceGroupName "ResourceGroup14" -AutomationAccountName "Contoso17" -NodeId $Node.Id
+  description: |-
+    The first command gets the DSC node for the computer named Computer14 in the Automation account named Contoso17.
+    The command stores this object in the $Node variable.
+    The second command gets metadata for all reports sent from the DSC node named Computer14 to the Automation account named Contoso17.
+    The command specifies the node by using the **Id** property of the $Node object.
+  summary: ""
+- title: 'Example 2: Get a report for a DSC node by report ID'
+  code: |-
+    PS C:\>$Node = Get-AzAutomationDscNode -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -Name "Computer14"
+    PS C:\> Get-AzAutomationDscNodeReport -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -NodeId $Node.Id -Id c0a1718e-d8be-4fa3-91b6-82e1d3a36298
+  description: |-
+    The first command gets the DSC node for the computer named Computer14 in the Automation account named Contoso17.
+    The command stores this object in the $Node variable.
+    The second command gets metadata for the report identified by the specified ID sent from the DSC node named Computer14 to the Automation account named Contoso17.
+  summary: ""
+- title: 'Example 3: Get the latest report for a DSC node'
+  code: |-
+    PS C:\>$Node = Get-AzAutomationDscNode -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -Name "Computer14"
+    PS C:\> Get-AzAutomationDscNodeReport -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -NodeId $Node.Id -Latest
+  description: |-
+    The first command gets the DSC node for the computer named Computer14 in the Automation account named Contoso17.
+    The command stores this object in the $Node variable.
+    The second command gets metadata for the latest report sent from the DSC node named Computer14 to the Automation account named Contoso17.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of an Automation account.
+    This cmdlet exports reports for a DSC node that belongs to the account that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: EndTime
+  description: |+
+    Specifies an end time.
+    This cmdlet gets reports that Automation received before this time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the unique ID of the DSC node report for this cmdlet to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ReportId
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Latest
+  description: |+
+    Indicates that this cmdlet gets the latest DSC report for the specified node only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: NodeId
+  isRequired: true
+  description: |+
+    Specifies the unique ID of the DSC node for which this cmdlet gets reports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group that contains the DSC node for which this cmdlet gets reports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+  name: StartTime
+  description: |+
+    Specifies a start time.
+    This cmdlet gets reports that Automation received after this time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.Get-AzAutomationDscNodeReport
+name: Get-AzAutomationDscNodeReport
+description: |-
+  The **Get-AzAutomationDscNodeReport** cmdlet gets reports sent from an APS Desired State Configuration (DSC) node to Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 1246C3AC-A123-4EA1-B99E-458A85789109
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationdscnodereport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscNodeReport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscNodeReport.md

@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the details of the Backend.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzApiManagementBackend
+  href: ./New-AzApiManagementBackend.yml
+- text: New-AzApiManagementBackendCredential
+  href: ./New-AzApiManagementBackendCredential.yml
+- text: New-AzApiManagementBackendProxy
+  href: ./New-AzApiManagementBackendProxy.yml
+- text: Set-AzApiManagementBackend
+  href: ./Set-AzApiManagementBackend.yml
+- text: Remove-AzApiManagementBackend
+  href: ./Remove-AzApiManagementBackend.yml
+syntaxes:
+- >-
+  Get-AzApiManagementBackend -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+- >-
+  Get-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all Backends'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementBackend -Context $apimContext
+  description: |-
+    Gets a list of all the Backends configured in the Api Management service.
+  summary: ""
+- title: 'Example 2: Get the Backend specified by the Identifier 123'
+  code: |-
+    PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    PS C:\>Get-AzApiManagementBackend -Context $apimContext -backendId 123
+  description: |-
+    Get the details of the specified Backend identified by the Identifier '123'
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: BackendId
+  isRequired: true
+  description: |+
+    Identifier of a backend.
+    If specified will try to find backend by the identifier.
+    This parameter is optional.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Instance of PsApiManagementContext.
+    This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Get-AzApiManagementBackend
+name: Get-AzApiManagementBackend
+description: |-
+  Get the details of the Backend.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/get-azapimanagementbackend
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementBackend.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementBackend.md

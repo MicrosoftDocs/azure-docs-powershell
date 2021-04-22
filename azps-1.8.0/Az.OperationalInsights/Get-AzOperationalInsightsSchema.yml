@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the schema associated with a workspace.
+module: Az.OperationalInsights
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSSearchGetSchemaResponse" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Azure Operational Insights Cmdlets
+  href: /powershell/module/az.operationalinsights
+syntaxes:
+- >-
+  Get-AzOperationalInsightsSchema [-ResourceGroupName] <String> [-WorkspaceName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the schemas for a workspace'
+  code: |-
+    PS C:\>Get-AzOperationalInsightsSchema -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "ContosoWorkspace"
+  description: |-
+    This command gets the schemas associated with a workspace.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of an Azure resource group that contains a workspace.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WorkspaceName
+  isRequired: true
+  description: |+
+    Specifies a workspace name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+uid: Az.OperationalInsights.Get-AzOperationalInsightsSchema
+name: Get-AzOperationalInsightsSchema
+description: |-
+  The **Get-AzOperationalInsightsSchema** cmdlet returns the schema associated with the specified workspace within that resource group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+  Module Name: Az.OperationalInsights
+  ms.assetid: 6A834F26-C3D1-46DA-A4A6-1BB5B69291D0
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightsschema
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/Get-AzOperationalInsightsSchema.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/Get-AzOperationalInsightsSchema.md

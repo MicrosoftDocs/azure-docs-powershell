@@ -1,0 +1,320 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties for a database, or moves an existing database into an elastic pool.
+module: Az.Sql
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzSqlDatabase
+  href: ./Get-AzSqlDatabase.yml
+- text: New-AzSqlDatabase
+  href: ./New-AzSqlDatabase.yml
+- text: Remove-AzSqlDatabase
+  href: ./Remove-AzSqlDatabase.yml
+- text: Resume-AzSqlDatabase
+  href: ./Resume-AzSqlDatabase.yml
+- text: Suspend-AzSqlDatabase
+  href: ./Suspend-AzSqlDatabase.yml
+- text: SQL Database Documentation
+  href: https://docs.microsoft.com/azure/sql-database/
+syntaxes:
+- >-
+  Set-AzSqlDatabase [-DatabaseName] <String> [-MaxSizeBytes <Int64>] [-Edition <String>]
+
+   [-RequestedServiceObjectiveName <String>] [-ElasticPoolName <String>] [-ReadScale <DatabaseReadScale>]
+
+   [-Tags <Hashtable>] [-ZoneRedundant] [-AsJob] [-LicenseType <String>] [-ServerName] <String>
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzSqlDatabase [-DatabaseName] <String> [-MaxSizeBytes <Int64>] [-Edition <String>]
+
+   [-ReadScale <DatabaseReadScale>] [-Tags <Hashtable>] [-ZoneRedundant] [-AsJob] [-VCore <Int32>]
+
+   [-ComputeGeneration <String>] [-LicenseType <String>] [-ServerName] <String> [-ResourceGroupName] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AzSqlDatabase [-DatabaseName] <String> -NewName <String> [-AsJob] [-ServerName] <String>
+
+   [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a database to a Standard S0 database'
+  code: |-
+    PS C:\>Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -Edition "Standard" -RequestedServiceObjectiveName "S0"
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database01
+    Location                      : Central US
+    DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+    Edition                       : Standard
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 7/3/2015 7:33:37 AM
+    CurrentServiceObjectiveId     : 455330e1-00cd-488b-b5fa-177c226f28b7
+    CurrentServiceObjectiveName   : S0
+    RequestedServiceObjectiveId   : 455330e1-00cd-488b-b5fa-177c226f28b7
+    RequestedServiceObjectiveName :
+    ElasticPoolName               :
+    EarliestRestoreDate           :
+    Tags                          :
+  description: |-
+    This command updates a database named Database01 to a Standard S0 database on a server named Server01.
+  summary: ""
+- title: 'Example 2: Add a database to an elastic pool'
+  code: |-
+    PS C:\>Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database01
+    Location                      : Central US
+    DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+    Edition                       : Standard
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 7/3/2015 7:33:37 AM
+    CurrentServiceObjectiveId     : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+    CurrentServiceObjectiveName   : ElasticPool
+    RequestedServiceObjectiveId   : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+    RequestedServiceObjectiveName :
+    ElasticPoolName               : elasticpool01
+    EarliestRestoreDate           :
+    Tags                          :
+  description: |-
+    This command adds a database named Database01 to the elastic pool named ElasticPool01 hosted on the server named Server01.
+  summary: ""
+- title: 'Example 3: Modify the storage max size of a database'
+  code: |-
+    PS C:\>Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -MaxSizeBytes 1099511627776
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database01
+    Location                      : Central US
+    DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+    Edition                       : Standard
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 1099511627776
+    Status                        : Online
+    CreationDate                  : 8/24/2017 9:00:37 AM
+    CurrentServiceObjectiveId     : 789681b8-ca10-4eb0-bdf2-e0b050601b40
+    CurrentServiceObjectiveName   : S3
+    RequestedServiceObjectiveId   : 789681b8-ca10-4eb0-bdf2-e0b050601b40
+    RequestedServiceObjectiveName :
+    ElasticPoolName               :
+    EarliestRestoreDate           :
+    Tags                          :
+  description: |-
+    This command updates a database named Database01 to set its max size to 1 TB.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Run cmdlet in the background
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ComputeGeneration
+  description: |+
+    The compute generation to assign.
+
+  defaultValue: None
+  position: Named
+  aliases: Family
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of the database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Edition
+  description: |+
+    Specifies the edition for the database.
+    The acceptable values for this parameter are:
+    - None
+    - Basic
+    - Standard
+    - Premium
+    - DataWarehouse
+    - Free
+    - Stretch
+    - GeneralPurpose
+    - BusinessCritical
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ElasticPoolName
+  description: |+
+    Specifies name of the elastic pool in which to move the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LicenseType
+  description: |+
+    The license type for the Azure Sql database. Possible values are:
+    - BasePrice - Azure Hybrid Benefit (AHB) discounted pricing for existing SQL Server license owners is applied. Database price will be discounted for existing SQL Server license owners.
+    - LicenseIncluded - Azure Hybrid Benefit (AHB) discount pricing for existing SQL Server license owners is not applied. Database price will include a new SQL Server license costs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+  name: MaxSizeBytes
+  description: |+
+    The maximum size of the Azure SQL Database in bytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NewName
+  isRequired: true
+  description: |+
+    The new name to rename the database to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.DatabaseReadScale" data-throw-if-not-resolved="False" />
+  name: ReadScale
+  description: |+
+    The read scale option to assign to the Azure SQL Database.(Enabled/Disabled)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RequestedServiceObjectiveName
+  description: |+
+    Specifies the name of the service objective to assign to the database. For information about
+    service objectives, see [Azure SQL Database Service Tiers and Performance Levels](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+    in the Microsoft Developer Network Library.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of resource group to which the server is assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the server that hosts the database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    Key-value pairs in the form of a hash table. For example:
+    @{key0="value0";key1=$null;key2="value2"}
+
+  defaultValue: None
+  position: Named
+  aliases: Tag
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: VCore
+  description: |+
+    The Vcore number for the Azure Sql database
+
+  defaultValue: None
+  position: Named
+  aliases: Capacity
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ZoneRedundant
+  description: |+
+    The zone redundancy to associate with the Azure Sql Database
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Sql.Set-AzSqlDatabase
+name: Set-AzSqlDatabase
+description: |-
+  The **Set-AzSqlDatabase** cmdlet sets properties for a database in Azure SQL Database. This cmdlet can modify the service tier (*Edition*), performance level (*RequestedServiceObjectiveName*), and storage max size (*MaxSizeBytes*) for the database.  In addition, you can specify the *ElasticPoolName* parameter to move a database into an elastic pool. If a database is already in an elastic pool, you can use the *RequestedServiceObjectiveName* parameter to move the database out of an elastic pool and into a performance level for single databases.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  Module Name: Az.Sql
+  ms.assetid: 2E4F5C27-C50F-4133-B193-BC477BCD6778
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqldatabase
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlDatabase.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlDatabase.md

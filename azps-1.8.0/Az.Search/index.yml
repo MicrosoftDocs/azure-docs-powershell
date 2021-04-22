@@ -1,0 +1,25 @@
+### YamlMime:PowershellModule
+children:
+- title: Search
+  cmdlets:
+  - Az.Search.Get-AzSearchAdminKeyPair
+  - Az.Search.Get-AzSearchQueryKey
+  - Az.Search.Get-AzSearchService
+  - Az.Search.New-AzSearchAdminKey
+  - Az.Search.New-AzSearchQueryKey
+  - Az.Search.New-AzSearchService
+  - Az.Search.Remove-AzSearchQueryKey
+  - Az.Search.Remove-AzSearchService
+  - Az.Search.Set-AzSearchService
+uid: Az.Search
+name: Az.Search
+description: |-
+  This topic displays help topics for the Azure Search Cmdlets.
+metadata:
+  Module Name: Az.Search
+  Module Guid: a2bb88dc-abd2-4275-9aae-bd98346f8c8a
+  Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.search
+  Help Version: 0.1.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Search/Search/help/Az.Search.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Search/Search/help/Az.Search.md

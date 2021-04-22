@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a key in a key vault.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzKeyVaultKey
+  href: ./Add-AzKeyVaultKey.yml
+- text: Get-AzKeyVaultKey
+  href: ./Get-AzKeyVaultKey.yml
+- text: Undo-AzKeyVaultKeyRemoval
+  href: ./Undo-AzKeyVaultKeyRemoval.yml
+syntaxes:
+- >-
+  Remove-AzKeyVaultKey [-VaultName] <String> [-Name] <String> [-Force] [-PassThru] [-InRemovedState]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AzKeyVaultKey [-InputObject] <PSKeyVaultKeyIdentityItem> [-Force] [-PassThru] [-InRemovedState]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a key from a key vault'
+  code: |-
+    PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -PassThru
+
+    Vault Name           : contoso
+    Name                 : key2
+    Id                   : https://contoso.vault.azure.net:443/keys/itsoftware/fdad15793ba0437e960497908ef9eb32
+    Deleted Date         : 5/24/2018 11:28:25 PM
+    Scheduled Purge Date : 8/22/2018 11:28:25 PM
+    Enabled              : False
+    Expires              : 10/11/2018 11:32:49 PM
+    Not Before           : 4/11/2018 11:22:49 PM
+    Created              : 4/12/2018 10:16:38 PM
+    Updated              : 4/12/2018 10:16:38 PM
+    Purge Disabled       : False
+    Tags                 :
+  description: |-
+    This command removes the key named ITSoftware from the key vault named Contoso.
+  summary: ""
+- title: 'Example 2: Remove a key without user confirmation'
+  code: |-
+    PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Force
+  description: |-
+    This command removes the key named ITSoftware from the key vault named Contoso.
+    The command specifies the *Force* parameter, and, therefore, the cmdlet does not prompt you for confirmation.
+  summary: ""
+- title: 'Example 3: Purge a deleted key from the key vault permanently'
+  code: |-
+    PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -InRemovedState
+  description: |-
+    This command removes the key named ITSoftware from the key vault named Contoso permanently.
+    Executing this cmdlet requires the 'purge' permission, which must have been previously and explicitly granted to the user for this key vault.
+  summary: ""
+- title: 'Example 4: Remove keys by using the pipeline operator'
+  code: |-
+    PS C:\> Get-AzKeyVaultKey -VaultName 'Contoso' | Where-Object {$_.Attributes.Enabled -eq $False} | Remove-AzKeyVaultKey
+  description: |-
+    This command gets all the keys in the key vault named Contoso, and passes them to the **Where-Object** cmdlet by using the pipeline operator.
+    That cmdlet passes the keys that have a value of $False for the **Enabled** attribute to the current cmdlet.
+    That cmdlet removes those keys.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    KeyBundle Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InRemovedState
+  description: |+
+    Remove the previously deleted key permanently.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the key to remove.
+    This cmdlet constructs the fully qualified domain name (FQDN) of a key based on the name that this parameter specifies, the name of the key vault, and your current environment.
+
+  defaultValue: None
+  position: "1"
+  aliases: KeyName
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Indicates that this cmdlet returns a **Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey** object.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Specifies the name of the key vault from which to remove the key.
+    This cmdlet constructs the FQDN of a key vault based on the name that this parameter specifies and your current environment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.KeyVault.Remove-AzKeyVaultKey
+name: Remove-AzKeyVaultKey
+description: |-
+  The Remove-AzKeyVaultKey cmdlet deletes a key in a key vault.
+  If the key was accidentally deleted the key can be recovered using Undo-AzKeyVaultKeyRemoval by a user with special 'recover' permissions.
+  This cmdlet has a value of high for the **ConfirmImpact** property.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  ms.assetid: 817BF177-519F-47BA-86CF-4591FB402E2Dl
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/remove-azkeyvaultkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md

@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a rewrite rule set to an application gateway.
+module: Az.Network
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzApplicationGatewayRewriteRuleSet
+  href: ./Get-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRuleSet
+  href: ./New-AzApplicationGatewayRewriteRuleSet.yml
+- text: Remove-AzApplicationGatewayRewriteRuleSet
+  href: ./Remove-AzApplicationGatewayRewriteRuleSet.yml
+- text: Set-AzApplicationGatewayRewriteRuleSet
+  href: ./Set-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRule
+  href: ./New-AzApplicationGatewayRewriteRule.yml
+- text: New-AzApplicationGatewayRewriteRuleActionSet
+  href: ./New-AzApplicationGatewayRewriteRuleActionSet.yml
+- text: New-AzApplicationGatewayRewriteRuleHeaderConfiguration
+  href: ./New-AzApplicationGatewayRewriteRuleHeaderConfiguration.yml
+syntaxes:
+- >-
+  Add-AzApplicationGatewayRewriteRuleSet -ApplicationGateway <PSApplicationGateway> -Name <String>
+
+   -RewriteRule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRule]>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $AppGw = Add-AzApplicationGatewayRewriteRuleSet -ApplicationGateway $AppGw -Name "ruleset1" -RewriteRule $rule
+  description: |-
+    The first command gets the application gateway and stores it in the $AppGw variable.
+    The second command adds the rewrite rule set to the application gateway.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+  name: ApplicationGateway
+  isRequired: true
+  description: |+
+    The applicationGateway
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the RewriteRuleSet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRule" data-throw-if-not-resolved="False" /><span>]</span>
+  name: RewriteRule
+  isRequired: true
+  description: |+
+    List of rewrite rules
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Network.Add-AzApplicationGatewayRewriteRuleSet
+name: Add-AzApplicationGatewayRewriteRuleSet
+description: |-
+  The **Add-AzApplicationGatewayRewriteRuleSet** cmdlet adds a rewrite rule set to an application gateway.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  Module Name: Az.Network
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayrewriteruleset
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzApplicationGatewayRewriteRuleSet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzApplicationGatewayRewriteRuleSet.md

@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get application insights continuous export configuration for an application insights resource
+module: Az.ApplicationInsights
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApplicationInsights.Models.PSApplicationInsightsComponent" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApplicationInsights.Models.PSExportConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-AzApplicationInsightsContinuousExport [-ResourceGroupName] <String> [-Name] <String> [[-ExportId] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApplicationInsightsContinuousExport [-ApplicationInsightsComponent] <PSApplicationInsightsComponent>
+
+   [[-ExportId] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzApplicationInsightsContinuousExport [-ResourceId] <String> [[-ExportId] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1 Get continuous export for an application insights resource
+  code: |-
+    PS C:\> Get-AzApplicationInsightsContinuousExport -ResourceGroupName "testgroup" -Name "test"
+
+    ExportId                     DocumentTypes                ExportStatus DestinationStorageAccountId
+    --------                     -------------                ------------ ---------------------------
+    ZJrfffySPdtG3ESn3iRxVIEFuNY= Request, Performance Counter Preparing    /subscriptions/{subid}...
+  description: |-
+    Get application insights continuous export configurations for resource named "test" in resource group "testgroup"
+  summary: ""
+- title: Example 2 Get continuous export for an application insights resource
+  code: |-
+    PS C:\> Get-AzApplicationInsightsContinuousExport -ResourceGroupName "testgroup" -Name "test" -ExportId "ZJrfffySPdtG3ESn3iRxVIEFuNY="
+
+    ExportId                         : ZJrfffySPdtG3ESn3iRxVIEFuNY=
+    StorageName                      : targetaccount
+    ContainerName                    : continuousexport
+    DocumentTypes                    : Request, Performance Counter
+    DestinationStorageSubscriptionId : {subid}
+    DestinationStorageLocationId     : eastus
+    DestinationStorageAccountId      : /subscriptions/{subid}/resourceGroups/targetstorage/providers/Microsoft.Storage/storageAccounts/targetaccount
+    IsEnabled                        : True
+    ExportStatus                     : Preparing
+    LastSuccessTime                  :
+  description: |-
+    Get application insights continuous export configuration with export id "ZJrfffySPdtG3ESn3iRxVIEFuNY=" for resource named "test" in resource group "testgroup"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.ApplicationInsights.Models.PSApplicationInsightsComponent" data-throw-if-not-resolved="False" />
+  name: ApplicationInsightsComponent
+  isRequired: true
+  description: |+
+    Application Insights Component Object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ExportId
+  description: |+
+    Application Insights Continuous Export Id.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Application Insights Component Name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ApplicationInsightsComponentName, ComponentName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Application Insights Component Resource Id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApplicationInsights.Get-AzApplicationInsightsContinuousExport
+name: Get-AzApplicationInsightsContinuousExport
+description: |-
+  Get application insights continuous export configuration for an application insights resource
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.dll-Help.xml
+  Module Name: Az.ApplicationInsights
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.applicationinsights/get-azapplicationinsightscontinuousexport
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApplicationInsights/ApplicationInsights/help/Get-AzApplicationInsightsContinuousExport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApplicationInsights/ApplicationInsights/help/Get-AzApplicationInsightsContinuousExport.md

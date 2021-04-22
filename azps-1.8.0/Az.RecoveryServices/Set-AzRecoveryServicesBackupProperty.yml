@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties for backup management.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRecoveryServicesBackupProperty
+  href: ./Get-AzRecoveryServicesBackupProperty.yml
+- text: Get-AzRecoveryServicesVault
+  href: ./Get-AzRecoveryServicesVault.yml
+syntaxes:
+- >-
+  Set-AzRecoveryServicesBackupProperty -Vault <ARSVault>
+
+   [-BackupStorageRedundancy <AzureRmRecoveryServicesBackupStorageRedundancyType>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set GeoRedundant storage for a vault'
+  code: |-
+    PS C:\> $Vault01 = Get-AzRecoveryServicesVault -Name "TestVault"
+    PS C:\> Set-AzRecoveryServicesBackupProperty -Vault $Vault01 -BackupStorageRedundancy GeoRedundant
+  description: |-
+    The first command gets the vault named TestVault, and then stores it in the $Vault01 variable.
+    The second command sets the backup storage redundancy for $Vault01 to GeoRedundant.
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.RecoveryServices.AzureRmRecoveryServicesBackupStorageRedundancyType" data-throw-if-not-resolved="False" /><span>]</span>
+  name: BackupStorageRedundancy
+  description: |+
+    Specifies the backup storage redundancy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: GeoRedundant, LocallyRedundant
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+  name: Vault
+  isRequired: true
+  description: |+
+    Specifies the name of the vault.
+    The vault must be an **AzureRmRecoveryServicesVault** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Set-AzRecoveryServicesBackupProperty
+name: Set-AzRecoveryServicesBackupProperty
+description: |-
+  The **Set-AzRecoveryServicesBackupProperty** cmdlet sets backup storage properties for a Recovery Services vault.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  ms.assetid: C635D723-0F03-4EF8-9435-24DBE0859899
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/set-azrecoveryservicesbackupproperty
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProperty.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProperty.md

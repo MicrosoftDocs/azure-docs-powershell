@@ -1,0 +1,363 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a scheduled azure automation software update configuration.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Schedule" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.WindowsUpdateClasses" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.LinuxPackageClasses" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.SoftwareUpdateConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzAutomationSoftwareUpdateConfiguration -Schedule <Schedule> [-Windows] [-RebootOnly]
+
+   [-AzureVMResourceId <String[]>] [-PreTaskRunbookName <String>] [-PostTaskRunbookName <String>]
+
+   [-PreTaskRunbookParameter <Hashtable>] [-PostTaskRunbookParameter <Hashtable>] [-NonAzureComputer <String[]>]
+
+   [-AzureQuery <AzureQueryProperties[]>] [-NonAzureQuery <NonAzureQueryProperties[]>] [-Duration <TimeSpan>]
+
+   [-RebootSetting <RebootSetting>] [-IncludedUpdateClassification <WindowsUpdateClasses[]>]
+
+   [-ExcludedKbNumber <String[]>] [-IncludedKbNumber <String[]>] [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-AzAutomationSoftwareUpdateConfiguration -Schedule <Schedule> [-Linux] [-RebootOnly]
+
+   [-AzureVMResourceId <String[]>] [-PreTaskRunbookName <String>] [-PostTaskRunbookName <String>]
+
+   [-PreTaskRunbookParameter <Hashtable>] [-PostTaskRunbookParameter <Hashtable>] [-NonAzureComputer <String[]>]
+
+   [-AzureQuery <AzureQueryProperties[]>] [-NonAzureQuery <NonAzureQueryProperties[]>] [-Duration <TimeSpan>]
+
+   [-RebootSetting <RebootSetting>] [-IncludedPackageClassification <LinuxPackageClasses[]>]
+
+   [-ExcludedPackageNameMask <String[]>] [-IncludedPackageNameMask <String[]>] [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $startTime = [DateTimeOffset]"2018-09-13T21:00"
+    PS C:\> $targetMachines = @( `
+        "/subscriptions/22e2445a-0984-4fa5-86a4-0280d76c4b2c/resourceGroups/compute/providers/Microsoft.Compute/virtualMachines/vm-w-01", `
+        "/subscriptions/22e2445a-0984-4fa5-86a4-0280d76c4b2c/resourceGroups/compute/providers/Microsoft.Compute/virtualMachines/vm-w-02"
+        )
+    PS C:\> $duration = New-TimeSpan -Hours 2
+    PS C:\> $schedule = New-AzAutomationSchedule -ResourceGroupName "mygroup" `
+                                                      -AutomationAccountName "myaccount" `
+                                                      -Name MyWeeklySchedule `
+                                                      -StartTime $startTime `
+                                                      -DaysOfWeek Saturday `
+                                                      -WeekInterval 1 `
+                                                      -ForUpdateConfiguration
+
+    New-AzAutomationSoftwareUpdateConfiguration -ResourceGroupName "mygroup" `
+                                                     -AutomationAccountName "myaccount" `
+                                                     -Schedule $schedule `
+                                                     -Windows `
+                                                     -AzVMResourceId $targetMachines `
+                                                     -IncludedUpdateClassification Critical `
+                                                     -Duration $duration
+
+    UpdateConfiguration   : Microsoft.Azure.Commands.Automation.Model.UpdateManagement.UpdateConfiguration
+    ScheduleConfiguration : Microsoft.Azure.Commands.Automation.Model.Schedule
+    ProvisioningState     : Provisioning
+    ErrorInfo             :
+    ResourceGroupName     : mygroup
+    AutomationAccountName : myaccount
+    Name                  : MyWeeklySchedule
+    CreationTime          : 9/14/2018 3:53:27 AM +00:00
+    LastModifiedTime      : 9/14/2018 3:53:27 AM +00:00
+    Description           :
+  description: ""
+  summary: |+
+    Creates a software update configuration to install critical updates on two Windows azure virtual machines once every Saturday 9PM. Update duration is set to 2 hours in this example.
+
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    The automation account name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.AzureQueryProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AzureQuery
+  description: |+
+    Dynamic group azure query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AzureVMResourceId
+  description: |+
+    Resource Ids for azure virtual machines.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: Duration
+  description: |+
+    Maximum duration for the update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludedKbNumber
+  description: |+
+    KB numbers of excluded updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludedPackageNameMask
+  description: |+
+    Excluded Linux package masks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludedKbNumber
+  description: |+
+    KB numbers of included updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.LinuxPackageClasses" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludedPackageClassification
+  description: |+
+    Included Linux package classifications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unclassified, Critical, Security, Other
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludedPackageNameMask
+  description: |+
+    Included Linux package masks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.WindowsUpdateClasses" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludedUpdateClassification
+  description: |+
+    Included Windows Update classifications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unclassified, Critical, Security, UpdateRollup, FeaturePack, ServicePack, Definition, Tools, Updates
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Linux
+  isRequired: true
+  description: |+
+    Indicates that the software update configuration targeting Linux operating system machines.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NonAzureComputer
+  description: |+
+    Non-Az computer names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.NonAzureQueryProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NonAzureQuery
+  description: |+
+    Dynamic group non Azure query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PostTaskRunbookName
+  description: |+
+    Post task.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: PostTaskRunbookParameter
+  description: |+
+    Post task parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PreTaskRunbookName
+  description: |+
+    Pre task.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: PreTaskRunbookParameter
+  description: |+
+    Pre task parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RebootOnly
+  description: |+
+    Indicates that the software update configuration will Only Reboot the machines.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.RebootSetting" data-throw-if-not-resolved="False" />
+  name: RebootSetting
+  description: |+
+    Reboot Seeting.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: IfRequired, Never, Always, RebootOnly
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Automation.Model.Schedule" data-throw-if-not-resolved="False" />
+  name: Schedule
+  isRequired: true
+  description: |+
+    Schedule object used for software update configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Windows
+  isRequired: true
+  description: |+
+    Indicates that the software update configuration targeting windows operating system machines.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.New-AzAutomationSoftwareUpdateConfiguration
+name: New-AzAutomationSoftwareUpdateConfiguration
+description: |-
+  Creates a software update configuration that runs on a schedule to update a list of computers. Computers include both azure virtual machines or non-az computers.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/new-azautomationsoftwareupdateconfiguration
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationSoftwareUpdateConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationSoftwareUpdateConfiguration.md

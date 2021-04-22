@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a key in a key vault from a backed-up key.
+module: Az.KeyVault
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzKeyVaultKey
+  href: ./Add-AzKeyVaultKey.yml
+- text: Backup-AzKeyVaultKey
+  href: ./Backup-AzKeyVaultKey.yml
+- text: Get-AzKeyVaultKey
+  href: ./Get-AzKeyVaultKey.yml
+- text: Remove-AzKeyVaultKey
+  href: ./Remove-AzKeyVaultKey.yml
+syntaxes:
+- >-
+  Restore-AzKeyVaultKey [-VaultName] <String> [-InputFile] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Restore-AzKeyVaultKey [-InputObject] <PSKeyVault> [-InputFile] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Restore-AzKeyVaultKey [-ResourceId] <String> [-InputFile] <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restore a backed-up key'
+  code: |-
+    PS C:\> Restore-AzKeyVaultKey -VaultName 'MyKeyVault' -InputFile "C:\Backup.blob"
+
+    Vault Name     : MyKeyVault
+    Name           : key1
+    Version        : 394f9379a47a4e2086585468de6c7ae5
+    Id             : https://mykeyvault.vault.azure.net:443/keys/key1/394f9379a47a4e2086585468de6c7ae5
+    Enabled        : True
+    Expires        :
+    Not Before     :
+    Created        : 4/6/2018 11:31:36 PM
+    Updated        : 4/6/2018 11:35:04 PM
+    Purge Disabled : False
+    Tags           :
+  description: |-
+    This command restores a key, including all of its versions, from the backup file named Backup.blob into the key vault named MyKeyVault.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: InputFile
+  isRequired: true
+  description: |+
+    Specifies the input file that contains the backup of the key to restore.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    KeyVault object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    KeyVault Resource Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: VaultName
+  isRequired: true
+  description: |+
+    Specifies the name of the key vault into which to restore the key.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.KeyVault.Restore-AzKeyVaultKey
+name: Restore-AzKeyVaultKey
+description: |-
+  The **Restore-AzKeyVaultKey** cmdlet creates a key in the specified key vault.
+  This key is a replica of the backed-up key in the input file and has the same name as the original key.
+  If the key vault already has a key by the same name, this cmdlet fails instead of overwriting the original key.
+  If the backup contains multiple versions of a key, all versions are restored.
+  The key vault that you restore the key into can be different from the key vault that you backed up the key from.
+  However, the key vault must use the same subscription and be in an Azure region in the same geography (for example, North America).
+  See the Microsoft Azure Trust Center (https://azure.microsoft.com/support/trust-center/) for the mapping of Azure regions to geographies.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  Module Name: Az.KeyVault
+  ms.assetid: C4E7ACDF-22FB-4D49-93B3-69E787B7E0CD
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/restore-azkeyvaultkey
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Restore-AzKeyVaultKey.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Restore-AzKeyVaultKey.md

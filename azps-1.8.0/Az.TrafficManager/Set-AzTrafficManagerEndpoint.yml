@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a Traffic Manager endpoint.
+module: Az.TrafficManager
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndpoint>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update an endpoint'
+  code: |-
+    PS C:\>$TrafficManagerEndpoint = Get-AzTrafficManagerEndpoint -Name "endpoint1" -Type AzureEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+    PS C:\> $TrafficManagerEndpoint.Weight = 20
+    PS C:\> Set-AzTrafficManagerEndpoint -TrafficManagerEndpoint $TrafficManagerEndpoint
+  description: |-
+    The first command gets an Azure Traffic Manager endpoint by using the **Get-AzTrafficManagerEndpoint** cmdlet.
+    The command stores the endpoint locally in the $TrafficManagerEndpoint variable.
+
+    The second command changes that endpoint locally.
+    This command changes the endpoint weight to 20.
+
+    The third command updates the endpoint in Traffic Manager to match the local value in $TrafficManagerEndpoint.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint" data-throw-if-not-resolved="False" />
+  name: TrafficManagerEndpoint
+  isRequired: true
+  description: |+
+    Specifies a local **TrafficManagerEndpoint** object.
+    This cmdlet updates Traffic Manager to match this local object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.TrafficManager.Set-AzTrafficManagerEndpoint
+name: Set-AzTrafficManagerEndpoint
+description: |-
+  The **Set-AzTrafficManagerEndpoint** cmdlet updates an endpoint in Azure Traffic Manager.
+  This cmdlet updates the settings from a local endpoint object.
+  You can specify the endpoint object either by using the *TrafficManagerEndpoint* parameter or by using the pipeline.
+
+  You can obtain a local object that represents an endpoint by using the Get-AzTrafficManagerEndpoint cmdlet.
+  Modify the object locally and then use **Set-AzTrafficManagerEndpoint** to commit your changes.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
+  Module Name: Az.TrafficManager
+  ms.assetid: 5287D4DB-2709-4A3C-97D5-DB494CEEFD18
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/set-aztrafficmanagerendpoint
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Set-AzTrafficManagerEndpoint.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Set-AzTrafficManagerEndpoint.md

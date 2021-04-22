@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an integration account certificate.
+module: Az.LogicApp
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccountCertificate" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzIntegrationAccountCertificate
+  href: ./Get-AzIntegrationAccountCertificate.yml
+- text: Remove-AzIntegrationAccountCertificate
+  href: ./Remove-AzIntegrationAccountCertificate.yml
+- text: Set-AzIntegrationAccountCertificate
+  href: ./Set-AzIntegrationAccountCertificate.yml
+syntaxes:
+- >-
+  New-AzIntegrationAccountCertificate -ResourceGroupName <String> -Name <String> -CertificateName <String>
+
+   -KeyName <String> -KeyVersion <String> -KeyVaultId <String> [-PublicCertificateFilePath <String>]
+
+   [-Metadata <Object>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzIntegrationAccountCertificate -ResourceGroupName <String> -Name <String> -CertificateName <String>
+
+   [-KeyName <String>] [-KeyVersion <String>] [-KeyVaultId <String>] -PublicCertificateFilePath <String>
+
+   [-Metadata <Object>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzIntegrationAccountCertificate -ResourceGroupName <String> -Name <String> -CertificateName <String>
+
+   -KeyName <String> -KeyVersion <String> -KeyVaultId <String> -PublicCertificateFilePath <String>
+
+   [-Metadata <Object>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an integration account certificate'
+  code: |-
+    PS C:\>New-AzIntegrationAccountCertificate -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -CertificateName "IntegrationAccountCertificate01" -KeyName "TestKey" -KeyVersion "1.0" -KeyVaultId "/subscriptions/<subscriptionId>/resourcegroups/ResourceGroup11/providers/microsoft.keyvault/vaults/keyvault" -PublicCertificateFilePath "c:\temp\Certificate.cer"
+    Id                : /subscriptions/<SusbcriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegartionAccount31/certificates/IntegrationAccountCertificate01
+    Name              : IntegrationAccountCertificate01
+    Type              : Microsoft.Logic/integrationAccounts/certificates
+    CreatedTime       : 3/26/2016 6:59:07 PM
+    ChangedTime       : 3/26/2016 6:59:07 PM
+    KeyName           : TestKey
+    KeyVersion        : 1.0
+    KeyVaultId        : /subscriptions/<SusbcriptionId>/resourcegroups/ResourceGroup11/providers/microsoft.keyvault/vaults/<name>
+    KeyVaultName      : testkeyvault
+    KeyVaultName      : testkeyvault
+    PublicCertificate : 
+    MetaData          :
+  description: |-
+    This command creates the integration account certificate in the specified resource group.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: CertificateName
+  isRequired: true
+  description: |+
+    Specifies a name for the integration account certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyName
+  isRequired: true
+  description: |+
+    Specifies the name of the certificate key in the key vault.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVaultId
+  isRequired: true
+  description: |+
+    Specifies a key vault ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: KeyVersion
+  isRequired: true
+  description: |+
+    Specifies the version of the certificate key in the key vault.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  name: Metadata
+  description: |+
+    Specifies a metadata object for the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an integration account.
+
+  defaultValue: None
+  position: Named
+  aliases: IntegrationAccountName, ResourceName
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PublicCertificateFilePath
+  isRequired: true
+  description: |+
+    Specifies the path of a public certificate (.cer) file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.LogicApp.New-AzIntegrationAccountCertificate
+name: New-AzIntegrationAccountCertificate
+description: |-
+  The **New-AzIntegrationAccountCertificate** cmdlet creates an integration account certificate.
+  This cmdlet returns an object that represents the integration account certificate.
+  Specify the integration account name, resource group name, certificate name, key name, key version, and key vault ID.
+  Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  Module Name: Az.LogicApp
+  ms.assetid: BB1B49CD-B42F-4222-B0BA-0AA4CE3C95E0
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/new-azintegrationaccountcertificate
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/New-AzIntegrationAccountCertificate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/New-AzIntegrationAccountCertificate.md

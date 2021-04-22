@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an existing deployment region from PsApiManagement instance.
+module: Az.ApiManagement
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzApiManagementRegion
+  href: ./Add-AzApiManagementRegion.yml
+- text: Update-AzApiManagementRegion
+  href: ./Update-AzApiManagementRegion.yml
+syntaxes:
+- >-
+  Remove-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a region from a PsApiManagement instance'
+  code: |-
+    PS C:\>Remove-AzApiManagementRegion -ApiManagement $ApiManagement -Location "East US"
+  description: |-
+    This command removes the region named East US from the **PsApiManagement** instance.
+  summary: ""
+- title: 'Example 2: Remove a region from a PsApiManagement instance using a series of commands'
+  code: |-
+    PS C:\>Get-AzApiManagement -ResourceGroupName "Contoso" -Name ContosoApi | Remove-AzApiManagementRegion -Location "East US" | Update-AzApiManagementDeployment
+  description: |-
+    This first command gets an instance of **PsApiManagement** from the resource group named Contoso named ContosoApi.
+    The final command then removes the region named East US from that instance then updates the deployment.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+  name: ApiManagement
+  isRequired: true
+  description: |+
+    Specifies the **PsApiManagement** instance that this cmdlet removes the additional deployment region from.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Specifies the location of the region that this cmdlet removes.
+    Specifies the location of the new deployment region amongst the supported region for Api Management service.
+    To obtain valid locations, use the cmdlet
+    Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | where {$_.ResourceTypes[0].ResourceTypeName -eq "service"} | Select-Object Locations
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.ApiManagement.Remove-AzApiManagementRegion
+name: Remove-AzApiManagementRegion
+description: |-
+  The **Remove-AzApiManagementRegion** cmdlet removes instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion** from a collection of **AdditionalRegions** of provided the instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement**.
+  This cmdlet does not modify deployment by itself but updates the instance of **PsApiManagement** in-memory.
+  To update a deployment of an API Management, pass the modified **PsApiManagementInstance** to **Update-AzApiManagement**.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  Module Name: Az.ApiManagement
+  ms.assetid: 17D7EBD2-FE3F-4D24-A1AA-8C45B9B1FEF5
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementregion
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementRegion.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementRegion.md

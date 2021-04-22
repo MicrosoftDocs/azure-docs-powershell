@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a DNS zone.
+module: Az.Dns
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Dns.DnsZone" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzDnsZone
+  href: ./New-AzDnsZone.yml
+- text: Remove-AzDnsZone
+  href: ./Remove-AzDnsZone.yml
+- text: Set-AzDnsZone
+  href: ./Set-AzDnsZone.yml
+syntaxes:
+- Get-AzDnsZone [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzDnsZone [-Name <String>] -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a zone'
+  code: |-
+    PS C:\> $Zone = Get-AzDnsZone -ResourceGroupName "MyResourceGroup" -Name "myzone.com"
+  description: |-
+    This example gets the DNS zone named myzone.com from the specified resource group, and then stores it in the $Zone variable.
+  summary: ""
+- title: 'Example 2: Get all of the zones in a resource group'
+  code: |-
+    PS C:\> $Zones = Get-AzDnsZone -ResourceGroupName "MyResourceGroup"
+  description: |-
+    This example gets all of the DNS zones in the specified resource group, and then stores it in the $Zones variable.
+  summary: ""
+- title: 'Example 3: Get all of the zones in a subscription'
+  code: |-
+    PS C:\> $Zones = Get-AzDnsZone
+  description: |-
+    This example gets all of the DNS zones in the current Azure subscription, and then stores them in the $Zones variable.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the DNS zone to get.
+    If you do not specify a value for the *Name* parameter, this cmdlet gets all DNS zones in the specified resource group.
+    If you also omit the *ResourceGroupName* parameter, this cmdlet gets all DNS zones in the current Azure subscription.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource group that contains the DNS zone to get.
+    If you do not specify the *ResourceGroupName*, then you must also omit the *Name* parameter.
+    In this case, this cmdlet gets all DNS zones in the current Azure subscription.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Dns.Get-AzDnsZone
+name: Get-AzDnsZone
+description: |-
+  The **Get-AzDnsZone** cmdlet gets a Domain Name System (DNS) zone from the specified resource group.
+  If you specify the *Name* parameter, a single **DnsZone** object is returned.
+  If you do not specify the *Name* parameter, an array containing all of the zones in the specified resource group is returned.
+  You can use the **DnsZone** object to update the zone, for example you can add **RecordSet** objects to it.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
+  Module Name: Az.Dns
+  ms.assetid: B831ABE6-348C-4DD6-9295-18D23A1FDF63
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/get-azdnszone
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Dns/Dns/help/Get-AzDnsZone.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Dns/Dns/help/Get-AzDnsZone.md

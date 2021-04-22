@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the tenant, subscription, and environment for cmdlets to use in the current session.
+module: Az.Accounts
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureTenant" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureSubscription" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzContext
+  href: ./Get-AzContext.yml
+syntaxes:
+- >-
+  Set-AzContext [-Context] <PSAzureContext>
+
+   [-ExtendedProperty <System.Collections.Generic.IDictionary`2[System.String,System.String]>] [-Name <String>]
+
+   [-Force] [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzContext [-TenantObject] <PSAzureTenant>
+
+   [-ExtendedProperty <System.Collections.Generic.IDictionary`2[System.String,System.String]>] [-Name <String>]
+
+   [-Force] [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzContext [-SubscriptionObject] <PSAzureSubscription>
+
+   [-ExtendedProperty <System.Collections.Generic.IDictionary`2[System.String,System.String]>] [-Name <String>]
+
+   [-Force] [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzContext [-Tenant <String>] [-Subscription] <String>
+
+   [-ExtendedProperty <System.Collections.Generic.IDictionary`2[System.String,System.String]>] [-Name <String>]
+
+   [-Force] [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-AzContext -Tenant <String>
+
+   [-ExtendedProperty <System.Collections.Generic.IDictionary`2[System.String,System.String]>] [-Name <String>]
+
+   [-Force] [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the subscription context'
+  code: |-
+    PS C:\>Set-AzContext -SubscriptionId "xxxx-xxxx-xxxx-xxxx"
+
+    Name    Account             SubscriptionName    Environment         TenantId
+    ----    -------             ----------------    -----------         --------
+    Work    test@outlook.com    Subscription1       AzureCloud          xxxxxxxx-x...
+  description: |-
+    This command sets the context to use the specified subscription.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext" data-throw-if-not-resolved="False" />
+  name: Context
+  isRequired: true
+  description: |+
+    Specifies the context for the current session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.IDictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ExtendedProperty
+  description: |+
+    Additional context properties
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overwrite the existing context with the same name, if any.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Name of the context
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Profile.Common.ContextModificationScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Process, CurrentUser
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Subscription
+  isRequired: true
+  description: |+
+    The name or id of the subscription that the context should be set to. This parameter has aliases to -SubscriptionName and -SubscriptionId, so, for clarity, either of these can be used instead of -Subscription when specifying name and id, respectively.
+
+  defaultValue: None
+  position: "0"
+  aliases: SubscriptionId, SubscriptionName
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureSubscription" data-throw-if-not-resolved="False" />
+  name: SubscriptionObject
+  isRequired: true
+  description: |+
+    A subscription object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Tenant
+  isRequired: true
+  description: |+
+    Tenant name or ID
+
+  defaultValue: None
+  position: Named
+  aliases: Domain, TenantId
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureTenant" data-throw-if-not-resolved="False" />
+  name: TenantObject
+  isRequired: true
+  description: |+
+    A Tenant Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Accounts.Set-AzContext
+name: Set-AzContext
+description: |-
+  The Set-AzContext cmdlet sets authentication information for cmdlets that you run in the current session.
+  The context includes tenant, subscription, and environment information.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  Module Name: Az.Accounts
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/set-azcontext
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Set-AzContext.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Set-AzContext.md

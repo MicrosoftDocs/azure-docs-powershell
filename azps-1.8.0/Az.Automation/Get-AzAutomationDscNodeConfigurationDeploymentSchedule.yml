@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a DSC Node configuration deployment job schedule in Automation.
+module: Az.Automation
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeploymentSchedule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-AzAutomationDscCompilationJob
+  href: ./Start-AzAutomationDscCompilationJob.yml
+- text: Import-AzAutomationDscNodeConfiguration
+  href: ./Import-AzAutomationDscNodeConfiguration.yml
+- text: Start-AzAutomationDscNodeConfigurationDeployment
+  href: ./Start-AzAutomationDscNodeConfigurationDeployment.yml
+- text: Stop-AzAutomationDscNodeConfigurationDeployment
+  href: ./Stop-AzAutomationDscNodeConfigurationDeployment.yml
+- text: Get-AzAutomationDscNodeConfigurationDeployment
+  href: ./Get-AzAutomationDscNodeConfigurationDeployment.yml
+syntaxes:
+- >-
+  Get-AzAutomationDscNodeConfigurationDeploymentSchedule [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- >-
+  Get-AzAutomationDscNodeConfigurationDeploymentSchedule -JobScheduleId <Guid> [-ResourceGroupName] <String>
+
+   [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all the deployment schedules'
+  code: |-
+    PS C:\> Get-AzAutomationDscNodeConfigurationDeploymentSchedule `
+                -AutomationAccountName "Contoso01"  `
+                -ResourceGroupName "ResourceGroup01"
+
+    ResourceGroupName     : ResourceGroup01
+    AutomationAccountName : Contoso01
+    JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+    JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSchedule
+    RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
+
+    ResourceGroupName     : ResourceGroup01
+    AutomationAccountName : Contoso01
+    JobScheduleId         : e347dfc4-62fe-4ed6-adfb-55518c57b558
+    JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSchedule
+    RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
+  description: ""
+  summary: ""
+- title: 'Example 2: Get a deployment schedule'
+  code: |-
+    PS C:\> $js= Get-AzAutomationDscNodeConfigurationDeploymentSchedule `
+                     -AutomationAccountName "Contoso01" `
+                     -ResourceGroupName "ResourceGroup01" `
+                     -JobScheduleId 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+
+    PS C:\> $js
+
+    ResourceGroupName     : ResourceGroup01
+    AutomationAccountName : Contoso01
+    JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+    JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSche
+    RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
+
+    PS C:\> $js.JobSchedule
+
+    ResourceGroupName     : ResourceGroup01
+    RunOn                 :
+    AutomationAccountName : Contoso01
+    JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+    RunbookName           : Deploy-NodeConfigurationToAutomationDscNodesV1
+    ScheduleName          : TestScheduleName
+    Parameters            : {AutomationAccountName, NodeConfigurationName, ResourceGroupName, ListOfNodeNames}
+    HybridWorker          :
+  description: |-
+    The above command deploys the DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AutomationAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: JobScheduleId
+  isRequired: true
+  description: |+
+    Specifies the Job Schedule id of an existing scheduled deployment job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a resource group in which this cmdlet compiles a configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Automation.Get-AzAutomationDscNodeConfigurationDeploymentSchedule
+name: Get-AzAutomationDscNodeConfigurationDeploymentSchedule
+description: |-
+  The **Get-AzAutomationDscNodeConfigurationDeployment** cmdlet deployes an APS Desired State Configuration (DSC) node configuration in Azure Automation.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  Module Name: Az.Automation
+  ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationdscnodeconfigurationdeploymentschedule
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscNodeConfigurationDeploymentSchedule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscNodeConfigurationDeploymentSchedule.md

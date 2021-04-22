@@ -1,0 +1,514 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a container group.
+module: Az.ContainerInstance
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-AzContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-Image] <String>
+
+   [-RegistryCredential <PSCredential>] [-Location <String>] [-AssignIdentity] [-OsType <String>]
+
+   [-RestartPolicy <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>]
+
+   [-DnsNameLabel <String>] [-Port <Int32[]>] [-Command <String>] [-EnvironmentVariable <Hashtable>]
+
+   [-RegistryServerDomain <String>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  New-AzContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-Image] <String>
+
+   [-RegistryCredential <PSCredential>] -AzureFileVolumeShareName <String>
+
+   -AzureFileVolumeAccountCredential <PSCredential> -AzureFileVolumeMountPath <String> [-Location <String>]
+
+   [-AssignIdentity] [-OsType <String>] [-RestartPolicy <String>] [-Cpu <Int32>] [-MemoryInGB <Double>]
+
+   [-IpAddressType <String>] [-DnsNameLabel <String>] [-Port <Int32[]>] [-Command <String>]
+
+   [-EnvironmentVariable <Hashtable>] [-RegistryServerDomain <String>] [-Tag <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-Image] <String>
+
+   [-RegistryCredential <PSCredential>] -AzureFileVolumeShareName <String>
+
+   -AzureFileVolumeAccountCredential <PSCredential> -AzureFileVolumeMountPath <String> [-Location <String>]
+
+   -IdentityType <ResourceIdentityType> [-IdentityId <String[]>] [-OsType <String>] [-RestartPolicy <String>]
+
+   [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-DnsNameLabel <String>] [-Port <Int32[]>]
+
+   [-Command <String>] [-EnvironmentVariable <Hashtable>] [-RegistryServerDomain <String>] [-Tag <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-AzContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-Image] <String>
+
+   [-RegistryCredential <PSCredential>] [-Location <String>] -IdentityType <ResourceIdentityType>
+
+   [-IdentityId <String[]>] [-OsType <String>] [-RestartPolicy <String>] [-Cpu <Int32>] [-MemoryInGB <Double>]
+
+   [-IpAddressType <String>] [-DnsNameLabel <String>] [-Port <Int32[]>] [-Command <String>]
+
+   [-EnvironmentVariable <Hashtable>] [-RegistryServerDomain <String>] [-Tag <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-AzContainerGroup -ResourceGroupName demo -Name mycontainer -Image nginx -OsType Linux -IpAddressType Public -Port @(8000)
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials :
+    RestartPolicy            :
+    IpAddress                : 13.88.10.240
+    Ports                    : {8000}
+    OsType                   : Linux
+    Volumes                  :
+    State                    : Running
+    Events                   : {}
+  description: |-
+    This commands creates a container group using latest nginx image and requests a public IP address with opening port 8000.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> New-AzContainerGroup -ResourceGroupName demo -Name mycontainer -Image alpine -OsType Linux -Command "/bin/sh -c myscript.sh" -EnvironmentVariable @{"env1"="value1";"env2"="value2"}
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials :
+    RestartPolicy            :
+    IpAddress                :
+    Ports                    :
+    OsType                   : Linux
+    Volumes                  :
+    State                    : Running
+    Events                   : {}
+  description: |-
+    This commands creates a container group and runs a custom script inside the container.
+  summary: ""
+- title: 'Example 3: Creates a run-to-completion container group.'
+  code: |-
+    PS C:\> New-AzContainerGroup -ResourceGroupName demo -Name mycontainer -Image alpine -OsType Linux -Command "echo hello" -RestartPolicy Never
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials :
+    RestartPolicy            :
+    IpAddress                :
+    Ports                    :
+    OsType                   : Linux
+    Volumes                  :
+    State                    : Running
+    Events                   : {}
+  description: |-
+    This commands creates a container group which prints out 'hello' and stops.
+  summary: ""
+- title: 'Example 4: Creates a container group using image in Azure Container Registry'
+  code: |-
+    PS C:\> $secpasswd = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
+    PS C:\> $mycred = New-Object System.Management.Automation.PSCredential ("myacr", $secpasswd)
+    PS C:\> New-AzContainerGroup -ResourceGroupName demo -Name mycontainer -Image myacr.azurecr.io/nginx:latest -IpAddressType Public -RegistryCredential $mycred
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials : {myacr}
+    RestartPolicy            :
+    IpAddress                : 13.88.10.240
+    Ports                    : {80}
+    OsType                   : Linux
+    Volumes                  :
+    State                    : Running
+    Events                   : {}
+  description: |-
+    This commands creates a container group using a nginx image in Azure Container Registry.
+  summary: ""
+- title: 'Example 5: Creates a container group using image in custom container image registry'
+  code: |-
+    PS C:\> $secpasswd = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
+    PS C:\> $mycred = New-Object System.Management.Automation.PSCredential ("username", $secpasswd)
+    PS C:\> New-AzContainerGroup -ResourceGroupName MyResourceGroup -Name MyContainer -Image myserver.com/myimage:latest -RegistryServer myserver.com -RegistryCredential $mycred
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials : {myserver.com}
+    RestartPolicy            :
+    IpAddress                : 13.88.10.240
+    Ports                    : {80}
+    OsType                   : Linux
+    Volumes                  :
+    State                    : Running
+    Events                   : {}
+  description: |-
+    This commands creates a container group using a custom image from a custom container image registry.
+  summary: ""
+- title: 'Example 6: Creates a container group that mounts Azure File volume'
+  code: |-
+    PS C:\> $secpasswd = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
+    PS C:\> $mycred = New-Object System.Management.Automation.PSCredential ("username", $secpasswd)
+    PS C:\> New-AzContainerGroup -ResourceGroupName MyResourceGroup -Name MyContainer -Image alpine -AzFileVolumeShareName myshare -AzFileVolumeAccountKey $mycred -AzFileVolumeMountPath /mnt/azfile
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials : {myserver.com}
+    RestartPolicy            :
+    IpAddress                : 13.88.10.240
+    Ports                    : {80}
+    OsType                   : Linux
+    Volumes                  : {AzureFile}
+    State                    : Running
+    Events                   : {}
+  description: |-
+    This commands creates a container group that mounts the provided Azure File share to `/mnt/azfile`.
+  summary: ""
+- title: Example 7
+  code: |-
+    PS C:\> New-AzContainerGroup -ResourceGroupName demo -Name mycontainer -Image nginx -OsType Linux -IpAddressType Public -Port @(8000) -AssignIdentity
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials :
+    RestartPolicy            :
+    IpAddress                : 13.88.10.240
+    Ports                    : {8000}
+    OsType                   : Linux
+    Volumes                  :
+    State                    : Running
+    Events                   : {}
+    Identity                 : Microsoft.Azure.Management.ContainerInstance.Models.ContainerGroupIdentity
+  description: |-
+    This commands creates a container group with system assigned identity using latest nginx image and requests a public IP address with opening port 8000.
+  summary: ""
+- title: Example 8
+  code: |-
+    PS C:\> New-AzContainerGroup -ResourceGroupName demo -Name mycontainer -Image nginx -OsType Linux -IpAddressType Public -Port @(8000) -IdentityType SystemAssignedUserAssigned -IdentityId /subscriptions/<subscriptionId>/resourceGroups/<resourceGroup>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<UserIdentityName>
+
+    ResourceGroupName        : demo
+    Id                       : /subscriptions/ae43b1e3-c35d-4c8c-bc0d-f148b4c52b78/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/mycontainer
+    Name                     : mycontainer
+    Type                     : Microsoft.ContainerInstance/containerGroups
+    Location                 : westus
+    Tags                     :
+    ProvisioningState        : Creating
+    Containers               : {mycontainer}
+    ImageRegistryCredentials :
+    RestartPolicy            :
+    IpAddress                : 13.88.10.240
+    Ports                    : {8000}
+    OsType                   : Linux
+    Volumes                  :
+    State                    : Running
+    Events                   : {}
+    Identity                 : Microsoft.Azure.Management.ContainerInstance.Models.ContainerGroupIdentity
+  description: |-
+    This commands creates a container group with system assigned and user assigned identity using latest nginx image and requests a public IP address with opening port 8000.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AssignIdentity
+  description: |+
+    Enable system assigned identity
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: AzureFileVolumeAccountCredential
+  isRequired: true
+  description: |+
+    The storage account credential of the Azure File share to mount where the username is the storage account name and the key is the storage account key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureFileVolumeMountPath
+  isRequired: true
+  description: |+
+    The mount path for the Azure File volume.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: AzureFileVolumeShareName
+  isRequired: true
+  description: |+
+    The name of the Azure File share to mount.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Command
+  description: |+
+    The command to run in the container.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Cpu
+  description: |+
+    The required CPU cores.
+    Default: 1
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: DnsNameLabel
+  description: |+
+    The DNS name label for the IP address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: EnvironmentVariable
+  description: |+
+    The container environment variables.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IdentityId
+  description: |+
+    The user assigned identity IDs
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Management.ContainerInstance.Models.ResourceIdentityType" data-throw-if-not-resolved="False" />
+  name: IdentityType
+  isRequired: true
+  description: |+
+    The managed identity type
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SystemAssigned, UserAssigned, SystemAssignedUserAssigned, None
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Image
+  isRequired: true
+  description: |+
+    The container image.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: IpAddressType
+  description: |+
+    The IP address type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Public
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    The container group Location.
+    Default to the location of the resource group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Double" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MemoryInGB
+  description: |+
+    The required memory in GB.
+    Default: 1.5
+
+  defaultValue: None
+  position: Named
+  aliases: Memory
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The container group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OsType
+  description: |+
+    The container OS type.
+    Default: Linux
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Linux, Windows
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Port
+  description: |+
+    The port(s) to open. Default: [80]
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+  name: RegistryCredential
+  description: |+
+    The custom container registry credential.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RegistryServerDomain
+  description: |+
+    The custom container registry login server.
+
+  defaultValue: None
+  position: Named
+  aliases: RegistryServer
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    The resource group name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RestartPolicy
+  description: |+
+    The container restart policy. Default: Always
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Always, Never, OnFailure
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    {{Fill Tag Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.ContainerInstance.New-AzContainerGroup
+name: New-AzContainerGroup
+description: |-
+  The **New-AzContainerGroup** cmdlets creates a container group.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.dll-Help.xml
+  Module Name: Az.ContainerInstance
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.containerinstance/new-azcontainergroup
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerInstance/ContainerInstance/help/New-AzContainerGroup.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ContainerInstance/ContainerInstance/help/New-AzContainerGroup.md

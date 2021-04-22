@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a Sqoop job object.
+module: Az.HDInsight
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightSqoopJobDefinition" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-AzHDInsightJob
+  href: ./Start-AzHDInsightJob.yml
+syntaxes:
+- >-
+  New-AzHDInsightSqoopJobDefinition [-Files <String[]>] [-StatusFolder <String>] [-File <String>]
+
+   [-Command <String>] [-LibDir <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a Sqoop job definition'
+  code: |-
+    PS C:\># Cluster info
+    PS C:\>$clusterName = "your-hadoop-001"
+    PS C:\>$clusterCreds = Get-Credential
+
+    PS C:\>New-AzHDInsightSqoopJobDefinition -StatusFolder $statusFolder `
+                -Command $sqoopCommand `
+            | Start-AzHDInsightJob -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds
+  description: |-
+    This command creates a Sqoop job definition.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Command
+  description: |+
+    Specifies the Sqoop command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: File
+  description: |+
+    Specifies the path to a file that contains the query to run.
+    The file must be available on the Storage account associated with the cluster.
+    You can use this parameter instead of the *Query* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Files
+  description: |+
+    Specifies a collection of files that are associated with a Hive job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LibDir
+  description: |+
+    Specifies the library directory for the Sqoop job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: StatusFolder
+  description: |+
+    Specifies the location of the folder that contains standard outputs and error outputs for a job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.HDInsight.New-AzHDInsightSqoopJobDefinition
+name: New-AzHDInsightSqoopJobDefinition
+description: |-
+  The **New-AzHDInsightSqoopJobDefinition** cmdlet defines a Sqoop job object for use with an Azure HDInsight cluster.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  Module Name: Az.HDInsight
+  ms.assetid: 4ED47646-542B-4983-B46B-B603BE33D499
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.hdinsight/new-azhdinsightsqoopjobdefinition
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightSqoopJobDefinition.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/HDInsight/HDInsight/help/New-AzHDInsightSqoopJobDefinition.md

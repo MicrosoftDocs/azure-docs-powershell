@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of Recovery Services vaults.
+module: Az.RecoveryServices
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzRecoveryServicesVaultSettingsFile
+  href: ./Get-AzRecoveryServicesVaultSettingsFile.yml
+- text: New-AzRecoveryServicesVault
+  href: ./New-AzRecoveryServicesVault.yml
+- text: Remove-AzRecoveryServicesVault
+  href: ./Remove-AzRecoveryServicesVault.yml
+syntaxes:
+- >-
+  Get-AzRecoveryServicesVault [-ResourceGroupName <String>] [-Name <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AzRecoveryServicesVault
+  description: |-
+    Get the list of vault in selected subscription.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup"
+  description: |-
+    Get the list of vault in resource group in selected subscription.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+  description: |-
+    Get the vault in resource group with given name.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the vault to query for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  description: |+
+    Specifies the name of the Azure resource group in which to create or from which to retrieve the specified Recovery Services object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.RecoveryServices.Get-AzRecoveryServicesVault
+name: Get-AzRecoveryServicesVault
+description: |-
+  The **Get-AzRecoveryServicesVault** cmdlet gets a list of Recovery Services vaults in the current subscription.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.dll-Help.xml
+  Module Name: Az.RecoveryServices
+  ms.assetid: 818B5302-91EE-425F-B1CD-86B626F1B7A3
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/get-azrecoveryservicesvault
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesVault.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesVault.md

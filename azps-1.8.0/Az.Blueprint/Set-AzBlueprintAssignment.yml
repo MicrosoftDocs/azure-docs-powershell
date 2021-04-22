@@ -1,0 +1,188 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Update an existing blueprint assignment.
+module: Az.Blueprint
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.Blueprint.Models.PSBlueprintBase" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-AzBlueprintAssignment -Name <String> -Blueprint <PSBlueprintBase> [-SubscriptionId <String[]>]
+
+   -Location <String> [-ResourceGroupParameter <Hashtable>] [-Parameter <Hashtable>] [-SystemAssignedIdentity]
+
+   [-UserAssignedIdentity <String>] [-Lock <PSLockMode>] [-SecureStringParameter <Hashtable>]
+
+   [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $rg = @{ResourceGroup=@{name='storage_rg';location='eastus'}}
+    PS C:\> $params = @{applytaganditsdefaultvalue_tagName="Department_Cost_Center"; applytaganditsdefaultvalue_tagValue="Contoso/HR/Dev/0001"}
+    PS C:\> $blueprintObject =  Get-AzBlueprint -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myBlueprintName"
+    PS C:\> Set-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "00000000-1111-0000-1111-000000000000" -Location "West US" -Parameter $params -ResourceGroupParameter $rg -SystemAssignedIdentity
+
+    Name              : myAssignment
+    Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/Assignment-PS-BlueprintDefinition
+    Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+    LastModified      : 2019-01-08
+    LockMode          : None
+    ProvisioningState : Creating
+    Parameters        : {applytaganditsdefaultvalue_tagName, applytaganditsdefaultvalue_tagValue}
+    ResourceGroups    : ResourceGroup
+  description: |-
+    Update an existing blueprint assignment of the blueprint definition `$blueprintObject` within the specified subscription, updating the parameters. Uses system-assigned identity. The location defines the region for creating the managed identity.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Blueprint.Models.PSBlueprintBase" data-throw-if-not-resolved="False" />
+  name: Blueprint
+  isRequired: true
+  description: |+
+    Blueprint object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with Azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    Region for managed identity to be created in.
+    Learn more at aka.ms/blueprintmsi
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Blueprint.Models.PSLockMode" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Lock
+  description: |+
+    Lock resources.
+    Learn more at aka.ms/blueprintlocks
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, AllResourcesReadOnly, AllResourcesDoNotDelete
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Blueprint assignment name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: Parameter
+  description: |+
+    Artifact parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: ResourceGroupParameter
+  description: |+
+    {{Fill ResourceGroupParameter Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+  name: SecureStringParameter
+  description: |+
+    Secure string parameter for KeyVault resource id, name and version.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriptionId
+  description: |+
+    SubscriptionId to assign the Blueprint.
+    Can be a comma delimited list of subscriptionId strings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SystemAssignedIdentity
+  description: |+
+    System assigned identity(MSI) to deploy the artifacts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: UserAssignedIdentity
+  description: |+
+    User assigned identity(MSI) to deploy the artifacts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Az.Blueprint.Set-AzBlueprintAssignment
+name: Set-AzBlueprintAssignment
+description: |-
+  Update an existing blueprint assignment.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
+  Module Name: Az.Blueprint
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.blueprint/set-azblueprintassignment
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blueprint/Blueprint/help/Set-AzBlueprintAssignment.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Blueprint/Blueprint/help/Set-AzBlueprintAssignment.md

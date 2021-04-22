@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about a notification hub namespace.
+module: Az.NotificationHubs
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NotificationHubs.Models.NamespaceAttributes" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-AzNotificationHubsNamespace
+  href: ./New-AzNotificationHubsNamespace.yml
+- text: Remove-AzNotificationHubsNamespace
+  href: ./Remove-AzNotificationHubsNamespace.yml
+- text: Set-AzNotificationHubsNamespace
+  href: ./Set-AzNotificationHubsNamespace.yml
+syntaxes:
+- >-
+  Get-AzNotificationHubsNamespace [[-ResourceGroup] <String>] [[-Namespace] <String>]
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information for all notification hub namespaces'
+  code: |-
+    PS C:\>Get-AzNotificationHubsNamespace
+  description: |-
+    This command returns information for all your notification hub namespaces.
+  summary: ""
+- title: 'Example 2: Get information for a single notification hub namespace'
+  code: |-
+    PS C:\>Get-AzNotificationHubsNamespace -Namespace "ContosoNamespace"
+  description: |-
+    This command gets information for a single notification hub namespace: ContosoNamespace.
+  summary: ""
+- title: 'Example 3: Get information for all notification hubs assigned to a specific namespace'
+  code: |-
+    PS C:\>Get-AzNotificationHubsNamespace -ResourceGroup "ContosoNotificationsGroup"
+  description: |-
+    This command gets information for all notification hub namespaces assigned to the resource group ContosoNotificationsGroup.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Namespace
+  description: |+
+    Specifies a unique name for the namespace.
+    Namespaces provide a way to group and categorize notification hubs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroup
+  description: |+
+    Specifies the resource group to which the namespace is assigned.
+    Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.NotificationHubs.Get-AzNotificationHubsNamespace
+name: Get-AzNotificationHubsNamespace
+description: |-
+  **The Get-AzNotificationHubsNamespace** cmdlet gets information about notification hub namespaces.
+  This cmdlet provides you the option of getting information for all your namespaces, information about the namespaces assigned to a specified resource group; or for returning information about a specific namespace.
+  Namespaces are logical containers that help you organize and manage your notification hubs.
+  You must have at least one notification hub namespace: all notification hubs must be assigned to a namespace.
+  A single namespace can house multiple hubs which means that you might only need one namespace in your organization.
+  However, you can also have multiple namespaces to better organize your hubs, or to give specific individuals permission to manage a selected subset of hubs.
+  The **Get-AzNotificationHubsNamespace** cmdlet returns basic information about the namespace itself.
+  To get information about the authorization rules associated with a namespace use Get-AzNotificationHubsNamespaceAuthorizationRules.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
+  Module Name: Az.NotificationHubs
+  ms.assetid: 9805B3F1-C6BB-4A0F-A7C3-1DD1ACB75CDA
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.notificationhubs/get-aznotificationhubsnamespace
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespace.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespace.md

@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: Az.Websites
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AzWebAppSlot
+  href: ./Get-AzWebAppSlot.yml
+- text: New-AzWebAppSlot
+  href: ./New-AzWebAppSlot.yml
+- text: Remove-AzWebAppSlot
+  href: ./Remove-AzWebAppSlot.yml
+- text: Set-AzWebAppSlot
+  href: ./Set-AzWebAppSlot.yml
+- text: Start-AzWebAppSlot
+  href: ./Start-AzWebAppSlot.yml
+- text: Stop-AzWebAppSlot
+  href: ./Stop-AzWebAppSlot.yml
+- text: Get-AzWebApp
+  href: ./Get-AzWebApp.yml
+syntaxes:
+- >-
+  Restart-AzWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [-Slot] <String>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+- Restart-AzWebAppSlot [-WebApp] <PSSite> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Restart-AzWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
+  description: |-
+    This command restarts the slot Slot001 for the web app ContosoWebApp associated with the resource group Default-Web-WestUS
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    WebApp Name
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ResourceGroupName
+  isRequired: true
+  description: |+
+    Resource Group Name
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Slot
+  isRequired: true
+  description: |+
+    WebApp Slot Name
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.WebApps.Models.PSSite" data-throw-if-not-resolved="False" />
+  name: WebApp
+  isRequired: true
+  description: |+
+    WebApp Object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.Websites.Restart-AzWebAppSlot
+name: Restart-AzWebAppSlot
+description: |-
+  The **Restart-AzWebAppSlot** cmdlet stops and then starts an Azure Web App Slot.
+  If the Web App Slot is in a stopped state, use the Start-AzWebAppSlot cmdlet.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  Module Name: Az.Websites
+  ms.assetid: 645E74D2-640D-494F-9798-4375FE6A0AF2
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/restart-azwebappslot
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Restart-AzWebAppSlot.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Restart-AzWebAppSlot.md

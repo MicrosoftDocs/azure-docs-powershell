@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a Traffic Manager profile.
+module: Az.TrafficManager
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AzTrafficManagerEndpointConfig
+  href: ./Add-AzTrafficManagerEndpointConfig.yml
+- text: Get-AzTrafficManagerProfile
+  href: ./Get-AzTrafficManagerProfile.yml
+- text: New-AzTrafficManagerProfile
+  href: ./New-AzTrafficManagerProfile.yml
+- text: Remove-AzTrafficManagerEndpointConfig
+  href: ./Remove-AzTrafficManagerEndpointConfig.yml
+- text: Remove-AzTrafficManagerProfile
+  href: ./Remove-AzTrafficManagerProfile.yml
+syntaxes:
+- >-
+  Set-AzTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfile>
+
+   [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a profile'
+  code: |-
+    PS C:\>$TrafficManagerProfile = Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" 
+    PS C:\> $TrafficManagerProfile.ProfileStatus = Disabled
+    PS C:\> Set-AzTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
+  description: |-
+    The first command gets an Azure Traffic Manager profile by using the Get-AzTrafficManagerProfile cmdlet.
+    The command stores the profile locally in the $TrafficManagerProfile variable.
+
+    The second command changes that profile locally.
+    This command disables the profile.
+
+    The third command updates the Traffic Manager profile named ContosoProfile to match the local value in $TrafficManagerProfile.
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+  name: DefaultProfile
+  description: |+
+    The credentials, account, tenant, and subscription used for communication with azure.
+
+  defaultValue: None
+  position: Named
+  aliases: AzContext, AzureRmContext, AzureCredential
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+  name: TrafficManagerProfile
+  isRequired: true
+  description: |+
+    Specifies a local **TrafficManagerProfile** object.
+    This cmdlet updates Traffic Manager to match this local object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Az.TrafficManager.Set-AzTrafficManagerProfile
+name: Set-AzTrafficManagerProfile
+description: |-
+  The **Set-AzTrafficManagerProfile** cmdlet updates an Azure Traffic Manager profile.
+  This cmdlet updates the settings of the profile from a local profile object.
+  You can specify the profile object either by using the *TrafficManagerProfile* parameter or by using the pipeline.
+
+  You can obtain a local object that represents a profile by using the Get-AzTrafficManagerProfile cmdlet.
+  Modify the object locally and then use **Set-AzTrafficManagerProfile** to commit your changes.
+metadata:
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
+  Module Name: Az.TrafficManager
+  ms.assetid: 975DD42E-61B6-437B-884D-C15A8DB7A667
+  online version: https://docs.microsoft.com/en-us/powershell/module/az.trafficmanager/set-aztrafficmanagerprofile
+  schema: 2.0.0
+  content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Set-AzTrafficManagerProfile.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Set-AzTrafficManagerProfile.md
