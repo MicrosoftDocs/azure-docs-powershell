@@ -25,20 +25,18 @@ Gets a collection of SubscriberUsageAggregates, which are UsageAggregates from u
 
 ### Example 1: Get usage data aggregated by day
 ```powershell
-Get-AzsSubscriberUsage -ReportedStartTime "2019-12-30T00:00:00Z" -ReportedEndTime "2019-12-31T00:00:00Z" -AggregationGranularity Daily
+Get-AzsSubscriberUsage -ReportedStartTime "2019/12/30" -ReportedEndTime "2019-12-31" -AggregationGranularity Daily
 ```
 
-Get the usage data for the entire day of 30th Dec 2019 (in UTC) for all tenants under provider aggregated by the day.
-ReportedStartTime and ReportedEndTime must be rounded to days.
+Get the usage data for the entire day of 30th Dec 2019 (in UTC) for all tenants under provider aggregated by the day. Specify the date using the format `mm/dd/yyyy`.  
 If called as the service administrator, this effectively shows all usage data for every tenant.
 
 ### Example 2: Get usage data aggregated by the hour
 ```powershell
-Get-AzsSubscriberUsage -ReportedStartTime "2019-12-30T00:00:00Z" -ReportedEndTime "2019-12-30T02:00:00Z" -AggregationGranularity Hourly
+Get-AzsSubscriberUsage -ReportedStartTime "12/30/2019 15:00" -ReportedEndTime "12/30/2019 16:00" -AggregationGranularity Hourly
 ```
 
-Get the usage data between  12am - 2am on 30th Dec 2019 (in UTC) aggregated by the hour.
-ReportedStartTime and ReportedEndTime must be rounded to hours.
+Get the usage data between  3pm - 4am on 30th Dec 2019 (in UTC) aggregated by the hour. Specify the date and time using the format `mm/dd/yyyy HH:MM`.  
 Likewise, if called as the service administrator, this effectively shows all usage data for every tenant.
 
 ## PARAMETERS
@@ -169,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
