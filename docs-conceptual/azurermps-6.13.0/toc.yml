@@ -2,7 +2,7 @@
   href: overview.md
 - name: Install
   items:
-  - name: Install with PowerShellGet 
+  - name: Install with PowerShellGet
     href: install-azurerm-ps.md
   - name: Install with MSI
     href: other-install.md
@@ -22,7 +22,7 @@
     href: context-persistence.md
 - name: Queries
   href: queries-azureps.md
-- name: Format output 
+- name: Format output
   href: formatting-output.md
 - name: Manage subscriptions
   href: manage-subscriptions-azureps.md
@@ -60,3 +60,5 @@
   href: release-notes-azureps.md
 - name: Breaking changes for Azure PowerShell 6.x
   href: migration-guide.6.0.0.md
+- name: Frequently Asked Questions
+  href: faq.md
