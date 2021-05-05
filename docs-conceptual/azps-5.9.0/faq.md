@@ -3,8 +3,8 @@ title: Frequently Asked Questions (FAQ)
 description: Frequently Asked Questions about Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/17/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 08/17/2020
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
@@ -25,4 +25,22 @@ environment variable `SuppressAzurePowerShellBreakingChangeWarnings` to `true`.
 
 ```azurepowershell
 Set-Item -Path Env:\SuppressAzurePowerShellBreakingChangeWarnings -Value $true
+```
+
+## How do I disable the AzureRM retirement warning message in Azure PowerShell?
+
+To suppress the AzureRM retirement warning message in Azure PowerShell, you'll need to set the
+environment variable `SuppressAzureRmModulesRetiringWarning` to `true`.
+
+```azurepowershell-interactive
+Set-Item -Path Env:\SuppressAzureRmModulesRetiringWarning -Value $true
+```
+
+One disadvantage of the previous example is you'll need to run the command for each new PowerShell
+session unless you add it to your PowerShell profile.
+
+To set the environment variable permanently, you can also use the following example.
+
+```azurepowershell-interactive
+[System.Environment]::SetEnvironmentVariable('SuppressAzureRmModulesRetiringWarning', 'true', [System.EnvironmentVariableTarget]::User)
 ```
