@@ -9,6 +9,16 @@ ms.service: azure-powershell
 ---
 # Azure PowerShell release notes
 ## 6.0.0 - May 2021
+
+#### Supported versions of PowerShell
+
+Due to [CVE-2021-26701](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26701) Az 6.0.0 is only supported on the following version of PowerShell:
+ - Windows PowerShell 5.1
+ - PowerShell 7.0.6 or above
+ - PowerShell 7.1.3 or above
+
+For more information and how to upgrade, see [Azure PowerShell modules Lifecycle](https://docs.microsoft.com/powershell/azure/azureps-support-lifecycle).
+
 #### Az.Accounts
 * Upgraded Azure.Identity to 1.4 and MSAL to 4.30.1
 * Removed obsolete parameters 'ManagedServiceHostName', 'ManagedServicePort' and 'ManagedServiceSecret' of cmdlet 'Connect-AzAccount', environment variables 'MSI_ENDPOINT' and 'MSI_SECRET' could be used instead
