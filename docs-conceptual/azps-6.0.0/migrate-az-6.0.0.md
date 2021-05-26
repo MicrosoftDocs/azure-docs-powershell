@@ -52,7 +52,7 @@ Due to [CVE-2021-26701](https://msrc.microsoft.com/update-guide/vulnerability/CV
 - PowerShell 7.0: version 7.0.6 or above
 - Windows PowerShell 5.1
 
-For further details, refer to the [Azure PowerShell support lifecycle](https://aka.ms/lifecycle)
+For further details, refer to the [Azure PowerShell support lifecycle](https://aka.ms/azpslifecycle)
 
 ## Az.Accounts
 
