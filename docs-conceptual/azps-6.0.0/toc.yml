@@ -105,5 +105,7 @@
       href: migrate-az-5.0.0.md
     - name: Az 6.0.0 breaking changes
       href: migrate-az-6.0.0.md
+- name: Troubleshooting
+  href: troubleshooting.md
 - name: Frequently Asked Questions
   href: faq.md
