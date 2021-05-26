@@ -69,7 +69,7 @@ Azure Az PowerShell module in PowerShell 5.1 on Windows:
 ### Offline Installation
 
 In some environments, it's not possible to connect to the PowerShell Gallery. In those situations,
-you can still install offline using one of these methods:
+you can install the Az PowerShell module offline using one of these methods:
 
 - [Download the Azure PowerShell MSI](install-az-ps-msi.md). Keep in mind that the MSI installer
   only works for PowerShell 5.1 on Windows.
@@ -94,7 +94,7 @@ Connect-AzAccount
 To update any PowerShell module, you should use the same method used to install the module. For
 example, if you originally used `Install-Module`, then you should use
 [Update-Module](/powershell/module/powershellget/update-module) to get the latest version. If you
-originally used the MSI package then you should download and install the new MSI package.
+originally used the MSI package, then you should download and install the new MSI package.
 
 The PowerShellGet cmdlets cannot update modules that were installed from an MSI package. MSI
 packages do not update modules that were installed using PowerShellGet. If you have any issues
