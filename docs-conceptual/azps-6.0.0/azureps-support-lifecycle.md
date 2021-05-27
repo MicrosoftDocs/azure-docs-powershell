@@ -8,7 +8,7 @@ ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
-# Azure PowerShell modules Lifecycle
+# Azure PowerShell Support Lifecycle
 
 ## Az PowerShell modules
 
