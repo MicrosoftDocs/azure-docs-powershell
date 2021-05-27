@@ -5,7 +5,7 @@ summary: |
   Azure PowerShell is a set of cmdlets for managing Azure resources directly from the
   PowerShell command line. Azure PowerShell is designed to make it easy to learn and get started
   with, but provides powerful features for automation. Written in .NET Standard, Azure PowerShell
-  works with PowerShell 5.1 on Windows, and PowerShell 7.x and higher on all platforms.
+  works with PowerShell 5.1 on Windows, PowerShell 7.0.6 LTS and PowerShell 7.1.3 or higher on all platforms.
 
 metadata:
   title: Overview of Azure PowerShell
@@ -13,7 +13,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 10/22/2020
+  ms.date: 05/26/2021
 
 landingContent:
   - title: Get started with Azure PowerShell
