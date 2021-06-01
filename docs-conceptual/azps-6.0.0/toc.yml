@@ -1,8 +1,12 @@
 - name: Azure PowerShell
   href: index.yml
-- name: Introducing the new Az module
-  href: new-azureps-module-az.md
-  displayName: intro, introduction, azurerm
+- name: Overview
+  items:
+  - name: Introducing the Az PowerShell module
+    href: new-azureps-module-az.md
+    displayName: intro, introduction, az
+  - name: Azure PowerShell Support Lifecycle
+    href: azureps-support-lifecycle.md
 - name: Install
   items:
     - name: Install with PowerShellGet
