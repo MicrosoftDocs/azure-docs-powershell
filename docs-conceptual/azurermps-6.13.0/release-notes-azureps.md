@@ -4,7 +4,7 @@ description: This is a history of changes made to Azure PowerShell in the latest
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 08/28/2018 
+ms.date: 08/28/2018
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -156,7 +156,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Deprecated Azure Backup cmdlets.
 
 #### AzureRM.Compute
-* Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzureRmVm'
+* Added new sizes to the allowlist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzureRmVm'
 * Added ResourceName argument completer to all cmdlets.
 
 #### AzureRM.DataLakeStore
