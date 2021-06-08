@@ -17,7 +17,7 @@ Due to [CVE-2021-26701](https://msrc.microsoft.com/update-guide/vulnerability/CV
  - PowerShell 7.0.6 or above
  - PowerShell 7.1.3 or above
 
-For more information and how to upgrade, see [Azure PowerShell modules Lifecycle](https://docs.microsoft.com/powershell/azure/azureps-support-lifecycle).
+For more information and how to upgrade, see [Azure PowerShell modules Lifecycle](/powershell/azure/azureps-support-lifecycle).
 
 #### Az.Accounts
 * Upgraded Azure.Identity to 1.4 and MSAL to 4.30.1
@@ -3487,10 +3487,10 @@ https://github.com/Azure/azure-powershell/issues/9752
 * Fix for get-policy command for IaaSVMs
 
 #### Az.Resources
-    - Fix help text for Get-AzPolicyState -Top parameter
-    - Add client-side paging support for Get-AzPolicyAlias
-    - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
-    - Handful of doc and example updates for Policy cmdlets
+   - Fix help text for Get-AzPolicyState -Top parameter
+   - Add client-side paging support for Get-AzPolicyAlias
+   - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
+   - Handful of doc and example updates for Policy cmdlets
 
 #### Az.ServiceBus
 * Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes
