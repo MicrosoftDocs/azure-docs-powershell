@@ -3,8 +3,8 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 03/10/2020
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Azure PowerShell release notes
@@ -19,7 +19,7 @@ ms.service: azure-powershell
 
 #### Az.Compute
 * Fixed issue in 'Update-ASRRecoveryPlan' by populating FailoverTypes
-* Added the '-Top' and '-OrderBy' optional parameters to the 'Get-AzVmImage' cmdlet. 
+* Added the '-Top' and '-OrderBy' optional parameters to the 'Get-AzVmImage' cmdlet.
 
 #### Az.Databricks
 * General availability of 'Az.Databricks' module
@@ -63,11 +63,11 @@ ms.service: azure-powershell
 * Made 'New-AzRedisCache' and 'Set-AzRedisCache' cmdlets not fail because of permission issue related to registering Microsoft.Cache RP
 
 #### Az.Sql
-* Added BackupStorageRedundancy to the following: 
+* Added BackupStorageRedundancy to the following:
     - 'Restore-AzureRmSqlDatabase'
     - 'New-AzSqlDatabaseCopy'
     - 'New-AzSqlDatabaseSecondary'
-* Removed case sensitivity for BackupStorageRedundancy parameter for all SQL DB references 
+* Removed case sensitivity for BackupStorageRedundancy parameter for all SQL DB references
 * Updated BackupStorageRedundancy warning message names
 
 #### Az.Storage
@@ -80,7 +80,7 @@ ms.service: azure-powershell
     - 'Restore-AzRmStorageShare'
 * Changed the cmdlets for modify blob service properties, won't get the original properties from server, but only set the modified properties to server.
     - 'Enable-AzStorageBlobDeleteRetentionPolicy'
-    - 'Disable-AzStorageBlobDeleteRetentionPolicy'  
+    - 'Disable-AzStorageBlobDeleteRetentionPolicy'
     - 'Enable-AzStorageBlobRestorePolicy'
     - 'Disable-AzStorageBlobRestorePolicy'
     - 'Update-AzStorageBlobServiceProperty'
@@ -110,7 +110,7 @@ ms.service: azure-powershell
 * Added 'PatchStatus' property to VirtualMachine Instance View
 * Added 'VMHealth' property to the virtual machine's instance view, which is the returned object when 'Get-AzVm' is invoked with '-Status'
 * Added 'AssignedHost' field to 'Get-AzVM' and 'Get-AzVmss' instance views. The field shows the resource id of the virtual machine instance
-* Added optional parameter '-SupportAutomaticPlacement' to 'New-AzHostGroup' 
+* Added optional parameter '-SupportAutomaticPlacement' to 'New-AzHostGroup'
 * Added the '-HostGroupId' parameter to 'New-AzVm' and 'New-AzVmss'
 
 #### Az.DataFactory
@@ -143,7 +143,7 @@ ms.service: azure-powershell
 
 #### Az.Network
 * [Breaking Change] Updated below cmdlets to align resource virtual router and virtual hub
-    - 'New-AzVirtualRouter': 
+    - 'New-AzVirtualRouter':
         - Added -HostedSubnet parameter to support IP configuration child resource
         - deleted -HostedGateway and -HostedGatewayId
     - 'Get-AzVirtualRouter':
@@ -221,7 +221,7 @@ ms.service: azure-powershell
     - 'Disable-AzStorageBlobRestorePolicy'
     - 'New-AzStorageBlobRangeToRestore'
     - 'Restore-AzStorageBlobRange'
-* Supported get blob restore status of Storage account by run get-AzureRMStorageAccount with parameter -IncludeBlobRestoreStatus 
+* Supported get blob restore status of Storage account by run get-AzureRMStorageAccount with parameter -IncludeBlobRestoreStatus
     - 'Get-AzureRMStorageAccount'
 * Added breaking change warning message for upcoming cmdlet output change
     - 'Get-AzStorageContainerStoredAccessPolicy'
@@ -233,16 +233,16 @@ ms.service: azure-powershell
 * Upgraded Microsoft.Azure.Cosmos.Table SDK to 1.0.8
 
 ### Thanks to our community contributors
-* Thomas Van Laere (@ThomVanL), Add Dockerfile-alpine-3.10 (#12911) 
-* Lohith Chowdary Chilukuri (@Lochiluk), Update Remove-AzNetworkInterfaceIpConfig.md (#12807) 
-* Roberth Strand (@roberthstrand), Get-AzResourceGroup - New example, and cleanup (#12828) 
-* Ravi Mishra (@inmishrar), update Azure Web App runtime stack to DOTNETCORE (#12833) 
-* @jack-education, Updated Set-AzVirtualNetworkSubnetConfig to allow NSG and Route Table to be removed from subnet (#12351) 
-* @hagop-globanet, Update Add-AzApplicationGatewayCustomError.md (#12784) 
+* Thomas Van Laere (@ThomVanL), Add Dockerfile-alpine-3.10 (#12911)
+* Lohith Chowdary Chilukuri (@Lochiluk), Update Remove-AzNetworkInterfaceIpConfig.md (#12807)
+* Roberth Strand (@roberthstrand), Get-AzResourceGroup - New example, and cleanup (#12828)
+* Ravi Mishra (@inmishrar), update Azure Web App runtime stack to DOTNETCORE (#12833)
+* @jack-education, Updated Set-AzVirtualNetworkSubnetConfig to allow NSG and Route Table to be removed from subnet (#12351)
+* @hagop-globanet, Update Add-AzApplicationGatewayCustomError.md (#12784)
 * Joshua Van Daalen (@greenSacrifice)
-  * Update spelling of Property to Property (#12821) 
+  * Update spelling of Property to Property (#12821)
   * Update New-AzResourceLock.md examples (#12806)
-* Eragon Riddle (@eragonriddle), Corrected parameter field name in the example (#12825) 
+* Eragon Riddle (@eragonriddle), Corrected parameter field name in the example (#12825)
 * @rossifumax, Fix typo in New-AzConfigurationAssignment.md (#12701)
 
 ## 4.6.1 - August 2020
@@ -290,7 +290,7 @@ ms.service: azure-powershell
 * Added 'Get-AzDeploymentManagementGroupWhatIfResult' for getting ARM template What-If results at management Group scope
 * Added 'Get-AzTenantWhatIfResult' new cmdlet for getting ARM template What-If results at tenant scope
 * Overrode '-WhatIf' and '-Confirm' for 'New-AzManagementGroupDeployment' and 'New-AzTenantDeployment' to use ARM template What-If results
-* Fixed the behaviors of '-WhatIf' and '-Confirm' for new deployment cmdlets so they comply with False and 
+* Fixed the behaviors of '-WhatIf' and '-Confirm' for new deployment cmdlets so they comply with False and
 * Fixed serialization error for '-TemplateObject' and 'TemplateParameterObject' [#1528] [#6292]
 * Added breaking change attribute to 'Get-AzResourceGroupDeploymentOperation' for the upcoming output type change
 
@@ -599,7 +599,7 @@ ms.service: azure-powershell
 
 #### Az.OperationalInsights
 * Fixed bug PSWorkspace doesn't implement IOperationalInsightsWorkspace [#12135]
-* Added 'pergb2018' to valid value set of parameter 'Sku' in 'Set-AzOperationalInsightsWorkspace' 
+* Added 'pergb2018' to valid value set of parameter 'Sku' in 'Set-AzOperationalInsightsWorkspace'
 * Added alias 'FunctionParameters' for parameter 'FunctionParameter' to
     - 'New-AzOperationalInsightsSavedSearch'
     - 'Set-AzOperationalInsightsSavedSearch'
@@ -648,7 +648,7 @@ ms.service: azure-powershell
 * Updated assembly version of consumption cmdlets
 
 #### Az.CognitiveServices
-* Support PrivateEndpoint and PublicNetworkAccess control. 
+* Support PrivateEndpoint and PublicNetworkAccess control.
 
 #### Az.DataFactory
 * Updated assembly version of data factory V2 cmdlets
@@ -661,7 +661,7 @@ ms.service: azure-powershell
 
 #### Az.OperationalInsights
 * Upgraded SDK to 0.21.0
-* Added optional parameters to 
+* Added optional parameters to
     - 'New-AzOperationalInsightsSavedSearch'
     - 'Set-AzOperationalInsightsSavedSearch'
 
@@ -696,7 +696,7 @@ ms.service: azure-powershell
 ## 4.1.0 - May 2020
 ### Highlights since the last release
 * Supported PowerShell versions: Windows PowerShell 5.1, PowerShell Core 6.2.4+, PowerShell 7
-* General availability of Az.Functions 
+* General availability of Az.Functions
 * Az.ApiManagement, Az.Batch, Az.Compute, Az.KeyVault, Az.Monitor, Az.Network, Az.OperationalInsights, Az.Resources, and Az.Storage have major release
 
 #### Az.Accounts
@@ -713,7 +713,7 @@ ms.service: azure-powershell
 * 'New-AzApiManagement' and 'Set-AzApiManagement': [-AssignIdentity] parameter renamed as [-SystemAssignedIdentity]
 * 'New-AzApiManagement' and 'Set-AzApiManagement': New parameter added: [-UserAssignedIdentity <String[]>]
 * 'Get-AzApiManagementProperty': renamed as 'Get-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
-* 'New-AzApiManagementProperty': renamed as 'New-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId. 
+* 'New-AzApiManagementProperty': renamed as 'New-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * 'Set-AzApiManagementProperty': renamed as 'Set-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * 'Remove-AzApiManagementProperty': renamed as 'Remove-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * Added new 'Get-AzApiManagementAuthorizationServerClientSecret' cmdlet and 'Get-AzApiManagementAuthorizationServer' will not return client secret anymore.
@@ -747,7 +747,7 @@ ms.service: azure-powershell
     - AvailabilitySetsColocationStatus, VirtualMachinesColocationStatus and VirtualMachineScaleSetsColocationStatus properties are removed from ProximityPlacementGroup.
     - MaxInstanceRepairsPercent property is removed from AutomaticRepairsPolicy.
     - The types of AvailabilitySets, VirtualMachines and VirtualMachineScaleSets are changed from IList<SubResource> to IList<SubResourceWithColocationStatus>.
-* Description for 'Get-AzVM' cmdlet has been updated to better describe it. 
+* Description for 'Get-AzVM' cmdlet has been updated to better describe it.
 
 #### Az.DataFactory
 * Supported CRUD of data flow runtime properties in Managed IR.
@@ -3531,7 +3531,7 @@ Added KeyVault Support to Application Gateway using Identity.
 * Update common code to use latest version of ClientRuntime
 
 #### Az.Compute
-* Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'
+* Added new sizes to the allowlist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'
 * Added ResourceName argument completer to all cmdlets.
 
 #### Az.DataLakeStore
