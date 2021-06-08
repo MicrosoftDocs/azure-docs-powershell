@@ -368,7 +368,7 @@ Remove-AzRmStorageShare -ResourceGroupName $resourceGroupName -StorageAccountNam
 
 ### `Add-AzServiceFabricClusterCertificate`
 
-this cmdlet has been removed completly. please follow instructions here to add cluster certificates: https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-security-update-certs-azure#add-a-secondary-certificate-using-azure-resource-manager
+this cmdlet has been removed completely. please follow instructions [here](/azure/service-fabric/service-fabric-cluster-security-update-certs-azure#add-a-secondary-certificate-using-azure-resource-manager) to add cluster certificates.
 
 ### `Get-AzServiceFabricManagedClusterService`
 
@@ -414,7 +414,7 @@ $statelessService.ProvisioningState
 
 ### `Remove-AzServiceFabricClusterCertificate`
 
-this cmdlet has been removed completly. please follow instructions here to add cluster certificates: https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-security-update-certs-azure#remove-a-cluster-certificate-using-the-portal
+this cmdlet has been removed completely. please follow instructions [here](/azure/service-fabric/service-fabric-cluster-security-update-certs-azure#remove-a-cluster-certificate-using-the-portal) to add cluster certificates.
 
 ### `Remove-AzServiceFabricManagedClusterService`
 

@@ -3,8 +3,8 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 03/10/2020
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Azure PowerShell release notes
@@ -1373,10 +1373,10 @@ https://github.com/Azure/azure-powershell/issues/9752
 * Fix for get-policy command for IaaSVMs
 
 #### Az.Resources
-    - Fix help text for Get-AzPolicyState -Top parameter
-    - Add client-side paging support for Get-AzPolicyAlias
-    - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
-    - Handful of doc and example updates for Policy cmdlets
+   - Fix help text for Get-AzPolicyState -Top parameter
+   - Add client-side paging support for Get-AzPolicyAlias
+   - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
+   - Handful of doc and example updates for Policy cmdlets
 
 #### Az.ServiceBus
 * Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes
@@ -2613,7 +2613,7 @@ Added KeyVault Support to Application Gateway using Identity.
 * Update common code to use latest version of ClientRuntime
 
 #### Az.Compute
-* Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'
+* Added new sizes to the allowlist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'
 * Added ResourceName argument completer to all cmdlets.
 
 #### Az.DataLakeStore
