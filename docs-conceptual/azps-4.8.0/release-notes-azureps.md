@@ -2291,10 +2291,10 @@ https://github.com/Azure/azure-powershell/issues/9752
 * Fix for get-policy command for IaaSVMs
 
 #### Az.Resources
-    - Fix help text for Get-AzPolicyState -Top parameter
-    - Add client-side paging support for Get-AzPolicyAlias
-    - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
-    - Handful of doc and example updates for Policy cmdlets
+   - Fix help text for Get-AzPolicyState -Top parameter
+   - Add client-side paging support for Get-AzPolicyAlias
+   - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
+   - Handful of doc and example updates for Policy cmdlets
 
 #### Az.ServiceBus
 * Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes
