@@ -3,7 +3,7 @@ title: Install the Azure Az PowerShell module with PowerShellGet
 description: How to install the Azure Az PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/22/2021
+ms.date: 06/30/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -37,6 +37,13 @@ To check your PowerShell version, run the following command from within a PowerS
 
 ```azurepowershell-interactive
 $PSVersionTable.PSVersion
+```
+
+PowerShell script execution policy must be set to remote signed or less restrictive. `Get-ExecutionPolicy -List`
+can be used to determine the current execution policy. For more information, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+```powershell-interactive
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ## Installation
@@ -88,6 +95,8 @@ To start working with Azure PowerShell, sign in with your Azure credentials.
 ```powershell-interactive
 Connect-AzAccount
 ```
+
+After executing this command, a new browser window pops up and you can log into your Azure account.
 
 ## Update the Azure PowerShell module
 
