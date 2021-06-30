@@ -25,6 +25,7 @@ Az PowerShell modules, and makes their cmdlets available for use.
 > [!NOTE]
 > PowerShell 7.x and later is the recommended version of PowerShell for use with the Azure Az
 > PowerShell module on all platforms.
+> You need to run powershell with `Run as Administrator` option in order to be able to enable and import Azure Az module.
 
  The Azure Az PowerShell module works with PowerShell 7.x and later on all platforms. Azure
  PowerShell has no additional requirements when run on PowerShell 7.x and later.
@@ -48,6 +49,18 @@ platforms. Run the following command from a PowerShell session:
 
 ```powershell-interactive
 Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+```
+Then you need to import the module:
+
+```powershell-interactive
+Import-Module az.accounts
+```
+In case you ran into the error `Import-Module : cannot be loaded because running scripts is disabled on this system.` ,
+you need to open a new PowerShell instance using `Run as Administrator` option, then run the following command:
+
+```powershell-interactive
+
+Set-ExecutionPolicy RemoteSigned
 ```
 
 ## Other Installation Options
@@ -88,6 +101,8 @@ To start working with Azure PowerShell, sign in with your Azure credentials.
 ```powershell-interactive
 Connect-AzAccount
 ```
+After executing this command, a new browser window pops up and you can log into your Azure account.
+
 
 ## Update the Azure PowerShell module
 
