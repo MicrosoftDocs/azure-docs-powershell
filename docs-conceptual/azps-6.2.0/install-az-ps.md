@@ -3,7 +3,7 @@ title: Install the Azure Az PowerShell module with PowerShellGet
 description: How to install the Azure Az PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/22/2021
+ms.date: 06/30/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -39,6 +39,13 @@ To check your PowerShell version, run the following command from within a PowerS
 $PSVersionTable.PSVersion
 ```
 
+PowerShell script execution policy must be set to remote signed or less restrictive. `Get-ExecutionPolicy -List`
+can be used to determine the current execution policy. For more information, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+```powershell-interactive
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ## Installation
 
 Using the [Install-Module](/powershell/module/powershellget/install-module) cmdlet is the preferred
@@ -69,7 +76,7 @@ Azure Az PowerShell module in PowerShell 5.1 on Windows:
 ### Offline Installation
 
 In some environments, it's not possible to connect to the PowerShell Gallery. In those situations,
-you can still install offline using one of these methods:
+you can install the Az PowerShell module offline using one of these methods:
 
 - [Download the Azure PowerShell MSI](install-az-ps-msi.md). Keep in mind that the MSI installer
   only works for PowerShell 5.1 on Windows.
@@ -89,12 +96,14 @@ To start working with Azure PowerShell, sign in with your Azure credentials.
 Connect-AzAccount
 ```
 
+After executing this command, a new browser window pops up and you can log into your Azure account.
+
 ## Update the Azure PowerShell module
 
 To update any PowerShell module, you should use the same method used to install the module. For
 example, if you originally used `Install-Module`, then you should use
 [Update-Module](/powershell/module/powershellget/update-module) to get the latest version. If you
-originally used the MSI package then you should download and install the new MSI package.
+originally used the MSI package, then you should download and install the new MSI package.
 
 The PowerShellGet cmdlets cannot update modules that were installed from an MSI package. MSI
 packages do not update modules that were installed using PowerShellGet. If you have any issues
