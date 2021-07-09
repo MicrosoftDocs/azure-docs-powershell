@@ -227,7 +227,7 @@ New-AzKeyVault -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -Locatio
 
 #### After
 
-The ability to update soft-delete setting is deprecated in Az.KeyVault 3.0.0. Read more: https://docs.microsoft.com/azure/key-vault/general/soft-delete-change
+The ability to update soft-delete setting is deprecated in Az.KeyVault 3.0.0. [Read more](/azure/key-vault/general/soft-delete-change)
 
 ### Update-AzKeyVault
 
@@ -242,7 +242,7 @@ Update-AzKeyVault -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -Enab
 
 #### After
 
-The ability to update soft-delete setting is deprecated in Az.KeyVault 3.0.0. Read more: https://docs.microsoft.com/azure/key-vault/general/soft-delete-change
+The ability to update soft-delete setting is deprecated in Az.KeyVault 3.0.0. [Read more](/azure/key-vault/general/soft-delete-change)
 
 ### Get-AzKeyVaultSecret
 
