@@ -3,8 +3,8 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 03/10/2020
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Azure PowerShell release notes
@@ -33,7 +33,7 @@ ms.service: azure-powershell
     - 'Update-AzVm'
     - 'Update-AzVmss'
     - 'Update-AzGalleryImageVersion'
-* Added parameters '-EnableCrossZoneUpgrade' and '-PrioritizeUnhealthyInstance' to the 'Set-AzVmssRollingUpgradePolicy'  
+* Added parameters '-EnableCrossZoneUpgrade' and '-PrioritizeUnhealthyInstance' to the 'Set-AzVmssRollingUpgradePolicy'
 * Added 'AssessmentMode' parameter to the 'Set-AzVMOperatingSystem' cmdlet.
 * Fixed a bug in 'Add-AzVmssNetworkInterfaceConfiguration'
 * Fixed IOPS and throughput check in 'Test-AzVMAEMExtension'
@@ -125,7 +125,7 @@ ms.service: azure-powershell
     -  'Start-AzStorageBlobCopy'
 
 #### Az.Websites
-* Fixed 'Import-AzWebAppKeyVaultCertificate' to support ServerFarmId [#15091] 
+* Fixed 'Import-AzWebAppKeyVaultCertificate' to support ServerFarmId [#15091]
 * Fixed 'Added an optional parameter to delete or keep Appservice plan when the last WebApp is removing from plan'
 
 ### Thanks to our community contributors
@@ -149,7 +149,7 @@ ms.service: azure-powershell
   * 'Get-AzApplicationInsightsLinkedStorageAccount'
   * 'New-AzApplicationInsightsLinkedStorageAccount'
   * 'Update-AzApplicationInsightsLinkedStorageAccount'
-  * 'Remove-AzApplicationInsightsLinkedStorageAccount' 
+  * 'Remove-AzApplicationInsightsLinkedStorageAccount'
 
 #### Az.Cdn
 * Fixed profile missing issue in 'Remove-AzCdnProfile' cmdlet
@@ -274,7 +274,7 @@ Due to [CVE-2021-26701](https://msrc.microsoft.com/update-guide/vulnerability/CV
  - PowerShell 7.0.6 or above
  - PowerShell 7.1.3 or above
 
-For more information and how to upgrade, see [Azure PowerShell modules Lifecycle](https://docs.microsoft.com/powershell/azure/azureps-support-lifecycle).
+For more information and how to upgrade, see [Azure PowerShell modules Lifecycle](/powershell/azure/azureps-support-lifecycle).
 
 #### Az.Accounts
 * Upgraded Azure.Identity to 1.4 and MSAL to 4.30.1
@@ -324,7 +324,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 * Added support in function app creation for Python 3.9 and Node 14 function apps
 * Removed support in function app creation for V2, Python 3.6, Node 8, and Node 10 function apps
 * Updated IdentityID parameter from string to string array in Update-AzFunctionApp. This is to be consistent with New-AzFunctionApp which has the same parameter as a string array
-* Updated FullyQualifiedErrorId for an invalid Functions version from FunctionsVersionIsInvalid to FunctionsVersionNotSupported 
+* Updated FullyQualifiedErrorId for an invalid Functions version from FunctionsVersionIsInvalid to FunctionsVersionNotSupported
 * When creating a Node.js function app, if no runtime version is specified, the default runtime version is set to 14 instead of 12
 
 #### Az.KeyVault
@@ -445,7 +445,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 ## 5.9.0 - May 2021
 #### Az.Aks
 * Added support 'AcrNameToAttach' in 'Set-AzAksCluster'. [#14692]
-* Added support 'AcrNameToDetach' in 'Set-AzAksCluster'. [#14693] 
+* Added support 'AcrNameToDetach' in 'Set-AzAksCluster'. [#14693]
 * Added 'Set-AzAksClusterCredential' to reset the ServicePrincipal of an existing AKS cluster.
 
 #### Az.Automation
@@ -541,7 +541,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 * Edited default value for Size parameter in New-AzVM cmdlet from Standard_DS1_v2 to Standard_D2s_v3.
 
 #### Az.ContainerRegistry
-* Fixed bug in 'Get-AzContainerRegistryManifest' showing incorrect image name 
+* Fixed bug in 'Get-AzContainerRegistryManifest' showing incorrect image name
 
 #### Az.HDInsight
 * Supported getting default vmsize from backend if customer does not provide the related parameters: '-WorkerNodeSize', '-HeadNodeSize', '-ZookeeperNodeSize', '-EdgeNodeSize', '-KafkaManagementNodeSize'.
@@ -566,14 +566,14 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 
 #### Az.Resources
 * Added upcoming breaking change warnings on below cmdlets, because the value of 'IdentifierUris' parameter will need verified domain.
-  - 'New-AzADApplication' 
+  - 'New-AzADApplication'
   - 'Update-AzADApplication'
   - 'New-AzADServicePrincipal'
   - 'Update-AzADServicePrincipal'
 * Ignored Bicep warning message in error stream if exitcode equals zero.
 
 #### Az.Sql
-* Added cmdlet output breaking change warnings to the following: 
+* Added cmdlet output breaking change warnings to the following:
     - 'New-AzSqlDatabase'
     - 'Get-AzSqlDatabase'
     - 'Set-AzSqlDatabase'
@@ -598,7 +598,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 ## 5.7.0 - March 2021
 #### Az.Accounts
 * Fixed incorrect warning message on Windows PowerShell [#14556]
-* Set Azure Environment variable 'AzureKeyVaultServiceEndpointResourceId' according to the value of 'AzureKeyVaultDnsSuffix' when discovering environment 
+* Set Azure Environment variable 'AzureKeyVaultServiceEndpointResourceId' according to the value of 'AzureKeyVaultDnsSuffix' when discovering environment
 
 #### Az.Automation
 * Fixed the issue for starting Python3 runbooks with parameters
@@ -642,7 +642,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 	- 'Set-AzVirtualNetworkGateway'
 
 #### Az.RecoveryServices
-* Added Cross Zonal Restore for managed virtual machines. 
+* Added Cross Zonal Restore for managed virtual machines.
 
 #### Az.RedisEnterpriseCache
 * GA version of Az.RedisEnterpriseCache
@@ -717,16 +717,16 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 * Added Support for Python3 Runbook Type
 
 #### Az.Compute
-* Added parameter '-EnableHotpatching' to the 'Set-AzVMOperatingSystem' cmdlet for Windows machines. 
-* Added parameter '-PatchMode' to the Linux parameter sets in the cmdlet 'Set-AzVMOperatingSystem'. 
+* Added parameter '-EnableHotpatching' to the 'Set-AzVMOperatingSystem' cmdlet for Windows machines.
+* Added parameter '-PatchMode' to the Linux parameter sets in the cmdlet 'Set-AzVMOperatingSystem'.
 * [Breaking Change] Breaking changes for users in the public preview for the VM Guest Patching feature.
-    - Removed property 'RebootStatus' from the 'Microsoft.Azure.Management.Compute.Models.LastPatchInstallationSummary' object. 
+    - Removed property 'RebootStatus' from the 'Microsoft.Azure.Management.Compute.Models.LastPatchInstallationSummary' object.
     - Removed property 'StartedBy' from the 'Microsoft.Azure.Management.Compute.Models.LastPatchInstallationSummary' object.
-    - Renamed property 'Kbid' to 'KbId' in the 'Microsoft.Azure.Management.Compute.Models.VirtualMachineSoftwarePatchProperties' object. 
-    - Renamed property 'patches' to 'availablePatches' in the 'Microsoft.Azure.Management.Compute.Models.VirtualMachineAssessPatchesResult' object. 
+    - Renamed property 'Kbid' to 'KbId' in the 'Microsoft.Azure.Management.Compute.Models.VirtualMachineSoftwarePatchProperties' object.
+    - Renamed property 'patches' to 'availablePatches' in the 'Microsoft.Azure.Management.Compute.Models.VirtualMachineAssessPatchesResult' object.
     - Renamed object 'Microsoft.Azure.Management.Compute.Models.SoftwareUpdateRebootBehavior' to 'Microsoft.Azure.Management.Compute.Models.VMGuestPatchRebootBehavior'.
     - Renamed object 'Microsoft.Azure.Management.Compute.Models.InGuestPatchMode' to 'Microsoft.Azure.Management.Compute.Models.WindowsVMGuestPatchMode'.
-* [Breaking Change] Removed all 'ContainerService' cmdlets. The Container Service API was deprecated in January 2020. 
+* [Breaking Change] Removed all 'ContainerService' cmdlets. The Container Service API was deprecated in January 2020.
     - 'Add-AzContainerServiceAgentPoolProfile'
     - 'Get-AzContainerService'
     - 'New-AzContainerService'
@@ -783,7 +783,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 * Fixed issue that Get-AzStorageBlobContent use wrong directory separator char on Linux and MacOS [#14234]
 
 #### Az.Websites
-* Introduced an option to give custom timeout for 'Publish-AzWebApp' 
+* Introduced an option to give custom timeout for 'Publish-AzWebApp'
 * Added support for App Service Environment
     - 'New-AzAppServiceEnvironment'
     - 'Remove-AzAppServiceEnvironment'
@@ -816,7 +816,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
 
 #### Az.Compute
 * Added parameter '-EnableAutomaticUpgrade' to 'Set-AzVmExtension' and 'Add-AzVmssExtension'.
-* Removed FilterExpression parameter from 'Get-AzVMImage' cmdlet documentation. 
+* Removed FilterExpression parameter from 'Get-AzVMImage' cmdlet documentation.
 * Added deprecation message to the ContainerService cmdlets:
     - 'Add-AzureRmContainerServiceAgentPoolProfileCommand'
     - 'Get-AzContainerService'
@@ -827,7 +827,7 @@ For more information and how to upgrade, see [Azure PowerShell modules Lifecycle
     - 'Update-AzContainerService'
 * Added parameter '-BurstingEnabled' to 'New-AzDiskConfig' and 'New-AzDiskUpdateConfig'
 * Added '-GroupByApplicationId' and '-GroupByUserAgent' parameters to the 'Export-AzLogAnalyticThrottledRequest' and 'Export-AzLogAnalyticRequestRateByInterval' cmdlets.
-* Added 'VMParameterSet' parameter set to 'Get-AzVMExtension' cmdlet. Added new parameter '-VM' to this parameter set. 
+* Added 'VMParameterSet' parameter set to 'Get-AzVMExtension' cmdlet. Added new parameter '-VM' to this parameter set.
 
 #### Az.ContainerRegistry
 * Added cmdlets to supported repository, manifest, and tag operations:
@@ -874,7 +874,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.RecoveryServices
 * modified policy validation limits as per backup service.
-* Added Zone Redundancy for Recovery Service Vaults. 
+* Added Zone Redundancy for Recovery Service Vaults.
 * Azure Site Recovery support for Proximity placement group for VMware to Azure and HyperV to Azure providers.
 * Azure Site Recovery support for Availability zone for VMware to Azure and HyperV to Azure providers.
 * Azure Site Recovery support for UseManagedDisk for HyperV to Azure provider
@@ -928,7 +928,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Fixed issue that 'Get-AzLogicAppTriggerHistory' and 'Get-AzLogicAppRunAction' only retrieving the first page of results [#9141]
 
 #### Az.Monitor
-* Added cmdlets for data collection rules: 
+* Added cmdlets for data collection rules:
     - 'Get-AzDataCollectionRule'
     - 'New-AzDataCollectionRule'
     - 'Set-AzDataCollectionRule'
@@ -944,10 +944,10 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - 'New-AzVpnGatewayNatRule'
     - 'Update-AzVpnGatewayNatRule'
     - 'Get-AzVpnGatewayNatRule'
-    - 'Remove-AzVpnGatewayNatRule'	
+    - 'Remove-AzVpnGatewayNatRule'
 * Updated cmdlets to set NATRule on VpnGateway resource and associate it with VpnSiteLinkConnection resource.
     - 'New-AzVpnGateway'
-    - 'Update-AzVpnGateway'	
+    - 'Update-AzVpnGateway'
     - 'New-AzVpnSiteLinkConnection'
 * Updated cmdlets to enable setting of ConnectionMode on Virtual Network Gateway Connections.
     - 'New-AzVirtualNetworkGatewayConnection'
@@ -974,7 +974,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - Added parameter EnableRoutingPreferenceInternetFlag
 
 #### Az.RecoveryServices
-* Added Cross Region Restore feature.  
+* Added Cross Region Restore feature.
 * Blocked getting workload config when target item is an availability group.
 
 #### Az.Resources
@@ -1011,7 +1011,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Fixed location completer for New-AzAutomationUpdateManagementAzureQuery cmdlet
 
 #### Az.Compute
-* New parameter 'VM' in new parameter set 'VMParameterSet' added to 'Get-AzVMDscExtensionStatus' and 'Get-AzVMDscExtension' cmdlets. 
+* New parameter 'VM' in new parameter set 'VMParameterSet' added to 'Get-AzVMDscExtensionStatus' and 'Get-AzVMDscExtension' cmdlets.
 
 #### Az.Databricks
 * Fixed an issue that may cause 'New-AzDatabricksVNetPeering' to return before it is fully provisioned (https://github.com/Azure/autorest.powershell/issues/610)
@@ -1095,7 +1095,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * [Breaking change] 'New-AzApiManagementProduct' by default has no subscription limit.
 
 #### Az.Compute
-* Edited Get-AzVm to filter by '-Name' prior to checking for throttling due to too many resources. 
+* Edited Get-AzVm to filter by '-Name' prior to checking for throttling due to too many resources.
 * New cmdlet 'Start-AzVmssRollingExtensionUpgrade'.
 
 #### Az.ContainerRegistry
@@ -1129,7 +1129,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.Resources
 * Added '-Tag' parameter support to 'Set-AzTemplateSpec' and 'New-AzTemplateSpec'
-* Added Tag display support to default formatter for Template Specs 
+* Added Tag display support to default formatter for Template Specs
 
 #### Az.ServiceFabric
 * Added example to 'Set-AzServiceFabricSetting' with SettingsSectionDescription param
@@ -1137,14 +1137,14 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Marked for deprecation cluster cert cmdlets 'Add-AzureRmServiceFabricClusterCertificate' and 'Remove-AzureRmServiceFabricClusterCertificate'
 
 #### Az.Sql
-* Added SecondaryType to the following: 
+* Added SecondaryType to the following:
     - 'New-AzSqlDatabase'
     - 'Set-AzSqlDatabase'
     - 'New-AzSqlDatabaseSecondary'
-* Added HighAvailabilityReplicaCount to the following: 
+* Added HighAvailabilityReplicaCount to the following:
     - 'New-AzSqlDatabase'
     - 'Set-AzSqlDatabase'
-* Made ReadReplicaCount an alias of HighAvailabilityReplicaCount in the following: 
+* Made ReadReplicaCount an alias of HighAvailabilityReplicaCount in the following:
     - 'New-AzSqlDatabase'
     - 'Set-AzSqlDatabase'
 
@@ -1179,7 +1179,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Added new cmdlet 'Get-AzAccessToken'
 * Fixed an issue that error happens if user profile path is inaccessible
 * Fixed an issue causing Write-Object error during Connect-AzAccount [#13419]
-* Added parameter 'ContainerRegistryEndpointSuffix' to: 'Add-AzEnvironment', 'Set-AzEnvironment' 
+* Added parameter 'ContainerRegistryEndpointSuffix' to: 'Add-AzEnvironment', 'Set-AzEnvironment'
 * Supported interrupting login by hitting <kbd>CTRL</kbd>+<kbd>C</kbd>
 * Fixed an issue causing 'Connect-AzAccount -KeyVaultAccessToken' not working [#13127]
 * Fixed null reference and method case insensitive in 'Invoke-AzRestMethod'
@@ -1201,7 +1201,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.EventHub
 * Fixed Cluster commands for EventHub cluster without tags
-* Updated help text for PartnerNamespace of AzEventHubGeoDRConfiguration commands 
+* Updated help text for PartnerNamespace of AzEventHubGeoDRConfiguration commands
 
 #### Az.HDInsight
 * Add parameters 'ResourceProviderConnection' and 'PrivateLink' to cmdlet 'New-AzHDInsightCluster' to support relay outbound and private link feature
@@ -1218,7 +1218,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Fixed for Get-AzLogicAppRunHistory only retrieving the first page of results
 
 #### Az.Network
-* Updated below cmdlet 
+* Updated below cmdlet
     - 'New-AzLoadBalancerFrontendIpConfigCommand', 'Set-AzLoadBalancerFrontendIpConfigCommand', 'Add-AzLoadBalancerFrontendIpConfigCommand':
         - Added PublicIpAddressPrefix property
         - Added PublicIpAddressPrefixId property
@@ -1248,10 +1248,10 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - 'New-AzApplicationGatewayClientAuthConfiguration'
     - 'Remove-AzApplicationGatewayClientAuthConfiguration'
     - 'Set-AzApplicationGatewayClientAuthConfiguration'
-    - 'Add-AzApplicationGatewayTrustedClientCertificate' 
-    - 'Get-AzApplicationGatewayTrustedClientCertificate' 
-    - 'New-AzApplicationGatewayTrustedClientCertificate' 
-    - 'Remove-AzApplicationGatewayTrustedClientCertificate' 
+    - 'Add-AzApplicationGatewayTrustedClientCertificate'
+    - 'Get-AzApplicationGatewayTrustedClientCertificate'
+    - 'New-AzApplicationGatewayTrustedClientCertificate'
+    - 'Remove-AzApplicationGatewayTrustedClientCertificate'
     - 'Set-AzApplicationGatewayTrustedClientCertificate'
     - 'Add-AzApplicationGatewaySslProfile'
     - 'Get-AzApplicationGatewaySslProfile'
@@ -1307,7 +1307,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Removed properties DownloadUrlExpiry, Type, BillingPeriodNames from the response of Get-AzBillingInvoice cmdlet
 
 #### Az.Cdn
-* Added cmdlets to support multi-origin and private link functionality 
+* Added cmdlets to support multi-origin and private link functionality
 
 #### Az.CognitiveServices
 * Updated SDK to 7.4.0-preview.
@@ -1316,8 +1316,8 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Added '-VmssId' parameter to 'New-AzVm'
 * Added 'PlatformFaultDomainCount' parameter to the 'New-AzVmss' cmdlet.
 * New cmdlet 'Get-AzDiskEncryptionSetAssociatedResource'
-* Added 'Tier' and 'LogicalSectorSize' optional parameters to the New-AzDiskConfig cmdlet. 
-* Added 'Tier', 'MaxSharesCount', 'DiskIOPSReadOnly', and 'DiskMBpsReadOnly' optional parameters to the 'New-AzDiskUpdateConfig' cmdlet. 
+* Added 'Tier' and 'LogicalSectorSize' optional parameters to the New-AzDiskConfig cmdlet.
+* Added 'Tier', 'MaxSharesCount', 'DiskIOPSReadOnly', and 'DiskMBpsReadOnly' optional parameters to the 'New-AzDiskUpdateConfig' cmdlet.
 
 #### Az.ContainerRegistry
 * [Breaking Change] Updates API version to 2019-05-01
@@ -1340,7 +1340,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
         * Added `PreferredAppGroupType` for `New-AzWvdHostPool`.
 
 #### Az.Functions
-* [Breaking Change] Removed 'IncludeSlot' switch parameter from all but one parameter set of 'Get-AzFunctionApp'. The cmdlet now supports retrieving deployment slots in the results when '-IncludeSlot' is specified. 
+* [Breaking Change] Removed 'IncludeSlot' switch parameter from all but one parameter set of 'Get-AzFunctionApp'. The cmdlet now supports retrieving deployment slots in the results when '-IncludeSlot' is specified.
 * Updated 'New-AzFunctionApp':
   - Fixed -DisableApplicationInsights so that no application insights project is created when this option is specified. [#12728]
   - [Breaking Change] Removed support to create PowerShell 6.2 function apps.
@@ -1409,14 +1409,14 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Fixed an issue where template deployment cmdlets does not preserve case for template parameters
 * Added a default API version to be used in 'Export-AzResourceGroup' cmdlet
 * Added cmdlets for Template Specs ('Get-AzTemplateSpec', 'Set-AzTemplateSpec', 'New-AzTemplateSpec', 'Remove-AzTemplateSpec', 'Export-AzTemplateSpec')
-* Added support for deploying Template Specs using existing deployment cmdlets (via the new -TemplateSpecId parameter) 
+* Added support for deploying Template Specs using existing deployment cmdlets (via the new -TemplateSpecId parameter)
 * Updated 'Get-AzResourceGroupDeploymentOperation' to use the SDK.
 * Removed '-ApiVersion' parameter from '*-AzDeployment' cmdlets.
 
 #### Az.Sql
 * Fixed issue where New-AzSqlDatabaseExport fails if networkIsolation not specified [#13097]
 * Fixed issue where New-AzSqlDatabaseExport and New-AzSqlDatabaseImport were not returning OperationStatusLink in the result object [#13097]
-* Update Azure Paired Regions URL in Backup Storage Redundancy Warnings 
+* Update Azure Paired Regions URL in Backup Storage Redundancy Warnings
 
 #### Az.Storage
 * Removed obsolete property RestorePolicy.LastEnabledTime
@@ -1432,9 +1432,9 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Supported create/update file share with access tier
     - 'New-AzRmStorageShare'
     - 'Update-AzRmStorageShare'
-* Supported set/update/remove Acl recursively on Datalake Gen2 item 
-    -  'Set-AzDataLakeGen2AclRecursive' 
-    -  'Update-AzDataLakeGen2AclRecursive' 
+* Supported set/update/remove Acl recursively on Datalake Gen2 item
+    -  'Set-AzDataLakeGen2AclRecursive'
+    -  'Update-AzDataLakeGen2AclRecursive'
     -  'Remove-AzDataLakeGen2AclRecursive'
 * Supported Container access policy with new permission x,t
     -  'New-AzStorageContainerStoredAccessPolicy'
@@ -1472,7 +1472,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.Compute
 * Fixed issue in 'Update-ASRRecoveryPlan' by populating FailoverTypes
-* Added the '-Top' and '-OrderBy' optional parameters to the 'Get-AzVmImage' cmdlet. 
+* Added the '-Top' and '-OrderBy' optional parameters to the 'Get-AzVmImage' cmdlet.
 
 #### Az.Databricks
 * General availability of 'Az.Databricks' module
@@ -1516,11 +1516,11 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Made 'New-AzRedisCache' and 'Set-AzRedisCache' cmdlets not fail because of permission issue related to registering Microsoft.Cache RP
 
 #### Az.Sql
-* Added BackupStorageRedundancy to the following: 
+* Added BackupStorageRedundancy to the following:
     - 'Restore-AzureRmSqlDatabase'
     - 'New-AzSqlDatabaseCopy'
     - 'New-AzSqlDatabaseSecondary'
-* Removed case sensitivity for BackupStorageRedundancy parameter for all SQL DB references 
+* Removed case sensitivity for BackupStorageRedundancy parameter for all SQL DB references
 * Updated BackupStorageRedundancy warning message names
 
 #### Az.Storage
@@ -1533,7 +1533,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - 'Restore-AzRmStorageShare'
 * Changed the cmdlets for modify blob service properties, won't get the original properties from server, but only set the modified properties to server.
     - 'Enable-AzStorageBlobDeleteRetentionPolicy'
-    - 'Disable-AzStorageBlobDeleteRetentionPolicy'  
+    - 'Disable-AzStorageBlobDeleteRetentionPolicy'
     - 'Enable-AzStorageBlobRestorePolicy'
     - 'Disable-AzStorageBlobRestorePolicy'
     - 'Update-AzStorageBlobServiceProperty'
@@ -1563,7 +1563,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Added 'PatchStatus' property to VirtualMachine Instance View
 * Added 'VMHealth' property to the virtual machine's instance view, which is the returned object when 'Get-AzVm' is invoked with '-Status'
 * Added 'AssignedHost' field to 'Get-AzVM' and 'Get-AzVmss' instance views. The field shows the resource id of the virtual machine instance
-* Added optional parameter '-SupportAutomaticPlacement' to 'New-AzHostGroup' 
+* Added optional parameter '-SupportAutomaticPlacement' to 'New-AzHostGroup'
 * Added the '-HostGroupId' parameter to 'New-AzVm' and 'New-AzVmss'
 
 #### Az.DataFactory
@@ -1596,7 +1596,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.Network
 * [Breaking Change] Updated below cmdlets to align resource virtual router and virtual hub
-    - 'New-AzVirtualRouter': 
+    - 'New-AzVirtualRouter':
         - Added -HostedSubnet parameter to support IP configuration child resource
         - deleted -HostedGateway and -HostedGatewayId
     - 'Get-AzVirtualRouter':
@@ -1674,7 +1674,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - 'Disable-AzStorageBlobRestorePolicy'
     - 'New-AzStorageBlobRangeToRestore'
     - 'Restore-AzStorageBlobRange'
-* Supported get blob restore status of Storage account by run get-AzureRMStorageAccount with parameter -IncludeBlobRestoreStatus 
+* Supported get blob restore status of Storage account by run get-AzureRMStorageAccount with parameter -IncludeBlobRestoreStatus
     - 'Get-AzureRMStorageAccount'
 * Added breaking change warning message for upcoming cmdlet output change
     - 'Get-AzStorageContainerStoredAccessPolicy'
@@ -1686,16 +1686,16 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Upgraded Microsoft.Azure.Cosmos.Table SDK to 1.0.8
 
 ### Thanks to our community contributors
-* Thomas Van Laere (@ThomVanL), Add Dockerfile-alpine-3.10 (#12911) 
-* Lohith Chowdary Chilukuri (@Lochiluk), Update Remove-AzNetworkInterfaceIpConfig.md (#12807) 
-* Roberth Strand (@roberthstrand), Get-AzResourceGroup - New example, and cleanup (#12828) 
-* Ravi Mishra (@inmishrar), update Azure Web App runtime stack to DOTNETCORE (#12833) 
-* @jack-education, Updated Set-AzVirtualNetworkSubnetConfig to allow NSG and Route Table to be removed from subnet (#12351) 
-* @hagop-globanet, Update Add-AzApplicationGatewayCustomError.md (#12784) 
+* Thomas Van Laere (@ThomVanL), Add Dockerfile-alpine-3.10 (#12911)
+* Lohith Chowdary Chilukuri (@Lochiluk), Update Remove-AzNetworkInterfaceIpConfig.md (#12807)
+* Roberth Strand (@roberthstrand), Get-AzResourceGroup - New example, and cleanup (#12828)
+* Ravi Mishra (@inmishrar), update Azure Web App runtime stack to DOTNETCORE (#12833)
+* @jack-education, Updated Set-AzVirtualNetworkSubnetConfig to allow NSG and Route Table to be removed from subnet (#12351)
+* @hagop-globanet, Update Add-AzApplicationGatewayCustomError.md (#12784)
 * Joshua Van Daalen (@greenSacrifice)
-  * Update spelling of Property to Property (#12821) 
+  * Update spelling of Property to Property (#12821)
   * Update New-AzResourceLock.md examples (#12806)
-* Eragon Riddle (@eragonriddle), Corrected parameter field name in the example (#12825) 
+* Eragon Riddle (@eragonriddle), Corrected parameter field name in the example (#12825)
 * @rossifumax, Fix typo in New-AzConfigurationAssignment.md (#12701)
 
 ## 4.6.1 - August 2020
@@ -1743,7 +1743,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Added 'Get-AzDeploymentManagementGroupWhatIfResult' for getting ARM template What-If results at management Group scope
 * Added 'Get-AzTenantWhatIfResult' new cmdlet for getting ARM template What-If results at tenant scope
 * Overrode '-WhatIf' and '-Confirm' for 'New-AzManagementGroupDeployment' and 'New-AzTenantDeployment' to use ARM template What-If results
-* Fixed the behaviors of '-WhatIf' and '-Confirm' for new deployment cmdlets so they comply with False and 
+* Fixed the behaviors of '-WhatIf' and '-Confirm' for new deployment cmdlets so they comply with False and
 * Fixed serialization error for '-TemplateObject' and 'TemplateParameterObject' [#1528] [#6292]
 * Added breaking change attribute to 'Get-AzResourceGroupDeploymentOperation' for the upcoming output type change
 
@@ -2052,7 +2052,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.OperationalInsights
 * Fixed bug PSWorkspace doesn't implement IOperationalInsightsWorkspace [#12135]
-* Added 'pergb2018' to valid value set of parameter 'Sku' in 'Set-AzOperationalInsightsWorkspace' 
+* Added 'pergb2018' to valid value set of parameter 'Sku' in 'Set-AzOperationalInsightsWorkspace'
 * Added alias 'FunctionParameters' for parameter 'FunctionParameter' to
     - 'New-AzOperationalInsightsSavedSearch'
     - 'Set-AzOperationalInsightsSavedSearch'
@@ -2101,7 +2101,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Updated assembly version of consumption cmdlets
 
 #### Az.CognitiveServices
-* Support PrivateEndpoint and PublicNetworkAccess control. 
+* Support PrivateEndpoint and PublicNetworkAccess control.
 
 #### Az.DataFactory
 * Updated assembly version of data factory V2 cmdlets
@@ -2114,7 +2114,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.OperationalInsights
 * Upgraded SDK to 0.21.0
-* Added optional parameters to 
+* Added optional parameters to
     - 'New-AzOperationalInsightsSavedSearch'
     - 'Set-AzOperationalInsightsSavedSearch'
 
@@ -2149,7 +2149,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 ## 4.1.0 - May 2020
 ### Highlights since the last release
 * Supported PowerShell versions: Windows PowerShell 5.1, PowerShell Core 6.2.4+, PowerShell 7
-* General availability of Az.Functions 
+* General availability of Az.Functions
 * Az.ApiManagement, Az.Batch, Az.Compute, Az.KeyVault, Az.Monitor, Az.Network, Az.OperationalInsights, Az.Resources, and Az.Storage have major release
 
 #### Az.Accounts
@@ -2166,7 +2166,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * 'New-AzApiManagement' and 'Set-AzApiManagement': [-AssignIdentity] parameter renamed as [-SystemAssignedIdentity]
 * 'New-AzApiManagement' and 'Set-AzApiManagement': New parameter added: [-UserAssignedIdentity <String[]>]
 * 'Get-AzApiManagementProperty': renamed as 'Get-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
-* 'New-AzApiManagementProperty': renamed as 'New-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId. 
+* 'New-AzApiManagementProperty': renamed as 'New-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * 'Set-AzApiManagementProperty': renamed as 'Set-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * 'Remove-AzApiManagementProperty': renamed as 'Remove-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * Added new 'Get-AzApiManagementAuthorizationServerClientSecret' cmdlet and 'Get-AzApiManagementAuthorizationServer' will not return client secret anymore.
@@ -2200,7 +2200,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - AvailabilitySetsColocationStatus, VirtualMachinesColocationStatus and VirtualMachineScaleSetsColocationStatus properties are removed from ProximityPlacementGroup.
     - MaxInstanceRepairsPercent property is removed from AutomaticRepairsPolicy.
     - The types of AvailabilitySets, VirtualMachines and VirtualMachineScaleSets are changed from IList<SubResource> to IList<SubResourceWithColocationStatus>.
-* Description for 'Get-AzVM' cmdlet has been updated to better describe it. 
+* Description for 'Get-AzVM' cmdlet has been updated to better describe it.
 
 #### Az.DataFactory
 * Supported CRUD of data flow runtime properties in Managed IR.
@@ -3744,10 +3744,10 @@ https://github.com/Azure/azure-powershell/issues/9752
 * Fix for get-policy command for IaaSVMs
 
 #### Az.Resources
-    - Fix help text for Get-AzPolicyState -Top parameter
-    - Add client-side paging support for Get-AzPolicyAlias
-    - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
-    - Handful of doc and example updates for Policy cmdlets
+   - Fix help text for Get-AzPolicyState -Top parameter
+   - Add client-side paging support for Get-AzPolicyAlias
+   - Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject
+   - Handful of doc and example updates for Policy cmdlets
 
 #### Az.ServiceBus
 * Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes
@@ -4984,7 +4984,7 @@ Added KeyVault Support to Application Gateway using Identity.
 * Update common code to use latest version of ClientRuntime
 
 #### Az.Compute
-* Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'
+* Added new sizes to the allowlist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'
 * Added ResourceName argument completer to all cmdlets.
 
 #### Az.DataLakeStore
