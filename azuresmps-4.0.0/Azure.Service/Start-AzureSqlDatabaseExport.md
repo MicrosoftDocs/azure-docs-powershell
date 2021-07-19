@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts an export operation from an Azure SQL Database to Blob storage.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByContainerObject

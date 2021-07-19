@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates existing Service Bus authorization rule.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### EntitySAS

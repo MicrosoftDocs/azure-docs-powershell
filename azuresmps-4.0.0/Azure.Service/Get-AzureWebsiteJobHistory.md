@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a web job history.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### HistoryParameterSetName

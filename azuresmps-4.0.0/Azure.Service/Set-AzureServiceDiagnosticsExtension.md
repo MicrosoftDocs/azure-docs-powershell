@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables Azure Diagnostics extension on specified roles or all roles on a deployed service or at deployment.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### SetExtension (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Get the runtimes available to install in a role.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

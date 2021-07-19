@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the remote repositories of a local git repository for all the slots.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

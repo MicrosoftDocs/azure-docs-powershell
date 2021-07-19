@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets recoverable databases from a specified server.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### AllDatabasesOnGivenServer (Default)

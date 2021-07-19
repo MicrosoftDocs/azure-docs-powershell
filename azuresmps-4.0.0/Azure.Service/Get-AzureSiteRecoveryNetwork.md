@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets information about the networks managed by Site Recovery for the current vault.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

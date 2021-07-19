@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an operating system image from the image repository.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

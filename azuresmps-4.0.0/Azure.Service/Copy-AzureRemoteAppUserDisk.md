@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Copies the user disk of a user from one Azure RemoteApp collection to another.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

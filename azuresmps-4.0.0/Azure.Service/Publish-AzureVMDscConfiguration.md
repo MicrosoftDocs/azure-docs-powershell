@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Publishes a desired state configuration script to Azure blob storage.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### UploadArchive (Default)

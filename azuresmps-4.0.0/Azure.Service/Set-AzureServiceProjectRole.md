@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the number of instances or the runtime version of a role.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Instances

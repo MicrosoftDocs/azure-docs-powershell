@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts a test failover for a Site Recovery protection entity.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByPEId (Default)

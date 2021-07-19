@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Exports an Azure virtual machine state to a file.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

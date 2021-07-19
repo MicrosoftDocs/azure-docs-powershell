@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Exports all user disks from one Azure RemoteApp collection to the specified Azure storage account.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Changes the current and default Azure subscriptions.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### SelectSubscriptionByNameParameterSet (Default)

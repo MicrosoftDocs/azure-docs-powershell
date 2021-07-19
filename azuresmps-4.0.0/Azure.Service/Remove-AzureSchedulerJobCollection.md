@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes a scheduler job collection.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

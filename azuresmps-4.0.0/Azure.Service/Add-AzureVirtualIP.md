@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a virtual IP to a cloud service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

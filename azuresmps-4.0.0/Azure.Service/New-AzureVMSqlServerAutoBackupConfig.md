@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 55E097F4-1F49-4196-9A8B-949FD5D9108A
 online version: 
@@ -9,6 +9,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a configuration object for SQL Server automatic backup.
+
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 

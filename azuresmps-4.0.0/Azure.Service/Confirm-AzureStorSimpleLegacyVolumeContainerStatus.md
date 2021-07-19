@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Initiates the commit or rollback of the volume containers that are migrated.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### MigrateSpecificContainer

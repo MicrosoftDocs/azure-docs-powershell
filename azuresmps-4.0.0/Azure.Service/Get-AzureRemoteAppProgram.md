@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves the properties of one or more published Azure RemoteApp programs for a collection.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### FilterByName (Default)

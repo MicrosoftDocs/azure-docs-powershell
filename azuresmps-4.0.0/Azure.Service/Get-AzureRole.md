@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns a list of roles in your Microsoft Azure service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

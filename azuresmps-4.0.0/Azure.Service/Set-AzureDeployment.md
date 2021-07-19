@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies the status, configuration settings, or upgrade mode of a deployment.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Upgrade

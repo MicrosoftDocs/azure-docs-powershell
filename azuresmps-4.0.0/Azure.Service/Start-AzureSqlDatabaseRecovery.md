@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Initiates a restore request for a database.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### BySourceDatabaseName

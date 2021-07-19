@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets an Application Gateway configuration context.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

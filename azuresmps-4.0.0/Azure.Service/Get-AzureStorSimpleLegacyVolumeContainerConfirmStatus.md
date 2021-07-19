@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the status of a commit or rollback operation.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

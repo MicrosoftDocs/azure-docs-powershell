@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a list object with information about Azure virtual networks.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

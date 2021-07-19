@@ -11,6 +11,8 @@ Enables Azure PowerShell to collect data to improve the user experience with Azu
 Executing this cmdlet opts in to data collection for the current user on the current machine.
 No data is collected unless you explicitly opt in.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

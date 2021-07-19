@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a network security group for a virtual machine, network adapter, or PaaS role.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### GetNetworkSecurityGroupAssociationForSubnet

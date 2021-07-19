@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Swaps deployments between production and staging.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

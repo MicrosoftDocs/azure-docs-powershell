@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sends a message to a user.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes an Azure RemoteApp template image.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

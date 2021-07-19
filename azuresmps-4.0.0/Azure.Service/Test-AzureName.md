@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Tests whether a Microsoft Azure cloud service name, storage service name or service bus namespace name exists or not.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Service

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Changes the instance count property of a virtual machine role.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the properties of an Azure RemoteApp virtual network.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

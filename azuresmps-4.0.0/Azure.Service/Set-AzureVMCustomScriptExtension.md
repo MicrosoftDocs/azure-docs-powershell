@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets information for an Azure virtual machine custom script extension.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### SetCustomScriptExtensionByContainerAndFileNames (Default)

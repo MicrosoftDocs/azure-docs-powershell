@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds endpoints and metadata for an instance of Azure Resource Manager.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

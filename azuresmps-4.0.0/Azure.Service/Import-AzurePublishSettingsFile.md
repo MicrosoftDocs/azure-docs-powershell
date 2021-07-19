@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Imports a publish settings file that lets you manage your Azure accounts in Windows PowerShell.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```
