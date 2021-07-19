@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Performs a point in time restore of a database.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### BySourceDatabaseObject

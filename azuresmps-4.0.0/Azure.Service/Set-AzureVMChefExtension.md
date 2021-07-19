@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 021D4624-AE78-4FBE-B1DE-A8A84DF1FC90
 online version: 
@@ -9,6 +9,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Adds the Chef extension to the virtual machine.
+
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 

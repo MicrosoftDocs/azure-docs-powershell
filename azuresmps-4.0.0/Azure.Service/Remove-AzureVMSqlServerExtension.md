@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an Azure virtual machine SQL Server extension from a virtual machine object.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

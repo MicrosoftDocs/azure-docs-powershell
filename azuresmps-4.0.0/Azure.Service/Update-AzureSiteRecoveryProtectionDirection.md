@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the source and target server for the protection of a Site Recovery object.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByRPObject (Default)

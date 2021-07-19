@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets status of a task on a StorSimple device.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

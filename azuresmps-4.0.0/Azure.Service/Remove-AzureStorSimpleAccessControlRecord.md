@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes an access control record from the service configuration.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### IdentifyByName

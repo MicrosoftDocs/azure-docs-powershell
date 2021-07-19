@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Downloads the publish settings file for an Azure subscription.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

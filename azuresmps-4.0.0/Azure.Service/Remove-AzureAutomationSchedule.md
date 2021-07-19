@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Deletes an Azure Automation schedule.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

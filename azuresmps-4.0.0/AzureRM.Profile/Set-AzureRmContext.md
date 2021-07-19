@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the tenant, subscription, and environment for cmdlets to use in the current session.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### SubscriptionName (Default)

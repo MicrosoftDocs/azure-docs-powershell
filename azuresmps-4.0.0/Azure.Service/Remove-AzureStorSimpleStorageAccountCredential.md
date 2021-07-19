@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes an existing storage account credential.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### IdentifyByName

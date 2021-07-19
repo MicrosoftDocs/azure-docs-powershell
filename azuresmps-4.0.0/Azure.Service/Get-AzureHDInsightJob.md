@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets HDInsight jobs.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Get jobDetails History of a HDInsight Cluster (Default)

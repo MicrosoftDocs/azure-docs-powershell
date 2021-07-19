@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an endpoint from a Traffic Manager profile.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

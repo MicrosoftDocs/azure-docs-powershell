@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies an endpoint assigned to a virtual machine.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

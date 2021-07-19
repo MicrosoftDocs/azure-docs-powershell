@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Resumes a suspended Site Recovery job.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByObject (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the Public IP information for an Azure virtual machine.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

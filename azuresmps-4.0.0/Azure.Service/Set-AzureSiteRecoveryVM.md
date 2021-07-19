@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the recovery-side options for a Site Recovery protection entity.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

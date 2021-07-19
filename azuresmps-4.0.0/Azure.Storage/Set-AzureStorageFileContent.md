@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Uploads the contents of a file.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ShareName (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Captures and saves the image of a stopped Azure virtual machine.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

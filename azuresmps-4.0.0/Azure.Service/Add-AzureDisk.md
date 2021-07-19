@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a disk to the Azure disk repository.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

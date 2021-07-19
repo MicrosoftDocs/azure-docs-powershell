@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies an existing firewall rule in an Azure SQL Database Server.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

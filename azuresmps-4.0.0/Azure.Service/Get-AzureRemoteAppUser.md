@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists the users in an Azure RemoteApp collection.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

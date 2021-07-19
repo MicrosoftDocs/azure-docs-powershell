@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an authenticated account to use for Azure Resource Manager cmdlet requests.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### UserWithSubscriptionId (Default)

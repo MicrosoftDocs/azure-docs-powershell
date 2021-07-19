@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets a resource as the current resource.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

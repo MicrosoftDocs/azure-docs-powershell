@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets mappings of Site Recovery Storage objects for a vault.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

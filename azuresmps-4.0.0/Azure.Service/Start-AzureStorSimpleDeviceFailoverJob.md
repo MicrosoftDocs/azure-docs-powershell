@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Initiates a failover operation of volume container groups.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Empty (Default)

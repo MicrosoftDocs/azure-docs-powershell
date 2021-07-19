@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables application diagnostics on an Azure website.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### FileParameterSet

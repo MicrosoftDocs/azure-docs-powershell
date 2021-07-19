@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies all of the endpoints in a load balancer set within an Azure service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### DefaultProbe (Default)

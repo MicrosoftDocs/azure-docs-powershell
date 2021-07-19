@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a certificate object from an Azure service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

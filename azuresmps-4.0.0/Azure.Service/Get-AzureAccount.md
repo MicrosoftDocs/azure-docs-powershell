@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets Azure accounts that are available to Azure PowerShell.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

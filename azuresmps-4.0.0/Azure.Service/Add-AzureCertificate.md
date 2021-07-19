@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Uploads a certificate to an Azure cloud service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

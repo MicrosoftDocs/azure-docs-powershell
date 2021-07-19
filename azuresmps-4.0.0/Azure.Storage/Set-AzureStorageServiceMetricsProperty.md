@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies metrics properties for the Azure Storage service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

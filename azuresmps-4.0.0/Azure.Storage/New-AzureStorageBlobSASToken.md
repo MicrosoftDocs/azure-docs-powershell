@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates an SAS token for an Azure storage blob.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### BlobNameWithPermission (Default)

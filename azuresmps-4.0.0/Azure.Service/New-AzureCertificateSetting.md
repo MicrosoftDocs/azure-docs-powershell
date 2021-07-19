@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a certificate setting object for a certificate is in a service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

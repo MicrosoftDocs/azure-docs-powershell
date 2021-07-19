@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Grants HTTP access to a cluster.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets static IP address pool objects.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### FromVMSubnetObject (Default)

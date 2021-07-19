@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies the properties of an Azure SQL Database server.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

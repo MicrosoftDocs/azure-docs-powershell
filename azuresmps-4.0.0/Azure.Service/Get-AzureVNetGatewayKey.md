@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the pre-shared key for the connection between a virtual network gateway and a local network site.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

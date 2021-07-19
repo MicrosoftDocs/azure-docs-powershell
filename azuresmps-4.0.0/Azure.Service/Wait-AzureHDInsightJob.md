@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Awaits the completion or failure of an HDInsight job and displays the progress of the job.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Get jobDetails History of a HDInsight Cluster (Default)

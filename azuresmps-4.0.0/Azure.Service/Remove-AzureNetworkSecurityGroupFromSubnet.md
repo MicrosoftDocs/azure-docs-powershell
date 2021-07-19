@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Dissociates a network security group from a subnet.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

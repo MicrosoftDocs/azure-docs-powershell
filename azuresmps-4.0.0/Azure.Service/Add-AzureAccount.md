@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds the Azure account to Windows PowerShell.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### User (Default)

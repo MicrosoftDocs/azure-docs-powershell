@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates the required files and configuration for a PHP application that will be hosted in Azure through php.exe.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

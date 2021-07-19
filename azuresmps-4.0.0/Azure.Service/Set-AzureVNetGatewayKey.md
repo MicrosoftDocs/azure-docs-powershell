@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the pre-shared key for the connection between an Azure VPN gateway and a local network site.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

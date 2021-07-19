@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the properties of an existing volume.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### IdentifyByName

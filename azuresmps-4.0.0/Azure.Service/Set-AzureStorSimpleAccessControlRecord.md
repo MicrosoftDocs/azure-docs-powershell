@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the IQN of an access control record.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

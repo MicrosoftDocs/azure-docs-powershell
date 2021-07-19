@@ -10,6 +10,8 @@ schema: 2.0.0
 Opts out of collecting data to improve the AzurePowerShell cmdlets. 
 Data is not collected unless you explicitly opt in.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

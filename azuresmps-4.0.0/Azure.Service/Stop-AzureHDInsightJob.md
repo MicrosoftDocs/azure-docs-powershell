@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Stops an HDInsight job.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Start jobDetails on an HDInsight Cluster (Default)

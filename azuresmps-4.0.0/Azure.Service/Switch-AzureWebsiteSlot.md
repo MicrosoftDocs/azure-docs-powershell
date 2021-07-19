@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Swaps the production slot for a website with another slot.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets CORS rules for a Storage service type.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

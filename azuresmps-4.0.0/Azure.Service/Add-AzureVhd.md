@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Uploads a VHD file from an on-premise computer to a blob in a cloud storage account in Azure.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```
