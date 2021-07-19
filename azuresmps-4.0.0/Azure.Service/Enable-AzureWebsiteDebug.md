@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables the website's debug.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

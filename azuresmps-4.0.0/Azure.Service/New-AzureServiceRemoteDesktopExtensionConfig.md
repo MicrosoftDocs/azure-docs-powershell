@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates a remote desktop extension configuration for a deployment.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### NewExtension (Default)

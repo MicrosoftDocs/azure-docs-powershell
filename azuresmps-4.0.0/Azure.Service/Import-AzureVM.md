@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Imports an Azure virtual machine state from a file.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

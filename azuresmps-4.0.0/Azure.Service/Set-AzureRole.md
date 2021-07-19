@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the number of instances of an Azure role to run.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

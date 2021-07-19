@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Creates an Automation schedule.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByDaily (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures a website running in Azure.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

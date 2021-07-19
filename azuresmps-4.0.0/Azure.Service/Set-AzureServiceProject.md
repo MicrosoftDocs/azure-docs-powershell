@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets default location, subscription, slot, and storage account for the current service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

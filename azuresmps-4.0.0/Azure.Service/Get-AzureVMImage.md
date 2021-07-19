@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the properties on one or a list of operating systems or a virtual machine image in the image repository.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

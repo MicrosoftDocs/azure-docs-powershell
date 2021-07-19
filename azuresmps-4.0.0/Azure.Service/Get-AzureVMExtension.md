@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets resource extensions applied to virtual machines.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ListByReferenceName (Default)

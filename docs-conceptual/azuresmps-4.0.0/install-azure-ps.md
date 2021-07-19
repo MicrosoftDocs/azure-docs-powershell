@@ -9,6 +9,8 @@ ms.custom: devx-track-azurepowershell
 
 # Installing the Azure PowerShell Service Management module
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 Installing Azure PowerShell from the [PowerShell Gallery](https://www.powershellgallery.com/) is
 the preferred method of installation.
 

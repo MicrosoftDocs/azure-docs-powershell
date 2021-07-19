@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts the creation of a migration plan.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### MigrateSpecificContainer

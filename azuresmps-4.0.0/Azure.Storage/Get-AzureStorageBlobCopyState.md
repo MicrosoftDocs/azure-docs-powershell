@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the copy status of an Azure Storage blob.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### NamePipeline (Default)

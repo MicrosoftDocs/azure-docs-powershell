@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts to copy a blob.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ContainerName (Default)

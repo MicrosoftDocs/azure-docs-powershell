@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Uploads a local file to an Azure Storage blob.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### SendManual (Default)

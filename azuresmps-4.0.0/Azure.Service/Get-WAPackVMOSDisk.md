@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets operating system disk objects for virtual machines.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Empty (Default)

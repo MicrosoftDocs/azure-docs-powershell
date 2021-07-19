@@ -2,11 +2,13 @@
 title: Overview of the Azure PowerShell Service Management module | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 ms.devlang: powershell
-ms.topic: conceptual 
+ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ---
 
 # Overview of the Azure PowerShell Service Management module
+
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 Azure Service Management is the classic deployment model. This module allows you to work with you
 classic Azure deployments that have not been converted to Azure Resource Manager. Any new

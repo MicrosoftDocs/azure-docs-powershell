@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the storage capacity for a share.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ShareName

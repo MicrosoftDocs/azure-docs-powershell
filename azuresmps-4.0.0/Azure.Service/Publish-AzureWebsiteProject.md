@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Publish a Visual Studio web project to a Microsoft Azure web site using WebDeploy.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ProjectFile

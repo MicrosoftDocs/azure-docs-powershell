@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the default storage account for an HDInsight cluster.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

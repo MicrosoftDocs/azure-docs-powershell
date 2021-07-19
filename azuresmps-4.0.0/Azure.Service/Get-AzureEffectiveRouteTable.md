@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the route applied in a virtual machine.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### IaaSGetEffectiveRouteTableParamSet

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets information about events that Azure initiates that impact virtual machines and cloud services.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### GetDeploymentEventBySlot (Default)

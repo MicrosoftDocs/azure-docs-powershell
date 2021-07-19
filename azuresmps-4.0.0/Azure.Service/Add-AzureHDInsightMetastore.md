@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a SQL Server database account to an HDInsight cluster configuration.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

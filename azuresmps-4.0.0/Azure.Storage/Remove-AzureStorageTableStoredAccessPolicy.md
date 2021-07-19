@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a stored access policy from an Azure storage table.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

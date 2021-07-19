@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the results of Azure virtual network gateway diagnostics.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

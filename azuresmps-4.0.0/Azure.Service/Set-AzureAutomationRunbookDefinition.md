@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Updates the draft definition of a runbook.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

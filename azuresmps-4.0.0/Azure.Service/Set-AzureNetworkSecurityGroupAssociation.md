@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Associates a network security group to a virtual machine, PaaS role, or network adapter.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### AddNetworkSecurityGroupAssociationToSubnet

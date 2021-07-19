@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an ACL configuration object from an Azure virtual machine configuration.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets service objectives for an Azure SQL Database server.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByConnectionContext (Default)

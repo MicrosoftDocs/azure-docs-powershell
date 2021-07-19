@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns an object with information about the cloud services for the current subscription.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the association from the reserved IP address to the VM or cloud service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

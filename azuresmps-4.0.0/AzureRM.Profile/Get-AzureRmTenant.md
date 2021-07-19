@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets tenants that are authorized for the current user.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

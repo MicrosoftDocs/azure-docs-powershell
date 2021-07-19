@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a network security rule from a network security group.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

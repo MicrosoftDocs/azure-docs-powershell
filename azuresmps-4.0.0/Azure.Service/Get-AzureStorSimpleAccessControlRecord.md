@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets access control records in a service configuration.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

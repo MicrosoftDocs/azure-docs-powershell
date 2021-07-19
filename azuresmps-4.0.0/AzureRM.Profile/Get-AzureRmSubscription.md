@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Get subscriptions that the current account can access.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ListByIdInTenant (Default)

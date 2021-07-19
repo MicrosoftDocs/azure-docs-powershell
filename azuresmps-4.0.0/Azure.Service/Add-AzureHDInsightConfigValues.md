@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a Hadoop configuration value customization or a Hive shared library customization to an HDInsight cluster configuration.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

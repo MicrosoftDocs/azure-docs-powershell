@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets migration plans for legacy containers.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

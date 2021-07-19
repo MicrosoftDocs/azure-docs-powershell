@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Submits Hive queries to an HDInsight cluster, shows progress of the query execution, and gets query results in one operation.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

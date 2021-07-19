@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Removes a connection type.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

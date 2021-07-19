@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the public access permission to a storage container.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

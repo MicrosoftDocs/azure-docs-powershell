@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves the result of an Azure RemoteApp operation.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

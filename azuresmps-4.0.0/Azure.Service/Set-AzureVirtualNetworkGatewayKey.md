@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the key for an Azure virtual network gateway.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

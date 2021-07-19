@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a reserved IP address by its name or lists all the reserved IP addresses in the subscription.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```
