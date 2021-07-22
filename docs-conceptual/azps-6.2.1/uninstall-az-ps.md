@@ -1,7 +1,7 @@
 ---
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
-ms.date: 04/13/2021
+ms.date: 07/21/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
@@ -57,7 +57,7 @@ PowerShell module completely, you must uninstall each module individually.
 First, you'll need a list of all the Az PowerShell module versions installed on your system.
 
 ```azurepowershell-interactive
-Get-Module -Name Az -ListAvailable -OutVariable AzVersions
+Get-InstalledModule -Name Az -AllVersions -OutVariable AzVersions
 ```
 
 You can use the following example to generate a list of all the Az PowerShell modules that need to
@@ -66,7 +66,7 @@ be uninstalled in addition to the Az module.
 ```azurepowershell-interactive
 ($AzVersions |
   ForEach-Object {
-    Import-Clixml -Path (Join-Path -Path $_.ModuleBase -ChildPath PSGetModuleInfo.xml)
+    Import-Clixml -Path (Join-Path -Path $_.InstalledLocation -ChildPath PSGetModuleInfo.xml)
   }).Dependencies.Name | Sort-Object -Descending -Unique -OutVariable AzModules
 ```
 
