@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Enables an AD Domain extension for a cloud service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### JoinDomainUsingEnumOptions (Default)

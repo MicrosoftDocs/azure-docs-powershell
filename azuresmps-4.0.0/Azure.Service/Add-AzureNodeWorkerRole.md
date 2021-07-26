@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates the required files and folders for a Node.js application to be hosted in the cloud via node.exe
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

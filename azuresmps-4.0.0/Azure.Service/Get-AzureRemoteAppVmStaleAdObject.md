@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets information about the available extensions for hosted services.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ListLatestExtensions (Default)

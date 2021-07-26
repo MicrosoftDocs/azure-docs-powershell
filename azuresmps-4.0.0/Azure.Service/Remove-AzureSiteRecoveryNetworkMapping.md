@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a network mapping from a Site Recovery vault.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

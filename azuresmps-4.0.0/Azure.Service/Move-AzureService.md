@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Migrates a cloud service to the Azure Resource Manager stack.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### AbortMigrationParameterSet

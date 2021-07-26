@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a SSH Key object to insert an existing certificate into a new Linux-based Azure virtual machines.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### keypair

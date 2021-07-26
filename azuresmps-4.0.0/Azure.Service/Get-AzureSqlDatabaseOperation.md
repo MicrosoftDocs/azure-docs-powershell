@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the status of database operations on an Azure server.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByConnectionContext (Default)

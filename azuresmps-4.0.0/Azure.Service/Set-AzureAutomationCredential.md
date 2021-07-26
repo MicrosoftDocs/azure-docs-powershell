@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Modifies a credential in Automation.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

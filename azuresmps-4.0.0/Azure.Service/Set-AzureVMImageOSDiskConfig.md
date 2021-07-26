@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the operating system disk properties on a virtual machine image.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### UpdateAzureVMImageParamSet (Default)

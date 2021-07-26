@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a reserved IP address.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### CreateNewReservedIP (Default)

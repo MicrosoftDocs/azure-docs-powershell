@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies properties of an affinity group.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates a configuration for a diagnostics extension for specified role(s) or all roles.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### NewExtension (Default)

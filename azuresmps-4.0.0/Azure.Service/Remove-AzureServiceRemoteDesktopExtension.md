@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the cloud service remote desktop extension applied on all roles or named roles at a specified deployment slot.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### RemoveByRoles (Default)

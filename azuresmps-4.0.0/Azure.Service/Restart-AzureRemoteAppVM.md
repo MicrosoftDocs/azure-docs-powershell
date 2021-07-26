@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Restarts a virtual machine in an Azure RemoteApp collection.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

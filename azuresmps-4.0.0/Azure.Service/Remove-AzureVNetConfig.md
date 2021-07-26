@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes the network configuration from the current Azure subscription.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

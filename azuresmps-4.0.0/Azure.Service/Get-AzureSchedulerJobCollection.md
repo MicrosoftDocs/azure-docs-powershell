@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets scheduler job collections.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

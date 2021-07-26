@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Associates a runbook with a schedule.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByRunbookName (Default)

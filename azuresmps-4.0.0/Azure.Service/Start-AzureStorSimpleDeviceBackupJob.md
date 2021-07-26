@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts a new job that creates a backup from an existing backup policy.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Empty (Default)

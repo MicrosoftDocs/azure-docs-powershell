@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets devices attached to the resource.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Empty (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies the host cache mode of an Azure virtual machine.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### NoResize

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets Site Recovery vaults from the current subscription.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Default (Default)

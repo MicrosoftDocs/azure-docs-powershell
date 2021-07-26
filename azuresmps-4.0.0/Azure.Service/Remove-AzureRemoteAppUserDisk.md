@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the user disk of a user from an Azure RemoteApp collection.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

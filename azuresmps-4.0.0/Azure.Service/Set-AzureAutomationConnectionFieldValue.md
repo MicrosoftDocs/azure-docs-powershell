@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Modifies the value of a field for a connection.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

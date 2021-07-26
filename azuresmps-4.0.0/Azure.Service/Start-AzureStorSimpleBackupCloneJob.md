@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts a job that clones a backup on a device.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Empty (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the default site for forced tunneling traffic.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

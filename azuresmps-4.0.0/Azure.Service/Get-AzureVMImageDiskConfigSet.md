@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a disk configuration set object from the input image context.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

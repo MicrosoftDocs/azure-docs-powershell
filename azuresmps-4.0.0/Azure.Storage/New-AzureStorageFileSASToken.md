@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates a shared access signature token for a Storage file.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### NameSasPermission

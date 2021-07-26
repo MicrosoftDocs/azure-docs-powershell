@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new storage account in an Azure subscription.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ParameterSetAffinityGroup (Default)

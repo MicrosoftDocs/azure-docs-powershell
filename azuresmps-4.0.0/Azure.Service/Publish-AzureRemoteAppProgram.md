@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Publishes an Azure RemoteApp program.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### App Id (Default)

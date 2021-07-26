@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Associates a reserved IP address with an existing virtual machine or cloud service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet gets the cloud service remote desktop extension applied on all roles or named roles at a certain deployment slot.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

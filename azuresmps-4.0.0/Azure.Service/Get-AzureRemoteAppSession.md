@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists all active and disconnected Azure RemoteApp sessions for a collection.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```
