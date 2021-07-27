@@ -4,7 +4,6 @@ ms.date: 05/25/2020
 ms.topic: include
 ---
 > [!IMPORTANT]
-> This PowerShell command for Service Bus is no longer supported as of **11/1/2021**. The Azure
-> Service Management model is deprecated for Service Bus and will be disabled on that date. Please
-> use the commands that support the Azure Resource Management model in
-> [AzureRM.ServiceBus](/powershell/module/azurerm.servicebus).
+> The Service Management REST API for Service Bus will be retired by **November 1, 2021**. Go to the [deprecation of Azure Service Manager](https://docs.microsoft.com/azure/service-bus-messaging/deprecate-service-bus-management) for more information about the retirement of the API.
+> This Azure Service Management PowerShell cmdlet for Service Bus will no longer be supported as of November 1, 2021. Please migrate to the new [Azure PowerShell cmdlets](https://docs.microsoft.com/powershell/module/az.servicebus/)
+
