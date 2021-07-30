@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the label of an operating system image in the image repository.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

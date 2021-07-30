@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a stored access policy for an Azure storage container.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

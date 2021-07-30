@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Defines a new Hive job for an HDInsight service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

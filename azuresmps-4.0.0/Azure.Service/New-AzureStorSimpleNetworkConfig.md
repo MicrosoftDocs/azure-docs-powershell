@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Prepares a network configuration object.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

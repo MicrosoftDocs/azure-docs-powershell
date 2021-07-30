@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes endpoints and metadata for connecting to a given Azure instance.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

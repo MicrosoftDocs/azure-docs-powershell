@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the URI to WinRM https listener to a virtual machine or a list of virtual machines in a hosted service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

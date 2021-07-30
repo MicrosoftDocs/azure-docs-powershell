@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the volume container groups for device failover.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### IdentifyById

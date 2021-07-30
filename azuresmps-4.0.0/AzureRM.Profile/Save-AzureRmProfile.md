@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Saves the current authentication information for use in other PowerShell sessions.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts a job that restores a backup on a StorSimple device.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Empty (Default)

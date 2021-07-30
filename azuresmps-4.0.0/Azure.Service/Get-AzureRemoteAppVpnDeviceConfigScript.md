@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Retrieves the configuration script for an Azure RemoteApp VPN device.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

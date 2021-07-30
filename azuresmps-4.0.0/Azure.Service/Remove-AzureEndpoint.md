@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes an endpoint from an Azure virtual machine.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

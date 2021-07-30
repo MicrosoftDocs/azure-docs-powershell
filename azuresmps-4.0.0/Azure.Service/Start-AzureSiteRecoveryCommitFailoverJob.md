@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts the commit failover action for a Site Recovery object.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByRPId (Default)

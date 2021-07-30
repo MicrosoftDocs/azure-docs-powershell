@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the number of data nodes for an HDInsight cluster.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Set cluster size in nodes with name.

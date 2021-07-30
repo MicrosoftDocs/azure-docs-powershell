@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new operating system image or a new virtual machine image to the image repository.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### OSImage (Default)

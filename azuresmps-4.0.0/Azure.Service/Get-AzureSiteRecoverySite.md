@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the Hyper-V sites from a Site Recovery vault.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

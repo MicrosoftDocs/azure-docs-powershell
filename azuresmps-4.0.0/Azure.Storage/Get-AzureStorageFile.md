@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists directories and files for a path.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ShareName (Default)

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Downloads and saves the logs for a specified website.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

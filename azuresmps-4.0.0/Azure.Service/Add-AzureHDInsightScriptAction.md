@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an HDInsight script action.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

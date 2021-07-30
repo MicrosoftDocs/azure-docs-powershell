@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the Data Disk properties on the virtual machine image.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### UpdateAzureVMImageParamSet (Default)

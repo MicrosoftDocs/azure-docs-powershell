@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Stops the specified website.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

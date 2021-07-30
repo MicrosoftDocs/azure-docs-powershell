@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds or modifies a network security rule in a network security group.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

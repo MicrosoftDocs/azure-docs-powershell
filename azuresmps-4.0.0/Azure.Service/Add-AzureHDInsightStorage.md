@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a blob storage account entry to an HDInsight configuration.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

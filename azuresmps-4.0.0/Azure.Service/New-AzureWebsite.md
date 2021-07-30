@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Create a new website to run in Azure.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

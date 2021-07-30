@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies an internal load balancer configuration in an Azure service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ServiceAndSlot (Default)

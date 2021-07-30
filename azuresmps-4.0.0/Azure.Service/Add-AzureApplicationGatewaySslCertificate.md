@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an SSL certificate to an Application Gateway.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

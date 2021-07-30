@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the web jobs associated with a website.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

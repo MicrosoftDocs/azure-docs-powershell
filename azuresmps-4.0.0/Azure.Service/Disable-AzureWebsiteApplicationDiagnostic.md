@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Disables application diagnostics for an Azure website.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

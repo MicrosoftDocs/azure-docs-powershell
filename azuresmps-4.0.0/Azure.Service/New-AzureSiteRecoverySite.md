@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a Site Recovery site.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

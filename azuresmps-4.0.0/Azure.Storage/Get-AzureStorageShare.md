@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets a list of file shares.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### MatchingPrefix (Default)

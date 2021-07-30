@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets firewall rules for Azure SQL Database Server.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

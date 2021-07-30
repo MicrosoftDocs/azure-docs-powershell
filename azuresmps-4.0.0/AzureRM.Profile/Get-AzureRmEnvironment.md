@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Get endpoints and metadata for an instance of Azure services.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

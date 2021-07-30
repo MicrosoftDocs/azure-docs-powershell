@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts a copy operation of an Azure SQL Database.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByInputObject

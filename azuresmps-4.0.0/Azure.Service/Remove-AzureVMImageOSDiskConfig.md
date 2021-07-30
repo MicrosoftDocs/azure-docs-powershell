@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the operating system disk configuration from the DiskConfigSet object.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Gets Azure Automation runbooks and associated schedules.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByAll (Default)

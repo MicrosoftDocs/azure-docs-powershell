@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the current state of diagnostics for a virtual network gateway.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

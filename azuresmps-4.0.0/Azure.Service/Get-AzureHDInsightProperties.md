@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets properties specific to an HDInsight service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

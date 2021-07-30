@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists the storage containers.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ContainerName (Default)

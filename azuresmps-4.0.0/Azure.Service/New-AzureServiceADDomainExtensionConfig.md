@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generates the configuration for the AD domain extension for cloud services.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### JoinDomainUsingEnumOptions (Default)

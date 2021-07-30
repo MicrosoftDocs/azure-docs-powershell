@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the primary and secondary storage account keys for an Azure storage account.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

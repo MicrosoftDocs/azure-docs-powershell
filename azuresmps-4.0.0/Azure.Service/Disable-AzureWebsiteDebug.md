@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Disables the website's debugging.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

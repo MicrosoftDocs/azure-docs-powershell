@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets information about disks in the Azure disk repository.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

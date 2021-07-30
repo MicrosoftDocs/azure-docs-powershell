@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the DSC extension status for all the virtual machines deployed in a cloud service or for a particular virtual machine in the service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### GetStatusByServiceAndVMName (Default)

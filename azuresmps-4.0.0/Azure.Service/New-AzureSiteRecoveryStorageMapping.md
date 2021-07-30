@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a mapping between an Azure Storage object and recovery Storage object.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

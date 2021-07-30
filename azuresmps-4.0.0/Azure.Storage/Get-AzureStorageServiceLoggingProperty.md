@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets logging properties for Azure Storage services.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```
