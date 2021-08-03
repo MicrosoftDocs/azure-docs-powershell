@@ -3,7 +3,7 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020
+ms.date: 08/03/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -2296,7 +2296,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - AutomaticRepairMaxInstanceRepairsPercent is removed from 'New-AzVmssConfig' and 'Update-AzVmss' cmdlets.
     - AvailabilitySetsColocationStatus, VirtualMachinesColocationStatus and VirtualMachineScaleSetsColocationStatus properties are removed from ProximityPlacementGroup.
     - MaxInstanceRepairsPercent property is removed from AutomaticRepairsPolicy.
-    - The types of AvailabilitySets, VirtualMachines and VirtualMachineScaleSets are changed from IList<SubResource> to IList<SubResourceWithColocationStatus>.
+    - The types of AvailabilitySets, VirtualMachines and VirtualMachineScaleSets are changed from `IList<SubResource>` to `IList<SubResourceWithColocationStatus>`.
 * Description for 'Get-AzVM' cmdlet has been updated to better describe it.
 
 #### Az.DataFactory
@@ -5110,7 +5110,7 @@ Added KeyVault Support to Application Gateway using Identity.
 * Support Get-AzCognitiveServicesAccountSkus without an existing account.
 
 #### Az.Compute
-* Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed
+* Fix Get-AzVM -ResourceGroupName `<rg>` to return more than 50 results if needed
 * Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.
 * Fixed a typo in the Azure Disk Encryption progress message
 
