@@ -13,12 +13,12 @@ ms.service: azure-powershell
 If a proxy is necessary for HTTP request, the Azure PowerShell team recommends the following proxy
 configuration for different platforms:
 
-     **Platform**       |                          **Recommended Proxy Settings**                           |                                               **Comment**
------------------------ | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------
-Windows PowerShell 5.1  | System proxy settings                                                             | Do not suggest setting HTTP_PROXY/HTTPS_PROXY environment variables.
-PowerShell 7 on Windows | System proxy settings                                                             | Proxy could be configured by setting both HTTP_PROXY and HTTPS_PROXY environment variables.
-PowerShell 7 on MacOS   | System proxy settings                                                             | Proxy could be configured by setting both HTTP_PROXY and HTTPS_PROXY environment variables.
-PowerShell 7 on Linux   | Set both HTTP_PROXY and HTTPS_PROXY environment variables, plus optional NO_PROXY | The environment variables should be set before starting powershell, otherwise they may not be respected.
+|      **Platform**       |                          **Recommended Proxy Settings**                           |                                               **Comment**                                                |
+| ----------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Windows PowerShell 5.1  | System proxy settings                                                             | Do not suggest setting HTTP_PROXY/HTTPS_PROXY environment variables.                                     |
+| PowerShell 7 on Windows | System proxy settings                                                             | Proxy could be configured by setting both HTTP_PROXY and HTTPS_PROXY environment variables.              |
+| PowerShell 7 on MacOS   | System proxy settings                                                             | Proxy could be configured by setting both HTTP_PROXY and HTTPS_PROXY environment variables.              |
+| PowerShell 7 on Linux   | Set both HTTP_PROXY and HTTPS_PROXY environment variables, plus optional NO_PROXY | The environment variables should be set before starting powershell, otherwise they may not be respected. |
 
 The environment variables used are:
 
