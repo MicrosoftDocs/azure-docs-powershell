@@ -27,7 +27,7 @@ Az PowerShell modules, and makes their cmdlets available for use.
 > PowerShell module on all platforms.
 
  The Azure Az PowerShell module works with PowerShell 7.x and later on all platforms. Azure
- PowerShell has no additional requirements when run on PowerShell 7.x and later (for conflicts caused by an earlier AzureRM installation or Developer PowerShell for Visual Studio, see [Troubleshooting](install-az-ps.md#Troubleshooting) below).
+ PowerShell has no additional requirements when run on PowerShell 7.x and later (for conflicts caused by an earlier AzureRM installation or Developer PowerShell for Visual Studio, see [Troubleshooting](install-az-ps.md#troubleshooting) below).
 
 - Install the
  [latest version of PowerShell](/powershell/scripting/install/installing-powershell) available for
@@ -132,7 +132,7 @@ In a scenario where you want to install both AzureRM and the Az PowerShell modul
 system, AzureRM must be installed only in the user scope for Windows PowerShell. Install the Az
 PowerShell module for PowerShell 7.x on the same system.
 
-Older versions of Visual Studio may install Azure PowerShell as part of the Azure development workload, which installs the AzureRM module.  Azure PowerShell can be removed using the Visual Studio installer or by using "Uninstall" in Apps & features.  If you have already installed PowerShell 7.x, you may need to [manually install](install-az-ps.md#Installation) the Azure Az PowerShell module.
+Older versions of Visual Studio may install Azure PowerShell as part of the Azure development workload, which installs the AzureRM module.  Azure PowerShell can be removed using the Visual Studio installer or by using "Uninstall" in Apps & features.  If you have already installed PowerShell 7.x, you may need to [manually install](install-az-ps.md#installation) the Azure Az PowerShell module.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
