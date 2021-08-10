@@ -1,5 +1,5 @@
 ---
-title: Use the Azure Az PowerShell module behind a proxy server
+title: Use the Az PowerShell module behind a proxy
 description: How to use the Azure Az PowerShell module behind a proxy server
 ms.date: 08/09/2021
 ms.devlang: powershell
@@ -8,7 +8,7 @@ ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
-# Use the Azure Az PowerShell module behind a proxy server
+# Use the Az PowerShell module behind a proxy
 
 If a proxy is necessary for HTTP request, the Azure PowerShell team recommends the following proxy
 configuration for different platforms:

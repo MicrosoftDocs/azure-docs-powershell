@@ -30,7 +30,7 @@
       displayName: breaking, cmdlet, module, names
 - name: Configuration
   items:
-    - name: Use the Azure Az PowerShell module behind a proxy server
+    - name: Use the Az PowerShell module behind a proxy
       href: az-powershell-proxy.md
 - name: Get started
   href: get-started-azureps.md
