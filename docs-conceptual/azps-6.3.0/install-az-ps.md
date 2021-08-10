@@ -3,7 +3,7 @@ title: Install the Azure Az PowerShell module with PowerShellGet
 description: How to install the Azure Az PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/30/2021
+ms.date: 08/10/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -39,8 +39,10 @@ To check your PowerShell version, run the following command from within a PowerS
 $PSVersionTable.PSVersion
 ```
 
-PowerShell script execution policy must be set to remote signed or less restrictive. `Get-ExecutionPolicy -List`
-can be used to determine the current execution policy. For more information, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+PowerShell script execution policy must be set to remote signed or less restrictive.
+`Get-ExecutionPolicy -List` can be used to determine the current execution policy. For more
+information, see
+[about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 ```powershell-interactive
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -133,6 +135,13 @@ system, AzureRM must be installed only in the user scope for Windows PowerShell.
 PowerShell module for PowerShell 7.x on the same system.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+#### Visual Studio
+
+Older versions of Visual Studio may install Azure PowerShell as part of the Azure development
+workload, which installs the AzureRM module. Azure PowerShell can be removed using the Visual Studio
+installer or by using "Uninstall" in Apps & features. If you have already installed PowerShell 7.x,
+you may need to [manually install](install-az-ps.md#installation) the Azure Az PowerShell module.
 
 ### Proxy blocks connection
 
