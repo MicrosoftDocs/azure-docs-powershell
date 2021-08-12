@@ -3,8 +3,8 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/04/2019 
-ms.custom: devx-track-azurepowershell 
+ms.date: 08/10/2021
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Sign in with Azure PowerShell
@@ -78,7 +78,7 @@ and provide the service principal's Application ID as the `-ApplicationId` param
 Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-In PowerShell 5.1, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module. For PowerShell Core 6.x and later, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
+In PowerShell 5.1, the certificate store can be managed and inspected with the [PKI](/powershell/module/pki) module. For PowerShell Core 6.x and later, the process is more complicated. The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.
 
 #### Import a certificate in PowerShell 5.1
 
@@ -92,15 +92,15 @@ Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Pas
 
 ```azurepowershell-interactive
 # Import a PFX
-$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My 
-$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser 
-$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation) 
+$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My
+$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser
+$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation)
 $certPath = <path to certificate>
 $credentials = Get-Credential -Message "Provide PFX private key password"
-$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable 
-$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag) 
-$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite) 
-$store.Add($Certificate) 
+$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable
+$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag)
+$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+$store.Add($Certificate)
 $store.Close()
 ```
 
@@ -112,7 +112,7 @@ service principal for sign-in, and acquire an app-only access token to access ot
 This command connects using the managed identity of the host environment. For example, if executed on a VirtualMachine with an assigned Managed Service Identity, this allows the code to sign in using that assigned identity.
 
 ```azurepowershell-interactive
- Connect-AzAccount -Identity 
+ Connect-AzAccount -Identity
 ```
 
 ## Sign in with a non-default tenant or as a Cloud Solution Provider (CSP)
