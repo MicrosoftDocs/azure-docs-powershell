@@ -28,7 +28,7 @@ Update-AzSshKey [-ResourceId] <String> -PublicKey <String> [-AsJob] [-DefaultPro
 
 ### InputObjectParameterSet
 ```
-Update-AzSshKey[-InputObject] <PSSshPublicKeyResource> -PublicKey <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+Update-AzSshKey [-InputObject] <PSSshPublicKeyResource> -PublicKey <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
