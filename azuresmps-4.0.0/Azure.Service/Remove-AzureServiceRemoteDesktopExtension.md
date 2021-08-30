@@ -12,6 +12,8 @@ Removes the cloud service remote desktop extension applied on all roles or named
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
+[!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+
 ## SYNTAX
 
 ### RemoveByRoles (Default)

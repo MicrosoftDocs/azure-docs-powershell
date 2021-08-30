@@ -12,6 +12,8 @@ This cmdlet gets the cloud service remote desktop extension applied on all roles
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
+[!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+
 ## SYNTAX
 
 ```
