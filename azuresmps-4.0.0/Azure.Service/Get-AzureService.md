@@ -12,6 +12,8 @@ Returns an object with information about the cloud services for the current subs
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
+[!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+
 ## SYNTAX
 
 ```

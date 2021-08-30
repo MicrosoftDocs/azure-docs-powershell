@@ -12,6 +12,8 @@ Uploads a certificate to an Azure cloud service.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
+[!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+
 ## SYNTAX
 
 ```

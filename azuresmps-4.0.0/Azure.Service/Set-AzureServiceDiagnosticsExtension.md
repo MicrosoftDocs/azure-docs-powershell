@@ -12,6 +12,8 @@ Enables Azure Diagnostics extension on specified roles or all roles on a deploye
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
+[!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+
 ## SYNTAX
 
 ### SetExtension (Default)
