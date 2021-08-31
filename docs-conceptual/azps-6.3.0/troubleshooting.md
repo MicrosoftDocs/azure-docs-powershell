@@ -49,3 +49,20 @@ same version of PowerShell.
 Both Az and AzureRM may coexist on the same Windows system, but only if AzureRM is installed in the
 `CurrentUser` scope of Windows PowerShell and Az installed in PowerShell 7. For more information, see
 [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
+
+## On MacOS, an error returns when KeyChain authorization fails
+
+When running Azure PowerShell on MacOS, you might encounter an error message while attempting to
+sign in to your Azure account from a PowerShell session.
+
+```txt
+DeviceCodeCredential authentication failed: Persistence check failed. Reason: KeyChain authorization/authentication failed. .Error code: -25293. OS error code -25293.
+```
+
+As a workaround for this issue, you can disable storing credentials between sessions by running
+the following command. After making this change however, you will need to run `Connect-AzAccount`
+each time you start a new PowerShell session.
+
+```powershell
+Disable-AzContextAutosave
+```
