@@ -3,7 +3,7 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/23/2020
+ms.date: 08/10/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -117,7 +117,7 @@ Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $
 ```
 
 In PowerShell 5.1, the certificate store can be managed and inspected with the
-[PKI](/powershell/module/pkiclient) module. For PowerShell Core 6.x and later, the process is more
+[PKI](/powershell/module/pki) module. For PowerShell Core 6.x and later, the process is more
 complicated. The following scripts show you how to import an existing certificate into the
 certificate store accessible by PowerShell.
 

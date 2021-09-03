@@ -14,7 +14,7 @@ metadata:
   author: mikefrobbins
   ms.author: mirobb
   ms.date: 07/06/2021
-
+  ms.prod: azure-powershell
 landingContent:
   - title: Get started with Azure PowerShell
     linkLists:

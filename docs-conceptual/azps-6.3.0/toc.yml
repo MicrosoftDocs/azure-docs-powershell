@@ -28,6 +28,10 @@
     - name: Changes between AzureRM and Az
       href: migrate-az-1.0.0.md
       displayName: breaking, cmdlet, module, names
+- name: Configuration
+  items:
+    - name: Use the Az PowerShell module behind a proxy
+      href: az-powershell-proxy.md
 - name: Get started
   href: get-started-azureps.md
   displayName: sign in, signin, log in, login, find, feedback, intro, introduction
