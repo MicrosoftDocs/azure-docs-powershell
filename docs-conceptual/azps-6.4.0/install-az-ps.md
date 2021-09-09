@@ -67,6 +67,11 @@ options if needed.
 
 ### Installation on Windows PowerShell
 
+> [!IMPORTANT]
+> If you have the AzureRM PowerShell module installed, see the
+> [Az and AzureRM coexistence](install-az-ps.md#az-and-azurerm-coexistence) section of this article
+> before proceeding.
+
 The Azure Az PowerShell module is also supported for use with PowerShell 5.1 on Windows. To use the
 Azure Az PowerShell module in PowerShell 5.1 on Windows:
 
