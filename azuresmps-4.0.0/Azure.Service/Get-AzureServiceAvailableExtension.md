@@ -12,6 +12,8 @@ Gets information about the available extensions for hosted services.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
+[!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+
 ## SYNTAX
 
 ### ListLatestExtensions (Default)
