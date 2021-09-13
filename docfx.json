@@ -619,7 +619,7 @@
                 "azurermps-5.7.0/**/*": "NOINDEX, NOFOLLOW",
                 "docs-conceptual/azurermps-2.5.0/**/*": "NOINDEX, NOFOLLOW",
                 "docs-conceptual/azurermps-4.4.1/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-5.7.0/**/*": "NOINDEX, NOFOLLOW",
+                "docs-conceptual/azurermps-5.7.0/**/*": "NOINDEX, NOFOLLOW"
             }
         },
         "globalMetadata": {
