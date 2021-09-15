@@ -29,6 +29,5 @@ The environment variables used are:
 On systems where environment variables are case-sensitive, the variable names may be all lowercase
 or all uppercase. The lowercase names are checked first.
 
-The proxy server may be a hostname or IP address, optionally followed by a colon and port number, or
-it may be an http URL, optionally including a username and password for proxy authentication. The
-URL must be start with http, not https, and cannot include any text after the hostname, IP, or port.
+The proxy server may be a hostname, IP address, or HTTP URL, optionally followed by a colon and port number. Username and password are also optional for proxy authentication. The
+URL must start with HTTP, not HTTPS, and cannot include any text after the hostname, IP address, or port number.
