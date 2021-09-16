@@ -39,16 +39,15 @@ from a browser through [Azure Cloud Shell](/azure/cloud-shell/overview) or
 
 The AzureRM PowerShell module was the first generation of cmdlets to use the Azure Resource Manager
 model for managing Azure Resources. The AzureRM PowerShell module is no longer recommended as
-deprecation has been announced for it, new features are no longer being added to it, and it's not
-cross platform. For more information, see
-[Overview of Azure PowerShell](/powershell/azure/azurerm/overview).
+deprecation has been announced, new features are no longer being added, and it's not cross platform.
+For more information, see
+[Overview of the AzureRM PowerShell module](/powershell/azure/azurerm/overview).
 
 ## The Azure PowerShell module
 
 > [!IMPORTANT]
 > The cmdlets in the Azure PowerShell module are for managing legacy Azure resources that use
-> Service Management APIs. Unless you have a specific need to manage legacy Azure resources, this is
-> not the PowerShell module that you're looking for.
+> Service Management APIs.
 
 Some of the cmdlets in the Azure PowerShell module have been deprecated and others have been
 deprecated for new customers with retirement announced for existing customers as noted on their
