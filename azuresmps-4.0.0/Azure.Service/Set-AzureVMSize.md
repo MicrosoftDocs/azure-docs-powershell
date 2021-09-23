@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the size of an Azure virtual machine.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Checks the status of copy relationships.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByServerNameOnly (Default)

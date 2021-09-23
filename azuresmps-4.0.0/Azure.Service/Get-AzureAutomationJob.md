@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Gets one or more Azure Automation runbook jobs.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByAll (Default)

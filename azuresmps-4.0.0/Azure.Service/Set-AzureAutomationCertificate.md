@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Modifies the configuration of an Automation certificate.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets connections to an Azure virtual network.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a site recovery plan from Site Recovery.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByRPObject (Default)

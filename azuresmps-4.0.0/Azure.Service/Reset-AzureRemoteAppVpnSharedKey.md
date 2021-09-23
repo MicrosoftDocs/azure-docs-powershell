@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Resets the Azure RemoteApp VPN shared key.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

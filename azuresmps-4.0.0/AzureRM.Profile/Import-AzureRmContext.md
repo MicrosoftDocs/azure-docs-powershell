@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Loads Azure authentication information from a file.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### InMemoryProfile

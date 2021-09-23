@@ -31,6 +31,31 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs-conceptual/azps-5.9.0/overview.md",
+      "redirect_url": "/powershell/azure/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs-conceptual/azps-6.1.0/overview.md",
+      "redirect_url": "/powershell/azure/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs-conceptual/azps-6.2.1/overview.md",
+      "redirect_url": "/powershell/azure/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs-conceptual/azps-6.3.0/overview.md",
+      "redirect_url": "/powershell/azure/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs-conceptual/azps-6.4.0/overview.md",
+      "redirect_url": "/powershell/azure/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs-conceptual/azurermps-2.5.0/index.md",
       "redirect_url": "/powershell/azure/azurerm/overview",
       "redirect_document_id": false

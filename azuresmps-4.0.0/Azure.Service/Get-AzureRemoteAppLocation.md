@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Lists the locations that Azure RemoteApp supports.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

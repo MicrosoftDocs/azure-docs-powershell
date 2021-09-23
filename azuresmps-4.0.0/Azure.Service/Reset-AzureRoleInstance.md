@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Requests a reboot or reimage of a single role instance or all role instances of a specific role.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

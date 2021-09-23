@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the available data center locations for the current Azure subscription.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

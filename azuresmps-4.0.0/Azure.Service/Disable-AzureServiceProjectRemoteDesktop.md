@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Disables Remote Desktop access to a cloud service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

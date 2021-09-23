@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Associates a network security group to a subnet.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

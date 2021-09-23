@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Tests the availability of a static virtual network IP address, and gets a list of suggestions if the queried address is not available.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

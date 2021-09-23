@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the cloud service Active Directory (AD) domain extension that applies to all roles or to named roles at a specified deployment slot.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the stored access policy for an Azure storage table.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

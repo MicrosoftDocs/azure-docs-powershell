@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts the unplanned failover for a Site Recovery protection entity or recovery plan.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByRPId (Default)

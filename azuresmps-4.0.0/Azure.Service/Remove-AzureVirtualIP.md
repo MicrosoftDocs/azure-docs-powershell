@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes a virtual IP address from your Cloud Service.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -4,7 +4,7 @@ description: This is a history of changes made to Azure PowerShell in the latest
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 2/20/2018 
+ms.date: 2/20/2018
 ms.custom: devx-track-azurepowershell
 ---
 # Azure PowerShell Release notes
@@ -668,7 +668,7 @@ Changes since last release: https://github.com/Azure/azure-powershell/compare/v5
   - New Cmdlet Update-AzureRmPowerBIEmbeddedCapacity - Modifies an instance of PowerBI Embedded Capacity
 * Profile
   - Updated USGovernmentActiveDirectoryEndpoint to https://login.microsoftonline.us/
-    - For more information about the Azure Government endpoint mappings, please see the following: https://docs.microsoft.com/azure/azure-government/documentation-government-developer-guide#endpoint-mapping
+    - For more information about the Azure Government endpoint mappings, see [Endpoint mapping](/azure/azure-government/documentation-government-developer-guide#endpoint-mapping)
     - Added -AsJob support for cmdlets, enabling selected cmdlets to execute in the background and return a job to track and control progress
     - Added -AsJob parameter to Get-AzureRmSubscription cmdlet
 * RecoveryServices.Backup

@@ -10,6 +10,10 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the cloud service diagnostics extension applied on all roles or named roles at a certain deployment slot.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+[!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+
 ## SYNTAX
 
 ```

@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Checks whether a domain name is available as a Traffic Manager profile.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

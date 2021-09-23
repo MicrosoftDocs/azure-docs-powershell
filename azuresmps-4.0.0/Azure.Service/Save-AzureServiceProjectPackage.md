@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Packages the service project into Azure cloud package.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

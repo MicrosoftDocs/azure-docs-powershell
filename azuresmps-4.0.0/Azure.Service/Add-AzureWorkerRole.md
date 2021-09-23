@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates required files and configuration for a custom worker role.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

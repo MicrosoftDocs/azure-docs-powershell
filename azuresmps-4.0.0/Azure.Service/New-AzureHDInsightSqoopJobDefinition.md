@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Defines a new Sqoop job.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

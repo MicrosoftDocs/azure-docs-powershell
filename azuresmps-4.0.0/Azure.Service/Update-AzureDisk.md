@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Changes the label of a disk in the Azure disk repository.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### Resize

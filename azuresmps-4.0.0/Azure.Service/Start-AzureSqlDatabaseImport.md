@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts an import operation from blob storage to an Azure SQL Database.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ByContainerObject

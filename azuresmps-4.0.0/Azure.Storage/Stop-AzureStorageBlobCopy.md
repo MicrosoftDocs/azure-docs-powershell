@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Stops a copy operation.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### NamePipeline (Default)

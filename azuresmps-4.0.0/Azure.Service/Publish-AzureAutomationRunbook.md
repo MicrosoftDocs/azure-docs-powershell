@@ -11,6 +11,8 @@ schema: 2.0.0
 
 Publishes a runbook.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

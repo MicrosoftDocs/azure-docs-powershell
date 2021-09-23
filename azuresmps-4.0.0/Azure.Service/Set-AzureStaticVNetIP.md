@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the static VNet IP address information for a virtual machine object.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

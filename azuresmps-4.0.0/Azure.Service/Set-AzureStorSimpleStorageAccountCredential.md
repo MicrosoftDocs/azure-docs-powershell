@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates an Azure storage access credential.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ```

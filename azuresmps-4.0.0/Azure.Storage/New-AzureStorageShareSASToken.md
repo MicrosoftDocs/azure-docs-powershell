@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Generate Shared Access Signature token for Azure Storage share.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### SasPolicy

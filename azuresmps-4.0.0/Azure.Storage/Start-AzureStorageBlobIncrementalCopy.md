@@ -9,6 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Start an Incremental copy operation from a Page blob snapshot to the specified destination Page blob.
 
+[!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
 ## SYNTAX
 
 ### ContainerInstance (Default)
