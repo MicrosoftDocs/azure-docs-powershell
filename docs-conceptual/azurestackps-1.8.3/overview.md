@@ -1,15 +1,15 @@
 ---
 title: Overview of Azure Stack Admin PowerShell | Microsoft Docs
 description: An overview of Azure Stack Admin PowerShell with instructions for installation and configuration.
-author: sijuman 
-ms.author: sijuman
-manager: knithinc
+author: mattbriggs 
+ms.author: mabrigg
+manager: femila
 ms.devlang: powershell
 ms.topic: conceptual
-ms.manager: knithinc
-ms.date: 08/06/2020
+ms.manager: femila
+ms.date: 09/23/2021
 ---
-# Azure Stack Module 1.8.2
+# Azure Stack Module 1.8.32
 
 ## Requirements:
 
@@ -28,7 +28,7 @@ Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose
 Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
 
 # Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.8.2
+Install-Module -Name AzureStack -RequiredVersion 1.8.3
 ```
 
 ## Release Notes

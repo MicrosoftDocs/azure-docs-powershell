@@ -1,13 +1,13 @@
 ---
 title: Overview of Azure Stack Hub Admin PowerShell | Microsoft Docs
 description: An overview of Azure Stack Hub Admin PowerShell with instructions for installation and configuration.
-author: sijuman 
-ms.author: sijuman
-manager: knithinc
+author: mattbriggs 
+ms.author: mabrigg
+manager: femila
 ms.devlang: powershell
 ms.topic: conceptual
-ms.manager: knithinc
-ms.date: 04/16/2020
+ms.manager: femila
+ms.date: 09/23/2021
 ---
 # Azure Stack Hub Module 2.0.0
 
