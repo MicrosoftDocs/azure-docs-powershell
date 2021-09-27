@@ -255,13 +255,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IPruneBackupStoreOperationOptionModel
+Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IPruneBackupStoreOperationOptionModel
 
-### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.IBackupAdminIdentity
+Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.IBackupAdminIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IPruneModel
+Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IPruneModel
 
 ## NOTES
 
@@ -272,14 +272,14 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
+INPUTOBJECT \<IBackupAdminIdentity>: Identity Parameter
   - `[Backup <String>]`: Name of the backup.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the backup location.
   - `[ResourceGroupName <String>]`: Name of the resource group.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-OPTION <IPruneBackupStoreOperationOptionModel>: Prune backup store operation model.
+OPTION \<IPruneBackupStoreOperationOptionModel>: Prune backup store operation model.
   - `[OperationType <PruneBackupStoreOperationType?>]`: Operation type.
 
 ## RELATED LINKS
