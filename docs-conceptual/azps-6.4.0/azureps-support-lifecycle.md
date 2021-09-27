@@ -33,7 +33,7 @@ scripts, follow the [quickstart guide](/powershell/azure/quickstart-migrate-azur
 
 The following table identifies the supported platforms for the Az, AzureRM, and Azure PowerShell modules.
 
-|        Az        | PowerShell <br/> 7.1.3 | PowerShell <br/> >= 7.0.6 | PowerShell <br/> =< 7.0.5 | Windows PowerShell <br/> 5.1 |
+|        Az        | PowerShell <br/> 7.1.3 | PowerShell <br/> >= 7.0.6 | PowerShell <br/> <= 7.0.5 | Windows PowerShell <br/> 5.1 |
 | :--------------: | :--------------------: | :-----------------------: | :-----------------------: | :--------------------------: |
 |      Az 6.0      |       Supported        |         Supported         |       Not supported       |          Supported           |
 |      Az 5.9      |       Supported        |         Supported         |         Supported         |          Supported           |
