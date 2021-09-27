@@ -33,13 +33,13 @@ Close-AzsAlert -Name <String> -User <String> -Alert <IAlert> [-Location <String>
 
 ### CloseViaIdentity
 ```
-Close-AzsAlert -InputObject <IInfrastructureInsightsAdminIdentity> -User <String> -Alert <IAlert>
+Close-AzsAlert -INPUTOBJECT \<IInfrastructureInsightsAdminIdentity> -User <String> -Alert <IAlert>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CloseViaIdentityExpanded
 ```
-Close-AzsAlert -InputObject <IInfrastructureInsightsAdminIdentity> -User <String> [-Location <String>]
+Close-AzsAlert -INPUTOBJECT \<IInfrastructureInsightsAdminIdentity> -User <String> [-Location <String>]
  [-AlertId <String>] [-AlertProperty <Hashtable>] [-ClosedByUserAlias <String>] [-ClosedTimestamp <String>]
  [-CreatedTimestamp <String>] [-Description <IDictionary[]>] [-FaultId <String>] [-FaultTypeId <String>]
  [-HasValidRemediationAction] [-ImpactedResourceDisplayName <String>] [-ImpactedResourceId <String>]
@@ -598,7 +598,7 @@ ALERT <IAlert>: This object represents an alert resource.
   - `[State <String>]`: State of the alert.
   - `[Title <String>]`: Gets or sets the Resource ID for the impacted item.
 
-INPUTOBJECT <IInfrastructureInsightsAdminIdentity>: Identity Parameter
+INPUTOBJECT \<IInfrastructureInsightsAdminIdentity>: Identity Parameter
   - `[AlertName <String>]`: Name of the alert.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the region

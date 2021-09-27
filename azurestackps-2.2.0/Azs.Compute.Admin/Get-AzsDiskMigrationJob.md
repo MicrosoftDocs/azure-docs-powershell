@@ -26,7 +26,7 @@ Get-AzsDiskMigrationJob -Name <String> [-Location <String>] [-SubscriptionId <St
 
 ### GetViaIdentity
 ```
-Get-AzsDiskMigrationJob -InputObject <IComputeAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsDiskMigrationJob -INPUTOBJECT \<IComputeAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,16 +34,17 @@ Returns the requested disk migration job.
 
 ## EXAMPLES
 
-### Example 1:
+### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
-PS C:\> Get-AzsDiskMigrationJob
+Get-AzsDiskMigrationJob
 ```
 
-Returns a list of managed disk migration jobs at the location local.
 
-### Example 2:
+
+### -------------------------- EXAMPLE 2 --------------------------
 ```powershell
-PS C:\> Get-AzsDiskMigrationJob -Name TestNewDiskMigrationJob
+Get-AzsDiskMigrationJob -Name TestNewDiskMigrationJob
+```
 
 CreationTime : 2/26/2020 10:45:41 AM
 EndTime      : 2/26/2020 10:46:32 AM
@@ -56,9 +57,6 @@ Status       : Succeeded
 Subtask      : {edacd0f6-760a-43f9-a188-8833751f89ce, f1ee38a4-5c27-4728-a12b-36976c565042}
 TargetShare  : \\SU1FileServer.s31r1801.masd.stbtest.microsoft.com\SU1_ObjStore_1
 Type         : Microsoft.Compute.Admin/locations/diskmigrationjobs
-```
-
-Get a specific managed disk migration job.
 
 ## PARAMETERS
 
@@ -75,7 +73,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -InputObject
@@ -92,7 +89,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -108,7 +104,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Name
@@ -124,7 +119,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Status
@@ -140,7 +134,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -157,7 +150,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -169,23 +161,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDiskMigrationJob
-
-
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20210401.IDiskMigrationJob
 
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+
+INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
+  - `[FeatureName <String>]`: Name of the feature.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[MigrationId <String>]`: The migration job guid name.
   - `[Offer <String>]`: Name of the offer.
   - `[Publisher <String>]`: Name of the publisher.
   - `[QuotaName <String>]`: Name of the quota.
+  - `[ScaleUnitName <String>]`: Name of the scale unit.
   - `[Sku <String>]`: Name of the SKU.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
   - `[Type <String>]`: Type of extension.

@@ -30,14 +30,14 @@ Repair-AzsScaleUnitNode -Name <String> -BareMetalNode <IBareMetalNodeDescription
 
 ### RepairViaIdentity
 ```
-Repair-AzsScaleUnitNode -InputObject <IFabricAdminIdentity> -BareMetalNode <IBareMetalNodeDescription>
+Repair-AzsScaleUnitNode -INPUTOBJECT \<IFabricAdminIdentity> -BareMetalNode <IBareMetalNodeDescription>
  [-Force] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### RepairViaIdentityExpanded
 ```
-Repair-AzsScaleUnitNode -InputObject <IFabricAdminIdentity> [-BiosVersion <String>] [-BmciPv4Address <String>]
+Repair-AzsScaleUnitNode -INPUTOBJECT \<IFabricAdminIdentity> [-BiosVersion <String>] [-BmciPv4Address <String>]
  [-ClusterName <String>] [-ComputerName <String>] [-Force] [-MacAddress <String>] [-Model <String>]
  [-SerialNumber <String>] [-Vendor <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -428,7 +428,7 @@ BAREMETALNODE <IBareMetalNodeDescription>: Identity Parameter
   - `[SerialNumber <String>]`: Serial number of the physical machine.
   - `[Vendor <String>]`: Vendor of the physical machine.
 
-INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
+INPUTOBJECT \<IFabricAdminIdentity>: Identity Parameter
   - `[Drive <String>]`: Name of the storage drive.
   - `[EdgeGateway <String>]`: Name of the edge gateway.
   - `[EdgeGatewayPool <String>]`: Name of the edge gateway pool.

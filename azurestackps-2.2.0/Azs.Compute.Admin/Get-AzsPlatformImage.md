@@ -26,7 +26,7 @@ Get-AzsPlatformImage -Offer <String> -Publisher <String> -Sku <String> -Version 
 
 ### GetViaIdentity
 ```
-Get-AzsPlatformImage -InputObject <IComputeAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsPlatformImage -INPUTOBJECT \<IComputeAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,9 +34,10 @@ Returns the specific platform image matching publisher, offer, skus and version.
 
 ## EXAMPLES
 
-### Example 1: Get All Platform Images
+### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
-PS C:\> Get-AzsPlatformImage
+Get-AzsPlatformImage
+```
 
 BillingPartNumber :
 DataDisks         :
@@ -49,13 +50,11 @@ OsUri             : https://asdf.blob.local.azurestack.external/asdf/UbuntuServe
                     wdlacup&se=2020-02-13T13:25:58Z&st=2020-02-13T05:25:58Z&spr=https
 ProvisioningState : Succeeded
 Type              : Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions
-```
 
-Get a list of all Platform Images by leaving all parameters blank.
-
-### Example 2: Get Specific Platform Image
+### -------------------------- EXAMPLE 2 --------------------------
 ```powershell
-PS C:\> Get-AzsPlatformImage -Offer ExampleOffer -Publisher ExamplePublisher -Location local -Sku ExampleSku -Version 1.0.0
+Get-AzsPlatformImage -Offer ExampleOffer -Publisher ExamplePublisher -Location local -Sku ExampleSku -Version 1.0.0
+```
 
 BillingPartNumber :
 DataDisks         :
@@ -68,9 +67,6 @@ OsUri             : https://asdf.blob.local.azurestack.external/asdf/UbuntuServe
                     e=2020-02-13T13:25:58Z&st=2020-02-13T05:25:58Z&spr=https
 ProvisioningState : Succeeded
 Type              : Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions
-```
-
-Specify the Offer, Publisher, Location, Sku, and Version to retrieve a Platform Image.
 
 ## PARAMETERS
 
@@ -87,7 +83,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -InputObject
@@ -104,7 +99,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -120,7 +114,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Offer
@@ -136,7 +129,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Publisher
@@ -152,7 +144,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Sku
@@ -168,7 +159,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -185,7 +175,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Version
@@ -201,7 +190,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -215,21 +203,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20151201Preview.IPlatformImage
 
-
-
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+
+INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
+  - `[FeatureName <String>]`: Name of the feature.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[MigrationId <String>]`: The migration job guid name.
   - `[Offer <String>]`: Name of the offer.
   - `[Publisher <String>]`: Name of the publisher.
   - `[QuotaName <String>]`: Name of the quota.
+  - `[ScaleUnitName <String>]`: Name of the scale unit.
   - `[Sku <String>]`: Name of the SKU.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
   - `[Type <String>]`: Type of extension.

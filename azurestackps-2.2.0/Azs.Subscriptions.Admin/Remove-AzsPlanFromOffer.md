@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/remove-azsplanfromoffer
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/remove-azsplanfromoffer
 schema: 2.0.0
 ---
 
@@ -27,13 +27,13 @@ Remove-AzsPlanFromOffer -OfferName <String> -ResourceGroupName <String> -PlanLin
 
 ### UnlinkViaIdentity
 ```
-Remove-AzsPlanFromOffer -InputObject <ISubscriptionsAdminIdentity> -PlanLink <IPlanLinkDefinition>
+Remove-AzsPlanFromOffer -INPUTOBJECT \<ISubscriptionsAdminIdentity> -PlanLink <IPlanLinkDefinition>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UnlinkViaIdentityExpanded
 ```
-Remove-AzsPlanFromOffer -InputObject <ISubscriptionsAdminIdentity> [-MaxAcquisitionCount <Int32>]
+Remove-AzsPlanFromOffer -INPUTOBJECT \<ISubscriptionsAdminIdentity> [-MaxAcquisitionCount <Int32>]
  [-PlanLinkType <PlanLinkType>] [-PlanName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -252,7 +252,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
+INPUTOBJECT \<ISubscriptionsAdminIdentity>: Identity Parameter
   - `[DelegatedProvider <String>]`: DelegatedProvider identifier.
   - `[DelegatedProviderSubscriptionId <String>]`: Delegated provider subscription identifier.
   - `[Id <String>]`: Resource identity path

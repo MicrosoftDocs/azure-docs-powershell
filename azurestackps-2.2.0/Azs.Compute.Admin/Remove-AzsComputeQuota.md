@@ -20,7 +20,7 @@ Remove-AzsComputeQuota -Name <String> [-Location <String>] [-SubscriptionId <Str
 
 ### DeleteViaIdentity
 ```
-Remove-AzsComputeQuota -InputObject <IComputeAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
+Remove-AzsComputeQuota -INPUTOBJECT \<IComputeAdminIdentity> [-DefaultProfile <PSObject>] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -29,12 +29,12 @@ Delete an existing Compute quota.
 
 ## EXAMPLES
 
-### Example 1: Remove a Compute Quota
+### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
-PS C:\> Remove-AzsComputeQuota -Name "AComputeQuota"
+Remove-AzsComputeQuota -Name "AComputeQuota"
 ```
 
-A successful call to remove a compute quota will not return any output
+
 
 ## PARAMETERS
 
@@ -51,7 +51,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -InputObject
@@ -68,7 +67,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -84,7 +82,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Name
@@ -100,7 +97,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -PassThru
@@ -116,7 +112,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -133,7 +128,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Confirm
@@ -149,7 +143,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -WhatIf
@@ -166,7 +159,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -180,21 +172,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Boolean
 
-
-
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+
+INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
+  - `[FeatureName <String>]`: Name of the feature.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[MigrationId <String>]`: The migration job guid name.
   - `[Offer <String>]`: Name of the offer.
   - `[Publisher <String>]`: Name of the publisher.
   - `[QuotaName <String>]`: Name of the quota.
+  - `[ScaleUnitName <String>]`: Name of the scale unit.
   - `[Sku <String>]`: Name of the SKU.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
   - `[Type <String>]`: Type of extension.

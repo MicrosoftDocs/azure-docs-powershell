@@ -26,7 +26,7 @@ Get-AzsComputeQuota -Name <String> [-Location <String>] [-SubscriptionId <String
 
 ### GetViaIdentity
 ```
-Get-AzsComputeQuota -InputObject <IComputeAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsComputeQuota -INPUTOBJECT \<IComputeAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,9 +34,10 @@ Get an existing Compute Quota.
 
 ## EXAMPLES
 
-### Example 1: Get All Compute Quotas
+### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
-PS C:\> Get-AzsComputeQuota
+Get-AzsComputeQuota
+```
 
 AvailabilitySetCount               : 10
 CoresLimit                         : 100
@@ -49,13 +50,11 @@ StandardManagedDiskAndSnapshotSize : 2048
 Type                               : Microsoft.Compute.Admin/quotas
 VMScaleSetCount                    : 100
 VirtualMachineCount                : 100
-```
 
-Run `Get-AzsComputeQuota` with no parameters to get a list of all Compute Quotas.
-
-### Example 2: Get Compute Quota by Name
+### -------------------------- EXAMPLE 2 --------------------------
 ```powershell
-PS C:\> Get-AzsComputeQuota -Name ExampleComputeQuotaWithDefaultParameters
+Get-AzsComputeQuota -Name ExampleComputeQuotaWithDefaultParameters
+```
 
 AvailabilitySetCount               : 10
 CoresLimit                         : 100
@@ -68,9 +67,6 @@ StandardManagedDiskAndSnapshotSize : 2048
 Type                               : Microsoft.Compute.Admin/quotas
 VMScaleSetCount                    : 0
 VirtualMachineCount                : 100
-```
-
-Specify the Quota's name on the command line to retrieve a specific quota.
 
 ## PARAMETERS
 
@@ -87,7 +83,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -InputObject
@@ -104,7 +99,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -120,7 +114,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Name
@@ -136,7 +129,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -153,7 +145,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -165,23 +156,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
-
-
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api202101.IQuota
 
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+
+INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
+  - `[FeatureName <String>]`: Name of the feature.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[MigrationId <String>]`: The migration job guid name.
   - `[Offer <String>]`: Name of the offer.
   - `[Publisher <String>]`: Name of the publisher.
   - `[QuotaName <String>]`: Name of the quota.
+  - `[ScaleUnitName <String>]`: Name of the scale unit.
   - `[Sku <String>]`: Name of the SKU.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
   - `[Type <String>]`: Type of extension.

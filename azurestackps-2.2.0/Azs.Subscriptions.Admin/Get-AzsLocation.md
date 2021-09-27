@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/get-azslocation
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/get-azslocation
 schema: 2.0.0
 ---
 
@@ -24,7 +24,7 @@ Get-AzsLocation -Name <String> [-SubscriptionId <String[]>] [-DefaultProfile <PS
 
 ### GetViaIdentity
 ```
-Get-AzsLocation -InputObject <ISubscriptionsAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsLocation -INPUTOBJECT \<ISubscriptionsAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,7 +128,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
+INPUTOBJECT \<ISubscriptionsAdminIdentity>: Identity Parameter
   - `[DelegatedProvider <String>]`: DelegatedProvider identifier.
   - `[DelegatedProviderSubscriptionId <String>]`: Delegated provider subscription identifier.
   - `[Id <String>]`: Resource identity path

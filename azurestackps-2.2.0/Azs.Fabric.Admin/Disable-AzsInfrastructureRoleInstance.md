@@ -21,7 +21,7 @@ Disable-AzsInfrastructureRoleInstance -Name <String> [-Location <String>] [-Reso
 
 ### ShutdownViaIdentity
 ```
-Disable-AzsInfrastructureRoleInstance -InputObject <IFabricAdminIdentity> [-Force]
+Disable-AzsInfrastructureRoleInstance -INPUTOBJECT \<IFabricAdminIdentity> [-Force]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -255,7 +255,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
+INPUTOBJECT \<IFabricAdminIdentity>: Identity Parameter
   - `[Drive <String>]`: Name of the storage drive.
   - `[EdgeGateway <String>]`: Name of the edge gateway.
   - `[EdgeGatewayPool <String>]`: Name of the edge gateway pool.

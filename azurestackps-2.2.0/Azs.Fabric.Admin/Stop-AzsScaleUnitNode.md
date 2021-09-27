@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Fabric.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.fabric.admin/stop-azsscaleunitnode
+online version: https://docs.microsoft.com/powershell/module/azs.fabric.admin/stop-azsscaleunitnode
 schema: 2.0.0
 ---
 
@@ -21,7 +21,7 @@ Stop-AzsScaleUnitNode -Name <String> [-Location <String>] [-ResourceGroupName <S
 
 ### PowerOffViaIdentity
 ```
-Stop-AzsScaleUnitNode -InputObject <IFabricAdminIdentity> [-Force] [-DefaultProfile <PSObject>] [-AsJob]
+Stop-AzsScaleUnitNode -INPUTOBJECT \<IFabricAdminIdentity> [-Force] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Stop-AzsScaleUnitNode -Name <String> [-Location <String>] [-ResourceGroupName <S
 
 ### ShutdownViaIdentity
 ```
-Stop-AzsScaleUnitNode -InputObject <IFabricAdminIdentity> [-Force] [-DefaultProfile <PSObject>] [-AsJob]
+Stop-AzsScaleUnitNode -INPUTOBJECT \<IFabricAdminIdentity> [-Force] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -270,7 +270,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
+INPUTOBJECT \<IFabricAdminIdentity>: Identity Parameter
   - `[Drive <String>]`: Name of the storage drive.
   - `[EdgeGateway <String>]`: Name of the edge gateway.
   - `[EdgeGatewayPool <String>]`: Name of the edge gateway pool.

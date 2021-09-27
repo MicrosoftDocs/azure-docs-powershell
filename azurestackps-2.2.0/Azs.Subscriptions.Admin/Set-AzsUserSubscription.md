@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/set-azsusersubscription
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/set-azsusersubscription
 schema: 2.0.0
 ---
 

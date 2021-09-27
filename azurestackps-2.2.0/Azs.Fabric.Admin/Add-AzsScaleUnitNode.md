@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Fabric.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.fabric.admin/add-azsscaleunitnode
+online version: https://docs.microsoft.com/powershell/module/azs.fabric.admin/add-azsscaleunitnode
 schema: 2.0.0
 ---
 
@@ -28,14 +28,14 @@ Add-AzsScaleUnitNode -ScaleUnit <String> -ScaleUnitNodeParameter <IScaleOutScale
 
 ### ScaleViaIdentity
 ```
-Add-AzsScaleUnitNode -InputObject <IFabricAdminIdentity>
+Add-AzsScaleUnitNode -INPUTOBJECT \<IFabricAdminIdentity>
  -ScaleUnitNodeParameter <IScaleOutScaleUnitParametersList> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ScaleViaIdentityExpanded
 ```
-Add-AzsScaleUnitNode -InputObject <IFabricAdminIdentity> [-AwaitStorageConvergence]
+Add-AzsScaleUnitNode -INPUTOBJECT \<IFabricAdminIdentity> [-AwaitStorageConvergence]
  [-BmciPv4Address <String>] [-ComputerName <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -305,7 +305,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IFabricAdminIdentity>: Identity Parameter
+INPUTOBJECT \<IFabricAdminIdentity>: Identity Parameter
   - `[Drive <String>]`: Name of the storage drive.
   - `[EdgeGateway <String>]`: Name of the edge gateway.
   - `[EdgeGatewayPool <String>]`: Name of the edge gateway pool.

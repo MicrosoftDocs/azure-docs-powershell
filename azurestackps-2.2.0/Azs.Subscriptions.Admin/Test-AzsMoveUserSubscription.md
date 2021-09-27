@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/test-azsmoveusersubscription
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/test-azsmoveusersubscription
 schema: 2.0.0
 ---
 
@@ -28,14 +28,14 @@ Test-AzsMoveUserSubscription -MoveSubscriptionsDefinition <IMoveSubscriptionsDef
 
 ### ValidateViaIdentity
 ```
-Test-AzsMoveUserSubscription -InputObject <ISubscriptionsAdminIdentity>
+Test-AzsMoveUserSubscription -INPUTOBJECT \<ISubscriptionsAdminIdentity>
  -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ValidateViaIdentityExpanded
 ```
-Test-AzsMoveUserSubscription -InputObject <ISubscriptionsAdminIdentity> -ResourceId <String[]>
+Test-AzsMoveUserSubscription -INPUTOBJECT \<ISubscriptionsAdminIdentity> -ResourceId <String[]>
  [-DestinationDelegatedProviderOffer <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -267,7 +267,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
+INPUTOBJECT \<ISubscriptionsAdminIdentity>: Identity Parameter
   - `[DelegatedProvider <String>]`: DelegatedProvider identifier.
   - `[DelegatedProviderSubscriptionId <String>]`: Delegated provider subscription identifier.
   - `[Id <String>]`: Resource identity path

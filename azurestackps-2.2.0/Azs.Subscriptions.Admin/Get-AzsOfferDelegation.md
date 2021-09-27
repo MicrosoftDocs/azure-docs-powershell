@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Azs.Subscriptions.Admin
-online version: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin/get-azsofferdelegation
+online version: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin/get-azsofferdelegation
 schema: 2.0.0
 ---
 
@@ -26,7 +26,7 @@ Get-AzsOfferDelegation -Name <String> -OfferName <String> -ResourceGroupName <St
 
 ### GetViaIdentity
 ```
-Get-AzsOfferDelegation -InputObject <ISubscriptionsAdminIdentity> [-DefaultProfile <PSObject>]
+Get-AzsOfferDelegation -INPUTOBJECT \<ISubscriptionsAdminIdentity> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -166,7 +166,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
+INPUTOBJECT \<ISubscriptionsAdminIdentity>: Identity Parameter
   - `[DelegatedProvider <String>]`: DelegatedProvider identifier.
   - `[DelegatedProviderSubscriptionId <String>]`: Delegated provider subscription identifier.
   - `[Id <String>]`: Resource identity path

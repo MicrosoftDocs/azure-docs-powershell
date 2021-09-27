@@ -22,9 +22,10 @@ Cancel a disk migration job.
 
 ## EXAMPLES
 
-### Example 1:
+### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
-PS C:\> Stop-AzsDiskMigrationJob -Name TestJob
+Stop-AzsDiskMigrationJob -Name TestJob
+```
 
 CreationTime : 2/26/2020 11:06:40 AM
 EndTime      : 2/26/2020 11:07:24 AM
@@ -38,9 +39,6 @@ Status       : Canceled
 Subtask      : {47774498-6bc7-4ce2-98ca-738739ded2fc, b09ac623-f71d-480c-98bc-88fa3f603f2c}
 TargetShare  : \\SU1FileServer.s31r1801.masd.stbtest.microsoft.com\SU1_ObjStore_4
 Type         : Microsoft.Compute.Admin/locations/diskmigrationjobs
-```
-
-Cancel a managed disk migration job.
 
 ## PARAMETERS
 
@@ -57,7 +55,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -73,7 +70,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Name
@@ -89,7 +85,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -106,7 +101,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Confirm
@@ -122,7 +116,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -WhatIf
@@ -139,7 +132,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -149,11 +141,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDiskMigrationJob
-
-
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20210401.IDiskMigrationJob
 
 ## NOTES
+
+ALIASES
 
 ## RELATED LINKS
 

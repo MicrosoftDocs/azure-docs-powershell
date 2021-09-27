@@ -30,13 +30,13 @@ New-AzsNetworkQuota -Name <String> -Quota <IQuota> [-Location <String>] [-Subscr
 
 ### CreateViaIdentity
 ```
-New-AzsNetworkQuota -InputObject <INetworkAdminIdentity> -Quota <IQuota> [-DefaultProfile <PSObject>]
+New-AzsNetworkQuota -INPUTOBJECT \<INetworkAdminIdentity> -Quota <IQuota> [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentityExpanded
 ```
-New-AzsNetworkQuota -InputObject <INetworkAdminIdentity> [-MaxLoadBalancersPerSubscription <Int64>]
+New-AzsNetworkQuota -INPUTOBJECT \<INetworkAdminIdentity> [-MaxLoadBalancersPerSubscription <Int64>]
  [-MaxNicsPerSubscription <Int64>] [-MaxPublicIpsPerSubscription <Int64>]
  [-MaxSecurityGroupsPerSubscription <Int64>] [-MaxVirtualNetworkGatewayConnectionsPerSubscription <Int64>]
  [-MaxVirtualNetworkGatewaysPerSubscription <Int64>] [-MaxVnetsPerSubscription <Int64>] [-Tag <Hashtable>]
@@ -345,7 +345,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <INetworkAdminIdentity>: Identity Parameter
+INPUTOBJECT \<INetworkAdminIdentity>: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[ResourceName <String>]`: Name of the resource.

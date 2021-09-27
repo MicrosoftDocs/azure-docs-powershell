@@ -21,13 +21,14 @@ Get-AzsDisk [-Location <String>] [-SubscriptionId <String[]>] [-Count <Int32>] [
 
 ### Get
 ```
-Get-AzsDisk -Name <String> [-Location <String>] [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+Get-AzsDisk -Name <String> [-Location <String>] [-SubscriptionId <String[]>] [-ShowSizeDetail]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
-Get-AzsDisk -InputObject <IComputeAdminIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzsDisk -INPUTOBJECT \<IComputeAdminIdentity> [-ShowSizeDetail] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,16 +36,17 @@ Returns the disk.
 
 ## EXAMPLES
 
-### Example 1: Get All Disks 
+### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
-PS C:\> Get-AzsDisk
+Get-AzsDisk
 ```
 
-Without any parameters, `Get-AzsDisk` will list all Disks.
 
-### Example 2: Get a Disk by Name
+
+### -------------------------- EXAMPLE 2 --------------------------
 ```powershell
-PS C:\> Get-AzsDisk -Name "426b8945-8a24-42ad-acdc-c26f16202489"
+Get-AzsDisk -Name "426b8945-8a24-42ad-acdc-c26f16202489"
+```
 
 ActualSizeGb    : 24
 DiskId          : 426b8945-8a24-42ad-acdc-c26f16202489
@@ -61,13 +63,11 @@ Status          : Unattached
 Type            : Microsoft.Compute.Admin/locations/disks
 UserResourceId  : /subscriptions/74c72bdc-d917-431c-a377-8ca80f4238a0/resourceGroups/LADTEST/providers/Microsoft.Comput
                   e/Disks/TEST_OsDisk_1_426b89458a2442adacdcc26f16202489
-```
 
-Specify a disk by its `Name` to retrieve it.
-
-### Example 3: Get a Specified number of Disks
+### -------------------------- EXAMPLE 3 --------------------------
 ```powershell
-PS C:\>  Get-AzsDisk -Count 3
+Get-AzsDisk -Count 3
+```
 
 ActualSizeGb    : 24
 DiskId          : 20f1619e-4210-47f6-81e6-b89e3028df06
@@ -116,13 +116,11 @@ Status          : Unattached
 Type            : Microsoft.Compute.Admin/locations/disks
 UserResourceId  : /subscriptions/74c72bdc-d917-431c-a377-8ca80f4238a0/resourceGroups/LADTEST/providers/Microsoft.Comput
                   e/Disks/TEST_OsDisk_1_426b89458a2442adacdcc26f16202489
-```
 
-Use the `Count` parameter to retrieve a specific number of disks.
-
-### Example 4: Get all disks in specific location
+### -------------------------- EXAMPLE 4 --------------------------
 ```powershell
-PS C:\> Get-AzsDisk -Status All -ScaleUnit s-cluster -VolumeLabel Objstore_4
+Get-AzsDisk -Status All -ScaleUnit s-cluster -VolumeLabel Objstore_4
+```
 
 ActualSizeGb    : 2
 DiskId          : e4732f76-0753-40ec-80f5-8effdd0b437d
@@ -165,9 +163,6 @@ SharePath       : \\SU1FileServer.s11r0401.masd.stbtest.microsoft.com\SU1_ObjSto
 Status          : Reserved
 Type            : Microsoft.Compute.Admin/locations/disks
 UserResourceId  : /subscriptions/7829c784-cd3f-464a-b195-3be83c964c9c/resourceGroups/RBACTEST/providers/Microsoft.Compute/Disks/testdd
-```
-
-Use the `ScaleUnit` or `VolumeLabel` parameter to list all disks in specific location
 
 ## PARAMETERS
 
@@ -184,7 +179,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DefaultProfile
@@ -200,7 +194,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -InputObject
@@ -217,7 +210,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -233,7 +225,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Name
@@ -249,7 +240,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -ScaleUnit
@@ -265,7 +255,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SharePath
@@ -281,7 +270,21 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
 
+### -ShowSizeDetail
+Switch for whether summary or detailed disk size information is returned.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: Get, GetViaIdentity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Start
@@ -297,7 +300,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Status
@@ -313,7 +315,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -330,7 +331,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -UserSubscriptionId
@@ -346,7 +346,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -VolumeLabel
@@ -362,7 +361,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -374,23 +372,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDisk
-
-
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20210401.IDisk
 
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+
+INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
+  - `[FeatureName <String>]`: Name of the feature.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[MigrationId <String>]`: The migration job guid name.
   - `[Offer <String>]`: Name of the offer.
   - `[Publisher <String>]`: Name of the publisher.
   - `[QuotaName <String>]`: Name of the quota.
+  - `[ScaleUnitName <String>]`: Name of the scale unit.
   - `[Sku <String>]`: Name of the SKU.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
   - `[Type <String>]`: Type of extension.

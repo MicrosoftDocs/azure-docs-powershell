@@ -1,7 +1,7 @@
 ---
 Module Name: Azs.Subscriptions.Admin
 Module Guid: 05ed726b-fcce-40b2-ae08-ae5e6027eee4
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azs.subscriptions.admin
+Download Help Link: https://docs.microsoft.com/powershell/module/azs.subscriptions.admin
 Help Version: 1.0.0.0
 Locale: en-US
 ---

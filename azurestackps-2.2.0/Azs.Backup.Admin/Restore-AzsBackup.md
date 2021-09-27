@@ -29,14 +29,14 @@ Restore-AzsBackup -Name <String> -RestoreOption <IRestoreOptions> [-Location <St
 
 ### RestoreViaIdentity
 ```
-Restore-AzsBackup -InputObject <IBackupAdminIdentity> -RestoreOption <IRestoreOptions>
+Restore-AzsBackup -INPUTOBJECT \<IBackupAdminIdentity> -RestoreOption <IRestoreOptions>
  [-DefaultProfile <PSObject>] [-AsJob] [-Force] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### RestoreViaIdentityExpanded
 ```
-Restore-AzsBackup -InputObject <IBackupAdminIdentity> [-DecryptionCertPassword <SecureString>]
+Restore-AzsBackup -INPUTOBJECT \<IBackupAdminIdentity> [-DecryptionCertPassword <SecureString>]
  [-DecryptionCertPath <String>] [-RoleName <String>] [-DefaultProfile <PSObject>] [-AsJob] [-Force] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -69,7 +69,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DecryptionCertPassword
@@ -85,7 +84,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DecryptionCertPath
@@ -101,7 +99,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DefaultProfile
@@ -117,7 +114,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Force
@@ -133,7 +129,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -InputObject
@@ -150,7 +145,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -166,7 +160,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Name
@@ -182,7 +175,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -NoWait
@@ -198,7 +190,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -PassThru
@@ -214,7 +205,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -ResourceGroupName
@@ -230,7 +220,6 @@ Position: Named
 Default value: "system.$((Get-AzLocation)[0].Location)"
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -RestoreOption
@@ -247,7 +236,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -RoleName
@@ -263,7 +251,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -280,7 +267,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Confirm
@@ -296,7 +282,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -WhatIf
@@ -313,7 +298,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -327,21 +311,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Boolean
 
-
-
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
+
+INPUTOBJECT \<IBackupAdminIdentity>: Identity Parameter
   - `[Backup <String>]`: Name of the backup.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the backup location.
   - `[ResourceGroupName <String>]`: Name of the resource group.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-RESTOREOPTION <IRestoreOptions>: Properties for restore options.
+RESTOREOPTION \<IRestoreOptions>: Properties for restore options.
   - `[DecryptionCertBase64 <String>]`: The certificate file raw data in Base64 string. This should be the .pfx file with the private key.
   - `[DecryptionCertPassword <String>]`: The password for the decryption certificate.
   - `[RoleName <String>]`: The Azure Stack role name for restore, set it to empty for all infrastructure role

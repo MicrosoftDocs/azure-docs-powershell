@@ -32,9 +32,10 @@ Creates or Updates a Compute Quota with the provided quota parameters.
 
 ## EXAMPLES
 
-### Example 1: Create a Compute Quota with Default Parameters
+### -------------------------- EXAMPLE 1 --------------------------
 ```powershell
-PS C:\> New-AzsComputeQuota -Name ExampleComputeQuotaWithDefaultParameters
+New-AzsComputeQuota -Name ExampleComputeQuotaWithDefaultParameters
+```
 
 AvailabilitySetCount               : 10
 CoresLimit                         : 100
@@ -47,13 +48,11 @@ StandardManagedDiskAndSnapshotSize : 2048
 Type                               : Microsoft.Compute.Admin/quotas
 VMScaleSetCount                    : 0
 VirtualMachineCount                : 100
-```
 
-Any parameters that are not specified will be set to their default parameter, shown above.
-
-### Example 2: Create a Compute Quota with Custom Parameters
+### -------------------------- EXAMPLE 2 --------------------------
 ```powershell
-PS C:\>  New-AzsComputeQuota -Name ExampleComputeQuotaWithCustomParameters -Location local -AvailabilitySetCount 9 -CoresCount 99 -PremiumManagedDiskAndSnapshotSize 1024 -StandardManagedDiskAndSnapshotSize 1024 -VirtualMachineCount 99 -VMScaleSetCount 2
+New-AzsComputeQuota -Name ExampleComputeQuotaWithCustomParameters -Location local -AvailabilitySetCount 9 -CoresCount 99 -PremiumManagedDiskAndSnapshotSize 1024 -StandardManagedDiskAndSnapshotSize 1024 -VirtualMachineCount 99 -VMScaleSetCount 2
+```
 
 AvailabilitySetCount               : 9
 CoresLimit                         : 99
@@ -66,9 +65,6 @@ StandardManagedDiskAndSnapshotSize : 1024
 Type                               : Microsoft.Compute.Admin/quotas
 VMScaleSetCount                    : 2
 VirtualMachineCount                : 99
-```
-
-Customize Quota with parameters. Any parameters not specified will have default value.
 
 ## PARAMETERS
 
@@ -85,7 +81,6 @@ Position: Named
 Default value: 10
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -CoresCount
@@ -101,7 +96,6 @@ Position: Named
 Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DefaultProfile
@@ -117,7 +111,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -133,7 +126,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Location1
@@ -149,7 +141,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Name
@@ -165,7 +156,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -NewQuota
@@ -173,7 +163,7 @@ Holds Compute quota information used to control resource allocation.
 To construct, see NOTES section for NEWQUOTA properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
+Type: Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api202101.IQuota
 Parameter Sets: Create
 Aliases:
 
@@ -182,7 +172,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -PremiumManagedDiskAndSnapshotSize
@@ -198,7 +187,6 @@ Position: Named
 Default value: 2048
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -StandardManagedDiskAndSnapshotSize
@@ -214,7 +202,6 @@ Position: Named
 Default value: 2048
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -231,7 +218,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -VirtualMachineCount
@@ -247,7 +233,6 @@ Position: Named
 Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -VMScaleSetCount
@@ -263,7 +248,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Confirm
@@ -279,7 +263,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -WhatIf
@@ -296,7 +279,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -304,23 +286,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api202101.IQuota
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180209.IQuota
-
-
+### Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api202101.IQuota
 
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
 
 NEWQUOTA <IQuota>: Holds Compute quota information used to control resource allocation.
   - `[Location <String>]`: Location of the resource.
   - `[AvailabilitySetCount <Int32?>]`: Maximum number of availability sets allowed.
   - `[CoresLimit <Int32?>]`: Maximum number of cores allowed.
+  - `[DdagpuCount <Int32?>]`: Maximum number of dda gpus allowed.
+  - `[PartitionedGpuCount <Int32?>]`: Maximum number of partitioned gpus allowed.
   - `[PremiumManagedDiskAndSnapshotSize <Int32?>]`: Maximum number of managed disks and snapshots of type premium allowed.
   - `[StandardManagedDiskAndSnapshotSize <Int32?>]`: Maximum number of managed disks and snapshots of type standard allowed.
   - `[VMScaleSetCount <Int32?>]`: Maximum number of scale sets allowed.
