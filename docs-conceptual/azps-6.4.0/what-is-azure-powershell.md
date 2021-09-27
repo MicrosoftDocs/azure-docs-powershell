@@ -20,9 +20,9 @@ for automation.
 > The Az PowerShell module is the recommended PowerShell module for managing Azure resources on all
 > platforms.
 
-Introduced in 2018, the Az PowerShell module is based on the .NET Standard, and works with
-PowerShell 7.0.6 LTS and PowerShell 7.1.3 or higher on all platforms including Windows, macOS, and
-Linux. It's also compatible with Windows PowerShell 5.1.
+The Az PowerShell module is based on the .NET Standard, and works with PowerShell 7.0.6 LTS and
+PowerShell 7.1.3 or higher on all platforms including Windows, macOS, and Linux. It's also
+compatible with Windows PowerShell 5.1.
 
 > [!NOTE]
 > PowerShell 7.0.6 LTS and PowerShell 7.1.3 or higher is the recommended version of PowerShell for
@@ -33,17 +33,54 @@ from a browser through [Azure Cloud Shell](/azure/cloud-shell/overview) or
 [inside a Docker container](/powershell/azure/azureps-in-docker). For more information, see the
 [Azure PowerShell documentation](/powershell/azure/).
 
-## The AzureRM PowerShell module
+### Authentication
+
+Azure PowerShell supports several authentication methods. For detailed information about
+authenticating to Azure from the Az PowerShell module, see
+[Sign in with Azure PowerShell](/powershell/azure/authenticate-azureps).
+
+### Module Design
+
+The Az PowerShell module is a wrapper module for Azure service related PowerShell modules, usually
+one module per Azure service such as `Az.Network` for Azure networking services and `Az.AKS` for
+Azure Kubernetes Service.
+
+The cmdlets in the Az PowerShell module make REST calls to the Azure API. Breaking changes in the Az
+PowerShell module are limited to twice a year. Many breaking changes at the API level are handled
+within the cmdlets to prevent the perception of a breaking change.
+
+The Az PowerShell module contains cmdlets for performing both control plane and data plane
+operations in Azure. You use the control plane to manage resources in your subscription. You use the
+data plane to use capabilities exposed by your instance of a resource type. For more information,
+see
+[Azure control plane and data plane](/azure/azure-resource-manager/management/control-plane-and-data-plane).
+
+### Output Objects
+
+The cmdlets in the Az PowerShell module produce .NET objects. As with any PowerShell command that
+produces output, the cmdlets in the Az PowerShell module can be piped to the
+[Get-Member](/powershell/module/microsoft.powershell.utility/get-member) cmdlet to determine what
+type of object is produced along with a list of the available properties and methods. For more
+information, see [Query output of Azure PowerShell](/powershell/azure/queries-azureps) and
+[Format Azure PowerShell cmdlet output](/powershell/azure/formatting-output).
+
+## Other modules
+
+The AzureAD and MSOnline PowerShell modules are not part of the Az PowerShell module. For more
+information about those modules, see the documentation for
+[Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/overview).
+
+## Legacy Azure PowerShell modules
+
+### The AzureRM PowerShell module
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-The AzureRM PowerShell module was the first generation of cmdlets to use the Azure Resource Manager
-model for managing Azure Resources. The AzureRM PowerShell module is no longer recommended as
-deprecation has been announced, new features are no longer being added, and it's not cross platform.
-For more information, see
+The AzureRM PowerShell module is no longer recommended as deprecation has been announced, new
+features are no longer being added, and it's not cross platform. For more information, see
 [Overview of the AzureRM PowerShell module](/powershell/azure/azurerm/overview).
 
-## The Azure PowerShell module
+### The Azure PowerShell module
 
 > [!IMPORTANT]
 > The cmdlets in the Azure PowerShell module are for managing legacy Azure resources that use
