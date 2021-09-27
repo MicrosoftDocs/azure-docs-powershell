@@ -1,41 +1,68 @@
 ---
 external help file:
 Module Name: Azs.Backup.Admin
-online version: https://docs.microsoft.com/powershell/module/azs.backup.admin/start-azsbackup
+online version: https://docs.microsoft.com/powershell/module/azs.backup.admin/invoke-azsprunebackuplocationexternalstore
 schema: 2.0.0
 ---
 
-# Start-AzsBackup
+# Invoke-AzsPruneBackupLocationExternalStore
 
 ## SYNOPSIS
-Back up a specific location.
+Prune the external backup store.
 
 ## SYNTAX
 
-### Create (Default)
+### PruneExpanded (Default)
 ```
-Start-AzsBackup [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+Invoke-AzsPruneBackupLocationExternalStore [-Location <String>] [-ResourceGroupName <String>]
+ [-SubscriptionId <String>] [-OperationType <PruneBackupStoreOperationType>] [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### CreateViaIdentity
+### Prune
 ```
-Start-AzsBackup -InputObject <IBackupAdminIdentity> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Invoke-AzsPruneBackupLocationExternalStore -Option <IPruneBackupStoreOperationOptionModel>
+ [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### PruneViaIdentity
+```
+Invoke-AzsPruneBackupLocationExternalStore -InputObject <IBackupAdminIdentity>
+ -Option <IPruneBackupStoreOperationOptionModel> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### PruneViaIdentityExpanded
+```
+Invoke-AzsPruneBackupLocationExternalStore -InputObject <IBackupAdminIdentity>
+ [-OperationType <PruneBackupStoreOperationType>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Back up a specific location.
+Prune the external backup store.
 
 ## EXAMPLES
 
-### Example 1: Start azurestack backup
+### Example 1: Prune external store
 ```powershell
-PS C:\>Start-AzsBackup
+PS C:\> Invoke-AzsPruneBackupLocationExternalStore
+
+masbackup/progressivebackup/garbage
+```
+
+Prune external store
+
+### Example 2: Perform a dry run that does not actually remove the garbage
+```powershell
+PS C:\> Invoke-AzsPruneBackupLocationExternalStore -OperationType DryRun
+
+masbackup/progressivebackup/garbage
 
 ```
 
-Start an Azure Stack backup.
+Perform a dry run that does not actually remove the garbage
 
 ## PARAMETERS
 
@@ -75,7 +102,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.IBackupAdminIdentity
-Parameter Sets: CreateViaIdentity
+Parameter Sets: PruneViaIdentity, PruneViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -90,7 +117,7 @@ Name of the backup location.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create
+Parameter Sets: Prune, PruneExpanded
 Aliases:
 
 Required: False
@@ -115,12 +142,58 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OperationType
+Operation type.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Support.PruneBackupStoreOperationType
+Parameter Sets: PruneExpanded, PruneViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Option
+Prune backup store operation model.
+To construct, see NOTES section for OPTION properties and create a hash table.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IPruneBackupStoreOperationOptionModel
+Parameter Sets: Prune, PruneViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PassThru
+Returns true when the command succeeds
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Name of the resource group.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create
+Parameter Sets: Prune, PruneExpanded
 Aliases:
 
 Required: False
@@ -136,7 +209,7 @@ The subscription ID forms part of the URI for every service call.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create
+Parameter Sets: Prune, PruneExpanded
 Aliases:
 
 Required: False
@@ -182,11 +255,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IPruneBackupStoreOperationOptionModel
+
 ### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.IBackupAdminIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IBackup
+### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IPruneModel
 
 ## NOTES
 
@@ -203,6 +278,9 @@ INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
   - `[Location <String>]`: Name of the backup location.
   - `[ResourceGroupName <String>]`: Name of the resource group.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+
+OPTION <IPruneBackupStoreOperationOptionModel>: Prune backup store operation model.
+  - `[OperationType <PruneBackupStoreOperationType?>]`: Operation type.
 
 ## RELATED LINKS
 
