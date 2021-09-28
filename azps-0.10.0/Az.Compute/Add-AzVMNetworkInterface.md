@@ -78,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Id
 Specifies the ID of a network interface to add to a virtual machine.
-You can use the [Get-AzNetworkInterface](get-aznetworkinterface.md) cmdlet to obtain a network interface.
+You can use the [Get-AzNetworkInterface](/powershell/module/az.network/get-aznetworkinterface) cmdlet to obtain a network interface.
 
 ```yaml
 Type: String
