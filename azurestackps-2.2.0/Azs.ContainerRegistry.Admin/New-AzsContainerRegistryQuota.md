@@ -21,7 +21,7 @@ New-AzsContainerRegistryQuota -Name <String> [-Location <String>] [-Subscription
 
 ### Create
 ```
-New-AzsContainerRegistryQuota -Name <String> -QuotaObject <IContainerRegistryQuota> [-Location <String>]
+New-AzsContainerRegistryQuota -Name <String> -QUOTAOBJECT \<IContainerRegistryQuota> [-Location <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -204,7 +204,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-QUOTAOBJECT <IContainerRegistryQuota>: Container registry quota.
+QUOTAOBJECT \<IContainerRegistryQuota>: Container registry quota.
   - `[CapacityPerRegistryInGiB <Int32?>]`: Storage capacity (GiB) of each registry.
   - `[NumberOfRegistry <Int32?>]`: Total number of container registry accounts.
 

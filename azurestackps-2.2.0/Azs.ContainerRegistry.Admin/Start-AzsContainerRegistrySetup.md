@@ -20,14 +20,14 @@ Start-AzsContainerRegistrySetup [-Location <String>] [-SubscriptionId <String>] 
 
 ### Start
 ```
-Start-AzsContainerRegistrySetup -StartSetupRequest <IContainerRegistrySetupProperty> [-Location <String>]
+Start-AzsContainerRegistrySetup -STARTSETUPREQUEST \<IContainerRegistrySetupProperty> [-Location <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### StartViaIdentity
 ```
 Start-AzsContainerRegistrySetup -INPUTOBJECT \<IContainerRegistryAdminIdentity>
- -StartSetupRequest <IContainerRegistrySetupProperty> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ -STARTSETUPREQUEST \<IContainerRegistrySetupProperty> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -240,7 +240,7 @@ INPUTOBJECT \<IContainerRegistryAdminIdentity>: Identity Parameter
   - `[QuotaName <String>]`: The name of the container registry quota.
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 
-STARTSETUPREQUEST <IContainerRegistrySetupProperty>: Container registry setup properties.
+STARTSETUPREQUEST \<IContainerRegistrySetupProperty>: Container registry setup properties.
   - `[Password <SecureString>]`: Ssl certificate password.
   - `[SslCertBase64 <Byte[]>]`: Ssl certificate in base64 format.
 

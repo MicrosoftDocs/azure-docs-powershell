@@ -22,7 +22,7 @@ Set-AzsContainerRegistryConfiguration -ConfigurationName <String> [-Location <St
 ### Put
 ```
 Set-AzsContainerRegistryConfiguration -ConfigurationName <String>
- -ConfigurationObject <IContainerRegistryConfiguration> [-Location <String>] [-SubscriptionId <String>]
+ -CONFIGURATIONOBJECT \<IContainerRegistryConfiguration> [-Location <String>] [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -189,7 +189,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-CONFIGURATIONOBJECT <IContainerRegistryConfiguration>: Container registry configuration property.
+CONFIGURATIONOBJECT \<IContainerRegistryConfiguration>: Container registry configuration property.
   - `[MaximumCapacityInGiB <Int32?>]`: Total storage capacity (GiB) which can used by the registry.
 
 ## RELATED LINKS

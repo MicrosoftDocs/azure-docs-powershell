@@ -20,7 +20,7 @@ New-AzsStorageQuota -Name <String> [-Location <String>] [-SubscriptionId <String
 
 ### Create
 ```
-New-AzsStorageQuota -Name <String> -QuotaObject <IStorageQuota> [-Location <String>]
+New-AzsStorageQuota -Name <String> -QUOTAOBJECT \<IStorageQuota> [-Location <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -201,7 +201,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-QUOTAOBJECT <IStorageQuota>: 
+QUOTAOBJECT \<IStorageQuota>: 
   - `[CapacityInGb <Int32?>]`: Maximum capacity (GB).
   - `[NumberOfStorageAccounts <Int32?>]`: Total number of storage accounts.
 

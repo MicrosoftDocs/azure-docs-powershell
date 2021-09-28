@@ -15,7 +15,7 @@ Creates a new platform image with given publisher, offer, skus and version.
 ### CreateExpanded (Default)
 ```
 Add-AzsPlatformImage -Offer <String> -Publisher <String> -Sku <String> -Version <String> [-Location <String>]
- [-SubscriptionId <String>] [-BillingPartNumber <String>] [-DataDisks <IDataDisk[]>] [-OsType <OSType>]
+ [-SubscriptionId <String>] [-BillingPartNumber <String>] [-DATADISKS \<IDataDisk[]>] [-OsType <OSType>]
  [-OsUri <String>] [-ProvisioningState <ProvisioningState>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -36,7 +36,7 @@ Add-AzsPlatformImage -INPUTOBJECT \<IComputeAdminIdentity> -NewImage <IPlatformI
 ### CreateViaIdentityExpanded
 ```
 Add-AzsPlatformImage -INPUTOBJECT \<IComputeAdminIdentity> [-BillingPartNumber <String>]
- [-DataDisks <IDataDisk[]>] [-OsType <OSType>] [-OsUri <String>] [-ProvisioningState <ProvisioningState>]
+ [-DATADISKS \<IDataDisk[]>] [-OsType <OSType>] [-OsUri <String>] [-ProvisioningState <ProvisioningState>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -359,7 +359,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DATADISKS <IDataDisk[]>: Data disks used by the platform image.
+DATADISKS \<IDataDisk[]>: Data disks used by the platform image.
   - `[Lun <Int32?>]`: Logical unit number.
   - `[Uri <String>]`: Location of the disk template.
 
@@ -378,7 +378,7 @@ INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[Type <String>]`: Type of extension.
   - `[Version <String>]`: The version of the resource.
 
-NEWIMAGE <IPlatformImageParameters>: Parameters used to create a new platform image.
+NEWIMAGE \<IPlatformImageParameters>: Parameters used to create a new platform image.
   - `[DataDisk <IDataDisk[]>]`: Data disks used by the platform image.
     - `[Lun <Int32?>]`: Logical unit number.
     - `[Uri <String>]`: Location of the disk template.
