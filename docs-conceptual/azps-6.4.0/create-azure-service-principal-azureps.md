@@ -216,7 +216,7 @@ Connect-AzAccount -ServicePrincipal -Tenant <TenantId> -CertificateThumbprint <T
 ```
 
 For instructions on importing a certificate into a credential store accessible by PowerShell, see
-[Sign in with Azure PowerShell](authenticate-azureps.md#sp-signin)
+[Sign in with Azure PowerShell](authenticate-azureps.md#sign-in-with-a-service-principal)
 
 ## Reset credentials
 
