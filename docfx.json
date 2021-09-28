@@ -582,21 +582,6 @@
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azuresmps-4.0.0/**/*.yml": "09/11/2018"
             },
-            "feedback_system": {
-                "azurermps-2.5.0/**/*": "None",
-                "azurermps-4.4.1/**/*": "None",
-                "azurermps-5.7.0/**/*": "None",
-                "azurermps-6.13.0/**/*": "None",
-                "azps-6.4.0/**/*": "None",
-                "azps-5.9.0/**/*": "None",
-                "azps-0.10.0/**/*": "None",
-                "azuresmps-4.0.0/**/*": "None",
-                "azurestackps-1.3.0/**/*": "None",
-                "azurestackps-1.4.0/**/*": "None",
-                "azurestackps-1.5.0/**/*": "None",
-                "azurestackps-1.6.0/**/*": "None",
-                "azuredmps-0.9.0/**/*": "None"
-            },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.yml": false,
                 "azps-*/**/*.yml": true
@@ -620,6 +605,26 @@
                 "docs-conceptual/azurermps-2.5.0/**/*": "NOINDEX, NOFOLLOW",
                 "docs-conceptual/azurermps-4.4.1/**/*": "NOINDEX, NOFOLLOW",
                 "docs-conceptual/azurermps-5.7.0/**/*": "NOINDEX, NOFOLLOW"
+            },
+            "feedback_system": {
+                "azurermps-2.5.0/**/*": "None",
+                "azurermps-4.4.1/**/*": "None",
+                "azurermps-5.7.0/**/*": "None",
+                "azurermps-6.13.0/**/*": "None",
+                "azps-6.4.0/**/*": "None",
+                "azps-5.9.0/**/*": "None",
+                "azps-0.10.0/**/*": "None",
+                "azuresmps-4.0.0/**/*": "None",
+                "azurestackps-1.3.0/**/*": "None",
+                "azurestackps-1.4.0/**/*": "None",
+                "azurestackps-1.5.0/**/*": "None",
+                "azurestackps-1.6.0/**/*": "None",
+                "azuredmps-0.9.0/**/*": "None"
+            },
+            "feedback_github_repo": {
+                "docs-conceptual/**/**.md": "microsoftdocs/azure-docs-powershell",
+                "az*/**/**.md": "azure/azure-powershell",
+                "az*/**/**.yml": "azure/azure-powershell"
             }
         },
         "globalMetadata": {
@@ -632,10 +637,7 @@
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
-            "feedback_github_repo": {
-                "docs-conceptual/**/**/**.md": "microsoftdocs/azure-docs-powershell",
-                "az*/**/**.md": "azure/azure-powershell"
-            },
+            "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new"
         },
         "dest": "azureps",
