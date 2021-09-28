@@ -632,7 +632,10 @@
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
-            "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
+            "feedback_github_repo": {
+                "docs-conceptual/**/**/**.md": "microsoftdocs/azure-docs-powershell",
+                "az*/**/**.md": "azure/azure-powershell"
+            },
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new"
         },
         "dest": "azureps",
