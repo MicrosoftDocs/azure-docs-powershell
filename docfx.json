@@ -639,6 +639,7 @@
             "feedback_system": "GitHub",
             "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new"
+            "ms.topic": "reference" 
         },
         "dest": "azureps",
         "lruSize": 0,
