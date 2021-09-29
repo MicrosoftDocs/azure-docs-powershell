@@ -12,7 +12,7 @@ ms.service: azure-powershell
 #### Az.Accounts
 * Corrected the URLs to Azure Portal in the results of 'Get-AzEnvironment' and 'Get-AzContext'. [#15429]
 * Made infrastructural changes to support overriding default subscription via a '-SubscriptionId <String>' parameter.
-    - [Az.Aks](https://docs.microsoft.com/powershell/module/az.aks/get-azakscluster) is the first module that supports it.
+    - [Az.Aks](/powershell/module/az.aks/get-azakscluster) is the first module that supports it.
 
 #### Az.Aks
 * Made '-Subscription <String>' available in all Aks cmdlets. You can manage Aks resources in other subscriptions without switching the context.
@@ -21,18 +21,18 @@ ms.service: azure-powershell
 * Added new 'Sync-AzApiManagementKeyVaultSecret' cmdlet.
 * Added new 'New-AzApiManagementKeyVaultObject' cmdlet.
 * Added new optional [-useFromLocation] parameter to the 'Get-ApiManagementCache' 'New-ApiManagementCache''Update-ApiManagementCache' cmdlet.
-* Updated cmdlet **New-AzApiManagement** to manage ApiManagement service 
+* Updated cmdlet **New-AzApiManagement** to manage ApiManagement service
     - Added support for the new 'Isolated' SKU
     - Added support for managing Availability Zones using 'Zone' property
     - Added support for Disabling Gateway in a Region using 'DisableGateway' property
     - Added support for managing the minimum Api Version to allow for Control Plane using 'MinimalControlPlaneApiVersion' property.
-* Updated cmdlet **New-AzApiManagementRegion** to manage ApiManagement service     
+* Updated cmdlet **New-AzApiManagementRegion** to manage ApiManagement service
     - Added support for managing Availability Zones using 'Zone' property
     - Added support for Disabling Gateway in a Region using 'DisableGateway' property
-* Updated cmdlet **Add-AzApiManagementRegion** to manage ApiManagement service     
+* Updated cmdlet **Add-AzApiManagementRegion** to manage ApiManagement service
     - Added support for managing Availability Zones using 'Zone' property
     - Added support for Disabling Gateway in a Region using 'DisableGateway' property
-* Updated cmdlet **Update-AzApiManagementRegion** to manage ApiManagement service     
+* Updated cmdlet **Update-AzApiManagementRegion** to manage ApiManagement service
     - Added support for managing Availability Zones using 'Zone' property
     - Added support for Disabling Gateway in a Region using 'DisableGateway' property
 * Updated cmdlet **New-AzApiManagementCustomHostnameConfiguration** to manage Custom Hostname Configuration
@@ -56,7 +56,7 @@ ms.service: azure-powershell
     - 'Update-AzRestorePointCollection'
     - 'Remove-AzRestorePoint'
     - 'Remove-AzRestorePointCollection'
-* Added new parameters '-EnableSpotRestore' and '-SpotRestoreTimeout' to 'New-AzVMSSConfig' to enable Spot Restore Policy 
+* Added new parameters '-EnableSpotRestore' and '-SpotRestoreTimeout' to 'New-AzVMSSConfig' to enable Spot Restore Policy
 * Added new cmdlets: 'Update-AzCapacityReservationGroup' and 'Update-AzCapacityReservation'
 
 #### Az.CosmosDB
@@ -130,15 +130,15 @@ ms.service: azure-powershell
     -  'Start-AzStorageBlobCopy'
     -  'Stop-AzStorageBlobCopy'
 * Generate blob sas token with new API version
-    -  'New-AzStorageBlobSASToken' 
-    -  'New-AzStorageContainerSASToken' 
+    -  'New-AzStorageBlobSASToken'
+    -  'New-AzStorageContainerSASToken'
     -  'New-AzStorageAccountSASToken'
 * Fixed blob copy failure with OAuth credential when client and server has time difference [#15644]
-    -  'Copy-AzStorageBlob' 
+    -  'Copy-AzStorageBlob'
 * Fixed remove Data Lake Gen2 item fail with readonly SAS token
-    -  'Remove-AzDataLakeGen2Item' 
+    -  'Remove-AzDataLakeGen2Item'
 * Revised destination existing check in move Data Lake Gen2 item
-    -  'Move-AzDataLakeGen2Item' 
+    -  'Move-AzDataLakeGen2Item'
 
 #### Az.StorageSync
 * Added parameter sets to 'Invoke-AzStorageSyncChangeDetection'
