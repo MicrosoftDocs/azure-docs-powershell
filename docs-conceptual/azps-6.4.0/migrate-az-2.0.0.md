@@ -3,13 +3,13 @@ title: Migration guide for Az 2.0.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 2.0 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/24/2019 
-ms.custom: devx-track-azurepowershell 
+ms.date: 09/07/2021
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Migration Guide for Az 2.0.0
 
-This document describes the changes between the 1.0.0 and 2.0.0 versions of Az 
+This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
 
 ## Table of Contents
 - [Module breaking changes](#module-breaking-changes)
@@ -34,8 +34,8 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
   ```powershell
   Update-AzAvailabilitySet -Sku Aligned
   ```
-- For consistency, removed `Image` parameter from 'ByName' and 'ByResourceId' parameter sets in `Update-AzImage` 
-  
+- For consistency, removed `Image` parameter from 'ByName' and 'ByResourceId' parameter sets in `Update-AzImage`
+
   #### Before
 
   Note that the below code is functional, but the passed-in ImageName is not used, so removing this parameter has no functional impact.
@@ -55,12 +55,12 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
   ```
 
 - For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Restart-AzVM`
-  
+
   #### Before
 
   Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.
   ```powershell
-  Restart-AzVM -InputObject $VM -Name $Name 
+  Restart-AzVM -InputObject $VM -Name $Name
 
   Restart-AzVM -ResourceId $Id -Name $Name
   ```
@@ -74,13 +74,13 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
   ```
 
 - For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Start-AzVM`
-  
+
   #### Before
 
   Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.
 
   ```powershell
-  Start-AzVM -InputObject $VM -Name $Name 
+  Start-AzVM -InputObject $VM -Name $Name
 
   Start-AzVM -ResourceId $Id -Name $Name
   ```
@@ -94,13 +94,13 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
   ```
 
 - For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Stop-AzVM`
-  
+
   #### Before
 
   Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.
 
   ```powershell
-  Stop-AzVM -InputObject $VM -Name $Name 
+  Stop-AzVM -InputObject $VM -Name $Name
 
   Stop-AzVM -ResourceId $Id -Name $Name
   ```
@@ -114,7 +114,7 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
   ```
 
 - For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Remove-AzVM`
-  
+
   #### Before
 
   Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.
@@ -122,19 +122,19 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
   ```powershell
   Remove-AzVM -InputObject $VM -Name $Name
 
-  Remove-AzVM -ResourceId $Id -Name $Name 
+  Remove-AzVM -ResourceId $Id -Name $Name
   ```
 
   #### After
 
   ```powershell
-  Remove-AzVM -InputObject $VM 
+  Remove-AzVM -InputObject $VM
 
-  Remove-AzVM -ResourceId $Id 
+  Remove-AzVM -ResourceId $Id
   ```
 
 - For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Set-AzVM`
-  
+
   #### Before
 
   Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.
@@ -153,8 +153,8 @@ This document describes the changes between the 1.0.0 and 2.0.0 versions of Az
   Set-AzVM -ResourceId $Id ...
   ```
 
-- For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Save-AzVMImage` 
-  
+- For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Save-AzVMImage`
+
   #### Before
   Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.
   ```powershell
@@ -356,7 +356,7 @@ For more information about these role-based access changes, see [aka.ms/hdi-conf
 
   #### Example 1:  Add a message to a Queue (change CloudQueueMessage object namespace)
 
-  Before: 
+  Before:
 
   ```powershell
   $queue = Get-AzStorageQueue –Name $queueName –Context $ctx
@@ -374,7 +374,7 @@ For more information about these role-based access changes, see [aka.ms/hdi-conf
 
   #### Example 2:  Fetch Blob/File Attributes with AccessCondition (change AccessCondition object namespace)
 
-  Before: 
+  Before:
 
   ```powershell
   $accessCondition= New-Object Microsoft.WindowsAzure.Storage.AccessCondition
@@ -407,7 +407,7 @@ For more information about these role-based access changes, see [aka.ms/hdi-conf
 
 - The default service behavior when creating a storage account withous specifying a Kind has changed.  In previous versions, when a storage account was created with no `Kind` specified, the Storage account Kind of `Storage` was used, in the new version `StorageV2` is the default `Kind` value. If you need to create a V1 Storage account with Kind 'Storage', add parameter '-Kind Storage'
 
-  #### Example : Create a storage Account (Default Kind change)  
+  #### Example : Create a storage Account (Default Kind change)
 
   Before:
 

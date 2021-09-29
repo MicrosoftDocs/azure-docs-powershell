@@ -3,7 +3,7 @@ title: Azure PowerShell support lifecycle
 description: Details about the support lifecycle of the Azure PowerShell modules
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/27/2021
+ms.date: 09/29/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -40,9 +40,8 @@ modules.
 | :--------------: | :--------------------: | :-----------------------: | :-----------------------: | :--------------------------: |
 |      Az 6.0      |       Supported        |         Supported         |       Not supported       |          Supported           |
 |      Az 5.9      |       Supported        |         Supported         |         Supported         |          Supported           |
-|      Az 4.8      |       Supported        |         Supported         |         Supported         |          Supported           |
 | AzureRM (6.13.2) |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
-|  Azure (5.3.0)   |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
+|  Azure (5.3.1)   |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
 
 > [!NOTE]
 > PowerShell 6.2 has reached its end of life as of September 4, 2020. The Az PowerShell modules are
