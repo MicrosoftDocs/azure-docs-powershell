@@ -8,12 +8,6 @@
             { "files": ["**/*.yml"], "src": "azurermps-2.5.0", "version": "azurermps-2.5.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-2.5.0", "version": "azurermps-2.5.0", "dest": "azure/azurerm" },
 
-            { "files": ["**/*.yml"], "src": "azurermps-4.4.1", "version": "azurermps-4.4.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-4.4.1", "version": "azurermps-4.4.1", "dest": "azure/azurerm" },
-
-            { "files": ["**/*.yml"], "src": "azurermps-5.7.0", "version": "azurermps-5.7.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-5.7.0", "version": "azurermps-5.7.0", "dest": "azure/azurerm" },
-
             { "files": ["**/*.yml"], "src": "azurermps-6.13.0", "version": "azurermps-6.13.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-6.13.0", "version": "azurermps-6.13.0", "dest": "azure/azurerm" },
 
@@ -111,8 +105,6 @@
         ],
         "resource": [
             { "files": ["media/**"], "version": "azurermps-2.5.0" },
-            { "files": ["media/**"], "version": "azurermps-4.4.1" },
-            { "files": ["media/**"], "version": "azurermps-5.7.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" },
             { "files": ["media/**"], "version": "azps-6.4.0" },
             { "files": ["media/**"], "version": "azps-6.3.0" },
@@ -122,8 +114,6 @@
         "versions": {
             "azuredmps-0.9.0-preview": { "dest": "azuredmps-0.9.0-preview" },
             "azurermps-2.5.0": { "dest": "azurermps-2.5.0" },
-            "azurermps-4.4.1": { "dest": "azurermps-4.4.1" },
-            "azurermps-5.7.0": { "dest": "azurermps-5.7.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
             "azps-6.4.0": { "dest": "azps-6.4.0" },
             "azps-6.3.0": { "dest": "azps-6.3.0" },
@@ -571,16 +561,13 @@
                 "azurestackps-1.4.0/**/*.yml": "08/18/2018",
                 "azurestackps-1.5.0/**/*.yml": "09/19/2018",
                 "azurestackps-1.6.0/**/*.yml": "01/03/2019",
-                "azurermps-2.5.0/**/*.yml": "11/02/2017",
-                "azurermps-4.4.1/**/*.yml": "06/20/2018",
-                "azurermps-5.7.0/**/*.yml": "07/26/2018",
-                "azurermps-6.10.0/**/*.yml": "10/9/2018",
-                "azurermps-6.13.0/**/*.yml": "11/16/2018",
-                "azps-6.4.0/**/*.yml": "9/03/2021",
-                "azps-6.3.0/**/*.yml": "7/30/2021",
-                "azps-5.9.0/**/*.yml": "4/30/2021",
+                "azurermps-2.5.0/**/*.yml": "05/09/2019",
+                "azurermps-6.13.0/**/*.yml": "03/23/2021",
+                "azps-6.4.0/**/*.yml": "9/07/2021",
+                "azps-6.3.0/**/*.yml": "8/03/2021",
+                "azps-5.9.0/**/*.yml": "5/04/2021",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
-                "azuresmps-4.0.0/**/*.yml": "09/11/2018"
+                "azuresmps-4.0.0/**/*.yml": "11/28/2020"
             },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.yml": false,
@@ -600,18 +587,12 @@
             },
             "ROBOTS": {
                 "azurermps-2.5.0/**/*": "NOINDEX, NOFOLLOW",
-                "azurermps-4.4.1/**/*": "NOINDEX, NOFOLLOW",
-                "azurermps-5.7.0/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-2.5.0/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-4.4.1/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-5.7.0/**/*": "NOINDEX, NOFOLLOW"
+                "docs-conceptual/azurermps-2.5.0/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
                 "azurermps-2.5.0/**/*": "None",
-                "azurermps-4.4.1/**/*": "None",
-                "azurermps-5.7.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
-                "azps-6.4.0/**/*": "None",
+                "azps-6.3.0/**/*": "None",
                 "azps-5.9.0/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
@@ -639,7 +620,8 @@
             "feedback_system": "GitHub",
             "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
-            "ms.topic": "reference" 
+            "ms.topic": "reference",
+            "ms.date": "09/07/2021"
         },
         "dest": "azureps",
         "lruSize": 0,
