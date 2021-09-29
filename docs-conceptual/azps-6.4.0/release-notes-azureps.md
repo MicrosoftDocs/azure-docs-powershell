@@ -3,7 +3,7 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/03/2021
+ms.date: 09/29/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -11,11 +11,11 @@ ms.service: azure-powershell
 ## 6.4.0 - September 2021
 #### Az.Accounts
 * Corrected the URLs to Azure Portal in the results of 'Get-AzEnvironment' and 'Get-AzContext'. [#15429]
-* Made infrastructural changes to support overriding default subscription via a '-SubscriptionId <String>' parameter.
+* Made infrastructural changes to support overriding default subscription via a `-SubscriptionId <String>` parameter.
     - [Az.Aks](/powershell/module/az.aks/get-azakscluster) is the first module that supports it.
 
 #### Az.Aks
-* Made '-Subscription <String>' available in all Aks cmdlets. You can manage Aks resources in other subscriptions without switching the context.
+* Made `-Subscription <String>` available in all Aks cmdlets. You can manage Aks resources in other subscriptions without switching the context.
 
 #### Az.ApiManagement
 * Added new 'Sync-AzApiManagementKeyVaultSecret' cmdlet.
