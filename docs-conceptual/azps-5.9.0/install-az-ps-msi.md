@@ -3,8 +3,8 @@ title: Install Azure PowerShell with an MSI
 description: How to install Azure PowerShell without PowerShellGet using an MSI
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 09/27/2021
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
@@ -38,13 +38,15 @@ The MSI package for Azure PowerShell is available from
 [GitHub](https://github.com/Azure/azure-powershell/releases):
 
 1. Go to https://github.com/Azure/azure-powershell/releases.
-2. Look for the most recent Gallery Module for Azure PowerShell (these are listed chronologically and are typically just a release version with no name like "4.7.0").
-3. Scroll down to the bottom of the patch notes and click on the arrow next to "Assets" to reveal the MSI options.
-4. Click on the Az-Cmdlets MSI of your choice to start the download.
+1. Look for the most recent Gallery Module for Azure PowerShell (these are listed chronologically
+   and are typically just a release version with no name like "4.7.0").
+1. Scroll down to the bottom of the patch notes and click on the arrow next to "Assets" to reveal
+   the MSI options.
+1. Click on the Az-Cmdlets MSI of your choice to start the download.
 
-If you have installed earlier
-versions of Azure PowerShell using the MSI, the installer automatically removes them. The MSI
-package installs modules in `${env:ProgramFiles}\WindowsPowerShell\Modules`.
+If you have installed earlier versions of Azure PowerShell using the MSI, the installer
+automatically removes them. The MSI package installs modules in
+`${env:ProgramFiles}\WindowsPowerShell\Modules`.
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
 

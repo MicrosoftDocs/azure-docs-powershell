@@ -6,7 +6,7 @@ ms.service: azure-powershell
 ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
 ms.author: mirobb
-ms.date: 12/18/2020
+ms.date: 09/27/2021
 ---
 
 # Quickstart: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module
