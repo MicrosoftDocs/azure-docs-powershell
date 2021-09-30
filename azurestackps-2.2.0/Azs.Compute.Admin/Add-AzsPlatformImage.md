@@ -23,13 +23,13 @@ Add-AzsPlatformImage -Offer <String> -Publisher <String> -Sku <String> -Version 
 ### Create
 ```
 Add-AzsPlatformImage -Offer <String> -Publisher <String> -Sku <String> -Version <String>
- -NewImage <IPlatformImageParameters> [-Location <String>] [-SubscriptionId <String>]
+ -NewImage \<IPlatformImageParameters> [-Location <String>] [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentity
 ```
-Add-AzsPlatformImage -INPUTOBJECT \<IComputeAdminIdentity> -NewImage <IPlatformImageParameters>
+Add-AzsPlatformImage -INPUTOBJECT \<IComputeAdminIdentity> -NewImage \<IPlatformImageParameters>
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -360,7 +360,7 @@ To create the parameters described below, construct a hash table containing the 
 
 
 DATADISKS \<IDataDisk[]>: Data disks used by the platform image.
-  - `[Lun <Int32?>]`: Logical unit number.
+  - `[Lun \<Int32?>]`: Logical unit number.
   - `[Uri <String>]`: Location of the disk template.
 
 INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
@@ -379,8 +379,8 @@ INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[Version <String>]`: The version of the resource.
 
 NEWIMAGE \<IPlatformImageParameters>: Parameters used to create a new platform image.
-  - `[DataDisk <IDataDisk[]>]`: Data disks used by the platform image.
-    - `[Lun <Int32?>]`: Logical unit number.
+  - `[DataDisk \<IDataDisk[]>]`: Data disks used by the platform image.
+    - `[Lun \<Int32?>]`: Logical unit number.
     - `[Uri <String>]`: Location of the disk template.
   - `[DetailBillingPartNumber <String>]`: The part number is used to bill for software costs.
   - `[OSDiskOstype <OSType?>]`: Operating system type.

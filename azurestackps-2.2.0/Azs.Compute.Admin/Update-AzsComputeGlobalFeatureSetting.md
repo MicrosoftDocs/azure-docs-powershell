@@ -21,7 +21,7 @@ Update-AzsComputeGlobalFeatureSetting -FeatureName <String> [-Location <String>]
 
 ### Update
 ```
-Update-AzsComputeGlobalFeatureSetting -FeatureName <String> -GlobalFeatureSetting <IGlobalFeatureSettings>
+Update-AzsComputeGlobalFeatureSetting -FeatureName <String> -GlobalFeatureSetting \<IGlobalFeatureSettings>
  [-Location <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -29,7 +29,7 @@ Update-AzsComputeGlobalFeatureSetting -FeatureName <String> -GlobalFeatureSettin
 ### UpdateViaIdentity
 ```
 Update-AzsComputeGlobalFeatureSetting -INPUTOBJECT \<IComputeAdminIdentity>
- -GlobalFeatureSetting <IGlobalFeatureSettings> [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf]
+ -GlobalFeatureSetting \<IGlobalFeatureSettings> [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -232,7 +232,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-GLOBALFEATURESETTING <IGlobalFeatureSettings>: Higher-priority global feature flags.
+GLOBALFEATURESETTING \<IGlobalFeatureSettings>: Higher-priority global feature flags.
   - `[GlobalFeatureState <GlobalFeatureState?>]`: The state of the global feature.
 
 INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter

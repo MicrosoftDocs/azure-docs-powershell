@@ -14,14 +14,14 @@ Starts a managed disk migration job to migrate managed disks to the specified de
 
 ### Volume (Default)
 ```
-New-AzsDiskMigrationJob -Name <String> -TargetScaleUnit <String> -TargetVolumeLabel <String> -Disks <IDisk[]>
+New-AzsDiskMigrationJob -Name <String> -TargetScaleUnit <String> -TargetVolumeLabel <String> -Disks \<IDisk[]>
  [-Location <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Share
 ```
-New-AzsDiskMigrationJob -Name <String> -TargetShare <String> -Disks <IDisk[]> [-Location <String>]
+New-AzsDiskMigrationJob -Name <String> -TargetShare <String> -Disks \<IDisk[]> [-Location <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -245,7 +245,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DISKS <IDisk[]>: .
+DISKS \<IDisk[]>: .
   - `[Location <String>]`: Location of the resource.
   - `[DiskId <String>]`: The disk id.
   - `[SharePath <String>]`: The disk share path.

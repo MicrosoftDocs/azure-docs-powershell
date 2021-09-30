@@ -14,8 +14,8 @@ Returns the disk.
 
 ### List (Default)
 ```
-Get-AzsDisk [-Location <String>] [-SubscriptionId <String[]>] [-Count <Int32>] [-ScaleUnit <String>]
- [-SharePath <String>] [-Start <Int32>] [-Status <String>] [-UserSubscriptionId <String>]
+Get-AzsDisk [-Location <String>] [-SubscriptionId <String[]>] [-Count \<Int32>] [-ScaleUnit <String>]
+ [-SharePath <String>] [-Start \<Int32>] [-Status <String>] [-UserSubscriptionId <String>]
  [-VolumeLabel <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 

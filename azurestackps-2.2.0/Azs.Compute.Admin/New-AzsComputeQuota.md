@@ -15,15 +15,15 @@ Creates or Updates a Compute Quota with the provided quota parameters.
 ### CreateExpanded (Default)
 ```
 New-AzsComputeQuota -Name <String> [-Location <String>] [-SubscriptionId <String>]
- [-AvailabilitySetCount <Int32>] [-CoresCount <Int32>] [-Location1 <String>]
- [-PremiumManagedDiskAndSnapshotSize <Int32>] [-StandardManagedDiskAndSnapshotSize <Int32>]
- [-VirtualMachineCount <Int32>] [-VMScaleSetCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ [-AvailabilitySetCount \<Int32>] [-CoresCount \<Int32>] [-Location1 <String>]
+ [-PremiumManagedDiskAndSnapshotSize \<Int32>] [-StandardManagedDiskAndSnapshotSize \<Int32>]
+ [-VirtualMachineCount \<Int32>] [-VMScaleSetCount \<Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzsComputeQuota -Name <String> -NewQuota <IQuota> [-Location <String>] [-SubscriptionId <String>]
+New-AzsComputeQuota -Name <String> -NewQuota \<IQuota> [-Location <String>] [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -301,16 +301,16 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-NEWQUOTA <IQuota>: Holds Compute quota information used to control resource allocation.
+NEWQUOTA \<IQuota>: Holds Compute quota information used to control resource allocation.
   - `[Location <String>]`: Location of the resource.
-  - `[AvailabilitySetCount <Int32?>]`: Maximum number of availability sets allowed.
-  - `[CoresLimit <Int32?>]`: Maximum number of cores allowed.
-  - `[DdagpuCount <Int32?>]`: Maximum number of dda gpus allowed.
-  - `[PartitionedGpuCount <Int32?>]`: Maximum number of partitioned gpus allowed.
-  - `[PremiumManagedDiskAndSnapshotSize <Int32?>]`: Maximum number of managed disks and snapshots of type premium allowed.
-  - `[StandardManagedDiskAndSnapshotSize <Int32?>]`: Maximum number of managed disks and snapshots of type standard allowed.
-  - `[VMScaleSetCount <Int32?>]`: Maximum number of scale sets allowed.
-  - `[VirtualMachineCount <Int32?>]`: Maximum number of virtual machines allowed.
+  - `[AvailabilitySetCount \<Int32?>]`: Maximum number of availability sets allowed.
+  - `[CoresLimit \<Int32?>]`: Maximum number of cores allowed.
+  - `[DdagpuCount \<Int32?>]`: Maximum number of dda gpus allowed.
+  - `[PartitionedGpuCount \<Int32?>]`: Maximum number of partitioned gpus allowed.
+  - `[PremiumManagedDiskAndSnapshotSize \<Int32?>]`: Maximum number of managed disks and snapshots of type premium allowed.
+  - `[StandardManagedDiskAndSnapshotSize \<Int32?>]`: Maximum number of managed disks and snapshots of type standard allowed.
+  - `[VMScaleSetCount \<Int32?>]`: Maximum number of scale sets allowed.
+  - `[VirtualMachineCount \<Int32?>]`: Maximum number of virtual machines allowed.
 
 ## RELATED LINKS
 

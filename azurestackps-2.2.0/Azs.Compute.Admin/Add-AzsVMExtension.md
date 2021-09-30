@@ -23,14 +23,14 @@ Add-AzsVMExtension -Publisher <String> -Type <String> -Version <String> [-Locati
 
 ### Create
 ```
-Add-AzsVMExtension -Publisher <String> -Type <String> -Version <String> -Extension <IVMExtensionParameters>
+Add-AzsVMExtension -Publisher <String> -Type <String> -Version <String> -Extension \<IVMExtensionParameters>
  [-Location <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### CreateViaIdentity
 ```
-Add-AzsVMExtension -INPUTOBJECT \<IComputeAdminIdentity> -Extension <IVMExtensionParameters>
+Add-AzsVMExtension -INPUTOBJECT \<IComputeAdminIdentity> -Extension \<IVMExtensionParameters>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -366,7 +366,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-EXTENSION <IVMExtensionParameters>: Parameters used to create a new Virtual Machine Extension Image.
+EXTENSION \<IVMExtensionParameters>: Parameters used to create a new Virtual Machine Extension Image.
   - `[ComputeRole <String>]`: Compute role
   - `[IsSystemExtension <Boolean?>]`: Indicates if the extension is for the system.
   - `[ProvisioningState <ProvisioningState?>]`: Provisioning state of extension.

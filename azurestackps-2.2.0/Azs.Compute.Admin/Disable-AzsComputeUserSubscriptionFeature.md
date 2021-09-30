@@ -22,14 +22,14 @@ Disable-AzsComputeUserSubscriptionFeature -FeatureName <String> [-Location <Stri
 ### Disable
 ```
 Disable-AzsComputeUserSubscriptionFeature -FeatureName <String>
- -TenantSubscriptionFeatureSetting <ITenantSubscriptionFeatureSettings> [-Location <String>]
+ -TenantSubscriptionFeatureSetting \<ITenantSubscriptionFeatureSettings> [-Location <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### DisableViaIdentity
 ```
 Disable-AzsComputeUserSubscriptionFeature -INPUTOBJECT \<IComputeAdminIdentity>
- -TenantSubscriptionFeatureSetting <ITenantSubscriptionFeatureSettings> [-DefaultProfile <PSObject>]
+ -TenantSubscriptionFeatureSetting \<ITenantSubscriptionFeatureSettings> [-DefaultProfile <PSObject>]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -245,7 +245,7 @@ INPUTOBJECT \<IComputeAdminIdentity>: Identity Parameter
   - `[Type <String>]`: Type of extension.
   - `[Version <String>]`: The version of the resource.
 
-TENANTSUBSCRIPTIONFEATURESETTING <ITenantSubscriptionFeatureSettings>: The feature settings for the tenant subscription.
+TENANTSUBSCRIPTIONFEATURESETTING \<ITenantSubscriptionFeatureSettings>: The feature settings for the tenant subscription.
   - `[TenantSubscriptionId <String>]`: The tenant subscription identifier.
 
 ## RELATED LINKS
