@@ -16,24 +16,24 @@ Closes the given alert.
 ```
 Close-AzsAlert -Name <String> -User <String> [-Location <String>] [-ResourceGroupName <String>]
  [-SubscriptionId <String>] [-AlertId <String>] [-AlertProperty <Hashtable>] [-ClosedByUserAlias <String>]
- [-ClosedTimestamp <String>] [-CreatedTimestamp <String>] [-Description <IDictionary[]>] [-FaultId <String>]
+ [-ClosedTimestamp <String>] [-CreatedTimestamp <String>] [-Description \<IDictionary[]>] [-FaultId <String>]
  [-FaultTypeId <String>] [-HasValidRemediationAction] [-ImpactedResourceDisplayName <String>]
  [-ImpactedResourceId <String>] [-LastUpdatedTimestamp <String>] [-Location1 <String>]
- [-Remediation <IDictionary[]>] [-ResourceProviderRegistrationId <String>] [-ResourceRegistrationId <String>]
+ [-Remediation \<IDictionary[]>] [-ResourceProviderRegistrationId <String>] [-ResourceRegistrationId <String>]
  [-Severity <String>] [-State <String>] [-Tag <Hashtable>] [-Title <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Close
 ```
-Close-AzsAlert -Name <String> -User <String> -Alert <IAlert> [-Location <String>]
+Close-AzsAlert -Name <String> -User <String> -Alert \<IAlert> [-Location <String>]
  [-ResourceGroupName <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### CloseViaIdentity
 ```
-Close-AzsAlert -INPUTOBJECT \<IInfrastructureInsightsAdminIdentity> -User <String> -Alert <IAlert>
+Close-AzsAlert -INPUTOBJECT \<IInfrastructureInsightsAdminIdentity> -User <String> -Alert \<IAlert>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -41,9 +41,9 @@ Close-AzsAlert -INPUTOBJECT \<IInfrastructureInsightsAdminIdentity> -User <Strin
 ```
 Close-AzsAlert -INPUTOBJECT \<IInfrastructureInsightsAdminIdentity> -User <String> [-Location <String>]
  [-AlertId <String>] [-AlertProperty <Hashtable>] [-ClosedByUserAlias <String>] [-ClosedTimestamp <String>]
- [-CreatedTimestamp <String>] [-Description <IDictionary[]>] [-FaultId <String>] [-FaultTypeId <String>]
+ [-CreatedTimestamp <String>] [-Description \<IDictionary[]>] [-FaultId <String>] [-FaultTypeId <String>]
  [-HasValidRemediationAction] [-ImpactedResourceDisplayName <String>] [-ImpactedResourceId <String>]
- [-LastUpdatedTimestamp <String>] [-Remediation <IDictionary[]>] [-ResourceProviderRegistrationId <String>]
+ [-LastUpdatedTimestamp <String>] [-Remediation \<IDictionary[]>] [-ResourceProviderRegistrationId <String>]
  [-ResourceRegistrationId <String>] [-Severity <String>] [-State <String>] [-Tag <Hashtable>]
  [-Title <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -574,24 +574,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-ALERT <IAlert>: This object represents an alert resource.
+ALERT \<IAlert>: This object represents an alert resource.
   - `[Location <String>]`: The Azure Region where the resource lives
-  - `[Tag <ITrackedResourceTags>]`: Resource tags.
+  - `[Tag \<ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[AlertId <String>]`: Gets or sets the ID of the alert.
-  - `[AlertProperty <IAlertModelAlertProperties>]`: Properties of the alert.
+  - `[AlertProperty \<IAlertModelAlertProperties>]`: Properties of the alert.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[ClosedByUserAlias <String>]`: User alias who closed the alert.
   - `[ClosedTimestamp <String>]`: Timestamp when the alert was closed.
   - `[CreatedTimestamp <String>]`: Timestamp when the alert was created.
-  - `[Description <IDictionary[]>]`: Description of the alert.
+  - `[Description \<IDictionary[]>]`: Description of the alert.
   - `[FaultId <String>]`: Gets or sets the fault ID of the alert.
   - `[FaultTypeId <String>]`: Gets or sets the fault type ID of the alert.
   - `[HasValidRemediationAction <Boolean?>]`: Indicates if the alert can be remediated.
   - `[ImpactedResourceDisplayName <String>]`: Display name for the impacted item.
   - `[ImpactedResourceId <String>]`: Gets or sets the Resource ID for the impacted item.
   - `[LastUpdatedTimestamp <String>]`: Timestamp when the alert was last updated.
-  - `[Remediation <IDictionary[]>]`: Gets or sets the admin friendly remediation instructions for the alert.
+  - `[Remediation \<IDictionary[]>]`: Gets or sets the admin friendly remediation instructions for the alert.
   - `[ResourceProviderRegistrationId <String>]`: Gets or sets the registration ID of the service the alert belongs to.
   - `[ResourceRegistrationId <String>]`: Gets or sets the registration ID of the resource associated with the alert. If the alert is not associated with a resource, the resource registration ID is null.
   - `[Severity <String>]`: Severity of the alert.

@@ -15,7 +15,7 @@ Create or update the offer.
 ### UpdateExpanded (Default)
 ```
 Set-AzsOffer -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-AddonPlanDefinition <IAddonPlanDefinition[]>] [-BasePlanIds <String[]>] [-Description <String>]
+ [-AddonPlanDefinition \<IAddonPlanDefinition[]>] [-BasePlanIds <String[]>] [-Description <String>]
  [-DisplayName <String>] [-ExternalReferenceId <String>] [-Location <String>]
  [-MaxSubscriptionsPerAccount <Int32>] [-PropertiesName <String>] [-State <AccessibilityState>]
  [-SubscriptionCount <Int32>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -23,7 +23,7 @@ Set-AzsOffer -Name <String> -ResourceGroupName <String> [-SubscriptionId <String
 
 ### Update
 ```
-Set-AzsOffer -OfferDefinition <IOffer> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm]
+Set-AzsOffer -OfferDefinition \<IOffer> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -351,13 +351,13 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-ADDONPLANDEFINITION <IAddonPlanDefinition[]>: References to add-on plans that a tenant can optionally acquire as a part of the offer.
+ADDONPLANDEFINITION \<IAddonPlanDefinition[]>: References to add-on plans that a tenant can optionally acquire as a part of the offer.
   - `[MaxAcquisitionCount <Int32?>]`: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
   - `[PlanId <String>]`: Plan identifier.
 
-OFFERDEFINITION <IOffer>: Represents an offering of services against which a subscription can be created.
+OFFERDEFINITION \<IOffer>: Represents an offering of services against which a subscription can be created.
   - `[Location <String>]`: Location of the resource
-  - `[AddonPlans <IAddonPlanDefinition[]>]`: References to add-on plans that a tenant can optionally acquire as a part of the offer.
+  - `[AddonPlans \<IAddonPlanDefinition[]>]`: References to add-on plans that a tenant can optionally acquire as a part of the offer.
     - `[MaxAcquisitionCount <Int32?>]`: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
     - `[PlanId <String>]`: Plan identifier.
   - `[BasePlanIds <String[]>]`: Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer.

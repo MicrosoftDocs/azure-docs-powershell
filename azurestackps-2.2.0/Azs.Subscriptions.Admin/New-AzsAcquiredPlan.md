@@ -22,7 +22,7 @@ New-AzsAcquiredPlan -TargetSubscriptionId <String> [-PlanAcquisitionId <String>]
 
 ### Create
 ```
-New-AzsAcquiredPlan -TargetSubscriptionId <String> -AcquiredPlanDefinition <IPlanAcquisition>
+New-AzsAcquiredPlan -TargetSubscriptionId <String> -AcquiredPlanDefinition \<IPlanAcquisition>
  [-PlanAcquisitionId <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -262,7 +262,7 @@ New-AzsSubscriptionPlan
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-ACQUIREDPLANDEFINITION <IPlanAcquisition>: 
+ACQUIREDPLANDEFINITION \<IPlanAcquisition>: 
   - `[AcquisitionId <String>]`: Acquisition identifier.
   - `[AcquisitionTime <DateTime?>]`: Acquisition time.
   - `[ExternalReferenceId <String>]`: External reference identifier.

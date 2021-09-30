@@ -22,7 +22,7 @@ New-AzsUserSubscription -OfferId <String> -Owner <String> [-TargetSubscriptionId
 
 ### Create
 ```
-New-AzsUserSubscription -SubscriptionDefinition <ISubscriptionDefinition> [-TargetSubscriptionId <String>]
+New-AzsUserSubscription -SubscriptionDefinition \<ISubscriptionDefinition> [-TargetSubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -296,7 +296,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-SUBSCRIPTIONDEFINITION <ISubscriptionDefinition>: Subscription object properties.
+SUBSCRIPTIONDEFINITION \<ISubscriptionDefinition>: Subscription object properties.
   - `[DelegatedProviderSubscriptionId <String>]`: Parent DelegatedProvider subscription identifier.
   - `[DisplayName <String>]`: Subscription name.
   - `[ExternalReferenceId <String>]`: External reference identifier.

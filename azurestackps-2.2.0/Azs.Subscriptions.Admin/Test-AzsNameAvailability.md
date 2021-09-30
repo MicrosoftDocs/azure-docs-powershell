@@ -20,14 +20,14 @@ Test-AzsNameAvailability [-SubscriptionId <String>] [-Name <String>] [-ResourceT
 
 ### Check
 ```
-Test-AzsNameAvailability -NameAvailabilityDefinition <ICheckNameAvailabilityDefinition>
+Test-AzsNameAvailability -NameAvailabilityDefinition \<ICheckNameAvailabilityDefinition>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CheckViaIdentity
 ```
 Test-AzsNameAvailability -INPUTOBJECT \<ISubscriptionsAdminIdentity>
- -NameAvailabilityDefinition <ICheckNameAvailabilityDefinition> [-DefaultProfile <PSObject>] [-Confirm]
+ -NameAvailabilityDefinition \<ICheckNameAvailabilityDefinition> [-DefaultProfile <PSObject>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -223,7 +223,7 @@ INPUTOBJECT \<ISubscriptionsAdminIdentity>: Identity Parameter
   - `[TargetSubscriptionId <String>]`: The target subscription ID.
   - `[Tenant <String>]`: Directory tenant name.
 
-NAMEAVAILABILITYDEFINITION <ICheckNameAvailabilityDefinition>: The check name availability action definition.
+NAMEAVAILABILITYDEFINITION \<ICheckNameAvailabilityDefinition>: The check name availability action definition.
   - `[Name <String>]`: The resource name to verify.
   - `[ResourceType <String>]`: The resource type to verify.
 

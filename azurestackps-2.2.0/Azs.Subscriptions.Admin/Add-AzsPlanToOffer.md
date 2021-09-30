@@ -21,13 +21,13 @@ Add-AzsPlanToOffer -OfferName <String> -ResourceGroupName <String> [-Subscriptio
 
 ### Link
 ```
-Add-AzsPlanToOffer -OfferName <String> -ResourceGroupName <String> -PlanLink <IPlanLinkDefinition>
+Add-AzsPlanToOffer -OfferName <String> -ResourceGroupName <String> -PlanLink \<IPlanLinkDefinition>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### LinkViaIdentity
 ```
-Add-AzsPlanToOffer -INPUTOBJECT \<ISubscriptionsAdminIdentity> -PlanLink <IPlanLinkDefinition>
+Add-AzsPlanToOffer -INPUTOBJECT \<ISubscriptionsAdminIdentity> -PlanLink \<IPlanLinkDefinition>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -283,7 +283,7 @@ INPUTOBJECT \<ISubscriptionsAdminIdentity>: Identity Parameter
   - `[TargetSubscriptionId <String>]`: The target subscription ID.
   - `[Tenant <String>]`: Directory tenant name.
 
-PLANLINK <IPlanLinkDefinition>: Definition for linking and unlinking plans to offers.
+PLANLINK \<IPlanLinkDefinition>: Definition for linking and unlinking plans to offers.
   - `[MaxAcquisitionCount <Int32?>]`: The maximum acquisition count by subscribers
   - `[PlanLinkType <PlanLinkType?>]`: Type of the plan link.
   - `[PlanName <String>]`: Name of the plan.

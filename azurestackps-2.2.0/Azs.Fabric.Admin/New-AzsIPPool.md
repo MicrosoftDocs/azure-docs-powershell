@@ -24,7 +24,7 @@ New-AzsIPPool -Name <String> [-Location <String>] [-ResourceGroupName <String>] 
 
 ### Create
 ```
-New-AzsIPPool -Name <String> -Pool <IIPPool> [-Location <String>] [-ResourceGroupName <String>]
+New-AzsIPPool -Name <String> -Pool \<IIPPool> [-Location <String>] [-ResourceGroupName <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -340,9 +340,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-POOL <IIPPool>: This resource defines the range of IP addresses from which addresses are allocated for nodes within a subnet.
+POOL \<IIPPool>: This resource defines the range of IP addresses from which addresses are allocated for nodes within a subnet.
   - `[Location <String>]`: The region where the resource is located.
-  - `[Tag <IResourceTags>]`: List of key-value pairs.
+  - `[Tag \<IResourceTags>]`: List of key-value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[AddressPrefix <String>]`: The address prefix.
   - `[EndIPAddress <String>]`: The ending IP address.

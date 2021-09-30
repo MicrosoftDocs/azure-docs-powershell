@@ -24,13 +24,13 @@ New-AzsNetworkQuota -Name <String> [-Location <String>] [-SubscriptionId <String
 
 ### Create
 ```
-New-AzsNetworkQuota -Name <String> -Quota <IQuota> [-Location <String>] [-SubscriptionId <String>]
+New-AzsNetworkQuota -Name <String> -Quota \<IQuota> [-Location <String>] [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentity
 ```
-New-AzsNetworkQuota -INPUTOBJECT \<INetworkAdminIdentity> -Quota <IQuota> [-DefaultProfile <PSObject>]
+New-AzsNetworkQuota -INPUTOBJECT \<INetworkAdminIdentity> -Quota \<IQuota> [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -351,14 +351,14 @@ INPUTOBJECT \<INetworkAdminIdentity>: Identity Parameter
   - `[ResourceName <String>]`: Name of the resource.
   - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-QUOTA <IQuota>: Network quota resource.
-  - `[Tag <IResourceTags>]`: List of key value pairs.
+QUOTA \<IQuota>: Network quota resource.
+  - `[Tag \<IResourceTags>]`: List of key value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[MaxLoadBalancersPerSubscription <Int64?>]`: Maximum number of load balancers a tenant subscription can provision.
   - `[MaxNicsPerSubscription <Int64?>]`: Maximum number of NICs a tenant subscription can provision.
   - `[MaxPublicIpsPerSubscription <Int64?>]`: Maximum number of public IP addresses a tenant subscription can provision.
   - `[MaxSecurityGroupsPerSubscription <Int64?>]`: Maximum number of security groups a tenant subscription can provision.
-  - `[MaxVirtualNetworkGatewayConnectionsPerSubscription <Int64?>]`: Maximum number of virtual network gateway Connections a tenant subscription can provision.
+  - `[MaxVirtualNetworkGatewayConnectionsPerSubscription \<Int64?>]`: Maximum number of virtual network gateway Connections a tenant subscription can provision.
   - `[MaxVirtualNetworkGatewaysPerSubscription <Int64?>]`: Maximum number of virtual network gateways a tenant subscription can provision.
   - `[MaxVnetsPerSubscription <Int64?>]`: Maximum number of virtual networks a tenant subscription can provision.
 

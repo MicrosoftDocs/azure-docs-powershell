@@ -21,7 +21,7 @@ Invoke-AzsPruneBackupLocationExternalStore [-Location <String>] [-ResourceGroupN
 
 ### Prune
 ```
-Invoke-AzsPruneBackupLocationExternalStore -Option <IPruneBackupStoreOperationOptionModel>
+Invoke-AzsPruneBackupLocationExternalStore -Option \<IPruneBackupStoreOperationOptionModel>
  [-Location <String>] [-ResourceGroupName <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -29,7 +29,7 @@ Invoke-AzsPruneBackupLocationExternalStore -Option <IPruneBackupStoreOperationOp
 ### PruneViaIdentity
 ```
 Invoke-AzsPruneBackupLocationExternalStore -INPUTOBJECT \<IBackupAdminIdentity>
- -Option <IPruneBackupStoreOperationOptionModel> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+ -Option \<IPruneBackupStoreOperationOptionModel> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

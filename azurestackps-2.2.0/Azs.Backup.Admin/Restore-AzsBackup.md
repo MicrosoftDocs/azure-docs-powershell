@@ -22,14 +22,14 @@ Restore-AzsBackup -Name <String> [-Location <String>] [-ResourceGroupName <Strin
 
 ### Restore
 ```
-Restore-AzsBackup -Name <String> -RestoreOption <IRestoreOptions> [-Location <String>]
+Restore-AzsBackup -Name <String> -RestoreOption \<IRestoreOptions> [-Location <String>]
  [-ResourceGroupName <String>] [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-Force]
  [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### RestoreViaIdentity
 ```
-Restore-AzsBackup -INPUTOBJECT \<IBackupAdminIdentity> -RestoreOption <IRestoreOptions>
+Restore-AzsBackup -INPUTOBJECT \<IBackupAdminIdentity> -RestoreOption \<IRestoreOptions>
  [-DefaultProfile <PSObject>] [-AsJob] [-Force] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```

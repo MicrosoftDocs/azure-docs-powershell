@@ -22,7 +22,7 @@ New-AzsPlan -Name <String> -ResourceGroupName <String> -QuotaIds <String[]> [-Su
 
 ### Create
 ```
-New-AzsPlan -Name <String> -ResourceGroupName <String> -PlanDefinition <IPlan> [-SubscriptionId <String>]
+New-AzsPlan -Name <String> -ResourceGroupName <String> -PlanDefinition \<IPlan> [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -314,7 +314,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-PLANDEFINITION <IPlan>: A plan represents a package of quotas and capabilities that are offered tenants. A tenant can acquire this plan through an offer to upgrade his access to underlying cloud services.
+PLANDEFINITION \<IPlan>: A plan represents a package of quotas and capabilities that are offered tenants. A tenant can acquire this plan through an offer to upgrade his access to underlying cloud services.
   - `[Location <String>]`: Location of the resource
   - `[Description <String>]`: Description of the plan.
   - `[DisplayName <String>]`: Display name.

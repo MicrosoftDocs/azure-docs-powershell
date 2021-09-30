@@ -21,7 +21,7 @@ Move-AzsUserSubscription -ResourceId <String[]> [-SubscriptionId <String>]
 
 ### Move
 ```
-Move-AzsUserSubscription -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition>
+Move-AzsUserSubscription -MoveSubscriptionsDefinition \<IMoveSubscriptionsDefinition>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -29,7 +29,7 @@ Move-AzsUserSubscription -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinit
 ### MoveViaIdentity
 ```
 Move-AzsUserSubscription -INPUTOBJECT \<ISubscriptionsAdminIdentity>
- -MoveSubscriptionsDefinition <IMoveSubscriptionsDefinition> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ -MoveSubscriptionsDefinition \<IMoveSubscriptionsDefinition> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -284,7 +284,7 @@ INPUTOBJECT \<ISubscriptionsAdminIdentity>: Identity Parameter
   - `[TargetSubscriptionId <String>]`: The target subscription ID.
   - `[Tenant <String>]`: Directory tenant name.
 
-MOVESUBSCRIPTIONSDEFINITION <IMoveSubscriptionsDefinition>: The move subscriptions action definition
+MOVESUBSCRIPTIONSDEFINITION \<IMoveSubscriptionsDefinition>: The move subscriptions action definition
   - `Resources <String[]>`: A collection of subscriptions to move to the target delegated provider offer.
   - `[TargetDelegatedProviderOffer <String>]`: The delegated provider offer identifier (from the Admin context) that the subscriptions to be moved to.
 

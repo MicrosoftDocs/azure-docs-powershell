@@ -23,7 +23,7 @@ Set-AzsBackupConfiguration [-Location <String>] [-ResourceGroupName <String>] [-
 
 ### Update
 ```
-Set-AzsBackupConfiguration -Backup <IBackupLocation> [-Location <String>] [-ResourceGroupName <String>]
+Set-AzsBackupConfiguration -Backup \<IBackupLocation> [-Location <String>] [-ResourceGroupName <String>]
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -323,7 +323,7 @@ To create the parameters described below, construct a hash table containing the 
 
 BACKUP \<IBackupLocation>: Information about the backup location.
   - `[Location <String>]`: Location of the resource.
-  - `[Tag <IResourceTags>]`: List of key value pairs.
+  - `[Tag \<IResourceTags>]`: List of key value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[BackupFrequencyInHours <Int32?>]`: The interval, in hours, for the frequency that the scheduler takes a backup.
   - `[BackupRetentionPeriodInDays <Int32?>]`: The retention period, in days, for backs in the storage location.
