@@ -3,7 +3,7 @@ title: Install the Azure Az PowerShell module
 description: How to install the Azure Az PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/02/2021
+ms.date: 09/27/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -120,9 +120,16 @@ done the same way as installing. Ensure you use the `Force` parameter with `Inst
 reinstalling.
 
 Unlike MSI-based installations, installing or updating using PowerShellGet does not remove older
-versions that may exist on your system. To remove old versions of the Az PowerShell module from your
-system, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md). For more information about
-MSI-based installations, see [Install Azure PowerShell with an MSI](install-az-ps-msi.md).
+versions that may exist on your system.
+
+> [!NOTE]
+> Uninstallation can be complicated if you have more than one version of the Az PowerShell module
+> installed. Because of this complexity, we only support uninstalling all versions of the Az
+> PowerShell module that are currently installed.
+
+To remove all versions of the Az PowerShell module from your system, see
+[Uninstall the Azure PowerShell module](uninstall-az-ps.md). For more information about MSI-based
+installations, see [Install Azure PowerShell with an MSI](install-az-ps-msi.md).
 
 ## Troubleshooting
 
