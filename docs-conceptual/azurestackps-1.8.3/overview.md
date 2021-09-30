@@ -9,13 +9,18 @@ ms.topic: conceptual
 ms.manager: femila
 ms.date: 09/23/2021
 ---
-# Azure Stack Module 1.8.32
+# Azure Stack Module 1.8.3
 
 ## Requirements:
 
-Minimum supported Azure Stack version is 1910.
+Minimum supported Azure Stack version is 2002.
 
 Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
+
+> [!IMPORTANT]  
+> You've reached a webpage for an outdated version of Azure Stack Hub PowerShell. All versions of the Azure Resource Manager (AzureRM) PowerShell module are outdated, but not out of support. AzureRM modules will no longer be updated in future Azure Stack Hub builds. Az modules will be used for builds 2002 and later. The 2020-09-01-hybrid profile is not supported for AzureRM modules.  
+> 
+> The Az PowerShell module is now the recommended PowerShell module for interacting with Azure and Azure Stack Hub. To get started with the Az PowerShell module, see [Install PowerShell Az preview module for Azure Stack Hub](azure-stack/operator/powershell-install-az-module.md). To learn how to migrate to the Az PowerShell module. see [Migrate from AzureRM to Azure PowerShell Az in Azure Stack Hub](azure-stack/operator/migrate-azurerm-az.md). For details on the increased functionality of the Az modules, which have been adopted across global Azure, see [Introducing the Azure Az PowerShell module](azure-stack/operator/powershell/azure/new-azureps-module-az).
 
 ## Install
 
