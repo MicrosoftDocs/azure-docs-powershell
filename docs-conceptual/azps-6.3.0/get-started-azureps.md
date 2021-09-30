@@ -3,7 +3,7 @@ title: Get started with Azure PowerShell
 description: Get started with Azure PowerShell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 04/24/2020
+ms.date: 09/27/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -39,7 +39,7 @@ Connect-AzAccount
 ```
 
 Azure cloud services offer environments compliant with regional data-handling laws. For accounts in
-a regional cloud, use the **Environment** parameter to sign in. Get the name of the environment for
+a regional cloud, use the `Environment` parameter to sign in. Get the name of the environment for
 your region using the [Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) cmdlet.
 For example, to sign in to Azure China 21Vianet:
 
@@ -47,10 +47,9 @@ For example, to sign in to Azure China 21Vianet:
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-In Windows PowerShell 5.1 environments, you'll receive a sign-in dialog to provide a username and
-password for your Azure account. On every other version of PowerShell, you'll get a token to use on
-[microsoft.com/devicelogin](https://microsoft.com/devicelogin). Open this page in your browser and
-enter the token, then sign in with your Azure account credentials and authorize Azure PowerShell.
+Beginning with Az PowerShell module version 5.0.0, `Connect-AzAccount` presents an interactive
+browser based login prompt by default. You can specify the `UseDeviceAuthentication` parameter to
+receive a token string which was previously the default for PowerShell version 6 and higher.
 
 After signing in, you'll see information indicating which of your Azure subscriptions is active. If
 you have multiple Azure subscriptions in your account and want to select a different one, get your

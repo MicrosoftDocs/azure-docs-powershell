@@ -13,7 +13,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 10/22/2020
+  ms.date: 05/04/2021
   ms.prod: azure-powershell
 landingContent:
   - title: Get started with Azure PowerShell
@@ -88,6 +88,8 @@ landingContent:
             url: migrate-az-3.0.0.md
           - text: Breaking changes in Az 4.1.0
             url: migrate-az-4.1.0.md
+          - text: Breaking changes in Az 5.0.0
+            url: migrate-az-5.0.0.md
   - title: Other Azure PowerShell modules
     linkLists:
       - linkListType: overview

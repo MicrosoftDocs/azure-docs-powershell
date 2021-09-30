@@ -3,7 +3,7 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/10/2021
+ms.date: 09/27/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -52,7 +52,7 @@ in a variable to be used in the next two sections of this article.
 $tenantId = (Get-AzContext).Tenant.Id
 ```
 
-## Sign in with a service principal <a name="sp-signin"/>
+## Sign in with a service principal
 
 Service principals are non-interactive Azure accounts. Like other user accounts, their permissions
 are managed with Azure Active Directory. By granting a service principal only the permissions it
@@ -61,11 +61,10 @@ needs, your automation scripts stay secure.
 To learn how to create a service principal for use with Azure PowerShell, see
 [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
-To sign in with a service principal, use the `-ServicePrincipal` argument with the
-`Connect-AzAccount` cmdlet. You'll also need the service principal's application ID, sign-in
-credentials, and the tenant ID associate with the service principal. How you sign in with a service
-principal depends on whether it's configured for password-based or certificate-based
-authentication.
+To sign in with a service principal, use the `ServicePrincipal` parameter of the `Connect-AzAccount`
+cmdlet. You'll also need the service principal's application ID, sign-in credentials, and the tenant
+ID associate with the service principal. How you sign in with a service principal depends on whether
+it's configured for password-based or certificate-based authentication.
 
 ### Password-based authentication
 
@@ -109,17 +108,18 @@ local certificate store based on a certificate thumbprint.
 Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-When using a service principal instead of a registered application, add the `-ServicePrincipal` argument
-and provide the service principal's Application ID as the `-ApplicationId` parameter's value.
+When using a service principal instead of a registered application, specify the `ServicePrincipal`
+parameter and provide the service principal's Application ID as the `-ApplicationId` parameter's
+value.
 
 ```azurepowershell-interactive
 Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
 In PowerShell 5.1, the certificate store can be managed and inspected with the
-[PKI](/powershell/module/pki) module. For PowerShell Core 6.x and later, the process is more
-complicated. The following scripts show you how to import an existing certificate into the
-certificate store accessible by PowerShell.
+[PKI](/powershell/module/pki) module. For PowerShell 6.x and later, the process is more complicated.
+The following scripts show you how to import an existing certificate into the certificate store
+accessible by PowerShell.
 
 #### Import a certificate in PowerShell 5.1
 
@@ -162,23 +162,23 @@ that assigned identity.
 
 ## Sign in with a non-default tenant or as a Cloud Solution Provider (CSP)
 
-If your account is associated with more than one tenant, sign-in requires the `-Tenant` parameter to
+If your account is associated with more than one tenant, sign-in requires the `Tenant` parameter to
 be specified when connecting. This parameter works with any sign-in method. When logging in, this
 parameter value can either be the Azure object ID of the tenant (Tenant ID) or the fully qualified
 domain name of the tenant.
 
 If you're a [Cloud Solution Provider (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/), the
-`-Tenant` value **must** be a tenant ID.
+value for the `Tenant` parameter **must** be a tenant ID.
 
 ```azurepowershell-interactive
-Connect-AzAccount -Tenant 'xxxx-xxxx-xxxx-xxxx'
+Connect-AzAccount -Tenant '00000000-0000-0000-0000-000000000000'
 ```
 
 ## Sign in to another Cloud
 
 Azure cloud services offer environments compliant with regional data-handling laws. For accounts in
-a regional cloud, set the environment when you sign in with the `-Environment` argument. This
-parameter works with any sign-in method. For example, if your account is in the China cloud:
+a regional cloud, set the environment when you sign in with the `Environment` parameter. This
+parameter works with any sign-in method. For example, if your account is in Azure China 21Vianet:
 
 ```azurepowershell-interactive
 Connect-AzAccount -Environment AzureChinaCloud

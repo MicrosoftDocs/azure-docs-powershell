@@ -1,8 +1,14 @@
 - name: Azure PowerShell
   href: index.yml
-- name: Introducing the new Az module
-  href: new-azureps-module-az.md
-  displayName: intro, introduction, azurerm
+- name: Overview
+  items:
+  - name: What is Azure PowerShell?
+    href: what-is-azure-powershell.md
+  - name: Introducing the Az PowerShell module
+    href: new-azureps-module-az.md
+    displayName: intro, introduction, az
+  - name: Azure PowerShell Support Lifecycle
+    href: azureps-support-lifecycle.md
 - name: Install
   items:
     - name: Install with PowerShellGet
@@ -24,6 +30,10 @@
     - name: Changes between AzureRM and Az
       href: migrate-az-1.0.0.md
       displayName: breaking, cmdlet, module, names
+- name: Configuration
+  items:
+    - name: Use the Az PowerShell module behind a proxy
+      href: az-powershell-proxy.md
 - name: Get started
   href: get-started-azureps.md
   displayName: sign in, signin, log in, login, find, feedback, intro, introduction
@@ -106,4 +116,4 @@
 - name: Troubleshooting
   href: troubleshooting.md
 - name: Frequently Asked Questions
-  href: faq.md
+  href: faq.yml

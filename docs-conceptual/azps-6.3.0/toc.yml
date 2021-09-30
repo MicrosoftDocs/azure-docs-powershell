@@ -2,6 +2,8 @@
   href: index.yml
 - name: Overview
   items:
+  - name: What is Azure PowerShell?
+    href: what-is-azure-powershell.md
   - name: Introducing the Az PowerShell module
     href: new-azureps-module-az.md
     displayName: intro, introduction, az
