@@ -3,7 +3,7 @@ title: Using experimental Azure PowerShell modules
 description: Understand the philosophy and usage of experimental Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018 
+ms.date: 10/05/2021
 ms.custom: devx-track-azurepowershell
 ---
 # Use experimental Azure PowerShell modules
@@ -20,8 +20,8 @@ Azure SDK functionality in new, easier to use ways. In most cases, the cmdlets e
 existing cmdlets. However, the experimental cmdlets provide a shorthand notation and smarter default
 values that make it easier to create and manage Azure resources.
 
-These modules can be installed side by side with existing Azure PowerShell modules. The cmdlet
-names have been shortened to provide shorter names and avoid name conflicts with existing,
+These modules can be installed side by side with existing Azure PowerShell modules. The cmdlet names
+have been shortened to provide shorter names and avoid name conflicts with existing,
 non-experimental cmdlets.
 
 The experimental modules use the following naming convention: `AzureRM.*.Experiments`. This naming
@@ -32,14 +32,14 @@ use the same cmdlet and parameter names.
 
 ## How to install an experimental module
 
-Experimental modules are published to the PowerShell Gallery just like the existing Azure
-PowerShell modules. To see a list of experimental modules, run the following command:
+Experimental modules are published to the PowerShell Gallery just like the existing Azure PowerShell
+modules. To see a list of experimental modules, run the following command:
 
-```azurepowershell-interactive
-Find-Module AzureRM.*.Experiments
+```powershell
+Find-Module -Name AzureRM.*.Experiments
 ```
 
-```output
+```Output
 Version Name                         Repository Description
 ------- ----                         ---------- -----------
 1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
@@ -48,9 +48,9 @@ Version Name                         Repository Description
 
 To install the experimental module, use the following commands from an elevated PowerShell session:
 
-```azurepowershell-interactive
-Install-Module AzureRM.Compute.Experiments
-Install-Module AzureRM.Websites.Experiments
+```powershell
+Install-Module -Name AzureRM.Compute.Experiments
+Install-Module -Name AzureRM.Websites.Experiments
 ```
 
 ### Documentation and support
@@ -60,8 +60,8 @@ official documentation is published for experimental modules.
 
 We encourage you to test these modules. Your feedback allows us to improve usability and respond to
 your needs. However, being experimental, support for these modules is limited. Questions or problem
-reports can be submitted by creating an [issue](https://github.com/Azure/azure-powershell/issues)
-in the GitHub repository.
+reports can be submitted by creating an [issue](https://github.com/Azure/azure-powershell/issues) in
+the GitHub repository.
 
 ## Experiments and areas of improvement
 
@@ -75,12 +75,12 @@ users.
 The core improvements are regarded as "common sense", and little experimentation is needed to move
 forward in implementing these updates.
 
-- Scenario-based Cmdlets - <em>*All</em>- cmdlets should be designed around scenarios, not the Azure REST
-  service.
+- Scenario-based Cmdlets - <em>*All</em>- cmdlets should be designed around scenarios, not the Azure
+  REST service.
 
 - Shorter Names - Includes the names of cmdlets (for example, `New-AzureRmVM` => `New-AzVm`) and the
-  names of parameters (for example, `-ResourceGroupName` => `-Rg`). Use aliases for compatibility with
-  "old" cmdlets. Provide _backwards compatible_ parameter sets.
+  names of parameters (for example, `-ResourceGroupName` => `-Rg`). Use aliases for compatibility
+  with "old" cmdlets. Provide _backwards compatible_ parameter sets.
 
 - Smart Defaults - Create smart defaults to fill in "required" information. For example:
   - Resource Group
