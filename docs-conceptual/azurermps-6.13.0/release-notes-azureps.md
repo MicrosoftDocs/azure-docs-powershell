@@ -183,7 +183,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Support Get-AzureRmCognitiveServicesAccountSkus without an existing account.
 
 #### AzureRM.Compute
-* Fix Get-AzureRmVM -ResourceGroupName <rg> to return more than 50 results if needed
+* Fix Get-AzureRmVM -ResourceGroupName `<rg>` to return more than 50 results if needed
 * Added an example of the 'SimpleParameterSet' to New-AzureRmVmss cmdlet help.
 * Fixed a typo in the Azure Disk Encryption progress message
 
