@@ -59,4 +59,4 @@ is imported, the following non-blocking message will be displayed if an unsuppor
 PowerShell is being used: _"This version of Az.Accounts is only supported on Windows PowerShell 5.1
 and PowerShell 7.0.6 or greater, open
 [https://aka.ms/install-powershell](https://aka.ms/install-powershell) to learn how to upgrade. For
-further information, go to [https://aka.ms/azpslifecyle](https://aka.ms/azpslifecyle)."_
+further information, go to [https://aka.ms/azpslifecyle](https://aka.ms/azpslifecycle)."_
