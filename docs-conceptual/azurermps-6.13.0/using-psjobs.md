@@ -3,7 +3,7 @@ title: Running cmdlets in parallel using PowerShell jobs
 description: How to run cmdlets in parallel using the -AsJob parameter.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018 
+ms.date: 10/05/2021
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -11,18 +11,18 @@ ms.custom: devx-track-azurepowershell
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-PowerShell supports asynchronous action with [PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
-Azure PowerShell is heavily dependent on making, and waiting for, network calls to Azure. You
-may often find yourself needing to make non-blocking calls. To address this need, Azure PowerShell
-provides first-class [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) support.
+PowerShell supports asynchronous action with
+[PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs). Azure PowerShell
+is heavily dependent on making, and waiting for, network calls to Azure. You may often find yourself
+needing to make non-blocking calls. To address this need, Azure PowerShell provides first-class
+[PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) support.
 
 ## Context Persistence and PSJobs
 
-Since PSJobs are run as separate processes, your Azure connection must
-be shared with them. After signing in to your Azure account
-with `Connect-AzureRmAccount`, pass the context to a job.
+Since PSJobs are run as separate processes, your Azure connection must be shared with them. After
+signing in to your Azure account with `Connect-AzureRmAccount`, pass the context to a job.
 
-```azurepowershell-interactive
+```azurepowershell
 $creds = Get-Credential
 $job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmContext $context -Credential $vmadmin} -Arguments (Get-AzureRmContext),$creds
 ```
@@ -30,7 +30,7 @@ $job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmCon
 However, if you have chosen to have your context automatically saved with
 `Enable-AzureRmContextAutosave`, the context is automatically shared with any jobs you create.
 
-```azurepowershell-interactive
+```azurepowershell
 Enable-AzureRmContextAutosave
 $creds = Get-Credential
 $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin} -Arguments $creds
@@ -41,19 +41,19 @@ $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin
 As a convenience, Azure PowerShell also provides an `-AsJob` switch on some long-running cmdlets.
 The `-AsJob` switch makes creating PSJobs even easier.
 
-```azurepowershell-interactive
+```azurepowershell
 $creds = Get-Credential
 $job = New-AzureRmVM -Name MyVm -Credential $creds -AsJob
 ```
 
 You can inspect the job and progress at any time with `Get-Job` and `Get-AzureRmVM`.
 
-```azurepowershell-interactive
+```azurepowershell
 Get-Job $job
 Get-AzureRmVM MyVm
 ```
 
-```output
+```Output
 Id Name                                       PSJobTypeName         State   HasMoreData Location  Command
 -- ----                                       -------------         -----   ----------- --------  -------
 1  Long Running Operation for 'New-AzureRmVM' AzureLongRunningJob`1 Running True        localhost New-AzureRmVM
@@ -66,18 +66,18 @@ MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Crea
 When the job completes, get the result of the job with `Receive-Job`.
 
 > [!NOTE]
-> `Receive-Job` returns the result from the cmdlet as if the `-AsJob` flag were not present.
-> For example, the `Receive-Job` result of `Do-Action -AsJob` is of the same type as the result of
+> `Receive-Job` returns the result from the cmdlet as if the `-AsJob` flag were not present. For
+> example, the `Receive-Job` result of `Do-Action -AsJob` is of the same type as the result of
 > `Do-Action`.
 
-```azurepowershell-interactive
+```azurepowershell
 $vm = Receive-Job $job
 $vm
 ```
 
-```output
+```Output
 ResourceGroupName        : MyVm
-Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyVm/providers/Microsoft.Compute/virtualMachines/MyVm
+Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyVm/providers/Microsoft.Compute/virtualMachines/MyVm
 VmId                     : dff1f79e-a8f7-4664-ab72-0ec28b9fbb5b
 Name                     : MyVm
 Type                     : Microsoft.Compute/virtualMachines
@@ -95,7 +95,7 @@ FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
 
 Create several VMs at once:
 
-```azurepowershell-interactive
+```azurepowershell
 $creds = Get-Credential
 # Create 10 jobs.
 for($k = 0; $k -lt 10; $k++) {
@@ -112,7 +112,7 @@ In this example, the `Wait-Job` cmdlet causes the script to pause while jobs run
 continues executing once all of the jobs have completed. Several jobs run in parallel then the
 script waits for completion before continuing.
 
-```output
+```Output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 2      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
