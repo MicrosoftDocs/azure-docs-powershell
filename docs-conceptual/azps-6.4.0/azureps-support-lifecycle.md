@@ -38,7 +38,7 @@ modules.
 
 |        Az        | PowerShell <br/> 7.1.3 | PowerShell <br/> >= 7.0.6 | PowerShell <br/> <= 7.0.5 | Windows PowerShell <br/> 5.1 |
 | :--------------: | :--------------------: | :-----------------------: | :-----------------------: | :--------------------------: |
-|      Az 6.0      |       Supported        |         Supported         |       Not supported       |          Supported           |
+|      Az 6.x      |       Supported        |         Supported         |       Not supported       |          Supported           |
 |      Az 5.9      |       Supported        |         Supported         |         Supported         |          Supported           |
 | AzureRM (6.13.2) |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
 |  Azure (5.3.1)   |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
@@ -59,4 +59,4 @@ is imported, the following non-blocking message will be displayed if an unsuppor
 PowerShell is being used: _"This version of Az.Accounts is only supported on Windows PowerShell 5.1
 and PowerShell 7.0.6 or greater, open
 [https://aka.ms/install-powershell](https://aka.ms/install-powershell) to learn how to upgrade. For
-further information, go to [https://aka.ms/azpslifecyle](https://aka.ms/azpslifecyle)."_
+further information, go to [https://aka.ms/azpslifecyle](https://aka.ms/azpslifecycle)."_
