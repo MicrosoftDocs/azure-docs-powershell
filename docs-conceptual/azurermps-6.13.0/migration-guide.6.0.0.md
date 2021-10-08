@@ -1,12 +1,12 @@
 ---
-title: Breaking changes for Microsoft Azure PowerShell 6.0.0
-description: This migration guide contains a list of breaking changes made to Azure PowerShell in the version 6 release.
+title: Breaking changes for the AzureRM PowerShell module 6.0.0
+description: This migration guide contains a list of breaking changes made to the AzureRM PowerShell module in the version 6 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/01/2018 
+ms.date: 10/05/2021
 ms.custom: devx-track-azurepowershell
 ---
-# Breaking changes for Microsoft Azure PowerShell 6.0.0
+# Breaking changes for the AzureRM PowerShell module 6.0.0
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
@@ -111,11 +111,11 @@ of modules (and the corresponding cmdlets) affected by this:
 - The sku name property nested in types `PSDisk` and `PSSnapshot` changed from `StandardLRS` and
   `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
 
-```powershell-interactive
-$disk = Get-AzureRmDisk -ResourceGroupName "MyResourceGroup" -DiskName "MyDiskName"
+```powershell
+$disk = Get-AzureRmDisk -ResourceGroupName 'MyResourceGroup' -DiskName 'MyDiskName'
 $disk.Sku.Name       # This will now return Standard_LRS or Premium_LRS
 
-$snapshot = Get-AzureRmSnapshot -ResourceGroupName "MyResourceGroup" -SnapshotName "MySnapshotName"
+$snapshot = Get-AzureRmSnapshot -ResourceGroupName 'MyResourceGroup' -SnapshotName 'MySnapshotName'
 $snapshot.Sku.Name   # This will now return Standard_LRS or Premium_LRS
 ```
 
@@ -123,7 +123,7 @@ $snapshot.Sku.Name   # This will now return Standard_LRS or Premium_LRS
   and `PSImage` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`,
   respectively
 
-```powershell-interactive
+```powershell
 $vm = Get-AzureRmVM -ResourceGroupName "MyResourceGroup" -Name "MyVM"
 $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now return Standard_LRS or Premium_LRS
 ```
@@ -146,7 +146,7 @@ $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now
 **New-AzureRmAvailabilitySet**
 - The parameter `Managed` was removed in favor of `Sku`
 
-```powershell-interactive
+```powershell
 # Old
 New-AzureRmAvailabilitySet -ResourceGroupName "MyRG" -Name "MyAvailabilitySet" -Location "West US" -Managed
 
@@ -200,7 +200,7 @@ New-AzureRmAvailabilitySet -ResourceGroupName "MyRG" -Name "MyAvailabilitySet" -
 - Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the
   `Concurrency` parameter moving forward
 
-```powershell-interactive
+```powershell
 # Old
 Export-AzureRmDataLakeStoreItem -Account contoso -Path /test -Destination C:\test -Recurse -Resume -PerFileThreadCount 2 -ConcurrentFileCount 80
 
@@ -212,7 +212,7 @@ Export-AzureRmDataLakeStoreItem -Account contoso -Path /test -Destination C:\tes
 - Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the
   `Concurrency` parameter moving forward
 
-```powershell-interactive
+```powershell
 # Old
 Import-AzureRmDataLakeStoreItem -Account contoso -Path C:\test -Destination /test -Recurse -Resume -ForceBinary -PerFileThreadCount 2 -ConcurrentFileCount 80
 
@@ -223,7 +223,7 @@ Import-AzureRmDataLakeStoreItem -Account contoso -Path C:\test -Destination /tes
 **Remove-AzureRmDataLakeStoreItem**
 - Parameter `Clean` was removed
 
-```powershell-interactive
+```powershell
 # Old
 Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse -Clean
 
@@ -296,7 +296,7 @@ documentation pages, respectively:
 - [Constructing a Service SAS](/rest/api/storageservices/Constructing-a-Service-SAS)
 - [Constructing an Account SAS](/rest/api/storageservices/constructing-an-account-sas)
 
-```powershell-interactive
+```powershell
 # Old
 $sas = Set-AzureKeyVaultManagedStorageSasDefinition -VaultName myVault -Name myKey -Service Blob -Permissions 'rcw' -ValidityPeriod 180d
 
@@ -421,7 +421,7 @@ $sas=Set-AzureKeyVaultManagedStorageSasDefinition -AccountName $sa.StorageAccoun
 - The parameter `RedisVersion` was removed
 - The parameter `MaxMemoryPolicy` was removed in favor of `RedisConfiguration`
 
-```powershell-interactive
+```powershell
 # Old
 New-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -Location "North Central US" -MaxMemoryPolicy "allkeys-lru"
 
@@ -432,7 +432,7 @@ New-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -Location "
 **Set-AzureRmRedisCache**
 - The parameter `MaxMemoryPolicy` was removed in favor of `RedisConfiguration`
 
-```powershell-interactive
+```powershell
 # Old
 Set-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -MaxMemoryPolicy "allkeys-lru"
 
@@ -445,7 +445,7 @@ Set-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -RedisConfi
 **Find-AzureRmResource**
 - This cmdlet was removed and the functionality was moved into `Get-AzureRmResource`
 
-```powershell-interactive
+```powershell
 # Old
 Find-AzureRmResource -ResourceType "Microsoft.Web/sites" -ResourceGroupNameContains "ResourceGroup"
 Find-AzureRmResource -ResourceType "Microsoft.Web/sites" -ResourceNameContains "test"
@@ -458,7 +458,7 @@ Get-AzureRmResource -ResourceType "Microsoft.Web/sites" -Name "*test*"
 **Find-AzureRmResourceGroup**
 - This cmdlet was removed and the functionality was moved into `Get-AzureRmResourceGroup`
 
-```powershell-interactive
+```powershell
 # Old
 Find-AzureRmResourceGroup
 Find-AzureRmResourceGroup -Tag @{ "testtag" = $null }
@@ -473,7 +473,7 @@ Get-AzureRmResourceGroup -Tag @{ "testtag" = "testval" }
 **Get-AzureRmRoleDefinition**
 - Parameter `AtScopeAndBelow` was removed.
 
-```powershell-interactive
+```powershell
 
 # Old
 Get-AzureRmRoleDefinition [other required parameters] -AtScopeAndBelow

@@ -1,7 +1,7 @@
 ---
 title: Introducing the Azure Az PowerShell module
 description: Introducing the Az PowerShell module, recommended for interacting with Azure, and the replacement for the AzureRM PowerShell module.
-ms.date: 02/12/2021
+ms.date: 09/27/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
@@ -12,9 +12,9 @@ ms.service: azure-powershell
 
 ## Overview
 
-The Az PowerShell module is a set of cmdlets for managing Azure resources directly from PowerShell. PowerShell
-provides powerful features for automation that can be leveraged for managing your Azure resources
-for examples in the context of a CI/CD pipeline.
+The Az PowerShell module is a set of cmdlets for managing Azure resources directly from PowerShell.
+PowerShell provides powerful features for automation that can be leveraged for managing your Azure
+resources, for example in the context of a CI/CD pipeline.
 
 The Az PowerShell module is the replacement of AzureRM and is the recommended version to use for
 interacting with Azure.
@@ -45,14 +45,15 @@ The Az PowerShell module features the following benefits:
   * Cmdlet available for advanced REST operations with Azure resources
 
 > [!NOTE]
-> PowerShell 7 and later is the recommended version of PowerShell for use with Az PowerShell on
-> all platforms.
+> PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher is the recommended version of PowerShell for
+> use with the Azure Az PowerShell module on all platforms.
 
 The Az PowerShell module is based on the .NET Standard library and works with PowerShell 7 and later
 on all platforms including Windows, macOS, and Linux. It's also compatible with Windows PowerShell
 5.1.
 
-We're committed to bringing Azure support to all platforms and all Az PowerShell modules are cross-platforms.
+We're committed to bringing Azure support to all platforms and all Az PowerShell modules are
+cross-platforms.
 
 ## Upgrade your environment to Az
 

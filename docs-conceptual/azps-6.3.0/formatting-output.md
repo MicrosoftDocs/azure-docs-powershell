@@ -3,14 +3,15 @@ title: Format Azure PowerShell cmdlet output
 description: How to format cmdlet output for Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/07/2019 
-ms.custom: devx-track-azurepowershell 
+ms.date: 09/27/2021
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
 # Format Azure PowerShell cmdlet output
 
-By default each Azure PowerShell cmdlet formats output to be easy to read. PowerShell allows you to convert or format cmdlet output by piping to one of the following cmdlets:
+By default each Azure PowerShell cmdlet formats output to be easy to read. PowerShell allows you to
+convert or format cmdlet output by piping to one of the following cmdlets:
 
 | Formatting      | Conversion       |
 |-----------------|------------------|
@@ -19,17 +20,19 @@ By default each Azure PowerShell cmdlet formats output to be easy to read. Power
 | [Format-Table](/powershell/module/microsoft.powershell.utility/format-table)  | [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) |
 | [Format-Wide](/powershell/module/microsoft.powershell.utility/format-wide)   | [ConvertTo-Xml](/powershell/module/microsoft.powershell.utility/convertto-xml)  |
 
-Formatting is used for display in a PowerShell terminal, and conversion is used for generating data to be consumed by other scripts or programs.
+Formatting is used for display in the PowerShell console, and conversion is used for generating data
+to be consumed by other scripts or programs.
 
 ## Table output format
 
-By default, Azure PowerShell cmdlets output in the table format. This format doesn't display all information of the requested resource:
+By default, Azure PowerShell cmdlets output in the table format. This format doesn't display all
+information of the requested resource:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM
 ```
 
-```output
+```Output
 ResourceGroupName           Name Location          VmSize  OsType               NIC ProvisioningState Zone
 -----------------           ---- --------          ------  ------               --- ----------------- ----
 QueryExample      ExampleLinuxVM  westus2        Basic_A0   Linux examplelinuxvm916         Succeeded
@@ -37,14 +40,16 @@ QueryExample         RHELExample  westus2  Standard_D2_v3   Linux    rhelexample
 QueryExample        WinExampleVM  westus2 Standard_DS1_v2 Windows   winexamplevm268         Succeeded
 ```
 
-The amount of data displayed by `Format-Table` can be affected by the width of your PowerShell session window. To restrict the output to specific properties
-and order them, property names can be provided as arguments to `Format-Table`:
+The amount of data displayed by `Format-Table` can be affected by the width of your PowerShell
+session window. To restrict the output to specific properties and order them, property names can be
+provided as arguments to `Format-Table`:
 
-```powershell-interactive
-Get-AzVM -ResourceGroupName QueryExample | Format-Table Name,ResourceGroupName,Location
+```azurepowershell-interactive
+Get-AzVM -ResourceGroupName QueryExample |
+  Format-Table -Property Name, ResourceGroupName, Location
 ```
 
-```output
+```Output
 Name           ResourceGroupName Location
 ----           ----------------- --------
 ExampleLinuxVM QueryExample      westus2
@@ -54,15 +59,16 @@ WinExampleVM   QueryExample      westus2
 
 ## List output format
 
-List output format produces two columns, property names followed by the value. For complex objects, the type of the object is displayed instead.
+List output format produces two columns, property names followed by the value. For complex objects,
+the type of the object is displayed instead.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-List
 ```
 
 The following output has some fields removed.
 
-```output
+```Output
 ResourceGroupName        : QueryExample
 Id                       : /subscriptions/.../resourceGroups/QueryExample/providers/Microsoft.Compute/virtualMachines/ExampleLinuxVM
 VmId                     : ...
@@ -88,11 +94,11 @@ Location                 : westus2
 
 Like `Format-Table`, property names can be provided to order and restrict the output:
 
-```powershell-interactive
-Get-AzVM | Format-List ResourceGroupName,Name,Location
+```azurepowershell-interactive
+Get-AzVM | Format-List -Property ResourceGroupName, Name, Location
 ```
 
-```output
+```Output
 ResourceGroupName : QueryExample
 Name              : ExampleLinuxVM
 Location          : westus2
@@ -108,37 +114,39 @@ Location          : westus2
 
 ## Wide output format
 
-Wide output format produces only one property name per query. Which property is displayed can be controlled by giving a property as an argument.
+Wide output format produces only one property name per query. Which property is displayed can be
+controlled by giving a property as an argument.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-Wide
 ```
 
-```output
+```Output
 ExampleLinuxVM                                  RHELExample
 WinExampleVM
 ```
 
-```powershell-interactive
-Get-AzVM | Format-Wide ResourceGroupName
+```azurepowershell-interactive
+Get-AzVM | Format-Wide -Property ResourceGroupName
 ```
 
-```output
+```Output
 QueryExample                                    QueryExample
 QueryExample
 ```
 
 ## Custom output format
 
-The `Custom-Format` output type is meant for formatting custom objects. Without any arguments, it behaves like `Format-List` but displays the property names of custom classes.
+The `Custom-Format` output type is meant for formatting custom objects. Without any parameters, it
+behaves like `Format-List` but displays the property names of custom classes.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-Custom
 ```
 
 The following output has some fields removed.
 
-```output
+```Output
 ResourceGroupName : QueryExample
 Id                : /subscriptions/.../resourceGroups/QueryExample/providers/Microsoft.Compute/virtualMachines/ExampleLinuxVM
 VmId              : ...
@@ -155,15 +163,16 @@ StorageProfile    : {ImageReference, OsDisk, DataDisks}
 ...
 ```
 
-Giving property names as arguments to `Custom-Format` displays the property/value pairs for custom objects set as values:
+Giving property names as arguments to `Custom-Format` displays the property/value pairs for custom
+objects set as values:
 
 ```powershell-interactive
-Get-AzVM | Format-Custom Name,ResourceGroupName,Location,OSProfile
+Get-AzVM | Format-Custom -Property Name, ResourceGroupName, Location, OSProfile
 ```
 
 The following output has some fields removed.
 
-```output
+```Output
 class PSVirtualMachineList
 {
   Name = ExampleLinuxVM
@@ -227,7 +236,10 @@ class PSVirtualMachineList
 
 ## Conversion to other data formats
 
-The `ConvertTo-*` family of cmdlets allows for converting the results of Azure PowerShell cmdlets to machine-readable formats. To get only some properties from the Azure PowerShell results, use the `Select-Object` command in a pipe before performing the conversion. The following examples demonstrate the different kinds of output that each conversion produces.
+The `ConvertTo-*` family of cmdlets allows for converting the results of Azure PowerShell cmdlets to
+machine-readable formats. To get only some properties from the Azure PowerShell results, pipe to the
+`Select-Object` cmdlet before performing the conversion. The following examples demonstrate the
+different kinds of output that each conversion produces.
 
 ### Conversion to CSV
 
@@ -235,7 +247,7 @@ The `ConvertTo-*` family of cmdlets allows for converting the results of Azure P
 Get-AzVM | ConvertTo-CSV
 ```
 
-```output
+```Output
 #TYPE Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineList
 "ResourceGroupName","Id","VmId","Name","Type","Location","LicenseType","Tags","AvailabilitySetReference","DiagnosticsProfile","Extensions","HardwareProfile","InstanceView","NetworkProfile","OSProfile","Plan","ProvisioningState","StorageProfile","DisplayHint","Identity","Zones","FullyQualifiedDomainName","AdditionalCapabilities","RequestId","StatusCode"
 "QUERYEXAMPLE","/subscriptions/.../resourceGroups/QUERYEXAMPLE/providers/Microsoft.Compute/virtualMachines/ExampleLinuxVM","...","ExampleLinuxVM","Microsoft.Compute/virtualMachines","westus2",,"System.Collections.Generic.Dictionary`2[System.String,System.String]",,,"System.Collections.Generic.List`1[Microsoft.Azure.Management.Compute.Models.VirtualMachineExtension]","Microsoft.Azure.Management.Compute.Models.HardwareProfile",,"Microsoft.Azure.Management.Compute.Models.NetworkProfile","Microsoft.Azure.Management.Compute.Models.OSProfile",,"Succeeded","Microsoft.Azure.Management.Compute.Models.StorageProfile","Compact",,"System.Collections.Generic.List`1[System.String]",,,"...","OK"
@@ -245,15 +257,16 @@ Get-AzVM | ConvertTo-CSV
 
 ### Conversion to JSON
 
-JSON output doesn't expand all properties by default. To change the depth of properties expanded, use the `-Depth` argument. By default, the expansion depth is `2`.
+JSON output doesn't expand all properties by default. To change the depth of properties expanded,
+use the `Depth` parameter. By default, the expansion depth is `2`.
 
 ```azurepowershell-interactive
-Get-AzVM|ConvertTo-JSON
+Get-AzVM | ConvertTo-JSON
 ```
 
 The following output has some fields removed.
 
-```output
+```Output
 [
     {
         "ResourceGroupName":  "QUERYEXAMPLE",
@@ -296,13 +309,14 @@ The following output has some fields removed.
 
 ### Conversion to XML
 
-The `ConvertTo-XML` cmdlet converts the Azure PowerShell response object into a pure XML object, which can be handled like any other XML object within PowerShell. 
+The `ConvertTo-XML` cmdlet converts the Azure PowerShell response object into a pure XML object,
+which can be handled like any other XML object within PowerShell.
 
 ```azurepowershell-interactive
 Get-AzVM | ConvertTo-XML
 ```
 
-```output
+```Output
 xml                            Objects
 ---                            -------
 version="1.0" encoding="utf-8" Objects
@@ -310,14 +324,15 @@ version="1.0" encoding="utf-8" Objects
 
 ### Conversion to HTML
 
-Converting an object to HTML produces output that will be rendered as an HTML table. Rendering of the HTML will depend on your browser behavior for rendering tables which contain no width information.
-No custom class objects are expanded.
+Converting an object to HTML produces output that will be rendered as an HTML table. Rendering of
+the HTML will depend on your browser behavior for rendering tables which contain no width
+information. No custom class objects are expanded.
 
 ```azurepowershell-interactive
 Get-AzVM | ConvertTo-HTML
 ```
 
-```output
+```Output
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
