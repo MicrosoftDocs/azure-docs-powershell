@@ -3,7 +3,7 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/29/2021
+ms.date: 10/12/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -85,7 +85,7 @@ ms.service: azure-powershell
     -  'Stop-AzStorageAccountHierarchicalNamespaceUpgrade'
 * Supported AccessTierInferred, Tags in blob inventory policy schema
     - 'New-AzStorageBlobInventoryPolicyRule'
-* Supported create/update storage account with PublicNetworkAccess enabled/disabled 
+* Supported create/update storage account with PublicNetworkAccess enabled/disabled
     - 'New-AzStorageAccount'
     - 'Set-AzStorageAccount'
 * Supported create/update storage blob container with RootSquash
@@ -104,7 +104,7 @@ ms.service: azure-powershell
     - SyncStatus.DownloadActivity
 
 #### Az.Websites
-* Updated 'Import-AzWebAppKeyVaultCertificate1' to set the default name with combination of keyvault name and cert name 
+* Updated 'Import-AzWebAppKeyVaultCertificate1' to set the default name with combination of keyvault name and cert name
 
 ### Thanks to our community contributors
 * @DSakura207, Use last PowerState instance in Statuses for power status (#15941)
