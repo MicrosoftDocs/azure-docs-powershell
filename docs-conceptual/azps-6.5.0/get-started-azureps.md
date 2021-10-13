@@ -3,7 +3,7 @@ title: Get started with Azure PowerShell
 description: Get started with Azure PowerShell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 09/27/2021
+ms.date: 10/12/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
