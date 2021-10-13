@@ -3,7 +3,7 @@ title: Troubleshooting the Azure Az PowerShell module
 description: Troubleshooting the Azure Az PowerShell module.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/21/2021
+ms.date: 10/12/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---

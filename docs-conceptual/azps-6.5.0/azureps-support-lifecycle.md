@@ -3,7 +3,7 @@ title: Azure PowerShell support lifecycle
 description: Details about the support lifecycle of the Azure PowerShell modules
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/29/2021
+ms.date: 10/12/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -18,8 +18,9 @@ starting with _"Az."_. For the current list of Az PowerShell modules, see
 [Azure PowerShell Modules](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md).
 
 The Az PowerShell modules support lifecycle falls under the
-[Azure SDK lifecycle policy](https://support.microsoft.com/help/18486). We support no less than the
-last minor version of each of the two most recent major versions of the Az PowerShell module.
+[Azure SDK lifecycle policy](https://support.microsoft.com/help/18486). We support the last two
+minor versions of the current major version and last minor version of the previous major version of
+the Az PowerShell module.
 
 ## AzureRM PowerShell modules
 
