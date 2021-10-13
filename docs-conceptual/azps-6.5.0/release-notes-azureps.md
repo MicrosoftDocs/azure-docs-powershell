@@ -12,7 +12,7 @@ ms.service: azure-powershell
 #### Az.Accounts
 * Supported getting the access token for Microsoft Graph.
 * Added AuthorizeRequestDelegate to allow service module to adjust token audience.
-* Utilized [AssemblyLoadContext](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext) to resolve assembly conflict issues in PowerShell.
+* Utilized [AssemblyLoadContext](/dotnet/api/system.runtime.loader.assemblyloadcontext) to resolve assembly conflict issues in PowerShell.
 * Updated Azure.Core from 1.16.0 to 1.19.0.
 
 #### Az.Attestation
@@ -40,7 +40,7 @@ ms.service: azure-powershell
     - Delete via 'Remove-AzKeyVaultRoleDefinition',
     - Filter all custom roles via 'Get-AzKeyVaultRoleDefinition -Custom'.
 * Supported Encrypt/Decrypt/Wrap/Unwrap using keys [#15679]
-* Enabled managing resources in other subscriptions without switching the context by adding '-Subscription <String>'.
+* Enabled managing resources in other subscriptions without switching the context by adding `-Subscription <String>`.
 
 #### Az.Maintenance
 * Added Guest patch maintenance support.
