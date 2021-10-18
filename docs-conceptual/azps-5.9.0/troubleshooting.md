@@ -66,3 +66,39 @@ each time you start a new PowerShell session.
 ```powershell
 Disable-AzContextAutosave
 ```
+
+## IdentifierUri error when using `New-AzADServicePrincipal` or `New-AzADApplication`
+
+Error: _Values of identifierUris property must use a verified domain of the organization or its
+subdomain_ is displayed when running `New-AzADServicePrincipal` or `New-AzADApplication`.
+
+Due to the Azure Active Directory breaking change requiring [AppId Uri in single tenant applications
+to require use of default scheme or verified
+domains](/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains)
+you must upgrade the [Az.Resources](https://www.powershellgallery.com/packages/Az.Resources) module
+to version 4.1.0 or later to continue using `New-AzADServicePrincipal` or `New-AzADApplication` cmdlets.
+
+You can also upgrade to Az PowerShell module version 6.0 or greater.
+
+### Timeline
+
+The requirement will be in effect starting 10/15/2021.
+
+### Impacted versions
+
+The following versions of Azure PowerShell are impacted by the AzureAD breaking change:
+
+- Az.Resources PowerShell module version 3.5.1-preview or lesser.
+- Az PowerShell module version 5.9.0 or lesser.
+
+If you are still encountering issues after upgrading, feel free to open an
+[issue](https://github.com/Azure/azure-powershell/issues/new?assignees=&labels=needs-triage&template=az-module-bug-report.md&title=).
+
+### Workaround
+
+If you cannot upgrade to the PowerShell modules described above, you may follow those steps when
+creating a service principal:
+
+- If needed, [add your custom domain name using Azure Active Directory portal](/active-directory/fundamentals/add-custom-domain)
+- Create an application with an accepted IdentifierUri
+- Create a service principal referring this application
