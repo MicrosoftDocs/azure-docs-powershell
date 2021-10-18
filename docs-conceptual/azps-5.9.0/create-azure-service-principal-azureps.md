@@ -14,8 +14,8 @@ applications sign in as a fully privileged user, Azure offers service principals
 
 > [!IMPORTANT]
 > The value of the 'IdentifierUri' parameter for `New-AzAdApplication` must use a verified domain of
-> the organization or its subdomain. Update to Az PowerShell version 6.x or create the application,
-> then create the Service Principal referring to the application.
+> the organization or its subdomain. For more information, see
+> [Troubleshooting the Azure Az PowerShell module](/powershell/azure/troubleshooting#service-principal-identifieruri-verified-domain-error).
 
 An Azure service principal is an identity created for use with applications, hosted services, and
 automated tools to access Azure resources. This access is restricted by the roles assigned to the
