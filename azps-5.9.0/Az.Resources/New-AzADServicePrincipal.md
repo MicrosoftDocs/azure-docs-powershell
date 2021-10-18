@@ -13,6 +13,11 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/
 ## SYNOPSIS
 Creates a new Azure active directory service principal.
 
+> [!IMPORTANT]
+> The value of the 'IdentifierUri' parameter for `New-AzAdApplication` must use a verified domain of
+> the organization or its subdomain. Update to Az PowerShell version 6.x or create the application,
+> then create the Service Principal referring to the application.
+
 ## SYNTAX
 
 ### SimpleParameterSet (Default)

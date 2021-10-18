@@ -13,6 +13,11 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/
 ## SYNOPSIS
 Creates a new azure active directory application.
 
+> [!IMPORTANT]
+> The value of the 'IdentifierUri' parameter for `New-AzAdApplication` must use a verified domain of
+> the organization or its subdomain. Update to Az PowerShell version 6.x or create the application,
+> then create the Service Principal referring to the application.
+
 ## SYNTAX
 
 ### ApplicationWithoutCredentialParameterSet (Default)
@@ -144,7 +149,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 The effective end date of the credential usage.
-The default end date value is one year from today. 
+The default end date value is one year from today.
 For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
@@ -251,7 +256,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 The effective start date of the credential usage.
-The default start date value is today. 
+The default start date value is today.
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml
