@@ -67,7 +67,7 @@ each time you start a new PowerShell session.
 Disable-AzContextAutosave
 ```
 
-## IdentifierUri error when using `New-AzADServicePrincipal` or `New-AzADApplication`
+## Service Principal IdentifierUri verified domain error
 
 Error: _Values of identifierUris property must use a verified domain of the organization or its
 subdomain_ is displayed when running `New-AzADServicePrincipal` or `New-AzADApplication`.
