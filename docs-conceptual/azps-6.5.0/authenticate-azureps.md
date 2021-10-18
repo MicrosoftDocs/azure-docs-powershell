@@ -3,7 +3,7 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/12/2021
+ms.date: 10/18/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -158,6 +158,21 @@ that assigned identity.
 
 ```azurepowershell-interactive
  Connect-AzAccount -Identity
+```
+
+This example connects using the Managed Service Identity of myUserAssignedIdentity. It adds the user
+assigned identity to the virtual machine, then connects using the ClientId of the user assigned
+identity. For more information, see
+[Configure managed identities for Azure resources on an Azure VM](/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm).
+
+```azurepowershell-interactive
+$identity = Get-AzUserAssignedIdentity -ResourceGroupName 'myResourceGroup' -Name 'myUserAssignedIdentity'
+Get-AzVM -ResourceGroupName contoso -Name testvm | Update-AzVM -IdentityType UserAssigned -IdentityId $identity.Id
+Connect-AzAccount -Identity -AccountId $identity.ClientId # Run on the virtual machine
+
+Account                SubscriptionName TenantId                Environment
+-------                ---------------- --------                -----------
+yyyy-yyyy-yyyy-yyyy    Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
 ```
 
 ## Sign in with a non-default tenant or as a Cloud Solution Provider (CSP)
