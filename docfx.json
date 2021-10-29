@@ -593,6 +593,7 @@
                 "azurermps-2.5.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
                 "azps-6.5.0/**/*": "None",
+                "azps-6.4.0/**/*": "None",
                 "azps-5.9.0/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",

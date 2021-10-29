@@ -3,7 +3,7 @@ title: Migration guide for Az 5.0.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 5.0.0 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/07/2021
+ms.date: 10/12/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---

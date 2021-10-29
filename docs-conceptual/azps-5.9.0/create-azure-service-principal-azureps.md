@@ -12,6 +12,13 @@ ms.custom: devx-track-azurepowershell
 Automated tools that use Azure services should always have restricted permissions. Instead of having
 applications sign in as a fully privileged user, Azure offers service principals.
 
+> [!IMPORTANT]
+> Due to a breaking change with Azure Active Directory, you must upgrade to Az PowerShell 6.x or
+> create an application first using `New-AzAdApplication` with a verified domain of the organization
+> or its subdomain for the `IdentifierUri` parameter. Specify the newly created application with the
+> `ApplicationId` parameter of `New-AzAdServicePrincipal`. For more information, see
+> [Troubleshooting the Azure Az PowerShell module](/powershell/azure/troubleshooting#service-principal-identifieruri-verified-domain-error).
+
 An Azure service principal is an identity created for use with applications, hosted services, and
 automated tools to access Azure resources. This access is restricted by the roles assigned to the
 service principal, giving you control over which resources can be accessed and at which level. For
