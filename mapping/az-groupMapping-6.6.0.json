@@ -3599,7 +3599,6 @@
   "New-AzRedisCachePatchSchedule": "Redis Cache",
   "Reset-AzRedisCache": "Redis Cache",
   "Remove-AzRedisCachePatchSchedule": "Redis Cache",
-  "New-AzRedisCache": "Redis Cache",
   "Get-AzRedisCacheLink": "Redis Cache",
   "Get-AzRedisCacheKey": "Redis Cache",
   "New-AzRedisCacheKey": "Redis Cache",
