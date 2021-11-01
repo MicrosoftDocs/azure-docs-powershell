@@ -3,8 +3,8 @@ title: Using Azure PowerShell in Docker
 description: How to use Azure PowerShell that is preinstalled in a Docker image.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/20/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 09/27/2021
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
@@ -26,7 +26,7 @@ For each new release of the Az module we are releasing an image for the followin
 
 - Ubuntu 18.04 (default)
 - Debian 9
-- CentOs 7
+- CentOS 7
 
 A full list of available images can be found on our [Docker image][az image] page.
 
@@ -47,7 +47,9 @@ PowerShell session.
    docker run -it mcr.microsoft.com/azure-powershell pwsh
    ```
 
-For Windows Docker hosts, you must enable Docker File Sharing to allow local drives on Windows to be shared with Linux containers. For more information see [Get started with Docker for Windows][file-sharing].
+For Windows Docker hosts, you must enable Docker file sharing to allow local drives on Windows to be
+shared with Linux containers. For more information see
+[Get started with Docker for Windows][file-sharing].
 
 ### Run the azure-powershell container interactively using host authentication
 

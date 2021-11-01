@@ -3,7 +3,7 @@ title: Install Azure PowerShell on Windows with PowerShellGet
 description: How to install Azure PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/16/2018 
+ms.date: 10/05/2021
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -29,7 +29,7 @@ for classic deployments, follow the instructions in
 Starting with Azure PowerShell version 6.0, Azure PowerShell requires PowerShell version 5.0. To
 check the version of PowerShell running on your machine, run the following command:
 
-```powershell-interactive
+```powershell
 $PSVersionTable.PSVersion
 ```
 
@@ -46,7 +46,7 @@ If you have an outdated version, see
 You need elevated privileges to install modules from the PowerShell Gallery. To install Azure
 PowerShell, run the following command in an elevated session:
 
-```azurepowershell-interactive
+```azurepowershell
 Install-Module -Name AzureRM -AllowClobber
 ```
 
@@ -76,7 +76,7 @@ all of the available Azure Resource Manager modules, and makes their cmdlets ava
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
 
-```azurepowershell-interactive
+```azurepowershell
 # Connect to Azure with an interactive dialog for sign-in
 Connect-AzureRmAccount
 ```
@@ -95,7 +95,7 @@ You can update your Azure PowerShell installation by running
 [Update-Module](/powershell/module/powershellget/update-module). This command does **not** uninstall
 earlier versions.
 
-```powershell-interactive
+```powershell
 Update-Module -Name AzureRM
 ```
 
@@ -107,8 +107,9 @@ If you want to remove older versions of Azure PowerShell from your system, see
 It's possible to install more than one version of Azure PowerShell. To check if you have multiple
 versions of Azure PowerShell installed, use the following command:
 
-```azurepowershell-interactive
-Get-InstalledModule -Name AzureRM -AllVersions | select Name,Version
+```powershell
+Get-InstalledModule -Name AzureRM -AllVersions |
+  Select-Object -Property Name, Version
 ```
 
 To remove a version of Azure PowerShell, see
@@ -118,15 +119,15 @@ You might need more than one version if you work with on-premises Azure Stack re
 older version of Windows, or use the Azure classic deployment model. To install an older version,
 provide the `-RequiredVersion` argument when installing.
 
-```azurepowershell-interactive
+```powershell
 # Install version 2.3.0 of Azure PowerShell
 Install-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
 When loading the Azure PowerShell module the latest version is loaded by default. To load a
-different version, provide the `-RequiredVersion` argument.
+different version, specify the `RequiredVersion` parameter.
 
-```azurepowershell-interactive
+```powershell
 # Load version 2.3.0 of Azure PowerShell
 Import-Module -Name AzureRM -RequiredVersion 2.3.0
 ```

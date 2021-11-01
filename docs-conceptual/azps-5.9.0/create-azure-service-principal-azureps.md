@@ -4,13 +4,20 @@ description: Learn how to create and use service principals with Azure PowerShel
 ms.devlang: powershell
 ms.topic: conceptual
 ms.service: azure-powershell
-ms.date: 06/17/2020
+ms.date: 09/27/2021
 ms.custom: devx-track-azurepowershell
 ---
 # Create an Azure service principal with Azure PowerShell
 
 Automated tools that use Azure services should always have restricted permissions. Instead of having
 applications sign in as a fully privileged user, Azure offers service principals.
+
+> [!IMPORTANT]
+> Due to a breaking change with Azure Active Directory, you must upgrade to Az PowerShell 6.x or
+> create an application first using `New-AzAdApplication` with a verified domain of the organization
+> or its subdomain for the `IdentifierUri` parameter. Specify the newly created application with the
+> `ApplicationId` parameter of `New-AzAdServicePrincipal`. For more information, see
+> [Troubleshooting the Azure Az PowerShell module](/powershell/azure/troubleshooting#service-principal-identifieruri-verified-domain-error).
 
 An Azure service principal is an identity created for use with applications, hosted services, and
 automated tools to access Azure resources. This access is restricted by the roles assigned to the
@@ -22,9 +29,18 @@ This article shows you the steps for creating, getting information about, and re
 principal with Azure PowerShell.
 
 > [!WARNING]
-> When you create a service principal using the [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) command, the output includes credentials that you must protect. As an alternative, consider using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid the need to use credentials.
+> When you create a service principal using the
+> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) command, the
+> output includes credentials that you must protect. As an alternative, consider using
+> [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid
+> the need to use credentials.
 >
-> By default, [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the service principal at the subscription scope. To reduce your risk of a compromised service principal, assign a more specific role and narrow the scope to a resource or resource group. See [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps) for more information.
+> By default, [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal)
+> assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the
+> service principal at the subscription scope. To reduce your risk of a compromised service
+> principal, assign a more specific role and narrow the scope to a resource or resource group. See
+> [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps) for more
+> information.
 
 ## Create a service principal
 
@@ -62,12 +78,12 @@ principal. Its value _won't_ be displayed in the console output. If you lose the
 
 The following code will allow you to export the secret:
 
-```azurepowershell-interactive
+```powershell-interactive
 $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sp.Secret)
 $UnsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
 ```
 
-For user-supplied passwords, the `-PasswordCredential` argument takes
+For user-supplied passwords, the `PasswordCredential` parameter takes
 `Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential` objects. These objects must have a
 valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make
 sure you follow the
@@ -99,7 +115,7 @@ either of which can be used for sign in with the service principal.
 > principal. For information on managing role assignments, see
 > [Manage service principal roles](#manage-service-principal-roles).
 
-Service principals using certificate-based authentication are created with the `-CertValue`
+Service principals using certificate-based authentication are created with the `CertValue`
 parameter. This parameter takes a base64-encoded ASCII string of the public certificate. This is
 represented by a PEM file, or a text-encoded CRT or CER. Binary encodings of the public certificate
 aren't supported. These instructions assume that you already have a certificate available.
@@ -109,13 +125,13 @@ $cert = <public certificate as base64-encoded string>
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -CertValue $cert
 ```
 
-You can also use the `-KeyCredential` parameter, which takes `PSADKeyCredential` objects. These
+You can also use the `KeyCredential` parameter, which takes `PSADKeyCredential` objects. These
 objects must have a valid `StartDate`, `EndDate`, and have the `CertValue` member set to a
 base64-encoded ASCII string of the public certificate.
 
 ```azurepowershell-interactive
 $cert = <public certificate as base64-encoded string>
-$credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential -Property @{StartDate=Get-Date; EndDate=Get-Date -Year 2024; KeyId=New-Guid; CertValue=$cert}
+$credentials = New-Object -TypeName Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential -Property @{StartDate=Get-Date; EndDate=Get-Date -Year 2024; KeyId=New-Guid; CertValue=$cert}
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -KeyCredential $credentials
 ```
 
@@ -140,10 +156,10 @@ this command returns _all_ service principals in a tenant. For large organizatio
 a long time to return results. Instead, using one of the optional server-side filtering arguments is
 recommended:
 
-- `-DisplayNameBeginsWith` requests service principals that have a _prefix_ that match the provided
-  value. The display name of a service principal is the value set with `-DisplayName` during
+- `DisplayNameBeginsWith` requests service principals that have a _prefix_ that match the provided
+  value. The display name of a service principal is the value set with `DisplayName` during
   creation.
-- `-DisplayName` requests an _exact match_ of a service principal name.
+- `DisplayName` requests an _exact match_ of a service principal name.
 
 ## Manage service principal roles
 
@@ -207,7 +223,7 @@ Connect-AzAccount -ServicePrincipal -Tenant <TenantId> -CertificateThumbprint <T
 ```
 
 For instructions on importing a certificate into a credential store accessible by PowerShell, see
-[Sign in with Azure PowerShell](authenticate-azureps.md#sp-signin)
+[Sign in with Azure PowerShell](authenticate-azureps.md#sign-in-with-a-service-principal)
 
 ## Reset credentials
 

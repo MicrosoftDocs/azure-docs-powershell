@@ -4,7 +4,7 @@ description: This is a history of changes made to Azure PowerShell in the latest
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 08/28/2018
+ms.date: 10/05/2021
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -183,7 +183,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Support Get-AzureRmCognitiveServicesAccountSkus without an existing account.
 
 #### AzureRM.Compute
-* Fix Get-AzureRmVM -ResourceGroupName <rg> to return more than 50 results if needed
+* Fix Get-AzureRmVM -ResourceGroupName `<rg>` to return more than 50 results if needed
 * Added an example of the 'SimpleParameterSet' to New-AzureRmVmss cmdlet help.
 * Fixed a typo in the Azure Disk Encryption progress message
 
