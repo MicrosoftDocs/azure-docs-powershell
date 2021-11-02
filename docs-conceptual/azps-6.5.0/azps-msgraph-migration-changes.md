@@ -1,19 +1,21 @@
 ---
-title: Azure AD to Microsoft Graph migration breaking changes in Azure PowerShell
-description: This migration guide contains a list of Azure PowerShell breaking changes for the Azure AD to Microsoft Graph migration in the Az version 7.0.0 release.
+title: Azure AD to Microsoft Graph migration changes in Azure PowerShell
+description: This migration guide contains a list of Azure PowerShell changes for the Azure AD to Microsoft Graph migration in Az.Resources 5.0.0-preview.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/01/2021
+ms.date: 11/02/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
-# Azure AD to Microsoft Graph migration breaking changes in Azure PowerShell
+# Azure AD to Microsoft Graph migration changes in Azure PowerShell
 
 The `Az.Resources` PowerShell module version 5.0.0-preview of Azure PowerShell introduces changes to
 the identity-related cmdlets. The cmdlets that rely on Azure AD Graph are transitioning to Microsoft
 Graph. This change is occurring to ensure a smooth transition in light of the
 [announcement of the retirement of Azure AD Graph](/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
+For more information, see
+[Azure AD to Microsoft Graph migration for Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools/azure-ad-to-microsoft-graph-migration-for-azure-command-line/ba-p/2836666).
 
 The following example installs the latest preview version of the `Az.Resources` Azure PowerShell
 module.
@@ -22,7 +24,7 @@ module.
 Install-Module -Name Az.Resources -Repository PSGallery -Scope CurrentUser -AllowPrerelease
 ```
 
-See the following information for a list of the changes.
+See the following information for a list of changes.
 
 ## Application
 
@@ -270,6 +272,3 @@ See the following information for a list of the changes.
 - Input type of parameter `GroupObject` has been changed from
   `Microsoft.Azure.Commands.ActiveDirectory.PSADGroup` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphGroup`
-
-For more information, see
-[Azure AD to Microsoft Graph migration for Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools/azure-ad-to-microsoft-graph-migration-for-azure-command-line/ba-p/2836666).
