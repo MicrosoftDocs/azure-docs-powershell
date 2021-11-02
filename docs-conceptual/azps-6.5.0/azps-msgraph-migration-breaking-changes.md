@@ -10,13 +10,19 @@ ms.service: azure-powershell
 
 # Azure AD to Microsoft Graph migration breaking changes in Azure PowerShell
 
-With the release of Az PowerShell module version 7.x, the identity-related cmdlets that rely on
-Azure AD Graph are transitioning to Microsoft Graph. This breaking change is occurring because of
-the [announcement of the retirement of Azure AD Graph](/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
-Microsoft Graph provides all the functionality of Azure AD Graph along with new functionality.
+The `Az.Resources` PowerShell module version 5.0.0-preview of Azure PowerShell introduces changes to
+the identity-related cmdlets. The cmdlets that rely on Azure AD Graph are transitioning to Microsoft
+Graph. This change is occurring to ensure a smooth transition in light of the
+[announcement of the retirement of Azure AD Graph](/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
 
-The following information contains a detailed list of the breaking changes for the cmdlets in the Az
-PowerShell module.
+The following example installs the latest preview version of the `Az.Resources` Azure PowerShell
+module.
+
+```azurepowershell
+Install-Module -Name Az.Resources -Repository PSGallery -Scope CurrentUser -AllowPrerelease
+```
+
+See the following information for a list of the changes.
 
 ## Application
 
@@ -264,31 +270,6 @@ PowerShell module.
 - Input type of parameter `GroupObject` has been changed from
   `Microsoft.Azure.Commands.ActiveDirectory.PSADGroup` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphGroup`
-
-## Differences between output from AAD and MSGraph
-
-### PSADApplication vs IMicrosoftGraphApplication
-
-- ObjectId -> Id
-
-- $app.HomePage -> $app.Web.HomepageUrl
-
-- ApplicationId -> AppId
-
-- AvailableToOtherTenants ->  SignInAudience
-
-  - SignInAudience now have 4 values: 'AzureADMyOrg', 'AzureADMultipleOrgs',
-    'AzureADandPersonalMicrosoftAccount', 'PersonalMicrosoftAccount'
-
-  - AvailableToOtherTenants:$true -> AzureADMultipleOrgs'AD
-
-  - AvailableToOtherTenants:$false or $null -> AzureAdMyOrg
-
-- ApiPermissions -> RequiredResourceAccess
-
-- $app.ReplyUrls -> $app.Web.RedirectUris
-
-- ObjectType -> OdataType
 
 For more information, see
 [Azure AD to Microsoft Graph migration for Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools/azure-ad-to-microsoft-graph-migration-for-azure-command-line/ba-p/2836666).
