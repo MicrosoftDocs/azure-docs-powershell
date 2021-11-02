@@ -32,8 +32,8 @@ PowerShell module.
 - Output type has been changed from `Microsoft.Azure.Commands.ActiveDirectory.PSADApplication` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication`
 
-- Parameter `Password` has been removed, customized password is not supported anymore, server will
-  assign secret text when creation
+- Parameter `Password` has been removed, customized password is not supported anymore, server
+  assigns secret text when creation
 
 ### Remove-AzAdApplication
 
@@ -50,9 +50,9 @@ PowerShell module.
 - Output type has been changed from `Microsoft.Azure.Commands.ActiveDirectory.PSADApplication` to
   `System.Boolean`
 
-### Change of Application
+### Changes to Application Object
 
-- Object `ObjectId` has been replaced by `Id`
+- `ObjectId` has been replaced by `Id`
 
 - `HomePage` has been replaced by `HomepageUrl` in the `Web` element
 
@@ -144,11 +144,11 @@ PowerShell module.
 - Output type has been changed from `Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal`
   to `System.Boolean`
 
-### Changes of Service Principal
+### Changes to Service Principal Object
 
 - `ApplicationId` has been replaced by `AppId`
 
-- `ObjectType` has been replaced by "OdataType`
+- `ObjectType` has been replaced by `OdataType`
 
 ## ServicePrincipal Credential
 
@@ -210,11 +210,11 @@ PowerShell module.
 - Output type has been changed from `Microsoft.Azure.Commands.ActiveDirectory.PSADUser` to
   `System.Boolean`
 
-### Changes of User Object
+### Changes to User Object
 
-- `ObjectType` has been replaced by "OdataType`
+- `ObjectType` has been replaced by `OdataType`
 
-- `ImmutableId` has been replaced by "OnpremisesImmutableId`
+- `ImmutableId` has been replaced by `OnpremisesImmutableId`
 
 ## Group
 
@@ -238,7 +238,7 @@ PowerShell module.
 
 ### Changes of Group Object
 
-- `ObjectType` has been replaced by "OdataType`
+- `ObjectType` has been replaced by `OdataType`
 
 ## Group member
 
