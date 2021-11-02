@@ -3,7 +3,7 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/12/2021
+ms.date: 11/02/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -32,12 +32,12 @@ ms.service: azure-powershell
     - Remove-AzVmGalleryApplication
     - Remove-AzVmssGalleryApplication
 * Added support for proxy and debug settings for VM Extension for SAP (AEM)
-* Updated New-AzGalleryImageVersion to take in the 'Encryption' property correctly from '-TargetRegion' parameter. 
+* Updated New-AzGalleryImageVersion to take in the 'Encryption' property correctly from '-TargetRegion' parameter.
 * Updated Set-AzVmBootDiagnostic to default to managed storage account if not provided.
 * Edited New-AzVmss defaulting behavior when 'OrchestrationMode' is set to Flexible.
     - Removed NAT Pool.
     - Removed UpgradePolicy. Throws an error if provided.
-    - SinglePlacementGroup must be false. Throws an error if true. 
+    - SinglePlacementGroup must be false. Throws an error if true.
     - Networking Profile's API version is 2020-11-01 or later.
     - Networking Profile IP Configurations Primary property is set to true.
 
@@ -54,7 +54,7 @@ ms.service: azure-powershell
 * Upgraded api version to 2021-07-12.
 
 #### Az.EventHub
-* Added support for Premium sku and namesapce and optional switch parameter 'DisableLocalAuth' to 'New-AzEventHubNamespace' and 'Set-AzEventHubNamespace' 
+* Added support for Premium sku and namesapce and optional switch parameter 'DisableLocalAuth' to 'New-AzEventHubNamespace' and 'Set-AzEventHubNamespace'
 
 #### Az.Functions
 * Set site config netFrameworkVersion for Windows V4 apps only
@@ -97,7 +97,7 @@ ms.service: azure-powershell
 * Updated Security .NET SDK package reference to version 3.0.0
 
 #### Az.ServiceBus
-* Added support for ZoneRedundant and optional switch parameter 'DisableLocalAuth' to 'New-AzServiceBusNamespace' and 'Set-AzServiceBusNamespace' 
+* Added support for ZoneRedundant and optional switch parameter 'DisableLocalAuth' to 'New-AzServiceBusNamespace' and 'Set-AzServiceBusNamespace'
 
 #### Az.SignalR
 * Added Web PubSub cmdlets
