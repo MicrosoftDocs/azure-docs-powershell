@@ -13,7 +13,7 @@ ms.service: azure-powershell
 The `Az.Resources` PowerShell module version 5.0.0-preview of Azure PowerShell introduces changes to
 the identity-related cmdlets. The cmdlets that rely on Azure AD Graph are transitioning to Microsoft
 Graph. This change is occurring to ensure a smooth transition in light of the
-[announcement of the retirement of Azure AD Graph](/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
+[announcement of the retirement of Azure AD Graph](https://azure.microsoft.com/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
 For more information, see
 [Azure AD to Microsoft Graph migration for Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools/azure-ad-to-microsoft-graph-migration-for-azure-command-line/ba-p/2836666).
 
