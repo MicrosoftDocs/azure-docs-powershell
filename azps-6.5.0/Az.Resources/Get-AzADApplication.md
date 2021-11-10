@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists existing azure active directory applications.
 
+[!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)
