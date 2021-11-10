@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates an existing active directory user.
 
+[!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
+
 ## SYNTAX
 
 ### UPNOrObjectIdParameterSet (Default)

@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds a credential to an existing application.
 
+[!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
+
 ## SYNTAX
 
 ### ApplicationObjectIdWithPasswordParameterSet (Default)

@@ -13,6 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Filters active directory service principals.
 
+[!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)

@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes a user from an AD group.
 
+[!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
+
 ## SYNTAX
 
 ### ExplicitParameterSet (Default)
