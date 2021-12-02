@@ -4,7 +4,7 @@ description: Learn how to automatically migrate PowerShell scripts from AzureRM 
 author: mikefrobbins
 ms.service: azure-powershell
 ms.topic: quickstart
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, mode-api
 ms.author: mirobb
 ms.date: 10/12/2021
 ---
