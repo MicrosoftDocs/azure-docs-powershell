@@ -3,7 +3,7 @@ title: Persist user credentials across PowerShell sessions
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018 
+ms.date: 10/05/2021
 ms.custom: devx-track-azurepowershell
 ---
 # Persist user credentials across PowerShell sessions
@@ -40,12 +40,14 @@ a new PowerShell session.
 ## Automatically save the context for the next sign-in
 
 In versions 6.3.0 and later, Azure PowerShell retains your context information automatically between
-sessions. To set PowerShell to forget your context and credentials, use `Disable-AzureRmContextAutoSave`. You'll need to sign in to Azure every time you open a PowerShell session.
+sessions. To set PowerShell to forget your context and credentials, use
+`Disable-AzureRmContextAutoSave`. You'll need to sign in to Azure every time you open a PowerShell
+session.
 
 To allow Azure PowerShell to remember your context after the PowerShell session is closed, use
-`Enable-AzureRmContextAutosave`. Context and credential information are automatically saved in
-a special hidden folder in your user directory (`%AppData%\Roaming\Windows Azure PowerShell`).
-Each new PowerShell session targets the context used in your last session.
+`Enable-AzureRmContextAutosave`. Context and credential information are automatically saved in a
+special hidden folder in your user directory (`%AppData%\Roaming\Windows Azure PowerShell`). Each
+new PowerShell session targets the context used in your last session.
 
 The cmdlets that allow you to manage Azure contexts also allow you fine grained control. If you
 want changes to apply only to the current PowerShell session (`Process` scope) or every PowerShell
@@ -64,8 +66,8 @@ two different ways:
   Most AzureRM cmdlets allow you to pass the context as a parameter to the cmdlet. You can pass a
   context to a background job as shown in the following example:
 
-  ```powershell-interactive
-  PS C:\> $job = Start-Job { param ($ctx) New-AzureRmVm -AzureRmContext $ctx [... Additional parameters ...]} -ArgumentList (Get-AzureRmContext)
+  ```powershell
+ $job = Start-Job { param ($ctx) New-AzureRmVm -AzureRmContext $ctx [... Additional parameters ...]} -ArgumentList (Get-AzureRmContext)
   ```
 
 - Using the default context with Autosave enabled
@@ -73,25 +75,26 @@ two different ways:
   If you have enabled **Context Autosave**, background jobs automatically use the default saved
   context.
 
-  ```powershell-interactive
-  PS C:\> $job = Start-Job { New-AzureRmVm [... Additional parameters ...]}
+  ```powershell
+  $job = Start-Job { New-AzureRmVm [... Additional parameters ...]}
   ```
 
 When you need to know the outcome of the background task, use `Get-Job` to check the job status and
 `Wait-Job` to wait for the Job to complete. Use `Receive-Job` to capture or display the output of
-the background job. For more information, see [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+the background job. For more information, see
+[about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
 ## Creating, selecting, renaming, and removing contexts
 
-To create a context, you must be signed in to Azure. The `Connect-AzureRmAccount` cmdlet (or its alias,
-`Login-AzureRmAccount`) sets the default context used by Azure PowerShell cmdlets, and
-allows you to access any tenants or subscriptions allowed by your credentials.
+To create a context, you must be signed in to Azure. The `Connect-AzureRmAccount` cmdlet (or its
+alias, `Login-AzureRmAccount`) sets the default context used by Azure PowerShell cmdlets, and allows
+you to access any tenants or subscriptions allowed by your credentials.
 
 To add a new context after sign-in, use `Set-AzureRmContext` (or its alias,
 `Select-AzureRmSubscription`).
 
-```azurepowershell-interactive
-PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso1"
+```azurepowershell
+Set-AzureRMContext -Subscription 'Contoso Subscription 1' -Name 'Contoso1'
 ```
 
 The previous example adds a new context targeting 'Contoso Subscription 1' using your current
@@ -100,8 +103,8 @@ default name, using the account ID and subscription ID is used.
 
 To rename an existing context, use the `Rename-AzureRmContext` cmdlet. For example:
 
-```azurepowershell-interactive
-PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
+```azurepowershell
+Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]' 'Contoso2'
 ```
 
 This example renames the context with automatic name `[user1@contoso.org; 123456-7890-1234-564321]`
@@ -110,8 +113,8 @@ to quickly select the context.
 
 Finally, to remove a context, use the `Remove-AzureRmContext` cmdlet.  For example:
 
-```azurepowershell-interactive
-PS C:\> Remove-AzureRmContext Contoso2
+```azurepowershell
+Remove-AzureRmContext Contoso2
 ```
 
 Forgets the context that was named 'Contoso2'. You can recreate this context using
@@ -120,12 +123,12 @@ Forgets the context that was named 'Contoso2'. You can recreate this context usi
 ## Removing credentials
 
 You can remove all credentials and associated contexts for a user or service principal using
-`Disconnect-AzureRmAccount` (also known as `Logout-AzureRmAccount`). When executed without parameters,
-the `Disconnect-AzureRmAccount` cmdlet removes all credentials and contexts associated with the User or
-Service Principal in the current context. You may pass in a Username, Service Principal Name, or
-context to target a particular principal.
+`Disconnect-AzureRmAccount` (also known as `Logout-AzureRmAccount`). When executed without
+parameters, the `Disconnect-AzureRmAccount` cmdlet removes all credentials and contexts associated
+with the User or Service Principal in the current context. You may pass in a Username, Service
+Principal Name, or context to target a particular principal.
 
-```azurepowershell-interactive
+```azurepowershell
 Disconnect-AzureRmAccount user1@contoso.org
 ```
 
@@ -134,14 +137,14 @@ Disconnect-AzureRmAccount user1@contoso.org
 Occasionally, you may want to select, change, or remove a context in a PowerShell session without
 impacting other sessions. To change the default behavior of context cmdlets, use the `Scope`
 parameter. The `Process` scope overrides the default behavior by making it apply only for the
-current session. Conversely `CurrentUser` scope changes the context in all sessions, instead of
-just the current session.
+current session. Conversely `CurrentUser` scope changes the context in all sessions, instead of just
+the current session.
 
 As an example, to change the default context in the current PowerShell session without impacting
 other windows, or the context used the next time a session is opened, use:
 
-```azurepowershell-interactive
-PS C:\> Select-AzureRmContext Contoso1 -Scope Process
+```azurepowershell
+Select-AzureRmContext Contoso1 -Scope Process
 ```
 
 ## How the context autosave setting is remembered
@@ -150,11 +153,11 @@ The context AutoSave setting is saved to the user Azure PowerShell directory
 (`%AppData%\Roaming\Windows Azure PowerShell`). Some kinds of computer accounts may not have access
 to this directory. For such scenarios, you can use the environment variable
 
-```azurepowershell-interactive
-$env:AzureRmContextAutoSave="true" | "false"
+```azurepowershell
+$env:AzureRmContextAutoSave=$true
 ```
 
-When set to 'true', the context is automatically saved. If set to 'false', the context isn't saved.
+When set to `$true`, the context is automatically saved. If set to `$false`, the context isn't saved.
 
 ## Changes to the AzureRM.Profile module
 
