@@ -1,6 +1,6 @@
 ---
 title: Azure AD to Microsoft Graph migration changes in Azure PowerShell
-description: This migration guide contains a list of Azure PowerShell changes for the Azure AD to Microsoft Graph migration in Az.Resources 5.0.0-preview.
+description: This migration guide contains a list of Azure PowerShell changes for the Azure AD to Microsoft Graph migration in Az.Resources 5.1.0.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/02/2021
@@ -10,7 +10,7 @@ ms.service: azure-powershell
 
 # Azure AD to Microsoft Graph migration changes in Azure PowerShell
 
-The `Az.Resources` PowerShell module version 5.0.0-preview of Azure PowerShell introduces changes to
+The `Az.Resources` PowerShell module version 5.1.0 of Azure PowerShell introduces changes to
 the identity-related cmdlets. The cmdlets that rely on Azure AD Graph are transitioning to Microsoft
 Graph. This change is occurring to ensure a smooth transition in light of the
 [announcement of the retirement of Azure AD Graph](https://azure.microsoft.com/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
@@ -111,6 +111,14 @@ See the following information for a list of changes.
   `Microsoft.Azure.Commands.ActiveDirectory.PSADApplication` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication`
 
+### Changes to App Credential Object
+
+#### Password Credential
+- `Password` has been replaced by `SecretText`
+
+#### Key Credential
+- `CertValue` has been Removed
+
 ## ServicePrincipal
 
 ### Get-AzAdServicePrincipal
@@ -132,6 +140,8 @@ See the following information for a list of changes.
 
 - Role `contributor` is not assigned as default when parameter `-Role` is not provided due to
   security consideration.
+
+- Parameter `SkipAssignment` has been removed.
 
 ### Remove-AzAdServicePrincipal
 
@@ -186,6 +196,14 @@ See the following information for a list of changes.
   `Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphServicePrincipal`
 
+### Changes to ServicePrincipal Credential Object
+
+#### Password Credential
+- `Password` has been replaced by `SecretText`
+
+#### Key Credential
+- `CertValue` has been Removed
+
 ## User
 
 ### Get-AzAdUser
@@ -199,9 +217,6 @@ See the following information for a list of changes.
 
 - Output type has been changed from `Microsoft.Azure.Commands.ActiveDirectory.PSADUser` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphUser`
-
-- Parameter `ImmutableId` is not supported and has been removed (It is a bug in current preview
-  version. It should be added and equivalent to `OnPremisesImmutableId`)
 
 ### Remove-AzAdUser
 
