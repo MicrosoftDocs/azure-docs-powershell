@@ -218,7 +218,7 @@ All properties remain the same, so there is no change to the usage.
 
 
 ### `Get-AzHDInsightProperties`
-The generic type for output 'property VmSizes' has been changed from 'System.Collections.Generic.IDictionary2[System.String,Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightVmSizesCapability]' to 'System.Collections.Generic.IList1[System.String]'.
+The generic type for output 'property VmSizes' has been changed from `System.Collections.Generic.IDictionary2[System.String,Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightVmSizesCapability]` to `System.Collections.Generic.IList1[System.String]`.
 
 #### Before
 ```powershell
@@ -295,7 +295,7 @@ PS C:\> New-AzManagedServicesDefinition -Name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 ### `Get-AzLog`
 
-The type of the properties 'EventName', 'Category', 'ResourceProviderName', 'OperationName', 'Status', 'SubStatus has changed from 'Microsoft.Azure.Management.Monitor.Models.LocalizableString' to 'System.String'
+The type of the properties 'EventName', 'Category', 'ResourceProviderName', 'OperationName', 'Status', 'SubStatus has changed from `Microsoft.Azure.Management.Monitor.Models.LocalizableString` to `System.String`
 
 #### Before
 ```powershell
@@ -320,7 +320,7 @@ PS C:\> $subStatus = $log.SubStatus
 
 
 ### `Get-AzMetric,Get-AzMetricDefinition`
-The type of property 'Unit' has changed to 'System.String'
+The type of property 'Unit' has changed to `System.String`
 
 ```
 There is no change to the usage.
@@ -329,7 +329,7 @@ There is no change to the usage.
 
 
 ### `New-AzMetricAlertRuleV2Criteria`
-The type of property 'TimeAggregation' has changed to System.String'
+The type of property 'TimeAggregation' has changed to `System.String`
 
 ```
 There is no change to the usage.
