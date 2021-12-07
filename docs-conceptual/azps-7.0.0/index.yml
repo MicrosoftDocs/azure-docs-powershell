@@ -92,6 +92,8 @@ landingContent:
             url: migrate-az-5.0.0.md
           - text: Breaking changes in Az 6.0.0
             url: migrate-az-6.0.0.md
+          - text: Breaking changes in Az 7.0.0
+            url: migrate-az-7.0.0.md
   - title: Other Azure PowerShell modules
     linkLists:
       - linkListType: overview
