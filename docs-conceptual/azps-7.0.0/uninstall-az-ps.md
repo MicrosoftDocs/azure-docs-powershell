@@ -1,7 +1,7 @@
 ---
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
-ms.date: 11/02/2021
+ms.date: 12/07/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
