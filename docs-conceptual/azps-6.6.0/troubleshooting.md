@@ -28,6 +28,14 @@ To enable debug logging for an entire PowerShell session, you set the value of t
 $DebugPreference = 'Continue'
 ```
 
+## Permission issues with AzAD cmdlets
+
+[Microsoft Graph permissions reference](https://docs.microsoft.com/graph/permissions-reference)
+
+## Microsoft Graph query parameters
+
+AzAd cmdlets under Az.Resources now support [query parameters](https://docs.microsoft.com/graph/query-parameters) and [search query parameters](https://docs.microsoft.com/graph/search-query-parameter). For details about the syntax, see the previously referenced links.
+
 ## Command found but could not be loaded
 
 The following message is returned by PowerShell when you attempt to run any of the Az PowerShell commands.
