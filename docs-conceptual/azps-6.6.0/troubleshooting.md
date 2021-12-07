@@ -80,6 +80,15 @@ to version 4.1.0 or later to continue using `New-AzADServicePrincipal` or `New-A
 
 You can also upgrade to Az PowerShell module version 6.0 or greater.
 
+## Permission issues with AzAD cmdlets
+
+[Microsoft Graph permissions reference](https://docs.microsoft.com/en-us/graph/permissions-reference)
+
+## Microsoft Graph query parameters
+
+AzAd cmdlets under Az.Resources now supports [query parameters](https://docs.microsoft.com/en-us/graph/query-parameters) and [search query parameters](https://docs.microsoft.com/en-us/graph/search-query-parameter), please check these links for detail syntax.
+
+
 ### Timeline
 
 The requirement will be in effect starting 10/15/2021.
