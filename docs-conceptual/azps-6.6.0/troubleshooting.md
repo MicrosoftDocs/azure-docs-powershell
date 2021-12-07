@@ -28,6 +28,14 @@ To enable debug logging for an entire PowerShell session, you set the value of t
 $DebugPreference = 'Continue'
 ```
 
+## Permission issues with AzAD cmdlets
+
+[Microsoft Graph permissions reference](https://docs.microsoft.com/graph/permissions-reference)
+
+## Microsoft Graph query parameters
+
+AzAd cmdlets under Az.Resources now support [query parameters](https://docs.microsoft.com/graph/query-parameters) and [search query parameters](https://docs.microsoft.com/graph/search-query-parameter). For details about the syntax, see the previously referenced links.
+
 ## Command found but could not be loaded
 
 The following message is returned by PowerShell when you attempt to run any of the Az PowerShell commands.
@@ -79,15 +87,6 @@ you must upgrade the [Az.Resources](https://www.powershellgallery.com/packages/A
 to version 4.1.0 or later to continue using `New-AzADServicePrincipal` or `New-AzADApplication` cmdlets.
 
 You can also upgrade to Az PowerShell module version 6.0 or greater.
-
-## Permission issues with AzAD cmdlets
-
-[Microsoft Graph permissions reference](https://docs.microsoft.com/en-us/graph/permissions-reference)
-
-## Microsoft Graph query parameters
-
-AzAd cmdlets under Az.Resources now supports [query parameters](https://docs.microsoft.com/en-us/graph/query-parameters) and [search query parameters](https://docs.microsoft.com/en-us/graph/search-query-parameter), please check these links for detail syntax.
-
 
 ### Timeline
 
