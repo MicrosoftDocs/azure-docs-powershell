@@ -7,7 +7,7 @@ manager: femila
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: femila
-ms.date: 09/23/2021
+ms.date: 12/7/2021
 ---
 # Azure Stack Hub Module 2.2.0
 
