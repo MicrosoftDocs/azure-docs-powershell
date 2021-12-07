@@ -19,6 +19,8 @@
       href: azureps-in-docker.md
 - name: Uninstall
   href: uninstall-az-ps.md
+- name: Azure AD to Microsoft Graph Migration Guide
+  href: azps-msgraph-migration-changes.md
 - name: Migrate from AzureRM
   items:
     - name: Migration steps
@@ -115,8 +117,8 @@
       href: migrate-az-5.0.0.md
     - name: Az 6.0.0 breaking changes
       href: migrate-az-6.0.0.md
-    - name: Az.Resources 5.0.0-preview changes
-      href: azps-msgraph-migration-changes.md
+    - name: Az 7.0.0 breaking changes
+      href: migrate-az-7.0.0.md
 - name: Troubleshooting
   href: troubleshooting.md
 - name: Frequently Asked Questions

@@ -4,7 +4,7 @@ description: Learn how to create and use service principals with Azure PowerShel
 ms.devlang: powershell
 ms.topic: conceptual
 ms.service: azure-powershell
-ms.date: 11/02/2021
+ms.date: 12/07/2021
 ms.custom: devx-track-azurepowershell
 ---
 # Create an Azure service principal with Azure PowerShell
@@ -27,19 +27,19 @@ principal with Azure PowerShell.
 > output includes credentials that you must protect. As an alternative, consider using
 > [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid
 > the need to use credentials.
->
-> By default, [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal)
-> assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the
-> service principal at the subscription scope. To reduce your risk of a compromised service
-> principal, assign a more specific role and narrow the scope to a resource or resource group. See
-> [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps) for more
-> information.
 
 ## Create a service principal
 
 Create a service principal with the
 [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) cmdlet. When
 creating a service principal, you choose the type of sign-in authentication it uses.
+
+> [!IMPORTANT]
+> Beginning with Az PowerShell module version 7.x,
+> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) no longer
+> assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the
+> service principal by default. To assign a specific role to a service principal, see
+> [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps).
 
 > [!NOTE]
 > If your account doesn't have permission to create a service principal, `New-AzADServicePrincipal`
