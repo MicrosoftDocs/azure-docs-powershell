@@ -39,8 +39,8 @@ modules.
 
 |        Az        | PowerShell <br/> 7.1.3 | PowerShell <br/> >= 7.0.6 | PowerShell <br/> <= 7.0.5 | Windows PowerShell <br/> 5.1 |
 | :--------------: | :--------------------: | :-----------------------: | :-----------------------: | :--------------------------: |
+|      Az 7.x      |       Supported        |         Supported         |       Not supported       |          Supported           |
 |      Az 6.x      |       Supported        |         Supported         |       Not supported       |          Supported           |
-|      Az 5.9      |       Supported        |         Supported         |         Supported         |          Supported           |
 | AzureRM (6.13.2) |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
 |  Azure (5.3.1)   |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
 
