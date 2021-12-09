@@ -3,7 +3,7 @@ title: Troubleshooting the Azure Az PowerShell module
 description: Troubleshooting the Azure Az PowerShell module.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/02/2021
+ms.date: 12/07/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -27,6 +27,16 @@ To enable debug logging for an entire PowerShell session, you set the value of t
 ```azurepowershell-interactive
 $DebugPreference = 'Continue'
 ```
+
+## Permission issues with AzAD cmdlets
+
+[Microsoft Graph permissions reference](/graph/permissions-reference)
+
+## Microsoft Graph query parameters
+
+AzAd cmdlets under Az.Resources now support [query parameters](/graph/query-parameters) and
+[search query parameters](/graph/search-query-parameter). For details about the syntax, see the
+previously referenced links.
 
 ## Command found but could not be loaded
 

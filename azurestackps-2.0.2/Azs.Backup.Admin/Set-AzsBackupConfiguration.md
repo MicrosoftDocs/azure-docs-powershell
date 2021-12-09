@@ -56,7 +56,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Backup
@@ -73,7 +72,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -BackupFrequencyInHours
@@ -89,7 +87,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -BackupRetentionPeriodInDays
@@ -105,7 +102,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DefaultProfile
@@ -121,7 +117,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -EncryptionCertPath
@@ -137,7 +132,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -IsBackupSchedulerEnabled
@@ -153,7 +147,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -169,7 +162,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -NoWait
@@ -185,7 +177,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Password
@@ -201,7 +192,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Path
@@ -217,7 +207,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -ResourceGroupName
@@ -233,7 +222,6 @@ Position: Named
 Default value: "system.$((Get-AzLocation)[0].Location)"
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -250,7 +238,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Tag
@@ -266,7 +253,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -UserName
@@ -282,7 +268,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Confirm
@@ -298,7 +283,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -WhatIf
@@ -315,7 +299,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -329,14 +312,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IBackupLocation
 
-
-
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-BACKUP <IBackupLocation>: Information about the backup location.
+
+BACKUP \<IBackupLocation>: Information about the backup location.
   - `[Location <String>]`: Location of the resource.
   - `[Tag <IResourceTags>]`: List of key value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

@@ -52,7 +52,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DefaultProfile
@@ -68,7 +67,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -InputObject
@@ -85,7 +83,6 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-
 ```
 
 ### -Location
@@ -101,7 +98,6 @@ Position: Named
 Default value: (Get-AzLocation)[0].Location
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -NoWait
@@ -117,7 +113,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -ResourceGroupName
@@ -133,7 +128,6 @@ Position: Named
 Default value: "system.$((Get-AzLocation)[0].Location)"
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -SubscriptionId
@@ -150,7 +144,6 @@ Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -Confirm
@@ -166,7 +159,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -WhatIf
@@ -183,7 +175,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### CommonParameters
@@ -197,14 +188,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.PowerShell.Cmdlets.BackupAdmin.Models.Api20180901.IBackup
 
-
-
 ## NOTES
 
+ALIASES
+
 COMPLEX PARAMETER PROPERTIES
+
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
+
+INPUTOBJECT \<IBackupAdminIdentity>: Identity Parameter
   - `[Backup <String>]`: Name of the backup.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the backup location.
