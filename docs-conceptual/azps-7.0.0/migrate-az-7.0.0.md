@@ -409,7 +409,7 @@ Get-AzRecoveryServicesBackupJob -BackupManagementType MAB -VaultId $vault.ID
 ## Az.Resources
 
 ### `AzAD cmdlets`
-Please refer to the [migration guide](https://docs.microsoft.com/powershell/azure/azps-msgraph-migration-changes) of the Active Directory cmdlets.
+Please refer to the [migration guide](/powershell/azure/azps-msgraph-migration-changes) of the Active Directory cmdlets.
 
 ### `PolicyAssignment cmdlets`
 The type of property 'Identity' of type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyAssignment' has changed from 'System.Management.Automation.PSObject' to 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyIdentity'.
