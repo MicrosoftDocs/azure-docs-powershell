@@ -1,9 +1,0 @@
-- name: Azure Stack PowerShell
-  href: overview.md
-  items:
-  - name: Install
-    href: /azure/azure-stack/azure-stack-powershell-install?toc=%2fpowershell%2fazure%2fazure-stack%2ftoc.json
-  - name: Connect - Cloud Operator
-    href: /azure/azure-stack/azure-stack-powershell-configure-admin
-  - name: Connect - User
-    href: /azure/azure-stack/user/azure-stack-powershell-configure-user
