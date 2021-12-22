@@ -7,9 +7,10 @@
   - name: Introducing the Az PowerShell module
     href: new-azureps-module-az.md
     displayName: intro, introduction, az
-- name: Get started
-  href: get-started-azureps.md
-  displayName: sign in, signin, log in, login, find, feedback, intro, introduction
+  - name: Get started
+    href: get-started-azureps.md
+    displayName: sign in, signin, log in, login, find, feedback, intro, introduction
+- name: Install
   items:
   - name: Install with PowerShellGet
     href: install-az-ps.md
@@ -17,10 +18,26 @@
     href: install-az-ps-msi.md
   - name: Azure PowerShell in Docker
     href: azureps-in-docker.md
-  - name: Azure PowerShell Support Lifecycle
-    href: azureps-support-lifecycle.md
   - name: Uninstall
     href: uninstall-az-ps.md
+  - name: Azure PowerShell Support Lifecycle
+    href: azureps-support-lifecycle.md
+- name: What's New
+  items:
+  - name: Release notes
+    href: release-notes-azureps.md
+  - name: Az 2.0.0 breaking changes
+    href: migrate-az-2.0.0.md
+  - name: Az 3.0.0 breaking changes
+    href: migrate-az-3.0.0.md
+  - name: Az 4.1.0 breaking changes
+    href: migrate-az-4.1.0.md
+  - name: Az 5.0.0 breaking changes
+    href: migrate-az-5.0.0.md
+  - name: Az 6.0.0 breaking changes
+    href: migrate-az-6.0.0.md
+  - name: Az 7.0.0 breaking changes
+    href: migrate-az-7.0.0.md
 - name: Authentication and Identity
   items:
   - name: Authentication methods
@@ -63,31 +80,15 @@
 - name: Deploy
   items:
   - name: Deploy Resource Manager templates
-    href: /azure/azure-resource-manager/resource-group-template-deploy
+    href: /azure/azure-resource-manager/resource-group-template-deploy?toc=%2fpowershell%2fmodule%2ftoc.json
   - name: Export Resource Manager templates
-    href: /azure/azure-resource-manager/resource-manager-export-template-powershell
+    href: /azure/azure-resource-manager/resource-manager-export-template-powershell?toc=%2fpowershell%2fmodule%2ftoc.json
   - name: Deploy private Resource Manager templates
-    href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
+    href: /azure/azure-resource-manager/resource-manager-powershell-sas-token?toc=%2fpowershell%2fmodule%2ftoc.json
 - name: Tutorials
   items:
   - name: Create Virtual Machines
     href: azureps-vm-tutorial.yml
-- name: What's New
-  items:
-  - name: Release notes
-    href: release-notes-azureps.md
-  - name: Az 2.0.0 breaking changes
-    href: migrate-az-2.0.0.md
-  - name: Az 3.0.0 breaking changes
-    href: migrate-az-3.0.0.md
-  - name: Az 4.1.0 breaking changes
-    href: migrate-az-4.1.0.md
-  - name: Az 5.0.0 breaking changes
-    href: migrate-az-5.0.0.md
-  - name: Az 6.0.0 breaking changes
-    href: migrate-az-6.0.0.md
-  - name: Az 7.0.0 breaking changes
-    href: migrate-az-7.0.0.md
 - name: Migration Guides
   items:
   - name: Azure AD to Microsoft Graph Migration Guide
