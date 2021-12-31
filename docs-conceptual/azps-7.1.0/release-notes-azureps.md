@@ -4309,7 +4309,7 @@ https://github.com/Azure/azure-powershell/issues/9752
 
 #### Az.Network
 * Updated New-AzPrivateLinkServiceIpConfig
-    - Deprecated the paramster 'PublicIpAddress' since this is never used in the server side.
+    - Deprecated the parameter 'PublicIpAddress' since this is never used in the server side.
     - Added one optional parameter 'Primary' that indicate the current ip configuration is primary one or not.
 * Improved handling of request error exception from SDK
     -Fixes the issue that previously SDK exceptions aren't handled correctly which results in key error details not being displayed
