@@ -17,6 +17,9 @@
             { "files": ["**/*.yml"], "src": "azps-7.0.0", "version": "azps-7.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-7.0.0", "version": "azps-7.0.0", "dest": "azure" },
 
+            { "files": ["**/*.yml"], "src": "azps-7.1.0", "version": "azps-7.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-7.1.0", "version": "azps-7.1.0", "dest": "azure" },
+
             { "files": ["**/*.yml"], "src": "azps-5.9.0", "version": "azps-5.9.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-5.9.0", "version": "azps-5.9.0", "dest": "azure" },
 
@@ -89,6 +92,7 @@
             { "files": ["media/**"], "version": "azurermps-6.13.0" },
             { "files": ["media/**"], "version": "azps-6.6.0" },
             { "files": ["media/**"], "version": "azps-7.0.0" },
+            { "files": ["media/**"], "version": "azps-7.1.0" },
             { "files": ["media/**"], "version": "azps-5.9.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
@@ -98,6 +102,7 @@
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
             "azps-6.6.0": { "dest": "azps-6.6.0" },
             "azps-7.0.0": { "dest": "azps-7.0.0" },
+            "azps-7.1.0": { "dest": "azps-7.1.0" },
             "azps-5.9.0": { "dest": "azps-5.9.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
@@ -555,6 +560,7 @@
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
                 "azps-6.6.0/**/*.yml": "10/29/2021",
                 "azps-7.0.0/**/*.yml": "12/06/2021",
+                "azps-7.1.0/**/*.yml": "12/31/2021",
                 "azps-5.9.0/**/*.yml": "5/04/2021",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azuresmps-4.0.0/**/*.yml": "11/28/2020"
@@ -600,6 +606,7 @@
                 "azurermps-2.5.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
                 "azps-7.0.0/**/*": "None",
+                "azps-7.1.0/**/*": "None",
                 "azps-6.6.0/**/*": "None",
                 "azps-5.9.0/**/*": "None",
                 "azps-0.10.0/**/*": "None",
