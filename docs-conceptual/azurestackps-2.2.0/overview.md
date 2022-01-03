@@ -19,6 +19,7 @@ Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell]
 
 ## Install
 
+For detailed install instructions please refer to [Install Azure Stack Powershell](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
 Run the following cmdlets from an elevated PowerShell session prompt:
 
 ```powershell  
@@ -51,4 +52,4 @@ Install-Module -Name AzureStack -RequiredVersion 2.2.0 -AllowPrerelease
 
 * Supported with 2108 update.  
 
-  The Azure Stack Hub 2.2.0 is a breaking change. The module uses the Az module rather than the AzureRM module. You can find a migration guide and a list of breaking changes in [Migrate from AzureRM to Azure PowerShell Az in Azure Stack Hub](/azure-stack/operator/azure-stack-powershell-install).
+  Please refer to https://github.com/Azure/azurestack-powershell/releases/tag/v2.2.0 forr detailed release notes
