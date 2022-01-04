@@ -4,7 +4,7 @@ description: Learn the steps and tools for migrating Azure PowerShell scripts fr
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.date: 12/07/2021
+ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell, contperf-fy21q2
 ---
 

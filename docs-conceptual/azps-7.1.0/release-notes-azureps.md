@@ -3,7 +3,7 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/07/2021
+ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -92,7 +92,7 @@ ms.service: azure-powershell
 
 #### Az.Storage
 * Fixed the failure of sync copy blob with long destination blob name [#16628]
-    -  'Copy-AzStorageBlob' 
+    -  'Copy-AzStorageBlob'
 
 #### Az.Synapse
 * General availability of Az.Synapse
@@ -278,7 +278,7 @@ ms.service: azure-powershell
 
 #### Az.Sql
 * Fixed FirewallRuleName wildcard filtering in 'Get-AzSqlServerFirewallRule' [#16199]
-* Moved SQL Server and SQL Instance AAD from ActiveDirectoryClient to MicrosoftGraphClient 
+* Moved SQL Server and SQL Instance AAD from ActiveDirectoryClient to MicrosoftGraphClient
 
 #### Az.StackHCI
 * Promoted Az.StackHCI to GA
@@ -286,11 +286,11 @@ ms.service: azure-powershell
 #### Az.Storage
 * Fixed the failure of 'Get-AzStorageContainerStoredAccessPolicy' when permission is null [#15644]
 * Supported create blob service Sas token or account Sas token with permission i
-    -  'New-AzStorageBlobSASToken' 
-    -  'New-AzStorageContainerSASToken' 
+    -  'New-AzStorageBlobSASToken'
+    -  'New-AzStorageContainerSASToken'
     -  'New-AzStorageAccountSASToken'
 * Fixed creating container SAS token failed from an access policy without expire time, and set SAS token expire time [#16266]
-    -  'New-AzStorageContainerSASToken' 
+    -  'New-AzStorageContainerSASToken'
 * Removed parameter -Name from Get-AzRmStorageShare ShareResourceIdParameterSet
     - 'Get-AzRmStorageShare'
 * Supported create or migrate container to enable immutable Storage with versioning.
