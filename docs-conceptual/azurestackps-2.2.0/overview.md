@@ -51,5 +51,4 @@ Install-Module -Name AzureStack -RequiredVersion 2.2.0 -AllowPrerelease
 ## Release Notes
 
 * Supported with 2108 update.  
-
-  Please refer to https://github.com/Azure/azurestack-powershell/releases/tag/v2.2.0 forr detailed release notes
+* This release 2.2.0 updates the capabilities in the Azs.Compute.Admin module. This also adds new modules for working with Azure Container Registry on Azure Stack Hub: Azs.ContainerRegistry.Admin and Azs.ContainerService.Admin. The Admin modules now have a dependency on the Az.Resources module version 0.12.0. For details on the changes in this update, see the AzureStack module [change log](https://github.com/Azure/azurestack-powershell/blob/release-2108/src/changelog.md)
