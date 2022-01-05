@@ -38,7 +38,13 @@
     href: migrate-az-6.0.0.md
   - name: Az 7.0.0 breaking changes
     href: migrate-az-7.0.0.md
-- name: Authentication and Identity
+- How-to guides:
+  items:
+  - name: Configuration
+    items:
+    - name: Use the Az PowerShell module behind a proxy
+      href: az-powershell-proxy.md
+  - name: Authentication and Identity
   items:
   - name: Authentication methods
     href: authenticate-azureps.md
@@ -57,39 +63,35 @@
     displayName: >-
       sign in, signin, log in, login, process, session, context,
       persist, jobs, background, automation, scripting, task
-- name: Configuration
-  items:
-  - name: Use the Az PowerShell module behind a proxy
-    href: az-powershell-proxy.md
-- name: Concepts
-  items:
-  - name: Manage subscriptions
-    href: manage-subscriptions-azureps.md
-    displayName: tenant, user, sign in, signin, log in, login, authenticate, authentication, accounts
-  - name: Manage Azure resources with Invoke-AzRestMethod
-    href: manage-azure-resources-invoke-azrestmethod.md
-  - name: Queries
-    href: queries-azureps.md
-    displayName: filter, search, format, output, variable, scripting, array, dictionary, map, object
-  - name: Format output
-    href: formatting-output.md
-    displayName: object, table, yaml, json, xml, csv, html, list
-  - name: PowerShell jobs
-    href: using-psjobs.md
-    displayName: background, task, scripting, automation, context, process
-- name: Deploy
-  items:
-  - name: Deploy Resource Manager templates
-    href: /azure/azure-resource-manager/resource-group-template-deploy?toc=%2fpowershell%2fmodule%2ftoc.json
-  - name: Export Resource Manager templates
-    href: /azure/azure-resource-manager/resource-manager-export-template-powershell?toc=%2fpowershell%2fmodule%2ftoc.json
-  - name: Deploy private Resource Manager templates
-    href: /azure/azure-resource-manager/resource-manager-powershell-sas-token?toc=%2fpowershell%2fmodule%2ftoc.json
+  - name: Concepts
+    items:
+    - name: Manage subscriptions
+      href: manage-subscriptions-azureps.md
+      displayName: tenant, user, sign in, signin, log in, login, authenticate, authentication, accounts
+    - name: Manage Azure resources with Invoke-AzRestMethod
+      href: manage-azure-resources-invoke-azrestmethod.md
+    - name: Queries
+      href: queries-azureps.md
+      displayName: filter, search, format, output, variable, scripting, array, dictionary, map, object
+    - name: Format output
+      href: formatting-output.md
+      displayName: object, table, yaml, json, xml, csv, html, list
+    - name: PowerShell jobs
+      href: using-psjobs.md
+      displayName: background, task, scripting, automation, context, process
+  - name: Deploy
+    items:
+    - name: Deploy Resource Manager templates
+      href: /azure/azure-resource-manager/resource-group-template-deploy?toc=%2fpowershell%2fmodule%2ftoc.json
+    - name: Export Resource Manager templates
+      href: /azure/azure-resource-manager/resource-manager-export-template-powershell?toc=%2fpowershell%2fmodule%2ftoc.json
+    - name: Deploy private Resource Manager templates
+      href: /azure/azure-resource-manager/resource-manager-powershell-sas-token?toc=%2fpowershell%2fmodule%2ftoc.json
 - name: Tutorials
   items:
   - name: Create Virtual Machines
     href: azureps-vm-tutorial.yml
-- name: Migration Guides
+- name: Migration
   items:
   - name: Azure AD to Microsoft Graph Migration Guide
     href: azps-msgraph-migration-changes.md
@@ -104,7 +106,7 @@
     - name: Changes between AzureRM and Az
       href: migrate-az-1.0.0.md
       displayName: breaking, cmdlet, module, names
-- name: Sample Scripts
+- name: Samples
   items:
   - name: Linux Virtual Machines
     href: /azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
