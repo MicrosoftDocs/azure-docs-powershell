@@ -38,31 +38,31 @@
     href: migrate-az-6.0.0.md
   - name: Az 7.0.0 breaking changes
     href: migrate-az-7.0.0.md
-- How-to guides:
+- name: How-to guides
   items:
   - name: Configuration
     items:
     - name: Use the Az PowerShell module behind a proxy
       href: az-powershell-proxy.md
   - name: Authentication and Identity
-  items:
-  - name: Authentication methods
-    href: authenticate-azureps.md
-    displayName: >-
-      sign in, signin, log in, login, credentials, msi, managed identity,
-      tenant, subscription, region, certificate, service principal,
-      authenticate
-  - name: Create a service principal
-    href: create-azure-service-principal-azureps.md
-    displayName: >-
-      automation, application, web app, script, certificate, sign in,
-      signin, log in, login, devops, dev ops, itpro, it pro, role,
-      aad, authentication, authenticate
-  - name: Credential contexts
-    href: context-persistence.md
-    displayName: >-
-      sign in, signin, log in, login, process, session, context,
-      persist, jobs, background, automation, scripting, task
+    items:
+    - name: Authentication methods
+      href: authenticate-azureps.md
+      displayName: >-
+        sign in, signin, log in, login, credentials, msi, managed identity,
+        tenant, subscription, region, certificate, service principal,
+        authenticate
+    - name: Create a service principal
+      href: create-azure-service-principal-azureps.md
+      displayName: >-
+        automation, application, web app, script, certificate, sign in,
+        signin, log in, login, devops, dev ops, itpro, it pro, role,
+        aad, authentication, authenticate
+    - name: Credential contexts
+      href: context-persistence.md
+      displayName: >-
+        sign in, signin, log in, login, process, session, context,
+        persist, jobs, background, automation, scripting, task
   - name: Concepts
     items:
     - name: Manage subscriptions
