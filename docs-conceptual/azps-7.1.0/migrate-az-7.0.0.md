@@ -3,7 +3,7 @@ title: Migration guide for Az 7.0.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 7.0.0 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/04/2022
+ms.date: 01/06/2022
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -409,7 +409,7 @@ Get-AzRecoveryServicesBackupJob -BackupManagementType MAB -VaultId $vault.ID
 ## Az.Resources
 
 ### `AzAD cmdlets`
-Please refer to (placeholder) for the migration guide of Active Directory cmdlets.
+Please refer to the [migration guide](/powershell/azure/azps-msgraph-migration-changes) of the Active Directory cmdlets.
 
 ### `PolicyAssignment cmdlets`
 The type of property 'Identity' of type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyAssignment' has changed from 'System.Management.Automation.PSObject' to 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyIdentity'.
