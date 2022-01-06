@@ -3,7 +3,7 @@ title: Sign in with Azure PowerShell
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/04/2022
+ms.date: 01/06/2022
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -83,17 +83,18 @@ for the username and convert its `secret` to plain text for the password.
 
 ```azurepowershell-interactive
 # Retrieve the plain text password for use with `Get-Credential` in the next command.
-$sp.secret | ConvertFrom-SecureString -AsPlainText
+$sp.PasswordCredentials.SecretText
 
-$pscredential = Get-Credential -UserName $sp.ApplicationId
+$pscredential = Get-Credential -UserName $sp.AppId
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
-For automation scenarios, you need to create credentials from a service principal's `applicationId`
-and `secret`:
+For automation scenarios, you need to create credentials from a service principal's `AppId` and
+`SecretText`:
 
 ```azurepowershell-interactive
-$pscredential = New-Object -TypeName System.Management.Automation.PSCredential($sp.ApplicationId, $sp.Secret)
+$SecureStringPwd = $sp.PasswordCredentials.SecretText | ConvertTo-SecureString -AsPlainText -Force
+$pscredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $sp.AppId, $SecureStringPwd
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
