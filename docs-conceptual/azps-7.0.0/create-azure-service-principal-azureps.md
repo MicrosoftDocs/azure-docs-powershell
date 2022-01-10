@@ -4,7 +4,7 @@ description: Learn how to create and use service principals with Azure PowerShel
 ms.devlang: powershell
 ms.topic: conceptual
 ms.service: azure-powershell
-ms.date: 12/07/2021
+ms.date: 01/06/2022
 ms.custom: devx-track-azurepowershell
 ---
 # Create an Azure service principal with Azure PowerShell
@@ -64,7 +64,7 @@ password created for you. If you want password-based authentication, this method
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
 ```
 
-The returned object contains the `Secret` member, which is a `SecureString` containing the generated
+The returned object contains the `PasswordCredentials.SecretText` property containing the generated
 password. Make sure that you store this value somewhere secure to authenticate with the service
 principal. Its value _won't_ be displayed in the console output. If you lose the password,
 [reset the service principal credentials](#reset-credentials).
@@ -72,21 +72,7 @@ principal. Its value _won't_ be displayed in the console output. If you lose the
 The following code will allow you to export the secret:
 
 ```powershell-interactive
-$BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sp.Secret)
-$UnsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
-```
-
-For user-supplied passwords, the `PasswordCredential` parameter takes
-`Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential` objects. These objects must have a
-valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make
-sure you follow the
-[Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy).
-Don't use a weak password or reuse a password.
-
-```azurepowershell-interactive
-Import-Module -Name Az.Resources # Imports the PSADPasswordCredential object
-$credentials = New-Object Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential -Property @{StartDate=Get-Date; EndDate=Get-Date -Year 2024; Password=<Choose a strong password>}
-$sp = New-AzAdServicePrincipal -DisplayName ServicePrincipalName -PasswordCredential $credentials
+$sp.PasswordCredentials.SecretText
 ```
 
 The object returned from `New-AzADServicePrincipal` contains the `Id` and `DisplayName` members,
@@ -118,17 +104,7 @@ $cert = <public certificate as base64-encoded string>
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -CertValue $cert
 ```
 
-You can also use the `KeyCredential` parameter, which takes `PSADKeyCredential` objects. These
-objects must have a valid `StartDate`, `EndDate`, and have the `CertValue` member set to a
-base64-encoded ASCII string of the public certificate.
-
-```azurepowershell-interactive
-$cert = <public certificate as base64-encoded string>
-$credentials = New-Object -TypeName Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential -Property @{StartDate=Get-Date; EndDate=Get-Date -Year 2024; KeyId=New-Guid; CertValue=$cert}
-$sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName -KeyCredential $credentials
-```
-
-The object returned from `New-AzADServicePrincipal` contains the `Id` and `DisplayName` members,
+The object returned from `New-AzADServicePrincipal` contains the `Id` and `DisplayName` properties,
 either of which can be used for sign in with the service principal. Clients which sign in with the
 service principal also need access to the certificate's private key.
 
@@ -162,12 +138,10 @@ Azure PowerShell has the following cmdlets to manage role assignments:
 - [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
 - [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
-The default role for a password-based authentication service principal is **Contributor**. This role
-has full permissions to read and write to an Azure account. The **Reader** role is more restrictive,
-with read-only access. For more information on Role-Based Access Control (RBAC) and roles, see
+For more information on Role-Based Access Control (RBAC) and roles, see
 [RBAC: Built-in roles](/azure/active-directory/role-based-access-built-in-roles).
 
-This example adds the **Reader** role and removes the **Contributor** one:
+The following example adds the **Reader** role and removes the **Contributor** role:
 
 ```azurepowershell-interactive
 New-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName 'Reader'
