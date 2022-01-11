@@ -16,6 +16,8 @@ HTTP Methods: GET (supported for all groups), POST (supported for security group
 Nullable.
 Supports $expand.
 
+[!INCLUDE [msgraph-migration-banner-az7](../../includes/msgraph-migration-banner-az7.md)]
+
 ## SYNTAX
 
 ### ExplicitParameterSet  (Default)
