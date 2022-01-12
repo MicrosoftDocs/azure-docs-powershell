@@ -275,6 +275,11 @@ See the following information for a list of changes.
   `Microsoft.Azure.Commands.ActiveDirectory.PSADGroup` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphGroup`
 
+> [!IMPORTANT]
+> Currently service principals are not listed as group members due to staged roll-out of service
+> principals on Graph V1.0 endpoint. For more information, see
+> [the Microsoft Graph REST API documentation](/graph/api/group-list-members).
+
 ### Add-AzAdGroupMember
 
 - Input type of parameter `GroupObject` has been changed from
