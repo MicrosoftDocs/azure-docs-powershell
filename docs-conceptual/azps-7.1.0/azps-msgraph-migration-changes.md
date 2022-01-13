@@ -275,6 +275,8 @@ See the following information for a list of changes.
   `Microsoft.Azure.Commands.ActiveDirectory.PSADGroup` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphGroup`
 
+[!INCLUDE [get-azadgroupmember-no-serviceprincipal-banner](../../includes/get-azadgroupmember-no-serviceprincipal-banner.md)]
+
 ### Add-AzAdGroupMember
 
 - Input type of parameter `GroupObject` has been changed from
