@@ -40,10 +40,7 @@ Get-AzADGroupMember [-Expand <String[]>] [-Filter <String>] [-Orderby <String[]>
 ## DESCRIPTION
 Lists members from group.
 
-> [!IMPORTANT]
-> Currently service principals are not listed as group members due to staged roll-out of service
-> principals on Graph V1.0 endpoint. For more information, see
-> [the Microsoft Graph REST API documentation](/graph/api/group-list-members).
+[!INCLUDE [get-azadgroupmember-no-serviceprincipal-banner](../../includes/get-azadgroupmember-no-serviceprincipal-banner.md)]
 
 ## EXAMPLES
 
