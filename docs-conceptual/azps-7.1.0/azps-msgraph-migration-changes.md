@@ -3,7 +3,7 @@ title: Azure AD to Microsoft Graph migration changes in Azure PowerShell
 description: This migration guide contains a list of Azure PowerShell changes for the Azure AD to Microsoft Graph migration in Az.Resources 5.1.0.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/04/2022
+ms.date: 01/06/2022
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -17,11 +17,10 @@ Graph. This change is occurring to ensure a smooth transition in light of the
 For more information, see
 [Azure AD to Microsoft Graph migration for Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools/azure-ad-to-microsoft-graph-migration-for-azure-command-line/ba-p/2836666).
 
-The following example installs the latest preview version of the `Az.Resources` Azure PowerShell
-module.
+The following example installs the latest version of the `Az.Resources` Azure PowerShell module.
 
 ```azurepowershell
-Install-Module -Name Az.Resources -Repository PSGallery -Scope CurrentUser -AllowPrerelease
+Install-Module -Name Az.Resources -Repository PSGallery -Scope CurrentUser
 ```
 
 See the following information for a list of changes.
@@ -275,6 +274,8 @@ See the following information for a list of changes.
 - Input type of parameter `GroupObject` has been changed from
   `Microsoft.Azure.Commands.ActiveDirectory.PSADGroup` to
   `Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphGroup`
+
+[!INCLUDE [get-azadgroupmember-no-serviceprincipal-banner](../../includes/get-azadgroupmember-no-serviceprincipal-banner.md)]
 
 ### Add-AzAdGroupMember
 
