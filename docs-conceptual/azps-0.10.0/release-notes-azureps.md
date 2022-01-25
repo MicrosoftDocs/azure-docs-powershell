@@ -2547,7 +2547,7 @@ Added KeyVault Support to Application Gateway using Identity.
 * Support Get-AzCognitiveServicesAccountSkus without an existing account.
 
 #### Az.Compute
-* Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed
+* Fix Get-AzVM -ResourceGroupName `<rg>` to return more than 50 results if needed
 * Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.
 * Fixed a typo in the Azure Disk Encryption progress message
 
