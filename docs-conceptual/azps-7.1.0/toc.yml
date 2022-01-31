@@ -10,6 +10,10 @@
   - name: Get started
     href: get-started-azureps.md
     displayName: sign in, signin, log in, login, find, feedback, intro, introduction
+  - name: Module versioning and release cadence
+    href: azps-versioning-release-cadence.md
+  - name: Support lifecycle
+    href: azureps-support-lifecycle.md
 - name: Install
   items:
   - name: Install with PowerShellGet
@@ -20,24 +24,22 @@
     href: azureps-in-docker.md
   - name: Uninstall
     href: uninstall-az-ps.md
-  - name: Azure PowerShell Support Lifecycle
-    href: azureps-support-lifecycle.md
 - name: What's New
   items:
   - name: Release notes
     href: release-notes-azureps.md
-  - name: Az 2.0.0 breaking changes
-    href: migrate-az-2.0.0.md
-  - name: Az 3.0.0 breaking changes
-    href: migrate-az-3.0.0.md
-  - name: Az 4.1.0 breaking changes
-    href: migrate-az-4.1.0.md
-  - name: Az 5.0.0 breaking changes
-    href: migrate-az-5.0.0.md
-  - name: Az 6.0.0 breaking changes
-    href: migrate-az-6.0.0.md
   - name: Az 7.0.0 breaking changes
     href: migrate-az-7.0.0.md
+  - name: Az 6.0.0 breaking changes
+    href: migrate-az-6.0.0.md
+  - name: Az 5.0.0 breaking changes
+    href: migrate-az-5.0.0.md
+  - name: Az 4.1.0 breaking changes
+    href: migrate-az-4.1.0.md
+  - name: Az 3.0.0 breaking changes
+    href: migrate-az-3.0.0.md
+  - name: Az 2.0.0 breaking changes
+    href: migrate-az-2.0.0.md
 - name: How-to guides
   items:
   - name: Configuration
@@ -70,7 +72,7 @@
       displayName: tenant, user, sign in, signin, log in, login, authenticate, authentication, accounts
     - name: Manage Azure resources with Invoke-AzRestMethod
       href: manage-azure-resources-invoke-azrestmethod.md
-    - name: Queries
+    - name: Filter cmdlet results
       href: queries-azureps.md
       displayName: filter, search, format, output, variable, scripting, array, dictionary, map, object
     - name: Format output
@@ -82,11 +84,11 @@
   - name: Deploy
     items:
     - name: Deploy Resource Manager templates
-      href: /azure/azure-resource-manager/resource-group-template-deploy?toc=%2fpowershell%2fmodule%2ftoc.json
+      href: /azure/azure-resource-manager/templates/deploy-powershell?toc=/powershell/azure/toc.json
     - name: Export Resource Manager templates
-      href: /azure/azure-resource-manager/resource-manager-export-template-powershell?toc=%2fpowershell%2fmodule%2ftoc.json
+      href: /azure/azure-resource-manager/management/manage-resources-powershell?toc=/powershell/azure/toc.json
     - name: Deploy private Resource Manager templates
-      href: /azure/azure-resource-manager/resource-manager-powershell-sas-token?toc=%2fpowershell%2fmodule%2ftoc.json
+      href: /azure/azure-resource-manager/templates/secure-template-with-sas-token?toc=/powershell/azure/toc.json
 - name: Tutorials
   items:
   - name: Create Virtual Machines
@@ -97,30 +99,26 @@
     href: azps-msgraph-migration-changes.md
   - name: Migrate from AzureRM
     items:
+    - name: Changes between AzureRM and Az
+      href: migrate-az-1.0.0.md
+      displayName: breaking, cmdlet, module, names
     - name: Migration steps
       href: migrate-from-azurerm-to-az.md
       displayName: migrate, azurerm, az
     - name: Automatically migrate PowerShell scripts
       href: quickstart-migrate-azurerm-to-az-automatically.md
       displayName: automatically migrate, azurerm, az
-    - name: Changes between AzureRM and Az
-      href: migrate-az-1.0.0.md
-      displayName: breaking, cmdlet, module, names
 - name: Samples
   items:
-  - name: Linux Virtual Machines
-    href: /azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
-    displayName: vms
-  - name: Windows Virtual Machines
-    href: /azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
-    displayName: vms
-  - name: Web Apps
-    href: /azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+  - name: Azure App Service
+    href: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
   - name: SQL Databases
-    href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+    href: /azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json
   - name: Cosmos DB
-    href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
+    href: /azure/cosmos-db/sql/powershell-samples?toc=/powershell/azure/toc.json
     displayName: database, nosql, mongodb, couchdb
+  - name: Samples repo
+    href: https://github.com/Azure/azure-docs-powershell-samples
 - name: Troubleshooting
   href: troubleshooting.md
 - name: Frequently Asked Questions
