@@ -82,7 +82,7 @@ conceptualContent:
           text: Breaking changes in Az 5.0.0
         - url: migrate-az-4.1.0.md
           itemType: whats-new
-          text: Breaking changes in Az 4.0.0
+          text: Breaking changes in Az 4.1.0
         - url: migrate-az-3.0.0.md
           itemType: whats-new
           text: Breaking changes in Az 3.0.0
