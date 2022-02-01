@@ -1,106 +1,178 @@
-###YamlMime:Landing
+### YamlMime:Hub
 
-title: Azure PowerShell documentation
-summary: |
-  Azure PowerShell is a set of cmdlets for managing Azure resources directly from the
-  PowerShell command line. Azure PowerShell is designed to make it easy to learn and get started
-  with, but provides powerful features for automation. Written in .NET Standard, Azure PowerShell
-  works with PowerShell 5.1 on Windows, PowerShell 7.0.6 LTS and PowerShell 7.1.3 or higher on all platforms.
+title: Azure PowerShell Documentation
+summary: Official product documentation for the Azure Az PowerShell module
+brand: azure
 
 metadata:
-  title: Overview of Azure PowerShell
-  description: Get started with Azure PowerShell by installing and learning about its features and capabilities.
-  ms.topic: landing-page
+  title: Azure PowerShell Documentation
+  description: Official product documentation for the Azure Az PowerShell module
+  ms.service: azure-powershell
+  ms.topic: hub-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 12/07/2021
-  ms.prod: azure-powershell
-landingContent:
-  - title: Get started with Azure PowerShell
-    linkLists:
-      - linkListType: download
-        links:
-          - text: Install Azure PowerShell
-            url: install-az-ps.md
-          - text: Install PowerShell
-            url: /powershell/scripting/install/installing-powershell
-          - text: Run in Azure Cloud Shell
-            url: https://shell.azure.com
-      - linkListType: get-started
-        links:
-          - text: Get started
-            url: get-started-azureps.md
-          - text: Learn about PowerShell concepts
-            url: /powershell/scripting/overview
-      - linkListType: how-to-guide
-        links:
-          - text: Authenticate with Azure PowerShell
-            url: authenticate-azureps.md
-          - text: Create a service principal
-            url: create-azure-service-principal-azureps.md
-          - text: Filter cmdlet results
-            url: queries-azureps.md
-          - text: Format cmdlet output
-            url: formatting-output.md
-  - title: Manage Azure resources
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Sample scripts for virtual machines
-            url: /azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json
-          - text: Sample scripts for Azure App Service
-            url: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
-          - text: Sample scripts for SQL databases
-            url: /azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json
-      - linkListType: tutorial
-        links:
-          - text: Create virtual machines on the same subnet
-            url: azureps-vm-tutorial.yml
-      - linkListType: learn
-        links:
-          - text: Automate Azure tasks from PowerShell
-            url: /learn/modules/automate-azure-tasks-with-powershell/
-  - title: Migrate from AzureRM
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: About the Azure PowerShell 'Az' module
-            url: new-azureps-module-az.md
-      - linkListType: concept
-        links:
-          - text: Migrate from AzureRM to Az
-            url: migrate-from-azurerm-to-az.md
-      - linkListType: reference
-        links:
-          - text: Breaking changes between AzureRM and Az
-            url: migrate-az-1.0.0.md
-  - title: Azure PowerShell Reference
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Cmdlet reference
-            url: /powershell/module/?view=azps-7.0.0
-          - text: Release notes
-            url: release-notes-azureps.md
-          - text: Breaking changes in Az 2.0.0
-            url: migrate-az-2.0.0.md
-          - text: Breaking changes in Az 3.0.0
-            url: migrate-az-3.0.0.md
-          - text: Breaking changes in Az 4.1.0
-            url: migrate-az-4.1.0.md
-          - text: Breaking changes in Az 5.0.0
-            url: migrate-az-5.0.0.md
-          - text: Breaking changes in Az 6.0.0
-            url: migrate-az-6.0.0.md
-          - text: Breaking changes in Az 7.0.0
-            url: migrate-az-7.0.0.md
-  - title: Other Azure PowerShell modules
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Azure Active Directory for PowerShell
-            url: /powershell/module/azuread/
-          - text: Azure Service Fabric for PowerShell
-            url: /powershell/module/servicefabric/
-          - text: Azure SQL Database Cmdlets
-            url: /powershell/module/az.sql/
+  ms.date: 01/24/2022
+
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    - title: What is Azure PowerShell?
+      itemType: overview
+      url: what-is-azure-powershell.md
+    - title: Installation
+      itemType: download
+      url: install-az-ps.md
+    - title: Cmdlet reference
+      itemType: reference
+      url: /powershell/module/?view=azps-7.0.0
+    - title: Azure AD to Microsoft Graph Migration changes
+      itemType: whats-new
+      url: azps-msgraph-migration-changes.md
+    - title: Automate Azure tasks from PowerShell
+      itemType: learn
+      url: /learn/modules/automate-azure-tasks-with-powershell/
+    - title: Create virtual machines
+      itemType: tutorial
+      url: azureps-vm-tutorial.yml
+
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    - title: About Azure PowerShell
+      links:
+        - url: get-started-azureps.md
+          itemType: get-started
+          text: Get started
+        - url: what-is-azure-powershell.md
+          itemType: overview
+          text: What is Azure PowerShell?
+        - url: new-azureps-module-az.md
+          itemType: overview
+          text: Introducing the Az PowerShell module
+        - url: azureps-support-lifecycle.md
+          itemType: overview
+          text: Support Lifecycle
+    - title: Installation
+      links:
+        - url: install-az-ps.md
+          itemType: download
+          text: Install with PowerShellGet
+        - url: install-az-ps-msi.md
+          itemType: download
+          text: Install with MSI
+        - url: azureps-in-docker.md
+          itemType: download
+          text: Run in Docker
+        - url: https://shell.azure.com
+          itemType: download
+          text: Run in Azure Cloud Shell
+    - title: What's new
+      links:
+        - url: release-notes-azureps.md
+          itemType: whats-new
+          text: Release notes
+        - url: migrate-az-7.0.0.md
+          itemType: whats-new
+          text: Breaking changes in Az 7.0.0
+        - url: migrate-az-6.0.0.md
+          itemType: whats-new
+          text: Breaking changes in Az 6.0.0
+        - url: migrate-az-5.0.0.md
+          itemType: whats-new
+          text: Breaking changes in Az 5.0.0
+        - url: migrate-az-4.1.0.md
+          itemType: whats-new
+          text: Breaking changes in Az 4.1.0
+        - url: migrate-az-3.0.0.md
+          itemType: whats-new
+          text: Breaking changes in Az 3.0.0
+        - url: migrate-az-2.0.0.md
+          itemType: whats-new
+          text: Breaking changes in Az 2.0.0
+    - title: Configuration
+      links:
+        - url: az-powershell-proxy.md
+          itemType: how-to-guide
+          text: Use the Az PowerShell module behind a proxy
+    - title: Identity and Authentication
+      links:
+        - url: authenticate-azureps.md
+          itemType: how-to-guide
+          text: Authentication methods
+        - url: create-azure-service-principal-azureps.md
+          itemType: how-to-guide
+          text: Create a service principal
+        - url: context-persistence.md
+          itemType: how-to-guide
+          text: Credential Contexts
+    - title: Concepts
+      links:
+        - url: manage-subscriptions-azureps.md
+          itemType: how-to-guide
+          text: Manage subscriptions
+        - url: manage-azure-resources-invoke-azrestmethod.md
+          itemType: how-to-guide
+          text: Manage Azure resources with Invoke-AzRestMethod
+        - url: queries-azureps.md
+          itemType: how-to-guide
+          text: Filter cmdlet results
+        - url: formatting-output.md
+          itemType: how-to-guide
+          text: Format output
+        - url: using-psjobs.md
+          itemType: how-to-guide
+          text: PowerShell jobs
+    - title: Deploy
+      links:
+        - url: /azure/azure-resource-manager/templates/deploy-powershell?toc=/powershell/azure/toc.json
+          itemType: deploy
+          text: Deploy resource manager templates
+        - url: /azure/azure-resource-manager/management/manage-resources-powershell?toc=/powershell/azure/toc.json
+          itemType: deploy
+          text: Export resource manager templates
+        - url: /azure/azure-resource-manager/templates/secure-template-with-sas-token?toc=/powershell/azure/toc.json
+          itemType: deploy
+          text: Deploy private resource manager templates
+    - title: Samples
+      links:
+        - url: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
+          itemType: sample
+          text: Azure App Service
+        - url: /azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json
+          itemType: sample
+          text: SQL databases
+        - url: /azure/cosmos-db/sql/powershell-samples?toc=/powershell/azure/toc.json
+          itemType: sample
+          text: Cosmos DB
+        - url: https://github.com/Azure/azure-docs-powershell-samples
+          itemType: sample
+          text: Samples repo
+    - title: Migrate from AzureRM
+      links:
+        - url: migrate-az-1.0.0.md
+          itemType: whats-new
+          text: Changes between AzureRM and Az
+        - url: migrate-from-azurerm-to-az.md
+          itemType: how-to-guide
+          text: Migration steps
+        - url: quickstart-migrate-azurerm-to-az-automatically.md
+          itemType: quickstart
+          text: Automatically migrate PowerShell scripts
+
+additionalContent:
+  sections:
+    - title: Help & Support
+      summary: Communicate with the Azure PowerShell team
+      items:
+        - title: GitHub Issues
+          summary: Report Azure PowerShell product issues
+          url: https://github.com/Azure/azure-powershell/issues
+        - title: Troubleshoot
+          summary: Troubleshooting the Azure Az PowerShell module
+          url: troubleshooting.md
+        - title: Follow the Azure PowerShell team on Twitter
+          summary: Azure PowerShell news 280 characters at a time
+          url: https://twitter.com/azureposh
+        - title: Azure Tools Blog
+          summary: Collaborate, share and learn from experts in the Microsoft Tech Community
+          url: https://techcommunity.microsoft.com/t5/azure-tools-blog/bg-p/AzureToolsBlog
