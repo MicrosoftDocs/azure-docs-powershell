@@ -13,7 +13,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 12/07/2021
+  ms.date: 01/04/2022
   ms.prod: azure-powershell
 landingContent:
   - title: Get started with Azure PowerShell
@@ -79,7 +79,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-7.0.0
+            url: /powershell/module/?view=azps-7.1.0
           - text: Release notes
             url: release-notes-azureps.md
           - text: Breaking changes in Az 2.0.0

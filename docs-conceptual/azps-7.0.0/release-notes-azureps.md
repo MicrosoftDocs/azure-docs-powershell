@@ -97,7 +97,7 @@ ms.service: azure-powershell
 * Breaking change:
   - Changed the type of parameter 'OSType' from 'Microsoft.Azure.Management.HDInsight.Models.OSType' to 'System.string' in cmdlet 'New-AzHDInsightCluster'.
   - Changed the type of parameter 'ClusterTier' from 'Microsoft.Azure.Management.HDInsight.Models.ClusterTier' to 'System.string' in cmdlets 'New-AzHDInsightCluster' and 'New-AzHDInsightClusterConfig'.
-  - Changed the type of property 'VmSizes' in class 'AzureHDInsightCapabilities' from 'IDictionary<string, AzureHDInsightVmSizesCapability>' to 'IList<string>'.
+  - Changed the type of property 'VmSizes' in class 'AzureHDInsightCapabilities' from `IDictionary<string, AzureHDInsightVmSizesCapability>` to `IList<string>`.
   - Changed the type of property 'AssignedIdentity' in class 'AzureHDInsightCluster' from 'Microsoft.Azure.Management.HDInsight.Models.ClusterIdentity'  to 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightClusterIdentity'.
 
 #### Az.KeyVault
@@ -169,7 +169,7 @@ ms.service: azure-powershell
 
 #### Az.Sql
 * Fixed FirewallRuleName wildcard filtering in 'Get-AzSqlServerFirewallRule' [#16199]
-* Moved SQL Server and SQL Instance AAD from ActiveDirectoryClient to MicrosoftGraphClient 
+* Moved SQL Server and SQL Instance AAD from ActiveDirectoryClient to MicrosoftGraphClient
 
 #### Az.StackHCI
 * Promoted Az.StackHCI to GA
@@ -177,11 +177,11 @@ ms.service: azure-powershell
 #### Az.Storage
 * Fixed the failure of 'Get-AzStorageContainerStoredAccessPolicy' when permission is null [#15644]
 * Supported create blob service Sas token or account Sas token with permission i
-    -  'New-AzStorageBlobSASToken' 
-    -  'New-AzStorageContainerSASToken' 
+    -  'New-AzStorageBlobSASToken'
+    -  'New-AzStorageContainerSASToken'
     -  'New-AzStorageAccountSASToken'
 * Fixed creating container SAS token failed from an access policy without expire time, and set SAS token expire time [#16266]
-    -  'New-AzStorageContainerSASToken' 
+    -  'New-AzStorageContainerSASToken'
 * Removed parameter -Name from Get-AzRmStorageShare ShareResourceIdParameterSet
     - 'Get-AzRmStorageShare'
 * Supported create or migrate container to enable immutable Storage with versioning.

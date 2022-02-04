@@ -1,7 +1,7 @@
 ---
 title: Introducing the Azure Az PowerShell module
 description: Introducing the Az PowerShell module, recommended for interacting with Azure, and the replacement for the AzureRM PowerShell module.
-ms.date: 12/07/2021
+ms.date: 01/04/2022
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
@@ -35,7 +35,7 @@ The Az PowerShell module features the following benefits:
   * Prevention of man-in-the-middle attack type
   * Support authentication with ADFS 2019
   * Username and password authentication in PowerShell 7
-  * Support for features like continuous access evaluation (coming in 2021)
+  * Support for features like continuous access evaluation
 * Support for all Azure services
   * All generally available Azure services have a corresponding supported PowerShell module
   * Multiple bug fixes and API version upgrades since AzureRM

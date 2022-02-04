@@ -3,7 +3,7 @@ title: Troubleshooting the Azure Az PowerShell module
 description: Troubleshooting the Azure Az PowerShell module.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/07/2021
+ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -37,6 +37,23 @@ $DebugPreference = 'Continue'
 AzAd cmdlets under Az.Resources now support [query parameters](/graph/query-parameters) and
 [search query parameters](/graph/search-query-parameter). For details about the syntax, see the
 previously referenced links.
+
+## Get-AzAdGroupMember doesn't return service principals
+
+Due to limitations with the current Graph API, service principals are not returned by
+[Get-AzAdGroupMember](/powershell/module/az.resources/get-azadgroupmember) in Az 7.x. As a
+workaround, [Invoke-AzRestMethod](/powershell/module/az.accounts/invoke-azrestmethod) can be used
+with the beta version of the Microsoft Graph API.
+
+The following example requires the Az PowerShell module. Replace `myGroupName` in the first line
+with the name of your group.
+
+```azurepowershell-interactive
+$Group = Get-AzADGroup -DisplayName myGroupName
+((Invoke-AzRestMethod -Uri "https://graph.microsoft.com/beta/groups/$($Group.id)/members").Content |
+  ConvertFrom-Json).value |
+  Select-Object -Property DisplayName, Id, @{label='OdataType';expression={$_.'@odata.type'}}
+```
 
 ## Command found but could not be loaded
 
