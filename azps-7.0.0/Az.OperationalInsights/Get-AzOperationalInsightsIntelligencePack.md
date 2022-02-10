@@ -14,7 +14,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets the available Intelligence Packs.
 
 > [!NOTE]
-> Solutions is being deprecated, please use [az monitor log-analytics solution](/cli/azure/monitor/log-analytics/solution) and [Get-AzMonitorLogAnalyticsSolution](../az.monitoringsolutions/get-azmonitorloganalyticssolution?view=azps-5.9.0) instead if this command.
+> Solutions is being deprecated, please use [az monitor log-analytics solution](/cli/azure/monitor/log-analytics/solution) and [Get-AzMonitorLogAnalyticsSolution](https://docs.microsoft.com/en-us/powershell/module/az.monitoringsolutions/get-azmonitorloganalyticssolution?view=azps-5.9.0) instead if this command.
 
 ## SYNTAX
 
