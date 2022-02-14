@@ -1,11 +1,11 @@
 ---
-title: Using Azure PowerShell in Docker
 description: How to use Azure PowerShell that is preinstalled in a Docker image.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Using Azure PowerShell in Docker
 ---
 
 # Using Azure PowerShell in Docker

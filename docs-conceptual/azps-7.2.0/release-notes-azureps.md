@@ -1,11 +1,11 @@
 ---
-title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Azure PowerShell release notes
 ---
 # Azure PowerShell release notes
 ## 7.2.0 - February 2022
