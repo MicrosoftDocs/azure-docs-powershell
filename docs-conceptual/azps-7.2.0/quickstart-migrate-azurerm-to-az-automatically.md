@@ -1,12 +1,12 @@
 ---
-title: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module
-description: Learn how to automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module.
 author: mikefrobbins
+description: Learn how to automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module.
+ms.author: mirobb
+ms.custom: devx-track-azurepowershell, mode-api
+ms.date: 02/08/2022
 ms.service: azure-powershell
 ms.topic: quickstart
-ms.custom: devx-track-azurepowershell, mode-api
-ms.author: mirobb
-ms.date: 01/04/2022
+title: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module
 ---
 
 # Quickstart: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module

@@ -1,11 +1,11 @@
 ---
-title: Azure contexts and sign-in credentials
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Azure contexts and sign-in credentials
 ---
 # Azure PowerShell context objects
 
