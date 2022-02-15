@@ -1,11 +1,11 @@
 ---
-title: Query output of Azure PowerShell cmdlets
 description: How to query for resources in Azure and format the results.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Query output of Azure PowerShell cmdlets
 ---
 # Query output of Azure PowerShell
 

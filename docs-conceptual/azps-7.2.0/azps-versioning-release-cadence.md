@@ -1,11 +1,11 @@
 ---
-title: Azure PowerShell module versioning and release cadence
 description: This article contains Azure PowerShell versioning and release cadence information for the Az PowerShell module.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/31/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Azure PowerShell module versioning and release cadence
 ---
 
 # Azure PowerShell module versioning and release cadence

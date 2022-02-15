@@ -1,11 +1,11 @@
 ---
-title: Install the Azure Az PowerShell module
 description: How to install the Azure Az PowerShell with PowerShellGet
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Install the Azure Az PowerShell module
 ---
 
 # Install the Azure Az PowerShell module
