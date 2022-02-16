@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds member to group.
 
+[!INCLUDE [msgraph-migration-banner-az7](../../includes/msgraph-migration-banner-az7.md)]
+
 ## SYNTAX
 
 ### MemberObjectIdWithGroupObjectIdParameterSet (Default)
