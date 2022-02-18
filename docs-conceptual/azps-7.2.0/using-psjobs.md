@@ -1,7 +1,7 @@
 ---
 description: Learn how to run Azure PowerShell cmdlets in parallel or as background tasks, using -AsJob and Start-Job.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/08/2022
+ms.date: 02/18/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -27,59 +27,68 @@ PowerShell Jobs are run as separate processes without an attached PowerShell ses
 credentials must be shared with them. Credentials are passed as Azure context objects, using one of
 these methods:
 
-* Automatic context persistence. Context persistence is enabled by default and preserves your
+- Automatic context persistence. Context persistence is enabled by default and preserves your
   sign-in information across multiple sessions. With context persistence enabled, the current Azure
   context is passed to the new process:
 
   ```azurepowershell-interactive
   Enable-AzContextAutosave # Enables context autosave if not already on
-  $creds = Get-Credential
-  $job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin } -ArgumentList $creds
+  $vmadmin = Get-Credential
+
+  Start-Job {
+    New-AzVM -Name MyVm -Credential $Using:vmadmin
+  }
   ```
 
-* Use the `-AzContext` parameter with any Azure PowerShell cmdlets to provide an Azure context
+- Use the `AzContext` parameter with any Azure PowerShell cmdlet to provide an Azure context
   object:
 
   ```azurepowershell-interactive
   $context = Get-AzContext -Name 'mycontext' # Get an Azure context object
-  $creds = Get-Credential
-  $job = Start-Job { param($context, $vmadmin) New-AzVM -Name MyVm -AzContext $context -Credential $vmadmin} -ArgumentList $context,$creds }
+  $vmadmin = Get-Credential
+
+  $job = Start-Job {
+    New-AzVM -Name MyVm -AzContext $Using:context -Credential $Using:vmadmin
+  }
   ```
 
-  If context persistence is disabled, the `-AzContext` argument is required.
+  If context persistence is disabled, the `AzContext` parameter is required.
 
-* Use the `-AsJob` switch provided by some Azure PowerShell cmdlets. This switch automatically
-  starts the cmdlet as a PowerShell Job, using the currently active Azure context:
+- Use the `AsJob` parameter provided by some Azure PowerShell cmdlets. This switch automatically
+  starts the cmdlet as a PowerShell Job, using the active Azure context:
 
   ```azurepowershell-interactive
-  $creds = Get-Credential
-  $job = New-AzVM -Name MyVm -Credential $creds -AsJob
+  $vmadmin = Get-Credential
+  $job = New-AzVM -Name MyVm -Credential $vmadmin -AsJob
   ```
 
-  To see if a cmdlet supports `-AsJob`, check its reference documentation. The `-AsJob` switch
+  To see if a cmdlet supports `AsJob`, check its reference documentation. The `AsJob` parameter
   doesn't require context autosave to be enabled.
 
 You can check the status of a running job with the
 [Get-Job](/powershell/module/microsoft.powershell.core/get-job) cmdlet. To get the output from a job
 so far, use the [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job) cmdlet.
 
-To check an operation's progress remotely on Azure, use the `Get-` cmdlets associated with the type
+To check an operation's progress remotely on Azure, use the `Get` cmdlets associated with the type
 of resource being modified by the job:
 
 ```azurepowershell-interactive
-$creds = Get-Credential
+$vmadmin = Get-Credential
 $context = Get-AzContext -Name 'mycontext'
-$vmName = "MyVm"
+$vmName = 'MyVm'
 
-$job = Start-Job { param($context, $vmName, $vmadmin) New-AzVM -Name $vmName -AzContext $context -Credential $vmadmin} -ArgumentList $context,$vmName,$creds }
+$job = Start-Job {
+  New-AzVM -Name $Using:vmName -AzContext $Using:context -Credential $Using:vmadmin
+}
 
-Get-Job $job
+Get-Job -Id $job.Id
 Get-AzVM -Name $vmName
 ```
 
 ## See Also
 
-* [Azure PowerShell contexts](context-persistence.md)
-* [About PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs)
-* [Get-Job reference](/powershell/module/microsoft.powershell.core/get-job)
-* [Receive-Job reference](/powershell/module/microsoft.powershell.core/receive-job)
+- [Azure PowerShell contexts](context-persistence.md)
+- [About PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs)
+- [Get-Job](/powershell/module/microsoft.powershell.core/get-job)
+- [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job)
+- [The `Using:` scope modifier](/powershell/module/microsoft.powershell.core/about/about_scopes#the-using-scope-modifier)
