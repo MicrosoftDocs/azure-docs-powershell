@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Stops all containers in a container group.
 Compute resources will be deallocated and billing will stop.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/stop-azcontainergroup) for up-to-date information.
+
 ## SYNTAX
 
 ### Stop (Default)

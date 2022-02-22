@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Delete a Kubernetes Cluster Extension.
 This will cause the Agent to Uninstall the extension from the cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kubernetesconfiguration/remove-azkubernetesextension) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

@@ -14,6 +14,9 @@ Updates specific properties of a job.
 You can call this operation to notify the Import/Export service that the hard drives comprising the import or export job have been shipped to the Microsoft data center.
 It can also be used to cancel an existing job.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/update-azimportexport) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Generates and downloads Vpn profile at VirtualWan-VpnServerConfiguration level for Point to site client setup.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualwanvpnserverconfigurationvpnprofile) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVirtualWanNameByVpnServerConfigurationObject (Default)

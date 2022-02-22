@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Restores a managed storage account in a key vault from a backup file.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/restore-azkeyvaultmanagedstorageaccount) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVaultName (Default)

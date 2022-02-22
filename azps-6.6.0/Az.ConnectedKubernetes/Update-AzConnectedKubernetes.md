@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 API to update certain properties of the connected cluster resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectedkubernetes/update-azconnectedkubernetes) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

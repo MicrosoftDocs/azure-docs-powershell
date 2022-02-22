@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops a Synapse Analytics Spark session.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/stop-azsynapsesparksession) for up-to-date information.
+
 ## SYNTAX
 
 ### DeleteByNameParameterSet (Default)

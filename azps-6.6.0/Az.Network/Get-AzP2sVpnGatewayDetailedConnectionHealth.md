@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the detailed information of current point to site connections from P2SVpnGateway.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azp2svpngatewaydetailedconnectionhealth) for up-to-date information.
+
 ## SYNTAX
 
 ### ByP2SVpnGatewayName (Default)

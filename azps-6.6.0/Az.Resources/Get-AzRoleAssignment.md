@@ -15,6 +15,9 @@ Lists Azure RBAC role assignments at the specified scope.
 By default it lists all role assignments in the selected Azure subscription.
 Use respective parameters to list assignments to a specific user, or to list assignments on a specific resource group or resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azroleassignment) for up-to-date information.
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)

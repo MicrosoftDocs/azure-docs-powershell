@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Rename an Azure context.  By default contexts are named by user account and subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/rename-azcontext) for up-to-date information.
+
 ## SYNTAX
 
 ### RenameByInputObject (Default)

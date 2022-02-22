@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Cleans up the test migration for the replicating server.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.migrate/start-azmigratetestmigrationcleanup) for up-to-date information.
+
 ## SYNTAX
 
 ### ByIDVMwareCbt (Default)

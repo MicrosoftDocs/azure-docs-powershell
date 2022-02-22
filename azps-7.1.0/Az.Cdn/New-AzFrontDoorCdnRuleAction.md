@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates the rule action.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/new-azfrontdoorcdnruleaction) for up-to-date information.
+
 ## SYNTAX
 
 ### AfdRuleCacheExpirationAction (Default)

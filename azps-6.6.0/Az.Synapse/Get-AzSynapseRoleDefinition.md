@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a Synapse Analytics role definition.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapseroledefinition) for up-to-date information.
+
 ## SYNTAX
 
 ### GetByWorkspaceNameAndIdParameterSet (Default)

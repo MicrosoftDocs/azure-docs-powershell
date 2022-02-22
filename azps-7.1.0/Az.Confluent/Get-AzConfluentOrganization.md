@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the properties of a specific Organization resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.confluent/get-azconfluentorganization) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

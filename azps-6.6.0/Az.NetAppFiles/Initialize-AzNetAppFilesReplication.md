@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Re-Initializes the replication connection on the destination volume
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/initialize-aznetappfilesreplication) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsParameterSet (Default)

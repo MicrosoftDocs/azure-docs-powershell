@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enforces the given rules on the NSG(s) listed in the request
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/add-azsecurityadaptivenetworkhardening) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceGroupLevelResource (Default)
