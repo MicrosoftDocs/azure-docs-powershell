@@ -4,7 +4,7 @@ ms.custom: devx-track-azurepowershell
 ms.date: 02/08/2022
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
+ms.topic: overview
 title: What is Azure PowerShell
 ---
 
