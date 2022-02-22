@@ -2,7 +2,7 @@
 title: What is Azure PowerShell
 description: This article is an introduction to Azure PowerShell and its features.
 ms.devlang: powershell
-ms.topic: conceptual
+ms.topic: overview
 ms.date: 11/02/2021
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
