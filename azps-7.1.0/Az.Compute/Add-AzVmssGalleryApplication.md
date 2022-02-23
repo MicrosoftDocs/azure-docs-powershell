@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Add a GalleryApplication object to the PSVirtualMachineProfile object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvmssgalleryapplication) for up-to-date information.
+
 ## SYNTAX
 
 ```

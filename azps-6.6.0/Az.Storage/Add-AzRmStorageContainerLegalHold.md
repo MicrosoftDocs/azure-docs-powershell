@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds legal hold tags to a Storage blob container
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/add-azrmstoragecontainerlegalhold) for up-to-date information.
+
 ## SYNTAX
 
 ### AccountName (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes a backup policy belonging to a backup vault
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/remove-azdataprotectionbackuppolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

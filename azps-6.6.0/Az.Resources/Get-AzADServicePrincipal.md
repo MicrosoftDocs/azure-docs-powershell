@@ -15,6 +15,9 @@ Filters active directory service principals.
 
 [!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azadserviceprincipal) for up-to-date information.
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)

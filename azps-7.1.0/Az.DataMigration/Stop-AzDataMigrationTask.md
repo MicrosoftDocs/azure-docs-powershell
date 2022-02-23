@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops an  Azure Database Migration Service task that is in a running state.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/stop-azdatamigrationtask) for up-to-date information.
+
 ## SYNTAX
 
 ### ComponentNameParameterSet (Default)

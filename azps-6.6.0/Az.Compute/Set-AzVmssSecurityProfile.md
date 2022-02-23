@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This cmdlet allows users to set the SecurityType enum for Virtual Machines scale sets.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmsssecurityprofile) for up-to-date information.
+
 ## SYNTAX
 
 ```

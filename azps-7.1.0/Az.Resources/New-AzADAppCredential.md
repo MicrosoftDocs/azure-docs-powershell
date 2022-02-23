@@ -14,6 +14,9 @@ Creates key credentials or password credentials for an application.
 
 [!INCLUDE [msgraph-migration-banner-az7](../../includes/msgraph-migration-banner-az7.md)]
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azadappcredential) for up-to-date information.
+
 ## SYNTAX
 
 ### ApplicationObjectIdWithPasswordParameterSet (Default)

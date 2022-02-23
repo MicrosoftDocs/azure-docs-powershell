@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes one or more databases from an Azure SQL Database Failover Group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/remove-azsqldatabasefromfailovergroup) for up-to-date information.
+
 ## SYNTAX
 
 ```

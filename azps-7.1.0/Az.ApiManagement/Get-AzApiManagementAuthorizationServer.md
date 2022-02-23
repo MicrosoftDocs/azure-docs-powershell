@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets an API Management authorization server.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/get-azapimanagementauthorizationserver) for up-to-date information.
+
 ## SYNTAX
 
 ### ContextParameterSet (Default)

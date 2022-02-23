@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns connectivity information for a specified source VM and a destination.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/test-aznetworkwatcherconnectivity) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByResource (Default)

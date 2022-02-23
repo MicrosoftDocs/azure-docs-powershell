@@ -20,6 +20,9 @@ The cmdlet may call below Microsoft Graph API according to input parameters:
 - GET /groups/{id}
 - GET /directoryObjects/{id}
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azroleassignment) for up-to-date information.
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)
