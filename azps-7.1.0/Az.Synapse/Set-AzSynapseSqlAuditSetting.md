@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Changes the auditing settings of an Azure Synapse Analytics Workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/set-azsynapsesqlauditsetting) for up-to-date information.
+
 ## SYNTAX
 
 ### WorkspaceParameterSet (Default)

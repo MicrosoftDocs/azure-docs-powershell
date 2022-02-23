@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Patches the Tags field of a SAP monitor for the specified subscription, resource group, and monitor name.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hanaonazure/update-azsapmonitor) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

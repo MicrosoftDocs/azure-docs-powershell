@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates the FileShare object for the Azure Database Migration Service, which specifies the local network share to take the source database backups to.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationfileshare) for up-to-date information.
+
 ## SYNTAX
 
 ```

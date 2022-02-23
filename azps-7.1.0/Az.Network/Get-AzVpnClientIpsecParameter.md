@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the vpn Ipsec parameters set on Virtual Network Gateway for Point to site connections.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvpnclientipsecparameter) for up-to-date information.
+
 ## SYNTAX
 
 ```

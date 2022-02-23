@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerate the Authorization Rule Key for a NotificationHub .
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.notificationhubs/new-aznotificationhubkey) for up-to-date information.
+
 ## SYNTAX
 
 ```

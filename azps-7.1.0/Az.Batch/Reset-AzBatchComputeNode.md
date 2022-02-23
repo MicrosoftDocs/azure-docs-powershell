@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Reinstalls the operating system on the specified compute node.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/reset-azbatchcomputenode) for up-to-date information.
+
 ## SYNTAX
 
 ### Id (Default)

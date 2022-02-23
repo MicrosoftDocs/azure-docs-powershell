@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 If a backup item is deleted and present in a soft-deleted state, this command brings the item back to a state where the data is retained forever 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/undo-azrecoveryservicesbackupitemdeletion) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Description for Detach the user provided function app from the static site build
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/unregister-azstaticwebappbuilduserprovidedfunctionapp) for up-to-date information.
+
 ## SYNTAX
 
 ### Detach (Default)

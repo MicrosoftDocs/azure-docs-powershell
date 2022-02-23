@@ -101,7 +101,7 @@ subdomain_ is displayed when running `New-AzADServicePrincipal` or `New-AzADAppl
 
 Due to the Azure Active Directory breaking change requiring [AppId Uri in single tenant applications
 to require use of default scheme or verified
-domains](/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains)
+domains](/azure/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains)
 you must upgrade the [Az.Resources](https://www.powershellgallery.com/packages/Az.Resources) module
 to version 4.1.0 or later to continue using `New-AzADServicePrincipal` or `New-AzADApplication` cmdlets.
 
@@ -126,6 +126,6 @@ If you are still encountering issues after upgrading, feel free to open an
 If you cannot upgrade to the PowerShell modules described above, you may follow those steps when
 creating a service principal:
 
-- If needed, [add your custom domain name using Azure Active Directory portal](/active-directory/fundamentals/add-custom-domain)
+- If needed, [add your custom domain name using Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)
 - Create an application with an accepted IdentifierUri
 - Create a service principal referring this application

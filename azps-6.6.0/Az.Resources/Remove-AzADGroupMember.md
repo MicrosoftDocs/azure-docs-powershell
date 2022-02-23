@@ -14,6 +14,9 @@ Removes a user from an AD group.
 
 [!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azadgroupmember) for up-to-date information.
+
 ## SYNTAX
 
 ### ExplicitParameterSet (Default)

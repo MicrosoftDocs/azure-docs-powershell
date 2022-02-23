@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the effective network security group of a network interface.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azeffectivenetworksecuritygroup) for up-to-date information.
+
 ## SYNTAX
 
 ```

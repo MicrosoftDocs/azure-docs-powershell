@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Attach to the output stream of a specific container instance in a specified resource group and container group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/add-azcontainerinstanceoutput) for up-to-date information.
+
 ## SYNTAX
 
 ```

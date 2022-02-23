@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerate key of Spatial Anchors Account
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mixedreality/new-azspatialanchorsaccountkey) for up-to-date information.
+
 ## SYNTAX
 
 ### RegeneratePrimaryKeyParameterSet

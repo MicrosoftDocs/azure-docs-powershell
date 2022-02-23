@@ -15,6 +15,9 @@ Adds a credential to an existing service principal.
 
 [!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azadspcredential) for up-to-date information.
+
 ## SYNTAX
 
 ### SpObjectIdWithPasswordParameterSet (Default)

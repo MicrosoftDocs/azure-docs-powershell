@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List all the firewall rules in a given server.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.postgresql/get-azpostgresqlflexibleserverfirewallrule) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

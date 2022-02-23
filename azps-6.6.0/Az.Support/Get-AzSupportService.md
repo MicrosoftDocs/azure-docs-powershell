@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get services for which support is available. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.support/get-azsupportservice) for up-to-date information.
+
 ## SYNTAX
 
 ### ListParameterSet (Default)
