@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enables custom HTTPS.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/enable-azcdncustomdomainhttps) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsParameterSet (Default)

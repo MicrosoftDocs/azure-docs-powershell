@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerates the specified key of Key Vault managed Azure Storage Account.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/update-azkeyvaultmanagedstorageaccountkey) for up-to-date information.
+
 ## SYNTAX
 
 ### ByDefinitionName (Default)

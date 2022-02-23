@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops a DSC Node configuration deployment in Automation. It only stops the current deployment job but does not unassign already assigned node configurations.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/stop-azautomationdscnodeconfigurationdeployment) for up-to-date information.
+
 ## SYNTAX
 
 ### ByJobId (Default)

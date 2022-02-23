@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove a service from the cluster. Only supports ARM deployed services.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/remove-azservicefabricservice) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceGroup (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
  Invokes another instance of a trigger run.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/invoke-azdatafactoryv2triggerrun) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFactoryNameByParameterFile (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists all the restorable Azure Cosmos DB MongoDB collection available for a specific database.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cosmosdb/get-azcosmosdbmongodbrestorablecollection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByNameParameterSet (Default)

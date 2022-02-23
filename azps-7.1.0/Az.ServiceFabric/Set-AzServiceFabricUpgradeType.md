@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Change the Service Fabric upgrade type of the cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/set-azservicefabricupgradetype) for up-to-date information.
+
 ## SYNTAX
 
 ### Automatic

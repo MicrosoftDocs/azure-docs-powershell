@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Diagnoses network connectivity status for external resources on which the service is dependent on.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kusto/invoke-azkustodiagnoseclustervirtualnetwork) for up-to-date information.
+
 ## SYNTAX
 
 ### Diagnose (Default)

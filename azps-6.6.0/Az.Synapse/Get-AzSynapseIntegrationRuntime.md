@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets information about integration runtime resources.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapseintegrationruntime) for up-to-date information.
+
 ## SYNTAX
 
 ### GetByNameParameterSet (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 When creating an Azure Synapse Analytics workspace, you can choose to encrypt all data at rest in the workspace `with a customer-managed key which will provide double encryption to the workspace.You may need to set up the encryption environment firstly, such as to create a key vault with purge protection enable and specify Access Polices to the key vault. Then use this cmdlet to activate the new Azure Synapse Analytics workspace which double encryption is enabled using a customer-managed key.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/enable-azsynapseworkspace) for up-to-date information.
+
 ## SYNTAX
 
 ### EnableByNameParameterSet (Default)

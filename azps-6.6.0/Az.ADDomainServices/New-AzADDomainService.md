@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 The Create Domain Service operation creates a new domain service with the specified parameters.
 If the specific service already exists, then any patchable properties will be updated and any immutable properties will remain unchanged.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.addomainservices/new-azaddomainservice) for up-to-date information.
+
 ## SYNTAX
 
 ```

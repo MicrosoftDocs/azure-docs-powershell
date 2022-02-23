@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 Update the durability tier or VmSku of a node type in the cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/update-azservicefabricdurability) for up-to-date information.
+
 ## SYNTAX
 
 ```

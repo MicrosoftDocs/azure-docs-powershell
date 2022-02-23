@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes a deployment and any associated operations
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azdeployment) for up-to-date information.
+
 ## SYNTAX
 
 ### RemoveByDeploymentName (Default)

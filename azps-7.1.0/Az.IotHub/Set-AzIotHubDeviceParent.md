@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Set the parent device of the specified device.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/set-aziothubdeviceparent) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

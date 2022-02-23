@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Rebuild Role Instances reinstalls the operating system on instances of web roles or worker roles and initializes the storage resources that are used by them.
 If you do not want to initialize storage resources, you can use Reimage Role Instances.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/invoke-azcloudservicerebuild) for up-to-date information.
+
 ## SYNTAX
 
 ### RebuildExpanded (Default)

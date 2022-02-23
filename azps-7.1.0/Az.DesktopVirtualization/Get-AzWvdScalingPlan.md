@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get a scaling plan.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.desktopvirtualization/get-azwvdscalingplan) for up-to-date information.
+
 ## SYNTAX
 
 ### List1 (Default)
