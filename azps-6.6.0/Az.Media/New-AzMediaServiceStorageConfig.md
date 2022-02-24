@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a storage account configuration for the media service cmdlets.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.media/new-azmediaservicestorageconfig) for up-to-date information.
+
 ## SYNTAX
 
 ```

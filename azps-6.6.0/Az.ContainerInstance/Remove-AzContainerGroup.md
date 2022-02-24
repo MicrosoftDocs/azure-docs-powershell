@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Delete the specified container group in the specified subscription and resource group.
 The operation does not delete other resources provided by the user, such as volumes.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/remove-azcontainergroup) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

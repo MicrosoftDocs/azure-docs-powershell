@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a Recovery Point using recoveryPointId for a Datasource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/get-azdataprotectionrecoverypoint) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

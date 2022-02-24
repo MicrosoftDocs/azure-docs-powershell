@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerates an access key for the specified configuration store.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.appconfiguration/new-azappconfigurationstorekey) for up-to-date information.
+
 ## SYNTAX
 
 ### RegenerateExpanded (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Assigns the specified RBAC role to the specified principal, at the specified scope.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/new-azkeyvaultroleassignment) for up-to-date information.
+
 ## SYNTAX
 
 ### DefinitionNameSignInName (Default)

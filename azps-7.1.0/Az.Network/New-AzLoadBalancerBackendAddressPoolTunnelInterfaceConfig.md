@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a tunnel interface in a backend address pool of a load balancer.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azloadbalancerbackendaddresspooltunnelinterfaceconfig) for up-to-date information.
+
 ## SYNTAX
 
 ### CreateByNameParameterSet

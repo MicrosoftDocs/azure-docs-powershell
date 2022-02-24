@@ -14,8 +14,6 @@ Creates an Event Hubs namespace.
 
 ## SYNTAX
 
-## SYNTAX
-
 ### NamespaceParameterSet (Default)
 ```
 New-AzEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
@@ -36,7 +34,7 @@ New-AzEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Locatio
 The New-AzEventHubNamespace cmdlet creates a new namespace of type Event Hubs.
 
 ## EXAMPLES
-### Example 1			 								
+### Example 1
 ```powershell
 PS C:\> New-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location MyLocation
 
@@ -161,7 +159,7 @@ Encryption.KeyVaultProperties :
 
 Creates an Event Hubs namespace \`MyNamespaceName\` in the specified geographic location \`MyLocation\`, in resource group \`MyResourceGroupName\` with Kafka and  AutoInflate enabled.
 
-### Example 5: Creating Namespace with Manage Identity in a cluster 
+### Example 5: Creating Namespace with Manage Identity in a cluster
 ```powershell
 PS C:\> New-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location MyLocation --EnableAutoInflate -MaximumThroughputUnits 12 -EnableKafka -ZoneRedundant -Identity
 

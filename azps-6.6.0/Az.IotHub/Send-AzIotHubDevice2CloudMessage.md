@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Send device-to-cloud message.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/send-aziothubdevice2cloudmessage) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

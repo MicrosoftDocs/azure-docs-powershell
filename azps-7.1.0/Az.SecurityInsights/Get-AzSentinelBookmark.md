@@ -14,6 +14,9 @@ Gets a Bookmark. <br/>
 A Bookmark is used to preserve queries, comments and tags for a specific incident.<br/>
 You create the Bookmark first and then add it to an incident.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentinelbookmark) for up-to-date information.
+
 ## SYNTAX
 
 ### WorkspaceScope (Default)

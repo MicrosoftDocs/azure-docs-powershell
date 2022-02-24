@@ -1,11 +1,11 @@
 ---
-title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/04/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Azure PowerShell release notes
 ---
 # Azure PowerShell release notes
 ## 7.2.0 - February 2022
@@ -18,8 +18,8 @@ ms.service: azure-powershell
 #### Az.Compute
 * Remove ProvisioningDetails property from PSRestorePoint object.
 * Updated 'Set-AzVmExtension' cmdlet to properly display '-Name' and '-Location' parameters as mandatory.
-* Edited 'New-AzVmssConfig' second example so it runs successfully by changing the Tag input to the correct format. 
-* Added 'Hibernate' parameter to 'Stop-AzVm' cmdlet. 
+* Edited 'New-AzVmssConfig' second example so it runs successfully by changing the Tag input to the correct format.
+* Added 'Hibernate' parameter to 'Stop-AzVm' cmdlet.
 * Added 'HibernationEnabled' parameter to 'New-AzVm', 'New-AzVmConfig', and 'Update-AzVm' cmdlets.
 * Added 'EnableHotpatching' parameter to the 'Set-AzVmssOSProfile' cmdlet.
 * Added 'ForceDeletion' parameter to Remove-AzVM and Remove-AzVMSS.
@@ -64,20 +64,20 @@ ms.service: azure-powershell
 
 #### Az.ServiceBus
 * Added support to Enable or Disable  Public Network Access as optional parameter 'PublicNetworkAccess' to 'Set-AzServiceBusNetworkRuleSet'
-* Fixed 'Set-AzServiceBusNamespace' with Tags 
+* Fixed 'Set-AzServiceBusNamespace' with Tags
 
 #### Az.Sql
 * Deprecation of Get-AzSqlDatabaseTransparentDataEncryptionActivity cmdlet
 * Fixed cmdlets for Azure Active Directory Admin 'AzureSqlServerActiveDirectoryAdministratorAdapter' and 'AzureSqlInstanceActiveDirectoryAdministratorAdapter' migrate from 'AzureEnvironment.Endpoint.AzureEnvironment.Endpoint.Graph' to 'AzureEnvironment.ExtendedEndpoint.MicrosoftGraphUrl'
 
 #### Az.StackHCI
-* Adding support cmdlet for Remote Support 
+* Adding support cmdlet for Remote Support
     - New cmdlets - Install-AzStackHCIRemoteSupport, Remove-AzStackHCIRemoteSupport, Enable-AzStackHCIRemoteSupport, Disable-AzStackHCIRemoteSupport, Get-AzStackHCIRemoteSupportAccess,Get-AzStackHCIRemoteSupportSessionHistory
 
 #### Az.Storage
 * Fixed the issue that output number in console when update/copy blob sometimes [#16783]
-    -  'Set-AzStorageBlobContent' 
-    -  'Copy-AzStorageBlob' 
+    -  'Set-AzStorageBlobContent'
+    -  'Copy-AzStorageBlob'
 * Updated help file, added more description for the asynchronous blob copy.
     -  'Start-AzStorageBlobCopy'
 
@@ -5003,7 +5003,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     - Set-AzScheduledQueryRule
     - Update-AzScheduledQueryRule
     - Remove-AzScheduledQueryRule
-    - [More](/rest/api/monitor/scheduledqueryrules) information about SQR API
+    - [More](/rest/api/monitor/scheduledqueryrule-2021-08-01/scheduled-query-rules) information about SQR API
     - Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule
 
 #### Az.Network

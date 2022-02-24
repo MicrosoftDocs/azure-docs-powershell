@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds performance counters to all Linux computers in a workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.operationalinsights/new-azoperationalinsightslinuxperformanceobjectdatasource) for up-to-date information.
+
 ## SYNTAX
 
 ### ByWorkspaceName (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes the subscription to a topic from the specified Service Bus namespace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/remove-azservicebussubscription) for up-to-date information.
+
 ## SYNTAX
 
 ### SubscriptionPropertiesSet (Default)

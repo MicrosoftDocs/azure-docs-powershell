@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Modifies UEFI properties of gen 2 virtual machines that are part of virtual machine scale sets
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmssuefi) for up-to-date information.
+
 ## SYNTAX
 
 ```
