@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Changes the auditing settings for an Azure Synapse Analytics SQL pool.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/set-azsynapsesqlpoolauditsetting) for up-to-date information.
+
 ## SYNTAX
 
 ### SqlPoolParameterSet (Default)

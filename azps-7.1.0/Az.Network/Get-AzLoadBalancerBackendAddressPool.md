@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get-AzLoadBalancerBackendAddressPool retrieves one or more backend address pools associated with a load balancer. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azloadbalancerbackendaddresspool) for up-to-date information.
+
 ## SYNTAX
 
 ### GetByNameParameterSet

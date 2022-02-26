@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates the Tag for the given Cluster
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/set-azeventhubcluster) for up-to-date information.
+
 ## SYNTAX
 
 ### ClusterPropertiesSet (Default)

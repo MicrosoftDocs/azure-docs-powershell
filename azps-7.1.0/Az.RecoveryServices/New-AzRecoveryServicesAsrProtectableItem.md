@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Add(Discover) a physical server to the list of protectable items.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/new-azrecoveryservicesasrprotectableitem) for up-to-date information.
+
 ## SYNTAX
 
 ```

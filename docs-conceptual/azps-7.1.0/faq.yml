@@ -3,7 +3,7 @@ metadata:
   title: Frequently Asked Questions (FAQ)
   description: Frequently Asked Questions about Azure PowerShell.
   ms.devlang: powershell
-  ms.topic: conceptual
+  ms.topic: faq
   ms.date: 01/04/2022
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Checks whether the configuration store name is available for use.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.appconfiguration/test-azappconfigurationstorenameavailability) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -1,11 +1,11 @@
 ---
-title: Migrate Azure PowerShell scripts from AzureRM to Az
 description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
+ms.custom: devx-track-azurepowershell, contperf-fy21q2
+ms.date: 02/22/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.date: 01/04/2022
-ms.custom: devx-track-azurepowershell, contperf-fy21q2
+title: Migrate Azure PowerShell scripts from AzureRM to Az
 ---
 
 # Migrate Azure PowerShell from AzureRM to Az
@@ -64,11 +64,11 @@ To check which version(s) of AzureRM you have installed, run the following examp
 Get-Module -Name AzureRM -ListAvailable -All
 ```
 
-The **latest** available release of AzureRM is **6.13.1**. If you don't have this version installed,
+The **latest** available release of AzureRM is **6.13.2**. If you don't have this version installed,
 your existing scripts may need additional modifications to work with the Az module beyond the scope
 of what's described in this article and in the [breaking changes list](migrate-az-1.0.0.md).
 
-If your scripts don't work with AzureRM 6.13.1, update them according to the
+If your scripts don't work with AzureRM 6.13.2, update them according to the
 [AzureRM 5.x to 6.x migration guide](/powershell/azure/azurerm/migration-guide.6.0.0). If you use an
 earlier version of the AzureRM module, there are migration guides available for each major version.
 

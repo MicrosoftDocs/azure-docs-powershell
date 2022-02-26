@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Invokes a pipeline to start a run for it.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/invoke-azsynapsepipeline) for up-to-date information.
+
 ## SYNTAX
 
 ### NewByName (Default)

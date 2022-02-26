@@ -1,11 +1,11 @@
 ---
-title: Use Azure service principals with Azure PowerShell
 description: Learn how to create and use service principals with Azure PowerShell.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.service: azure-powershell
-ms.date: 01/06/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
+ms.service: azure-powershell
+ms.topic: conceptual
+title: Use Azure service principals with Azure PowerShell
 ---
 # Create an Azure service principal with Azure PowerShell
 

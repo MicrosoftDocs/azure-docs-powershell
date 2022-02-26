@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Uploads a virtual hard disk from an on-premises machine to Azure (managed disk or blob).
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvhd) for up-to-date information.
+
 ## SYNTAX
 
 ### DefaultParameterSet

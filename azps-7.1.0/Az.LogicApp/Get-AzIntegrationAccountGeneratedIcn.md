@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This cmdlet retrieves the current value of the generated interchange control number per agreement.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/get-azintegrationaccountgeneratedicn) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -1,11 +1,11 @@
 ---
-title: Migration guide for Az 7.0.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 7.0.0 release.
-ms.devlang: powershell
-ms.topic: conceptual
-ms.date: 01/06/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/08/2022
+ms.devlang: powershell
 ms.service: azure-powershell
+ms.topic: conceptual
+title: Migration guide for Az 7.0.0
 ---
 
 # Migration Guide for Az 7.0.0

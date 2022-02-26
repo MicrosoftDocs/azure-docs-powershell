@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the details of an Event Hubs NetworkruleSet of namespace in the current Azure subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/get-azservicebusnetworkruleset) for up-to-date information.
+
 ## SYNTAX
 
 ### NetworkRuleSetPropertiesSet (Default)

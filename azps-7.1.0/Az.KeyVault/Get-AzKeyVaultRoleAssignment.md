@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get or list role assignments of a managed HSM. Use respective parameters to list assignments to a specific user or a role definition.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/get-azkeyvaultroleassignment) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

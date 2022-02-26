@@ -30,16 +30,6 @@
     href: release-notes-azureps.md
   - name: Az 7.0.0 breaking changes
     href: migrate-az-7.0.0.md
-  - name: Az 6.0.0 breaking changes
-    href: migrate-az-6.0.0.md
-  - name: Az 5.0.0 breaking changes
-    href: migrate-az-5.0.0.md
-  - name: Az 4.1.0 breaking changes
-    href: migrate-az-4.1.0.md
-  - name: Az 3.0.0 breaking changes
-    href: migrate-az-3.0.0.md
-  - name: Az 2.0.0 breaking changes
-    href: migrate-az-2.0.0.md
 - name: How-to guides
   items:
   - name: Configuration
@@ -97,6 +87,18 @@
   items:
   - name: Azure AD to Microsoft Graph Migration Guide
     href: azps-msgraph-migration-changes.md
+  - name: Migrate from previous versions of Az
+    items:
+    - name: Az 6.0.0 breaking changes
+      href: migrate-az-6.0.0.md
+    - name: Az 5.0.0 breaking changes
+      href: migrate-az-5.0.0.md
+    - name: Az 4.1.0 breaking changes
+      href: migrate-az-4.1.0.md
+    - name: Az 3.0.0 breaking changes
+      href: migrate-az-3.0.0.md
+    - name: Az 2.0.0 breaking changes
+      href: migrate-az-2.0.0.md
   - name: Migrate from AzureRM
     items:
     - name: Changes between AzureRM and Az

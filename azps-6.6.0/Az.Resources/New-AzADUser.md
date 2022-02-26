@@ -15,6 +15,9 @@ Creates a new active directory user.
 
 [!INCLUDE [msgraph-migration-banner](../../includes/msgraph-migration-banner.md)]
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azaduser) for up-to-date information.
+
 ## SYNTAX
 
 ```

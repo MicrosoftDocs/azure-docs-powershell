@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Upload compute node service log files to an Azure Storage container.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/start-azbatchcomputenodeservicelogupload) for up-to-date information.
+
 ## SYNTAX
 
 ### AzureBatchComputeNodeServiceLogUpload (Default)

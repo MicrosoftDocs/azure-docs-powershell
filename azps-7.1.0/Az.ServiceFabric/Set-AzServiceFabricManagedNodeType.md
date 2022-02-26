@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets node type resource properties or run reimage actions on specific ndes of the node type with -Reimage parameter.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/set-azservicefabricmanagednodetype) for up-to-date information.
+
 ## SYNTAX
 
 ### ByObj (Default)
