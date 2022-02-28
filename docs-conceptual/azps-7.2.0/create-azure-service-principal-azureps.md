@@ -148,6 +148,10 @@ New-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefi
 Remove-AzRoleAssignment -ObjectId <service principal object ID> -RoleDefinitionName 'Contributor'
 ```
 
+If you create a service principal and immediately try to assign a role to that service principal,
+that role assignment can fail in some cases due to Azure AD replication delay. For more information, 
+see [Assign Azure roles](/azure/role-based-access-control/role-assignments-rest#new-service-principal).
+
 > [!IMPORTANT]
 > Role assignment cmdlets don't take the service principal object ID. They take the associated
 > application ID, which is generated at creation time. To get the application ID for a service
