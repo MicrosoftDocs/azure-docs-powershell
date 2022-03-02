@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets a advanced threat protection settings on a SQL pool.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/update-azsynapsesqlpooladvancedthreatprotectionsetting) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateByNameParameterSet (Default)

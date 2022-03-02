@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update a service fabric managed application. This allows to update the application parameters and/or upgrade the application type version which will trigger an application upgrade or other configuration only updates. Only supports ARM deployed applications.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/set-azservicefabricmanagedclusterapplication) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceGroup (Default)

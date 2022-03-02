@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 The operation to get the extension.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectedmachine/get-azconnectedmachineextension) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

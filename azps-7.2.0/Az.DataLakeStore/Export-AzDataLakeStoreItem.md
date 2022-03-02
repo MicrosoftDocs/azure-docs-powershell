@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Downloads a file from Data Lake Store.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/export-azdatalakestoreitem) for up-to-date information.
+
 ## SYNTAX
 
 ### NoDiagnosticLogging (Default)

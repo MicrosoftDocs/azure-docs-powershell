@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes the Custom Location with the specified Resource Name, Resource Group, and Subscription Id.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.customlocation/remove-azcustomlocation) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

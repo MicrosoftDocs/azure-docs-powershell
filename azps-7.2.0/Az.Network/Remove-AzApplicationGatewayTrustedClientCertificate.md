@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes the trusted client CA certificate chain object from an application gateway.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azapplicationgatewaytrustedclientcertificate) for up-to-date information.
+
 ## SYNTAX
 
 ```
