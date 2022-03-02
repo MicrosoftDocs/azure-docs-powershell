@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Description for Gets the list of users of a static site.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/get-azstaticwebappuser) for up-to-date information.
+
 ## SYNTAX
 
 ```

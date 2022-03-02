@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Operation to delete a lab resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/remove-azlabserviceslab) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceId (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Checks the configuration of the AEM extension.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/test-azvmaemextension) for up-to-date information.
+
 ## SYNTAX
 
 ```
