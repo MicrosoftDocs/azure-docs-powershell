@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an elastic database pool for a SQL Database.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqlelasticpool) for up-to-date information.
+
 ## SYNTAX
 
 ### DtuBasedPool (Default)

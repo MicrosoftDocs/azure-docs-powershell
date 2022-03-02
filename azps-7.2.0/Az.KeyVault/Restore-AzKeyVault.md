@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Fully restores a managed HSM from backup.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/restore-azkeyvault) for up-to-date information.
+
 ## SYNTAX
 
 ### InteractiveStorageName (Default)

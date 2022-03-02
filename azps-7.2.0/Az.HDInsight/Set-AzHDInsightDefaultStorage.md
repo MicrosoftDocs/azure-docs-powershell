@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets the default Storage account setting in a cluster configuration object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/set-azhdinsightdefaultstorage) for up-to-date information.
+
 ## SYNTAX
 
 ```

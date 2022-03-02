@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Cmdlet deletes the Migration configuration for Standard to Premium namespaces
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/remove-azservicebusmigration) for up-to-date information.
+
 ## SYNTAX
 
 ### MigrationConfigurationPropertiesSet (Default)

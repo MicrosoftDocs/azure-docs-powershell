@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This command lists all storage sync services within a given scope of subscription/resource group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagesync/get-azstoragesyncservice) for up-to-date information.
+
 ## SYNTAX
 
 ### ParentStringParameterSet (Default)

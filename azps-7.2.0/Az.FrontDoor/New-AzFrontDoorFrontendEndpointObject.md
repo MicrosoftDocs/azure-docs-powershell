@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a PSFrontendEndpoint Object for Front Door creation
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.frontdoor/new-azfrontdoorfrontendendpointobject) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 The operation to delete the extension.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectedmachine/remove-azconnectedmachineextension) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

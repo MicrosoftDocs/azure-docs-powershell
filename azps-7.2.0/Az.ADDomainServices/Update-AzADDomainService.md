@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 The Update Domain Service operation can be used to update the existing deployment.
 The update call only supports the properties listed in the PATCH body.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.addomainservices/update-azaddomainservice) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
