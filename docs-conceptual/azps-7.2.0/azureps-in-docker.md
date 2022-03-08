@@ -1,7 +1,7 @@
 ---
 description: How to use Azure PowerShell that is preinstalled in a Docker image.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/08/2022
+ms.date: 03/08/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -50,20 +50,6 @@ PowerShell session.
 For Windows Docker hosts, you must enable Docker file sharing to allow local drives on Windows to be
 shared with Linux containers. For more information see
 [Get started with Docker for Windows][file-sharing].
-
-### Run the azure-powershell container interactively using host authentication
-
-If you have Azure PowerShell already installed on the system hosting Docker, you may have cached
-Azure credentials. These credentials can be used in the PowerShell session running in the Docker
-container.
-
-By default, the cached credentials are in `$HOME/.Azure` directory on your host. The Docker service
-must have access to this location to access the credentials. The following command starts the
-container with the credential cache mounted and starts an interactive PowerShell session.
-
-```console
-docker run -it -v ~/.Azure/AzureRmContext.json:/root/.Azure/AzureRmContext.json -v ~/.Azure/TokenCache.dat:/root/.Azure/TokenCache.dat mcr.microsoft.com/azure-powershell pwsh
-```
 
 ### Remove the image when no longer needed
 
