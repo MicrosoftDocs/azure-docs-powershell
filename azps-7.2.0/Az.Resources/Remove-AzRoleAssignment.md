@@ -21,6 +21,9 @@ The cmdlet may call below Microsoft Graph API according to input parameters:
 - GET /directoryObjects/{id}
 - POST /directoryObjects/getByIds
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azroleassignment) for up-to-date information.
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Starts Packet Capture Operation on a Vpn Connection.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/start-azvpnconnectionpacketcapture) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVpnConnectionName (Default)

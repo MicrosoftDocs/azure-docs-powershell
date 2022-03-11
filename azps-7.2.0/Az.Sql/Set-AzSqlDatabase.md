@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets properties for a database, or moves an existing database into an elastic pool.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/set-azsqldatabase) for up-to-date information.
+
 ## SYNTAX
 
 ### Update (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets V2 (non-classic) metric alert rules
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/get-azmetricalertrulev2) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceGroupName (Default)

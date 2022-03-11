@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds custom header information to a local Traffic Manager endpoint object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.trafficmanager/add-aztrafficmanagercustomheadertoendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ```

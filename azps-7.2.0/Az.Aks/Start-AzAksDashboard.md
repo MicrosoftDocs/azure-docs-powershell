@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a Kubectl SSH tunnel to the managed cluster's dashboard.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.aks/start-azaksdashboard) for up-to-date information.
+
 ## SYNTAX
 
 ### GroupNameParameterSet (Default)
