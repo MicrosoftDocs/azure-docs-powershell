@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Starts a streaming job.
 Once a job is started it will start processing input events and produce output.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/start-azstreamanalyticsjob) for up-to-date information.
+
 ## SYNTAX
 
 ### StartExpanded (Default)

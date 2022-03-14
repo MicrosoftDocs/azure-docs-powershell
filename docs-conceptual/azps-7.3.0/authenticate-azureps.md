@@ -1,7 +1,7 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/08/2022
+ms.date: 03/01/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

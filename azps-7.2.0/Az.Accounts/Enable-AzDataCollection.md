@@ -14,6 +14,9 @@ Enables Azure PowerShell to collect data to improve the user experience with the
 cmdlets. Executing this cmdlet opts in to data collection for the current user on the current
 machine. Data is collected by default unless you explicitly opt out.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/enable-azdatacollection) for up-to-date information.
+
 ## SYNTAX
 
 ```

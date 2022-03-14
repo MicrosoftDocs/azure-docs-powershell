@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove IpRules or VirtualNetworkRules from the NetWorkRule property of a Cognitive Services account
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cognitiveservices/remove-azcognitiveservicesaccountnetworkrule) for up-to-date information.
+
 ## SYNTAX
 
 ### NetWorkRuleString (Default)

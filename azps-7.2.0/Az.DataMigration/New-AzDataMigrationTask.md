@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates and starts a data migration task in the Azure Database Migration Service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationtask) for up-to-date information.
+
 ## SYNTAX
 
 ### ComponentNameParameterSet (Default)
