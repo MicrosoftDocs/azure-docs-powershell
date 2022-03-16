@@ -1,7 +1,7 @@
 ---
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.custom: devx-track-azurepowershell
-ms.date: 03/01/2022
+ms.date: 03/12/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
