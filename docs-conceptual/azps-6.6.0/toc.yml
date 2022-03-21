@@ -87,6 +87,8 @@
   items:
   - name: Migrate from previous versions of Az
     items:
+    - name: Az 6.0.0 breaking changes
+      href: migrate-az-6.0.0.md
     - name: Az 5.0.0 breaking changes
       href: migrate-az-5.0.0.md
     - name: Az 4.1.0 breaking changes
