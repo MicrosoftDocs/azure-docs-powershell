@@ -1,7 +1,7 @@
 ---
 description: Using Az Predictor for intelligent context-aware command completion in Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 03/21/2022
+ms.date: 03/31/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -43,7 +43,7 @@ Install-Module -Name PSReadline
 Install the Az.Tools.Predictor PowerShell module
 
 ```powershell
-Install-Module -Name Az.Tools.Predictor -AllowPrerelease
+Install-Module -Name Az.Tools.Predictor
 ```
 
 ### Enable Az Predictor
