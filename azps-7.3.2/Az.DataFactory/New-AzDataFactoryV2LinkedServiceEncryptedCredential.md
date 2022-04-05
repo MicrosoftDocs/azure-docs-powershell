@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Encrypt credential in linked service with specified integration runtime.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/new-azdatafactoryv2linkedserviceencryptedcredential) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFactoryName (Default)

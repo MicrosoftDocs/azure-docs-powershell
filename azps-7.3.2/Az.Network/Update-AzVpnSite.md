@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a VPN site.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/update-azvpnsite) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVpnSiteNameNoVirtualWanUpdate (Default)

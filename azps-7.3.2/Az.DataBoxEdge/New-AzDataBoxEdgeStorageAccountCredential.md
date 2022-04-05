@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates new credentials for an edge storage account on the device.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databoxedge/new-azdataboxedgestorageaccountcredential) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Starts an instance of the Azure Database Migration Service in a stopped state. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/start-azdatamigrationservice) for up-to-date information.
+
 ## SYNTAX
 
 ### ComponentNameParameterSet (Default)

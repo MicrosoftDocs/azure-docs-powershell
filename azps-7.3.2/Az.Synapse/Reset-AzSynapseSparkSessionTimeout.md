@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Resets timeout of a Synapse Analytics Spark session.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/reset-azsynapsesparksessiontimeout) for up-to-date information.
+
 ## SYNTAX
 
 ### ResetByNameParameterSet (Default)

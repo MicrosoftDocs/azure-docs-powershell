@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns whether the packet is allowed or denied to or from a particular destination.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/test-aznetworkwatcheripflow) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByResource (Default)

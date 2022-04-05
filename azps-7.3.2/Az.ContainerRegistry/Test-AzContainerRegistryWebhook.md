@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Triggers a webhook ping event.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerregistry/test-azcontainerregistrywebhook) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceIdParameterSet (Default)

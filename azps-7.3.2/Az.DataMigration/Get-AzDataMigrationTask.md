@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieves the PSProjectTask object associated with an Azure Database Migration Service migration task.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/get-azdatamigrationtask) for up-to-date information.
+
 ## SYNTAX
 
 ### ListByComponent (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates the DatabaseInfo object for the Azure Database Migration Service, which specifies the database source for migration.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationdatabaseinfo) for up-to-date information.
+
 ## SYNTAX
 
 ```

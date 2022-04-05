@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerates a login credential for a container registry.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerregistry/update-azcontainerregistrycredential) for up-to-date information.
+
 ## SYNTAX
 
 ### NameResourceGroupParameterSet (Default)

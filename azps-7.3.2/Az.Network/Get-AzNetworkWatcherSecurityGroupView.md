@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 View the configured and effective network security group rules applied on a VM.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-aznetworkwatchersecuritygroupview) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByResource (Default)
