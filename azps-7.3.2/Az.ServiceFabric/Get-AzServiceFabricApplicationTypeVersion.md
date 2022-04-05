@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get Service Fabric application type version details. Only supports ARM deployed application type versions.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/get-azservicefabricapplicationtypeversion) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceGroupAndCluster (Default)

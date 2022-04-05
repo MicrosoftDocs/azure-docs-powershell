@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a local criteria object that can be used to create a new metric alert
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/new-azmetricalertrulev2criteria) for up-to-date information.
+
 ## SYNTAX
 
 ### StaticThresholdParameterSet (Default)

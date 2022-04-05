@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a link with an SSO token to a deployed management portal of an API Management service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/get-azapimanagementssotoken) for up-to-date information.
+
 ## SYNTAX
 
 ### ExpandedParameter (Default)

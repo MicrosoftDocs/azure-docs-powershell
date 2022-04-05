@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets authorization rules for a notification hub namespace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.notificationhubs/set-aznotificationhubsnamespaceauthorizationrule) for up-to-date information.
+
 ## SYNTAX
 
 ### InputFileParameterSet

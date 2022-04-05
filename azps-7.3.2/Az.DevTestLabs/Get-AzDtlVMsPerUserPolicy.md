@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the virtual machines per user policy of a lab in DevTest Labs.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.devtestlabs/get-azdtlvmsperuserpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ```

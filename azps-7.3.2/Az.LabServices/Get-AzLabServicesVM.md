@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns the properties for a lab virtual machine.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/get-azlabservicesvm) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

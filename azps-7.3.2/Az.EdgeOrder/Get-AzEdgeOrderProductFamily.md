@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This method provides the list of product families for the given subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/get-azedgeorderproductfamily) for up-to-date information.
+
 ## SYNTAX
 
 ```

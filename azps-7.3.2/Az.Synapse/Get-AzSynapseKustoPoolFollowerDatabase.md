@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns a list of databases that are owned by this Kusto Pool and were followed by another Kusto Pool.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapsekustopoolfollowerdatabase) for up-to-date information.
+
 ## SYNTAX
 
 ```

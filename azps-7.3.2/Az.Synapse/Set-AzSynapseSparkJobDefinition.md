@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a Spark job definition in workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/set-azsynapsesparkjobdefinition) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByName (Default)

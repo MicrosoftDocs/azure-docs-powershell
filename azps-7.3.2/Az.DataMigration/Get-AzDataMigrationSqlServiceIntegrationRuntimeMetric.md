@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieve the registered Integration Runtime nodes and their monitoring data for a given Database Migration Service
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/get-azdatamigrationsqlserviceintegrationruntimemetric) for up-to-date information.
+
 ## SYNTAX
 
 ```

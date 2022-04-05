@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Imports previously exported security domain data to a managed HSM.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/import-azkeyvaultsecuritydomain) for up-to-date information.
+
 ## SYNTAX
 
 ### ByName (Default)
