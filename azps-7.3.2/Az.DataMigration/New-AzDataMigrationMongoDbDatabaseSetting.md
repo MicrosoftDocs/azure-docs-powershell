@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates database setting for migration for the mongoDb migration
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationmongodbdatabasesetting) for up-to-date information.
+
 ## SYNTAX
 
 ```

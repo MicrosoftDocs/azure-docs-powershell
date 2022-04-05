@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removed a particular API Revision
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/remove-azapimanagementapirevision) for up-to-date information.
+
 ## SYNTAX
 
 ### ByApiId (Default)

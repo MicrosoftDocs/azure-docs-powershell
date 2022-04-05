@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Used to display allowed traffic between resources for the subscription
 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/get-azallowedconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### SubscriptionScope (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Deletes an existing job.
 Only jobs in the Creating or Completed states can be deleted.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/remove-azimportexport) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

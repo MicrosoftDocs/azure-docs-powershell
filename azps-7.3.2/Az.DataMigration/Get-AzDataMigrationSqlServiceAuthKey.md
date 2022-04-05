@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieve the List of Authentication Keys for Self Hosted Integration Runtime.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/get-azdatamigrationsqlserviceauthkey) for up-to-date information.
+
 ## SYNTAX
 
 ```
