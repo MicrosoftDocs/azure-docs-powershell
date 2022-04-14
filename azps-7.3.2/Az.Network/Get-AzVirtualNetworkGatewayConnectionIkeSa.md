@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get IKE Security Associations of a Virtual Network Gateway Connection
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualnetworkgatewayconnectionikesa) for up-to-date information.
+
 ## SYNTAX
 
 ### ByName

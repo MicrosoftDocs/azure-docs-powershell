@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Generate a new instance of Cognitive Services Account ApiProperties
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cognitiveservices/new-azcognitiveservicesaccountapiproperty) for up-to-date information.
+
 ## SYNTAX
 
 ```

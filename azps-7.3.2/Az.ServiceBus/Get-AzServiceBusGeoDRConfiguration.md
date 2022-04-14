@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieves Alias(Disaster Recovery configuration) for primary or secondary namespace
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/get-azservicebusgeodrconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ### GeoDRPropertiesSet (Default)

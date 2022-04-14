@@ -15,6 +15,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Restores the data and configuration for a Backup item to the specified recovery point. The required parameters vary with the backup item type.
 The same command is used to restore Azure Virtual machines, databases running within Azure Virtual machines and Azure file shares as well.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/restore-azrecoveryservicesbackupitem) for up-to-date information.
+
 ## SYNTAX
 
 ### AzureManagedVMReplaceExistingParameterSet (Default)
