@@ -49,7 +49,7 @@ landingContent:
             url: release-notes-azureps.md
           - text: Breaking changes in Az 7.0.0
             url: migrate-az-7.0.0.md
-          - text: Az Predictor intelligent command completion
+          - text: Intelligent command completion
             url: az-predictor.md
   - title: Azure PowerShell Reference
     linkLists:
@@ -95,7 +95,7 @@ landingContent:
         links:
           - text: Use the Az PowerShell module behind a proxy
             url: az-powershell-proxy.md
-          - text: Az Predictor intelligent command completion
+          - text: Intelligent command completion
             url: az-predictor.md
   - title: Deploy
     linkLists:
