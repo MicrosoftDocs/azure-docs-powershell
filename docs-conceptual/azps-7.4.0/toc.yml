@@ -30,12 +30,16 @@
     href: release-notes-azureps.md
   - name: Az 7.0.0 breaking changes
     href: migrate-az-7.0.0.md
+  - name: Az Predictor intelligent command completion
+    href: az-predictor.md
 - name: How-to guides
   items:
   - name: Configuration
     items:
     - name: Use the Az PowerShell module behind a proxy
       href: az-powershell-proxy.md
+    - name: Az Predictor intelligent command completion
+      href: az-predictor.md
   - name: Authentication and Identity
     items:
     - name: Authentication methods
