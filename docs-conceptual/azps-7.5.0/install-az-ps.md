@@ -1,7 +1,7 @@
 ---
 description: How to install the Azure Az PowerShell with PowerShellGet
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 04/26/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
