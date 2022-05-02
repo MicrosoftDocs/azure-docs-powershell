@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update the Azure site recovery protection container mapping.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/update-azrecoveryservicesasrprotectioncontainermapping) for up-to-date information.
+
 ## SYNTAX
 
 ### AzureToAzureEnableAutoUpdate (Default)

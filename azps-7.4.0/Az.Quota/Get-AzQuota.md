@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Get the quota limit of a resource.
 The response can be used to determine the remaining quota to calculate a new quota limit that can be submitted with a PUT request.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.quota/get-azquota) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

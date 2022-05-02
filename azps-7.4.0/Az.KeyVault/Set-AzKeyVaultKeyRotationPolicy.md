@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets the key rotation policy for the specified key in Key Vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/set-azkeyvaultkeyrotationpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVaultName (Default)

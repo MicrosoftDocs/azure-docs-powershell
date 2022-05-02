@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a ManagedRuleSet for the firewallPolicy
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azapplicationgatewayfirewallpolicymanagedruleset) for up-to-date information.
+
 ## SYNTAX
 
 ```

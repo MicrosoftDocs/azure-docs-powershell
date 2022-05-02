@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Starts collection of custom logs from Linux computers.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.operationalinsights/enable-azoperationalinsightslinuxcustomlogcollection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByWorkspaceName (Default)
