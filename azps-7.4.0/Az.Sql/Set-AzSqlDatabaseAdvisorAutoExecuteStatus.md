@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Modifies auto execute status of an Azure SQL Database Advisor.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/set-azsqldatabaseadvisorautoexecutestatus) for up-to-date information.
+
 ## SYNTAX
 
 ```

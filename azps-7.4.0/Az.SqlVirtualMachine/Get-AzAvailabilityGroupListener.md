@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get one or more Availability Group Listeners in a SQL Virtual Machine Group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sqlvirtualmachine/get-azavailabilitygrouplistener) for up-to-date information.
+
 ## SYNTAX
 
 ### Name (Default)

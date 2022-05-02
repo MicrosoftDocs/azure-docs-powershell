@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Creates an order item.
 Existing order item cannot be updated with this api and should instead be updated with the Update order item API.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/new-azedgeorderitem) for up-to-date information.
+
 ## SYNTAX
 
 ```

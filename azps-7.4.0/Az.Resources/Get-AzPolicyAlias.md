@@ -14,6 +14,9 @@ Get-AzPolicyAlias retrieves and outputs Azure provider resource types that have 
 given parameter values. If no parameters are provided, all provider resource types that contain an alias will be output.
 The -ListAvailable switch modifies this behavior by listing all matching resource types including those without aliases.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azpolicyalias) for up-to-date information.
+
 ## SYNTAX
 
 ```

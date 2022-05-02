@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops Packet Capture Operation on a Virtual Network Gateway connection
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/stop-azvirtualnetworkgatewayconnectionpacketcapture) for up-to-date information.
+
 ## SYNTAX
 
 ### ByName (Default)

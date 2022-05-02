@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets guest configuration policy compliance status history for an initiative of type "Guest Configuration" that is assigned to a VM.
 An initiative is a policy of definition type "Initiative".
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.guestconfiguration/get-azvmguestpolicystatushistory) for up-to-date information.
+
 ## SYNTAX
 
 ### InitiativeNameScope (Default)

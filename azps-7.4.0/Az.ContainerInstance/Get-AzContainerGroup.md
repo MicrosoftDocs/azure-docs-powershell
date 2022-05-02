@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets the properties of the specified container group in the specified subscription and resource group.
 The operation returns the properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/get-azcontainergroup) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)
