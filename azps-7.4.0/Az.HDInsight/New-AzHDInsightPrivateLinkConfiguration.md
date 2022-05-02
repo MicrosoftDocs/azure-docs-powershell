@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates the private link configuration of the HDInsight cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/new-azhdinsightprivatelinkconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ```

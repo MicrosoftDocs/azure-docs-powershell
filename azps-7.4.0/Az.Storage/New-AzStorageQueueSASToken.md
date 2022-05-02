@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Generates a shared access signature token for an Azure storage queue.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstoragequeuesastoken) for up-to-date information.
+
 ## SYNTAX
 
 ### SasPolicy

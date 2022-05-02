@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes a Bot Service from the resource group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.botservice/remove-azbotservice) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

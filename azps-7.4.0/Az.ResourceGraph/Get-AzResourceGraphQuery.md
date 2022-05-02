@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get a single graph query by its resourceName.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcegraph/get-azresourcegraphquery) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

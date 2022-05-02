@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a VirtualRouter peer in an Azure VirtualRouter
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualrouterpeer) for up-to-date information.
+
 ## SYNTAX
 
 ### VirtualRouterPeerNameParameterSet (Default)

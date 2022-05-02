@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Check the availability of a name. Alias: Test-AzSignal.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.signalr/test-azsignalrname) for up-to-date information.
+
 ## SYNTAX
 
 ```
