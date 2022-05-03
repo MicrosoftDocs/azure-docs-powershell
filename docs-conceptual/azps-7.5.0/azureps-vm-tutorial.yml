@@ -100,6 +100,7 @@ items:
           PublicIpAddressName = 'tutorialPublicIp'
           Credential = $cred
           OpenPorts = 3389
+          Size = 'Standard_D2s_v3'
         }
         $newVM1 = New-AzVM @vmParams
         ```
@@ -198,7 +199,7 @@ items:
         Desktop.
 
         ```powershell-interactive
-        mstsc.exe /v <PUBLIC_IP_ADDRESS>
+        mstsc.exe /v $publicIp.IpAddress
         ```
 
         For more information about querying for object properties, see
