@@ -1,7 +1,7 @@
 ---
 description: Manage Azure subscriptions with Azure PowerShell
 ms.custom: devx-track-azurepowershell
-ms.date: 04/26/2022
+ms.date: 05/03/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -11,8 +11,7 @@ title: Manage Azure subscriptions with Azure PowerShell
 
 Most Azure users will only ever have a single subscription. However, if you are part of more than
 one organization or your organization has divided up access to certain resources across groupings,
-you may have multiple subscriptions within Azure. The CLI supports selecting a subscription both
-globally and per command.
+you may have multiple subscriptions within Azure.
 
 For detailed information on subscriptions, billing, and cost management, see the
 [billing and cost management documentation](/azure/billing/).
@@ -39,18 +38,18 @@ To learn how to sign in to a specific tenant, see
 In Azure PowerShell, accessing the resources for a subscription requires changing the subscription
 associated with your current Azure session. This is done by modifying the active session context,
 the information about which tenant, subscription, and user cmdlets should be run against. In order
-to change subscriptions, an Azure PowerShell Context object first needs to be retrieved with
-[Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription) and then the current context
-changed with [Set-AzContext](/powershell/module/az.accounts/set-azcontext).
+to change subscriptions, you use the [Set-AzContext](/powershell/module/az.accounts/set-azcontext)
+cmdlet to change the current context.
 
-The next example shows how to get a subscription in the currently active tenant, and set it as the
-active session:
+The following example shows how to change the context in your current Azure session:
 
-```powershell-interactive
-$context = Get-AzSubscription -SubscriptionId ...
-Set-AzContext $context
+```azurepowershell-interactive
+Set-AzContext -Subscription <subscription name or id>
 ```
 
+You can use the [Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription) cmdlet to
+retrieve a list of your Azure subscriptions.
+
 To learn more about Azure PowerShell contexts, including how to save them and quickly switch between
-them for working with multiple subscriptions easily, see
+them for working with multiple subscriptions, see
 [Persist credentials with Azure PowerShell contexts](context-persistence.md).
