@@ -1,7 +1,7 @@
 ---
 description: How to perform a complete uninstall of Azure PowerShell
 ms.custom: devx-track-azurepowershell
-ms.date: 04/26/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -56,14 +56,14 @@ PowerShell module completely, you must uninstall each module individually.
 
 First, you'll need a list of all the Az PowerShell module versions installed on your system.
 
-```azurepowershell-interactive
+```powershell
 Get-InstalledModule -Name Az -AllVersions -OutVariable AzVersions
 ```
 
 You can use the following example to generate a list of all the Az PowerShell modules that need to
 be uninstalled in addition to the Az module.
 
-```azurepowershell-interactive
+```powershell
 ($AzVersions |
   ForEach-Object {
     Import-Clixml -Path (Join-Path -Path $_.InstalledLocation -ChildPath PSGetModuleInfo.xml)
@@ -72,7 +72,7 @@ be uninstalled in addition to the Az module.
 
 Remove the Az modules from memory and then uninstall them.
 
-```azurepowershell-interactive
+```powershell
 $AzModules |
   ForEach-Object {
     Remove-Module -Name $_ -ErrorAction SilentlyContinue
@@ -83,7 +83,7 @@ $AzModules |
 
 The final step is to remove the Az PowerShell module.
 
-```azurepowershell-interactive
+```powershell
 Remove-Module -Name Az -ErrorAction SilentlyContinue
 Uninstall-Module -Name Az -AllVersions
 ```
@@ -120,13 +120,13 @@ is not supported, however the Az module can be used to immediately uninstall the
 can install the Az module and bypass the AzureRM module warning with the following command if you do
 not have the Az module installed already:
 
-```powershell-interactive
+```powershell
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
 ```
 
 Once the Az module is installed, the following command removes _all_ AzureRM modules from your machine. It
 requires administrator privileges.
 
-```powershell-interactive
+```powershell
 Uninstall-AzureRm
 ```

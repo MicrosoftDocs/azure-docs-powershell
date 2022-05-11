@@ -1,7 +1,7 @@
 ---
 description: How to install Azure PowerShell without PowerShellGet using an MSI
 ms.custom: devx-track-azurepowershell
-ms.date: 04/26/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -30,7 +30,7 @@ To use Azure PowerShell in PowerShell 5.1, you need to:
 
 1. Update to [Windows PowerShell 5.1](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell)
    if needed. If you're on Windows 10, you already have PowerShell 5.1 installed.
-2. Install [.NET Framework 4.7.2 or later](/dotnet/framework/install).
+1. Install [.NET Framework 4.7.2 or later](/dotnet/framework/install).
 
 ## Install or update on Windows using the MSI Package
 
@@ -50,7 +50,7 @@ automatically removes them. The MSI package installs modules in
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
 
-```powershell-interactive
+```azurepowershell
 # Connect to Azure with an interactive dialog for sign-in
 Connect-AzAccount
 ```
