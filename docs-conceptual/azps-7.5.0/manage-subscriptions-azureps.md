@@ -1,12 +1,13 @@
 ---
 description: Manage Azure subscriptions with Azure PowerShell
 ms.custom: devx-track-azurepowershell
-ms.date: 05/03/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 title: Manage Azure subscriptions with Azure PowerShell
 ---
+
 # Use multiple Azure subscriptions
 
 Most Azure users will only ever have a single subscription. However, if you are part of more than

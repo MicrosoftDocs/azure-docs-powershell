@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/26/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -24,7 +24,7 @@ Get-AzResource -Name 'DoesNotExist' -Debug
 To enable debug logging for an entire PowerShell session, you set the value of the
 **DebugPreference** variable to `Continue`.
 
-```azurepowershell-interactive
+```powershell-interactive
 $DebugPreference = 'Continue'
 ```
 
@@ -90,7 +90,7 @@ As a workaround for this issue, you can disable storing credentials between sess
 the following command. After making this change however, you will need to run `Connect-AzAccount`
 each time you start a new PowerShell session.
 
-```powershell
+```azurepowershell
 Disable-AzContextAutosave
 ```
 
