@@ -19,7 +19,7 @@ additional migration options, see
 ## Requirements
 
 - Update your existing PowerShell scripts to the latest version of the
-  [AzureRM PowerShell module (6.13.2)](https://www.powershellgallery.com/packages/AzureRM/).
+  [AzureRM PowerShell module (6.13.1)](https://www.powershellgallery.com/packages/AzureRM/).
 - Install the Az.Tools.Migration PowerShell module.
 
   ```powershell
@@ -42,7 +42,7 @@ variable named **`Plan`**.
 
 ```powershell
 # Generate an upgrade plan for all the scripts and module files in the specified folder and save it to a variable.
-New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.2 -ToAzVersion 5.2.0 -DirectoryPath 'C:\Scripts' -OutVariable Plan
+New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 5.2.0 -DirectoryPath 'C:\Scripts' -OutVariable Plan
 ```
 
 As shown in the following output, the upgrade plan details the specific file and offset points that
