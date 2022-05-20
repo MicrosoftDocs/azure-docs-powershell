@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enables Azure Monitor in a specified HDInsight cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/enable-azhdinsightazuremonitor) for up-to-date information.
+
 ## SYNTAX
 
 ### EnableByNameParameterSet (Default)

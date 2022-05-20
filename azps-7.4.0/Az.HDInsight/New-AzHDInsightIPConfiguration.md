@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates the IP configuration of private link configuration.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/new-azhdinsightipconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ```

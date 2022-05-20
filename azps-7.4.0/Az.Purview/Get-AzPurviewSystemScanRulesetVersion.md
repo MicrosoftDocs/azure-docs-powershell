@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List system scan ruleset versions in Data catalog
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/get-azpurviewsystemscanrulesetversion) for up-to-date information.
+
 ## SYNTAX
 
 ```

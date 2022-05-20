@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enables replication for an ASR protectable item by creating a replication protected item.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/new-azrecoveryservicesasrreplicationprotecteditem) for up-to-date information.
+
 ## SYNTAX
 
 ### EnterpriseToEnterprise (Default)

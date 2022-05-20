@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets pricing tier hints for upgrading an Azure SQL Database server.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqlserverupgradehint) for up-to-date information.
+
 ## SYNTAX
 
 ```

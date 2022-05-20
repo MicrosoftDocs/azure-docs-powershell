@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes/unregister the specified Azure Site Recovery recovery services provider from the recovery services vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/remove-azrecoveryservicesasrservicesprovider) for up-to-date information.
+
 ## SYNTAX
 
 ```

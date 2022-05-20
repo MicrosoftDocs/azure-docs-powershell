@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes an Automated Response from an Analytic Rule.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/remove-azsentinelalertruleaction) for up-to-date information.
+
 ## SYNTAX
 
 ### ActionId (Default)

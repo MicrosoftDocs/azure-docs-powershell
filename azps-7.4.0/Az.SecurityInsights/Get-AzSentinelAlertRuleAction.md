@@ -15,6 +15,9 @@ Azure Sentinel Automation Rules will be supported in the future.
 
 *Note: This requires a parameter value of "AlertRuleId"*
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentinelalertruleaction) for up-to-date information.
+
 ## SYNTAX
 
 ### AlertRuleId (Default)

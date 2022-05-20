@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Invokes specific actions on a storage container
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackedge/invoke-azstackedgestoragecontainer) for up-to-date information.
+
 ## SYNTAX
 
 ### InvokeByNameParameterSet (Default)
