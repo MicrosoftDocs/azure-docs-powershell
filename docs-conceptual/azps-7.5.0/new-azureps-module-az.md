@@ -1,7 +1,7 @@
 ---
 description: Introducing the Az PowerShell module, recommended for interacting with Azure, and the replacement for the AzureRM PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -21,28 +21,28 @@ interacting with Azure.
 
 You can use the Az PowerShell module with one of the following methods:
 
-* [Install the Az PowerShell module via PowerShellGet](install-az-ps.md) (recommended option).
-* [Install the Az PowerShell module with MSI](install-az-ps-msi.md).
-* [Use Azure Cloud Shell](/azure/cloud-shell/overview).
-* [Use the Az PowerShell Docker container](azureps-in-docker.md).
+- [Install the Az PowerShell module via PowerShellGet](install-az-ps.md) (recommended option).
+- [Install the Az PowerShell module with MSI](install-az-ps-msi.md).
+- [Use Azure Cloud Shell](/azure/cloud-shell/overview).
+- [Use the Az PowerShell Docker container](azureps-in-docker.md).
 
 ## Features
 
 The Az PowerShell module features the following benefits:
 
-* Security and stability
-  * Token cache encryption
-  * Prevention of man-in-the-middle attack type
-  * Support authentication with ADFS 2019
-  * Username and password authentication in PowerShell 7
-  * Support for features like continuous access evaluation
-* Support for all Azure services
-  * All generally available Azure services have a corresponding supported PowerShell module
-  * Multiple bug fixes and API version upgrades since AzureRM
-* New capabilities
-  * Support in Cloud Shell and cross-platform
-  * Can get and use access token to access Azure resources
-  * Cmdlet available for advanced REST operations with Azure resources
+- Security and stability
+  - Token cache encryption
+  - Prevention of man-in-the-middle attack type
+  - Support authentication with ADFS 2019
+  - Username and password authentication in PowerShell 7
+  - Support for features like continuous access evaluation
+- Support for all Azure services
+  - All generally available Azure services have a corresponding supported PowerShell module
+  - Multiple bug fixes and API version upgrades since AzureRM
+- New capabilities
+  - Support in Cloud Shell and cross-platform
+  - Can get and use access token to access Azure resources
+  - Cmdlet available for advanced REST operations with Azure resources
 
 > [!NOTE]
 > PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher is the recommended version of PowerShell for
@@ -61,10 +61,10 @@ To keep up with the latest Azure features in PowerShell, you should migrate to t
 you're not ready to install the Az module as a replacement for AzureRM, you have a couple of options
 available to experiment with Az:
 
-* Use a `PowerShell` environment with [Azure Cloud Shell](/azure/cloud-shell/overview). Azure Cloud
+- Use a `PowerShell` environment with [Azure Cloud Shell](/azure/cloud-shell/overview). Azure Cloud
   Shell is a browser-based shell environment that comes with the Az module installed and
   `Enable-AzureRM` compatibility aliases enabled.
-* Keep the AzureRM module installed in Windows PowerShell 5.1 and install the Az module in
+- Keep the AzureRM module installed in Windows PowerShell 5.1 and install the Az module in
   PowerShell 7 or later. Windows PowerShell 5.1 and PowerShell 7 and later use separate
   collections of modules. Follow the instructions to install the
   [latest version of PowerShell](/powershell/scripting/install/installing-powershell) and then
@@ -84,9 +84,9 @@ To upgrade from an existing AzureRM install:
 If your scripts are still based on the AzureRM module, we have several resources to help you with
 the migration:
 
-* [Get started with migration from AzureRM to Az](migrate-from-azurerm-to-az.md)
-* [Full list of breaking changes from AzureRM to Az 1.0.0](migrate-az-1.0.0.md)
-* The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet
+- [Get started with migration from AzureRM to Az](migrate-from-azurerm-to-az.md)
+- [Full list of breaking changes from AzureRM to Az 1.0.0](migrate-az-1.0.0.md)
+- The [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet
 
 ## Supportability
 

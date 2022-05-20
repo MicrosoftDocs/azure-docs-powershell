@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Tests if the information provided for a function is valid.
 This can range from testing the connection to the underlying web service behind the function or making sure the function code provided is syntactically correct.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/test-azstreamanalyticsfunction) for up-to-date information.
+
 ## SYNTAX
 
 ```

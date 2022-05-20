@@ -1,7 +1,7 @@
 ---
 description: Get started with Azure PowerShell
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: get-started-article
@@ -34,7 +34,7 @@ Sign in interactively with the
 use Cloud Shell. Your Azure Cloud Shell session is already authenticated for the environment,
 subscription, and tenant that launched the Cloud Shell session.
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount
 ```
 

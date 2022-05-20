@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Command to sync the address space on the peering link if the remote virtual network has a new address space.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/sync-azvirtualnetworkpeering) for up-to-date information.
+
 ## SYNTAX
 
 ### Fields

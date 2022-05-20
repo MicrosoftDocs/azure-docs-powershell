@@ -1,7 +1,7 @@
 ---
 description: How to install the Azure Az PowerShell with PowerShellGet
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -35,7 +35,7 @@ Azure PowerShell has no additional requirements when run on PowerShell 7.0.6 LTS
 
 To check your PowerShell version, run the following command from within a PowerShell session:
 
-```azurepowershell
+```powershell
 $PSVersionTable.PSVersion
 ```
 
@@ -78,8 +78,8 @@ Azure Az PowerShell module in PowerShell 5.1 on Windows:
 1. Update to
    [Windows PowerShell 5.1](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell).
    If you're on Windows 10 version 1607 or higher, you already have PowerShell 5.1 installed.
-2. Install [.NET Framework 4.7.2 or later](/dotnet/framework/install).
-3. Make sure you have the latest version of PowerShellGet. Run `Install-Module -Name PowerShellGet -Force`.
+1. Install [.NET Framework 4.7.2 or later](/dotnet/framework/install).
+1. Make sure you have the latest version of PowerShellGet. Run `Install-Module -Name PowerShellGet -Force`.
 
 ### Offline Installation
 
@@ -100,7 +100,7 @@ you can install the Az PowerShell module offline using one of these methods:
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
 
-```powershell
+```azurepowershell
 Connect-AzAccount
 ```
 

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Manual platform update domain walk to update virtual machines in a service fabric virtual machine scale set.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/repair-azvmssservicefabricupdatedomain) for up-to-date information.
+
 ## SYNTAX
 
 ### DefaultParameter (Default)

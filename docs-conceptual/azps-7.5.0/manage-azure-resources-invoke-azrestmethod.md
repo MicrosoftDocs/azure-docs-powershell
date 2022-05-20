@@ -1,7 +1,7 @@
 ---
 description: How to use Azure PowerShell to manage resources with the Invoke-AzRestMethod cmdlet.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -130,6 +130,6 @@ plans to stop supporting them. With `Invoke-AzRestMethod`, we have added a new c
 
 ## See Also
 
-* [Get-AzResource](/powershell/module/az.resources/get-azresource)
-* [New-AzResource](/powershell/module/az.resources/new-azresource)
-* [Remove-AzResource](/powershell/module/az.resources/remove-azresource)
+- [Get-AzResource](/powershell/module/az.resources/get-azresource)
+- [New-AzResource](/powershell/module/az.resources/new-azresource)
+- [Remove-AzResource](/powershell/module/az.resources/remove-azresource)

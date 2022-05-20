@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Returns the details about a location to which you can ship the disks associated with an import or export job.
 A location is an Azure region.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/get-azimportexportlocation) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

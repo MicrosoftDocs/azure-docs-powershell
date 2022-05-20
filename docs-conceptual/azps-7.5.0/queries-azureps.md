@@ -1,12 +1,13 @@
 ---
 description: How to query for resources in Azure and format the results.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 title: Query output of Azure PowerShell cmdlets
 ---
+
 # Query output of Azure PowerShell
 
 The results of each Azure PowerShell cmdlet are an Azure PowerShell object. Even cmdlets that aren't
@@ -32,9 +33,9 @@ Get-AzVM -Name TestVM -ResourceGroupName TestGroup |
 
 ```Output
 ResourceGroupName        : TESTGROUP
-Id                       : /subscriptions/711d8ed1-b888-4c52-8ab9-66f07b87eb6b/resourceGroups/TESTGROUP/providers/Micro
+Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TESTGROUP/providers/Micro
                            soft.Compute/virtualMachines/TestVM
-VmId                     : 711d8ed1-b888-4c52-8ab9-66f07b87eb6b
+VmId                     : 00000000-0000-0000-0000-000000000000
 Name                     : TestVM
 Type                     : Microsoft.Compute/virtualMachines
 Location                 : westus2
@@ -55,7 +56,7 @@ Identity                 :
 Zones                    : {}
 FullyQualifiedDomainName :
 AdditionalCapabilities   :
-RequestId                : 711d8ed1-b888-4c52-8ab9-66f07b87eb6b
+RequestId                : 00000000-0000-0000-0000-000000000000
 StatusCode               : OK
 ```
 
@@ -70,7 +71,7 @@ Get-AzVM -Name TestVM -ResourceGroupName TestGroup |
 ```Output
 Name   VmId                                 ProvisioningState
 ----   ----                                 -----------------
-TestVM 711d8ed1-b888-4c52-8ab9-66f07b87eb6b Succeeded
+TestVM 00000000-0000-0000-0000-000000000000 Succeeded
 ```
 
 Output from using `Select-Object` is always formatted to display the requested information. To learn
@@ -85,7 +86,7 @@ full path to the value you want to inspect as part of a dictionary argument to `
 
 ```azurepowershell-interactive
 Get-AzVM -ResourceGroupName TestGroup |
-  Select-Object -Property Name, @{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
+  Select-Object -Property Name, @{label='OSType'; expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
 ```Output
@@ -127,8 +128,8 @@ Get-AzVM -ResourceGroupName TestGroup |
 ```
 
 ```Output
-Name    VmId                                 ProvisioningState
-----    ----                                 -----------------
-TestVM  711d8ed1-b888-4c52-8ab9-66f07b87eb6  Succeeded
-TestVM2 cbcee769-dd78-45e3-a14d-2ad11c647d0  Succeeded
+Name    VmId                                  ProvisioningState
+----    ----                                  -----------------
+TestVM  00000000-0000-0000-0000-000000000000  Succeeded
+TestVM2 00000000-0000-0000-0000-000000000000  Succeeded
 ```

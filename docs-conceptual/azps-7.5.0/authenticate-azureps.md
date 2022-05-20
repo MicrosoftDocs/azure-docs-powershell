@@ -1,12 +1,13 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 05/09/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 title: Sign in with Azure PowerShell
 ---
+
 # Sign in with Azure PowerShell
 
 Azure PowerShell supports several authentication methods. The easiest way to get started is with
@@ -31,7 +32,7 @@ use the [Select-AzContext](/powershell/module/az.accounts/select-azcontext) cmdl
 To sign in interactively, use the
 [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount
 ```
 
@@ -124,15 +125,15 @@ accessible by PowerShell.
 
 #### Import a certificate in PowerShell 5.1
 
-```azurepowershell-interactive
+```powershell-interactive
 # Import a PFX
-$credentials = Get-Credential -Message "Provide PFX private key password"
+$credentials = Get-Credential -Message 'Provide PFX private key password'
 Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
 ```
 
 #### Import a certificate in PowerShell Core 6.x and later
 
-```azurepowershell-interactive
+```powershell-interactive
 # Import a PFX
 $storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My
 $storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser

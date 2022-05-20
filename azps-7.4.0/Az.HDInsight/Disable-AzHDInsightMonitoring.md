@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Disables the Classic Azure Monitor logs integration on an HDInsight cluster and relevant logs will stop flowing to the monitoring workspace specified during enable.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/disable-azhdinsightmonitoring) for up-to-date information.
+
 ## SYNTAX
 
 ```

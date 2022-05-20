@@ -7,7 +7,7 @@ metadata:
     level: Beginner
     displayType: two-column
     interactive: azurepowershell
-    ms.date: 04/05/2022
+    ms.date: 05/11/2022
     ms.author: mirobb
     author: mikefrobbins
     manager: barbkess
@@ -35,7 +35,7 @@ items:
         If you're using a local install of the Azure PowerShell, you need to sign in before
         performing any other steps.
 
-        ```powershell-interactive
+        ```azurepowershell
         Connect-AzAccount
         ```
 
@@ -49,7 +49,7 @@ items:
         For this tutorial, all of the created resources go into a single group named
         `TutorialResources`.
 
-        ```powershell-interactive
+        ```azurepowershell-interactive
         New-AzResourceGroup -Name TutorialResources -Location eastus
         ```
 
@@ -58,7 +58,7 @@ items:
         Location          : eastus
         ProvisioningState : Succeeded
         Tags              :
-        ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources
+        ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TutorialResources
         ```
 
     - durationInMinutes: 1
@@ -91,7 +91,7 @@ items:
 
         Create a new virtual machine running Windows.
 
-        ```powershell-interactive
+        ```azurepowershell-interactive
         $vmParams = @{
           ResourceGroupName = 'TutorialResources'
           Name = 'TutorialVM1'
@@ -100,6 +100,7 @@ items:
           PublicIpAddressName = 'tutorialPublicIp'
           Credential = $cred
           OpenPorts = 3389
+          Size = 'Standard_D2s_v3'
         }
         $newVM1 = New-AzVM @vmParams
         ```
@@ -115,7 +116,7 @@ items:
         ```
 
         Once the VM is ready, we can view the results in the Azure Portal or by inspecting the
-        \$newVM1 variable.
+        `$newVM1` variable.
 
         ```powershell-interactive
         $newVM1
@@ -123,8 +124,8 @@ items:
 
         ```Output
         ResourceGroupName : TutorialResources
-        Id                : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM1
-        VmId              : 12345678-9abc-def0-1234-56789abcedf0
+        Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM1
+        VmId              : 00000000-0000-0000-0000-000000000000
         Name              : TutorialVM1
         Type              : Microsoft.Compute/virtualMachines
         Location          : eastus
@@ -146,7 +147,7 @@ items:
         the Name of the VM and the admin account we created.
 
         ```powershell-interactive
-        $newVM1.OSProfile | Select-Object ComputerName,AdminUserName
+        $newVM1.OSProfile | Select-Object -Property ComputerName,AdminUserName
         ```
 
         ```Output
@@ -158,10 +159,10 @@ items:
         We can use other Azure PowerShell commands to get specific information about the network
         configuration.
 
-        ```powershell-interactive
+        ```azurepowershell-interactive
         $newVM1 | Get-AzNetworkInterface |
           Select-Object -ExpandProperty IpConfigurations |
-            Select-Object Name,PrivateIpAddress
+            Select-Object -Property Name, PrivateIpAddress
         ```
 
         In this example we are using the PowerShell pipeline to send the \$newVM1 object to the
@@ -178,15 +179,16 @@ items:
         To confirm that the VM is running, we need to connect via Remote Desktop. For that, we need
         to know the Public IP address.
 
-        ```powershell-interactive
+        ```azurepowershell-interactive
         $publicIp = Get-AzPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
 
-        $publicIp | Select-Object Name,IpAddress,@{label='FQDN';expression={$_.DnsSettings.Fqdn}}
+        $publicIp |
+          Select-Object -Property Name, IpAddress, @{label='FQDN';expression={$_.DnsSettings.Fqdn}}
         ```
 
-        In this example, we use the `Get-AzPublicIpAddress` and store the results in the
-        \$publicIp variable. From this variable we are selecting properties and using an expression
-        to retrieve the nested Fqdn property.
+        In this example, we use the `Get-AzPublicIpAddress` and store the results in the `$publicIp`
+        variable. From this variable we are selecting properties and using an expression to retrieve
+        the nested Fqdn property.
 
         ```Output
         Name             IpAddress           FQDN
@@ -198,7 +200,7 @@ items:
         Desktop.
 
         ```powershell-interactive
-        mstsc.exe /v <PUBLIC_IP_ADDRESS>
+        mstsc.exe /v $publicIp.IpAddress
         ```
 
         For more information about querying for object properties, see
@@ -209,7 +211,7 @@ items:
       content: |-
         The second VM uses the existing subnet.
 
-        ```powershell-interactive
+        ```azurepowershell-interactive
         $vm2Params = @{
           ResourceGroupName = 'TutorialResources'
           Name = 'TutorialVM2'
@@ -227,8 +229,8 @@ items:
 
         ```Output
         ResourceGroupName        : TutorialResources
-        Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM2
-        VmId                     : 12345678-9abc-def0-1234-56789abcedf1
+        Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM2
+        VmId                     : 00000000-0000-0000-0000-000000000000
         Name                     : TutorialVM2
         Type                     : Microsoft.Compute/virtualMachines
         Location                 : eastus
@@ -242,7 +244,7 @@ items:
         ```
 
         You can skip a few steps to get the public IP address of the new VM since it's returned in
-        the FullyQualifiedDomainName property of the \$newVM2 object. Use the following command to
+        the FullyQualifiedDomainName property of the `$newVM2` object. Use the following command to
         connect using Remote Desktop.
 
         ```powershell-interactive
@@ -257,7 +259,7 @@ items:
         to remove all resources in a resource group is delete the group using the
         `Remove-AzResourceGroup` command.
 
-        ```powershell-interactive
+        ```azurepowershell-interactive
         $job = Remove-AzResourceGroup -Name TutorialResources -Force -AsJob
 
         $job
@@ -269,9 +271,10 @@ items:
         1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzResource...
         ```
 
-        This command deletes the resources created during the tutorial, and is guaranteed to deallocate
-        them in the correct order. The `-AsJob` parameter keeps PowerShell from blocking while the
-        deletion takes place. To wait until the deletion is complete, use the following command:
+        This command deletes the resources created during the tutorial, and is guaranteed to
+        deallocate them in the correct order. The `AsJob` parameter keeps PowerShell from blocking
+        while the deletion takes place. To wait until the deletion is complete, use the following
+        command:
 
         ```powershell-interactive
         Wait-Job -Id $job.Id
@@ -294,7 +297,7 @@ items:
         ### In-depth Azure PowerShell documentation
 
         You might want to take time to explore the complete
-        [Azure PowerShell documentation](/powershell/azure/new-azureps-module-az?view=azps-4.1.0) set.
+        [Azure PowerShell documentation](/powershell/azure/) set.
 
         For more information about the commands used in this tutorial, see the following articles.
 
@@ -317,19 +320,21 @@ items:
 
         If you want to get started right away with specific tasks, look at some sample scripts.
 
-        - [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
-        - [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
-        - [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
-        - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)
-        - [Cosmos DB](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)
+        - [Azure App Service](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
+        - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
+        - [Cosmos DB](/azure/cosmos-db/sql/powershell-samples?toc=/powershell/azure/toc.json)
+        - [Samples repo](https://github.com/Azure/azure-docs-powershell-samples)
 
         ### Feedback
 
         If you'd like to give feedback, suggestions, or ask questions, there are a number of ways
         for you to get in touch.
 
-        * `Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide free-form feedback to the team.
-        * File a feature request or a bug report in the [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).
-        * Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/MicrosoftDocs/azure-docs-powershell/issues).
+        - `Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide
+          free-form feedback to the team.
+        - File a feature request or a bug report in the
+          [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).
+        - Ask a question or get clarification by filing an issue in the
+          [Azure PowerShell documentation repository](https://github.com/MicrosoftDocs/azure-docs-powershell/issues).
 
-        We hope that you enjoy using the Azure PowerShell!
+        We hope that you enjoy using Azure PowerShell!

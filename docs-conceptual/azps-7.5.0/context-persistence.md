@@ -1,12 +1,13 @@
 ---
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/05/2022
+ms.date: 05/11/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 title: Azure contexts and sign-in credentials
 ---
+
 # Azure PowerShell context objects
 
 Azure PowerShell uses _Azure PowerShell context objects_ (Azure contexts) to hold subscription and
@@ -28,13 +29,13 @@ and the authentication information needed to connect to an Azure cloud. With Azu
 PowerShell doesn't need to reauthenticate your account each time you switch subscriptions. An Azure
 context consists of:
 
-* The _account_ that was used to sign in to Azure with
+- The _account_ that was used to sign in to Azure with
   [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Azure contexts treat users,
   application IDs, and service principals the same from an account perspective.
-* The active _subscription_, a service agreement with Microsoft to create and run Azure resources,
+- The active _subscription_, a service agreement with Microsoft to create and run Azure resources,
   which are associated with a _tenant_. Tenants are often referred to as _organizations_ in
   documentation or when working with Active Directory.
-* A reference to a _token cache_, a stored authentication token for accessing an Azure cloud. Where
+- A reference to a _token cache_, a stored authentication token for accessing an Azure cloud. Where
   this token is stored and how long it persists for is determined by the
   [context autosave settings](#save-azure-contexts-across-powershell-sessions).
 
@@ -132,7 +133,7 @@ more about running PowerShell Jobs using Azure PowerShell, see
 By default, Azure contexts are saved for use between PowerShell sessions. You change this behavior
 in the following ways:
 
-* Sign in using `-Scope Process` with `Connect-AzAccount`.
+- Sign in using `-Scope Process` with `Connect-AzAccount`.
 
   ```azurepowershell
   Connect-AzAccount -Scope Process
@@ -140,15 +141,15 @@ in the following ways:
 
   The Azure context returned as part of this sign in is valid for the current session _only_ and
   will not be saved automatically, regardless of the Azure PowerShell context autosave setting.
-* Disable context autosave in Azure PowerShell with the
+- Disable context autosave in Azure PowerShell with the
   [Disable-AzContextAutosave](/powershell/module/az.accounts/disable-azcontextautosave) cmdlet.
   Disabling context autosave __doesn't__ clear any stored tokens. To learn how to clear stored Azure
   context information, see
   [Remove Azure contexts and credentials](#remove-azure-contexts-and-stored-credentials).
-* Explicitly enable Azure context autosave can be enabled with the
+- Explicitly enable Azure context autosave can be enabled with the
   [Enable-AzContextAutosave](/powershell/module/az.accounts/enable-azcontextautosave) cmdlet. With
   autosave enabled, all of a user's contexts are stored locally for later PowerShell sessions.
-* Manually save contexts with [Save-AzContext](/powershell/module/az.accounts/save-azcontext) to be
+- Manually save contexts with [Save-AzContext](/powershell/module/az.accounts/save-azcontext) to be
   used in future PowerShell sessions, where they can be loaded with
   [Import-AzContext](/powershell/module/az.accounts/import-azcontext):
 
@@ -184,7 +185,7 @@ stored information, see the
 
 To clear Azure contexts and credentials:
 
-* Sign out of an account with
+- Sign out of an account with
   [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount). You can sign out of
   any account either by account or context:
 
@@ -198,9 +199,9 @@ To clear Azure contexts and credentials:
 
   Disconnecting always removes stored authentication tokens and clears saved contexts associated
   with the disconnected user or context.
-* Use [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext). This cmdlet always removes
+- Use [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext). This cmdlet always removes
   stored contexts, authentication tokens, and signs you out.
-* Remove a context with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext):
+- Remove a context with [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext):
 
   ```azurepowershell-interactive
   Remove-AzContext -Name 'mycontext' # Remove by name
@@ -212,6 +213,6 @@ To clear Azure contexts and credentials:
 
 ## See also
 
-* [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md)
-* [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
-* [Az.Accounts reference](/powershell/module/az.accounts)
+- [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md)
+- [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
+- [Az.Accounts reference](/powershell/module/az.accounts)

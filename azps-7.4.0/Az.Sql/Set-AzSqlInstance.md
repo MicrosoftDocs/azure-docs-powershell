@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets properties for an Azure SQL Database Managed Instance.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/set-azsqlinstance) for up-to-date information.
+
 ## SYNTAX
 
 ### SetInstanceFromInputParameters (Default)

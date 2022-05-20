@@ -3,7 +3,7 @@ author: mikefrobbins
 description: Learn how to automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module.
 ms.author: mirobb
 ms.custom: devx-track-azurepowershell, mode-api
-ms.date: 04/05/2022
+ms.date: 05/11/2022
 ms.service: azure-powershell
 ms.topic: quickstart
 title: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module
@@ -18,9 +18,9 @@ additional migration options, see
 
 ## Requirements
 
-* Update your existing PowerShell scripts to the latest version of the
-  [AzureRM PowerShell module (6.13.2)](https://www.powershellgallery.com/packages/AzureRM/).
-* Install the Az.Tools.Migration PowerShell module.
+- Update your existing PowerShell scripts to the latest version of the
+  [AzureRM PowerShell module (6.13.1)](https://www.powershellgallery.com/packages/AzureRM/).
+- Install the Az.Tools.Migration PowerShell module.
 
   ```powershell
   Install-Module -Name Az.Tools.Migration
@@ -42,7 +42,7 @@ variable named **`Plan`**.
 
 ```powershell
 # Generate an upgrade plan for all the scripts and module files in the specified folder and save it to a variable.
-New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.2 -ToAzVersion 5.2.0 -DirectoryPath 'C:\Scripts' -OutVariable Plan
+New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 5.2.0 -DirectoryPath 'C:\Scripts' -OutVariable Plan
 ```
 
 As shown in the following output, the upgrade plan details the specific file and offset points that
@@ -175,9 +175,9 @@ Replacement            :
 
 ## Limitations
 
-* File I/O operations use default encoding. Unusual file encoding situations may cause problems.
-* AzureRM cmdlets passed as arguments to Pester unit test mock statements aren't detected.
-* Currently, only Az PowerShell module version 5.2.0 is supported as a target.
+- File I/O operations use default encoding. Unusual file encoding situations may cause problems.
+- AzureRM cmdlets passed as arguments to Pester unit test mock statements aren't detected.
+- Currently, only Az PowerShell module version 5.2.0 is supported as a target.
 
 ## How to report issues
 
