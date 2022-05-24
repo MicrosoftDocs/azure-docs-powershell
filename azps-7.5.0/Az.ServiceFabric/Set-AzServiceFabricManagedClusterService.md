@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update a managed service from the cluster. Only supports ARM deployed services.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/set-azservicefabricmanagedclusterservice) for up-to-date information.
+
 ## SYNTAX
 
 ### Stateless-ByResourceGroup (Default)

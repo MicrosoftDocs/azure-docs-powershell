@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieves the user solution.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitoringsolutions/get-azmonitorloganalyticssolution) for up-to-date information.
+
 ## SYNTAX
 
 ### List1 (Default)

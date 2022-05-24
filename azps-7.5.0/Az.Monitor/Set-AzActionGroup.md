@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new or updates an existing action group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/set-azactiongroup) for up-to-date information.
+
 ## SYNTAX
 
 ### ByPropertyName (Default)

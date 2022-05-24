@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Modifies an entry in the ACL of a catalog or catalog item in Data Lake Analytics.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakeanalytics/set-azdatalakeanalyticscatalogitemaclentry) for up-to-date information.
+
 ## SYNTAX
 
 ### SetCatalogAclEntryForUser (Default)

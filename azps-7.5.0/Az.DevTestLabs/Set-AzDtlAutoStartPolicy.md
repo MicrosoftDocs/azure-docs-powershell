@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets the auto start policy of a lab in DevTest Labs.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.devtestlabs/set-azdtlautostartpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### Enable (Default)

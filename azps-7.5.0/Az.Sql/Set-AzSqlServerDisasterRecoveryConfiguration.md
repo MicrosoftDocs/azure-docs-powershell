@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Modifies a database server recovery configuration.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/set-azsqlserverdisasterrecoveryconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ```
