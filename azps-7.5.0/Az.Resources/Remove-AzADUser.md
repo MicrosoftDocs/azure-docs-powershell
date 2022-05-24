@@ -14,6 +14,9 @@ Deletes entity from users.
 
 [!INCLUDE [msgraph-migration-banner-az7](../../includes/msgraph-migration-banner-az7.md)]
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azaduser) for up-to-date information.
+
 ## SYNTAX
 
 ### UPNOrObjectIdParameterSet (Default)

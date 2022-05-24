@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the details of the upgrade profile for a managed cluster with a specified resource group and name.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.aks/get-azaksupgradeprofile) for up-to-date information.
+
 ## SYNTAX
 
 ### Get (Default)

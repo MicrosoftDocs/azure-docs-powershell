@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enables an activity log alert and sets its Tags.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/enable-azactivitylogalert) for up-to-date information.
+
 ## SYNTAX
 
 ### EnableByNameAndResourceGroup

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Stops a running streaming job.
 This will cause a running streaming job to stop processing input events and producing output.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/stop-azstreamanalyticsjob) for up-to-date information.
+
 ## SYNTAX
 
 ### Stop (Default)

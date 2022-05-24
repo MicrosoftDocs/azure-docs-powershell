@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes the order for a device.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databoxedge/remove-azdataboxedgeorder) for up-to-date information.
+
 ## SYNTAX
 
 ### DeleteByNameParameterSet (Default)

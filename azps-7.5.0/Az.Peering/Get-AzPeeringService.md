@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get a list of peering service objects of a single object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.peering/get-azpeeringservice) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceGroupName (Default)
