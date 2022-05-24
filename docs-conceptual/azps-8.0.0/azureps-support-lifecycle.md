@@ -39,8 +39,9 @@ modules.
 
 |        Az        | PowerShell <br/> 7.1.3 | PowerShell <br/> >= 7.0.6 | PowerShell <br/> <= 7.0.5 | Windows PowerShell <br/> 5.1 |
 | :--------------: | :--------------------: | :-----------------------: | :-----------------------: | :--------------------------: |
+|      Az 8.x      |       Supported        |         Supported         |       Not supported       |          Supported           |
 |      Az 7.x      |       Supported        |         Supported         |       Not supported       |          Supported           |
-|      Az 6.x      |       Supported        |         Supported         |       Not supported       |          Supported           |
+|      Az 6.x      |     Not supported      |       Not supported       |       Not supported       |        Not supported         |
 | AzureRM (6.13.2) |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
 |  Azure (5.3.1)   |     Not Supported      |       Not Supported       |       Not Supported       |          Supported           |
 
@@ -56,8 +57,8 @@ been fixed in PowerShell 7.0.6 and 7.1.3. For more information, see
 [Microsoft Security Advisory CVE-2021-26701: .NET Core Remote Code Execution Vulnerability](https://github.com/PowerShell/Announcements/issues/23).
 
 Starting with Az 6.0.0, PowerShell 7.0.6 or 7.1.3 or later is required. When the Az.Accounts module
-is imported, the following non-blocking message will be displayed if an unsupported version of
-PowerShell is being used: _"This version of Az.Accounts is only supported on Windows PowerShell 5.1
-and PowerShell 7.0.6 or greater, open
+is imported, the following non-blocking message is displayed if an unsupported version of PowerShell
+is being used: _"This version of Az.Accounts is only supported on Windows PowerShell 5.1 and
+PowerShell 7.0.6 or greater, open
 [https://aka.ms/install-powershell](https://aka.ms/install-powershell) to learn how to upgrade. For
 further information, go to [https://aka.ms/azpslifecyle](https://aka.ms/azpslifecycle)."_
