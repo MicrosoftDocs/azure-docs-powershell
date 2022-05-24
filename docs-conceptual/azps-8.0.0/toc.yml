@@ -28,8 +28,8 @@
   items:
   - name: Release notes
     href: release-notes-azureps.md
-  - name: Az 7.0.0 breaking changes
-    href: migrate-az-7.0.0.md
+  - name: Az 8.0.0 breaking changes
+    href: migrate-az-8.0.0.md
   - name: Intelligent command completion
     href: az-predictor.md
 - name: How-to guides
@@ -93,6 +93,8 @@
     href: azps-msgraph-migration-changes.md
   - name: Migrate from previous versions of Az
     items:
+    - name: Az 8.0.0 breaking changes
+      href: migrate-az-8.0.0.md
     - name: Az 7.0.0 breaking changes
       href: migrate-az-7.0.0.md
     - name: Az 6.0.0 breaking changes
