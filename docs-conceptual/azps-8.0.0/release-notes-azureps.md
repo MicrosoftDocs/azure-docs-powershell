@@ -927,7 +927,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 * Breaking change:
   - Changed the type of parameter 'OSType' from 'Microsoft.Azure.Management.HDInsight.Models.OSType' to 'System.string' in cmdlet 'New-AzHDInsightCluster'.
   - Changed the type of parameter 'ClusterTier' from 'Microsoft.Azure.Management.HDInsight.Models.ClusterTier' to 'System.string' in cmdlets 'New-AzHDInsightCluster' and 'New-AzHDInsightClusterConfig'.
-  - Changed the type of property 'VmSizes' in class 'AzureHDInsightCapabilities' from 'IDictionary<string, AzureHDInsightVmSizesCapability>' to 'IList<string>'.
+  - Changed the type of property 'VmSizes' in class 'AzureHDInsightCapabilities' from `IDictionary<string, AzureHDInsightVmSizesCapability>` to `IList<string>`.
   - Changed the type of property 'AssignedIdentity' in class 'AzureHDInsightCluster' from 'Microsoft.Azure.Management.HDInsight.Models.ClusterIdentity'  to 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightClusterIdentity'.
 
 #### Az.KeyVault
@@ -1183,7 +1183,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
     - Delete via 'Remove-AzKeyVaultRoleDefinition',
     - Filter all custom roles via 'Get-AzKeyVaultRoleDefinition -Custom'.
 * Supported Encrypt/Decrypt/Wrap/Unwrap using keys [#15679]
-* Enabled managing resources in other subscriptions without switching the context by adding '-Subscription <String>'.
+* Enabled managing resources in other subscriptions without switching the context by adding `-Subscription <String>`.
 
 #### Az.Maintenance
 * Added Guest patch maintenance support.
@@ -1259,11 +1259,11 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 ## 6.4.0 - September 2021
 #### Az.Accounts
 * Corrected the URLs to Azure Portal in the results of 'Get-AzEnvironment' and 'Get-AzContext'. [#15429]
-* Made infrastructural changes to support overriding default subscription via a '-SubscriptionId <String>' parameter.
+* Made infrastructural changes to support overriding default subscription via a `-SubscriptionId <String>` parameter.
     - [Az.Aks](/powershell/module/az.aks/get-azakscluster) is the first module that supports it.
 
 #### Az.Aks
-* Made '-Subscription <String>' available in all Aks cmdlets. You can manage Aks resources in other subscriptions without switching the context.
+* Made `-Subscription <String>` available in all Aks cmdlets. You can manage Aks resources in other subscriptions without switching the context.
 
 #### Az.ApiManagement
 * Added new 'Sync-AzApiManagementKeyVaultSecret' cmdlet.
@@ -1768,7 +1768,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 
 
 ## 6.0.0 - May 2021
-Az 6.0.0 (Az.Accounts 2.3.0) is only supported on Windows PowerShell 5.1, PowerShell 7.0 version 7.0.6 or greater and PowerShell 7.1 version 7.1.3 or greater, open https://aka.ms/install-powershell to learn how to upgrade. For further information, go to http://aka.ms/azpslifecyle.
+Az 6.0.0 (Az.Accounts 2.3.0) is only supported on Windows PowerShell 5.1, PowerShell 7.0 version 7.0.6 or greater and PowerShell 7.1 version 7.1.3 or greater, open https://aka.ms/install-powershell to learn how to upgrade. For further information, go to https://aka.ms/azpslifecyle.
 
 #### Az.Accounts
 * Upgraded Azure.Identity to 1.4 and MSAL to 4.30.1
@@ -3679,7 +3679,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 
 #### Az.ApiManagement
 * 'New-AzApiManagement' and 'Set-AzApiManagement': [-AssignIdentity] parameter renamed as [-SystemAssignedIdentity]
-* 'New-AzApiManagement' and 'Set-AzApiManagement': New parameter added: [-UserAssignedIdentity <String[]>]
+* 'New-AzApiManagement' and 'Set-AzApiManagement': New parameter added: [`-UserAssignedIdentity <String[]>`]
 * 'Get-AzApiManagementProperty': renamed as 'Get-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * 'New-AzApiManagementProperty': renamed as 'New-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
 * 'Set-AzApiManagementProperty': renamed as 'Set-AzApiManagementNamedValue'. PropertyId parameter renamed as NamedValueId.
@@ -3714,7 +3714,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - AutomaticRepairMaxInstanceRepairsPercent is removed from 'New-AzVmssConfig' and 'Update-AzVmss' cmdlets.
     - AvailabilitySetsColocationStatus, VirtualMachinesColocationStatus and VirtualMachineScaleSetsColocationStatus properties are removed from ProximityPlacementGroup.
     - MaxInstanceRepairsPercent property is removed from AutomaticRepairsPolicy.
-    - The types of AvailabilitySets, VirtualMachines and VirtualMachineScaleSets are changed from IList<SubResource> to IList<SubResourceWithColocationStatus>.
+    - The types of AvailabilitySets, VirtualMachines and VirtualMachineScaleSets are changed from `IList<SubResource>` to `IList<SubResourceWithColocationStatus>`.
 * Description for 'Get-AzVM' cmdlet has been updated to better describe it.
 
 #### Az.DataFactory
@@ -4008,7 +4008,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
   - Az.Websites
 * Three new PowerShell modules for az have been introduced that work with Azure Stack Hub, which are Az.Databox, Az.IotHub, and Az.EventHub
 * Commands remain relatively the same, with minor changes such as changing AzureRM to Az
-* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](aka.ms/InstallASHPowerShell)
+* Updated link to PowerShell documentation for Azure Stack Hub can be found [here](https://aka.ms/InstallASHPowerShell)
 
 #### Az.Accounts
 * Upgrade from ADAL to MSAL
