@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns a BotService specified by the parameters.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.botservice/export-azbotserviceapp) for up-to-date information.
+
 ## SYNTAX
 
 ```

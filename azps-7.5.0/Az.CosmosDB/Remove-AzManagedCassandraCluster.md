@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes a Azure Managed Instances for Apache Cassandra cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cosmosdb/remove-azmanagedcassandracluster) for up-to-date information.
+
 ## SYNTAX
 
 ### ByNameParameterSet (Default)

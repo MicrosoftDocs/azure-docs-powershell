@@ -17,6 +17,9 @@ First, use the Get-AzRoleDefinition command to retrieve the custom role that you
 Then, modify the properties that you wish to change.
 Finally, save the role definition using this command.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/set-azroledefinition) for up-to-date information.
+
 ## SYNTAX
 
 ### InputFileParameterSet

@@ -15,6 +15,9 @@ Gets a vpn connection by name or lists all vpn connections connected to a VpnGat
 >[!NOTE]
 > This Powershell command is for customers using Virtual WAN Site-to-site VPN Gateway only. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvpnconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVpnGatewayName (Default)

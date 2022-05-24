@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes the data connection with the given name.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/remove-azsynapsekustopooldataconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

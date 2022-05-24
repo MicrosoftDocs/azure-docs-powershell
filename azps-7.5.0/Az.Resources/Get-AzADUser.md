@@ -14,6 +14,9 @@ Lists entities from users or get entity from users by key
 
 [!INCLUDE [msgraph-migration-banner-az7](../../includes/msgraph-migration-banner-az7.md)]
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azaduser) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Uploads the contents of a file.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azstoragefilecontent) for up-to-date information.
+
 ## SYNTAX
 
 ### ShareName (Default)

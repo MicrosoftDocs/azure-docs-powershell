@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Description for Validates a particular custom domain can be added to a static site.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/test-azstaticwebappcustomdomain) for up-to-date information.
+
 ## SYNTAX
 
 ### ValidateExpanded (Default)

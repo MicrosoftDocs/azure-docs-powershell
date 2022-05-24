@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Creates a new network configuration diagnostic profile object. 
 This object is used to restrict the network configuration during a diagnostic session using the specified criteria.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-aznetworkwatchernetworkconfigurationdiagnosticprofile) for up-to-date information.
+
 ## SYNTAX
 
 ```

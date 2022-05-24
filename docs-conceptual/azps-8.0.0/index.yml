@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 05/02/2022
+  ms.date: 05/24/2022
   ms.prod: azure-powershell
 landingContent:
   - title: About Azure PowerShell
@@ -47,8 +47,8 @@ landingContent:
         links:
           - text: Release notes
             url: release-notes-azureps.md
-          - text: Breaking changes in Az 7.0.0
-            url: migrate-az-7.0.0.md
+          - text: Breaking changes in Az 8.0.0
+            url: migrate-az-8.0.0.md
           - text: Intelligent command completion
             url: az-predictor.md
   - title: Azure PowerShell Reference
@@ -56,7 +56,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-7.5.0
+            url: /powershell/module/?view=azps-8.0.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: whats-new
