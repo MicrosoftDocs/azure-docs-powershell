@@ -55,7 +55,7 @@ Enable-AzRecoveryServicesBackupProtection [[-Policy] <PolicyBase>] [-Item] <Item
 ```
 
 ## DESCRIPTION
-The **Enable-AzRecoveryServicesBackupProtection** cmdlet enables the backup by associating a protection policy with the item. If policy ID is not present or the backup item is not associated with any policy, then this command will expect a policyID. You can also use the same command to resume backup for a resource for which you've stopped protection with data retention. Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
+The **Enable-AzRecoveryServicesBackupProtection** cmdlet enables the backup by associating a protection policy with the item. If policy ID is not present or the backup item is not associated with any policy, then this command will expect a policyID. You can also use the same command to resume backup for a resource for which you've stopped protection with the data retention option. Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
 ## EXAMPLES
 
