@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/reset-azwebapppublishingprofile) for up-to-date information.
+
 ## SYNTAX
 
 ### S1
@@ -35,8 +38,8 @@ The **Reset-AzWebAppPublishingProfile** cmdlet resets the publishing profile for
 
 The following example resets the publishing profile for the Web App IpRule associated with the resource group MyResourceGroup.
 
+<!-- Aladdin Generated Example -->
 ```powershell
-<!-- Aladdin Generated Example --> 
 Reset-AzWebAppPublishingProfile -Name IpRule -ResourceGroupName MyResourceGroup
 ```
 

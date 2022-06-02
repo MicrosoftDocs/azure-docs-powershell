@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a NAT rule on a VpnGateway which can be associated with VpnSiteLinkConnection.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvpngatewaynatrule) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVpnGatewayName (Default)

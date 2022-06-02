@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Resizes an existing virtual network gateway.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/resize-azvirtualnetworkgateway) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns the payload that needs to be passed as a request for installing Logz.io agent on a VM.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logz/invoke-azlogzhostsubaccount) for up-to-date information.
+
 ## SYNTAX
 
 ### Host (Default)

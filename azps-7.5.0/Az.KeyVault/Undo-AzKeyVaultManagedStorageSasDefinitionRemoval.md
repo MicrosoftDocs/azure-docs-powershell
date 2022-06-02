@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Recovers a previously deleted KeyVault-managed storage SAS definition.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/undo-azkeyvaultmanagedstoragesasdefinitionremoval) for up-to-date information.
+
 ## SYNTAX
 
 ### Default (Default)

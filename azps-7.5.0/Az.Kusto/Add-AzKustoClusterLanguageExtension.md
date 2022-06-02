@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Add a list of language extensions that can run within KQL queries.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kusto/add-azkustoclusterlanguageextension) for up-to-date information.
+
 ## SYNTAX
 
 ### AddExpanded (Default)

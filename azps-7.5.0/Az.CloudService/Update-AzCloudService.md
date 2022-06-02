@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Create or update a cloud service.
 Please note some properties can be set only during cloud service creation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/update-azcloudservice) for up-to-date information.
+
 ## SYNTAX
 
 ```

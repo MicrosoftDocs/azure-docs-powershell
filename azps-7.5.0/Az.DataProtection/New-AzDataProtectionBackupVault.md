@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates or updates a BackupVault resource belonging to a resource group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/new-azdataprotectionbackupvault) for up-to-date information.
+
 ## SYNTAX
 
 ```
