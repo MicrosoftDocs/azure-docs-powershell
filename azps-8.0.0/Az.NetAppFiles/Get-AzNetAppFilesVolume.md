@@ -56,7 +56,7 @@ ProvisioningState : Succeeded
 SubnetId          : /subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyRG-vnet/subnets/default
 ```
 
-This command gets the volume named MyAnfVolume from the pool "MyAnfPool". 
+This command gets the volume named MyAnfVolume from the pool "MyAnfPool".
 
 ## PARAMETERS
 
@@ -190,6 +190,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzNetAppFilesVolumeBackupStatus](./Get-AzNetAppFilesVolumeBackupStatus.md)
 [Get-AzNetAppFilesVolumeRestoreStatus](./Get-AzNetAppFilesVolumeRestoreStatus.md)
 [Approve-AzNetAppFilesReplication](./Approve-AzNetAppFilesReplication.md)
-[Inititialize-AzNetAppFilesReplication](./Inititialize-AzNetAppFilesReplication.md)
+[Initialize-AzNetAppFilesReplication](./Initialize-AzNetAppFilesReplication.md)
 [Resume-AzNetAppFilesReplication](./Resume-AzNetAppFilesReplication.md)
 [Remove-AzNetAppFilesReplication](./Remove-AzNetAppFilesReplication.md)

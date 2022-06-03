@@ -21,13 +21,13 @@ New-AzNetAppFilesExportPolicyObject -Rule <PSNetAppFilesExportPolicyRule[]>
 
 ## DESCRIPTION
 New-AzNetAppFilesExportPolicyObject is a helper cmdlet that creates an export policy object that can be used with New-AzNetAppFilesVolume.
-Each ExportPolicy object consists of a set of ExportPolicy rules that can be applied to an ANF volume. 
+Each ExportPolicy object consists of a set of ExportPolicy rules that can be applied to an ANF volume.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $exportPolicyRule = New-NetAppFilesAzExportPolicyRuleObject -RuleIndex 1 -AllowedClients '0.0.0.0/0' -UnixReadOnly -UnixReadWrite -Cifs -Nfsv3 
+PS C:\> $exportPolicyRule = New-NetAppFilesAzExportPolicyRuleObject -RuleIndex 1 -AllowedClients '0.0.0.0/0' -UnixReadOnly -UnixReadWrite -Cifs -Nfsv3
 PS C:\> $exportPolicyRules = $($exportPolicyRule)
 PS C:\> $newExportPolicy = New-NetAppFilesAzExportPolicyObject -Rules $exportPolicyRules
 PS C:\> New-AzNetAppFilesVolume -ResourceGroupName "MyRG" -AccountName "MyAnfAccount" -PoolName "MyAnfPool" -Name "MyAnfVolume" -l "westus2" -CreationToken "MyAnfVolume" -UsageThreshold 1099511627776 -ServiceLevel "Premium" -SubnetId "/subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyVnetName/subnets/MySubNetName" -ExportPolicy $newExportPolicy
@@ -113,8 +113,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzExportPolicyRuleObject](./New-AzExportPolicyRuleObject.md)
-[Get-AzNetAppFilesVolume](./Get-AzNetAppFilessVolume.md)
-[New-AzNetAppFilesVolume](./New-AzNetAppFilessVolume.md)
-[Update-AzNetAppFilesVolume](./Update-AzNetAppFilessVolume.md)
-[Remove-AzNetAppFilesVolume](./Remove-AzNetAppFilessVolume.md)
+[Get-AzNetAppFilesVolume](./Get-AzNetAppFilesVolume.md)
+[New-AzNetAppFilesVolume](./New-AzNetAppFilesVolume.md)
+[Update-AzNetAppFilesVolume](./Update-AzNetAppFilesVolume.md)
+[Remove-AzNetAppFilesVolume](./Remove-AzNetAppFilesVolume.md)
