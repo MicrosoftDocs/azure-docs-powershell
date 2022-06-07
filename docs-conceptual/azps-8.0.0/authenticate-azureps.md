@@ -1,7 +1,7 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/24/2022
+ms.date: 06/07/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -25,7 +25,7 @@ use the [Select-AzContext](/powershell/module/az.accounts/select-azcontext) cmdl
 
 > [!IMPORTANT]
 > Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.
-> For more information, see the article on [Persistent Credentials](context-persistence.md).
+> For more information, see [Azure PowerShell context objects](context-persistence.md).
 
 ## Sign in interactively
 
@@ -36,21 +36,22 @@ To sign in interactively, use the
 Connect-AzAccount
 ```
 
-Beginning with Az PowerShell module version 5.0.0, this cmdlet presents an interactive browser based
-login prompt by default. You can specify the `UseDeviceAuthentication` parameter to receive a token
-string which was previously the default for PowerShell version 6 and higher.
-
-> [!IMPORTANT]
-> Username/password credential authorization has been removed in Azure PowerShell due to changes in
-> Active Directory authorization implementations and security concerns. If you use credential
-> authorization for automation purposes, instead
-> [create a service principal](create-azure-service-principal-azureps.md).
+This cmdlet presents an interactive browser based login prompt by default.
 
 Use the [Get-AzContext](/powershell/module/az.accounts/get-azcontext) cmdlet to store your tenant ID
 in a variable to be used in the next two sections of this article.
 
 ```azurepowershell-interactive
 $tenantId = (Get-AzContext).Tenant.Id
+```
+
+## Device code authentication
+
+You can specify the `UseDeviceAuthentication` parameter to use device code authentication instead of
+a browser control.
+
+```azurepowershell-interactive
+Connect-AzAccount -UseDeviceAuthentication
 ```
 
 ## Sign in with a service principal
