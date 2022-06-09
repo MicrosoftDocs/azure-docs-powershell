@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/11/2022
+ms.date: 06/09/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -26,6 +26,27 @@ To enable debug logging for an entire PowerShell session, you set the value of t
 
 ```powershell-interactive
 $DebugPreference = 'Continue'
+```
+
+## Object reference not set to an instance of an object
+
+The message "_object reference not set to an instance of an object_" means that you are referring to
+an object that is null or an Azure resource that does not exist or that you do not have permissions
+to access.
+
+```azurepowershell
+$resourceId =  '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/<resource-group-name>/providers/Microsoft.Web/sites/<webapp-name>/privateEndpointConnections/<endpoint-name>'
+Get-AzPrivateEndpointConnection -ResourceId $resourceId
+```
+
+```Output
+Get-AzPrivateEndpointConnection: Object reference not set to an instance of an object.
+```
+
+You can use the `Get-AzResource` cmdlet to verify that the specified Azure resource exists.
+
+```azurepowershell
+Get-AzResource -ResourceId $resourceId
 ```
 
 ## Permission issues with AzAD cmdlets
@@ -76,6 +97,8 @@ same version of PowerShell.
 Both Az and AzureRM may coexist on the same Windows system, but only if AzureRM is installed in the
 `CurrentUser` scope of Windows PowerShell and Az installed in PowerShell 7. For more information, see
 [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## On MacOS, an error returns when KeyChain authorization fails
 
