@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/11/2022
+ms.date: 06/09/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -76,6 +76,8 @@ same version of PowerShell.
 Both Az and AzureRM may coexist on the same Windows system, but only if AzureRM is installed in the
 `CurrentUser` scope of Windows PowerShell and Az installed in PowerShell 7. For more information, see
 [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## On MacOS, an error returns when KeyChain authorization fails
 
