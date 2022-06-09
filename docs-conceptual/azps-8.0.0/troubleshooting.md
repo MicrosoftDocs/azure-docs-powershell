@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/24/2022
+ms.date: 06/08/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -26,6 +26,27 @@ To enable debug logging for an entire PowerShell session, you set the value of t
 
 ```powershell-interactive
 $DebugPreference = 'Continue'
+```
+
+## Object reference not set to an instance of an object
+
+The message "_object reference not set to an instance of an object_" means that you are referring to
+an object that is null or an Azure resource that does not exist or that you do not have permissions
+to access.
+
+```azurepowershell
+$resourceId =  '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/<resource-group-name>/providers/Microsoft.Web/sites/<webapp-name>/privateEndpointConnections/<endpoint-name>'
+Get-AzPrivateEndpointConnection -ResourceId $resourceId
+```
+
+```Output
+Get-AzPrivateEndpointConnection: Object reference not set to an instance of an object.
+```
+
+You can use the `Get-AzResource` cmdlet to verify that the specified Azure resource exists.
+
+```azurepowershell
+Get-AzResource -ResourceId $resourceId
 ```
 
 ## Permission issues with AzAD cmdlets
