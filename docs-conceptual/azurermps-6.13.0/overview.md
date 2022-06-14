@@ -1,6 +1,6 @@
 ---
-title: Overview of the AzureRM PowerShell module
-description: Learn how to use the Azure Resource Manager (AzureRM) PowerShell module.
+title: Overview of Azure Resource Manager (AzureRM) -- PowerShell
+description: Learn how to manage resources with Azure PowerShell cmdlets for Azure Resource Manager (AzureRM), either in the cloud or on your desktop.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/13/2022
