@@ -144,6 +144,7 @@ Specifies the rollup status of DSC node configurations that this cmdlet gets.
 Valid values are: 
 - Bad 
 - Good
+
 *Bad: Non-Compliant* *Good: Compliant*
 
 ```yaml
