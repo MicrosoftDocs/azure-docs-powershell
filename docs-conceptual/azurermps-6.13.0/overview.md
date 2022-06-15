@@ -1,32 +1,29 @@
 ---
-title: Overview of the AzureRM PowerShell module | Microsoft Docs
-description: An overview of Azure PowerShell with links to installation and configuration.
+title: Overview of Azure Resource Manager (AzureRM) -- PowerShell
+description: Learn how to manage resources with Azure PowerShell cmdlets for Azure Resource Manager (AzureRM), either in the cloud or on your desktop.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/05/2021
-ms.custom: devx-track-azurepowershell
+ms.date: 06/13/2022
+ms.custom: devx-track-azurepowershell, kr2b-contr-experiment
 ---
 # Overview of the AzureRM PowerShell module
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-Azure PowerShell provides a set of cmdlets that use the
-[Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) model for managing
-your Azure resources. You can use it in your browser with
-[Azure Cloud Shell](/azure/cloud-shell/overview), or you can install it on your local machine and
+Azure PowerShell provides a set of lightweight commands called [cmdlets](/powershell/scripting/developer/cmdlet/cmdlet-overview) that use the
+[Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) (AzureRM) to manage your Azure resources. You can run AzureRM in your browser with
+[Azure Cloud Shell](/azure/cloud-shell/overview), or you can [install it on your local machine](install-azurerm-ps.md) and
 use it in any PowerShell session.
 
-Use the [Cloud Shell](/azure/cloud-shell/overview) to run the Azure PowerShell in your browser, or
-[install](install-azurerm-ps.md) it on own computer. Then read the
-[Get Started](get-started-azureps.md) article to begin using it. For information about the latest
+Read the [Get Started](get-started-azureps.md) article to begin using AzureRM. For information about the latest
 release, see the [release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
-- [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json)
-- [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=/powershell/azure/toc.json)
-- [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
-- [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
+- [Linux virtual machines](/azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json)
+- [Windows virtual machines](/azure/virtual-machines/windows/powershell-samples?toc=/powershell/azure/toc.json)
+- [Web apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
+- [SQL databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
 ## Learn PowerShell basics
 
@@ -36,7 +33,7 @@ If you are unfamiliar with PowerShell, you may find an introduction to PowerShel
 - [PowerShell learning resources](/powershell/scripting/learn/more-powershell-learning)
 
 You can also watch this video:
-[PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
+[PowerShell basics: (Part 1) Getting started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 
 ## Build your skills with Microsoft Learn
 
