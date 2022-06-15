@@ -145,7 +145,7 @@ Valid values are:
 - Bad 
 - Good
 
-*Bad: Non-Compliant* *Good: Compliant*
+*Bad: Non-Compliant*, *Good: Compliant*
 
 ```yaml
 Type: System.String
