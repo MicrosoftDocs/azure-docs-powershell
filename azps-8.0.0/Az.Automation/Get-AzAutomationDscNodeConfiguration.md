@@ -145,6 +145,8 @@ Valid values are:
 - Bad 
 - Good
 
+*Bad: Non-Compliant*, *Good: Compliant*
+
 ```yaml
 Type: System.String
 Parameter Sets: ByAll, ByConfigurationName
