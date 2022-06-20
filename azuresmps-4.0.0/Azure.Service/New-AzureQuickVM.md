@@ -54,7 +54,7 @@ The cmdlet bases the virtual machine on the specified image.
 The command specifies the *WaitForBoot* parameter.
 Therefore, the cmdlet waits for the virtual machine to start.
 
-### Example 2: Create a virtual machine that by using certificates
+### Example 2: Create a virtual machine by using certificates
 ```
 PS C:\> $certs = Get-ChildItem Cert:\CurrentUser\My
 PS C:\> New-AzureQuickVM -Windows -ServiceName "MySvc1" -name "MyWinVM1" -ImageName "Image07" -Password "password" -AdminUserName "AdminMain" -WinRMCertificate $certs[0] -X509Certificates $certs[1], $certs[2] -WaitForBoot
