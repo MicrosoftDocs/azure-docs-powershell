@@ -29,7 +29,7 @@ Update-AzFrontDoorCdnRoute -EndpointName <String> -Name <String> -ProfileName <S
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzFrontDoorCdnRoute -InputObject <ICdnIdentity> [-CacheConfigurationQueryParameter <String>]
+Update-AzFrontDoorCdnRoute -InputObject `<ICdnIdentity>` [-CacheConfigurationQueryParameter <String>]
  [-CacheConfigurationQueryStringCachingBehavior <AfdQueryStringCachingBehavior>]
  [-CompressionSettingContentTypesToCompress <String[]>] [-CompressionSettingIsCompressionEnabled]
  [-CustomDomain <IActivatedResourceReference[]>] [-EnabledState <EnabledState>]
@@ -478,7 +478,7 @@ To create the parameters described below, construct a hash table containing the 
 CUSTOMDOMAIN <IActivatedResourceReference[]>: Domains referenced by this endpoint.
   - `[Id <String>]`: Resource ID.
 
-INPUTOBJECT <ICdnIdentity>: Identity Parameter
+INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[CustomDomainName <String>]`: Name of the domain under the profile which is unique globally.
   - `[EndpointName <String>]`: Name of the endpoint under the profile which is unique globally.
   - `[Id <String>]`: Resource identity path

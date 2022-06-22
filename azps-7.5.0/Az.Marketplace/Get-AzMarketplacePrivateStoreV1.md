@@ -29,7 +29,7 @@ Get-AzMarketplacePrivateStoreV1 -Id <String> [-DefaultProfile <PSObject>] [<Comm
 
 ### GetViaIdentity
 ```
-Get-AzMarketplacePrivateStoreV1 -InputObject <IMarketplaceIdentity> [-DefaultProfile <PSObject>]
+Get-AzMarketplacePrivateStoreV1 -InputObject `<IMarketplaceIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -135,7 +135,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMarketplaceIdentity>: Identity Parameter
+INPUTOBJECT `<IMarketplaceIdentity>`: Identity Parameter
   - `[AdminRequestApprovalId <String>]`: The admin request approval ID to get create or update
   - `[CollectionId <String>]`: The collection ID
   - `[Id <String>]`: Resource identity path

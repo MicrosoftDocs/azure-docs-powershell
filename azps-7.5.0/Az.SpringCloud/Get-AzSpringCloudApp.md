@@ -31,7 +31,7 @@ Get-AzSpringCloudApp -Name <String> -ResourceGroupName <String> -ServiceName <St
 
 ### GetViaIdentity
 ```
-Get-AzSpringCloudApp -InputObject <ISpringCloudIdentity> [-SyncStatus <String>] [-DefaultProfile <PSObject>]
+Get-AzSpringCloudApp -InputObject `<ISpringCloudIdentity>` [-SyncStatus <String>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -218,7 +218,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ISpringCloudIdentity>: Identity Parameter
+INPUTOBJECT `<ISpringCloudIdentity>`: Identity Parameter
   - `[AppName <String>]`: The name of the App resource.
   - `[BindingName <String>]`: The name of the Binding resource.
   - `[CertificateName <String>]`: The name of the certificate resource.

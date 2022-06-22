@@ -28,7 +28,7 @@ Update-AzPostgreSqlServer -Name <String> -ResourceGroupName <String> [-Subscript
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzPostgreSqlServer -InputObject <IPostgreSqlIdentity> [-AdministratorLoginPassword <SecureString>]
+Update-AzPostgreSqlServer -InputObject `<IPostgreSqlIdentity>` [-AdministratorLoginPassword <SecureString>]
  [-BackupRetentionDay <Int32>] [-MinimalTlsVersion <MinimalTlsVersionEnum>]
  [-PublicNetworkAccess <PublicNetworkAccessEnum>] [-ReplicationRole <String>] [-Sku <String>]
  [-SkuCapacity <Int32>] [-SkuFamily <String>] [-SkuTier <SkuTier>] [-SslEnforcement <SslEnforcementEnum>]
@@ -428,7 +428,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IPostgreSqlIdentity>: Identity Parameter.
+INPUTOBJECT `<IPostgreSqlIdentity>`: Identity Parameter.
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.
   - `[FirewallRuleName <String>]`: The name of the server firewall rule.

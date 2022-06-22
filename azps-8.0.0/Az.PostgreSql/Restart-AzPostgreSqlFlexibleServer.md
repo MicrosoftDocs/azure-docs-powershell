@@ -23,20 +23,20 @@ Restart-AzPostgreSqlFlexibleServer -Name <String> -ResourceGroupName <String> [-
 
 ### Restart
 ```
-Restart-AzPostgreSqlFlexibleServer -Name <String> -ResourceGroupName <String> -Parameter <IRestartParameter>
+Restart-AzPostgreSqlFlexibleServer -Name <String> -ResourceGroupName <String> -Parameter `<IRestartParameter>`
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### RestartViaIdentity
 ```
-Restart-AzPostgreSqlFlexibleServer -InputObject <IPostgreSqlIdentity> -Parameter <IRestartParameter>
+Restart-AzPostgreSqlFlexibleServer -InputObject `<IPostgreSqlIdentity>` -Parameter `<IRestartParameter>`
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### RestartViaIdentityExpanded
 ```
-Restart-AzPostgreSqlFlexibleServer -InputObject <IPostgreSqlIdentity> [-FailoverMode <String>]
+Restart-AzPostgreSqlFlexibleServer -InputObject `<IPostgreSqlIdentity>` [-FailoverMode <String>]
  [-RestartWithFailover] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -298,7 +298,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IPostgreSqlIdentity>: Identity Parameter
+INPUTOBJECT `<IPostgreSqlIdentity>`: Identity Parameter
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.
   - `[FirewallRuleName <String>]`: The name of the server firewall rule.
@@ -310,7 +310,7 @@ INPUTOBJECT <IPostgreSqlIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: The ID of the target subscription.
   - `[VirtualNetworkRuleName <String>]`: The name of the virtual network rule.
 
-PARAMETER <IRestartParameter>: Represents server restart parameters.
+PARAMETER `<IRestartParameter>`: Represents server restart parameters.
   - `[FailoverMode <String>]`: Failover mode.
   - `[RestartWithFailover <Boolean?>]`: Indicates whether to restart the server with failover.
 

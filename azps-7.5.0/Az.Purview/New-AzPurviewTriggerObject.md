@@ -21,7 +21,7 @@ Create an in-memory object for Trigger.
 New-AzPurviewTriggerObject [-IncrementalScanStartTime <DateTime>] [-Interval <Int32>]
  [-RecurrenceEndTime <DateTime>] [-RecurrenceFrequency <TriggerFrequency>] [-RecurrenceInterval <String>]
  [-RecurrenceStartTime <DateTime>] [-RecurrenceTimeZone <String>] [-ScanLevel <ScanLevelType>]
- [-ScheduleAdditionalProperty <IRecurrenceScheduleAdditionalProperties>] [-ScheduleHour <Int32[]>]
+ [-ScheduleAdditionalProperty `<IRecurrenceScheduleAdditionalProperties>`] [-ScheduleHour <Int32[]>]
  [-ScheduleMinute <Int32[]>] [-ScheduleMonthDay <Int32[]>]
  [-ScheduleMonthlyOccurrence <IRecurrenceScheduleOccurrence[]>] [-ScheduleWeekDay <DaysOfWeek[]>]
  [<CommonParameters>]
@@ -280,11 +280,11 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-SCHEDULEADDITIONALPROPERTY <IRecurrenceScheduleAdditionalProperties>: Dictionary of <any>.
+SCHEDULEADDITIONALPROPERTY `<IRecurrenceScheduleAdditionalProperties>`: Dictionary of `<any>`.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
 
 SCHEDULEMONTHLYOCCURRENCE <IRecurrenceScheduleOccurrence[]>: 
-  - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of <any>
+  - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of `<any>`
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[Day <DayOfWeek?>]`: 
   - `[Occurrence <Int32?>]`: 

@@ -27,7 +27,7 @@ Get-AzConnectedKubernetes -ClusterName <String> -ResourceGroupName <String> [-Su
 
 ### GetViaIdentity
 ```
-Get-AzConnectedKubernetes -InputObject <IConnectedKubernetesIdentity> [-DefaultProfile <PSObject>]
+Get-AzConnectedKubernetes -InputObject `<IConnectedKubernetesIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -198,7 +198,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IConnectedKubernetesIdentity>: Identity Parameter
+INPUTOBJECT `<IConnectedKubernetesIdentity>`: Identity Parameter
   - `[ClusterName <String>]`: The name of the Kubernetes cluster on which get is called.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.

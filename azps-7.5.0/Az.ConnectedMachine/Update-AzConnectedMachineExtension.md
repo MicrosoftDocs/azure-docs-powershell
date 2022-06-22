@@ -29,20 +29,20 @@ Update-AzConnectedMachineExtension -MachineName <String> -Name <String> -Resourc
 ### Update
 ```
 Update-AzConnectedMachineExtension -MachineName <String> -Name <String> -ResourceGroupName <String>
- -ExtensionParameter <IMachineExtensionUpdate> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ -ExtensionParameter `<IMachineExtensionUpdate>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentity
 ```
-Update-AzConnectedMachineExtension -InputObject <IConnectedMachineIdentity>
- -ExtensionParameter <IMachineExtensionUpdate> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
+Update-AzConnectedMachineExtension -InputObject `<IConnectedMachineIdentity>`
+ -ExtensionParameter `<IMachineExtensionUpdate>` [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzConnectedMachineExtension -InputObject <IConnectedMachineIdentity> [-AutoUpgradeMinorVersion]
+Update-AzConnectedMachineExtension -InputObject `<IConnectedMachineIdentity>` [-AutoUpgradeMinorVersion]
  [-EnableAutomaticUpgrade] [-ForceRerun <String>] [-ProtectedSetting <IAny>] [-Publisher <String>]
  [-Setting <IAny>] [-Tag <Hashtable>] [-Type <String>] [-TypeHandlerVersion <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -461,7 +461,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-EXTENSIONPARAMETER <IMachineExtensionUpdate>: Describes a Machine Extension Update.
+EXTENSIONPARAMETER `<IMachineExtensionUpdate>`: Describes a Machine Extension Update.
   - `[Tag <IResourceUpdateTags>]`: Resource tags
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[AutoUpgradeMinorVersion <Boolean?>]`: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
@@ -473,7 +473,7 @@ EXTENSIONPARAMETER <IMachineExtensionUpdate>: Describes a Machine Extension Upda
   - `[Type <String>]`: Specifies the type of the extension; an example is "CustomScriptExtension".
   - `[TypeHandlerVersion <String>]`: Specifies the version of the script handler.
 
-INPUTOBJECT <IConnectedMachineIdentity>: Identity Parameter
+INPUTOBJECT `<IConnectedMachineIdentity>`: Identity Parameter
   - `[ExtensionName <String>]`: The name of the machine extension.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path

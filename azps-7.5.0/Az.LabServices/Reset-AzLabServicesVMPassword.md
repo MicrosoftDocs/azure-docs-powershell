@@ -32,7 +32,7 @@ Reset-AzLabServicesVMPassword -LabName <String> -ResourceGroupName <String> -Vir
 
 ### VM
 ```
-Reset-AzLabServicesVMPassword -Password <SecureString> -VM <VirtualMachine> [-SubscriptionId <String>]
+Reset-AzLabServicesVMPassword -Password <SecureString> -VM `<VirtualMachine>` [-SubscriptionId <String>]
  [-Username <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [<CommonParameters>]
 ```
 
@@ -286,7 +286,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-VM <VirtualMachine>: 
+VM `<VirtualMachine>`: 
   - `[SystemDataCreatedAt <DateTime?>]`: The timestamp of resource creation (UTC).
   - `[SystemDataCreatedBy <String>]`: The identity that created the resource.
   - `[SystemDataCreatedByType <CreatedByType?>]`: The type of identity that created the resource.

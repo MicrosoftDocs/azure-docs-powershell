@@ -15,8 +15,8 @@ Create or update linker resource in container app.
 ## SYNTAX
 
 ```
-New-AzServiceLinkerForContainerApp -AuthInfo <IAuthInfoBase> -Scope <String>
- -TargetService <ITargetServiceBase> -ContainerApp <String> -ResourceGroupName <String> [-Name <String>]
+New-AzServiceLinkerForContainerApp -AuthInfo `<IAuthInfoBase>` -Scope <String>
+ -TargetService `<ITargetServiceBase>` -ContainerApp <String> -ResourceGroupName <String> [-Name <String>]
  [-ResourceUri <String>] [-ClientType <ClientType>] [-SecretStoreKeyVaultId <String>]
  [-VNetSolutionType <VNetSolutionType>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-SubscriptionId <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -309,10 +309,10 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-AUTHINFO <IAuthInfoBase>: The authentication type.
+AUTHINFO `<IAuthInfoBase>`: The authentication type.
   - `AuthType <AuthType>`: The authentication type.
 
-TARGETSERVICE <ITargetServiceBase>: The target service properties
+TARGETSERVICE `<ITargetServiceBase>`: The target service properties
   - `Type <TargetServiceType>`: The target service type.
 
 ## RELATED LINKS

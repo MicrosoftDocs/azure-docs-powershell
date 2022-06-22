@@ -22,7 +22,7 @@ Remove-AzCustomProvider -Name <String> -ResourceGroupName <String> [-Subscriptio
 
 ### DeleteViaIdentity
 ```
-Remove-AzCustomProvider -InputObject <ICustomProvidersIdentity> [-DefaultProfile <PSObject>] [-AsJob]
+Remove-AzCustomProvider -InputObject `<ICustomProvidersIdentity>` [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -225,7 +225,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ICustomProvidersIdentity>: Identity Parameter
+INPUTOBJECT `<ICustomProvidersIdentity>`: Identity Parameter
   - `[AssociationName <String>]`: The name of the association.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group.

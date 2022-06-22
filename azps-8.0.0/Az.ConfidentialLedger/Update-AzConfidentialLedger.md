@@ -24,7 +24,7 @@ Update-AzConfidentialLedger -Name <String> -ResourceGroupName <String> -Location
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzConfidentialLedger -InputObject <IConfidentialLedgerIdentity> -Location <String>
+Update-AzConfidentialLedger -InputObject `<IConfidentialLedgerIdentity>` -Location <String>
  [-AadBasedSecurityPrincipal <IAadBasedSecurityPrincipal[]>]
  [-CertBasedSecurityPrincipal <ICertBasedSecurityPrincipal[]>] [-LedgerType <LedgerType>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -313,7 +313,7 @@ CERTBASEDSECURITYPRINCIPAL <ICertBasedSecurityPrincipal[]>: Array of all cert ba
   - `[Cert <String>]`: Public key of the user cert (.pem or .cer)
   - `[LedgerRoleName <LedgerRoleName?>]`: LedgerRole associated with the Security Principal of Ledger
 
-INPUTOBJECT <IConfidentialLedgerIdentity>: Identity Parameter
+INPUTOBJECT `<IConfidentialLedgerIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[LedgerName <String>]`: Name of the Confidential Ledger
   - `[ResourceGroupName <String>]`: The name of the resource group.

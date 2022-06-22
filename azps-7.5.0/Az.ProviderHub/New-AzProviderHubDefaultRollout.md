@@ -24,7 +24,7 @@ New-AzProviderHubDefaultRollout -ProviderNamespace <String> -RolloutName <String
  [-MediumTrafficRegion <String[]>] [-MediumTrafficWaitDuration <TimeSpan>]
  [-ProvisioningState <ProvisioningState>] [-RestOfTheWorldGroupOneRegion <String[]>]
  [-RestOfTheWorldGroupOneWaitDuration <TimeSpan>] [-RestOfTheWorldGroupTwoRegion <String[]>]
- [-RestOfTheWorldGroupTwoWaitDuration <TimeSpan>] [-SpecificationProviderRegistration <IProviderRegistration>]
+ [-RestOfTheWorldGroupTwoWaitDuration <TimeSpan>] [-SpecificationProviderRegistration `<IProviderRegistration>`]
  [-SpecificationResourceTypeRegistration <IResourceTypeRegistration[]>] [-StatusCompletedRegion <String[]>]
  [-StatusFailedOrSkippedRegion <Hashtable>] [-StatusNextTrafficRegion <TrafficRegionCategory>]
  [-StatusNextTrafficRegionScheduledTime <DateTime>]
@@ -493,7 +493,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-SPECIFICATIONPROVIDERREGISTRATION <IProviderRegistration>: .
+SPECIFICATIONPROVIDERREGISTRATION `<IProviderRegistration>`: .
   - `[Capability <IResourceProviderCapabilities[]>]`: 
     - `Effect <ResourceProviderCapabilitiesEffect>`: 
     - `QuotaId <String>`: 

@@ -28,19 +28,19 @@ Update-AzKustoManagedPrivateEndpoint -ClusterName <String> -Name <String> -Resou
 ### Update
 ```
 Update-AzKustoManagedPrivateEndpoint -ClusterName <String> -Name <String> -ResourceGroupName <String>
- -Parameter <IManagedPrivateEndpoint> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob]
+ -Parameter `<IManagedPrivateEndpoint>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentity
 ```
-Update-AzKustoManagedPrivateEndpoint -InputObject <IKustoIdentity> -Parameter <IManagedPrivateEndpoint>
+Update-AzKustoManagedPrivateEndpoint -InputObject `<IKustoIdentity>` -Parameter `<IManagedPrivateEndpoint>`
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzKustoManagedPrivateEndpoint -InputObject <IKustoIdentity> [-GroupId <String>]
+Update-AzKustoManagedPrivateEndpoint -InputObject `<IKustoIdentity>` [-GroupId <String>]
  [-PrivateLinkResourceId <String>] [-PrivateLinkResourceRegion <String>] [-RequestMessage <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -316,7 +316,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IKustoIdentity>: Identity Parameter
+INPUTOBJECT `<IKustoIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[ClusterName <String>]`: The name of the Kusto cluster.
   - `[DataConnectionName <String>]`: The name of the data connection.
@@ -332,7 +332,7 @@ INPUTOBJECT <IKustoIdentity>: Identity Parameter
   - `[ScriptName <String>]`: The name of the Kusto database script.
   - `[SubscriptionId <String>]`: Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-PARAMETER <IManagedPrivateEndpoint>: Class representing a managed private endpoint.
+PARAMETER `<IManagedPrivateEndpoint>`: Class representing a managed private endpoint.
   - `[AzureAsyncOperation <String>]`: 
   - `[GroupId <String>]`: The groupId in which the managed private endpoint is created.
   - `[PrivateLinkResourceId <String>]`: The ARM resource ID of the resource for which the managed private endpoint is created.

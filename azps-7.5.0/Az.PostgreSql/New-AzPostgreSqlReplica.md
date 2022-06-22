@@ -18,7 +18,7 @@ Creates a new replica from an existing database.
 ## SYNTAX
 
 ```
-New-AzPostgreSqlReplica -ReplicaName <String> -ResourceGroupName <String> -Master <IServer>
+New-AzPostgreSqlReplica -ReplicaName <String> -ResourceGroupName <String> -Master `<IServer>`
  [-SubscriptionId <String>] [-Location <String>] [-Sku <String>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -245,7 +245,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-MASTER <IServer>: The source server object to create replica from.
+MASTER `<IServer>`: The source server object to create replica from.
   - `Location <String>`: The geo-location where the resource lives
   - `[Tag <ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

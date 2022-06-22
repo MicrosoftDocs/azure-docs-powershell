@@ -24,7 +24,7 @@ Set-AzCommunicationServiceNotificationHub -CommunicationServiceName <String> -Re
 ### Link
 ```
 Set-AzCommunicationServiceNotificationHub -CommunicationServiceName <String> -ResourceGroupName <String>
- -LinkNotificationHubParameter <ILinkNotificationHubParameters> [-SubscriptionId <String>]
+ -LinkNotificationHubParameter `<ILinkNotificationHubParameters>` [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -200,7 +200,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-LINKNOTIFICATIONHUBPARAMETER <ILinkNotificationHubParameters>: Description of an Azure Notification Hub to link to the communication service
+LINKNOTIFICATIONHUBPARAMETER `<ILinkNotificationHubParameters>`: Description of an Azure Notification Hub to link to the communication service
   - `ConnectionString <String>`: Connection string for the notification hub
   - `ResourceId <String>`: The resource ID of the notification hub
 

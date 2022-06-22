@@ -26,7 +26,7 @@ Update-AzContainerGroup -Name <String> -ResourceGroupName <String> [-Subscriptio
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzContainerGroup -InputObject <IContainerInstanceIdentity> [-Location <String>] [-Tag <Hashtable>]
+Update-AzContainerGroup -InputObject `<IContainerInstanceIdentity>` [-Location <String>] [-Tag <Hashtable>]
  [-Zone <String[]>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -240,7 +240,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IContainerInstanceIdentity>: Identity Parameter
+INPUTOBJECT `<IContainerInstanceIdentity>`: Identity Parameter
   - `[ContainerGroupName <String>]`: The name of the container group.
   - `[ContainerName <String>]`: The name of the container instance.
   - `[Id <String>]`: Resource identity path

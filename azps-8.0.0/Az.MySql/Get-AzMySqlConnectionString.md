@@ -22,7 +22,7 @@ Get-AzMySqlConnectionString -Client <String> -Name <String> -ResourceGroupName <
 
 ### GetViaIdentity
 ```
-Get-AzMySqlConnectionString -Client <String> -InputObject <IServer> [-DefaultProfile <PSObject>]
+Get-AzMySqlConnectionString -Client <String> -InputObject `<IServer>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -166,7 +166,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IServer>: The server for the connection string.
+INPUTOBJECT `<IServer>`: The server for the connection string.
   - `Location <String>`: The geo-location where the resource lives
   - `[Tag <ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

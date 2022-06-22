@@ -23,20 +23,20 @@ Update-AzDigitalTwinsInstance -ResourceGroupName <String> -ResourceName <String>
 ### Update
 ```
 Update-AzDigitalTwinsInstance -ResourceGroupName <String> -ResourceName <String>
- -DigitalTwinsPatchDescription <IDigitalTwinsPatchDescription> [-SubscriptionId <String>]
+ -DigitalTwinsPatchDescription `<IDigitalTwinsPatchDescription>` [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentity
 ```
-Update-AzDigitalTwinsInstance -InputObject <IDigitalTwinsIdentity>
- -DigitalTwinsPatchDescription <IDigitalTwinsPatchDescription> [-DefaultProfile <PSObject>] [-Confirm]
+Update-AzDigitalTwinsInstance -InputObject `<IDigitalTwinsIdentity>`
+ -DigitalTwinsPatchDescription `<IDigitalTwinsPatchDescription>` [-DefaultProfile <PSObject>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzDigitalTwinsInstance -InputObject <IDigitalTwinsIdentity> [-Tag <Hashtable>]
+Update-AzDigitalTwinsInstance -InputObject `<IDigitalTwinsIdentity>` [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -234,11 +234,11 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DIGITALTWINSPATCHDESCRIPTION <IDigitalTwinsPatchDescription>: The description of the DigitalTwins service.
+DIGITALTWINSPATCHDESCRIPTION `<IDigitalTwinsPatchDescription>`: The description of the DigitalTwins service.
   - `[Tag <IDigitalTwinsPatchDescriptionTags>]`: Instance tags
     - `[(Any) <String>]`: This indicates any property can be added to this object.
 
-INPUTOBJECT <IDigitalTwinsIdentity>: Identity Parameter
+INPUTOBJECT `<IDigitalTwinsIdentity>`: Identity Parameter
   - `[EndpointName <String>]`: Name of Endpoint Resource.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of DigitalTwinsInstance.

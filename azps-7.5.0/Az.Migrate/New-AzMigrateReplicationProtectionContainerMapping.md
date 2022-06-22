@@ -21,7 +21,7 @@ The operation to create a protection container mapping.
 New-AzMigrateReplicationProtectionContainerMapping -FabricName <String> -MappingName <String>
  -ProtectionContainerName <String> -ResourceGroupName <String> -ResourceName <String>
  [-SubscriptionId <String>] [-PolicyId <String>]
- [-ProviderSpecificInput <IReplicationProviderSpecificContainerMappingInput>]
+ [-ProviderSpecificInput `<IReplicationProviderSpecificContainerMappingInput>`]
  [-TargetProtectionContainerId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -285,7 +285,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-PROVIDERSPECIFICINPUT <IReplicationProviderSpecificContainerMappingInput>: Provider specific input for pairing.
+PROVIDERSPECIFICINPUT `<IReplicationProviderSpecificContainerMappingInput>`: Provider specific input for pairing.
   - `[InstanceType <String>]`: The class type.
 
 ## RELATED LINKS

@@ -25,7 +25,7 @@ New-AzDigitalTwinsInstance -ResourceGroupName <String> -ResourceName <String> -L
 ### Create
 ```
 New-AzDigitalTwinsInstance -ResourceGroupName <String> -ResourceName <String>
- -DigitalTwinsCreate <IDigitalTwinsDescription> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ -DigitalTwinsCreate `<IDigitalTwinsDescription>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -251,7 +251,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DIGITALTWINSCREATE <IDigitalTwinsDescription>: The description of the DigitalTwins service.
+DIGITALTWINSCREATE `<IDigitalTwinsDescription>`: The description of the DigitalTwins service.
   - `Location <String>`: The resource location.
   - `[Tag <IDigitalTwinsResourceTags>]`: The resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

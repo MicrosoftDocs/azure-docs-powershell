@@ -26,7 +26,7 @@ Add-AzSynapseKustoPoolLanguageExtension -KustoPoolName <String> -ResourceGroupNa
 
 ### AddViaIdentityExpanded
 ```
-Add-AzSynapseKustoPoolLanguageExtension -InputObject <ISynapseIdentity> [-Value <ILanguageExtension[]>]
+Add-AzSynapseKustoPoolLanguageExtension -InputObject `<ISynapseIdentity>` [-Value <ILanguageExtension[]>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -248,7 +248,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ISynapseIdentity>: Identity Parameter
+INPUTOBJECT `<ISynapseIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[DataConnectionName <String>]`: The name of the data connection.
   - `[DatabaseName <String>]`: The name of the database in the Kusto pool.

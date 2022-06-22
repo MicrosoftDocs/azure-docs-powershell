@@ -29,7 +29,7 @@ Update-AzADUser -UPNOrObjectId <String> [-AccountEnabled <Boolean>] [-Password <
  [-GivenName <String>] [-Id <String>] [-Identity <IMicrosoftGraphObjectIdentity[]>] [-IsResourceAccount]
  [-JobTitle <String>] [-Mail <String>] [-MailNickname <String>] [-OfficeLocation <String>]
  [-OnPremisesImmutableId <String>] [-OtherMail <String[]>] [-PasswordPolicy <String>]
- [-PasswordProfile <IMicrosoftGraphPasswordProfile>] [-PostalCode <String>] [-PreferredLanguage <String>]
+ [-PasswordProfile `<IMicrosoftGraphPasswordProfile>`] [-PostalCode <String>] [-PreferredLanguage <String>]
  [-ShowInAddressList] [-State <String>] [-StreetAddress <String>] [-Surname <String>] [-UsageLocation <String>]
  [-UserType <String>] [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -43,7 +43,7 @@ Update-AzADUser [-AccountEnabled <Boolean>] [-Password <SecureString>] [-ForceCh
  [-ExternalUserStateChangeDateTime <DateTime>] [-FaxNumber <String>] [-GivenName <String>] [-Id <String>]
  [-Identity <IMicrosoftGraphObjectIdentity[]>] [-IsResourceAccount] [-JobTitle <String>] [-Mail <String>]
  [-MailNickname <String>] [-OfficeLocation <String>] [-OnPremisesImmutableId <String>] [-OtherMail <String[]>]
- [-PasswordPolicy <String>] [-PasswordProfile <IMicrosoftGraphPasswordProfile>] [-PostalCode <String>]
+ [-PasswordPolicy <String>] [-PasswordProfile `<IMicrosoftGraphPasswordProfile>`] [-PostalCode <String>]
  [-PreferredLanguage <String>] [-ShowInAddressList] [-State <String>] [-StreetAddress <String>]
  [-Surname <String>] [-UsageLocation <String>] [-UserType <String>] -ObjectId <String>
  [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -58,9 +58,9 @@ Update-AzADUser [-AccountEnabled <Boolean>] [-Password <SecureString>] [-ForceCh
  [-ExternalUserStateChangeDateTime <DateTime>] [-FaxNumber <String>] [-GivenName <String>] [-Id <String>]
  [-Identity <IMicrosoftGraphObjectIdentity[]>] [-IsResourceAccount] [-JobTitle <String>] [-Mail <String>]
  [-MailNickname <String>] [-OfficeLocation <String>] [-OnPremisesImmutableId <String>] [-OtherMail <String[]>]
- [-PasswordPolicy <String>] [-PasswordProfile <IMicrosoftGraphPasswordProfile>] [-PostalCode <String>]
+ [-PasswordPolicy <String>] [-PasswordProfile `<IMicrosoftGraphPasswordProfile>`] [-PostalCode <String>]
  [-PreferredLanguage <String>] [-ShowInAddressList] [-State <String>] [-StreetAddress <String>]
- [-Surname <String>] [-UsageLocation <String>] [-UserType <String>] -InputObject <IMicrosoftGraphUser>
+ [-Surname <String>] [-UsageLocation <String>] [-UserType <String>] -InputObject `<IMicrosoftGraphUser>`
  [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -73,7 +73,7 @@ Update-AzADUser [-AccountEnabled <Boolean>] [-Password <SecureString>] [-ForceCh
  [-ExternalUserStateChangeDateTime <DateTime>] [-FaxNumber <String>] [-GivenName <String>] [-Id <String>]
  [-Identity <IMicrosoftGraphObjectIdentity[]>] [-IsResourceAccount] [-JobTitle <String>] [-Mail <String>]
  [-MailNickname <String>] [-OfficeLocation <String>] [-OnPremisesImmutableId <String>] [-OtherMail <String[]>]
- [-PasswordPolicy <String>] [-PasswordProfile <IMicrosoftGraphPasswordProfile>] [-PostalCode <String>]
+ [-PasswordPolicy <String>] [-PasswordProfile `<IMicrosoftGraphPasswordProfile>`] [-PostalCode <String>]
  [-PreferredLanguage <String>] [-ShowInAddressList] [-State <String>] [-StreetAddress <String>]
  [-Surname <String>] [-UsageLocation <String>] [-UserType <String>] -UserPrincipalName <String>
  [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -875,7 +875,7 @@ IDENTITY <IMicrosoftGraphObjectIdentity[]>: Represents the identities that can b
   - `[IssuerAssignedId <String>]`: Specifies the unique identifier assigned to the user by the issuer. The combination of issuer and issuerAssignedId must be unique within the organization. Represents the sign-in name for the user, when signInType is set to emailAddress or userName (also known as local accounts).When signInType is set to: emailAddress, (or a custom string that starts with emailAddress like emailAddress1) issuerAssignedId must be a valid email addressuserName, issuerAssignedId must be a valid local part of an email addressSupports $filter. 100 character limit.
   - `[SignInType <String>]`: Specifies the user sign-in types in your directory, such as emailAddress, userName or federated. Here, federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.
 
-INPUTOBJECT <IMicrosoftGraphUser>: user input object
+INPUTOBJECT `<IMicrosoftGraphUser>`: user input object
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[DeletedDateTime <DateTime?>]`: 
   - `[DisplayName <String>]`: The name displayed in directory
@@ -912,7 +912,7 @@ INPUTOBJECT <IMicrosoftGraphUser>: user input object
   - `[OperatingSystemVersion <String>]`: Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
   - `[OtherMail <String[]>]`: A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user.Supports $filter (eq, NOT, ge, le, in, startsWith).
   - `[PasswordPolicy <String>]`: Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.Supports $filter (ne, NOT).
-  - `[PasswordProfile <IMicrosoftGraphPasswordProfile>]`: passwordProfile
+  - `[PasswordProfile `<IMicrosoftGraphPasswordProfile>`]`: passwordProfile
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
     - `[ForceChangePasswordNextSignIn <Boolean?>]`: true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon.
     - `[ForceChangePasswordNextSignInWithMfa <Boolean?>]`: If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
@@ -929,7 +929,7 @@ INPUTOBJECT <IMicrosoftGraphUser>: user input object
   - `[UserPrincipalName <String>]`: The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith) and $orderBy.
   - `[UserType <String>]`: A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, NOT, in,).
 
-PASSWORDPROFILE <IMicrosoftGraphPasswordProfile>: passwordProfile
+PASSWORDPROFILE `<IMicrosoftGraphPasswordProfile>`: passwordProfile
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[ForceChangePasswordNextSignIn <Boolean?>]`: true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon.
   - `[ForceChangePasswordNextSignInWithMfa <Boolean?>]`: If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.

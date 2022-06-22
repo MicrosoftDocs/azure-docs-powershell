@@ -31,7 +31,7 @@ Get-AzDnsForwardingRulesetForwardingRule -DnsForwardingRulesetName <String> -Nam
 
 ### GetViaIdentity
 ```
-Get-AzDnsForwardingRulesetForwardingRule -InputObject <IDnsResolverIdentity> [-DefaultProfile <PSObject>]
+Get-AzDnsForwardingRulesetForwardingRule -InputObject `<IDnsResolverIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -197,7 +197,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IDnsResolverIdentity>: Identity Parameter
+INPUTOBJECT `<IDnsResolverIdentity>`: Identity Parameter
   - `[DnsForwardingRulesetName <String>]`: The name of the DNS forwarding ruleset.
   - `[DnsResolverName <String>]`: The name of the DNS resolver.
   - `[ForwardingRuleName <String>]`: The name of the forwarding rule.

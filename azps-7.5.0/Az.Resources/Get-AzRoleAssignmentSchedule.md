@@ -30,7 +30,7 @@ Get-AzRoleAssignmentSchedule -Name <String> -Scope <String> [-DefaultProfile <PS
 
 ### GetViaIdentity
 ```
-Get-AzRoleAssignmentSchedule -InputObject <IAuthorizationIdentity> [-DefaultProfile <PSObject>]
+Get-AzRoleAssignmentSchedule -InputObject `<IAuthorizationIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -215,7 +215,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAuthorizationIdentity>: Identity Parameter
+INPUTOBJECT `<IAuthorizationIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[RoleAssignmentScheduleInstanceName <String>]`: The name (hash of schedule name + time) of the role assignment schedule to get.
   - `[RoleAssignmentScheduleName <String>]`: The name (guid) of the role assignment schedule to get.

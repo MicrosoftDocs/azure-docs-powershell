@@ -24,19 +24,19 @@ Clear-AzFrontDoorCdnEndpointContent -EndpointName <String> -ProfileName <String>
 ### Purge
 ```
 Clear-AzFrontDoorCdnEndpointContent -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
- -Content <IAfdPurgeParameters> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ -Content `<IAfdPurgeParameters>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### PurgeViaIdentity
 ```
-Clear-AzFrontDoorCdnEndpointContent -InputObject <ICdnIdentity> -Content <IAfdPurgeParameters>
+Clear-AzFrontDoorCdnEndpointContent -InputObject `<ICdnIdentity>` -Content `<IAfdPurgeParameters>`
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### PurgeViaIdentityExpanded
 ```
-Clear-AzFrontDoorCdnEndpointContent -InputObject <ICdnIdentity> -ContentPath <String[]> [-Domain <String[]>]
+Clear-AzFrontDoorCdnEndpointContent -InputObject `<ICdnIdentity>` -ContentPath <String[]> [-Domain <String[]>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -305,11 +305,11 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-CONTENT <IAfdPurgeParameters>: Parameters required for content purge.
+CONTENT `<IAfdPurgeParameters>`: Parameters required for content purge.
   - `ContentPath <String[]>`: The path to the content to be purged. Can describe a file path or a wild card directory.
   - `[Domain <String[]>]`: List of domains.
 
-INPUTOBJECT <ICdnIdentity>: Identity Parameter
+INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[CustomDomainName <String>]`: Name of the domain under the profile which is unique globally.
   - `[EndpointName <String>]`: Name of the endpoint under the profile which is unique globally.
   - `[Id <String>]`: Resource identity path

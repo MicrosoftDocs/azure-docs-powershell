@@ -46,7 +46,7 @@ Update-AzSynapseKustoPoolDataConnection -DatabaseName <String> -DataConnectionNa
 
 ### UpdateViaIdentityExpandedEventGrid
 ```
-Update-AzSynapseKustoPoolDataConnection -InputObject <ISynapseIdentity> -ConsumerGroup <String>
+Update-AzSynapseKustoPoolDataConnection -InputObject `<ISynapseIdentity>` -ConsumerGroup <String>
  -EventHubResourceId <String> -Kind <DataConnectionKind> -Location <String> -StorageAccountResourceId <String>
  [-BlobStorageEventType <BlobStorageEventType>] [-DataFormat <EventGridDataFormat>] [-IgnoreFirstRecord]
  [-MappingRuleName <String>] [-TableName <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
@@ -55,7 +55,7 @@ Update-AzSynapseKustoPoolDataConnection -InputObject <ISynapseIdentity> -Consume
 
 ### UpdateViaIdentityExpandedEventHub
 ```
-Update-AzSynapseKustoPoolDataConnection -InputObject <ISynapseIdentity> -ConsumerGroup <String>
+Update-AzSynapseKustoPoolDataConnection -InputObject `<ISynapseIdentity>` -ConsumerGroup <String>
  -EventHubResourceId <String> -Kind <DataConnectionKind> -Location <String> [-Compression <Compression>]
  [-DataFormat <EventGridDataFormat>] [-EventSystemProperty <String[]>] [-MappingRuleName <String>]
  [-TableName <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
@@ -64,7 +64,7 @@ Update-AzSynapseKustoPoolDataConnection -InputObject <ISynapseIdentity> -Consume
 
 ### UpdateViaIdentityExpandedIotHub
 ```
-Update-AzSynapseKustoPoolDataConnection -InputObject <ISynapseIdentity> -ConsumerGroup <String>
+Update-AzSynapseKustoPoolDataConnection -InputObject `<ISynapseIdentity>` -ConsumerGroup <String>
  -IotHubResourceId <String> -Kind <DataConnectionKind> -Location <String> -SharedAccessPolicyName <String>
  [-DataFormat <EventGridDataFormat>] [-EventSystemProperty <String[]>] [-MappingRuleName <String>]
  [-TableName <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
@@ -575,7 +575,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ISynapseIdentity>: Identity Parameter
+INPUTOBJECT `<ISynapseIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[DataConnectionName <String>]`: The name of the data connection.
   - `[DatabaseName <String>]`: The name of the database in the Kusto pool.

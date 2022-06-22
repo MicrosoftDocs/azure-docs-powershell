@@ -31,7 +31,7 @@ Get-AzImportExport -Name <String> -ResourceGroupName <String> [-SubscriptionId <
 
 ### GetViaIdentity
 ```
-Get-AzImportExport -InputObject <IImportExportIdentity> [-AcceptLanguage <String>]
+Get-AzImportExport -InputObject `<IImportExportIdentity>` [-AcceptLanguage <String>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -243,7 +243,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IImportExportIdentity>: Identity Parameter
+INPUTOBJECT `<IImportExportIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[JobName <String>]`: The name of the import/export job.
   - `[LocationName <String>]`: The name of the location. For example, West US or westus.

@@ -30,7 +30,7 @@ Get-AzADDomainService -Name <String> -ResourceGroupName <String> [-SubscriptionI
 
 ### GetViaIdentity
 ```
-Get-AzADDomainService -InputObject <IAdDomainServicesIdentity> [-DefaultProfile <PSObject>]
+Get-AzADDomainService -InputObject `<IAdDomainServicesIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -198,7 +198,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAdDomainServicesIdentity>: Identity Parameter
+INPUTOBJECT `<IAdDomainServicesIdentity>`: Identity Parameter
   - `[DomainServiceName <String>]`: The name of the domain service.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group within the user's subscription. The name is case insensitive.

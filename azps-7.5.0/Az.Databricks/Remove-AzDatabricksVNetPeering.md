@@ -26,7 +26,7 @@ Remove-AzDatabricksVNetPeering -Name <String> -ResourceGroupName <String> -Works
 
 ### DeleteViaIdentity
 ```
-Remove-AzDatabricksVNetPeering -InputObject <IDatabricksIdentity> [-DefaultProfile <PSObject>] [-AsJob]
+Remove-AzDatabricksVNetPeering -InputObject `<IDatabricksIdentity>` [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -239,7 +239,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IDatabricksIdentity>: Identity Parameter
+INPUTOBJECT `<IDatabricksIdentity>`: Identity Parameter
   - `[GroupId <String>]`: The name of the private link resource
   - `[Id <String>]`: Resource identity path
   - `[PeeringName <String>]`: The name of the workspace vNet peering.

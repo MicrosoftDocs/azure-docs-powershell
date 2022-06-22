@@ -24,7 +24,7 @@ Update-AzSynapseKustoPoolDatabase -DatabaseName <String> -KustoPoolName <String>
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzSynapseKustoPoolDatabase -InputObject <ISynapseIdentity> -Kind <Kind> [-HotCachePeriod <TimeSpan>]
+Update-AzSynapseKustoPoolDatabase -InputObject `<ISynapseIdentity>` -Kind <Kind> [-HotCachePeriod <TimeSpan>]
  [-Location <String>] [-SoftDeletePeriod <TimeSpan>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -315,7 +315,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ISynapseIdentity>: Identity Parameter
+INPUTOBJECT `<ISynapseIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[DataConnectionName <String>]`: The name of the data connection.
   - `[DatabaseName <String>]`: The name of the database in the Kusto pool.

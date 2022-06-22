@@ -20,7 +20,7 @@ Query the usage data for scope defined.
 ### UsageExpanded (Default)
 ```
 Invoke-AzCostManagementQuery -Scope <String> -Timeframe <TimeframeType> -Type <ExportType>
- [-ConfigurationColumn <String[]>] [-DatasetAggregation <Hashtable>] [-DatasetFilter <IQueryFilter>]
+ [-ConfigurationColumn <String[]>] [-DatasetAggregation <Hashtable>] [-DatasetFilter `<IQueryFilter>`]
  [-DatasetGranularity <GranularityType>] [-DatasetGrouping <IQueryGrouping[]>] [-TimePeriodFrom <DateTime>]
  [-TimePeriodTo <DateTime>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -29,7 +29,7 @@ Invoke-AzCostManagementQuery -Scope <String> -Timeframe <TimeframeType> -Type <E
 ```
 Invoke-AzCostManagementQuery -ExternalCloudProviderId <String>
  -ExternalCloudProviderType <ExternalCloudProviderType> -Timeframe <TimeframeType> -Type <ExportType>
- [-ConfigurationColumn <String[]>] [-DatasetAggregation <Hashtable>] [-DatasetFilter <IQueryFilter>]
+ [-ConfigurationColumn <String[]>] [-DatasetAggregation <Hashtable>] [-DatasetFilter `<IQueryFilter>`]
  [-DatasetGranularity <GranularityType>] [-DatasetGrouping <IQueryGrouping[]>] [-TimePeriodFrom <DateTime>]
  [-TimePeriodTo <DateTime>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -315,12 +315,12 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DATASETFILTER <IQueryFilter>: Has filter expression to use in the query.
+DATASETFILTER `<IQueryFilter>`: Has filter expression to use in the query.
   - `[And <IQueryFilter[]>]`: The logical "AND" expression. Must have at least 2 items.
   - `[Dimensions <IQueryComparisonExpression>]`: Has comparison expression for a dimension
     - `Name <String>`: The name of the column to use in comparison.
     - `Value <String[]>`: Array of values to use for comparison
-  - `[Not <IQueryFilter>]`: The logical "NOT" expression.
+  - `[Not `<IQueryFilter>`]`: The logical "NOT" expression.
   - `[Or <IQueryFilter[]>]`: The logical "OR" expression. Must have at least 2 items.
   - `[Tag <IQueryComparisonExpression>]`: Has comparison expression for a tag
 

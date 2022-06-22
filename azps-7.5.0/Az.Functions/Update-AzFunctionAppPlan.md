@@ -26,7 +26,7 @@ Update-AzFunctionAppPlan -Name <String> -ResourceGroupName <String> [-Subscripti
 
 ### ByObjectInput
 ```
-Update-AzFunctionAppPlan -InputObject <IAppServicePlan> [-Force] [-MaximumWorkerCount <Int32>]
+Update-AzFunctionAppPlan -InputObject `<IAppServicePlan>` [-Force] [-MaximumWorkerCount <Int32>]
  [-MinimumWorkerCount <Int32>] [-Sku <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -281,7 +281,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAppServicePlan>: 
+INPUTOBJECT `<IAppServicePlan>`: 
   - `Location <String>`: Resource Location.
   - `[Kind <String>]`: Kind of resource.
   - `[Tag <IResourceTags>]`: Resource tags.

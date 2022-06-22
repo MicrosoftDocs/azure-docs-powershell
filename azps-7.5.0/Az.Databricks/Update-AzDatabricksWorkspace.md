@@ -28,7 +28,7 @@ Update-AzDatabricksWorkspace -Name <String> -ResourceGroupName <String> [-Subscr
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzDatabricksWorkspace -InputObject <IDatabricksIdentity> [-AmlWorkspaceId <String>]
+Update-AzDatabricksWorkspace -InputObject `<IDatabricksIdentity>` [-AmlWorkspaceId <String>]
  [-EncryptionKeyName <String>] [-EncryptionKeySource <KeySource>] [-EncryptionKeyVaultUri <String>]
  [-EncryptionKeyVersion <String>] [-KeyVaultKeyName <String>] [-KeyVaultKeyVersion <String>]
  [-KeyVaultUri <String>] [-PrepareEncryption] [-SkuTier <String>] [-Tag <Hashtable>]
@@ -413,7 +413,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IDatabricksIdentity>: Identity parameter.
+INPUTOBJECT `<IDatabricksIdentity>`: Identity parameter.
   - `[GroupId <String>]`: The name of the private link resource
   - `[Id <String>]`: Resource identity path
   - `[PeeringName <String>]`: The name of the workspace vNet peering.

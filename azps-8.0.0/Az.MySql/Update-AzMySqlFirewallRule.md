@@ -30,13 +30,13 @@ Update-AzMySqlFirewallRule -Name <String> -ResourceGroupName <String> -ServerNam
 
 ### ClientIPAddressViaIdentity
 ```
-Update-AzMySqlFirewallRule -InputObject <IMySqlIdentity> -ClientIPAddress <String>
+Update-AzMySqlFirewallRule -InputObject `<IMySqlIdentity>` -ClientIPAddress <String>
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzMySqlFirewallRule -InputObject <IMySqlIdentity> -EndIPAddress <String> -StartIPAddress <String>
+Update-AzMySqlFirewallRule -InputObject `<IMySqlIdentity>` -EndIPAddress <String> -StartIPAddress <String>
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -309,7 +309,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMySqlIdentity>: Identity Parameter
+INPUTOBJECT `<IMySqlIdentity>`: Identity Parameter
   - `[BackupName <String>]`: The name of the backup.
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.

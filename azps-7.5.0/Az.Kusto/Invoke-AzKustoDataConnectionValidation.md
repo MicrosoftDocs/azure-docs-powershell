@@ -46,7 +46,7 @@ Invoke-AzKustoDataConnectionValidation -ClusterName <String> -DatabaseName <Stri
 
 ### DataViaIdentityExpandedEventGrid
 ```
-Invoke-AzKustoDataConnectionValidation -InputObject <IKustoIdentity> -ConsumerGroup <String>
+Invoke-AzKustoDataConnectionValidation -InputObject `<IKustoIdentity>` -ConsumerGroup <String>
  -DataConnectionName <String> -EventHubResourceId <String> -Kind <Kind> -Location <String>
  -StorageAccountResourceId <String> [-DataFormat <EventGridDataFormat>] [-MappingRuleName <String>]
  [-TableName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -54,7 +54,7 @@ Invoke-AzKustoDataConnectionValidation -InputObject <IKustoIdentity> -ConsumerGr
 
 ### DataViaIdentityExpandedEventHub
 ```
-Invoke-AzKustoDataConnectionValidation -InputObject <IKustoIdentity> -ConsumerGroup <String>
+Invoke-AzKustoDataConnectionValidation -InputObject `<IKustoIdentity>` -ConsumerGroup <String>
  -DataConnectionName <String> -EventHubResourceId <String> -Kind <Kind> -Location <String>
  [-Compression <Compression>] [-DataFormat <EventGridDataFormat>] [-EventSystemProperty <String[]>]
  [-MappingRuleName <String>] [-TableName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
@@ -63,7 +63,7 @@ Invoke-AzKustoDataConnectionValidation -InputObject <IKustoIdentity> -ConsumerGr
 
 ### DataViaIdentityExpandedIotHub
 ```
-Invoke-AzKustoDataConnectionValidation -InputObject <IKustoIdentity> -ConsumerGroup <String>
+Invoke-AzKustoDataConnectionValidation -InputObject `<IKustoIdentity>` -ConsumerGroup <String>
  -DataConnectionName <String> -IotHubResourceId <String> -Kind <Kind> -Location <String>
  -SharedAccessPolicyName <String> [-DataFormat <EventGridDataFormat>] [-EventSystemProperty <String[]>]
  [-MappingRuleName <String>] [-TableName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
@@ -545,7 +545,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IKustoIdentity>: Identity Parameter
+INPUTOBJECT `<IKustoIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[ClusterName <String>]`: The name of the Kusto cluster.
   - `[DataConnectionName <String>]`: The name of the data connection.

@@ -31,7 +31,7 @@ Get-AzApplicationInsightsWebTest -Name <String> -ResourceGroupName <String> [-Su
 
 ### GetViaIdentity
 ```
-Get-AzApplicationInsightsWebTest -InputObject <IApplicationInsightsIdentity> [-DefaultProfile <PSObject>]
+Get-AzApplicationInsightsWebTest -InputObject `<IApplicationInsightsIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -245,7 +245,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IApplicationInsightsIdentity>: Identity Parameter
+INPUTOBJECT `<IApplicationInsightsIdentity>`: Identity Parameter
   - `[ComponentName <String>]`: The name of the Application Insights component resource.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.

@@ -34,14 +34,14 @@ Test-AzPostgreSqlFlexibleServerConnect -Name <String> -QueryText <String> -Resou
 ### TestViaIdentity
 ```
 Test-AzPostgreSqlFlexibleServerConnect -AdministratorLoginPassword <SecureString>
- -InputObject <IPostgreSqlIdentity> [-DatabaseName <String>] [-AdministratorUserName <String>]
+ -InputObject `<IPostgreSqlIdentity>` [-DatabaseName <String>] [-AdministratorUserName <String>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### TestViaIdentityAndQuery
 ```
 Test-AzPostgreSqlFlexibleServerConnect -QueryText <String> -AdministratorLoginPassword <SecureString>
- -InputObject <IPostgreSqlIdentity> [-DatabaseName <String>] [-AdministratorUserName <String>]
+ -InputObject `<IPostgreSqlIdentity>` [-DatabaseName <String>] [-AdministratorUserName <String>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -251,7 +251,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IPostgreSqlIdentity>: The server to connect.
+INPUTOBJECT `<IPostgreSqlIdentity>`: The server to connect.
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.
   - `[FirewallRuleName <String>]`: The name of the server firewall rule.

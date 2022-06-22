@@ -33,7 +33,7 @@ Update-AzLabServicesLabPlan -Name <String> -ResourceGroupName <String> [-Subscri
 
 ### LabPlan
 ```
-Update-AzLabServicesLabPlan -LabPlan <LabPlan> [-SubscriptionId <String>] [-AllowedRegion <String[]>]
+Update-AzLabServicesLabPlan -LabPlan `<LabPlan>` [-SubscriptionId <String>] [-AllowedRegion <String[]>]
  [-DefaultAutoShutdownProfileDisconnectDelay <TimeSpan>] [-DefaultAutoShutdownProfileIdleDelay <TimeSpan>]
  [-DefaultAutoShutdownProfileNoConnectDelay <TimeSpan>]
  [-DefaultAutoShutdownProfileShutdownOnDisconnect <EnableState>]
@@ -541,7 +541,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-LABPLAN <LabPlan>: 
+LABPLAN `<LabPlan>`: 
   - `Location <String>`: The geo-location where the resource lives
   - `[AllowedRegion <String[]>]`: The allowed regions for the lab creator to use when creating labs using this lab plan.
   - `[DefaultAutoShutdownProfileDisconnectDelay <TimeSpan?>]`: The amount of time a VM will stay running after a user disconnects if this behavior is enabled.

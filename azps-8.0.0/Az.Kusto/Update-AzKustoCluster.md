@@ -35,7 +35,7 @@ Update-AzKustoCluster -Name <String> -ResourceGroupName <String> [-SubscriptionI
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzKustoCluster -InputObject <IKustoIdentity> [-IfMatch <String>]
+Update-AzKustoCluster -InputObject `<IKustoIdentity>` [-IfMatch <String>]
  [-AcceptedAudience <IAcceptedAudiences[]>] [-AllowedFqdnList <String[]>] [-AllowedIPRangeList <String[]>]
  [-EnableAutoStop] [-EnableDiskEncryption] [-EnableDoubleEncryption] [-EnablePurge] [-EnableStreamingIngest]
  [-EngineType <EngineType>] [-IdentityType <IdentityType>] [-IdentityUserAssignedIdentity <Hashtable>]
@@ -749,7 +749,7 @@ To create the parameters described below, construct a hash table containing the 
 ACCEPTEDAUDIENCE <IAcceptedAudiences[]>: The cluster's accepted audiences.
   - `[Value <String>]`: GUID or valid URL representing an accepted audience.
 
-INPUTOBJECT <IKustoIdentity>: Identity Parameter
+INPUTOBJECT `<IKustoIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[ClusterName <String>]`: The name of the Kusto cluster.
   - `[DataConnectionName <String>]`: The name of the data connection.

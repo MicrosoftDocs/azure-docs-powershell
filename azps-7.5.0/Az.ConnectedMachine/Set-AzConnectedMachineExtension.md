@@ -31,7 +31,7 @@ Set-AzConnectedMachineExtension -MachineName <String> -Name <String> -ResourceGr
 ### Update
 ```
 Set-AzConnectedMachineExtension -MachineName <String> -Name <String> -ResourceGroupName <String>
- -ExtensionParameter <IMachineExtension> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob]
+ -ExtensionParameter `<IMachineExtension>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -515,7 +515,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-EXTENSIONPARAMETER <IMachineExtension>: Describes a Machine Extension.
+EXTENSIONPARAMETER `<IMachineExtension>`: Describes a Machine Extension.
   - `Location <String>`: The geo-location where the resource lives
   - `[Tag <ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

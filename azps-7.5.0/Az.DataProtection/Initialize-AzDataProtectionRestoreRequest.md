@@ -28,7 +28,7 @@ Initialize-AzDataProtectionRestoreRequest -DatasourceType <DatasourceTypes> -Res
 
 ### OriginalLocationFullRecovery
 ```
-Initialize-AzDataProtectionRestoreRequest -BackupInstance <BackupInstanceResource>
+Initialize-AzDataProtectionRestoreRequest -BackupInstance `<BackupInstanceResource>`
  -DatasourceType <DatasourceTypes> -RestoreLocation <String> -RestoreType <RestoreTargetType>
  -SourceDataStore <DataStoreType> [-PointInTime <DateTime>] [-RecoveryPoint <String>]
  [-RehydrationDuration <String>] [-RehydrationPriority <String>] [-SecretStoreType <SecretStoreTypes>]
@@ -37,7 +37,7 @@ Initialize-AzDataProtectionRestoreRequest -BackupInstance <BackupInstanceResourc
 
 ### OriginalLocationILR
 ```
-Initialize-AzDataProtectionRestoreRequest -BackupInstance <BackupInstanceResource>
+Initialize-AzDataProtectionRestoreRequest -BackupInstance `<BackupInstanceResource>`
  -DatasourceType <DatasourceTypes> -ItemLevelRecovery -RestoreLocation <String>
  -RestoreType <RestoreTargetType> -SourceDataStore <DataStoreType> [-ContainersList <String[]>]
  [-FromPrefixPattern <String[]>] [-PointInTime <DateTime>] [-RecoveryPoint <String>]
@@ -438,7 +438,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BACKUPINSTANCE <BackupInstanceResource>: Backup Instance object to trigger original localtion restore.
+BACKUPINSTANCE `<BackupInstanceResource>`: Backup Instance object to trigger original localtion restore.
   - `[Property <IBackupInstance>]`: BackupInstanceResource properties
     - `DataSourceInfo <IDatasource>`: Gets or sets the data source information.
       - `ResourceId <String>`: Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.

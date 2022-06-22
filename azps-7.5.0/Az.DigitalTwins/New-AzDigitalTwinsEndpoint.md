@@ -22,7 +22,7 @@ Create or update DigitalTwinsInstance endpoint.
 New-AzDigitalTwinsEndpoint -EndpointName <String> -ResourceGroupName <String> -ResourceName <String>
  -ConnectionStringPrimaryKey <String> -EndpointType <EndpointType> [-SubscriptionId <String>]
  [-ConnectionStringSecondaryKey <String>] [-DeadLetterSecret <String>]
- [-EndpointDescription <IDigitalTwinsEndpointResource>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-EndpointDescription `<IDigitalTwinsEndpointResource>`] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ New-AzDigitalTwinsEndpoint -EndpointName <String> -ResourceGroupName <String> -R
 ```
 New-AzDigitalTwinsEndpoint -EndpointName <String> -ResourceGroupName <String> -ResourceName <String>
  -AccessKey1 <String> -EndpointType <EndpointType> -TopicEndpoint <String> [-SubscriptionId <String>]
- [-DeadLetterSecret <String>] [-EndpointDescription <IDigitalTwinsEndpointResource>]
+ [-DeadLetterSecret <String>] [-EndpointDescription `<IDigitalTwinsEndpointResource>`]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ New-AzDigitalTwinsEndpoint -EndpointName <String> -ResourceGroupName <String> -R
 ```
 New-AzDigitalTwinsEndpoint -EndpointName <String> -ResourceGroupName <String> -ResourceName <String>
  -EndpointType <EndpointType> -PrimaryConnectionString <String> [-SubscriptionId <String>]
- [-DeadLetterSecret <String>] [-EndpointDescription <IDigitalTwinsEndpointResource>]
+ [-DeadLetterSecret <String>] [-EndpointDescription `<IDigitalTwinsEndpointResource>`]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -366,7 +366,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-ENDPOINTDESCRIPTION <IDigitalTwinsEndpointResource>: DigitalTwinsInstance endpoint resource.
+ENDPOINTDESCRIPTION `<IDigitalTwinsEndpointResource>`: DigitalTwinsInstance endpoint resource.
   - `EndpointType <EndpointType>`: The type of Digital Twins endpoint
   - `[DeadLetterSecret <String>]`: Dead letter storage secret. Will be obfuscated during read.
 

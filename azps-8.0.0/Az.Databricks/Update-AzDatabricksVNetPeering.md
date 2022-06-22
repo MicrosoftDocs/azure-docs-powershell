@@ -24,7 +24,7 @@ Update-AzDatabricksVNetPeering -Name <String> -ResourceGroupName <String> -Works
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzDatabricksVNetPeering -InputObject <IDatabricksIdentity> [-AllowForwardedTraffic <Boolean>]
+Update-AzDatabricksVNetPeering -InputObject `<IDatabricksIdentity>` [-AllowForwardedTraffic <Boolean>]
  [-AllowGatewayTransit <Boolean>] [-AllowVirtualNetworkAccess <Boolean>] [-UseRemoteGateway <Boolean>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -302,7 +302,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IDatabricksIdentity>: Identity parameter.
+INPUTOBJECT `<IDatabricksIdentity>`: Identity parameter.
   - `[GroupId <String>]`: The name of the private link resource
   - `[Id <String>]`: Resource identity path
   - `[PeeringName <String>]`: The name of the workspace vNet peering.

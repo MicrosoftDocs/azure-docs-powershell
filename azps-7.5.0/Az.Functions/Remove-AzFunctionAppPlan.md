@@ -25,7 +25,7 @@ Remove-AzFunctionAppPlan -Name <String> -ResourceGroupName <String> [-Subscripti
 
 ### ByObjectInput
 ```
-Remove-AzFunctionAppPlan -InputObject <IAppServicePlan> [-Force] [-DefaultProfile <PSObject>] [-PassThru]
+Remove-AzFunctionAppPlan -InputObject `<IAppServicePlan>` [-Force] [-DefaultProfile <PSObject>] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -206,7 +206,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAppServicePlan>: 
+INPUTOBJECT `<IAppServicePlan>`: 
   - `Location <String>`: Resource Location.
   - `[Kind <String>]`: Kind of resource.
   - `[Tag <IResourceTags>]`: Resource tags.

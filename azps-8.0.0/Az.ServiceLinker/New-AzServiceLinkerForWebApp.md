@@ -15,7 +15,7 @@ Create or update linker resource in webapp.
 ## SYNTAX
 
 ```
-New-AzServiceLinkerForWebApp -AuthInfo <IAuthInfoBase> -TargetService <ITargetServiceBase>
+New-AzServiceLinkerForWebApp -AuthInfo `<IAuthInfoBase>` -TargetService `<ITargetServiceBase>`
  -ResourceGroupName <String> -WebApp <String> [-Name <String>] [-ResourceUri <String>]
  [-ClientType <ClientType>] [-Scope <String>] [-SecretStoreKeyVaultId <String>]
  [-VNetSolutionType <VNetSolutionType>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
@@ -310,10 +310,10 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-AUTHINFO <IAuthInfoBase>: The authentication type.
+AUTHINFO `<IAuthInfoBase>`: The authentication type.
   - `AuthType <AuthType>`: The authentication type.
 
-TARGETSERVICE <ITargetServiceBase>: The target service properties
+TARGETSERVICE `<ITargetServiceBase>`: The target service properties
   - `Type <TargetServiceType>`: The target service type.
 
 ## RELATED LINKS

@@ -23,7 +23,7 @@ Update-AzVMwareCluster -Name <String> -PrivateCloudName <String> -ResourceGroupN
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzVMwareCluster -InputObject <IVMwareIdentity> [-ClusterSize <Int32>] [-PropertiesHost <String[]>]
+Update-AzVMwareCluster -InputObject `<IVMwareIdentity>` [-ClusterSize <Int32>] [-PropertiesHost <String[]>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -261,7 +261,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IVMwareIdentity>: Identity Parameter
+INPUTOBJECT `<IVMwareIdentity>`: Identity Parameter
   - `[AddonName <String>]`: Name of the addon for the private cloud
   - `[AuthorizationName <String>]`: Name of the ExpressRoute Circuit Authorization in the private cloud
   - `[CloudLinkName <String>]`: Name of the cloud link resource

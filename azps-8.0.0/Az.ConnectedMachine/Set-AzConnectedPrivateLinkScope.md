@@ -25,7 +25,7 @@ Set-AzConnectedPrivateLinkScope -ResourceGroupName <String> -ScopeName <String> 
 ### Update
 ```
 Set-AzConnectedPrivateLinkScope -ResourceGroupName <String> -ScopeName <String>
- -Parameter <IHybridComputePrivateLinkScope> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ -Parameter `<IHybridComputePrivateLinkScope>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -223,7 +223,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-PARAMETER <IHybridComputePrivateLinkScope>: An Azure Arc PrivateLinkScope definition.
+PARAMETER `<IHybridComputePrivateLinkScope>`: An Azure Arc PrivateLinkScope definition.
   - `Location <String>`: Resource location
   - `[Tag <IPrivateLinkScopesResourceTags>]`: Resource tags
     - `[(Any) <String>]`: This indicates any property can be added to this object.

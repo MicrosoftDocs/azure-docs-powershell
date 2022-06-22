@@ -27,7 +27,7 @@ Update-AzVMwarePrivateCloud -Name <String> -ResourceGroupName <String> [-Subscri
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzVMwarePrivateCloud -InputObject <IVMwareIdentity> [-AvailabilitySecondaryZone <Int32>]
+Update-AzVMwarePrivateCloud -InputObject `<IVMwareIdentity>` [-AvailabilitySecondaryZone <Int32>]
  [-AvailabilityStrategy <AvailabilityStrategy>] [-AvailabilityZone <Int32>]
  [-EncryptionStatus <EncryptionState>] [-IdentitySource <IIdentitySource[]>]
  [-IdentityType <ResourceIdentityType>] [-Internet <InternetEnum>] [-KeyVaultPropertyKeyName <String>]
@@ -435,7 +435,7 @@ IDENTITYSOURCE <IIdentitySource[]>: vCenter Single Sign On Identity Sources
   - `[Ssl <SslEnum?>]`: Protect LDAP communication using SSL certificate (LDAPS)
   - `[Username <String>]`: The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
 
-INPUTOBJECT <IVMwareIdentity>: Identity Parameter
+INPUTOBJECT `<IVMwareIdentity>`: Identity Parameter
   - `[AddonName <String>]`: Name of the addon for the private cloud
   - `[AuthorizationName <String>]`: Name of the ExpressRoute Circuit Authorization in the private cloud
   - `[CloudLinkName <String>]`: Name of the cloud link resource

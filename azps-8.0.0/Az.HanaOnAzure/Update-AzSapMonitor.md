@@ -22,7 +22,7 @@ Update-AzSapMonitor -Name <String> -ResourceGroupName <String> [-SubscriptionId 
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzSapMonitor -InputObject <IHanaOnAzureIdentity> [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
+Update-AzSapMonitor -InputObject `<IHanaOnAzureIdentity>` [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -203,7 +203,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IHanaOnAzureIdentity>: Identity Parameter
+INPUTOBJECT `<IHanaOnAzureIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: The location of the deleted vault.
   - `[OperationKind <AccessPolicyUpdateKind?>]`: Name of the operation

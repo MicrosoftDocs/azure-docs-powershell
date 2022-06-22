@@ -19,7 +19,7 @@ Create or update a addon in a private cloud
 
 ```
 New-AzVMwareAddon -PrivateCloudName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-Property <IAddonProperties>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
+ [-Property `<IAddonProperties>`] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -199,7 +199,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-PROPERTY <IAddonProperties>: The properties of an addon resource
+PROPERTY `<IAddonProperties>`: The properties of an addon resource
   - `AddonType <AddonType>`: The type of private cloud addon
 
 ## RELATED LINKS

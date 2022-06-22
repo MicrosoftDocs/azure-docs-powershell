@@ -25,7 +25,7 @@ Update-AzHealthBot -Name <String> -ResourceGroupName <String> [-SubscriptionId <
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzHealthBot -InputObject <IHealthBotIdentity> [-Sku <SkuName>] [-Tag <Hashtable>]
+Update-AzHealthBot -InputObject `<IHealthBotIdentity>` [-Sku <SkuName>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -220,7 +220,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IHealthBotIdentity>: Identity Parameter
+INPUTOBJECT `<IHealthBotIdentity>`: Identity Parameter
   - `[BotName <String>]`: The name of the Bot resource.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the Bot resource group in the user subscription.

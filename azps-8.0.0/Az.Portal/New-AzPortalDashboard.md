@@ -23,7 +23,7 @@ New-AzPortalDashboard -Name <String> -ResourceGroupName <String> -Location <Stri
 
 ### Create
 ```
-New-AzPortalDashboard -Name <String> -ResourceGroupName <String> -Dashboard <IDashboard>
+New-AzPortalDashboard -Name <String> -ResourceGroupName <String> -Dashboard `<IDashboard>`
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -258,7 +258,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DASHBOARD <IDashboard>: The shared dashboard resource definition.
+DASHBOARD `<IDashboard>`: The shared dashboard resource definition.
   - `Location <String>`: Resource location
   - `[Lens <IDashboardPropertiesLenses>]`: The dashboard lenses.
     - `[(Any) <IDashboardLens>]`: This indicates any property can be added to this object.

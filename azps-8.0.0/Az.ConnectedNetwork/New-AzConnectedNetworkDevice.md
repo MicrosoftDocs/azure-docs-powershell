@@ -16,7 +16,7 @@ Creates or updates a device.
 
 ```
 New-AzConnectedNetworkDevice -Name <String> -ResourceGroupName <String> -Location <String>
- [-SubscriptionId <String>] [-Property <IDevicePropertiesFormat>] [-Tag <Hashtable>]
+ [-SubscriptionId <String>] [-Property `<IDevicePropertiesFormat>`] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -265,7 +265,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-PROPERTY <IDevicePropertiesFormat>: Device properties.
+PROPERTY `<IDevicePropertiesFormat>`: Device properties.
   - `DeviceType <DeviceType>`: The type of the device.
 
 ## RELATED LINKS

@@ -32,10 +32,10 @@ Update-AzADServicePrincipal -ObjectId <String> [-KeyCredential <IMicrosoftGraphK
  [-DeletedDateTime <DateTime>] [-Description <String>] [-DisabledByMicrosoftStatus <String>]
  [-DisplayName <String>] [-Endpoint <IMicrosoftGraphEndpoint[]>]
  [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
- [-Info <IMicrosoftGraphInformationalUrl>] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
+ [-Info `<IMicrosoftGraphInformationalUrl>`] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
  [-NotificationEmailAddress <String[]>] [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
  [-PreferredSingleSignOnMode <String>] [-PreferredTokenSigningKeyThumbprint <String>] [-ReplyUrl <String[]>]
- [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>] [-ServicePrincipalType <String>]
+ [-SamlSingleSignOnSetting `<IMicrosoftGraphSamlSingleSignOnSettings>`] [-ServicePrincipalType <String>]
  [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
  [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
  [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
@@ -56,10 +56,10 @@ Update-AzADServicePrincipal [-KeyCredential <IMicrosoftGraphKeyCredential[]>]
  [-DeletedDateTime <DateTime>] [-Description <String>] [-DisabledByMicrosoftStatus <String>]
  [-DisplayName <String>] [-Endpoint <IMicrosoftGraphEndpoint[]>]
  [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
- [-Info <IMicrosoftGraphInformationalUrl>] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
+ [-Info `<IMicrosoftGraphInformationalUrl>`] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
  [-NotificationEmailAddress <String[]>] [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
  [-PreferredSingleSignOnMode <String>] [-PreferredTokenSigningKeyThumbprint <String>] [-ReplyUrl <String[]>]
- [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>] [-ServicePrincipalType <String>]
+ [-SamlSingleSignOnSetting `<IMicrosoftGraphSamlSingleSignOnSettings>`] [-ServicePrincipalType <String>]
  [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
  [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
  [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
@@ -80,14 +80,14 @@ Update-AzADServicePrincipal [-KeyCredential <IMicrosoftGraphKeyCredential[]>]
  [-DeletedDateTime <DateTime>] [-Description <String>] [-DisabledByMicrosoftStatus <String>]
  [-DisplayName <String>] [-Endpoint <IMicrosoftGraphEndpoint[]>]
  [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
- [-Info <IMicrosoftGraphInformationalUrl>] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
+ [-Info `<IMicrosoftGraphInformationalUrl>`] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
  [-NotificationEmailAddress <String[]>] [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
  [-PreferredSingleSignOnMode <String>] [-PreferredTokenSigningKeyThumbprint <String>] [-ReplyUrl <String[]>]
- [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>] [-ServicePrincipalType <String>]
+ [-SamlSingleSignOnSetting `<IMicrosoftGraphSamlSingleSignOnSettings>`] [-ServicePrincipalType <String>]
  [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
  [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
  [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
- [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>] -InputObject <IMicrosoftGraphServicePrincipal>
+ [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>] -InputObject `<IMicrosoftGraphServicePrincipal>`
  [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -104,10 +104,10 @@ Update-AzADServicePrincipal [-KeyCredential <IMicrosoftGraphKeyCredential[]>]
  [-DeletedDateTime <DateTime>] [-Description <String>] [-DisabledByMicrosoftStatus <String>]
  [-DisplayName <String>] [-Endpoint <IMicrosoftGraphEndpoint[]>]
  [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
- [-Info <IMicrosoftGraphInformationalUrl>] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
+ [-Info `<IMicrosoftGraphInformationalUrl>`] [-LoginUrl <String>] [-LogoutUrl <String>] [-Note <String>]
  [-NotificationEmailAddress <String[]>] [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
  [-PreferredSingleSignOnMode <String>] [-PreferredTokenSigningKeyThumbprint <String>] [-ReplyUrl <String[]>]
- [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>] [-ServicePrincipalType <String>]
+ [-SamlSingleSignOnSetting `<IMicrosoftGraphSamlSingleSignOnSettings>`] [-ServicePrincipalType <String>]
  [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
  [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
  [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
@@ -967,14 +967,14 @@ HOMEREALMDISCOVERYPOLICY <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>: The homeRe
   - `[DeletedDateTime <DateTime?>]`: 
   - `[DisplayName <String>]`: The name displayed in directory
 
-INFO <IMicrosoftGraphInformationalUrl>: informationalUrl
+INFO `<IMicrosoftGraphInformationalUrl>`: informationalUrl
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[MarketingUrl <String>]`: Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
   - `[PrivacyStatementUrl <String>]`: Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
   - `[SupportUrl <String>]`: Link to the application's support page. For example, https://www.contoso.com/app/support
   - `[TermsOfServiceUrl <String>]`: Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
 
-INPUTOBJECT <IMicrosoftGraphServicePrincipal>: service principal object
+INPUTOBJECT `<IMicrosoftGraphServicePrincipal>`: service principal object
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[DeletedDateTime <DateTime?>]`: 
   - `[DisplayName <String>]`: The name displayed in directory
@@ -1032,7 +1032,7 @@ INPUTOBJECT <IMicrosoftGraphServicePrincipal>: service principal object
     - `[DeletedDateTime <DateTime?>]`: 
     - `[DisplayName <String>]`: The name displayed in directory
   - `[Homepage <String>]`: Home page or landing page of the application.
-  - `[Info <IMicrosoftGraphInformationalUrl>]`: informationalUrl
+  - `[Info `<IMicrosoftGraphInformationalUrl>`]`: informationalUrl
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
     - `[MarketingUrl <String>]`: Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
     - `[PrivacyStatementUrl <String>]`: Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
@@ -1070,7 +1070,7 @@ INPUTOBJECT <IMicrosoftGraphServicePrincipal>: service principal object
   - `[PreferredSingleSignOnMode <String>]`: Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
   - `[PreferredTokenSigningKeyThumbprint <String>]`: Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
   - `[ReplyUrl <String[]>]`: The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
-  - `[SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>]`: samlSingleSignOnSettings
+  - `[SamlSingleSignOnSetting `<IMicrosoftGraphSamlSingleSignOnSettings>`]`: samlSingleSignOnSettings
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
     - `[RelayState <String>]`: The relative URI the service provider would redirect to after completion of the single sign-on flow.
   - `[ServicePrincipalName <String[]>]`: Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, NOT, ge, le, startsWith).
@@ -1121,7 +1121,7 @@ PASSWORDCREDENTIAL <IMicrosoftGraphPasswordCredential[]>: The collection of pass
   - `[KeyId <String>]`: The unique identifier for the password.
   - `[StartDateTime <DateTime?>]`: The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
 
-SAMLSINGLESIGNONSETTING <IMicrosoftGraphSamlSingleSignOnSettings>: samlSingleSignOnSettings
+SAMLSINGLESIGNONSETTING `<IMicrosoftGraphSamlSingleSignOnSettings>`: samlSingleSignOnSettings
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[RelayState <String>]`: The relative URI the service provider would redirect to after completion of the single sign-on flow.
 

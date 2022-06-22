@@ -37,7 +37,7 @@ Get-AzPurviewAccount -ResourceGroupName <String> [-SubscriptionId <String[]>] [-
 
 ### GetViaIdentity
 ```
-Get-AzPurviewAccount -InputObject <IPurviewIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzPurviewAccount -InputObject `<IPurviewIdentity>` [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -213,7 +213,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IPurviewIdentity>: Identity Parameter
+INPUTOBJECT `<IPurviewIdentity>`: Identity Parameter
   - `[AccountName <String>]`: The name of the account.
   - `[GroupId <String>]`: The group identifier.
   - `[Id <String>]`: Resource identity path

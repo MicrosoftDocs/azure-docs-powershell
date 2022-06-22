@@ -18,7 +18,7 @@ Creates or Updates a scan ruleset
 ## SYNTAX
 
 ```
-New-AzPurviewScanRuleset -Endpoint <String> -Name <String> -Body <IScanRuleset> [-DefaultProfile <PSObject>]
+New-AzPurviewScanRuleset -Endpoint <String> -Name <String> -Body `<IScanRuleset>` [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -164,7 +164,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODY <IScanRuleset>: .
+BODY `<IScanRuleset>`: .
   - `Kind <DataSourceType>`: 
   - `[Type <ScanRulesetType?>]`: 
 

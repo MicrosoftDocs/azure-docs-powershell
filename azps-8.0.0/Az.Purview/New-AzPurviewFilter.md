@@ -15,7 +15,7 @@ Creates or updates a filter
 ## SYNTAX
 
 ```
-New-AzPurviewFilter -Endpoint <String> -DataSourceName <String> -ScanName <String> -Body <IFilter>
+New-AzPurviewFilter -Endpoint <String> -DataSourceName <String> -ScanName <String> -Body `<IFilter>`
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -168,7 +168,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODY <IFilter>: .
+BODY `<IFilter>`: .
   - `[ExcludeUriPrefix <String[]>]`: 
   - `[IncludeUriPrefix <String[]>]`: 
 

@@ -26,7 +26,7 @@ Remove-AzConnectedKubernetes -ClusterName <String> -ResourceGroupName <String> [
 
 ### DeleteViaIdentity
 ```
-Remove-AzConnectedKubernetes -InputObject <IConnectedKubernetesIdentity> [-KubeConfig <String>]
+Remove-AzConnectedKubernetes -InputObject `<IConnectedKubernetesIdentity>` [-KubeConfig <String>]
  [-KubeContext <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -255,7 +255,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IConnectedKubernetesIdentity>: Identity Parameter
+INPUTOBJECT `<IConnectedKubernetesIdentity>`: Identity Parameter
   - `[ClusterName <String>]`: The name of the Kubernetes cluster on which get is called.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.

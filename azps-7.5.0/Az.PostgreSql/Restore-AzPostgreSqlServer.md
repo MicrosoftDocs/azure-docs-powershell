@@ -19,14 +19,14 @@ Restore a server from an existing backup
 
 ### GeoRestore (Default)
 ```
-Restore-AzPostgreSqlServer -Name <String> -ResourceGroupName <String> -InputObject <IServer> -UseGeoRestore
+Restore-AzPostgreSqlServer -Name <String> -ResourceGroupName <String> -InputObject `<IServer>` -UseGeoRestore
  [-SubscriptionId <String>] [-Location <String>] [-Sku <String>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### PointInTimeRestore
 ```
-Restore-AzPostgreSqlServer -Name <String> -ResourceGroupName <String> -InputObject <IServer>
+Restore-AzPostgreSqlServer -Name <String> -ResourceGroupName <String> -InputObject `<IServer>`
  -RestorePointInTime <DateTime> -UsePointInTimeRestore [-SubscriptionId <String>] [-Location <String>]
  [-Sku <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
  [<CommonParameters>]
@@ -314,7 +314,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IServer>: The source server object to restore from.
+INPUTOBJECT `<IServer>`: The source server object to restore from.
   - `Location <String>`: The geo-location where the resource lives
   - `[Tag <ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

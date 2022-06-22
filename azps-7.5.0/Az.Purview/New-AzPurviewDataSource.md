@@ -18,7 +18,7 @@ Creates or Updates a data source
 ## SYNTAX
 
 ```
-New-AzPurviewDataSource -Endpoint <String> -Name <String> -Body <IDataSource> [-DefaultProfile <PSObject>]
+New-AzPurviewDataSource -Endpoint <String> -Name <String> -Body `<IDataSource>` [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -165,7 +165,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODY <IDataSource>: .
+BODY `<IDataSource>`: .
   - `Kind <DataSourceType>`: 
 
 ## RELATED LINKS

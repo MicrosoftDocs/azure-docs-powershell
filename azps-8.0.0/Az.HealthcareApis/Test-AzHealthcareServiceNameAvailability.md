@@ -22,20 +22,20 @@ Test-AzHealthcareServiceNameAvailability -Name <String> -Type <String> [-Subscri
 
 ### Check
 ```
-Test-AzHealthcareServiceNameAvailability -CheckNameAvailabilityInput <ICheckNameAvailabilityParameters>
+Test-AzHealthcareServiceNameAvailability -CheckNameAvailabilityInput `<ICheckNameAvailabilityParameters>`
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CheckViaIdentity
 ```
-Test-AzHealthcareServiceNameAvailability -InputObject <IHealthcareApisIdentity>
- -CheckNameAvailabilityInput <ICheckNameAvailabilityParameters> [-DefaultProfile <PSObject>] [-Confirm]
+Test-AzHealthcareServiceNameAvailability -InputObject `<IHealthcareApisIdentity>`
+ -CheckNameAvailabilityInput `<ICheckNameAvailabilityParameters>` [-DefaultProfile <PSObject>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### CheckViaIdentityExpanded
 ```
-Test-AzHealthcareServiceNameAvailability -InputObject <IHealthcareApisIdentity> -Name <String> -Type <String>
+Test-AzHealthcareServiceNameAvailability -InputObject `<IHealthcareApisIdentity>` -Name <String> -Type <String>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -202,11 +202,11 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-CHECKNAMEAVAILABILITYINPUT <ICheckNameAvailabilityParameters>: Input values.
+CHECKNAMEAVAILABILITYINPUT `<ICheckNameAvailabilityParameters>`: Input values.
   - `Name <String>`: The name of the service instance to check.
   - `Type <String>`: The fully qualified resource type which includes provider namespace.
 
-INPUTOBJECT <IHealthcareApisIdentity>: Identity Parameter
+INPUTOBJECT `<IHealthcareApisIdentity>`: Identity Parameter
   - `[DicomServiceName <String>]`: The name of DICOM Service resource.
   - `[FhirDestinationName <String>]`: The name of IoT Connector FHIR destination resource.
   - `[FhirServiceName <String>]`: The name of FHIR Service resource.

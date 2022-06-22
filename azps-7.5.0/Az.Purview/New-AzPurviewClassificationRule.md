@@ -18,7 +18,7 @@ Creates or Updates a classification rule
 ## SYNTAX
 
 ```
-New-AzPurviewClassificationRule -Endpoint <String> -Name <String> -Body <IClassificationRule>
+New-AzPurviewClassificationRule -Endpoint <String> -Name <String> -Body `<IClassificationRule>`
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -173,7 +173,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODY <IClassificationRule>: .
+BODY `<IClassificationRule>`: .
   - `Kind <ClassificationRuleType>`: 
 
 ## RELATED LINKS

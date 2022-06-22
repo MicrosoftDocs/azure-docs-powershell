@@ -27,7 +27,7 @@ Update-AzMySqlFlexibleServer -Name <String> -ResourceGroupName <String> [-Subscr
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzMySqlFlexibleServer -InputObject <IMySqlIdentity> [-AdministratorLoginPassword <SecureString>]
+Update-AzMySqlFlexibleServer -InputObject `<IMySqlIdentity>` [-AdministratorLoginPassword <SecureString>]
  [-BackupRetentionDay <Int32>] [-HighAvailability <String>] [-MaintenanceWindow <String>]
  [-ReplicationRole <String>] [-Sku <String>] [-SkuTier <SkuTier>] [-StorageAutogrow <StorageAutogrow>]
  [-StorageInMb <Int32>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
@@ -386,7 +386,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMySqlIdentity>: Identity Parameter.
+INPUTOBJECT `<IMySqlIdentity>`: Identity Parameter.
   - `[BackupName <String>]`: The name of the backup.
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.

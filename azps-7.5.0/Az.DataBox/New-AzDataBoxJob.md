@@ -21,7 +21,7 @@ Existing job cannot be updated with this API and should instead be updated with 
 ```
 New-AzDataBoxJob -Name <String> -ResourceGroupName <String> -Location <String> -SkuName <SkuName>
  -TransferType <TransferType> [-SubscriptionId <String>] [-DeliveryInfoScheduledDateTime <DateTime>]
- [-DeliveryType <JobDeliveryType>] [-Detail <IJobDetails>] [-IdentityType <String>] [-SkuDisplayName <String>]
+ [-DeliveryType <JobDeliveryType>] [-Detail `<IJobDetails>`] [-IdentityType <String>] [-SkuDisplayName <String>]
  [-SkuFamily <String>] [-Tag <Hashtable>] [-UserAssignedIdentity <Hashtable>] [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -528,7 +528,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DETAIL <IJobDetails>: Details of a job run. This field will only be sent for expand details filter.
+DETAIL `<IJobDetails>`: Details of a job run. This field will only be sent for expand details filter.
   - `ContactDetail <IContactDetails>`: Contact details for notification and shipping.
     - `ContactName <String>`: Contact name of the person.
     - `EmailList <String[]>`: List of Email-ids to be notified about job progress.

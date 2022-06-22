@@ -30,7 +30,7 @@ Get-AzPortalDashboard -Name <String> -ResourceGroupName <String> [-SubscriptionI
 
 ### GetViaIdentity
 ```
-Get-AzPortalDashboard -InputObject <IPortalIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzPortalDashboard -InputObject `<IPortalIdentity>` [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### List
@@ -171,7 +171,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IPortalIdentity>: Identity Parameter
+INPUTOBJECT `<IPortalIdentity>`: Identity Parameter
   - `[DashboardName <String>]`: The name of the dashboard.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group.

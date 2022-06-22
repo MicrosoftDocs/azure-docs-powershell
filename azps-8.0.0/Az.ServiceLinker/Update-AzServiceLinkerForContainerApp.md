@@ -16,8 +16,8 @@ Operation to update an existing link in container app.
 
 ### UpdateExpanded (Default)
 ```
-Update-AzServiceLinkerForContainerApp -Name <String> -AuthInfo <IAuthInfoBase> -ClientType <ClientType>
- -Scope <String> -TargetService <ITargetServiceBase> -ContainerApp <String> -ResourceGroupName <String>
+Update-AzServiceLinkerForContainerApp -Name <String> -AuthInfo `<IAuthInfoBase>` -ClientType <ClientType>
+ -Scope <String> -TargetService `<ITargetServiceBase>` -ContainerApp <String> -ResourceGroupName <String>
  [-ResourceUri <String>] [-SecretStoreKeyVaultId <String>] [-VNetSolutionType <VNetSolutionType>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-SubscriptionId <String>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
@@ -25,8 +25,8 @@ Update-AzServiceLinkerForContainerApp -Name <String> -AuthInfo <IAuthInfoBase> -
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzServiceLinkerForContainerApp -InputObject <IServiceLinkerIdentity> -AuthInfo <IAuthInfoBase>
- -ClientType <ClientType> -Scope <String> -TargetService <ITargetServiceBase>
+Update-AzServiceLinkerForContainerApp -InputObject `<IServiceLinkerIdentity>` -AuthInfo `<IAuthInfoBase>`
+ -ClientType <ClientType> -Scope <String> -TargetService `<ITargetServiceBase>`
  [-SecretStoreKeyVaultId <String>] [-VNetSolutionType <VNetSolutionType>] [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-SubscriptionId <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -333,15 +333,15 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-AUTHINFO <IAuthInfoBase>: The authentication type.
+AUTHINFO `<IAuthInfoBase>`: The authentication type.
   - `AuthType <AuthType>`: The authentication type.
 
-INPUTOBJECT <IServiceLinkerIdentity>: Identity Parameter
+INPUTOBJECT `<IServiceLinkerIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[LinkerName <String>]`: The name Linker resource.
   - `[ResourceUri <String>]`: The fully qualified Azure Resource manager identifier of the resource to be connected.
 
-TARGETSERVICE <ITargetServiceBase>: The target service properties
+TARGETSERVICE `<ITargetServiceBase>`: The target service properties
   - `Type <TargetServiceType>`: The target service type.
 
 ## RELATED LINKS

@@ -44,14 +44,14 @@ New-AzADAppCredential -ObjectId <String> [-CustomKeyIdentifier <String>]
 ### ApplicationObjectWithPasswordParameterSet
 ```
 New-AzADAppCredential [-StartDate <DateTime>] [-EndDate <DateTime>] [-CustomKeyIdentifier <String>]
- -ApplicationObject <IMicrosoftGraphApplication> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ -ApplicationObject `<IMicrosoftGraphApplication>` [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ApplicationObjectWithCertValueParameterSet
 ```
 New-AzADAppCredential [-StartDate <DateTime>] [-EndDate <DateTime>] [-CustomKeyIdentifier <String>]
- -CertValue <String> -ApplicationObject <IMicrosoftGraphApplication> [-DefaultProfile <PSObject>] [-WhatIf]
+ -CertValue <String> -ApplicationObject `<IMicrosoftGraphApplication>` [-DefaultProfile <PSObject>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -84,7 +84,7 @@ New-AzADAppCredential [-StartDate <DateTime>] [-EndDate <DateTime>] [-CustomKeyI
 ### ApplicationObjectWithPasswordCredentialParameterSet
 ```
 New-AzADAppCredential [-CustomKeyIdentifier <String>] -PasswordCredentials <MicrosoftGraphPasswordCredential[]>
- -ApplicationObject <IMicrosoftGraphApplication> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ -ApplicationObject `<IMicrosoftGraphApplication>` [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -103,7 +103,7 @@ New-AzADAppCredential [-CustomKeyIdentifier <String>] -PasswordCredentials <Micr
 ### ApplicationObjectWithKeyCredentialParameterSet
 ```
 New-AzADAppCredential [-CustomKeyIdentifier <String>] -KeyCredentials <MicrosoftGraphKeyCredential[]>
- -ApplicationObject <IMicrosoftGraphApplication> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ -ApplicationObject `<IMicrosoftGraphApplication>` [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -374,7 +374,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-APPLICATIONOBJECT <IMicrosoftGraphApplication>: The application object, could be used as pipeline input.
+APPLICATIONOBJECT `<IMicrosoftGraphApplication>`: The application object, could be used as pipeline input.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[DeletedDateTime <DateTime?>]`: 
   - `[DisplayName <String>]`: The name displayed in directory

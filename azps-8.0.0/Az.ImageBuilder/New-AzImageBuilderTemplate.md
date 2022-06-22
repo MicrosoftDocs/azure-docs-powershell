@@ -17,7 +17,7 @@ Create a virtual machine image template
 ### FlattenParameterSet (Default)
 ```
 New-AzImageBuilderTemplate -ImageTemplateName <String> -ResourceGroupName <String>
- -Distribute <IImageTemplateDistributor[]> -Source <IImageTemplateSource> -UserAssignedIdentityId <String>
+ -Distribute <IImageTemplateDistributor[]> -Source `<IImageTemplateSource>` -UserAssignedIdentityId <String>
  [-SubscriptionId <String>] [-BuildTimeoutInMinute <Int32>] [-Customize <IImageTemplateCustomizer[]>]
  [-Location <String>] [-Tag <Hashtable>] [-VMProfileOsdiskSizeInGb <Int32>] [-VMProfileVmSize <String>]
  [-VnetConfigSubnetId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
@@ -380,7 +380,7 @@ DISTRIBUTE <IImageTemplateDistributor[]>: The distribution targets where the ima
   - `[ArtifactTag <IImageTemplateDistributorArtifactTags>]`: Tags that will be applied to the artifact once it has been created/updated by the distributor.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
 
-SOURCE <IImageTemplateSource>: Describes a virtual machine image source for building, customizing and distributing.
+SOURCE `<IImageTemplateSource>`: Describes a virtual machine image source for building, customizing and distributing.
   - `Type <String>`: Specifies the type of source image you want to start with.
 
 ## RELATED LINKS

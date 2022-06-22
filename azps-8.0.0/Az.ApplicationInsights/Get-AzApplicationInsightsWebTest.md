@@ -28,7 +28,7 @@ Get-AzApplicationInsightsWebTest -Name <String> -ResourceGroupName <String> [-Su
 
 ### GetViaIdentity
 ```
-Get-AzApplicationInsightsWebTest -InputObject <IApplicationInsightsIdentity> [-DefaultProfile <PSObject>]
+Get-AzApplicationInsightsWebTest -InputObject `<IApplicationInsightsIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -247,7 +247,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IApplicationInsightsIdentity>: Identity Parameter
+INPUTOBJECT `<IApplicationInsightsIdentity>`: Identity Parameter
   - `[AnnotationId <String>]`: The unique annotation ID. This is unique within a Application Insights component.
   - `[ComponentName <String>]`: The name of the Application Insights component resource.
   - `[ExportId <String>]`: The Continuous Export configuration ID. This is unique within a Application Insights component.

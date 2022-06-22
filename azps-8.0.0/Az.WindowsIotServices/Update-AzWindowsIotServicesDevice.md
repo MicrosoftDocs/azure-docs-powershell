@@ -25,7 +25,7 @@ Update-AzWindowsIotServicesDevice -Name <String> -ResourceGroupName <String> [-S
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzWindowsIotServicesDevice -InputObject <IWindowsIotServicesIdentity> [-IfMatch <String>]
+Update-AzWindowsIotServicesDevice -InputObject `<IWindowsIotServicesIdentity>` [-IfMatch <String>]
  [-AdminDomainName <String>] [-BillingDomainName <String>] [-Etag <String>] [-Location <String>]
  [-Note <String>] [-Quantity <Int64>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
@@ -313,7 +313,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IWindowsIotServicesIdentity>: Identity Parameter
+INPUTOBJECT `<IWindowsIotServicesIdentity>`: Identity Parameter
   - `[DeviceName <String>]`: The name of the Windows IoT Device Service.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group that contains the Windows IoT Device Service.

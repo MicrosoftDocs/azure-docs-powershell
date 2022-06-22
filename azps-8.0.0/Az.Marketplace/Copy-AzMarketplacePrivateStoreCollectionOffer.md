@@ -24,18 +24,18 @@ Copy-AzMarketplacePrivateStoreCollectionOffer -CollectionId <String> -PrivateSto
 ### Transfer
 ```
 Copy-AzMarketplacePrivateStoreCollectionOffer -CollectionId <String> -PrivateStoreId <String>
- -Payload <ITransferOffersProperties> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ -Payload `<ITransferOffersProperties>` [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### TransferViaIdentity
 ```
-Copy-AzMarketplacePrivateStoreCollectionOffer -InputObject <IMarketplaceIdentity>
- -Payload <ITransferOffersProperties> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Copy-AzMarketplacePrivateStoreCollectionOffer -InputObject `<IMarketplaceIdentity>`
+ -Payload `<ITransferOffersProperties>` [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### TransferViaIdentityExpanded
 ```
-Copy-AzMarketplacePrivateStoreCollectionOffer -InputObject <IMarketplaceIdentity> [-OfferIdList <String[]>]
+Copy-AzMarketplacePrivateStoreCollectionOffer -InputObject `<IMarketplaceIdentity>` [-OfferIdList <String[]>]
  [-Operation <String>] [-TargetCollection <String[]>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -236,7 +236,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMarketplaceIdentity>: Identity Parameter
+INPUTOBJECT `<IMarketplaceIdentity>`: Identity Parameter
   - `[AdminRequestApprovalId <String>]`: The admin request approval ID to get create or update
   - `[CollectionId <String>]`: The collection ID
   - `[Id <String>]`: Resource identity path
@@ -244,7 +244,7 @@ INPUTOBJECT <IMarketplaceIdentity>: Identity Parameter
   - `[PrivateStoreId <String>]`: The store ID - must use the tenant ID
   - `[RequestApprovalId <String>]`: The request approval ID to get create or update
 
-PAYLOAD <ITransferOffersProperties>: Transfer offers properties
+PAYLOAD `<ITransferOffersProperties>`: Transfer offers properties
   - `[OfferIdsList <String[]>]`: Offers ids list to transfer from source collection to target collection(s)
   - `[Operation <String>]`: Operation to perform (For example: Copy or Move)
   - `[TargetCollection <String[]>]`: Target collections ids

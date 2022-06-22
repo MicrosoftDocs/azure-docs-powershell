@@ -17,7 +17,7 @@ Creates or updates a Move Resource in the move collection.
 ```
 Add-AzResourceMoverMoveResource -MoveCollectionName <String> -Name <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-DependsOnOverride <IMoveResourceDependencyOverride[]>]
- [-ExistingTargetId <String>] [-ResourceSetting <IResourceSettings>] [-SourceId <String>]
+ [-ExistingTargetId <String>] [-ResourceSetting `<IResourceSettings>`] [-SourceId <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -376,7 +376,7 @@ DEPENDSONOVERRIDE <IMoveResourceDependencyOverride[]>: Gets or sets the move res
   - `[Id <String>]`: Gets or sets the ARM ID of the dependent resource.
   - `[TargetId <String>]`: Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of         the dependent resource.
 
-RESOURCESETTING <IResourceSettings>: Gets or sets the resource settings.
+RESOURCESETTING `<IResourceSettings>`: Gets or sets the resource settings.
   - `ResourceType <String>`: The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
   - `TargetResourceName <String>`: Gets or sets the target Resource name.
 

@@ -40,7 +40,7 @@ Remove-AzADUser -DisplayName <String> [-DefaultProfile <PSObject>] [-PassThru] [
 
 ### InputObjectParameterSet
 ```
-Remove-AzADUser -InputObject <IMicrosoftGraphUser> [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf]
+Remove-AzADUser -InputObject `<IMicrosoftGraphUser>` [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -222,7 +222,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMicrosoftGraphUser>: user input object
+INPUTOBJECT `<IMicrosoftGraphUser>`: user input object
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[DeletedDateTime <DateTime?>]`: 
   - `[DisplayName <String>]`: The name displayed in directory

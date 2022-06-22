@@ -25,7 +25,7 @@ Get-AzElasticTagRule -MonitorName <String> -ResourceGroupName <String> [-Subscri
 
 ### GetViaIdentity
 ```
-Get-AzElasticTagRule -InputObject <IElasticIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzElasticTagRule -InputObject `<IElasticIdentity>` [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -159,7 +159,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IElasticIdentity>: Identity Parameter
+INPUTOBJECT `<IElasticIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[MonitorName <String>]`: Monitor resource name
   - `[ResourceGroupName <String>]`: The name of the resource group to which the Elastic resource belongs.

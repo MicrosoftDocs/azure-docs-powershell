@@ -28,7 +28,7 @@ Update-AzStreamAnalyticsFunction -File <String> -JobName <String> -Name <String>
 
 ### UpdateViaIdentity
 ```
-Update-AzStreamAnalyticsFunction -File <String> -InputObject <IStreamAnalyticsIdentity> [-IfMatch <String>]
+Update-AzStreamAnalyticsFunction -File <String> -InputObject `<IStreamAnalyticsIdentity>` [-IfMatch <String>]
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -241,7 +241,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IStreamAnalyticsIdentity>: Identity Parameter
+INPUTOBJECT `<IStreamAnalyticsIdentity>`: Identity Parameter
   - `[ClusterName <String>]`: The name of the cluster.
   - `[FunctionName <String>]`: The name of the function.
   - `[Id <String>]`: Resource identity path

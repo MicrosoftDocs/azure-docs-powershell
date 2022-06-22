@@ -30,14 +30,14 @@ Test-AzMySqlFlexibleServerConnect -Name <String> -QueryText <String> -ResourceGr
 
 ### TestViaIdentity
 ```
-Test-AzMySqlFlexibleServerConnect -AdministratorLoginPassword <SecureString> -InputObject <IMySqlIdentity>
+Test-AzMySqlFlexibleServerConnect -AdministratorLoginPassword <SecureString> -InputObject `<IMySqlIdentity>`
  [-DatabaseName <String>] [-AdministratorUserName <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### TestViaIdentityAndQuery
 ```
 Test-AzMySqlFlexibleServerConnect -QueryText <String> -AdministratorLoginPassword <SecureString>
- -InputObject <IMySqlIdentity> [-DatabaseName <String>] [-AdministratorUserName <String>]
+ -InputObject `<IMySqlIdentity>` [-DatabaseName <String>] [-AdministratorUserName <String>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -247,7 +247,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMySqlIdentity>: The server to connect.
+INPUTOBJECT `<IMySqlIdentity>`: The server to connect.
   - `[BackupName <String>]`: The name of the backup.
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.

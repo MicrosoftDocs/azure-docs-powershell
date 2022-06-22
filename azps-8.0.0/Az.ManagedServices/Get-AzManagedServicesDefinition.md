@@ -27,7 +27,7 @@ Get-AzManagedServicesDefinition -Name <String> [-Scope <String>] [-DefaultProfil
 
 ### GetViaIdentity
 ```
-Get-AzManagedServicesDefinition -InputObject <IManagedServicesIdentity> [-DefaultProfile <PSObject>]
+Get-AzManagedServicesDefinition -InputObject `<IManagedServicesIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -172,7 +172,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IManagedServicesIdentity>: Identity Parameter
+INPUTOBJECT `<IManagedServicesIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[MarketplaceIdentifier <String>]`: The Azure Marketplace identifier. Expected formats: {publisher}.{product[-preview]}.{planName}.{version} or {publisher}.{product[-preview]}.{planName} or {publisher}.{product[-preview]} or {publisher}).
   - `[RegistrationAssignmentId <String>]`: The GUID of the registration assignment.

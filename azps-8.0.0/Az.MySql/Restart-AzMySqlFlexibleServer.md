@@ -23,20 +23,20 @@ Restart-AzMySqlFlexibleServer -Name <String> -ResourceGroupName <String> [-Subsc
 
 ### Restart
 ```
-Restart-AzMySqlFlexibleServer -Name <String> -ResourceGroupName <String> -Parameter <IServerRestartParameter>
+Restart-AzMySqlFlexibleServer -Name <String> -ResourceGroupName <String> -Parameter `<IServerRestartParameter>`
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### RestartViaIdentity
 ```
-Restart-AzMySqlFlexibleServer -InputObject <IMySqlIdentity> -Parameter <IServerRestartParameter>
+Restart-AzMySqlFlexibleServer -InputObject `<IMySqlIdentity>` -Parameter `<IServerRestartParameter>`
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### RestartViaIdentityExpanded
 ```
-Restart-AzMySqlFlexibleServer -InputObject <IMySqlIdentity> [-MaxFailoverSecond <Int32>]
+Restart-AzMySqlFlexibleServer -InputObject `<IMySqlIdentity>` [-MaxFailoverSecond <Int32>]
  [-RestartWithFailover <EnableStatusEnum>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -291,7 +291,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMySqlIdentity>: Identity Parameter
+INPUTOBJECT `<IMySqlIdentity>`: Identity Parameter
   - `[BackupName <String>]`: The name of the backup.
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.
@@ -304,7 +304,7 @@ INPUTOBJECT <IMySqlIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: The ID of the target subscription.
   - `[VirtualNetworkRuleName <String>]`: The name of the virtual network rule.
 
-PARAMETER <IServerRestartParameter>: Server restart parameters.
+PARAMETER `<IServerRestartParameter>`: Server restart parameters.
   - `[MaxFailoverSecond <Int32?>]`: The maximum allowed failover time in seconds.
   - `[RestartWithFailover <EnableStatusEnum?>]`: Whether or not failover to standby server when restarting a server with high availability enabled.
 

@@ -30,7 +30,7 @@ Get-AzKustoCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <
 
 ### GetViaIdentity
 ```
-Get-AzKustoCluster -InputObject <IKustoIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzKustoCluster -InputObject `<IKustoIdentity>` [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### List
@@ -170,7 +170,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IKustoIdentity>: Identity Parameter
+INPUTOBJECT `<IKustoIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[ClusterName <String>]`: The name of the Kusto cluster.
   - `[DataConnectionName <String>]`: The name of the data connection.

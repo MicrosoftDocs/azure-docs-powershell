@@ -21,7 +21,7 @@ Create an in-memory object for AzureSynapseWorkspaceCredentialScan.
 New-AzPurviewAzureSynapseWorkspaceCredentialScanObject -Kind <ScanAuthorizationType>
  [-CollectionReferenceName <String>] [-CollectionType <String>] [-ConnectedViaReferenceName <String>]
  [-CredentialReferenceName <String>] [-CredentialType <CredentialType>]
- [-ResourceType <IExpandingResourceScanPropertiesResourceTypes>] [-ScanRulesetName <String>]
+ [-ResourceType `<IExpandingResourceScanPropertiesResourceTypes>`] [-ScanRulesetName <String>]
  [-ScanRulesetType <ScanRulesetType>] [-Worker <Int32>] [<CommonParameters>]
 ```
 
@@ -216,7 +216,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-RESOURCETYPE <IExpandingResourceScanPropertiesResourceTypes>: 
+RESOURCETYPE `<IExpandingResourceScanPropertiesResourceTypes>`: 
   - `[AdlGen1ScanRulesetName <String>]`: 
   - `[AdlGen1ScanRulesetType <ScanRulesetType?>]`: 
   - `[AdlGen2ScanRulesetName <String>]`: 

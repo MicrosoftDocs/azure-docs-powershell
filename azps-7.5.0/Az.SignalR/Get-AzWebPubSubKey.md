@@ -25,7 +25,7 @@ Get-AzWebPubSubKey -ResourceGroupName <String> -ResourceName <String> [-Subscrip
 
 ### ListViaIdentity
 ```
-Get-AzWebPubSubKey -InputObject <IWebPubSubIdentity> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+Get-AzWebPubSubKey -InputObject `<IWebPubSubIdentity>` [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -194,7 +194,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IWebPubSubIdentity>: Identity Parameter
+INPUTOBJECT `<IWebPubSubIdentity>`: Identity Parameter
   - `[HubName <String>]`: The hub name.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: the region

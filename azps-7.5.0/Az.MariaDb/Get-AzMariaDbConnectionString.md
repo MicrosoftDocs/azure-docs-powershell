@@ -25,7 +25,7 @@ Get-AzMariaDbConnectionString -Client <String> -Name <String> -ResourceGroupName
 
 ### ServerObject
 ```
-Get-AzMariaDbConnectionString -Client <String> -InputObject <IServer> [-DefaultProfile <PSObject>]
+Get-AzMariaDbConnectionString -Client <String> -InputObject `<IServer>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -170,7 +170,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IServer>: Identity Parameter
+INPUTOBJECT `<IServer>`: Identity Parameter
   - `Location <String>`: The location the resource resides in.
   - `[Tag <ITrackedResourceTags>]`: Application-specific metadata in the form of key-value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.

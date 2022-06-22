@@ -18,7 +18,7 @@ Creates an instance of a scan
 ## SYNTAX
 
 ```
-New-AzPurviewScan -Endpoint <String> -DataSourceName <String> -Name <String> -Body <IScan>
+New-AzPurviewScan -Endpoint <String> -DataSourceName <String> -Name <String> -Body `<IScan>`
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -181,7 +181,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODY <IScan>: .
+BODY `<IScan>`: .
   - `Kind <ScanAuthorizationType>`: 
 
 ## RELATED LINKS

@@ -25,7 +25,7 @@ Remove-AzBotService -Name <String> -ResourceGroupName <String> [-SubscriptionId 
 
 ### DeleteViaIdentity
 ```
-Remove-AzBotService -InputObject <IBotServiceIdentity> [-DefaultProfile <PSObject>] [-PassThru] [-Confirm]
+Remove-AzBotService -InputObject `<IBotServiceIdentity>` [-DefaultProfile <PSObject>] [-PassThru] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -195,7 +195,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IBotServiceIdentity>: Identity Parameter
+INPUTOBJECT `<IBotServiceIdentity>`: Identity Parameter
   - `[ChannelName <ChannelName?>]`: The name of the Channel resource.
   - `[ConnectionName <String>]`: The name of the Bot Service Connection Setting resource
   - `[Id <String>]`: Resource identity path

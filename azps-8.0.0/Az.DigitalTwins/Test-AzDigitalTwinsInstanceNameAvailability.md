@@ -23,20 +23,20 @@ Test-AzDigitalTwinsInstanceNameAvailability -Location <String> -Name <String> [-
 ### Check
 ```
 Test-AzDigitalTwinsInstanceNameAvailability -Location <String>
- -DigitalTwinsInstanceCheckName <ICheckNameRequest> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ -DigitalTwinsInstanceCheckName `<ICheckNameRequest>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CheckViaIdentity
 ```
-Test-AzDigitalTwinsInstanceNameAvailability -InputObject <IDigitalTwinsIdentity>
- -DigitalTwinsInstanceCheckName <ICheckNameRequest> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+Test-AzDigitalTwinsInstanceNameAvailability -InputObject `<IDigitalTwinsIdentity>`
+ -DigitalTwinsInstanceCheckName `<ICheckNameRequest>` [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### CheckViaIdentityExpanded
 ```
-Test-AzDigitalTwinsInstanceNameAvailability -InputObject <IDigitalTwinsIdentity> -Name <String>
+Test-AzDigitalTwinsInstanceNameAvailability -InputObject `<IDigitalTwinsIdentity>` -Name <String>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -220,10 +220,10 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-DIGITALTWINSINSTANCECHECKNAME <ICheckNameRequest>: The result returned from a database check name availability request.
+DIGITALTWINSINSTANCECHECKNAME `<ICheckNameRequest>`: The result returned from a database check name availability request.
   - `Name <String>`: Resource name.
 
-INPUTOBJECT <IDigitalTwinsIdentity>: Identity Parameter
+INPUTOBJECT `<IDigitalTwinsIdentity>`: Identity Parameter
   - `[EndpointName <String>]`: Name of Endpoint Resource.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of DigitalTwinsInstance.

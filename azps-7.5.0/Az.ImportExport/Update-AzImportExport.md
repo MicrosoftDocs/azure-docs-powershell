@@ -35,7 +35,7 @@ Update-AzImportExport -Name <String> -ResourceGroupName <String> [-SubscriptionI
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzImportExport -InputObject <IImportExportIdentity> [-AcceptLanguage <String>] [-BackupDriveManifest]
+Update-AzImportExport -InputObject `<IImportExportIdentity>` [-AcceptLanguage <String>] [-BackupDriveManifest]
  [-CancelRequested] [-DeliveryPackageCarrierName <String>] [-DeliveryPackageDriveCount <Int32>]
  [-DeliveryPackageShipDate <String>] [-DeliveryPackageTrackingNumber <String>] [-DriveList <IDriveStatus[]>]
  [-LogLevel <String>] [-ReturnAddressCity <String>] [-ReturnAddressCountryOrRegion <String>]
@@ -555,7 +555,7 @@ DRIVELIST <IDriveStatus[]>: List of drives that comprise the job.
   - `[State <DriveState?>]`: The drive's current state. 
   - `[VerboseLogUri <String>]`: A URI that points to the blob containing the verbose log for the data transfer operation. 
 
-INPUTOBJECT <IImportExportIdentity>: Identity Parameter
+INPUTOBJECT `<IImportExportIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[JobName <String>]`: The name of the import/export job.
   - `[LocationName <String>]`: The name of the location. For example, West US or westus.

@@ -29,13 +29,13 @@ Get-AzADAppFederatedIdentityCredential -ApplicationObjectId <String> -Id <String
 
 ### GetByApplicationObject
 ```
-Get-AzADAppFederatedIdentityCredential -Id <String> -ApplicationObject <MicrosoftGraphApplication>
+Get-AzADAppFederatedIdentityCredential -Id <String> -ApplicationObject `<MicrosoftGraphApplication>`
  [-Expand <String[]>] [-Select <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### ListByApplicationObject
 ```
-Get-AzADAppFederatedIdentityCredential -ApplicationObject <MicrosoftGraphApplication> [-Expand <String[]>]
+Get-AzADAppFederatedIdentityCredential -ApplicationObject `<MicrosoftGraphApplication>` [-Expand <String[]>]
  [-Select <String[]>] [-Count] [-Filter <String>] [-Orderby <String[]>] [-Search <String>] [-First <UInt64>]
  [-Skip <UInt64>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
@@ -260,7 +260,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-APPLICATIONOBJECT <MicrosoftGraphApplication>: application object
+APPLICATIONOBJECT `<MicrosoftGraphApplication>`: application object
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AddIn <IMicrosoftGraphAddIn[]>]`: Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on.
     - `[Id <String>]`: 

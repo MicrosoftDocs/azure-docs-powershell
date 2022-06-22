@@ -23,7 +23,7 @@ Update-AzStaticWebAppUser -AuthProvider <String> -Name <String> -ResourceGroupNa
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzStaticWebAppUser -InputObject <IWebsitesIdentity> [-Kind <String>] [-Role <String>]
+Update-AzStaticWebAppUser -InputObject `<IWebsitesIdentity>` [-Kind <String>] [-Role <String>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -250,7 +250,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IWebsitesIdentity>: Identity Parameter
+INPUTOBJECT `<IWebsitesIdentity>`: Identity Parameter
   - `[Authprovider <String>]`: The auth provider for the users.
   - `[DomainName <String>]`: The custom domain name.
   - `[EnvironmentName <String>]`: The stage site identifier.

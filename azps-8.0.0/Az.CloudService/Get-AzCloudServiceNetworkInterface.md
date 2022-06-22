@@ -29,7 +29,7 @@ Get-AzCloudServiceNetworkInterface -CloudServiceName <String> -Name <String> -Re
 
 ### GetViaIdentity
 ```
-Get-AzCloudServiceNetworkInterface -InputObject <ICloudServiceIdentity> [-Expand <String>]
+Get-AzCloudServiceNetworkInterface -InputObject `<ICloudServiceIdentity>` [-Expand <String>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -210,7 +210,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ICloudServiceIdentity>: Identity Parameter
+INPUTOBJECT `<ICloudServiceIdentity>`: Identity Parameter
   - `[CloudServiceName <String>]`: 
   - `[IPConfigurationName <String>]`: The IP configuration name.
   - `[Id <String>]`: Resource identity path

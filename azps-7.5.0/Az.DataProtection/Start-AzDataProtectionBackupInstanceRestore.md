@@ -20,14 +20,14 @@ Triggers restore for a BackupInstance
 ### Trigger (Default)
 ```
 Start-AzDataProtectionBackupInstanceRestore -BackupInstanceName <String> -ResourceGroupName <String>
- -VaultName <String> -Parameter <IAzureBackupRestoreRequest> [-SubscriptionId <String>]
+ -VaultName <String> -Parameter `<IAzureBackupRestoreRequest>` [-SubscriptionId <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### TriggerExpanded
 ```
 Start-AzDataProtectionBackupInstanceRestore -BackupInstanceName <String> -ResourceGroupName <String>
- -VaultName <String> -ObjectType <String> -RestoreTargetInfo <IRestoreTargetInfoBase>
+ -VaultName <String> -ObjectType <String> -RestoreTargetInfo `<IRestoreTargetInfoBase>`
  -SourceDataStoreType <SourceDataStoreType> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -318,14 +318,14 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-PARAMETER <IAzureBackupRestoreRequest>: Azure backup restore request
+PARAMETER `<IAzureBackupRestoreRequest>`: Azure backup restore request
   - `ObjectType <String>`: 
-  - `RestoreTargetInfo <IRestoreTargetInfoBase>`: Gets or sets the restore target information.
+  - `RestoreTargetInfo `<IRestoreTargetInfoBase>``: Gets or sets the restore target information.
     - `ObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
     - `[RestoreLocation <String>]`: Target Restore region
   - `SourceDataStoreType <SourceDataStoreType>`: Gets or sets the type of the source data store.
 
-RESTORETARGETINFO <IRestoreTargetInfoBase>: Gets or sets the restore target information.
+RESTORETARGETINFO `<IRestoreTargetInfoBase>`: Gets or sets the restore target information.
   - `ObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
   - `[RestoreLocation <String>]`: Target Restore region
 

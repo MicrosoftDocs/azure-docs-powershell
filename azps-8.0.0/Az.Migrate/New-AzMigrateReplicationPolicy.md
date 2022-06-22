@@ -16,7 +16,7 @@ The operation to create a replication policy.
 
 ```
 New-AzMigrateReplicationPolicy -PolicyName <String> -ResourceGroupName <String> -ResourceName <String>
- [-SubscriptionId <String>] [-ProviderSpecificInput <IPolicyProviderSpecificInput>]
+ [-SubscriptionId <String>] [-ProviderSpecificInput `<IPolicyProviderSpecificInput>`]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -216,7 +216,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-PROVIDERSPECIFICINPUT <IPolicyProviderSpecificInput>: The ReplicationProviderSettings.
+PROVIDERSPECIFICINPUT `<IPolicyProviderSpecificInput>`: The ReplicationProviderSettings.
   - `[InstanceType <String>]`: The class type.
 
 ## RELATED LINKS

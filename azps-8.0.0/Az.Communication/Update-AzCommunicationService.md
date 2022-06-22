@@ -23,7 +23,7 @@ Update-AzCommunicationService -Name <String> -ResourceGroupName <String> [-Subsc
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzCommunicationService -InputObject <ICommunicationIdentity> [-DataLocation <String>]
+Update-AzCommunicationService -InputObject `<ICommunicationIdentity>` [-DataLocation <String>]
  [-Location <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -221,7 +221,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ICommunicationIdentity>: Identity Parameter
+INPUTOBJECT `<ICommunicationIdentity>`: Identity Parameter
   - `[CommunicationServiceName <String>]`: The name of the CommunicationService resource.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.

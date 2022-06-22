@@ -16,8 +16,8 @@ Operation to update an existing link in spring cloud.
 
 ### UpdateExpanded (Default)
 ```
-Update-AzServiceLinkerForSpringCloud -Name <String> -AuthInfo <IAuthInfoBase> -ClientType <ClientType>
- -TargetService <ITargetServiceBase> -AppName <String> -ResourceGroupName <String> -ServiceName <String>
+Update-AzServiceLinkerForSpringCloud -Name <String> -AuthInfo `<IAuthInfoBase>` -ClientType <ClientType>
+ -TargetService `<ITargetServiceBase>` -AppName <String> -ResourceGroupName <String> -ServiceName <String>
  [-ResourceUri <String>] [-Scope <String>] [-SecretStoreKeyVaultId <String>]
  [-VNetSolutionType <VNetSolutionType>] [-DefaultProfile <PSObject>] [-AsJob] [-DeploymentName <String>]
  [-NoWait] [-SubscriptionId <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -25,8 +25,8 @@ Update-AzServiceLinkerForSpringCloud -Name <String> -AuthInfo <IAuthInfoBase> -C
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzServiceLinkerForSpringCloud -InputObject <IServiceLinkerIdentity> -AuthInfo <IAuthInfoBase>
- -ClientType <ClientType> -TargetService <ITargetServiceBase> [-Scope <String>]
+Update-AzServiceLinkerForSpringCloud -InputObject `<IServiceLinkerIdentity>` -AuthInfo `<IAuthInfoBase>`
+ -ClientType <ClientType> -TargetService `<ITargetServiceBase>` [-Scope <String>]
  [-SecretStoreKeyVaultId <String>] [-VNetSolutionType <VNetSolutionType>] [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-SubscriptionId <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -363,15 +363,15 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-AUTHINFO <IAuthInfoBase>: The authentication type.
+AUTHINFO `<IAuthInfoBase>`: The authentication type.
   - `AuthType <AuthType>`: The authentication type.
 
-INPUTOBJECT <IServiceLinkerIdentity>: Identity Parameter
+INPUTOBJECT `<IServiceLinkerIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[LinkerName <String>]`: The name Linker resource.
   - `[ResourceUri <String>]`: The fully qualified Azure Resource manager identifier of the resource to be connected.
 
-TARGETSERVICE <ITargetServiceBase>: The target service properties
+TARGETSERVICE `<ITargetServiceBase>`: The target service properties
   - `Type <TargetServiceType>`: The target service type.
 
 ## RELATED LINKS

@@ -26,7 +26,7 @@ Update-AzSynapseKustoPool -Name <String> -ResourceGroupName <String> -WorkspaceN
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzSynapseKustoPool -InputObject <ISynapseIdentity> [-IfMatch <String>] [-EnablePurge]
+Update-AzSynapseKustoPool -InputObject `<ISynapseIdentity>` [-IfMatch <String>] [-EnablePurge]
  [-EnableStreamingIngest] [-OptimizedAutoscaleIsEnabled] [-OptimizedAutoscaleMaximum <Int32>]
  [-OptimizedAutoscaleMinimum <Int32>] [-OptimizedAutoscaleVersion <Int32>] [-SkuCapacity <Int32>]
  [-SkuName <SkuName>] [-SkuSize <SkuSize>] [-Tag <Hashtable>] [-WorkspaceUid <String>]
@@ -408,7 +408,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ISynapseIdentity>: Identity Parameter
+INPUTOBJECT `<ISynapseIdentity>`: Identity Parameter
   - `[AttachedDatabaseConfigurationName <String>]`: The name of the attached database configuration.
   - `[DataConnectionName <String>]`: The name of the data connection.
   - `[DatabaseName <String>]`: The name of the database in the Kusto pool.

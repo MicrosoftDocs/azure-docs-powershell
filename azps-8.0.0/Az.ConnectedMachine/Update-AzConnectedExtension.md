@@ -24,20 +24,20 @@ Update-AzConnectedExtension -MachineName <String> -ResourceGroupName <String> [-
 ### Upgrade
 ```
 Update-AzConnectedExtension -MachineName <String> -ResourceGroupName <String>
- -ExtensionUpgradeParameter <IMachineExtensionUpgrade> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+ -ExtensionUpgradeParameter `<IMachineExtensionUpgrade>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpgradeViaIdentity
 ```
-Update-AzConnectedExtension -InputObject <IConnectedMachineIdentity>
- -ExtensionUpgradeParameter <IMachineExtensionUpgrade> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+Update-AzConnectedExtension -InputObject `<IConnectedMachineIdentity>`
+ -ExtensionUpgradeParameter `<IMachineExtensionUpgrade>` [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpgradeViaIdentityExpanded
 ```
-Update-AzConnectedExtension -InputObject <IConnectedMachineIdentity> [-ExtensionTarget <Hashtable>]
+Update-AzConnectedExtension -InputObject `<IConnectedMachineIdentity>` [-ExtensionTarget <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -266,11 +266,11 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-EXTENSIONUPGRADEPARAMETER <IMachineExtensionUpgrade>: Describes the Machine Extension Upgrade Properties
+EXTENSIONUPGRADEPARAMETER `<IMachineExtensionUpgrade>`: Describes the Machine Extension Upgrade Properties
   - `[ExtensionTarget <IExtensionTarget>]`: Describes the Extension Target Properties.
     - `[(Any) <IExtensionTargetProperties>]`: This indicates any property can be added to this object.
 
-INPUTOBJECT <IConnectedMachineIdentity>: Identity Parameter
+INPUTOBJECT `<IConnectedMachineIdentity>`: Identity Parameter
   - `[ExtensionName <String>]`: The name of the machine extension.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path

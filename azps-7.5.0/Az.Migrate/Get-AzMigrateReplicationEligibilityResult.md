@@ -25,7 +25,7 @@ Get-AzMigrateReplicationEligibilityResult -ResourceGroupName <String> -VirtualMa
 
 ### GetViaIdentity
 ```
-Get-AzMigrateReplicationEligibilityResult -InputObject <IMigrateIdentity> [-DefaultProfile <PSObject>]
+Get-AzMigrateReplicationEligibilityResult -InputObject `<IMigrateIdentity>` [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -156,7 +156,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMigrateIdentity>: Identity Parameter
+INPUTOBJECT `<IMigrateIdentity>`: Identity Parameter
   - `[AccountName <String>]`: Run as account ARM name.
   - `[AlertSettingName <String>]`: The name of the email notification configuration.
   - `[ClusterName <String>]`: Cluster ARM name.

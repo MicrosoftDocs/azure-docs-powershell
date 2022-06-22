@@ -25,19 +25,19 @@ Import-AzCdnEndpointContent -EndpointName <String> -ProfileName <String> -Resour
 ### Load
 ```
 Import-AzCdnEndpointContent -EndpointName <String> -ProfileName <String> -ResourceGroupName <String>
- -ContentFilePath <ILoadParameters> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ -ContentFilePath `<ILoadParameters>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### LoadViaIdentity
 ```
-Import-AzCdnEndpointContent -InputObject <ICdnIdentity> -ContentFilePath <ILoadParameters>
+Import-AzCdnEndpointContent -InputObject `<ICdnIdentity>` -ContentFilePath `<ILoadParameters>`
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### LoadViaIdentityExpanded
 ```
-Import-AzCdnEndpointContent -InputObject <ICdnIdentity> -ContentPath <String[]> [-DefaultProfile <PSObject>]
+Import-AzCdnEndpointContent -InputObject `<ICdnIdentity>` -ContentPath <String[]> [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -292,10 +292,10 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-CONTENTFILEPATH <ILoadParameters>: Parameters required for content load.
+CONTENTFILEPATH `<ILoadParameters>`: Parameters required for content load.
   - `ContentPath <String[]>`: The path to the content to be loaded. Path should be a relative file URL of the origin.
 
-INPUTOBJECT <ICdnIdentity>: Identity Parameter
+INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[CustomDomainName <String>]`: Name of the domain under the profile which is unique globally.
   - `[EndpointName <String>]`: Name of the endpoint under the profile which is unique globally.
   - `[Id <String>]`: Resource identity path

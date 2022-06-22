@@ -23,7 +23,7 @@ Update-AzMySqlServerConfigurationsList -ResourceGroupName <String> -ServerName <
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzMySqlServerConfigurationsList -InputObject <IMySqlIdentity> [-Value <IConfiguration[]>]
+Update-AzMySqlServerConfigurationsList -InputObject `<IMySqlIdentity>` [-Value <IConfiguration[]>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -222,7 +222,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMySqlIdentity>: Identity Parameter
+INPUTOBJECT `<IMySqlIdentity>`: Identity Parameter
   - `[BackupName <String>]`: The name of the backup.
   - `[ConfigurationName <String>]`: The name of the server configuration.
   - `[DatabaseName <String>]`: The name of the database.

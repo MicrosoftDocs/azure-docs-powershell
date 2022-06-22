@@ -25,7 +25,7 @@ New-AzAppConfigurationStoreKey -Name <String> -ResourceGroupName <String> -Id <S
 
 ### RegenerateViaIdentityExpanded
 ```
-New-AzAppConfigurationStoreKey -InputObject <IAppConfigurationIdentity> -Id <String>
+New-AzAppConfigurationStoreKey -InputObject `<IAppConfigurationIdentity>` -Id <String>
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -207,7 +207,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAppConfigurationIdentity>: Identity Parameter
+INPUTOBJECT `<IAppConfigurationIdentity>`: Identity Parameter
   - `[ConfigStoreName <String>]`: The name of the configuration store.
   - `[GroupName <String>]`: The name of the private link resource group.
   - `[Id <String>]`: Resource identity path

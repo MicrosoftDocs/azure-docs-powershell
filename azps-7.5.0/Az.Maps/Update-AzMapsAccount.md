@@ -27,7 +27,7 @@ Update-AzMapsAccount -Name <String> -ResourceGroupName <String> [-SubscriptionId
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzMapsAccount -InputObject <IMapsIdentity> [-DisableLocalAuth] [-Kind <Kind>] [-SkuName <Name>]
+Update-AzMapsAccount -InputObject `<IMapsIdentity>` [-DisableLocalAuth] [-Kind <Kind>] [-SkuName <Name>]
  [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -259,7 +259,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMapsIdentity>: Identity Parameter
+INPUTOBJECT `<IMapsIdentity>`: Identity Parameter
   - `[AccountName <String>]`: The name of the Maps Account.
   - `[CreatorName <String>]`: The name of the Maps Creator instance.
   - `[Id <String>]`: Resource identity path

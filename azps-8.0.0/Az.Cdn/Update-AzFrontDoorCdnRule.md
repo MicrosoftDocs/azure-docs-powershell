@@ -24,7 +24,7 @@ Update-AzFrontDoorCdnRule -Name <String> -ProfileName <String> -ResourceGroupNam
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzFrontDoorCdnRule -InputObject <ICdnIdentity> [-Action <IDeliveryRuleAction1[]>]
+Update-AzFrontDoorCdnRule -InputObject `<ICdnIdentity>` [-Action <IDeliveryRuleAction1[]>]
  [-Condition <IDeliveryRuleCondition[]>] [-MatchProcessingBehavior <MatchProcessingBehavior>] [-Order <Int32>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -318,7 +318,7 @@ ACTION <IDeliveryRuleAction1[]>: A list of actions that are executed when all th
 CONDITION <IDeliveryRuleCondition[]>: A list of conditions that must be matched for the actions to be executed
   - `Name <MatchVariable>`: The name of the condition for the delivery rule.
 
-INPUTOBJECT <ICdnIdentity>: Identity Parameter
+INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[CustomDomainName <String>]`: Name of the domain under the profile which is unique globally.
   - `[EndpointName <String>]`: Name of the endpoint under the profile which is unique globally.
   - `[Id <String>]`: Resource identity path

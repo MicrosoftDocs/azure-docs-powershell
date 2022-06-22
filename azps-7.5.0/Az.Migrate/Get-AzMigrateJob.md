@@ -30,7 +30,7 @@ Get-AzMigrateJob -JobID <String> [-SubscriptionId <String>] [-DefaultProfile <PS
 
 ### GetByInputObject
 ```
-Get-AzMigrateJob -InputObject <IJob> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
+Get-AzMigrateJob -InputObject `<IJob>` [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -312,7 +312,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IJob>: Specifies the job object of the replicating server.
+INPUTOBJECT `<IJob>`: Specifies the job object of the replicating server.
   - `[Location <String>]`: Resource Location
   - `[ActivityId <String>]`: The activity id.
   - `[AllowedAction <String[]>]`: The Allowed action the job.
