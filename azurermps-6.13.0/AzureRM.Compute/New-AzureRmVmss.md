@@ -47,7 +47,7 @@ Use the simple parameter set (`SimpleParameterSet`) to quickly create a pre-set 
 ### Example 1: Create a VMSS using the **`SimpleParameterSet`**
 ```powershell
 $vmssName = <VMSSNAME>
-# Create credentials, I am using one way to create credentials, there are others as well. 
+# Create credentials, I am using one way to create credentials, there are others as well.
 # Pick one that makes the most sense according to your use case.
 $vmPassword = ConvertTo-SecureString <PASSWORD_HERE> -AsPlainText -Force
 $vmCred = New-Object System.Management.Automation.PSCredential(<USERNAME_HERE>, $vmPassword)
@@ -77,7 +77,7 @@ New-AzureRmResourceGroup -Name $RGName -Location $LOC -Force;
 $STOName = "STO" + $RGName;
 $STOType = "Standard_GRS";
 New-AzureRmStorageAccount -ResourceGroupName $RGName -Name $STOName -Location $LOC -Type $STOType;
-$STOAccount = Get-AzureRmStorageAccount -ResourceGroupName $RGName -Name $STOName; 
+$STOAccount = Get-AzureRmStorageAccount -ResourceGroupName $RGName -Name $STOName;
 
 # NRP
 $SubNet = New-AzureRmVirtualNetworkSubnetConfig -Name ("subnet" + $RGName) -AddressPrefix "10.0.0.0/24";
@@ -116,11 +116,11 @@ $VMSSName = "VMSS" + $RGName;
 $AdminUsername = "Admin01";
 $AdminPassword = "p4ssw0rd@123" + $RGName;
 
-$PublisherName = "MicrosoftWindowsServer" 
-$Offer         = "WindowsServer" 
-$Sku           = "2012-R2-Datacenter" 
+$PublisherName = "MicrosoftWindowsServer"
+$Offer         = "WindowsServer"
+$Sku           = "2012-R2-Datacenter"
 $Version       = "latest"
-        
+
 $VHDContainer = "https://" + $STOName + ".blob.core.contoso.net/" + $VMSSName;
 
 $ExtName = "CSETest";
@@ -133,7 +133,7 @@ $IPCfg = New-AzureRmVmssIPConfig -Name "Test" `
     -LoadBalancerInboundNatPoolsId $ExpectedLb.InboundNatPools[0].Id `
     -LoadBalancerBackendAddressPoolsId $ExpectedLb.BackendAddressPools[0].Id `
     -SubnetId $SubNetId;
-            
+
 #VMSS Config
 $VMSS = New-AzureRmVmssConfig -Location $LOC -SkuCapacity 2 -SkuName "Standard_A2" -UpgradePolicyMode "Automatic" `
     | Add-AzureRmVmssNetworkInterfaceConfiguration -Name "Test" -Primary $True -IPConfiguration $IPCfg `
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainNameLabel
-The domain name label for the public Fully-Qualified domain name (FQDN) for this Scale Set. This is the first component of the domain name that is automatically assigned to the Scale Set. Automatically assigned Domain names use the form (<DomainNameLabel>.<Location>.cloudapp.azure.com). If no value is supplied, the default domain name label will be the concatenation of <ScaleSetName> and <ResourceGroupName>.
+The domain name label for the public Fully-Qualified domain name (FQDN) for this Scale Set. This is the first component of the domain name that is automatically assigned to the Scale Set. Automatically assigned Domain names use the form (`<DomainNameLabel>.<Location>.cloudapp.azure.com`). If no value is supplied, the default domain name label will be the concatenation of `<ScaleSetName>` and `<ResourceGroupName>`.
 
 ```yaml
 Type: System.String

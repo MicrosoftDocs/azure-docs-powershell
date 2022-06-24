@@ -5526,11 +5526,11 @@ to enable create Azure-SSIS IR with static public IP addresses.
     - Added support for configuring the 'DeveloperPortal' hostname on ApiManagement service.
 * Updated cmdlets **Get-AzApiManagementSsoToken** to take 'PsApiManagement' object as input
 * Updated the cmdlet to display Error Messages inline
-     - `PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin`
-       - `Set-AzApiManagementPolicy :`
-       - `Error Code: ValidationError`
-       - `Error Message: One or more fields contain incorrect values:`
-       - `Error Details: [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]`
+  - `PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin`
+  - `Set-AzApiManagementPolicy :`
+  - `Error Code: ValidationError`
+  - `Error Message: One or more fields contain incorrect values:`
+  - `Error Details: [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]`
 * Updated cmdlet **Export-AzApiManagementApi** to export APIs in 'OpenApi 3.0' format
 * Updated cmdlet **Import-AzApiManagementApi**
     - To import Api from 'OpenApi 3.0' document specification
