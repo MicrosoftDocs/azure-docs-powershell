@@ -25,19 +25,14 @@ This commandlet returns a list of supported VPN device brands, models, and firmw
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-AzureRmVirtualNetworkGatewaySupportedVpnDevice -ResourceGroupName TestRG -Name TestGateway 
-<?xml version="1.0" encoding="utf-8"?>
-<RpVpnDeviceList version="1.0">
-  <Vendor name="Cisco-Test">
-    <DeviceFamily name="IOS-Test">
-       <FirmwareVersion name="20" />
-    </DeviceFamily>
-  </Vendor>
-</RpVpnDeviceList>
-```
 
 Returns list of supported VPN device brands, models and firmware versions:
+
+```powershell
+Get-AzureRmVirtualNetworkGatewaySupportedVpnDevice -ResourceGroupName TestRG -Name TestGateway
+```
+
+```Output
 <?xml version="1.0" encoding="utf-8"?>
 <RpVpnDeviceList version="1.0">
   <Vendor name="Cisco-Test">
@@ -46,6 +41,7 @@ Returns list of supported VPN device brands, models and firmware versions:
     </DeviceFamily>
   </Vendor>
 </RpVpnDeviceList>
+```
 
 ## PARAMETERS
 
@@ -85,7 +81,7 @@ The resource group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

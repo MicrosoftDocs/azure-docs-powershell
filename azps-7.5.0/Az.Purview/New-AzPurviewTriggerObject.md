@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleAdditionalProperty
-Dictionary of \<any\>.
+Dictionary of `<any>`.
 To construct, see NOTES section for SCHEDULEADDITIONALPROPERTY properties and create a hash table.
 
 ```yaml
@@ -280,13 +280,13 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-SCHEDULEADDITIONALPROPERTY <IRecurrenceScheduleAdditionalProperties>: Dictionary of <any>.
+SCHEDULEADDITIONALPROPERTY `<IRecurrenceScheduleAdditionalProperties>`: Dictionary of `<any>`.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
 
-SCHEDULEMONTHLYOCCURRENCE <IRecurrenceScheduleOccurrence[]>: 
-  - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of <any>
+SCHEDULEMONTHLYOCCURRENCE <IRecurrenceScheduleOccurrence[]>:
+  - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of `<any>`
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
-  - `[Day <DayOfWeek?>]`: 
-  - `[Occurrence <Int32?>]`: 
+  - `[Day <DayOfWeek?>]`:
+  - `[Occurrence <Int32?>]`:
 
 ## RELATED LINKS

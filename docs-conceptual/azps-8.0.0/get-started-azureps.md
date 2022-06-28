@@ -96,13 +96,17 @@ For a full list of the modules in Azure PowerShell, see the
 [Azure PowerShell modules list](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md)
 hosted on GitHub.
 
-## Telemetry
+## Data Collection
 
-Azure PowerShell automatically collects telemetry data by default. Microsoft aggregates collected
-data to identify patterns of usage, to identify common issues, and to improve the experience of
-Azure PowerShell. Microsoft Azure PowerShell doesn't collect any private or personal data. To
-disable data collection, you must explicitly opt out by executing
-[Disable-AzDataCollection](/powershell/module/az.accounts/disable-azdatacollection).
+Azure PowerShell collects telemetry data by default. Microsoft aggregates collected data to identify
+patterns of usage to identify common issues and to improve the experience of Azure PowerShell.
+Microsoft Azure PowerShell does not collect any private or personal data. For example, the usage
+data helps identify issues such as cmdlets with low success and helps prioritize our work.
+
+While we appreciate the insights this data provides, we also understand that not everyone wants to
+send usage data. You can disable data collection with the
+[`Disable-AzDataCollection`](/powershell/module/az.accounts/disable-azdatacollection) cmdlet. You
+can also read our [privacy statement](https://privacy.microsoft.com/privacystatement) to learn more.
 
 ## Learn Azure PowerShell basics with quickstarts and tutorials
 

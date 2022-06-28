@@ -24,7 +24,7 @@ modules supported with the Az module.
 
 For each new release of the Az module we are releasing an image for the following operating systems:
 
-- Ubuntu 18.04 (default)
+- Ubuntu 20.04 (default)
 - Debian 9
 - CentOS 7
 
