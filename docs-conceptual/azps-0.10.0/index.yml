@@ -14,7 +14,9 @@ metadata:
   author: mikefrobbins
   ms.author: mirobb
   ms.date: 10/22/2020
-  ms.prod: azure-powershell
+  ms.devlang: powershell
+  ms.custom: devx-track-azurepowershell
+  ms.service: azure-powershell
 landingContent:
   - title: Get started with Azure PowerShell
     linkLists:
