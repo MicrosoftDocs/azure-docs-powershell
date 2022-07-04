@@ -1,7 +1,7 @@
 ---
 description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
 ms.custom: devx-track-azurepowershell, contperf-fy21q2
-ms.date: 05/11/2022
+ms.date: 06/09/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -12,6 +12,8 @@ title: Migrate Azure PowerShell scripts from AzureRM to Az
 
 All versions of the AzureRM PowerShell module are outdated. The [Az PowerShell
 module](install-az-ps.md) is now the recommended PowerShell module for interacting with Azure.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 ## Why a new module?
 

@@ -1,7 +1,7 @@
 ---
 description: Details about the support lifecycle of the Azure PowerShell modules
 ms.custom: devx-track-azurepowershell
-ms.date: 05/24/2022
+ms.date: 06/09/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -24,8 +24,7 @@ the Az PowerShell module.
 
 ## AzureRM PowerShell modules
 
-Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more,
-we'll retire AzureRM PowerShell modules on 29 February 2024.
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
 PowerShell modules to use Az PowerShell modules by 29 February 2024. To automatically update your

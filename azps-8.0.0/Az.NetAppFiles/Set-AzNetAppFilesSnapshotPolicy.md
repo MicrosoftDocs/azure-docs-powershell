@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzNetAppFilesSnapshotPolicy
 
 ## SYNOPSIS
-Updates an Azure NetApp Files (ANF) Snapshot Policy with the new data set. 
+Updates an Azure NetApp Files (ANF) Snapshot Policy with the new data set.
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ The **Set-AzNetAppFilesPool** cmdlet modifies an ANF Snapshot Policy.
 
 ### Example 1
 ```powershell
-$hourlySchedule = @{        
+$hourlySchedule = @{
         Minute = 2
         SnapshotsToKeep = 6
     }
@@ -56,14 +56,14 @@ $hourlySchedule = @{
         SnapshotsToKeep = 6
     }
     $weeklySchedule = @{
-        Minute = 2    
-        Hour = 1		        
+        Minute = 2
+        Hour = 1
         Day = "Sunday,Monday"
         SnapshotsToKeep = 6
     }
     $monthlySchedule = @{
-        Minute = 2    
-        Hour = 1        
+        Minute = 2
+        Hour = 1
         DaysOfMonth = "2,11,21"
         SnapshotsToKeep = 6
     }
@@ -324,8 +324,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzNetAppFilesSnapshot](./Get-AzNetAppFilesSnapshot.md)
 [New-AzNetAppFilesSnapshot](./New-AzNetAppFilesSnapshot.md)
 [Remove-AzNetAppFilesSnapshot](./Remove-AzNetAppFilesSnapshot.md)
-[Update-AzNetAppFilesSnapshot](./Update-AzNetAppFilesSnapshot.md)
-[Get-AzNetAppFilesVolume](./Get-AzNetAppFilessVolume.md)
-[New-AzNetAppFilesVolume](./New-AzNetAppFilessVolume.md)
-[Update-AzNetAppFilesVolume](./Update-AzNetAppFilessVolume.md)
-[Remove-AzNetAppFilesVolume](./Remove-AzNetAppFilessVolume.md)
+[Get-AzNetAppFilesVolume](./Get-AzNetAppFilesVolume.md)
+[New-AzNetAppFilesVolume](./New-AzNetAppFilesVolume.md)
+[Update-AzNetAppFilesVolume](./Update-AzNetAppFilesVolume.md)
+[Remove-AzNetAppFilesVolume](./Remove-AzNetAppFilesVolume.md)

@@ -145,6 +145,10 @@ Valid values are:
 - Bad 
 - Good
 
+*Bad: Non-Compliant*, *Good: Compliant*
+>[!NOTE]
+> Even if one node is non-compliant, the overall state of the node configuration shows as bad.
+
 ```yaml
 Type: System.String
 Parameter Sets: ByAll, ByConfigurationName

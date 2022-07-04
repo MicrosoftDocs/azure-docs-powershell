@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzNetAppFilesBackupPolicy
 
 ## SYNOPSIS
-Updates an Azure NetApp Files (ANF) Backup Policy with the new data set. 
+Updates an Azure NetApp Files (ANF) Backup Policy with the new data set.
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ The **Set-AzNetAppFilesBackupPolicy** cmdlet modifies an ANF account.
 Set-AzNetAppFilesBackupPolicy -ResourceGroupName "MyRG" -Location "westus2" -AccountName "MyAccount" -Name "MyBackupPolicy" -Tag @{"tag1" = "tagValue"} -Enabled -DailyBackupsToKeep 1 -WeeklyBackupsToKeep 2 -MonthlyBackupsToKeep 2
 ```
 
-This command performs an update on the given backup policy. 
+This command performs an update on the given backup policy.
 
 ## PARAMETERS
 
@@ -302,8 +302,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzNetAppFilesSnapshot](./Get-AzNetAppFilesSnapshot.md)
 [New-AzNetAppFilesSnapshot](./New-AzNetAppFilesSnapshot.md)
 [Remove-AzNetAppFilesSnapshot](./Remove-AzNetAppFilesSnapshot.md)
-[Update-AzNetAppFilesSnapshot](./Update-AzNetAppFilesSnapshot.md)
-[Get-AzNetAppFilesVolume](./Get-AzNetAppFilessVolume.md)
-[New-AzNetAppFilesVolume](./New-AzNetAppFilessVolume.md)
-[Update-AzNetAppFilesVolume](./Update-AzNetAppFilessVolume.md)
-[Remove-AzNetAppFilesVolume](./Remove-AzNetAppFilessVolume.md)
+[Get-AzNetAppFilesVolume](./Get-AzNetAppFilesVolume.md)
+[New-AzNetAppFilesVolume](./New-AzNetAppFilesVolume.md)
+[Update-AzNetAppFilesVolume](./Update-AzNetAppFilesVolume.md)
+[Remove-AzNetAppFilesVolume](./Remove-AzNetAppFilesVolume.md)
