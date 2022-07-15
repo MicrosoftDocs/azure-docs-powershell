@@ -568,7 +568,7 @@
             },
             "feedback_system": {
                 "azps-7.5.0/**/*": "None",
-                "azps-8.0.0/**/*": "GitHub",
+                "azps-8.0.0/**/*": "None",
                 "azps-8.1.0/**/*": "GitHub",
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
