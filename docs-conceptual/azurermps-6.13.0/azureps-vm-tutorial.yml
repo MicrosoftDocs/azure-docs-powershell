@@ -11,11 +11,9 @@ metadata:
     ms.author: mirobb
     author: mikefrobbins
     manager: barbkess
-    ms.devlang: azure-powershell
-    ms.prod: powershell
-    ms.technology: azure-powershell
-    ms.topic: tutorial
+    ms.devlang: powershell
     ms.custom: devx-track-azurepowershell
+    ms.service: azure-powershell
     clicktale: true
 items:
     - durationInMinutes: 1
