@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get federatedIdentityCredentials by Id from applications.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azadappfederatedidentitycredential) for up-to-date information.
+
 ## SYNTAX
 
 ### ListByApplicationObjectId (Default)

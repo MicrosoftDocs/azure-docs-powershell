@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates an Azure NetApp Files (ANF) Backup Policy with the new data set.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/set-aznetappfilesbackuppolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsParameterSet (Default)

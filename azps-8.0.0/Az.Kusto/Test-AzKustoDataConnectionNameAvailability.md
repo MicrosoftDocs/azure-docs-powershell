@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Checks that the data connection name is valid and is not already in use.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kusto/test-azkustodataconnectionnameavailability) for up-to-date information.
+
 ## SYNTAX
 
 ### CheckExpanded (Default)

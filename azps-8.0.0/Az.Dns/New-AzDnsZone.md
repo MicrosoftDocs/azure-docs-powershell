@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new DNS zone.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dns/new-azdnszone) for up-to-date information.
+
 ## SYNTAX
 
 ### Ids (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes a resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azresource) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceId (Default)

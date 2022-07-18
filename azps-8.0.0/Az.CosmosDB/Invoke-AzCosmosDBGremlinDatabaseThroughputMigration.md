@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Use this to migrate autoscale throughput to manual throughput and vice versa.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cosmosdb/invoke-azcosmosdbgremlindatabasethroughputmigration) for up-to-date information.
+
 ## SYNTAX
 
 ### ByNameParameterSet (Default)

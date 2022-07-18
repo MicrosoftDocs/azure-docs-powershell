@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Pre-loads a content to CDN.
 Available for Verizon Profiles.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/import-azcdnendpointcontent) for up-to-date information.
+
 ## SYNTAX
 
 ### LoadExpanded (Default)
