@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets an existing delivery rule within a rule set.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/get-azfrontdoorcdnrule) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

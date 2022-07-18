@@ -18,6 +18,9 @@ information, see [Azure PowerShell context objects](https://docs.microsoft.com/p
 This cmdlet allows the Azure context information to be saved and automatically loaded when you start
 a PowerShell process. For example, when opening a new window.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/enable-azcontextautosave) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List the registration key for the device.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/get-azconnectednetworkdeviceregistrationkey) for up-to-date information.
+
 ## SYNTAX
 
 ```

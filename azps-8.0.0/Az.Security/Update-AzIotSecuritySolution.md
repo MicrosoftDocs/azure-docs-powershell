@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update one or more of the following properties in IoT security solution: tags, recommendation configuration, user defined resources
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/update-aziotsecuritysolution) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceGroupLevelResource (Default)

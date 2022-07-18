@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates an existing domain within a profile.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/update-azfrontdoorcdncustomdomain) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

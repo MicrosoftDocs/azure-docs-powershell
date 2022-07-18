@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This command creates a new server endpoint on a registered server. This enables the specified path on the server to start syncing the files with other endpoints in the sync group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagesync/new-azstoragesyncserverendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### StringParameterSet (Default)

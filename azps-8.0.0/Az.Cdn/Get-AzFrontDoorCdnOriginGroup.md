@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets an existing origin group within a profile.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/get-azfrontdoorcdnorigingroup) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

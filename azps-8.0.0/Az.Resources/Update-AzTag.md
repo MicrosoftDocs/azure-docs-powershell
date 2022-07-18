@@ -14,6 +14,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 Selectively updates the set of tags on a resource or subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/update-aztag) for up-to-date information.
+
 ## SYNTAX
 
 ```
