@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Check the quota and actual usage of the CDN profiles under the given subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/get-azcdnsubscriptionresourceusage) for up-to-date information.
+
 ## SYNTAX
 
 ```

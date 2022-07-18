@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Saves an image from a lab VM to the attached shared image gallery.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/save-azlabserviceslabplanimage) for up-to-date information.
+
 ## SYNTAX
 
 ```

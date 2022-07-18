@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Shows the status of the latest virtual machine scale set rolling upgrade.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azvmssrollingupgrade) for up-to-date information.
+
 ## SYNTAX
 
 ```

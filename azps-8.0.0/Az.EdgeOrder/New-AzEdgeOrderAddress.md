@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Creates a new address with the specified parameters.
 Existing address can be updated with this API
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/new-azedgeorderaddress) for up-to-date information.
+
 ## SYNTAX
 
 ```
