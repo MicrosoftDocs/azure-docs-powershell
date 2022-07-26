@@ -48,7 +48,7 @@ Use the simple parameter set (`SimpleParameterSet`) to quickly create a pre-set 
 ### Example 1: Create a VMSS using the SimpleParameterSet
 ```powershell
 $vmssName = 'VMSSNAME'
-# Create credentials, I am using one way to create credentials, there are others as well. 
+# Create credentials, I am using one way to create credentials, there are others as well.
 # Pick one that makes the most sense according to your use case.
 $vmPassword = ConvertTo-SecureString "PASSWORD" -AsPlainText -Force
 $vmCred = New-Object System.Management.Automation.PSCredential('USERNAME', $vmPassword)
@@ -78,7 +78,7 @@ New-AzResourceGroup -Name $RGName -Location $LOC -Force;
 $STOName = "STO" + $RGName;
 $STOType = "Standard_GRS";
 New-AzStorageAccount -ResourceGroupName $RGName -Name $STOName -Location $LOC -Type $STOType;
-$STOAccount = Get-AzStorageAccount -ResourceGroupName $RGName -Name $STOName; 
+$STOAccount = Get-AzStorageAccount -ResourceGroupName $RGName -Name $STOName;
 
 # NRP
 $SubNet = New-AzVirtualNetworkSubnetConfig -Name ("subnet" + $RGName) -AddressPrefix "10.0.0.0/24";
@@ -117,11 +117,11 @@ $VMSSName = "VMSS" + $RGName;
 $AdminUsername = "Admin01";
 $AdminPassword = "p4ssw0rd@123" + $RGName;
 
-$PublisherName = "MicrosoftWindowsServer" 
-$Offer         = "WindowsServer" 
-$Sku           = "2012-R2-Datacenter" 
+$PublisherName = "MicrosoftWindowsServer"
+$Offer         = "WindowsServer"
+$Sku           = "2012-R2-Datacenter"
 $Version       = "latest"
-        
+
 $VHDContainer = "https://" + $STOName + ".blob.core.contoso.net/" + $VMSSName;
 
 $ExtName = "CSETest";
@@ -134,7 +134,7 @@ $IPCfg = New-AzVmssIPConfig -Name "Test" `
     -LoadBalancerInboundNatPoolsId $ExpectedLb.InboundNatPools[0].Id `
     -LoadBalancerBackendAddressPoolsId $ExpectedLb.BackendAddressPools[0].Id `
     -SubnetId $SubNetId;
-            
+
 #VMSS Config
 $VMSS = New-AzVmssConfig -Location $LOC -SkuCapacity 2 -SkuName "Standard_E4-2ds_v4" -UpgradePolicyMode "Automatic" `
     | Add-AzVmssNetworkInterfaceConfiguration -Name "Test" -Primary $True -IPConfiguration $IPCfg `
@@ -174,7 +174,7 @@ The complex example above creates a VMSS, following is an explanation of what is
 $ResourceGroupName = 'RESOURCE GROUP NAME';
 $vmssName = 'VMSSNAME';
 $domainNameLabel = "dnl" + $ResourceGroupName;
-# Create credentials, I am using one way to create credentials, there are others as well. 
+# Create credentials, I am using one way to create credentials, there are others as well.
 # Pick one that makes the most sense according to your use case.
 $vmPassword = ConvertTo-SecureString 'PASSWORD' -AsPlainText -Force;
 $vmCred = New-Object System.Management.Automation.PSCredential('USERNAME', $vmPassword);
@@ -226,8 +226,8 @@ $vmss = New-AzVmssConfig -Location $loc -SkuCapacity 2 -SkuName $vmssSize -Upgra
 | Set-AzVmssStorageProfile -OsDiskCreateOption 'FromImage' -OsDiskCaching 'ReadOnly' `
     -ImageReferenceOffer $imgRef.Offer -ImageReferenceSku $imgRef.Skus -ImageReferenceVersion $imgRef.Version `
     -ImageReferencePublisher $imgRef.PublisherName ;
-    
-# Requirements for the Guest Attestation defaulting behavior.  
+
+# Requirements for the Guest Attestation defaulting behavior.
 # SecurityType is TrustedLaunch, EnableVtpm is true, EnableSecureBoot is true, DisableIntegrityMonitoring is not true.
 $vmss = Set-AzVmssSecurityProfile -VirtualMachineScaleSet $vmss -SecurityType $securityType;
 $vmss = Set-AzVmssUefi -VirtualMachineScaleSet $VMSS -EnableVtpm $vtpm -EnableSecureBoot $secureboot;
@@ -361,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainNameLabel
-The domain name label for the public Fully-Qualified domain name (FQDN) for this Scale Set. This is the first component of the domain name that is automatically assigned to the Scale Set. Automatically assigned Domain names use the form (`<DomainNameLabel>.<Location>.cloudapp.azure.com`). If no value is supplied, the default domain name label will be the concatenation of <ScaleSetName> and <ResourceGroupName>.
+The domain name label for the public Fully-Qualified domain name (FQDN) for this Scale Set. This is the first component of the domain name that is automatically assigned to the Scale Set. Automatically assigned Domain names use the form (`<DomainNameLabel>.<Location>.cloudapp.azure.com`). If no value is supplied, the default domain name label will be the concatenation of `<ScaleSetName>` and `<ResourceGroupName>`.
 
 ```yaml
 Type: System.String
@@ -406,7 +406,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAtHost
-This parameter will enable the encryption for all the disks including Resource/Temp disk at host itself. 
+This parameter will enable the encryption for all the disks including Resource/Temp disk at host itself.
 Default: The Encryption at host will be disabled unless this property is set to true for the resource.
 
 ```yaml
@@ -928,7 +928,7 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
- 
+
 ### -DisableIntegrityMonitoring
 This flag disables the default behavior to install the Guest Attestation extension to the virtual machine scale set and its vm instances if: 1) SecurityType is TrustedLaunch, 2) SecureBootEnabled on the SecurityProfile is true, 3) VTpmEnabled on the SecurityProfile is true.
 
