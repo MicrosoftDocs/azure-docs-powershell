@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This feature is in a limited preview, initially accessible only to certain subscriptions. Creates a Synapse Analytics SQL database.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/new-azsynapsesqldatabase) for up-to-date information.
+
 ## SYNTAX
 
 ### CreateByNameParameterSet (Default)

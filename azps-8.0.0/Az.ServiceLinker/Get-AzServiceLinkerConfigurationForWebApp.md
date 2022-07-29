@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 list source configurations for a linker in webapp.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicelinker/get-azservicelinkerconfigurationforwebapp) for up-to-date information.
+
 ## SYNTAX
 
 ```

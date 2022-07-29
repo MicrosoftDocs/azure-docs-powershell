@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Import a blueprint file in JSON format to a blueprint object and save it within the specified subscription or management group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.blueprint/import-azblueprintwithartifact) for up-to-date information.
+
 ## SYNTAX
 
 ```

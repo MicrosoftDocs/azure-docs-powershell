@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Configure Azure Site Recovery notification settings (email notification) for the vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/set-azrecoveryservicesasralertsetting) for up-to-date information.
+
 ## SYNTAX
 
 ### Set (Default)

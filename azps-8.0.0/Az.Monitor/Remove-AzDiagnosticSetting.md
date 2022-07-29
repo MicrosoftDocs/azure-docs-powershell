@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove a diagnostic setting for the a resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/remove-azdiagnosticsetting) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceIdParameterSet (Default)

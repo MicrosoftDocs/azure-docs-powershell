@@ -1,11 +1,11 @@
 ---
-title: Azure PowerShell versioning, release cadence, and breaking changes
 description: This article contains Azure PowerShell versioning, release cadence, and breaking change information for the Az PowerShell module.
-ms.date: 06/14/2022
+ms.custom: devx-track-azurepowershell
+ms.date: 07/21/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.custom: devx-track-azurepowershell
+title: Azure PowerShell versioning, release cadence, and breaking changes
 ---
 
 # Azure PowerShell versioning, release cadence, and breaking changes
@@ -58,19 +58,6 @@ version 6.2.1.
 > Breaking changes may occur at any point for non-GA preview and feature preview modules. Non-GA
 > modules are not required to adhere to breaking change policies.
 
-### Breaking change warning messages
-
-Breaking change warning messages are a way for Azure PowerShell cmdlet author's to communicate
-upcoming breaking changes with end users.
-
-### Suppress breaking change warning messages
-
-To suppress breaking change warning messages, see
-[How do I disable breaking change warning messages in Azure PowerShell?](/powershell/azure/faq#how-do-i-disable-breaking-change-warning-messages-in-azure-powershell-).
-
-For more information, see
-[Breaking Changes Attribute Help](https://github.com/Azure/azure-powershell/blob/preview/documentation/breaking-changes/breaking-changes-attribute-help.md#supress-the-breaking-change-messages-at-runtime).
-
 ### When do breaking changes occur
 
 We release two breaking change versions per year:
@@ -84,6 +71,32 @@ For information about upcoming breaking change releases, see [Azure PowerShell m
 
 Various types of breaking changes can occur in cmdlets. For more information, see
 [Breaking Change Definition](https://github.com/Azure/azure-powershell/blob/preview/documentation/breaking-changes/breaking-changes-definition.md).
+
+### List of breaking changes
+
+For detailed information about breaking changes in major releases of the Az PowerShell module, see
+the following articles.
+
+- [Az 8.0.0 breaking changes](migrate-az-8.0.0.md)
+- [Az 7.0.0 breaking changes](migrate-az-7.0.0.md)
+- [Az 6.0.0 breaking changes](migrate-az-6.0.0.md)
+- [Az 5.0.0 breaking changes](migrate-az-5.0.0.md)
+- [Az 4.1.0 breaking changes](migrate-az-4.1.0.md)
+- [Az 3.0.0 breaking changes](migrate-az-3.0.0.md)
+- [Az 2.0.0 breaking changes](migrate-az-2.0.0.md)
+
+### Breaking change warning messages
+
+Breaking change warning messages are a way for Azure PowerShell cmdlet author's to communicate
+upcoming breaking changes with end users.
+
+### Suppress breaking change warning messages
+
+To suppress breaking change warning messages, see
+[How do I disable breaking change warning messages in Azure PowerShell?](/powershell/azure/faq#how-do-i-disable-breaking-change-warning-messages-in-azure-powershell-).
+
+For more information, see
+[Breaking Changes Attribute Help](https://github.com/Azure/azure-powershell/blob/preview/documentation/breaking-changes/breaking-changes-attribute-help.md#supress-the-breaking-change-messages-at-runtime).
 
 ## Provide feedback
 

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates or updates a virtual network link to a DNS forwarding ruleset.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/new-azdnsforwardingrulesetvirtualnetworklink) for up-to-date information.
+
 ## SYNTAX
 
 ```
