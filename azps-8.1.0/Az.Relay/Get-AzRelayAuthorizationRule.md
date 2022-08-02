@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the description of a specified authorization rule for a given Relay entities (Namespace/WcfRelay/HybridConnection).
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.relay/get-azrelayauthorizationrule) for up-to-date information.
+
 ## SYNTAX
 
 ### NamespaceAuthorizationRuleSet (Default)

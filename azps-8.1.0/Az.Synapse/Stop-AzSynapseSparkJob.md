@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Cancels a Synapse Analytics Spark job.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/stop-azsynapsesparkjob) for up-to-date information.
+
 ## SYNTAX
 
 ### StopSparkJobByIdParameterSet (Default)

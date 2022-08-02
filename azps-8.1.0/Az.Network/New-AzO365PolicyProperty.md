@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an office 365 traffic breakout policy object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azo365policyproperty) for up-to-date information.
+
 ## SYNTAX
 
 ```

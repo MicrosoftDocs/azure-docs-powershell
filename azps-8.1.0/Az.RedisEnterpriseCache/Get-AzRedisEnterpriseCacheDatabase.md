@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets information about a database in a Redis Enterprise cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.redisenterprisecache/get-azredisenterprisecachedatabase) for up-to-date information.
+
 ## SYNTAX
 
 ```
