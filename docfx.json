@@ -4,8 +4,8 @@
             { "files": ["**/*.yml"], "src": "azps-7.5.0", "version": "azps-7.5.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-7.5.0", "version": "azps-7.5.0", "dest": "azure" },
 
-            { "files": ["**/*.yml"], "src": "azps-8.0.0", "version": "azps-8.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-8.0.0", "version": "azps-8.0.0", "dest": "azure" },
+            { "files": ["**/*.yml"], "src": "azps-8.2.0", "version": "azps-8.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-8.2.0", "version": "azps-8.2.0", "dest": "azure" },
 
             { "files": ["**/*.yml"], "src": "azps-8.1.0", "version": "azps-8.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-8.1.0", "version": "azps-8.1.0", "dest": "azure" },
@@ -85,7 +85,7 @@
         ],
         "resource": [
             { "files": ["media/**"], "version": "azps-7.5.0" },
-            { "files": ["media/**"], "version": "azps-8.0.0" },
+            { "files": ["media/**"], "version": "azps-8.2.0" },
             { "files": ["media/**"], "version": "azps-8.1.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" },
@@ -93,7 +93,7 @@
         ],
         "versions": {
             "azps-7.5.0": { "dest": "azps-7.5.0" },
-            "azps-8.0.0": { "dest": "azps-8.0.0" },
+            "azps-8.2.0": { "dest": "azps-8.2.0" },
             "azps-8.1.0": { "dest": "azps-8.1.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
@@ -532,7 +532,7 @@
             },
             "ms.date": {
                 "azps-7.5.0/**/*.yml": "4/26/2022",
-                "azps-8.0.0/**/*.yml": "5/24/2022",
+                "azps-8.2.0/**/*.yml": "5/24/2022",
                 "azps-8.1.0/**/*.yml": "7/04/2022",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
@@ -568,7 +568,7 @@
             },
             "feedback_system": {
                 "azps-7.5.0/**/*": "None",
-                "azps-8.0.0/**/*": "None",
+                "azps-8.2.0/**/*": "None",
                 "azps-8.1.0/**/*": "GitHub",
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
