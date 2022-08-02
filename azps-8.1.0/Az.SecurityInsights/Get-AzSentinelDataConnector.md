@@ -21,6 +21,9 @@ Please note that automation support is only available for the following data con
 * OfficeDataConnector
 * TIDataConnector
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentineldataconnector) for up-to-date information.
+
 ## SYNTAX
 
 ### WorkspaceScope (Default)

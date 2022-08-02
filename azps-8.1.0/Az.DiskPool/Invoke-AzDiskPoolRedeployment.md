@@ -14,6 +14,9 @@ Upgrade replaces the underlying virtual machine hosts one at a time.
 This operation can take 10-15 minutes to complete.
 This is expected service behavior.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.diskpool/invoke-azdiskpoolredeployment) for up-to-date information.
+
 ## SYNTAX
 
 ### Redeploy (Default)

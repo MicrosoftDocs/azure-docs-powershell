@@ -1,7 +1,7 @@
 ---
 description: How to install Azure PowerShell without PowerShellGet using an MSI
 ms.custom: devx-track-azurepowershell
-ms.date: 07/05/2022
+ms.date: 08/02/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

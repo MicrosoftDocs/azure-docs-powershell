@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Power off the cloud service.
 Note that resources are still attached and you are getting charged for the resources.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/stop-azcloudservice) for up-to-date information.
+
 ## SYNTAX
 
 ### PowerOff (Default)

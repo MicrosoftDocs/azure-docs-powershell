@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a Data Lake Analytics data source.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsdatasource) for up-to-date information.
+
 ## SYNTAX
 
 ### GetAllDataSources (Default)
