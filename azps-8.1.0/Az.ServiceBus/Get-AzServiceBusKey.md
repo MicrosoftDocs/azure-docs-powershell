@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the primary and secondary connection strings for the given Namespace or Queue or Topic or Alias (GeoDR Configurations).
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/get-azservicebuskey) for up-to-date information.
+
 ## SYNTAX
 
 ### NamespaceAuthorizationRuleSet (Default)

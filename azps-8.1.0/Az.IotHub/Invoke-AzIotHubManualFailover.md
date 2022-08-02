@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Invoke failover process for the IoT Hub to the geo-paired disaster recovery region.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/invoke-aziothubmanualfailover) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

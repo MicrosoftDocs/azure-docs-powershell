@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Powers off (stop) a role instance of a vendor network function.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/stop-azconnectednetworkvendorfunctionroleinstance) for up-to-date information.
+
 ## SYNTAX
 
 ### Stop (Default)

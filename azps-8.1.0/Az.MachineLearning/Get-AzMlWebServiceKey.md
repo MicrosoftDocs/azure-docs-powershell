@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieves the web service's keys.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearning/get-azmlwebservicekey) for up-to-date information.
+
 ## SYNTAX
 
 ### GetByNameAndResourceGroup

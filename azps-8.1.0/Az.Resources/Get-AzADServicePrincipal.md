@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists entities from service principals or get entity from service principals by key
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azadserviceprincipal) for up-to-date information.
+
 ## SYNTAX
 
 ### EmptyParameterSet (Default)
