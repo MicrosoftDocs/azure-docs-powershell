@@ -89,7 +89,7 @@
     href: azureps-vm-tutorial.yml
   - name: Deploy an Azure Kubernetes Service (AKS) cluster
     href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
-  - name: Create a private container registry using Azure PowerShell
+  - name: Create a private container registry
     href: /azure/container-registry/container-registry-get-started-powershell
 - name: Migration
   items:
