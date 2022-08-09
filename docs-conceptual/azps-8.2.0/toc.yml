@@ -87,6 +87,8 @@
   items:
   - name: Create Virtual Machines
     href: azureps-vm-tutorial.yml
+  - name: Deploy an Azure Kubernetes Service (AKS) cluster
+    href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
 - name: Migration
   items:
   - name: Azure AD to Microsoft Graph Migration Guide
