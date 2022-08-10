@@ -90,7 +90,9 @@
   - name: Deploy an Azure Kubernetes Service (AKS) cluster
     href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
   - name: Create a private container registry
-    href: /azure/container-registry/container-registry-get-started-powershell
+    href: /azure/container-registry/container-registry-get-started-powershell?toc=/powershell/azure/toc.json
+  - name: Deploy a container instance in Azure
+    href: /azure/container-instances/container-instances-quickstart-powershell?toc=/powershell/azure/toc.json
 - name: Migration
   items:
   - name: Azure AD to Microsoft Graph Migration Guide
