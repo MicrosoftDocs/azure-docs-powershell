@@ -30,8 +30,8 @@
     href: release-notes-azureps.md
   - name: Az 8.0.0 breaking changes
     href: migrate-az-8.0.0.md
-  - name: Intelligent command completion
-    href: az-predictor.md
+  - name: Upcoming breaking changes
+    href: upcoming-breaking-changes.md
 - name: How-to guides
   items:
   - name: Configuration

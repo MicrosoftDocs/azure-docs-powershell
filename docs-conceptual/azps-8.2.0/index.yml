@@ -51,8 +51,8 @@ landingContent:
             url: release-notes-azureps.md
           - text: Breaking changes in Az 8.0.0
             url: migrate-az-8.0.0.md
-          - text: Intelligent command completion
-            url: az-predictor.md
+          - text: Upcoming breaking changes
+            url: upcoming-breaking-changes.md
   - title: Azure PowerShell Reference
     linkLists:
       - linkListType: reference
