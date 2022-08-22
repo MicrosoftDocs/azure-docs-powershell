@@ -93,8 +93,6 @@
     href: azps-msgraph-migration-changes.md
   - name: Migrate from previous versions of Az
     items:
-    - name: Az 7.0.0 breaking changes
-      href: migrate-az-7.0.0.md
     - name: Az 6.0.0 breaking changes
       href: migrate-az-6.0.0.md
     - name: Az 5.0.0 breaking changes

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List the api keys for a given monitor resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datadog/get-azdatadogmonitorapikey) for up-to-date information.
+
 ## SYNTAX
 
 ```

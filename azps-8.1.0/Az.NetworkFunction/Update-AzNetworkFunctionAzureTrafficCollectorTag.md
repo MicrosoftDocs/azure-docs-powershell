@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates the specified Azure Traffic Collector tags.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.networkfunction/update-aznetworkfunctionazuretrafficcollectortag) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
@@ -198,7 +201,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <INetworkFunctionIdentity>: Identity Parameter
+INPUTOBJECT `<INetworkFunctionIdentity>`: Identity Parameter
   - `[AzureTrafficCollectorName <String>]`: Azure Traffic Collector name
   - `[CollectorPolicyName <String>]`: Collector Policy Name
   - `[Id <String>]`: Resource identity path

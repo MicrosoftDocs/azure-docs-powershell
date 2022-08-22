@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets App Service Environment. If only Resource Group is specified, it will return a list of ASE in the Resource Group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/get-azappserviceenvironment) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -29,7 +32,7 @@ The **Get-AzAppServiceEnvironment** cmdlet return ASE(s) matching the query.
 Get-AzAppServiceEnvironment -ResourceGroupName MyResourceGroup -Name MyAseName
 ```
 
-Returns a specific App Service Environment named <MyAseName> in <MyResourceGroup>
+Returns a specific App Service Environment named `<MyAseName>` in `<MyResourceGroup>`
 
 ## PARAMETERS
 

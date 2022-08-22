@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an in-memory object for AzureDataLakeGen2Datastore.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/new-azmlworkspacedatastoredatalakegen2object) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -192,13 +195,13 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-CREDENTIALS <IDatastoreCredentials>: [Required] Account credentials.
+CREDENTIALS `<IDatastoreCredentials>`: [Required] Account credentials.
   - `CredentialsType <CredentialsType>`: [Required] Credential type used to authentication with storage.
 
-PROPERTY <IResourceBaseProperties>: The asset property dictionary.
+PROPERTY `<IResourceBaseProperties>`: The asset property dictionary.
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
-TAG <IResourceBaseTags>: Tag dictionary. Tags can be added, removed, and updated.
+TAG `<IResourceBaseTags>`: Tag dictionary. Tags can be added, removed, and updated.
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS

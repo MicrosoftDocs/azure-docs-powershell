@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 The Delete Domain Service operation deletes an existing Domain Service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.addomainservices/remove-azaddomainservice) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)
@@ -222,7 +225,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAdDomainServicesIdentity>: Identity Parameter
+INPUTOBJECT `<IAdDomainServicesIdentity>`: Identity Parameter
   - `[DomainServiceName <String>]`: The name of the domain service.
   - `[Id <String>]`: Resource identity path
   - `[ResourceGroupName <String>]`: The name of the resource group within the user's subscription. The name is case insensitive.

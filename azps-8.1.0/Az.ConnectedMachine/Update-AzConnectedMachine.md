@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 The operation to update a hybrid machine.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectedmachine/update-azconnectedmachine) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
@@ -409,7 +412,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IConnectedMachineIdentity>: Identity Parameter
+INPUTOBJECT `<IConnectedMachineIdentity>`: Identity Parameter
   - `[ExtensionName <String>]`: The name of the machine extension.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
@@ -421,7 +424,7 @@ INPUTOBJECT <IConnectedMachineIdentity>: Identity Parameter
   - `[ScopeName <String>]`: The name of the Azure Arc PrivateLinkScope resource.
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 
-PARAMETER <IMachineUpdate>: Describes a hybrid machine Update.
+PARAMETER `<IMachineUpdate>`: Describes a hybrid machine Update.
   - `[Tag <IResourceUpdateTags>]`: Resource tags
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[IdentityType <ResourceIdentityType?>]`: The identity type.

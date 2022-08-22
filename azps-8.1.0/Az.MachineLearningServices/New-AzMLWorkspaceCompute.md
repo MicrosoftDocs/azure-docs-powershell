@@ -15,6 +15,9 @@ This call will overwrite a compute if it exists.
 This is a nonrecoverable operation.
 If your intent is to create a new compute, do a GET first to verify that it does not exist yet.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/new-azmlworkspacecompute) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -376,7 +379,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-COMPUTE <ICompute>: Compute properties
+COMPUTE `<ICompute>`: Compute properties
   - `Type <ComputeType>`: The type of compute
   - `[Description <String>]`: The description of the Machine Learning compute.
   - `[DisableLocalAuth <Boolean?>]`: Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.

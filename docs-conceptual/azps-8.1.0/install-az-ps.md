@@ -1,7 +1,7 @@
 ---
-description: How to install the Azure Az PowerShell with PowerShellGet
+description: How to install the Azure Az PowerShell module from the PowerShell Gallery
 ms.custom: devx-track-azurepowershell
-ms.date: 05/24/2022
+ms.date: 07/27/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -10,9 +10,9 @@ title: Install the Azure Az PowerShell module
 
 # Install the Azure Az PowerShell module
 
-This article explains how to install the Azure Az PowerShell module using
-[PowerShellGet](/powershell/scripting/gallery/installing-psget). These instructions work on Windows,
-macOS, and Linux platforms.
+This article explains how to install the Azure Az PowerShell module from
+[The PowerShell Gallery](/powershell/scripting/gallery/overview). These instructions work on
+Windows, Linux, and macOS platforms.
 
 The Azure Az PowerShell module is preinstalled in Azure
 [Cloud Shell](/azure/cloud-shell/overview) and in [Docker images](azureps-in-docker.md).
@@ -52,7 +52,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 Using the [Install-Module](/powershell/module/powershellget/install-module) cmdlet is the preferred
 installation method for the Az PowerShell module. Install the Az module for the current user only.
-This is the recommended installation scope. This method works the same on Windows, macOS, and Linux
+This is the recommended installation scope. This method works the same on Windows, Linux, and macOS
 platforms. Run the following command from a PowerShell session:
 
 ```powershell
@@ -68,8 +68,8 @@ options if needed.
 ### Installation on Windows PowerShell
 
 > [!IMPORTANT]
-> If you have the AzureRM PowerShell module installed, see the
-> [Az and AzureRM coexistence](install-az-ps.md#az-and-azurerm-coexistence) section of this article
+> If you have the AzureRM PowerShell module installed, see
+> [Az and AzureRM coexistence](troubleshooting.md#az-and-azurerm-coexistence)
 > before proceeding.
 
 The Azure Az PowerShell module is also supported for use with PowerShell 5.1 on Windows. To use the
@@ -133,49 +133,7 @@ installations, see [Install Azure PowerShell with an MSI](install-az-ps-msi.md).
 
 ## Troubleshooting
 
-Here are some common problems seen when installing the Azure Az PowerShell module. If you experience
-a problem not listed here,
-[file an issue on GitHub](https://github.com/azure/azure-powershell/issues).
-
-### Az and AzureRM coexistence
-
-> [!WARNING]
-> We do not support having both the AzureRM and Az modules installed for PowerShell 5.1 on Windows
-> at the same time.
-
-In a scenario where you want to install both AzureRM and the Az PowerShell module on the same
-system, AzureRM must be installed only in the user scope for Windows PowerShell. Install the Az
-PowerShell module for PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher on the same system.
-
-[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
-
-#### Visual Studio
-
-Older versions of Visual Studio may install Azure PowerShell as part of the Azure development
-workload, which installs the AzureRM module. Azure PowerShell can be removed using the Visual Studio
-installer or by using "Uninstall" in Apps & features. If you have already installed PowerShell 7.x,
-you may need to [manually install](install-az-ps.md#installation) the Azure Az PowerShell module.
-
-### Proxy blocks connection
-
-If you get errors from `Install-Module` that the PowerShell Gallery is unreachable, you may be
-behind a proxy. Different operating systems and network environment have different requirements for
-configuring a system-wide proxy. Contact your system administrator for your proxy settings and how
-to configure them for your environment.
-
-PowerShell itself may not be configured to use this proxy automatically. With PowerShell 5.1 and
-later, configure the PowerShell session to use a proxy using the following commands:
-
-```powershell
-$webClient = New-Object -TypeName System.Net.WebClient
-$webClient.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
-```
-
-If your operating system credentials are configured correctly, this configuration routes PowerShell
-requests through the proxy. To have this setting persist between sessions, add the commands to your
-[PowerShell profile](/powershell/module/microsoft.powershell.core/about/about_profiles).
-
-To install the package, your proxy needs to allow HTTPS connections to [www.powershellgallery.com](https://www.powershellgallery.com).
+[Troubleshoot installation problems with the Azure Az PowerShell module](troubleshooting.md#installation).
 
 ## Provide feedback
 

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates an existing delivery rule within a rule set.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/update-azfrontdoorcdnrule) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
@@ -309,7 +312,7 @@ ACTION <IDeliveryRuleAction1[]>: A list of actions that are executed when all th
 CONDITION <IDeliveryRuleCondition[]>: A list of conditions that must be matched for the actions to be executed
   - `Name <MatchVariable>`: The name of the condition for the delivery rule.
 
-INPUTOBJECT <ICdnIdentity>: Identity Parameter
+INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[CustomDomainName <String>]`: Name of the domain under the profile which is unique globally.
   - `[EndpointName <String>]`: Name of the endpoint under the profile which is unique globally.
   - `[Id <String>]`: Resource identity path

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an in-memory object for ScaleRule.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.app/new-azcontainerappscaleruleobject) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -208,14 +211,14 @@ CUSTOMAUTH <IScaleRuleAuth[]>: Authentication secrets for the custom scale rule.
   - `[SecretRef <String>]`: Name of the Container App secret from which to pull the auth params.
   - `[TriggerParameter <String>]`: Trigger Parameter that uses the secret
 
-CUSTOMMETADATA <ICustomScaleRuleMetadata>: Metadata properties to describe custom scale rule.
+CUSTOMMETADATA `<ICustomScaleRuleMetadata>`: Metadata properties to describe custom scale rule.
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 HTTPAUTH <IScaleRuleAuth[]>: Authentication secrets for the custom scale rule.
   - `[SecretRef <String>]`: Name of the Container App secret from which to pull the auth params.
   - `[TriggerParameter <String>]`: Trigger Parameter that uses the secret
 
-HTTPMETADATA <IHttpScaleRuleMetadata>: Metadata properties to describe http scale rule.
+HTTPMETADATA `<IHttpScaleRuleMetadata>`: Metadata properties to describe http scale rule.
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS

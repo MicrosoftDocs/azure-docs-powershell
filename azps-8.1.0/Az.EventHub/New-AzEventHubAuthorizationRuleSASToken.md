@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Generates a SAS token for Azure eventhub authorization rule of namespace/eventhub. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/new-azeventhubauthorizationrulesastoken) for up-to-date information.
+
 ## SYNTAX
 
 ```

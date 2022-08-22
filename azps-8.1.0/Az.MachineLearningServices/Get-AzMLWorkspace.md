@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the properties of the specified machine learning workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/get-azmlworkspace) for up-to-date information.
+
 ## SYNTAX
 
 ### List1 (Default)
@@ -200,7 +203,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IMachineLearningServicesIdentity>: Identity Parameter
+INPUTOBJECT `<IMachineLearningServicesIdentity>`: Identity Parameter
   - `[ComputeName <String>]`: Name of the Azure Machine Learning compute.
   - `[ConnectionName <String>]`: Friendly name of the workspace connection
   - `[DeploymentName <String>]`: Inference deployment identifier.

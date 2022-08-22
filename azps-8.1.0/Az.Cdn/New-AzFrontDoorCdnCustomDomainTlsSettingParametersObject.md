@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an in-memory object for AFDDomainHttpsParameters.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/new-azfrontdoorcdncustomdomaintlssettingparametersobject) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -107,7 +110,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-SECRET <IResourceReference>: Resource reference to the secret. ie. subs/rg/profile/secret.
+SECRET `<IResourceReference>`: Resource reference to the secret. ie. subs/rg/profile/secret.
   - `[Id <String>]`: Resource ID.
 
 ## RELATED LINKS

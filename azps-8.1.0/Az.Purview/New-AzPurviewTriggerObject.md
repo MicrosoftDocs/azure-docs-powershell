@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an in-memory object for Trigger.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/new-azpurviewtriggerobject) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -279,13 +282,13 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-SCHEDULEADDITIONALPROPERTY `<IRecurrenceScheduleAdditionalProperties>`: Dictionary of <any>.
+SCHEDULEADDITIONALPROPERTY `<IRecurrenceScheduleAdditionalProperties>`: Dictionary of `<any>`.
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
 
-SCHEDULEMONTHLYOCCURRENCE <IRecurrenceScheduleOccurrence[]>: 
-  - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of <any>
+SCHEDULEMONTHLYOCCURRENCE <IRecurrenceScheduleOccurrence[]>:
+  - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of `<any>`
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
-  - `[Day <DayOfWeek?>]`: 
-  - `[Occurrence <Int32?>]`: 
+  - `[Day <DayOfWeek?>]`:
+  - `[Occurrence <Int32?>]`:
 
 ## RELATED LINKS

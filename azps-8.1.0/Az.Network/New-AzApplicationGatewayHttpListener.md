@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an HTTP listener for an application gateway.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azapplicationgatewayhttplistener) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByResourceId
@@ -104,10 +107,10 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicy
-Specifies the object reference to a top-level firewall policy. 
+Specifies the object reference to a top-level firewall policy.
 The object reference can be created by using New-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet.
 $firewallPolicy = New-AzApplicationGatewayFirewallPolicy -Name "wafPolicy1" -ResourceGroup "rgName"
-A firewall policy created using the above commandlet can be referred at a path-rule level. 
+A firewall policy created using the above commandlet can be referred at a path-rule level.
 he above command would create a default policy settings and managed rules.
 Instead of the default values, users can specify PolicySettings, ManagedRules by using New-AzApplicationGatewayFirewallPolicySettings and New-AzApplicationGatewayFirewallPolicyManagedRules respectively.
 
@@ -125,10 +128,10 @@ Accept wildcard characters: False
 
 ### -FirewallPolicyId
 Specifies the ID of an existing top-level web application firewall resource.
-Firewall policy IDs can be returned by using the Get-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet. 
+Firewall policy IDs can be returned by using the Get-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet.
 After we have the ID you can use *FirewallPolicyId* parameter instead of *FirewallPolicy* parameter.
 For instance:
--FirewallPolicyId  �/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/<firewallPolicyName>�
+`-FirewallPolicyId "/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/<firewallPolicyName>"`
 
 ```yaml
 Type: System.String

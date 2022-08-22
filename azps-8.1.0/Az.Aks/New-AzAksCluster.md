@@ -16,6 +16,9 @@ The cmdlet may call below Microsoft Graph API according to input parameters:
 
 - POST /servicePrincipals
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.aks/new-azakscluster) for up-to-date information.
+
 ## SYNTAX
 
 ```

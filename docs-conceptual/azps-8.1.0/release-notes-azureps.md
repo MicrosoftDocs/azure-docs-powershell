@@ -1,7 +1,7 @@
 ---
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/24/2022
+ms.date: 07/05/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -11,7 +11,7 @@ title: Azure PowerShell release notes
 ## 8.1.0 - July 2022
 #### Az.Accounts
 * Supported exporting and importing configurations by 'Export-AzConfig' and 'Import-AzConfig'.
-* Fixed an issue that Az.Accounts may fail to be imported in parallel PowerShell processes. [#18321] 
+* Fixed an issue that Az.Accounts may fail to be imported in parallel PowerShell processes. [#18321]
 * Fixed incorrect access token [#18105]
 * Upgraded version of Microsoft.Identity.Client for .NET Framework. [#18495]
 * Fixed an issue that Az.Accounts failed to be imported if multiple environment variables, which only differ by case, are set. [#18304]
@@ -31,12 +31,12 @@ title: Azure PowerShell release notes
 
 #### Az.Compute
 * Added image alias 'Win2022AzureEditionCore'
-* Added the '-DisableIntegrityMonitoring' switch parameter to the 'New-AzVM' cmdlet. 
+* Added the '-DisableIntegrityMonitoring' switch parameter to the 'New-AzVM' cmdlet.
   Changed the default behavior for 'New-AzVM' and 'New-AzVmss' when these conditions are met:
   1) '-DisableIntegrityMonitoring' is not true.
   2) 'SecurityType' on the SecurityProfile is 'TrustedLaunch'.
   3) 'VTpmEnabled' on the SecurityProfile is true.
-  4) 'SecureBootEnabled' on the SecurityProfile is true. 
+  4) 'SecureBootEnabled' on the SecurityProfile is true.
   Now 'New-AzVM' will install the 'Guest Attestation' extension to the new VM when these conditions are met.
   Now 'New-AzVmss' will install the 'Guest Attestation' extension to the new Vmss when these conditions are met and installed to all VM instances in the Vmss.
 * Added '-UserAssignedIdentity' and '-FederatedClientId' to the following cmdlets:
@@ -69,7 +69,7 @@ title: Azure PowerShell release notes
 
 #### Az.KeyVault
 * Supported importing pem certificate by 'Import-AzKeyVaultCertificate' [#18494]
-* Supported accepting rotation policy in a JSON file 
+* Supported accepting rotation policy in a JSON file
 * [Breaking Change] Changed parameter 'ExpiresIn' in 'Set-AzKeyVaultKeyRotationPolicy' from TimeSpan? to string. It must be an ISO 8601 duration like 'P30D' for 30 days.
 * [Breaking Change] Changed output properties 'ExpiresIn', 'TimeAfterCreate' and 'TimeBeforeExpiry' of 'Set-AzKeyVaultKeyRotationPolicy' and 'Get-AzKeyVaultKeyRotationPolicy' from TimeSpan? to string.
 * Supported creating/updating key with release policy in a Managed HSM
@@ -5795,7 +5795,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
   - Set-AzScheduledQueryRule
   - Update-AzScheduledQueryRule
   - Remove-AzScheduledQueryRule
-  - [More](/rest/api/monitor/scheduledqueryrules) information about SQR API
+  - [More](/rest/api/monitor/scheduledqueryrule-2021-08-01/scheduled-query-rules) information about SQR API
   - Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule
 
 #### Az.Network

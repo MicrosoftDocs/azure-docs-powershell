@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Patches a certificate.
 Currently only patching of tags is supported
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.app/update-azcontainerappmanagedenvcert) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
@@ -220,7 +223,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAppIdentity>: Identity Parameter
+INPUTOBJECT `<IAppIdentity>`: Identity Parameter
   - `[AuthConfigName <String>]`: Name of the Container App AuthConfig.
   - `[CertificateName <String>]`: Name of the Certificate.
   - `[ComponentName <String>]`: Name of the Dapr Component.

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a PSRoutingRuleObject for Front Door creation
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.frontdoor/new-azfrontdoorroutingruleobject) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsWithForwardingParameterSet (Default)
@@ -40,7 +43,7 @@ Create a PSRoutingRuleObject for Front Door creation
 
 ### Example 1: Create a PSRoutingRuleObject for Front Door creation with a forwarding rule
 ```powershell
-New-AzFrontDoorRoutingRuleObject -Name $routingRuleName -FrontDoorName $frontDoorName -ResourceGroupName $rgname -FrontendEndpointName "frontendEndpoint1" -BackendPoolName "backendPool1" 
+New-AzFrontDoorRoutingRuleObject -Name $routingRuleName -FrontDoorName $frontDoorName -ResourceGroupName $rgname -FrontendEndpointName "frontendEndpoint1" -BackendPoolName "backendPool1"
 ```
 
 ```output
@@ -178,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomQueryString
-The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in `<key>=<value>` format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
 
 ```yaml
 Type: System.String
@@ -225,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCaching
-Whether to enable caching for this route. 
+Whether to enable caching for this route.
 Default value is false
 
 ```yaml
@@ -319,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -PatternToMatch
-The route patterns of the rule,  Must not have any * except possibly after the final / at the end of the path. 
+The route patterns of the rule,  Must not have any * except possibly after the final / at the end of the path.
 Default value is /*
 
 ```yaml

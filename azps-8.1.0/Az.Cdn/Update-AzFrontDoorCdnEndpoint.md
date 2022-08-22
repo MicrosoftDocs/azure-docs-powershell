@@ -16,6 +16,9 @@ To update origins, use the Update Origin operation.
 To update origin groups, use the Update Origin group operation.
 To update domains, use the Update Custom Domain operation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/update-azfrontdoorcdnendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
@@ -258,7 +261,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <ICdnIdentity>: Identity Parameter
+INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[CustomDomainName <String>]`: Name of the domain under the profile which is unique globally.
   - `[EndpointName <String>]`: Name of the endpoint under the profile which is unique globally.
   - `[Id <String>]`: Resource identity path

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an instance of a trigger
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/new-azpurviewtrigger) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -187,24 +190,24 @@ To create the parameters described below, construct a hash table containing the 
 
 
 BODY `<ITrigger>`: .
-  - `[IncrementalScanStartTime <DateTime?>]`: 
-  - `[Interval <Int32?>]`: 
-  - `[RecurrenceEndTime <DateTime?>]`: 
-  - `[RecurrenceFrequency <TriggerFrequency?>]`: 
-  - `[RecurrenceInterval <String>]`: 
-  - `[RecurrenceStartTime <DateTime?>]`: 
-  - `[RecurrenceTimeZone <String>]`: 
-  - `[ScanLevel <ScanLevelType?>]`: 
-  - `[ScheduleAdditionalProperty <IRecurrenceScheduleAdditionalProperties>]`: Dictionary of <any>
+  - `[IncrementalScanStartTime <DateTime?>]`:
+  - `[Interval <Int32?>]`:
+  - `[RecurrenceEndTime <DateTime?>]`:
+  - `[RecurrenceFrequency <TriggerFrequency?>]`:
+  - `[RecurrenceInterval <String>]`:
+  - `[RecurrenceStartTime <DateTime?>]`:
+  - `[RecurrenceTimeZone <String>]`:
+  - `[ScanLevel <ScanLevelType?>]`:
+  - `[ScheduleAdditionalProperty <IRecurrenceScheduleAdditionalProperties>]`: Dictionary of `<any>`
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
-  - `[ScheduleHour <Int32[]>]`: 
-  - `[ScheduleMinute <Int32[]>]`: 
-  - `[ScheduleMonthDay <Int32[]>]`: 
-  - `[ScheduleMonthlyOccurrence <IRecurrenceScheduleOccurrence[]>]`: 
-    - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of <any>
+  - `[ScheduleHour <Int32[]>]`:
+  - `[ScheduleMinute <Int32[]>]`:
+  - `[ScheduleMonthDay <Int32[]>]`:
+  - `[ScheduleMonthlyOccurrence <IRecurrenceScheduleOccurrence[]>]`:
+    - `[AdditionalProperty <IRecurrenceScheduleOccurrenceAdditionalProperties>]`: Dictionary of `<any>`
       - `[(Any) <Object>]`: This indicates any property can be added to this object.
-    - `[Day <DayOfWeek?>]`: 
-    - `[Occurrence <Int32?>]`: 
-  - `[ScheduleWeekDay <DaysOfWeek[]>]`: 
+    - `[Day <DayOfWeek?>]`:
+    - `[Occurrence <Int32?>]`:
+  - `[ScheduleWeekDay <DaysOfWeek[]>]`:
 
 ## RELATED LINKS

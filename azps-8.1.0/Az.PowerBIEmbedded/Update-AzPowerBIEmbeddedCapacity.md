@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Modifies  an instance of PowerBI Embedded Capacity.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.powerbiembedded/update-azpowerbiembeddedcapacity) for up-to-date information.
+
 ## SYNTAX
 
 ### ByNameAndResourceGroup (Default)
@@ -64,7 +67,7 @@ Modifies the capacity named testcapacity in resourcegroup testgroup to set the t
 ## PARAMETERS
 
 ### -Administrator
-A comma separated names to set as administrators on the capacity. For service principal: <service principal object id>@<tenant id>
+A comma separated names to set as administrators on the capacity. For service principal: `<service principal object id>@<tenant id>`
 
 ```yaml
 Type: System.String[]

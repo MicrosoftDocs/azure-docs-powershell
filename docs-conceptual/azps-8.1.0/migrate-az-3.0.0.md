@@ -1,7 +1,7 @@
 ---
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 3.0 release.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/24/2022
+ms.date: 07/05/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -850,7 +850,7 @@ RetentionInDays              : 0
 ```
 
 ### `Remove-AzSqlServerThreatDetectionPolicy`
-Cmdlet `Remove-AzSqlServerThreatDetectionPolicy` is repleaced by `Clear-AzSqlServerThreatDetectionSetting`
+Cmdlet `Remove-AzSqlServerThreatDetectionPolicy` is repleaced by `Clear-AzSqlServerAdvancedThreatProtectionSetting`
 
 #### Before
 ```powershell
@@ -863,7 +863,7 @@ Clear-AzSqlServerAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGro
 ```
 
 ### `Set-AzSqlServerThreatDetectionPolicy`
-Cmdlet `Set-AzSqlServerThreatDetectionPolicy` is repleaced by `Update-AzSqlServerThreatDetectionSetting`
+Cmdlet `Set-AzSqlServerThreatDetectionPolicy` is repleaced by `Update-AzSqlServerAdvancedThreatProtectionSetting`
 
 #### Before
 ```powershell
@@ -907,7 +907,7 @@ RetentionInDays              : 0
 ```
 
 ### `Set-AzSqlDatabaseThreatDetectionPolicy`
-Cmdlet `Set-AzSqlDatabaseThreatDetectionPolicy` is repleaced by `Update-AzSqlDatabaseThreatDetectionSetting`
+Cmdlet `Set-AzSqlDatabaseThreatDetectionPolicy` is repleaced by `Update-AzSqlDatabaseAdvancedThreatProtectionSetting`
 
 #### Before
 ```powershell
@@ -920,7 +920,7 @@ Update-AzSqlDatabaseAdvancedThreatProtectionSetting -ResourceGroupName "Resource
 ```
 
 ### `Remove-AzSqlDatabaseThreatDetectionPolicy`
-Cmdlet `Remove-AzSqlDatabaseThreatDetectionPolicy` is repleaced by `Clear-AzSqlDatabaseThreatDetectionSetting`
+Cmdlet `Remove-AzSqlDatabaseThreatDetectionPolicy` is repleaced by `Clear-AzSqlDatabaseAdvancedThreatProtectionSetting`
 
 #### Before
 ```powershell

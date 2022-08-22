@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a Firewall Application Rule.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azfirewallapplicationrule) for up-to-date information.
+
 ## SYNTAX
 
 ### TargetFqdn (Default)
@@ -111,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Specifies the type of traffic to be filtered by this rule. The format is <protocol type>:<port>. 
+Specifies the type of traffic to be filtered by this rule. The format is <protocol `type>:<port>`. 
 For example, "http:80" or "https:443".
 Protocol is mandatory when TargetFqdn is used, but it cannot be used with FqdnTag. The supported protocols are HTTP and HTTPS.
 

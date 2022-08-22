@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get storage for a managedEnvironment.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.app/get-azcontainerappmanagedenvstorage) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)
@@ -177,7 +180,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IAppIdentity>: Identity Parameter
+INPUTOBJECT `<IAppIdentity>`: Identity Parameter
   - `[AuthConfigName <String>]`: Name of the Container App AuthConfig.
   - `[CertificateName <String>]`: Name of the Certificate.
   - `[ComponentName <String>]`: Name of the Dapr Component.

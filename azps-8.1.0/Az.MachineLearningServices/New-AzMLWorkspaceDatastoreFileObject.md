@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an in-memory object for AzureFileDatastore.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/new-azmlworkspacedatastorefileobject) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -176,10 +179,10 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-PROPERTY <IResourceBaseProperties>: The asset property dictionary.
+PROPERTY `<IResourceBaseProperties>`: The asset property dictionary.
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
-TAG <IResourceBaseTags>: Tag dictionary. Tags can be added, removed, and updated.
+TAG `<IResourceBaseTags>`: Tag dictionary. Tags can be added, removed, and updated.
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS

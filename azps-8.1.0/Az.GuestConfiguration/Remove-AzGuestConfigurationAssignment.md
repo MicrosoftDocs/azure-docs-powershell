@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Delete a guest configuration assignment
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.guestconfiguration/remove-azguestconfigurationassignment) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)
@@ -257,7 +260,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IGuestConfigurationIdentity>: Identity Parameter
+INPUTOBJECT `<IGuestConfigurationIdentity>`: Identity Parameter
   - `[GuestConfigurationAssignmentName <String>]`: Name of the guest configuration assignment.
   - `[Id <String>]`: Resource identity path
   - `[MachineName <String>]`: The name of the ARC machine.

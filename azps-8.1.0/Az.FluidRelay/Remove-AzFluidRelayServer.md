@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Delete a Fluid Relay server.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.fluidrelay/remove-azfluidrelayserver) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)
@@ -182,7 +185,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-INPUTOBJECT <IFluidRelayIdentity>: Identity Parameter
+INPUTOBJECT `<IFluidRelayIdentity>`: Identity Parameter
   - `[FluidRelayContainerName <String>]`: The Fluid Relay container resource name.
   - `[FluidRelayServerName <String>]`: The Fluid Relay server resource name.
   - `[Id <String>]`: Resource identity path

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets a certificate issuer in a key vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/set-azkeyvaultcertificateissuer) for up-to-date information.
+
 ## SYNTAX
 
 ### Expanded (Default)

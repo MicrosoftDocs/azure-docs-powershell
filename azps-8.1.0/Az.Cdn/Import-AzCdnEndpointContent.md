@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Pre-loads a content to CDN.
 Available for Verizon Profiles.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/import-azcdnendpointcontent) for up-to-date information.
+
 ## SYNTAX
 
 ### LoadExpanded (Default)
@@ -277,10 +280,10 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-CONTENTFILEPATH <ILoadParameters>: Parameters required for content load.
+CONTENTFILEPATH `<ILoadParameters>`: Parameters required for content load.
   - `ContentPath <String[]>`: The path to the content to be loaded. Path should be a relative file URL of the origin.
 
-INPUTOBJECT <ICdnIdentity>: Identity Parameter
+INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[CustomDomainName <String>]`: Name of the domain under the profile which is unique globally.
   - `[EndpointName <String>]`: Name of the endpoint under the profile which is unique globally.
   - `[Id <String>]`: Resource identity path
