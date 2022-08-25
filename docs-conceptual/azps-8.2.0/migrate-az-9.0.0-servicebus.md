@@ -56,7 +56,7 @@ $queue = Get-AzServiceBusQueue -InputObject <ResourceID of ServiceBus Queue>
 Set-AzServiceBusQueue -InputObject $queue -ForwardTo q1 -ForwardDeadLetteredMessagesTo q2 -DefaultMessageTimeToLive (New-Timespan -Days 365 -Hours 3 -Minutes 11 -Seconds 2)
 ```
 
-- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables as shown in the example above. Please refer https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan to know more about New-TimeSpan.
+- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables as shown in the example above. Please refer [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan) to know more about New-TimeSpan.
 
 ### Pipelining support
 
@@ -141,7 +141,7 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbQueue`.
 - `-SizeInBytes` and `-MessageCount` are readonly parameters and are getting removed.
 - Parameter `-EnableBatchedOperations` is renamed to `-EnableBatchedOperation`.
-- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan to know more about New-TimeSpan.
+- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan) to know more about New-TimeSpan.
 
 ### Set-AzServiceBusQueue
 
@@ -185,7 +185,7 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbTopic`.
 -  `-SizeInBytes` is readonly parameter and is getting removed.
 - Parameter `-EnableBatchedOperations` would be renamed to `-EnableBatchedOperation`.
-- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan to know more about New-TimeSpan.
+- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan) to know more about New-TimeSpan.
 - Parameter `-ResourceGroupName` would no longer support alias `-ResourceGroup`.
 
 ### Remove-AzServiceBusTopic
@@ -233,7 +233,7 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSSubscriptionAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbSubscription`.
-- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan to know more about New-TimeSpan.
+- Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan) to know more about New-TimeSpan.
 
 ### Set-AzServiceBusSubscription
 
