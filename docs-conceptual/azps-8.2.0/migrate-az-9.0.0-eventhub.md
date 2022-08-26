@@ -243,6 +243,7 @@ PSEventHubsAvailableCluster[]` to
 
 - Input type of parameter `-InputObject` and output type of the cmdlet have been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`. CaptureDescription class data members would be flattened and would directly be accessible as data members within Microsoft.`Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`. Please refer to example on top to know more.
+- `-InputObject` parameter set would have a change in behaviour. Refer the [section](#Behavior-of--InputObject) to know more.
 - `-InputObject` parameter would no longer support alias `-EventHubObj`.
 
 ### Remove-AzEventHub
@@ -303,7 +304,7 @@ PSEventHubsAvailableCluster[]` to
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IArmDisasterRecovery`.
-- `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+-  `-InputObject` and `-ResourceId` are not supported during resource creation, hence are being removed.
 
 ### Remove-AzEventHubGeoDRConfiguration
 
