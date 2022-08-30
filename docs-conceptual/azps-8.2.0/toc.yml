@@ -32,10 +32,6 @@
     href: migrate-az-8.0.0.md
   - name: Upcoming breaking changes
     href: upcoming-breaking-changes.md
-  - name: Az.EventHub upcoming breaking changes
-    href: migrate-az-9.0.0-eventhub.md
-  - name: Az.ServiceBus upcoming breaking changes
-    href: migrate-az-9.0.0-servicebus.md
 - name: How-to guides
   items:
   - name: Configuration
