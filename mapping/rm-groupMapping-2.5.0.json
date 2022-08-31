@@ -159,6 +159,7 @@
   "Stop-AzureRmDeployment": "Resources",
   "Get-AzureRmResourceGroup": "Resources",
   "Get-AzureRmPolicyDefinition": "Policies",
+  "Get-AzureRmPolicyAlias": "Policies",
   "New-AzureRmADServicePrincipal": "Active Directory",
   "Invoke-AzureRmResourceAction": "Resources",
   "Update-AzureRmADServicePrincipal": "Active Directory",

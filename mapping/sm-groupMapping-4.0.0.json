@@ -731,6 +731,6 @@
     "Use-AzureHDInsightCluster": "HD Insights",
     "Wait-AzureHDInsightJob": "HD Insights",
     "Save-AzureRmContext": "Profile",
-    "Select-AzureRmprofile": "Profile",
-    "Send-feedback": "Profile"
+    "Select-AzureRmProfile": "Profile",
+    "Send-Feedback": "Profile"
 }
