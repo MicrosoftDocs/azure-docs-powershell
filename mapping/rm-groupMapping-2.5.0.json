@@ -159,6 +159,7 @@
   "Stop-AzureRmDeployment": "Resources",
   "Get-AzureRmResourceGroup": "Resources",
   "Get-AzureRmPolicyDefinition": "Policies",
+  "Get-AzureRmPolicyAlias": "Policies",
   "New-AzureRmADServicePrincipal": "Active Directory",
   "Invoke-AzureRmResourceAction": "Resources",
   "Update-AzureRmADServicePrincipal": "Active Directory",
@@ -798,5 +799,18 @@
   "Set-AzureStorageBlobContent": "Storage",
   "Set-AzureStorageServiceLoggingProperty": "Storage",
   "Remove-AzureStorageQueueStoredAccessPolicy": "Storage",
-  "Set-AzureStorageQueueStoredAccessPolicy": "Storage"
+  "Set-AzureStorageQueueStoredAccessPolicy": "Storage",
+  "Add-AzureRmStorageAccountNetworkRule": "Storage",
+  "Get-AzureRmStorageAccount": "Storage",
+  "Get-AzureRmStorageAccountKey": "Storage",
+  "Get-AzureRmStorageAccountNameAvailability": "Storage",
+  "Get-AzureRmStorageAccountNetworkRuleSet": "Storage",
+  "Get-AzureRmStorageUsage": "Storage",
+  "New-AzureRmStorageAccount": "Storage",
+  "New-AzureRmStorageAccountKey": "Storage",
+  "Remove-AzureRmStorageAccount": "Storage",
+  "Remove-AzureRmStorageAccountNetworkRule": "Storage",
+  "Set-AzureRmCurrentStorageAccount": "Storage",
+  "Set-AzureRmStorageAccount": "Storage",
+  "Update-AzureRmStorageAccountNetworkRuleSet": "Storage"
  }
