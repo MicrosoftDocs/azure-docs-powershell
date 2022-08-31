@@ -26,7 +26,7 @@ to complete a survey. You can disable being prompted to participate in surveys w
 
 ## Disable the survey
 
-In the following example, the `Update-AzConfig` cmdlet to disable the survey message.
+In the following example, the `Update-AzConfig` cmdlet is used to disable the survey message.
 
 ```azurepowershell
 Update-AzConfig -DisplaySurveyMessage $false
