@@ -10,9 +10,7 @@ ms.custom: devx-track-azurepowershell
 
 # Azure Command line tools survey guidance
 
-The purpose of the intercept survey is to collect information about the satisfaction of Azure
-command line tools. By providing responses to the survey, you help to identify common issues and
-areas for improvement. Understanding your experiences and opinions helps to make future releases of
+When using Azure PowerShell you may be invited to fill a survey to tell us about your experience. By providing responses to the survey, you help to identify common issues and areas for improvement. Understanding your experiences and opinions helps to make future releases of
 Azure command line tools better for you and others.
 
 ## What data is collected
