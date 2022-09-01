@@ -1,5 +1,5 @@
 ---
-title: Intercept survey guidance
+title: Guidance for Azure Command Line tools survey
 description: This article contains information about azure powershell intercept survey guidance.
 ms.date: 08/31/2022
 ms.devlang: powershell
