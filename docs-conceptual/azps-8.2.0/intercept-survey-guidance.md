@@ -15,8 +15,8 @@ Azure command line tools better for you and others.
 
 ## What data is collected
 
-The intercept survey collects anonymized feedback about your satisfaction of Azure command line
-tools. The intercept survey does not collect any private or personal data.
+The survey collects anonymized feedback about your satisfaction of Azure command line
+tools and does not collect any private or personal data.
 
 While we appreciate the insights this data provides, we understand not everyone wants to be prompted
 to complete a survey. You can disable being prompted to participate in surveys with the
