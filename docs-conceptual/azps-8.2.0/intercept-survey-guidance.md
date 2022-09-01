@@ -1,6 +1,6 @@
 ---
 title: Guidance for Azure Command Line tools survey
-description: This article contains information about azure powershell intercept survey guidance.
+description: This article contains information about the survey included the Azure Command line tools.
 ms.date: 08/31/2022
 ms.devlang: powershell
 ms.service: azure-powershell
