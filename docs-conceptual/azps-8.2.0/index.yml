@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 07/05/2022
+  ms.date: 08/02/2022
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -51,14 +51,14 @@ landingContent:
             url: release-notes-azureps.md
           - text: Breaking changes in Az 8.0.0
             url: migrate-az-8.0.0.md
-          - text: Intelligent command completion
-            url: az-predictor.md
+          - text: Upcoming breaking changes
+            url: upcoming-breaking-changes.md
   - title: Azure PowerShell Reference
     linkLists:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-8.1.0
+            url: /powershell/module/?view=azps-8.2.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: whats-new

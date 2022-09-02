@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Triggers a policy compliance evaluation for all resources in a subscription or resource group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.policyinsights/start-azpolicycompliancescan) for up-to-date information.
+
 ## SYNTAX
 
 ```

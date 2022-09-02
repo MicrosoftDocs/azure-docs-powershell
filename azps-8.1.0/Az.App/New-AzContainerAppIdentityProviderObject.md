@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an in-memory object for IdentityProviders.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.app/new-azcontainerappidentityproviderobject) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -655,7 +658,7 @@ Accept wildcard characters: False
 ### -RegistrationOpenIdIssuer
 The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
         When using Azure Active Directory, this value is the URI of the directory tenant, e.g.
-https://login.microsoftonline.com/v2.0/{tenant-guid}/.
+`https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
         This URI is a case-sensitive identifier for the token issuer.
         More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html.
 

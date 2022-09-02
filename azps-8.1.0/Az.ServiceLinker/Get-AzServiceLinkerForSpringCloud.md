@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns Linker resource for a given name in spring cloud.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicelinker/get-azservicelinkerforspringcloud) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

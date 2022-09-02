@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets all the network dependencies for this container group to allow complete control of network setting and configuration.
 For container groups, this will always be an empty list.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/get-azcontainerinstancecontainergroupoutboundnetworkdependencyendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### Get (Default)

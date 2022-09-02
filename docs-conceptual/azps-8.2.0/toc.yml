@@ -28,10 +28,8 @@
   items:
   - name: Release notes
     href: release-notes-azureps.md
-  - name: Az 8.0.0 breaking changes
-    href: migrate-az-8.0.0.md
-  - name: Intelligent command completion
-    href: az-predictor.md
+  - name: Upcoming breaking changes
+    href: upcoming-breaking-changes.md
 - name: How-to guides
   items:
   - name: Configuration
@@ -87,23 +85,37 @@
   items:
   - name: Create Virtual Machines
     href: azureps-vm-tutorial.yml
+  - name: Deploy an Azure Kubernetes Service (AKS) cluster
+    href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
+  - name: Create a private container registry
+    href: /azure/container-registry/container-registry-get-started-powershell?toc=/powershell/azure/toc.json
+  - name: Deploy a container instance in Azure
+    href: /azure/container-instances/container-instances-quickstart-powershell?toc=/powershell/azure/toc.json
+  - name: Set and retrieve a secret from Azure Key Vault
+    href: /azure/key-vault/secrets/quick-create-powershell?toc=/powershell/azure/toc.json
 - name: Migration
   items:
   - name: Azure AD to Microsoft Graph Migration Guide
     href: azps-msgraph-migration-changes.md
   - name: Migrate from previous versions of Az
     items:
-    - name: Az 7.0.0 breaking changes
+    - name: Az.EventHub Migration Guide
+      href: migrate-az-9.0.0-eventhub.md
+    - name: Az.ServiceBus Migration Guide
+      href: migrate-az-9.0.0-servicebus.md
+    - name: Az 8.0.0 Migration Guide
+      href: migrate-az-8.0.0.md
+    - name: Az 7.0.0 Migration Guide
       href: migrate-az-7.0.0.md
-    - name: Az 6.0.0 breaking changes
+    - name: Az 6.0.0 Migration Guide
       href: migrate-az-6.0.0.md
-    - name: Az 5.0.0 breaking changes
+    - name: Az 5.0.0 Migration Guide
       href: migrate-az-5.0.0.md
-    - name: Az 4.1.0 breaking changes
+    - name: Az 4.1.0 Migration Guide
       href: migrate-az-4.1.0.md
-    - name: Az 3.0.0 breaking changes
+    - name: Az 3.0.0 Migration Guide
       href: migrate-az-3.0.0.md
-    - name: Az 2.0.0 breaking changes
+    - name: Az 2.0.0 Migration Guide
       href: migrate-az-2.0.0.md
   - name: Migrate from AzureRM
     items:
@@ -127,6 +139,8 @@
     displayName: database, nosql, mongodb, couchdb
   - name: Samples repo
     href: https://github.com/Azure/azure-docs-powershell-samples
+- name: Survey Guidance
+  href: command-line-tools-survey-guidance.md
 - name: Troubleshooting
   href: troubleshooting.md
 - name: Frequently Asked Questions

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzDeployment
 
 ## SYNOPSIS
-Create a deployment
+Create a deployment at the current subscription scope.
 
 ## SYNTAX
 

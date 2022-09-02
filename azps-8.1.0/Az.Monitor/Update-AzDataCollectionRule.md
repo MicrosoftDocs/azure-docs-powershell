@@ -12,36 +12,39 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a data collection rule tags property.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/update-azdatacollectionrule) for up-to-date information.
+
 ## SYNTAX
 
 ### ByName (Default)
 ```
-Update-AzDataCollectionRule 
-      -ResourceGroupName <string> 
-      -RuleName <string> 
-      [-Tag <hashtable>] 
-      [-DefaultProfile <IAzureContextContainer>] 
-      [-WhatIf] 
+Update-AzDataCollectionRule
+      -ResourceGroupName <string>
+      -RuleName <string>
+      [-Tag <hashtable>]
+      [-DefaultProfile <IAzureContextContainer>]
+      [-WhatIf]
       [-Confirm]
       [<CommonParameters>]
 ```
 
 ### ByResourceId
 ```
-Update-AzDataCollectionRule 
-      -RuleId <string> 
-      [-Tag <hashtable>] 
-      [-DefaultProfile <IAzureContextContainer>] 
-      [-WhatIf] 
+Update-AzDataCollectionRule
+      -RuleId <string>
+      [-Tag <hashtable>]
+      [-DefaultProfile <IAzureContextContainer>]
+      [-WhatIf]
       [-Confirm]
       [<CommonParameters>]
 ```
 
 ### ByInputObject
 ```
-Update-AzDataCollectionRule 
-      -InputObject <PSDataCollectionRuleResource> 
-      [-Tag <hashtable>] 
+Update-AzDataCollectionRule
+      -InputObject <PSDataCollectionRuleResource>
+      [-Tag <hashtable>]
       [-DefaultProfile <IAzureContextContainer>]
       [-WhatIf]
       [-Confirm]
@@ -51,7 +54,7 @@ Update-AzDataCollectionRule
 ## DESCRIPTION
 The **Update-AzDataCollectionRule** cmdlet updates a data collection rule Tags property.
 
-Data Collection Rules (DCR) define data coming into Azure Monitor and specify where that data should be sent or stored. Here is the complete [DCR overview article](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection-rule-overview).
+Data Collection Rules (DCR) define data coming into Azure Monitor and specify where that data should be sent or stored. Here is the complete [DCR overview article](/azure/azure-monitor/essentials/data-collection-rule-overview).
 
 ## EXAMPLES
 
@@ -63,7 +66,7 @@ Update-AzDataCollectionRule -RuleName 'newDcr' `
 ```
 
 ```output
-Description       : 
+Description       :
 DataSources       : Microsoft.Azure.Commands.Insights.OutputClasses.PSDataCollectionRuleDataSources
 Destinations      : Microsoft.Azure.Commands.Insights.OutputClasses.PSDataCollectionRuleDestinations
 DataFlows         : {Microsoft.Azure.Commands.Insights.OutputClasses.PSDataFlow}
@@ -85,7 +88,7 @@ Update-AzDataCollectionRule -RuleId '/subscriptions/{subId}/resourceGroups/testd
 ```
 
 ```output
-Description       : 
+Description       :
 DataSources       : Microsoft.Azure.Commands.Insights.OutputClasses.PSDataCollectionRuleDataSources
 Destinations      : Microsoft.Azure.Commands.Insights.OutputClasses.PSDataCollectionRuleDestinations
 DataFlows         : {Microsoft.Azure.Commands.Insights.OutputClasses.PSDataFlow}
@@ -107,7 +110,7 @@ $dcr | Update-AzDataCollectionRule -Tag @{"tag1"="value1"; "tag2"="value2"}
 ```
 
 ```output
-Description       : 
+Description       :
 DataSources       : Microsoft.Azure.Commands.Insights.OutputClasses.PSDataCollectionRuleDataSources
 Destinations      : Microsoft.Azure.Commands.Insights.OutputClasses.PSDataCollectionRuleDestinations
 DataFlows         : {Microsoft.Azure.Commands.Insights.OutputClasses.PSDataFlow}

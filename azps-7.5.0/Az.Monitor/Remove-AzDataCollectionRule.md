@@ -20,8 +20,8 @@ Delete a data collection rule.
 ### ByName (Default)
 ```
 Remove-AzDataCollectionRule
-   -ResourceGroupName <string> 
-   -RuleName <string> 
+   -ResourceGroupName <string>
+   -RuleName <string>
    [-PassThru]
    [-DefaultProfile <IAzureContextContainer>]
    [-WhatIf]
@@ -54,13 +54,13 @@ Remove-AzDataCollectionRule
 ## DESCRIPTION
 The **Remove-AzDataCollectionRule** cmdlet delete a data collection rule.
 
-Data Collection Rules (DCR) define data coming into Azure Monitor and specify where that data should be sent or stored. Here is the complete [DCR overview article](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection-rule-overview).
+Data Collection Rules (DCR) define data coming into Azure Monitor and specify where that data should be sent or stored. Here is the complete [DCR overview article](/azure/azure-monitor/essentials/data-collection-rule-overview).
 
 ## EXAMPLES
 
 ### Example 1: Delete data collection rule with name and resource group parameters
 ```powershell
-Remove-AzDataCollectionRule -ResourceGroupName "testgroup" -RuleName "testDcr"             
+Remove-AzDataCollectionRule -ResourceGroupName "testgroup" -RuleName "testDcr"
 ```
 
 ### Example 2: Delete data collection rule with name and resource group return bool

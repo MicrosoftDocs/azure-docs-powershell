@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a in-memory object for NetworkFunctionUserConfiguration
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/new-azconnectednetworkfunctionuserconfigurationobject) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -70,7 +73,7 @@ The maximum length of the binary array is 65535 bytes.
  customData is passed to the VM to be saved as a file.
 For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) 
 
- For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+ For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](/azure/virtual-machines/linux/using-cloud-init).
 
 ```yaml
 Type: System.String

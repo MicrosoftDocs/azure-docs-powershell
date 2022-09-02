@@ -260,7 +260,7 @@
     "Get-WAPackVMTemplate": "Virtual Machines",
     "Get-WAPackVNet": "Azure",
     "Grant-AzureHDInsightHttpServicesAccess": "HD Insights",
-    "Grant-AzureHDInsightRdpAccess": "HD Insights",
+    "Grant-AzureHdinsightRdpAccess": "HD Insights",
     "Import-AzurePublishSettingsFile": "Azure",
     "Import-AzureRmContext": "Profile",
     "Import-AzureSiteRecoveryVaultSettingsFile": "Recovery",
@@ -540,7 +540,7 @@
     "Resume-AzureSiteRecoveryJob": "Recovery",
     "Resume-WAPackVM": "Virtual Machines",
     "Revoke-AzureHDInsightHttpServicesAccess": "HD Insights",
-    "Revoke-AzureHDInsightRdpAccess": "HD Insights",
+    "Revoke-AzureHdinsightRdpAccess": "HD Insights",
     "Save-AzureRmProfile": "Profile",
     "Save-AzureServiceProjectPackage": "Azure",
     "Save-AzureVhd": "VM VHDs",
@@ -730,7 +730,7 @@
     "Update-AzureWebsiteRepository": "Azure",
     "Use-AzureHDInsightCluster": "HD Insights",
     "Wait-AzureHDInsightJob": "HD Insights",
-    "Save-AzureRmContext": "profile",
-    "Select-AzureRmprofile": "Profile",
-    "Send-feedback": "Profile"
+    "Save-AzureRmContext": "Profile",
+    "Select-AzureRmProfile": "Profile",
+    "Send-Feedback": "Profile"
 }
