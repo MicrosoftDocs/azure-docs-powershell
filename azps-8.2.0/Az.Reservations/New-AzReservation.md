@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Purchase `ReservationOrder` and create resource under the specified URI.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/new-azreservation) for up-to-date information.
+
 ## SYNTAX
 
 ### PurchaseExpanded (Default)

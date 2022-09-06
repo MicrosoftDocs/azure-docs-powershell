@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates auth key for an Azure Data Factory Gateway.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/new-azdatafactorygatewayauthkey) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFactoryName (Default)

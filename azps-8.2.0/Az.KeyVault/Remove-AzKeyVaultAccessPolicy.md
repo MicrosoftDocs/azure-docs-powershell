@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes all permissions for a user or application from a key vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/remove-azkeyvaultaccesspolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### ByUserPrincipalName (Default)

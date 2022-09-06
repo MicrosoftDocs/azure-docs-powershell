@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Regenerate either the primary or secondary key for use with the Maps APIs.
 The old key will stop working immediately.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.maps/new-azmapsaccountkey) for up-to-date information.
+
 ## SYNTAX
 
 ### RegenerateExpanded (Default)

@@ -1,7 +1,7 @@
 ---
 description: Introducing the Az PowerShell module, recommended for interacting with Azure, and the replacement for the AzureRM PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 08/02/2022
+ms.date: 09/06/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
