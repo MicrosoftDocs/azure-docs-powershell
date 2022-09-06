@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Swap two slots within a Web App
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/switch-azwebappslot) for up-to-date information.
+
 ## SYNTAX
 
 ### S1

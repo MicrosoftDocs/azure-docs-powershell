@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets or lists private endpoint connections in a ServiceBus namespace
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/get-azservicebusprivateendpointconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### PrivateEndpointPropertiesSet (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets the orchestration service state for the VMSS.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmssorchestrationservicestate) for up-to-date information.
+
 ## SYNTAX
 
 ### DefaultParameter (Default)

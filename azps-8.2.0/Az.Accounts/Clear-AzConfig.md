@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Clears the values of configs that are set by the user.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/clear-azconfig) for up-to-date information.
+
 ## SYNTAX
 
 ### ClearAll (Default)

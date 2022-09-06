@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets or removes the expire time for a file in an Azure Data Lake Store account.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/set-azdatalakestoreitemexpiry) for up-to-date information.
+
 ## SYNTAX
 
 ### SetAbsoluteNeverExpireExpiry (Default)

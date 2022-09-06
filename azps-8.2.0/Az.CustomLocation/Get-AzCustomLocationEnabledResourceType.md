@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the list of the Enabled Resource Types.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.customlocation/get-azcustomlocationenabledresourcetype) for up-to-date information.
+
 ## SYNTAX
 
 ```
