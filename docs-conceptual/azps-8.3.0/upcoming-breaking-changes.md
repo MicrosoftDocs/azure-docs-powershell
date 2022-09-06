@@ -1,11 +1,11 @@
 ---
-title: Upcoming breaking changes in Azure PowerShell
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
-ms.date: 08/18/2022
+ms.custom: devx-track-azurepowershell
+ms.date: 09/06/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.custom: devx-track-azurepowershell
+title: Upcoming breaking changes in Azure PowerShell
 ---
 
 # Upcoming breaking changes in Azure PowerShell

@@ -1,11 +1,11 @@
 ---
-title: Azure command line tools survey guidance
 description: This article contains guidance about the Azure command line tools survey.
-ms.date: 09/01/2022
+ms.custom: devx-track-azurepowershell
+ms.date: 09/06/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.custom: devx-track-azurepowershell
+title: Azure command line tools survey guidance
 ---
 
 # Azure command line tools survey guidance
