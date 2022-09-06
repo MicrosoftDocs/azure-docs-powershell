@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a local data disk object for a virtual machine or a Vmss VM.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/new-azvmdatadisk) for up-to-date information.
+
 ## SYNTAX
 
 ### NormalDiskParameterSetName (Default)

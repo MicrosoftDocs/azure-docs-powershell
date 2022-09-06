@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns connection monitor with specified name or the list of connection monitors
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-aznetworkwatcherconnectionmonitor) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByName (Default)

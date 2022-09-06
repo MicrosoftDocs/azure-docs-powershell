@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Create or update a workspace for Grafana resource.
 This API is idempotent, so user can either create a new grafana or update an existing grafana.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dashboard/new-azgrafana) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Cancel the long running image build based on the image template
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.imagebuilder/stop-azimagebuildertemplate) for up-to-date information.
+
 ## SYNTAX
 
 ### Cancel (Default)

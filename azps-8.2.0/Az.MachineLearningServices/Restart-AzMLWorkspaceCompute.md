@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Posts a restart action to a compute instance
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/restart-azmlworkspacecompute) for up-to-date information.
+
 ## SYNTAX
 
 ### Restart (Default)

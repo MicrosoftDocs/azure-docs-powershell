@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets the specified virtual network rules in the specified Data Lake Store.
 If no virtual network rule is specified, then lists all virtual network rules for the account.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/get-azdatalakestorevirtualnetworkrule) for up-to-date information.
+
 ## SYNTAX
 
 ```

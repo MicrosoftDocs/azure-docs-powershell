@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Patches a certificate.
 Currently only patching of tags is supported
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.app/update-azcontainerappmanagedenvcert) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
