@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This cmdlet starts a rolling upgrade for all extensions on the given Virtual Machine Scale Set to the latest available version. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/start-azvmssrollingextensionupgrade) for up-to-date information.
+
 ## SYNTAX
 
 ### DefaultParameter (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Delete or remove a registered ASN from the parent peering resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.peering/remove-azpeeringregisteredasn) for up-to-date information.
+
 ## SYNTAX
 
 ### ByName (Default)

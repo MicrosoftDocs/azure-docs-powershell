@@ -12,11 +12,14 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates (full replacement) a data collection rule.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/set-azdatacollectionrule) for up-to-date information.
+
 ## SYNTAX
 
 ### ByName (Default)
 ```
-Set-AzDataCollectionRule 
+Set-AzDataCollectionRule
    -Location <string>
    -ResourceGroupName <string>
    -RuleName <string>
@@ -31,7 +34,7 @@ Set-AzDataCollectionRule
 
 ### ByResourceId
 ```
-Set-AzDataCollectionRule 
+Set-AzDataCollectionRule
    -Location <string>
    -RuleId <string>
    -RuleFile <string>
@@ -45,8 +48,8 @@ Set-AzDataCollectionRule
 
 ### ByInputObject
 ```
-Set-AzDataCollectionRule 
-   -InputObject <PSDataCollectionRuleResource> 
+Set-AzDataCollectionRule
+   -InputObject <PSDataCollectionRuleResource>
    [-DefaultProfile <IAzureContextContainer>]
    [-WhatIf]
    [-Confirm]
@@ -56,7 +59,7 @@ Set-AzDataCollectionRule
 ## DESCRIPTION
 The **Set-AzDataCollectionRule** cmdlet replaces an existing data collection rule.
 
-Data Collection Rules (DCR) define data coming into Azure Monitor and specify where that data should be sent or stored. Here is the complete [DCR overview article](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection-rule-overview).
+Data Collection Rules (DCR) define data coming into Azure Monitor and specify where that data should be sent or stored. Here is the complete [DCR overview article](/azure/azure-monitor/essentials/data-collection-rule-overview).
 
 To use the -RuleFile parameter, construct a json file containing three properties: dataSources, destinations, dataFlows (see Example #1).
 

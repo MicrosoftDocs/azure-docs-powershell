@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the details of an Event Grid system topic, or gets a list of all Event Grid system topics in the current Azure subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventgrid/get-azeventgridsystemtopic) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceGroupNameParameterSet (Default)

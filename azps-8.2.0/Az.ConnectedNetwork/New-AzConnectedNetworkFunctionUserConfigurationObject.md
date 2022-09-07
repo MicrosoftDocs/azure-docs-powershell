@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedNetwork
 online version: https://docs.microsoft.com/powershell/module/az.ConnectedNetwork/new-AzConnectedNetworkFunctionUserConfigurationObject
 schema: 2.0.0
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a in-memory object for NetworkFunctionUserConfiguration
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/new-azconnectednetworkfunctionuserconfigurationobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -62,15 +65,15 @@ The base-64 encoded string is decoded to a binary array that is saved as a file 
 The maximum length of the binary array is 65535 bytes.
 
 
- **Note: Do not pass any secrets or passwords in customData property** 
+ **Note: Do not pass any secrets or passwords in customData property**
 
  This property cannot be updated after the VM is created.
 
 
  customData is passed to the VM to be saved as a file.
-For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) 
+For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/)
 
- For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+ For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](/azure/virtual-machines/linux/using-cloud-init).
 
 ```yaml
 Type: System.String
