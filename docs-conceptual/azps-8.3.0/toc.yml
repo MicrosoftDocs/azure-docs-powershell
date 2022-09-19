@@ -88,7 +88,7 @@
   - name: Create a virtual network
     href: /azure/virtual-network/quick-create-powershell?toc=/powershell/azure/toc.json
   - name: Create a storage account
-    href: azure/storage/common/storage-account-create?toc=/powershell/azure/toc.json&tabs=azure-powershell
+    href: /azure/storage/common/storage-account-create?toc=/powershell/azure/toc.json&tabs=azure-powershell
   - name: Deploy an Azure Kubernetes Service (AKS) cluster
     href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
   - name: Create a private container registry
