@@ -85,7 +85,7 @@
   items:
   - name: Create Virtual Machines
     href: azureps-vm-tutorial.yml
-  - name: Create a virtual network using PowerShell
+  - name: Create a virtual network
     href: /azure/virtual-network/quick-create-powershell?toc=/powershell/azure/toc.json&tabs=azure-powershell
   - name: Deploy an Azure Kubernetes Service (AKS) cluster
     href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
