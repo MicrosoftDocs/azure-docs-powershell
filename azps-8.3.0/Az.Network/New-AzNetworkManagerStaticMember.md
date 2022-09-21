@@ -221,5 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzNetworkManagerStaticMember](./Get-AzNetworkManagerStaticMember.md)
 
 [Remove-AzNetworkManagerStaticMember](./Remove-AzNetworkManagerStaticMember.md)
-
-[Set-AzNetworkManagerStaticMember](./Set-AzNetworkManagerStaticMember.md)
