@@ -89,6 +89,8 @@
     href: /azure/virtual-network/quick-create-powershell?toc=/powershell/azure/toc.json
   - name: Create a storage account
     href: /azure/storage/common/storage-account-create?toc=/powershell/azure/toc.json&tabs=azure-powershell
+  - name: Configure a Log Analytics workspace in Azure Monitor
+    href: /azure/azure-monitor/logs/powershell-workspace-configuration?toc=/powershell/azure/toc.json
   - name: Deploy an Azure Kubernetes Service (AKS) cluster
     href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
   - name: Create a private container registry
