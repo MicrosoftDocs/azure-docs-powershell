@@ -1,7 +1,7 @@
 ---
 title: Upcoming breaking changes in Azure PowerShell
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
-ms.date: 09/13/2022
+ms.date: 10/03/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -9,6 +9,15 @@ ms.custom: devx-track-azurepowershell
 ---
 
 # Upcoming breaking changes in Azure PowerShell
+
+The breaking changes listed in this article are planned for the next major release of the Az
+PowerShell module unless otherwise noted. Per
+[our release cadence](/powershell/azure/azps-versioning-release-cadence#release-cadence), breaking
+changes in Azure PowerShell occur twice a year with major versions of the Az PowerShell module. As
+referenced in our
+[Azure PowerShell Support Lifecycle](/powershell/azure/azureps-support-lifecycle), we support the
+last two minor versions of the current major version and last minor version of the previous major
+version of the Az PowerShell module.
 
 ## Az.Accounts
 
