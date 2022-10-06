@@ -137,11 +137,13 @@ Below list talks about the changes to existing cmdlets in detailed manner:
 - Parameter `-VirtualNetworkRule` is changing type from `Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetVirtualNetworkRulesAttributes[]` to `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.INwRuleSetVirtualNetworkRules[]`. Please use `New-AzEventHubVirtualNetworkRuleConfig` cmdlet to construct an in-memory object which can then be fed as input to `-VirtualNetworkRule`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided to `-InputObject` parameter.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
+- Parameter 'Name' has been renamed to 'NamespaceName'.
 
 ### Get-AzEventHubNetworkRuleSet
 
 - Output type has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSNetworkRuleSetAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.INetworkRuleSet`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ## Authorization Rules and SAS Keys
 
@@ -149,6 +151,8 @@ Below list talks about the changes to existing cmdlets in detailed manner:
 
 - Output type has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSSharedAccessAuthorizationRuleAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IAuthorizationRule`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ### Set-AzEventHubAuthorizationRule
 
@@ -156,22 +160,35 @@ Below list talks about the changes to existing cmdlets in detailed manner:
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IAuthorizationRule`.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
 - `-InputObject` parameter would no longer support alias `-AuthRuleObj`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ### Get-AzEventHubAuthorizationRule
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSSharedAccessAuthorizationRuleAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IAuthorizationRule`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
+
+### Remove-AzEventHubAuthorizationRule
+
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been changed to 'EventHubName'.
 
 ### New-AzEventHubKey
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSListKeysAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IAccessKeys`.
 - Parameter `-ResourceGroupName` would no longer support alias `-ResourceGroup`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ### Get-AzEventHubKey
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSListKeysAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IAccessKeys`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ## Consumer Groups
 
@@ -179,24 +196,32 @@ Below list talks about the changes to existing cmdlets in detailed manner:
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSConsumerGroupAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IConsumerGroup`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ### Set-AzEventHubConsumerGroup
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSConsumerGroupAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IConsumerGroup`.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ### Get-AzEventHubConsumerGroup
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSConsumerGroupAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IConsumerGroup`.
 - Parameter `-MaxCount` has been removed. Use `-Skip` and `-Top`  pagination use case.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ### Remove-AzEventHubConsumerGroup
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSConsumerGroupAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IConsumerGroup`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'. 
+- Parameter 'EventHub' has been renamed to 'EventHubName'.
 
 ## Clusters
 
@@ -238,6 +263,7 @@ PSEventHubsAvailableCluster[]` to
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`.
 - `-InputObject` would be removed as it is not supported for Creation operation and is available for use after resource is created.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Set-AzEventHub
 
@@ -245,12 +271,14 @@ PSEventHubsAvailableCluster[]` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`. CaptureDescription class data members would be flattened and would directly be accessible as data members within Microsoft.`Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`. Please refer to example on top to know more.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
 - `-InputObject` parameter would no longer support alias `-EventHubObj`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Remove-AzEventHub
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Get-AzEventHub
 
@@ -258,6 +286,7 @@ PSEventHubsAvailableCluster[]` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`.
 - Parameter `-MaxCount` has been removed. Use `-Skip` and `-Top`  for pagination use case.
 - Parameter `-NamespaceObject` is being replaced by `-InputObject` of type `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IEventhub`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ## Private Endpoints
 
@@ -299,30 +328,35 @@ PSEventHubsAvailableCluster[]` to
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSNamespaceAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IArmDisasterRecovery`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### New-AzEventHubGeoDRConfiguration
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IArmDisasterRecovery`.
 -  `-InputObject` and `-ResourceId` are not supported during resource creation, hence are being removed.
+-  Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Remove-AzEventHubGeoDRConfiguration
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IArmDisasterRecovery`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Set-AzEventHubGeoDRConfigurationBreakPair
 
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IArmDisasterRecovery`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Set-AzEventHubGeoDRConfigurationFailOver
 
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.IArmDisasterRecovery`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ## Schema Groups
 
@@ -330,17 +364,20 @@ PSEventHubsAvailableCluster[]` to
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubsSchemaRegistryAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.ISchemaGroup`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Get-AzEventHubSchemaGroup
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubsSchemaRegistryAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.ISchemaGroup`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ### Remove-AzEventHubSchemaGroup
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.EventHub.Models.PSEventHubsSchemaRegistryAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.Api202201Preview.ISchemaGroup`.
+- Parameter 'Namespace' has been renamed to 'NamespaceName'.
 
 ## CheckNameAvailability
 
