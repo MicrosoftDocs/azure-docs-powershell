@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes an Azure Database Migration Service task from Azure.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/remove-azdatamigrationtask) for up-to-date information.
+
 ## SYNTAX
 
 ### ComponentNameParameterSet (Default)

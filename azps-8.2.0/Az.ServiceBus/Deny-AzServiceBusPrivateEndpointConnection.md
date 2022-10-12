@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Rejects a private endpoint connection for an Service Bus namespace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/deny-azservicebusprivateendpointconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### PrivateEndpointPropertiesSet (Default)

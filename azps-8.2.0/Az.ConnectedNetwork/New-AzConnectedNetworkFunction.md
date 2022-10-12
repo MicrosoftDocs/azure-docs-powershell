@@ -14,6 +14,9 @@ Creates or updates a network function resource.
 This operation can take up to 6 hours to complete.
 This is expected service behavior.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/new-azconnectednetworkfunction) for up-to-date information.
+
 ## SYNTAX
 
 ```

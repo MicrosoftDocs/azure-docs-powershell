@@ -1,70 +1,12 @@
 {
-  "build_entry_point": "docs",
-  "docsets_to_publish": [
-    {
-      "docset_name": "azureps",
-      "build_source_folder": ".",
-      "build_output_subfolder": "azureps",
-      "locale": "en-us",
-      "monikers": [],
-      "xref_query_tags": [
-        "/dotnet"
-      ],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content",
-        "Tutorial": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ],
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      }
-    }
-  ],
-  "notification_subscribers": [],
-  "sync_notification_subscribers": [],
-  "branches_to_filter": [],
-  "git_repository_branch_open_to_public_contributors": "main",
-  "skip_source_output_uploading": false,
-  "need_preview_pull_request": true,
-  "enable_incremental_build": false,
-  "contribution_branch_mappings": {},
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "main",
-      "branch_mapping": {}
-    },
-    {
-      "path_to_root": "dotnet-xref",
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
-      "branch": "live",
-      "branch_mapping": {}
-    }
-  ],
   "branch_target_mapping": {
     "live": [
       "Publish"
     ]
   },
-  "error_log_codes": [
-    "DuplicateOutputFiles"
-  ],
-  "need_generate_pdf_url_template": false,
-  "targets": {},
-  "need_generate_intellisense": false,
+  "branches_to_filter": [],
+  "build_entry_point": "docs",
+  "contribution_branch_mappings": {},
   "dependent_packages": [
     {
       "id": "Microsoft.DocAsCode.MAML2Yaml",
@@ -74,8 +16,70 @@
       "version": "latest"
     }
   ],
+  "dependent_repositories": [
+    {
+      "branch": "main",
+      "branch_mapping": {},
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft"
+    },
+    {
+      "branch": "live",
+      "branch_mapping": {},
+      "path_to_root": "dotnet-xref",
+      "url": "https://github.com/MicrosoftDocs/dotnet-xref"
+    }
+  ],
   "dest": "_site",
   "docs_build_engine": {
     "name": "docfx_v3"
-  }
+  },
+  "docsets_to_publish": [
+    {
+      "build_entry_point": "docs",
+      "build_output_subfolder": "azureps",
+      "build_source_folder": ".",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
+        ]
+      },
+      "docset_name": "azureps",
+      "locale": "en-us",
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ],
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "template_folder": "_themes",
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "PowershellCmdlet": "Content",
+        "PowershellModule": "Content",
+        "RestApi": "Content",
+        "Tutorial": "Content"
+      },
+      "version": 0,
+      "xref_query_tags": [
+        "/dotnet"
+      ]
+    }
+  ],
+  "enable_incremental_build": false,
+  "error_log_codes": [
+    "DuplicateOutputFiles"
+  ],
+  "git_repository_branch_open_to_public_contributors": "main",
+  "need_generate_intellisense": false,
+  "need_generate_pdf_url_template": false,
+  "need_preview_pull_request": true,
+  "notification_subscribers": [],
+  "redirection_files": [
+    ".openpublishing.redirection.json",
+    ".openpublishing.redirection.smps.json"
+  ],
+  "skip_source_output_uploading": false,
+  "sync_notification_subscribers": [],
+  "targets": {}
 }

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates an express route connection created between an express route gateway and on-premise express route circuit peering.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azexpressrouteconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByExpressRouteConnectionName (Default)

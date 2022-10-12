@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets detail status about a link connection in workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapselinkconnectiondetailedstatus) for up-to-date information.
+
 ## SYNTAX
 
 ### GetByName (Default)

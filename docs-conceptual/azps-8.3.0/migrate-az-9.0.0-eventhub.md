@@ -1,11 +1,11 @@
 ---
-title: Migration Guide for latest Az.EventHub PowerShell Module
 description: This migration guide contains a list of breaking changes made to the Az.EventHub module in the Azure PowerShell 9.0.0 release.
-ms.date: 08/25/2022
+ms.custom: devx-track-azurepowershell
+ms.date: 09/06/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.custom: devx-track-azurepowershell
+title: Migration Guide for latest Az.EventHub PowerShell Module
 ---
 
 # Migration Guide for latest Az.EventHub PowerShell Module
