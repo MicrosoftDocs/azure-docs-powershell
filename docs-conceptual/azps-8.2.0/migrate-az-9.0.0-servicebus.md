@@ -97,12 +97,14 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 - Parameter `-VirtualNetworkRule` is changing type from `Microsoft.Azure.Commands.ServiceBus.Models.PSNWRuleSetVirtualNetworkRulesAttributes[]` to `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.INwRuleSetVirtualNetworkRules[]`.Please use `New-AzServiceBusVirtualNetworkRuleConfig` cmdlet to construct an in-memory object which can then be fed as input to `-VirtualNetworkRule`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided to `-InputObject` parameter.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
+- Parameter `Name` has been replaced by `NamespaceName`.
 
 ### Get-AzServiceBusNetworkRuleSet
 
 - Input type of parameter `-InputObject` and Output type of the cmdlet have been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSNetworkRuleSetAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.INetworkRuleSet`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided to `-InputObject` parameter.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ## Authorization Rules and SAS Keys
 
@@ -110,6 +112,9 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSSharedAccessAuthorizationRuleAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbAuthorizationRule`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
+- Parameter `Queue` has been renamed to `QueueName`. 
+- Parameter `Topic` has been renamed to `TopicName`.
 
 ### Set-AzServiceBusAuthorizationRule
 
@@ -117,21 +122,41 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbAuthorizationRule`.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
 - `-InputObject` parameter would no longer support alias `-AuthRuleObj`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
+- Parameter `Queue` has been renamed to `QueueName`. 
+- Parameter `Topic` has been renamed to `TopicName`.
 
 ### Get-AzServiceBusAuthorizationRule
 
 - Input type of parameter `-InputObject` and Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSSharedAccessAuthorizationRuleAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbAuthorizationRule`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
+- Parameter `Queue` has been renamed to `QueueName`. 
+- Parameter `Topic` has been renamed to `TopicName`.
+
+### Remove-AzServiceBusAuthorizationRule
+
+- Parameter `Namespace` has been renamed to `NamespaceName`.
+- Parameter `Queue` has been renamed to `QueueName`. 
+- Parameter `Topic` has been renamed to `TopicName`.
+
+
 
 ### New-AzServiceBusKey
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSListKeysAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IAccessKeys`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
+- Parameter `Queue` has been renamed to `QueueName`. 
+- Parameter `Topic` has been renamed to `TopicName`
 
 ### Get-AzServiceBusKey
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSListKeysAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IAccessKeys`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
+- Parameter `Queue` has been renamed to `QueueName`. 
+- Parameter `Topic` has been renamed to `TopicName`
 
 ## Queue Entity
 
@@ -140,8 +165,9 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSQueueAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbQueue`.
 - `-SizeInBytes` and `-MessageCount` are readonly parameters and are getting removed.
-- Parameter `-EnableBatchedOperations` is renamed to `-EnableBatchedOperation`.
 - Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan) to know more about New-TimeSpan.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### Set-AzServiceBusQueue
 
@@ -149,18 +175,24 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbQueue`.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
 - `-InputObject` parameter would no longer support alias `-QueueObj`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### Remove-AzServiceBusQueue
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSQueueAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbQueue`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### Get-AzServiceBusQueue
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSQueueAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbQueue`.
 - Parameter `-MaxCount` has been removed. Use `-Skip` and `-Top` for pagination use cases.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ## Topic Entity
 
@@ -170,6 +202,7 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbTopic`.
 - Parameter `-MaxCount` has been removed. Use `-Skip` and `-Top` for pagination use cases.
 - Parameter `-ResourceGroupName` would no longer support alias `-ResourceGroup`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ### Set-AzServiceBusTopic
 
@@ -178,15 +211,16 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
 - `-InputObject` parameter would no longer support alias `-TopicObj`.
 - Parameter `-ResourceGroupName` would no longer support alias `-ResourceGroup`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ### New-AzServiceBusTopic
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSTopicAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbTopic`.
 -  `-SizeInBytes` is readonly parameter and is getting removed.
-- Parameter `-EnableBatchedOperations` would be renamed to `-EnableBatchedOperation`.
 - Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan) to know more about New-TimeSpan.
 - Parameter `-ResourceGroupName` would no longer support alias `-ResourceGroup`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ### Remove-AzServiceBusTopic
 
@@ -194,6 +228,7 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbTopic`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
 - Parameter `-ResourceGroupName` would no longer support alias `-ResourceGroup`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ## Rule Entity
 
@@ -202,24 +237,40 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSRulesAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IRule`.
 - Parameter `-MaxCount` has been removed. Use `-Skip` and `-Top` for pagination use cases.
+- Parameter `Namespace` has been renamed to `NamespaceName`. 
+- Parameter `Topic` has been renamed to `TopicName`. 
+- Parameter `Subscription` has been renamed to `SubscriptionName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### Set-AzServiceBusRule
 
 - Input type of parameter `-InputObject` and Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSRulesAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IRule`.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
+- Parameter `Namespace` has been renamed to `NamespaceName`. 
+- Parameter `Topic` has been renamed to `TopicName`. 
+- Parameter `Subscription` has been renamed to `SubscriptionName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### New-AzServiceBusRule
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSRulesAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IRule`.
 - Parameter `-RequiresPreprocessing` is being renamed to `-ActionRequiresPreprocessing`.
+- Parameter `Namespace` has been renamed to `NamespaceName`. 
+- Parameter `Topic` has been renamed to `TopicName`. 
+- Parameter `Subscription` has been renamed to `SubscriptionName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### Remove-AzServiceBusRule
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSRulesAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IRule`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter `Namespace` has been renamed to `NamespaceName`. 
+- Parameter `Topic` has been renamed to `TopicName`. 
+- Parameter `Subscription` has been renamed to `SubscriptionName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ## Subscription Entity
 
@@ -228,12 +279,18 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSSubscriptionAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbSubscription`.
 - Parameter `-MaxCount` has been removed. Use `-Skip` and `-Top` for pagination use cases.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `Topic` has been removed to `TopicName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### New-AzServiceBusSubscription
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSSubscriptionAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbSubscription`.
 - Input type of parameters `-DefaultMessageTimeToLive`, `-AutoDeleteOnIdle`, `-LockDuration`, `-DuplicateDetectionHistoryTimeWindow` has been changed from System.String to System.Timespan. Hence, ISO 8601 format for timespan can NO longer be fed as input to these parameters. Please use New-TimeSpan cmdlet object to construct Timespan variables. Please refer [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan) to know more about New-TimeSpan.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `Topic` has been removed to `TopicName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### Set-AzServiceBusSubscription
 
@@ -241,12 +298,18 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbSubscription`.
 - `-InputObject` parameter set would have a change in behaviour. Refer the [section](#behavior-of--inputobject) to know more.
 - `-InputObject` parameter would no longer support alias `-SubscriptionObj`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `Topic` has been removed to `TopicName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ### Remove-AzServiceBusSubscription
 
 - Input type of parameter `-InputObject` and Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSSubscriptionAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ISbSubscription`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter `Namespace` has been renamed to `NamespaceName`.  
+- Parameter `Topic` has been removed to `TopicName`.  
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ## Private Endpoints
 
@@ -289,30 +352,37 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IArmDisasterRecovery`.
 - `-Name` parameter would be removed from `-InputObject` parameter set. Henceforth,`-InputObject` must  contain the ResourceId  of  Disaster Recovery Configuration alias.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ### New-AzServiceBusGeoDRConfiguration
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IArmDisasterRecovery`.
 -  `-InputObject` and `-ResourceId` are not supported during resource creation, hence are being removed.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ### Remove-AzServiceBusGeoDRConfiguration
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IArmDisasterRecovery`.
 - `-ResourceId` parameter would be deprecated. Henceforth, resource id can be provided as input to `-InputObject` parameter.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ### Set-AzServiceBusGeoDRConfigurationBreakPair
 
 - Parameter `-ResourceId` is being removed. Henceforth, resource id can be provided as input to `-InputObject`.
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IArmDisasterRecovery`.
+- Parameter `Namespace` has been renamed to `NamespaceName`. 
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
+  
 
 ### Set-AzServiceBusGeoDRConfigurationFailOver
 
 - Parameter `-ResourceId` is being removed. Henceforth, resource id can be provided as input to `-InputObject`.
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IArmDisasterRecovery`.
+- Parameter `Namespace` has been renamed to `NamespaceName`.
 
 ## Migration Configurations
 
@@ -321,6 +391,7 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IMigrationConfigProperties`.
 - Parameter `-ResourceId` is being removed. Henceforth, resource id can be provided as input to `-InputObject`.
+- Parameter `Name` has been replaced by `NamespaceName`.
 
 ### Get-AzServiceBusMigration
 
@@ -328,22 +399,27 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IMigrationConfigProperties`.
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusMigrationConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IMigrationConfigProperties`.
+- Parameter `Name` has been replaced by `NamespaceName`.
 
 ### Start-AzServiceBusMigration
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusMigrationConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IMigrationConfigProperties`.
+- Parameter `Name` has been replaced by `NamespaceName`.
 
 ### Remove-AzServiceBusMigration
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IMigrationConfigProperties`.
+- Parameter `Name` has been replaced by `NamespaceName`.
 
 ### Stop-AzServiceBusMigration
 
 - Input type of parameter `-InputObject` has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSServiceBusDRConfigurationAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.IMigrationConfigProperties`.
 - Parameter `-ResourceId` is being removed. Henceforth, resource id can be provided as input to `-InputObject`.
+- Parameter `Name` has been renamed to `NamespaceName`
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
 
 ## CheckNameAvailability
 
@@ -351,3 +427,5 @@ Use Set-AzServiceBusNetworkRuleSet to add/remove multiple IP/ virtual network ru
 
 - Output type of the cmdlet has been changed from `Microsoft.Azure.Commands.ServiceBus.Models.PSCheckNameAvailabilityResultAttributes` to
   `Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.Api202201Preview.ICheckNameAvailabilityResult`.
+- Parameter `Namespace` has been renamed to `NamespaceName`. 
+- Parameter `ResourceGroupName` would no longer support alias `ResourceGroup`.
