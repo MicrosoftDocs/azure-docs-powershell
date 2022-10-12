@@ -50,7 +50,7 @@ Update metadata of DigitalTwinsInstance.
 
 ### Example 1: UpdateExpanded (Default)
 ```powershell
-Update-AzDigitalTwinsInstance -ResourcegroupName youritemp -ResourceName youriDigitalTwinsTest -Tag @{“dtt”="001"}
+Update-AzDigitalTwinsInstance -ResourcegroupName youritemp -ResourceName youriDigitalTwinsTest -Tag @{"dtt"="001"}
 ```
 
 ```output
