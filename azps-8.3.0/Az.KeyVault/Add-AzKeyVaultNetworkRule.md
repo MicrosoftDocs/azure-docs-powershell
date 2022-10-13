@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds a rule meant to restrict access to a key vault based on the client's internet address.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/add-azkeyvaultnetworkrule) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVaultName (Default)

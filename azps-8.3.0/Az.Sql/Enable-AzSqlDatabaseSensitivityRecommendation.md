@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enables sensitivity recommendations on columns (recommendations are enabled by default on all columns) in the database.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/enable-azsqldatabasesensitivityrecommendation) for up-to-date information.
+
 ## SYNTAX
 
 ### InputObjectParameterSet (Default)
