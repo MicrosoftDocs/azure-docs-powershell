@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Recovers a deleted key in a key vault into an active state.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/undo-azkeyvaultkeyremoval) for up-to-date information.
+
 ## SYNTAX
 
 ### Default (Default)

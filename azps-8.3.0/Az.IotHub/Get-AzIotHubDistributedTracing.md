@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the distributed tracing settings for a device.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/get-aziothubdistributedtracing) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

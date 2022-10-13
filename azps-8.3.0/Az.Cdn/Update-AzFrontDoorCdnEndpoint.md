@@ -16,6 +16,9 @@ To update origins, use the Update Origin operation.
 To update origin groups, use the Update Origin group operation.
 To update domains, use the Update Custom Domain operation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/update-azfrontdoorcdnendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
