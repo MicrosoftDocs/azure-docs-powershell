@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns one or more `Reservations` in exchange for one or more `Reservation` purchases.\n
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/invoke-azreservationexchange) for up-to-date information.
+
 ## SYNTAX
 
 ### PostExpanded (Default)

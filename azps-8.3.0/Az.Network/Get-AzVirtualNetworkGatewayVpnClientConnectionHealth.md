@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS 
 Get the list of vpn client connection health of an Azure virtual network gateway for per vpn client connection
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualnetworkgatewayvpnclientconnectionhealth) for up-to-date information.
+
 ## SYNTAX
 
 ```

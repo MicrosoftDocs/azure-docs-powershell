@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Ip addresses assoicated to the firewall on virtual hub
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azfirewallhubipaddress) for up-to-date information.
+
 ## SYNTAX
 
 ```

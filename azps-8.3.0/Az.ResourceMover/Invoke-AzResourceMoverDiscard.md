@@ -14,6 +14,9 @@ Discards the set of resources included in the request body.
 The discard operation is triggered on the moveResources in the moveState 'CommitPending' or 'DiscardFailed', on a successful completion the moveResource moveState do a transition to MovePending.
 To aid the user to prerequisite the operation the client can call operation with validateOnly property set to true.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcemover/invoke-azresourcemoverdiscard) for up-to-date information.
+
 ## SYNTAX
 
 ```
