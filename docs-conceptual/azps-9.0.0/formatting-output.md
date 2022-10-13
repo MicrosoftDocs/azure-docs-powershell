@@ -1,7 +1,7 @@
 ---
 description: How to format cmdlet output for Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 09/06/2022
+ms.date: 10/12/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
