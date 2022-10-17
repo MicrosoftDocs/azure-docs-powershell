@@ -28,8 +28,6 @@
   items:
   - name: Release notes
     href: release-notes-azureps.md
-  - name: Az 9.0.0 Migration Guide
-    href: migrate-az-9.0.0.md
   - name: Upcoming breaking changes
     href: upcoming-breaking-changes.md
 - name: How-to guides
@@ -107,6 +105,8 @@
     href: azps-msgraph-migration-changes.md
   - name: Migrate from previous versions of Az
     items:
+    - name: Az 9.0.0 Migration Guide
+      href: migrate-az-9.0.0.md
     - name: Az.EventHub Migration Guide
       href: migrate-az-9.0.0-eventhub.md
     - name: Az.ServiceBus Migration Guide
