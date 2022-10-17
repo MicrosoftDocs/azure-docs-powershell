@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 09/06/2022
+ms.date: 10/17/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -96,7 +96,10 @@ Get-AzResource -ResourceId $resourceId
 
 ## Permission issues with AzAD cmdlets
 
-[Microsoft Graph permissions reference](/graph/permissions-reference)
+The Az PowerShell module uses the Microsoft Graph API. Administering or managing resources in Azure
+with the Az PowerShell module requires the same permissions as performing the identical task from
+Azure portal or any other Azure command-line tool. For specific questions about permissions see the
+[Microsoft Graph permissions reference](/graph/permissions-reference).
 
 ## Microsoft Graph query parameters
 
