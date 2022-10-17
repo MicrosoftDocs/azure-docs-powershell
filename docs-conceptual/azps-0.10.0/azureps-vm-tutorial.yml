@@ -7,10 +7,7 @@ metadata:
     level: Beginner
     displayType: two-column
     interactive: azurepowershell
-    ms.date: 12/13/2018
-    ms.author: mirobb
-    author: mikefrobbins
-    manager: barbkess
+    ms.date: 10/17/2022
     ms.devlang: powershell
     ms.custom: devx-track-azurepowershell
     ms.service: azure-powershell

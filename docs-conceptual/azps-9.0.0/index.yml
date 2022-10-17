@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 10/12/2022
+  ms.date: 10/17/2022
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -49,8 +49,8 @@ landingContent:
         links:
           - text: Release notes
             url: release-notes-azureps.md
-          - text: Breaking changes in Az 8.0.0
-            url: migrate-az-8.0.0.md
+          - text: Az 9.0.0 migration guide
+            url: migrate-az-9.0.0.md
           - text: Upcoming breaking changes
             url: upcoming-breaking-changes.md
   - title: Azure PowerShell Reference

@@ -29,6 +29,8 @@ principal with Azure PowerShell.
 > [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid
 > the need to use credentials.
 
+[!INCLUDE [azps-prerequisites-h2.md](../../includes/azps-prerequisites-h2.md)]
+
 ## Create a service principal
 
 Create a service principal with the
