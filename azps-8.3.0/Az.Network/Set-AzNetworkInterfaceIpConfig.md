@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 13EF1028-43DE-424D-8185-EC45B5CEF2C1
-online version: https://docs.microsoft.com/powershell/module/az.network/set-aznetworkinterfaceipconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/set-aznetworkinterfaceipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkInterfaceIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkInterfaceIpConfig.md
@@ -69,7 +69,7 @@ The first two commands get a virtual network called myvnet and a subnet called m
     configuration that needs to be updated. The third command sets the private IP address of the primary IP
     configuration ipconfig1 to 10.0.0.11. Finally, the last command updates the network interface ensuring the changes
     have been made successfully.
-    
+
 
 ### 2: Associating an IP configuration with an application security group
 ```powershell

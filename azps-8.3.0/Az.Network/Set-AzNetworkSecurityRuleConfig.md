@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 7EFFFF43-501E-4955-A4EE-2C09B8863B30
-online version: https://docs.microsoft.com/powershell/module/az.network/set-aznetworksecurityruleconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/set-aznetworksecurityruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md
@@ -85,7 +85,7 @@ $nsg | Set-AzNetworkSecurityGroup | Get-AzNetworkSecurityRuleConfig -Name "RuleN
 ## PARAMETERS
 
 ### -Access
-Specifies whether network traffic is allowed or denied. 
+Specifies whether network traffic is allowed or denied.
 The acceptable values for this parameter are: Allow and Deny.
 
 ```yaml
@@ -135,8 +135,8 @@ Accept wildcard characters: False
 ### -DestinationAddressPrefix
 Specifies a destination address prefix.
 The acceptable values for this parameter are:
-- A Classless Interdomain Routing (CIDR) address 
-- A destination IP address range 
+- A Classless Interdomain Routing (CIDR) address
+- A destination IP address range
 - A wildcard character (*) to match any IP address.
 You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ### -DestinationPortRange
 Specifies a destination port or range.
 The acceptable values for this parameter are:
-- An integer 
+- An integer
 - A range of integers between 0 and 65535
 - A wildcard character (*) to match any port
 

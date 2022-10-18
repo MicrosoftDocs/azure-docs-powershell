@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Logz
-online version: https://docs.microsoft.com/powershell/module/az.logz/remove-azlogzsubaccounttagrule
+online version: https://learn.microsoft.com/powershell/module/az.logz/remove-azlogzsubaccounttagrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/Remove-AzLogzSubAccountTagRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/Remove-AzLogzSubAccountTagRule.md
@@ -209,11 +209,11 @@ To create the parameters described below, construct a hash table containing the 
 
 
 INPUTOBJECT `<ILogzIdentity>`: Identity Parameter
-  - `[ConfigurationName <String>]`: 
+  - `[ConfigurationName <String>]`:
   - `[Id <String>]`: Resource identity path
   - `[MonitorName <String>]`: Monitor resource name
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
-  - `[RuleSetName <String>]`: 
+  - `[RuleSetName <String>]`:
   - `[SubAccountName <String>]`: Sub Account resource name
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 

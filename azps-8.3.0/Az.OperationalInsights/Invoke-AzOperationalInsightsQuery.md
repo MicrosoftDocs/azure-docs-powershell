@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version: https://docs.microsoft.com/powershell/module/az.operationalinsights/invoke-azoperationalinsightsquery
+online version: https://learn.microsoft.com/powershell/module/az.operationalinsights/invoke-azoperationalinsightsquery
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Invoke-AzOperationalInsightsQuery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Invoke-AzOperationalInsightsQuery.md
@@ -35,8 +35,8 @@ The **Invoke-AzOperationalInsightsQuery** cmdlet returns the search results base
 You can access the status of the search in the Metadata property of the returned object.
 If the status is Pending, then the search has not completed, and the results will be from the archive.
 You can retrieve the results of the search from the Value property of the returned object.
-Please check detail of general query limits here: 
-https://docs.microsoft.com/azure/azure-monitor/service-limits#log-queries-and-language.
+Please check detail of general query limits here:
+https://learn.microsoft.com/azure/azure-monitor/service-limits#log-queries-and-language.
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CostManagement
-online version: https://docs.microsoft.com/powershell/module/az.CostManagement/new-AzCostManagementQueryFilterObject
+online version: https://learn.microsoft.com/powershell/module/az.CostManagement/new-AzCostManagementQueryFilterObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/help/New-AzCostManagementQueryFilterObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/help/New-AzCostManagementQueryFilterObject.md

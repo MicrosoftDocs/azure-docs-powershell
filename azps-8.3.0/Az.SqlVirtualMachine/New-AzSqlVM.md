@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.dll-Help.xml
 Module Name: Az.SqlVirtualMachine
-online version: https://docs.microsoft.com/powershell/module/az.sqlvirtualmachine/new-azsqlvm
+online version: https://learn.microsoft.com/powershell/module/az.sqlvirtualmachine/new-azsqlvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/New-AzSqlVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/New-AzSqlVM.md
@@ -46,7 +46,7 @@ Name ResourceGroupName  LicenseType Sku       Offer          SqlManagementType
 vm   ResourceGroup01	PAYG        Developer SQL2017-WS2016 Full
 ```
 
-Creates a new Azure SQL virtual machine with name vm in the resource group ResourceGroup01 
+Creates a new Azure SQL virtual machine with name vm in the resource group ResourceGroup01
 
 ## PARAMETERS
 

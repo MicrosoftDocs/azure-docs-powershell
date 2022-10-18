@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 5224BDF5-D492-4160-893E-4BB5F76C22F3
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactorypipeline
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactorypipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryPipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryPipeline.md
@@ -72,7 +72,7 @@ For more information, type `Get-Help Format-List`.
 Activities  : {WikiHiveActivity, BlobToSqlCopyActivity}
 Description : DP Wikipedia Sample Pipelines
 End         : 6/6/2014 8:00:00 AM
-IsPaused    : 
+IsPaused    :
 RuntimeInfo : Microsoft.DataFactories.PipelineRuntimeInfo
 Start       : 6/5/2014 8:00:00 PM
 ```
@@ -86,7 +86,7 @@ This command gets information for the pipeline named DPWikisample in the data fa
 
 ```output
 Transformation    : Microsoft.DataFactories.HDInsightActivityProperties
-Description       : 
+Description       :
 Inputs            : {DAWikipediaClickEvents}
 LinkedServiceName : HDILinkedService
 Name              : WikiHiveActivity
@@ -94,7 +94,7 @@ Outputs           : {DACuratedWikiData}
 Policy            : Microsoft.DataFactories.ActivityPolicy
 
 Transformation    : Microsoft.DataFactories.CopyActivityProperties
-Description       : 
+Description       :
 Inputs            : {DACuratedWikiData}
 LinkedServiceName : HDILinkedService
 Name              : BlobToSqlCopyActivity
@@ -123,8 +123,8 @@ This command gets information for the pipeline named DPWikisample in the data fa
 ```
 
 ```output
-EndTime   : 
-Length    : 
+EndTime   :
+Length    :
 Name      : DAWikipediaClickEvents
 StartTime :
 ```

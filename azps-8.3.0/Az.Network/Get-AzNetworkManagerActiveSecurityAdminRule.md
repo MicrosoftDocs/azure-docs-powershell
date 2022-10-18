@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkmanageractivesecurityadminrule
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanageractivesecurityadminrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerActiveSecurityAdminRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerActiveSecurityAdminRule.md
@@ -30,7 +30,7 @@ The **Get-AzNetworkManagerActiveSecurityAdminRule** cmdlet lists NetworkManager 
 
 ### Example 1
 ```powershell
-$regions = @("centraluseuap")  
+$regions = @("centraluseuap")
 Get-AzNetworkManagerActiveSecurityAdminRule -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG" -Region $regions -SkipToken "FakeSkipToken"
 ```
 ```output
@@ -128,7 +128,7 @@ Accept wildcard characters: True
 List of regions.
 
 ```yaml
-Type: System.String[]	
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -176,7 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-### System.String[]	
+### System.String[]
 
 ## OUTPUTS
 

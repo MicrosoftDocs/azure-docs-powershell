@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: B5C909D7-6087-463A-83BF-99DD196B9862
-online version: https://docs.microsoft.com/powershell/module/az.sql/stop-azsqldatabaseactivity
+online version: https://learn.microsoft.com/powershell/module/az.sql/stop-azsqldatabaseactivity
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Stop-AzSqlDatabaseActivity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Stop-AzSqlDatabaseActivity.md
@@ -45,7 +45,7 @@ ErrorMessage    :
 ErrorSeverity   :
 StartTime       : 10/15/2017 02:49:42 PM
 EndTime         : 10/15/2017 02:49:43 PM
-PercentComplete : 
+PercentComplete :
 Properties      : Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseActivityModel+DatabaseState
 ```
 

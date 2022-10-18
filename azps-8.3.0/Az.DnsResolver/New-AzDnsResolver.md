@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DnsResolver
-online version: https://docs.microsoft.com/powershell/module/az.dnsresolver/new-azdnsresolver
+online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/new-azdnsresolver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/New-AzDnsResolver.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/New-AzDnsResolver.md
@@ -28,7 +28,7 @@ Creates or updates a DNS resolver.
 
 ## EXAMPLES
 
-### Example 1: Create a DNS resolver 
+### Example 1: Create a DNS resolver
 ```powershell
 New-AzDnsResolver -Name sampleResolver -ResourceGroupName powershell-test-rg -VirtualNetworkId /subscriptions/0e5a46b1-de0b-4ec3-a5d7-dda908b4e076/resourceGroups/powershell-test-08b4e076/resourceGroups/powershell-test-rg/providers/Microsoft.Network/virtualNetworks/psvirtualnetworkname16y71mjc -Location westus2
 ```
@@ -41,7 +41,7 @@ westus2  sampleResolver Microsoft.Network/dnsResolvers "000027d5-0000-0800-0000-
 
 This cmdlet creates a DNS resolver.
 
-### Example 2: Create a DNS resolver with tag 
+### Example 2: Create a DNS resolver with tag
 ```powershell
 New-AzDnsResolver -Name sampleResolver -ResourceGroupName powershell-test-rg -VirtualNetworkId /subscriptions/0e5a46b1-de0b-4ec3-a5d7-dda908b4e076/resourceGroups/powershell-test-rg/providers/Microsoft.Network/virtualNetworks/psvirtualnetworkname16y71mjc -Location westus2 -Tag @{"key0" = "value0"}
 ```

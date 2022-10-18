@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
 Module Name: Az.FrontDoor
-online version: https://docs.microsoft.com/powershell/module/az.frontdoor/disable-azfrontdoorcustomdomainhttps
+online version: https://learn.microsoft.com/powershell/module/az.frontdoor/disable-azfrontdoorcustomdomainhttps
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/Disable-AzFrontDoorCustomDomainHttps.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/Disable-AzFrontDoorCustomDomainHttps.md
@@ -71,7 +71,7 @@ Disable HTTPS for a custom domain "frontendpointname1-custom-xyz" with FrontDoor
 
 ### Example 2: Disable HTTPS for a custom domain with PSFrontendEndpoint object.
 ```powershell
-Get-AzFrontDoorFrontendEndpoint -ResourceGroupName "resourcegroup1" -FrontDoorName "frontdoor1" -Name "frontendpointname1-custom-xyz" | Disable-AzFrontDoorCustomDomainHttps -InputObject $frontendEndpointObj 
+Get-AzFrontDoorFrontendEndpoint -ResourceGroupName "resourcegroup1" -FrontDoorName "frontdoor1" -Name "frontendpointname1-custom-xyz" | Disable-AzFrontDoorCustomDomainHttps -InputObject $frontendEndpointObj
 ```
 
 ```output
@@ -99,7 +99,7 @@ Disable HTTPS for a custom domain with PSFrontendEndpoint object.
 
 ### Example 3: Disable HTTPS for a custom domain with ResourceId.
 ```powershell
-Disable-AzFrontDoorCustomDomainHttps -ResourceId $resourceId 
+Disable-AzFrontDoorCustomDomainHttps -ResourceId $resourceId
 ```
 
 ```output

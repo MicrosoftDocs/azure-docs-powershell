@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: C1648DC3-8CFD-4487-A080-D9BE25DAD258
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstoragefilecopystate
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragefilecopystate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileCopyState.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileCopyState.md
@@ -47,12 +47,12 @@ This command gets the state of the copy operation for a file that has the specif
 
 ### Example 2: Start Copy and pipeline to get the copy status
 ```
-C:\PS> $destfile = Start-AzStorageFileCopy -SrcShareName "contososhare" -SrcFilePath "contosofile" -DestShareName "contososhare2" -destfilepath "contosofile_copy"  
+C:\PS> $destfile = Start-AzStorageFileCopy -SrcShareName "contososhare" -SrcFilePath "contosofile" -DestShareName "contososhare2" -destfilepath "contosofile_copy"
 
 C:\PS> $destfile | Get-AzStorageFileCopyState
 ```
 
-The first command starts copy file "contosofile" to "contosofile_copy", and output the destiantion file object. 
+The first command starts copy file "contosofile" to "contosofile_copy", and output the destiantion file object.
 The second command pipeline the destiantion file object to Get-AzStorageFileCopyState, to get file copy state.
 
 ## PARAMETERS

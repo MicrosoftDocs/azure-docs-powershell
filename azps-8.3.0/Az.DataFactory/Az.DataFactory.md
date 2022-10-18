@@ -1,7 +1,7 @@
 ---
 Module Name: Az.DataFactory
 Module Guid: e3c0f6bc-fe96-41a0-88f4-5e490a91f05d
-Download Help Link: https://docs.microsoft.com/powershell/module/az.datafactory
+Download Help Link: https://learn.microsoft.com/powershell/module/az.datafactory
 Help Version: 0.5.3.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Az.DataFactory.md
@@ -44,7 +44,7 @@ Gets information about integration runtime resources.
 Gets keys for a self-hosted integration runtime.
 
 #### [Get-AzDataFactoryV2IntegrationRuntimeMetric](Get-AzDataFactoryV2IntegrationRuntimeMetric.md)
-Gets metric data for an integration runtime. 
+Gets metric data for an integration runtime.
 
 #### [Get-AzDataFactoryV2IntegrationRuntimeNode](Get-AzDataFactoryV2IntegrationRuntimeNode.md)
 Gets an integration runtime node information.

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: D2B5BC27-6D51-45BC-AE6A-F7FED11B8651
-online version: https://docs.microsoft.com/powershell/module/az.compute/save-azvmimage
+online version: https://learn.microsoft.com/powershell/module/az.compute/save-azvmimage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Save-AzVMImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Save-AzVMImage.md
@@ -41,7 +41,7 @@ You can deploy virtual machines from your captured image.
 
 ### Example 1: Capture a virtual machine
 ```powershell
-Set-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -Generalized 
+Set-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -Generalized
 Save-AzVMImage -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine07" -DestinationContainerName "VMContainer01" -VHDNamePrefix "VM07"
 ```
 
@@ -97,7 +97,7 @@ Specifies the name of a container inside the "system" container that you want to
 If the container doesn't exist, it is created for you.
 The virtual hard disks (VHDs) that constitute the VMImage reside in the container that this parameter specifies.
 If the VHDs are spread across multiple storage accounts, this cmdlet creates one container that has this name in each storage account.
-The URL of the saved image is similar to: 
+The URL of the saved image is similar to:
 https://\<storageAccountName\>.blob.core.windows.net/system/Microsoft.Compute/Images/\<imagesContainer\>/\<vhdPrefix-osDisk\>.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.vhd.
 
 ```yaml

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageblobbytag
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageblobbytag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobByTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobByTag.md
@@ -32,20 +32,20 @@ The **Get-AzStorageBlobByTag** cmdlet lists blobs in a storage account across co
 ### Example 1: List all blobs match a specific blob tag, across containers.
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> Get-AzStorageBlobByTag -TagFilterSqlExpression """tag1""='value1'" -Context $ctx 
+PS C:\> Get-AzStorageBlobByTag -TagFilterSqlExpression """tag1""='value1'" -Context $ctx
 
    AccountName: storageaccountname, ContainerName: containername1
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
-testblob                                                                                                                                   False                                    
-testblob2                                                                                                                                  False                                    
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+testblob                                                                                                                                   False
+testblob2                                                                                                                                  False
 
    AccountName: storageaccountname, ContainerName: containername2
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
-testblob3                                                                                                                                   False                                    
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+testblob3                                                                                                                                   False
 testblob4                                                                                                                                   False
 ```
 
@@ -58,9 +58,9 @@ PS C:\> Get-AzStorageBlobByTag -TagFilterSqlExpression "@container='containernam
 
    AccountName: storageaccountname, ContainerName: containername
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
-test1                                                                                                                                      False                                    
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+test1                                                                                                                                      False
 test2                                                                                                                                      False
 ```
 
@@ -73,16 +73,16 @@ PS C:\> Get-AzStorageBlobByTag -TagFilterSqlExpression """tag1""='value1'" -GetB
 
    AccountName: storageaccountname, ContainerName: containername1
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
-testblob             BlockBlob 2097152         application/octet-stream       2020-07-23 09:35:02Z Hot                                     False      2020-07-23T09:35:02.8527357Z *                                   
-testblob2            BlockBlob 1048012         application/octet-stream       2020-07-23 09:35:05Z Hot                                     False      2020-07-23T09:35:05.2504530Z *                             
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+testblob             BlockBlob 2097152         application/octet-stream       2020-07-23 09:35:02Z Hot                                     False      2020-07-23T09:35:02.8527357Z *
+testblob2            BlockBlob 1048012         application/octet-stream       2020-07-23 09:35:05Z Hot                                     False      2020-07-23T09:35:05.2504530Z *
 
    AccountName: storageaccountname, ContainerName: containername2
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
-testblob3            BlockBlob 100             application/octet-stream       2020-07-01 09:55:14Z Hot                                     False      2020-07-01T09:55:14.6507341Z *                      
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+testblob3            BlockBlob 100             application/octet-stream       2020-07-01 09:55:14Z Hot                                     False      2020-07-01T09:55:14.6507341Z *
 testblob4            BlockBlob 2024            application/octet-stream       2020-07-01 09:42:11Z Hot                                     False      2020-07-01T09:42:11.4283807Z *
 ```
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -TagFilterSqlExpression
 Filters the result set to only include blobs whose tags match the specified expression.
-See details in https://docs.microsoft.com/en-us/rest/api/storageservices/find-blobs-by-tags#remarks.
+See details in https://learn.microsoft.com/en-us/rest/api/storageservices/find-blobs-by-tags#remarks.
 
 ```yaml
 Type: System.String

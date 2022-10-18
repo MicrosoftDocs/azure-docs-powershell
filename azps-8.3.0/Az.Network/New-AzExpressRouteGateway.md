@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azexpressroutegateway
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azexpressroutegateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzExpressRouteGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzExpressRouteGateway.md
@@ -40,9 +40,9 @@ New-AzExpressRouteGateway -ResourceGroupName <String> -Name <String> -MinScaleUn
 
 ## DESCRIPTION
 
-New-AzExpressRouteGateway creates a scalable ExpressRoute Gateway. This is software defined connectivity for on premise to Azure inside the VirtualHub. 
+New-AzExpressRouteGateway creates a scalable ExpressRoute Gateway. This is software defined connectivity for on premise to Azure inside the VirtualHub.
 
-This gateway can be scaled based on the scale unit specified in this or the Set-AzExpressRouteGateway cmdlet. 
+This gateway can be scaled based on the scale unit specified in this or the Set-AzExpressRouteGateway cmdlet.
 
 A connection is set up from a on-premise ExpressRoute circuit to the scalable gateway.
 
@@ -71,7 +71,7 @@ Type                : Microsoft.Network/expressRouteGateways
 ProvisioningState   : Succeeded
 ```
 
-The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure.
 An ExpressRoute gateway will be created thereafter in the Virtual Hub with 2 scale units.
 
 ### Example 2

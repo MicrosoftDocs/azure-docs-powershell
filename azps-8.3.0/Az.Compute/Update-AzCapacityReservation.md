@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/update-azcapacityreservation
+online version: https://learn.microsoft.com/powershell/module/az.compute/update-azcapacityreservation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzCapacityReservation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzCapacityReservation.md
@@ -59,7 +59,7 @@ Updating the capacity reservation.
 Get-AzCapacityReservation -ResourceGroupName $rgname -ReservationGroupName $capResGroup -Name $capRes | Update-AzCapacityReservation -CapacityToReserve 4
 ```
 
-Updating the capacity reservation using the InputObject parameter set. 
+Updating the capacity reservation using the InputObject parameter set.
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 5FA8A3F3-F52C-40BC-94C2-4CDA00C6F32F
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstoragecorsrule
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragecorsrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageCORSRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageCORSRule.md
@@ -123,9 +123,9 @@ Accept wildcard characters: False
 ### -ServiceType
 Specifies the Azure Storage service type for which this cmdlet gets CORS rules.
 The acceptable values for this parameter are:
-- Blob 
-- Table 
-- Queue 
+- Blob
+- Table
+- Queue
 - File
 
 ```yaml

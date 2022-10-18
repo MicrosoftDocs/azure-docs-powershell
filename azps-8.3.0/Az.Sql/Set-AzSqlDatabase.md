@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 2E4F5C27-C50F-4133-B193-BC477BCD6778
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqldatabase
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqldatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabase.md
@@ -437,7 +437,7 @@ Accept wildcard characters: False
 
 ### -RequestedServiceObjectiveName
 Specifies the name of the service objective to assign to the database. For information about
-service objectives, see [Azure SQL Database Service Tiers and Performance Levels](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+service objectives, see [Azure SQL Database Service Tiers and Performance Levels](https://learn.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 in the Microsoft Developer Network Library.
 
 ```yaml
@@ -600,4 +600,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Suspend-AzSqlDatabase](./Suspend-AzSqlDatabase.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

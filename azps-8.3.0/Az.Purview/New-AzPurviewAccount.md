@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://docs.microsoft.com/powershell/module/az.purview/new-azpurviewaccount
+online version: https://learn.microsoft.com/powershell/module/az.purview/new-azpurviewaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAccount.md
@@ -35,8 +35,8 @@ New-AzPurviewAccount -Name test-pa -ResourceGroupName test-rg -Location eastus -
 ```
 
 ```output
-IdentityPrincipalId                  IdentityTenantId                     IdentityType   Location Name    SystemDataCreatedAt  SystemDataCreatedBy    
--------------------                  ----------------                     ------------   -------- ----    -------------------  ----------- 
+IdentityPrincipalId                  IdentityTenantId                     IdentityType   Location Name    SystemDataCreatedAt  SystemDataCreatedBy
+-------------------                  ----------------                     ------------   -------- ----    -------------------  -----------
 xxxxxxxx-9e08-4873-8b0d-1442be9e5b14 54826b22-38d6-4fb2-bad9-b7b93a3e9c5a SystemAssigned eastus  test-pa 8/17/2021 7:47:10 AM xxx.xxx…
 ```
 

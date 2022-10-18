@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/new-azdiagnosticdetailsetting
+online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azdiagnosticdetailsetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticDetailSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticDetailSetting.md
@@ -30,7 +30,7 @@ New-AzDiagnosticDetailSetting -Metric [-RetentionInDays <Int32>] [-RetentionEnab
 ```
 
 ## DESCRIPTION
-Create PSMetricSettings or PSLogSettings object. 
+Create PSMetricSettings or PSLogSettings object.
 You can get categories by using `Get-AzDiagnosticSettingCategory`.
 
 ## EXAMPLES

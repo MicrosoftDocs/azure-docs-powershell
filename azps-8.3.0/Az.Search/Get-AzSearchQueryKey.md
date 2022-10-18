@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Search.dll-Help.xml
 Module Name: Az.Search
-online version: https://docs.microsoft.com/powershell/module/az.search/get-azsearchquerykey
+online version: https://learn.microsoft.com/powershell/module/az.search/get-azsearchquerykey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Get-AzSearchQueryKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Get-AzSearchQueryKey.md
@@ -45,8 +45,8 @@ The **Get-AzSearchQueryKey** cmdlet gets query key(s) of the Azure Cognitive Sea
 Get-AzSearchQueryKey -ResourceGroupName "TestAzureSearchPsGroup" -ServiceName "pstestazuresearch01"
 ```
 ```output
-Name Key                             
----- ---                             
+Name Key
+---- ---
      896AA09C167541072D404E1BE0442CE9
 ```
 

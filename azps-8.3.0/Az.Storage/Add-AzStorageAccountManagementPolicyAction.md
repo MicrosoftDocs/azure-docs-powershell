@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/Az.storage/add-Azstorageaccountmanagementpolicyaction
+online version: https://learn.microsoft.com/powershell/module/Az.storage/add-Azstorageaccountmanagementpolicyaction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Add-AzStorageAccountManagementPolicyAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Add-AzStorageAccountManagementPolicyAction.md
@@ -63,27 +63,27 @@ PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Dele
 PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction TierToArchive -daysAfterModificationGreaterThan 50  -DaysAfterLastTierChangeGreaterThan 40 -InputObject $action
 PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction TierToCool -DaysAfterLastAccessTimeGreaterThan 30  -EnableAutoTierToHotFromCool -InputObject $action
 PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -SnapshotAction Delete -daysAfterCreationGreaterThan 100 -InputObject $action
-PS C:\>$action 
+PS C:\>$action
 
-BaseBlob.TierToCool.DaysAfterModificationGreaterThan      : 
+BaseBlob.TierToCool.DaysAfterModificationGreaterThan      :
 BaseBlob.TierToCool.DaysAfterLastAccessTimeGreaterThan    : 30
-BaseBlob.TierToCool.DaysAfterCreationGreaterThan          : 
+BaseBlob.TierToCool.DaysAfterCreationGreaterThan          :
 BaseBlob.EnableAutoTierToHotFromCool                      : True
 BaseBlob.TierToArchive.DaysAfterModificationGreaterThan   : 50
-BaseBlob.TierToArchive.DaysAfterLastAccessTimeGreaterThan : 
-BaseBlob.TierToArchive.DaysAfterCreationGreaterThan       : 
+BaseBlob.TierToArchive.DaysAfterLastAccessTimeGreaterThan :
+BaseBlob.TierToArchive.DaysAfterCreationGreaterThan       :
 BaseBlob.TierToArchive.DaysAfterLastTierChangeGreaterThan : 40
-BaseBlob.Delete.DaysAfterModificationGreaterThan          : 
-BaseBlob.Delete.DaysAfterLastAccessTimeGreaterThan        : 
+BaseBlob.Delete.DaysAfterModificationGreaterThan          :
+BaseBlob.Delete.DaysAfterLastAccessTimeGreaterThan        :
 BaseBlob.Delete.DaysAfterCreationGreaterThan              : 100
-Snapshot.TierToCool.DaysAfterCreationGreaterThan          : 
-Snapshot.TierToArchive.DaysAfterCreationGreaterThan       : 
-Snapshot.TierToArchive.DaysAfterLastTierChangeGreaterThan : 
+Snapshot.TierToCool.DaysAfterCreationGreaterThan          :
+Snapshot.TierToArchive.DaysAfterCreationGreaterThan       :
+Snapshot.TierToArchive.DaysAfterLastTierChangeGreaterThan :
 Snapshot.Delete.DaysAfterCreationGreaterThan              : 100
-Version.TierToCool.DaysAfterCreationGreaterThan           : 
-Version.TierToArchive.DaysAfterCreationGreaterThan        : 
-Version.TierToArchive.DaysAfterLastTierChangeGreaterThan  : 
-Version.Delete.DaysAfterCreationGreaterThan               : 
+Version.TierToCool.DaysAfterCreationGreaterThan           :
+Version.TierToArchive.DaysAfterCreationGreaterThan        :
+Version.TierToArchive.DaysAfterLastTierChangeGreaterThan  :
+Version.Delete.DaysAfterCreationGreaterThan               :
 
 PS C:\>$filter = New-AzStorageAccountManagementPolicyFilter
 PS C:\>$rule = New-AzStorageAccountManagementPolicyRule -Name Test -Action $action -Filter $filter
@@ -103,24 +103,24 @@ PS C:\> $action = Add-AzStorageAccountManagementPolicyAction -InputObject $actio
 PS C:\> $action = Add-AzStorageAccountManagementPolicyAction -InputObject $action -BlobVersionAction TierToCool -daysAfterCreationGreaterThan 90
 PS C:\> $action
 
-BaseBlob.TierToCool.DaysAfterModificationGreaterThan      : 
-BaseBlob.TierToCool.DaysAfterLastAccessTimeGreaterThan    : 
-BaseBlob.TierToCool.DaysAfterCreationGreaterThan          : 
-BaseBlob.EnableAutoTierToHotFromCool                      : 
-BaseBlob.TierToArchive.DaysAfterModificationGreaterThan   : 
-BaseBlob.TierToArchive.DaysAfterLastAccessTimeGreaterThan : 
-BaseBlob.TierToArchive.DaysAfterCreationGreaterThan       : 
-BaseBlob.TierToArchive.DaysAfterLastTierChangeGreaterThan : 
-BaseBlob.Delete.DaysAfterModificationGreaterThan          : 
-BaseBlob.Delete.DaysAfterLastAccessTimeGreaterThan        : 
-BaseBlob.Delete.DaysAfterCreationGreaterThan              : 
+BaseBlob.TierToCool.DaysAfterModificationGreaterThan      :
+BaseBlob.TierToCool.DaysAfterLastAccessTimeGreaterThan    :
+BaseBlob.TierToCool.DaysAfterCreationGreaterThan          :
+BaseBlob.EnableAutoTierToHotFromCool                      :
+BaseBlob.TierToArchive.DaysAfterModificationGreaterThan   :
+BaseBlob.TierToArchive.DaysAfterLastAccessTimeGreaterThan :
+BaseBlob.TierToArchive.DaysAfterCreationGreaterThan       :
+BaseBlob.TierToArchive.DaysAfterLastTierChangeGreaterThan :
+BaseBlob.Delete.DaysAfterModificationGreaterThan          :
+BaseBlob.Delete.DaysAfterLastAccessTimeGreaterThan        :
+BaseBlob.Delete.DaysAfterCreationGreaterThan              :
 Snapshot.TierToCool.DaysAfterCreationGreaterThan          : 60
 Snapshot.TierToArchive.DaysAfterCreationGreaterThan       : 50
-Snapshot.TierToArchive.DaysAfterLastTierChangeGreaterThan : 
+Snapshot.TierToArchive.DaysAfterLastTierChangeGreaterThan :
 Snapshot.Delete.DaysAfterCreationGreaterThan              : 40
 Version.TierToCool.DaysAfterCreationGreaterThan           : 90
 Version.TierToArchive.DaysAfterCreationGreaterThan        : 80
-Version.TierToArchive.DaysAfterLastTierChangeGreaterThan  : 
+Version.TierToArchive.DaysAfterLastTierChangeGreaterThan  :
 Version.Delete.DaysAfterCreationGreaterThan               : 70
 
 PS C:\>$filter = New-AzStorageAccountManagementPolicyFilter

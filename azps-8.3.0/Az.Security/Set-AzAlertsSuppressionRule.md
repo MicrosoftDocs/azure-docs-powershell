@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: 
+online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzAlertsSuppressionRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzAlertsSuppressionRule.md
@@ -43,7 +43,7 @@ Create or update an alerts suppression rule.
 Set-AzAlertsSuppressionRule -Name "Example" -State Enabled -Comment "Example of a comment" -AlertType "AzureDNS_CurrencyMining" -Reason "Other" -AllOf @([Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSScopeElementContains]::new("entities.account.name", "example")) -ExpirationDateUtc 2024-10-17T15:02:24.7511441Z
 ```
 
-The above example creates a new suppression rule with the name "Example" to suppress alerts of type (Digital currency mining activity)[https://docs.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference] that contains "example" as part of their account name.
+The above example creates a new suppression rule with the name "Example" to suppress alerts of type (Digital currency mining activity)[https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference] that contains "example" as part of their account name.
 
 ## PARAMETERS
 

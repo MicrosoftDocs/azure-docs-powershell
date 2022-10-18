@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkmanagerdeploymentstatus
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagerdeploymentstatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerDeploymentStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerDeploymentStatus.md
@@ -31,8 +31,8 @@ The **Get-AzNetworkManagerDeploymentStatus** cmdlet lists Deployment Status in a
 
 ### Example 1
 ```powershell
-$regions = @("centraluseuap")  
-$DeploymentTypes = @("SecurityAdmin")  
+$regions = @("centraluseuap")
+$DeploymentTypes = @("SecurityAdmin")
 Get-AzNetworkManagerDeploymentStatus -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG" -region $regions -skipToken "FakeSkipToken" -DeploymentType $DeploymentTypes
 ```
 ```output
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 List of deploymentTypes.
 
 ```yaml
-Type: System.String[]	
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -104,7 +104,7 @@ Accept wildcard characters: True
 List of regions.
 
 ```yaml
-Type: System.String[]	
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -152,7 +152,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-### System.String[]	
+### System.String[]
 
 ## OUTPUTS
 

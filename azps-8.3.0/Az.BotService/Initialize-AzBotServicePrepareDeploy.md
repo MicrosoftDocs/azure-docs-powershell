@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.BotService
-online version: https://docs.microsoft.com/powershell/module/az.botservice/initialize-azbotservicepreparedeploy
+online version: https://learn.microsoft.com/powershell/module/az.botservice/initialize-azbotservicepreparedeploy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/help/Initialize-AzBotServicePrepareDeploy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/help/Initialize-AzBotServicePrepareDeploy.md

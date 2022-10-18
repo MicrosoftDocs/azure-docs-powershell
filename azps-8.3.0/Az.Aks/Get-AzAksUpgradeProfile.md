@@ -1,7 +1,7 @@
 ---
 external help file: Az.Aks-help.xml
 Module Name: Az.Aks
-online version: https://docs.microsoft.com/powershell/module/az.aks/get-azaksupgradeprofile
+online version: https://learn.microsoft.com/powershell/module/az.aks/get-azaksupgradeprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Get-AzAksUpgradeProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Get-AzAksUpgradeProfile.md

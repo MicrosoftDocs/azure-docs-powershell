@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: BF0C1A2F-2703-492F-A3A7-053416A5D1EB
-online version: https://docs.microsoft.com/powershell/module/az.batch/test-azbatchautoscale
+online version: https://learn.microsoft.com/powershell/module/az.batch/test-azbatchautoscale
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Test-AzBatchAutoScale.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Test-AzBatchAutoScale.md

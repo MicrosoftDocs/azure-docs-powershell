@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvpnsite
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvpnsite
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVpnSite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVpnSite.md
@@ -52,7 +52,7 @@ New-AzVpnSite -ResourceGroupName "testRG" -Name "testVpnSite" -Location "West US
 Remove-AzVpnSite -ResourceGroupName "testRG" -Name "testVpnSite"
 ```
 
-The above will create a resource group, Virtual WAN in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN in West US in "testRG" resource group in Azure.
 
 Then it creates a VpnSite to represent a customer branch and links it to the Virtual WAN.
 

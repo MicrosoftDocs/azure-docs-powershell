@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstoragelocaluserkey
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragelocaluserkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageLocalUserKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageLocalUserKey.md
@@ -46,8 +46,8 @@ Get-AzStorageLocalUserKey -ResourceGroupName "myresourcegroup" -AccountName "mys
 ```
 
 ```output
-SshAuthorizedKeys                                    SharedKey                                                                               
------------------                                    ---------                                                                               
+SshAuthorizedKeys                                    SharedKey
+-----------------                                    ---------
 {ssh-rsa keykeykeykeykew=, ssh-rsa keykeykeykeykew=} <hidden>
 ```
 

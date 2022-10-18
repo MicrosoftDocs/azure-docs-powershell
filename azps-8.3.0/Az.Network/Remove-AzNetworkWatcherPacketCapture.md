@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-aznetworkwatcherpacketcapture
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-aznetworkwatcherpacketcapture
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
@@ -37,9 +37,9 @@ Remove-AzNetworkWatcherPacketCapture -Location <String> -PacketCaptureName <Stri
 ```
 
 ## DESCRIPTION
-The Remove-AzNetworkWatcherPacketCapture removes a packet capture resource. 
-It is recommended to call Stop-AzNetworkWatcherPacketCapture before calling Remove-AzNetworkWatcherPacketCapture. 
-If the packet capture session is running when Remove-AzNetworkWatcherPacketCapture is called the packet capture may not be saved. If the session is stopped prior to removal the .cap file containing capture data is not removed. 
+The Remove-AzNetworkWatcherPacketCapture removes a packet capture resource.
+It is recommended to call Stop-AzNetworkWatcherPacketCapture before calling Remove-AzNetworkWatcherPacketCapture.
+If the packet capture session is running when Remove-AzNetworkWatcherPacketCapture is called the packet capture may not be saved. If the session is stopped prior to removal the .cap file containing capture data is not removed.
 
 ## EXAMPLES
 

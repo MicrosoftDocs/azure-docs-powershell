@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
 Module Name: Az.Blueprint
-online version: https://docs.microsoft.com/powershell/module/az.blueprint/publish-azblueprint
+online version: https://learn.microsoft.com/powershell/module/az.blueprint/publish-azblueprint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Publish-AzBlueprint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Publish-AzBlueprint.md
@@ -29,7 +29,7 @@ Publish a new version of a blueprint definition.
 
 ### Example 1
 ```powershell
-Publish-AzBlueprint -Blueprint $bp -Version 1.0 
+Publish-AzBlueprint -Blueprint $bp -Version 1.0
 ```
 
 ```output

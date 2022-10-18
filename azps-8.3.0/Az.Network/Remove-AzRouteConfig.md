@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 03285628-6BD3-4F2F-8129-E3CAE4C70EC8
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azrouteconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azrouteconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzRouteConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzRouteConfig.md
@@ -41,7 +41,7 @@ Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGr
                     k/routeTables/RouteTable01
 Etag              : W/"47099b62-60ec-4bc1-b87b-fad56cb8bed1"
 ProvisioningState : Succeeded
-Tags              : 
+Tags              :
 Routes            : [
                       {
                         "Name": "Route07",
@@ -50,10 +50,10 @@ Routes            : [
                     soft.Network/routeTables/RouteTable01/routes/Route07",
                         "AddressPrefix": "10.1.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       }
-                    ] 
+                    ]
 Subnets           : []
 ```
 

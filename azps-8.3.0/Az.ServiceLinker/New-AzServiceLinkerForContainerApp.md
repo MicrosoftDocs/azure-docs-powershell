@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/new-azservicelinkerforcontainerapp
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/new-azservicelinkerforcontainerapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerForContainerApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerForContainerApp.md
@@ -34,7 +34,7 @@ Create or update linker resource in container app.
 ```powershell
 $target=New-AzServiceLinkerAzureResourceObject -Id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/servicelinker-test-group/providers/Microsoft.DBforPostgreSQL/servers/servicelinker-postgresql/databases/test
 
-$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name testUser -SecretValue ***  
+$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name testUser -SecretValue ***
 
 New-AzServiceLinkerForContainerApp -TargetService $target -AuthInfo $auth -ClientType dotnet -LinkerName testLinker -ContainerApp servicelinker-app -ResourceGroupName servicelinker-test-linux-group -Scope 'simple-hello-world-container'
 ```

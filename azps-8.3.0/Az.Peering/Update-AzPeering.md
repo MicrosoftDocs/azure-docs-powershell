@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
 Module Name: Az.Peering
-online version: https://docs.microsoft.com/powershell/module/az.peering/update-azpeering
+online version: https://learn.microsoft.com/powershell/module/az.peering/update-azpeering
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Update-AzPeering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Update-AzPeering.md
@@ -60,7 +60,7 @@ Sets the PSPeering Object
 
 ### Example 1: Update Md5 Authentication Key
 ```powershell
-$peering = Get-AzPeering -ResourceGroupName rg1 -Name "ContosoPeering"  
+$peering = Get-AzPeering -ResourceGroupName rg1 -Name "ContosoPeering"
 $peering.Connections[0] = $peering.Connections[0] | Set-AzPeeringDirectConnectionObject -MD5AuthenticationKey $hash
 $peering | Update-AzPeering
 ```
@@ -69,7 +69,7 @@ Sets the Md5 Authentication Key
 
 ### Example 2: Update IPv4 Address for Exchange Peering
 ```powershell
-$peering = Get-AzPeering -ResourceGroupName rg1 -Name "ContosoExchangePeering" 
+$peering = Get-AzPeering -ResourceGroupName rg1 -Name "ContosoExchangePeering"
 $peering.Connections[0] = $peering.Connections[0] | Set-AzPeeringExchangeConnectionObject -PeerSessionIPv4Address $ipv4Address
 Update-AzPeering -ResourceId $peering.Id $peering.Connections
 ```
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-The Peering object 
+The Peering object
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.PSPeering

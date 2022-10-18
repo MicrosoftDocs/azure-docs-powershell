@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/invoke-azvminstallpatch
+online version: https://learn.microsoft.com/powershell/module/az.compute/invoke-azvminstallpatch
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Invoke-AzVMInstallPatch.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Invoke-AzVMInstallPatch.md
@@ -75,7 +75,7 @@ Installs patches on the VM
 Invoke-AzVmInstallPatch -ResourceGroupName 'MyRG' -VmName 'MyVM' -Windows -RebootSetting 'never' -MaximumDuration PT2H -ClassificationToIncludeForWindows Critical
 ```
 
-This example installs critical patches on the VM. 
+This example installs critical patches on the VM.
 
 ### Example 2
 ```powershell
@@ -91,7 +91,7 @@ $myLinuxVM = Get-AzVM -ResourceGroupName 'MyRG' -Name 'MyLinuxVM'
 Invoke-AzVMInstallPatch -ResourceId $myLinuxVM.id -MaximumDuration "PT90M" -RebootSetting "Always" -Linux -ClassificationToIncludeForLinux "Security" -PackageNameMaskToInclude "package123" -PackageNameMaskToExclude "package567"
 ```
 
-This example installs certain packages to the Linux VM provided by Resource ID. 
+This example installs certain packages to the Linux VM provided by Resource ID.
 
 ## PARAMETERS
 

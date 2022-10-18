@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.EdgeOrder
-online version: https://docs.microsoft.com/powershell/module/az.edgeorder/update-azedgeorderitem
+online version: https://learn.microsoft.com/powershell/module/az.edgeorder/update-azedgeorderitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/Update-AzEdgeOrderItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/Update-AzEdgeOrderItem.md
@@ -52,7 +52,7 @@ $DebugPreference = "Continue"
 #     ],
 #     "Target": null
 #   }
-# } 
+# }
 $updatedOrderItem = Update-AzEdgeOrderItem -Name "examplePowershell" -ResourceGroupName "resourceGroupName" -SubscriptionId SubscriptionId -ForwardAddressContactDetail $contactDetail
 
 $updatedOrderItem.ForwardAddressContactDetail | Format-List

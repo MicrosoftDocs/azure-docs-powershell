@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.dll-Help.xml
 Module Name: Az.AlertsManagement
-online version: https://docs.microsoft.com/powershell/module/az.alertsmanagement/update-azactionrule
+online version: https://learn.microsoft.com/powershell/module/az.alertsmanagement/update-azactionrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Update-AzAlertProcessingRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Update-AzAlertProcessingRule.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzAlertProcessingRule
 
 ## SYNOPSIS
-Updates alert processing rule properties. 
+Updates alert processing rule properties.
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.alertsmanagement/update-azalertprocessingrule) for up-to-date information.
@@ -45,7 +45,7 @@ Update-AzAlertProcessingRule -InputObject <PSActionRule> [-Enabled <String>] [-T
 Update-AzAlertProcessingRule -ResourceGroupName "test-rg" -Name "Test-AlertProcessingRule" -Enabled "False"
 ```
 
-This cmdlet disables the alert processing rule. 
+This cmdlet disables the alert processing rule.
 
 ## PARAMETERS
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Alert Processing rule tags
 For eg.
 @{"tag1" = "key1";"tag2" = "key2"}
-Use {} to clear existing tags. 
+Use {} to clear existing tags.
 
 ```yaml
 Type: System.Collections.Hashtable

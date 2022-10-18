@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Resources
 Module Guid: ab3ca893-26fe-44b0-bd3c-8933df144d7b
-Download Help Link: https://docs.microsoft.com/powershell/module/az.resources
+Download Help Link: https://learn.microsoft.com/powershell/module/az.resources
 Help Version: 5.5.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Az.Resources.md
@@ -75,7 +75,7 @@ Gets or lists deployment scripts.
 Gets the log of a deployment script execution.
 
 ### [Get-AzDeploymentWhatIfResult](Get-AzDeploymentWhatIfResult.md)
-Gets a template What-If result for a deployment at subscription scope. 
+Gets a template What-If result for a deployment at subscription scope.
 
 ### [Get-AzLocation](Get-AzLocation.md)
 Gets all locations and the supported resource providers for each location.
@@ -96,7 +96,7 @@ Get deployment at a management group
 Get deployment operation for management group deployment
 
 ### [Get-AzManagementGroupDeploymentWhatIfResult](Get-AzManagementGroupDeploymentWhatIfResult.md)
-Gets a template What-If result for a deployment at management group scope. 
+Gets a template What-If result for a deployment at management group scope.
 
 ### [Get-AzManagementGroupEntity](Get-AzManagementGroupEntity.md)
 Lists all Entities under the current Tenant
@@ -152,7 +152,7 @@ Gets the deployments in a resource group.
 Gets the resource group deployment operation
 
 ### [Get-AzResourceGroupDeploymentWhatIfResult](Get-AzResourceGroupDeploymentWhatIfResult.md)
-Gets a template What-If result for a deployment at resource group scope. 
+Gets a template What-If result for a deployment at resource group scope.
 
 ### [Get-AzResourceLock](Get-AzResourceLock.md)
 Gets a resource lock.
@@ -224,7 +224,7 @@ Get deployment at tenant scope
 Get deployment operation for deployment at tenant scope
 
 ### [Get-AzTenantDeploymentWhatIfResult](Get-AzTenantDeploymentWhatIfResult.md)
-Gets a template What-If result for a deployment at tenant scope. 
+Gets a template What-If result for a deployment at tenant scope.
 
 ### [Invoke-AzResourceAction](Invoke-AzResourceAction.md)
 Invokes an action on a resource.

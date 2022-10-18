@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ProviderHub
-online version: https://docs.microsoft.com/powershell/module/az.providerhub/new-azproviderhubsku
+online version: https://learn.microsoft.com/powershell/module/az.providerhub/new-azproviderhubsku
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/help/New-AzProviderHubSku.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/help/New-AzProviderHubSku.md
@@ -212,33 +212,33 @@ To create the parameters described below, construct a hash table containing the 
 
 
 SKUSETTING <ISkuSetting[]>: .
-  - `Name <String>`: 
-  - `[Capability <ISkuCapability[]>]`: 
-    - `Name <String>`: 
-    - `Value <String>`: 
-  - `[CapacityDefault <Int32?>]`: 
-  - `[CapacityMaximum <Int32?>]`: 
-  - `[CapacityMinimum <Int32?>]`: 
-  - `[CapacityScaleType <SkuScaleType?>]`: 
-  - `[Cost <ISkuCost[]>]`: 
-    - `MeterId <String>`: 
-    - `[ExtendedUnit <String>]`: 
-    - `[Quantity <Int32?>]`: 
-  - `[Family <String>]`: 
-  - `[Kind <String>]`: 
-  - `[Location <String[]>]`: 
-  - `[LocationInfo <ISkuLocationInfo[]>]`: 
-    - `Location <String>`: 
-    - `[ExtendedLocation <String[]>]`: 
-    - `[Type <String>]`: 
-    - `[Zone <String[]>]`: 
-    - `[ZoneDetail <ISkuZoneDetail[]>]`: 
-      - `[Capability <ISkuCapability[]>]`: 
-      - `[Name <String[]>]`: 
-  - `[RequiredFeature <String[]>]`: 
-  - `[RequiredQuotaId <String[]>]`: 
-  - `[Size <String>]`: 
-  - `[Tier <String>]`: 
+  - `Name <String>`:
+  - `[Capability <ISkuCapability[]>]`:
+    - `Name <String>`:
+    - `Value <String>`:
+  - `[CapacityDefault <Int32?>]`:
+  - `[CapacityMaximum <Int32?>]`:
+  - `[CapacityMinimum <Int32?>]`:
+  - `[CapacityScaleType <SkuScaleType?>]`:
+  - `[Cost <ISkuCost[]>]`:
+    - `MeterId <String>`:
+    - `[ExtendedUnit <String>]`:
+    - `[Quantity <Int32?>]`:
+  - `[Family <String>]`:
+  - `[Kind <String>]`:
+  - `[Location <String[]>]`:
+  - `[LocationInfo <ISkuLocationInfo[]>]`:
+    - `Location <String>`:
+    - `[ExtendedLocation <String[]>]`:
+    - `[Type <String>]`:
+    - `[Zone <String[]>]`:
+    - `[ZoneDetail <ISkuZoneDetail[]>]`:
+      - `[Capability <ISkuCapability[]>]`:
+      - `[Name <String[]>]`:
+  - `[RequiredFeature <String[]>]`:
+  - `[RequiredQuotaId <String[]>]`:
+  - `[Size <String>]`:
+  - `[Tier <String>]`:
 
 ## RELATED LINKS
 

@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Sql
 Module Guid: 150d9544-6348-4373-806f-10cd0b4de4cb
-Download Help Link: https://docs.microsoft.com/powershell/module/az.sql
+Download Help Link: https://learn.microsoft.com/powershell/module/az.sql
 Help Version: 4.4.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Az.Sql.md
@@ -23,7 +23,7 @@ Adds a job step to a job
 Adds a target to a target group
 
 ### [Add-AzSqlInstanceKeyVaultKey](Add-AzSqlInstanceKeyVaultKey.md)
-Adds a key vault key to the provided Managed Instance. 
+Adds a key vault key to the provided Managed Instance.
 
 ### [Add-AzSqlManagedInstanceTransparentDataEncryptionCertificate](Add-AzSqlManagedInstanceTransparentDataEncryptionCertificate.md)
 Adds a Transparent Data Encryption Certificate for the given managed instance
@@ -68,7 +68,7 @@ Converts a vulnerability assessment scan results to Excel format.
 Converts a vulnerability assessment scan results to Excel format.
 
 ### [Copy-AzSqlDatabaseLongTermRetentionBackup](Copy-AzSqlDatabaseLongTermRetentionBackup.md)
-Copies a long term retention backup to a target database.  
+Copies a long term retention backup to a target database.
 
 ### [Disable-AzSqlDatabaseLedgerDigestUpload](Disable-AzSqlDatabaseLedgerDigestUpload.md)
 Disables uploading ledger digests to Azure Blob storage or to Azure Confidential Ledger.
@@ -494,7 +494,7 @@ Adds the allowed FQDN to the list of outbound firewall rules and creates a new o
 Creates or updates a Server Trust Group.
 
 ### [New-AzSqlServerVirtualNetworkRule](New-AzSqlServerVirtualNetworkRule.md)
-Creates an Azure SQL Server Virtual Network Rule. 
+Creates an Azure SQL Server Virtual Network Rule.
 
 ### [New-AzSqlSyncAgent](New-AzSqlSyncAgent.md)
 Creates an Azure SQL Sync Agent.

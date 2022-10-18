@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azmanagementgroupdeploymentwhatifresult
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azmanagementgroupdeploymentwhatifresult
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupDeploymentWhatIfResult.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupDeploymentWhatIfResult.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzManagementGroupDeploymentWhatIfResult
 
 ## SYNOPSIS
-Gets a template What-If result for a deployment at management group scope. 
+Gets a template What-If result for a deployment at management group scope.
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azmanagementgroupdeploymentwhatifresult) for up-to-date information.

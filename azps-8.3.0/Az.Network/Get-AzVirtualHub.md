@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvirtualhub
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualHub.md
@@ -48,7 +48,7 @@ ResourceGroupName         : testRG
 Name                      : westushub
 Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
 AddressPrefix             : 10.0.1.0/24
-RouteTable                : 
+RouteTable                :
 VirtualNetworkConnections : {}
 Location                  : West US
 Type                      : Microsoft.Network/virtualHubs
@@ -71,7 +71,7 @@ ResourceGroupName         : testRG
 Name                      : westushub1
 Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub1
 AddressPrefix             : 10.0.1.0/24
-RouteTable                : 
+RouteTable                :
 VirtualNetworkConnections : {}
 Location                  : West US
 Type                      : Microsoft.Network/virtualHubs
@@ -82,7 +82,7 @@ ResourceGroupName         : testRG
 Name                      : westushub2
 Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub2
 AddressPrefix             : 10.0.1.0/24
-RouteTable                : 
+RouteTable                :
 VirtualNetworkConnections : {}
 Location                  : West US
 Type                      : Microsoft.Network/virtualHubs

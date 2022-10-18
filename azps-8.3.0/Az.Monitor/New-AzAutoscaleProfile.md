@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
-online version: https://docs.microsoft.com/powershell/module/az.monitor/new-azautoscaleprofile
+online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azautoscaleprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleProfile.md
@@ -53,7 +53,7 @@ The **New-AzAutoscaleProfile** cmdlet creates an Autoscale profile.
 
 ### Example 1: Create single profile with a fixed date
 ```powershell
-$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1"
 
 $Profile = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -StartTimeWindow 2015-03-05T14:00:00 -EndTimeWindow 2015-03-05T14:30:00 -TimeWindowTimeZone GMT -Rule $Rule -Name "Profile01"
 ```
@@ -62,8 +62,8 @@ $Profile = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -Mi
 Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
 FixedDate  : Microsoft.Azure.Management.Insights.Models.TimeWindow
 Name       : adios
-Recurrence : 
-Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+Recurrence :
+Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule,
              Microsoft.Azure.Management.Insights.Models.ScaleRule}
 ```
 
@@ -72,17 +72,17 @@ The second command creates a profile named Profile01 with a fixed date using the
 
 ### Example 2: Create a profile with a schedule
 ```powershell
-$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1"
 
 $Profile = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -Rule $Rule -Name "SecondProfileName" -RecurrenceFrequency Minute -ScheduleDay "1", "2", "3" -ScheduleHour 5, 10, 15 -ScheduleMinute 15, 30, 45 -ScheduleTimeZone GMT
 ```
 
 ```output
 Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
-FixedDate  : 
+FixedDate  :
 Name       : secondProfileName
 Recurrence : Microsoft.Azure.Management.Insights.Models.Recurrence
-Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule,
              Microsoft.Azure.Management.Insights.Models.ScaleRule}
 ```
 
@@ -91,7 +91,7 @@ The second command creates a profile named SecondProfileName with a recurring sc
 
 ### Example 3: Create profiles with two rules
 ```powershell
-$Rule1 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+$Rule1 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1"
 
 $Rule2 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:10:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "2"
 
@@ -104,14 +104,14 @@ $Profile2 = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -M
 Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
 FixedDate  : Microsoft.Azure.Management.Insights.Models.TimeWindow
 Name       : profileName
-Recurrence : 
-Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+Recurrence :
+Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule,
              Microsoft.Azure.Management.Insights.Models.ScaleRule}
 Capacity   : Microsoft.Azure.Management.Insights.Models.ScaleCapacity
-FixedDate  : 
+FixedDate  :
 Name       : secondProfileName
 Recurrence : Microsoft.Azure.Management.Insights.Models.Recurrence
-Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule, 
+Rules      : {Microsoft.Azure.Management.Insights.Models.ScaleRule,
              Microsoft.Azure.Management.Insights.Models.ScaleRule}
 ```
 
@@ -121,7 +121,7 @@ The final command creates a profile named SecondProfileName using the rules in R
 
 ### Example 4: Create a profile with no schedule or fixed date
 ```powershell
-$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1" 
+$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1"
 
 $Profile = New-AzAutoscaleProfile -DefaultCapacity "1" -MaximumCapacity "10" -MinimumCapacity "1" -Rule $Rule -Name "ProfileName"
 ```

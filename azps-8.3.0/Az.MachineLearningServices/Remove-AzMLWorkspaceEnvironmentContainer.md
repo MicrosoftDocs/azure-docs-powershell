@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.machinelearningservices/remove-azmlworkspaceenvironmentcontainer
+online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/remove-azmlworkspaceenvironmentcontainer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Remove-AzMLWorkspaceEnvironmentContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Remove-AzMLWorkspaceEnvironmentContainer.md
@@ -43,7 +43,7 @@ Delete environment container
 
 ### Example 2: Delete environment container by pipeline
 ```powershell
-Get-AzMLWorkspaceEnvironmentContainer  -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-portal01 -Name pwshenv01 | Remove-AzMLWorkspaceEnvironmentContainer 
+Get-AzMLWorkspaceEnvironmentContainer  -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-portal01 -Name pwshenv01 | Remove-AzMLWorkspaceEnvironmentContainer
 ```
 
 Delete environment container by pipeline

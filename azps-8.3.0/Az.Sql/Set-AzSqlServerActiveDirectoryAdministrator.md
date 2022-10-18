@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 60E0D10F-9B93-45A9-A1FF-5C943B8CA09C
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqlserveractivedirectoryadministrator
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlserveractivedirectoryadministrator
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerActiveDirectoryAdministrator.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerActiveDirectoryAdministrator.md
@@ -28,9 +28,9 @@ Set-AzSqlServerActiveDirectoryAdministrator [-DisplayName] <String> [[-ObjectId]
 The **Set-AzSqlServerActiveDirectoryAdministrator** cmdlet provisions an Azure Active Directory (Azure AD) administrator for AzureSQL Server in the current subscription.
 You can provision only one administrator at a time.
 The following members of Azure AD can be provisioned as a SQL Server administrator:
-- Native members of Azure AD 
-- Federated members of Azure AD 
-- Imported members from other Azure ADs who are native or federated members 
+- Native members of Azure AD
+- Federated members of Azure AD
+- Imported members from other Azure ADs who are native or federated members
 - Azure AD groups created as security groups
 Microsoft accounts, such as those in the Outlook.com, Hotmail.com, or Live.com domains, are not supported as administrators.
 Other guest accounts, such as those in the Gmail.com or Yahoo.com domains, are not supported as administrators.
@@ -59,7 +59,7 @@ Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01"
 
 ```output
 ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication
------------------ ---------- ----------- -------- 
+----------------- ---------- ----------- --------
 resourcegroup01   server01   David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9 False
 ```
 
@@ -71,8 +71,8 @@ Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01"
 ```
 
 ```output
-ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication 
------------------ ---------- ----------- -------- 
+ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication
+----------------- ---------- ----------- --------
 ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b False
 ```
 
@@ -212,6 +212,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Disable-AzSqlServerActiveDirectoryOnlyAuthentication](./Disable-AzSqlServerActiveDirectoryOnlyAuthentication.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
 
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 7BCF2086-05FA-43FB-9D19-7277374CB03E
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccount
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccount.md
@@ -24,7 +24,7 @@ Get-AzIntegrationAccount [-ResourceGroupName <String>] [-Name <String>]
 ```
 
 ## DESCRIPTION
-The **Get-AzIntegrationAccount** cmdlet gets integration accounts from a resource group. 
+The **Get-AzIntegrationAccount** cmdlet gets integration accounts from a resource group.
 Specify an integration account name and resource group name.
 This module supports dynamic parameters.
 To use a dynamic parameter, type it in the command.
@@ -43,7 +43,7 @@ Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/pro
 Name        : IntegrationAccount31
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
 ```
@@ -60,7 +60,7 @@ Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup1/prov
 Name        : IntegrationAccount31
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
 ```
@@ -77,7 +77,7 @@ Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/pro
 Name        : IntegrationAccount31
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
 ```

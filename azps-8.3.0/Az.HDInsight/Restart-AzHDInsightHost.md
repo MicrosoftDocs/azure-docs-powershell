@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/restart-azhdinsighthost
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/restart-azhdinsighthost
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Restart-AzHDInsightHost.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Restart-AzHDInsightHost.md

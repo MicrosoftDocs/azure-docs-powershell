@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkeruserassignedidentityauthinfoobject
+online version: https://learn.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkeruserassignedidentityauthinfoobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerUserAssignedIdentityAuthInfoObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerUserAssignedIdentityAuthInfoObject.md
@@ -35,7 +35,7 @@ New-AzServiceLinkerUserAssignedIdentityAuthInfoObject -ClientId 00000000-0000-00
 ```output
 AuthType             ClientId                             SubscriptionId
 --------             --------                             --------------
-userAssignedIdentity 00000000-0000-0000-0000-000000000000 00000000-0000-0000-0000-0000… 
+userAssignedIdentity 00000000-0000-0000-0000-000000000000 00000000-0000-0000-0000-0000…
 ```
 
 create linker's auth info with user assigned identity type

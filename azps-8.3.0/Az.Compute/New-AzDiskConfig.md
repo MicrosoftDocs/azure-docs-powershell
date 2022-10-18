@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/new-azdiskconfig
+online version: https://learn.microsoft.com/powershell/module/az.compute/new-azdiskconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzDiskConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzDiskConfig.md
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 ```
 
 ### -GalleryImageReference
-The GalleryImageReference object.  Required if creating from a Gallery Image. 
+The GalleryImageReference object.  Required if creating from a Gallery Image.
 The id will be the ARM id of the shared galley image version from which to create a disk.
 A lun is needed if the source of the copy is one of the data disks in the gallery image; if null, the OS disk of the image will be copied.
 
@@ -427,7 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogicalSectorSize
-Logical sector size in bytes for Ultra disks. 
+Logical sector size in bytes for Ultra disks.
 
 ```yaml
 Type: System.Int32

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.machinelearningservices/start-azmlworkspacecompute
+online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/start-azmlworkspacecompute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Start-AzMLWorkspaceCompute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Start-AzMLWorkspaceCompute.md
@@ -44,7 +44,7 @@ Posts a start action to a compute instance
 
 ### Example 2: Posts a start action to a compute instance by pipeline
 ```powershell
-Get-AzMLWorkspaceCompute -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-test01 -Name compute02 | Start-AzMLWorkspaceCompute 
+Get-AzMLWorkspaceCompute -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-test01 -Name compute02 | Start-AzMLWorkspaceCompute
 ```
 
 Posts a start action to a compute instance by pipeline
