@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets Automation runbooks and associated schedules.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationscheduledrunbook) for up-to-date information.
+
 ## SYNTAX
 
 ### ByAll (Default)
@@ -75,7 +78,7 @@ This command gets all scheduled runbooks for the schedule Schedule01 in the Azur
 ### Example 4: Get Parameters given to a particular Scheduled Runbook
 
 ```powershell
-Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -JobScheduleId “2b1d7738-093d-4ff7-b87b-e4b2321319e5”
+Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -JobScheduleId "2b1d7738-093d-4ff7-b87b-e4b2321319e5"
 ```
 This is currently not supported for jobs created with complex parameters (for example - array) through Azure portal.
 

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Delete a Fluid Relay container.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.fluidrelay/remove-azfluidrelaycontainer) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

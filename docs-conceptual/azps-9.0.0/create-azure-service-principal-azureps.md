@@ -1,7 +1,7 @@
 ---
 description: Learn how to create and use service principals with Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 09/06/2022
+ms.date: 10/12/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -28,6 +28,8 @@ principal with Azure PowerShell.
 > output includes credentials that you must protect. As an alternative, consider using
 > [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid
 > the need to use credentials.
+
+[!INCLUDE [azps-prerequisites-h2.md](../../includes/azps-prerequisites-h2.md)]
 
 ## Create a service principal
 

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Initializes Restore Request object for triggering restore on a protected backup instance.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/initialize-azdataprotectionrestorerequest) for up-to-date information.
+
 ## SYNTAX
 
 ### AlternateLocationFullRecovery (Default)

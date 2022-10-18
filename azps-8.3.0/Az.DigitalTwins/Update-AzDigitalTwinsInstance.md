@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update metadata of DigitalTwinsInstance.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.digitaltwins/update-azdigitaltwinsinstance) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
@@ -47,7 +50,7 @@ Update metadata of DigitalTwinsInstance.
 
 ### Example 1: UpdateExpanded (Default)
 ```powershell
-Update-AzDigitalTwinsInstance -ResourcegroupName youritemp -ResourceName youriDigitalTwinsTest -Tag @{“dtt”="001"}
+Update-AzDigitalTwinsInstance -ResourcegroupName youritemp -ResourceName youriDigitalTwinsTest -Tag @{"dtt"="001"}
 ```
 
 ```output

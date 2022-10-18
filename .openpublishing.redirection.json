@@ -8,17 +8,12 @@
     {
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/",
-      "source_path": "docs-conceptual/azps-7.5.0/overview.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/",
-      "source_path": "docs-conceptual/azps-8.2.0/overview.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/",
       "source_path": "docs-conceptual/azps-8.3.0/overview.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azps-9.0.0/overview.md"
     },
     {
       "redirect_document_id": false,

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets network group(s) in a network manager.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-aznetworkmanagergroup) for up-to-date information.
+
 ## SYNTAX
 
 ### NoExpand (Default)

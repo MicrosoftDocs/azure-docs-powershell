@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Requests the Agent of any active instance of this Job Definition to stop.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagemover/stop-azstoragemoverjobdefinition) for up-to-date information.
+
 ## SYNTAX
 
 ### Stop (Default)

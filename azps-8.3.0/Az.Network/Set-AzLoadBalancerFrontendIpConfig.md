@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a front-end IP configuration for a load balancer.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azloadbalancerfrontendipconfig) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByResourceSubnet (Default)
