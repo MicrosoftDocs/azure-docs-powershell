@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Functions
 Module Guid: eafced71-8742-4a2c-5afd-13117428dd90
-Download Help Link: https://docs.microsoft.com/powershell/module/az.functions
+Download Help Link: https://learn.microsoft.com/powershell/module/az.functions
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/help/Az.Functions.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 # Az.Functions Module
 ## Description
-Microsoft Azure PowerShell - Azure Functions service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.\n\nFor information on Azure Functions, please visit the following: https://docs.microsoft.com/azure/azure-functions/
+Microsoft Azure PowerShell - Azure Functions service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.\n\nFor information on Azure Functions, please visit the following: https://learn.microsoft.com/azure/azure-functions/
 
 ## Az.Functions Cmdlets
 ### [Get-AzFunctionApp](Get-AzFunctionApp.md)

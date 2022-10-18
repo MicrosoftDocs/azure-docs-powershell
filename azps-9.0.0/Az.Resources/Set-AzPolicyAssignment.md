@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: C3B2C33F-8BD4-4E31-9450-EF6A3A6A5325
-online version: https://docs.microsoft.com/powershell/module/az.resources/set-azpolicyassignment
+online version: https://learn.microsoft.com/powershell/module/az.resources/set-azpolicyassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzPolicyAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzPolicyAssignment.md
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityId
-Specifies the Id of the user assigned managed identity to assign to this policy assignment. This value is required if the value 'UserAssigned' is passed to the -IdentityType parameter. 
+Specifies the Id of the user assigned managed identity to assign to this policy assignment. This value is required if the value 'UserAssigned' is passed to the -IdentityType parameter.
 
 ```yaml
 Type: System.String

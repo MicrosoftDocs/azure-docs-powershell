@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Compute
 Module Guid: 0a83c907-1ffb-4d87-a492-c65ac7d7ed37
-Download Help Link: https://docs.microsoft.com/powershell/module/az.compute
+Download Help Link: https://learn.microsoft.com/powershell/module/az.compute
 Help Version: 3.5.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Az.Compute.md
@@ -431,7 +431,7 @@ Removes a data disk from an image object.
 Delete Proximity Placement Group resource.
 
 ### [Remove-AzRestorePoint](Remove-AzRestorePoint.md)
-This cmdlet can remove a Restore Point 
+This cmdlet can remove a Restore Point
 
 ### [Remove-AzRestorePointCollection](Remove-AzRestorePointCollection.md)
 This Cmdlet can remove Restore Point Collection
@@ -683,7 +683,7 @@ Starts an Azure virtual machine.
 Starts the VMSS or a set of virtual machines within the VMSS.
 
 ### [Start-AzVmssRollingExtensionUpgrade](Start-AzVmssRollingExtensionUpgrade.md)
-This cmdlet starts a rolling upgrade for all extensions on the given Virtual Machine Scale Set to the latest available version. 
+This cmdlet starts a rolling upgrade for all extensions on the given Virtual Machine Scale Set to the latest available version.
 
 ### [Start-AzVmssRollingOSUpgrade](Start-AzVmssRollingOSUpgrade.md)
 Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.

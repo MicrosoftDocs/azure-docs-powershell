@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/get-azreservationorderid
+online version: https://learn.microsoft.com/powershell/module/az.reservations/get-azreservationorderid
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationOrderId.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationOrderId.md
@@ -38,12 +38,12 @@ Get-AzReservationOrderId -SubscriptionId '10000000-aaaa-bbbb-cccc-100000000005'
 ```output
 Id                         : /subscriptions/10000000-aaaa-bbbb-cccc-100000000005/providers/microsoft.capacity/AppliedReservations/default
 Name                       : default
-ReservationOrderIdNextLink : 
-ReservationOrderIdValue    : {/providers/Microsoft.Capacity/reservationorders/7c6192be-7543-40c3-93e1-3d7f0b15203f, 
-                             /providers/Microsoft.Capacity/reservationorders/aa6c95fe-f25b-4f2e-864f-3860ef5d5bd0, 
-                             /providers/Microsoft.Capacity/reservationorders/d9e3935c-288e-4ef5-81a0-55201c1a6a67, 
+ReservationOrderIdNextLink :
+ReservationOrderIdValue    : {/providers/Microsoft.Capacity/reservationorders/7c6192be-7543-40c3-93e1-3d7f0b15203f,
+                             /providers/Microsoft.Capacity/reservationorders/aa6c95fe-f25b-4f2e-864f-3860ef5d5bd0,
+                             /providers/Microsoft.Capacity/reservationorders/d9e3935c-288e-4ef5-81a0-55201c1a6a67,
                              /providers/Microsoft.Capacity/reservationorders/b60911ea-d990-4795-818a-b7396abdb13b…}
-ResourceGroupName          : 
+ResourceGroupName          :
 Type                       : Microsoft.Capacity/AppliedReservations
 ```
 

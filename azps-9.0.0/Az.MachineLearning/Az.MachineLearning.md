@@ -1,7 +1,7 @@
 ---
 Module Name: Az.MachineLearning
 Module Guid: bb030259-49f9-46ef-806f-2a3f5a2e018e
-Download Help Link: https://docs.microsoft.com/powershell/module/az.machinelearning
+Download Help Link: https://learn.microsoft.com/powershell/module/az.machinelearning
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Az.MachineLearning.md

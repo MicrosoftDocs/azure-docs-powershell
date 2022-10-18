@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: 838026E4-F001-434C-86F0-B2A838E93A9C
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackuprecoverypoint
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackuprecoverypoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupRecoveryPoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupRecoveryPoint.md
@@ -57,10 +57,10 @@ $backupItem = Get-AzRecoveryServicesBackupItem -Container $container -WorkloadTy
 $rp = Get-AzRecoveryServicesBackupRecoveryPoint -Item $backupItem -StartDate $startdate.ToUniversalTime() -EndDate $enddate.ToUniversalTime() -VaultId $vault.ID
 ```
 
-The first command gets vault object based on vaultName. 
+The first command gets vault object based on vaultName.
 The second command gets the date from seven days ago, and then stores it in the $startDate variable.
 The third command gets today's date, and then stores it in the $endDate variable.
-The fourth command gets AzureVM backup containers, and stores them in the $Container variable. 
+The fourth command gets AzureVM backup containers, and stores them in the $Container variable.
 The fifth command gets the backup item based on workloadType, vaultId and then stores it in the $backupItem variable.
 The last command gets an array of recovery points for the item in $BackupItem, and then stores them in the $rp variable.
 
@@ -78,7 +78,7 @@ $rp = Get-AzRecoveryServicesBackupRecoveryPoint -StartDate $startDate -EndDate $
 The first command gets vault object based on vaultName. The second command gets the date from seven days ago, and then stores it in the $startDate variable.
 The third command gets today's date, and then stores it in the $endDate variable.
 The fourth command gets backup items based on backupManagementType and workloadType, vaultId and then stores it in the $item variable.
-The last command gets an array of recovery points for the item in $backupItem which are ready to be moved to VaultArchive tier and 
+The last command gets an array of recovery points for the item in $backupItem which are ready to be moved to VaultArchive tier and
 then stores them in the $rp variable.
 
 ### Example 3: Get recovery points in a particular tier
@@ -95,8 +95,8 @@ $rp = Get-AzRecoveryServicesBackupRecoveryPoint -StartDate $startDate -EndDate $
 The first command gets vault object based on vaultName. The second command gets the date from seven days ago, and then stores it in the $startDate variable.
 The third command gets today's date, and then stores it in the $endDate variable.
 The fourth command gets backup items based on backupManagementType and workloadType, vaultId and then stores it in the $item variable.
-The last command gets an array of recovery points for the item in $backupItem which are ready to be moved to VaultArchive tier and 
-then stores them in the $rp variable. 
+The last command gets an array of recovery points for the item in $backupItem which are ready to be moved to VaultArchive tier and
+then stores them in the $rp variable.
 
 ## PARAMETERS
 

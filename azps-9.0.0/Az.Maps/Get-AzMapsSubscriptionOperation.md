@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Maps
-online version: https://docs.microsoft.com/powershell/module/az.maps/get-azmapssubscriptionoperation
+online version: https://learn.microsoft.com/powershell/module/az.maps/get-azmapssubscriptionoperation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/Get-AzMapsSubscriptionOperation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/Get-AzMapsSubscriptionOperation.md

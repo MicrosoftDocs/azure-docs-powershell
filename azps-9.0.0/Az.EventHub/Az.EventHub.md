@@ -1,7 +1,7 @@
 ---
 Module Name: Az.EventHub
 Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
-Download Help Link: https://docs.microsoft.com/powershell/module/az.eventhub
+Download Help Link: https://learn.microsoft.com/powershell/module/az.eventhub
 Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Az.EventHub.md
@@ -77,7 +77,7 @@ Creates or updates an ApplicationGroup for a Namespace.
 Creates an EventHub Authorization Rule
 
 ### [New-AzEventHubAuthorizationRuleSASToken](New-AzEventHubAuthorizationRuleSASToken.md)
-Generates a SAS token for Azure eventhub authorization rule of namespace/eventhub. 
+Generates a SAS token for Azure eventhub authorization rule of namespace/eventhub.
 
 ### [New-AzEventHubCluster](New-AzEventHubCluster.md)
 Creates or updates an instance of an Event Hubs Cluster.
@@ -86,7 +86,7 @@ Creates or updates an instance of an Event Hubs Cluster.
 Creates or updates an Event Hubs consumer group as a nested resource within a Namespace.
 
 ### [New-AzEventHubEncryptionConfig](New-AzEventHubEncryptionConfig.md)
-Creates an in memory object instance of PSEncryptionConfigAttributes which can then be given as input to New-AzEventHubNamespace and Set-AzEventHubNamespace to enable encryption 
+Creates an in memory object instance of PSEncryptionConfigAttributes which can then be given as input to New-AzEventHubNamespace and Set-AzEventHubNamespace to enable encryption
 
 ### [New-AzEventHubGeoDRConfiguration](New-AzEventHubGeoDRConfiguration.md)
 Creates or updates a new Alias(Disaster Recovery configuration)

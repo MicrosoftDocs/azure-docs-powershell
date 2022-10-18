@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: 476094CC-A320-4B2D-B53D-6BFFE30C76CC
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupretentionpolicyobject
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupretentionpolicyobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupRetentionPolicyObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupRetentionPolicyObject.md
@@ -30,9 +30,9 @@ It is a temporary object that you can manipulate and use with the New-AzRecovery
 
 ### Example 1: Create a backup protection policy
 ```powershell
-$RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType AzureVM 
+$RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType AzureVM
 $RetPol.DailySchedule.DurationCountInDays = 365
-$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType AzureVM 
+$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType AzureVM
 New-AzRecoveryServicesBackupProtectionPolicy -Name "NewPolicy" -WorkloadType AzureVM -RetentionPolicy $RetPol -SchedulePolicy $SchPol
 ```
 
@@ -54,7 +54,7 @@ The second command sets the retention duration for daily recovery points to 10 d
 
 ### -BackupManagementType
 The class of resources being protected. The acceptable values for this parameter are:
-- AzureVM 
+- AzureVM
 - AzureWorkload
 - AzureStorage
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -WorkloadType
 Workload type of the resource. The acceptable values for this parameter are:
-- AzureVM 
+- AzureVM
 - AzureFiles
 - MSSQL
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StreamAnalytics
-online version: https://docs.microsoft.com/powershell/module/az.streamanalytics/get-azstreamanalyticsjob
+online version: https://learn.microsoft.com/powershell/module/az.streamanalytics/get-azstreamanalyticsjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/help/Get-AzStreamAnalyticsJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/help/Get-AzStreamAnalyticsJob.md
@@ -83,7 +83,7 @@ This command returns information about the Stream Analytics job StreamingJob in 
 
 ### Example 4: Get information about a specific job in a resource group by pipeline
 ```powershell
-New-AzStreamAnalyticsJob -ResourceGroupName lucas-rg-test -Name sajob-02-pwsh -Location westcentralus -SkuName Standard | Get-AzStreamAnalyticsJob 
+New-AzStreamAnalyticsJob -ResourceGroupName lucas-rg-test -Name sajob-02-pwsh -Location westcentralus -SkuName Standard | Get-AzStreamAnalyticsJob
 ```
 ```output
 Location        Name          Type                                    ETag

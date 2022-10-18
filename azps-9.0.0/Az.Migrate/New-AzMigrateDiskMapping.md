@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Migrate
-online version: https://docs.microsoft.com/powershell/module/az.migrate/new-azmigratediskmapping
+online version: https://learn.microsoft.com/powershell/module/az.migrate/new-azmigratediskmapping
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/New-AzMigrateDiskMapping.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/New-AzMigrateDiskMapping.md
@@ -30,9 +30,9 @@ New-AzMigrateDiskMapping -DiskID a -DiskType Standard -IsOSDisk 'true'
 ```
 
 ```output
-DiskEncryptionSetId DiskId   DiskType  IsOSDisk LogStorageAccountId LogStorageAccountSasSecretName  
-------------------- ------   --------  -------- ------------------- ------------------------------   
-                      a      Standard  true  
+DiskEncryptionSetId DiskId   DiskType  IsOSDisk LogStorageAccountId LogStorageAccountSasSecretName
+------------------- ------   --------  -------- ------------------- ------------------------------
+                      a      Standard  true
 ```
 
 Get disks object to provide input for New-AzMigrateServerReplication

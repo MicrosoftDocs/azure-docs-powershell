@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MarketplaceOrdering
-online version: https://docs.microsoft.com/powershell/module/az.marketplaceordering/set-azmarketplaceterms
+online version: https://learn.microsoft.com/powershell/module/az.marketplaceordering/set-azmarketplaceterms
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MarketplaceOrdering/help/Set-AzMarketplaceTerms.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MarketplaceOrdering/help/Set-AzMarketplaceTerms.md

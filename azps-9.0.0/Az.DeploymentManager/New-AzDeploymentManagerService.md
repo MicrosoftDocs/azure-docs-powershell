@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DeploymentManager.dll-Help.xml
 Module Name: Az.DeploymentManager
-online version: https://docs.microsoft.com/powershell/module/az.deploymentmanager/new-azdeploymentmanagerservice
+online version: https://learn.microsoft.com/powershell/module/az.deploymentmanager/new-azdeploymentmanagerservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeploymentManager/DeploymentManager/help/New-AzDeploymentManagerService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeploymentManager/DeploymentManager/help/New-AzDeploymentManagerService.md
@@ -37,7 +37,7 @@ New-AzDeploymentManagerService [-ResourceGroupName] <String> -Name <String> -Loc
 
 ## DESCRIPTION
 The **New-AzDeploymentManagerService** cmdlet creates a service under a service topology, and returns an object that represents that service.
-Specify the service by its name, service topology it is in and the resource group name. 
+Specify the service by its name, service topology it is in and the resource group name.
 
 The cmdlet returns a Service object. You can modify this object locally, and then apply changes to the service by using the Set-AzDeploymentManagerService cmdlet.
 

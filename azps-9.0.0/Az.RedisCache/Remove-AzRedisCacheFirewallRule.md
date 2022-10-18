@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/remove-azrediscachefirewallrule
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/remove-azrediscachefirewallrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Remove-AzRedisCacheFirewallRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Remove-AzRedisCacheFirewallRule.md
@@ -40,7 +40,7 @@ Remove-AzRedisCacheFirewallRule -Name "mycache" -RuleName "ruleone" -PassThru
 True
 ```
 
-This command removes a firewall rule named ruleone from Redis Cache named mycache. 
+This command removes a firewall rule named ruleone from Redis Cache named mycache.
 
 ## PARAMETERS
 

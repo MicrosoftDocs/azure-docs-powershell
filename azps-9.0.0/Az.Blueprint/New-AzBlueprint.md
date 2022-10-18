@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
 Module Name: Az.Blueprint
-online version: https://docs.microsoft.com/powershell/module/az.blueprint/new-azblueprint
+online version: https://learn.microsoft.com/powershell/module/az.blueprint/new-azblueprint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/New-AzBlueprint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/New-AzBlueprint.md
@@ -27,7 +27,7 @@ New-AzBlueprint -Name <String> -ManagementGroupId <String> -BlueprintFile <Strin
 ```
 
 ## DESCRIPTION
-Create a new blueprint definition. 
+Create a new blueprint definition.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ New-AzBlueprint -Name MyNewBlueprint -SubscriptionId 00000000-1111-0000-1111-000
 Name              : SimpleBlueprint
 Id                : /providers/Microsoft.Management/managementGroups/{mgId}/providers/Microsoft.Blueprint/blueprints/SimpleBlueprint
 ManagementGroupId : myManagementGroupId
-Versions          : 
+Versions          :
 Description       : test
 TimeCreated       : 2019-05-12
 TargetScope       : Subscription

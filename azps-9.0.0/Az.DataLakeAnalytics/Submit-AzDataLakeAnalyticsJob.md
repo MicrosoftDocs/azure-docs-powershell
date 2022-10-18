@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
 Module Name: Az.DataLakeAnalytics
 ms.assetid: 0DB9595A-6C8B-4F3F-A707-2DB41D7C7470
-online version: https://docs.microsoft.com/powershell/module/az.datalakeanalytics/submit-azdatalakeanalyticsjob
+online version: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/submit-azdatalakeanalyticsjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Submit-AzDataLakeAnalyticsJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Submit-AzDataLakeAnalyticsJob.md
@@ -122,8 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -CompileMode
-The type of compilation to be done on this job. 
-Valid values: 
+The type of compilation to be done on this job.
+Valid values:
 - Semantic (Only performs semantic checks and necessary sanity checks)
 - Full (Full compilation)
 - SingleBox (Full compilation performed locally)

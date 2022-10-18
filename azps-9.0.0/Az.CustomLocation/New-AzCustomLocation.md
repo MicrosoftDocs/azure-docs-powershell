@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CustomLocation
-online version: https://docs.microsoft.com/powershell/module/az.customlocation/new-azcustomlocation
+online version: https://learn.microsoft.com/powershell/module/az.customlocation/new-azcustomlocation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/help/New-AzCustomLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/help/New-AzCustomLocation.md

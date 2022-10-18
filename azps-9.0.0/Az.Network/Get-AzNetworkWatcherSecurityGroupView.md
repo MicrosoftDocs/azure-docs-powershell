@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkwatchersecuritygroupview
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkwatchersecuritygroupview
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherSecurityGroupView.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherSecurityGroupView.md
@@ -39,13 +39,13 @@ The Get-AzNetworkWatcherSecurityGroupView enables you to view the configured and
 
 ### Example 1: Make a Security Group View call on a VM
 ```powershell
-$nw = Get-AzResource | Where-Object {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
-$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
-$VM = Get-AzVM -ResourceGroupName ContosoResourceGroup -Name VM0 
+$nw = Get-AzResource | Where-Object {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+$VM = Get-AzVM -ResourceGroupName ContosoResourceGroup -Name VM0
 Get-AzNetworkWatcherSecurityGroupView -NetworkWatcher $networkWatcher -TargetVirtualMachineId $VM.Id
 ```
 
-In the above example, we first get the regional Network Watcher, then a VM in the region. 
+In the above example, we first get the regional Network Watcher, then a VM in the region.
 Then we make a Security Group View call on the specified VM.
 
 ## PARAMETERS
@@ -169,7 +169,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.Network.Models.PSSecurityGroupViewResult
 
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, flow, ip 
+Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, flow, ip
 
 ## RELATED LINKS
 

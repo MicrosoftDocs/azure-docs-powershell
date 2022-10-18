@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/remove-azstackhcicluster
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/remove-azstackhcicluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHciCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHciCluster.md
@@ -31,7 +31,7 @@ Delete an HCI cluster.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Remove-AzStackHciCluster -ResourceGroupName test-rg -Name myCluster2
 ```

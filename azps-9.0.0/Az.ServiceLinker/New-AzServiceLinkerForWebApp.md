@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/new-azservicelinkerforwebapp
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/new-azservicelinkerforwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerForWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerForWebApp.md
@@ -31,7 +31,7 @@ Create or update linker resource in webapp.
 ```powershell
 $target=New-AzServiceLinkerAzureResourceObject -Id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/servicelinker-test-group/providers/Microsoft.DBforPostgreSQL/servers/servicelinker-postgresql/databases/test
 
-$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name testUser -SecretValue ***  
+$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name testUser -SecretValue ***
 
 New-AzServiceLinkerForWebApp -TargetService $target -AuthInfo $auth -ClientType dotnet -LinkerName testLinker -WebApp servicelinker-app -ResourceGroupName servicelinker-test-group
 ```

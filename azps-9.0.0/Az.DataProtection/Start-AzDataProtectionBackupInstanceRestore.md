@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/start-azdataprotectionbackupinstancerestore
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/start-azdataprotectionbackupinstancerestore
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Start-AzDataProtectionBackupInstanceRestore.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Start-AzDataProtectionBackupInstanceRestore.md
@@ -328,7 +328,7 @@ To create the parameters described below, construct a hash table containing the 
 
 
 `PARAMETER <IAzureBackupRestoreRequest>`: Azure backup restore request
-  - `ObjectType <String>`: 
+  - `ObjectType <String>`:
   - `RestoreTargetInfo <IRestoreTargetInfoBase>`: Gets or sets the restore target information.
     - `ObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
     - `[RestoreLocation <String>]`: Target Restore region

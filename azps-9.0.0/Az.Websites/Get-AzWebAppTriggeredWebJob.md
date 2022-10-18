@@ -1,7 +1,7 @@
 ---
 external help file: Az.Websites-help.xml
 Module Name: Az.Websites
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebapptriggeredwebjob
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebapptriggeredwebjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppTriggeredWebJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppTriggeredWebJob.md
@@ -44,7 +44,7 @@ Get-AzWebAppTriggeredWebJob -ResourceGroupName webjob-rg-test -AppName appServic
 ```output
 Name                              Kind WebJobType ResourceGroupName
 ----                              ---- ---------- -----------------
-appService-test01/triggeredjob-01                 webjob-rg-test   
+appService-test01/triggeredjob-01                 webjob-rg-test
 appService-test01/triggeredjob-02                 webjob-rg-test
 ```
 
@@ -65,7 +65,7 @@ This command gets triggered web for an app.
 ### Example 3: Get triggered web for an app by pipeline
 ```powershell
 $webjob = Get-AzWebAppTriggeredWebJob -ResourceGroupName webjob-rg-test -AppName appService-test01 -Name triggeredjob-01
-Start-AzWebAppTriggeredWebJob -ResourceGroupName webjob-rg-test -AppName appService-test01 -Name triggeredjob-01 
+Start-AzWebAppTriggeredWebJob -ResourceGroupName webjob-rg-test -AppName appService-test01 -Name triggeredjob-01
 $webjob.Id | Get-AzWebAppTriggeredWebJob
 ```
 ```output

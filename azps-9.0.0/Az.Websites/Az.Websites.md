@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Websites
 Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
-Download Help Link: https://docs.microsoft.com/powershell/module/az.websites
+Download Help Link: https://learn.microsoft.com/powershell/module/az.websites
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Az.Websites.md
@@ -182,7 +182,7 @@ Creates an object that represents an Azure Storage path to be mounted in a Web A
 
 
 ### [New-AzWebAppCertificate](New-AzWebAppCertificate.md)
-Creates an App service managed certificate for an Azure Web App. 
+Creates an App service managed certificate for an Azure Web App.
 
 ### [New-AzWebAppContainerPSSession](New-AzWebAppContainerPSSession.md)
 New-AzWebAppContainerPSSession will create new remote PowerShell Session into the windows container specified in a given site or slot and given resource group
@@ -197,7 +197,7 @@ Creates an Azure Web App slot.
 Creates an SSL certificate binding for an Azure Web App.
 
 ### [Publish-AzWebApp](Publish-AzWebApp.md)
-Deploys an Azure Web App from a ZIP, JAR, or WAR file using zipdeploy. 
+Deploys an Azure Web App from a ZIP, JAR, or WAR file using zipdeploy.
 
 ### [Register-AzStaticWebAppUserProvidedFunctionApp](Register-AzStaticWebAppUserProvidedFunctionApp.md)
 Description for Register a user provided function app with a static site build
@@ -233,7 +233,7 @@ Removes an Access Restriction rule from an Azure Web App.
 
 
 ### [Remove-AzWebAppCertificate](Remove-AzWebAppCertificate.md)
-Removes an App service managed certificate for an Azure Web App. 
+Removes an App service managed certificate for an Azure Web App.
 
 ### [Remove-AzWebAppContinuousWebJob](Remove-AzWebAppContinuousWebJob.md)
 Delete a continuous web job for an app.

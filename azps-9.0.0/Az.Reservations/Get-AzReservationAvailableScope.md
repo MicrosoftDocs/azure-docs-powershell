@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/get-azreservationavailablescope
+online version: https://learn.microsoft.com/powershell/module/az.reservations/get-azreservationavailablescope
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationAvailableScope.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationAvailableScope.md
@@ -235,7 +235,7 @@ To create the parameters described below, construct a hash table containing the 
 
 
 `BODY <IAvailableScopeRequest>`: Available scope
-  - `[Scope <String[]>]`: 
+  - `[Scope <String[]>]`:
 
 `INPUTOBJECT <IReservationsIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path

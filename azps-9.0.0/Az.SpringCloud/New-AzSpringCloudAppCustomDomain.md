@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/new-azspringcloudappcustomdomain
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/new-azspringcloudappcustomdomain
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/New-AzSpringCloudAppCustomDomain.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/New-AzSpringCloudAppCustomDomain.md
@@ -31,8 +31,8 @@ New-AzSpringCloudAppCustomDomain -ResourceGroupName SpringCloud-gp-junxi -Servic
 ```
 
 ```output
-Name                                      
-----                             
+Name
+----
 springcloud-service.azuremicroservices.io
 ```
 

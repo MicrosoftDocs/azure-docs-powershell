@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/Start-AzDataMigrationService
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/Start-AzDataMigrationService
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Start-AzDataMigrationService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Start-AzDataMigrationService.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Start-AzDataMigrationService
 
 ## SYNOPSIS
-Starts an instance of the Azure Database Migration Service in a stopped state. 
+Starts an instance of the Azure Database Migration Service in a stopped state.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Start-AzDataMigrationService [-ResourceId] <String> [-PassThru] [-DefaultProfile
 ```
 
 ## DESCRIPTION
-The Start-AzDataMigrationService cmdlet starts an instance of the Azure Database Migration Service in a stopped state. 
+The Start-AzDataMigrationService cmdlet starts an instance of the Azure Database Migration Service in a stopped state.
 
 ## EXAMPLES
 

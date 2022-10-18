@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
 ms.assetid: 8E12A392-A100-4814-9003-B2999150DCE1
-online version: https://docs.microsoft.com/powershell/module/az.trafficmanager/remove-aztrafficmanagerendpointconfig
+online version: https://learn.microsoft.com/powershell/module/az.trafficmanager/remove-aztrafficmanagerendpointconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Remove-AzTrafficManagerEndpointConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Remove-AzTrafficManagerEndpointConfig.md
@@ -33,7 +33,7 @@ To remove an endpoint and commit changes in a single operation, use the Remove-A
 ### Example 1: Remove an endpoint
 ```powershell
 $TrafficManagerProfile = Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
-Remove-AzTrafficManagerEndpointConfig -EndpointName "contoso" -TrafficManagerProfile $TrafficManagerProfile 
+Remove-AzTrafficManagerEndpointConfig -EndpointName "contoso" -TrafficManagerProfile $TrafficManagerProfile
 Set-AzTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
 ```
 

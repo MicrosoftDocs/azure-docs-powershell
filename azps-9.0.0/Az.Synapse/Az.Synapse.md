@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Synapse
 Module Guid: 89eceb4f-9916-4ec5-8499-d5cca97a9cae
-Download Help Link: https://docs.microsoft.com/powershell/module/az.synapse
+Download Help Link: https://learn.microsoft.com/powershell/module/az.synapse
 Help Version: 0.0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Az.Synapse.md
@@ -83,7 +83,7 @@ Gets information about integration runtime resources.
 Gets keys for a self-hosted integration runtime.
 
 ### [Get-AzSynapseIntegrationRuntimeMetric](Get-AzSynapseIntegrationRuntimeMetric.md)
-Gets metric data for an integration runtime. 
+Gets metric data for an integration runtime.
 
 ### [Get-AzSynapseIntegrationRuntimeNode](Get-AzSynapseIntegrationRuntimeNode.md)
 Gets an integration runtime node information.

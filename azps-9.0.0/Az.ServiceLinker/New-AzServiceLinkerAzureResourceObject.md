@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkerazureresourceobject
+online version: https://learn.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkerazureresourceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerAzureResourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerAzureResourceObject.md
@@ -32,7 +32,7 @@ New-AzServiceLinkerAzureResourceObject -Id /subscriptions/00000000-0000-0000-000
 ```output
 Id
 --
-/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/servicelinker-test-… 
+/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/servicelinker-test-…
 
 ```
 

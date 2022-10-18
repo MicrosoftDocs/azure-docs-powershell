@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImageBuilder
-online version: https://docs.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatedistributorobject
+online version: https://learn.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatedistributorobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplateDistributorObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplateDistributorObject.md
@@ -45,7 +45,7 @@ New-AzImageBuilderTemplateDistributorObject -ManagedImageDistributor -ArtifactTa
 
 ```output
 RunOutputName ImageId
-------------- -------                                                                                                         
+------------- -------
 luacas-runout /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Co…
 ```
 
@@ -66,13 +66,13 @@ This command creates a VHD distributor.
 
 ### Example 3: Create a shared image distributor
 ```powershell
-New-AzImageBuilderTemplateDistributorObject -SharedImageDistributor -ArtifactTag @{tag='dis-share'} -GalleryImageId '/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/galleries/myimagegallery/images/lcuas-linux-share' -ReplicationRegion eastus2 -RunOutputName 'outname' -ExcludeFromLatest $false 
+New-AzImageBuilderTemplateDistributorObject -SharedImageDistributor -ArtifactTag @{tag='dis-share'} -GalleryImageId '/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/galleries/myimagegallery/images/lcuas-linux-share' -ReplicationRegion eastus2 -RunOutputName 'outname' -ExcludeFromLatest $false
 ```
 
 ```output
 RunOutputName ExcludeFromLatest GalleryImageId
-------------- ----------------- --------------                                                                                
-outname       False             /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/prov… 
+------------- ----------------- --------------
+outname       False             /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/prov…
 ```
 
 This command creates a shared image distributor.

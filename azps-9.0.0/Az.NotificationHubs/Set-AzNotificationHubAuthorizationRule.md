@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
 ms.assetid: BD311CEF-378B-463E-8998-CC3E9A5B3A7B
-online version: https://docs.microsoft.com/powershell/module/az.notificationhubs/set-aznotificationhubauthorizationrule
+online version: https://learn.microsoft.com/powershell/module/az.notificationhubs/set-aznotificationhubauthorizationrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHubAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHubAuthorizationRule.md
@@ -32,7 +32,7 @@ Set-AzNotificationHubAuthorizationRule [-ResourceGroup] <String> [-Namespace] <S
 ## DESCRIPTION
 The **Set-AzNotificationHubAuthorizationRule** cmdlet modifies a Shared Access Signature (SAS) authorization rule assigned to a notification hub.
 Authorization rules manage access to your notification hubs by the creation of links, as URIs, based on different permission levels.
-Permission levels can be one of the following: 
+Permission levels can be one of the following:
 - Listen
 - Send
 - Manage
@@ -44,12 +44,12 @@ You can configure the object through the .NET Framework.
 You can then copy those property values to your rule by using *SASRule* parameter.
 Alternatively, you can create a JSON (JavaScript Object Notation) file containing the relevant configuration values and then apply those values through the *InputFile* parameter.
 A JSON file is a text file that uses syntax similar to this:
-{      "Name": "ContosoAuthorizationRule",  
-    "PrimaryKey": "WE4qH0398AyXjlekt56gg1gMR3NHoMs29KkUnnpUk01Y=",  
-    "Rights": \[  
-        "Listen",  
-        "Send"  
-    \]  
+{      "Name": "ContosoAuthorizationRule",
+    "PrimaryKey": "WE4qH0398AyXjlekt56gg1gMR3NHoMs29KkUnnpUk01Y=",
+    "Rights": \[
+        "Listen",
+        "Send"
+    \]
 }
 When used in conjunction with the New-AzNotificationHubAuthorizationRule cmdlet, the preceding JSON sample modifies an authorization rule named ContosoAuthorizationRule in order to give users Listen and Send rights to the hub.
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the resource group to which the notification hub is assigned. 
+Specifies the resource group to which the notification hub is assigned.
 Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml

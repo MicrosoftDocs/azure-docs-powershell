@@ -1,7 +1,7 @@
 ---
 Module Name: Az.DataMigration
 Module Guid: 150d9544-6348-4373-806f-10cd0b4de4cb
-Download Help Link: https://docs.microsoft.com/powershell/module/az.datamigration
+Download Help Link: https://learn.microsoft.com/powershell/module/az.datamigration
 Help Version: 0.1.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Az.DataMigration.md
@@ -23,7 +23,7 @@ Collect performance data for given SQL Server instance(s)
 Retrieves the properties of an Azure Database Migration project.
 
 ### [Get-AzDataMigrationService](Get-AzDataMigrationService.md)
-Retrieves the properties associated with an instance of the Azure Database Migration Service. 
+Retrieves the properties associated with an instance of the Azure Database Migration Service.
 
 ### [Get-AzDataMigrationSkuRecommendation](Get-AzDataMigrationSkuRecommendation.md)
 Gives SKU recommendations for Azure SQL offerings
@@ -134,7 +134,7 @@ Removes an Azure Database Migration Service task from Azure.
 Remove the specified database migration for a given SQL Db.
 
 ### [Start-AzDataMigrationService](Start-AzDataMigrationService.md)
-Starts an instance of the Azure Database Migration Service in a stopped state. 
+Starts an instance of the Azure Database Migration Service in a stopped state.
 
 ### [Stop-AzDataMigrationService](Stop-AzDataMigrationService.md)
 Stops an instance of the Azure Database Migration Service that is in a running state.

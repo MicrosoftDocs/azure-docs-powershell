@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Functions
-online version: https://docs.microsoft.com/powershell/module/az.functions/update-azfunctionappplan
+online version: https://learn.microsoft.com/powershell/module/az.functions/update-azfunctionappplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/help/Update-AzFunctionAppPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/help/Update-AzFunctionAppPlan.md
@@ -278,7 +278,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-`INPUTOBJECT <IAppServicePlan>`: 
+`INPUTOBJECT <IAppServicePlan>`:
   - `Location <String>`: Resource Location.
   - `[Kind <String>]`: Kind of resource.
   - `[Tag <IResourceTags>]`: Resource tags.

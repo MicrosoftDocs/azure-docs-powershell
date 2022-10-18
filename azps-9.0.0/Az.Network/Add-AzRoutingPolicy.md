@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/add-azroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/add-azroutingpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzRoutingPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzRoutingPolicy.md
@@ -16,7 +16,7 @@ Add a Routing Policy to the Routing Intent object.
 
 ### (Default)
 ```
-Add-AzRoutingPolicy -RoutingIntent <PSRoutingIntent> -Name <String> -Destination <String[]> -NextHop <String> 
+Add-AzRoutingPolicy -RoutingIntent <PSRoutingIntent> -Name <String> -Destination <String[]> -NextHop <String>
  [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -31,7 +31,7 @@ $rgName = "testRg"
 $firewallName = "testFirewall"
 $firewall = Get-AzFirewall -Name $firewallName -ResourceGroupName $rgName
 $routingIntent = Get-AzRoutingIntent -Name "routingIntent1" -HubName "hub1" -ResourceGroupName $rgName
-Add-AzRoutingPolicy -Name "PublicTraffic" -RoutingIntent $routingIntent -Destination @("Internet") -NextHop $firewall.Id 
+Add-AzRoutingPolicy -Name "PublicTraffic" -RoutingIntent $routingIntent -Destination @("Internet") -NextHop $firewall.Id
 Set-AzRoutingIntent -InputObject $routingIntent
 ```
 ```output
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the routing policy 
+Name of the routing policy
 
 ```yaml
 Type: System.String
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingIntent
-The routing intent resource to which this rouing policy has to be added. 
+The routing intent resource to which this rouing policy has to be added.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSRoutingIntent

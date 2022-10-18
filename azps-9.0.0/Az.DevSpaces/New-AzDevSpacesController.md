@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DevSpaces.dll-Help.xml
 Module Name: Az.DevSpaces
-online version: https://docs.microsoft.com/powershell/module/az.devspaces/new-azdevspacescontroller
+online version: https://learn.microsoft.com/powershell/module/az.devspaces/new-azdevspacescontroller
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevSpaces/DevSpaces/help/New-AzDevSpacesController.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevSpaces/DevSpaces/help/New-AzDevSpacesController.md

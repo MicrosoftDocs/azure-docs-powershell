@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/test-azservicelinkerforwebapp
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/test-azservicelinkerforwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Test-AzServiceLinkerForWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Test-AzServiceLinkerForWebApp.md
@@ -38,20 +38,20 @@ Test-AzServiceLinkerForWebApp -WebApp servicelinker-webapp -ResourceGroupName se
 ```
 
 ```output
-AuthType              : 
+AuthType              :
 IsConnectionAvailable : True
 LinkerName            : postgresql_connection
 ReportEndTimeUtc      : 5/6/2022 8:32:26 AM
 ReportStartTimeUtc    : 5/6/2022 8:32:24 AM
-ResourceId            : /subscriptions/d82d7763-8e12-4f39-a7b6-496a983ec2f4/resourceGroups/servicelinke 
-                        r-test-group/providers/Microsoft.Web/sites/servicelinker-webapp/providers/Mi 
+ResourceId            : /subscriptions/d82d7763-8e12-4f39-a7b6-496a983ec2f4/resourceGroups/servicelinke
+                        r-test-group/providers/Microsoft.Web/sites/servicelinker-webapp/providers/Mi
                         crosoft.ServiceLinker/linkers/postgresql_connection
 SourceId              :
 Status                : Succeeded
-TargetId              : /subscriptions/937bc588-a144-4083-8612-5f9ffbbddb14/resourceGroups/servicelinke 
-                        r-test-group/providers/Microsoft.Storage/storageAccounts/servicelinkersto 
+TargetId              : /subscriptions/937bc588-a144-4083-8612-5f9ffbbddb14/resourceGroups/servicelinke
+                        r-test-group/providers/Microsoft.Storage/storageAccounts/servicelinkersto
                         rage/tableServices/default
-ValidationDetail      : {The target existence is validated, The target service firewall is validated,   
+ValidationDetail      : {The target existence is validated, The target service firewall is validated,
                         The configured values is validated}
 ```
 

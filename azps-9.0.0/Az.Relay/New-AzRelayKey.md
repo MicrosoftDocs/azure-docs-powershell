@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
 Module Name: Az.Relay
-online version: https://docs.microsoft.com/powershell/module/az.relay/new-azrelaykey
+online version: https://learn.microsoft.com/powershell/module/az.relay/new-azrelaykey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/New-AzRelayKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/New-AzRelayKey.md
@@ -92,9 +92,9 @@ Regenerates the primary or secondary connection strings for the given Relay-WcfR
 
 ### Example 2.1 - WcfRelay  KeyValue Provided
 ```powershell
-New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -WcfRelay TestWCFRelay1 -RegenerateKey PrimaryKey -KeyValue xxxxxxxxxxx 
+New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -WcfRelay TestWCFRelay1 -RegenerateKey PrimaryKey -KeyValue xxxxxxxxxxx
 
-New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -WcfRelay TestWCFRelay1 -RegenerateKey SecondaryKey -KeyValue xxxxxxxxxxx 
+New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -WcfRelay TestWCFRelay1 -RegenerateKey SecondaryKey -KeyValue xxxxxxxxxxx
 ```
 
 ```output
@@ -126,9 +126,9 @@ Regenerates the primary or secondary connection strings for the given Relay enti
 
 ### Example 3.1 - HybridConnection KeyValue Provided
 ```powershell
-New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -HybridConnection TestHybridConnection -RegenerateKey PrimaryKey -KeyValue xxxxxxxxxxx 
+New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -HybridConnection TestHybridConnection -RegenerateKey PrimaryKey -KeyValue xxxxxxxxxxx
 
-New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -HybridConnection TestHybridConnection -RegenerateKey SecondaryKey -KeyValue xxxxxxxxxxx 
+New-AzRelayKey -ResourceGroupName Default-ServiceBus-WestUS -Namespace TestNameSpace-Relay1 -Name AuthoRule1 -HybridConnection TestHybridConnection -RegenerateKey SecondaryKey -KeyValue xxxxxxxxxxx
 ```
 
 ```output

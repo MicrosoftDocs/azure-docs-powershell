@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: A06D36D7-3F72-4D21-8995-9DBBB9A9B880
-online version: https://docs.microsoft.com/powershell/module/az.automation/set-azautomationmodule
+online version: https://learn.microsoft.com/powershell/module/az.automation/set-azautomationmodule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationModule.md
@@ -24,8 +24,8 @@ Set-AzAutomationModule [-Name] <String> [-ContentLinkUri <Uri>] [-ContentLinkVer
 ## DESCRIPTION
 The **Set-AzAutomationModule** cmdlet updates a module in Azure Automation.
 This command accepts a compressed file that has a .zip file name extension.
-The file contains a folder that includes a file that is one of the following types: 
-- wps_2 module, which has a .psm1 or .dll file name extension 
+The file contains a folder that includes a file that is one of the following types:
+- wps_2 module, which has a .psm1 or .dll file name extension
 - wps_2 module manifest, which has a .psd1 file name extension
 The name of the .zip file, the name of the folder, and the name of the file in the folder must be the same.
 Specify the .zip file as a URL that the Automation service can access.

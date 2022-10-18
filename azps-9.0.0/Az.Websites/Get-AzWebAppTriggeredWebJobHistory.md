@@ -1,7 +1,7 @@
 ---
 external help file: Az.Websites-help.xml
 Module Name: Az.Websites
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebapptriggeredwebjobhistory
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebapptriggeredwebjobhistory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppTriggeredWebJobHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppTriggeredWebJobHistory.md

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MySql
-online version: https://docs.microsoft.com/powershell/module/az.mysql/restore-azmysqlflexibleserver
+online version: https://learn.microsoft.com/powershell/module/az.mysql/restore-azmysqlflexibleserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Restore-AzMySqlFlexibleServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Restore-AzMySqlFlexibleServer.md
@@ -28,7 +28,7 @@ Restore a server from an existing backup
 ### Example 1: Restore MySql server using PointInTime Restore
 ```powershell
 $restorePointInTime = (Get-Date).AddMinutes(-10)
-Get-AzMySqlFlexibleServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test | Restore-AzMySqlFlexibleServer -Name mysql-test-restore -ResourceGroupName PowershellMySqlTest -RestorePointInTime $restorePointInTime 
+Get-AzMySqlFlexibleServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test | Restore-AzMySqlFlexibleServer -Name mysql-test-restore -ResourceGroupName PowershellMySqlTest -RestorePointInTime $restorePointInTime
 ```
 
 ```output
@@ -39,7 +39,7 @@ mysql-test-restore   West US 2 Standard_D2ds_v4 GeneralPurpose admin            
 
 These cmdlets restore MySql server using PointInTime Restore.
 
-### Example 2: Restore MySql server with new private access resources 
+### Example 2: Restore MySql server with new private access resources
 ```powershell
 $restorePointInTime = (Get-Date).AddMinutes(-10)
 Get-AzMySqlFlexibleServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test | Restore-AzMySqlFlexibleServer -Name mysql-test-restore -ResourceGroupName PowershellMySqlTest -RestorePointInTime $restorePointInTime -Subnet <SubnetId> -PrivateDnsZone <PrivateDnsZoneId>
