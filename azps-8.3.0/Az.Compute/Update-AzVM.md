@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 38917534-49C6-47EA-B815-240F794EE655
-online version: https://docs.microsoft.com/powershell/module/az.compute/update-azvm
+online version: https://learn.microsoft.com/powershell/module/az.compute/update-azvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVM.md
@@ -72,14 +72,14 @@ $vCPUsCore1 = 1;
 $vCPUsAvailable1 = 1;
 $vmSize = 'Standard_D4s_v4';
 
-$securePassword = 'Password' | ConvertTo-SecureString -AsPlainText -Force;  
+$securePassword = 'Password' | ConvertTo-SecureString -AsPlainText -Force;
 $user = "user";
 $cred = New-Object System.Management.Automation.PSCredential ($user, $securePassword);
 $vm = New-AzVM -ResourceGroupName $rgname -Name $vmname -Credential $cred -DomainNameLabel $domainNameLabel -Size $vmSize -vCPUCountPerCore $vCPUsCoreInitial -vCPUCountAvailable $vCPUsAvailableInitial;
 # The $vm.HardwareProfile.VmSizeProperties.VCPUsPerCore property is 2, and the $vm.HardwareProfile.VmSizeProperties.VCPUsAvailable property is 4.
 
 Update-AzVm -ResourceGroupName $rgname -VM $vm -vCPUCountAvailable $vCPUsAvailable1 -vCPUCountPerCore $vCPUsCore1;
-# The $vm.HardwareProfile.VmSizeProperties.VCPUsPerCore property is 1, and the $vm.HardwareProfile.VmSizeProperties.VCPUsAvailable property is 1. 
+# The $vm.HardwareProfile.VmSizeProperties.VCPUsPerCore property is 1, and the $vm.HardwareProfile.VmSizeProperties.VCPUsAvailable property is 1.
 # Hyperthreading is now disabled for this VM.
 ```
 
@@ -131,8 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAtHost
-EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. 
-This will enable the encryption for all the disks including Resource/Temp disk at host itself. 
+EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set.
+This will enable the encryption for all the disks including Resource/Temp disk at host itself.
 
 ```yaml
 Type: System.Boolean
@@ -347,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -vCPUCountAvailable
-Specifies the number of vCPUs available for the VM. When this property is not specified in the request body the default behavior is to set it to the value of vCPUs available for that VM size exposed in api response of [List all available virtual machine sizes in a region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list).
+Specifies the number of vCPUs available for the VM. When this property is not specified in the request body the default behavior is to set it to the value of vCPUs available for that VM size exposed in api response of [List all available virtual machine sizes in a region](https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list).
 
 ```yaml
 Type: System.Int32
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -vCPUCountPerCore
-Specifies the vCPU to physical core ratio. When this property is not specified in the request body the default behavior is set to the value of vCPUsPerCore for the VM Size exposed in api response of [List all available virtual machine sizes in a region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list). Setting this property to 1 also means that hyper-threading is disabled.
+Specifies the vCPU to physical core ratio. When this property is not specified in the request body the default behavior is set to the value of vCPUsPerCore for the VM Size exposed in api response of [List all available virtual machine sizes in a region](https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list). Setting this property to 1 also means that hyper-threading is disabled.
 
 ```yaml
 Type: System.Int32

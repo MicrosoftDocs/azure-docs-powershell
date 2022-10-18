@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/get-azstackhcicluster
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/get-azstackhcicluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Get-AzStackHciCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Get-AzStackHciCluster.md
@@ -44,7 +44,7 @@ Get HCI cluster.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Get-AzStackHciCluster -ResourceGroupName test-rg
 ```
@@ -59,7 +59,7 @@ westeurope myCluster2 test-rg
 
 Gets all the clusters in a RG
 
-### Example 2: 
+### Example 2:
 ```powershell
 
 ```

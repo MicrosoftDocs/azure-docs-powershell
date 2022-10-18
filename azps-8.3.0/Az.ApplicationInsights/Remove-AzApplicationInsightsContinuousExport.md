@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ApplicationInsights
-online version: https://docs.microsoft.com/powershell/module/az.applicationinsights/remove-azapplicationinsightscontinuousexport
+online version: https://learn.microsoft.com/powershell/module/az.applicationinsights/remove-azapplicationinsightscontinuousexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/help/Remove-AzApplicationInsightsContinuousExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/help/Remove-AzApplicationInsightsContinuousExport.md

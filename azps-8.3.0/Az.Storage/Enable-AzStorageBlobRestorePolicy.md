@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/enable-azstorageblobrestorepolicy
+online version: https://learn.microsoft.com/powershell/module/az.storage/enable-azstorageblobrestorepolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Enable-AzStorageBlobRestorePolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Enable-AzStorageBlobRestorePolicy.md
@@ -50,12 +50,12 @@ PS C:\> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegoup" 
 
 StorageAccountName            : mystorageaccount
 ResourceGroupName             : myresourcegoup
-DefaultServiceVersion         : 
+DefaultServiceVersion         :
 DeleteRetentionPolicy.Enabled : True
 DeleteRetentionPolicy.Days    : 5
 RestorePolicy.Enabled         : False
-RestorePolicy.Days            : 
-RestorePolicy.MinRestoreTime  : 
+RestorePolicy.Days            :
+RestorePolicy.MinRestoreTime  :
 ChangeFeed                    : True
 IsVersioningEnabled           : True
 
@@ -65,7 +65,7 @@ PS C:\> Get-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegoup" -St
 
 StorageAccountName            : mystorageaccount
 ResourceGroupName             : myresourcegoup
-DefaultServiceVersion         : 
+DefaultServiceVersion         :
 DeleteRetentionPolicy.Enabled : True
 DeleteRetentionPolicy.Days    : 5
 RestorePolicy.Enabled         : True

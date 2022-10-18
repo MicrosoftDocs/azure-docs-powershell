@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/restore-azdatalakegen2deleteditem
+online version: https://learn.microsoft.com/powershell/module/az.storage/restore-azdatalakegen2deleteditem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzDataLakeGen2DeletedItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzDataLakeGen2DeletedItem.md
@@ -40,25 +40,25 @@ This cmdlet only works if Hierarchical Namespace is enabled for the Storage acco
 ### Example 1: List all deleted files or directories from a Filesystem, and restore them by pipeline
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> $items = Get-AzDataLakeGen2DeletedItem -FileSystem "filesystem1" 
+PS C:\> $items = Get-AzDataLakeGen2DeletedItem -FileSystem "filesystem1"
 PS C:\> $items
 
    FileSystem Name: filesystem1
 
 Path                 DeletionId           DeletedOn            RemainingRetentionDays
 ----                 ----------           ---------            ----------------------
-dir0/dir1/file1      132658816156507617   2021-05-19 07:06:55Z 3                     
-dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3                    
-dir0/dir2/file3      132658834534174806   2021-05-19 07:37:33Z 3   
+dir0/dir1/file1      132658816156507617   2021-05-19 07:06:55Z 3
+dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3
+dir0/dir2/file3      132658834534174806   2021-05-19 07:37:33Z 3
 
-PS C:\> $items | Restore-AzDataLakeGen2DeletedItem 
+PS C:\> $items | Restore-AzDataLakeGen2DeletedItem
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
-dir0/dir1/file1      False        1024            2021-05-19 07:06:39Z rw-r-----    $superuser           $superuser          
-dir0/dir2            True                         2021-05-19 07:06:37Z rwxr-x---    $superuser           $superuser          
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
+dir0/dir1/file1      False        1024            2021-05-19 07:06:39Z rw-r-----    $superuser           $superuser
+dir0/dir2            True                         2021-05-19 07:06:37Z rwxr-x---    $superuser           $superuser
 dir0/dir2/file3      False        1024            2021-05-19 07:06:42Z rw-r-----    $superuser           $superuser
 ```
 
@@ -72,8 +72,8 @@ Restore-AzDataLakeGen2DeletedItem -FileSystem "filesystem1"  -Path dir0/dir1/fil
 ```output
 FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
 dir0/dir1/file1      False        1024            2021-05-19 07:06:39Z rw-r-----    $superuser           $superuser
 ```
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: C2A7F37B-5713-4430-B83F-C6745692396D
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/new-azrecoveryservicesbackupprotectionpolicy
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/new-azrecoveryservicesbackupprotectionpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesBackupProtectionPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesBackupProtectionPolicy.md
@@ -94,7 +94,7 @@ New-AzRecoveryServicesBackupProtectionPolicy -Name 'NewPolicy' -RetentionPolicy 
 $pol = New-AzRecoveryServicesBackupProtectionPolicy -Name newTierRecommendedPolicy -WorkloadType AzureVM -BackupManagementType AzureVM -RetentionPolicy $retPol -SchedulePolicy $schPol -VaultId $vault.ID -MoveToArchiveTier $true -TieringMode TierRecommended
 ```
 
-This command is used to create policy to enable archive smart tiering for tiering mode TierRecommended, we set -MoveToArchiveTier parameter to $true to enable smart tiering. We set TieringMode to TierRecommended to move all recommended recovery points to archive. Please note that tiering mode TierRecommended is only supported for workload type AzureVM. 
+This command is used to create policy to enable archive smart tiering for tiering mode TierRecommended, we set -MoveToArchiveTier parameter to $true to enable smart tiering. We set TieringMode to TierRecommended to move all recommended recovery points to archive. Please note that tiering mode TierRecommended is only supported for workload type AzureVM.
 
 ### Example 5: Create new policy with archive smart tiering disabled
 ```powershell

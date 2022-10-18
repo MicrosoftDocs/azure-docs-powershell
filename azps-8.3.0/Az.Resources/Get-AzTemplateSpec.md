@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-aztemplatespec
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-aztemplatespec
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzTemplateSpec.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzTemplateSpec.md
@@ -36,10 +36,10 @@ Get-AzTemplateSpec [[-Version] <String>] [-ResourceId] <String> [-DefaultProfile
 ```
 
 ## DESCRIPTION
-This cmdlet can be used to list Template Specs in a subscription/resource group or get a specific Template Spec 
+This cmdlet can be used to list Template Specs in a subscription/resource group or get a specific Template Spec
 by name or id. When getting a specific Template Spec by name/id a specific version can optionally be retrieved
-by specifying a version name through the **-Version** parameter. When **-Version** is used, only the specific version 
-details will be present within **.Versions* on the returned Template Spec object. If no specific version 
+by specifying a version name through the **-Version** parameter. When **-Version** is used, only the specific version
+details will be present within **.Versions* on the returned Template Spec object. If no specific version
 is specified when retrieving a Template Spec by name/id, all versions will be present within the  **.Versions*
 property of the returned object.
 
@@ -70,7 +70,7 @@ Get-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'MyTemplateSpec'
 
 Gets information about the Template Spec named 'MyTemplateSpec' within the resource group 'myRG'.
 
-**Note**: All of the Template Spec's versions will be present within the "*.Versions*" property 
+**Note**: All of the Template Spec's versions will be present within the "*.Versions*" property
 of the return object.
 
 ### Example 4: Get Template Spec (specific version) by name
@@ -89,7 +89,7 @@ Get-AzTemplateSpec -ResourceId '/subscriptions/{subId}/resourceGroups/myRG/provi
 
 Gets information about the Template Spec named 'MyTemplateSpec' within the resource group 'myRG' of subscription \{subId\}.
 
-**Note**: All of the Template Spec's versions will be present within the "*.Versions*" property 
+**Note**: All of the Template Spec's versions will be present within the "*.Versions*" property
 of the return object.
 
 ### Example 6: Get Template Spec (specific version) by resource id

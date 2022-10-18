@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/get-azrediscachelink
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/get-azrediscachelink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Get-AzRedisCacheLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Get-AzRedisCacheLink.md
@@ -41,7 +41,7 @@ Get-AzRedisCacheLink -SecondaryServerName <String> [-DefaultProfile <IAzureConte
 ```
 
 ## DESCRIPTION
-There are four different ways to get geo-replication link detail. Either provide parameter Name or PrimaryServerName and/or SecondaryServerName. Name is given then all link where cache exists will be returned. If only PrimaryServerName is given then all links where cache is primary will be returned. If only SecondaryServerName is given then all links where cache is secondary will be returned. If PrimaryServerName and SecondaryServerName both are given then specific link with correct role will be returned. 
+There are four different ways to get geo-replication link detail. Either provide parameter Name or PrimaryServerName and/or SecondaryServerName. Name is given then all link where cache exists will be returned. If only PrimaryServerName is given then all links where cache is primary will be returned. If only SecondaryServerName is given then all links where cache is secondary will be returned. If PrimaryServerName and SecondaryServerName both are given then specific link with correct role will be returned.
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementkeyvaultobject
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementkeyvaultobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementKeyVaultObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementKeyVaultObject.md
@@ -30,7 +30,7 @@ The **New-AzApiManagementKeyVaultObject** cmdlet creates an instance of PsApiMan
 ### Example 1 : Create a keyVault Namedvalue
 ```powershell
 $secretIdentifier = 'https://contoso.vault.azure.net/secrets/xxxx'
-$keyvault = New-AzApiManagementKeyVaultObject -SecretIdentifier $secretIdentifier 
+$keyvault = New-AzApiManagementKeyVaultObject -SecretIdentifier $secretIdentifier
 $keyVaultNamedValue = New-AzApiManagementNamedValue -Context $context -NamedValueId $keyVaultNamedValueId -Name $keyVaultNamedValueName -keyVault $keyvault -Secret
 ```
 
@@ -40,7 +40,7 @@ The second command creates a named value using secret from this keyvault.
 ### Example 2 : Create a keyVault Certificate
 ```powershell
 $secretIdentifier = 'https://contoso.vault.azure.net/secrets/xxxx'
-$keyvault = New-AzApiManagementKeyVaultObject -SecretIdentifier $secretIdentifier 
+$keyvault = New-AzApiManagementKeyVaultObject -SecretIdentifier $secretIdentifier
 $keyVaultcert = New-AzApiManagementCertificate -Context $context -CertificateId $kvcertId -KeyVault $keyvault
 ```
 

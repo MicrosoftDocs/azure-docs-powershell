@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 6C16B04B-459A-4B2C-B7DF-AC4D16FF7281
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccountschema
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccountschema
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountSchema.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountSchema.md
@@ -45,7 +45,7 @@ Type                 : Microsoft.Logic/integrationAccounts/schemas
 CreatedTime          : 3/25/2016 5:42:58 PM
 ChangedTime          : 3/25/2016 5:42:58 PM
 SchemaType           : Xml
-ContentType          : 
+ContentType          :
 ContentLink          : https://<baseurl>/integrationaccounts469af4f3cf4047b7ac3a08c87948ec5f/3839E_XML_INTEGRATIONACCOUNTSCHEMA43-5A86631F61F
                        14513AA1185A52C6B2874?sv=2014-02-14&sr=b&sig=<value>
 ContentSize          : 7901
@@ -66,7 +66,7 @@ Type                 : Microsoft.Logic/integrationAccounts/schemas
 CreatedTime          : 3/25/2016 5:42:58 PM
 ChangedTime          : 3/25/2016 5:42:58 PM
 SchemaType           : Xml
-ContentType          : 
+ContentType          :
 ContentLink          : https://<baseurl>/integrationaccounts469af4f3cf4047b7ac3a08c87948ec5f/3839E_XML_INTEGRATIONACCOUNTSCHEMA43-5A86631F61F
                        14513AA1185A52C6B2874?sv=2014-02-14&sr=b&sig=<value>
 ContentSize          : 7901

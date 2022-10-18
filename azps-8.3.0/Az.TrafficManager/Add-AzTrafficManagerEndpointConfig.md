@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
 ms.assetid: 25E3F297-1D91-4102-B4D3-1E7195A5D33D
-online version: https://docs.microsoft.com/powershell/module/az.trafficmanager/add-aztrafficmanagerendpointconfig
+online version: https://learn.microsoft.com/powershell/module/az.trafficmanager/add-aztrafficmanagerendpointconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Add-AzTrafficManagerEndpointConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Add-AzTrafficManagerEndpointConfig.md
@@ -123,10 +123,10 @@ Accept wildcard characters: False
 
 ### -EndpointStatus
 Specifies the status of the endpoint.
-Valid values are: 
+Valid values are:
 
-- Enabled 
-- Disabled 
+- Enabled
+- Disabled
 
 If the status is Enabled, the endpoint is probed for endpoint health and is included in the traffic-routing method.
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -GeoMapping
-The list of regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager documentation for a [full list of accepted values](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-geographic-regions).
+The list of regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager documentation for a [full list of accepted values](https://learn.microsoft.com/azure/traffic-manager/traffic-manager-geographic-regions).
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of endpoint that this cmdlet adds to the Azure Traffic Manager profile.
-Valid values are: 
+Valid values are:
 
 - AzureEndpoints
 - ExternalEndpoints

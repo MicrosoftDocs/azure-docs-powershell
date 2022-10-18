@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/add-azresourcemovermoveresource
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/add-azresourcemovermoveresource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Add-AzResourceMoverMoveResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Add-AzResourceMoverMoveResource.md
@@ -41,19 +41,19 @@ Add-AzResourceMoverMoveResource -ResourceGroupName "RG-MoveCollection-demoRMS" -
 ```output
 DependsOn                         : {}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralus-demoRMS/moveResources/PSDemoVM
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
 MoveStatusErrorsPropertiesCode    : DependencyComputationPending
 MoveStatusErrorsPropertiesDetail  : {}
 MoveStatusErrorsPropertiesMessage : The dependency computation is not completed for resource - /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/PSDemoRM/providers/Microsoft.Compute/virtualMachines/PSDemoVM. Possible Causes: Dependency computation is pending for resource. Recommended Action: Validate dependencies to compute the dependencies.
-MoveStatusErrorsPropertiesTarget  : 
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : PSDemoVM
 ProvisioningState                 : Succeeded
@@ -66,8 +66,8 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 ```
 
 Add a resource to the Move Collection.
@@ -80,19 +80,19 @@ Add-AzResourceMoverMoveResource -ResourceGroupName "RG-MoveCollection-demoRMS"  
 ```output
 DependsOn                         : {}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
 ExistingTargetId                  : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/PSDemoRM-target
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralus-demoRMS/moveResources/psdemorm
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : CommitPending
 Name                              : psdemorm
 ProvisioningState                 : Succeeded
@@ -105,8 +105,8 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 ```
 
 Add a resource to the Move Collection that has existing target resource.
@@ -124,19 +124,19 @@ Add-AzResourceMoverMoveResource -ResourceGroupName "RG-MoveCollection-demoRMS" -
 DependsOn                         : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/PSDemoRM/providers/Microsoft.Network/networkInterfaces/psdemov
                                     m111, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/PSDemoRM}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralus-demoRMS/moveResources/PSDemoVM
 IsResolveRequired                 : True
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : PSDemoVM
 ProvisioningState                 : Succeeded
@@ -149,8 +149,8 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 ```
 
 Update target resource settings after the Move Resource has been added.

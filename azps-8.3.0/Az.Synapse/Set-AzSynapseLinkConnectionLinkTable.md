@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/set-azsynapselinkconnectionlinktables
+online version: https://learn.microsoft.com/powershell/module/az.synapse/set-azsynapselinkconnectionlinktables
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseLinkConnectionLinkTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseLinkConnectionLinkTable.md
@@ -46,22 +46,22 @@ The **Set-AzSynapseLinkConnectionLinkTables** cmdlet edits link tables under a l
 ```powershell
 <#
 edittables.json
-{ 
-  "linkTables": [ 
-    { 
+{
+  "linkTables": [
+    {
       "id": "00000000000000000000000000000000", // please change to your link table Id: a uuid
-      "source": { 
+      "source": {
         "tableName": "sampleSourceTable", // please change to your source table name
         "schemaName": "sampleSourceSchema" // please change to your source database schema name
-      }, 
-      "target": { 
+      },
+      "target": {
         "tableName": "sampleTargetTable", // please change to your target table name
         "schemaName": "sampleTargetSchema", // please change to your target database schema name
-        "distributionOptions": { 
+        "distributionOptions": {
           "type": "Round_RoBin", // please choose a type from Hash, Round_RoBin, Replicate
           "distributionColumn": "sampleColumn" // please change to the column name
         }
-      }, 
+      },
       "operationType": "add" // please choose a value from add, update, remove
     }
   ]

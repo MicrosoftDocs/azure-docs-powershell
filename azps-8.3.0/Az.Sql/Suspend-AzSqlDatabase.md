@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 7302D785-9DD0-4CC0-93C9-9A6EA60591CF
-online version: https://docs.microsoft.com/powershell/module/az.sql/suspend-azsqldatabase
+online version: https://learn.microsoft.com/powershell/module/az.sql/suspend-azsqldatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Suspend-AzSqlDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Suspend-AzSqlDatabase.md
@@ -169,6 +169,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlDatabase](./Set-AzSqlDatabase.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
 
 

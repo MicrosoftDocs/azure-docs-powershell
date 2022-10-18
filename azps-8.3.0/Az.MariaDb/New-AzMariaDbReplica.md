@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MariaDb
-online version: https://docs.microsoft.com/powershell/module/az.mariadb/new-azmariadbreplica
+online version: https://learn.microsoft.com/powershell/module/az.mariadb/new-azmariadbreplica
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MariaDb/help/New-AzMariaDbReplica.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MariaDb/help/New-AzMariaDbReplica.md
@@ -64,7 +64,7 @@ This command creates a replica db for a MariaDB.
 
 ### Example 3: Create a replica db for a MariaDB
 ```powershell
-$mariaDb = Get-AzMariaDbServer -Name mariadb-test-9pebvn -ResourceGroupName mariadb-test-qu5ov0 
+$mariaDb = Get-AzMariaDbServer -Name mariadb-test-9pebvn -ResourceGroupName mariadb-test-qu5ov0
 New-AzMariaDbReplica -Master $mariaDb -ReplicaName mariadb-test-9pebvn-rep03
 ```
 

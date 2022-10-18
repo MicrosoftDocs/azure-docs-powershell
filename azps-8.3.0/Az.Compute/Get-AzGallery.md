@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azgallery
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azgallery
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzGallery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzGallery.md
@@ -53,7 +53,7 @@ Get-AzGallery -ResourceGroupName rg1 -GalleryName gallery1
 ```output
 ResourceGroupName : rg1
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery1
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/galleries/gallery1
@@ -73,7 +73,7 @@ Get-AzGallery -ResourceGroupName rg1
 ```output
 ResourceGroupName : rg1
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery1
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/galleries/gallery1
@@ -84,7 +84,7 @@ Tags              : {}
 
 ResourceGroupName : rg1
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery2
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/galleries/gallery2
@@ -104,7 +104,7 @@ Get-AzGallery
 ```output
 ResourceGroupName : rg1
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery1
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/galleries/gallery1
@@ -115,7 +115,7 @@ Tags              : {}
 
 ResourceGroupName : rg1
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery2
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/galleries/gallery2
@@ -126,7 +126,7 @@ Tags              : {}
 
 ResourceGroupName : rg2
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery3
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Compute/galleries/gallery3
@@ -146,7 +146,7 @@ Get-AzGallery -Name gallery*
 ```output
 ResourceGroupName : rg1
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery1
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/galleries/gallery1
@@ -157,7 +157,7 @@ Tags              : {}
 
 ResourceGroupName : rg1
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery2
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/galleries/gallery2
@@ -168,7 +168,7 @@ Tags              : {}
 
 ResourceGroupName : rg2
 Description       : Gallery created by PowerShell.
-Identifier        : 
+Identifier        :
   UniqueName      : 00000000-0000-0000-0000-000000000000-gallery3
 ProvisioningState : Succeeded
 Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg2/providers/Microsoft.Compute/galleries/gallery3

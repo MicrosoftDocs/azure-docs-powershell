@@ -1,9 +1,9 @@
 ---
 Module Name: Az.PrivateDns
 Module Guid: f9850afe-b631-4369-ab61-eca7023f2f53
-Download Help Link: https://docs.microsoft.com/powershell/module/az.privatedns
+Download Help Link: https://learn.microsoft.com/powershell/module/az.privatedns
 Help Version: 1.0.0
-Locale: 
+Locale:
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/Az.PrivateDNS.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/Az.PrivateDNS.md
 ---

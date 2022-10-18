@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: AEDA89D3-EF80-4E56-9B97-677EC8F3959D
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/set-azlogicapp
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/set-azlogicapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzLogicApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzLogicApp.md
@@ -63,12 +63,12 @@ ChangedTime                  : 1/13/2016 2:41:39 PM
 CreatedTime                  : 1/13/2016 2:41:39 PM
 AccessEndpoint               : https://westus.logic.azure.com:443/subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourcegroups/ResourceGroup11/providers/Microsoft.Logic/workflows/LogicApp17
 State                        : Enabled
-DefinitionLinkUri            : 
-DefinitionLinkContentVersion : 
-Definition                   : {$schema, contentVersion, parameters, triggers...} 
-ParametersLinkUri            : 
-ParametersLinkContentVersion : 
-Parameters                   : {[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter]} 
+DefinitionLinkUri            :
+DefinitionLinkContentVersion :
+Definition                   : {$schema, contentVersion, parameters, triggers...}
+ParametersLinkUri            :
+ParametersLinkContentVersion :
+Parameters                   : {[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter]}
 SkuName                      : Standard
 PlanName                     : ServicePlan01
 PlanType                     : Microsoft.Web/ServerFarms

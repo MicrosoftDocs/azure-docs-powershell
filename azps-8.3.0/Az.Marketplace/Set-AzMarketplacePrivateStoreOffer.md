@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Marketplace.dll-Help.xml
 Module Name: Az.Marketplace
-online version: https://docs.microsoft.com/powershell/module/az.marketplace/set-azmarketplaceprivatestoreoffer
+online version: https://learn.microsoft.com/powershell/module/az.marketplace/set-azmarketplaceprivatestoreoffer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Set-AzMarketplacePrivateStoreOffer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Set-AzMarketplacePrivateStoreOffer.md
@@ -48,7 +48,7 @@ Name                      : publisherid.offerid
 Type                      : Microsoft.Marketplace/privateStores/offers
 ```
 
-Creates offer with private + public plans for private store that was created under tenant scope. 
+Creates offer with private + public plans for private store that was created under tenant scope.
 
 ### Example 2
 ```powershell
@@ -70,7 +70,7 @@ Name                      : publisherid.offerid
 Type                      : Microsoft.Marketplace/privateStores/offers
 ```
 
-Creates offer with private plans only for private store that was created under subscription scope. 
+Creates offer with private plans only for private store that was created under subscription scope.
 
 ### Example 3
 ```powershell

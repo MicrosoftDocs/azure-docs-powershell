@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azvirtualhub
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualHub.md
@@ -64,7 +64,7 @@ Type                                  : Microsoft.Network/virtualHubs
 ProvisioningState                     : Succeeded
 ```
 
-First we create a Virtual Hub Route object, and use it to create a Virtual Hub Route Table resource. Then we set this route table resource to the virtual hub using the 
+First we create a Virtual Hub Route object, and use it to create a Virtual Hub Route Table resource. Then we set this route table resource to the virtual hub using the
 Set-AzVirtualHub command.
 
 ## PARAMETERS

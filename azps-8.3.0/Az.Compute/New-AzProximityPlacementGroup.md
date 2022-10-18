@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/new-azproximityplacementgroup
+online version: https://learn.microsoft.com/powershell/module/az.compute/new-azproximityplacementgroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzProximityPlacementGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzProximityPlacementGroup.md
@@ -62,7 +62,7 @@ New-AzProximityPlacementGroup -Location westus -Name 'AgentPool01' -ProximityPla
 $ResourceGroupName = <Resource Group Name>
 $PPGName = <PPG Name>
 $Location = <Azure Region>
-# Use the VM Sizes and Zone that you want to use for the Zone and IntentVMSizeList parameters. 
+# Use the VM Sizes and Zone that you want to use for the Zone and IntentVMSizeList parameters.
 New-AzProximityPlacementGroup -ResourceGroupName $ResourceGroupName -Name $PPGName -Location $Location -Zone '1' -IntentVMSizeList 'Standard_D4d_v4', 'Standard_D4d_v5';
 $ppg = Get-AzProximityPlacementGroup -ResourceGroupName $ResourceGroupName -Name $PPGName;
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImageBuilder
-online version: https://docs.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatecustomizerobject
+online version: https://learn.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatecustomizerobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplateCustomizerObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplateCustomizerObject.md
@@ -85,8 +85,8 @@ New-AzImageBuilderTemplateCustomizerObject -PowerShellCustomizer -Name settingUp
 ```
 
 ```output
-Name                 Inline                                                                                                  RunAsSystem  
-----                 ------                                                                                                  -----------  
+Name                 Inline                                                                                                  RunAsSystem
+----                 ------                                                                                                  -----------
 settingUpMgmtAgtPath {mkdir c:\\buildActions, echo Azure-Image-Builder-Was-Here  > c:\\buildActions\\buildActionsOutput.txt}
 ```
 
@@ -107,12 +107,12 @@ This command creates a restart customizer.
 
 ### Example 5: Create a shell customizer
 ```powershell
-New-AzImageBuilderTemplateCustomizerObject -ShellCustomizer -Name downloadBuildArtifacts -ScriptUri "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/customizeScript2.sh" 
+New-AzImageBuilderTemplateCustomizerObject -ShellCustomizer -Name downloadBuildArtifacts -ScriptUri "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/customizeScript2.sh"
 ```
 
 ```output
 Name                   Inline ScriptUri
-----                   ------ ---------                                                                                       
+----                   ------ ---------
 downloadBuildArtifacts        https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/cus…
 ```
 

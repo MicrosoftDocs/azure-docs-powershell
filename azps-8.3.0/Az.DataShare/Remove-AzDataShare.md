@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/remove-azdatashare
+online version: https://learn.microsoft.com/powershell/module/az.datashare/remove-azdatashare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShare.md
@@ -46,11 +46,11 @@ Remove-AzDataShare -ResourceGroupName "ADS" -AccountName "WikiAds" -Name "AdsSha
 ```
 
 ```output
-Are you sure you want to remove data share "AdsShare"? 
+Are you sure you want to remove data share "AdsShare"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-This commands removes the data share named AdsShare from the azure data share account WikiAds. 
+This commands removes the data share named AdsShare from the azure data share account WikiAds.
 
 ## PARAMETERS
 
@@ -104,7 +104,7 @@ Azure data share object`
 ``yaml
 Type: PSDataShare
 Parameter Sets: ByObjectParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -130,7 +130,7 @@ Azure data share name
 yaml
 Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -156,7 +156,7 @@ Return object (if specified).
 yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ The resource group name of the azure data share account
 yaml
 Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -208,7 +208,7 @@ The resource id of the Azure data share
 yaml
 Type: String
 Parameter Sets: ByResourceIdParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

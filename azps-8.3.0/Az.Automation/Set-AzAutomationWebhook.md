@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 9EA7F710-36FB-435C-BF28-1015E5D3155F
-online version: https://docs.microsoft.com/powershell/module/az.automation/set-azautomationwebhook
+online version: https://learn.microsoft.com/powershell/module/az.automation/set-azautomationwebhook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationWebhook.md
@@ -48,7 +48,7 @@ This command sets the run on value for the webhook and forces the runbook to be 
 Set-AzAutomationWebhook -Name "Webhook01" -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -RunOn $null
 ```
 
-This command updates the run on value for the webhook and forces the runbook to be run on an Azure runbook worker. 
+This command updates the run on value for the webhook and forces the runbook to be run on an Azure runbook worker.
 
 ## PARAMETERS
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/remove-azservicelinkerforwebapp
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/remove-azservicelinkerforwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Remove-AzServiceLinkerForWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Remove-AzServiceLinkerForWebApp.md
@@ -37,7 +37,7 @@ Delete a link in webapp.
 
 ### Example 1: Remove linker
 ```powershell
-Remove-AzServiceLinkerForWebApp -WebApp servicelinker-app -ResourceGroupName servicelinker-test-group -Name testLinker       
+Remove-AzServiceLinkerForWebApp -WebApp servicelinker-app -ResourceGroupName servicelinker-test-group -Name testLinker
 ```
 
 Remove linker

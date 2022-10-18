@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkersystemassignedidentityauthinfoobject
+online version: https://learn.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkersystemassignedidentityauthinfoobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject.md
@@ -28,7 +28,7 @@ Create an in-memory object for SystemAssignedIdentityAuthInfo.
 
 ### Example 1: Create linker's auth info with system assigned identity
 ```powershell
-New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject  
+New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject
 ```
 
 ```output

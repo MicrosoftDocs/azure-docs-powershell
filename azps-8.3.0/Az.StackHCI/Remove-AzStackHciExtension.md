@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/remove-azstackhciextension
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/remove-azstackhciextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHciExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHciExtension.md
@@ -35,14 +35,14 @@ Delete particular Arc Extension of HCI Cluster.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Remove-AzStackHciExtension -ResourceGroupName test-rg -ClusterName myCluster -ArcSettingName "default" -Name MicrosoftMonitoringAgent
 ```
 
 Removes a particular extension under arcSettings of a cluster.
 
-### Example 2: 
+### Example 2:
 ```powershell
 Get-AzStackHciExtension -ResourceGroupName test-rg -ClusterName myCluster -ArcSettingName "default" | Remove-AzStackHciExtension
 ```

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Advisor.dll-Help.xml
 Module Name: Az.Advisor
-online version: https://docs.microsoft.com/powershell/module/az.advisor/set-azadvisorConfiguration
+online version: https://learn.microsoft.com/powershell/module/az.advisor/set-azadvisorConfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/Advisor/help/Set-AzAdvisorConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/Advisor/help/Set-AzAdvisorConfiguration.md
@@ -24,7 +24,7 @@ Set-AzAdvisorConfiguration [-Exclude] [[-ResourceGroupName] <String>]
  [-Confirm] [<CommonParameters>]
 ```
 
-### InputObjectLowCpuExcludeParameterSet 
+### InputObjectLowCpuExcludeParameterSet
 ```
 Set-AzAdvisorConfiguration [-Exclude] [-LowCpuThreshold] <Int32>
  [[-InputObject] <PsAzureAdvisorConfigurationData>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
@@ -32,7 +32,7 @@ Set-AzAdvisorConfiguration [-Exclude] [-LowCpuThreshold] <Int32>
 ```
 
 ## DESCRIPTION
-Used to update the configuration of the Azure Advisor. Two types of Configuration are present: Subscription level configuration and ResourceGroup level configuration. 
+Used to update the configuration of the Azure Advisor. Two types of Configuration are present: Subscription level configuration and ResourceGroup level configuration.
 
 Subscription level configuration: There can be only one Configuration for this type for a subscription. LowCpuThreshold and Exclude properties can be updated using this cmdlet.
 ResourceGroup level configuration: There can be only one configuration for each ResourceGroup. Only Exclude property can be updated using this cmdlet.
@@ -60,7 +60,7 @@ Updates the configuration(lowCpuThreshold) for subscription level Configuration.
 ```powershell
 Set-AzAdvisorConfiguration -LowCpuThreshold 15 -Exclude
 ```
- 
+
 ```output
 Id         : /subscriptions/{user_subscription}/resourceGroups/resourceGroupName1/providers/Microsoft.Advisor/configurations/{user_subscription}
 Name       : {user_subscription}

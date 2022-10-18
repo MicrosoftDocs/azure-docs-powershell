@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DesktopVirtualization
-online version: https://docs.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdusersession
+online version: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdusersession
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdUserSession.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdUserSession.md

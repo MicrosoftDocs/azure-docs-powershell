@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionpolicytagcriteriaclientobject
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionpolicytagcriteriaclientobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/New-AzDataProtectionPolicyTagCriteriaClientObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/New-AzDataProtectionPolicyTagCriteriaClientObject.md
@@ -40,7 +40,7 @@ Creates a new criteria object
 
 ## EXAMPLES
 
-### Example 1: Create a tag with absolute criteria 
+### Example 1: Create a tag with absolute criteria
 ```powershell
 New-AzDataProtectionPolicyTagCriteriaClientObject -AbsoluteCriteria FirstOfDay
 ```

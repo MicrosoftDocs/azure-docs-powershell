@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/get-azeventhubnetworkruleset
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/get-azeventhubnetworkruleset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Get-AzEventHubNetworkRuleSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Get-AzEventHubNetworkRuleSet.md
@@ -45,7 +45,7 @@ Gets the details of an Event Hubs NetworkruleSet of namespace in the current Azu
 Get-AzEventHubNetworkRuleSet -ResourceGroupName  v-ajnavtest -Namespace Eventhub-Namespace1-1375
 ```
 
-Get the details of Event Hubs NetworkruleSet of namespace using ResourceGroup and Namespace parameters. 
+Get the details of Event Hubs NetworkruleSet of namespace using ResourceGroup and Namespace parameters.
 
 ### Example 2
 ```powershell
@@ -59,7 +59,7 @@ Get the details of Event Hubs NetworkruleSet of namespace using  Namespace which
 Get-AzEventHubNetworkRuleSet -ResourceId /SubscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/Eventhub-Namespace1-2389
 ```
 
-Get the details of Event Hubs NetworkruleSet of namespace using Resource Id of other Namespace 
+Get the details of Event Hubs NetworkruleSet of namespace using Resource Id of other Namespace
 
 ## PARAMETERS
 

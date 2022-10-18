@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.dll-Help.xml
 Module Name: Az.SqlVirtualMachine
-online version: https://docs.microsoft.com/powershell/module/az.sqlvirtualmachine/new-azsqlvmgroup
+online version: https://learn.microsoft.com/powershell/module/az.sqlvirtualmachine/new-azsqlvmgroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/New-AzSqlVMGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/New-AzSqlVMGroup.md
@@ -39,7 +39,7 @@ New-AzSqlVMGroup $resourceGroupName $groupName $location -ClusterOperatorAccount
          -Offer 'SQL2017-WS2016' -Sku 'Developer'
 ```
 
-```output         
+```output
 Name       ResourceGroupName  Sku       Offer
 ----       -----------------  ---       -----
 test-group ResourceGroup01	  Developer SQL2017-WS2016

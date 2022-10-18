@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/set-aziothubdeviceparent
+online version: https://learn.microsoft.com/powershell/module/az.iothub/set-aziothubdeviceparent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHubDeviceParent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHubDeviceParent.md
@@ -54,7 +54,7 @@ LastActivityTime           : 1/1/0001 12:00:00 AM
 ConnectionState            : Disconnected
 ConnectionStateUpdatedTime : 1/1/0001 12:00:00 AM
 Status                     : Enabled
-StatusReason               : 
+StatusReason               :
 StatusUpdatedTime          : 1/17/2020 10:15:04 PM
 CloudToDeviceMessageCount  : 0
 Authentication             : Sas

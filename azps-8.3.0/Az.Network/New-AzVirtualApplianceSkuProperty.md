@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvirtualapplianceskuproperty
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualapplianceskuproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualApplianceSkuProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualApplianceSkuProperty.md
@@ -32,7 +32,7 @@ The New-AzVirtualApplianceSkuProperties command defines a Sku for Network Virtua
 $var=New-AzVirtualApplianceSkuProperty -VendorName "barracudasdwanrelease" -BundledScaleUnit 1 -MarketPlaceVersion 'latest'
 ```
 
-Create a Virtual Appliance Sku Properties object to be used with New-AzNetworkVirtualAppliance command. 
+Create a Virtual Appliance Sku Properties object to be used with New-AzNetworkVirtualAppliance command.
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 76DB6AF5-BF6F-436C-8500-626468F84466
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azapplicationgatewaywebapplicationfirewallconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewaywebapplicationfirewallconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayWebApplicationFirewallConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayWebApplicationFirewallConfiguration.md
@@ -170,8 +170,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleSetType
-The type of the web application firewall rule set. 
-The acceptable values for this parameter are: 
+The type of the web application firewall rule set.
+The acceptable values for this parameter are:
 - OWASP
 
 ```yaml

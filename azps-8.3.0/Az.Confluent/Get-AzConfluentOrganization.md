@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Confluent
-online version: https://docs.microsoft.com/powershell/module/az.confluent/get-azconfluentorganization
+online version: https://learn.microsoft.com/powershell/module/az.confluent/get-azconfluentorganization
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/help/Get-AzConfluentOrganization.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/help/Get-AzConfluentOrganization.md

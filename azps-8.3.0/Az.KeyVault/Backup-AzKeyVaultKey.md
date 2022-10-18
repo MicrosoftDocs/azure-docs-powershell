@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: A82392AA-B12B-443E-8704-7CF5A9F8ED58
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/backup-azkeyvaultkey
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/backup-azkeyvaultkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultKey.md
@@ -41,9 +41,9 @@ The **Backup-AzKeyVaultKey** cmdlet backs up a specified key in a key vault by d
 If there are multiple versions of the key, all versions are included in the backup.
 Because the downloaded content is encrypted, it cannot be used outside of Azure Key Vault.
 You can restore a backed-up key to any key vault in the subscription that it was backed up from.
-Typical reasons to use this cmdlet are: 
+Typical reasons to use this cmdlet are:
 - You want to escrow a copy of your key, so that you have an offline copy in case you accidentally delete your key in your key vault.
- 
+
 - You created a key using Key Vault and now want to clone the key into a different Azure region, so that you can use it from all instances of your distributed application.
 Use the **Backup-AzKeyVaultKey** cmdlet to retrieve the key in encrypted format and then use the Restore-AzKeyVaultKey cmdlet and specify a key vault in the second region.
 

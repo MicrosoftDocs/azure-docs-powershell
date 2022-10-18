@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/new-azsshkey
+online version: https://learn.microsoft.com/powershell/module/az.compute/new-azsshkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzSshKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzSshKey.md
@@ -32,7 +32,7 @@ Create a SSH Public Key resource.
 New-AzSshKey -ResourceGroupName "testRG" -Name "sshkey1" -PublicKey $publicKey
 ```
 
-Creating a SSH Key resource with provided a public key. 
+Creating a SSH Key resource with provided a public key.
 
 ### Example 2
 ```powershell

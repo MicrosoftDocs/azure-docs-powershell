@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
 Module Name: Az.FrontDoor
-online version: https://docs.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorbackendobject
+online version: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorbackendobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendObject.md
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHostHeader
-The value to use as the host header sent to the backend. 
+The value to use as the host header sent to the backend.
 Default value is the backend address.
 
 ```yaml
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledState
-Whether to enable use of this backend. 
+Whether to enable use of this backend.
 Default value is Enabled
 
 ```yaml

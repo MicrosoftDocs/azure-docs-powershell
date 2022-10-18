@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version: https://docs.microsoft.com/powershell/module/az.websites/new-AzWebAppCertificate
+online version: https://learn.microsoft.com/powershell/module/az.websites/new-AzWebAppCertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppCertificate.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzWebAppCertificate
 
 ## SYNOPSIS
-Creates an App service managed certificate for an Azure Web App. 
+Creates an App service managed certificate for an Azure Web App.
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/new-azwebappcertificate) for up-to-date information.

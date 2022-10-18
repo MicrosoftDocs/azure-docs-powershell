@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/Az.storage/new-azstorageblobqueryconfig
+online version: https://learn.microsoft.com/powershell/module/Az.storage/new-azstorageblobqueryconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageBlobQueryConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageBlobQueryConfig.md
@@ -38,7 +38,7 @@ The **New-AzStorageBlobQueryConfig** cmdlet creates a blob query configuration o
 ```powershell
 PS C:\> $inputconfig = New-AzStorageBlobQueryConfig -AsCsv -ColumnSeparator "," -QuotationCharacter """" -EscapeCharacter "\" -RecordSeparator "`n" -HasHeader
 
-PS C:\> $outputconfig = New-AzStorageBlobQueryConfig -AsJson -RecordSeparator "`n" 
+PS C:\> $outputconfig = New-AzStorageBlobQueryConfig -AsJson -RecordSeparator "`n"
 
 PS C:\> $queryString = "SELECT * FROM BlobStorage WHERE Name = 'a'"
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DesktopVirtualization
-online version: https://docs.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdmsixpackage
+online version: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdmsixpackage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdMsixPackage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdMsixPackage.md
@@ -53,7 +53,7 @@ HostPoolName/MSIXPackage_FullName                     Microsoft.DesktopVirtualiz
 
 This command gets a MSIX Package in a HostPool.
 
-### Example 2: List MSIX Packages 
+### Example 2: List MSIX Packages
 ```powershell
 Get-AzWvdMsixPackage -HostPoolName HostPoolName -ResourceGroupName ResourceGroupName -SubscriptionId SubscriptionId
 ```

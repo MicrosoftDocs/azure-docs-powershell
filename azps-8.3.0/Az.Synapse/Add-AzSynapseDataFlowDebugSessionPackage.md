@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/add-azsynapsedataflowdebugsessionpackage
+online version: https://learn.microsoft.com/powershell/module/az.synapse/add-azsynapsedataflowdebugsessionpackage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Add-AzSynapseDataFlowDebugSessionPackage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Add-AzSynapseDataFlowDebugSessionPackage.md
@@ -32,9 +32,9 @@ Add-AzSynapseDataFlowDebugSessionPackage -WorkspaceObject <PSSynapseWorkspace> -
 ## DESCRIPTION
 This command attaches data flow resource and its dependencies to the specific debug session. The PowerShell command sequence for data flow debug workflow should be:
 
-Start-AzSynapseDataFlowDebugSession  
-Add-AzSynapseDataFlowDebugSessionPackage  
-Invoke-AzSynapseDataFlowDebugSessionCommand (repeat this step for different commands/targets, or repeat step 2-3 in order to change the package file)  
+Start-AzSynapseDataFlowDebugSession
+Add-AzSynapseDataFlowDebugSessionPackage
+Invoke-AzSynapseDataFlowDebugSessionCommand (repeat this step for different commands/targets, or repeat step 2-3 in order to change the package file)
 Stop-AzSynapseDataFlowDebugSession
 
 ## EXAMPLES
@@ -44,7 +44,7 @@ Stop-AzSynapseDataFlowDebugSession
 Add-AzSynapseDataFlowDebugSessionPackage -WorkspaceName ContosoWorkspace -PackageFile "D:\dataflowps\addpackage.json" -SessionId 3afb278e-ac5f-469f-a0b6-2f04c3ab59bc
 ```
 
-Add data flow package into debug session "3afb278e-ac5f-469f-a0b6-2f04c3ab59bc" under Synapse workspace "ContosoWorkspace". Pakcage file contains data flow debug resource, list of dataset debug resouce, list of linked service debug resource, debug setting and session ID. [-SessionId] parameter is optional, if it is specified, it will replace the existing sessionId property in the package file.  
+Add data flow package into debug session "3afb278e-ac5f-469f-a0b6-2f04c3ab59bc" under Synapse workspace "ContosoWorkspace". Pakcage file contains data flow debug resource, list of dataset debug resouce, list of linked service debug resource, debug setting and session ID. [-SessionId] parameter is optional, if it is specified, it will replace the existing sessionId property in the package file.
 
 ### Example 2
 ```powershell

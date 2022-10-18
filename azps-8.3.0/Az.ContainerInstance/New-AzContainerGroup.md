@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ContainerInstance
-online version: https://docs.microsoft.com/powershell/module/az.containerinstance/new-azcontainergroup
+online version: https://learn.microsoft.com/powershell/module/az.containerinstance/new-azcontainergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/New-AzContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/New-AzContainerGroup.md
@@ -72,7 +72,7 @@ This commands creates a container group and runs a custom script inside the cont
 
 ### Example 3: Create a run-to-completion container group
 ```powershell
-$container = New-AzContainerInstanceObject -Name test-container -Image alpine -Command "echo hello" 
+$container = New-AzContainerInstanceObject -Name test-container -Image alpine -Command "echo hello"
 $containerGroup = New-AzContainerGroup -ResourceGroupName test-rg -Name test-cg -Location eastus -Container $container -OsType Linux
 ```
 
@@ -87,7 +87,7 @@ This commands creates a container group which prints out 'hello' and stops.
 ### Example 4: Create a container group with a container instance using image nginx in Azure Container Registry
 ```powershell
 $container = New-AzContainerInstanceObject -Name test-container -Image myacr.azurecr.io/nginx:latest
-$imageRegistryCredential = New-AzContainerGroupImageRegistryCredentialObject -Server "myacr.azurecr.io" -Username "username" -Password (ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force) 
+$imageRegistryCredential = New-AzContainerGroupImageRegistryCredentialObject -Server "myacr.azurecr.io" -Username "username" -Password (ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force)
 $containerGroup = New-AzContainerGroup -ResourceGroupName test-rg -Name test-cg -Location eastus -Container $container -ImageRegistryCredential $imageRegistryCredential
 ```
 
@@ -102,7 +102,7 @@ This commands creates a container group with a container instance, whose image i
 ### Example 5: Create a container group with a container instance using image nginx in custom container image Registry
 ```powershell
 $container = New-AzContainerInstanceObject -Name test-container -Image myserver.com/nginx:latest
-$imageRegistryCredential = New-AzContainerGroupImageRegistryCredentialObject -Server "myserver.com" -Username "username" -Password (ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force) 
+$imageRegistryCredential = New-AzContainerGroupImageRegistryCredentialObject -Server "myserver.com" -Username "username" -Password (ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force)
 $containerGroup = New-AzContainerGroup -ResourceGroupName test-rg -Name test-cg -Location eastus -Container $container -ImageRegistryCredential $imageRegistryCredential
 ```
 

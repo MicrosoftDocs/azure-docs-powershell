@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azmetricalertrulev2
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azmetricalertrulev2
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzMetricAlertRuleV2.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzMetricAlertRuleV2.md
@@ -129,7 +129,7 @@ Get-AzMetricAlertRuleV2 -ResourceGroupName metricAlertsRG -Name PS3182019
 Criteria             : {metric1}
 Actions              : {/subscriptions/00000000-0000-0000-0000-0000000/resourcegroups/default-activitylogalerts/providers/Microsoft.Insights/actiongroups/demo}
 ResourceGroup        : metricAlertsRG
-Description          : This is description 
+Description          : This is description
 Severity             : 1
 Enabled              : True
 Scopes               : {/subscriptions/00000000-0000-0000-0000-0000000/resourceGroups/metricAlertsRG/providers/Microsoft.Compute/virtualMachines/VM1,
@@ -166,9 +166,9 @@ Enabled              : True
 Scopes               : {/subscriptions/00000000-0000-0000-0000-0000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Insights/components/alertstestFunction}
 EvaluationFrequency  : 00:01:00
 WindowSize           : 00:05:00
-TargetResourceType   : 
-TargetResourceRegion : 
-AutoMitigate         : 
+TargetResourceType   :
+TargetResourceRegion :
+AutoMitigate         :
 LastUpdatedTime      :
 Id                   : /subscriptions/00000000-0000-0000-0000-0000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Insights/metricAlerts/MyMetricAlertRule
 Name                 : MyMetricAlertRule

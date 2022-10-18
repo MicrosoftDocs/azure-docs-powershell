@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemoverbulkremove
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemoverbulkremove
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverBulkRemove.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverBulkRemove.md
@@ -38,13 +38,13 @@ Invoke-AzResourceMoverBulkRemove -ResourceGroupName "RG-MoveCollection-demoRMS" 
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 12:52:28 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/b4e3f140-b36b-4fd5-a507-b1e663ecf7a3
-Message        : 
+Message        :
 Name           : b4e3f140-b36b-4fd5-a507-b1e663ecf7a3
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 12:52:28 PM
@@ -60,13 +60,13 @@ Invoke-AzResourceMoverBulkRemove -ResourceGroupName "RG-MoveCollection-demoRMS" 
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 12:58:10 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/d4827071-b797-45c5-b88c-00ddd7818d42
-Message        : 
+Message        :
 Name           : d4827071-b797-45c5-b88c-00ddd7818d42
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 12:57:08 PM
@@ -81,13 +81,13 @@ Invoke-AzResourceMoverBulkRemove -ResourceGroupName "RG-MoveCollection-demoRMS" 
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 1:05:13 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/7b6904e2-fc3f-400d-b248-8908fcb282fb
-Message        : 
+Message        :
 Name           : 7b6904e2-fc3f-400d-b248-8908fcb282fb
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 1:05:00 PM

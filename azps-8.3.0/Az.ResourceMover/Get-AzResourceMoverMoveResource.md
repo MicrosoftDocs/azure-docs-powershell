@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/get-azresourcemovermoveresource
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/get-azresourcemovermoveresource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Get-AzResourceMoverMoveResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Get-AzResourceMoverMoveResource.md
@@ -36,27 +36,27 @@ Gets the Move Resource.
 
 ### Example 1: Get details of all the resources in the Move collection.
 ```powershell
-Get-AzResourceMoverMoveResource -MoveCollectionName "PS-centralus-westcentralus-demoRMS" -ResourceGroupName "RG-MoveCollection-demoRMS"         
+Get-AzResourceMoverMoveResource -MoveCollectionName "PS-centralus-westcentralus-demoRMS" -ResourceGroupName "RG-MoveCollection-demoRMS"
 ```
 
 ```output
 DependsOn                         : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/PSDemoRM/providers/Microsoft.Network/networkInterfaces/psdemov
                                     m111, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/PSDemoRM}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveColle
                                     ctions/PS-centralus-westcentralus-demoRMS1/moveResources/PSDemoVM
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : PSDemoVM
 ProvisioningState                 : Succeeded
@@ -69,27 +69,27 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 
 DependsOn                         : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/psdemorm/providers/Microsoft.Network/virtualNetworks/psdemorm-
                                     vnet, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm/providers/microsoft.network/networksecuritygroup
                                     s/psdemovm-nsg, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveColle
                                     ctions/PS-centralus-westcentralus-demoRMS1/moveResources/psdemovm111
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : psdemovm111
 ProvisioningState                 : Succeeded
@@ -103,25 +103,25 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 
 DependsOn                         : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveColle
                                     ctions/PS-centralus-westcentralus-demoRMS1/moveResources/psdemorm-vnet
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : psdemorm-vnet
 ProvisioningState                 : Succeeded
@@ -135,25 +135,25 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 
 DependsOn                         : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveColle
                                     ctions/PS-centralus-westcentralus-demoRMS1/moveResources/psdemovm-nsg
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : psdemovm-nsg
 ProvisioningState                 : Succeeded
@@ -167,25 +167,25 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 
 DependsOn                         : {}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
 ExistingTargetId                  : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/PSDemoRM-target
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveColle
                                     ctions/PS-centralus-westcentralus-demoRMS1/moveResources/psdemorm
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : DeleteSourcePending
 Name                              : psdemorm
 ProvisioningState                 : Succeeded
@@ -207,27 +207,27 @@ Get details of all the resources in the move collection.
 
 ### Example 2: Get details of a specific resources in a Move collection using move resource name .
 ```powershell
-Get-AzResourceMoverMoveResource -MoveCollectionName "PS-centralus-westcentralus-demoRMS" -ResourceGroupName "RG-MoveCollection-demoRMS" -Name "PSDemoVM"   
+Get-AzResourceMoverMoveResource -MoveCollectionName "PS-centralus-westcentralus-demoRMS" -ResourceGroupName "RG-MoveCollection-demoRMS" -Name "PSDemoVM"
 ```
 
-```output                                                     
+```output
 DependsOn                         : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/PSDemoRM/providers/Microsoft.Network/networkInterfaces/psdemov
                                     m111, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/PSDemoRM}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveColle
                                     ctions/PS-centralus-westcentralus-demoRMS/moveResources/PSDemoVM
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : PSDemoVM
 ProvisioningState                 : Succeeded
@@ -240,8 +240,8 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 
 ```
 
@@ -257,20 +257,20 @@ DependsOn                         : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxx
                                     vnet, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm/providers/microsoft.network/networksecuritygroup
                                     s/psdemovm-nsg, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm}
 DependsOnOverride                 : {}
-ErrorsPropertiesCode              : 
-ErrorsPropertiesDetail            : 
-ErrorsPropertiesMessage           : 
-ErrorsPropertiesTarget            : 
-ExistingTargetId                  : 
+ErrorsPropertiesCode              :
+ErrorsPropertiesDetail            :
+ErrorsPropertiesMessage           :
+ErrorsPropertiesTarget            :
+ExistingTargetId                  :
 Id                                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveColle
                                     ctions/PS-centralus-westcentralus-demoRMS1/moveResources/psdemovm111
 IsResolveRequired                 : False
-JobStatusJobName                  : 
-JobStatusJobProgress              : 
-MoveStatusErrorsPropertiesCode    : 
-MoveStatusErrorsPropertiesDetail  : 
-MoveStatusErrorsPropertiesMessage : 
-MoveStatusErrorsPropertiesTarget  : 
+JobStatusJobName                  :
+JobStatusJobProgress              :
+MoveStatusErrorsPropertiesCode    :
+MoveStatusErrorsPropertiesDetail  :
+MoveStatusErrorsPropertiesMessage :
+MoveStatusErrorsPropertiesTarget  :
 MoveStatusMoveState               : PreparePending
 Name                              : psdemovm111
 ProvisioningState                 : Succeeded
@@ -284,8 +284,8 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-TargetId                          : 
-Type                              : 
+TargetId                          :
+Type                              :
 
 ```
 

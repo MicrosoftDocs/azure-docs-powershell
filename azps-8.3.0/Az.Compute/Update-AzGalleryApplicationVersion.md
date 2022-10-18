@@ -1,7 +1,7 @@
 ---
 external help file: Az.Compute-help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/update-azgalleryapplicationversion
+online version: https://learn.microsoft.com/powershell/module/az.compute/update-azgalleryapplicationversion
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzGalleryApplicationVersion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzGalleryApplicationVersion.md
@@ -48,7 +48,7 @@ $SASToken = New-AzStorageBlobSASToken -Context $ctx -Container $containerName -b
 $storAcc = Get-AzStorageAccount -ResourceGroupName $rgName -Name $storAccName
 $blob = Get-AzStorageBlob -Container $containerName -Blob $blobName -Context $storAcc.Context
 $SASToken = New-AzStorageBlobSASToken -Container $containerName -Blob $blobName -Permission rwd -Context $storAcc.Context
-$SASUri = $blob.ICloudBlob.Uri.AbsoluteUri + "?" +$SASToken 
+$SASUri = $blob.ICloudBlob.Uri.AbsoluteUri + "?" +$SASToken
 Update-AzGalleryApplicationVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryApplicationName $galleryApplicationName -name "0.1.0" -PackageFileLink $SASUri -ReplicaCount 3
 ```
 

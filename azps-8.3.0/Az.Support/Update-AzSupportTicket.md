@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
 Module Name: Az.Support
-online version: https://docs.microsoft.com/powershell/module/az.support/update-azsupportticket
+online version: https://learn.microsoft.com/powershell/module/az.support/update-azsupportticket
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Update-AzSupportTicket.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Update-AzSupportTicket.md
@@ -78,7 +78,7 @@ test1 test title1                  150010521000317 Moderate Virtual Machine runn
 $contactDetail = New-Object Microsoft.Azure.Commands.Support.Models.PSContactProfile
 $contactDetail.FirstName = "first name updated"
 $contactDetail.LastName = "last name updated"
-Update-AzSupportTicket -Name "test1" -CustomerContactDetail $contactDetail 
+Update-AzSupportTicket -Name "test1" -CustomerContactDetail $contactDetail
 ```
 ```output
 Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate
@@ -98,7 +98,7 @@ test1 test title1                  150010521000317 Moderate Virtual Machine runn
 
 ### Example 5: Update contact details of support ticket by specifying individual contact parameters.
 ```powershell
-Update-AzSupportTicket -Name "test1" -CustomerFirstName "first name updated" -CustomerLastName "last name updated" -AdditionalEmailAddress @("user2@contoso.com") 
+Update-AzSupportTicket -Name "test1" -CustomerFirstName "first name updated" -CustomerLastName "last name updated" -AdditionalEmailAddress @("user2@contoso.com")
 ```
 ```output
 Name  Title                        SupportTicketId Severity ServiceDisplayName            Status CreatedDate

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 1D07222C-17D1-421C-8C9B-37043CBCF517
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/set-azdatafactoryslicestatus
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/set-azdatafactoryslicestatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Set-AzDataFactorySliceStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Set-AzDataFactorySliceStatus.md
@@ -119,10 +119,10 @@ Accept wildcard characters: False
 Specifies the end of a time period as a **DateTime** object.
 This time is the end of a data slice.
 For more information about **DateTime** objects, type `Get-Help Get-Date`.
-*EndDateTime* must be specified in the ISO8601 format as in the following examples: 
-2015-01-01Z 
-2015-01-01T00:00:00Z 
-2015-01-01T00:00:00.000Z (UTC) 
+*EndDateTime* must be specified in the ISO8601 format as in the following examples:
+2015-01-01Z
+2015-01-01T00:00:00Z
+2015-01-01T00:00:00.000Z (UTC)
 2015-01-01T00:00:00-08:00 (Pacific Standard Time)
 The default time zone designator is UTC.
 
@@ -174,11 +174,11 @@ Accept wildcard characters: False
 Specifies a status to assign to the data slice.
 The acceptable values for this parameter are:
 - Waiting.
-Data slice is waiting for validation against validation policies before being processed. 
+Data slice is waiting for validation against validation policies before being processed.
 - Ready.
 Data processing has completed and the data slice is ready.
 - InProgress.
-Data processing is in-progress. 
+Data processing is in-progress.
 - Failed.
 Data processing failed.
 - Skipped.
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 Specifies the type of update to the slice.
 The acceptable values for this parameter are:
 - Individual.
-Sets the status of each slice for the dataset in the specified time range. 
+Sets the status of each slice for the dataset in the specified time range.
 - UpstreamInPipeline.
 Sets the status of each slice for the dataset and all the dependent datasets, which are used as input datasets for activities in the pipeline.
 

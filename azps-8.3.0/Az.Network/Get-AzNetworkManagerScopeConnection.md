@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkmanagerscopeconnection
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagerscopeconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerScopeConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerScopeConnection.md
@@ -63,7 +63,7 @@ Get a specific scope connection on a network manager.
 
 ### Example 2: List scope connections
 ```powershell
-Get-AzNetworkManagerScopeConnection -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager" 
+Get-AzNetworkManagerScopeConnection -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager"
 ```
 ```output
 TenantId          : 72f988bf-86f1-41af-91ab-2d7cd011db47

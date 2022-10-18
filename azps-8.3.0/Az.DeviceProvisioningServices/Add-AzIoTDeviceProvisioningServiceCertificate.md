@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.dll-Help.xml
 Module Name: Az.DeviceProvisioningServices
-online version: https://docs.microsoft.com/powershell/module/az.deviceprovisioningservices/add-aziotdeviceprovisioningservicecertificate
+online version: https://learn.microsoft.com/powershell/module/az.deviceprovisioningservices/add-aziotdeviceprovisioningservicecertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Add-AzIoTDeviceProvisioningServiceCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Add-AzIoTDeviceProvisioningServiceCertificate.md
@@ -40,7 +40,7 @@ Add-AzIoTDeviceProvisioningServiceCertificate [-ResourceId] <String> [-Certifica
 
 ## DESCRIPTION
 Uploads a new certificate or to replace the existing certificate with the same name.
-For a detailed explanation of CA certificates in Azure IoT Hub Device Provisioning Service, see https://docs.microsoft.com/azure/iot-dps/how-to-verify-certificates.
+For a detailed explanation of CA certificates in Azure IoT Hub Device Provisioning Service, see https://learn.microsoft.com/azure/iot-dps/how-to-verify-certificates.
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ Created				: 1/01/2017 16:01
 Etag				: AAAAAAFpObE=
 ```
 
-Updates a CA certificate in an IoT hub device provisioning service by uploading a new CER file. 
+Updates a CA certificate in an IoT hub device provisioning service by uploading a new CER file.
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 91D58F60-F22A-454A-B04C-E5AEF33E9D06
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azfirewall
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azfirewall
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzFirewall.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzFirewall.md
@@ -241,7 +241,7 @@ $azFw=Get-AzFirewall -Name "azFw" -ResourceGroupName "rgName"
 $getAppRc=$azFw.GetApplicationRuleCollectionByName("MyAppRuleCollection")
 ```
 
-This example retrieves a firewall and then gets a rule collection by name, calling method GetApplicationRuleCollectionByName on the 
+This example retrieves a firewall and then gets a rule collection by name, calling method GetApplicationRuleCollectionByName on the
 firewall object. The rule collection name for method GetApplicationRuleCollectionByName is case-insensitive.
 
 ### Example 7: Retrieve a firewall and then retrieve a network rule collection by name from the Firewall
@@ -250,7 +250,7 @@ $azFw=Get-AzFirewall -Name "azFw" -ResourceGroupName "rgName"
 $getNetRc=$azFw.GetNetworkRuleCollectionByName("MyNetworkRuleCollection")
 ```
 
-This example retrieves a firewall and then gets a rule collection by name, calling method GetNetworkRuleCollectionByName on the 
+This example retrieves a firewall and then gets a rule collection by name, calling method GetNetworkRuleCollectionByName on the
 firewall object. The rule collection name for method GetNetworkRuleCollectionByName is case-insensitive.
 
 ### Example 8: Retrieve a firewall and then remove a application rule collection by name from the Firewall
@@ -259,7 +259,7 @@ $azFw=Get-AzFirewall -Name "azFw" -ResourceGroupName "rgName"
 $azFw.RemoveApplicationRuleCollectionByName("MyAppRuleCollection")
 ```
 
-This example retrieves a firewall and then removes a rule collection by name, calling method RemoveApplicationRuleCollectionByName on the 
+This example retrieves a firewall and then removes a rule collection by name, calling method RemoveApplicationRuleCollectionByName on the
 firewall object. The rule collection name for method RemoveApplicationRuleCollectionByName is case-insensitive.
 
 ### Example 9: Retrieve a firewall and then remove a network rule collection by name from the Firewall
@@ -268,7 +268,7 @@ $azFw=Get-AzFirewall -Name "azFw" -ResourceGroupName "rgName"
 $azFw.RemoveNetworkRuleCollectionByName("MyNetworkRuleCollection")
 ```
 
-This example retrieves a firewall and then removes a rule collection by name, calling method RemoveNetworkRuleCollectionByName on the 
+This example retrieves a firewall and then removes a rule collection by name, calling method RemoveNetworkRuleCollectionByName on the
 firewall object. The rule collection name for method RemoveNetworkRuleCollectionByName is case-insensitive.
 
 ### Example 10: Retrieve a firewall and then allocate the firewall

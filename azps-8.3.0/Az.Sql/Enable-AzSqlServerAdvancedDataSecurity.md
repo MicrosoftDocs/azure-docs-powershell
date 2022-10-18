@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/enable-azsqlserveradvanceddatasecurity
+online version: https://learn.microsoft.com/powershell/module/az.sql/enable-azsqlserveradvanceddatasecurity
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Enable-AzSqlServerAdvancedDataSecurity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Enable-AzSqlServerAdvancedDataSecurity.md

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImageBuilder
-online version: https://docs.microsoft.com/powershell/module/az.imagebuilder/get-azimagebuildertemplaterunoutput
+online version: https://learn.microsoft.com/powershell/module/az.imagebuilder/get-azimagebuildertemplaterunoutput
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/Get-AzImageBuilderTemplateRunOutput.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/Get-AzImageBuilderTemplateRunOutput.md
@@ -61,7 +61,7 @@ Get-AzImageBuilderTemplateRunOutput -ImageTemplateName test-img-temp -ResourceGr
 ```output
 Name    SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
 ----    ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
-runout-template-name-u7gjq  
+runout-template-name-u7gjq
 ```
 
 This command gets a run result under a template.

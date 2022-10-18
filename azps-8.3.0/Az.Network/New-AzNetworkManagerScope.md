@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkmanagerscope
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagerscope
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerScope.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerScope.md
@@ -35,8 +35,8 @@ $mggroup  = @("/providers/Microsoft.Management/managementGroups/PowerShellTest")
 New-AzNetworkManagerScope -Subscription $subgroup -ManagementGroup $mggroup
 ```
 ```output
-ManagementGroups                                                  Subscriptions                                         
-----------------                                                  -------------                                         
+ManagementGroups                                                  Subscriptions
+----------------                                                  -------------
 {/providers/Microsoft.Management/managementGroups/PowerShellTest} {/subscriptions/00000000-0000-0000-0000-000000000000}
 ```
 Creates a network manager scope with management group and subscription.

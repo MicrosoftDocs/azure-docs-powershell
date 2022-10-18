@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 5F45A12C-BB50-4732-BE80-188491DEF8B5
-online version: https://docs.microsoft.com/powershell/module/az.automation/remove-azautomationmodule
+online version: https://learn.microsoft.com/powershell/module/az.automation/remove-azautomationmodule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationModule.md

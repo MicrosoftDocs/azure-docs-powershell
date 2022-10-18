@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azactivitylog
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azactivitylog
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzActivityLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzActivityLog.md
@@ -89,7 +89,7 @@ This command lists at most 1000 of the events associated with the user's subscri
 Get-AzActivityLog -CorrelationId "60c694d0-e46f-4c12-bed1-9b7aef541c23"
 ```
 
-This command lists at most 1000 events associated with the specified correlation ID that took place 7 days from the current date/time. 
+This command lists at most 1000 events associated with the specified correlation ID that took place 7 days from the current date/time.
 **NOTE**: this is usually only one event.
 
 ### Example 6: Get an event log by correlation ID with a maximum number of events
@@ -97,7 +97,7 @@ This command lists at most 1000 events associated with the specified correlation
 Get-AzActivityLog -CorrelationId "60c694d0-e46f-4c12-bed1-9b7aef541c23" -MaxRecord 100
 ```
 
-This command lists at most 100 events associated with the specified correlation ID that took place 7 days from the current date/time. 
+This command lists at most 100 events associated with the specified correlation ID that took place 7 days from the current date/time.
 **NOTE**: this is usually only one event.
 
 ### Example 7: Get an event log by correlation ID and start time

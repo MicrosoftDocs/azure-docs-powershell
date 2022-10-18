@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 14620FBD-4B10-4366-94F7-891BC01B893F
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlelasticpooldatabase
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlelasticpooldatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolDatabase.md

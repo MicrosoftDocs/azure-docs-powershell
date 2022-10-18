@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 06DAD751-3A43-4EF6-94C5-AA7AC1A67FC8
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azvirtualnetworkpeering
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualnetworkpeering
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkPeering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkPeering.md
@@ -66,7 +66,7 @@ Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1TomyVnet2
 
 ### Example 4: Use remote gateways in virtual network peering
 ```powershell
-# Get the virtual network peering 
+# Get the virtual network peering
 $myVnet1TomyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "ResourceGroup001" -Name "myVnet1TomyVnet2"
 
 # Change the UseRemoteGateways property

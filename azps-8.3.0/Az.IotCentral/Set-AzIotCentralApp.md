@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotCentral.dll-Help.xml
 Module Name: Az.IotCentral
-online version: https://docs.microsoft.com/powershell/module/az.iotcentral/set-aziotcentralapp
+online version: https://learn.microsoft.com/powershell/module/az.iotcentral/set-aziotcentralapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Set-AzIotCentralApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Set-AzIotCentralApp.md
@@ -39,7 +39,7 @@ Set-AzIotCentralApp [-DisplayName <String>] [-Subdomain <String>] [-Tag <Hashtab
 ```
 
 ## DESCRIPTION
-Update the metadata for an IoT Central Application. 
+Update the metadata for an IoT Central Application.
 
 ## EXAMPLES
 
@@ -54,7 +54,7 @@ ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resource
 Name              : MyAppResourceName
 Type              : Microsoft.IoTCentral/IoTApps
 Location          : westus
-Tag               : 
+Tag               :
 Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
 ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 DisplayName       : My New Custom Display Name
@@ -76,7 +76,7 @@ ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resource
 Name              : MyAppResourceName
 Type              : Microsoft.IoTCentral/IoTApps
 Location          : westus
-Tag               : 
+Tag               :
 Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
 ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 DisplayName       : Display Name
@@ -98,7 +98,7 @@ ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resource
 Name              : MyAppResourceName
 Type              : Microsoft.IoTCentral/IoTApps
 Location          : westus
-Tag               : 
+Tag               :
 Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
 ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 DisplayName       : Display Name

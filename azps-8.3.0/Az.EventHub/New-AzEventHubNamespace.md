@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/new-azeventhubnamespace
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/new-azeventhubnamespace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubNamespace.md
@@ -173,7 +173,7 @@ Encryption.KeyVaultProperties :
 
 Creates an Event Hubs namespace \`MyNamespaceName\` in the specified geographic location \`MyLocation\`, in resource group \`MyResourceGroupName\` with Kafka and  AutoInflate enabled.
 
-### Example 5: Creating Namespace with Manage Identity in a cluster 
+### Example 5: Creating Namespace with Manage Identity in a cluster
 ```powershell
 New-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location MyLocation -EnableAutoInflate -MaximumThroughputUnits 12 -EnableKafka -ZoneRedundant -IdentityType SystemAssigned
 ```
@@ -245,7 +245,7 @@ Encryption.KeySource          : MicrosoftKeyVault
 Identity                      : PrinicipalId : ,
                                 TenantId: ,
                                 Type: UserAssigned,
-                                UserAssignedIdentity: /subscriptions/{subscriptionId}/resourceGroups/{resourcegroup}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/MSIName 
+                                UserAssignedIdentity: /subscriptions/{subscriptionId}/resourceGroups/{resourcegroup}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/MSIName
                                                       /subscriptions/{subscriptionId}/resourceGroups/{resourcegroup}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/MSIName2
 IdentityType                  : UserAssigned
 IdentityId                    : /subscriptions/{subscriptionId}/resourceGroups/{resourcegroup}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/MSIName

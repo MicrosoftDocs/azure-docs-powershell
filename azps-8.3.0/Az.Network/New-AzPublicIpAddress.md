@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 8D84F81A-F6B5-413D-B349-50947FCD5CFC
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azpublicipaddress
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azpublicipaddress
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPublicIpAddress.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPublicIpAddress.md
@@ -63,7 +63,7 @@ This command creates a new public IP address resource.A DNS record is created fo
 $dnsPrefix.$location.cloudapp.azure.com pointing to the public IP address of this resource. A
 public IP address is immediately allocated to this resource as the -AllocationMethod is specified
 as 'Static'. If it is specified as 'Dynamic', a public IP address gets allocated only when you
-start (or create) the associated resource (like a VM or load balancer). An Iptag is used to 
+start (or create) the associated resource (like a VM or load balancer). An Iptag is used to
 specific the Tags associated with resource. Iptag can be specified using New-AzPublicIpTag
 and passed as input through -IpTags.
 

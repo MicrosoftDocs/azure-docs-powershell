@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: D85FF5ED-23EA-48C7-8E61-D931713E0064
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactorygateway
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactorygateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryGateway.md
@@ -45,16 +45,16 @@ Get-AzDataFactoryGateway -ResourceGroupName "ADF" -DataFactoryName "WikiADF"
 
 ```output
 Name            : gateway1
-Description     : 
+Description     :
 Version         : 1.3.5338.1
 Status          : Online
 VersionStatus   : UpToDate
 CreateTime      : 8/22/2014 1:40:34 AM
 RegisterTime    : 8/22/2014 1:41:46 AM
 LastConnectTime : 8/22/2014 1:44:56 AM
-ExpiryTime      : 
+ExpiryTime      :
 Name            : gateway2
-Description     : 
+Description     :
 Version         : 1.3.5338.1
 Status          : Offline
 VersionStatus   : UpToDate
@@ -73,7 +73,7 @@ Get-AzDataFactoryGateway -ResourceGroupName "ADF" -Name "Gateway01" -DataFactory
 
 ```output
 Name            : Gateway01
-Description     : 
+Description     :
 Version         : 1.3.5338.1
 Status          : Online
 VersionStatus   : UpToDate

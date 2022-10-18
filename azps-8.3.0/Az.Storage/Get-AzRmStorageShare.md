@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azrmstorageshare
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azrmstorageshare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzRmStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzRmStorageShare.md
@@ -112,14 +112,14 @@ This command gets a Storage file share with Storage account name and share name,
 ### Example 5: List all Storage file shares of a Storage account, include the deleted shares, include the share snapshots
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -IncludeDeleted -IncludeSnapshot 
+PS C:\> Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -IncludeDeleted -IncludeSnapshot
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
-Name       QuotaGiB EnabledProtocols AccessTier           Deleted Version          ShareUsageBytes snapshotTime       
-----       -------- ---------------- ----------           ------- -------          --------------- ------------       
+Name       QuotaGiB EnabledProtocols AccessTier           Deleted Version          ShareUsageBytes snapshotTime
+----       -------- ---------------- ----------           ------- -------          --------------- ------------
 testshare1 5120                     TransactionOptimized                                          2021-05-10T08:04:08Z
-testshare1 5120                     TransactionOptimized                                                      
+testshare1 5120                     TransactionOptimized
 share1     100                      TransactionOptimized True    01D61FD1FC5498B6
 ```
 
@@ -132,8 +132,8 @@ PS C:\> Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccoun
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
-Name       QuotaGiB EnabledProtocols AccessTier           Deleted Version ShareUsageBytes snapshotTime       
-----       -------- ---------------- ----------           ------- ------- --------------- ------------       
+Name       QuotaGiB EnabledProtocols AccessTier           Deleted Version ShareUsageBytes snapshotTime
+----       -------- ---------------- ----------           ------- ------- --------------- ------------
 testshare1 5120                     TransactionOptimized                                 2021-05-10T08:04:08Z
 ```
 

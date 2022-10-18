@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version: https://docs.microsoft.com/powershell/module/az.containerregistry/import-azcontainerregistryimage
+online version: https://learn.microsoft.com/powershell/module/az.containerregistry/import-azcontainerregistryimage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Import-AzContainerRegistryImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Import-AzContainerRegistryImage.md
@@ -58,8 +58,8 @@ Import image from a public/azure registry to an azure container registry.
 Import-AzContainerRegistryImage -SourceImage library/busybox:latest -ResourceGroupName $resourceGroupName -RegistryName $RegistryName -SourceRegistryUri docker.io -TargetTag busybox:latest
 ```
 
-Import busybox to ACR. 
-Note: 
+Import busybox to ACR.
+Note:
 * "library/" need to be add before source image. "busybox:latest" => "library/busybox:latest"
 * Credential needed if source registry is not publicly available
 
@@ -68,8 +68,8 @@ Note:
 Import-AzContainerRegistryImage -SourceImage "$SourceRegistry.azurecr.io/busybox:latest" -ResourceGroupName $resourceGroupName -RegistryName $RegistryName -SourceRegistryResourceId $SourceACRID -TargetTag busybox:latest
 ```
 
-Import busybox from source ACR to target ACR. 
-Note: 
+Import busybox from source ACR to target ACR.
+Note:
 * Credential needed if admin user for source registry was disabled.
 
 ## PARAMETERS

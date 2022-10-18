@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 54585346-04E2-4FB4-B5FD-833A85C46ACB
-online version: https://docs.microsoft.com/powershell/module/az.storage/start-azstorageblobcopy
+online version: https://learn.microsoft.com/powershell/module/az.storage/start-azstorageblobcopy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Start-AzStorageBlobCopy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Start-AzStorageBlobCopy.md
@@ -425,9 +425,9 @@ Accept wildcard characters: False
 ```
 
 ### -DestTagCondition
-Optional Tag expression statement to check match condition on the destination Blob. 
+Optional Tag expression statement to check match condition on the destination Blob.
 The blob request will fail when the destination blob tags does not match the given expression.
-See details in https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
 
 ```yaml
 Type: System.String
@@ -613,7 +613,7 @@ Accept wildcard characters: False
 
 ### -StandardBlobTier
 Block Blob Tier, valid values are Hot/Cool/Archive.
-See detail in https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers
+See detail in https://learn.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers
 
 ```yaml
 Type: System.String
@@ -644,9 +644,9 @@ Accept wildcard characters: False
 ```
 
 ### -TagCondition
-Optional Tag expression statement to check match condition on the source blob. 
+Optional Tag expression statement to check match condition on the source blob.
 The blob request will fail when the source blob tags does not match the given expression.
-See details in https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
 
 ```yaml
 Type: System.String

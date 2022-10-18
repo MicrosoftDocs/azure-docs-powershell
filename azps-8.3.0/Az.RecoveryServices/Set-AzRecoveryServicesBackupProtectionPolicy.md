@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: D614B509-82DD-42FB-B975-D72CD3355E3E
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/set-azrecoveryservicesbackupprotectionpolicy
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/set-azrecoveryservicesbackupprotectionpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProtectionPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProtectionPolicy.md
@@ -42,7 +42,7 @@ Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet bef
 
 ### Example 1: Modify a Backup protection policy
 ```powershell
-$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM" 
+$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM"
 $SchPol.ScheduleRunTimes.Clear()
 $Time = Get-Date
 $Time1 = Get-Date -Year $Time.Year -Month $Time.Month -Day $Time.Day -Hour $Time.Hour -Minute 0 -Second 0 -Millisecond 0
@@ -51,10 +51,10 @@ $SchPol.ScheduleRunTimes.Add($Time1)
 $SchPol.ScheduleRunFrequency.Clear
 $SchPol.ScheduleRunDays.Add("Monday")
 $SchPol.ScheduleRunFrequency="Weekly"
-$RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType "AzureVM" 
+$RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType "AzureVM"
 $RetPol.IsDailyScheduleEnabled=$false
 $RetPol.DailySchedule.DurationCountInDays = 0
-$RetPol.IsWeeklyScheduleEnabled=$true 
+$RetPol.IsWeeklyScheduleEnabled=$true
 $RetPol.WeeklySchedule.DaysOfTheWeek.Add("Monday")
 $RetPol.WeeklySchedule.DurationCountInWeeks = 365
 $vault = Get-AzRecoveryServicesVault -ResourceGroupName "azurefiles" -Name "azurefilesvault"
@@ -63,7 +63,7 @@ $Pol.SnapshotRetentionInDays=5
 Set-AzRecoveryServicesBackupProtectionPolicy -Policy $Pol -SchedulePolicy $SchPol -RetentionPolicy $RetPol
 ```
 
-Here is the high-level description of the steps to be followed for modifying a protection policy: 
+Here is the high-level description of the steps to be followed for modifying a protection policy:
 1.	Get a base SchedulePolicyObject and base RetentionPolicyObject. Store them in some variable.
 2.	Set the different parameters of schedule and retention policy object as per your requirement. For example- In the above sample script, we are trying to set a weekly protection policy. Hence, we changed the schedule frequency to "Weekly" and also updated the schedule run time. In the retention policy object, we updated the weekly retention duration and set the correct "weekly schedule enabled" flag. In case you want to set a Daily policy, set the "daily schedule enabled" flag to true and assign appropriate values for other object parameters.
 3.	Get the backup protection policy that you want to modify and store it in a variable. In the above example, we retrieved the backup policy with the name "TestPolicy" that we wanted to modify.
@@ -84,7 +84,7 @@ $policy = Get-AzRecoveryServicesBackupProtectionPolicy -Name "TestPolicy" -Vault
 Set-AzRecoveryServicesBackupProtectionPolicy -Policy $policy -VaultId $vault.ID -SchedulePolicy $schedulePolicy -RetentionPolicy $retentionPolicy
 ```
 
-Here is the high-level description of the steps to be followed for modifying a fileshare policy for multiple backups per day: 
+Here is the high-level description of the steps to be followed for modifying a fileshare policy for multiple backups per day:
 1.	Get a base hourly SchedulePolicyObject and base hourly RetentionPolicyObject. Store them in some variable.
 2.	Set the different parameters of schedule and retention policy object as per your requirement. For example- In the above sample script, we are trying to set the $timeZone in which we want to run the schedule we are setting the start time of the Hourly schedule, setting hourly interval (in hours), after which the backup will be retriggered on the same day, duration (in hours) for which the schedule will run. Next we are modifying the retention setting for daily recovery points.
 3.	Get the backup protection policy that you want to modify and store it in a variable. In the above example, we retrieved the backup policy with the name "TestPolicy" that we wanted to modify.
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs. 
+Shows what would happen if the cmdlet runs.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

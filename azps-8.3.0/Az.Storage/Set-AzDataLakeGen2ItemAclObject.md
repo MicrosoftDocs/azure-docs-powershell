@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azdatalakegen2itemaclobject
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azdatalakegen2itemaclobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzDataLakeGen2ItemAclObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzDataLakeGen2ItemAclObject.md
@@ -32,14 +32,14 @@ If the new ACL entry with same AccessControlType/EntityId/DefaultScope not exist
 <!-- Skip: Output cannot be splitted from code -->
 ```
 PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -Permission rwx -DefaultScope
-PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl 
+PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl
 PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType other -Permission "rw-" -InputObject $acl
 PS C:\>Update-AzDataLakeGen2Item -FileSystem "filesystem1" -Path "dir1/dir3" -ACL $acl
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
 dir1/dir3            True                         2020-03-23 09:34:31Z rwxrw-rw-+   $superuser           $superuser
 ```
 
@@ -49,26 +49,26 @@ This command creates an ACL object with 3 ACL entries (use -InputObject paramete
 <!-- Skip: Output cannot be splitted from code -->
 ```
 PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -Permission rwx -DefaultScope
-PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl 
+PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl
 PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType other -Permission "rw-" -InputObject $acl
-PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId $id -Permission rwx -InputObject $acl 
+PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId $id -Permission rwx -InputObject $acl
 PS C:\>$acl
 
 DefaultScope AccessControlType EntityId                             Permissions
 ------------ ----------------- --------                             -----------
-True         User                                                   rwx        
-False        Group                                                  rw-        
-False        Other                                                  rw-        
-False        User              ********-****-****-****-************ rwx        
+True         User                                                   rwx
+False        Group                                                  rw-
+False        Other                                                  rw-
+False        User              ********-****-****-****-************ rwx
 
-PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId $id -Permission r-x -InputObject $acl 
-PS C:\>$acl  
+PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId $id -Permission r-x -InputObject $acl
+PS C:\>$acl
 
 DefaultScope AccessControlType EntityId                             Permissions
 ------------ ----------------- --------                             -----------
-True         User                                                   rwx        
-False        Group                                                  rw-        
-False        Other                                                  rw-        
+True         User                                                   rwx
+False        Group                                                  rw-
+False        Other                                                  rw-
 False        User              ********-****-****-****-************ r-x
 ```
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: A4226BFB-AB3B-4883-9D52-5EB7F29D8A71
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementregion
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementregion
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementRegion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementRegion.md
@@ -32,7 +32,7 @@ This command is to be used with New-AzApiManagement command.
 
 ### Example 1
 ```powershell
-$apimRegion = New-AzApiManagementRegion -Location "Central US" 
+$apimRegion = New-AzApiManagementRegion -Location "Central US"
 
 $additionalRegions = @($apimRegion)
 
@@ -43,7 +43,7 @@ New-AzApiManagement -ResourceGroupName ContosoGroup -Location "West US" -Name Co
 ```powershell
 $apimRegionVirtualNetwork = New-AzApiManagementVirtualNetwork -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/centralusvirtualNetwork/subnets/backendSubnet"
 
-$apimRegion = New-AzApiManagementRegion -Location "Central US" -VirtualNetwork $apimRegionVirtualNetwork 
+$apimRegion = New-AzApiManagementRegion -Location "Central US" -VirtualNetwork $apimRegionVirtualNetwork
 
 $additionalRegions = @($apimRegion)
 

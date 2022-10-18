@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/enable-azstackhciremotesupport
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/enable-azstackhciremotesupport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Enable-AzStackHCIRemoteSupport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Enable-AzStackHCIRemoteSupport.md
@@ -27,7 +27,7 @@ Enables Remote Support allows authorized Microsoft Support users to remotely acc
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Enable-AzStackHCIRemoteSupport -AccessLevel Diagnostics -ExpireInMinutes 1440 -SasCredential "Sample SAS"
 ```
