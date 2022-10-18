@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 7EC166C7-151D-4DA0-9B10-165E735D4F12
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssextension
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmssextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssExtension.md
@@ -43,7 +43,7 @@ Indicates whether the extension version should be automatically updated to a new
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -73,7 +73,7 @@ If a value is provided and is different from the previous value, the extension h
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +88,7 @@ Specifies the name of the extension that this cmdlet adds.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -104,7 +104,7 @@ This cmdlet encrypts the private configuration.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -121,7 +121,7 @@ This can use the [Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md) cmdlet to
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -137,7 +137,7 @@ This cmdlet does not encrypt public configuration.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -153,7 +153,7 @@ You can use the [Get-AzVMExtensionImageType](./Get-AzVMExtensionImageType.md) cm
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -169,7 +169,7 @@ You can use the [Get-AzVMExtensionImage](./Get-AzVMExtensionImage.md) cmdlet to 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -185,7 +185,7 @@ You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) to create the object.
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -234,7 +234,7 @@ Parameter 'VirtualMachineScaleSet' accepts value of type 'VirtualMachineScaleSet
 
 ## OUTPUTS
 
-###  
+### None
 This cmdlet does not generate any output.
 
 ## NOTES

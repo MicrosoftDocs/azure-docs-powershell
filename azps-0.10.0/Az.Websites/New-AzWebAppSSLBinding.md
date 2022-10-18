@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: 910239BE-9E48-4DC5-85EA-CC6D466FE62F
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/new-Azwebappsslbinding
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/new-Azwebappsslbinding
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzWebAppSSLBinding.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzWebAppSSLBinding.md
@@ -44,7 +44,7 @@ New-AzWebAppSSLBinding [-WebApp] <Site> [-Name] <String> [[-SslState] <SslState>
 
 ## DESCRIPTION
 The **New-AzWebAppSSLBinding** cmdlet creates a Secure Socket Layer (SSL) certificate binding for an Azure Web App.
-The cmdlet creates an SSL binding in two ways: 
+The cmdlet creates an SSL binding in two ways:
 
 - You can bind a Web App to an existing certificate.
 - You can upload a new certificate and then bind the Web App to this new certificate.
@@ -52,11 +52,11 @@ The cmdlet creates an SSL binding in two ways:
 Regardless of which approach you use, the certificate and the Web App must be associated with the same Azure resource group.
 If you have a Web App in Resource Group A and you want to bind that Web App to a certificate in Resource Group B, the only way to do that is to upload a copy of the certificate to Resource Group A.
 
-If you upload a new certificate, keep in mind the following requirements for an Azure SSL certificate: 
+If you upload a new certificate, keep in mind the following requirements for an Azure SSL certificate:
 
-- The certificate must contain a private key. 
-- The certificate must use the Personal Information Exchange (PFX) format. 
-- The certificate's subject name must match the domain used to access the Web App. 
+- The certificate must contain a private key.
+- The certificate must use the Personal Information Exchange (PFX) format.
+- The certificate's subject name must match the domain used to access the Web App.
 - The certificate must use a minimum of 2048-bit encryption.
 
 ## EXAMPLES
@@ -78,7 +78,7 @@ The *CertificateFilePath* parameter is only required if the certificate has not 
 ```yaml
 Type: String
 Parameter Sets: S1, S3
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -93,7 +93,7 @@ Specifies the decryption password for the certificate.
 ```yaml
 Type: String
 Parameter Sets: S1, S3
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -123,7 +123,7 @@ Specifies the name of the Web App.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -140,7 +140,7 @@ You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in t
 ```yaml
 Type: String
 Parameter Sets: S1, S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -159,7 +159,7 @@ Typically you will deploy your changes to a staging site, validate those changes
 ```yaml
 Type: String
 Parameter Sets: S1, S2
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -175,7 +175,7 @@ Set the *SSLState* parameter to 1 to enable the certificate, or set *SSLState* t
 ```yaml
 Type: SslState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, SniEnabled, IpBasedEnabled
 
 Required: False
@@ -191,7 +191,7 @@ Specifies the unique identifier for the certificate.
 ```yaml
 Type: String
 Parameter Sets: S2, S4
-Aliases: 
+Aliases:
 
 Required: True
 Position: 6
@@ -209,7 +209,7 @@ You cannot use the *WebApp* parameter in the same command as the *ResourceGroupN
 ```yaml
 Type: Site
 Parameter Sets: S3, S4
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -226,7 +226,7 @@ You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same
 ```yaml
 Type: String
 Parameter Sets: S1, S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

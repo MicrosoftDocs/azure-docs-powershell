@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 427F7300-0FEB-4F28-9C1D-27592AEBF6A0
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/invoke-Azresourceaction
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/invoke-Azresourceaction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Invoke-AzResourceAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Invoke-AzResourceAction.md
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceName
 Specifies the name of an extension resource for the resource on which this cmdlet invokes an action.
-For instance, to specify a database, use the following format: 
+For instance, to specify a database, use the following format:
 server name`/`database name
 
 ```yaml
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceType
 Specifies the type of the extension resource.
-For instance: 
+For instance:
 `Microsoft.Sql/Servers/Databases`
 
 ```yaml
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 
 ### -ResourceId
 Specifies the fully qualified resource ID of the resource on which this cmdlet invokes an action.
-The ID includes the subscription, as in the following example: 
+The ID includes the subscription, as in the following example:
 `/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 Specifies the name of the resource of the resource on which this cmdlet invokes an action.
-For instance, to specify a database, use the following format: 
+For instance, to specify a database, use the following format:
 `ContosoServer/ContosoDatabase`
 
 ```yaml
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -ResourceType
 Specifies the type of the resource.
-For instance, for a database, the resource type is as follows: 
+For instance, for a database, the resource type is as follows:
 `Microsoft.Sql/Servers/Databases`
 
 ```yaml

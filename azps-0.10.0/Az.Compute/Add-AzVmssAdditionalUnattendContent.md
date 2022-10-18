@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 9BE2E42C-594B-4B67-866C-BBA3B84AA5FD
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssadditionalunattendcontent
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmssadditionalunattendcontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssAdditionalUnattendContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssAdditionalUnattendContent.md
@@ -42,7 +42,7 @@ The only allowable value is Microsoft-Windows-Shell-Setup.
 ```yaml
 Type: ComponentNames
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: MicrosoftWindowsShellSetup
 
 Required: False
@@ -58,7 +58,7 @@ Specifies the XML formatted content that is added to the unattend.xml file for t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -89,7 +89,7 @@ The only allowable value is oobeSystem.
 ```yaml
 Type: PassNames
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OobeSystem
 
 Required: False
@@ -109,7 +109,7 @@ The acceptable values for this parameter are::
 ```yaml
 Type: SettingNames
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AutoLogon, FirstLogonCommands
 
 Required: False
@@ -126,7 +126,7 @@ You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) cmdlet to create the o
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/select-azcontext
+online version: https://learn.microsoft.com/en-us/powershell/module/az.accounts/select-azcontext
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Select-AzContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Select-AzContext.md
@@ -27,7 +27,7 @@ Select-AzContext [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureCon
 ```
 
 ## DESCRIPTION
-Select a  subscription to target (or account or tenant) in Azure PowerShell cmdlets.  After this cmdlet, future cmdlets will target the 
+Select a  subscription to target (or account or tenant) in Azure PowerShell cmdlets.  After this cmdlet, future cmdlets will target the
 selected context.
 
 ## EXAMPLES

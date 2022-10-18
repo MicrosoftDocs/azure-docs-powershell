@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: DDA137FD-4EB3-4FB7-A202-978922038AFC
-online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/remove-azlogprofile
+online version: https://learn.microsoft.com/en-us/powershell/module/az.monitor/remove-azlogprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Remove-AzLogProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Remove-AzLogProfile.md

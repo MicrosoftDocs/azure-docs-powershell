@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Monitor
 Module Guid: 698c387c-bd6b-41c6-82ce-721f1ef39548
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.monitor
+Download Help Link: https://learn.microsoft.com/en-us/powershell/module/az.monitor
 Help Version: 4.0.4.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Az.Monitor.md
@@ -17,7 +17,7 @@ This topic displays help topics for the Azure Insights Cmdlets.
 Creates an Autoscale setting.
 
 ### [Add-AzLogProfile](Add-AzLogProfile.md)
-Creates a new activity log profile. This profile is used to either archive the activity log to an Azure storage account or stream it to an Azure event hub in the same subscription. 
+Creates a new activity log profile. This profile is used to either archive the activity log to an Azure storage account or stream it to an Azure event hub in the same subscription.
 
 ### [Add-AzMetricAlertRule](Add-AzMetricAlertRule.md)
 Adds or updates a metric-based alert rule.

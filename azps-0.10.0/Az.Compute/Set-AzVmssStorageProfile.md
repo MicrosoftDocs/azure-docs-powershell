@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 230DAE05-C197-451F-A24C-F4A2DAE4AD04
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssstorageprofile
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssstorageprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssStorageProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssStorageProfile.md
@@ -47,7 +47,7 @@ Specifies the data disk object.
 ```yaml
 Type: VirtualMachineScaleSetDataDisk[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +78,7 @@ VMSS creates an operating system disk in the same container of the user image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -93,7 +93,7 @@ Specifies the image reference ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -125,7 +125,7 @@ To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -141,7 +141,7 @@ To obtain SKUs, use the Get-AzVMImageSku cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -157,7 +157,7 @@ To use the latest version, specify a value of latest instead of a particular ver
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -172,7 +172,7 @@ Specifies the managed disk.
 ```yaml
 Type: StorageAccountTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: StandardLRS, PremiumLRS
 
 Required: False
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskCaching
-Specifies the caching mode of the operating system disk. 
+Specifies the caching mode of the operating system disk.
 The acceptable values for this parameter are:
 
 - ReadOnly
@@ -197,7 +197,7 @@ This setting affects the consistency and performance of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ReadOnly, ReadWrite
 
 Required: False
@@ -212,14 +212,14 @@ Specifies how this cmdlet creates the VMSS virtual machines.
 
 The acceptable values for this parameter are:
 
-- Attach : This value is used when you are using a specialized disk to create the VMSS virtual machine. 
+- Attach : This value is used when you are using a specialized disk to create the VMSS virtual machine.
 - FromImage : This value is used when you are using an image to create the VMSS virtual machine.
 If you are using a platform image, you will also use the *imageReference* parameter.
 
 ```yaml
 Type: DiskCreateOptionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: FromImage, Empty, Attach
 
 Required: False
@@ -251,7 +251,7 @@ This is only needed for user image scenarios and not for a platform image.
 ```yaml
 Type: OperatingSystemTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Windows, Linux
 
 Required: False
@@ -267,7 +267,7 @@ Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ Specifies the container URLs that are used to store operating system disks for t
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -298,7 +298,7 @@ To obtain the object, use the New-AzVmssConfig object.
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -342,7 +342,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### None
 This cmdlet does not generate any output.
 
 ## OUTPUTS

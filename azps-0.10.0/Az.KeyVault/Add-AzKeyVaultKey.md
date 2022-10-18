@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/add-azKeyvaultkey
+online version: https://learn.microsoft.com/en-us/powershell/module/az.keyvault/add-azKeyvaultkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
@@ -180,7 +180,7 @@ extension, it imports the key as a software-protected key.
 ```yaml
 Type: String
 Parameter Sets: Create
-Aliases: 
+Aliases:
 Accepted values: HSM, Software
 
 Required: True
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Import
-Aliases: 
+Aliases:
 Accepted values: HSM, Software
 
 Required: False
@@ -210,7 +210,7 @@ the key will fail. Use this parameter if you are preloading keys that you intend
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ parameter, the key does not expire.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +246,7 @@ name extension.
 ```yaml
 Type: SecureString
 Parameter Sets: Import
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -270,7 +270,7 @@ When you specify this parameter, the *Destination* parameter is optional.
 ```yaml
 Type: String
 Parameter Sets: Import
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -296,7 +296,7 @@ the [JSON Web Key (JWK) specification](http://go.microsoft.com/fwlink/?LinkID=61
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,7 +331,7 @@ parameter, the key can be used immediately.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -364,7 +364,7 @@ FQDN of a key vault based on the name that this parameter specifies and your cur
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

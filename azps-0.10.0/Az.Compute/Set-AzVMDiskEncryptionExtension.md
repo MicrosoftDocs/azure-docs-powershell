@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 6BCB36BC-F5E6-4EDD-983C-8BDE7A9B004D
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmdiskencryptionextension
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmdiskencryptionextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMDiskEncryptionExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMDiskEncryptionExtension.md
@@ -76,22 +76,22 @@ $CertPath = "C:\certificates\examplecert.pfx"
 $CertPassword = "Password"
 $Cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($CertPath, $CertPassword)
 $KeyValue = [System.Convert]::ToBase64String($cert.GetRawCertData())
-$AzureAdApplication = New-AzADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -KeyValue $KeyValue -KeyType AsymmetricX509Cert 
+$AzureAdApplication = New-AzADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -KeyValue $KeyValue -KeyType AsymmetricX509Cert
 $ServicePrincipal = New-AzADServicePrincipal -ApplicationId $AzureAdApplication.ApplicationId
 
 $AADClientID = $AzureAdApplication.ApplicationId
 $aadClientCertThumbprint= $cert.Thumbprint
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 $KeyVaultSecretName = "MyAADCert"
 $FileContentBytes = get-content $CertPath -Encoding Byte
 $FileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes)
 $JSONObject = @"
-    { 
-        "data" : "$filecontentencoded", 
-        "dataType" : "pfx", 
-        "password" : "$CertPassword" 
-    } 
+    {
+        "data" : "$filecontentencoded",
+        "dataType" : "pfx",
+        "password" : "$CertPassword"
+    }
 "@
 $JSONObjectBytes = [System.Text.Encoding]::UTF8.GetBytes($jsonObject)
 $JSONEncoded = [System.Convert]::ToBase64String($jsonObjectBytes)
@@ -103,9 +103,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName $RGName -Ena
 #deploy cert to VM
 $CertUrl = (Get-AzureKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 $SourceVaultId = (Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName 
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 $VM = Add-AzVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
-Update-AzVM -VM $VM -ResourceGroupName $RGName 
+Update-AzVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
@@ -151,22 +151,22 @@ $CertPath = "C:\certificates\examplecert.pfx"
 $CertPassword = "Password"
 $Cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($CertPath, $CertPassword)
 $KeyValue = [System.Convert]::ToBase64String($cert.GetRawCertData())
-$AzureAdApplication = New-AzADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -KeyValue $KeyValue -KeyType AsymmetricX509Cert 
+$AzureAdApplication = New-AzADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -KeyValue $KeyValue -KeyType AsymmetricX509Cert
 $ServicePrincipal = New-AzADServicePrincipal -ApplicationId $AzureAdApplication.ApplicationId
 
 $AADClientID = $AzureAdApplication.ApplicationId
 $AADClientCertThumbprint= $Cert.Thumbprint
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 $KeyVaultSecretName = "MyAADCert"
 $FileContentBytes = get-content $CertPath -Encoding Byte
 $FileContentEncoded = [System.Convert]::ToBase64String($FileContentBytes)
 $JSONObject = @"
-    { 
-        "data" : "$filecontentencoded", 
-        "dataType" : "pfx", 
-        "password" : "$CertPassword" 
-    } 
+    {
+        "data" : "$filecontentencoded",
+        "dataType" : "pfx",
+        "password" : "$CertPassword"
+    }
 "@
 $JSONObjectBytes = [System.Text.Encoding]::UTF8.GetBytes($JSONObject)
 $JsonEncoded = [System.Convert]::ToBase64String($JSONObjectBytes)
@@ -177,9 +177,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName $RGName -Ena
 #deploy cert to VM
 $CertUrl = (Get-AzureKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 $SourceVaultId = (Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName 
-$VM = Add-AzVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl 
-Update-AzVM -VM $VM -ResourceGroupName $RGName 
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
+$VM = Add-AzVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
+Update-AzVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGname -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
@@ -199,7 +199,7 @@ The certificate must be previously deployed to the virtual machine local compute
 ```yaml
 Type: String
 Parameter Sets: AADClientCertParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -214,7 +214,7 @@ Specifies the client ID of the Azure AD application that has permissions to writ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -229,7 +229,7 @@ Specifies the client secret of the Azure AD application that has permissions to 
 ```yaml
 Type: String
 Parameter Sets: AADClientSecretParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -259,7 +259,7 @@ Indicates that this cmdlet disables auto-upgrade of the minor version of the ext
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 14
@@ -274,7 +274,7 @@ Specifies the resource ID of the **KeyVault** to which the virtual machine encry
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -289,7 +289,7 @@ Specifies the **KeyVault** URL to which the virtual machine encryption keys shou
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -304,7 +304,7 @@ Encrypt-Format all data drives that are not already encrypted
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +319,7 @@ The extension publisher name. Specify this parameter only to override the defaul
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -334,7 +334,7 @@ The extension type. Specify this parameter to override its default value of "Azu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -349,7 +349,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -365,7 +365,7 @@ The default value is RSA-OAEP.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RSA-OAEP, RSA1_5
 
 Required: False
@@ -382,7 +382,7 @@ This must be the full versioned URL.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -398,7 +398,7 @@ This must be a full versioned URL.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -430,7 +430,7 @@ This parameter is not used for virtual machines that run the Windows operating s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 13
@@ -445,7 +445,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -462,7 +462,7 @@ The Get-AzVMExtension cmdlet can be used to retrieve the previous sequence numbe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -477,7 +477,7 @@ Skip backup creation for Linux VMs
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 15
@@ -524,7 +524,7 @@ The allowed values for Linux virtual machines are as follows: Data only.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OS, Data, All
 
 Required: False

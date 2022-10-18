@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: EC798838-1850-4E88-B17F-D2F00F2D4EE9
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azpublicipaddress
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azpublicipaddress
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzPublicIpAddress.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzPublicIpAddress.md
@@ -30,17 +30,17 @@ The **Set-AzPublicIpAddress** cmdlet sets the goal state for a public IP address
 PS C:\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
 
 PS C:\> $publicIp.PublicIpAllocationMethod = "Dynamic"
-    
+
 PS C:\> Set-AzPublicIpAddress -PublicIpAddress $publicIp
 
 PS C:\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
 ```
 
- First command gets the public IP address resource with name $publicIPName in the resource 
+ First command gets the public IP address resource with name $publicIPName in the resource
     group $rgName.
     Second command sets the allocation method of the public IP address object to "Static".
-    Set-AzPublicIPAddress command updates the public IP address resource with the 
-    updated object, and modifies the allocation method to 'Static'. A public IP address gets 
+    Set-AzPublicIPAddress command updates the public IP address resource with the
+    updated object, and modifies the allocation method to 'Static'. A public IP address gets
     allocated immediately.
 
 ### 2: Change DNS domain label of a public IP address
@@ -48,16 +48,16 @@ PS C:\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName
 PS C:\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
 
 PS C:\> $publicIp.DnsSettings.DomainNameLabel = "newdnsprefix"
-    
+
 PS C:\> Set-AzPublicIpAddress -PublicIpAddress $publicIp
 
 PS C:\> $publicIp = Get-AzPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
 ```
 
-First command gets the public IP address resource with name $publicIPName in the resource 
+First command gets the public IP address resource with name $publicIPName in the resource
     group $rgName.
     Second command sets the DomainNameLabel property to the required dns prefix.
-    Set-AzPublicIPAddress command updates the public IP address resource with the 
+    Set-AzPublicIPAddress command updates the public IP address resource with the
     updated object. DomainNameLabel & Fqdn are modified as expected.
 
 ## PARAMETERS
@@ -68,7 +68,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Specifies a **PublicIpAddress** object that represents the goal state to which t
 ```yaml
 Type: PSPublicIpAddress
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

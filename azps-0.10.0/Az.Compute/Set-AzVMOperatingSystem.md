@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 39AADD19-2EDD-4C1F-BC9E-22186DD9A085
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMOperatingSystem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMOperatingSystem.md
@@ -46,8 +46,8 @@ You can specify logon credentials, computer name, and operating system type.
 ### Example 1: Set operating system properties for a new virtual machines
 ```
 PS C:\> $SecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
-PS C:\> $Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword); 
-PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03" 
+PS C:\> $Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword);
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
 PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
 PS C:\> $ComputerName = "ContosoVM122"
 PS C:\> $WinRMCertUrl = "http://keyVaultName.vault.azure.net/secrets/secretName/secretVersion"
@@ -84,7 +84,7 @@ Specifies the name of the computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -101,7 +101,7 @@ For more information, type `Get-Help Get-Credential`.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -118,7 +118,7 @@ The maximum length of the binary array is 65535 bytes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -148,7 +148,7 @@ Indicates that this cmdlet disables password authentication.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linux
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -163,7 +163,7 @@ Indicates that this cmdlet enables auto update.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -178,7 +178,7 @@ Indicates that the type of operating system is Linux.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linux
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -193,7 +193,7 @@ Indicates that the settings require that the virtual machine agent be installed 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -208,7 +208,7 @@ Specifies the time zone for the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: Windows, WindowsWinRmHttps
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -240,7 +240,7 @@ Indicates that the type of operating system is Windows.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -256,7 +256,7 @@ This needs to be stored in a Key Vault.
 ```yaml
 Type: Uri
 Parameter Sets: WindowsWinRmHttps
-Aliases: 
+Aliases:
 
 Required: True
 Position: 10
@@ -271,7 +271,7 @@ Indicates that this operating system uses HTTP WinRM.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -286,7 +286,7 @@ Indicates that this operating system uses HTTPS WinRM.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WindowsWinRmHttps
-Aliases: 
+Aliases:
 
 Required: True
 Position: 9

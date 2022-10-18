@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatcherflowlogstatus
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatcherflowlogstatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcherFlowLogStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcherFlowLogStatus.md
@@ -27,9 +27,9 @@ Get-AzNetworkWatcherFlowLogStatus -NetworkWatcherName <String> -ResourceGroupNam
 ```
 
 ## DESCRIPTION
-The Get-AzNetworkWatcherFlowLogStatus cmdlet Gets the status of flow logging on a resource. 
-The status includes whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, and the retention policy for the logs. 
-Currently Network Security Groups are supported for flow logging. 
+The Get-AzNetworkWatcherFlowLogStatus cmdlet Gets the status of flow logging on a resource.
+The status includes whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, and the retention policy for the logs.
+Currently Network Security Groups are supported for flow logging.
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ The network watcher resource.
 ```yaml
 Type: PSNetworkWatcher
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ The name of the network watcher resource group.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +136,7 @@ The target resource ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

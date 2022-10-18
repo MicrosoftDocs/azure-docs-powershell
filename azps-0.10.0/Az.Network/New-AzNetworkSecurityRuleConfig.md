@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 633FB5C9-BEB3-42A3-AF4F-A54CC3F9E0F7
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-aznetworksecurityruleconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/new-aznetworksecurityruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzNetworkSecurityRuleConfig.md
@@ -47,8 +47,8 @@ The **New-AzNetworkSecurityRuleConfig** cmdlet creates an Azure network security
 
 ### 1: Create a network security rule to allow RDP
 ```
-$rule1 = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" 
-    -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix 
+$rule1 = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP"
+    -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix
     Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
 ```
 
@@ -56,8 +56,8 @@ This command creates a security rule allowing access from the Internet to port 3
 
 ### 2: Create a network security rule that allows HTTP
 ```
-$rule2 = New-AzNetworkSecurityRuleConfig -Name web-rule -Description "Allow HTTP" 
-    -Access Allow -Protocol Tcp -Direction Inbound -Priority 101 -SourceAddressPrefix 
+$rule2 = New-AzNetworkSecurityRuleConfig -Name web-rule -Description "Allow HTTP"
+    -Access Allow -Protocol Tcp -Direction Inbound -Priority 101 -SourceAddressPrefix
     Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 80
 ```
 
@@ -72,7 +72,7 @@ The acceptable values for this parameter are: Allow and Deny.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Allow, Deny
 
 Required: False
@@ -103,7 +103,7 @@ Specifies a description of the network security rule configuration to create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 Specifies a destination address prefix.
 The acceptable values for this parameter are:
 
-- A Classless Interdomain Routing (CIDR) address 
-- A destination IP address range 
+- A Classless Interdomain Routing (CIDR) address
+- A destination IP address range
 - A wildcard character (*) to match any IP address
 
 You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
@@ -125,7 +125,7 @@ You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ The application security group set as destination for the rule. It cannot be use
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ The application security group set as destination for the rule. It cannot be use
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ The acceptable values for this parameter are: Inbound and Outbound.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Inbound, Outbound
 
 Required: False
@@ -207,7 +207,7 @@ Specifies the name of the network security rule configuration that this cmdlet c
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -226,7 +226,7 @@ The lower the priority number, the higher the priority of the rule.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +246,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Tcp, Udp, *
 
 Required: False
@@ -269,7 +269,7 @@ You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,7 +284,7 @@ The application security group set as source for the rule. It cannot be used wit
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +299,7 @@ The application security group set as source for the rule. It cannot be used wit
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +319,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

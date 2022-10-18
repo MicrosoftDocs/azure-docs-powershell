@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 47FE9EF4-6000-4096-8F04-26A0C6661FDB
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azvirtualnetworksubnetconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/remove-azvirtualnetworksubnetconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzVirtualNetworkSubnetConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzVirtualNetworkSubnetConfig.md
@@ -28,24 +28,24 @@ The **Remove-AzVirtualNetworkSubnetConfig** cmdlet removes a subnet from an Azur
 ### 1: Remove a subnet from a virtual network and update the virtual network
 ```
 New-AzResourceGroup -Name TestResourceGroup -Location centralus
-    $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet 
+    $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet
     -AddressPrefix "10.0.1.0/24"
 
-$backendSubnet = New-AzVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix 
+$backendSubnet = New-AzVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix
     "10.0.2.0/24"
 
-$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName 
-    TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet 
+$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName
+    TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet
     $frontendSubnet,$backendSubnet
 
-Remove-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork 
+Remove-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork
     $virtualNetwork
     $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-This example creates a resource group and a virtual network with two subnets. It then 
-    uses the Remove-AzVirtualNetworkSubnetConfig command to remove the backend subnet 
-    from the in-memory representation of the virtual network. Set-AzVirtualNetwork is 
+This example creates a resource group and a virtual network with two subnets. It then
+    uses the Remove-AzVirtualNetworkSubnetConfig command to remove the backend subnet
+    from the in-memory representation of the virtual network. Set-AzVirtualNetwork is
     then called to modify the virtual network on the server side.
 
 ## PARAMETERS
@@ -71,7 +71,7 @@ Specifies the name of the subnet configuration to remove.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Specifies the **VirtualNetwork** object that contains the subnet configuration t
 ```yaml
 Type: PSVirtualNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

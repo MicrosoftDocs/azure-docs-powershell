@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 063BAA79-484D-48CF-9170-3808813752BD
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-Azadspcredential
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azadspcredential
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADSpCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADSpCredential.md
@@ -76,9 +76,9 @@ A new password credential is added to the existing service principal with object
 ### Example 2 - Create a new service principal credential using a certificate
 
 ```
-PS C:\> $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate 
-PS C:\> $cer.Import("C:\myapp.cer") 
-PS C:\> $binCert = $cer.GetRawCertData() 
+PS C:\> $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
+PS C:\> $cer.Import("C:\myapp.cer")
+PS C:\> $binCert = $cer.GetRawCertData()
 PS C:\> $credValue = [System.Convert]::ToBase64String($binCert)
 PS C:\> New-AzADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
 ```
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 The effective end date of the credential usage.
-The default end date value is one year from today. 
+The default end date value is one year from today.
 For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 The effective start date of the credential usage.
-The default start date value is today. 
+The default start date value is today.
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml

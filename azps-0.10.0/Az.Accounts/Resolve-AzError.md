@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/resolve-azerror
+online version: https://learn.microsoft.com/en-us/powershell/module/az.accounts/resolve-azerror
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Resolve-AzError.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Resolve-AzError.md
@@ -25,9 +25,9 @@ Resolve-AzError [-Last] [-DefaultProfile <IAzureContextContainer>] [<CommonParam
 ```
 
 ## DESCRIPTION
-Resolves and displays detailed information about errors in the current PowerShell session, including where the error 
-occurred in script, stack trace, and all inner and aggregate exceptions. For Azure PowerShell errors provides 
-additional detail in debugging service issues, including complete detail about the request and server response 
+Resolves and displays detailed information about errors in the current PowerShell session, including where the error
+occurred in script, stack trace, and all inner and aggregate exceptions. For Azure PowerShell errors provides
+additional detail in debugging service issues, including complete detail about the request and server response
 that caused the error.
 
 ## EXAMPLES

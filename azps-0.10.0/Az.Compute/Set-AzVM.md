@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 939320CB-2595-4150-AFDD-500CEA78559C
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvm
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVM.md
@@ -60,7 +60,7 @@ Run cmdlet in the background and return a Job to track progress.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Indicates that this cmdlet marks a virtual machine as generalized.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: GeneralizeResourceGroupNameParameterSetName, GeneralizeIdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ Specifies the Resource ID of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: GeneralizeIdParameterSetName, RedeployIdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -120,7 +120,7 @@ Specifies the name of the virtual machine on which this cmdlet operates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -137,7 +137,7 @@ If you redeploy a virtual machine, it restarts, which results in the loss of eph
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RedeployResourceGroupNameParameterSetName, RedeployIdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -152,7 +152,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: GeneralizeResourceGroupNameParameterSetName, RedeployResourceGroupNameParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

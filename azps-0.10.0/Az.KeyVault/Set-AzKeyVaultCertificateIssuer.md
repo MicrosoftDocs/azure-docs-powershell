@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 4C2C77F7-ECE4-4106-8AF1-256A496A977B
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/set-AzKeyvaultcertificateissuer
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/set-AzKeyvaultcertificateissuer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificateIssuer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificateIssuer.md
@@ -48,7 +48,7 @@ Specifies the account ID for the certificate issuer.
 ```yaml
 Type: String
 Parameter Sets: Expanded
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,7 +63,7 @@ Specifies the API key for the certificate issuer.
 ```yaml
 Type: SecureString
 Parameter Sets: Expanded
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +93,7 @@ Specifies the certificate issuer to update.
 ```yaml
 Type: KeyVaultCertificateIssuer
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ Specifies the type of certificate issuer.
 ```yaml
 Type: String
 Parameter Sets: Expanded
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ Organization details to be used with the issuer.
 ```yaml
 Type: KeyVaultCertificateOrganizationDetails
 Parameter Sets: Expanded
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Specifies the name of the key vault.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

@@ -1,7 +1,7 @@
 ---
 Module Name: Az.IotHub
 Module Guid: 51a3a993-fe39-4f8f-a437-2cb751584af5
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.iothub
+Download Help Link: https://learn.microsoft.com/en-us/powershell/module/az.iothub
 Help Version: 3.1.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/IotHub/IotHub/help/Az.IotHub.md
@@ -35,10 +35,10 @@ Add an endpoint to your IoT Hub
 Gets information about the IotHubs in a subscription.
 
 ### [Get-AzIotHubCertificate](Get-AzIotHubCertificate.md)
-Lists all certificates or a particular certificate contained within an Azure IoT Hub. 
+Lists all certificates or a particular certificate contained within an Azure IoT Hub.
 
 ### [Get-AzIotHubCertificateVerificationCode](Get-AzIotHubCertificateVerificationCode.md)
-Generates a verification code for an Azure IoT Hub certificate. 
+Generates a verification code for an Azure IoT Hub certificate.
 
 ### [Get-AzIotHubConnectionString](Get-AzIotHubConnectionString.md)
 Gets the IotHub connectionstrings.
@@ -116,7 +116,7 @@ Update a message enrichment in your IoT hub.
 Update a route in IoT Hub
 
 ### [Set-AzIotHubVerifiedCertificate](Set-AzIotHubVerifiedCertificate.md)
-Verifies an Azure IoT Hub certificate. 
+Verifies an Azure IoT Hub certificate.
 
 ### [Test-AzIotHubRoute](Test-AzIotHubRoute.md)
 Test routes in IoT Hub

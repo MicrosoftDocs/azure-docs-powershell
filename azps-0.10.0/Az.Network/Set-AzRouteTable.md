@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 1CE2A30A-6DF8-4C4C-8348-C3C1CD4D0146
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azroutetable
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azroutetable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzRouteTable.md
@@ -35,7 +35,7 @@ Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGr
                     k/routeTables/RouteTable01
 Etag              : W/"f13e1bc8-d41f-44d0-882d-b8b5a1134f59"
 ProvisioningState : Succeeded
-Tags              : 
+Tags              :
 Routes            : [
                       {
                         "Name": "Route07",
@@ -44,7 +44,7 @@ Routes            : [
                     soft.Network/RouteTables/RouteTable01/routes/Route07",
                         "AddressPrefix": "10.1.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       },
                       {
@@ -54,19 +54,19 @@ Routes            : [
                     soft.Network/RouteTables/RouteTable01/routes/Route07",
                         "AddressPrefix": "10.2.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       },
                       {
                         "Name": "Route13",
-                        "Etag": null, 
-                        "Id": null, 
+                        "Etag": null,
+                        "Id": null,
                         "AddressPrefix": "10.3.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": null
                       }
-                    ] 
+                    ]
 Subnets           : []
 ```
 
@@ -82,7 +82,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Specifies a route table object that represents the goal state to which this cmdl
 ```yaml
 Type: PSRouteTable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

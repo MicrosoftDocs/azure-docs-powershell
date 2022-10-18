@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 383402B2-6B7C-41AB-AFF9-36C86156B0A9
-online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstoragecontext
+online version: https://learn.microsoft.com/en-us/powershell/module/az.storage/new-azstoragecontext
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/New-AzStorageContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/New-AzStorageContext.md
@@ -106,7 +106,7 @@ The command gets the Azure Storage container for the local developer storage acc
 
 ### Example 6: Get multiple containers
 ```
-C:\PS>$Context01 = New-AzStorageContext -Local 
+C:\PS>$Context01 = New-AzStorageContext -Local
 PS C:\> $Context02 = New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >"
 PS C:\> ($Context01, $Context02) | Get-AzStorageContainer
 ```

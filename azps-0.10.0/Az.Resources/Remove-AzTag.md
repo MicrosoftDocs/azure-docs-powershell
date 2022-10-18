@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Tags.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 66B25541-0FA5-46CF-90D8-FE9527BE11C6
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-aztag
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/remove-aztag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzTag.md
@@ -44,7 +44,7 @@ If the tag has been applied to any resources or resource groups, the command fai
 PS C:\>Remove-AzTag -Name "Department" -Value "HumanResources" -PassThru
 Name:   Department
 Count:  14
-Values: 
+Values:
 
         Name        Count
         =========   =====

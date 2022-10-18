@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 356764CF-A860-432A-907A-9058CEB2BF8E
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azrouteconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azrouteconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzRouteConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzRouteConfig.md
@@ -30,9 +30,9 @@ The **New-AzRouteConfig** cmdlet creates a route for an Azure route table.
 PS C:\>$Route = New-AzRouteConfig -Name "Route07" -AddressPrefix 10.1.0.0/16 -NextHopType "VnetLocal"
 PS C:\> $Route
 Name              : Route07
-Id                : 
-Etag              : 
-ProvisioningState : 
+Id                :
+Etag              :
+ProvisioningState :
 AddressPrefix     : 10.1.0.0/16
 NextHopType       : VnetLocal
 NextHopIpAddress  :
@@ -51,7 +51,7 @@ Specifies the destination, in Classless Interdomain Routing (CIDR) format, to wh
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ Specifies a name for the route.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Specify this parameter only if you specify a value of VirtualAppliance for the *
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,13 +112,13 @@ Specifies how this route forwards packets.
 The acceptable values for this parameter are:
 
 - Internet.
-The default Internet gateway provided by Azure. 
+The default Internet gateway provided by Azure.
 - None.
-If you specify this value, the route does not forward packets. 
+If you specify this value, the route does not forward packets.
 - VirtualAppliance.
-A virtual appliance that you add to your Azure virtual network. 
+A virtual appliance that you add to your Azure virtual network.
 - VirtualNetworkGateway.
-An Azure server-to-server virtual private network gateway. 
+An Azure server-to-server virtual private network gateway.
 - VnetLocal.
 The local virtual network.
 If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network, select a value of VnetLocal for each subnet to forward to the other subnet.
@@ -126,7 +126,7 @@ If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

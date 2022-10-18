@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 8C1C12AD-5130-42E7-99BB-B13900D7A712
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmssextension
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/remove-azvmssextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVmssExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVmssExtension.md
@@ -60,7 +60,7 @@ Specifies the ID of the extension that this cmdlet removes from the VMSS.
 ```yaml
 Type: String
 Parameter Sets: IdParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -75,7 +75,7 @@ Specifies the name of the extension that this cmdlet removes from the VMSS.
 ```yaml
 Type: String
 Parameter Sets: NameParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -90,7 +90,7 @@ Specifies the VMSS from which to remove the extension from.
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
