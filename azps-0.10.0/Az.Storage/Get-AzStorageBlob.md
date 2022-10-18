@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: E54BFD3A-CD54-4E6B-9574-92B8D3E88FF3
-online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageblob
+online version: https://learn.microsoft.com/en-us/powershell/module/az.storage/get-azstorageblob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageBlob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageBlob.md
@@ -49,10 +49,10 @@ PS C:\>Get-AzStorageContainer -Name container* | Get-AzStorageBlob -IncludeDelet
 
    Container Uri: https://storageaccountname.blob.core.windows.net/container1
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime         IsDeleted 
-----                 --------  ------          -----------                    ------------         ---------- ------------         --------- 
-test1                BlockBlob 403116          application/octet-stream       2017-11-08 07:53:19Z            2017-11-08 08:19:32Z True      
-test1                BlockBlob 403116          application/octet-stream       2017-11-08 09:00:29Z                                 True      
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime         IsDeleted
+----                 --------  ------          -----------                    ------------         ---------- ------------         ---------
+test1                BlockBlob 403116          application/octet-stream       2017-11-08 07:53:19Z            2017-11-08 08:19:32Z True
+test1                BlockBlob 403116          application/octet-stream       2017-11-08 09:00:29Z                                 True
 test2                BlockBlob 403116          application/octet-stream       2017-11-08 07:53:00Z                                 False
 ```
 

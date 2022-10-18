@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/test-azstackhciconnection
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/test-azstackhciconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Test-AzStackHCIConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Test-AzStackHCIConnection.md
@@ -27,7 +27,7 @@ Test-AzStackHCIConnection verifies connectivity from on-premises clustered nodes
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Test-AzStackHCIConnection
 ```

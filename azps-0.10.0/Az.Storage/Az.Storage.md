@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Storage
 Module Guid: dfa9e4ea-1407-446d-9111-79122977ab20
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.storage
+Download Help Link: https://learn.microsoft.com/en-us/powershell/module/az.storage
 Help Version: 4.2.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Az.Storage.md

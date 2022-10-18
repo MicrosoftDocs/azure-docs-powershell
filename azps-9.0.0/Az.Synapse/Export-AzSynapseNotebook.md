@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/export-azsynapsenotebook
+online version: https://learn.microsoft.com/powershell/module/az.synapse/export-azsynapsenotebook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Export-AzSynapseNotebook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Export-AzSynapseNotebook.md
@@ -33,7 +33,7 @@ Export-AzSynapseNotebook -InputObject <PSNotebookResource> -OutputFolder <String
 ```
 
 ## DESCRIPTION
-The **Export-AzSynapseNotebook** cmdlet exports an Azure Synapse notebook to a notebook (.ipynb) file. 
+The **Export-AzSynapseNotebook** cmdlet exports an Azure Synapse notebook to a notebook (.ipynb) file.
 The name of the notebook becomes the name of the exported file. If you specify the name of a notebook, the cmdlet exports that notebook. If you do not specify a name, the cmdlet export all notebooks in the workspace.
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.HealthcareApis
-online version: https://docs.microsoft.com/powershell/module/az.healthcareapis/remove-azhealthcareapisworkspace
+online version: https://learn.microsoft.com/powershell/module/az.healthcareapis/remove-azhealthcareapisworkspace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthcareApis/help/Remove-AzHealthcareApisWorkspace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthcareApis/help/Remove-AzHealthcareApisWorkspace.md

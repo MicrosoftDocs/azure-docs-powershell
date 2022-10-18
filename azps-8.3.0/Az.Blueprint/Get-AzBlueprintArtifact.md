@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
 Module Name: Az.Blueprint
-online version: https://docs.microsoft.com/powershell/module/az.blueprint/get-azblueprintartifact
+online version: https://learn.microsoft.com/powershell/module/az.blueprint/get-azblueprintartifact
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Get-AzBlueprintArtifact.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Get-AzBlueprintArtifact.md
@@ -30,7 +30,7 @@ Retrieve artifacts from a blueprint definition. If a blueprint definition versio
 ### Example 1
 ```powershell
 $bp = Get-AzBlueprint -Name SimpleBlueprint
-Get-AzBlueprintArtifact -Blueprint $bp 
+Get-AzBlueprintArtifact -Blueprint $bp
 ```
 
 ```output
@@ -56,7 +56,7 @@ Type               : Microsoft.Blueprint/blueprints/artifacts
 Name               : 0e1593da-47d5-4b75-800c-9a797dd23192
 ```
 
-Retrieve artifacts from a blueprint definition.. 
+Retrieve artifacts from a blueprint definition..
 
 ## PARAMETERS
 

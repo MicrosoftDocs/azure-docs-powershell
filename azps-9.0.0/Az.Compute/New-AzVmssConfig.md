@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: CE32F620-8DB2-4004-8012-F1C4AA235B60
-online version: https://docs.microsoft.com/powershell/module/az.compute/new-azvmssconfig
+online version: https://learn.microsoft.com/powershell/module/az.compute/new-azvmssconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVmssConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVmssConfig.md
@@ -62,7 +62,7 @@ Use the following cmdlets to configure the VMSS object:
 - **[Add-AzVmssNetworkInterfaceConfiguration](https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmssnetworkinterfaceconfiguration)** to set the network profile.<br>
 - **[Set-AzVmssOsProfile](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssosprofile)** to set the OS profile. <br>
 - **[Set-AzVmssStorageProfile](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssstorageprofile)** to set the storage profile.<br>
-- **[Get-AzComputeResourceSku](https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku)** can also be used to find out available virtual machine sizes for your subscription and region.<br><br>
+- **[Get-AzComputeResourceSku](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku)** can also be used to find out available virtual machine sizes for your subscription and region.<br><br>
 
 See other cmdlets for virtual machine scale set [here](https://learn.microsoft.com/en-us/powershell/module/az.compute/#vm-scale-sets).<br>
 <br>
@@ -157,18 +157,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -BaseRegularPriorityCount
-Specifies the minimum number of VMs that must be of Regular priority as a VMSS Flex instance scales out. This parameter is only valid for VMSS instances with Flexible OrchestrationMode. 
+Specifies the minimum number of VMs that must be of Regular priority as a VMSS Flex instance scales out. This parameter is only valid for VMSS instances with Flexible OrchestrationMode.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default Value: None
-Accept pipeline input: False 
-Accept wildcard characters: False 
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -BootDiagnostic
@@ -614,13 +614,13 @@ Specifies the desired percentage of VMs, after the BaseRegularCount has been met
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default Value: None
-Accept pipeline input: False 
-Accept wildcard characters: False 
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -RollingUpgradePolicy
@@ -699,7 +699,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Specifies the size of all the instances of VMSS. [Get-AzComputeResourceSku](https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku) can be used to find out available sizes for your subscription and region. 
+Specifies the size of all the instances of VMSS. [Get-AzComputeResourceSku](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku) can be used to find out available sizes for your subscription and region.
 
 ```yaml
 Type: System.String

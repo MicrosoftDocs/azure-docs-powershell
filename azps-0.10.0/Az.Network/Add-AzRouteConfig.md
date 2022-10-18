@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: C868DFA4-8A9D-4108-B88B-ACD7F100A63C
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azrouteconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azrouteconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzRouteConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzRouteConfig.md
@@ -48,7 +48,7 @@ Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGr
                     k/routeTables/routetable01
 Etag              : W/"f13e1bc8-d41f-44d0-882d-b8b5a1134f59"
 ProvisioningState : Succeeded
-Tags              : 
+Tags              :
 Routes            : [
                       {
                         "Name": "route07",
@@ -57,7 +57,7 @@ Routes            : [
                     soft.Network/routeTables/routetable01/routes/route07",
                         "AddressPrefix": "10.1.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       },
                       {
@@ -67,19 +67,19 @@ Routes            : [
                     soft.Network/routeTables/routetable01/routes/route02",
                         "AddressPrefix": "10.2.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       },
                       {
                         "Name": "route13",
-                        "Etag": null, 
-                        "Id": null, 
+                        "Etag": null,
+                        "Id": null,
                         "AddressPrefix": "10.3.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": null
                       }
-                    ] 
+                    ]
 Subnets           : []
 ```
 
@@ -95,7 +95,7 @@ Specifies the destination, in Classless Interdomain Routing (CIDR) format, to wh
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ Specifies a name of the route to add to the route table.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Specify this parameter only if you specify a value of VirtualAppliance for the *
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,13 +156,13 @@ Specifies how this route forwards packets.
 The acceptable values for this parameter are:
 
 - Internet.
-The default Internet gateway provided by Azure. 
+The default Internet gateway provided by Azure.
 - None.
-If you specify this value, the route does not forward packets. 
+If you specify this value, the route does not forward packets.
 - VirtualAppliance.
-A virtual appliance that you add to your Azure virtual network. 
+A virtual appliance that you add to your Azure virtual network.
 - VirtualNetworkGateway.
-An Azure server-to-server virtual private network gateway. 
+An Azure server-to-server virtual private network gateway.
 - VnetLocal.
 The local virtual network.
 If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network, select a value of VnetLocal for each subnet to forward to the other subnet.
@@ -170,7 +170,7 @@ If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ Specifies the route table to which this cmdlet adds a route.
 ```yaml
 Type: PSRouteTable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

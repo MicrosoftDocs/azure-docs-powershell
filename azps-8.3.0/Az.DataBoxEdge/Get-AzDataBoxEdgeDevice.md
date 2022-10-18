@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll-Help.xml
 Module Name: Az.DataBoxEdge
-online version: https://docs.microsoft.com/powershell/module/az.databoxedge/get-azdataboxedgedevice
+online version: https://learn.microsoft.com/powershell/module/az.databoxedge/get-azdataboxedgedevice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/Get-AzDataBoxEdgeDevice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/Get-AzDataBoxEdgeDevice.md
@@ -83,7 +83,7 @@ Get-AzDataBoxEdgeDevice [-ResourceGroupName] <String> [-Name] <String> [-Alert]
 ```
 
 ## DESCRIPTION
-The **Get-AzDataBoxEdgeDevice** cmdlet gets the information about the available Data Box Edge Devices. You can specify the Name of the device along with the Resource Group Name to get the information on a specific device. 
+The **Get-AzDataBoxEdgeDevice** cmdlet gets the information about the available Data Box Edge Devices. You can specify the Name of the device along with the Resource Group Name to get the information on a specific device.
 
 ## EXAMPLES
 

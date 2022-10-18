@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azapplicationgatewayconnectiondraining
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/remove-azapplicationgatewayconnectiondraining
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzApplicationGatewayConnectionDraining.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzApplicationGatewayConnectionDraining.md
@@ -44,7 +44,7 @@ The backend http settings
 ```yaml
 Type: PSApplicationGatewayBackendHttpSettings
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

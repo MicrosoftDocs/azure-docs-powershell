@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
 Module Name: Az.Blueprint
-online version: https://docs.microsoft.com/powershell/module/az.blueprint/set-azblueprint
+online version: https://learn.microsoft.com/powershell/module/az.blueprint/set-azblueprint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Set-AzBlueprint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Set-AzBlueprint.md
@@ -43,7 +43,7 @@ Set-AzBlueprint -Name MyBlueprint -SubscriptionId 00000000-1111-0000-1111-000000
 Name              : SimpleBlueprint
 Id                : /providers/Microsoft.Management/managementGroups/{mgId}/providers/Microsoft.Blueprint/blueprints/SimpleBlueprint
 ManagementGroupId : myManagementGroupId
-Versions          : 
+Versions          :
 Description       : test
 TimeCreated       : 2019-05-12
 TargetScope       : Subscription

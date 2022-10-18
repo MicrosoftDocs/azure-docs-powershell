@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmssdatadisk
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmssdatadisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssDataDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssDataDisk.md
@@ -42,7 +42,7 @@ Specifies the caching type of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ReadOnly, ReadWrite
 
 Required: False
@@ -58,7 +58,7 @@ Specifies the create option of the disk.
 ```yaml
 Type: DiskCreateOptionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: FromImage, Empty, Attach
 
 Required: False
@@ -89,7 +89,7 @@ Specifies the size of the disk in GB.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ Specifies the logical unit number of the disk.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -119,7 +119,7 @@ Specifies the name of the disk.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -134,7 +134,7 @@ Specifies the storage account type of the disk.
 ```yaml
 Type: StorageAccountTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: StandardLRS, PremiumLRS
 
 Required: False
@@ -151,7 +151,7 @@ You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) cmdlet to create the o
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -166,7 +166,7 @@ Specifies whether WriteAccelerator should be enabled or disabled on the data dis
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

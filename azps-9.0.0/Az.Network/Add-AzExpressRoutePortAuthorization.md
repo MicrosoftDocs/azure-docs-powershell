@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/add-azexpressrouteportauthorization
+online version: https://learn.microsoft.com/powershell/module/az.network/add-azexpressrouteportauthorization
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzExpressRoutePortAuthorization.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzExpressRoutePortAuthorization.md
@@ -22,7 +22,7 @@ Add-AzExpressRoutePortAuthorization -Name <String> -ExpressRoutePortObject <PSEx
 ## DESCRIPTION
 The **Add-AzExpressRoutePortAuthorization** cmdlet adds an authorization to an ExpressRoutePort.
 The owner of an ExpressRoutePort can create these authorizations which generate an
-authorization key that can be used by a ExpressRoute circuit owner to create the circuit on 
+authorization key that can be used by a ExpressRoute circuit owner to create the circuit on
 the ExpressRoutePort (with a different owner). Only one circuit can be created with one
 ExpressRoutePort authorization.**Add-AzExpressRoutePortAuthorization**
 adds a new authorization to a ExpressRoutePort and, at the same time, generates the corresponding

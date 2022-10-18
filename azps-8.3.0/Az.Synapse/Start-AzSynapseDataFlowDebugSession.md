@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/start-azsynapsedataflowdebugsession
+online version: https://learn.microsoft.com/powershell/module/az.synapse/start-azsynapsedataflowdebugsession
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Start-AzSynapseDataFlowDebugSession.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Start-AzSynapseDataFlowDebugSession.md
@@ -31,11 +31,11 @@ Start-AzSynapseDataFlowDebugSession -WorkspaceObject <PSSynapseWorkspace> [-Inte
 
 ## DESCRIPTION
 This long running command starts a data flow debug session for the upcoming debug commands. This command can attach with an integration runtime definition to configure the size/type of debug session cluster.
-The PowerShell command sequence for data flow debug workflow should be:  
-1. Start-AzSynapseDataFlowDebugSession  
-2. Add-AzSynapseDataFlowDebugSessionPackage  
-3. Invoke-AzSynapseDataFlowDebugSessionCommand (repeat this step for different commands/targets, or repeat step 2-3 in order to change the package file)  
-4. Stop-AzSynapseDataFlowDebugSession  
+The PowerShell command sequence for data flow debug workflow should be:
+1. Start-AzSynapseDataFlowDebugSession
+2. Add-AzSynapseDataFlowDebugSessionPackage
+3. Invoke-AzSynapseDataFlowDebugSessionCommand (repeat this step for different commands/targets, or repeat step 2-3 in order to change the package file)
+4. Stop-AzSynapseDataFlowDebugSession
 
 ## EXAMPLES
 
@@ -48,8 +48,8 @@ This command starts an Azure Synapse Analytics data flow debug session.
 
 ### Example 2
 ```powershell
-$ws = Get-AzSynapseWorkspace -Workspacename ContosoWorkspace -ResourceGroupName GroupName  
-$result = $ws | Start-AzSynapseDataFlowDebugSession  
+$ws = Get-AzSynapseWorkspace -Workspacename ContosoWorkspace -ResourceGroupName GroupName
+$result = $ws | Start-AzSynapseDataFlowDebugSession
 $result
 ```
 

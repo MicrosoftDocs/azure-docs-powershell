@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/get-azservicelinkerforspringcloud
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/get-azservicelinkerforspringcloud
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Get-AzServiceLinkerForSpringCloud.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Get-AzServiceLinkerForSpringCloud.md
@@ -64,13 +64,13 @@ Get-AzServiceLinkerForSpringCloud -ServiceName servicelinker-springcloud -AppNam
 AuthInfo                     : Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Model
                                s.Api20220501.SecretAuthInfo
 ClientType                   : dotnet
-Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/re 
-                               sourceGroups/servicelinker-test-group/providers/ 
-                               Microsoft.AppPlatform/Spring/servicelinker-springcloud/apps/appconfiguration/deployments/default/providers 
-                               /Microsoft.ServiceLinker/linkers/postgresql_connection     
+Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/re
+                               sourceGroups/servicelinker-test-group/providers/
+                               Microsoft.AppPlatform/Spring/servicelinker-springcloud/apps/appconfiguration/deployments/default/providers
+                               /Microsoft.ServiceLinker/linkers/postgresql_connection
 Name                         : postgresql_connection
 ProvisioningState            : Succeeded
-Scope                        : 
+Scope                        :
 SecretStoreKeyVaultId        :
 SystemDataCreatedAt          :
 SystemDataCreatedBy          :
@@ -78,7 +78,7 @@ SystemDataCreatedByType      :
 SystemDataLastModifiedAt     :
 SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType :
-TargetService                : Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Model 
+TargetService                : Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Model
                                s.Api20220501.AzureResource
 Type                         : microsoft.servicelinker/linkers
 VNetSolutionType             : serviceEndpoint
@@ -100,13 +100,13 @@ $identity | Get-AzServiceLinkerForSpringCloud  | Format-List
 AuthInfo                     : Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Model
                                s.Api20220501.SecretAuthInfo
 ClientType                   : dotnet
-Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/re 
-                               sourceGroups/servicelinker-test-group/providers/ 
-                               Microsoft.AppPlatform/Spring/servicelinker-springcloud/apps/appconfiguration/deployments/default/providers 
-                               /Microsoft.ServiceLinker/linkers/postgresql_connection     
+Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/re
+                               sourceGroups/servicelinker-test-group/providers/
+                               Microsoft.AppPlatform/Spring/servicelinker-springcloud/apps/appconfiguration/deployments/default/providers
+                               /Microsoft.ServiceLinker/linkers/postgresql_connection
 Name                         : postgresql_connection
 ProvisioningState            : Succeeded
-Scope                        : 
+Scope                        :
 SecretStoreKeyVaultId        :
 SystemDataCreatedAt          :
 SystemDataCreatedBy          :
@@ -114,7 +114,7 @@ SystemDataCreatedByType      :
 SystemDataLastModifiedAt     :
 SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType :
-TargetService                : Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Model 
+TargetService                : Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Model
                                s.Api20220501.AzureResource
 Type                         : microsoft.servicelinker/linkers
 VNetSolutionType             : serviceEndpoint

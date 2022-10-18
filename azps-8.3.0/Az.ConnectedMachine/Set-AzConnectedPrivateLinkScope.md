@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedMachine
-online version: https://docs.microsoft.com/powershell/module/az.connectedmachine/set-azconnectedprivatelinkscope
+online version: https://learn.microsoft.com/powershell/module/az.connectedmachine/set-azconnectedprivatelinkscope
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/Set-AzConnectedPrivateLinkScope.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/Set-AzConnectedPrivateLinkScope.md
@@ -46,7 +46,7 @@ Set-AzConnectedPrivateLinkScope -ResourceGroupName $resourceGroupName -ScopeName
 ```output
 Name         Location    PublicNetworkAccess ProvisioningState
 ----         --------    ------------------- -----------------
-name         eastus2euap Disabled            Succeeded         
+name         eastus2euap Disabled            Succeeded
 ```
 
 Updates the PublicNetworkAccess to "Disable" and tags to $tags

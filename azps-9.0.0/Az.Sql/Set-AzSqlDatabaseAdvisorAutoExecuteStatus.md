@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 50E09DF7-F5B5-4668-9520-73D562E91800
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqldatabaseadvisorautoexecutestatus
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqldatabaseadvisorautoexecutestatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabaseAdvisorAutoExecuteStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabaseAdvisorAutoExecuteStatus.md
@@ -67,8 +67,8 @@ Accept wildcard characters: False
 ### -AutoExecuteStatus
 Specifies the value for the status.
 The acceptable values for this parameter are:
-- Enabled 
-- Disabled 
+- Enabled
+- Disabled
 - Default
 
 ```yaml
@@ -193,5 +193,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzSqlDatabaseAdvisor](./Get-AzSqlDatabaseAdvisor.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
 

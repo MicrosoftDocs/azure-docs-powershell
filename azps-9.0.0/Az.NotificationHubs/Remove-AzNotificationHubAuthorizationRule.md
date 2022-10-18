@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
 ms.assetid: 715F8821-BBD1-440A-AD54-E960939E288A
-online version: https://docs.microsoft.com/powershell/module/az.notificationhubs/remove-aznotificationhubauthorizationrule
+online version: https://learn.microsoft.com/powershell/module/az.notificationhubs/remove-aznotificationhubauthorizationrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Remove-AzNotificationHubAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Remove-AzNotificationHubAuthorizationRule.md
@@ -24,7 +24,7 @@ Remove-AzNotificationHubAuthorizationRule [-ResourceGroup] <String> [-Namespace]
 ## DESCRIPTION
 The **Remove-AzNotificationHubAuthorizationRule** cmdlet removes a Shared Access Signature (SAS) authorization rule from a notification hub.
 Authorization rules manage access to your notification hubs through the creation of links, as URIs, based on different permission levels.
-Permission levels can be one of the following: 
+Permission levels can be one of the following:
 - Listen
 - Send
 - Manage

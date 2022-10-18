@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataBox
-online version: https://docs.microsoft.com/powershell/module/az.databox/update-azdataboxjob
+online version: https://learn.microsoft.com/powershell/module/az.databox/update-azdataboxjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/Update-AzDataBoxJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/Update-AzDataBoxJob.md
@@ -29,7 +29,7 @@ Updates the properties of an existing job.
 
 ## EXAMPLES
 
-### Example 1: Update databox job encryption from microsoft managed to customer managed with user assigned identities 
+### Example 1: Update databox job encryption from microsoft managed to customer managed with user assigned identities
 <!-- Skip: Output cannot be splitted from code -->
 ```powershell
 $keyEncryptionDetails = New-AzDataBoxKeyEncryptionKeyObject -KekType "CustomerManaged" -IdentityProperty @{Type = "UserAssigned"; UserAssignedResourceId = "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName"} -KekUrl "keyIdentifier" -KekVaultResourceId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.KeyVault/vaults/keyVaultName"
@@ -50,7 +50,7 @@ $DebugPreference = "Continue"
 #     ],
 #     "Target": null
 #   }
-# } 
+# }
 Update-AzDataBoxJob -Name "powershell10" -ResourceGroupName "resourceGroupName" -KeyEncryptionKey $keyEncryptionDetails -ContactDetail $contactDetail -ShippingAddress $ShippingDetails  -IdentityType "UserAssigned" -UserAssignedIdentity @{"/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName" = @{}}
 
 Name         Location Status        TransferType  SkuName IdentityType DeliveryType Detail

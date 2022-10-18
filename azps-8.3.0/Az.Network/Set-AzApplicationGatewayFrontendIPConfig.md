@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 2C024C32-1B03-4BAA-AD31-4974D414C998
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azapplicationgatewayfrontendipconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azapplicationgatewayfrontendipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayFrontendIPConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayFrontendIPConfig.md
@@ -35,7 +35,7 @@ Set-AzApplicationGatewayFrontendIPConfig -ApplicationGateway <PSApplicationGatew
 
 ## DESCRIPTION
 The **Set-AzApplicationGatewayFrontendIPConfig** cmdlet updates a front-end IP configuration.
-An application gateway supports two types of front-end IP addresses: 
+An application gateway supports two types of front-end IP addresses:
 - Public IP addresses
 - Private IP addresses for which the configuration uses Internal Load Balancing (ILB)
 An application gateway can have at most one public IP address and one private IP address.

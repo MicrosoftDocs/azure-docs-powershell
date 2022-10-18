@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-aznetworkmanagersecurityadminrulecollection
+online version: https://learn.microsoft.com/powershell/module/az.network/set-aznetworkmanagersecurityadminrulecollection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkManagerSecurityAdminRuleCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkManagerSecurityAdminRuleCollection.md
@@ -33,7 +33,7 @@ The **Set-AzNetworkManagerSecurityAdminRuleCollection** cmdlet updates a network
 $NetworkManagerSecurityAdminRuleCollection = Get-AzNetworkManagerSecurityAdminRuleCollection -SecurityAdminConfigurationName "psSecurityAdminConfig" -Name "psRuleCollection" -NetworkManagerName "psNetworkManager" -ResourceGroupName "psResourceGroup"
 $groupItem = New-AzNetworkManagerSecurityGroupItem -NetworkGroupId "/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/networkGroups/psNetworkGroup"
 $groupItem2 = New-AzNetworkManagerSecurityGroupItem -NetworkGroupId "/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/networkGroups/psNetworkGroup2"
-[System.Collections.Generic.List[Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerSecurityGroupItem]]$configGroup  = @() 
+[System.Collections.Generic.List[Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerSecurityGroupItem]]$configGroup  = @()
 $configGroup.Add($groupItem)
 $configGroup.Add($groupItem2)
 $NetworkManagerSecurityAdminRuleCollection.AppliesToGroups = $configGroup

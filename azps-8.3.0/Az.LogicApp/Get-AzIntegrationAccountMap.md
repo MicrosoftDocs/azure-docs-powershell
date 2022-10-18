@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 4F65A8B3-A250-41C1-9AA5-DBEB3193C401
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccountmap
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccountmap
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountMap.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountMap.md
@@ -45,7 +45,7 @@ Type                 : Microsoft.Logic/integrationAccounts/maps
 CreatedTime          : 3/24/2016 10:34:26 PM
 ChangedTime          : 3/24/2016 10:34:26 PM
 MapType              : Xslt
-ContentType          : 
+ContentType          :
 ContentLink          : https://<baseurl>/integrationaccounts8811f0155a364b5e9618ba28f7180601/99D1E_XSLT_INTEGRATIONACCOUNT
                        MAP1-9A960F9B71C844CDB09D4922B3BCFF61?sv=2014-02-14&sr=b&sig=<value>
 ContentSize          : 3056
@@ -66,7 +66,7 @@ Type                 : Microsoft.Logic/integrationAccounts/maps
 CreatedTime          : 3/24/2016 10:34:26 PM
 ChangedTime          : 3/24/2016 10:34:26 PM
 MapType              : Xslt
-ContentType          : 
+ContentType          :
 ContentLink          : https://<baseurl>/integrationaccounts8811f0155a364b5e9618ba28f7180601/99D1E_XSLT_INTEGRATIONACCOUNT
                        MAP1-9A960F9B71C844CDB09D4922B3BCFF61?sv=2014-02-14&sr=b&sig=<value>
 ContentSize          : 3056

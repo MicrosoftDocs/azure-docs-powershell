@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 5CC89899-00B6-424A-8896-FD32DE9DDA28
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmssvaultcertificateconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmssvaultcertificateconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssVaultCertificateConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssVaultCertificateConfig.md
@@ -42,7 +42,7 @@ This is only valid for Windows Virtual Machine Scale Sets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -66,7 +66,7 @@ It is the base64 encoding of the following JSON Object which is encoded in UTF-8
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -130,7 +130,7 @@ This cmdlet does not accept any input.
 
 ## OUTPUTS
 
-###  
+### None
 This cmdlet does not generate any output.
 
 ## NOTES

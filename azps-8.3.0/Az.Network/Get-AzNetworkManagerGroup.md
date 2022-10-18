@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkmanagergroup
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerGroup.md
@@ -41,7 +41,7 @@ Get-AzNetworkManagerGroup  -Name "TestGroup" -NetworkManagerName "TestNMName" -R
 ```output
 Name                  : TestGroup
 Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup
-Description           : 
+Description           :
 Etag                  : "00000000-0000-0000-0000-000000000000"
 ProvisioningState     : Succeeded
 ConditionalMembership :
@@ -63,8 +63,8 @@ Get-AzNetworkManagerGroup -NetworkManagerName "TestNMName" -ResourceGroupName "T
 ```
 ```output
 Name                  : TestGroup
-Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup 
-Description           : 
+Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup
+Description           :
 Etag                  : "00000000-0000-0000-0000-000000000000"
 ProvisioningState     : Succeeded
 ConditionalMembership :
@@ -79,8 +79,8 @@ SystemData            : {
                         }
 
                         Name                  : TestGroup2
-Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup2 
-Description           : 
+Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup2
+Description           :
 Etag                  : "00000000-0000-0000-0000-000000000000"
 ProvisioningState     : Succeeded
 ConditionalMembership :

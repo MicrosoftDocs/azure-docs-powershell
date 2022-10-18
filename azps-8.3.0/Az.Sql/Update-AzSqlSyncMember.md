@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/update-azsqlsyncmember
+online version: https://learn.microsoft.com/powershell/module/az.sql/update-azsqlsyncmember
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlSyncMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlSyncMember.md
@@ -45,12 +45,12 @@ SyncGroupName               : SyncGroup01
 SyncMemberName              : SyncMember01
 SyncDirection               : OneWayMemberToHub
 MemberDatabaseType:         : AzureSqlDatabase
-SyncAgentId                 : 
-SqlServerDatabaseId         : 
+SyncAgentId                 :
+SqlServerDatabaseId         :
 MemberServerName            : memberServer01.full.dns.name
 MemberDatabaseName          : memberDatabase01
 MemberDatabaseUserName      : myAccount-new
-MemberDatabasePassword      : 
+MemberDatabasePassword      :
 SyncState                   : Good
 ```
 

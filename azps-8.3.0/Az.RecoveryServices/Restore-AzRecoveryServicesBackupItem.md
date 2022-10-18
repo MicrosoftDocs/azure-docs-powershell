@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: F49FA524-28BC-464F-BD0A-F898E99C83D8
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/restore-azrecoveryservicesbackupitem
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/restore-azrecoveryservicesbackupitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Restore-AzRecoveryServicesBackupItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Restore-AzRecoveryServicesBackupItem.md
@@ -147,7 +147,7 @@ $BackupItem = Get-AzRecoveryServicesBackupItem -BackupManagementType "AzureVM" -
 $StartDate = (Get-Date).AddDays(-7)
 $EndDate = Get-Date
 $RP = Get-AzRecoveryServicesBackupRecoveryPoint -Item $BackupItem -StartDate $StartDate.ToUniversalTime() -EndDate $EndDate.ToUniversalTime() -VaultId $vault.ID
-$AlternateLocationRestoreJob = Restore-AzRecoveryServicesBackupItem -RecoveryPoint $RP[0] -TargetResourceGroupName "Target_RG" -StorageAccountName "DestStorageAccount" -StorageAccountResourceGroupName "DestStorageAccRG" -TargetVMName "TagetVirtualMachineName" -TargetVNetName "Target_VNet" -TargetVNetResourceGroup "" -TargetSubnetName "subnetName" -VaultId $vault.ID -VaultLocation $vault.Location 
+$AlternateLocationRestoreJob = Restore-AzRecoveryServicesBackupItem -RecoveryPoint $RP[0] -TargetResourceGroupName "Target_RG" -StorageAccountName "DestStorageAccount" -StorageAccountResourceGroupName "DestStorageAccRG" -TargetVMName "TagetVirtualMachineName" -TargetVNetName "Target_VNet" -TargetVNetResourceGroup "" -TargetSubnetName "subnetName" -VaultId $vault.ID -VaultLocation $vault.Location
 $OriginalLocationRestoreJob = Restore-AzRecoveryServicesBackupItem -RecoveryPoint $RP[0] -StorageAccountName "DestStorageAccount" -StorageAccountResourceGroupName "DestStorageAccRG" -VaultId $vault.ID -VaultLocation $vault.Location
 ```
 
@@ -162,7 +162,7 @@ The second command gets the Backup item of type AzureVM, of the name "V2VM", and
 The third command gets the date from seven days earlier, and then stores it in the $StartDate variable.
 The fourth command gets the current date, and then stores it in the $EndDate variable.
 The fifth command gets a list of recovery points for the specific backup item filtered by $StartDate and $EndDate.
-The sixth command triggers an Alternate Location Restore (ALR) to create a new VM in Target_RG resource group as per the inputs specified by parameters TargetVMName, TargetVNetName, TargetVNetResourceGroup, TargetSubnetName. 
+The sixth command triggers an Alternate Location Restore (ALR) to create a new VM in Target_RG resource group as per the inputs specified by parameters TargetVMName, TargetVNetName, TargetVNetResourceGroup, TargetSubnetName.
 Alternately, if a user wants to perform an in-place restore to the originally backed up VM in the original location, it can be done with the last command. Please **avoid** using TargetResourceGroupName, RestoreAsUnmanagedDisks, TargetVMName, TargetVNetName, TargetVNetResourceGroup, TargetSubnetName parameters for performing Original Location Restore (OLR).
 
 ### Example 3: Restore specified disks of a backed up Managed disk Azure VM from a given recovery point
@@ -854,7 +854,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. 
+Shows what would happen if the cmdlet runs.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

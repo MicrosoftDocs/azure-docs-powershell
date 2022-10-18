@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 43D01A97-75B9-46CE-B007-26FE6A97C31C
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/update-azcontainerservice
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/update-azcontainerservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Update-AzContainerService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Update-AzContainerService.md
@@ -50,7 +50,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -65,7 +65,7 @@ Specifies a local **ContainerService** object that contains changes.
 ```yaml
 Type: PSContainerService
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -95,7 +95,7 @@ Specifies the name of the container service that this cmdlet updates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -110,7 +110,7 @@ Specifies the resource group of the container service that this cmdlet updates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

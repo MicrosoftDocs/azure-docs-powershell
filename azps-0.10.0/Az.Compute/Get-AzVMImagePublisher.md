@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 7311F66C-3370-4436-8030-6D98D42C3112
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmimagepublisher
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvmimagepublisher
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMImagePublisher.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMImagePublisher.md
@@ -54,7 +54,7 @@ Specifies the location of the VMImage.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

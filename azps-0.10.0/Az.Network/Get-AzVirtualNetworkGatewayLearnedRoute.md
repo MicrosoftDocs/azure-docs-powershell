@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvirtualnetworkgatewaylearnedroute
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azvirtualnetworkgatewaylearnedroute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzVirtualNetworkGatewayLearnedRoute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzVirtualNetworkGatewayLearnedRoute.md
@@ -20,7 +20,7 @@ Get-AzVirtualNetworkGatewayLearnedRoute -VirtualNetworkGatewayName <String> -Res
 ```
 
 ## DESCRIPTION
-Enumerates routes learned by an Azure virtual network gateway from various sources. This includes routes learned over BGP, as well as static routes. 
+Enumerates routes learned by an Azure virtual network gateway from various sources. This includes routes learned over BGP, as well as static routes.
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ SourcePeer   : 10.0.0.254
 Weight       : 32768
 ```
 
-For the Azure virtual network gateway named gatewayname in resource group resourceGroup, retrieves routes the Azure gateway knows. 
+For the Azure virtual network gateway named gatewayname in resource group resourceGroup, retrieves routes the Azure gateway knows.
 
 The Azure virtual network gateway in this case has two static routes (10.1.0.0/16 and 10.0.0.254/32), as well as one route learned over BGP (10.0.0.0/16).
 
@@ -65,7 +65,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ Virtual network gateway resource group's name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

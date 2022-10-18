@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 8C9B33EE-10DE-4803-B76D-FE9FC2AC3372
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultsecret
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultsecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultSecret.md
@@ -292,8 +292,8 @@ Install-Module Microsoft.PowerShell.SecretManagement -Repository PSGallery -Allo
 Register-SecretVault -Name AzKeyVault -ModuleName Az.KeyVault -VaultParameters @{ AZKVaultName = 'test-kv'; SubscriptionId = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' }
 # Set secret for vault AzKeyVault
 $secure = ConvertTo-SecureString -String "Password" -AsPlainText -Force
-Set-Secret -Vault AzKeyVault -Name secureSecret -SecureStringSecret $secure 
-Get-Secret -Vault AzKeyVault -Name secureSecret -AsPlainText 
+Set-Secret -Vault AzKeyVault -Name secureSecret -SecureStringSecret $secure
+Get-Secret -Vault AzKeyVault -Name secureSecret -AsPlainText
 ```
 
 ```output

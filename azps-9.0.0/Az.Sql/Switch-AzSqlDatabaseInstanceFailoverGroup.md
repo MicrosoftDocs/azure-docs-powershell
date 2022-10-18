@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/Az.sql/switch-Azsqldatabaseinstancefailovergroup
+online version: https://learn.microsoft.com/powershell/module/Az.sql/switch-Azsqldatabaseinstancefailovergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Switch-AzSqlDatabaseInstanceFailoverGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Switch-AzSqlDatabaseInstanceFailoverGroup.md
@@ -33,7 +33,7 @@ Switch-AzSqlDatabaseInstanceFailoverGroup [-InputObject] <AzureSqlInstanceFailov
 ```
 
 ## DESCRIPTION
-This command swaps the roles of the managed instances in a Instance Failover Group by failing over to the specified secondary region, making it the new primary region. All new TDS sessions connecting to the primary endpoint are automatically re-routed to the new primary region. 
+This command swaps the roles of the managed instances in a Instance Failover Group by failing over to the specified secondary region, making it the new primary region. All new TDS sessions connecting to the primary endpoint are automatically re-routed to the new primary region.
 
 ## EXAMPLES
 

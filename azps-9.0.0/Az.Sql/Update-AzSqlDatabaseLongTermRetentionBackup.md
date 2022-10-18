@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/update-azsqldatabaselongtermretentionbackup
+online version: https://learn.microsoft.com/powershell/module/az.sql/update-azsqldatabaselongtermretentionbackup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlDatabaseLongTermRetentionBackup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlDatabaseLongTermRetentionBackup.md
@@ -37,7 +37,7 @@ Update-AzSqlDatabaseLongTermRetentionBackup [-BackupStorageRedundancy <String>]
 
 ## DESCRIPTION
 Updates the properties of a long term retention backup.
-  
+
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ ResourceGroupName                : testrg
 BackupStorageRedundancy			 : Geo
 ```
 
-This command sets the Backup Storage Redundancy of the specified backup using location and Resource Group, Server, Database, and Backup names.  
+This command sets the Backup Storage Redundancy of the specified backup using location and Resource Group, Server, Database, and Backup names.
 
 ### Example 2: Update Backup Storage Redundancy of a long term retention backup (using Resource Id).
 ```powershell
@@ -81,7 +81,7 @@ ResourceGroupName                : testrg
 BackupStorageRedundancy			 : Geo
 ```
 
-This command sets the Backup Storage Redundancy of the specified backup using a backup Resource Id. 
+This command sets the Backup Storage Redundancy of the specified backup using a backup Resource Id.
 
 ## PARAMETERS
 
@@ -293,4 +293,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlDatabaseBackupLongTermRetentionPolicy](./Set-AzSqlDatabaseBackupLongTermRetentionPolicy.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

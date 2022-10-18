@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
 Module Name: Az.FrontDoor
-online version: https://docs.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorloadbalancingsettingobject
+online version: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorloadbalancingsettingobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorLoadBalancingSettingObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorLoadBalancingSettingObject.md
@@ -45,7 +45,7 @@ Create a PSLoadBalancingSetting object for Front Door creation
 ## PARAMETERS
 
 ### -AdditionalLatencyInMilliseconds
-The additional latency in milliseconds for probes to fall into the lowest latency bucket. 
+The additional latency in milliseconds for probes to fall into the lowest latency bucket.
 Default value is 0
 
 ```yaml

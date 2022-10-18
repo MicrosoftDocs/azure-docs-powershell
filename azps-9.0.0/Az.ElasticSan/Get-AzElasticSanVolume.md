@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/get-azelasticsanvolume
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/get-azelasticsanvolume
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Get-AzElasticSanVolume.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Get-AzElasticSanVolume.md
@@ -42,8 +42,8 @@ Get-AzElasticSanVolume -ResourceGroupName myresourcegroup -ElasticSanName myelas
 ```
 
 ```output
-CreationDataCreateSource       : 
-CreationDataSourceUri          : 
+CreationDataCreateSource       :
+CreationDataSourceUri          :
 Id                             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup/volumes/myvolume1
 Name                           : myvolume1
 SizeGiB                        : 120
@@ -62,8 +62,8 @@ Tag                            : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.M
 Type                           : Microsoft.ElasticSan/ElasticSans
 VolumeId                       : abababab-abab-abab-abab-abababababab
 
-CreationDataCreateSource       : 
-CreationDataSourceUri          : 
+CreationDataCreateSource       :
+CreationDataSourceUri          :
 Id                             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup/volumes/myvolume2
 Name                           : myvolume2
 SizeGiB                        : 100
@@ -85,14 +85,14 @@ VolumeId                       : cdcdcdcd-cdcd-cdcd-cdcd-cdcdcdcdcdcd
 
 This command gets all the volumes in a volume group.
 
-### Example 2: Get a specific volume 
+### Example 2: Get a specific volume
 ```powershell
 Get-AzElasticSanVolume -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -VolumeGroupName myvolumegroup -Name myvolume
 ```
 
 ```output
-CreationDataCreateSource       : 
-CreationDataSourceUri          : 
+CreationDataCreateSource       :
+CreationDataSourceUri          :
 Id                             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup/volumes/myvolume
 Name                           : myvolume
 SizeGiB                        : 100

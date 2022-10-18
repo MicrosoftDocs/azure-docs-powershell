@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 26E06BA3-C550-40A5-B8E3-FEC8E9BF3867
-online version: https://docs.microsoft.com/powershell/module/az.storage/remove-azstoragecorsrule
+online version: https://learn.microsoft.com/powershell/module/az.storage/remove-azstoragecorsrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzStorageCORSRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzStorageCORSRule.md
@@ -122,9 +122,9 @@ Accept wildcard characters: False
 ### -ServiceType
 Specifies the Azure Storage service type for which this cmdlet removes rules.
 The acceptable values for this parameter are:
-- Blob 
-- Table 
-- Queue 
+- Blob
+- Table
+- Queue
 - File
 
 ```yaml

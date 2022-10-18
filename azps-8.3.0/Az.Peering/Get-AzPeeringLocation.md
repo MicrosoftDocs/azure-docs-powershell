@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
 Module Name: Az.Peering
-online version: https://docs.microsoft.com/powershell/module/az.peering/get-azpeeringlocation
+online version: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringlocation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringLocation.md
@@ -67,7 +67,7 @@ Its a long list of locations. Gets the all the Direct Peering Facilities.
 
 ### Example 2
 ```powershell
-Get-AzPeeringLocation -Kind Exchange -PeeringLocation "Honolulu" 
+Get-AzPeeringLocation -Kind Exchange -PeeringLocation "Honolulu"
 ```
 
 ```output
@@ -82,11 +82,11 @@ FacilityIPv4Prefix    : 206.197.210.0/24
 FacilityIPv6Prefix    : 2606:7c80:3375:50::/64
 ```
 
-Gets the exchange peering location for Honolulu. 
+Gets the exchange peering location for Honolulu.
 
 ### Example 3
 ```powershell
-Get-AzPeeringLocation -Kind Exchange -PeeringDbFacilityId 71 
+Get-AzPeeringLocation -Kind Exchange -PeeringDbFacilityId 71
 ```
 
 ```output
@@ -101,7 +101,7 @@ FacilityIPv4Prefix    : 91.210.16.0/22
 FacilityIPv6Prefix    : 2001:7f8:14::/64
 ```
 
-Gets the exchange peering location for peering facility id 71. 
+Gets the exchange peering location for peering facility id 71.
 
 ## PARAMETERS
 

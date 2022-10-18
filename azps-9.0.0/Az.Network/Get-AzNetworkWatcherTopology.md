@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkwatchertopology
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkwatchertopology
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherTopology.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherTopology.md
@@ -33,14 +33,14 @@ Get-AzNetworkWatcherTopology -Location <String> -TargetResourceGroupName <String
 ```
 
 ## DESCRIPTION
-The Get-AzNetworkWatcherTopology cmdlet a network level view of resources and their relationships in a resource group. 
+The Get-AzNetworkWatcherTopology cmdlet a network level view of resources and their relationships in a resource group.
 Note: If resources from multiple regions reside in the resource group, only the resources in the same region as the Network Watcher will be included in the JSON output.
 
 ## EXAMPLES
 
 ### Example 1: Get an Azure Topology
 ```powershell
-$networkWatcher = Get-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroupName NetworkWatcherRG 
+$networkWatcher = Get-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroupName NetworkWatcherRG
 Get-AzNetworkWatcherTopology -NetworkWatcher $networkWatcher -TargetResourceGroupName testresourcegroup
 ```
 
@@ -246,7 +246,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.Network.Models.PSTopology
 
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, topology, view 
+Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, topology, view
 
 ## RELATED LINKS
 

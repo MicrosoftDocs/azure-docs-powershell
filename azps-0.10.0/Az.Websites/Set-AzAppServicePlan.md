@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: 32D45795-FBCD-4157-BF45-41BD1F61782E
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/set-Azappserviceplan
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/set-Azappserviceplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Set-AzAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Set-AzAppServicePlan.md
@@ -39,7 +39,7 @@ The **Set-AzAppServicePlan** cmdlet sets an Azure App Service plan.
 PS C:\>Set-AzAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -PerSiteScaling $true
 ```
 
-This command sets the PerSiteScaling option to true on the App Service plan named ContosoASP 
+This command sets the PerSiteScaling option to true on the App Service plan named ContosoASP
     that belongs to the resource group named Default-Web-WestUS.
 
 ## PARAMETERS
@@ -50,7 +50,7 @@ Admin Site Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -65,7 +65,7 @@ App Service Plan Object
 ```yaml
 Type: AppServicePlan
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -95,7 +95,7 @@ App Service Plan Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -110,7 +110,7 @@ Number Of Workers
 ```yaml
 Type: Int32
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -125,7 +125,7 @@ Per Site Scaling Boolean
 ```yaml
 Type: Boolean
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -155,7 +155,7 @@ Tier
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 Accepted values: Free, Shared, Basic, Standard, Premium, PremiumV2
 
 Required: False
@@ -171,7 +171,7 @@ Worker Size
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 Accepted values: Small, Medium, Large, ExtraLarge
 
 Required: False
@@ -186,7 +186,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

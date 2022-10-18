@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/new-azservicebusrule
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/new-azservicebusrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusRule.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzServiceBusRule
 
 ## SYNOPSIS
-Creates a new rule for a given Subscription of Topic. 
+Creates a new rule for a given Subscription of Topic.
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/new-azservicebusrule) for up-to-date information.

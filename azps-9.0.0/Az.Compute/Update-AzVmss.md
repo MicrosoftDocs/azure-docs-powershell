@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 9EE192A5-4E3F-41ED-A539-8E0A5D5EA4C9
-online version: https://docs.microsoft.com/powershell/module/az.compute/update-azvmss
+online version: https://learn.microsoft.com/powershell/module/az.compute/update-azvmss
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmss.md
@@ -35,7 +35,7 @@ Update-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String>
  [-TerminateScheduledEventNotBeforeTimeoutInMinutes <Int32>] [-TerminateScheduledEvents <Boolean>]
  [-TimeZone <String>] [-UltraSSDEnabled <Boolean>] [-UpgradePolicyMode <UpgradeMode>]
  [-CapacityReservationGroupId <String>] [-VhdContainer <String[]>] [-AsJob] [-EncryptionAtHost <Boolean>]
- [-UserData <String>] [-AutomaticRepairAction <String>] [-DefaultProfile <IAzureContextContainer>] 
+ [-UserData <String>] [-AutomaticRepairAction <String>] [-DefaultProfile <IAzureContextContainer>]
  [-BaseRegularPriorityCount <Int32>] [-RegularPriorityPercentage <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ Update-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String>
  [-TerminateScheduledEvents <Boolean>] [-TimeZone <String>] [-UltraSSDEnabled <Boolean>]
  [-UpgradePolicyMode <UpgradeMode>] [-CapacityReservationGroupId <String>] [-VhdContainer <String[]>] [-AsJob]
  [-EncryptionAtHost <Boolean>] [-UserData <String>] [-AutomaticRepairAction <String>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-BaseRegularPriorityCount <Int32>] 
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-BaseRegularPriorityCount <Int32>]
  [-RegularPriorityPercentage <Int32>] [-Confirm] [<CommonParameters>]
 ```
 
@@ -149,18 +149,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -BaseRegularPriorityCount
-Specifies the minimum number of VMs that must be of Regular priority as a VMSS Flex instance scales out. This parameter is only valid for VMSS instances with Flexible OrchestrationMode. 
+Specifies the minimum number of VMs that must be of Regular priority as a VMSS Flex instance scales out. This parameter is only valid for VMSS instances with Flexible OrchestrationMode.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default Value: None
-Accept pipeline input: False 
-Accept wildcard characters: False 
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -BootDiagnosticsEnabled
@@ -716,13 +716,13 @@ Specifies the desired percentage of VMs, after the BaseRegularCount has been met
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default Value: None
-Accept pipeline input: False 
-Accept wildcard characters: False 
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
@@ -896,7 +896,7 @@ Accept wildcard characters: False
 
 ### -TimeZone
 Specifies the time zone for Windows OS. e.g. \"Pacific Standard Time\". <br>
-Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+Possible values can be [TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
 
 ```yaml
 Type: System.String

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/new-azdatashare
+online version: https://learn.microsoft.com/powershell/module/az.datashare/new-azdatashare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/New-AzDataShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/New-AzDataShare.md
@@ -39,7 +39,7 @@ Type                : Microsoft.DataShare/shares
 CreatedAt           : 6/11/2019 12:00:00 AM
 CreatedBy           : Contoso ADS
 ShareKind           : CopyBased
-Description         : Example of description  
+Description         : Example of description
 ProvisioningState   : Succeeded
 Terms               : This should not be shared
 ```

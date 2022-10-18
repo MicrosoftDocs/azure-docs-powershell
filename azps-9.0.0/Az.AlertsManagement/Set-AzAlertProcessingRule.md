@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.dll-Help.xml
 Module Name: Az.AlertsManagement
-online version: https://docs.microsoft.com/powershell/module/az.alertsmanagement/set-azactionrule
+online version: https://learn.microsoft.com/powershell/module/az.alertsmanagement/set-azactionrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Set-AzAlertProcessingRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Set-AzAlertProcessingRule.md
@@ -16,32 +16,32 @@ Create or update an alert processing rule.
 
 ### BySimplifiedFormatSuppressionAlertProcessingRule (Default)
 ```
-Set-AzAlertProcessingRule -ResourceGroupName <String> -Name <String> [-Description <String>] -AlertProcessingRuleRuleType <String> 
- -Scope <System.Collections.Generic.List`1[System.String]> -Enabled <String> [-Tag <Hashtable>] 
- [-FilterSeverity <String>] [-FilterMonitorService <String>] [-FilterMonitorCondition <String>] [-FilterTargetResourceType <String>] 
+Set-AzAlertProcessingRule -ResourceGroupName <String> -Name <String> [-Description <String>] -AlertProcessingRuleRuleType <String>
+ -Scope <System.Collections.Generic.List`1[System.String]> -Enabled <String> [-Tag <Hashtable>]
+ [-FilterSeverity <String>] [-FilterMonitorService <String>] [-FilterMonitorCondition <String>] [-FilterTargetResourceType <String>]
  [-FilterTargetResource <String>] [-FilterTargetResourceGroup <String>] [-FilterAlertRuleId <String>] [-FilterAlertRuleNam <String>]
  [-FilterDescription <String>] [-FilterAlertContext <String>] [-FilterSignalType <String>]
  [-ScheduleStartDateTime <String>] [-ScheduleEndDateTime <String>] [-ScheduleTimeZone <String>]
- [-ScheduleReccurenceType <String>] [-ScheduleReccurenceDaysOfWeek <String>] [-ScheduleReccurenceDaysOfMonth <String>] [-ScheduleReccurenceStartTime <String>]  
+ [-ScheduleReccurenceType <String>] [-ScheduleReccurenceDaysOfWeek <String>] [-ScheduleReccurenceDaysOfMonth <String>] [-ScheduleReccurenceStartTime <String>]
  [-ScheduleReccurenceEndTime <String>]
  [-ScheduleReccurence2Type <String>] [-ScheduleReccurence2DaysOfWeek <String>] [-ScheduleReccurence2DaysOfMonth <String>] [-ScheduleReccurence2StartTime <String>]
-  [-ScheduleReccurence2EndTime <String>] 
+  [-ScheduleReccurence2EndTime <String>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### BySimplifiedFormatActionGroupAlertProcessingRule 
+### BySimplifiedFormatActionGroupAlertProcessingRule
 ```
-Set-AzAlertProcessingRule -ResourceGroupName <String> -Name <String> [-Description <String>] -AlertProcessingRuleRuleType <String> 
- -Scope <System.Collections.Generic.List`1[System.String]> -Enabled <String> [-Tag <Hashtable>] 
- [-FilterSeverity <String>] [-FilterMonitorService <String>] [-FilterMonitorCondition <String>] [-FilterTargetResourceType <String>] 
+Set-AzAlertProcessingRule -ResourceGroupName <String> -Name <String> [-Description <String>] -AlertProcessingRuleRuleType <String>
+ -Scope <System.Collections.Generic.List`1[System.String]> -Enabled <String> [-Tag <Hashtable>]
+ [-FilterSeverity <String>] [-FilterMonitorService <String>] [-FilterMonitorCondition <String>] [-FilterTargetResourceType <String>]
  [-FilterTargetResource <String>] [-FilterTargetResourceGroup <String>] [-FilterAlertRuleId <String>] [-FilterAlertRuleName <String>]
  [-FilterDescription <String>] [-FilterAlertContext <String>] [-FilterSignalType <String>]
  [-ScheduleStartDateTime <String>] [-ScheduleEndDateTime <String>] [-ScheduleTimeZone <String>]
  [-ScheduleReccurenceType <String>] [-ScheduleReccurenceDaysOfWeek <String>] [-ScheduleReccurenceDaysOfMonth <String>] [-ScheduleReccurenceStartTime <String>]
  [-ScheduleReccurenceEndTime <String>]
  [-ScheduleReccurence2Type <String>] [-ScheduleReccurence2DaysOfWeek <String>] [-ScheduleReccurence2DaysOfMonth <String>] [-ScheduleReccurence2StartTime <String>]
- [-ScheduleReccurence2EndTime <String>] 
- -ActionGroupId <String> 
+ [-ScheduleReccurence2EndTime <String>]
+ -ActionGroupId <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 Alert Processing rule tags.
 For eg.
 @{"tag1" = "key1";"tag2" = "key2"}
-Use {} to clear existing tags. 
+Use {} to clear existing tags.
 
 ```yaml
 Type: System.String
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -FilterAlertContext
 Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
-For eg. 
+For eg.
 Contains:smartgroups
 
 ```yaml

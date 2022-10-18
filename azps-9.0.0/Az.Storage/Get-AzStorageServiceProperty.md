@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageserviceproperty
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageserviceproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageServiceProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageServiceProperty.md
@@ -31,16 +31,16 @@ C:\PS>Get-AzStorageServiceProperty -ServiceType Blob
 
 Logging.Version                     : 1.0
 Logging.LoggingOperations           : None
-Logging.RetentionDays               : 
+Logging.RetentionDays               :
 HourMetrics.Version                 : 1.0
 HourMetrics.MetricsLevel            : ServiceAndApi
 HourMetrics.RetentionDays           : 7
 MinuteMetrics.Version               : 1.0
 MinuteMetrics.MetricsLevel          : None
-MinuteMetrics.RetentionDays         : 
+MinuteMetrics.RetentionDays         :
 DeleteRetentionPolicy.Enabled       : True
 DeleteRetentionPolicy.RetentionDays : 70
-Cors                                : 
+Cors                                :
 DefaultServiceVersion               : 2017-07-29
 ```
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Specifies the storage service type.
 This cmdlet gets the logging properties for the service type that this parameter specifies.
 The acceptable values for this parameter are:
-- Blob 
+- Blob
 - Table
 - Queue
 - File

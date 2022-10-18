@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: EFDFCE12-F39C-4F52-9962-4601F0C4FD47
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqlelasticpoolrecommendedactionstate
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlelasticpoolrecommendedactionstate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlElasticPoolRecommendedActionState.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlElasticPoolRecommendedActionState.md
@@ -41,8 +41,8 @@ ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east
 AdvisorName                : CreateIndex
 RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
-Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
-                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType,
+                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...}
 ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
 EstimatedImpact            : {ActionDuration, SpaceChange}
 ExecuteActionDuration      : PT1M
@@ -55,12 +55,12 @@ IsExecutableAction         : True
 IsRevertableAction         : True
 LastRefresh                : 4/21/2016 3:24:47 PM
 LinkedObjects              : {}
-ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
-RecommendationReason       : 
-RevertActionDuration       : 
-RevertActionInitiatedBy    : 
-RevertActionInitiatedTime  : 
-RevertActionStartTime      : 
+ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...}
+RecommendationReason       :
+RevertActionDuration       :
+RevertActionInitiatedBy    :
+RevertActionInitiatedTime  :
+RevertActionStartTime      :
 Score                      : 2
 State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
 TimeSeries                 : {}
@@ -239,4 +239,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlServerRecommendedActionState](./Set-AzSqlServerRecommendedActionState.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvhubroute
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvhubroute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVHubRoute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVHubRoute.md
@@ -98,7 +98,7 @@ RoutingConfiguration   : {
                              "StaticRoutes": []
                            }
                          }
-                         
+
 $staticRoute1 = New-AzStaticRoute -Name "static_route1" -AddressPrefix @("10.2.1.0/24", "10.2.3.0/24") -NextHopIpAddress "10.2.0.5"
 $routingConfig = $hubVnetConn.RoutingConfiguration
 $routingConfig.VnetRoutes.StaticRoutes = @($staticRoute1)

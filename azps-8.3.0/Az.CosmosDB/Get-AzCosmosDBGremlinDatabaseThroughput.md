@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
 Module Name: Az.CosmosDB
-online version: https://docs.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbgremlindatabasethroughput
+online version: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbgremlindatabasethroughput
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBGremlinDatabaseThroughput.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBGremlinDatabaseThroughput.md
@@ -42,7 +42,7 @@ Get-AzCosmosDBGremlinDatabaseThroughput -ResourceGroupName "rgName" -AccountName
 ```output
 Name: {throughputName}
 Id: {Id}
-Throughput: {value} 
+Throughput: {value}
 MinimumThroughput: {value}
 OfferReplacePending: {value}
 ```

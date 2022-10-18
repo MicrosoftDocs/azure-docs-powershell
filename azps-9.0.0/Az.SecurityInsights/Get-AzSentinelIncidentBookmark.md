@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/get-azsentinelincidentbookmark
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelincidentbookmark
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelIncidentBookmark.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelIncidentBookmark.md
@@ -37,7 +37,7 @@ Note           : my notes
                  2nd line notes
 CreatedByEmail : luke@contoso.com
 CreatedByName  : Luke
-Name           : 4557d832-41f0-456f-977e-78a2e129b8d0 
+Name           : 4557d832-41f0-456f-977e-78a2e129b8d0
 ```
 
 This command lists all Bookmarks for a given Incident.

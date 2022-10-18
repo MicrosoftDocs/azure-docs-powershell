@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version: https://docs.microsoft.com/powershell/module/az.automation/new-azautomationsourcecontrol
+online version: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationsourcecontrol
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationSourceControl.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationSourceControl.md
@@ -35,7 +35,7 @@ Create a source control configuration to link an Azure Automation account with a
 ```powershell
 # VSTS Personal access token
 $token = "vppmrabbs65axamofglyo66rjg6reddaa7xxgvaddd5555aaaaddxzbmma"
-$accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force 
+$accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force
 New-AzAutomationSourceControl -ResourceGroupName "rg1" `
                                            -AutomationAccountName "devAccount" `
                                            -Name  "VSTSNative" `
@@ -57,7 +57,7 @@ Create a source control configuration to link an Azure Automation account with a
 ```powershell
 # VSTS Personal access token
 $token = "vppmrabbs65axamofglyo66rjg6reddaa7xxgvaddd5555aaaaddxzbmma"
-$accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force 
+$accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force
 New-AzAutomationSourceControl -ResourceGroupName "rg1" `
                                            -AutomationAccountName "devAccount" `
                                            -Name  "VSTSGit" `
@@ -80,7 +80,7 @@ Create a source control configuration to link an Azure Automation account with a
 ```powershell
 # GitHub access token
 $token = "68b08011223aac8bdd3388913a44rrsaa84fdf"
-$accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force 
+$accessToken = ConvertTo-SecureString -String $token -AsPlainText -Force
  New-AzAutomationSourceControl -ResourceGroupName "rg1" `
                                            -AutomationAccountName "devAccount" `
                                            -Name  "GitHub1" `

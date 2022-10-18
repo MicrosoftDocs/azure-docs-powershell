@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkmanageraddressprefixitem
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanageraddressprefixitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerAddressPrefixItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerAddressPrefixItem.md
@@ -29,7 +29,7 @@ The **New-AzNetworkManagerAddressPrefixItem** cmdlet creates a network manager a
 
 ### Example 1
 ```powershell
-New-AzNetworkManagerAddressPrefixItem -AddressPrefix "Internet" -AddressPrefixType "ServiceTag"   
+New-AzNetworkManagerAddressPrefixItem -AddressPrefix "Internet" -AddressPrefixType "ServiceTag"
 ```
 ```output
 AddressPrefix AddressPrefixType
@@ -40,7 +40,7 @@ Creates a network manager service tag address prefix item.
 
 ### Example 2
 ```powershell
-New-AzNetworkManagerAddressPrefixItem -AddressPrefix "10.0.0.1" -AddressPrefixType "IPPrefix"   
+New-AzNetworkManagerAddressPrefixItem -AddressPrefix "10.0.0.1" -AddressPrefixType "IPPrefix"
 ```
 ```output
 AddressPrefix AddressPrefixType

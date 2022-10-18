@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CloudService
-online version: https://docs.microsoft.com/powershell/module/az.cloudservice/update-azcloudservice
+online version: https://learn.microsoft.com/powershell/module/az.cloudservice/update-azcloudservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/help/Update-AzCloudService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/help/Update-AzCloudService.md
@@ -221,7 +221,7 @@ To create the parameters described below, construct a hash table containing the 
 
 
 INPUTOBJECT `<ICloudServiceIdentity>`: Identity Parameter
-  - `[CloudServiceName <String>]`: 
+  - `[CloudServiceName <String>]`:
   - `[IPConfigurationName <String>]`: The IP configuration name.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the location that the OS version pertains to.
@@ -229,7 +229,7 @@ INPUTOBJECT `<ICloudServiceIdentity>`: Identity Parameter
   - `[OSFamilyName <String>]`: Name of the OS family.
   - `[OSVersionName <String>]`: Name of the OS version.
   - `[PublicIPAddressName <String>]`: The name of the public IP Address.
-  - `[ResourceGroupName <String>]`: 
+  - `[ResourceGroupName <String>]`:
   - `[RoleInstanceName <String>]`: Name of the role instance.
   - `[RoleName <String>]`: Name of the role.
   - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
@@ -246,7 +246,7 @@ PARAMETER `<ICloudService>`: Describes the cloud service.
       - `[ForceUpdateTag <String>]`: Tag to force apply the provided public and protected settings.         Changing the tag value allows for re-running the extension without changing any of the public or protected settings.         If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.         If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and         it is up to handler implementation whether to re-run it or not
       - `[Name <String>]`: The name of the extension.
       - `[ProtectedSetting <String>]`: Protected settings for the extension which are encrypted before sent to the role instance.
-      - `[ProtectedSettingFromKeyVaultSecretUrl <String>]`: 
+      - `[ProtectedSettingFromKeyVaultSecretUrl <String>]`:
       - `[Publisher <String>]`: The name of the extension handler publisher.
       - `[RolesAppliedTo <String[]>]`: Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
       - `[Setting <String>]`: Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.

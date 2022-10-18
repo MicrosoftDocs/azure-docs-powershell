@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/enable-azcontextautosave
+online version: https://learn.microsoft.com/en-us/powershell/module/az.accounts/enable-azcontextautosave
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Enable-AzContextAutosave
 
 ## SYNOPSIS
-Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window. 
+Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Enable-AzContextAutosave [-Scope <ContextModificationScope>] [-DefaultProfile <I
 ```
 
 ## DESCRIPTION
-Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window. 
+Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window.
 
 ## EXAMPLES
 

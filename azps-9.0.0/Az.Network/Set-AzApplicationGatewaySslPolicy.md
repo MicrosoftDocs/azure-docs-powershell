@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 30A34CA8-AC07-4327-B7B9-19F001DA996A
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azapplicationgatewaysslpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azapplicationgatewaysslpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewaySslPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewaySslPolicy.md
@@ -94,8 +94,8 @@ Accept wildcard characters: False
 ### -DisabledSslProtocols
 Specifies which protocols are disabled.
 The acceptable values for this parameter are:
-- TLSv1_0 
-- TLSv1_1 
+- TLSv1_0
+- TLSv1_1
 - TLSv1_2
 
 ```yaml

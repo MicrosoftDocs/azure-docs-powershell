@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Elastic
-online version: https://docs.microsoft.com/powershell/module/az.elastic/get-azelasticdeploymentinfo
+online version: https://learn.microsoft.com/powershell/module/az.elastic/get-azelasticdeploymentinfo
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/help/Get-AzElasticDeploymentInfo.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/help/Get-AzElasticDeploymentInfo.md

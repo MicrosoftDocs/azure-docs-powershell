@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 383402B2-6B7C-41AB-AFF9-36C86156B0A9
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstoragecontext
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragecontext
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageContext.md
@@ -100,7 +100,7 @@ New-AzStorageContext [-UseConnectedAccount] [-BlobEndpoint <String>] [-FileEndpo
 ## DESCRIPTION
 The **New-AzStorageContext** cmdlet creates an Azure Storage context.
 The default Authentication of a Storage Context is OAuth (Azure AD), if only input Storage account name.
-See details of authentication of the Storage Service in https://docs.microsoft.com/rest/api/storageservices/authorization-for-the-azure-storage-services.
+See details of authentication of the Storage Service in https://learn.microsoft.com/rest/api/storageservices/authorization-for-the-azure-storage-services.
 
 ## EXAMPLES
 
@@ -144,7 +144,7 @@ The command gets the Azure Storage container for the local developer storage acc
 
 ### Example 6: Get multiple containers
 ```
-PS C:\>$Context01 = New-AzStorageContext -Local 
+PS C:\>$Context01 = New-AzStorageContext -Local
 PS C:\> $Context02 = New-AzStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >"
 PS C:\> ($Context01, $Context02) | Get-AzStorageContainer
 ```
@@ -210,7 +210,7 @@ PS C:\> New-AzStorageContext -StorageAccountName "myaccountname" -SasToken $SasT
 ```
 
 The first command generates an SAS token by using the New-AzStorageContainerSASToken cmdlet for the container named MyContainer, and then stores that token in the $SasToken variable.
-The second command creates a context for the account named myaccountname that uses the SAS token and a specified blob endpoint, table endpoint, file endpoint, and queue endpoint. 
+The second command creates a context for the account named myaccountname that uses the SAS token and a specified blob endpoint, table endpoint, file endpoint, and queue endpoint.
 
 ### Example 14: Create ea context by using the OAuth Authentication with a specified blob endpoint
 ```

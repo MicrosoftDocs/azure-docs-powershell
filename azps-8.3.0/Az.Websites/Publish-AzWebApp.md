@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
-online version: https://docs.microsoft.com/powershell/module/az.websites/publish-azwebapp
+online version: https://learn.microsoft.com/powershell/module/az.websites/publish-azwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Publish-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Publish-AzWebApp.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Publish-AzWebApp
 
 ## SYNOPSIS
-Deploys an Azure Web App from a ZIP, JAR, or WAR file using zipdeploy. 
+Deploys an Azure Web App from a ZIP, JAR, or WAR file using zipdeploy.
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/publish-azwebapp) for up-to-date information.

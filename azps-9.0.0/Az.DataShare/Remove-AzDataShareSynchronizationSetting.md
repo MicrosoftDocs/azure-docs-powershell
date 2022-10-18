@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/remove-azdatasharesynchronizationsetting
+online version: https://learn.microsoft.com/powershell/module/az.datashare/remove-azdatasharesynchronizationsetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShareSynchronizationSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShareSynchronizationSetting.md
@@ -44,11 +44,11 @@ Remove-AzDataShareSynchronizationSetting -ResourceGroupName "ADS" -AccountName "
 ```
 
 ```output
-Are you sure you want to remove synchronization-setting "AdsShareSynchronizationSetting"? 
+Are you sure you want to remove synchronization-setting "AdsShareSynchronizationSetting"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-This commands removes a synchronization setting named AdsShareSynchronizationSetting from share AdsShare. 
+This commands removes a synchronization setting named AdsShareSynchronizationSetting from share AdsShare.
 
 ## PARAMETERS
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvpngateway
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvpngateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVpnGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVpnGateway.md
@@ -47,7 +47,7 @@ New-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw" -VirtualHubId $vi
 Remove-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw" -Passthru
 ```
 
-This example creates a Resource group, Virtual WAN, Virtual Hub, scalable VPN gateway in Central US and then immediately deletes it. 
+This example creates a Resource group, Virtual WAN, Virtual Hub, scalable VPN gateway in Central US and then immediately deletes it.
 To suppress the prompt when deleting the Virtual Gateway, use the -Force flag.
 This will delete the VpnGateway and all VpnConnections attached to it.
 
@@ -61,7 +61,7 @@ New-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw" -VirtualHubId $vi
 Get-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw" | Remove-AzVpnGateway -Passthru
 ```
 
-This example creates a Resource group, Virtual WAN, Virtual Hub, scalable VPN gateway in Central US and then immediately deletes it. 
+This example creates a Resource group, Virtual WAN, Virtual Hub, scalable VPN gateway in Central US and then immediately deletes it.
 This deletion happens using powershell piping, which uses the VpnGateway object returned by the Get-AzVpnGateway command.
 To suppress the prompt when deleting the Virtual Gateway, use the -Force flag.
 This will delete the VpnGateway and all VpnConnections attached to it.

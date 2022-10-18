@@ -1,7 +1,7 @@
 ---
 Module Name: Az.ApiManagement
 Module Guid: f875725d-8ce4-423f-a6af-ea880bc63f13
-Download Help Link: https://docs.microsoft.com/powershell/module/az.apimanagement
+Download Help Link: https://learn.microsoft.com/powershell/module/az.apimanagement
 Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Az.ApiManagement.md

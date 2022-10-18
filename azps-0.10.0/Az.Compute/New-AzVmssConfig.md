@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: CE32F620-8DB2-4004-8012-F1C4AA235B60
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmssconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmssconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssConfig.md
@@ -93,7 +93,7 @@ Specify the system assigned identity for the virtual machine scale set.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AssignIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ Sets whether OS upgrades should automatically be applied to scale set instances 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Specifies the virtual machine scale set boot diagnostics profile.
 ```yaml
 Type: BootDiagnostics
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies the extension information object for the VMSS. You can use the
 ```yaml
 Type: VirtualMachineScaleSetExtension[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -170,7 +170,7 @@ HealthProbeId is in the form of '/subscriptions/{subscriptionId}/resourceGroups/
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ The user identity references will be ARM resource ids in the form: '/subscriptio
 ```yaml
 Type: String[]
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ResourceIdentityType
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 Accepted values: SystemAssigned, UserAssigned, SystemAssignedUserAssigned, None
 
 Required: True
@@ -225,7 +225,7 @@ Specify the license type, which is for bringing your own license scenario.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ Specifies the Azure location where the VMSS is created.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -256,7 +256,7 @@ You can use the **Add-AzVmssNetworkInterfaceConfiguration** cmdlet to add this o
 ```yaml
 Type: VirtualMachineScaleSetNetworkConfiguration[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -272,7 +272,7 @@ You can use the **Set-AzVmssOsProfile** cmdlet to set this object.
 ```yaml
 Type: VirtualMachineScaleSetOSProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -287,7 +287,7 @@ Indicates whether the cmdlet overprovisions the VMSS.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -302,7 +302,7 @@ Specifies the plan name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ Specifies the plan product.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -332,7 +332,7 @@ Specifies the plan promotion code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -347,7 +347,7 @@ Specifies the plan publisher.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -362,7 +362,7 @@ Specifies the priority for the virtual machines in the scale set.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -377,7 +377,7 @@ Specifies the rolling upgrade policy.
 ```yaml
 Type: RollingUpgradePolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -392,7 +392,7 @@ Specifies the single placement group.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -407,7 +407,7 @@ Specifies the number of instances in the VMSS.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -440,7 +440,7 @@ Specifies the tier of VMSS. The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -456,7 +456,7 @@ You can use the **Set-AzVmssStorageProfile** cmdlet to set this object.
 ```yaml
 Type: VirtualMachineScaleSetStorageProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -473,7 +473,7 @@ Key-value pairs in the form of a hash table. For example:
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -493,7 +493,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: UpgradeMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, Manual, Rolling
 
 Required: False
@@ -509,7 +509,7 @@ Specifies the zone list for the virtual machine scale set.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

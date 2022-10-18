@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azprivateendpoint
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azprivateendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzPrivateEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzPrivateEndpoint.md
@@ -20,7 +20,7 @@ Remove-AzPrivateEndpoint -ResourceGroupName <String> -Name <String> [-Force] [-A
 ```
 
 ## DESCRIPTION
-The **Remove-AzPrivateEndpoint** cmdlet removes a private endpoint. 
+The **Remove-AzPrivateEndpoint** cmdlet removes a private endpoint.
 
 ## EXAMPLES
 

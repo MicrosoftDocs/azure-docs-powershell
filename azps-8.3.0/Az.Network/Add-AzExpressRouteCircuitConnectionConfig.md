@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 7b4a8c9f-874c-4a27-b87e-c8ad7e73188d
-online version: https://docs.microsoft.com/powershell/module/az.network/add-azexpressroutecircuitconnectionconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/add-azexpressroutecircuitconnectionconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Add-AzExpressRouteCircuitConnectionConfig
 
 ## SYNOPSIS
-Adds a circuit connection configuration to Private Peering of an Express Route Circuit. 
+Adds a circuit connection configuration to Private Peering of an Express Route Circuit.
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/add-azexpressroutecircuitconnectionconfig) for up-to-date information.
@@ -34,8 +34,8 @@ Add-AzExpressRouteCircuitConnectionConfig [-Name] <String> [-ExpressRouteCircuit
 
 ## DESCRIPTION
 The **Add-AzExpressRouteCircuitConnectionConfig** cmdlet adds a circuit connection configuration to
-private peering for an ExpressRoute circuit. This allows peering two Express Route Circuits 
-across regions or subscriptions.Note that, after running **Add-AzExpressRouteCircuitConnectionConfig**, 
+private peering for an ExpressRoute circuit. This allows peering two Express Route Circuits
+across regions or subscriptions.Note that, after running **Add-AzExpressRouteCircuitConnectionConfig**,
 you must call the Set-AzExpressRouteCircuit cmdlet to activate the configuration.
 
 ## EXAMPLES

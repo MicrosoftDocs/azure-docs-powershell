@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/get-azspringcloudcertificate
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/get-azspringcloudcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Get-AzSpringCloudCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Get-AzSpringCloudCertificate.md
@@ -55,7 +55,7 @@ List all the certificate resource under a spring service.
 
 ### Example 2: Get a certificate resource by name
 ```powershell
-Get-AzSpringCloudCertificate -ResourceGroupName lucas-rg-test -ServiceName springapp-pwsh01 -Name cert01  
+Get-AzSpringCloudCertificate -ResourceGroupName lucas-rg-test -ServiceName springapp-pwsh01 -Name cert01
 ```
 
 ```output

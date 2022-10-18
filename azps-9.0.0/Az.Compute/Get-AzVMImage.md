@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: D5254218-8B3B-4DE2-9480-D65EE5483018
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azvmimage
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmimage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMImage.md
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -Top
-Specifies the maximum number of virtual machine images returned. 
+Specifies the maximum number of virtual machine images returned.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]

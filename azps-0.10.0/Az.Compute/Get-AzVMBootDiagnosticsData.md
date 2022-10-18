@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 15CAC050-F2E9-4872-88E7-516A6D194FAB
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmbootdiagnosticsdata
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvmbootdiagnosticsdata
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMBootDiagnosticsData.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMBootDiagnosticsData.md
@@ -64,7 +64,7 @@ Indicates that the virtual machine runs the Linux operating system.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: LinuxParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -79,7 +79,7 @@ Specifies the local path for the boot diagnostics data.
 ```yaml
 Type: String
 Parameter Sets: WindowsParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: LinuxParamSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -121,7 +121,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -136,7 +136,7 @@ Indicates that the virtual machine runs the Windows operating system.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WindowsParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2

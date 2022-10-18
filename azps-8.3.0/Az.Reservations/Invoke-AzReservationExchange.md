@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/invoke-azreservationexchange
+online version: https://learn.microsoft.com/powershell/module/az.reservations/invoke-azreservationexchange
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Invoke-AzReservationExchange.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Invoke-AzReservationExchange.md
@@ -40,8 +40,8 @@ Invoke-AzReservationExchange -SessionId 8982593c-679e-4d4e-b971-c48b6d824cba
 ```
 
 ```output
-SessionId                            Status   
----------                            ------   
+SessionId                            Status
+---------                            ------
 8982593c-679e-4d4e-b971-c48b6d824cba Succeeded
 ```
 

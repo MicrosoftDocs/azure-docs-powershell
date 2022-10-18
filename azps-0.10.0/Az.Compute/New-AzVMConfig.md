@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 1BECAC91-BB43-46EB-B2C9-C965C6FBC831
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMConfig.md
@@ -62,7 +62,7 @@ Specify the system assigned identity for the virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AssignIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +79,7 @@ The availability set object contains an ID property.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -110,7 +110,7 @@ The user identity references will be ARM resource ids in the form: '/subscriptio
 ```yaml
 Type: String[]
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ The identity of the virtual machine, if configured.
 ```yaml
 Type: ResourceIdentityType
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 Accepted values: SystemAssigned, UserAssigned, SystemAssignedUserAssigned, None
 
 Required: True
@@ -141,7 +141,7 @@ The license type, which is for bringing your own license scenario.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -186,7 +186,7 @@ Specifies the size for the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -201,7 +201,7 @@ Specifies the zone list for the virtual machine.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

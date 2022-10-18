@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: 2D83D38F-3A5C-40DB-BE8B-D52E5CAFCF6E
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebappcertificate
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebappcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppCertificate.md
@@ -63,7 +63,7 @@ Specifies the name of the resource group that the certificate is assigned to.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -78,7 +78,7 @@ Specifies the unique identifier for the certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

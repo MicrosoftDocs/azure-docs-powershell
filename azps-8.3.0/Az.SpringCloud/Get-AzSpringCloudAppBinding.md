@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/get-azspringcloudappbinding
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/get-azspringcloudappbinding
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Get-AzSpringCloudAppBinding.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Get-AzSpringCloudAppBinding.md
@@ -46,8 +46,8 @@ Get a Binding and its properties.
 ```
 
 ```output
-Name  
-----  
+Name
+----
 redis
 ```
 
@@ -59,8 +59,8 @@ Get-AzSpringCloudAppBinding -ResourceGroupName SpringCloud-gp-junxi -ServiceName
 ```
 
 ```output
-Name  
-----  
+Name
+----
 redis
 ```
 
@@ -72,8 +72,8 @@ New-AzSpringCloudAppBinding -ResourceGroupName SpringCloud-gp-junxi -ServiceName
 ```
 
 ```output
-Name  
-----  
+Name
+----
 redis
 ```
 

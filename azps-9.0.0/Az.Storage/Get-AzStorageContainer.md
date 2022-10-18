@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 90C3DF13-0010-49B6-A8CD-C6AC34BC3EFA
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstoragecontainer
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragecontainer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageContainer.md
@@ -53,24 +53,24 @@ This example uses the *Prefix* parameter to return a list of all containers with
 ### Example 3: List Azure Storage container, include deleted containers
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> $containers =  Get-AzStorageContainer -IncludeDeleted -Context $ctx 
+PS C:\> $containers =  Get-AzStorageContainer -IncludeDeleted -Context $ctx
 
 PS C:\> $containers
 
    Storage Account Name: storageaccountname
 
-Name                 PublicAccess         LastModified                   IsDeleted  VersionId                                                                                                                                                                                                                                                      
-----                 ------------         ------------                   ---------  ---------                                                                                                                                                                   
-testcon              Off                  8/28/2020 10:18:13 AM +00:00                                                                                                                                                                                                                                                                   
-testcon2                                  9/4/2020 12:52:37 PM +00:00    True       01D67D248986B6DA  
+Name                 PublicAccess         LastModified                   IsDeleted  VersionId
+----                 ------------         ------------                   ---------  ---------
+testcon              Off                  8/28/2020 10:18:13 AM +00:00
+testcon2                                  9/4/2020 12:52:37 PM +00:00    True       01D67D248986B6DA
 
 PS C:\> $c[1].BlobContainerProperties
 
 LastModified                   : 9/4/2020 12:52:37 PM +00:00
 LeaseStatus                    : Unlocked
 LeaseState                     : Expired
-LeaseDuration                  : 
-PublicAccess                   : 
+LeaseDuration                  :
+PublicAccess                   :
 HasImmutabilityPolicy          : False
 HasLegalHold                   : False
 DefaultEncryptionScope         : $account-encryption-key

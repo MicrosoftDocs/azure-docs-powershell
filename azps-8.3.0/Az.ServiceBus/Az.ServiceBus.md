@@ -1,7 +1,7 @@
 ---
 Module Name: Az.ServiceBus
 Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
-Download Help Link: https://docs.microsoft.com/powershell/module/az.servicebus
+Download Help Link: https://learn.microsoft.com/powershell/module/az.servicebus
 Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Az.ServiceBus.md
@@ -17,7 +17,7 @@ This topic displays help topics for the Azure Service Bus cmdlets.
 Cmdlets set the Migration from Standard to premium namespace as complete and connection strings of standard namespace now point to Premium namespace
 
 ### [Get-AzServiceBusAuthorizationRule](Get-AzServiceBusAuthorizationRule.md)
-Gets a description of the specified authorization rule for a given Namespace or Queue or Topic or Alias (GeoDR Configurations). 
+Gets a description of the specified authorization rule for a given Namespace or Queue or Topic or Alias (GeoDR Configurations).
 
 ### [Get-AzServiceBusGeoDRConfiguration](Get-AzServiceBusGeoDRConfiguration.md)
 Retrieves Alias(Disaster Recovery configuration) for primary or secondary namespace
@@ -38,7 +38,7 @@ List supported ServiceBus Operations
 Returns a description for the specified Service Bus queue.
 
 ### [Get-AzServiceBusRule](Get-AzServiceBusRule.md)
-Creates a new rule for a given Subscription of Topic. 
+Creates a new rule for a given Subscription of Topic.
 
 ### [Get-AzServiceBusSubscription](Get-AzServiceBusSubscription.md)
 Returns a subscription description for the specified topic.
@@ -50,7 +50,7 @@ Returns a description for the specified Service Bus topic.
 Creates a new authorization rule for the specified Service Bus given Namespace or Queue or Topic.
 
 ### [New-AzServiceBusAuthorizationRuleSASToken](New-AzServiceBusAuthorizationRuleSASToken.md)
-Generates a SAS tolen for Azure serviucebus authorization rule of namespace/queue/topic. 
+Generates a SAS tolen for Azure serviucebus authorization rule of namespace/queue/topic.
 
 ### [New-AzServiceBusGeoDRConfiguration](New-AzServiceBusGeoDRConfiguration.md)
 Creates an new Alias(Disaster Recovery configuration)
@@ -65,7 +65,7 @@ Creates a new Service Bus namespace.
 Creates a Service Bus queue in the specified Service Bus namespace.
 
 ### [New-AzServiceBusRule](New-AzServiceBusRule.md)
-Creates a new rule for a given Subscription of Topic. 
+Creates a new rule for a given Subscription of Topic.
 
 ### [New-AzServiceBusSubscription](New-AzServiceBusSubscription.md)
 Creates a subscription to the specified Service Bus topic.
@@ -83,7 +83,7 @@ Deletes an Alias(Disaster Recovery configuration)
 Cmdlet deletes the Migration configuration for Standard to Premium namespaces
 
 ### [Remove-AzServiceBusNamespace](Remove-AzServiceBusNamespace.md)
-Removes the namespace from the specified resource group. 
+Removes the namespace from the specified resource group.
 
 ### [Remove-AzServiceBusQueue](Remove-AzServiceBusQueue.md)
 Removes the queue from the specified Service Bus namespace.
@@ -128,5 +128,5 @@ Creates a new Migration configuration and starts migrating entities from Standar
 {{Fill in the Synopsis}}
 
 ### [Test-AzServiceBusName](Test-AzServiceBusName.md)
-Checks the Availability of the given NameSpace Name or Alias (DR Configuration Name) 
+Checks the Availability of the given NameSpace Name or Alias (DR Configuration Name)
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/add-azeventhubiprule
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/add-azeventhubiprule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Add-AzEventHubIPRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Add-AzEventHubIPRule.md
@@ -46,7 +46,7 @@ DefaultAction       : Allow
 Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.Eventhub/namespaces/Eventhub-Namespace-2389/networkRuleSets/default
 Type                : Microsoft.Eventhub/Namespaces/NetworkRuleSet
 IpRules             : {11.22.33.44, Allow}
-VirtualNetworkRules : 
+VirtualNetworkRules :
 ```
 add the IPRule with IpMask "11.22.33.44" and Action Allow for the given namespace.
 
@@ -61,7 +61,7 @@ DefaultAction       : Allow
 Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.Eventhub/namespaces/Eventhub-Namespace-2389/networkRuleSets/default
 Type                : Microsoft.Eventhub/Namespaces/NetworkRuleSet
 IpRules             : {11.22.33.44, Allow}
-VirtualNetworkRules : 
+VirtualNetworkRules :
 ```
 add the IPRule with IpMask "11.22.33.44" and Action Allow for the given namespace.
 

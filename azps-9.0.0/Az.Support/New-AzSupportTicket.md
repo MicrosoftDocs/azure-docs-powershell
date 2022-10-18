@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
 Module Name: Az.Support
-online version: https://docs.microsoft.com/powershell/module/az.support/new-azsupportticket
+online version: https://learn.microsoft.com/powershell/module/az.support/new-azsupportticket
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/New-AzSupportTicket.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/New-AzSupportTicket.md
@@ -72,7 +72,7 @@ New-AzSupportTicket -Name <String> -Title <String> -Description <String> -Proble
 ```
 
 ## DESCRIPTION
-This cmdlet can be used to create a support ticket for Billing, Subscription Management, Quota or Technical issues. Use Get-AzSupportService and Get-AzSupportProblemClassification cmdlets to identify the Azure service and it's corresponding problem classifications respectively for which you want to request support. You must specify the following parameters: 
+This cmdlet can be used to create a support ticket for Billing, Subscription Management, Quota or Technical issues. Use Get-AzSupportService and Get-AzSupportProblemClassification cmdlets to identify the Azure service and it's corresponding problem classifications respectively for which you want to request support. You must specify the following parameters:
 
 	• Title
 	• Description
@@ -86,7 +86,7 @@ Cloud Solution Providers can create a support ticket for their customer's subscr
 
 __For technical tickets:__
 
-To specify the resource name, specify the ARM resource ID of the resource by using *TechnicalTicketResourceId* parameter. See an example below. 
+To specify the resource name, specify the ARM resource ID of the resource by using *TechnicalTicketResourceId* parameter. See an example below.
 
 __For quota tickets:__
 
@@ -107,7 +107,7 @@ To request for quota increase for **Compute VM Cores**, **Batch**, **SQL Databas
 	    ○ Region
 
             This is the Azure location or region for which you are requesting quota increase. This is the Location property of Get-AzLocation cmdlet.
-		
+
         ○ Payload
 
             This is where you specify the new limits for the selected quota type.

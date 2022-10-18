@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Set-AzSecurityWorkspaceSetting
+online version: https://learn.microsoft.com/powershell/module/az.security/Set-AzSecurityWorkspaceSetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzSecurityWorkspaceSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzSecurityWorkspaceSetting.md
@@ -34,7 +34,7 @@ Set-AzSecurityWorkspaceSetting -Name "default" -Scope "/subscriptions/487bb485-b
 ```
 
 ```output
-Id                                                                                                         Name    WorkspaceId 
+Id                                                                                                         Name    WorkspaceId
 --                                                                                                         ----    ----
 /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/workspaceSettings/default default /...
 ```

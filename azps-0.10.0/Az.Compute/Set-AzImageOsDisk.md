@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azimageosdisk
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azimageosdisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzImageOsDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzImageOsDisk.md
@@ -56,7 +56,7 @@ Specifies the Uri of the blob.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -71,7 +71,7 @@ Specifies the caching mode of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ReadOnly, ReadWrite
 
 Required: False
@@ -102,7 +102,7 @@ Specifies the size of the disk in GB.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Specifies a local image object.
 ```yaml
 Type: PSImage
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -132,7 +132,7 @@ Specifies the ID of a managed disk.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ Specifies the OS state.
 ```yaml
 Type: OperatingSystemStateTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Generalized, Specialized
 
 Required: False
@@ -163,7 +163,7 @@ Specifies the OS type.
 ```yaml
 Type: OperatingSystemTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Windows, Linux
 
 Required: False
@@ -179,7 +179,7 @@ Specifies the ID of a snapshot.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ The Storage Account type of Os Image Disk
 ```yaml
 Type: StorageAccountTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: StandardLRS, PremiumLRS
 
 Required: False

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 7436F31F-9DCB-4365-BA6D-41BDB5D7FCB6
-online version: https://docs.microsoft.com/powershell/module/az.monitor/set-azactivitylogalert
+online version: https://learn.microsoft.com/powershell/module/az.monitor/set-azactivitylogalert
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
 Module Name: Az.CosmosDB
-online version: https://docs.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbsqlrestorablecontainer
+online version: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbsqlrestorablecontainer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBSqlRestorableContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBSqlRestorableContainer.md
@@ -32,7 +32,7 @@ Get-AzCosmosDBSqlRestorableContainer -InputObject <PSRestorableSqlDatabaseGetRes
 ## DESCRIPTION
 Lists all the restorable Azure Cosmos DB SQL containers available for a specific database.
 The list would have entries corresponding to create, replace and delete events of all live and deleted containers under the database.
-This list is useful to identify the restore timestamp based on the changes in the container. 
+This list is useful to identify the restore timestamp based on the changes in the container.
 For example, if user wants to restore the database account to a timestamp when a specific container is deleted, the user can find corresponding collection delete event from this list, and choose a timestamp before the delete event for restore.
 
 ## EXAMPLES

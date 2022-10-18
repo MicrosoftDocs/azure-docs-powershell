@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azapplicationgatewaycustomerror
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewaycustomerror
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayCustomError.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayCustomError.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzApplicationGatewayCustomError
 
 ## SYNOPSIS
-Creates a custom error with http status code and custom error page url 
+Creates a custom error with http status code and custom error page url
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azapplicationgatewaycustomerror) for up-to-date information.

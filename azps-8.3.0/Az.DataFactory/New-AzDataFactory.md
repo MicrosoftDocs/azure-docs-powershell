@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 7B18FA1B-F616-4479-B2F0-620FC0E3E962
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/new-azdatafactory
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/new-azdatafactory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactory.md
@@ -26,10 +26,10 @@ New-AzDataFactory [-Name] <String> [-Location] <String> [[-Tag] <Hashtable>] [-F
 
 ## DESCRIPTION
 The **New-AzDataFactory** cmdlet creates a data factory with the specified resource group name and location.
-Perform these operations in the following order: 
-- Create a data factory. 
-- Create linked services. 
-- Create datasets. 
+Perform these operations in the following order:
+- Create a data factory.
+- Create linked services.
+- Create datasets.
 - Create a pipeline.
 
 ## EXAMPLES

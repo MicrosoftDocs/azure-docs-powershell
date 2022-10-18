@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: B78F3E8B-C7D2-458C-AB23-06F584FE97E0
-online version: https://docs.microsoft.com/powershell/module/az.dns/new-azdnszone
+online version: https://learn.microsoft.com/powershell/module/az.dns/new-azdnszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/New-AzDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/New-AzDnsZone.md
@@ -80,7 +80,7 @@ in the $Zone variable.
 $Zone = New-AzDnsZone -Name "mychild.zone.com" -ResourceGroupName "MyResourceGroup" -ParentZoneName "zone.com"
 ```
 
-This command creates a new child DNS zone named mychild.zone.com in the specified resource group and stores 
+This command creates a new child DNS zone named mychild.zone.com in the specified resource group and stores
 in the $Zone variable.
 It also adds delegation in the parent DNS zone named zone.com residing in the same subscription and resource group as child zone.
 
@@ -89,17 +89,17 @@ It also adds delegation in the parent DNS zone named zone.com residing in the sa
 $Zone = New-AzDnsZone -Name "mychild.zone.com" -ResourceGroupName "MyResourceGroup" -ParentZoneId "/subscriptions/**67e2/resourceGroups/other-rg/providers/Microsoft.Network/dnszones/zone.com"
 ```
 
-This command creates a new child DNS zone named mychild.zone.com in the specified resource group and stores 
+This command creates a new child DNS zone named mychild.zone.com in the specified resource group and stores
 in the $Zone variable.
 It also adds delegation in the parent DNS zone named zone.com in resource group other-rg provided subscription is same as that of child zone created.
 
 ### Example 6: Create a DNS zone with delegation by specifying parent zone object
 ```powershell
-$PZone = New-AzDnsZone -Name "zone.com" -ResourceGroupName "MyResourceGroup" 
+$PZone = New-AzDnsZone -Name "zone.com" -ResourceGroupName "MyResourceGroup"
 $Zone = New-AzDnsZone -Name "mychild.zone.com" -ResourceGroupName "MyResourceGroup" -ParentZone @($PZone)
 ```
 
-This command creates a new child DNS zone named mychild.zone.com in the specified resource group and stores 
+This command creates a new child DNS zone named mychild.zone.com in the specified resource group and stores
 in the $Zone variable.
 It also adds delegation in the parent DNS zone named zone.com as passed in the ParentZone object
 

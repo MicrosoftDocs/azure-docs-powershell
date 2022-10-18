@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 4D7EEDD7-89D4-4B1E-A9A1-B301E759CE72
-online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/set-azstorageaccount
+online version: https://learn.microsoft.com/en-us/powershell/module/az.storage/set-azstorageaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Set-AzStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Set-AzStorageAccount.md
@@ -102,11 +102,11 @@ This command sets NetworkRuleSet property of a Storage account with JSON
 
 ### Example 8: Get NetworkRuleSet property from a Storage account, and set it to another Storage account
 ```
-PS C:\> $networkRuleSet = (Get-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount").NetworkRuleSet 
+PS C:\> $networkRuleSet = (Get-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount").NetworkRuleSet
 PS C:\> Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount2" -NetworkRuleSet $networkRuleSet
 ```
 
-This first command gets NetworkRuleSet property from a Storage account, and the second command sets it to another Storage account 
+This first command gets NetworkRuleSet property from a Storage account, and the second command sets it to another Storage account
 
 ### Example 9: Upgrade a Storage account with Kind "Storage" or "BlobStorage" to "StorageV2" kind Storage account
 ```
@@ -122,7 +122,7 @@ Specifies the access tier of the Storage account that this cmdlet modifies.
 The acceptable values for this parameter are: Hot and Cool.
 If you change the access tier, it may result in additional charges. For more information, see
 [Azure Blob Storage: Hot and cool storage tiers](http://go.microsoft.com/fwlink/?LinkId=786482).
-If the Storage account has Kind as StorageV2 or BlobStorage, you can specify the *AccessTier* parameter. 
+If the Storage account has Kind as StorageV2 or BlobStorage, you can specify the *AccessTier* parameter.
 If the Storage account has Kind as Storage, do not specify the *AccessTier* parameter.
 
 ```yaml
@@ -244,8 +244,8 @@ Accept wildcard characters: False
 ```
 
 ### -KeyvaultEncryption
-Indicates whether or not to use Microsoft KeyVault for the encryption keys when using Storage Service Encryption. 
-If KeyName, KeyVersion, and KeyVaultUri are all set, KeySource will be set to Microsoft.Keyvault whether this parameter is set or not. 
+Indicates whether or not to use Microsoft KeyVault for the encryption keys when using Storage Service Encryption.
+If KeyName, KeyVersion, and KeyVaultUri are all set, KeySource will be set to Microsoft.Keyvault whether this parameter is set or not.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

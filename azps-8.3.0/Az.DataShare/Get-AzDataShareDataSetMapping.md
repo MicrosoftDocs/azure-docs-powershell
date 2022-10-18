@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/get-azdatasharedatasetmapping
+online version: https://learn.microsoft.com/powershell/module/az.datashare/get-azdatasharedatasetmapping
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Get-AzDataShareDataSetMapping.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Get-AzDataShareDataSetMapping.md
@@ -30,7 +30,7 @@ Get-AzDataShareDataSetMapping -ResourceId <String> [-DefaultProfile <IAzureConte
 ```
 
 ## DESCRIPTION
-The **Get-AzDataShareDataSetMapping** cmdlet gets information about a particular dataset mapping if the name is specified. Otherwise, it gets information about all the dataset mappings in a share subscription. 
+The **Get-AzDataShareDataSetMapping** cmdlet gets information about a particular dataset mapping if the name is specified. Otherwise, it gets information about all the dataset mappings in a share subscription.
 
 ## EXAMPLES
 

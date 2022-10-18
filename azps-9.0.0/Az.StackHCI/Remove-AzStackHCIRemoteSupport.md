@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/remove-azstackhciremotesupport
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/remove-azstackhciremotesupport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHCIRemoteSupport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHCIRemoteSupport.md
@@ -23,7 +23,7 @@ Remove-AzStackHCIRemoteSupport uninstalls Remote Support Deployment module.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Remove-AzStackHCIRemoteSupport
 ```

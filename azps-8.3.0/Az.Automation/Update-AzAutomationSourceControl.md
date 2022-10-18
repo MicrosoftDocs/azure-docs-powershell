@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version: https://docs.microsoft.com/powershell/module/az.automation/update-azautomationsourcecontrol
+online version: https://learn.microsoft.com/powershell/module/az.automation/update-azautomationsourcecontrol
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Update-AzAutomationSourceControl.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Update-AzAutomationSourceControl.md
@@ -37,7 +37,7 @@ This commands sets the PublishRunbook field to false for the Azure Automation so
 Update-AzAutomationSourceControl -ResourceGroupName "rg1" `
                                       -AutomationAccountName "devAccount" `
                                       -Name "VSTSNative" `
-                                      -PublishRunbook $false 
+                                      -PublishRunbook $false
 ```
 ```output
 Name            SourceType Branch FolderPath  AutoSync PublishRunbook RepoUrl

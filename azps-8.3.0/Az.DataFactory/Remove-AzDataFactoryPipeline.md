@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: E1E0919A-062B-4794-ADE7-E17133A40604
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/remove-azdatafactorypipeline
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/remove-azdatafactorypipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryPipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryPipeline.md
@@ -43,7 +43,7 @@ Remove-AzDataFactoryPipeline -ResourceGroupName "ADF" -Name "DPWikisample" -Data
 
 ```output
 Confirm
-Are you sure you want to remove pipeline 'DPWikisample' in data factory 'WikiADF'? 
+Are you sure you want to remove pipeline 'DPWikisample' in data factory 'WikiADF'?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 True
 ```

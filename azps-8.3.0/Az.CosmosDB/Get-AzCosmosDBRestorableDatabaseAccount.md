@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
 Module Name: Az.CosmosDB
-online version: https://docs.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbrestorabledatabaseaccount
+online version: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbrestorabledatabaseaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBRestorableDatabaseAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBRestorableDatabaseAccount.md
@@ -79,7 +79,7 @@ ApiType                   : Sql
 RestorableLocations       : {West US, East US}
 ```
 
-Gets the restorable database account with the given DatabaseInstanceId in the given ARM location  
+Gets the restorable database account with the given DatabaseInstanceId in the given ARM location
 
 ## PARAMETERS
 

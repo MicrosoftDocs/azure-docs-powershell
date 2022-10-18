@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Nginx
-online version: https://docs.microsoft.com/powershell/module/az.nginx/new-aznginxconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.nginx/new-aznginxconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxConfiguration.md
@@ -289,12 +289,12 @@ To create the parameters described below, construct a hash table containing the 
 
 
 `FILE <INginxConfigurationFile[]>`: .
-  - `[Content <String>]`: 
-  - `[VirtualPath <String>]`: 
+  - `[Content <String>]`:
+  - `[VirtualPath <String>]`:
 
 `PROTECTEDFILE <INginxConfigurationFile[]>`: .
-  - `[Content <String>]`: 
-  - `[VirtualPath <String>]`: 
+  - `[Content <String>]`:
+  - `[VirtualPath <String>]`:
 
 ## RELATED LINKS
 

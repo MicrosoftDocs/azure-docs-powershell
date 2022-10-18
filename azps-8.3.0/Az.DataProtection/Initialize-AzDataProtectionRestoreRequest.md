@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/initialize-azdataprotectionrestorerequest
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/initialize-azdataprotectionrestorerequest
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Initialize-AzDataProtectionRestoreRequest.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Initialize-AzDataProtectionRestoreRequest.md
@@ -134,11 +134,11 @@ The above restoreRequest restore the following containers/blobs:
 FromPrefix           ToPrefix
 "container1/aaa"    "container1/bbb"  (restores all blobs matched in this Prefix range)
 "container1/ccc"    "container1/ddd"
-"container2/aab"    "container2/abc" 
+"container2/aab"    "container2/abc"
 "container3"        "container3-0"   (restores whole container3)
-                    
+
 Note: The ranges shouldn't overlap with each other.
-Reference: https://docs.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata
+Reference: https://learn.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata
 
 ## PARAMETERS
 
@@ -444,9 +444,9 @@ BACKUPINSTANCE `<BackupInstanceResource>`: Backup Instance object to trigger ori
       - `[ResourceType <String>]`: Resource Type of Datasource.
       - `[ResourceUri <String>]`: Uri of the resource.
       - `[Type <String>]`: DatasourceType of the resource.
-    - `ObjectType <String>`: 
+    - `ObjectType <String>`:
     - `PolicyInfo <IPolicyInfo>`: Gets or sets the policy information.
-      - `PolicyId <String>`: 
+      - `PolicyId <String>`:
       - `[PolicyParameter <IPolicyParameters>]`: Policy parameters for the backup instance
         - `[DataStoreParametersList <IDataStoreParameters[]>]`: Gets or sets the DataStore Parameters
           - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive

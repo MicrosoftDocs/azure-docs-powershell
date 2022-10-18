@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/Az.storage/new-Azstorageaccountmanagementpolicyblobindexmatchobject
+online version: https://learn.microsoft.com/powershell/module/Az.storage/new-Azstorageaccountmanagementpolicyblobindexmatchobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyBlobIndexMatchObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyBlobIndexMatchObject.md
@@ -33,8 +33,8 @@ The **New-AzStorageAccountManagementPolicyBlobIndexMatchObject** cmdlet creates 
 PS C:\> $blobindexmatch1 = New-AzStorageAccountManagementPolicyBlobIndexMatchObject -Name "tag1" -Value "value1"
 PS C:\> $blobindexmatch1
 
-Name Op Value 
----- -- ----- 
+Name Op Value
+---- -- -----
 tag1 == value1
 
 PS C:\> $blobindexmatch2 = New-AzStorageAccountManagementPolicyBlobIndexMatchObject -Name "tag2" -Value "value2"
@@ -44,7 +44,7 @@ PS C:\> New-AzStorageAccountManagementPolicyFilter -PrefixMatch prefix1,prefix2 
 
 PrefixMatch        BlobTypes   BlobIndexMatch
 -----------        ---------   --------------
-{prefix1, prefix2} {blockBlob} {tag1, tag2}  
+{prefix1, prefix2} {blockBlob} {tag1, tag2}
 ```
 
 This command creates 2 ManagementPolicy BlobIndexMatch objects, then add themto a management policy rule filter.

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/get-azspringcloudconfigserver
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/get-azspringcloudconfigserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Get-AzSpringCloudConfigServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Get-AzSpringCloudConfigServer.md
@@ -34,7 +34,7 @@ Get the config server and its properties.
 
 ## EXAMPLES
 
-### Example 1: Get all properties of the config server 
+### Example 1: Get all properties of the config server
 ```powershell
 Get-AzSpringCloudConfigServer -ResourceGroupName "springcloud-rg-0zquav" -Name "spring-f7lz2n"
 ```

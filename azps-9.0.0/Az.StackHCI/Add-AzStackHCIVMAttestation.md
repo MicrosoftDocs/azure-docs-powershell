@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/add-azstackhcivmattestation
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/add-azstackhcivmattestation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Add-AzStackHCIVMAttestation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Add-AzStackHCIVMAttestation.md
@@ -34,7 +34,7 @@ Add-AzStackHCIVMAttestation configures guests for AzureStack HCI IMDS Attestatio
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Add-AzStackHCIVMAttestation -AddAll
 ```
@@ -53,7 +53,7 @@ ppt7pn0     HCINODE2        Connected
 
 Adding all guests on current node
 
-### Example 2: 
+### Example 2:
 ```powershell
 Invoke-Command -ScriptBlock {Add-AzStackHCIVMAttestation -VMName "bhat2", "ppt7pn0"} -ComputerName "HCINODE2"
 ```

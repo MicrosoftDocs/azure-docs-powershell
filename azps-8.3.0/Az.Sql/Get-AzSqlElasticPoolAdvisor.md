@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: BC8C0D59-662F-47D2-8619-9F69D78B171D
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlelasticpooladvisor
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlelasticpooladvisor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolAdvisor.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolAdvisor.md
@@ -117,10 +117,10 @@ AutoExecuteStatus              : Disabled
 AutoExecuteStatusInheritedFrom : Database
 LastChecked                    : 8/1/2016 2:36:47 PM
 RecommendationsStatus          : Ok
-RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...} 
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...}
 
 ElasticPoolName                : WIRunnerPool
 ResourceGroupName              : WIRunnersProd
@@ -131,10 +131,10 @@ AutoExecuteStatus              : Disabled
 AutoExecuteStatusInheritedFrom : Database
 LastChecked                    : 7/31/2016 8:41:19 PM
 RecommendationsStatus          : Ok
-RecommendedActions             : {IR_[test_schema]_[test_table_0.0288891]_38724E1DCF2178318957, 
-                                 IR_[test_schema]_[test_table_0.140264]_38724E1DCF2178318957, 
-                                 IR_[test_schema]_[test_table_0.412191]_38724E1DCF2178318957, 
-                                 IR_[test_schema]_[test_table_0.442075]_38724E1DCF2178318957...} 
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0288891]_38724E1DCF2178318957,
+                                 IR_[test_schema]_[test_table_0.140264]_38724E1DCF2178318957,
+                                 IR_[test_schema]_[test_table_0.412191]_38724E1DCF2178318957,
+                                 IR_[test_schema]_[test_table_0.442075]_38724E1DCF2178318957...}
 
 ElasticPoolName                : WIRunnerPool
 ResourceGroupName              : WIRunnersProd
@@ -176,9 +176,9 @@ AutoExecuteStatus              : Disabled
 AutoExecuteStatusInheritedFrom : Database
 LastChecked                    : 8/1/2016 2:36:47 PM
 RecommendationsStatus          : Ok
-RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893,
                                  IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...}
 ```
 
@@ -333,4 +333,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlElasticPoolAdvisorAutoExecuteStatus](./Set-AzSqlElasticPoolAdvisorAutoExecuteStatus.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azroutingpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRoutingPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRoutingPolicy.md
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingIntent
-The routing intent resource to which this rouing policy has to be added. 
+The routing intent resource to which this rouing policy has to be added.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSRoutingIntent

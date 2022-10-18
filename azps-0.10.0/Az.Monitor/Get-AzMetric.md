@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
-online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/get-azmetric
+online version: https://learn.microsoft.com/en-us/powershell/module/az.monitor/get-azmetric
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzMetric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzMetric.md
@@ -37,23 +37,23 @@ The **Get-AzMetric** cmdlet gets the metric values for a specified resource.
 ### Example 1: Get a metric with summarized output
 ```
 PS C:\>Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00
-DimensionName  : 
-DimensionValue : 
+DimensionName  :
+DimensionValue :
 Name           : AverageResponseTime
 EndTime        : 3/20/2015 6:40:46 PM
-MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, 
-                 Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue,
+                 Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
 ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
 StartTime      : 3/20/2015 5:40:00 PM
 TimeGrain      : 00:01:00
 Unit           : Seconds
-DimensionName  : 
-DimensionValue : 
+DimensionName  :
+DimensionValue :
 Name           : AverageMemoryWorkingSet
 EndTime        : 3/20/2015 6:40:46 PM
-MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, 
-                 Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue,
+                 Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
 ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
 StartTime      : 3/20/2015 5:40:00 PM
@@ -66,34 +66,34 @@ This command gets the metric values for website3 with a time grain of 1 minute.
 ### Example 2: Get a metric with detailed output
 ```
 PS C:\>Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00 -DetailedOutput
-MetricValues   : 
+MetricValues   :
                      Average    : 0
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:37:00 PM
                      Total      : 0
                      Average    : 0.106
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:39:00 PM
                      Total      : 0.106
                      Average    : 0.064
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:41:00 PM
                      Total      : 0.064
-Properties     : 
-DimensionName  : 
-DimensionValue : 
+Properties     :
+DimensionName  :
+DimensionValue :
 Name           : AverageResponseTime
 EndTime        : 3/20/2015 6:43:33 PM
 ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
@@ -108,50 +108,50 @@ The output is detailed.
 ### Example 3: Get detailed output for a specified metric
 ```
 PS C:\>Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -MetricName "Requests" -TimeGrain 00:01:00 -DetailedOutput
-MetricValues   : 
+MetricValues   :
                      Average    : 1
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:39:00 PM
                      Total      : 1
                      Average    : 1
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:41:00 PM
                      Total      : 1
                      Average    : 0
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:43:00 PM
                      Total      : 0
                      Average    : 1
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:44:00 PM
                      Total      : 1
                      Average    : 0
                      Count      : 1
-                     Last       : 
-                     Maximum    : 
-                     Minimum    : 
-                     Properties : 
+                     Last       :
+                     Maximum    :
+                     Minimum    :
+                     Properties :
                      Timestamp  : 3/20/2015 6:45:00 PM
                      Total      : 0
-Properties     : 
-DimensionName  : 
-DimensionValue : 
+Properties     :
+DimensionName  :
+DimensionValue :
 Name           : Requests
 EndTime        : 3/20/2015 6:47:56 PM
 ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
@@ -437,7 +437,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 More information about the supported metrics may be found at:
-https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported
+https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported
 
 ## RELATED LINKS
 

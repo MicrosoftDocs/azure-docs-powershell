@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DeploymentManager.dll-Help.xml
 Module Name: Az.DeploymentManager
-online version: https://docs.microsoft.com/powershell/module/az.deploymentmanager/get-azdeploymentmanagerrollout
+online version: https://learn.microsoft.com/powershell/module/az.deploymentmanager/get-azdeploymentmanagerrollout
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeploymentManager/DeploymentManager/help/Get-AzDeploymentManagerRollout.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeploymentManager/DeploymentManager/help/Get-AzDeploymentManagerRollout.md
@@ -45,14 +45,14 @@ The returned rollout object contains the services, service units and steps that 
 Get-AzDeploymentManagerRollout -ResourceGroupName ContosoResourceGroup -Name ContosoRollout
 ```
 
-This command gets a rollout named ContosoRollout in the ContosoResourceGroup. 
+This command gets a rollout named ContosoRollout in the ContosoResourceGroup.
 
 ### Example 2 Get and display the rollout details
 ```powershell
 Get-AzDeploymentManagerRollout -ResourceGroupName ContosoResourceGroup -Name ContosoRollout -Verbose
 ```
 
-This command gets a rollout named ContosoRollout in the ContosoResourceGroup. 
+This command gets a rollout named ContosoRollout in the ContosoResourceGroup.
 The -Verbose switch displays all the rollout details hierarchically; showing the Services, the ServiceUnits and the steps under each ServiceUnit and contextual information for each step for a holistic view of the rollout.
 
 ### Example 3: Get a rollout using the resource identifier

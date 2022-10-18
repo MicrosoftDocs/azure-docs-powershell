@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 38917534-49C6-47EA-B815-240F794EE655
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/update-azvm
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/update-azvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Update-AzVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Update-AzVM.md
@@ -64,7 +64,7 @@ Run cmdlet in the background and return a Job to track progress.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ Specify the system assigned identity for the virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AssignIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,7 +109,7 @@ Specifies the Resource ID of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: IdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -125,7 +125,7 @@ The user identity references will be ARM resource ids in the form: '/subscriptio
 ```yaml
 Type: String[]
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ The type of identity used for the virtual machine. Currently, the only supported
 ```yaml
 Type: ResourceIdentityType
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 Accepted values: SystemAssigned, UserAssigned, SystemAssignedUserAssigned, None
 
 Required: True
@@ -156,7 +156,7 @@ Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupNameParameterSetName, AssignIdentityParameterSet, ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

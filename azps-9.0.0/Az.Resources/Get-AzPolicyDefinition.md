@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 6396AEC3-DFE6-45DA-BCF4-69C55C5D051B
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azpolicydefinition
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azpolicydefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyDefinition.md

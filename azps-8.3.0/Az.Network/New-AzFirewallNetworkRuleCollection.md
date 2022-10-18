@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: A29E9921-C1B9-42C2-B816-5D4873AC6688
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azfirewallnetworkrulecollection
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azfirewallnetworkrulecollection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallNetworkRuleCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallNetworkRuleCollection.md
@@ -39,7 +39,7 @@ This example creates a collection which will allow all traffic that matches eith
 The first rule is for all UDP traffic.
 The second rule is for TCP traffic from 10.0.0.0 to 60.1.5.0:4040.
 If there is another Network rule collection with higher priority (smaller number) which also matches traffic identified in $rule1 or $rule2,
-the action of the rule collection with higher priority will take in effect instead. 
+the action of the rule collection with higher priority will take in effect instead.
 
 ### Example 2: Add a rule to a rule collection
 ```powershell
@@ -60,7 +60,7 @@ $ruleCollection = New-AzFirewallNetworkRuleCollection -Name "MyNetworkRuleCollec
 $getRule=$ruleCollection.GetRuleByName("ALL-UDP-traffic")
 ```
 
-This example creates a new network rule collection with one rule and then gets the rule by name, calling method GetRuleByName on the 
+This example creates a new network rule collection with one rule and then gets the rule by name, calling method GetRuleByName on the
 rule collection object. The rule name for method GetRuleByName is case-insensitive.
 
 ### Example 4: Remove a rule from a rule collection

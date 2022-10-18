@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 46FDE4D8-08E0-4465-8BF9-849A108628B8
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaywebapplicationfirewallconfiguration
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewaywebapplicationfirewallconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzApplicationGatewayWebApplicationFirewallConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzApplicationGatewayWebApplicationFirewallConfiguration.md
@@ -46,7 +46,7 @@ You can use the Get-AzApplicationGateway cmdlet to get an application gateway ob
 ```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The disabled rule groups.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallDisabledRuleGroup]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Indicates whether the web application firewall is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Detection, Prevention
 
 Required: True
@@ -121,15 +121,15 @@ Accept wildcard characters: False
 ```
 
 ### -RuleSetType
-The type of the web application firewall rule set. 
-The acceptable values for this parameter are: 
+The type of the web application firewall rule set.
+The acceptable values for this parameter are:
 
 - OWASP
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OWASP
 
 Required: False
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -RuleSetVersion
 The version of the rule set type.
-The acceptable values for this parameter are: 
+The acceptable values for this parameter are:
 
 - 3.0
 - 2.2.9
@@ -149,7 +149,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 3.0, 2.2.9
 
 Required: False

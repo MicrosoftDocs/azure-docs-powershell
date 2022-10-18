@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: BF80D456-DAB1-4B51-B50F-A75C2C66A472
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmnetworkinterface
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmnetworkinterface
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVMNetworkInterface.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVMNetworkInterface.md

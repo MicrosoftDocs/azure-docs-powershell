@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 9DBD5ADF-C30E-4D1A-A4CB-4D70C21088F3
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azfirewall
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azfirewall
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzFirewall.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzFirewall.md
@@ -27,7 +27,7 @@ The **Remove-AzFirewall** cmdlet removes an Azure Firewall.
 
 ### Example 1: Create and delete a Firewall
 ```powershell
-New-AzFirewall -Name "azFw" -ResourceGroupName "rgName" -Location centralus 
+New-AzFirewall -Name "azFw" -ResourceGroupName "rgName" -Location centralus
 
 Remove-AzFirewall -Name "azFw" -ResourceGroupName "rgName"
 ```
