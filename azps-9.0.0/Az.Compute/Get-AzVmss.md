@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: FC6BC096-DBC4-48DA-A366-B87EB18A0496
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azvmss
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmss
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVmss.md
@@ -240,7 +240,7 @@ VirtualMachineProfile                       :
   UserData                                  : dQBwAGQAYQB0AGUAIAB2AG0AcwBzAA==
 ```
 
-The UserData value must be Base64 encoded. This command assumes you have created a Vmss with a UserData value. 
+The UserData value must be Base64 encoded. This command assumes you have created a Vmss with a UserData value.
 
 ## PARAMETERS
 

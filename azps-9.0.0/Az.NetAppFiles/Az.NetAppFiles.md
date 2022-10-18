@@ -1,7 +1,7 @@
 ---
 Module Name: Az.NetAppFiles
 Module Guid: e20e99dc-6df9-479b-8504-2960f0088f00
-Download Help Link: https://docs.microsoft.com/powershell/module/az.netappfiles
+Download Help Link: https://learn.microsoft.com/powershell/module/az.netappfiles
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Az.NetAppFiles.md
@@ -147,13 +147,13 @@ Resume/Resync the connection on the destination volume. If the operation is ran 
 Updates an Azure NetApp Files (ANF) account with the new data set. Useful for deletion of associated active directories.
 
 ### [Set-AzNetAppFilesBackupPolicy](Set-AzNetAppFilesBackupPolicy.md)
-Updates an Azure NetApp Files (ANF) Backup Policy with the new data set. 
+Updates an Azure NetApp Files (ANF) Backup Policy with the new data set.
 
 ### [Set-AzNetAppFilesPool](Set-AzNetAppFilesPool.md)
-Updates an Azure NetApp Files (ANF) Capacity Pool with the new data set. 
+Updates an Azure NetApp Files (ANF) Capacity Pool with the new data set.
 
 ### [Set-AzNetAppFilesSnapshotPolicy](Set-AzNetAppFilesSnapshotPolicy.md)
-Updates an Azure NetApp Files (ANF) Snapshot Policy with the new data set. 
+Updates an Azure NetApp Files (ANF) Snapshot Policy with the new data set.
 
 ### [Set-AzNetAppFilesVolumePool](Set-AzNetAppFilesVolumePool.md)
 Change pool for an Azure NetApp Files (ANF) volume.

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/new-azcdnendpoint
+online version: https://learn.microsoft.com/powershell/module/az.cdn/new-azcdnendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/New-AzCdnEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/New-AzCdnEndpoint.md
@@ -36,7 +36,7 @@ $origin = @{
     Name = "origin1"
     HostName = "host1.hello.com"
 };
-New-AzCdnEndpoint -ResourceGroupName testps-rg-da16jm -ProfileName cdn001 -Name endptest001 -Location westus -Origin $origin             
+New-AzCdnEndpoint -ResourceGroupName testps-rg-da16jm -ProfileName cdn001 -Name endptest001 -Location westus -Origin $origin
 ```
 
 ```output
@@ -525,7 +525,7 @@ GEOFILTER <IGeoFilter[]>: List of rules defining the user's geo access within a 
   - `RelativePath <String>`: Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
 
 ORIGIN <IDeepCreatedOrigin[]>: The source of the content being delivered via CDN.
-  - `Name <String>`: Origin name which must be unique within the endpoint. 
+  - `Name <String>`: Origin name which must be unique within the endpoint.
   - `[Enabled <Boolean?>]`: Origin is enabled for load balancing or not. By default, origin is always enabled.
   - `[HostName <String>]`: The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
   - `[HttpPort <Int32?>]`: The value of the HTTP port. Must be between 1 and 65535.

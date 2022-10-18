@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
 Module Name: Az.FrontDoor
-online version: https://docs.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorrulesengineactionobject
+online version: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorrulesengineactionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineActionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineActionObject.md
@@ -44,7 +44,7 @@ New-AzFrontDoorRulesEngineActionObject
 ```
 
 ## DESCRIPTION
-Create a PSRulesEngineAction object for creating a rules engine rule. 
+Create a PSRulesEngineAction object for creating a rules engine rule.
 
 Use cmdlet "New-AzFrontDoorHeaderActionObject" to create PSHeaderObjects to pass into the parameters "-RequestHeaderActions" and "-ResponseHeaderActions".
 

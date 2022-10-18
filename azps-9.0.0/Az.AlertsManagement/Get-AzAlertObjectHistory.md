@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.dll-Help.xml
 Module Name: Az.AlertsManagement
-online version: https://docs.microsoft.com/powershell/module/az.alertsmanagement/get-azalertobjecthistory
+online version: https://learn.microsoft.com/powershell/module/az.alertsmanagement/get-azalertobjecthistory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Get-AzAlertObjectHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Get-AzAlertObjectHistory.md
@@ -35,7 +35,7 @@ Get-AzAlertObjectHistory -InputObject <PSSmartGroup> [-DefaultProfile <IAzureCon
 Get-AzAlertObjectHistory -AlertId "afbf1b3a-0a6c-4f19-9c9b-644ccd7b1529"
 ```
 
-Gets alert history details. 
+Gets alert history details.
 
 ## PARAMETERS
 

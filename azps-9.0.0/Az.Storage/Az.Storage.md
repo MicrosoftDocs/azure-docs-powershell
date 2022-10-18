@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Storage
 Module Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac5
-Download Help Link: https://docs.microsoft.com/powershell/module/az.storage
+Download Help Link: https://learn.microsoft.com/powershell/module/az.storage
 Help Version: 4.2.3.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Az.Storage.md
@@ -308,7 +308,7 @@ Generates an SAS token for an Azure Storage table.
 Creates a stored access policy for an Azure storage table.
 
 ### [Remove-AzDataLakeGen2AclRecursive](Remove-AzDataLakeGen2AclRecursive.md)
-Remove ACL recursively on the specified path. 
+Remove ACL recursively on the specified path.
 
 ### [Remove-AzDataLakeGen2Item](Remove-AzDataLakeGen2Item.md)
 Remove a file or directory.
@@ -401,7 +401,7 @@ Revoke all User Delegation keys of a Storage account.
 Modifies the current Storage account of the specified subscription.
 
 ### [Set-AzDataLakeGen2AclRecursive](Set-AzDataLakeGen2AclRecursive.md)
-Set ACL recursively on the specified path. 
+Set ACL recursively on the specified path.
 
 ### [Set-AzDataLakeGen2ItemAclObject](Set-AzDataLakeGen2ItemAclObject.md)
 Creates/Updates a DataLake gen2 item ACL object, which can be used in Update-AzDataLakeGen2Item cmdlet.
@@ -485,7 +485,7 @@ Stops a copy operation.
 Stops a copy operation to the specified destination file.
 
 ### [Update-AzDataLakeGen2AclRecursive](Update-AzDataLakeGen2AclRecursive.md)
-Update ACL recursively on the specified path. 
+Update ACL recursively on the specified path.
 
 ### [Update-AzDataLakeGen2Item](Update-AzDataLakeGen2Item.md)
 Update a file or directory on properties, metadata, permission, ACL, and owner.

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/start-azspringcloudappdeployment
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/start-azspringcloudappdeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Start-AzSpringCloudAppDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Start-AzSpringCloudAppDeployment.md
@@ -34,7 +34,7 @@ Start the deployment.
 
 ### Example 1: Start Spring Cloud Service by name
 ```powershell
-Start-AzSpringCloudAppDeployment -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service -AppName gateway -DeploymentName default 
+Start-AzSpringCloudAppDeployment -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service -AppName gateway -DeploymentName default
 ```
 
 Start Spring Cloud Service by name.

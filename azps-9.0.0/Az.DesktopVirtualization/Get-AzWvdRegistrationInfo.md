@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DesktopVirtualization
-online version: https://docs.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdregistrationinfo
+online version: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdregistrationinfo
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdRegistrationInfo.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdRegistrationInfo.md
@@ -24,15 +24,15 @@ Get the Windows virtual desktop registration info.
 
 ## EXAMPLES
 
-### Example 1: Get a Windows Virtual Desktop Registration Token	
+### Example 1: Get a Windows Virtual Desktop Registration Token
 ```powershell
 Get-AzWvdRegistrationInfo -ResourceGroupName ResourceGroupName -HostPoolName HostPoolName
 ```
 
 ```output
-ExpirationTime       RegistrationTokenOperation Token	
---------------       -------------------------- -----	
-4/1/2020 10:19:33 PM None                       eyJhbGciOiJSUzI1NiIsImtpZCI6IkMyRjU1RUYxNzg0MEFCNzkzMDk2RUYzRjdEMkNBRDk0NThGNDhEOTQiLCJ0eXAiOiJKV1QifQ.eyJSZWdpc3RyYXRpb25JZCI6IjU5NGJjZWUwLTk5MjQtNDg3ZC1iOW...	
+ExpirationTime       RegistrationTokenOperation Token
+--------------       -------------------------- -----
+4/1/2020 10:19:33 PM None                       eyJhbGciOiJSUzI1NiIsImtpZCI6IkMyRjU1RUYxNzg0MEFCNzkzMDk2RUYzRjdEMkNBRDk0NThGNDhEOTQiLCJ0eXAiOiJKV1QifQ.eyJSZWdpc3RyYXRpb25JZCI6IjU5NGJjZWUwLTk5MjQtNDg3ZC1iOW...
 ```
 
 This command gets a Windows Virtual Desktop Registration Token in a Host Pool.

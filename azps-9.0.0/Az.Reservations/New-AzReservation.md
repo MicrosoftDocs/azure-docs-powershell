@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/new-azreservation
+online version: https://learn.microsoft.com/powershell/module/az.reservations/new-azreservation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/New-AzReservation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/New-AzReservation.md
@@ -403,7 +403,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[Quantity <Int32?>]`: Quantity of the SKUs that are part of the Reservation.
   - `[Renew <Boolean?>]`: Setting this to true will automatically purchase a new reservation on the expiration date time.
   - `[ReservedResourceType <ReservedResourceType?>]`: The type of the resource that is being reserved.
-  - `[Sku <String>]`: 
+  - `[Sku <String>]`:
   - `[Term <ReservationTerm?>]`: Represent the term of Reservation.
 
 `INPUTOBJECT <IReservationsIdentity>`: Identity Parameter

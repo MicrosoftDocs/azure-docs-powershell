@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Consumption.dll-Help.xml
 Module Name: Az.Billing
-online version: https://docs.microsoft.com/powershell/module/az.billing/get-azconsumptionbudget
+online version: https://learn.microsoft.com/powershell/module/az.billing/get-azconsumptionbudget
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzConsumptionBudget.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzConsumptionBudget.md
@@ -30,7 +30,7 @@ Get-AzConsumptionBudget
 ```
 
 ```output
-Amount:  60		
+Amount:  60
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
@@ -47,7 +47,7 @@ Get-AzConsumptionBudget -ResourceGroupName RGBudgets
 ```
 
 ```output
-Amount:  60		
+Amount:  60
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/resourceGroups/RGBudgets/providers/Microsoft.Consumption/budgets/PSBudgetRG
@@ -64,7 +64,7 @@ Get-AzConsumptionBudget -Name PSBudget
 ```
 
 ```output
-Amount:  60		
+Amount:  60
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
@@ -81,7 +81,7 @@ Get-AzConsumptionBudget -ResourceGroupName RGBudgets -Name PSBudgetRG
 ```
 
 ```output
-Amount:  60		
+Amount:  60
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/resourceGroups/RGBudgets/providers/Microsoft.Consumption/budgets/PSBudgetRG

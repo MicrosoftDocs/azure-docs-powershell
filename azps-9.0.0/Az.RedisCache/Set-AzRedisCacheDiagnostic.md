@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: FA99C137-68E3-47D3-A0AC-FE33A481BE66
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/set-azrediscachediagnostic
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/set-azrediscachediagnostic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Set-AzRedisCacheDiagnostic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Set-AzRedisCacheDiagnostic.md

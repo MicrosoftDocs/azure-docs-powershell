@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkwatcherreachabilityreport
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkwatcherreachabilityreport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherReachabilityReport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherReachabilityReport.md
@@ -73,9 +73,9 @@ Get-AzNetworkWatcherReachabilityReport -NetworkWatcher $nw -Location "West US" -
             },
             {
                 "timeStamp": "2017-10-12T00:00:00Z",
-                "score": 94    
+                "score": 94
             }
-        ]  
+        ]
     }
 ]
 ```

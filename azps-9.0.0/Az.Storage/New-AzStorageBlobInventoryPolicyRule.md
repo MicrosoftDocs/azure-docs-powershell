@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstorageblobinventorypolicyrule
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstorageblobinventorypolicyrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageBlobInventoryPolicyRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageBlobInventoryPolicyRule.md
@@ -56,9 +56,9 @@ Rules              : {Test1, Test2}
 
 PS C:\> $policy.Rules
 
-Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch  SchemaFields                                           
-----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               -----------  ------------                                           
-Test1 False   containername Container  Csv     Daily                                                                 {con1, con2} {Name, Metadata, PublicAccess, Last-Modified...}       
+Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch  SchemaFields
+----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               -----------  ------------
+Test1 False   containername Container  Csv     Daily                                                                 {con1, con2} {Name, Metadata, PublicAccess, Last-Modified...}
 Test2 True    containername Blob       Parquet Weekly   True             True                {blockBlob, appendBlob} {aaa, bbb}   {Name, Creation-Time, Last-Modified, Content-Length...}
 ```
 
@@ -68,7 +68,7 @@ The following command sets blob inventory policy to a Storage account with the 2
 ## PARAMETERS
 
 ### -BlobSchemaField
-Specifies the fields and properties of the Blob object to be included in the inventory. Valid values include: Name, Creation-Time, Last-Modified, Content-Length, Content-MD5, BlobType, AccessTier, AccessTierChangeTime, Expiry-Time, hdi_isfolder, Owner, Group, Permissions, Acl, Metadata, LastAccessTime, AccessTierInferred, Tags. 
+Specifies the fields and properties of the Blob object to be included in the inventory. Valid values include: Name, Creation-Time, Last-Modified, Content-Length, Content-MD5, BlobType, AccessTier, AccessTierChangeTime, Expiry-Time, hdi_isfolder, Owner, Group, Permissions, Acl, Metadata, LastAccessTime, AccessTierInferred, Tags.
 'Name' is a required schemafield. Schema field values 'Expiry-Time, hdi_isfolder, Owner, Group, Permissions, Acl' are valid only for HierarchicalNamespace enabled accounts.'Tags' field is only valid for non HierarchicalNamespace accounts.
 If specify '-IncludeSnapshot', will include 'Snapshot'  in the inventory.  If specify '-IncludeBlobVersion', will include 'VersionId, 'IsCurrentVersion' in the inventory.
 

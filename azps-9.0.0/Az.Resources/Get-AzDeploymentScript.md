@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azdeploymentscript
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azdeploymentscript
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentScript.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentScript.md
@@ -62,7 +62,7 @@ Gets a deployment script with the name MyDeploymentScript in resource group DS-T
 Get-AzDeploymentScript -Id "/subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Resources/deploymentScripts/{deploymentScriptName}"
 ```
 
-Gets a deployment script with the given resource Id. 
+Gets a deployment script with the given resource Id.
 
 ## PARAMETERS
 

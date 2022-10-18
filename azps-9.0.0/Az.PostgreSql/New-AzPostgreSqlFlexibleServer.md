@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.PostgreSql
-online version: https://docs.microsoft.com/powershell/module/az.postgresql/new-azpostgresqlflexibleserver
+online version: https://learn.microsoft.com/powershell/module/az.postgresql/new-azpostgresqlflexibleserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/New-AzPostgreSqlFlexibleServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/New-AzPostgreSqlFlexibleServer.md
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 
 ### -PublicAccess
 Determines the public access.
-Enter single or range of IP addresses to be 
+Enter single or range of IP addresses to be
             included in the allowed list of IPs.
 IP address ranges must be dash-
             separated and not contain any spaces.

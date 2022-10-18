@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Dashboard
-online version: https://docs.microsoft.com/powershell/module/az.dashboard/get-azgrafana
+online version: https://learn.microsoft.com/powershell/module/az.dashboard/get-azgrafana
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/Get-AzGrafana.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/Get-AzGrafana.md
@@ -182,7 +182,7 @@ To create the parameters described below, construct a hash table containing the 
 `INPUTOBJECT <IDashboardIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[PrivateEndpointConnectionName <String>]`: The private endpoint connection name of Azure Managed Grafana.
-  - `[PrivateLinkResourceName <String>]`: 
+  - `[PrivateLinkResourceName <String>]`:
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[SubscriptionId <String>]`: The ID of the target subscription.
   - `[WorkspaceName <String>]`: The workspace name of Azure Managed Grafana.

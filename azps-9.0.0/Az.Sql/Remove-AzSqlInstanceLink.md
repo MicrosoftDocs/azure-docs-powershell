@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/remove-azsqlinstancelink
+online version: https://learn.microsoft.com/powershell/module/az.sql/remove-azsqlinstancelink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceLink.md
@@ -76,7 +76,7 @@ This command removes the instance link with specified resource ID.
 
 ### Example 4: Remove instance link by its PowerShell object
 ```powershell
-$managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01" 
+$managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01"
 Remove-AzSqlInstanceLink -InputObject $managedInstanceLink
 ```
 
@@ -89,7 +89,7 @@ This command removes the instance link specified by instance link object.
 
 ### Example 5: Remove instance link by its parent instance object
 ```powershell
-$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01" 
+$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
 Remove-AzSqlInstanceLink -InstanceObject $instance -Name "Link01"
 ```
 
@@ -114,7 +114,7 @@ This command removes the instance link "Link01" from the managed instance "Manag
 
 ### Example 7: Remove all instance links from its parent instance by piping link objects
 ```powershell
-$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01" 
+$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
 $instance | Get-AzSqlInstanceLink | Remove-AzSqlInstanceLink -Force
 ```
 

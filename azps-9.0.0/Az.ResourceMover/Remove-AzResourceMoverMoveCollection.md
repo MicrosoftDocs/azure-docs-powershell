@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/remove-azresourcemovermovecollection
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/remove-azresourcemovermovecollection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Remove-AzResourceMoverMoveCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Remove-AzResourceMoverMoveCollection.md
@@ -30,16 +30,16 @@ Remove-AzResourceMoverMoveCollection -ResourceGroupName "RG-MoveCollection-demoR
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
-EndTime        : 
+AdditionalInfo :
+Code           :
+Detail         :
+EndTime        :
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/ec788761-2f1b-46a2-97b7-f5056afd334d
-Message        : 
-Name           : 
+Message        :
+Name           :
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
-StartTime      : 
+StartTime      :
 Status         : Succeeded
 ```
 

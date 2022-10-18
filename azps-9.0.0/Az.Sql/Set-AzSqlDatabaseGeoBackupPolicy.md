@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 5A2072B4-1533-46A2-9841-5509A44DE695
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqldatabasegeobackuppolicy
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqldatabasegeobackuppolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabaseGeoBackupPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabaseGeoBackupPolicy.md
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ### -State
 Specifies the state of the geo backup policy.
 The acceptable values for this parameter are:
-- Enabled 
+- Enabled
 - Disabled
 
 ```yaml
@@ -167,5 +167,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzSqlDatabaseGeoBackupPolicy](./Get-AzSqlDatabaseGeoBackupPolicy.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
 

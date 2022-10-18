@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/remove-azsentinelbookmark
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/remove-azsentinelbookmark
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Remove-AzSentinelBookmark.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Remove-AzSentinelBookmark.md
@@ -33,7 +33,7 @@ Delete the bookmark.
 
 ### Example 1: Remove a Sentinel Bookmark
 ```powershell
-Remove-AzSentinelBookmark -ResourceGroupName "myResourceGroup" -WorkspaceName "myWorkspaceName" -Id <bookMarkId> 
+Remove-AzSentinelBookmark -ResourceGroupName "myResourceGroup" -WorkspaceName "myWorkspaceName" -Id <bookMarkId>
 ```
 
 This command removes a bookmark

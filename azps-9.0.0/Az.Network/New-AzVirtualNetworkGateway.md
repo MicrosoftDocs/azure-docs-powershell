@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 5784FD44-91D4-4537-84F3-4F03CCBA355F
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvirtualnetworkgateway
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualnetworkgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkGateway.md
@@ -98,7 +98,7 @@ New-AzVirtualNetworkGateway -Name myNGW -ResourceGroupName vnet-gateway -Locatio
 
 The above will create a resource group, request a Public IP Address, create a Virtual Network and
 subnet and create a Virtual Network Gateway with P2S settings e.g. VpnProtocol,VpnClientAddressPool,VpnClientRootCertificates,VpnClientIpsecPolicy etc. in Azure.
-The gateway will be called "myNGW" within the resource group "vnet-gateway" in the location "UK West" with the previously created IP configurations saved in the variable "ngwIPConfig," the gateway type of "VPN," the vpn type "RouteBased," and the sku "VpnGw1." Vpn settings will be set on Gateway such as VpnProtocol set as Ikev2, VpnClientAddressPool as "201.169.0.0/16", VpnClientRootCertificate set as passed one: clientRootCertName and custom vpn ipsec policy passed in object:$vpnclientipsecpolicy  
+The gateway will be called "myNGW" within the resource group "vnet-gateway" in the location "UK West" with the previously created IP configurations saved in the variable "ngwIPConfig," the gateway type of "VPN," the vpn type "RouteBased," and the sku "VpnGw1." Vpn settings will be set on Gateway such as VpnProtocol set as Ikev2, VpnClientAddressPool as "201.169.0.0/16", VpnClientRootCertificate set as passed one: clientRootCertName and custom vpn ipsec policy passed in object:$vpnclientipsecpolicy
 It will also set custom routes specified by customers on gateway.
 
 ### Example 4: Create a Virtual Network Gateway with AAD authentication Configuration for VpnClient of virtual network gateway.
@@ -134,7 +134,7 @@ New-AzVirtualNetworkGateway -Name myNGW -ResourceGroupName vnet-gateway -Locatio
 
 The above will create a resource group, request a Public IP Address, create a Virtual Network and
 subnet and create a Virtual Network Gateway in Azure.
-The gateway will be called "myNGW" within the resource group "vnet-gateway" in the location "UK West" 
+The gateway will be called "myNGW" within the resource group "vnet-gateway" in the location "UK West"
 with the previously created IP configurations saved in the variable "ngwIPConfig," the
 gateway type of "VPN", the vpn type "RouteBased", the sku "VpnGw4" and VpnGatewayGeneration Generation2 enabled.
 
@@ -158,7 +158,7 @@ New-AzVirtualNetworkGateway -Name gateway1 -ResourceGroupName vnet-gateway -Loca
 The above will create a resource group, request a Public IP Address, create a Virtual Network and
 subnet and create a Virtual Network Gateway in Azure.
 ipconfigurationId1 of gateway ipconfiguration just created and stored in ngwipconfig.
-The gateway will be called "gateway1" within the resource group "resourcegroup1resourcegroup1" in the location "UK West" 
+The gateway will be called "gateway1" within the resource group "resourcegroup1resourcegroup1" in the location "UK West"
 with the previously created IP configurations Bgppeering address saved in the variable "gw1ipconfBgp1," the
 gateway type of "VPN", the vpn type "RouteBased", the sku "VpnGw4" and VpnGatewayGeneration Generation2 enabled.
 
@@ -180,8 +180,8 @@ New-AzVirtualNetworkGateway -Name gateway1 -ResourceGroupName vnet-gateway -Loca
 The above will create a resource group, request a Public IP Address, create a Virtual Network and
 subnet and create a Virtual Network Gateway in Azure.
 ipconfigurationId1 of gateway ipconfiguration just created and stored in ngwipconfig.
-The gateway will be called "gateway1" within the resource group "resourcegroup1resourcegroup1" in the location "UK West" 
-New virtualNetworkGateway NatRule will be saved in the variable "natRule" 
+The gateway will be called "gateway1" within the resource group "resourcegroup1resourcegroup1" in the location "UK West"
+New virtualNetworkGateway NatRule will be saved in the variable "natRule"
 the gateway type of "VPN", the vpn type "RouteBased", the sku "VpnGw4" and VpnGatewayGeneration Generation2 enabled and BgpRouteTranslationForNat enabled.
 
 ## PARAMETERS
@@ -321,7 +321,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DisableIPsecProtection 
+### -DisableIPsecProtection
 The Flag disables IPsec Protection on VirtualNetworkGateway.
 
 ```yaml

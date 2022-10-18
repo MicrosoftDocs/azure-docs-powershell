@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: C2EBCCF0-56CE-4D49-A138-74E52FC3A9AC
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstoragequeue
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragequeue
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageQueue.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageQueue.md

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 019EFD94-4087-45F6-812D-FBDFE1B2E48A
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azlogprofile
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azlogprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzLogProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzLogProfile.md

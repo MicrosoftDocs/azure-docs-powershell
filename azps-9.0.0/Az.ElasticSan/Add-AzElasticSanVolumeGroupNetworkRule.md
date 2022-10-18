@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/update-azelasticsanvolumegroup
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/update-azelasticsanvolumegroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Add-AzElasticSanVolumeGroupNetworkRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Add-AzElasticSanVolumeGroupNetworkRule.md
@@ -33,7 +33,7 @@ Add a list of virtual network rules to a VolumeGroup
 
 ## EXAMPLES
 
-### Example 1: Add network rules to a volume group by NetworkAclsVirtualNetworkRule objects 
+### Example 1: Add network rules to a volume group by NetworkAclsVirtualNetworkRule objects
 ```powershell
 $virtualNetworkRule1 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1" -Action Allow
 $virtualNetworkRule2 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2" -Action Allow
@@ -42,8 +42,8 @@ Add-AzElasticSanVolumeGroupNetworkRule -ResourceGroupName myresourcegroup -Elast
 ```
 
 ```output
-Action State VirtualNetworkResourceId                                                                                                                       
------- ----- ------------------------                                                                                                                       
+Action State VirtualNetworkResourceId
+------ ----- ------------------------
 Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1
 Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2
 ```
@@ -60,8 +60,8 @@ Add-AzElasticSanVolumeGroupNetworkRule -ResourceGroupName myresourcegroup -Elast
 ```
 
 ```output
-Action State VirtualNetworkResourceId                                                                                                                       
------- ----- ------------------------                                                                                                                       
+Action State VirtualNetworkResourceId
+------ ----- ------------------------
 Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1
 Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2
 ```

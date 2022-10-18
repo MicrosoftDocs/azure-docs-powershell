@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/set-aztemplatespec
+online version: https://learn.microsoft.com/powershell/module/az.resources/set-aztemplatespec
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzTemplateSpec.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzTemplateSpec.md
@@ -69,10 +69,10 @@ Set-AzTemplateSpec [-ResourceGroupName] <String> [-Name] <String> [-Version] <St
 ```
 
 ## DESCRIPTION
-Modifies a Templace Spec. If the Template Spec with the specified name and/or specific version does not already exist, it will be 
+Modifies a Templace Spec. If the Template Spec with the specified name and/or specific version does not already exist, it will be
 created.
 
-When modifying a Template Spec version's ARM Template content, the content can either come from a raw 
+When modifying a Template Spec version's ARM Template content, the content can either come from a raw
 JSON string (using **UpdateVersionByNameFromJsonParameterSet** parameter set) or from a specified JSON/Bicep file
 (using **UpdateVersionByNameFromJsonFileParameterSet** parameter set).
 
@@ -91,12 +91,12 @@ $templateJson = @"
 Set-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'myTemplateSpec' -Version 'v1.0' -Location 'West US' -TemplateJson $templateJson
 ```
 
-Modifies version "v1.0" of a Template Spec named "myTemplateSpec". The specified version 
-will have $templateJson as the version's ARM Template content. If the root Template Spec and/or version 
+Modifies version "v1.0" of a Template Spec named "myTemplateSpec". The specified version
+will have $templateJson as the version's ARM Template content. If the root Template Spec and/or version
 do not already exist they will be created.
 
 
-**Notes:** 
+**Notes:**
 
 * The ARM Template in the example is a no-op as it contains no actual resources.
 * Location is only required when the Template Spec does not already exist
@@ -106,8 +106,8 @@ do not already exist they will be created.
 Set-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'myTemplateSpec' -Version 'v2.0' -Location 'West US' -TemplateFile 'myTemplateContent.json'
 ```
 
-Modifies version "v2.0" of a Template Spec named "myTemplateSpec". The specified version 
-will have the content from the local file "myTemplateContent.json" as the version's ARM Template content. If the 
+Modifies version "v2.0" of a Template Spec named "myTemplateSpec". The specified version
+will have the content from the local file "myTemplateContent.json" as the version's ARM Template content. If the
 root Template Spec and/or version do not already exist they will be created.
 
 **Note:** Location is only required when the Template Spec does not already exist
@@ -117,7 +117,7 @@ root Template Spec and/or version do not already exist they will be created.
 Set-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'myTemplateSpec'  -Location 'West US' -Description 'My updated Template Spec'
 ```
 
-Modifies the description of the Template Spec named "myTemplateSpec" in resource group "myRG". If the 
+Modifies the description of the Template Spec named "myTemplateSpec" in resource group "myRG". If the
 Template Spec does not already exist it will be created.
 
 **Note:** Location is only required when the Template Spec does not already exist

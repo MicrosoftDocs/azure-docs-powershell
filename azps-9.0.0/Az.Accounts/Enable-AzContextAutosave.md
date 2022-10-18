@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/powershell/module/az.accounts/enable-azcontextautosave
+online version: https://learn.microsoft.com/powershell/module/az.accounts/enable-azcontextautosave
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
@@ -13,7 +13,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Azure contexts are PowerShell objects representing your active subscription to run commands against,
 and the authentication information needed to connect to an Azure cloud. With Azure contexts, Azure
 PowerShell doesn't need to reauthenticate your account each time you switch subscriptions. For more
-information, see [Azure PowerShell context objects](https://docs.microsoft.com/powershell/azure/context-persistence).
+information, see [Azure PowerShell context objects](https://learn.microsoft.com/powershell/azure/context-persistence).
 
 This cmdlet allows the Azure context information to be saved and automatically loaded when you start
 a PowerShell process. For example, when opening a new window.

@@ -1,7 +1,7 @@
 ---
 Module Name: Az.ContainerRegistry
 Module Guid: b3ca459c-feb9-41cc-a954-46222505acb3
-Download Help Link: https://docs.microsoft.com/powershell/module/az.containerregistry
+Download Help Link: https://learn.microsoft.com/powershell/module/az.containerregistry
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Az.ContainerRegistry.md
@@ -23,7 +23,7 @@ Gets a container registry.
 Gets the login credentials for a container registry.
 
 ### [Get-AzContainerRegistryManifest](Get-AzContainerRegistryManifest.md)
-Get or list ACR manifest. 
+Get or list ACR manifest.
 
 ### [Get-AzContainerRegistryReplication](Get-AzContainerRegistryReplication.md)
 Gets a replication of a container registry.
@@ -32,7 +32,7 @@ Gets a replication of a container registry.
 Get or list ACR repositories.
 
 ### [Get-AzContainerRegistryTag](Get-AzContainerRegistryTag.md)
-Get or list ACR tag. 
+Get or list ACR tag.
 
 ### [Get-AzContainerRegistryUsage](Get-AzContainerRegistryUsage.md)
 Get Usage of an azure container registry.
@@ -62,7 +62,7 @@ Creates a container registry webhook.
 Removes a container registry.
 
 ### [Remove-AzContainerRegistryManifest](Remove-AzContainerRegistryManifest.md)
-Delete ACR manifest. 
+Delete ACR manifest.
 
 ### [Remove-AzContainerRegistryReplication](Remove-AzContainerRegistryReplication.md)
 Removes a container registry replication.
@@ -92,7 +92,7 @@ Updates a container registry.
 Regenerates a login credential for a container registry.
 
 ### [Update-AzContainerRegistryManifest](Update-AzContainerRegistryManifest.md)
-Update ACR manifest. 
+Update ACR manifest.
 
 ### [Update-AzContainerRegistryRepository](Update-AzContainerRegistryRepository.md)
 Update ACR repository.

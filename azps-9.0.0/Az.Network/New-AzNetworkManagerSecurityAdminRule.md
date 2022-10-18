@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkmanagersecurityadminrule
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagersecurityadminrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerSecurityAdminRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerSecurityAdminRule.md
@@ -43,10 +43,10 @@ The **New-AzNetworkManagerSecurityAdminRule** cmdlet creates a security admin ru
 ### Example 1: Create Custom Security Admin Rule
 ```powershell
 $sourceAddressPrefix = New-AzNetworkManagerAddressPrefixItem -AddressPrefix "Internet" -AddressPrefixType "ServiceTag"
-$destinationAddressPrefix = New-AzNetworkManagerAddressPrefixItem -AddressPrefix "10.0.0.1" -AddressPrefixType "IPPrefix" 
+$destinationAddressPrefix = New-AzNetworkManagerAddressPrefixItem -AddressPrefix "10.0.0.1" -AddressPrefixType "IPPrefix"
 $sourcePortList = @("100")
 $destinationPortList = @("99")
-New-AzNetworkManagerSecurityAdminRule -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager" -ConfigName "psSecurityAdminConfig" -RuleCollectionName "psRuleCollection" -Name "psRule" -Description "TestDescription" -Protocol  "TCP" -Direction "Inbound" -Access "Allow" -Priority 100 -SourcePortRange $sourcePortList -DestinationPortRange $destinationPortList -SourceAddressPrefix $sourceAddressPrefix -DestinationAddressPrefix $destinationAddressPrefix 
+New-AzNetworkManagerSecurityAdminRule -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager" -ConfigName "psSecurityAdminConfig" -RuleCollectionName "psRuleCollection" -Name "psRule" -Description "TestDescription" -Protocol  "TCP" -Direction "Inbound" -Access "Allow" -Priority 100 -SourcePortRange $sourcePortList -DestinationPortRange $destinationPortList -SourceAddressPrefix $sourceAddressPrefix -DestinationAddressPrefix $destinationAddressPrefix
 ```
 ```output
 Protocol                  : Tcp
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 Destination Port Ranges.
 
 ```yaml
-Type: System.String[]	
+Type: System.String[]
 Parameter Sets: Custom
 Aliases:
 
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 Source Port Ranges.
 
 ```yaml
-Type: System.String[]	
+Type: System.String[]
 Parameter Sets: Custom
 Aliases:
 
@@ -409,7 +409,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerAddressPrefixItem[]
 
-### System.String[]	
+### System.String[]
 
 ### System.Int32
 

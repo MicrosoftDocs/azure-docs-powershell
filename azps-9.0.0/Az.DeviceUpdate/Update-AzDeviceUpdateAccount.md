@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DeviceUpdate
-online version: https://docs.microsoft.com/powershell/module/az.deviceupdate/update-azdeviceupdateaccount
+online version: https://learn.microsoft.com/powershell/module/az.deviceupdate/update-azdeviceupdateaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/help/Update-AzDeviceUpdateAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/help/Update-AzDeviceUpdateAccount.md
