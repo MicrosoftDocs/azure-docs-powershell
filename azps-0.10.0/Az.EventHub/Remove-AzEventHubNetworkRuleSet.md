@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/remove-azeventhubnetworkruleset
+online version: https://learn.microsoft.com/en-us/powershell/module/az.eventhub/remove-azeventhubnetworkruleset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Remove-AzEventHubNetworkRuleSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Remove-AzEventHubNetworkRuleSet.md
@@ -45,18 +45,18 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/subscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/EventHub-Namespace-1375/networkRuleSets/default
 Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
-IpRules             : 
-VirtualNetworkRules : 
+IpRules             :
+VirtualNetworkRules :
 
 
-Deletes the NetworkRuleSet for the Given "Eventhub-Namespace1-1375" namespace 
+Deletes the NetworkRuleSet for the Given "Eventhub-Namespace1-1375" namespace
 
 ### Example 2
 ```powershell
 PS C:\> Remove-AzEventHubNetworkRuleSet -InputObject $result1375
 ```
 
-Deletes the NetworkRuleSet using InputObject 
+Deletes the NetworkRuleSet using InputObject
 
 ### Example 3
 ```powershell
@@ -66,8 +66,8 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/subscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/EventHub-Namespace-1375/networkRuleSets/default
 Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
-IpRules             : 
-VirtualNetworkRules : 
+IpRules             :
+VirtualNetworkRules :
 
 Deletes the NetworkRuleSet using ResourceId of the Namespace
 

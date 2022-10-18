@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 4166119F-D26A-45A1-B040-D7B2459833D6
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/set-Azwebapp
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/set-Azwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Set-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Set-AzWebApp.md
@@ -55,7 +55,7 @@ App Service Plan Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -70,7 +70,7 @@ App Settings HashTable
 ```yaml
 Type: Hashtable
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -85,7 +85,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Enable/disable MSI on an existing azure webapp or functionapp [PREVIEW]
 ```yaml
 Type: Boolean
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Destination slot name for auto swap
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 15
@@ -130,7 +130,7 @@ Connection Strings HashTable
 ```yaml
 Type: Hashtable
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -145,7 +145,7 @@ Default Documents String Array
 ```yaml
 Type: String[]
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -175,7 +175,7 @@ Detailed Error Logging Enabled Boolean
 ```yaml
 Type: Boolean
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -190,7 +190,7 @@ Handler Mappings IList
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Management.WebSites.Models.HandlerMapping]
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 11
@@ -205,7 +205,7 @@ WebApp HostNames String Array
 ```yaml
 Type: String[]
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ HttpLoggingEnabled Boolean
 ```yaml
 Type: Boolean
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -235,7 +235,7 @@ Enable/disable redirecting all traffic to HTTPS on an existing azure webapp or f
 ```yaml
 Type: Boolean
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ Managed Pipeline Mode Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 Accepted values: Classic, Integrated
 
 Required: False
@@ -266,7 +266,7 @@ WebApp Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -281,7 +281,7 @@ Net Framework Version
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -296,7 +296,7 @@ The number of workers to be allocated
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +311,7 @@ Php Version
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -326,7 +326,7 @@ Request Tracing Enabled
 ```yaml
 Type: Boolean
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -341,7 +341,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -356,7 +356,7 @@ Use 32-bit Worker Process Boolean
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 14
@@ -371,7 +371,7 @@ WebApp Object
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -386,7 +386,7 @@ WebSocketsEnabled Boolean
 ```yaml
 Type: Boolean
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 13

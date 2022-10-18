@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: B7A675D3-EF79-4EE2-9330-D4C690739006
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmsize
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvmsize
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMSize.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMSize.md
@@ -67,7 +67,7 @@ Specifies the name of the Availability Set for which this cmdlet gets the availa
 ```yaml
 Type: String
 Parameter Sets: ListAvailableSizesForAvailabilitySet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -97,7 +97,7 @@ Specifies the location for which this cmdlet gets the available virtual machine 
 ```yaml
 Type: String
 Parameter Sets: ListVirtualMachineSizeParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -112,7 +112,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ListAvailableSizesForAvailabilitySet, ListAvailableSizesForVirtualMachine
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -127,7 +127,7 @@ Specifies the name of the virtual machine that this cmdlet gets the available vi
 ```yaml
 Type: String
 Parameter Sets: ListAvailableSizesForVirtualMachine
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 656BE930-E778-40B0-8A75-BFE52DE386CE
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmsssecret
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmsssecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssSecret.md
@@ -68,7 +68,7 @@ This means that you can use the same value for the *SourceVaultId* parameter whe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -84,7 +84,7 @@ You can use the [New-AzVmssVaultCertificateConfig](./New-AzVmssVaultCertificateC
 ```yaml
 Type: VaultCertificate[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -100,7 +100,7 @@ You can use the [New-AzVmssConfig](./New-AzVmssConfig.md) cmdlet to create this 
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

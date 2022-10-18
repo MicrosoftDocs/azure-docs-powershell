@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 695F224D-DA25-49F2-916E-25DA2A48A4A7
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmdscextensionstatus
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvmdscextensionstatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMDscExtensionStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMDscExtensionStatus.md
@@ -56,7 +56,7 @@ Specify this parameter only if you changed the default name in the Set cmdlet or
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -71,7 +71,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -86,7 +86,7 @@ Specifies the name of a virtual machine for which this cmdlet gets the DSC exten
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

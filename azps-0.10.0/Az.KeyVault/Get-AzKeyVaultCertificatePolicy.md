@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 0729687C-3104-4136-A80D-16BAEBD6B76C
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/get-AzKeyvaultcertificatepolicy
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/get-AzKeyvaultcertificatepolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificatePolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificatePolicy.md
@@ -34,11 +34,11 @@ KeySize                         : 2048
 Exportable                      : True
 ReuseKeyOnRenewal               : True
 SubjectName                     : CN=contoso.com
-DnsNames                        : 
+DnsNames                        :
 Ekus                            : {1.3.6.1.5.5.7.3.1, 1.3.6.1.5.5.7.3.2}
 ValidityInMonths                : 6
 IssuerName                      : Self
-RenewAtNumberOfDaysBeforeExpiry : 
+RenewAtNumberOfDaysBeforeExpiry :
 RenewAtPercentageLifetime       : 80
 EmailOnly                       : False
 Enabled                         : True
@@ -86,7 +86,7 @@ Specifies the name of a key vault.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

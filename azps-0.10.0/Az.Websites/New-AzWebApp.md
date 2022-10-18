@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: D6D4E733-31AE-4ABE-8C78-583EC48C56B8
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/new-Azwebapp
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/new-Azwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzWebApp.md
@@ -52,7 +52,7 @@ App Service Plan Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -67,7 +67,7 @@ App Settings Overrides HashTable
 ```yaml
 Type: Hashtable
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -82,7 +82,7 @@ App Service Environment Name
 ```yaml
 Type: String
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -97,7 +97,7 @@ App Service Environment Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -112,7 +112,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Path to the GitHub repository containign the web application to deploy.
 ```yaml
 Type: String
 Parameter Sets: SimpleParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ Ignore Custom Host Names Option
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Ignore Source Control Option
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Include Source WebApp Slots Option
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +202,7 @@ Location
 ```yaml
 Type: String
 Parameter Sets: SimpleParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -244,7 +244,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: SimpleParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -271,7 +271,7 @@ Source WebApp Object
 ```yaml
 Type: Site
 Parameter Sets: WebAppParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4

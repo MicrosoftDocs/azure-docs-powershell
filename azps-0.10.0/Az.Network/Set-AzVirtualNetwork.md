@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 93D8A341-540A-43F1-8C62-28323EAA58E0
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetwork
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetwork
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetwork.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetwork.md
@@ -32,7 +32,7 @@ New-AzResourceGroup -Name TestResourceGroup -Location centralus
 
 $backendSubnet = New-AzVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix "10.0.2.0/24"
 
-$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName 
+$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName
     TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet,$backendSubnet
 
 Remove-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork $virtualNetwork
@@ -40,8 +40,8 @@ Remove-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork $virtual
 $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-This example creates a virtual network with two subnets. Then it removes one subnet from 
-    the in-memory representation of the virtual network. The Set-AzVirtualNetwork cmdlet 
+This example creates a virtual network with two subnets. Then it removes one subnet from
+    the in-memory representation of the virtual network. The Set-AzVirtualNetwork cmdlet
     is then used to write the modified virtual network state on the service side.
 
 ## PARAMETERS
@@ -52,7 +52,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ Specifies a **VirtualNetwork** object that represents the goal state.
 ```yaml
 Type: PSVirtualNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

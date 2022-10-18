@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: C453485D-67A7-480E-83F6-527D4F5EBC93
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmdatadisk
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmdatadisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMDataDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMDataDisk.md
@@ -64,7 +64,7 @@ This setting affects the consistency and performance of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ReadOnly, ReadWrite
 
 Required: False
@@ -95,7 +95,7 @@ Specifies the size, in gigabytes, for the data disk.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -110,7 +110,7 @@ Specifies the logical unit number (LUN) of the data disk that this cmdlet modifi
 ```yaml
 Type: Int32
 Parameter Sets: ChangeWithLun
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -125,7 +125,7 @@ Specifies the name of the data disk that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: ChangeWithName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -140,7 +140,7 @@ The virtual machine managed disk's account type.
 ```yaml
 Type: StorageAccountTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: StandardLRS, PremiumLRS
 
 Required: False
@@ -172,7 +172,7 @@ Specifies whether WriteAccelerator should be enabled or disabled on the data dis
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

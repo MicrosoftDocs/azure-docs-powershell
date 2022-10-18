@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/new-azeventhubauthorizationrulesastoken
+online version: https://learn.microsoft.com/en-us/powershell/module/az.eventhub/new-azeventhubauthorizationrulesastoken
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/New-AzEventHubAuthorizationRuleSASToken.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/New-AzEventHubAuthorizationRuleSASToken.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # New-AzEventHubAuthorizationRuleSASToken
 
 ## SYNOPSIS
-Generates a SAS token for Azure eventhub authorization rule of namespace/eventhub. 
+Generates a SAS token for Azure eventhub authorization rule of namespace/eventhub.
 
 ## SYNTAX
 

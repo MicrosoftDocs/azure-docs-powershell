@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/update-Azadserviceprincipal
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/update-Azadserviceprincipal
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Update-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Update-AzADServicePrincipal.md
@@ -44,8 +44,8 @@ Update-AzADServicePrincipal -InputObject <PSADServicePrincipal> [-DisplayName <S
 ```
 
 ## DESCRIPTION
-Updates an existing azure active directory service principal. 
-To update the credentials associated with this service principal, please use New-AzADSpCredential cmdlet. 
+Updates an existing azure active directory service principal.
+To update the credentials associated with this service principal, please use New-AzADSpCredential cmdlet.
 To update the properties associated with the underlying application, please use Update-AzADApplication cmdlet.
 
 ## EXAMPLES

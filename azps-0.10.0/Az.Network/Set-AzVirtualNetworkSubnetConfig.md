@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: D1D51DEF-05DE-45C4-9013-A02A5B248EAC
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworksubnetconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworksubnetconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkSubnetConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkSubnetConfig.md
@@ -42,7 +42,7 @@ New-AzResourceGroup -Name TestResourceGroup -Location centralus
 
 $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
 
-$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup    
+$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup
     -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
 
 Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork -AddressPrefix "10.0.3.0/23"
@@ -50,9 +50,9 @@ Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNe
 $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-This example creates a virtual network with one subnet. Then is calls 
-    Set-AzVirtualNetworkSubnetConfig to modify the AddressPrefix of the subnet. This 
-    only impacts the in-memory representation of the virtual network. 
+This example creates a virtual network with one subnet. Then is calls
+    Set-AzVirtualNetworkSubnetConfig to modify the AddressPrefix of the subnet. This
+    only impacts the in-memory representation of the virtual network.
     Set-AzVirtualNetwork is then called to modify the virtual network in Azure.
 
 ### 2: Add a network security group to a subnet
@@ -61,26 +61,26 @@ New-AzResourceGroup -Name TestResourceGroup -Location centralus
 
 $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
 
-$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup 
+$virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup
     -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
 
-$rdpRule = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" -Access Allow 
+$rdpRule = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" -Access Allow
     -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
 
-$networkSecurityGroup = New-AzNetworkSecurityGroup -ResourceGroupName 
+$networkSecurityGroup = New-AzNetworkSecurityGroup -ResourceGroupName
     TestResourceGroup -Location centralus -Name "NSG-FrontEnd" -SecurityRules $rdpRule
 
-Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork -AddressPrefix 
+Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork -AddressPrefix
     "10.0.1.0/24" -NetworkSecurityGroup $networkSecurityGroup
 
 $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-This example creates a resource group with one virtual network containing just one 
-    subnet. It then creates a network security group with an allow rule for RDP traffic. The 
-    Set-AzVirtualNetworkSubnetConfig cmdlet is used to modify the in-memory 
-    representation of the frontend subnet so that it points to the newly created network 
-    security group. The Set-AzVirtualNetwork cmdlet is then called to write the modified 
+This example creates a resource group with one virtual network containing just one
+    subnet. It then creates a network security group with an allow rule for RDP traffic. The
+    Set-AzVirtualNetworkSubnetConfig cmdlet is used to modify the in-memory
+    representation of the frontend subnet so that it points to the newly created network
+    security group. The Set-AzVirtualNetwork cmdlet is then called to write the modified
     state back to the service.
 
 ## PARAMETERS
@@ -91,7 +91,7 @@ Specifies a range of IP addresses for a subnet configuration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ Specifies the name of a subnet configuration that this cmdlet configures.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +136,7 @@ Specifies a **NetworkSecurityGroup** object.
 ```yaml
 Type: PSNetworkSecurityGroup
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Specifies the ID of a network security group.
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ Specifies the route table object that is associated with the network security gr
 ```yaml
 Type: PSRouteTable
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ Specifies the ID of the route table object that is associated with the network s
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ Service Endpoint Value
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Specifies the **VirtualNetwork** object that contains the subnet configuration.
 ```yaml
 Type: PSVirtualNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
