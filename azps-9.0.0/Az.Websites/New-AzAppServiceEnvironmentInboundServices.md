@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates inbound services for App Service Environment. For ASEv2 ILB, this will create an Azure Private DNS Zone and records to map to the internal IP. For ASEv3 it will in addition ensure subnet has Network Policy disabled and will create a private endpoint.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/new-azappserviceenvironmentinboundservices) for up-to-date information.
+
 ## SYNTAX
 
 ### SubnetNameParameterSet (Default)

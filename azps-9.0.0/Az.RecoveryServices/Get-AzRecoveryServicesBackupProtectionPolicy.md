@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets Backup protection policies for a vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupprotectionpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### NoParamSet (Default)

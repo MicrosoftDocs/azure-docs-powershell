@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets properties of a SAP monitor for the specified subscription, resource group, and resource name.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hanaonazure/get-azsapmonitor) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

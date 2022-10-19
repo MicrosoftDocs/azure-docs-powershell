@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deploys an Azure Web App from a ZIP, JAR, or WAR file using zipdeploy.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/publish-azwebapp) for up-to-date information.
+
 ## SYNTAX
 
 ### FromWebApp (Default)

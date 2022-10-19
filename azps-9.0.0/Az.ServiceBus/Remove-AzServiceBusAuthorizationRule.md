@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes the Authorization Rule of a ServiceBus Namespace, Queue or Topic
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/remove-azservicebusauthorizationrule) for up-to-date information.
+
 ## SYNTAX
 
 ### RemoveExpandedNamespace (Default)

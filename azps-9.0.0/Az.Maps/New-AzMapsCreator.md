@@ -14,6 +14,9 @@ Create or update a Maps Creator resource.
 Creator resource will manage Azure resources required to populate a custom set of mapping data.
 It requires an account to exist before it can be created.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.maps/new-azmapscreator) for up-to-date information.
+
 ## SYNTAX
 
 ```

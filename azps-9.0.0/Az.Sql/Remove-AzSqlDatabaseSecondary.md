@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Terminates data replication between a SQL Database and the specified secondary database.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/remove-azsqldatabasesecondary) for up-to-date information.
+
 ## SYNTAX
 
 ```

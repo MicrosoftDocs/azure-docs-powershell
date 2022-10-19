@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists NetworkManager Active Connectivity Configurations in network manager.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-aznetworkmanageractiveconnectivityconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ```

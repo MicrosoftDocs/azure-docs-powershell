@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a in-memory object for Diagnostics Extension
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/new-azcloudservicediagnosticsextension) for up-to-date information.
+
 ## SYNTAX
 
 ```

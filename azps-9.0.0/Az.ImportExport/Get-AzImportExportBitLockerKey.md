@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns the BitLocker Keys for all drives in the specified job.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/get-azimportexportbitlockerkey) for up-to-date information.
+
 ## SYNTAX
 
 ```

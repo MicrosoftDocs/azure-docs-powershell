@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes the scan associated with the data source
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/remove-azpurviewscan) for up-to-date information.
+
 ## SYNTAX
 
 ```

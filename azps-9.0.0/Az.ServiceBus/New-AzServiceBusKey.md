@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerates the SASKey of a ServiceBus namespace, queue or topic.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/new-azservicebuskey) for up-to-date information.
+
 ## SYNTAX
 
 ### NewExpandedNamespace (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new CosmosDB Sql IndexingPolicy object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cosmosdb/new-azcosmosdbsqlindexingpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ```

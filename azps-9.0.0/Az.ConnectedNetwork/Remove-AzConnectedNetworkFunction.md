@@ -14,6 +14,9 @@ Deletes the specified network function resource.
 This operation can take up to 1 hour to complete.
 This is expected service behavior.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/remove-azconnectednetworkfunction) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

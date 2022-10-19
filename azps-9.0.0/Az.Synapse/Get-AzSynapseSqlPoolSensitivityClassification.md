@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the current information types and sensitivity labels of columns in the SQL pool.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapsesqlpoolsensitivityclassification) for up-to-date information.
+
 ## SYNTAX
 
 ### SqlPoolObjectParameterSet (Default)

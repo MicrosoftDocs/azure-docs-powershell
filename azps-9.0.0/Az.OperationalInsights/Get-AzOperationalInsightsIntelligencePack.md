@@ -16,6 +16,9 @@ Gets the available Intelligence Packs.
 > [!NOTE]
 > Solutions is being deprecated, please use [az monitor log-analytics solution](https://learn.microsoft.com/en-us/cli/azure/monitor/log-analytics/solution?view=azure-cli-latest) and [Get-AzMonitorLogAnalyticsSolution](https://learn.microsoft.com/en-us/powershell/module/az.monitoringsolutions/get-azmonitorloganalyticssolution?view=azps-5.9.0) instead if this command.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.operationalinsights/get-azoperationalinsightsintelligencepack) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Merge two reservations into one reservation within the same reservation order.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/merge-azreservation) for up-to-date information.
+
 ## SYNTAX
 
 ```

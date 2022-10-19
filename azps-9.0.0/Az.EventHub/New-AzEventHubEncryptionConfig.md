@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an in memory object instance of PSEncryptionConfigAttributes which can then be given as input to New-AzEventHubNamespace and Set-AzEventHubNamespace to enable encryption 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/new-azeventhubencryptionconfig) for up-to-date information.
+
 ## SYNTAX
 
 ```

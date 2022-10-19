@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes an allowed FQDN from the list of outbound firewall rules (Allowed FQDNs) from a SQL Database server.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/remove-azsqlserveroutboundfirewallrule) for up-to-date information.
+
 ## SYNTAX
 
 ```

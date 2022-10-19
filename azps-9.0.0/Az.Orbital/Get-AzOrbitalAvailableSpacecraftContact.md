@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Returns list of available contacts.
 A contact is available if the spacecraft is visible from the ground station for more than the minimum viable contact duration provided in the contact profile.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.orbital/get-azorbitalavailablespacecraftcontact) for up-to-date information.
+
 ## SYNTAX
 
 ### ListExpanded (Default)
