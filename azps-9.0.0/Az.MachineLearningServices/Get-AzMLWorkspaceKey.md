@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Lists all the keys associated with this workspace.
 This includes keys for the storage account, app insights and password for container registry
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/get-azmlworkspacekey) for up-to-date information.
+
 ## SYNTAX
 
 ```

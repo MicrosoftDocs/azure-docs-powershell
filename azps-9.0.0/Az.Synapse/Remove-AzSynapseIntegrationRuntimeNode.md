@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove a node with the given name on an integration runtime.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/remove-azsynapseintegrationruntimenode) for up-to-date information.
+
 ## SYNTAX
 
 ### RemoveByNameParameterSet (Default)

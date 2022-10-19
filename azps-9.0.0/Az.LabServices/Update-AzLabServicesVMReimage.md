@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Re-image a lab virtual machine.
 The virtual machine will be deleted and recreated using the latest published snapshot of the reference environment of the lab.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/update-azlabservicesvmreimage) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceId (Default)

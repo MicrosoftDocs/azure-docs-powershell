@@ -14,6 +14,9 @@ Deletes a DNS forwarding ruleset.
 WARNING: This operation cannot be undone.
 All forwarding rules within the ruleset will be deleted.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/remove-azdnsforwardingruleset) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

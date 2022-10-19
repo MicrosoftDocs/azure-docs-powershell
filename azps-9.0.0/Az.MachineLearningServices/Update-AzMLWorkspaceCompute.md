@@ -14,6 +14,9 @@ Updates properties of a compute.
 This call will overwrite a compute if it exists.
 This is a nonrecoverable operation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/update-azmlworkspacecompute) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

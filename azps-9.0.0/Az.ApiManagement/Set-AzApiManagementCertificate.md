@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Modifies an API Management certificate which is configured for mutual authentication with backend.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/set-azapimanagementcertificate) for up-to-date information.
+
 ## SYNTAX
 
 ### LoadFromFile (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an in-memory object for AzureSynapseWorkspaceScanRuleset.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/new-azpurviewazuresynapseworkspacescanrulesetobject) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Exports the properties (Disk usage and Acl) for the entire tree from the specified path to a output path
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/export-azdatalakestorechilditemproperty) for up-to-date information.
+
 ## SYNTAX
 
 ### GetDiskUsage

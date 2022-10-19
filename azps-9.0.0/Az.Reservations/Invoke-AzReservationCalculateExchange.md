@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Calculates price for exchanging `Reservations` if there are no policy errors.\n
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/invoke-azreservationcalculateexchange) for up-to-date information.
+
 ## SYNTAX
 
 ### PostExpanded (Default)

@@ -15,6 +15,9 @@ Deletes a custom role in Azure RBAC.
 The role to be deleted is specified using the Id property of the role.
 Delete will fail if there are existing role assignments made to the custom role.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azroledefinition) for up-to-date information.
+
 ## SYNTAX
 
 ### RoleDefinitionIdParameterSet (Default)

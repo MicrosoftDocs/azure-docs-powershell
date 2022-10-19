@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get either a list of all volumes from a volume group or get a single volume from a volume group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/get-azelasticsanvolume) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

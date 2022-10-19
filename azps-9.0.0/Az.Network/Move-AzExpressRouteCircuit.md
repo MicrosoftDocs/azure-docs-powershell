@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Moves an ExpressRoute circuit from the classic deployment model to the Resource Manager deployment model.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/move-azexpressroutecircuit) for up-to-date information.
+
 ## SYNTAX
 
 ```

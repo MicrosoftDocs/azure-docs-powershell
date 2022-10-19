@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List the vm ingestion details that will be monitored by the Elastic monitor resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elastic/get-azelasticdetailvmingestion) for up-to-date information.
+
 ## SYNTAX
 
 ### Details (Default)

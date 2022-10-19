@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove/Delete the replication connection on the destination volume, and send release to the source replication
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/remove-aznetappfilesreplication) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsParameterSet (Default)
