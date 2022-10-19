@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Advisor
 online version: https://docs.microsoft.com/powershell/module/az.advisor/Get-AzAdvisorRecommendation
 schema: 2.0.0
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -Filter
 The filter to apply to the recommendations.
-Filter can be applied to properties ['ResourceId', 'ResourceGroup', 'RecommendationTypeGuid', '[Category](#category)'] with operators ['eq', 'and', 'or'].
+Filter can be applied to properties ['ResourceId', 'ResourceGroup', 'RecommendationTypeGuid', '[Category](#-category)'] with operators ['eq', 'and', 'or'].
 Example:
 - $filter=Category eq 'Cost' and ResourceGroup eq 'MyResourceGroup'
 
