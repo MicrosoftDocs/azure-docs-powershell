@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/set-azapimanagement
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/set-azapimanagement
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagement.md
@@ -59,7 +59,7 @@ $proxy2 = New-AzApiManagementCustomHostnameConfiguration -Hostname "gatewayl.foo
 $proxyCustomConfig = @($proxy1,$proxy2)
 $apim = Get-AzApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
 $apim.PortalCustomHostnameConfiguration = $portal
-$apim.ProxyCustomHostnameConfiguration = $proxyCustomConfig 
+$apim.ProxyCustomHostnameConfiguration = $proxyCustomConfig
 Set-AzApiManagement -InputObject $apim -SystemAssignedIdentity
 ```
 

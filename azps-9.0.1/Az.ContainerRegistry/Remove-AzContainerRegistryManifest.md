@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml
 Module Name: Az.ContainerRegistry
-online version: https://docs.microsoft.com/powershell/module/az.containerregistry/remove-azcontainerregistrymanifest
+online version: https://learn.microsoft.com/powershell/module/az.containerregistry/remove-azcontainerregistrymanifest
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Remove-AzContainerRegistryManifest.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Remove-AzContainerRegistryManifest.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzContainerRegistryManifest
 
 ## SYNOPSIS
-Delete ACR manifest. 
+Delete ACR manifest.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Remove-AzContainerRegistryManifest -RepositoryName <String> -Tag <String> -Regis
 
 ## DESCRIPTION
 Delete ACR manifest.
-To use this cmdlet please run 
+To use this cmdlet please run
 `Update-AzContainerRegistryRepository -RegistryName XXX -Repository XXX -DeleteEnable $true`
 first.
 

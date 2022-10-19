@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/update-azsynapsekustopooldataconnection
+online version: https://learn.microsoft.com/powershell/module/az.synapse/update-azsynapsekustopooldataconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Update-AzSynapseKustoPoolDataConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Update-AzSynapseKustoPoolDataConnection.md
@@ -82,8 +82,8 @@ Update-AzSynapseKustoPoolDataConnection -ResourceGroupName testrg -WorkspaceName
 ```
 
 ```output
-Kind     Location  Name                                            
-----     --------  ----                                            
+Kind     Location  Name
+----     --------  ----
 EventHub East US 2 testws/testkustopool/testdatabase/eventhubdc
 ```
 
@@ -96,7 +96,7 @@ Update-AzSynapseKustoPoolDataConnection -ResourceGroupName testrg -WorkspaceName
 
 ```output
 Kind      Location  Name
-----      --------  ----                                              
+----      --------  ----
 EventGrid East US 2 testws/testkustopool/testdatabase/eventgriddc
 ```
 
@@ -108,8 +108,8 @@ Update-AzSynapseKustoPoolDataConnection -ResourceGroupName testrg -WorkspaceName
 ```
 
 ```output
-Kind   Location  Name 
-----   --------  ----                                           
+Kind   Location  Name
+----   --------  ----
 IotHub East US 2 testws/testkustopool/testdatabase/iothubdc
 ```
 
@@ -122,8 +122,8 @@ Update-AzSynapseKustoPoolDataConnection -InputObject $dataConnection -Location e
 ```
 
 ```output
-Kind     Location  Name                                            
-----     --------  ----                                            
+Kind     Location  Name
+----     --------  ----
 EventHub East US 2 testws/testkustopool/testdatabase/eventhubdc
 ```
 
@@ -137,7 +137,7 @@ Update-AzSynapseKustoPoolDataConnection -InputObject $dataConnection -Location e
 
 ```output
 Kind      Location  Name
-----      --------  ----                                              
+----      --------  ----
 EventGrid East US 2 testws/testkustopool/testdatabase/eventgriddc
 ```
 
@@ -150,8 +150,8 @@ Update-AzSynapseKustoPoolDataConnection -InputObject $dataConnection -Location e
 ```
 
 ```output
-Kind   Location  Name 
-----   --------  ----                                           
+Kind   Location  Name
+----   --------  ----
 IotHub East US 2 testws/testkustopool/testdatabase/iothubdc
 ```
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 47FE9EF4-6000-4096-8F04-26A0C6661FDB
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvirtualnetworksubnetconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvirtualnetworksubnetconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetworkSubnetConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetworkSubnetConfig.md
@@ -38,9 +38,9 @@ Remove-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork $virtual
 $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-This example creates a resource group and a virtual network with two subnets. It then 
-    uses the Remove-AzVirtualNetworkSubnetConfig command to remove the backend subnet 
-    from the in-memory representation of the virtual network. Set-AzVirtualNetwork is 
+This example creates a resource group and a virtual network with two subnets. It then
+    uses the Remove-AzVirtualNetworkSubnetConfig command to remove the backend subnet
+    from the in-memory representation of the virtual network. Set-AzVirtualNetwork is
     then called to modify the virtual network on the server side.
 
 ## PARAMETERS

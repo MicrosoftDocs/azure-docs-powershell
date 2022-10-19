@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/Az.storage/get-azstorageblobqueryresult
+online version: https://learn.microsoft.com/powershell/module/Az.storage/get-azstorageblobqueryresult
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobQueryResult.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobQueryResult.md
@@ -78,7 +78,7 @@ PS C:\> $blob = Get-AzStorageBlob -Container $containerName -Blob $blobName -Sna
 
 PS C:\> $inputconfig = New-AzStorageBlobQueryConfig -AsCsv -ColumnSeparator "," -QuotationCharacter """" -EscapeCharacter "\" -RecordSeparator "`n" -HasHeader
 
-PS C:\> $outputconfig = New-AzStorageBlobQueryConfig -AsJson -RecordSeparator "`n" 
+PS C:\> $outputconfig = New-AzStorageBlobQueryConfig -AsJson -RecordSeparator "`n"
 
 PS C:\> $queryString = "SELECT * FROM BlobStorage WHERE _1 LIKE '1%%'"
 
@@ -88,7 +88,7 @@ PS C:\> $result
 
 BytesScanned FailureCount BlobQueryError
 ------------ ------------ --------------
-   187064971            1 {ParseError}  
+   187064971            1 {ParseError}
 
 
 
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueryString
-Query string, see more details in: https://docs.microsoft.com/azure/storage/blobs/query-acceleration-sql-reference
+Query string, see more details in: https://learn.microsoft.com/azure/storage/blobs/query-acceleration-sql-reference
 
 ```yaml
 Type: System.String

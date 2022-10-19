@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Marketplace
-online version: https://docs.microsoft.com/powershell/module/az.marketplace/set-azmarketplaceprivatestorecollectionoffer
+online version: https://learn.microsoft.com/powershell/module/az.marketplace/set-azmarketplaceprivatestorecollectionoffer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Set-AzMarketplacePrivateStoreCollectionOffer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Set-AzMarketplacePrivateStoreCollectionOffer.md
@@ -25,7 +25,7 @@ Update or add an offer to a specific collection of the private store.
 
 ## EXAMPLES
 
-### Example 1: Creates or updates offer to private store collection 
+### Example 1: Creates or updates offer to private store collection
 ```powershell
 $acc = @{Accessibility = "azure_managedservices_professional"}
 New-AzMarketplacePrivateStoreCollectionOffer -CollectionId fdb889a1-cf3e-49f0-95b8-2bb012fa01f1 -PrivateStoreId 7f5402e4-e8f4-46bd-9bd1-8d27866a606b  -OfferId aumatics.azure_managedservices -Plan $acc

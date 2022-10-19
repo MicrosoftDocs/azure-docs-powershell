@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/remove-azdatalakegen2aclrecursive
+online version: https://learn.microsoft.com/powershell/module/az.storage/remove-azdatalakegen2aclrecursive
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzDataLakeGen2AclRecursive.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzDataLakeGen2AclRecursive.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzDataLakeGen2AclRecursive
 
 ## SYNOPSIS
-Remove ACL recursively on the specified path. 
+Remove ACL recursively on the specified path.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Remove-AzDataLakeGen2AclRecursive [-FileSystem] <String> [[-Path] <String>] [-Co
 ```
 
 ## DESCRIPTION
-The **Remove-AzDataLakeGen2AclRecursive** cmdlet removes ACL recursively on the specified path. 
+The **Remove-AzDataLakeGen2AclRecursive** cmdlet removes ACL recursively on the specified path.
 The ACL entries in original ACL, which has same AccessControlType, DefaultScope and EntityId with input ACL entries (even with different permission) wil lbe removed.
 
 ## EXAMPLES
@@ -35,7 +35,7 @@ PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId 
 PS C:\> Remove-AzDataLakeGen2AclRecursive -FileSystem "filesystem1" -Acl $acl -Context $ctx
 WARNING: To find the ACL Entry to remove, will only compare AccessControlType, DefaultScope and EntityId, will omit Permission.
 
-FailedEntries                   : 
+FailedEntries                   :
 TotalDirectoriesSuccessfulCount : 7
 TotalFilesSuccessfulCount       : 5
 TotalFailureCount               : 0
@@ -60,8 +60,8 @@ ContinuationToken               : VBaHi5TfyO2ai1wYTRhIL2FjbGNibjA2c3RmATAxRDVEN0
 
 PS C:\> $result.FailedEntries
 
-Name            IsDirectory ErrorMessage                                                                   
-----            ----------- ------------                                                                   
+Name            IsDirectory ErrorMessage
+----            ----------- ------------
 dir0/dir2/file4       False This request is not authorized to perform this operation using this permission.
 
 # user need fix the failed item , then can resume with ContinuationToken
@@ -71,7 +71,7 @@ WARNING: To find the ACL Entry to remove, will only compare AccessControlType, D
 
 PS C:\> $result
 
-FailedEntries                   : 
+FailedEntries                   :
 TotalDirectoriesSuccessfulCount : 100
 TotalFilesSuccessfulCount       : 1000
 TotalFailureCount               : 0
@@ -125,8 +125,8 @@ ContinuationToken               : VBaHi5TfyO2ai1wYTRhIL2FjbGNibjA2c3RmATAxRDVEN0
 
 PS C:\> $result.FailedEntries
 
-Name            IsDirectory ErrorMessage                                                                   
-----            ----------- ------------                                                                   
+Name            IsDirectory ErrorMessage
+----            ----------- ------------
 dir0/dir1/file1       False This request is not authorized to perform this operation using this permission.
 dir0/dir2/file4       False This request is not authorized to perform this operation using this permission.
 
@@ -135,7 +135,7 @@ dir0/dir2/file4       False This request is not authorized to perform this opera
 PS C:\> foreach ($path in $result.FailedEntries.Name)
         {
             # user code to fix failed entry in $path
-            
+
             #set ACL again
             Remove-AzDataLakeGen2AclRecursive -FileSystem "filesystem1" -Path $path -Acl $acl -Context $ctx
         }

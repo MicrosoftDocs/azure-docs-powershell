@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: BBC85035-DCF7-44FA-A747-A1563A55B820
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebappbackuplist
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebappbackuplist
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppBackupList.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppBackupList.md

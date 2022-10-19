@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Security
 Module Guid: 5e312bb4-9d3a-4c88-94c3-8e5bbb2e3da4
-Download Help Link: https://docs.microsoft.com/powershell/module/az.security
+Download Help Link: https://learn.microsoft.com/powershell/module/az.security
 Help Version: 0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Az.Security.md
@@ -44,7 +44,7 @@ Get device security group (IoT Hub security)
 Gets security solutions that were discovered by Azure Security Center
 
 ### [Get-AzExternalSecuritySolution](Get-AzExternalSecuritySolution.md)
-Get external security solution 
+Get external security solution
 
 ### [Get-AzIotSecurityAnalytics](Get-AzIotSecurityAnalytics.md)
 Get IoT security analytics

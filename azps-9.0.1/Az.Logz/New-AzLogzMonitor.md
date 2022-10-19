@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Logz
-online version: https://docs.microsoft.com/powershell/module/az.logz/new-azlogzmonitor
+online version: https://learn.microsoft.com/powershell/module/az.logz/new-azlogzmonitor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/New-AzLogzMonitor.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/New-AzLogzMonitor.md

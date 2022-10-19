@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: E7F31B71-983A-4DB3-BB30-BDC5C0247E74
-online version: https://docs.microsoft.com/powershell/module/az.automation/publish-azautomationrunbook
+online version: https://learn.microsoft.com/powershell/module/az.automation/publish-azautomationrunbook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Publish-AzAutomationRunbook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Publish-AzAutomationRunbook.md

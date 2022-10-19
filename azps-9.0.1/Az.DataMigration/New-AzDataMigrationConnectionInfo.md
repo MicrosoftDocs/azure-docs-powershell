@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/New-AzDataMigrationConnectionInfo
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/New-AzDataMigrationConnectionInfo
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationConnectionInfo.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationConnectionInfo.md
@@ -20,7 +20,7 @@ New-AzDataMigrationConnectionInfo -ServerType <ServerTypeEnum> [-DefaultProfile 
 ```
 
 ## DESCRIPTION
-The New-AzDataMigrationConnectionInfo cmdlet creates new a Connection Info object specifying the server type for connection. 
+The New-AzDataMigrationConnectionInfo cmdlet creates new a Connection Info object specifying the server type for connection.
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerType
-Enum that describes server type to connect to. Currently supported values are SQL for SQL Server, Azure SQL Managed Instance, MongoDb, CosmosDb and Azure SQL Database. 
+Enum that describes server type to connect to. Currently supported values are SQL for SQL Server, Azure SQL Managed Instance, MongoDb, CosmosDb and Azure SQL Database.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataMigration.Models.ServerTypeEnum

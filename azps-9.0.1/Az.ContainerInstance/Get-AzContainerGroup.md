@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ContainerInstance
-online version: https://docs.microsoft.com/powershell/module/az.containerinstance/get-azcontainergroup
+online version: https://learn.microsoft.com/powershell/module/az.containerinstance/get-azcontainergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/Get-AzContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/Get-AzContainerGroup.md
@@ -74,32 +74,32 @@ EncryptionPropertyVaultBaseUrl :
 IPAddressDnsNameLabel          :
 IPAddressFqdn                  :
 IPAddressIP                    : 000.000.000.000
-IPAddressPort                  : {Microsoft.Azure.PowerShell.Cmdlets.ContainerInsta 
-                                 nce.Models.Api20210301.Port, Microsoft.Azure.Power 
-                                 Shell.Cmdlets.ContainerInstance.Models.Api20210301 
+IPAddressPort                  : {Microsoft.Azure.PowerShell.Cmdlets.ContainerInsta
+                                 nce.Models.Api20210301.Port, Microsoft.Azure.Power
+                                 Shell.Cmdlets.ContainerInstance.Models.Api20210301
                                  .Port}
 IPAddressType                  : Public
-Id                             : /subscriptions/00000000-0000-0000-0000-000000000000 
-                                 0/resourceGroups/test-rg/providers/Microsoft.Contai 
+Id                             : /subscriptions/00000000-0000-0000-0000-000000000000
+                                 0/resourceGroups/test-rg/providers/Microsoft.Contai
                                  nerInstance/containerGroups/test-cg1
 IdentityPrincipalId            :
 IdentityTenantId               :
 IdentityType                   :
-IdentityUserAssignedIdentity   : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan 
-                                 ce.Models.Api20210301.ContainerGroupIdentityUserAs 
+IdentityUserAssignedIdentity   : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan
+                                 ce.Models.Api20210301.ContainerGroupIdentityUserAs
                                  signedIdentities
 ImageRegistryCredentials       :
 InitContainer                  : {}
 InstanceViewEvent              :
 InstanceViewState              :
 Location                       : eastus
-LogAnalyticLogType             : 
-LogAnalyticMetadata            : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan 
+LogAnalyticLogType             :
+LogAnalyticMetadata            : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan
                                  ce.Models.Api20210301.LogAnalyticsMetadata
 LogAnalyticWorkspaceId         :
 LogAnalyticWorkspaceKey        :
-LogAnalyticWorkspaceResourceId : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan 
-                                 ce.Models.Api20210301.LogAnalyticsWorkspaceResourc 
+LogAnalyticWorkspaceResourceId : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan
+                                 ce.Models.Api20210301.LogAnalyticsWorkspaceResourc
                                  eId
 Name                           : test-cg1
 NetworkProfileId               :
@@ -108,9 +108,9 @@ ProvisioningState              : Succeeded
 ResourceGroupName              : test-rg
 RestartPolicy                  : Never
 Sku                            : Standard
-Tag                            : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan 
+Tag                            : Microsoft.Azure.PowerShell.Cmdlets.ContainerInstan
                                  ce.Models.Api20210301.ResourceTags
-Type                           : Microsoft.ContainerInstance/containerGroups        
+Type                           : Microsoft.ContainerInstance/containerGroups
 Volume                         :
 ```
 

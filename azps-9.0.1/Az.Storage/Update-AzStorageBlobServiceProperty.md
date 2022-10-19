@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/update-azstorageblobserviceproperty
+online version: https://learn.microsoft.com/powershell/module/az.storage/update-azstorageblobserviceproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzStorageBlobServiceProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzStorageBlobServiceProperty.md
@@ -44,16 +44,16 @@ The **Update-AzStorageBlobServiceProperty** cmdlet modifies the service properti
 ### Example 1: Set Blob service DefaultServiceVersion to 2018-03-28
 <!-- Skip: Output cannot be splitted from code -->
 ```
-C:\PS> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -DefaultServiceVersion 2018-03-28 
+C:\PS> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -DefaultServiceVersion 2018-03-28
 
 StorageAccountName            : mystorageaccount
 ResourceGroupName             : myresourcegroup
 DefaultServiceVersion         : 2018-03-28
 DeleteRetentionPolicy.Enabled : False
-DeleteRetentionPolicy.Days    : 
-RestorePolicy.Enabled         : 
-RestorePolicy.Days            : 
-ChangeFeed.Enabled            : 
+DeleteRetentionPolicy.Days    :
+RestorePolicy.Enabled         :
+RestorePolicy.Days            :
+ChangeFeed.Enabled            :
 ChangeFeed.RetentionInDays    :
 IsVersioningEnabled           :
 ```
@@ -67,19 +67,19 @@ C:\PS> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegroup" 
 
 StorageAccountName            : mystorageaccount
 ResourceGroupName             : myresourcegroup
-DefaultServiceVersion         : 
+DefaultServiceVersion         :
 DeleteRetentionPolicy.Enabled : False
-DeleteRetentionPolicy.Days    : 
-RestorePolicy.Enabled         : 
-RestorePolicy.Days            : 
+DeleteRetentionPolicy.Days    :
+RestorePolicy.Enabled         :
+RestorePolicy.Days            :
 ChangeFeed.Enabled            : True
 ChangeFeed.RetentionInDays    : 5
 IsVersioningEnabled           :
 ```
 
 This command enables Changefeed on Blob service of a Storage account with ChangeFeedRetentionInDays as 5 days.
-Change feed support in Azure Blob Storage works by listening to a GPv2 or Blob storage account for any blob level creation, modification, or deletion events. 
-It then outputs an ordered log of events for the blobs stored in the $blobchangefeed container within the storage account. 
+Change feed support in Azure Blob Storage works by listening to a GPv2 or Blob storage account for any blob level creation, modification, or deletion events.
+It then outputs an ordered log of events for the blobs stored in the $blobchangefeed container within the storage account.
 The serialized changes are persisted as an Apache Avro file and can be processed asynchronously and incrementally.
 If not specify ChangeFeedRetentionInDays, will get null value in service properties, indicates an infinite retention of the change feed.
 
@@ -90,12 +90,12 @@ C:\PS> Update-AzStorageBlobServiceProperty -ResourceGroupName "myresourcegroup" 
 
 StorageAccountName            : mystorageaccount
 ResourceGroupName             : myresourcegroup
-DefaultServiceVersion         : 
+DefaultServiceVersion         :
 DeleteRetentionPolicy.Enabled : False
-DeleteRetentionPolicy.Days    : 
-RestorePolicy.Enabled         : 
-RestorePolicy.Days            : 
-ChangeFeed                    : 
+DeleteRetentionPolicy.Days    :
+RestorePolicy.Enabled         :
+RestorePolicy.Days            :
+ChangeFeed                    :
 ChangeFeed.RetentionInDays    :
 IsVersioningEnabled           : True
 ```
@@ -105,7 +105,7 @@ This command enables Versioning on Blob service of a Storage account
 ## PARAMETERS
 
 ### -ChangeFeedRetentionInDays
-Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). 
+Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years).
 Never specify it when enabled changeFeed will get null value in service properties, indicates an infinite retention of the change feed.
 
 ```yaml

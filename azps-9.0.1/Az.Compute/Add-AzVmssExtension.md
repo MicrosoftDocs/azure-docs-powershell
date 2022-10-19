@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 7EC166C7-151D-4DA0-9B10-165E735D4F12
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmssextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmssextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssExtension.md
@@ -57,7 +57,7 @@ $protectedSettings = @{
 "managedIdentity" = @{ "clientId" = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"};
 }
 
-$publicSettings = @{ 
+$publicSettings = @{
 "fileUris"= (,"https://storage.blob.core.windows.net/itfiles/$($BatchFile)");
 "commandToExecute"= "sh $($BatchFile)"
 }
@@ -82,7 +82,7 @@ Update-AzVmss `
     -VirtualMachineScaleSet $vmss
 ```
 
-This command adds an extension to the VMSS with a sample bash script on a blob storage, specify the url of blob storage and executable command in settings and security access in protected settings. 
+This command adds an extension to the VMSS with a sample bash script on a blob storage, specify the url of blob storage and executable command in settings and security access in protected settings.
 
 ## PARAMETERS
 

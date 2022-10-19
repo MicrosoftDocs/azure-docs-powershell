@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/start-azspringcloudappdeploymentjfr
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/start-azspringcloudappdeploymentjfr
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Start-AzSpringCloudAppDeploymentJfr.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Start-AzSpringCloudAppDeploymentJfr.md
@@ -36,7 +36,7 @@ Start JFR
 
 ### Example 1: Start Spring Cloud Service by name
 ```powershell
-Start-AzSpringCloudAppDeploymentJfr -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service -AppName gateway -Name default 
+Start-AzSpringCloudAppDeploymentJfr -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service -AppName gateway -Name default
 ```
 
 Start Spring Cloud Service by name.

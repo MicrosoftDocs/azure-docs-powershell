@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: F20A5FD3-6EC3-4EFE-988C-75F8583961A4
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstorageblobcontent
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstorageblobcontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageBlobContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageBlobContent.md
@@ -102,8 +102,8 @@ PS C:\> Set-AzStorageBlobContent -File $filepath -Container "contosouploads" -Pr
 
    AccountName: storageaccountname, ContainerName: contosouploads
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
 index.html           BlockBlob 403116          text/html                      2020-09-22 08:06:53Z Cool                                    False
 ```
 
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-Specifies properties for the uploaded blob. 
+Specifies properties for the uploaded blob.
 The supported properties are: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, ContentMD5, ContentType.
 
 ```yaml
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 
 ### -StandardBlobTier
 Block Blob Tier, valid values are Hot/Cool/Archive.
-See detail in https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers
+See detail in https://learn.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers
 
 ```yaml
 Type: System.String
@@ -446,9 +446,9 @@ Accept wildcard characters: False
 ```
 
 ### -TagCondition
-Optional Tag expression statement to check match condition. 
+Optional Tag expression statement to check match condition.
 The blob request will fail when the blob tags does not match the given expression.
-See details in https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
 
 ```yaml
 Type: System.String

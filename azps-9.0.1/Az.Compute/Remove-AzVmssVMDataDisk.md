@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azvmssvmdatadisk
+online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azvmssvmdatadisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVmssVMDataDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVmssVMDataDisk.md
@@ -26,7 +26,7 @@ The **Remove-AzVmssVMDataDisk** cmdlet removes a data disk from a VM scale set V
 
 ### Example 1: Remove a data disk from a VM scale set VM
 ```powershell
-$VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0 
+$VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0
 Remove-AzVmssVMDataDisk -VirtualMachineScaleSetVM $VirtualMachine -Lun 0
 Update-AzVmssVM -VirtualMachineScaleSetVM $VmssVM
 ```

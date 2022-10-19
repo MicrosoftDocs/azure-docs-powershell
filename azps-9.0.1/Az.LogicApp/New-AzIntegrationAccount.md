@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 5F1A4FE0-CB57-45D3-9F08-879469A61E1E
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/new-azintegrationaccount
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/new-azintegrationaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/New-AzIntegrationAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/New-AzIntegrationAccount.md
@@ -41,7 +41,7 @@ Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/pro
 Name        : IntegrationAccount31
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
 ```

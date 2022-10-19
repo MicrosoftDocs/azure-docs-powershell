@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azfirewallpolicyexplicitproxy
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azfirewallpolicyexplicitproxy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallPolicyExplicitProxy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallPolicyExplicitProxy.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFirewallPolicyExplicitProxy
 
 ## SYNOPSIS
-Creates a new Explicit Proxy 
+Creates a new Explicit Proxy
 
 ## SYNTAX
 
@@ -30,12 +30,12 @@ The **New-AzFirewallPolicyExplicitProxy** cmdlet creates an explicit proxy
  New-AzFirewallPolicyExplicitProxy -EnableExplicitProxy  -HttpPort 100 -HttpsPort 101 -EnablePacFile  -PacFilePort 130 -PacFile "sampleurlfortesting.blob.core.windowsnet/nothing"
 ```
 ```output
-		EnableExplicitProxy	: true	
-		EnablePacFile	    : true	
-		HttpPort	        : 100	
-		HttpsPort	        : 101	
+		EnableExplicitProxy	: true
+		EnablePacFile	    : true
+		HttpPort	        : 100
+		HttpsPort	        : 101
 		PacFile	            : "sampleurlfortesting.blob.core.windowsnet/nothing"
-		PacFilePort	        : 130	
+		PacFilePort	        : 130
 ```
 This example creates an explicit proxy with provided settings
 

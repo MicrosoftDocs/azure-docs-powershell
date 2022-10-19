@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azexpressroutegateway
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azexpressroutegateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzExpressRouteGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzExpressRouteGateway.md
@@ -47,7 +47,7 @@ New-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testExpressRoutegw"
 Remove-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testExpressRoutegw" -Passthru
 ```
 
-This example creates a Resource group, Virtual WAN, Virtual Hub, scalable ExpressRoute gateway in Central US and then immediately deletes it. 
+This example creates a Resource group, Virtual WAN, Virtual Hub, scalable ExpressRoute gateway in Central US and then immediately deletes it.
 To suppress the prompt when deleting the Virtual Gateway, use the -Force flag.
 This will delete the ExpressRouteGateway and all ExpressRouteConnections attached to it.
 
@@ -61,7 +61,7 @@ New-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testExpressRoutegw"
 Get-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testExpressRoutegw" | Remove-AzExpressRouteGateway -Passthru
 ```
 
-This example creates a Resource group, Virtual WAN, Virtual Hub, scalable ExpressRoute gateway in West Central US and then immediately deletes it. 
+This example creates a Resource group, Virtual WAN, Virtual Hub, scalable ExpressRoute gateway in West Central US and then immediately deletes it.
 This deletion happens using powershell piping, which uses the ExpressRouteGateway object returned by the Get-AzExpressRouteGateway command.
 To suppress the prompt when deleting the Virtual Gateway, use the -Force flag.
 This will delete the ExpressRouteGateway and all ExpressRouteConnections attached to it.

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DedicatedHsm
-online version: https://docs.microsoft.com/powershell/module/az.dedicatedhsm/update-azdedicatedhsm
+online version: https://learn.microsoft.com/powershell/module/az.dedicatedhsm/update-azdedicatedhsm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/help/Update-AzDedicatedHsm.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/help/Update-AzDedicatedHsm.md

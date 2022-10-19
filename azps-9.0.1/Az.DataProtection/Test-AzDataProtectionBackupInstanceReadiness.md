@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/test-azdataprotectionbackupinstancereadiness
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/test-azdataprotectionbackupinstancereadiness
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Test-AzDataProtectionBackupInstanceReadiness.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Test-AzDataProtectionBackupInstanceReadiness.md
@@ -25,13 +25,13 @@ Validate whether adhoc backup will be successful or not
 
 ## EXAMPLES
 
-### Example 1: Test the backup instance 
+### Example 1: Test the backup instance
 ```powershell
 $vault = Get-AzDataProtectionBackupVault -ResourceGroupName "resourceGroupName" -VaultName "vaultName"
 $diskBackupPolicy = Get-AzDataProtectionBackupPolicy -ResourceGroupName "resourceGroupName" -VaultName $vault.Name -Name "diskBackupPolicy"
-$diskId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/rgName/providers/Microsoft.Compute/disks/test-disk" 
+$diskId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/rgName/providers/Microsoft.Compute/disks/test-disk"
 $snapshotRG = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rgName"
-$instance = Initialize-AzDataProtectionBackupInstance -SnapshotResourceGroupId $Snapshotrg -DatasourceType AzureDisk -DatasourceLocation $vault.Location -PolicyId $diskBackupPolicy[0].Id -DatasourceId $diskId 
+$instance = Initialize-AzDataProtectionBackupInstance -SnapshotResourceGroupId $Snapshotrg -DatasourceType AzureDisk -DatasourceLocation $vault.Location -PolicyId $diskBackupPolicy[0].Id -DatasourceId $diskId
 Test-AzDataProtectionBackupInstanceReadiness -ResourceGroupName "resourceGroupName" -VaultName $vault.Name -BackupInstance  $instance[0].Property
 ```
 
@@ -208,9 +208,9 @@ To create the parameters described below, construct a hash table containing the 
     - `[ResourceType <String>]`: Resource Type of Datasource.
     - `[ResourceUri <String>]`: Uri of the resource.
     - `[Type <String>]`: DatasourceType of the resource.
-  - `ObjectType <String>`: 
+  - `ObjectType <String>`:
   - `PolicyInfo <IPolicyInfo>`: Gets or sets the policy information.
-    - `PolicyId <String>`: 
+    - `PolicyId <String>`:
     - `[PolicyParameter <IPolicyParameters>]`: Policy parameters for the backup instance
       - `[DataStoreParametersList <IDataStoreParameters[]>]`: Gets or sets the DataStore Parameters
         - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive

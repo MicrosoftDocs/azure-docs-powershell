@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azroutingpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzRoutingPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzRoutingPolicy.md
@@ -10,13 +10,13 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzRoutingPolicy
 
 ## SYNOPSIS
-Returns an in-memory routing policy object. 
+Returns an in-memory routing policy object.
 
 ## SYNTAX
 
 ### (Default)
 ```
-New-AzRoutingPolicy -Name <String> -Destination <String[]> -NextHop <String> 
+New-AzRoutingPolicy -Name <String> -Destination <String[]> -NextHop <String>
  [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ The **New-AzRoutingPolicy** cmdlet creates a routing policy object. This can be 
 $rgName = "testRg"
 $firewallName = "testFirewall"
 $firewall = Get-AzFirewall -Name $firewallName -ResourceGroupName $rgName
-New-AzRoutingPolicy -Name "PrivateTraffic" -Destination @("PrivateTraffic") -NextHop $firewall.Id 
+New-AzRoutingPolicy -Name "PrivateTraffic" -Destination @("PrivateTraffic") -NextHop $firewall.Id
 ```
 
 ```output
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the routing policy 
+Name of the routing policy
 
 ```yaml
 Type: System.String

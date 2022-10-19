@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/register-azstackhci
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/register-azstackhci
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Register-AzStackHCI.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Register-AzStackHCI.md
@@ -42,7 +42,7 @@ PortalAADAppPermissionsURL: https://portal.azure.com/#blade/Microsoft_AAD_Regist
 
 Invoking on one of the cluster node.
 
-### Example 2: 
+### Example 2:
 ```powershell
 Register-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -ComputerName ClusterNode1
 ```
@@ -56,9 +56,9 @@ PortalAADAppPermissionsURL: https://portal.azure.com/#blade/Microsoft_AAD_Regist
 
 Invoking from the management node.
 
-### Example 3: 
+### Example 3:
 ```powershell
-Register-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -ArmAccessToken etyer..ere= -GraphAccessToken acyee..rerrer -AccountId user1@corp1.com -Region westus -ResourceName DemoHCICluster3 -ResourceGroupName DemoHCIRG 
+Register-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -ArmAccessToken etyer..ere= -GraphAccessToken acyee..rerrer -AccountId user1@corp1.com -Region westus -ResourceName DemoHCICluster3 -ResourceGroupName DemoHCIRG
 ```
 
 ```output
@@ -70,7 +70,7 @@ PortalAADAppPermissionsURL: https://portal.azure.com/#blade/Microsoft_AAD_Regist
 
 Invoking from WAC.
 
-### Example 4: 
+### Example 4:
 ```powershell
 Register-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -Region westus -ResourceName HciCluster1 -TenantId "c31c0dbb-ce27-4c78-ad26-a5f717c14557" -ResourceGroupName HciClusterRG -ArmAccessToken eerrer..ere= -GraphAccessToken acee..rerrer -AccountId user1@corp1.com -EnvironmentName AzureCloud -ComputerName node1hci -Credential Get-Credential
 ```

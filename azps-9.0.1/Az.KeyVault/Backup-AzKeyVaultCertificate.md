@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/backup-azkeyvaultcertificate
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/backup-azkeyvaultcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultCertificate.md
@@ -31,11 +31,11 @@ The **Backup-AzKeyVaultCertificate** cmdlet backs up a specified certificate in 
 If the certificate has multiple versions, all its versions will be included in the backup.
 Because the downloaded content is encrypted, it cannot be used outside of Azure Key Vault.
 You can restore a backed-up certificate to any key vault in the subscription that it was backed up from, as long as the vault is in the same Azure geography.
-Typical reasons to use this cmdlet are: 
+Typical reasons to use this cmdlet are:
 - You want to retain an offline copy of the certificate in case you accidentally delete the original from the vault.
- 
+
 - You created a certificate using Key Vault and now want to clone the object into a different Azure region, so that you can use it from all instances of your distributed application.
-Use the **Backup-AzKeyVaultCertificate** cmdlet to retrieve the certificate in encrypted format and then use the **Restore-AzKeyVaultCertificate** cmdlet 
+Use the **Backup-AzKeyVaultCertificate** cmdlet to retrieve the certificate in encrypted format and then use the **Restore-AzKeyVaultCertificate** cmdlet
 and specify a key vault in the second region.
 
 ## EXAMPLES

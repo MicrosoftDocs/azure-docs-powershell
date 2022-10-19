@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azpacketcapturescopeconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azpacketcapturescopeconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPacketCaptureScopeConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPacketCaptureScopeConfig.md
@@ -20,16 +20,16 @@ New-AzPacketCaptureScopeConfig [-Include <String[]>] [-Exclude <String[]>]
 ```
 
 ## DESCRIPTION
-The New-AzPacketCaptureScopeConfig cmdlet creates a new packet capture scope object. 
-This object is used to either include or exclude the provided VMSS Instances for running Packet Captures. 
+The New-AzPacketCaptureScopeConfig cmdlet creates a new packet capture scope object.
+This object is used to either include or exclude the provided VMSS Instances for running Packet Captures.
 The New-AzPacketCaptureScopeConfig cmdlet can accept multiple VMSS Instances Names enable/disable composable capture sessions.
 
 ## EXAMPLES
 
 ### Example 1: Create a Packet Capture with multiple VMSS Instances in Include Scope
 ```powershell
-$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
-$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
 
 $storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
 
@@ -40,13 +40,13 @@ $scope = New-AzPacketCaptureScopeConfig -Include $instance1, $instance2
 New-AzNetworkWatcherPacketCaptureV2 -NetworkWatcher $networkWatcher -TargetId $vmss.Id -TargetType "azurevmss" -Scope $scope -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60
 ```
 
-In this example we create a packet capture named "PacketCaptureTest" with multiple VMSS Instances in Include Scope and a time limit. Once the session is complete, it will be saved to the specified storage account. 
+In this example we create a packet capture named "PacketCaptureTest" with multiple VMSS Instances in Include Scope and a time limit. Once the session is complete, it will be saved to the specified storage account.
 Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.
 
 ### Example 2: Create a Packet Capture with multiple VMSS Instances in Exclude Scope
 ```powershell
-$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
-$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
 
 $storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
 
@@ -57,7 +57,7 @@ $scope = New-AzPacketCaptureScopeConfig -Exclude $instance1, $instance2
 New-AzNetworkWatcherPacketCaptureV2 -NetworkWatcher $networkWatcher -TargetId $vmss.Id -TargetType "azurevmss" -Scope $scope -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60
 ```
 
-In this example we create a packet capture named "PacketCaptureTest" with multiple VMSS Instances in Exclude Scope - meaning that apart from these provided Instance, Packet Capture would be working on all other instances and a time limit. Once the session is complete, it will be saved to the specified storage account. 
+In this example we create a packet capture named "PacketCaptureTest" with multiple VMSS Instances in Exclude Scope - meaning that apart from these provided Instance, Packet Capture would be working on all other instances and a time limit. Once the session is complete, it will be saved to the specified storage account.
 Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.
 
 ## PARAMETERS

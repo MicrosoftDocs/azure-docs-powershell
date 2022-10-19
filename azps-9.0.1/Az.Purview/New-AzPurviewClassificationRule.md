@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://docs.microsoft.com/powershell/module/az.purview/new-azpurviewclassificationrule
+online version: https://learn.microsoft.com/powershell/module/az.purview/new-azpurviewclassificationrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewClassificationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewClassificationRule.md
@@ -173,6 +173,6 @@ To create the parameters described below, construct a hash table containing the 
 
 
 BODY `<IClassificationRule>`: .
-  - `Kind <ClassificationRuleType>`: 
+  - `Kind <ClassificationRuleType>`:
 
 ## RELATED LINKS
