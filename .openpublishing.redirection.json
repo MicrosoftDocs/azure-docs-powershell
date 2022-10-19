@@ -17,6 +17,11 @@
     },
     {
       "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azps-9.0.1/overview.md"
+    },
+    {
+      "redirect_document_id": false,
       "redirect_url": "/powershell/azure/azurerm/overview",
       "source_path": "docs-conceptual/azurermps-2.5.0/index.md"
     },
