@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
 Module Name: Az.Relay
-online version: https://docs.microsoft.com/powershell/module/az.relay/remove-azrelaynamespace
+online version: https://learn.microsoft.com/powershell/module/az.relay/remove-azrelaynamespace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Remove-AzRelayNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Remove-AzRelayNamespace.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzRelayNamespace
 
 ## SYNOPSIS
-Removes the namespace from the specified resource group. 
+Removes the namespace from the specified resource group.
 
 ## SYNTAX
 

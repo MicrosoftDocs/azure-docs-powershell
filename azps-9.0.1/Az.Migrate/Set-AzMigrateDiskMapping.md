@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Migrate
-online version: https://docs.microsoft.com/powershell/module/az.migrate/set-azmigratediskmapping
+online version: https://learn.microsoft.com/powershell/module/az.migrate/set-azmigratediskmapping
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Set-AzMigrateDiskMapping.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Set-AzMigrateDiskMapping.md

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Attestation-help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/get-azattestationdefaultprovider
+online version: https://learn.microsoft.com/powershell/module/az.attestation/get-azattestationdefaultprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationDefaultProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationDefaultProvider.md
@@ -57,12 +57,12 @@ Get-AzAttestationDefaultProvider
 ```
 
 ```output
-SystemDataCreatedAt          : 
-SystemDataCreatedBy          : 
-SystemDataCreatedByType      : 
-SystemDataLastModifiedAt     : 
-SystemDataLastModifiedBy     : 
-SystemDataLastModifiedByType : 
+SystemDataCreatedAt          :
+SystemDataCreatedBy          :
+SystemDataCreatedByType      :
+SystemDataLastModifiedAt     :
+SystemDataLastModifiedBy     :
+SystemDataLastModifiedByType :
 Value                        : {{
                                  "id": "/providers/Microsoft.Attestation/attestationProviders/sharedeus2",
                                  "name": "sharedeus2",

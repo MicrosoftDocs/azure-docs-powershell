@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 8C014335-9622-4F2E-A163-4B0C84531506
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/add-azapimanagementusertogroup
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/add-azapimanagementusertogroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Add-AzApiManagementUserToGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Add-AzApiManagementUserToGroup.md

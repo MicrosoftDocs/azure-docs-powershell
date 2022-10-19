@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 846F781C-73A3-4BBE-ABD9-897371109FBE
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/add-azkeyvaultkey
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/add-azkeyvaultkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
@@ -146,7 +146,7 @@ Vault/HSM Name : contoso
 Name           : ITSoftware
 Key Type       : RSA
 Key Size       : 2048
-Curve Name     : 
+Curve Name     :
 Version        : 67da57e9cadf48a2ad8d366b115843ab
 Id             : https://contoso.vault.azure.net:443/keys/ITSoftware/67da57e9cadf48a2ad8d366b115843ab
 Enabled        : True
@@ -335,7 +335,7 @@ $key = Add-AzKeyVaultKey -VaultName $vaultName -Name $keyName -Destination HSM -
 ```
 
 Generates a key (referred to as a Key Exchange Key (KEK)). The KEK must be an RSA-HSM key that has only the import key operation. Only Key Vault Premium SKU supports RSA-HSM keys.
-For more details please refer to https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys
+For more details please refer to https://learn.microsoft.com/azure/key-vault/keys/hsm-protected-keys
 
 ### Example 9: Create a secure key in managed hsm
 
@@ -364,28 +364,28 @@ Vault/HSM Name : testmhsm
 Name           : test-key
 Key Type       : RSA
 Key Size       : 2048
-Curve Name     : 
+Curve Name     :
 Version        : ed6b026bf0a605042006635713d33ef6
 Id             : https://testmhsm.managedhsm.azure.net:443/keys/test-key/ed6b026bf0a605042006635713d33ef6
 Enabled        : True
-Expires        : 
-Not Before     : 
+Expires        :
+Not Before     :
 Created        : 6/2/2022 7:14:37 AM
 Updated        : 6/2/2022 7:14:37 AM
 Recovery Level : Recoverable+Purgeable
-Release Policy : 
+Release Policy :
                  Content Type   : application/json; charset=utf-8
-                 Policy Content : {"anyOf":[{"allOf":[{"claim":"x-ms-sgx-is-debuggable","equals":"true"}],"authority":"htt 
+                 Policy Content : {"anyOf":[{"allOf":[{"claim":"x-ms-sgx-is-debuggable","equals":"true"}],"authority":"htt
                  ps://sharedeus.eus.attest.azure.net/"}],"version":"1.0.0"}
                  Immutable      : False
 
 
-Tags           : 
+Tags           :
 ```
 
-Create a secure key in managed hsm named testmhsm. Its name is test-key and type is RSA. 
+Create a secure key in managed hsm named testmhsm. Its name is test-key and type is RSA.
 
-### Example 10: Add a key for a Confidential VM to a key vault. 
+### Example 10: Add a key for a Confidential VM to a key vault.
 ```powershell
 New-AzKeyVault -Name $keyVaultName -Location $location -ResourceGroupName $resourceGroupName -Sku Premium -EnablePurgeProtection -EnabledForDiskEncryption;
 $cvmAgent = Get-AzADServicePrincipal -ApplicationId 'bf7b6499-ff71-4aa2-97a4-f372087be7f0';
@@ -393,7 +393,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $keyVaultName -ResourceGroupName $resource
 
 $keySize = 3072;
 Add-AzKeyVaultKey -VaultName $keyVaultName -Name $keyName -Size $keySize -KeyOps wrapKey,unwrapKey -KeyType RSA -Destination HSM -Exportable -UseDefaultCVMPolicy;
-        
+
 ```
 
 ```output

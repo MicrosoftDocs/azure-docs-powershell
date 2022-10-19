@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: D818C404-60E4-42DB-AADF-063305D9541B
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azloadbalancerinboundnatruleconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azloadbalancerinboundnatruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzLoadBalancerInboundNatRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzLoadBalancerInboundNatRuleConfig.md

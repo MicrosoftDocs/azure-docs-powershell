@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Databricks
-online version: https://docs.microsoft.com/powershell/module/az.databricks/get-azdatabricksoutboundnetworkdependenciesendpoint
+online version: https://learn.microsoft.com/powershell/module/az.databricks/get-azdatabricksoutboundnetworkdependenciesendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/help/Get-AzDatabricksOutboundNetworkDependenciesEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/help/Get-AzDatabricksOutboundNetworkDependenciesEndpoint.md
@@ -12,7 +12,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the list of endpoints that VNET Injected Workspace calls Azure Databricks Control Plane.
 You must configure outbound access with these endpoints.
-For more information, see https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/udr
+For more information, see https://learn.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/udr
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Get-AzDatabricksOutboundNetworkDependenciesEndpoint -ResourceGroupName <String> 
 ## DESCRIPTION
 Gets the list of endpoints that VNET Injected Workspace calls Azure Databricks Control Plane.
 You must configure outbound access with these endpoints.
-For more information, see https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/udr
+For more information, see https://learn.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/udr
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Endpoint : {{
 
 This command gets the list of endpoints that VNET Injected Workspace calls Azure Databricks Control Plane.
 You must configure outbound access with these endpoints.
-For more information, see https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/udr
+For more information, see https://learn.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/udr
 
 ## PARAMETERS
 

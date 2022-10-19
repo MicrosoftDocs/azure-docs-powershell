@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 5F856280-C561-47B5-AA96-27E34C86D604
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultcertificateissuer
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultcertificateissuer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificateIssuer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificateIssuer.md

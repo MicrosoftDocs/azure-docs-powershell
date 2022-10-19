@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: B8B632B5-9D3B-4352-B4C8-49C00472B3A7
-online version: https://docs.microsoft.com/powershell/module/az.network/add-azvirtualnetworksubnetconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/add-azvirtualnetworksubnetconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzVirtualNetworkSubnetConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzVirtualNetworkSubnetConfig.md
@@ -49,8 +49,8 @@ New-AzResourceGroup -Name TestResourceGroup -Location centralus
     $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-  This example first creates a resource group as a container of the resources to be created. It then creates a subnet configuration and uses it to create a virtual network. The 
-    Add-AzVirtualNetworkSubnetConfig is then used to add a subnet to the in-memory representation of the virtual network. The Set-AzVirtualNetwork command updates the existing virtual 
+  This example first creates a resource group as a container of the resources to be created. It then creates a subnet configuration and uses it to create a virtual network. The
+    Add-AzVirtualNetworkSubnetConfig is then used to add a subnet to the in-memory representation of the virtual network. The Set-AzVirtualNetwork command updates the existing virtual
     network with the new subnet.
 
 ### Example 2: Add a delegation to a subnet being added to an existing virtual network

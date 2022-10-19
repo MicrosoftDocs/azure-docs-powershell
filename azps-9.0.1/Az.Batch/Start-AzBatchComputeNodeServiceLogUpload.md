@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
-online version: https://docs.microsoft.com/powershell/module/az.batch/Start-AzBatchComputeNodeServiceLogUpload
+online version: https://learn.microsoft.com/powershell/module/az.batch/Start-AzBatchComputeNodeServiceLogUpload
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Start-AzBatchComputeNodeServiceLogUpload.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Start-AzBatchComputeNodeServiceLogUpload.md
@@ -36,7 +36,7 @@ Start-AzBatchComputeNodeServiceLogUpload [-ComputeNode] <PSComputeNode> [-Contai
 ```
 
 ## DESCRIPTION
-This cmdlet gathers Azure Batch service log files from compute nodes if you are experiencing an error and wish to escalate to Azure support. The Azure Batch service log files should be shared with Azure support to aid in debugging issues with the Batch service. 
+This cmdlet gathers Azure Batch service log files from compute nodes if you are experiencing an error and wish to escalate to Azure support. The Azure Batch service log files should be shared with Azure support to aid in debugging issues with the Batch service.
 
 ## EXAMPLES
 

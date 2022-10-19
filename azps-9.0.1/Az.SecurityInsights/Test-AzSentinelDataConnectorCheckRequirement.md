@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/test-azsentineldataconnectorcheckrequirement
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/test-azsentineldataconnectorcheckrequirement
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Test-AzSentinelDataConnectorCheckRequirement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Test-AzSentinelDataConnectorCheckRequirement.md

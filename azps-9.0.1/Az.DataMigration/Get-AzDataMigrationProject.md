@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/Get-AzDataMigrationProject
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/Get-AzDataMigrationProject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationProject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationProject.md
@@ -49,7 +49,7 @@ The above example retrieves  Azure Database Migration project named TestProject 
 Get-AzDataMigrationProject -InputObject $myService
 ```
 
-The above example retrieves the  Azure Database Migration project based on PSProject object input parameter passed in. 
+The above example retrieves the  Azure Database Migration project based on PSProject object input parameter passed in.
 
 ## PARAMETERS
 

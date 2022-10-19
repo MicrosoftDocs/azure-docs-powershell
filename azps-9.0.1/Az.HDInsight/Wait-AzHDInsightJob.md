@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: 677E19F2-CC6C-4C16-B1FD-3A15D0FF1ECA
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/wait-azhdinsightjob
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/wait-azhdinsightjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Wait-AzHDInsightJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Wait-AzHDInsightJob.md

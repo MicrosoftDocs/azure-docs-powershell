@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/invoke-aziothubconfigurationmetricsquery
+online version: https://learn.microsoft.com/powershell/module/az.iothub/invoke-aziothubconfigurationmetricsquery
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Invoke-AzIotHubConfigurationMetricsQuery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Invoke-AzIotHubConfigurationMetricsQuery.md
@@ -39,7 +39,7 @@ Invoke-AzIotHubConfigurationMetricsQuery [-ResourceId] <String> -Name <String> -
 Evaluate a target custom or system metric defined in an IoT device configuration.
 There are pre-defined system metrics which are calculated by Iot Hub and cannot be customized.
 - "Targeted" specifies the number of device twins that match the target condition.
-- "Applied" specified the number of device twins that have been modified by the configuration. 
+- "Applied" specified the number of device twins that have been modified by the configuration.
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azexpressrouteportslocation
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azexpressrouteportslocation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePortsLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePortsLocation.md
@@ -20,7 +20,7 @@ Get-AzExpressRoutePortsLocation [-LocationName <String>] [-DefaultProfile <IAzur
 ```
 
 ## DESCRIPTION
-The **Get-AzExpressRoutePortsLocation** cmdlet is used to retrieve the locations at which 
+The **Get-AzExpressRoutePortsLocation** cmdlet is used to retrieve the locations at which
 ExpressRoutePort resources are available. Given a specific location as input, the cmdlet displays
 the details of that location i.e., list of available bandwidths at that location.
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/get-azsentinelincident
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelincident
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelIncident.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelIncident.md

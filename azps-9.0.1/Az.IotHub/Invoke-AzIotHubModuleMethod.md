@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/invoke-aziothubmodulemethod
+online version: https://learn.microsoft.com/powershell/module/az.iothub/invoke-aziothubmodulemethod
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Invoke-AzIotHubModuleMethod.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Invoke-AzIotHubModuleMethod.md
@@ -37,7 +37,7 @@ Invoke-AzIotHubModuleMethod [-ResourceId] <String> [-DeviceId] <String> [-Module
 ```
 
 ## DESCRIPTION
-Invoke an Edge module method. See https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-direct-methods for more information.
+Invoke an Edge module method. See https://learn.microsoft.com/azure/iot-hub/iot-hub-devguide-direct-methods for more information.
 
 ## EXAMPLES
 

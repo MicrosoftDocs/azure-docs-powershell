@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: CBD157D2-37C5-491F-A806-6B39F1D0415A
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageblobcopystate
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageblobcopystate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobCopyState.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobCopyState.md
@@ -72,8 +72,8 @@ C:\PS> $destBlob = Start-AzStorageBlobCopy -SrcContainer "contosouploads" -SrcBl
 C:\PS> $destBlob | Get-AzStorageBlobCopyState
 ```
 
-The first command starts copy blob "ContosoPlanning2015" to "ContosoPlanning2015_copy", and output the destiantion blob object. 
-The second command pipeline the destiantion blob object to Get-AzStorageBlobCopyState, to get blob copy state. 
+The first command starts copy blob "ContosoPlanning2015" to "ContosoPlanning2015_copy", and output the destiantion blob object.
+The second command pipeline the destiantion blob object to Get-AzStorageBlobCopyState, to get blob copy state.
 
 ## PARAMETERS
 

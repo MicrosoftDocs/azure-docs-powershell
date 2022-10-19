@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Get-AzIotSecuritySolution
+online version: https://learn.microsoft.com/powershell/module/az.security/Get-AzIotSecuritySolution
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzIotSecuritySolution.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzIotSecuritySolution.md
@@ -37,7 +37,7 @@ Get-AzIotSecuritySolution -ResourceId <String> [-DefaultProfile <IAzureContextCo
 ```
 
 ## DESCRIPTION
-The Get-AzIotSecuritySolution cmdlet returns one or more iot security solutions. 
+The Get-AzIotSecuritySolution cmdlet returns one or more iot security solutions.
 The IoT security solution collects security data and events from iot devices and iot hub to help prevent and detect threats.
 
 ## EXAMPLES
@@ -60,7 +60,7 @@ Workspace: "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourcegroups/M
 AdditionalWorkspaces: null
 IotHubs: ["/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourcegroups/MyResourceGroup/providers/microsoft.devices/iothubs/MySample"]
 UserDefinedResources: {
-	Query: "" 
+	Query: ""
 	QuerySubscriptions: []
 }
 RecommendationsConfiguration: [

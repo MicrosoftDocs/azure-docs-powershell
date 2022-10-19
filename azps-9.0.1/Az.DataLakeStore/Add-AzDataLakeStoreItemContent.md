@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: B008028D-27FC-4469-BE71-54F7218C068B
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/add-azdatalakestoreitemcontent
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/add-azdatalakestoreitemcontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Add-AzDataLakeStoreItemContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Add-AzDataLakeStoreItemContent.md

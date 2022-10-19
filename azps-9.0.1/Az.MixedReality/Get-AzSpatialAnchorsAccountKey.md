@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MixedReality.dll-Help.xml
 Module Name: Az.MixedReality
-online version: https://docs.microsoft.com/powershell/module/az.mixedreality/get-azspatialanchorsaccountkey
+online version: https://learn.microsoft.com/powershell/module/az.mixedreality/get-azspatialanchorsaccountkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Get-AzSpatialAnchorsAccountKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Get-AzSpatialAnchorsAccountKey.md
@@ -52,7 +52,7 @@ Get developer keys of Spatial Anchors Account "example" from current Subscriptio
 
 ### Example 2
 ```powershell
-Get-AzSpatialAnchorsAccount -ResourceGroup rg1 -Name example | Get-AzSpatialAnchorsAccountKey 
+Get-AzSpatialAnchorsAccount -ResourceGroup rg1 -Name example | Get-AzSpatialAnchorsAccountKey
 ```
 
 ```output

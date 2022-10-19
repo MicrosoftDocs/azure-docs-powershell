@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: C48E204D-D7EC-4EFD-ADC5-C6F593313B9B
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvirtualnetwork
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvirtualnetwork
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetwork.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetwork.md
@@ -32,7 +32,7 @@ $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -Address
 $backendSubnet = New-AzVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix "10.0.2.0/24"
 
 New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet,$backendSubnet
-    
+
 Remove-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup
 ```
 

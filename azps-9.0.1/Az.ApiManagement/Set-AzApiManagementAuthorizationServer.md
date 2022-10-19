@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 93005775-3AB9-43C5-B353-45B82124ADB7
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementauthorizationserver
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementauthorizationserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementAuthorizationServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementAuthorizationServer.md

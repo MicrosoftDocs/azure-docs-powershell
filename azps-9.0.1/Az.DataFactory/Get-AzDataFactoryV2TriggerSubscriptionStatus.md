@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
 Module Name: Az.DataFactory
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2triggersubscriptionstatus
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2triggersubscriptionstatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2TriggerSubscriptionStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2TriggerSubscriptionStatus.md
@@ -58,7 +58,7 @@ The data factory name.
 ```yaml
 Type: String
 Parameter Sets: ByFactoryName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -88,7 +88,7 @@ The trigger object.
 ```yaml
 Type: PSTrigger
 Parameter Sets: ByInputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -118,7 +118,7 @@ The resource group name.
 ```yaml
 Type: String
 Parameter Sets: ByFactoryName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -133,7 +133,7 @@ The Azure resource ID.
 ```yaml
 Type: String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

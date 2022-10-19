@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 42EEAAA8-F13B-486B-82BD-F646EF0DCDBA
-online version: https://docs.microsoft.com/powershell/module/az.resources/remove-azresourcelock
+online version: https://learn.microsoft.com/powershell/module/az.resources/remove-azresourcelock
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzResourceLock.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzResourceLock.md
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 Specifies the name of the resource for which the lock applies.
-For instance, to specify a database, use the following format: 
+For instance, to specify a database, use the following format:
 Server`/`Database
 
 ```yaml

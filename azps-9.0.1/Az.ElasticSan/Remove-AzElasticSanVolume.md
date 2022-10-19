@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/remove-azelasticsanvolume
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/remove-azelasticsanvolume
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Remove-AzElasticSanVolume.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Remove-AzElasticSanVolume.md
@@ -32,7 +32,7 @@ Delete an Volume.
 
 ## EXAMPLES
 
-### Example 1: Remove a volume 
+### Example 1: Remove a volume
 ```powershell
 Remove-AzElasticSanVolume -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -VolumeGroupName myvolumegroup -Name myvolume
 ```

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
 Module Name: Az.DataFactory
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2pipeline
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2pipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2Pipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2Pipeline.md
@@ -41,7 +41,7 @@ If you do not specify a name, this cmdlet gets information about all the pipelin
 
 ### Example 1: Get information about all pipelines
 ```powershell
-Get-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -DataFactoryName "WikiADF" 
+Get-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -DataFactoryName "WikiADF"
 ```
 
 ```output

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: BB18EEF3-570A-4667-AF0E-FCEEE17B4905
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactorydataset
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactorydataset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryDataset.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryDataset.md
@@ -39,29 +39,29 @@ If you do not specify a name, this cmdlet gets information about all the dataset
 Get-AzDataFactoryDataset -ResourceGroupName "ADF" -DataFactoryName "WikiADF"
 ```
 
-```output 
+```output
 DatasetName       : DACuratedWikiData
 ResourceGroupName : ADF
 DataFactoryName   : WikiADF
 Availability      : Microsoft.DataFactories.Availability
-Location          : 
-Policy            : 
+Location          :
+Policy            :
 Structure         : {}
 
 DatasetName       : DAWikipediaClickEvents
 ResourceGroupName : ADF
 DataFactoryName   : WikiADF
 Availability      : Microsoft.DataFactories.Availability
-Location          : 
-Policy            : 
+Location          :
+Policy            :
 Structure         : {}
 
 DatasetName         : DAWikiAggregatedData
 ResourceGroupName : ADF
 DataFactoryName   : WikiADF
 Availability      : Microsoft.DataFactories.Availability
-Location          : 
-Policy            : 
+Location          :
+Policy            :
 Structure         : {}
 ```
 
@@ -69,7 +69,7 @@ This command gets information about all datasets in the data factory named WikiA
 
 ### Example 2: Get information about a specific dataset
 ```powershell
-Get-AzDataFactoryDataset -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "DAWikipediaClickEvents" 
+Get-AzDataFactoryDataset -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "DAWikipediaClickEvents"
 ```
 
 ```output
@@ -91,8 +91,8 @@ This command gets information about the dataset named DAWikipediaClickEvents in 
 
 ```output
 BlobPath          : wikidatagateway/wikisampledatain/
-FilenamePrefix    : 
-Format            : 
+FilenamePrefix    :
+Format            :
 LinkedServiceName : LinkedServiceWikipediaClickEvents
 PartitionBy       : {}
 ```

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkmanagerconnectivityconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagerconnectivityconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerConnectivityConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerConnectivityConfiguration.md
@@ -32,11 +32,11 @@ The **New-AzNetworkManagerConnectivityConfiguration** cmdlet creates a network m
 ### Example 1
 ```powershell
 $connectivityGroupItem = New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId "/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/networkGroups/psNetworkGroup"
-$connectivityGroup  = @($connectivityGroupItem)  
+$connectivityGroup  = @($connectivityGroupItem)
 
-$hub = New-AzNetworkManagerHub -ResourceId "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub" -ResourceType "Microsoft.Network/virtualNetworks" 
+$hub = New-AzNetworkManagerHub -ResourceId "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub" -ResourceType "Microsoft.Network/virtualNetworks"
 $hubList = @($hub)
-New-AzNetworkManagerConnectivityConfiguration -ResourceGroupName psResourceGroup -Name "psConnectivityConfig" -NetworkManagerName psNetworkManager -ConnectivityTopology "HubAndSpoke" -Hub $hublist -AppliesToGroup $connectivityGroup -DeleteExistingPeering 
+New-AzNetworkManagerConnectivityConfiguration -ResourceGroupName psResourceGroup -Name "psConnectivityConfig" -NetworkManagerName psNetworkManager -ConnectivityTopology "HubAndSpoke" -Hub $hublist -AppliesToGroup $connectivityGroup -DeleteExistingPeering
 ```
 ```output
 ConnectivityTopology  : HubAndSpoke
@@ -80,9 +80,9 @@ Creates a hub and spoke network manager connectivity configuration.
 ### Example 2
 ```powershell
 $connectivityGroupItem = New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId "/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/networkGroups/psNetworkGroup"
-[System.Collections.Generic.List[Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerConnectivityGroupItem]]$connectivityGroup  = @()  
-$connectivityGroup.Add($connectivityGroupItem)   
-New-AzNetworkManagerConnectivityConfiguration -ResourceGroupName psResourceGroup -Name "psConnectivityConfigMesh" -NetworkManagerName psNetworkManager -ConnectivityTopology "Mesh" -AppliesToGroup $connectivityGroup -DeleteExistingPeering 
+[System.Collections.Generic.List[Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerConnectivityGroupItem]]$connectivityGroup  = @()
+$connectivityGroup.Add($connectivityGroupItem)
+New-AzNetworkManagerConnectivityConfiguration -ResourceGroupName psResourceGroup -Name "psConnectivityConfigMesh" -NetworkManagerName psNetworkManager -ConnectivityTopology "Mesh" -AppliesToGroup $connectivityGroup -DeleteExistingPeering
 ```
 ```output
 ConnectivityTopology  : Mesh

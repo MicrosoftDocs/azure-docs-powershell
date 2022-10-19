@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementnamedvalue
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementnamedvalue
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementNamedValue.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementNamedValue.md
@@ -46,7 +46,7 @@ This command creates a **Named Value** that has a value that is encrypted.
 ### Example 3 : Create a keyVault Namedvalue
 ```powershell
 $secretIdentifier = 'https://contoso.vault.azure.net/secrets/xxxx'
-$keyvault = New-AzApiManagementKeyVaultObject -SecretIdentifier $secretIdentifier 
+$keyvault = New-AzApiManagementKeyVaultObject -SecretIdentifier $secretIdentifier
 $keyVaultNamedValue = New-AzApiManagementNamedValue -Context $context -NamedValueId $keyVaultNamedValueId -Name $keyVaultNamedValueName -keyVault $keyvault -Secret
 ```
 

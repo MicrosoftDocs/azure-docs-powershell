@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DnsResolver
-online version: https://docs.microsoft.com/powershell/module/az.dnsresolver/get-azdnsresolver
+online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/get-azdnsresolver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Get-AzDnsResolver.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Get-AzDnsResolver.md
@@ -48,7 +48,7 @@ Gets properties of a DNS resolver.
 
 ## EXAMPLES
 
-### Example 1: List all DNS Resolvers under the subscription 
+### Example 1: List all DNS Resolvers under the subscription
 ```powershell
 Get-AzDnsResolver -SubscriptionId 0e5a46b1-de0b-4ec3-a5d7-dda908b4e076
 ```
@@ -71,7 +71,7 @@ westus2  dnsresolvertestresolver9892 Microsoft.Network/dnsResolvers "47008640-00
 
 This command gets all DNS Resolvers under the subscription.
 
-### Example 2: List all DNS Resolvers under the resource group 
+### Example 2: List all DNS Resolvers under the resource group
 ```powershell
 Get-AzDnsResolver -ResourceGroupName powershell-test-rg
 ```
@@ -86,7 +86,7 @@ westus2  psdnsresolvername35m3jf0n Microsoft.Network/dnsResolvers "0000d0d4-0000
 
 This command gets all DNS Resolvers under the resource group.
 
-### Example 3: Get single DNS Resolver by name 
+### Example 3: Get single DNS Resolver by name
 ```powershell
 Get-AzDnsResolver -ResourceGroupName powershell-test-rg -Name  psdnsresolvername33nmy1fz
 ```
@@ -99,7 +99,7 @@ westus2  psdnsresolvername33nmy1fz Microsoft.Network/dnsResolvers "0000c2d4-0000
 
 This command gets  single DNS Resolver by name.
 
-### Example 4: List all DNS Resolvers under the virtual network 
+### Example 4: List all DNS Resolvers under the virtual network
 ```powershell
 Get-AzDnsResolver -ResourceGroupName powershell-test-rg -VirtualNetworkName virtualnetwork-test
 ```

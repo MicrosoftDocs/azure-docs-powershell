@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 5C309071-A2ED-464C-9197-0A77859C8FBB
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azvirtualnetworkgateway
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualnetworkgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkGateway.md
@@ -198,7 +198,7 @@ BgpSettings            : {
                            "BgpPeeringAddress": "1.2.3.4",
                            "PeerWeight": 0
                          }
-						 
+
 Set-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -VpnClientRootCertificates $rootCert -RemoveAadAuthentication
 ```
 
@@ -384,7 +384,7 @@ $Gateway1 = Set-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -VpnClie
 
 The first command gets a virtual network gateway named Gateway01 that belongs to resource group ResourceGroup001 and stores it to the variable named $Gateway
 The second command gets all the root certificates on VirtualNetworkGateway and save it to another variable $rootCerts
-The third command shows total existing root certs on VirtualNetworkGateway. 
+The third command shows total existing root certs on VirtualNetworkGateway.
 The forth & fifth commands print root certificates at those corresponding indices for customer to see which ones they want to delete.
 The sixth command removes expired root certificate by using that index e.g. here 1. Repeat same steps to remove multiple expired certificates from variable: $rootCerts
 The seventh command updates VirtualNetworkGateway to set valid root certificates i.e. certificates that exists in variable: $rootCerts

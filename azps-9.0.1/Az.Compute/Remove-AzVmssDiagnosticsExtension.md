@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 5F135E64-9432-4D08-961F-4604410378A3
-online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azvmssdiagnosticsextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azvmssdiagnosticsextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVmssDiagnosticsExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVmssDiagnosticsExtension.md

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
 Module Name: Az.Billing
-online version: https://docs.microsoft.com/powershell/module/az.billing/get-azinvoicesection
+online version: https://learn.microsoft.com/powershell/module/az.billing/get-azinvoicesection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzInvoiceSection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzInvoiceSection.md
@@ -27,7 +27,7 @@ Get-AzInvoiceSection -BillingAccountName <String> -BillingProfileName <String> -
 ```
 
 ## DESCRIPTION
-The **Get-AzInvoiceSection** cmdlet gets invoice sections under the specified billing profile. 
+The **Get-AzInvoiceSection** cmdlet gets invoice sections under the specified billing profile.
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Websites-help.xml
 Module Name: Az.Websites
-online version: https://docs.microsoft.com/powershell/module/az.websites/new-azstaticwebappcustomdomain
+online version: https://learn.microsoft.com/powershell/module/az.websites/new-azstaticwebappcustomdomain
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzStaticWebAppCustomDomain.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzStaticWebAppCustomDomain.md
@@ -37,7 +37,7 @@ Kind Name               Type
 ```
 
 This command creates a new static site custom domain in an existing resource group and static site.
-First, Need to [configure dns provider](https://docs.microsoft.com/en-us/azure/static-web-apps/custom-domain#configure-dns-provider) for static site.
+First, Need to [configure dns provider](https://learn.microsoft.com/en-us/azure/static-web-apps/custom-domain#configure-dns-provider) for static site.
 
 ## PARAMETERS
 

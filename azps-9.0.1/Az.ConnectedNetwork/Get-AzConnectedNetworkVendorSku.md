@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedNetwork
-online version: https://docs.microsoft.com/powershell/module/az.connectednetwork/get-azconnectednetworkvendorsku
+online version: https://learn.microsoft.com/powershell/module/az.connectednetwork/get-azconnectednetworkvendorsku
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/Get-AzConnectedNetworkVendorSku.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/Get-AzConnectedNetworkVendorSku.md

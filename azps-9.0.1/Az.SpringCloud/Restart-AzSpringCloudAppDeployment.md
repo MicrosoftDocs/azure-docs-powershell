@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/restart-azspringcloudappdeployment
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/restart-azspringcloudappdeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Restart-AzSpringCloudAppDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Restart-AzSpringCloudAppDeployment.md
@@ -34,7 +34,7 @@ Restart the deployment.
 
 ### Example 1: Restart Spring Cloud Service by name
 ```powershell
-Restart-AzSpringCloudAppDeployment -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service -AppName gateway -DeploymentName default 
+Restart-AzSpringCloudAppDeployment -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service -AppName gateway -DeploymentName default
 ```
 
 Restart Spring Cloud Service by name.

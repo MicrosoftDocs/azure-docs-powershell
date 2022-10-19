@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotCentral.dll-Help.xml
 Module Name: Az.IotCentral
-online version: https://docs.microsoft.com/powershell/module/az.iotcentral/new-aziotcentralapp
+online version: https://learn.microsoft.com/powershell/module/az.iotcentral/new-aziotcentralapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/New-AzIotCentralApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/New-AzIotCentralApp.md
@@ -21,7 +21,7 @@ New-AzIotCentralApp [-Subdomain] <String> [-DisplayName <String>] [-Template <St
 ```
 
 ## DESCRIPTION
-Creates a new IoT Central Application with the provided properties and metadata. For an introduction to IoT Central, see https://docs.microsoft.com/azure/iot-central/.
+Creates a new IoT Central Application with the provided properties and metadata. For an introduction to IoT Central, see https://learn.microsoft.com/azure/iot-central/.
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resource
 Name              : MyAppResourceName
 Type              : Microsoft.IoTCentral/IoTApps
 Location          : westus
-Tag               : 
+Tag               :
 Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
 ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 DisplayName       : MyAppResourceName
@@ -59,7 +59,7 @@ ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resource
 Name              : MyAppResourceName
 Type              : Microsoft.IoTCentral/IoTApps
 Location          : westus
-Tag               : 
+Tag               :
 Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
 ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 DisplayName       : My Custom Display Name

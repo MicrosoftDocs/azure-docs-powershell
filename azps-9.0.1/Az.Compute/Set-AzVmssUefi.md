@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmssuefi
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmssuefi
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssUefi.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssUefi.md
@@ -20,7 +20,7 @@ Set-AzVmssUefi [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-EnableVtp
 ```
 
 ## DESCRIPTION
-The **Set-AzVmssUefi** cmdlet modifies UEFI properties of virtual machines in a virtual machine scale set. 
+The **Set-AzVmssUefi** cmdlet modifies UEFI properties of virtual machines in a virtual machine scale set.
 
 ## EXAMPLES
 

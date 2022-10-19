@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
 Module Name: Az.PrivateDns
-online version: https://docs.microsoft.com/powershell/module/az.privatedns/new-azprivatednszone
+online version: https://learn.microsoft.com/powershell/module/az.privatedns/new-azprivatednszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/New-AzPrivateDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/New-AzPrivateDnsZone.md
@@ -38,7 +38,7 @@ $Zone = New-AzPrivateDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGr
 Name                          : myzone.com
 ResourceId                    : "/subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/PrivateZones/myzone.com"
 ResourceGroupName             : MyResourceGroup
-Location					  : 
+Location					  :
 Etag                          : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Tags                          : {}
 NumberOfRecordSets            : 1

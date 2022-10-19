@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvpngateway
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvpngateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnGateway.md
@@ -71,7 +71,7 @@ Type                : Microsoft.Network/vpnGateways
 ProvisioningState   : Succeeded
 ```
 
-The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure.
 A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
 
 ## PARAMETERS

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/remove-azsqlinstanceservertrustcertificate
+online version: https://learn.microsoft.com/powershell/module/az.sql/remove-azsqlinstanceservertrustcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceServerTrustCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceServerTrustCertificate.md
@@ -60,7 +60,7 @@ This command removes the server trust certificate with specified resource ID.
 
 ### Example 3: Remove a server trust certificate by its PowerShell object
 ```powershell
-$serverTrustCertificate = Get-AzSqlInstanceServerTrustCertificate -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Certificate01" 
+$serverTrustCertificate = Get-AzSqlInstanceServerTrustCertificate -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Certificate01"
 Remove-AzSqlInstanceServerTrustCertificate -InputObject $serverTrustCertificate
 ```
 
@@ -68,7 +68,7 @@ This command removes the server trust certificate specified by certificate objec
 
 ### Example 4: Remove a server trust certificate by its parent instance object
 ```powershell
-$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01" 
+$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
 Remove-AzSqlInstanceServerTrustCertificate -InstanceObject $instance -Name "Certificate01"
 ```
 
@@ -83,7 +83,7 @@ This command removes the server trust certificate "Certificate01" from the manag
 
 ### Example 6: Remove all server trust certificate from its parent instance
 ```powershell
-$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01" 
+$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
 $instance | Get-AzSqlInstanceServerTrustCertificate | Remove-AzSqlInstanceServerTrustCertificate
 ```
 

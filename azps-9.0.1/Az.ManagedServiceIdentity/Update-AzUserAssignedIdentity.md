@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ManagedServiceIdentity
-online version: https://docs.microsoft.com/powershell/module/az.managedserviceidentity/update-azuserassignedidentity
+online version: https://learn.microsoft.com/powershell/module/az.managedserviceidentity/update-azuserassignedidentity
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServiceIdentity/help/Update-AzUserAssignedIdentity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServiceIdentity/help/Update-AzUserAssignedIdentity.md

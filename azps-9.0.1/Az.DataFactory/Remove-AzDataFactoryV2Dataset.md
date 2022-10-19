@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
 Module Name: Az.DataFactory
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/remove-azdatafactoryv2dataset
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/remove-azdatafactoryv2dataset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2Dataset.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2Dataset.md
