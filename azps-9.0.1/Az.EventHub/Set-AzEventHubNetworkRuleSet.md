@@ -1,7 +1,7 @@
 ---
 external help file: Az.EventHub-help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/set-azeventhubnetworkruleset
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/set-azeventhubnetworkruleset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Set-AzEventHubNetworkRuleSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Set-AzEventHubNetworkRuleSet.md
@@ -363,7 +363,7 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IEventHubIdentity>`: Identity parameter.
   - `[Alias <String>]`: The Disaster Recovery configuration name
-  - `[ApplicationGroupName <String>]`: The Application Group name 
+  - `[ApplicationGroupName <String>]`: The Application Group name
   - `[AuthorizationRuleName <String>]`: The authorization rule name.
   - `[ClusterName <String>]`: The name of the Event Hubs Cluster.
   - `[ConsumerGroupName <String>]`: The consumer group name
@@ -373,7 +373,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[PrivateEndpointConnectionName <String>]`: The PrivateEndpointConnection name
   - `[ResourceAssociationName <String>]`: The ResourceAssociation Name
   - `[ResourceGroupName <String>]`: Name of the resource group within the azure subscription.
-  - `[SchemaGroupName <String>]`: The Schema Group name 
+  - `[SchemaGroupName <String>]`: The Schema Group name
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
 `IPRULE <INwRuleSetIPRules[]>`: List of IpRules

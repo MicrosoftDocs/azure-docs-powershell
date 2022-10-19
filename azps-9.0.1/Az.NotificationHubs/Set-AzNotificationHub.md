@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
 ms.assetid: F7BBEF57-0DC2-4EFF-9AA2-119B3BD19AE6
-online version: https://docs.microsoft.com/powershell/module/az.notificationhubs/set-aznotificationhub
+online version: https://learn.microsoft.com/powershell/module/az.notificationhubs/set-aznotificationhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHub.md
@@ -36,9 +36,9 @@ This can be done through the .NET Framework.
 You can then copy those property values to your hub by through the *NotificationHubObj* parameter.
 Alternatively, you can create a JSON (JavaScript Object Notation) file that contains the relevant configuration values, then apply those values by through the *InputFile* parameter.
 A JSON file is a text file that uses syntax similar to the following:
-{  
-    "Name": "ContosoNotificationHub",  
-    "Location": "West US",  
+{
+    "Name": "ContosoNotificationHub",
+    "Location": "West US",
 }
 When used in conjunction with the **Set-AzNotificationHub** cmdlet, the preceding JSON sample sets the Location value of a notification hub named ContosoNotificationHub to West US.
 

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Updates an existing custom resource provider.
 The only value that can be updated via PATCH currently is the tags.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.customproviders/update-azcustomprovider) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds a certificate to the specified Batch account.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/new-azbatchcertificate) for up-to-date information.
+
 ## SYNTAX
 
 ### File (Default)

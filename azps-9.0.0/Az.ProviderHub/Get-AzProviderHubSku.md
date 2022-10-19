@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the sku details for the given resource type and sku name.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.providerhub/get-azproviderhubsku) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

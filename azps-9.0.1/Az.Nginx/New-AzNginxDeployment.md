@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Nginx
-online version: https://docs.microsoft.com/powershell/module/az.nginx/new-aznginxdeployment
+online version: https://learn.microsoft.com/powershell/module/az.nginx/new-aznginxdeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxDeployment.md
@@ -334,15 +334,15 @@ To create the parameters described below, construct a hash table containing the 
 
 
 `NETWORKPROFILE <INginxNetworkProfile>`: .
-  - `[FrontEndIPConfiguration <INginxFrontendIPConfiguration>]`: 
-    - `[PrivateIPAddress <INginxPrivateIPAddress[]>]`: 
-      - `[PrivateIPAddress <String>]`: 
-      - `[PrivateIPAllocationMethod <NginxPrivateIPAllocationMethod?>]`: 
-      - `[SubnetId <String>]`: 
-    - `[PublicIPAddress <INginxPublicIPAddress[]>]`: 
-      - `[Id <String>]`: 
-  - `[NetworkInterfaceConfiguration <INginxNetworkInterfaceConfiguration>]`: 
-    - `[SubnetId <String>]`: 
+  - `[FrontEndIPConfiguration <INginxFrontendIPConfiguration>]`:
+    - `[PrivateIPAddress <INginxPrivateIPAddress[]>]`:
+      - `[PrivateIPAddress <String>]`:
+      - `[PrivateIPAllocationMethod <NginxPrivateIPAllocationMethod?>]`:
+      - `[SubnetId <String>]`:
+    - `[PublicIPAddress <INginxPublicIPAddress[]>]`:
+      - `[Id <String>]`:
+  - `[NetworkInterfaceConfiguration <INginxNetworkInterfaceConfiguration>]`:
+    - `[SubnetId <String>]`:
 
 ## RELATED LINKS
 

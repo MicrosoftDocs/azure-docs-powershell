@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Export logs that show total throttled Api requests for this subscription in the given time window.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/export-azloganalyticthrottledrequest) for up-to-date information.
+
 ## SYNTAX
 
 ```

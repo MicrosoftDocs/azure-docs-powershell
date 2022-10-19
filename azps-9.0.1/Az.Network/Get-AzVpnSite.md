@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvpnsite
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvpnsite
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnSite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnSite.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzVpnSite
 
 ## SYNOPSIS
-Gets an Azure VpnSite resource by name OR lists all VpnSites in a ResourceGroup or SubscriptionId. 
+Gets an Azure VpnSite resource by name OR lists all VpnSites in a ResourceGroup or SubscriptionId.
 
 This is an RM representation of customer branches that are uploaded to Azure for S2S connectivity with a Cortex virtual hub.
 
@@ -28,7 +28,7 @@ Get-AzVpnSite [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <I
 ```
 
 ## DESCRIPTION
-Gets an Azure VpnSite resource by name OR lists all VpnSites in a ResourceGroup or SubscriptionId. 
+Gets an Azure VpnSite resource by name OR lists all VpnSites in a ResourceGroup or SubscriptionId.
 
 ## EXAMPLES
 
@@ -57,7 +57,7 @@ Type              : Microsoft.Network/vpnSites
 ProvisioningState : Succeeded
 ```
 
-The above will create a resource group, Virtual WAN in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN in West US in "testRG" resource group in Azure.
 
 Then it creates a VpnSite to represent a customer branch and links it to the Virtual WAN.
 

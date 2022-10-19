@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Remove-AzIotSecuritySolution
+online version: https://learn.microsoft.com/powershell/module/az.security/Remove-AzIotSecuritySolution
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Remove-AzIotSecuritySolution.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Remove-AzIotSecuritySolution.md
@@ -33,7 +33,7 @@ Remove-AzIotSecuritySolution -InputObject <PSIotSecuritySolution> [-PassThru]
 ```
 
 ## DESCRIPTION
-The Remove-AzIotSecuritySolution cmdlet deletes a specific iot security solution. 
+The Remove-AzIotSecuritySolution cmdlet deletes a specific iot security solution.
 The IoT security solution collects security data and events from iot devices and iot hub to help prevent and detect threats.
 
 ## EXAMPLES

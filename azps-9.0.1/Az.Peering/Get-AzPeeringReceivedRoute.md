@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
 Module Name: Az.Peering
-online version: https://docs.microsoft.com/powershell/module/az.peering/get-azpeeringreceivedroute
+online version: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringreceivedroute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringReceivedRoute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringReceivedRoute.md
@@ -45,7 +45,7 @@ Lists all of the received routes for a peering
 Get-AzPeeringReceivedRoute -ResourceGroupName $resourceGroupName -Name $peeringName -AsPath "1234 5674 9834"
 ```
 
-Lists all of the received routes for a peering with a filter on AS 
+Lists all of the received routes for a peering with a filter on AS
 
 ### Filter by RPKIValidationState
 ```powershell

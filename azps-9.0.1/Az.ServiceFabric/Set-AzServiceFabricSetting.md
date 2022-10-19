@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
 Module Name: Az.ServiceFabric
-online version: https://docs.microsoft.com/powershell/module/az.servicefabric/set-azservicefabricsetting
+online version: https://learn.microsoft.com/powershell/module/az.servicefabric/set-azservicefabricsetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Set-AzServiceFabricSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Set-AzServiceFabricSetting.md
@@ -42,13 +42,13 @@ This command will set 'MaxFileOperationTimeout' to value '5000' under the sectio
 ### Example 2
 ```powershell
 $fabricSettings = @(
-    @{ 
+    @{
         "name" = "NamingService";
         "parameters" =  [System.Collections.Generic.List[Microsoft.Azure.Commands.ServiceFabric.Models.PSSettingsParameterDescription]]@(
             @{ "Name" = "MaxFileOperationTimeout"; "Value" = "5000"  };
             @{ "Name" = "MaxOperationTimeout"; "Value" = "1200"  })
     },
-    @{ 
+    @{
         "name" = "Hosting";
         "parameters" =  [System.Collections.Generic.List[Microsoft.Azure.Commands.ServiceFabric.Models.PSSettingsParameterDescription]]@(
             @{ "Name" = "ActivationMaxFailureCount"; "Value" = "11"  })

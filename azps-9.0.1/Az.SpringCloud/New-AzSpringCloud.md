@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/new-azspringcloud
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/new-azspringcloud
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/New-AzSpringCloud.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/New-AzSpringCloud.md
@@ -28,7 +28,7 @@ Create a new Service or update an exiting Service.
 
 ## EXAMPLES
 
-### Example 1: Create or update a new standard spring cloud service 
+### Example 1: Create or update a new standard spring cloud service
 ```powershell
 New-AzSpringCloud -ResourceGroupName springcloudrg -Name spring-pwsh01 -Location eastus
 ```
@@ -42,7 +42,7 @@ eastus   springcloud-service 2022/6/28 7:59:45   ******@microsoft.com    User   
 
 Create or update a new standard spring cloud service.
 
-### Example 2: Create or update a new enterprise spring cloud service 
+### Example 2: Create or update a new enterprise spring cloud service
 ```powershell
 New-AzSpringCloud -ResourceGroupName springcloudrg -Name espring-pwsh01 -Location eastus -SkuTier "Enterprise" -SkuName "E0"
 ```

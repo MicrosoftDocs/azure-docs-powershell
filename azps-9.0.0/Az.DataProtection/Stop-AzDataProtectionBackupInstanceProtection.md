@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This operation will stop protection of a backup instance and data will be held forever
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/stop-azdataprotectionbackupinstanceprotection) for up-to-date information.
+
 ## SYNTAX
 
 ### Stop (Default)

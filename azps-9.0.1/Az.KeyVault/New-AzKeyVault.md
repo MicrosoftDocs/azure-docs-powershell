@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 4C40DAC9-5C0B-4AFD-9BDB-D407E0B9F701
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/new-azkeyvault
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/new-azkeyvault
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/New-AzKeyVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/New-AzKeyVault.md
@@ -57,9 +57,9 @@ Resource ID                      : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxx
 Vault URI                        : https://contoso03vault.vault.azure.net/
 Tenant ID                        : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
 SKU                              : Standard
-Enabled For Deployment?          : 
-Enabled For Template Deployment? : 
-Enabled For Disk Encryption?     : 
+Enabled For Deployment?          :
+Enabled For Template Deployment? :
+Enabled For Disk Encryption?     :
 Soft Delete Enabled?             : True
 Access Policies                  :
                                    Tenant ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
@@ -76,7 +76,7 @@ Network Rule Set                  :
                                    Bypass                                     : AzureServices
                                    IP Rules                                   :
                                    Virtual Network Rules                      :
-                                      
+
 Tags                             :
 ```
 
@@ -117,7 +117,7 @@ Network Rule Set                 :
                                   Bypass                                     : AzureServices
                                   IP Rules                                   :
                                   Virtual Network Rules                      :
-                                 
+
 Tags                             :
 ```
 
@@ -163,7 +163,7 @@ Network Rule Set                 :
                                   Virtual Network Rules                      : /subscriptions/0b1f6471-1bf0-4dda-ae
                                   c3-cb9272f09590/resourcegroups/myRg/providers/microsoft.network/virtualnetworks
                                   /myvnet/subnets/frontendsubnet
-                                 
+
 Tags                             :
 ```
 Creating a key vault and specifies network rules to allow access to the specified IP address from the virtual network identified by $myNetworkResId. See `New-AzKeyVaultNetworkRuleSetObject` for more information.

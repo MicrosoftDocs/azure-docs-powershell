@@ -1,7 +1,7 @@
 ---
 Module Name: Az.StorageSync
 Module Guid: 001b4bbc-9d7d-43b2-9e95-7a70325e9509
-Download Help Link: https://docs.microsoft.com/powershell/module/az.storagesync
+Download Help Link: https://learn.microsoft.com/powershell/module/az.storagesync
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageSync/StorageSync/help/Az.StorageSync.md
@@ -31,13 +31,13 @@ This command lists all storage sync services within a given scope of subscriptio
 ### [Invoke-AzStorageSyncChangeDetection](Invoke-AzStorageSyncChangeDetection.md)
 This command can be used to manually initiate the detection of namespaces changes. It can be targeted to the entire share, subfolder or set of files. A maximum of 10,000 items can be detected. If the scope of changes is known to you, limit the execution of this command to parts of the namespace, so change detection can finish quickly and within the 10,000 item limit.
 
-> [!Note]  
+> [!Note]
 > The Invoke-AzStorageSyncChangeDetection cmdlet will not detect the following changes in the Azure file share:
-> - Files that are deleted. 
+> - Files that are deleted.
 > - Files that are moved out of the share.
-> - Files that are deleted and created with the same name.  
-> 
->  These changes will be detected when the [change detection job](https://docs.microsoft.com/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2Cazure-portal#afs-change-detection) runs.
+> - Files that are deleted and created with the same name.
+>
+>  These changes will be detected when the [change detection job](https://learn.microsoft.com/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2Cazure-portal#afs-change-detection) runs.
 
 ### [Invoke-AzStorageSyncCompatibilityCheck](Invoke-AzStorageSyncCompatibilityCheck.md)
 Checks for potential compatibility issues between your system and Azure File Sync.

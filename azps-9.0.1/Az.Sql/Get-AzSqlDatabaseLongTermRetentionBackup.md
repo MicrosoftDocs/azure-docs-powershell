@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqldatabaselongtermretentionbackup
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqldatabaselongtermretentionbackup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseLongTermRetentionBackup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseLongTermRetentionBackup.md
@@ -79,7 +79,7 @@ Location						 : northeurope
 ResourceId						 : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/resourceGroups/resourcegroup01/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database01/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
 ServerName						 : server01
 ServerCreateTime				 : 2/29/2018 12:12:19 AM
-ResourceGroupName                : 
+ResourceGroupName                :
 BackupStorageRedundancy			 : Geo
 
 BackupExpirationTime			 : 3/22/2018 11:43:18 PM
@@ -91,7 +91,7 @@ Location						 : northeurope
 ResourceId						 : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server02/longTermRetentionDatabases/database02/longTermRetentionBackups/55970792-164c-4a4a-88e5-7158d092d503;131656309980000000
 ServerName						 : server02
 ServerCreateTime				 : 2/28/2018 12:12:19 AM
-ResourceGroupName                : 
+ResourceGroupName                :
 BackupStorageRedundancy			 : Geo
 ```
 
@@ -133,7 +133,7 @@ Location						       : northeurope
 ResourceId					       : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/resourceGroups/resourcegroup01/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database01/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
 ServerName						     : server01
 ServerCreateTime			  	 : 2/29/2018 12:12:19 AM
-ResourceGroupName          : 
+ResourceGroupName          :
 BackupStorageRedundancy		 : Geo
 ```
 
@@ -154,7 +154,7 @@ Location						       : northeurope
 ResourceId						     : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/resourceGroups/resourcegroup01/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database01/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
 ServerName						     : server01
 ServerCreateTime				   : 2/29/2018 12:12:19 AM
-ResourceGroupName          : 
+ResourceGroupName          :
 BackupStorageRedundancy		 : Geo
 ```
 
@@ -175,7 +175,7 @@ Location						       : northeurope
 ResourceId					       : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/resourceGroups/resourcegroup01/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database02/longTermRetentionBackups/601061b7-164c-4a4a-88e5-7158d092d503;131656309980000000
 ServerName						     : server01
 ServerCreateTime				   : 2/28/2018 12:12:19 AM
-ResourceGroupName          : 
+ResourceGroupName          :
 BackupStorageRedundancy		 : Geo
 
 BackupExpirationTime			 : 3/22/2018 5:50:55 AM
@@ -187,7 +187,7 @@ Location						       : northeurope
 ResourceId						     : /subscriptions/371edd6d-9630-4558-a7bd-ee139498e6a1/resourceGroups/resourcegroup01/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/database01/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
 ServerName						     : server01
 ServerCreateTime				   : 2/29/2018 12:12:19 AM
-ResourceGroupName          : 
+ResourceGroupName          :
 BackupStorageRedundancy		 : Geo
 ```
 
@@ -418,4 +418,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlDatabaseBackupLongTermRetentionPolicy](./Set-AzSqlDatabaseBackupLongTermRetentionPolicy.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

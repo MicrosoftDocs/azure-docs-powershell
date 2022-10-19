@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Unarchiving a `Reservation` moves it to the state it was before archiving.\n
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/invoke-azreservationunarchivereservation) for up-to-date information.
+
 ## SYNTAX
 
 ### Unarchive (Default)

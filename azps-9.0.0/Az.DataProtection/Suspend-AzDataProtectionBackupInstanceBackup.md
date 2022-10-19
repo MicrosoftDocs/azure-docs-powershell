@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This operation will stop backups for backup instance
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/suspend-azdataprotectionbackupinstancebackup) for up-to-date information.
+
 ## SYNTAX
 
 ### Suspend (Default)

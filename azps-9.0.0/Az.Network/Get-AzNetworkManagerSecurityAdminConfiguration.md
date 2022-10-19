@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a network security admin configuration in a network manager.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-aznetworkmanagersecurityadminconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ### NoExpand (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 Enables or disables Azure Defender plans for a subscription in Azure Security Center.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/set-azsecuritypricing) for up-to-date information.
+
 ## SYNTAX
 
 ### SubscriptionLevelResource (Default)

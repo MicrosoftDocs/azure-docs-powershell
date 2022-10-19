@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an alert rule webhook.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/new-azalertrulewebhook) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -108,7 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
 
 [New-AzAlertRuleEmail](./New-AzAlertRuleEmail.md)
-
-[New-AzAutoscaleWebhook](./New-AzAutoscaleWebhook.md)
-
-

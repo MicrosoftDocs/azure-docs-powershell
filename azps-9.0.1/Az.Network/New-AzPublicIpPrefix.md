@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azpublicipprefix
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azpublicipprefix
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPublicIpPrefix.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPublicIpPrefix.md
@@ -31,14 +31,14 @@ The **New-AzPublicIpPrefix** cmdlet creates a public IP prefix.
 $publicIpPrefix = New-AzPublicIpPrefix -Name $prefixName -ResourceGroupName $rgName -PrefixLength 30
 ```
 
-This command creates a new public IP prefix resource. 
+This command creates a new public IP prefix resource.
 
 ### Example 2: Create a new global public Ip prefix
 ```powershell
 $publicIpPrefix = New-AzPublicIpPrefix -ResourceGroupName $rgname -name $rname -location $location -Tier Global -PrefixLength 30
 ```
 
-This command creates a new global public IP prefix resource. 
+This command creates a new global public IP prefix resource.
 
 ### Example 3
 

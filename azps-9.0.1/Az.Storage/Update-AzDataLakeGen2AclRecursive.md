@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/update-azdatalakegen2aclrecursive
+online version: https://learn.microsoft.com/powershell/module/az.storage/update-azdatalakegen2aclrecursive
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzDataLakeGen2AclRecursive.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzDataLakeGen2AclRecursive.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzDataLakeGen2AclRecursive
 
 ## SYNOPSIS
-Update ACL recursively on the specified path. 
+Update ACL recursively on the specified path.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Update-AzDataLakeGen2AclRecursive [-FileSystem] <String> [[-Path] <String>] [-Co
 ```
 
 ## DESCRIPTION
-The **Update-AzDataLakeGen2AclRecursive** cmdlet updates ACL recursively on the specified path. 
+The **Update-AzDataLakeGen2AclRecursive** cmdlet updates ACL recursively on the specified path.
 The input ACL will merge the the original ACL: If ACL entry with same AccessControlType/EntityId/DefaultScope exist, update permission; else add a new ACL entry.
 
 ## EXAMPLES
@@ -30,12 +30,12 @@ The input ACL will merge the the original ACL: If ACL entry with same AccessCont
 ### Example 1: Update ACL recursively on a root directiry of filesystem
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\>$acl = New-AzDataLakeGen2ItemAclObject -AccessControlType user -Permission rwx 
-PS C:\>$acl = New-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl 
+PS C:\>$acl = New-AzDataLakeGen2ItemAclObject -AccessControlType user -Permission rwx
+PS C:\>$acl = New-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl
 PS C:\>$acl = New-AzDataLakeGen2ItemAclObject -AccessControlType other -Permission "rw-" -InputObject $acl
 PS C:\> Update-AzDataLakeGen2AclRecursive -FileSystem "filesystem1" -Acl $acl -Context $ctx
 
-FailedEntries                   : 
+FailedEntries                   :
 TotalDirectoriesSuccessfulCount : 7
 TotalFilesSuccessfulCount       : 5
 TotalFailureCount               : 0
@@ -59,8 +59,8 @@ ContinuationToken               : VBaHi5TfyO2ai1wYTRhIL2FjbGNibjA2c3RmATAxRDVEN0
 
 PS C:\> $result.FailedEntries
 
-Name            IsDirectory ErrorMessage                                                                   
-----            ----------- ------------                                                                   
+Name            IsDirectory ErrorMessage
+----            ----------- ------------
 dir0/dir2/file4       False This request is not authorized to perform this operation using this permission.
 
 # user need fix the failed item , then can resume with ContinuationToken
@@ -69,7 +69,7 @@ PS C:\> $result = Update-AzDataLakeGen2AclRecursive -FileSystem "filesystem1" -P
 
 PS C:\> $result
 
-FailedEntries                   : 
+FailedEntries                   :
 TotalDirectoriesSuccessfulCount : 100
 TotalFilesSuccessfulCount       : 1000
 TotalFailureCount               : 0
@@ -89,7 +89,7 @@ $totalFailure = 0
 $FailedEntries = New-Object System.Collections.Generic.List[System.Object]
 do
 {
-    
+
     if ($ContinueOnFailure)
     {
         $result = Update-AzDataLakeGen2AclRecursive -FileSystem "filesystem1" -Path "dir1" -Acl $acl  -BatchSize 100 -MaxBatchCount 50 -ContinuationToken $token -Context $ctx -ContinueOnFailure
@@ -132,8 +132,8 @@ ContinuationToken               : VBaHi5TfyO2ai1wYTRhIL2FjbGNibjA2c3RmATAxRDVEN0
 
 PS C:\> $result.FailedEntries
 
-Name            IsDirectory ErrorMessage                                                                   
-----            ----------- ------------                                                                   
+Name            IsDirectory ErrorMessage
+----            ----------- ------------
 dir0/dir1/file1       False This request is not authorized to perform this operation using this permission.
 dir0/dir2/file4       False This request is not authorized to perform this operation using this permission.
 
@@ -142,7 +142,7 @@ dir0/dir2/file4       False This request is not authorized to perform this opera
 PS C:\> foreach ($path in $result.FailedEntries.Name)
         {
             # user code to fix failed entry in $path
-            
+
             #set ACL again
             Set-AzDataLakeGen2AclRecursive -FileSystem "filesystem1" -Path $path -Acl $acl -Context $ctx
         }

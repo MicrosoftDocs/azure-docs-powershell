@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 4D7EEDD7-89D4-4B1E-A9A1-B301E759CE72
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstorageaccount
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstorageaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageAccount.md
@@ -159,11 +159,11 @@ This command sets NetworkRuleSet property of a Storage account with JSON
 
 ### Example 8: Get NetworkRuleSet property from a Storage account, and set it to another Storage account
 ```
-PS C:\> $networkRuleSet = (Get-AzStorageAccount -ResourceGroupName "MyResourceGroup" -Name "mystorageaccount").NetworkRuleSet 
+PS C:\> $networkRuleSet = (Get-AzStorageAccount -ResourceGroupName "MyResourceGroup" -Name "mystorageaccount").NetworkRuleSet
 PS C:\> Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -Name "mystorageaccount2" -NetworkRuleSet $networkRuleSet
 ```
 
-This first command gets NetworkRuleSet property from a Storage account, and the second command sets it to another Storage account 
+This first command gets NetworkRuleSet property from a Storage account, and the second command sets it to another Storage account
 
 ### Example 9: Upgrade a Storage account with Kind "Storage" or "BlobStorage" to "StorageV2" kind Storage account
 ```
@@ -181,8 +181,8 @@ PS C:\> $account = Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -Na
 
 PS C:\> $account.AzureFilesIdentityBasedAuth
 
-DirectoryServiceOptions ActiveDirectoryProperties                                                      DefaultSharePermission      
------------------------ -------------------------                                                      ----------------------      
+DirectoryServiceOptions ActiveDirectoryProperties                                                      DefaultSharePermission
+----------------------- -------------------------                                                      ----------------------
 AADDS                   Microsoft.Azure.Commands.Management.Storage.Models.PSActiveDirectoryProperties StorageFileDataSmbShareOwner
 ```
 
@@ -201,8 +201,8 @@ PS C:\> $account = Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -Na
         -ActiveDirectoryDomainSid "S-1-5-21-1234567890-1234567890-1234567890" `
         -ActiveDirectoryAzureStorageSid "S-1-5-21-1234567890-1234567890-1234567890-1234" `
         -ActiveDirectorySamAccountName "samaccountname" `
-        -ActiveDirectoryAccountType Computer 
-		
+        -ActiveDirectoryAccountType Computer
+
 PS C:\> $account.AzureFilesIdentityBasedAuth.DirectoryServiceOptions
 AD
 
@@ -237,7 +237,7 @@ PS C:\> $a.AllowSharedKeyAccess
 True
 ```
 
-The command sets MinimumTlsVersion, AllowBlobPublicAccess and AllowSharedKeyAccess, and then show the the 3 properties of the account 
+The command sets MinimumTlsVersion, AllowBlobPublicAccess and AllowSharedKeyAccess, and then show the the 3 properties of the account
 
 ### Example 13: Update a Storage account with RoutingPreference setting
 <!-- Skip: Output cannot be splitted from code -->
@@ -260,7 +260,7 @@ Table              : https://mystorageaccount.table.core.windows.net/
 File               : https://mystorageaccount.file.core.windows.net/
 Web                : https://mystorageaccount.z2.web.core.windows.net/
 Dfs                : https://mystorageaccount.dfs.core.windows.net/
-MicrosoftEndpoints : 
+MicrosoftEndpoints :
 InternetEndpoints  : {"Blob":"https://mystorageaccount-internetrouting.blob.core.windows.net/","File":"https://mystorageaccount-internetrouting.file.core.windows.net/","Web":"https://mystorageaccount-internetrouting.z2.web.core.windows.net/","Dfs":"https://w
                      eirp3-internetrouting.dfs.core.windows.net/"}
 ```
@@ -308,7 +308,7 @@ PS C:\> $account.Encryption.EncryptionIdentity.EncryptionUserAssignedIdentity
 PS C:\> $account.Encryption.KeyVaultProperties
 
 KeyName                       : wrappingKey
-KeyVersion                    : 
+KeyVersion                    :
 KeyVaultUri                   : https://mykeyvault.vault.azure.net:443
 CurrentVersionedKeyIdentifier : https://mykeyvault.vault.azure.net/keys/wrappingKey/8e74036e0d534e58b3bd84b319e31d8f
 LastKeyRotationTimestamp      : 4/12/2021 8:17:57 AM
@@ -331,13 +331,13 @@ $account = Set-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $sto
 # EncryptionUserAssignedIdentity is empty, so the account access keyvault with system assigned identity
 PS C:\> $account.Encryption.EncryptionIdentity
 
-EncryptionUserAssignedIdentity                                                                                                                 
------------------------------- 
+EncryptionUserAssignedIdentity
+------------------------------
 
 PS C:\> $account.Encryption.KeyVaultProperties
 
 KeyName                       : wrappingKey
-KeyVersion                    : 
+KeyVersion                    :
 KeyVaultUri                   : https://mykeyvault.vault.azure.net:443
 CurrentVersionedKeyIdentifier : https://mykeyvault.vault.azure.net/keys/wrappingKey/8e74036e0d534e58b3bd84b319e31d8f
 LastKeyRotationTimestamp      : 4/12/2021 8:17:57 AM
@@ -358,7 +358,7 @@ $account = Set-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $sto
 ```
 
 This command first update the user assigned identity to access keyvault, then update the keyvault for encryption.
-To update both both Keyvault and the user assigned identity, we need update with the above 2 steps. 
+To update both both Keyvault and the user assigned identity, we need update with the above 2 steps.
 
 ### Example 18: Update a Storage account with AllowCrossTenantReplication
 <!-- Skip: Output cannot be splitted from code -->
@@ -398,12 +398,12 @@ True
 
 PS C:\> $account.ImmutableStorageWithVersioning.ImmutabilityPolicy
 
-ImmutabilityPeriodSinceCreationInDays State    
-------------------------------------- -----    
+ImmutabilityPeriodSinceCreationInDays State
+------------------------------------- -----
                                     2 Unlocked
 ```
 
-The command updates account-level immutability policy properties on an existing storage account, and show the result. 
+The command updates account-level immutability policy properties on an existing storage account, and show the result.
 The storage account must be created with enable account level immutability with versioning.
 The account-level immutability policy will be inherited and applied to objects that do not possess an explicit immutability policy at the object level.
 
@@ -412,7 +412,7 @@ The account-level immutability policy will be inherited and applied to objects t
 
 
 ```powershell
-PS C:\> $account = Set-AzStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -EnableSftp $true -EnableLocalUser $true 
+PS C:\> $account = Set-AzStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -EnableSftp $true -EnableLocalUser $true
 
 PS C:\> $account.EnableSftp
 True
@@ -421,7 +421,7 @@ PS C:\> $account.EnableLocalUser
 True
 ```
 
-This command updates a Storage account by enable Sftp and localuser. 
+This command updates a Storage account by enable Sftp and localuser.
 To run the command succssfully, the Storage account should already enable Hierarchical Namespace.
 
 ## PARAMETERS
@@ -431,7 +431,7 @@ Specifies the access tier of the Storage account that this cmdlet modifies.
 The acceptable values for this parameter are: Hot and Cool.
 If you change the access tier, it may result in additional charges. For more information, see
 [Azure Blob Storage: Hot and cool storage tiers](http://go.microsoft.com/fwlink/?LinkId=786482).
-If the Storage account has Kind as StorageV2 or BlobStorage, you can specify the *AccessTier* parameter. 
+If the Storage account has Kind as StorageV2 or BlobStorage, you can specify the *AccessTier* parameter.
 If the Storage account has Kind as Storage, do not specify the *AccessTier* parameter.
 
 ```yaml
@@ -764,9 +764,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLargeFileShare
-Indicates whether or not the storage account can support large file shares with more than 5 TiB capacity. 
-Once the account is enabled, the feature cannot be disabled. 
-Currently only supported for LRS and ZRS replication types, hence account conversions to geo-redundant accounts would not be possible. 
+Indicates whether or not the storage account can support large file shares with more than 5 TiB capacity.
+Once the account is enabled, the feature cannot be disabled.
+Currently only supported for LRS and ZRS replication types, hence account conversions to geo-redundant accounts would not be possible.
 Learn more in https://go.microsoft.com/fwlink/?linkid=2086047
 
 ```yaml
@@ -843,7 +843,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutabilityPeriod
-The immutability period for the blobs in the container since the policy creation in days. 
+The immutability period for the blobs in the container since the policy creation in days.
 This property can only be changed when account is created with '-EnableAccountLevelImmutability'.
 
 ```yaml
@@ -859,11 +859,11 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutabilityPolicyState
-The mode of the policy. Possible values include: 'Unlocked', 'Locked', 'Disabled. 
-Disabled state disablesthe policy. 
-Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property. 
-Locked state only allows the increase of the immutability retention time. 
-A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. 
+The mode of the policy. Possible values include: 'Unlocked', 'Locked', 'Disabled.
+Disabled state disablesthe policy.
+Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property.
+Locked state only allows the increase of the immutability retention time.
+A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
 This property can only be changed when account is created with '-EnableAccountLevelImmutability'.
 
 ```yaml
@@ -909,8 +909,8 @@ Accept wildcard characters: False
 ```
 
 ### -KeyvaultEncryption
-Indicates whether or not to use Microsoft KeyVault for the encryption keys when using Storage Service Encryption. 
-If KeyName, KeyVersion, and KeyVaultUri are all set, KeySource will be set to Microsoft.Keyvault whether this parameter is set or not. 
+Indicates whether or not to use Microsoft KeyVault for the encryption keys when using Storage Service Encryption.
+If KeyName, KeyVersion, and KeyVaultUri are all set, KeySource will be set to Microsoft.Keyvault whether this parameter is set or not.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

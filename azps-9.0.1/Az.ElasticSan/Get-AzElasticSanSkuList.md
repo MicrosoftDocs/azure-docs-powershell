@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/get-azelasticsanskulist
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/get-azelasticsanskulist
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Get-AzElasticSanSkuList.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Get-AzElasticSanSkuList.md
@@ -24,14 +24,14 @@ List all the available Skus in the region and information related to them
 
 ## EXAMPLES
 
-### Example 1: Get all the available Skus 
+### Example 1: Get all the available Skus
 ```powershell
 Get-AzElasticSanSkuList
 ```
 
 ```output
-Location      Name           ResourceType Tier   
---------      ----           ------------ ----   
+Location      Name           ResourceType Tier
+--------      ----           ------------ ----
 {eastus}      Premium_LRS    elasticSans  Premium
 {eastus2}     Premium_LRS    elasticSans  Premium
 ```

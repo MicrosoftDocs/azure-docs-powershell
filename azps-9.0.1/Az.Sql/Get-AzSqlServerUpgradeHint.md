@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: BFEAE1F7-56E3-4EA9-B39A-ED09582C8A09
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlserverupgradehint
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlserverupgradehint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlServerUpgradeHint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlServerUpgradeHint.md
@@ -35,8 +35,8 @@ Get-AzSqlServerUpgradeHint -ResourceGroupName "ResourceGroup01" -ServerName "Ser
 ```
 
 ```output
-ElasticPools Databases           
------------- ---------           
+ElasticPools Databases
+------------ ---------
 {}           {database01, database02}
 ```
 
@@ -156,6 +156,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzSqlElasticPoolRecommendation](./Get-AzSqlElasticPoolRecommendation.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
 
 

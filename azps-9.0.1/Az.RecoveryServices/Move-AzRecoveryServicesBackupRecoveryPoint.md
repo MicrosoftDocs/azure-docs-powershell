@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/move-azrecoveryservicesbackuprecoverypoint
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/move-azrecoveryservicesbackuprecoverypoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Move-AzRecoveryServicesBackupRecoveryPoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Move-AzRecoveryServicesBackupRecoveryPoint.md
@@ -21,7 +21,7 @@ Move-AzRecoveryServicesBackupRecoveryPoint [-RecoveryPoint] <RecoveryPointBase>
 ```
 
 ## DESCRIPTION
-The **Move-AzRecoveryServicesBackupRecoveryPoint** cmdlet moves the recovery point from source tier to destination tier. 
+The **Move-AzRecoveryServicesBackupRecoveryPoint** cmdlet moves the recovery point from source tier to destination tier.
 Currently only valid Source tier is VaultStandard, only valid destination tier is VaultArchive.
 
 ## EXAMPLES
@@ -38,7 +38,7 @@ Move-AzRecoveryServicesBackupRecoveryPoint -RecoveryPoint $rp[2] -SourceTier Vau
 ```
 
 First we get the recovery services vault, backup items list. Then, we fetch the recovery points for a particular backup item ($item[3] in this case) which are in
-VaultStandard tier. Then we trigger move for one of the recovery points from the rp list to VaultArchive tier.  
+VaultStandard tier. Then we trigger move for one of the recovery points from the rp list to VaultArchive tier.
 
 ## PARAMETERS
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/start-azdatasharesubscriptionsynchronization
+online version: https://learn.microsoft.com/powershell/module/az.datashare/start-azdatasharesubscriptionsynchronization
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Start-AzDataShareSubscriptionSynchronization.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Start-AzDataShareSubscriptionSynchronization.md
@@ -56,7 +56,7 @@ status            : Succeeded
 synchronizationId : 20a4416b-b33b-4539-a908-71dc8ef698fb
 ```
 
-This commands initiates synchronization for a sharesubscription named AdsShareSubscription in account WikiAds. 
+This commands initiates synchronization for a sharesubscription named AdsShareSubscription in account WikiAds.
 
 ## PARAMETERS
 

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Perform an action on bulk collections
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.marketplace/set-azmarketplacebulkprivatestorecollectionaction) for up-to-date information.
+
 ## SYNTAX
 
 ### BulkExpanded (Default)

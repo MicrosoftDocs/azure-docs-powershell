@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 05626BF7-F886-4C76-8FC2-DDF783DEB539
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvpnclientrevokedcertificate
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvpnclientrevokedcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnClientRevokedCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnClientRevokedCertificate.md

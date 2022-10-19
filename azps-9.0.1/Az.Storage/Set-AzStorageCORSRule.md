@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 288B7B56-B934-45AF-BF56-4EB0DD827522
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstoragecorsrule
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstoragecorsrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageCORSRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageCORSRule.md
@@ -37,8 +37,8 @@ PS C:\>$CorsRules = (@{
     MaxAgeInSeconds=30;
     AllowedMethods=@("Get","Connect")},
     @{
-    AllowedOrigins=@("http://www.fabrikam.com","http://www.contoso.com"); 
-    ExposedHeaders=@("x-ms-meta-data*","x-ms-meta-customheader"); 
+    AllowedOrigins=@("http://www.fabrikam.com","http://www.contoso.com");
+    ExposedHeaders=@("x-ms-meta-data*","x-ms-meta-customheader");
     AllowedHeaders=@("x-ms-meta-target*","x-ms-meta-customheader");
     MaxAgeInSeconds=30;
     AllowedMethods=@("Put")})
@@ -182,9 +182,9 @@ Accept wildcard characters: False
 ### -ServiceType
 Specifies the Azure Storage service type for which this cmdlet assigns rules.
 The acceptable values for this parameter are:
-- Blob 
-- Table 
-- Queue 
+- Blob
+- Table
+- Queue
 - File
 
 ```yaml

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates the CosmosDB Sql Trigger. Performs a client side patch operation by reading the existing Trigger.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cosmosdb/update-azcosmosdbsqltrigger) for up-to-date information.
+
 ## SYNTAX
 
 ### ByNameParameterSet (Default)

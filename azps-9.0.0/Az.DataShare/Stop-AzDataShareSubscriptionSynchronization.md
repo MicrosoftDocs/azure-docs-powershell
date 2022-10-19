@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops ongoing synchronization for a share subscription. A share subscription can be specified through its resource id or its name.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datashare/stop-azdatasharesubscriptionsynchronization) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsParameterSet (Default)

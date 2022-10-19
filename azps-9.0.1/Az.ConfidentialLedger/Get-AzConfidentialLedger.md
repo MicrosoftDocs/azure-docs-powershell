@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConfidentialLedger
-online version: https://docs.microsoft.com/powershell/module/az.confidentialledger/get-azconfidentialledger
+online version: https://learn.microsoft.com/powershell/module/az.confidentialledger/get-azconfidentialledger
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/help/Get-AzConfidentialLedger.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/help/Get-AzConfidentialLedger.md
@@ -50,7 +50,7 @@ Get-AzConfidentialLedger `
 ```
 
 ```output
-Location Name               
+Location Name
 eastus   testledger0
 eastus   testledger1
 eastus   testledger2

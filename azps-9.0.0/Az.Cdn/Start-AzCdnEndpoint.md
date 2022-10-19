@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Starts an existing CDN endpoint that is on a stopped state.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/start-azcdnendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### Start (Default)

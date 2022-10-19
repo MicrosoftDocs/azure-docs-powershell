@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Expands and Lists MSIX packages in an Image, given the Image Path.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.desktopvirtualization/expand-azwvdmsiximage) for up-to-date information.
+
 ## SYNTAX
 
 ### ExpandExpanded (Default)

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 7915A7AC-5A47-4868-B846-2896BCEBFAB2
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azmetricdefinition
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azmetricdefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzMetricDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzMetricDefinition.md
@@ -33,21 +33,21 @@ Get-AzMetricDefinition -ResourceId "/subscriptions/d33fb0c7-69d3-40be-e35b-4f0de
 ```output
 Name                   : CpuTime
 Dimensions             : {}
-MetricAvailabilities   : {Microsoft.Azure.Insights.Models.MetricAvailability, 
-                         Microsoft.Azure.Insights.Models.MetricAvailability, 
+MetricAvailabilities   : {Microsoft.Azure.Insights.Models.MetricAvailability,
+                         Microsoft.Azure.Insights.Models.MetricAvailability,
                          Microsoft.Azure.Insights.Models.MetricAvailability}
 PrimaryAggregationType : Total
 Properties             : {}
-ResourceUri            : 
+ResourceUri            :
 Unit                   : Seconds
 Name                   : Requests
 Dimensions             : {}
-MetricAvailabilities   : {Microsoft.Azure.Insights.Models.MetricAvailability, 
-                         Microsoft.Azure.Insights.Models.MetricAvailability, 
+MetricAvailabilities   : {Microsoft.Azure.Insights.Models.MetricAvailability,
+                         Microsoft.Azure.Insights.Models.MetricAvailability,
                          Microsoft.Azure.Insights.Models.MetricAvailability}
 PrimaryAggregationType : Total
 Properties             : {}
-ResourceUri            : 
+ResourceUri            :
 Unit                   : Count
 ```
 
@@ -59,37 +59,37 @@ Get-AzMetricDefinition -ResourceId "/subscriptions/d33fb0c7-69d3-40be-e35b-4f0de
 ```
 
 ```output
-Dimensions             : 
-MetricAvailabilities   : 
-                             Location  : 
+Dimensions             :
+MetricAvailabilities   :
+                             Location  :
                              Retention : 2.00:00:00
                              Values    : 00:01:00
-                             Location  : 
+                             Location  :
                              Retention : 30.00:00:00
                              Values    : 01:00:00
-                             Location  : 
+                             Location  :
                              Retention : 90.00:00:00
                              Values    : 1.00:00:00
 Name                   : CpuTime
-Properties             : 
+Properties             :
 PrimaryAggregationType : Total
-ResourceUri            : 
+ResourceUri            :
 Unit                   : Seconds
-Dimensions             : 
-MetricAvailabilities   : 
-                             Location  : 
+Dimensions             :
+MetricAvailabilities   :
+                             Location  :
                              Retention : 2.00:00:00
                              Values    : 00:01:00
-                             Location  : 
+                             Location  :
                              Retention : 30.00:00:00
                              Values    : 01:00:00
-                             Location  : 
+                             Location  :
                              Retention : 90.00:00:00
                              Values    : 1.00:00:00
 Name                   : Requests
-Properties             : 
+Properties             :
 PrimaryAggregationType : Total
-ResourceUri            : 
+ResourceUri            :
 Unit                   : Count
 ```
 
@@ -102,36 +102,36 @@ Get-AzMetricDefinition -ResourceId "/subscriptions/d33fb0c7-69d3-40be-e35b-4f0de
 ```
 
 ```output
-MetricAvailabilities   : 
-                             Location  : 
+MetricAvailabilities   :
+                             Location  :
                              Retention : 2.00:00:00
                              Values    : 00:01:00
-                             Location  : 
+                             Location  :
                              Retention : 30.00:00:00
                              Values    : 01:00:00
-                             Location  : 
+                             Location  :
                              Retention : 90.00:00:00
                              Values    : 1.00:00:00
 Name                   : CpuTime
-Properties             : 
+Properties             :
 PrimaryAggregationType : Total
-ResourceUri            : 
+ResourceUri            :
 Unit                   : Seconds
-Dimensions             : 
-MetricAvailabilities   : 
-                             Location  : 
+Dimensions             :
+MetricAvailabilities   :
+                             Location  :
                              Retention : 2.00:00:00
                              Values    : 00:01:00
-                             Location  : 
+                             Location  :
                              Retention : 30.00:00:00
                              Values    : 01:00:00
-                             Location  : 
+                             Location  :
                              Retention : 90.00:00:00
                              Values    : 1.00:00:00
 Name                   : BytesSent
-Properties             : 
+Properties             :
 PrimaryAggregationType : Total
-ResourceUri            : 
+ResourceUri            :
 Unit                   : Bytes
 ```
 
@@ -232,7 +232,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 More information about the supported metrics may be found at:
-https://docs.microsoft.com/azure/azure-monitor/platform/metrics-supported
+https://learn.microsoft.com/azure/azure-monitor/platform/metrics-supported
 
 ## RELATED LINKS
 

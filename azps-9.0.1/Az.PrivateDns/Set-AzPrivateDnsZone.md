@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
 Module Name: Az.PrivateDns
-online version: https://docs.microsoft.com/powershell/module/az.privatedns/Set-AzPrivateDnsZone
+online version: https://learn.microsoft.com/powershell/module/az.privatedns/Set-AzPrivateDnsZone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/Set-AzPrivateDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/Set-AzPrivateDnsZone.md
@@ -51,13 +51,13 @@ Set-AzPrivateDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGroup" -Ta
 Name                          : myzone.com
 ResourceId                    : "/subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/PrivateZones/myzone.com"
 ResourceGroupName             : MyResourceGroup
-Location					  : 
+Location					  :
 Etag                          : xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Tags                          : {tag1="value1";tag2="value2"}
 NumberOfRecordSets            : 1
 MaxNumberOfRecordSets         : 5000
 ```
-This command updates the zone named myzone.com from the resource group named MyResourceGroup with the tags provided. Use Get-AzPrivateDnsZone to retrieve the updated zone. 
+This command updates the zone named myzone.com from the resource group named MyResourceGroup with the tags provided. Use Get-AzPrivateDnsZone to retrieve the updated zone.
 
 ## PARAMETERS
 

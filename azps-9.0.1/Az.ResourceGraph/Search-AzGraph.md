@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceGraph.dll-Help.xml
 Module Name: Az.ResourceGraph
-online version: https://docs.microsoft.com/powershell/module/az.resourcegraph/search-azgraph
+online version: https://learn.microsoft.com/powershell/module/az.resourcegraph/search-azgraph
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Search-AzGraph.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Search-AzGraph.md

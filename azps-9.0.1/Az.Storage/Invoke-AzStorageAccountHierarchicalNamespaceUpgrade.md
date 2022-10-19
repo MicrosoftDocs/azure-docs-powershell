@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/invoke-azstorageaccounthierarchicalnamespaceupgrade
+online version: https://learn.microsoft.com/powershell/module/az.storage/invoke-azstorageaccounthierarchicalnamespaceupgrade
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Invoke-AzStorageAccountHierarchicalNamespaceUpgrade.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Invoke-AzStorageAccountHierarchicalNamespaceUpgrade.md
@@ -43,7 +43,7 @@ PS C:\> $task = Invoke-AzStorageAccountHierarchicalNamespaceUpgrade -ResourceGro
 PS C:\> $task | Wait-Job
 ```
 
-The first command validates if a stroage account can be upgrade to enable HierarchicalNamespace. 
+The first command validates if a stroage account can be upgrade to enable HierarchicalNamespace.
 The second command upgrade the storage account to enable HierarchicalNamespace. Since the upgrade will take time, use '-Asjob' to run it in backend, and return a task.  Then wait for the task finish.
 
 ## PARAMETERS
@@ -124,8 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequestType
-The HierarchicalNamespaceUpgrade requestType  to run: 
-- Validation: Validate if the account can be upgrade to enable HierarchicalNamespace. 
+The HierarchicalNamespaceUpgrade requestType  to run:
+- Validation: Validate if the account can be upgrade to enable HierarchicalNamespace.
 - Upgrade: Upgrade the storage account to enable HierarchicalNamespace.
 
 ```yaml

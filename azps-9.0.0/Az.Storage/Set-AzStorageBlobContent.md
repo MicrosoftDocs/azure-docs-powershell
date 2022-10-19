@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Uploads a local file to an Azure Storage blob.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azstorageblobcontent) for up-to-date information.
+
 ## SYNTAX
 
 ### SendManual (Default)

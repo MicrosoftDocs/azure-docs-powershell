@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StorageMover
-online version: https://docs.microsoft.com/powershell/module/az.storagemover/remove-azstoragemoverproject
+online version: https://learn.microsoft.com/powershell/module/az.storagemover/remove-azstoragemoverproject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/Remove-AzStorageMoverProject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/Remove-AzStorageMoverProject.md

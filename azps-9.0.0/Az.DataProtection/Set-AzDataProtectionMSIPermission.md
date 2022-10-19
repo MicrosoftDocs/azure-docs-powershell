@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Grants required permissions to the backup vault to configure backup
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/set-azdataprotectionmsipermission) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Kusto
-online version: https://docs.microsoft.com/powershell/module/az.kusto/invoke-azkustodiagnoseclustervirtualnetwork
+online version: https://learn.microsoft.com/powershell/module/az.kusto/invoke-azkustodiagnoseclustervirtualnetwork
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Invoke-AzKustoDiagnoseClusterVirtualNetwork.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Invoke-AzKustoDiagnoseClusterVirtualNetwork.md
@@ -32,7 +32,7 @@ Diagnoses network connectivity status for external resources on which the servic
 
 ## EXAMPLES
 
-### Example 1: Show network connectivity diagnosis for external resources 
+### Example 1: Show network connectivity diagnosis for external resources
 ```powershell
 Invoke-AzKustoDiagnoseClusterVirtualNetwork -ResourceGroupName "testrg" -ClusterName "testnewkustocluster"
 ```

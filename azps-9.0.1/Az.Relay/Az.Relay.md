@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Relay
 Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
-Download Help Link: https://docs.microsoft.com/powershell/module/az.relay
+Download Help Link: https://learn.microsoft.com/powershell/module/az.relay
 Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Az.Relay.md
@@ -53,7 +53,7 @@ Removes the authorization rule of a HybridConnection from the given Relay entiti
 Removes the HybridConnection from the specified HybridConnection namespace.
 
 ### [Remove-AzRelayNamespace](Remove-AzRelayNamespace.md)
-Removes the namespace from the specified resource group. 
+Removes the namespace from the specified resource group.
 
 ### [Remove-AzWcfRelay](Remove-AzWcfRelay.md)
 Removes the WcfRelay from the specified Relay namespace.

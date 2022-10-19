@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
 Module Name: Az.Peering
-online version: https://docs.microsoft.com/powershell/module/az.peering/set-azpeeringexchangeconnectionobject
+online version: https://learn.microsoft.com/powershell/module/az.peering/set-azpeeringexchangeconnectionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Set-AzPeeringExchangeConnectionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Set-AzPeeringExchangeConnectionObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzPeeringExchangeConnectionObject
 
 ## SYNOPSIS
-Sets or updates the Exchange Connection information. 
+Sets or updates the Exchange Connection information.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Set-AzPeeringExchangeConnectionObject -InputObject <PSExchangeConnection> -MD5Au
 ```
 
 ## DESCRIPTION
-Used in conjunction with Update-AzPeering, this is an in memory operation and will only persist with `Update-AzPeering`. 
+Used in conjunction with Update-AzPeering, this is an in memory operation and will only persist with `Update-AzPeering`.
 
 ## EXAMPLES
 
@@ -42,14 +42,14 @@ Used in conjunction with Update-AzPeering, this is an in memory operation and wi
 $update = Get-AzPeering -Name "ContosoPeering" -ResourceGroupName rg1 | Set-AzPeeringExchangeConnectionObject -MD5AuthenticationKey $hash
 ```
 
-Updates the Md5 Hash for the first connection in the Peering object in memory. 
+Updates the Md5 Hash for the first connection in the Peering object in memory.
 
 ### Example 2: Update Bgp Session Address
 ```powershell
 $update = Get-AzPeering -Name "ContosoPeering" -ResourceGroupName rg1 | Set-AzPeeringExchangeConnectionObject -PeerSessionIPv4Address "192.168.0.1" -MaxPrefixesAdvertisedIPv4 20000
 ```
 
-Updates the Peering Address for the first connection in the Peering object in memory. 
+Updates the Peering Address for the first connection in the Peering object in memory.
 
 ## PARAMETERS
 

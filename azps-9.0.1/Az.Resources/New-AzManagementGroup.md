@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/new-azmanagementgroup/
+online version: https://learn.microsoft.com/powershell/module/az.resources/new-azmanagementgroup/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzManagementGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzManagementGroup.md
@@ -49,7 +49,7 @@ ParentName        : 14307de0-5e6f-46cf-b2ba-64a062964d30
 ParentDisplayName : 14307de0-5e6f-46cf-b2ba-64a062964d30
 ```
 
-Creation of a new group with `DisplayName` and `ParentId` set to `null`. The `DisplayName` will be same as the `GroupName` and the parent of the group will be the tenant.  
+Creation of a new group with `DisplayName` and `ParentId` set to `null`. The `DisplayName` will be same as the `GroupName` and the parent of the group will be the tenant.
 
 ### Example 2: Create a Management Group with a display name
 ```powershell

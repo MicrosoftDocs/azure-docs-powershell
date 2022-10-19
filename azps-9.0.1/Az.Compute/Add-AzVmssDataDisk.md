@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmssdatadisk
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmssdatadisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssDataDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssDataDisk.md
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ### -DeleteOption
 Specifies whether data disk should be deleted or detached upon VMSS Flex deletion (This feature is available for VMSS with Flexible OrchestrationMode only)
 
-Accepted Values 
+Accepted Values
 Delete - If this value is used, the data disk is deleted when the VMSS Flex VM is deleted.
 Detach - If this value is used, the data disk is retained after VMSS Flex VM is deleted.
 
