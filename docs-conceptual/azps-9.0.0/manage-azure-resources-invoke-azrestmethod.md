@@ -12,7 +12,7 @@ title: Manage Azure resources with Invoke-AzRestMethod
 
 [Invoke-AzRestMethod](/powershell/module/az.accounts/invoke-azrestmethod) is an Azure PowerShell
 cmdlet that was introduced in Az PowerShell module version 4.4.0. It allows you to make custom HTTP
-requests to the Azure Resource Management (ARM) endpoint using the Az context.
+requests to the Azure Resource Manager (ARM) endpoint using the Az context.
 
 This cmdlet is useful when you want to manage Azure services for features that aren't yet available
 in the Az PowerShell module.
@@ -57,7 +57,7 @@ The `APIVersion` parameter allows you to use a specific API version, including p
 supported API versions for Azure Resource providers can be found in the
 [azure-rest-api-specs](https://github.com/Azure/azure-rest-api-specs) GitHub repository.
 
-You can find the definition for the 2019-12-01-preview version of ACR in the following location:
+You can find the definition for the `2019-12-01-preview` ACR API version in the following location:
 [azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/](https://github.com/Azure/azure-rest-api-specs/tree/master/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview).
 
 ## Using Invoke-AzRestMethod with PATCH operations
@@ -88,7 +88,7 @@ The `Payload` property is a JSON string that shows the path of the property to b
 All the parameters for this API are described in the **rest-api-spec** file associated with this API.
 The specific definition for the publicNetworkAccess parameter can be found in the
 [container registry JSON file](https://github.com/Azure/azure-rest-api-specs/blob/2a9da9a79d0a7b74089567ec4f0289f3e0f31bec/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2019-12-01-preview/containerregistry.json)
-for the 2019-12-01 preview version of the API.
+for the `2019-12-01-preview` API version.
 
 To only allow access to the registry from a specific IP address, the payload needs to be modified as
 shown in the following example:
