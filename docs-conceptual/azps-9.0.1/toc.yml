@@ -105,12 +105,12 @@
     href: azps-msgraph-migration-changes.md
   - name: Migrate from previous versions of Az
     items:
-    - name: Az 9.0.0 Migration Guide
-      href: migrate-az-9.0.0.md
+    - name: Az 9.0.1 Migration Guide
+      href: migrate-az-9.0.1.md
     - name: Az.EventHub Migration Guide
-      href: migrate-az-9.0.0-eventhub.md
+      href: migrate-az-9.0.1-eventhub.md
     - name: Az.ServiceBus Migration Guide
-      href: migrate-az-9.0.0-servicebus.md
+      href: migrate-az-9.0.1-servicebus.md
     - name: Az 8.0.0 Migration Guide
       href: migrate-az-8.0.0.md
     - name: Az 7.0.0 Migration Guide
