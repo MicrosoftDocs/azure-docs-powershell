@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Migrate
-online version: https://docs.microsoft.com/powershell/module/az.migrate/get-azmigratejob
+online version: https://learn.microsoft.com/powershell/module/az.migrate/get-azmigratejob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Get-AzMigrateJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Get-AzMigrateJob.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Retrieves the status of an Azure Migrate job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.migrate/get-azmigratejob) for up-to-date information.
 
 ## SYNTAX
 
@@ -50,7 +53,7 @@ The Get-AzMigrateJob cmdlet retrives the status of an Azure Migrate job.
 
 ### Example 1: Get By Job Id
 ```powershell
-Get-AzMigrateJob -JobID "/Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.RecoveryServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/997e2a92-5afe-49c7-a81a-89660aec9b7b" 
+Get-AzMigrateJob -JobID "/Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.RecoveryServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/997e2a92-5afe-49c7-a81a-89660aec9b7b"
 ```
 
 ```output

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 18E1AD70-42A6-47A2-A685-6E218B6DC4BE
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/save-azvhd
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/save-azvhd
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Save-AzVhd.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Save-AzVhd.md
@@ -78,7 +78,7 @@ Run cmdlet in the background and return a Job to track progress.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Specifies the name of the resource group of the storage account.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

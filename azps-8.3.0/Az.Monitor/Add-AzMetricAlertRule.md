@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: A90564B5-57D7-48EB-976D-38C03D930289
-online version: https://docs.microsoft.com/powershell/module/az.monitor/add-azmetricalertrule
+online version: https://learn.microsoft.com/powershell/module/az.monitor/add-azmetricalertrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Add-AzMetricAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Add-AzMetricAlertRule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds or updates a metric-based alert rule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/add-azmetricalertrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,7 +48,7 @@ This command creates a metric alert rule for a website.
 
 ### Example 2: Disable a rule
 ```powershell
-Add-AzMetricAlertRule -Name "metricRule5" -Location "East US" -ResourceGroup Default-Web-EastUS -Operator GreaterThan -Threshold 2 -WindowSize 00:05:00 -MetricName "Requests" -TimeAggregationOperator Total 
+Add-AzMetricAlertRule -Name "metricRule5" -Location "East US" -ResourceGroup Default-Web-EastUS -Operator GreaterThan -Threshold 2 -WindowSize 00:05:00 -MetricName "Requests" -TimeAggregationOperator Total
 ```
 
 ```output

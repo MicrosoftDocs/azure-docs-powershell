@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/invoke-aziothubmanualfailover
+online version: https://learn.microsoft.com/en-us/powershell/module/az.iothub/invoke-aziothubmanualfailover
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/IotHub/IotHub/help/Invoke-AzIotHubManualFailover.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/IotHub/IotHub/help/Invoke-AzIotHubManualFailover.md
@@ -33,7 +33,7 @@ Invoke-AzIotHubManualFailover [-ResourceId] <String> [-AsJob] [-PassThru]
 ```
 
 ## DESCRIPTION
-It will trigger the failover your IoT hub to the secondary location. This action will cause down time and telemetry loss to your solution. 
+It will trigger the failover your IoT hub to the secondary location. This action will cause down time and telemetry loss to your solution.
 This is a long running operation and could take several minutes to finish. Please exercise with caution when using it.
 
 ## EXAMPLES

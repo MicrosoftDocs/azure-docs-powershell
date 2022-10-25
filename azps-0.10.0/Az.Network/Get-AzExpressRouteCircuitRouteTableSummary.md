@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 2C603E0E-A19F-4EA6-B918-945007BE22FF
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuitroutetablesummary
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuitroutetablesummary
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTableSummary.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTableSummary.md
@@ -57,7 +57,7 @@ The acceptable values for this parameter are: `Primary` or `Secondary`
 ```yaml
 Type: DevicePathEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Primary, Secondary
 
 Required: True
@@ -89,7 +89,7 @@ The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePubli
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AzurePrivatePeering, AzurePublicPeering, MicrosoftPeering
 
 Required: False
@@ -105,7 +105,7 @@ The name of the resource group containing the ExpressRoute circuit.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

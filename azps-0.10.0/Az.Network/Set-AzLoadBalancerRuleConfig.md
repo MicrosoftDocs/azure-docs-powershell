@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 2638B226-B974-43B6-ACC2-D67573CF6B56
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azloadbalancerruleconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azloadbalancerruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzLoadBalancerRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzLoadBalancerRuleConfig.md
@@ -60,7 +60,7 @@ Specifies a **BackendAddressPool** object to associate with a load balancer rule
 ```yaml
 Type: PSBackendAddressPool
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +75,7 @@ Specifies the ID of a **BackendAddressPool** object to associate with a load bal
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Specifies the backend port for traffic that is matched by this rule configuratio
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Configures SNAT for the VMs in the backend pool to use the publicIP address spec
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Indicates that this cmdlet enables a floating IP address for a rule configuratio
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ Specifies a list of front-end IP addresses to associate with a load balancer rul
 ```yaml
 Type: PSFrontendIPConfiguration
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ Specifies the ID for a front-end IP address configuration.
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ Specifies the front-end port that is matched by a load balancer rule configurati
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ Specifies the length of time, in minutes, for which the state of conversations i
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ This cmdlet sets the goal state rule configuration for the load balancer that th
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -227,7 +227,7 @@ The acceptable values for this parameter are: SourceIP and SourceIPProtocol.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Default, SourceIP, SourceIPProtocol
 
 Required: False
@@ -243,7 +243,7 @@ Specifies the name of a load balancer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -258,7 +258,7 @@ Specifies a probe to associate with a load balancer rule configuration.
 ```yaml
 Type: PSProbe
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ Specifies the ID of the probe to associate with a load balancer rule configurati
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ The acceptable values for this parameter are: Tcp or Udp.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Tcp, Udp, All
 
 Required: False

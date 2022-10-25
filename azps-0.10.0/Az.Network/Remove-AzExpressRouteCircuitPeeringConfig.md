@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 462F3EF7-4C15-41F8-853D-CDCC8E67673D
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azexpressroutecircuitpeeringconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/remove-azexpressroutecircuitpeeringconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzExpressRouteCircuitPeeringConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzExpressRouteCircuitPeeringConfig.md
@@ -56,7 +56,7 @@ The ExpressRoute circuit containing the peering configuration to be removed.
 ```yaml
 Type: PSExpressRouteCircuit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,7 +71,7 @@ The name of the peering configuration to be removed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ The Address family of the peering
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: IPv4, IPv6, All
 
 Required: False

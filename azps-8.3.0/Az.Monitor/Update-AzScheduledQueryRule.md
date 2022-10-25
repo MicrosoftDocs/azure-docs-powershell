@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/update-azscheduledqueryrule
+online version: https://learn.microsoft.com/powershell/module/az.monitor/update-azscheduledqueryrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Update-AzScheduledQueryRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Update-AzScheduledQueryRule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a Log Alert rule
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/update-azscheduledqueryrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,7 +37,7 @@ Update-AzScheduledQueryRule -ResourceId <String> -Enabled <Boolean> [-DefaultPro
 
 ## DESCRIPTION
 Updates a Log Alert rule, updating only "Enabled" property is supported by this command.
-To update other properties, see [Set-AzScheduledQueryRule](https://docs.microsoft.com/powershell/module/az.monitor/set-azscheduledqueryrule) command.
+To update other properties, see [Set-AzScheduledQueryRule](https://learn.microsoft.com/powershell/module/az.monitor/set-azscheduledqueryrule) command.
 
 ## EXAMPLES
 

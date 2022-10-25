@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 8F7AF1B8-D769-452C-92CF-4486C3EB894D
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmosdisk
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmosdisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMOSDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMOSDisk.md
@@ -66,10 +66,10 @@ The **Set-AzVMOSDisk** cmdlet sets the operating system disk properties on a vir
 
 ### Example 1: Set properties on a virtual machine from platform image
 ```
-PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
-PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id 
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13"
+PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
 PS C:\> Set-AzVMOSDisk -VM $VirtualMachine -Name "OsDisk12" -VhdUri "os.vhd" -Caching ReadWrite
-PS C:\> $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential) 
+PS C:\> $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential)
 PS C:\> $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName "Canonical" -Offer "UbuntuServer" -Skus "15.10" -Version "latest" -Caching ReadWrite
 PS C:\> $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption FromImage
 PS C:> New-AzVM -VM $VirtualMachine -ResouceGroupName "ResourceGroup11"
@@ -83,7 +83,7 @@ The final command sets the properties on the virtual machine in $VirtualMachine.
 
 ### Example 2: Sets properties on a virtual machine from generalized user image
 ```
-PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13"
 PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1"
 PS C:\> $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential)
 PS C:\> $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -SourceImageUri "https://mystorageaccount.blob.core.windows.net/vhds/myOSImage.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption fromImage -Linux
@@ -98,7 +98,7 @@ The final command sets the properties on the virtual machine in $VirtualMachine.
 
 ### Example 3: Sets properties on a virtual machine from specialized user image
 ```
-PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
+PS C:\> $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13"
 PS C:\> $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1"
 PS C:\> $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption Attach -Linux
 PS C:> New-AzVM -VM $VirtualMachine -ResouceGroupName "ResourceGroup11"
@@ -123,7 +123,7 @@ This example sets the disk encryption settings on a virtual machine operating sy
 
 ### -Caching
 Specifies the caching mode of the operating system disk.
-Valid values are: 
+Valid values are:
 
 - ReadOnly
 - ReadWrite
@@ -136,7 +136,7 @@ This setting affects the performance of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ReadOnly, ReadWrite
 
 Required: False
@@ -148,24 +148,24 @@ Accept wildcard characters: False
 
 ### -CreateOption
 Specifies whether this cmdlet creates a disk in the virtual machine from a platform or user image, or attaches an existing disk.
-Valid values are: 
+Valid values are:
 
 - Attach.
 Specify this option to create a virtual machine from a specialized disk.
 When you specify this option, do not specify the *SourceImageUri* parameter.
 Instead, use the Set-AzVMSourceImage cmdlet.
 You must also use the use the *Windows* or *Linux* parameters to tell the azure2 platform the type of the operating system on the VHD.
-The *VhdUri* parameter is enough to tell the azure2 platform the location of the disk to attach. 
+The *VhdUri* parameter is enough to tell the azure2 platform the location of the disk to attach.
 - FromImage.
 Specify this option to create a virtual machine from a platform image or a generalized user image.
 In the case of a generalized user image, you also need to specify the *SourceImageUri* parameter and either the *Windows* or *Linux* parameters to tell the Azure platform the location and type of the operating system disk VHD instead of using the **Set-AzVMSourceImage** cmdlet.
-In the case of a platform image, the *VhdUri* parameter is sufficient. 
+In the case of a platform image, the *VhdUri* parameter is sufficient.
 - Empty.
 
 ```yaml
 Type: DiskCreateOptionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: FromImage, Empty, Attach
 
 Required: False
@@ -196,7 +196,7 @@ Specifies the location of the disk encryption key.
 ```yaml
 Type: String
 Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 7
@@ -211,7 +211,7 @@ Specifies the resource ID of the Key Vault containing the disk encryption key.
 ```yaml
 Type: String
 Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 8
@@ -226,7 +226,7 @@ Specifies the size, in GB, of the operating system disk.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ Specifies the location of the key encryption key.
 ```yaml
 Type: String
 Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -256,7 +256,7 @@ Specifies the resource ID of the Key Vault containing the key encryption key.
 ```yaml
 Type: String
 Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -272,7 +272,7 @@ Specify this parameter for user image based virtual machine deployment.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: LinuxParamSet, LinuxDiskEncryptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -287,7 +287,7 @@ Specifies the ID of a managed disk.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -332,7 +332,7 @@ Specifies the storage account type of managed disk.
 ```yaml
 Type: StorageAccountTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: StandardLRS, PremiumLRS
 
 Required: False
@@ -384,7 +384,7 @@ Indicates that the operating system on the user image is Windows.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WindowsParamSet, WindowsDiskEncryptionParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -399,7 +399,7 @@ Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

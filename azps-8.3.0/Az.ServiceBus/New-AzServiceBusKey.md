@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/new-azservicebuskey
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/new-azservicebuskey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Regenerates the primary or secondary connection strings for the Service Bus namespace or queue or topic.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/new-azservicebuskey) for up-to-date information.
 
 ## SYNTAX
 

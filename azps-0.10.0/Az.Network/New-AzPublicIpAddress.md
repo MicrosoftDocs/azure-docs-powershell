@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 8D84F81A-F6B5-413D-B349-50947FCD5CFC
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azpublicipaddress
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azpublicipaddress
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzPublicIpAddress.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzPublicIpAddress.md
@@ -58,7 +58,7 @@ The acceptable values for this parameter are: Static or Dynamic.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Dynamic, Static
 
 Required: True
@@ -74,7 +74,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ Specifies the relative DNS name for a public IP address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ Specifies the idle time-out, in minutes.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Specifies the version of the IP address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: IPv4, IPv6
 
 Required: False
@@ -165,7 +165,7 @@ Specifies the region in which to create a public IP address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ Specifies the name of the resource group in which to create a public IP address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -210,7 +210,7 @@ Specifies a reverse fully qualified domain name (FQDN).
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ The public IP Sku name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Basic, Standard
 
 Required: False
@@ -243,7 +243,7 @@ Key-value pairs in the form of a hash table. For example:
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ A list of availability zones denoting the IP allocated for the resource needs to
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

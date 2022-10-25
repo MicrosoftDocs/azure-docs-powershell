@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 979E956B-4C74-426E-A617-E50C4EBC8A20
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/disable-azvmdiskencryption
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/disable-azvmdiskencryption
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Disable-AzVMDiskEncryption.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Disable-AzVMDiskEncryption.md
@@ -71,7 +71,7 @@ Indicates that this cmdlet disables auto-upgrade of the minor version of the ext
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ The extension publisher name. Specify this parameter only to override the defaul
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ The extension type. Specify this parameter to override its default value of "Azu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ Specifies the resource group name of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -VolumeType
 Specifies the type of virtual machine volumes to perform the encryption operation.
-For Windows virtual machines, valid values are: 
+For Windows virtual machines, valid values are:
 
 - All
 - OS
@@ -200,7 +200,7 @@ Disable encryption is not currently supported for Linux.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OS, Data, All
 
 Required: False

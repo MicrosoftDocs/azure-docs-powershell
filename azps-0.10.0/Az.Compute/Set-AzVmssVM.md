@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 70AA9747-232E-40F2-845C-35A779F51CD2
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmssvm
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssVM.md
@@ -40,7 +40,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +70,7 @@ Specifies the ID of the VMSS instance for which this cmdlet modifies state.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -85,7 +85,7 @@ Indicates that this cmdlet reimages the VMSS instance.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DefaultParameter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ Indicates that the cmdlet reimages all the disks in the VMSS instance.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FriendMethod
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +115,7 @@ Specifies the name of the resource group that contains the VMSS instance.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

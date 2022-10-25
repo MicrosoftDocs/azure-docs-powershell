@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: D704BAC0-D89E-4F15-ACF8-FA2C1F0D1B8F
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationdsccompilationjob
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationdsccompilationjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscCompilationJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscCompilationJob.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets DSC compilation jobs in Automation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationdsccompilationjob) for up-to-date information.
 
 ## SYNTAX
 
@@ -172,17 +175,17 @@ Accept wildcard characters: False
 
 ### -Status
 Specifies the status of jobs that this cmdlet gets.
-Valid values are: 
-- Completed 
-- Failed 
-- Queued 
-- Starting 
-- Resuming 
-- Running 
-- Stopped 
-- Stopping 
-- Suspended 
-- Suspending 
+Valid values are:
+- Completed
+- Failed
+- Queued
+- Starting
+- Resuming
+- Running
+- Stopped
+- Stopping
+- Suspended
+- Suspending
 - Activating
 - New
 

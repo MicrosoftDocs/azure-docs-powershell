@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/add-aziothubcertificate
+online version: https://learn.microsoft.com/en-us/powershell/module/az.iothub/add-aziothubcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/IotHub/IotHub/help/Add-AzIotHubCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/IotHub/IotHub/help/Add-AzIotHubCertificate.md
@@ -35,7 +35,7 @@ Add-AzIotHubCertificate [-ResourceId] <String> [-Path] <String> [-Etag <String>]
 
 ## DESCRIPTION
 Uploads a new certificate or to replace the existing certificate with the same name.
-For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-x509ca-overview
+For a detailed explanation of CA certificates in Azure IoT Hub, see https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-x509ca-overview
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ Created				: 1/01/2017 16:01
 Etag				: AAAAAAFpGcA=
 ```
 
-Uploads a CA certificate CER file to an IoT hub. 
+Uploads a CA certificate CER file to an IoT hub.
 
 ### Example 2
 ```
@@ -73,7 +73,7 @@ Created				: 1/01/2017 16:01
 Etag				: AAAAAAFpObE=
 ```
 
-Updates a CA certificate in an IoT hub by uploading a new CER file. 
+Updates a CA certificate in an IoT hub by uploading a new CER file.
 
 ## PARAMETERS
 

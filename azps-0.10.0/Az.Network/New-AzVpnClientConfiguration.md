@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvpnclientconfiguration
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azvpnclientconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzVpnClientConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzVpnClientConfiguration.md
@@ -42,7 +42,7 @@ Can take values EAPMSCHAPv2 or EAPTLS. When EAPMSCHAPv2 is specified then the cm
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: EAPTLS, EAPMSCHAPv2
 
 Required: True
@@ -57,7 +57,7 @@ A list of client root certificate paths
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ ProcessorArchitecture
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Amd64, X86
 
 Required: False
@@ -117,7 +117,7 @@ Radius server root certificate path. This is a mandatory parameter that has to b
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ The resource group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

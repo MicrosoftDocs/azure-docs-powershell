@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Attestation.dll-Help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/get-azattestationpolicy
+online version: https://learn.microsoft.com/powershell/module/az.attestation/get-azattestationpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the policy from a tenant in Azure Attestation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.attestation/get-azattestationpolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -41,7 +44,7 @@ The Get-AzAttestationPolicy cmdlet gets the policy from a tenant in Azure Attest
 ```powershell
 Get-AzAttestationPolicy -Name pshtest -ResourceGroupName psh-test-rg -Tee SgxEnclave
 ```
-```output                                                                                                                                                                                                                    
+```output
 Text       : version= 1.0;
              authorizationrules{
                  c:[type=="$is-debuggable"] => permit();

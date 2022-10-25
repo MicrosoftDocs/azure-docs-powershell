@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/get-azservicebusrule
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/get-azservicebusrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusRule.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzServiceBusRule
 
 ## SYNOPSIS
-Retrieves the definition of an existing rule in a given Subscription of Topic. 
+Retrieves the definition of an existing rule in a given Subscription of Topic.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/get-azservicebusrule) for up-to-date information.
 
 ## SYNTAX
 

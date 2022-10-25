@@ -1,7 +1,7 @@
 ---
 Module Name: Az.EventHub
 Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.eventhub
+Download Help Link: https://learn.microsoft.com/en-us/powershell/module/az.eventhub
 Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Az.EventHub.md
@@ -47,7 +47,7 @@ Creates a new Event Hub.
 Creates a new Event Hubs authorization rule for namespace or eventhub.
 
 ### [New-AzEventHubAuthorizationRuleSASToken](New-AzEventHubAuthorizationRuleSASToken.md)
-Generates a SAS tolen for Azure eventhub authorization rule of namespace/eventhub. 
+Generates a SAS tolen for Azure eventhub authorization rule of namespace/eventhub.
 
 ### [New-AzEventHubConsumerGroup](New-AzEventHubConsumerGroup.md)
 Creates a new consumer group for the specified Event Hub.

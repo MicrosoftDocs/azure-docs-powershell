@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 2908890B-7A46-41B7-931F-AE94638D1EDF
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationschedule
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an Automation schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationschedule) for up-to-date information.
 
 ## SYNTAX
 

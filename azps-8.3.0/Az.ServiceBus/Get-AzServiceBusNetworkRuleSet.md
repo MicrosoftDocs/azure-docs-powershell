@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/get-azservicebusnetworkruleset
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/get-azservicebusnetworkruleset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusNetworkRuleSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusNetworkRuleSet.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the details of an Event Hubs NetworkruleSet of namespace in the current Azure subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/get-azservicebusnetworkruleset) for up-to-date information.
 
 ## SYNTAX
 
@@ -50,7 +53,7 @@ Type                : Microsoft.ServiceBus/Namespaces/NetworkRuleSet
 IpRules             : {1.1.1.1, Allow}
 VirtualNetworkRules : {/subscriptions/subscriptionId/resourcegroups/v-ajnavtest/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default, False}
 ```
-Get the details of Event Hubs NetworkruleSet of namespace using ResourceGroup and Namespace parameters. 
+Get the details of Event Hubs NetworkruleSet of namespace using ResourceGroup and Namespace parameters.
 
 ### Example 2
 ```powershell
@@ -80,7 +83,7 @@ Type                : Microsoft.ServiceBus/Namespaces/NetworkRuleSet
 IpRules             : {1.1.1.1, Allow}
 VirtualNetworkRules : {/subscriptions/subscriptionId/resourcegroups/v-ajnavtest/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default, False}
 ```
-Get the details of Event Hubs NetworkruleSet of namespace using Resource Id of other Namespace 
+Get the details of Event Hubs NetworkruleSet of namespace using Resource Id of other Namespace
 
 ## PARAMETERS
 

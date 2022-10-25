@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 0F141A92-4994-45B3-AE94-09865BC691C4
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvirtualnetworkgatewayconnection
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualnetworkgatewayconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkGatewayConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkGatewayConnection.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates the Site-to-Site VPN connection between the virtual network gateway and the on-prem VPN device.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvirtualnetworkgatewayconnection) for up-to-date information.
 
 ## SYNTAX
 

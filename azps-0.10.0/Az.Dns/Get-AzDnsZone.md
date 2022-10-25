@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: B831ABE6-348C-4DD6-9295-18D23A1FDF63
-online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/get-azdnszone
+online version: https://learn.microsoft.com/en-us/powershell/module/az.dns/get-azdnszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Get-AzDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Get-AzDnsZone.md
@@ -65,7 +65,7 @@ If you also omit the *ResourceGroupName* parameter, this cmdlet gets all DNS zon
 ```yaml
 Type: String
 Parameter Sets: ResourceGroup
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ In this case, this cmdlet gets all DNS zones in the current Azure subscription.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

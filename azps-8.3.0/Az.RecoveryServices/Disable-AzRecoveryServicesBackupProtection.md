@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: ECD3F05A-9350-407E-8B48-67443547652F
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/disable-azrecoveryservicesbackupprotection
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/disable-azrecoveryservicesbackupprotection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Disable-AzRecoveryServicesBackupProtection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Disable-AzRecoveryServicesBackupProtection.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disables protection for a Backup-protected item.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/disable-azrecoveryservicesbackupprotection) for up-to-date information.
 
 ## SYNTAX
 

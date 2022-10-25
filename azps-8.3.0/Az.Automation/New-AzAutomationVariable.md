@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 5AF6F70F-7137-48E2-96ED-2C509042F127
-online version: https://docs.microsoft.com/powershell/module/az.automation/new-azautomationvariable
+online version: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationvariable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationVariable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationVariable.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Automation variable.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/new-azautomationvariable) for up-to-date information.
 
 ## SYNTAX
 

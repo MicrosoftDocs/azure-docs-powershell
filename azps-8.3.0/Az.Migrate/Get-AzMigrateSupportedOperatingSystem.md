@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Migrate
-online version: https://docs.microsoft.com/powershell/module/az.migrate/get-azmigratesupportedoperatingsystem
+online version: https://learn.microsoft.com/powershell/module/az.migrate/get-azmigratesupportedoperatingsystem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Get-AzMigrateSupportedOperatingSystem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Get-AzMigrateSupportedOperatingSystem.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the data of supported operating systems by SRS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.migrate/get-azmigratesupportedoperatingsystem) for up-to-date information.
 
 ## SYNTAX
 

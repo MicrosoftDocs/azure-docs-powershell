@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 987BD670-20F3-4105-A5BE-03E712AB2B56
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azvmsswinrmlistener
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmsswinrmlistener
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssWinRMListener.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssWinRMListener.md
@@ -45,7 +45,7 @@ Specifies a link, as a URL, of the certificate with which new virtual machines a
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -79,7 +79,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ProtocolTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: False
@@ -96,7 +96,7 @@ You can use the New-AzVmssConfig cmdlet to create the object.
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

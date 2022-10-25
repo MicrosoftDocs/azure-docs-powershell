@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: BFC38930-DBB4-4EBB-8E29-73B901FAF486
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/edit-Azwebappbackupconfiguration
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/edit-Azwebappbackupconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Edit-AzWebAppBackupConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Edit-AzWebAppBackupConfiguration.md
@@ -43,7 +43,7 @@ Databases of type DatabaseBackupSetting[]
 ```yaml
 Type: DatabaseBackupSetting[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -73,7 +73,7 @@ Frequency Interval
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -88,7 +88,7 @@ Frequency Unit
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -103,7 +103,7 @@ Keep At Least One Backup Option
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -118,7 +118,7 @@ WebApp Name
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -133,7 +133,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -148,7 +148,7 @@ Retention Period In Days
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 6
@@ -163,7 +163,7 @@ WebApp Slot Name
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -178,7 +178,7 @@ StartTime in UTC
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -193,7 +193,7 @@ Storage Account Url
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -208,7 +208,7 @@ WebApp Object
 ```yaml
 Type: Site
 Parameter Sets: FromWebApp
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

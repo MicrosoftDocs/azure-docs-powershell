@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 0FF88136-4FC9-41F2-A3E6-BFADBAFF4E44
-online version: https://docs.microsoft.com/powershell/module/az.automation/export-azautomationrunbook
+online version: https://learn.microsoft.com/powershell/module/az.automation/export-azautomationrunbook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Export-AzAutomationRunbook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Export-AzAutomationRunbook.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Exports an Automation runbook.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/export-azautomationrunbook) for up-to-date information.
 
 ## SYNTAX
 
@@ -129,8 +132,8 @@ Accept wildcard characters: False
 
 ### -Slot
 Specifies whether this cmdlet exports the draft or published content of the runbook.
-Valid values are: 
-- Published 
+Valid values are:
+- Published
 - Draft
 
 ```yaml

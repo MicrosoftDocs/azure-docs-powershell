@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: A73B388A-E859-40D3-BA63-0E231CF1E81D
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationmodule
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationmodule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationModule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets metadata for modules from Automation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationmodule) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: E37ADC54-A37B-41BF-BE94-9E4052C234BB
-online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/set-azdnszone
+online version: https://learn.microsoft.com/en-us/powershell/module/az.dns/set-azdnszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Set-AzDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Set-AzDnsZone.md

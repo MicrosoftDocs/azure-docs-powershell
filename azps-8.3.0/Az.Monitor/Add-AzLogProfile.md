@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 18D5B95E-4CF1-4C79-AE8B-9F4DA49B46A9
-online version: https://docs.microsoft.com/powershell/module/az.monitor/add-azlogprofile
+online version: https://learn.microsoft.com/powershell/module/az.monitor/add-azlogprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Add-AzLogProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Add-AzLogProfile.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new activity log profile. This profile is used to either archive the activity log to an Azure storage account or stream it to an Azure event hub in the same subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/add-azlogprofile) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: 3BCEADF3-15DC-4033-A94A-4C8B4F5E7340
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebappslotmetrics
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebappslotmetrics
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppSlotMetrics.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppSlotMetrics.md
@@ -39,7 +39,7 @@ The **Get-AzWebAppSlotMetrics** gets Web App metrics for the specified slot.
 PS C:\> Get-AzAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["Requests"]
 ```
 
-This command gets Request of the specified Web App 
+This command gets Request of the specified Web App
     per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
 
 ## PARAMETERS
@@ -65,7 +65,7 @@ End Time in UTC
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -80,7 +80,7 @@ Granularity
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 6
@@ -95,7 +95,7 @@ Instance Details
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -110,7 +110,7 @@ Metrics
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -125,7 +125,7 @@ WebApp Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -140,7 +140,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -155,7 +155,7 @@ WebApp Slot Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -170,7 +170,7 @@ Start Time in UTC
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -185,7 +185,7 @@ WebApp Object
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

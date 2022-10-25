@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.dll-Help.xml
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/new-azsentinelalertruleaction
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/new-azsentinelalertruleaction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/New-AzSentinelAlertRuleAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/New-AzSentinelAlertRuleAction.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Add an Automated Response to an Analytic Rule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/new-azsentinelalertruleaction) for up-to-date information.
 
 ## SYNTAX
 
@@ -22,7 +25,7 @@ New-AzSentinelAlertRuleAction -ResourceGroupName <String> -WorkspaceName <String
 
 ## DESCRIPTION
 The **New-AzSentinelAlertRuleAction** cmdlet creates an Automated Response for an Alert Rule in the specified workspace.
-You must provide the Logic App ResourceId and Trigger Uri which can be found using the [Azure Logic Apps PowerShell module](https://docs.microsoft.com/en-us/powershell/module/az.logicapp/get-azlogicapp?view=azps-5.6.0).
+You must provide the Logic App ResourceId and Trigger Uri which can be found using the [Azure Logic Apps PowerShell module](https://learn.microsoft.com/en-us/powershell/module/az.logicapp/get-azlogicapp?view=azps-5.6.0).
 You can use the *Confirm* parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation.
 
 ## EXAMPLES

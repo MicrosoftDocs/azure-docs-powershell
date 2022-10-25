@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 34985F06-4D8D-463B-B113-972666D18485
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/remove-AzKeyvaultcertificate
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/remove-AzKeyvaultcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Remove-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Remove-AzKeyVaultCertificate.md
@@ -29,9 +29,9 @@ The **Remove-AzKeyVaultCertificate** cmdlet removes a certificate from a key vau
 ```
 PS C:\>Remove-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "SelfSigned01" -PassThru -Force
 Name        : selfSigned01
-Certificate : 
-Thumbprint  : 
-Tags        : 
+Certificate :
+Thumbprint  :
+Tags        :
 Enabled     : True
 Created     : 2/8/2016 11:29:33 PM
 Updated     : 2/8/2016 11:29:33 PM
@@ -72,7 +72,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ If present, removes the previously deleted certificate permanently
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ This cmdlet constructs the fully qualified domain name (FQDN) of a certificate b
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -119,7 +119,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ This cmdlet constructs the FQDN of a key vault based on the name that this param
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

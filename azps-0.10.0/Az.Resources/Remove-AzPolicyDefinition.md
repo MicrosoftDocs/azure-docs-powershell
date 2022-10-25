@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: DEC01722-EB1A-45CE-BD30-9DB861718573
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-Azpolicydefinition
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/remove-Azpolicydefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzPolicyDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzPolicyDefinition.md
@@ -57,7 +57,7 @@ This command removes the specified policy definition.
 
 ### Example 2: Remove policy definition by resource ID
 ```
-PS C:\> $PolicyDefinition = Get-AzPolicyDefinition -Name 'VMPolicyDefinition' 
+PS C:\> $PolicyDefinition = Get-AzPolicyDefinition -Name 'VMPolicyDefinition'
 PS C:\> Remove-AzPolicyDefinition -Id $PolicyDefinition.ResourceId -Force
 ```
 

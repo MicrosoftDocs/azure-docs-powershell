@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatchertopology
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatchertopology
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcherTopology.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcherTopology.md
@@ -27,14 +27,14 @@ Get-AzNetworkWatcherTopology -NetworkWatcherName <String> -ResourceGroupName <St
 ```
 
 ## DESCRIPTION
-The Get-AzNetworkWatcherTopology cmdlet a network level view of resources and their relationships in a resource group. 
+The Get-AzNetworkWatcherTopology cmdlet a network level view of resources and their relationships in a resource group.
 Note: If resources from multiple regions reside in the resource group, only the resources in the same region as the Network Watcher will be included in the JSON output.
 
 ## EXAMPLES
 
 ### --------------------------  Example 1: Get an Azure Topology  --------------------------
 ```
-$networkWatcher = Get-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG 
+$networkWatcher = Get-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG
 Get-AzNetworkWatcherTopology -NetworkWatcher $networkWatcher -ResourceGroupName testresourcegroup
 
 Id                : e33d80cf-4f76-4b8f-b51c-5bb8eba80103
@@ -155,7 +155,7 @@ The network watcher resource.
 ```yaml
 Type: PSNetworkWatcher
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +185,7 @@ The name of the network watcher resource group.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +200,7 @@ The resource group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -222,7 +222,7 @@ System.String
 ### Microsoft.Azure.Commands.Network.Models.PSTopology
 
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, topology, view 
+Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, topology, view
 
 ## RELATED LINKS
 

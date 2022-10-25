@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: D639E4F5-5AAD-4F13-9B48-70E90D2DFFCA
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azloadbalancerfrontendipconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azloadbalancerfrontendipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzLoadBalancerFrontendIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzLoadBalancerFrontendIpConfig.md
@@ -81,7 +81,7 @@ Specifies the front-end IP configuration that this cmdlet creates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,7 +97,7 @@ Specify this parameter only if you also specify the *Subnet* parameter.
 ```yaml
 Type: String
 Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Specifies the **PublicIpAddress** object to associate with a front-end IP config
 ```yaml
 Type: PSPublicIpAddress
 Parameter Sets: SetByResourcePublicIpAddress
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -127,7 +127,7 @@ Specifies the ID of the **PublicIpAddress** object to associate with a front-end
 ```yaml
 Type: String
 Parameter Sets: SetByResourceIdPublicIpAddress
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +142,7 @@ Specifies the **Subnet** object in which to create a front-end IP configuration.
 ```yaml
 Type: PSSubnet
 Parameter Sets: SetByResourceSubnet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -157,7 +157,7 @@ Specifies the ID of the subnet in which to create a front-end IP configuration.
 ```yaml
 Type: String
 Parameter Sets: SetByResourceIdSubnet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +172,7 @@ A list of availability zones denoting the IP allocated for the resource needs to
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

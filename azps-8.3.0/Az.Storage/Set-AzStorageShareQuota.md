@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 176294FA-BB08-4A63-AD45-1E6C6D67A5D8
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstoragesharequota
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstoragesharequota
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageShareQuota.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageShareQuota.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets the storage capacity for a share.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azstoragesharequota) for up-to-date information.
 
 ## SYNTAX
 
@@ -112,7 +115,7 @@ Accept wildcard characters: False
 
 ### -Quota
 Specifies the quota value in gigabytes (GB).
-See the quota limitation in https://docs.microsoft.com/azure/azure-subscription-service-limits#azure-files-limits. 
+See the quota limitation in https://learn.microsoft.com/azure/azure-subscription-service-limits#azure-files-limits.
 
 ```yaml
 Type: System.Int32

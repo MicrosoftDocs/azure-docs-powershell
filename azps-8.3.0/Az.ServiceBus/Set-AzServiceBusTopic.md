@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/set-azservicebustopic
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/set-azservicebustopic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Set-AzServiceBusTopic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Set-AzServiceBusTopic.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates the description of a Service Bus topic in the specified Service Bus namespace.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/set-azservicebustopic) for up-to-date information.
 
 ## SYNTAX
 
@@ -56,7 +59,7 @@ SupportOrdering                     : False
 UpdatedAt                           : 10/12/2018 12:01:29 AM
 ```
 
-Updates the specified topic with a new description in the specified namespace. This example updates the **EnableExpress** property to **true**. 
+Updates the specified topic with a new description in the specified namespace. This example updates the **EnableExpress** property to **true**.
 
 ## PARAMETERS
 

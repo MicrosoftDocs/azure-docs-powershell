@@ -1,7 +1,7 @@
 ---
 external help file: Az.DataMigration-help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/get-azdatamigrationtosqlvm
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/get-azdatamigrationtosqlvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationToSqlVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationToSqlVM.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Retrieve the specified database migration for a given SQL VM.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/get-azdatamigrationtosqlvm) for up-to-date information.
 
 ## SYNTAX
 
@@ -52,8 +55,8 @@ $vmMigration.MigrationStatusDetail
 ```
 
 ```output
-BlobContainerName                    CompleteRestoreErrorMessage CurrentRestoringFilename          FileUploadBlockingError 
------------------                    --------------------------- ------------------------          ----------------------- 
+BlobContainerName                    CompleteRestoreErrorMessage CurrentRestoringFilename          FileUploadBlockingError
+-----------------                    --------------------------- ------------------------          -----------------------
 2673894b-451c-41cv-ae2b-58a8eefe3546                             AdventureWorks.bak
 ```
 
@@ -222,11 +225,11 @@ To create the parameters described below, construct a hash table containing the 
 
 INPUTOBJECT `<IDataMigrationIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
-  - `[ManagedInstanceName <String>]`: 
+  - `[ManagedInstanceName <String>]`:
   - `[ResourceGroupName <String>]`: Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-  - `[SqlDbInstanceName <String>]`: 
+  - `[SqlDbInstanceName <String>]`:
   - `[SqlMigrationServiceName <String>]`: Name of the SQL Migration Service.
-  - `[SqlVirtualMachineName <String>]`: 
+  - `[SqlVirtualMachineName <String>]`:
   - `[SubscriptionId <String>]`: Subscription ID that identifies an Azure subscription.
   - `[TargetDbName <String>]`: The name of the target database.
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Advisor.dll-Help.xml
 Module Name: Az.Advisor
-online version: https://docs.microsoft.com/powershell/module/az.advisor/get-azadvisorrecommendation
+online version: https://learn.microsoft.com/powershell/module/az.advisor/get-azadvisorrecommendation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/Advisor/help/Get-AzAdvisorRecommendation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/Advisor/help/Get-AzAdvisorRecommendation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a list of Azure Advisor recommendations.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.advisor/get-azadvisorrecommendation) for up-to-date information.
 
 ## SYNTAX
 

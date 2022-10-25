@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: EAD39EE1-C66F-4092-8876-E7F9FA612481
-online version: https://docs.microsoft.com/powershell/module/az.automation/remove-azautomationschedule
+online version: https://learn.microsoft.com/powershell/module/az.automation/remove-azautomationschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes an Automation schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/remove-azautomationschedule) for up-to-date information.
 
 ## SYNTAX
 

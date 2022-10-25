@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 80AAA327-77C6-4372-9461-FFED5A15E678
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/backup-AzKeyvaultsecret
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/backup-AzKeyvaultsecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Backup-AzKeyVaultSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Backup-AzKeyVaultSecret.md
@@ -85,7 +85,7 @@ Prompts you for confirmation before overwriting the output file, if that exists.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -117,7 +117,7 @@ If you specify the name of an existing output file, the operation will not compl
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -132,7 +132,7 @@ Specifies the object whose name and vault should be used for the backup operatio
 ```yaml
 Type: Secret
 Parameter Sets: BySecret
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -147,7 +147,7 @@ Specifies the name of the key vault that contains the secret to back up.
 ```yaml
 Type: String
 Parameter Sets: BySecretName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

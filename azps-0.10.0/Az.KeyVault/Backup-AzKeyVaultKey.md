@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: A82392AA-B12B-443E-8704-7CF5A9F8ED58
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/backup-AzKeyvaultkey
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/backup-AzKeyvaultkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Backup-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Backup-AzKeyVaultKey.md
@@ -33,10 +33,10 @@ If there are multiple versions of the key, all versions are included in the back
 Because the downloaded content is encrypted, it cannot be used outside of Azure Key Vault.
 You can restore a backed-up key to any key vault in the subscription that it was backed up from.
 
-Typical reasons to use this cmdlet are: 
+Typical reasons to use this cmdlet are:
 
 - You want to escrow a copy of your key, so that you have an offline copy in case you accidentally delete your key in your key vault.
- 
+
 - You created a key using Key Vault and now want to clone the key into a different Azure region, so that you can use it from all instances of your distributed application.
 Use the **Backup-AzKeyVaultKey** cmdlet to retrieve the key in encrypted format and then use the Restore-AzKeyVaultKey cmdlet and specify a key vault in the second region.
 
@@ -87,7 +87,7 @@ Overwrite the given file if it exists
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -102,7 +102,7 @@ Specifies a previously retrieved key which is to be backed up.
 ```yaml
 Type: KeyBundle
 Parameter Sets: ByKey
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -134,7 +134,7 @@ If you specify the name of an existing output file, the operation will not compl
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -149,7 +149,7 @@ Specifies the name of the key vault that contains the key to back up.
 ```yaml
 Type: String
 Parameter Sets: ByKeyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

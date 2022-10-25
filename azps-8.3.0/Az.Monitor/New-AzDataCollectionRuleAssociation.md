@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/new-azdatacollectionruleassociation
+online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azdatacollectionruleassociation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDataCollectionRuleAssociation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDataCollectionRuleAssociation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create data collection rule association.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/new-azdatacollectionruleassociation) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,7 +47,7 @@ New-AzDataCollectionRuleAssociation
 ## DESCRIPTION
 The **New-AzDataCollectionRuleAssociation** cmdlet creates a data collection rules association (DCRA).
 
-To apply a DCR to a virtual machine, you create an association for the virtual machine. A virtual machine may have an association to multiple DCRs, and a DCR may have multiple virtual machines associated to it. This allows you to define a set of DCRs, each matching a particular requirement, and apply them to only the virtual machines where they apply. Here is the ["Configure data collection for the Azure Monitor agent"](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection-rule-azure-monitor-agent) using DCRA article.
+To apply a DCR to a virtual machine, you create an association for the virtual machine. A virtual machine may have an association to multiple DCRs, and a DCR may have multiple virtual machines associated to it. This allows you to define a set of DCRs, each matching a particular requirement, and apply them to only the virtual machines where they apply. Here is the ["Configure data collection for the Azure Monitor agent"](https://learn.microsoft.com/azure/azure-monitor/platform/data-collection-rule-azure-monitor-agent) using DCRA article.
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 09/06/2022
+ms.date: 10/05/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -77,6 +77,11 @@ creating service principals, see
 ```azurepowershell-interactive
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
 ```
+
+> [!WARNING]
+> The provided service principal secret will be included in the `AzureRmContext.json` file found in
+> the user profile ( `$env:USERPROFILE\.Azure` ). Please ensure that this directory has appropriate
+> protections.
 
 To get the service principal's credentials as the appropriate object, use the
 [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This

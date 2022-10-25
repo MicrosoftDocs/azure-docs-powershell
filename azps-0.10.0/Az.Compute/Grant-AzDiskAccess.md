@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/grant-azdiskaccess
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/grant-azdiskaccess
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Grant-AzDiskAccess.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Grant-AzDiskAccess.md
@@ -40,7 +40,7 @@ Specifies Access level.
 ```yaml
 Type: AccessLevel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Read
 
 Required: True
@@ -56,7 +56,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Specifies access duration in seconds.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -116,7 +116,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

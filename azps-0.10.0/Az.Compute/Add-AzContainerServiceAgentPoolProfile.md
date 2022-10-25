@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: C3C65F3E-1192-4B57-87DB-5D371C8FF68E
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/add-azcontainerserviceagentpoolprofile
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azcontainerserviceagentpoolprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzContainerServiceAgentPoolProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzContainerServiceAgentPoolProfile.md
@@ -42,7 +42,7 @@ To obtain a **ContainerService** object, use the [New-AzContainerServiceConfig](
 ```yaml
 Type: PSContainerService
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -59,7 +59,7 @@ The default value is 1.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -89,7 +89,7 @@ Specifies the DNS prefix that this cmdlet uses to create the fully qualified dom
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -105,7 +105,7 @@ This value must be unique in the context of the subscription and resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -120,7 +120,7 @@ Specifies the size of the virtual machines for the agents.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3

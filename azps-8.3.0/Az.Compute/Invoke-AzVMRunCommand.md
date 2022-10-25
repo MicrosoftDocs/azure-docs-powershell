@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/invoke-azvmruncommand
+online version: https://learn.microsoft.com/powershell/module/az.compute/invoke-azvmruncommand
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Invoke-AzVMRunCommand.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Invoke-AzVMRunCommand.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Run a command on the VM.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/invoke-azvmruncommand) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,7 +48,7 @@ Invoke a run command on the VM.
 Invoke-AzVMRunCommand -ResourceGroupName 'rgname' -VMName 'vmname' -CommandId 'RunPowerShellScript' -ScriptPath 'sample.ps1' -Parameter @{param1 = "var1"; param2 = "var2"}
 ```
 
-Invoke a run command 'RunPowerShellScript' with overriding the script 'sample.ps1' on a Windows VM named 'vmname' in resource group 'rgname'. Var1 and var2 are defined as parameters in the sample.ps1. Parameter value can be string type only and script is responsible for converting them to other types if needed. 
+Invoke a run command 'RunPowerShellScript' with overriding the script 'sample.ps1' on a Windows VM named 'vmname' in resource group 'rgname'. Var1 and var2 are defined as parameters in the sample.ps1. Parameter value can be string type only and script is responsible for converting them to other types if needed.
 
 ### Example 2: Invoke a command on Linux
 <!-- Skip: Output cannot be splitted from code -->

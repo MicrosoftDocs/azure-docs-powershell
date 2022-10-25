@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Databricks
-online version: https://docs.microsoft.com/powershell/module/az.databricks/get-azdatabricksvnetpeering
+online version: https://learn.microsoft.com/powershell/module/az.databricks/get-azdatabricksvnetpeering
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/help/Get-AzDatabricksVNetPeering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/help/Get-AzDatabricksVNetPeering.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the workspace vNet Peering.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databricks/get-azdatabricksvnetpeering) for up-to-date information.
 
 ## SYNTAX
 

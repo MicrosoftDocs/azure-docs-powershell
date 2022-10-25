@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 9400E9EB-E927-44D5-8722-9706BDD92FD5
-online version: https://docs.microsoft.com/powershell/module/az.automation/resume-azautomationjob
+online version: https://learn.microsoft.com/powershell/module/az.automation/resume-azautomationjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Resume-AzAutomationJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Resume-AzAutomationJob.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Resumes a suspended Automation job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/resume-azautomationjob) for up-to-date information.
 
 ## SYNTAX
 

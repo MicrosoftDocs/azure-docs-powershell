@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: FD3A0013-4365-4E65-891C-5C50A9D5658C
-online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageshare
+online version: https://learn.microsoft.com/en-us/powershell/module/az.storage/get-azstorageshare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageShare.md

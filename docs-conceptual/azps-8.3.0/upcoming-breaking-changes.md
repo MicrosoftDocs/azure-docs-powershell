@@ -1,7 +1,7 @@
 ---
 title: Upcoming breaking changes in Azure PowerShell
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
-ms.date: 09/13/2022
+ms.date: 10/03/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -9,6 +9,15 @@ ms.custom: devx-track-azurepowershell
 ---
 
 # Upcoming breaking changes in Azure PowerShell
+
+The breaking changes listed in this article are planned for the next major release of the Az
+PowerShell module unless otherwise noted. Per
+[our release cadence](/powershell/azure/azps-versioning-release-cadence#release-cadence), breaking
+changes in Azure PowerShell occur twice a year with major versions of the Az PowerShell module. As
+referenced in our
+[Azure PowerShell Support Lifecycle](/powershell/azure/azureps-support-lifecycle), we support the
+last two minor versions of the current major version and last minor version of the previous major
+version of the Az PowerShell module.
 
 ## Az.Accounts
 
@@ -139,18 +148,18 @@ ms.custom: devx-track-azurepowershell
 ### `New-AzDisk`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - Starting on 10/12/2022 the "New-AzDisk" cmdlet will deploy with the Trusted Launch configuration by default. This includes defaulting the "HyperVGeneration" parameter to "v2". To know more about Trusted Launch, please visit [https://docs.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
+  - Starting on 10/12/2022 the "New-AzDisk" cmdlet will deploy with the Trusted Launch configuration by default. This includes defaulting the "HyperVGeneration" parameter to "v2". To know more about Trusted Launch, please visit [https://learn.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
 
 ### `New-AzVM`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - Starting on 10/12/2022 the "New-AzVM" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit [https://docs.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
+  - Starting on 10/12/2022 the "New-AzVM" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit [https://learn.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
   - It is recommended to use parameter "-PublicIpSku Standard" in order to create a new VM with a Standard public IP.Specifying zone(s) using the "-Zone" parameter will also result in a Standard public IP.If "-Zone" and "-PublicIpSku" are not specified, the VM will be created with a Basic public IP instead.Please note that the Standard SKU IPs will become the default behavior for VM creation in the future
 
 ### `New-AzVmss`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - Starting on 10/12/2022 the "New-AzVmss" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit [https://docs.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
+  - Starting on 10/12/2022 the "New-AzVmss" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit [https://learn.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
 
 ## Az.DataLakeStore
 

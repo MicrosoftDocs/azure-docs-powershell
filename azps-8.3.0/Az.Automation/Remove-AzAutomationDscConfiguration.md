@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 6389EE2A-12B5-46A1-A2B9-4B3CF5A55A30
-online version: https://docs.microsoft.com/powershell/module/az.automation/remove-azautomationdscconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.automation/remove-azautomationdscconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationDscConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationDscConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes DSC configurations from Automation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/remove-azautomationdscconfiguration) for up-to-date information.
 
 ## SYNTAX
 

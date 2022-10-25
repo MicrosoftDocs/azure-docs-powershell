@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 6140E973-D7AB-4A28-A4FA-818E08129372
-online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/remove-azautoscalesetting
+online version: https://learn.microsoft.com/en-us/powershell/module/az.monitor/remove-azautoscalesetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Remove-AzAutoscaleSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Remove-AzAutoscaleSetting.md

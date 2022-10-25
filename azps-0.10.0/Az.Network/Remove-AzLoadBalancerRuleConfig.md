@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: DEBD58A3-AFAF-485C-8708-53228625138F
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-azloadbalancerruleconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/remove-azloadbalancerruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzLoadBalancerRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzLoadBalancerRuleConfig.md
@@ -58,7 +58,7 @@ Specifies the **LoadBalancer** object that contains the rule configuration that 
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ Specifies the name of the load balancer rule configuration that this cmdlet remo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

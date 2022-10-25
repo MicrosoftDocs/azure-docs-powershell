@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: AF0DDDD0-B664-4AD8-A569-1363FB2EDB40
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/stop-azvmss
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/stop-azvmss
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Stop-AzVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Stop-AzVmss.md
@@ -56,7 +56,7 @@ Run cmdlet in the background and return a Job to track progress.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ For instance: `-InstanceId "0", "3"`.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -117,7 +117,7 @@ Specifies the name of the resource group of the VMSS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -133,7 +133,7 @@ If specified, the virtual machine will enter stopped state. If not specified, th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FriendMethod
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/set-aziothub
+online version: https://learn.microsoft.com/en-us/powershell/module/az.iothub/set-aziothub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/IotHub/IotHub/help/Set-AzIotHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/IotHub/IotHub/help/Set-AzIotHub.md
@@ -81,7 +81,7 @@ Update the retention time of telemetry in days to 4 for the IotHub named "myioth
 ## PARAMETERS
 
 ### -CloudToDevice
-The properties for the cloud to device command queue. 
+The properties for the cloud to device command queue.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSCloudToDeviceProperties
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileUploadNotifications
-Flag that specifies whether notifications should be enabled for file upload. 
+Flag that specifies whether notifications should be enabled for file upload.
 
 ```yaml
 Type: System.Boolean
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubRetentionTimeInDays
-Retention time in days. 
+Retention time in days.
 
 ```yaml
 Type: System.Int64
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadNotificationMaxDeliveryCount
-The maximum delivery count for file upload notifications.  
+The maximum delivery count for file upload notifications.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadNotificationTtl
-Time to live value for the messages in the file upload notification queue. 
+Time to live value for the messages in the file upload notification queue.
 
 ```yaml
 Type: System.TimeSpan
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadSasUriTtl
-Time to live for the for the SAS Uri thats generated for file upload. 
+Time to live for the for the SAS Uri thats generated for file upload.
 
 ```yaml
 Type: System.TimeSpan
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileUploadStorageConnectionString
-The storage connection string to upload the files to. 
+The storage connection string to upload the files to.
 
 ```yaml
 Type: System.String
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingProperties
-The Routing properties for routing messages to external endpoints 
+The Routing properties for routing messages to external endpoints
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingProperties

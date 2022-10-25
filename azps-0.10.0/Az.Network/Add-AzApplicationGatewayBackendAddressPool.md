@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 6FBFAEFF-786D-440A-94B2-8C27BE033A0A
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewaybackendaddresspool
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewaybackendaddresspool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzApplicationGatewayBackendAddressPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzApplicationGatewayBackendAddressPool.md
@@ -62,7 +62,7 @@ Specifies the application gateway to which this cmdlet adds a back-end address p
 ```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -77,7 +77,7 @@ Specifies a list of backend FQDNs which this cmdlet adds as a back-end server po
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Specifies a list of back-end IP addresses which this cmdlet adds as a back-end s
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Specifies the name of the back-end server pool that this cmdlet adds.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -167,8 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-System.String
+### System.String
 
 ## OUTPUTS
 

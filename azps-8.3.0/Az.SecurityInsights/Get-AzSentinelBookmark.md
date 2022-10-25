@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.dll-Help.xml
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/get-azsentinelbookmark
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelbookmark
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Get-AzSentinelBookmark.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Get-AzSentinelBookmark.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets a Bookmark. <br/>
 A Bookmark is used to preserve queries, comments and tags for a specific incident.<br/>
 You create the Bookmark first and then add it to an incident.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentinelbookmark) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 6847ECFD-2E3D-46F6-ABE9-9D8E08C7858F
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-Azresourcelock
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azresourcelock
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzResourceLock.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzResourceLock.md
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 Specifies the name of the resource for which the lock applies.
-For instance, to specify a database, use the following format: 
+For instance, to specify a database, use the following format:
 `ContosoServer/ContosoDatabase`
 
 ```yaml
@@ -293,9 +293,9 @@ Accept wildcard characters: False
 
 ### -Scope
 Specifies the scope to which the lock applies.
-For instance, to specify a database, use the following format: 
+For instance, to specify a database, use the following format:
 `/subscriptions/`subscription ID`/resourceGroups/`resource group name`/providers/Microsoft.Sql/servers/`server name`/databases/`database name
-To specify a resource group, use the following format: 
+To specify a resource group, use the following format:
 `/subscriptions/`subscription ID`/resourceGroups/`resource group name
 
 ```yaml

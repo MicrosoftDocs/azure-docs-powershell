@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: D2B5BC27-6D51-45BC-AE6A-F7FED11B8651
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/save-azvmimage
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/save-azvmimage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Save-AzVMImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Save-AzVMImage.md
@@ -40,7 +40,7 @@ You can deploy virtual machines from your captured image.
 
 ### Example 1: Capture a virtual machine
 ```
-PS C:\> Set-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -Generalized 
+PS C:\> Set-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -Generalized
 PS C:\> Save-AzVMImage -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine07" -DestinationContainerName "VMContainer01" -VHDNamePrefix "VM07"
 ```
 
@@ -57,7 +57,7 @@ Run cmdlet in the background and return a Job to track progress.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,14 +87,14 @@ Specifies the name of a container inside the "system" container that you want to
 If the container doesn't exist, it is created for you.
 The virtual hard disks (VHDs) that constitute the VMImage reside in the container that this parameter specifies.
 If the VHDs are spread across multiple storage accounts, this cmdlet creates one container that has this name in each storage account.
-The URL of the saved image is similar to: 
+The URL of the saved image is similar to:
 
 https://\<storageAccountName\>.blob.core.windows.net/system/Microsoft.Compute/Images/\<imagesContainer\>/\<vhdPrefix-osDisk\>.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.vhd.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -109,7 +109,7 @@ Specifies the Resource ID of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: IdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -139,7 +139,7 @@ Indicates that this cmdlet overwrites any VHDs that have the same prefix in the 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -154,7 +154,7 @@ Specifies the path of the VHD.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -169,7 +169,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupNameParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

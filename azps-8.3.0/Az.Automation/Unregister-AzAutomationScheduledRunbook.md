@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: C7C193CF-4E3A-4275-8289-946C99B1C553
-online version: https://docs.microsoft.com/powershell/module/az.automation/unregister-azautomationscheduledrunbook
+online version: https://learn.microsoft.com/powershell/module/az.automation/unregister-azautomationscheduledrunbook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Unregister-AzAutomationScheduledRunbook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Unregister-AzAutomationScheduledRunbook.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an association between a runbook and a schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/unregister-azautomationscheduledrunbook) for up-to-date information.
 
 ## SYNTAX
 

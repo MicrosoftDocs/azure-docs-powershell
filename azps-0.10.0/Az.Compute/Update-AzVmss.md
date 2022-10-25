@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 9EE192A5-4E3F-41ED-A539-8E0A5D5EA4C9
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/update-azvmss
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/update-azvmss
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Update-AzVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Update-AzVmss.md
@@ -71,7 +71,7 @@ Run cmdlet in the background and return a Job to track progress.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Sets whether OS upgrades should automatically be applied to scale set instances 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Whether boot diagnostics should be enabled on the virtual machine scale set.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ URI of the storage account to use for placing the console output and screenshot.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ The maximum length of the binary array is 65535 bytes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ Indicates that this cmdlet disables password authentication for Linux OS.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ Indicates whether the Windows virtual machines in the VMSS are enabled for autom
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ The user identity references will be ARM resource ids in the form: '/subscriptio
 ```yaml
 Type: String[]
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ResourceIdentityType
 Parameter Sets: ExplicitIdentityParameterSet
-Aliases: 
+Aliases:
 Accepted values: SystemAssigned, UserAssigned, SystemAssignedUserAssigned, None
 
 Required: True
@@ -233,7 +233,7 @@ Specifies the image reference ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,7 +265,7 @@ To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +281,7 @@ To obtain SKUs, use the Get-AzVMImageSku cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -297,7 +297,7 @@ To use the latest version, specify a value of latest instead of a particular ver
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ VMSS creates an operating system disk in the same container of the user image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,7 +328,7 @@ Specify the license type, which is for bringing your own license scenario.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -347,7 +347,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: StorageAccountTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: StandardLRS, PremiumLRS
 
 Required: False
@@ -365,7 +365,7 @@ If the value is not specified, it is set to 20.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -382,7 +382,7 @@ If the value is not specified, it is set to 20.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -400,7 +400,7 @@ If the value is not specified, it is set to 20.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskCaching
-Specifies the caching mode of the operating system disk. 
+Specifies the caching mode of the operating system disk.
 The acceptable values for this parameter are:
 
 - None
@@ -425,7 +425,7 @@ This setting affects the consistency and performance of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ReadOnly, ReadWrite
 
 Required: False
@@ -441,7 +441,7 @@ Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -456,7 +456,7 @@ Indicates whether the cmdlet overprovisions the VMSS.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -473,7 +473,7 @@ The default value is 0 seconds (PT0S).
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -488,7 +488,7 @@ Specifies the plan name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -503,7 +503,7 @@ Specifies the plan product.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -518,7 +518,7 @@ Specifies the plan promotion code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -533,7 +533,7 @@ Specifies the plan publisher.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -548,7 +548,7 @@ Indicates whether virtual machine agent should be provisioned on the Windows vir
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -563,7 +563,7 @@ Specifies the name of the resource group the VMSS belongs to.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -578,7 +578,7 @@ Specifies the single placement group.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -593,7 +593,7 @@ Specifies the number of instances in the VMSS.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -608,7 +608,7 @@ Specifies the size of all the instances of VMSS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -627,7 +627,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -644,7 +644,7 @@ Key-value pairs in the form of a hash table. For example:
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -659,7 +659,7 @@ Specifies the time zone for Windows OS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -679,7 +679,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: UpgradeMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, Manual, Rolling
 
 Required: False
@@ -695,7 +695,7 @@ Specifies the container URLs that are used to store operating system disks for t
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -712,7 +712,7 @@ This virtual machine object contains the updated state for the VMSS.
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3

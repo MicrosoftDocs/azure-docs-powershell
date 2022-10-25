@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 65962F9A-CC79-4B8B-9208-A993708FD36F
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstoragedirectory
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragedirectory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageDirectory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageDirectory.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a directory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstoragedirectory) for up-to-date information.
 
 ## SYNTAX
 

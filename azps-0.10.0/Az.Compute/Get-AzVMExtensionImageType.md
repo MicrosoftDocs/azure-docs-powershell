@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 45F35BDD-969E-4521-9E8D-3499A15434A6
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmextensionimagetype
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvmextensionimagetype
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMExtensionImageType.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMExtensionImageType.md
@@ -56,7 +56,7 @@ This cmdlet gets the type for an extension at the location that this parameter s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ This cmdlet gets the type for an extension from the publisher that this paramete
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

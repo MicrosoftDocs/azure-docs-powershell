@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 92B69069-0F98-428A-B05C-BBA09EBC0381
-online version: https://docs.microsoft.com/powershell/module/az.automation/remove-azautomationconnectiontype
+online version: https://learn.microsoft.com/powershell/module/az.automation/remove-azautomationconnectiontype
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationConnectionType.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationConnectionType.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an Automation connection type.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/remove-azautomationconnectiontype) for up-to-date information.
 
 ## SYNTAX
 
@@ -24,8 +27,8 @@ Remove-AzAutomationConnectionType [-Name] <String> [-Force] [-ResourceGroupName]
 ## DESCRIPTION
 The **Remove-AzAutomationConnectionType** cmdlet removes a connection type from Azure Automation.
 All connections that are associated with the connection type that you delete become unusable.
-Remove them, unless you create a new connection type that meets the following criteria: 
-- The type has the same name as the original connection type. 
+Remove them, unless you create a new connection type that meets the following criteria:
+- The type has the same name as the original connection type.
 - The type has the same field definitions as the original connection type.
 It can have additional fields.
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 73E6DF02-7171-481B-966F-DECEC122A602
-online version: https://docs.microsoft.com/powershell/module/az.automation/register-azautomationdscnode
+online version: https://learn.microsoft.com/powershell/module/az.automation/register-azautomationdscnode
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Register-AzAutomationDscNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Register-AzAutomationDscNode.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Registers an Azure virtual machine running Windows OS as a DSC node for an Automation account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/register-azautomationdscnode) for up-to-date information.
 
 ## SYNTAX
 
@@ -27,9 +30,9 @@ Register-AzAutomationDscNode -AzureVMName <String> [-NodeConfigurationName <Stri
 The **Register-AzAutomationDscNode** cmdlet registers an Azure virtual machine as an APS Desired State Configuration (DSC) node in an Azure Automation account. This cmdlet will only register VMs running Windows OS as an Automation DSC Node for an account.
 
 If you need to register a node to an automation account in a different subscription,
-you will need to use an ARM template rather than cmdlets. 
+you will need to use an ARM template rather than cmdlets.
 See the Azure Automation
-[documentation](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#registering-virtual-machines-across-azure-subscriptions)
+[documentation](https://learn.microsoft.com/azure/automation/automation-dsc-onboarding#registering-virtual-machines-across-azure-subscriptions)
 for more details.
 
 ## EXAMPLES
@@ -45,8 +48,8 @@ This command registers the Azure virtual machine named VirtualMachine01 as a DSC
 
 ### -ActionAfterReboot
 Specifies the action that the virtual machine takes after it restarts.
-Valid values are: 
-- ContinueConfiguration 
+Valid values are:
+- ContinueConfiguration
 - StopConfiguration
 
 ```yaml
@@ -139,9 +142,9 @@ Accept wildcard characters: False
 
 ### -ConfigurationMode
 Specifies the DSC configuration mode.
-Valid values are: 
-- ApplyAndMonitor 
-- ApplyAndAutocorrect 
+Valid values are:
+- ApplyAndMonitor
+- ApplyAndAutocorrect
 - ApplyOnly
 
 ```yaml

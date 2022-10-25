@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: AFF75E0B-CB88-45ED-9067-7F43E2BA485C
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azcontainerservice
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcontainerservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzContainerService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzContainerService.md
@@ -56,7 +56,7 @@ Specifies the name of the container service that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -71,7 +71,7 @@ Specifies the resource group of the container service that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

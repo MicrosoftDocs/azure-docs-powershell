@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Advisor.dll-Help.xml
 Module Name: Az.Advisor
-online version: https://docs.microsoft.com/powershell/module/az.advisor/enable-azadvisorrecommendation
+online version: https://learn.microsoft.com/powershell/module/az.advisor/enable-azadvisorrecommendation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/Advisor/help/Enable-AzAdvisorRecommendation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/Advisor/help/Enable-AzAdvisorRecommendation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Enables Azure Advisor recommendation(s).
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.advisor/enable-azadvisorrecommendation) for up-to-date information.
 
 ## SYNTAX
 
@@ -56,7 +59,7 @@ Risk                 : None
 ShortDescription     : problem : Improve the performance and reliability of your Redis Cache instance
                        solution : Follow Redis cache Advisor recommendations
 
-SuppressionIds       : {} 
+SuppressionIds       : {}
 Name                 : c3621337-f131-4bf4-92f2-3fb9c8cfa0d8
 Type                 : Microsoft.Advisor/recommendations
 ```
@@ -83,7 +86,7 @@ Risk                 : None
 ShortDescription     : problem : Improve the performance and reliability of your Redis Cache instance
                        solution : Follow Redis cache Advisor recommendations
 
-SuppressionIds       : {} 
+SuppressionIds       : {}
 Name                 : {recommendation_id}
 Type                 : Microsoft.Advisor/recommendations
 ```

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: B9153CA9-06D1-4EF3-9863-D649C2EBAEAA
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azvpnclientrootcertificate
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azvpnclientrootcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzVpnClientRootCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzVpnClientRootCertificate.md
@@ -84,7 +84,7 @@ You can retrieve this data  by using Windows PowerShell commands similar to this
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,7 +101,7 @@ Resource groups categorize items to help simplify inventory management and gener
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Specifies the name of the virtual network gateway where the certificate is added
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

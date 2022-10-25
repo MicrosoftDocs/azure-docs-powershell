@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 98FA4E95-CAC5-4FBD-AA84-113BE9ED7FEA
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewaysslpolicy
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewaysslpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzApplicationGatewaySslPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzApplicationGatewaySslPolicy.md
@@ -43,7 +43,7 @@ Ssl cipher suites to be enabled in the specified order to application gateway
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,14 +71,14 @@ Accept wildcard characters: False
 Specifies which protocols are disabled.
 The acceptable values for this parameter are:
 
-- TLSv1_0 
-- TLSv1_1 
+- TLSv1_0
+- TLSv1_1
 - TLSv1_2
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: TLSv1_0, TLSv1_1, TLSv1_2
 
 Required: False
@@ -94,7 +94,7 @@ Minimum version of Ssl protocol to be supported on application gateway
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: TLSv1_0, TLSv1_1, TLSv1_2
 
 Required: False
@@ -110,7 +110,7 @@ Name of Ssl predefined policy
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ Type of Ssl Policy
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Predefined, Custom
 
 Required: False

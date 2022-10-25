@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 0780CB09-9C3B-468A-A718-3A646FE3D152
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/test-azprivateipaddressavailability
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/test-azprivateipaddressavailability
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Test-AzPrivateIPAddressAvailability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Test-AzPrivateIPAddressAvailability.md
@@ -63,7 +63,7 @@ Specifies the IP address to test.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +78,7 @@ Specifies the name of the resource group for the virtual network.
 ```yaml
 Type: String
 Parameter Sets: TestByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ Specifies a **PSVirtualNetwork** object.
 ```yaml
 Type: PSVirtualNetwork
 Parameter Sets: TestByResource
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ Specifies the name of the virtual network.
 ```yaml
 Type: String
 Parameter Sets: TestByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

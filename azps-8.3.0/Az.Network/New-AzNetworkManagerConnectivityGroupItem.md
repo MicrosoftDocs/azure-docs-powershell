@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkmanagerconnectivitygroupitem
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagerconnectivitygroupitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerConnectivityGroupItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerConnectivityGroupItem.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a connectivity group item.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-aznetworkmanagerconnectivitygroupitem) for up-to-date information.
 
 ## SYNTAX
 
@@ -27,7 +30,7 @@ The **New-AzNetworkManagerConnectivityGroupItem** cmdlet creates a connectivity 
 ### Example 1
 ```powershell
 $networkGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup"
-New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId $networkGroupId -UseHubGateway -GroupConnectivity "None" -IsGlobal 
+New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId $networkGroupId -UseHubGateway -GroupConnectivity "None" -IsGlobal
 ```
 ```output
 NetworkGroupId                                                                                                                                           UseHubGateway IsGlobal GroupConnectivity
@@ -39,7 +42,7 @@ Creates a connectivity group item using hub as gateway.
 ### Example 2
 ```powershell
 $networkGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup"
-New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId $networkGroupId -GroupConnectivity "DirectlyConnected" 
+New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId $networkGroupId -GroupConnectivity "DirectlyConnected"
 ```
 ```output
 NetworkGroupId                                                                                                                                           UseHubGateway IsGlobal GroupConnectivity

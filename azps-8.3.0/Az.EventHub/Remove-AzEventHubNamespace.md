@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/remove-azeventhubnamespace
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/remove-azeventhubnamespace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Remove-AzEventHubNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Remove-AzEventHubNamespace.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the specified Event Hubs namespace.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/remove-azeventhubnamespace) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ Removes the Event Hubs namespace \`MyNamespaceName\` in resource group \`MyResou
 
 ### Example 2: InputObject - Using Variable:
 ```powershell
-$inputObject = Get-AzEventHubNamespace <params> 
+$inputObject = Get-AzEventHubNamespace <params>
 Remove-AzEventHubNamespace -InputObject $inputObject
 ```
 

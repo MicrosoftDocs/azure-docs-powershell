@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: 40179CF3-7896-4C45-BC18-4CB653B245B6
-online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/get-azdnsrecordset
+online version: https://learn.microsoft.com/en-us/powershell/module/az.dns/get-azdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Get-AzDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Get-AzDnsRecordSet.md
@@ -76,7 +76,7 @@ If you do not specify the *Name* parameter, all record sets of the specified typ
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ### -RecordType
 Specifies the type of DNS record that this cmdlet gets.
 
-Valid values are: 
+Valid values are:
 
 - A
 - AAAA
@@ -112,13 +112,13 @@ Valid values are:
 - SRV
 - TXT
 
-If you do not specify the *RecordType* parameter, you must also omit the *Name* parameter. 
+If you do not specify the *RecordType* parameter, you must also omit the *Name* parameter.
 This cmdlet then returns all record sets in the zone (of all names and types).
 
 ```yaml
 Type: RecordType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: A, AAAA, CNAME, MX, NS, PTR, SOA, SRV, TXT
 
 Required: False
@@ -137,7 +137,7 @@ Alternatively, you can specify the zone and resource group by passing in a **Dns
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -153,7 +153,7 @@ Alternatively, you can specify the zone using the *ZoneName* and *ResourceGroupN
 ```yaml
 Type: DnsZone
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -171,7 +171,7 @@ Alternatively, you can specify the zone and resource group by passing in a DNS Z
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

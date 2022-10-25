@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 40E56EC1-3327-4DFF-8262-E2EEBB5E4447
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azfirewall
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azfirewall
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewall.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewall.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Saves a modified Firewall.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azfirewall) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,9 +37,9 @@ Set-AzFirewall -AzureFirewall $azFw
 ```
 
 This example updates the priority of an existing rule collection of an Azure Firewall.
-Assuming Azure Firewall "AzureFirewall" in resource group "rg" contains an application rule collection named 
-"ruleCollectionName", the commands above will change the priority of that rule collection and update the 
-Azure Firewall afterwards. Without the Set-AzFirewall command, all operations performed on the local $azFw 
+Assuming Azure Firewall "AzureFirewall" in resource group "rg" contains an application rule collection named
+"ruleCollectionName", the commands above will change the priority of that rule collection and update the
+Azure Firewall afterwards. Without the Set-AzFirewall command, all operations performed on the local $azFw
 object are not reflected on the server.
 
 ### 2:  Create a Azure Firewall and set an application rule collection later
@@ -50,8 +53,8 @@ $azFw.ApplicationRuleCollections = $RuleCollection
 $azFw | Set-AzFirewall
 ```
 
-In this example, a Firewall is created first without any application rule collections. Afterwards a Application Rule 
-and Application Rule Collection are created, then the Firewall object is modified in memory, without affecting 
+In this example, a Firewall is created first without any application rule collections. Afterwards a Application Rule
+and Application Rule Collection are created, then the Firewall object is modified in memory, without affecting
 the real configuration in cloud. For changes to be reflected in cloud, Set-AzFirewall must be called.
 
 ### 3:  Update Threat Intel operation mode of Azure Firewall
@@ -76,7 +79,7 @@ $firewall.Allocate($vnet, $pip)
 $firewall | Set-AzFirewall
 ```
 
-This example retrieves a Firewall, deallocates the firewall, and saves it. The Deallocate command removes the running 
+This example retrieves a Firewall, deallocates the firewall, and saves it. The Deallocate command removes the running
 service but preserves the firewall's configuration. For changes to be reflected in cloud, Set-AzFirewall must be called.
 If user wants to start the service again, the Allocate method should be called on the firewall.
 The new VNet and Public IP must be in the same resource group as the Firewall. Again, for changes to be reflected in cloud,
@@ -170,7 +173,7 @@ $firewall.Allocate($Hub.Id)
 $firewall | Set-AzFirewall
 ```
 
-This example retrieves a Hub Firewall, deallocates the hub firewall, and saves it. The Deallocate command removes the reference 
+This example retrieves a Hub Firewall, deallocates the hub firewall, and saves it. The Deallocate command removes the reference
 to the virtual hub but preserves the firewall's configuration. For changes to be reflected in cloud, Set-AzFirewall must be called.
 The Allocate method assigns the virtual hub reference to the firewall. Again, for changes to be reflected in cloud,
 Set-AzFirewall must be called.
@@ -184,42 +187,42 @@ $azFw | Set-AzFirewall
 ```
 
 ```output
-		AllowActiveFTP	                : null	
-		ApplicationRuleCollections	    : Count = 0	
-		ApplicationRuleCollectionsText	: "[]"	
-		DNSEnableProxy	                : null	
-		DNSServer	                    : null	
-		DNSServersText	                : "null"	
+		AllowActiveFTP	                : null
+		ApplicationRuleCollections	    : Count = 0
+		ApplicationRuleCollectionsText	: "[]"
+		DNSEnableProxy	                : null
+		DNSServer	                    : null
+		DNSServersText	                : "null"
 		Etag	                        : "W/\"7533fa1b-8588-400d-857c-6bc372e14f1b\""
-		FirewallPolicy	                : null	
-		HubIPAddresses	                : null	
-		Id	                            : "/subscriptions/aeb5b02a-0f18-45a4-86d6-81808115cacf/resourceGroups/ps774/providers/Microsoft.Network/azureFirewalls/ps184"	
-		IdentifyTopFatFlow	            : "true"	
-		IpConfigurations	            : Count = 0	
-		IpConfigurationsText	        : "[]"	
-		Location	                    : "eastus"	
-		ManagementIpConfiguration	    : null	
-		ManagementIpConfigurationText	: "null"	
-		Name	                        : "ps184"	
-		NatRuleCollections	            : Count = 0	
-		NatRuleCollectionsText	        : "[]"	
-		NetworkRuleCollections	        : Count = 0	
-		NetworkRuleCollectionsText	    : "[]"	
-		PrivateRange	                : null	
-		PrivateRangeText	            : "null"	
-		ProvisioningState	            : "Succeeded"	
-		ResourceGroupName	            : "ps774"	
-		ResourceGuid	                : null	
-		Sku	                            : {Microsoft.Azure.Commands.Network.Models.PSAzureFirewallSku}	
-		Tag	                            : null	
-		TagsTable	                    : null	
-		ThreatIntelMode	                : "Alert"	
-		ThreatIntelWhitelist	        : {Microsoft.Azure.Commands.Network.Models.PSAzureFirewallThreatIntelWhitelist}	
-		ThreatIntelWhitelistText	    : "{\r\n  \"FQDNs\": null,\r\n  \"IpAddresses\": null\r\n}"	
-		Type	                        : "Microsoft.Network/azureFirewalls"	
-		VirtualHub	                    : null	
-		Zones	                        : Count = 0	
-		privateRange	                : null	
+		FirewallPolicy	                : null
+		HubIPAddresses	                : null
+		Id	                            : "/subscriptions/aeb5b02a-0f18-45a4-86d6-81808115cacf/resourceGroups/ps774/providers/Microsoft.Network/azureFirewalls/ps184"
+		IdentifyTopFatFlow	            : "true"
+		IpConfigurations	            : Count = 0
+		IpConfigurationsText	        : "[]"
+		Location	                    : "eastus"
+		ManagementIpConfiguration	    : null
+		ManagementIpConfigurationText	: "null"
+		Name	                        : "ps184"
+		NatRuleCollections	            : Count = 0
+		NatRuleCollectionsText	        : "[]"
+		NetworkRuleCollections	        : Count = 0
+		NetworkRuleCollectionsText	    : "[]"
+		PrivateRange	                : null
+		PrivateRangeText	            : "null"
+		ProvisioningState	            : "Succeeded"
+		ResourceGroupName	            : "ps774"
+		ResourceGuid	                : null
+		Sku	                            : {Microsoft.Azure.Commands.Network.Models.PSAzureFirewallSku}
+		Tag	                            : null
+		TagsTable	                    : null
+		ThreatIntelMode	                : "Alert"
+		ThreatIntelWhitelist	        : {Microsoft.Azure.Commands.Network.Models.PSAzureFirewallThreatIntelWhitelist}
+		ThreatIntelWhitelistText	    : "{\r\n  \"FQDNs\": null,\r\n  \"IpAddresses\": null\r\n}"
+		Type	                        : "Microsoft.Network/azureFirewalls"
+		VirtualHub	                    : null
+		Zones	                        : Count = 0
+		privateRange	                : null
 
 ```
 

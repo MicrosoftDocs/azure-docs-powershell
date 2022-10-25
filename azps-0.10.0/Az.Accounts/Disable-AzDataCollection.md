@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/disable-azdatacollection
+online version: https://learn.microsoft.com/en-us/powershell/module/az.accounts/disable-azdatacollection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Disable-AzDataCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Disable-AzDataCollection.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Disable-AzDataCollection
 
 ## SYNOPSIS
-Opts out of collecting data to improve the AzurePowerShell cmdlets. 
+Opts out of collecting data to improve the AzurePowerShell cmdlets.
 Data is not collected unless you explicitly opt in.
 
 ## SYNTAX
@@ -35,7 +35,7 @@ To enable data collection for the current user, run the Enable-AzDataCollection 
 PS C:\> Disable-AzDataCollection
 ```
 
-This example shows how to disable data collection for the current user. 
+This example shows how to disable data collection for the current user.
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 6F9BAB0B-7DC7-4672-B2B5-8B139D652DDD
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azloadbalancerprobeconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azloadbalancerprobeconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzLoadBalancerProbeConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzLoadBalancerProbeConfig.md
@@ -56,7 +56,7 @@ Specifies the interval, in seconds, between probes to each instance of the load-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ This cmdlet adds a probe configuration to the load balancer that this parameter 
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -87,7 +87,7 @@ Specifies the name of the probe configuration to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ Specifies the port on which probes should connect to a load-balanced service.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,7 +117,7 @@ Specifies the number of per-instance consecutive failures for an instance to be 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ The acceptable values for this parameter are: Tcp or Http.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Tcp, Http
 
 Required: False
@@ -149,7 +149,7 @@ Specifies the path in the load-balanced service to probe to determine health.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

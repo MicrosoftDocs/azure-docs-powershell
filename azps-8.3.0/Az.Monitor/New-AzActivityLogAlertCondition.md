@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 5E854358-CA9D-4336-BA6A-BF7B1FADAB50
-online version: https://docs.microsoft.com/powershell/module/az.monitor/new-azactivitylogalertcondition
+online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azactivitylogalertcondition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActivityLogAlertCondition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActivityLogAlertCondition.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an new activity log alert condition object in memory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/new-azactivitylogalertcondition) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ Equals property value: OtherField
 ```
 
 This command creates a new activity log alert condition object in memory.
-**NOTE**: when this cmdlet is used with [Set-AzActivityLogAlert](https://docs.microsoft.com/powershell/module/az.monitor/set-azactivitylogalert) at least one of these objects, passed as parameters, must have its Field equal to "Category". Otherwise, the backend responds with a 400 (BadRequest.)
+**NOTE**: when this cmdlet is used with [Set-AzActivityLogAlert](https://learn.microsoft.com/powershell/module/az.monitor/set-azactivitylogalert) at least one of these objects, passed as parameters, must have its Field equal to "Category". Otherwise, the backend responds with a 400 (BadRequest.)
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 95731734-EDCA-432A-A7BF-94D1E3725FB2
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/start-azapplicationgateway
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/start-azapplicationgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Start-AzApplicationGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Start-AzApplicationGateway.md
@@ -40,7 +40,7 @@ Specifies the application gateway that this cmdlet starts.
 ```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: FCDCEF0B-6E2C-480E-9841-EF4E64D61D54
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstorageshare
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstorageshare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageShare.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a file share.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstorageshare) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MySql
-online version: https://docs.microsoft.com/powershell/module/az.mysql/update-azmysqlflexibleserverfirewallrule
+online version: https://learn.microsoft.com/powershell/module/az.mysql/update-azmysqlflexibleserverfirewallrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Update-AzMySqlFlexibleServerFirewallRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Update-AzMySqlFlexibleServerFirewallRule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates an existing firewall rule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mysql/update-azmysqlflexibleserverfirewallrule) for up-to-date information.
 
 ## SYNTAX
 

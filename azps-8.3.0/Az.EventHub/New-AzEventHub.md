@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/new-azeventhub
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/new-azeventhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHub.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new Event Hub.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/new-azeventhub) for up-to-date information.
 
 ## SYNTAX
 
@@ -30,7 +33,7 @@ New-AzEventHub [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <Stri
 
 ## DESCRIPTION
 The New-AzEventHub cmdlet creates a new Azure Event Hub.
-To create Eventhub with Capture description properties, please follow the below steps (Examples 2). 
+To create Eventhub with Capture description properties, please follow the below steps (Examples 2).
 
 ## EXAMPLES
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: E1AC7139-786C-4DD6-A898-242723E0D159
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/set-Azpolicydefinition
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/set-Azpolicydefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Set-AzPolicyDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Set-AzPolicyDefinition.md
@@ -67,7 +67,7 @@ The second command updates the description of the policy definition identified b
 PS C:\> Set-AzPolicyDefinition -Name 'VMPolicyDefinition' -Mode 'All'
 ```
 
-This command updates the policy definition named VMPolicyDefinition by using the Set-AzPolicyDefinition cmdlet to 
+This command updates the policy definition named VMPolicyDefinition by using the Set-AzPolicyDefinition cmdlet to
 set its mode property to 'All'.
 
 ## PARAMETERS

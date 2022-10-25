@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
-online version: https://docs.microsoft.com/powershell/module/az.automation/remove-azautomationsourcecontrol
+online version: https://learn.microsoft.com/powershell/module/az.automation/remove-azautomationsourcecontrol
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationSourceControl.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Remove-AzAutomationSourceControl.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an Azure Automation source control.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/remove-azautomationsourcecontrol) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,7 +34,7 @@ This command removes the Automation source control named VSTSNative in the accou
 ```powershell
 Remove-AzAutomationSourceControl -ResourceGroupName "rg1" `
                                               -AutomationAccountName "devAccount" `
-                                              -Name "VSTSNative" 
+                                              -Name "VSTSNative"
 ```
 
 ## PARAMETERS

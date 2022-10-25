@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Attestation.dll-Help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/get-azattestation
+online version: https://learn.microsoft.com/powershell/module/az.attestation/get-azattestation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an attestation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.attestation/get-azattestation) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ The Get-AzAttestation cmdlet gets information about the attestation in a subscri
 ```powershell
 Get-AzAttestation -Name pshtest -ResourceGroupName psh-test-rg
 ```
-```output                                                                                                                                                       
+```output
 Id                : subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/psh-test-rg/providers/Microsoft.Attestation/attestationProviders/pshtest
 Location          : East US
 ResourceGroupName : psh-test-rg

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 85492E00-3776-4F20-A444-9C28CC6154B7
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azactivitylogalert
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azactivitylogalert
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets one or more activity log alert resources.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/get-azactivitylogalert) for up-to-date information.
 
 ## SYNTAX
 

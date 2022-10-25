@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: A3D60CF1-2E66-4EE5-9C68-932DD8DF80BD
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azfirewall
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azfirewall
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewall.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewall.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new Firewall in a resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azfirewall) for up-to-date information.
 
 ## SYNTAX
 
@@ -78,7 +81,7 @@ $rgName = "resourceGroupName"
 $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
 $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
 
-$rule = New-AzFirewallApplicationRule -Name R1 -Protocol "https:443" -TargetFqdn "*" 
+$rule = New-AzFirewallApplicationRule -Name R1 -Protocol "https:443" -TargetFqdn "*"
 $ruleCollection = New-AzFirewallApplicationRuleCollection -Name RC1 -Priority 100 -Rule $rule -ActionType "Allow"
 New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ApplicationRuleCollection $ruleCollection
 ```
@@ -113,7 +116,7 @@ $rgName = "resourceGroupName"
 $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
 $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
 
-$rule = New-AzFirewallApplicationRule -Name R1 -Protocol "http:8080" -TargetFqdn "*" 
+$rule = New-AzFirewallApplicationRule -Name R1 -Protocol "http:8080" -TargetFqdn "*"
 $ruleCollection = New-AzFirewallApplicationRuleCollection -Name RC1 -Priority 100 -Rule $rule -ActionType "Allow"
 New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ApplicationRuleCollection $ruleCollection -ThreatIntelMode Deny
 ```
@@ -511,7 +514,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIpAddress
-One or more Public IP Addresses. The Public IP addresses must use Standard SKU and must belong to the same resource group as the Firewall. No input needed for Forced Tunneling Firewalls. 
+One or more Public IP Addresses. The Public IP addresses must use Standard SKU and must belong to the same resource group as the Firewall. No input needed for Forced Tunneling Firewalls.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress[]

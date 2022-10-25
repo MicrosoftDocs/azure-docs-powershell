@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 9EE192A5-4E3F-41ED-A539-8E0A5D5EA4C9
-online version: https://docs.microsoft.com/powershell/module/az.compute/update-azvmss
+online version: https://learn.microsoft.com/powershell/module/az.compute/update-azvmss
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmss.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates the state of a VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/update-azvmss) for up-to-date information.
 
 ## SYNTAX
 
@@ -866,7 +869,7 @@ Accept wildcard characters: False
 
 ### -TimeZone
 Specifies the time zone for Windows OS. e.g. \"Pacific Standard Time\". <br>
-Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+Possible values can be [TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
 
 ```yaml
 Type: System.String

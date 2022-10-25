@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: CBDF4BCB-7EB3-4D64-B19C-1314D4AB84E4
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvirtualnetwork
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azvirtualnetwork
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzVirtualNetwork.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzVirtualNetwork.md
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Expand
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ Specifies the name of the resource group that virtual network belongs to.
 ```yaml
 Type: String
 Parameter Sets: NoExpand
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Expand
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

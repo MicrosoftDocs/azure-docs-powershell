@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
-online version: https://docs.microsoft.com/powershell/module/az.monitor/new-azactiongroup
+online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azactiongroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroup.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an ActionGroup reference object in memory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/new-azactiongroup) for up-to-date information.
 
 ## SYNTAX
 

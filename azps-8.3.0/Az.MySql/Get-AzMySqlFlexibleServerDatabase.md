@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MySql
-online version: https://docs.microsoft.com/powershell/module/az.mysql/get-azmysqlflexibleserverdatabase
+online version: https://learn.microsoft.com/powershell/module/az.mysql/get-azmysqlflexibleserverdatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Get-AzMySqlFlexibleServerDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Get-AzMySqlFlexibleServerDatabase.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about a database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mysql/get-azmysqlflexibleserverdatabase) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,7 +46,7 @@ Get-AzMySqlFlexibleServerDatabase -ResourceGroupName PowershellMySqlTest -Server
 ```
 
 ```output
-Name             Charset     Collation              
+Name             Charset     Collation
 ----             -------- ------------------
 flexibleserverdb utf8     utf8_general_ci
 ```

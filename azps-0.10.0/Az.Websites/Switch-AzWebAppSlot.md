@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: 258A4EA9-B82C-4664-8DCE-30D47A623868
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/switch-Azwebappslot
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/switch-Azwebappslot
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Switch-AzWebAppSlot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Switch-AzWebAppSlot.md
@@ -64,7 +64,7 @@ Destination Slot Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -79,7 +79,7 @@ WebApp Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -94,7 +94,7 @@ Preserve Vnet Boolean
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -109,7 +109,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -124,7 +124,7 @@ Source Slot Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -139,7 +139,7 @@ Swap With Preview Action
 ```yaml
 Type: SwapWithPreviewAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ApplySlotConfig, CompleteSlotSwap, ResetSlotSwap
 
 Required: False
@@ -155,7 +155,7 @@ WebApp Object
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

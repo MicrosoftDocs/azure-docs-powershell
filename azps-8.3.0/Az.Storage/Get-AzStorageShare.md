@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: FD3A0013-4365-4E65-891C-5C50A9D5658C
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageshare
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageshare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageShare.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a list of file shares.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageshare) for up-to-date information.
 
 ## SYNTAX
 

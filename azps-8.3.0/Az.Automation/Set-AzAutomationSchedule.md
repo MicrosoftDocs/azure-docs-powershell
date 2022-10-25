@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 6429C564-1995-4D9B-BF9B-963B4F5FB3BD
-online version: https://docs.microsoft.com/powershell/module/az.automation/set-azautomationschedule
+online version: https://learn.microsoft.com/powershell/module/az.automation/set-azautomationschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an Automation schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/set-azautomationschedule) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: B39C4D6B-392A-4C8D-A6FB-886DA1A2BA58
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationjoboutput
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationjoboutput
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationJobOutput.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationJobOutput.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the output of an Automation job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationjoboutput) for up-to-date information.
 
 ## SYNTAX
 
@@ -114,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Stream
 Specifies the type of output.
-Valid values are: 
+Valid values are:
 - Any
 - Debug
 - Error

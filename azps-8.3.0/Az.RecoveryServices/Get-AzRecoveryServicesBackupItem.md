@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: DEB3D7B5-D974-472B-B8B4-9A19CA6AECCC
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupitem
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupItem.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 
 Gets the items from a container in Backup.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupitem) for up-to-date information.
 
 ## SYNTAX
 

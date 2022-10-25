@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 230DAE05-C197-451F-A24C-F4A2DAE4AD04
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmssstorageprofile
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmssstorageprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssStorageProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssStorageProfile.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets the storage profile properties for the VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmssstorageprofile) for up-to-date information.
 
 ## SYNTAX
 
@@ -73,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiffDiskPlacement
-Specifies the ephemeral disk placement for operating system disk. This property can be used by user in the request to choose the location i.e. cache disk or resource disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer Ephemeral OS disk size requirements for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/ephemeral-os-disks#size-requirements and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/ephemeral-os-disks#size-requirements. This parameter can only be used if the parameter DiffDiskSetting is set to 'Local'.
+Specifies the ephemeral disk placement for operating system disk. This property can be used by user in the request to choose the location i.e. cache disk or resource disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer Ephemeral OS disk size requirements for Windows VM at https://learn.microsoft.com/azure/virtual-machines/windows/ephemeral-os-disks#size-requirements and Linux VM at https://learn.microsoft.com/azure/virtual-machines/linux/ephemeral-os-disks#size-requirements. This parameter can only be used if the parameter DiffDiskSetting is set to 'Local'.
 
 ```yaml
 Type: System.String
@@ -228,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsDiskCaching
-Specifies the caching mode of the operating system disk. 
+Specifies the caching mode of the operating system disk.
 The acceptable values for this parameter are:
 - ReadOnly
 - ReadWrite
@@ -252,7 +255,7 @@ Accept wildcard characters: False
 ### -OsDiskCreateOption
 Specifies how this cmdlet creates the VMSS virtual machines.
 The acceptable values for this parameter are:
-- Attach : This value is used when you are using a specialized disk to create the VMSS virtual machine. 
+- Attach : This value is used when you are using a specialized disk to create the VMSS virtual machine.
 - FromImage : This value is used when you are using an image to create the VMSS virtual machine.
 If you are using a platform image, you will also use the *imageReference* parameter.
 
@@ -271,7 +274,7 @@ Accept wildcard characters: False
 ### -OsDiskDeleteOption
 Specifies whether OS disk should be deleted or detached upon VMSS Flex deletion (This feature is available for VMSS with Flexible OrchestrationMode only).
 
-Accepted Values 
+Accepted Values
 Delete - If this value is used, the OS disk is deleted when the VMSS Flex VM is deleted.
 Detach - If this value is used, the OS disk is retained after VMSS Flex VM is deleted.
 

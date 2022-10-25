@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 5A0D9326-3A8A-4156-8372-EBA93C1BB4E4
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworksecurityruleconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworksecurityruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkSecurityRuleConfig.md
@@ -27,7 +27,7 @@ The **Get-AzNetworkSecurityRuleConfig** cmdlet gets a network security rule conf
 
 ### 1: Retrieving a network security rule config
 ```
-Get-AzNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 
+Get-AzNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1
     | Get-AzNetworkSecurityRuleConfig -Name AllowInternetOutBound -DefaultRules
 ```
 
@@ -35,7 +35,7 @@ This command retrieves the default rule named "AllowInternetOutBound" from Azure
 
 ### 2: Retrieving a network security rule config using only the name
 ```
-Get-AzNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 
+Get-AzNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1
     | Get-AzNetworkSecurityRuleConfig -Name "rdp-rule"
 ```
 
@@ -64,7 +64,7 @@ Indicates whether this cmdlet gets a user-created rule configuration or a defaul
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ Specifies the name of the network security rule configuration to get.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Specifies a **NetworkSecurityGroup** object that contains the network security r
 ```yaml
 Type: PSNetworkSecurityGroup
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

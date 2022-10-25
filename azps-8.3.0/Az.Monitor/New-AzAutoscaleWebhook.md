@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 674A11E4-36B9-4075-9F4E-952BD9FF07A7
-online version: https://docs.microsoft.com/powershell/module/az.monitor/new-azautoscalewebhook
+online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azautoscalewebhook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleWebhook.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Autoscale webhook.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/new-azautoscalewebhook) for up-to-date information.
 
 ## SYNTAX
 

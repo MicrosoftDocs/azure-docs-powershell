@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/remove-azservicebusnamespace
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/remove-azservicebusnamespace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Remove-AzServiceBusNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Remove-AzServiceBusNamespace.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzServiceBusNamespace
 
 ## SYNOPSIS
-Removes the namespace from the specified resource group. 
+Removes the namespace from the specified resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/remove-azservicebusnamespace) for up-to-date information.
 
 ## SYNTAX
 

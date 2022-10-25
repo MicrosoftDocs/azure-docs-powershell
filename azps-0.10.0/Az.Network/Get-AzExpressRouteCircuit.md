@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: C9954E3D-8645-473E-A6D4-86278C2F6BC1
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuit
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuit
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzExpressRouteCircuit.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzExpressRouteCircuit.md
@@ -70,7 +70,7 @@ The name of the resource group that contains the ExpressRoute circuit.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

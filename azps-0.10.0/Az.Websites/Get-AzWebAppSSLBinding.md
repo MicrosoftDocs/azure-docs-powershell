@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: EE3D2BA0-32E7-4A37-BCAF-F0E8FAAC43CE
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebappsslbinding
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebappsslbinding
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppSSLBinding.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppSSLBinding.md
@@ -76,7 +76,7 @@ Specifies the name of the SSL binding.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -93,7 +93,7 @@ You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in t
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -109,7 +109,7 @@ To get a deployment slot, use the Get-AzWebAppSlot cmdlet.
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -125,7 +125,7 @@ To get a Web App, use the Get-AzWebApp cmdlet.
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -142,7 +142,7 @@ You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

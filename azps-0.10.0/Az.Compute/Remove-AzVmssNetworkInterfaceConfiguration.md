@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: EC4E8CC1-C21F-4D41-818F-D0BC15AEEE1D
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmssnetworkinterfaceconfiguration
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/remove-azvmssnetworkinterfaceconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVmssNetworkInterfaceConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVmssNetworkInterfaceConfiguration.md
@@ -65,7 +65,7 @@ Specifies the ID of the network interface configuration that this cmdlet removes
 ```yaml
 Type: String
 Parameter Sets: IdParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -80,7 +80,7 @@ Specifies the name of the network interface configuration that this cmdlet remov
 ```yaml
 Type: String
 Parameter Sets: NameParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -95,7 +95,7 @@ Specifies the VMSS object.
 ```yaml
 Type: PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
