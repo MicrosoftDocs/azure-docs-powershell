@@ -564,8 +564,12 @@
                 "az*-*/Az*.Websites/*.yml": ["App Service", "Azure", "Azure Powershell"]
             },
             "ROBOTS": {
-                "azurermps-2.5.0/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-2.5.0/**/*": "NOINDEX, NOFOLLOW"
+                "azurermps-*/**/*": "NOINDEX, NOFOLLOW",
+                "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW",
+                "azuredmps-*/**/*": "NOINDEX, NOFOLLOW",
+                "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW",
+                "azuresmps-*/**/*": "NOINDEX, NOFOLLOW",
+                "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
                 "azps-9.0.1/**/*": "GitHub",
