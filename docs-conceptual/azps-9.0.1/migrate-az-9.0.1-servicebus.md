@@ -1,5 +1,5 @@
 ---
-description: This migration guide contains a list of breaking changes made to the Az.ServiceBus module in the Azure PowerShell 9.0.0 release.
+description: This migration guide contains a list of breaking changes made to the Az.ServiceBus module in the Azure PowerShell 9.0.1 release.
 ms.custom: devx-track-azurepowershell
 ms.date: 10/18/2022
 ms.devlang: powershell
@@ -10,7 +10,7 @@ title: Migration Guide for latest Az.ServiceBus PowerShell Module
 
 # Migration Guide for latest Az.ServiceBus PowerShell Module
 
-The `Az.ServiceBus` PowerShell module version 9.0.0 of Azure PowerShell that would be released in October introduces improvised cmdlets for public use.
+The `Az.ServiceBus` PowerShell module version 9.0.1 of Azure PowerShell that would be released in October introduces improvised cmdlets for public use.
 
 These changes are focused towards making the PowerShell use seamless for the end users.
 
@@ -48,7 +48,7 @@ Set-AzServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB
 
 ### After
 
-Below example shows how to update queue properties starting with / after Module version  9.0.0
+Below example shows how to update queue properties starting with / after Module version  9.0.1
 
 ```
 $queue = Get-AzServiceBusQueue -InputObject <ResourceID of ServiceBus Queue>

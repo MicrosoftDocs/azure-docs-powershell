@@ -1,5 +1,5 @@
 ---
-description: This migration guide contains a list of breaking changes made to the Az.EventHub module in the Azure PowerShell 9.0.0 release.
+description: This migration guide contains a list of breaking changes made to the Az.EventHub module in the Azure PowerShell 9.0.1 release.
 ms.custom: devx-track-azurepowershell
 ms.date: 10/18/2022
 ms.devlang: powershell
@@ -10,7 +10,7 @@ title: Migration Guide for latest Az.EventHub PowerShell Module
 
 # Migration Guide for latest Az.EventHub PowerShell Module
 
-The `Az.EventHub` PowerShell module version 9.0.0 of Azure PowerShell that would be released in October introduces improvised cmdlets for public use.
+The `Az.EventHub` PowerShell module version 9.0.1 of Azure PowerShell that would be released in October introduces improvised cmdlets for public use.
 
 These changes are focused towards making the PowerShell use more productive and seamless for the end users.
 
@@ -52,7 +52,7 @@ Set-AzEventHub -ResourceGroupName MyResourceGroupName -Namespace MyNamespaceName
 
 ### After
 
-Below example shows how to update capture description on existing event hub with starting with / after Module version  9.0.0
+Below example shows how to update capture description on existing event hub with starting with / after Module version  9.0.1
 
 ```
 $eventhub = Get-AzEventHub -InputObject <ResourceID of event hub>
